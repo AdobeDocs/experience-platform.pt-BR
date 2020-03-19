@@ -1,0 +1,188 @@
+---
+title: Monitoramento de eventos
+seo-title: Rastreamento de eventos SDK da Web da plataforma Adobe Experience
+description: Saiba como rastrear eventos SDK da Web da Experience Platform
+seo-description: Saiba como rastrear eventos SDK da Web da Experience Platform
+translation-type: tm+mt
+source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+
+---
+
+
+# Monitoramento de eventos
+
+>[!IMPORTANT]
+>
+>O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+
+Para enviar dados de eventos para a Adobe Experience Cloud, use o `event` comando. O `event` comando é a principal maneira de enviar dados para a Experience Cloud e recuperar conteúdo personalizado, identidades e destinos de público-alvo.
+
+Os dados enviados para a Adobe Experience Cloud se dividem em duas categorias:
+
+* Dados XDM
+* Dados não XDM (atualmente não suportados)
+
+## Envio de dados XDM
+
+Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um esquema criado na Adobe Experience Platform. [Saiba mais sobre como criar um esquema.](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md)
+
+Quaisquer dados XDM que você deseja que façam parte de suas análises, personalização, públicos-alvo ou destinos devem ser enviados usando a `xdm` opção.
+
+```javascript
+alloy("event", {
+  "xdm": {
+    "commerce": {
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3",
+        "purchaseOrderNumber": "VAU3123",
+        "currencyCode": "USD",
+        "priceTotal": 999.98
+      }
+    }
+  }
+});
+```
+
+### Envio de dados não XDM
+
+Atualmente, não há suporte para o envio de dados que não correspondem a um esquema XDM. O suporte está planejado para uma data futura.
+
+### Configuração `eventType`
+
+Em um evento de experiência XDM, há um `eventType` campo. Isso mantém o tipo de evento principal do registro. Isso pode ser passado como parte da `xdm` opção.
+
+```javascript
+alloy("event", {
+  "xdm": {
+    "eventType": "commerce.purchases",
+    "commerce": {
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3",
+        "purchaseOrderNumber": "VAU3123",
+        "currencyCode": "USD",
+        "priceTotal": 999.98
+      }
+    }
+  }
+});
+```
+
+Como alternativa, o evento `eventType` pode ser passado para o comando event usando a `type` opção. Em segundo plano, isso é adicionado aos dados XDM. Ter a opção `type` como uma permite que você defina mais facilmente a carga `eventType` sem precisar modificar a carga do XDM.
+
+```javascript
+var myXDMData = { ... };
+
+alloy("event", {
+  "xdm": myXDMData,
+  "type": "commerce.purchases"
+});
+```
+
+### Iniciar uma exibição
+
+Quando uma exibição é iniciada, é importante notificar o SDK definindo `viewStart` como `true` dentro do `event` comando. Isso indica, entre outras coisas, que o SDK deve recuperar e renderizar conteúdo personalizado. Mesmo que você não esteja usando a personalização atualmente, ela simplifica consideravelmente a ativação da personalização ou de outros recursos posteriormente, pois não será necessário modificar o código na página. Além disso, o rastreamento de exibições é benéfico ao exibir relatórios de análise depois que os dados são coletados.
+
+A definição de uma exibição pode depender do contexto.
+
+* Em um site regular, cada página da Web é normalmente considerada uma exibição exclusiva. Nesse caso, um evento com `viewStart` definido para `true` ser executado o mais rápido possível na parte superior da página.
+* Em um aplicativo de página única \(SPA\), uma exibição é menos definida. Normalmente, significa que o usuário navegou no aplicativo e a maioria do conteúdo mudou. Para aqueles que estão familiarizados com os fundamentos técnicos dos aplicativos de página única, isso geralmente acontece quando o aplicativo carrega uma nova rota. Sempre que um usuário se move para uma nova exibição, no entanto, você escolhe definir uma _exibição_, um evento com `viewStart` definição para `true` deve ser executado.
+
+O evento com `viewStart` definido como `true` é o principal mecanismo para enviar dados para a Adobe Experience Cloud e solicitar conteúdo da Adobe Experience Cloud. Veja como você inicia uma exibição:
+
+```javascript
+alloy("event", {
+  "viewStart": true,
+  "xdm": {
+    "commerce": {
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3",
+        "purchaseOrderNumber": "VAU3123",
+        "currencyCode": "USD",
+        "priceTotal": 999.98
+      }
+    }
+  }
+});
+```
+
+Depois que os dados são enviados, o servidor responde com conteúdo personalizado, entre outras coisas. Esse conteúdo personalizado é automaticamente renderizado em sua exibição. Os manipuladores de links também são anexados automaticamente ao conteúdo da nova exibição.
+
+## Uso da API sendBeacon
+
+Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para informar o SDK da Web da plataforma Adobe Experience `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando event.  Exemplo:
+
+```javascript
+alloy("event", {
+  "documentUnloading": true,
+  "xdm": {
+    "commerce": {
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3",
+        "purchaseOrderNumber": "VAU3123",
+        "currencyCode": "USD",
+        "priceTotal": 999.98
+      }
+    }
+  }
+});
+```
+
+Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` uma só vez. Em muitos navegadores, o limite é de 64K. Se o navegador rejeitar o evento porque a carga é muito grande, o SDK da Web da plataforma Adobe Experience volta ao uso do método de transporte normal (por exemplo, busca).
+
+## Tratamento de respostas de eventos
+
+Se quiser lidar com uma resposta de um evento, você pode ser notificado de um sucesso ou falha da seguinte maneira:
+
+```javascript
+alloy("event", {
+  "viewStart": true,
+  "xdm": {
+    "commerce": {
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3",
+        "purchaseOrderNumber": "VAU3123",
+        "currencyCode": "USD",
+        "priceTotal": 999.98
+      }
+    }
+  }
+}).then(function() {
+    // Tracking the event succeeded.
+  })
+  .catch(function(error) {
+    // Tracking the event failed.
+  });
+```
+
+## Modificação global de eventos {#modifying-events-globally}
+
+Se quiser adicionar, remover ou modificar campos do evento globalmente, você pode configurar um `onBeforeEventSend` retorno de chamada.  Esse retorno de chamada é chamado sempre que um evento é enviado.  Esse retorno de chamada é passado em um objeto de evento com um `xdm` campo.  Modifique `event.xdm` para alterar os dados enviados no evento.
+
+```javascript
+alloy("configure", {
+  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "onBeforeEventSend": function(event) {
+    // Change existing values
+    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    // Remove existing values
+    delete event.xdm.web.webReferrer.URL;
+    // Or add new values
+    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+  }
+});
+```
+
+`xdm` são definidos nesta ordem:
+
+1. Valores passados como opções para o comando event `alloy("event", { xdm: ... });`
+2. Valores coletados automaticamente.  (Consulte Informações [](../reference/automatic-information.md)Automáticas.)
+3. As alterações feitas no `onBeforeEventSend` retorno de chamada.
+
+Se o `onBeforeEventSend` retorno de chamada gerar uma exceção, o evento ainda será enviado; no entanto, nenhuma das alterações feitas no retorno de chamada é aplicada ao evento final.
+
+## Erros acionáveis potenciais
+
+Ao enviar um evento, um erro pode ser emitido se os dados enviados forem muito grandes (mais de 32 KB para a solicitação completa). Nesse caso, é necessário reduzir a quantidade de dados que está sendo enviada.
+
+Quando a depuração está ativada, o servidor valida de forma síncrona os dados de evento enviados em relação ao esquema XDM configurado. Se os dados não corresponderem ao esquema, os detalhes sobre a incompatibilidade serão retornados do servidor e um erro será lançado. Nesse caso, modifique os dados para que correspondam ao esquema. Quando a depuração não está ativada, o servidor valida os dados de forma assíncrona e, portanto, nenhum erro correspondente é emitido.

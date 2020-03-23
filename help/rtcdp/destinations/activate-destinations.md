@@ -38,7 +38,7 @@ Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinati
 Siga as etapas abaixo para editar os fluxos de ativação existentes no CDP em tempo real:
 
 1. Selecione **Destinos** na barra de navegação esquerda, clique na guia **Procurar** e clique no nome de destino.
-2. Selecione **[!UICONTROL Editar ativação]** no painel direito para alterar quais segmentos enviar para o destino.
+2. Selecione **[!UICONTROL Edit activation]** no painel direito para alterar quais segmentos enviar para o destino.
 
 ## Verificar se a ativação do segmento foi bem-sucedida {#verify-activation}
 
@@ -66,6 +66,6 @@ Verifique o destino de anúncio respectivo para o qual você está ativando seus
 Para desativar um fluxo de ativação existente, siga as etapas abaixo:
 
 1. Selecione **Destinos** na barra de navegação esquerda, clique na guia **Procurar** e clique no nome de destino.
-2. Clique no controle **[!UICONTROL Ativado]** no painel direito para alterar o estado do fluxo de ativação.
+2. Clique no **[!UICONTROL Enabled]** controle no painel direito para alterar o estado do fluxo de ativação.
 3. Na janela **Atualizar estado** do fluxo de dados, selecione **Confirmar** para desativar o fluxo de ativação.
 

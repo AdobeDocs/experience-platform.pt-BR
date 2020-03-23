@@ -19,11 +19,11 @@ Para enviar dados de segmento para a Salesforce Marketing Cloud, primeiro é nec
 
 ## Destino do Connect {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione Salesforce Marketing Cloud e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Connections > Destinations]**, selecione Salesforce Marketing Cloud e, em seguida, selecione **[!UICONTROL Connect destination]**.
 
    ![Conectar-se ao Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. No assistente de destino do Connect, selecione o tipo **[!UICONTROL de]** conexão para seu local de armazenamento. Para a Salesforce Marketing Cloud, você pode selecionar entre **SFTP com senha** e **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
+1. No assistente de destino do Connect, selecione o local **[!UICONTROL Connection type]** de armazenamento. Para a Salesforce Marketing Cloud, você pode selecionar entre **SFTP com senha** e **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect]**.
 
    ![Configurar o assistente do Salesforce](/help/rtcdp/destinations/assets/salesforce-step1.png)
 

@@ -19,11 +19,11 @@ Para enviar dados de segmento ao Oracle Responsys, primeiro você deve [conectar
 
 ## Destino do Connect {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione Oracle Responsys e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Connections > Destinations]**, selecione Oracle Responsys e, em seguida, selecione **[!UICONTROL Connect destination]**.
 
    ![Conectar-se ao Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. No assistente de destino do Connect, selecione o tipo **[!UICONTROL de]** conexão para seu local de armazenamento. Para o Oracle Responsys, você pode selecionar entre **SFTP com Senha** e **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
+1. No assistente de destino do Connect, selecione o local **[!UICONTROL Connection type]** de armazenamento. Para o Oracle Responsys, você pode selecionar entre **SFTP com Senha** e **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect]**.
 
    ![Configurar assistente de respostas](/help/rtcdp/destinations/assets/responsys-wizard.png)
 

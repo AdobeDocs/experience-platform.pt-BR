@@ -21,11 +21,11 @@ No fluxo de destino de conexão, descrito na seção abaixo, conecte-se ao Amazo
 
 ## Etapa 1 - Conectar ao destino {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Connections > Destinations]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione **[!UICONTROL Connect destination]**.
 
    ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. No assistente do Connect, selecione o tipo **[!UICONTROL de]** conexão para seu local de armazenamento. Você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
+2. No assistente do Connect, selecione o local de armazenamento **[!UICONTROL Connection type]** para o qual você deseja acessar. Você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect]**.
 
 Para conexões **** S3, você deve fornecer a ID da chave de acesso e a chave de acesso secreta.
 

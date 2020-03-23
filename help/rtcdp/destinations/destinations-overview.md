@@ -15,11 +15,11 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## Destinos e fontes
 
-Uma das principais funcionalidades da CDP em tempo real é assimilar seus dados primários e ativá-los de acordo com suas necessidades comerciais. Use **[!UICONTROL Fontes]** para assimilar dados em CDP e **[!UICONTROL Destinos]** em tempo real para exportar dados de CDP em tempo real.
+Uma das principais funcionalidades da CDP em tempo real é assimilar seus dados primários e ativá-los de acordo com suas necessidades comerciais. Use **[!UICONTROL Sources]** para assimilar dados em CDP em tempo real e **[!UICONTROL Destinations]** para exportar dados de CDP em tempo real.
 
 ## Etapas de destinos
 
-* Use **[!UICONTROL Destinos]** para [ativar](/help/rtcdp/destinations/activate-destinations.md) e enviar perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
+* Use **[!UICONTROL Destinations]** para [ativar](/help/rtcdp/destinations/activate-destinations.md) e enviar perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Escolha em um catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) autoatendimento de todos os destinos disponíveis no CDP em tempo real.
 * Agende exportações de dados para seus destinos preferenciais em horários regulares.
 
@@ -53,6 +53,6 @@ Os destinos no catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) 
 
 ## Controles de destinos e acesso
 
-A funcionalidade **[!UICONTROL Destinos]** na CDP em tempo real funciona com permissões de controle de acesso à plataforma Adobe Experience. Dependendo do nível de permissão do usuário, você pode exibir, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte Controle de [acesso na Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) e role até a parte inferior da página.
+A **[!UICONTROL Destinations]** funcionalidade em CDP em tempo real funciona com permissões de controle de acesso da plataforma Adobe Experience. Dependendo do nível de permissão do usuário, você pode exibir, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte Controle de [acesso na Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) e role até a parte inferior da página.
 
 Para obter mais informações sobre controles de acesso, consulte o guia [do usuário de controle de](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)acesso.

@@ -154,7 +154,7 @@ Por exemplo, para assimilar os dados do CRM da Luma, filtre o catálogo por *CRM
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Por exemplo, selecione **[!UICONTROL Contatos]**. Uma visualização dos dados dos contatos é carregada automaticamente para que você possa garantir que tudo tenha a aparência esperada.
+   Por exemplo, selecione **[!UICONTROL Contacts]**. Uma visualização dos dados dos contatos é carregada automaticamente para que você possa garantir que tudo tenha a aparência esperada.
 
    A plataforma Adobe Experience retira muito do trabalho manual desse processo mapeando automaticamente os campos padrão para o esquema de perfil do Modelo de Dados de Experiência (XDM).
 
@@ -231,7 +231,7 @@ Como Sarah adicionou um aparente item de presente no carrinho e o abandonou, Lum
 
 Quando você adiciona o segmento &quot;Presente Doando Abandonadores de Carrinho&quot;, você pode ver aproximadamente quantas pessoas fazem parte desse segmento. É possível realizar ações e disponibilizá-las para personalização em todos os canais.
 
-Clique em **[!UICONTROL Enviar para destinos]**.
+Clique em **[!UICONTROL Send to destinations]**.
 
 No Adobe Real-time CDP, o Luma pode agir perfeitamente em seus segmentos de público-alvo para personalização.\
 Aqui vemos todos os destinos disponíveis para Luma enviar este destino, tanto para soluções da Adobe quanto para outras soluções:
@@ -255,7 +255,7 @@ Você também pode programar o segmento para iniciar ou terminar em um horário 
 >[!NOTE]
 >Como opção, se você clicar no campo de data, ele automaticamente será programado por 90 dias.
 
-Clique em **[!UICONTROL Salvar]** para ir para a próxima página.
+Clique **[!UICONTROL Save]** para ir para a próxima página.
 
 Quando um cliente neste público faz uma compra, sua associação a esse público-alvo é suprimida em tempo real. Eles não se qualificam mais porque seu status mudou.
 

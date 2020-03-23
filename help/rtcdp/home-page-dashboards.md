@@ -40,13 +40,13 @@ Métricas adicionais — por exemplo, para perfis e segmentos — estão dispon�
 
 ### Conjuntos de dados
 
-O contador **[!UICONTROL de conjuntos]** de dados mostra o número de conjuntos de dados no sistema e a quantidade de dados na Plataforma. Este contador é atualizado quando um conjunto de dados é criado.
+O **[!UICONTROL Datasets]** contador mostra o número de conjuntos de dados no sistema e a quantidade de dados na Plataforma. Este contador é atualizado quando um conjunto de dados é criado.
 
 Para obter mais informações sobre conjuntos de dados, consulte [Ingressar dados na Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Perfis
 
-A contagem de **[!UICONTROL Perfis]** mostra o número total de pessoas com perfis no Perfil do cliente em tempo real. Não inclui fragmentos de perfil. Este é o seu público-alvo totalmente endereçável.
+A **[!UICONTROL Profiles]** contagem mostra o número total de pessoas com perfis no Perfil do cliente em tempo real. Não inclui fragmentos de perfil. Este é o seu público-alvo totalmente endereçável.
 
 Essa contagem usa a política [de](profile/merge-policies.md) mesclagem padrão definida na configuração da política de mesclagem no Perfil Unificado.
 
@@ -56,13 +56,13 @@ Para obter mais informações sobre perfis, consulte [Uma visão unificada do cl
 
 ### Segmentos
 
-**[!UICONTROL Segmentos]** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados.
+**[!UICONTROL Segments]** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados.
 
 Para obter mais informações sobre segmentos, consulte Visão geral [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)segmentação.
 
 ### Destinos
 
-**[!UICONTROL Destinos]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando novos destinos são criados.
+**[!UICONTROL Destinations]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando novos destinos são criados.
 
 Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/destinations-overview.md)Destinos.
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Conjuntos de dados recentes
 
-O cartão de conjuntos de dados **** recentes mostra os cinco conjuntos de dados mais recentes criados na organização. Essa lista é atualizada quando um novo conjunto de dados é criado.
+O **[!UICONTROL Recent datasets]** cartão mostra os cinco conjuntos de dados mais recentes criados na organização. Essa lista é atualizada quando um novo conjunto de dados é criado.
 
-Clique em um conjunto de dados para exibir os detalhes desse item ou **[!UICONTROL Visualize todos]** para ver a lista de conjuntos de dados. Daí, você pode clicar em uma fonte específica para obter detalhes.
+Clique em um conjunto de dados para exibir os detalhes desse item ou **[!UICONTROL View all]** para ver a lista de conjuntos de dados. Daí, você pode clicar em uma fonte específica para obter detalhes.
 
 Para obter mais informações sobre conjuntos de dados, consulte [Ingressar dados na Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Fontes recentes
 
-O cartão de métricas de fontes **** recentes mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova fonte é criada.
+O cartão de **[!UICONTROL Recent sources]** métricas mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova fonte é criada.
 
-Clique em uma fonte para exibir os detalhes desse item ou **[!UICONTROL Visualize tudo]** para ver a lista de fontes. Daí, você pode clicar em uma fonte específica para obter detalhes.
+Clique em uma fonte para exibir os detalhes desse item ou **[!UICONTROL View all]** para ver a lista de fontes. Daí, você pode clicar em uma fonte específica para obter detalhes.
 
 Para obter mais informações sobre fontes, consulte Visão geral [das](sources/sources-overview.md)fontes.
 
 ### Segmentos recentes
 
-O cartão de métricas de segmentos **** recentes mostra os cinco segmentos mais recentes criados na organização. Essa lista é atualizada quando um novo segmento é criado.
+O cartão de **[!UICONTROL Recent segments]** métricas mostra os cinco segmentos mais recentes criados na organização. Essa lista é atualizada quando um novo segmento é criado.
 
-Clique em um segmento para exibir os detalhes desse item ou **[!UICONTROL Visualize todos]** para ver informações sobre mais segmentos.
+Clique em um segmento para exibir os detalhes desse item ou **[!UICONTROL View all]** para ver informações sobre mais segmentos.
 
 Para obter mais informações sobre segmentos, consulte Visão geral [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)segmentação.
 
 ### Destinos recentes
 
-O cartão de métricas de destinos **** recentes mostra os cinco destinos mais recentes criados na organização. Essa lista é atualizada quando um novo destino é criado.
+O cartão de **[!UICONTROL Recent destinations]** métricas mostra os cinco destinos mais recentes criados na organização. Essa lista é atualizada quando um novo destino é criado.
 
-Clique em um destino para exibir os detalhes desse item ou **[!UICONTROL Visualize todos]** para ver informações sobre mais destinos.
+Clique em um destino para exibir os detalhes desse item ou **[!UICONTROL View all]** para ver informações sobre mais destinos.
 
 Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/destinations-overview.md)Destinos.

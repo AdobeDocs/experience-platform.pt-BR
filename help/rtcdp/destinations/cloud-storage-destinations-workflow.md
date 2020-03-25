@@ -4,7 +4,7 @@ seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
+source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
 
 ---
 

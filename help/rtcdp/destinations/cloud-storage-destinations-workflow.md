@@ -4,7 +4,7 @@ seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Para destinos do Amazon S3, insira o **[!UICONTROL Bucket name]** e o **[!UICONT
 
    ![Conectar-se ao destino do armazenamento da nuvem do Amazon S3 - etapa de autenticação](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>Para destinos SFTP, insira a variável **[!UICONTROL Folder path]**
+   Para destinos SFTP, insira o local em **[!UICONTROL Folder path]** que os arquivos serão entregues.
 
    ![Conectar-se ao destino do armazenamento na nuvem SFTP - etapa de autenticação](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 

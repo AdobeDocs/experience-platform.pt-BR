@@ -4,7 +4,7 @@ seo-title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real da Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real da Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -13,16 +13,16 @@ source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ![Banner de visão geral de destinos](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Os destinos** são integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados da Plataforma de dados do cliente em tempo real. Você pode usar **Destinos** para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+**Os destinos** são integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados da Plataforma de dados do cliente em tempo real. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 
 ## Destinos e fontes
 
-Uma das principais funcionalidades da CDP em tempo real é assimilar seus dados primários e ativá-los de acordo com suas necessidades comerciais. Use **[!UICONTROL Sources]** para assimilar dados em CDP em tempo real e **[!UICONTROL Destinations]** para exportar dados de CDP em tempo real.
+Uma das principais funcionalidades da CDP em tempo real é assimilar seus dados primários e ativá-los de acordo com suas necessidades comerciais. Use fontes para assimilar dados em CDP em tempo real e destinos para exportar dados de CDP em tempo real.
 
 ## Etapas de destinos
 
-* Use **[!UICONTROL Destinations]** para [ativar](/help/rtcdp/destinations/activate-destinations.md) e enviar perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Escolha em um catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) autoatendimento de todos os destinos disponíveis no CDP em tempo real.
+* Use **[!UICONTROL Destinations]** para [ativar](/help/rtcdp/destinations/activate-destinations.md) e enviar perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Agende exportações de dados para seus destinos preferenciais em horários regulares.
 
 ## Controles
@@ -55,6 +55,6 @@ Os destinos no catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) 
 
 ## Destinos e Controles de acesso
 
-A **[!UICONTROL Destinations]** funcionalidade em CDP em tempo real funciona com permissões de controle de acesso da plataforma Adobe Experience. Dependendo do nível de permissão do usuário, você pode visualização, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte [Controle de acesso na Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) e role até a parte inferior da página.
+A funcionalidade de destinos em CDP em tempo real funciona com permissões de controle de acesso da plataforma Adobe Experience. Dependendo do nível de permissão do usuário, você pode visualização, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte [Controle de acesso na Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) e role até a parte inferior da página.
 
 Para obter mais informações sobre controles de acesso, consulte o guia [do usuário do](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)Controle de acesso.

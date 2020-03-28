@@ -4,7 +4,7 @@ seo-title: Destino de anúncios do Google
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem propaganda por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 seo-description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem propaganda por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -20,12 +20,12 @@ O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de pub
 Observe os seguintes detalhes que são específicos para os destinos do Google Ads:
 
 * Você pode enviar as seguintes [identidades](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) para os destinos do Google Ads: ID de cookie do **Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
-* Os públicos-alvo ativados são criados de forma programática na plataforma do Google.
-* A CDP em tempo real da Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público-alvo no Google para validar a integração e entender o tamanho da definição de metas do público-alvo.
+* audiências ativadas são criadas de forma programática na plataforma do Google.
+* A CDP em tempo real da Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
 
 >[!IMPORTANT]
 >
->Se você estiver procurando criar seu primeiro destino com o Google Ads e não tiver ativado a funcionalidade [de sincronização de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID no Serviço da Experience Cloud ID no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar sincronizações de ID. Se você tiver configurado anteriormente integrações do Google no Audience Manager, a ID será sincronizada se você configurou a transferência para o Adobe Real-time CDP.
+>Se você estiver procurando criar seu primeiro destino com o Google Ads e não tiver ativado a funcionalidade [de sincronização de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID no Serviço da Experience Cloud ID no passado (com o Audiência Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar sincronizações de ID. Se você tiver configurado anteriormente integrações do Google no Audiência Manager, a ID sincronizará a transferência para o Adobe Real-time CDP.
 
 ## Pré-requisitos
 
@@ -51,12 +51,12 @@ Antes de criar o destino do Google Ads na Adobe Real-time CDP, você deve entrar
 1. Em **[!UICONTROL Connections > Destinations]**, selecione Google Ads e selecione **[!UICONTROL Create destination]**.
    ![Destino do Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. No assistente Criar destino, preencha as Informações básicas para o destino.
+2. No fluxo de trabalho Criar destino, preencha o campo [!UICONTROL Basic Information] para o destino.
    ![Informações básicas sobre o Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **Nome**: Preencha o nome preferencial para este destino.
-* **Descrição**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **Tipo** de conta: AdWords é a única opção disponível.
-* **ID** da conta: Preencha a ID da sua conta com o Google Ads. Normalmente, o formato da ID é 123-456-7890.
+* **[!UICONTROL Name]**: Preencha o nome preferencial para este destino.
+* **[!UICONTROL Description]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
+* **[!UICONTROL Account Type]**: AdWords é a única opção disponível.
+* **[!UICONTROL Account ID]**: Preencha a ID da sua conta com o Google Ads. Normalmente, o formato da ID é 123-456-7890.
 
 ## Ativar segmentos para Google Ads
 

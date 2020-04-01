@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experimentos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -128,7 +128,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução r
 
 ## Recuperar uma lista de experiências
 
-Você pode recuperar uma lista de Experimentos pertencentes a uma determinada MLIntent, executando uma única solicitação GET e fornecendo uma ID de instância MLI válida como parâmetro de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](appendix.md#query)de ativos.
+Você pode recuperar uma lista de Experimentos pertencentes a uma determinada MLIntent, executando uma única solicitação GET e fornecendo uma ID de instância MLI válida como parâmetro de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 
 **Formato da API**
@@ -238,7 +238,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 
 ## Recuperar uma lista de execuções de Experimento
 
-Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um Experimento específico, executando uma única solicitação GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](appendix.md#query)de ativos.
+Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um Experimento específico, executando uma única solicitação GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 >[!NOTE] Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (&amp;).
 
@@ -253,7 +253,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parâmetro | Descrição |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Uma ID de Experimento válida. |
-| `{QUERY_PARAMETER}` | Um dos parâmetros [de query](appendix.md#query) disponíveis usados para filtrar os resultados. |
+| `{QUERY_PARAMETER}` | Um dos parâmetros [de query](./appendix.md#query) disponíveis usados para filtrar os resultados. |
 | `{VALUE}` | O valor do parâmetro de query anterior. |
 
 **Solicitação**

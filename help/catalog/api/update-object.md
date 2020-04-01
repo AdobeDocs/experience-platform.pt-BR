@@ -1,0 +1,111 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Atualizar um objeto
+topic: developer guide
+translation-type: tm+mt
+source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+
+---
+
+
+# Atualizar um objeto
+
+É possível atualizar parte de um objeto de Catálogo incluindo sua ID no caminho de uma solicitação PATCH. Este documento aborda os dois métodos para executar operações PATCH em objetos de Catálogo:
+
+* Uso de campos
+* Uso da notação de Patch JSON
+
+>[!NOTE] As operações PATCH em um objeto não podem modificar seus campos expansíveis, que representam objetos inter-relacionados.  As modificações a objetos interrelacionados devem ser feitas diretamente.
+
+## Atualizar usando campos
+
+A chamada de exemplo a seguir demonstra como atualizar um objeto usando campos e valores.
+
+**Formato da API**
+
+```http
+PATCH /{OBJECT_TYPE}/{OBJECT_ID}
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser atualizado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
+
+**Solicitação**
+
+A solicitação a seguir atualiza os campos `name` e `description` de um conjunto de dados para os valores fornecidos na carga. Campos de objeto que não devem ser atualizados podem ser excluídos da carga.
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+       "name":"Updated Dataset Name",
+       "description":"Updated description for Sample Dataset"
+      }'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder àquela enviada na solicitação PATCH. A execução de uma solicitação GET para este conjunto de dados agora mostra que somente os valores `name` e `description` foram atualizados enquanto todos os outros valores permanecem inalterados.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+## Atualizar usando notação de Patch JSON
+
+A chamada de exemplo a seguir demonstra como atualizar um objeto usando o Patch JSON, conforme descrito em [RFC-6902](https://tools.ietf.org/html/rfc6902).
+
+<!-- (Include once API fundamentals guide is published) 
+
+For more information on JSON Patch syntax, see the [API fundamentals guide](). 
+
+-->
+
+**Formato da API**
+
+```http
+PATCH /{OBJECT_TYPE}/{OBJECT_ID}
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser atualizado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
+
+**Solicitação**
+
+A solicitação a seguir atualiza os campos `name` e `description` de um conjunto de dados para os valores fornecidos em cada objeto de Patch JSON. Ao usar o Patch JSON, você também deve definir o cabeçalho Content-Type como `application/json-patch+json`.
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json-patch+json' \
+  -d '[
+        { "op": "add", "path": "/name", "value": "New Dataset Name" },
+        { "op": "add", "path": "/description", "value": "New description for dataset" }
+      ]'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do objeto atualizado. Essa ID deve corresponder àquela enviada na solicitação PATCH. A execução de uma solicitação GET para esse objeto agora mostra que somente os valores `name` e `description` foram atualizados enquanto todos os outros valores permanecem inalterados.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```

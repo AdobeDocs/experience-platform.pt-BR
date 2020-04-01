@@ -5,7 +5,7 @@ description: Este tutorial fornece instruções sobre como usar a API do cliente
 seo-description: Este tutorial fornece instruções sobre como usar a API do cliente (alfa)
 index: false
 translation-type: tm+mt
-source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
+source-git-commit: e0d11adb7f0ece9344efb118b4199ecb1fc37bb3
 
 ---
 
@@ -26,7 +26,7 @@ Este tutorial aborda as etapas para trabalhar com a API do cliente usando a inte
 
 Este guia exige uma compreensão de trabalho dos vários serviços da plataforma envolvidos no uso da API do cliente. Antes de iniciar este tutorial, reveja os seguintes documentos:
 
-* [Visão geral do perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
+* [Visão geral do Perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
 * [Visão geral do Serviço de segmentação](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)
 * [Guia do usuário do Construtor de segmentos](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)
 
@@ -36,7 +36,7 @@ A plataforma Experience fornece a IA do cliente como um serviço simples de uso 
 
 ### Configurar sua instância
 
-Na interface do usuário da plataforma, clique em **Serviços** no painel de navegação esquerdo. O navegador **Serviços** é exibido e exibe todos os serviços disponíveis à sua disposição. No contêiner da API do cliente, clique em **Abrir**.
+Na interface do usuário da plataforma, clique em **Serviços** no painel de navegação esquerdo. O navegador **Serviços** é exibido e exibe todos os serviços disponíveis à sua disposição. No container para API do cliente, clique em **Abrir**.
 
 ![](./images/service.png)
 
@@ -48,13 +48,13 @@ O fluxo de trabalho de criação da instância é exibido, começando na etapa *
 
 Abaixo estão informações importantes sobre valores para os quais você deve fornecer à instância:
 
-* O nome da instância será usado em todos os locais onde a pontuação da AI do cliente for exibida. Assim, os nomes devem descrever o que as pontuações de previsão representam, por exemplo, &quot;Probabilidade de cancelar a assinatura de revistas&quot;.
+* O nome da instância será usado em todos os locais onde a pontuação da AI do cliente for exibida. Assim, os nomes devem descrever o que as pontuações de previsão representam, por exemplo, &quot;Probabilidade de cancelar a subscrição de revistas&quot;.
 
 * O tipo de propensão determina a intenção da pontuação e da polaridade da métrica. Você pode escolher **Churn** ou **Conversion**.
 
-* A fonte de dados se refere ao conjunto de dados de entrada que será usado para prever pontuações. Por padrão, a IA do cliente usa os dados do Evento de experiência do consumidor para calcular as pontuações de propensão. Ao selecionar um conjunto de dados no seletor suspenso, somente os que são compatíveis com a IA do cliente serão listados.
+* A fonte de dados se refere ao conjunto de dados de entrada que será usado para prever pontuações. Por padrão, a IA do cliente usa os dados do Evento da experiência do consumidor para calcular as pontuações de propensão. Ao selecionar um conjunto de dados no seletor suspenso, somente os que são compatíveis com a IA do cliente serão listados.
 
-* Por padrão, as pontuações de propensão são geradas para todos os perfis, a menos que uma população qualificada seja especificada. Você pode especificar uma população elegível definindo condições para incluir ou excluir perfis com base em eventos.
+* Por padrão, as pontuações de propensão são geradas para todos os perfis, a menos que uma população qualificada seja especificada. Você pode especificar uma população qualificada definindo condições para incluir ou excluir perfis com base em eventos.
 
 Forneça os valores necessários e clique em **Avançar**.
 
@@ -62,9 +62,9 @@ Forneça os valores necessários e clique em **Avançar**.
 
 ### Definir uma meta
 
-A etapa *Definir meta* é exibida e fornece um ambiente interativo para você definir visualmente uma meta. Uma meta é composta de um ou mais eventos, nos quais a ocorrência de cada evento se baseia na condição que ela contém. O objetivo de uma instância da API do cliente é determinar a probabilidade de atingir sua meta dentro de um determinado intervalo de tempo.
+A etapa *Definir meta* é exibida e fornece um ambiente interativo para que você defina visualmente uma meta. Uma meta é composta de um ou mais eventos, nos quais cada ocorrência de evento é baseada na condição que contém. O objetivo de uma instância da API do cliente é determinar a probabilidade de atingir sua meta dentro de um determinado intervalo de tempo.
 
-Clique em **Inserir nome** do campo e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor de destino para concluir o evento. Eventos adicionais podem ser configurados clicando em **Adicionar evento**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **Avançar**.
+Clique em **Inserir nome** do campo e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor do público alvo para concluir o evento. eventos adicionais podem ser configurados clicando em **Adicionar evento**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **Avançar**.
 
 ![](./images/goal.png)
 
@@ -76,9 +76,9 @@ Configure um agendamento de pontuação configurando a Frequência *de* Pontuaç
 
 ![](./images/schedule.png)
 
-Abaixo da configuração da programação, você pode definir exclusões de previsão para evitar que eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Este recurso pode ser usado para filtrar entradas de dados irrelevantes.
+Abaixo da configuração da programação, você pode definir exclusões de previsão para impedir que eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Este recurso pode ser usado para filtrar entradas de dados irrelevantes.
 
-Para excluir determinados eventos, clique em **Adicionar exclusão** e defina o evento da mesma forma que a meta é definida. Para remover uma exclusão, clique nas elipses (**...**) na parte superior direita do contêiner de eventos e clique em **Remover contêiner**.
+Para excluir determinados eventos, clique em **Adicionar exclusão** e defina o evento da mesma forma que a meta é definida. Para remover uma exclusão, clique nas elipses (**...**) na parte superior direita do container do evento e clique em **Remover Container**.
 
 ![](./images/exclusion.png)
 
@@ -88,19 +88,19 @@ Exclua eventos conforme necessário e clique em **Concluir** para criar a instâ
 
 Se a instância for criada com êxito, uma execução de previsão será acionada imediatamente e as subsequentes serão executadas de acordo com sua programação definida.
 
->   **Observação:** Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
+>[!NOTE] Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
 
-Ao seguir esta seção, você configurou uma instância do AI do cliente e uma execução de previsão foi executada. Após a conclusão com êxito da execução, insights pontuados irão automaticamente hidratar Perfis com pontuações previstas. Aguarde 24 horas antes de continuar com a próxima seção deste tutorial.
+Ao seguir esta seção, você configurou uma instância do AI do cliente e uma execução de previsão foi executada. Quando a execução for concluída com êxito, insights pontuados automaticamente hidratarão Perfis com pontuações previstas. Aguarde 24 horas antes de continuar com a próxima seção deste tutorial.
 
 ## Criar segmentos de clientes com pontuações previstas
 
-Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Perfis enriquecidos com pontuações de AI do cliente permitem a criação de segmentos de clientes que são baseados em pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)segmentos.
+Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. O enriquecimento de Perfis com pontuações de AI do cliente permite a criação de segmentos de clientes com base em pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)segmentos.
 
 Na interface do usuário da plataforma, clique em **Segmentos** no painel de navegação esquerdo e clique em **Criar segmento**.
 
 ![](./images/segments.png)
 
-O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta chamada Perfil **individual** XDM e clique na pasta com o namespace de sua organização. A pasta chamada AI **do** cliente contém os resultados de execuções de previsão e são nomeados após a instância à qual as pontuações pertencem. Clique e acesse os resultados da instância desejada.
+O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta chamada Perfil **individual** XDM e clique na pasta com a namespace de sua organização. A pasta chamada AI **do** cliente contém os resultados de execuções de previsão e são nomeados após a instância à qual as pontuações pertencem. Clique e acesse os resultados da instância desejada.
 
 ![](./images/results.png)
 
@@ -112,4 +112,4 @@ Na coluna de propriedades *do* segmento à direita, selecione uma política *de*
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você configurou com êxito uma instância da AI do cliente, gerou pontuações de propensão e criou um segmento imposto pelas pontuações de propensão usando o Construtor de segmentos. Seu segmento de cliente agora pode ser usado por destinos ativados para direcionar seus públicos-alvo. Consulte a visão geral [de](../destinations/destinations-overview.md) Destinos para obter mais informações.
+Ao seguir este tutorial, você configurou com êxito uma instância da AI do cliente, gerou pontuações de propensão e criou um segmento imposto pelas pontuações de propensão usando o Construtor de segmentos. Seu segmento de cliente agora pode ser usado por destinos ativados para público alvo de suas audiências. Consulte a visão geral [de](../destinations/destinations-overview.md) Destinos para obter mais informações.

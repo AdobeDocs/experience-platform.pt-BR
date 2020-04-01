@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 76032cca825eb75f7a8056cbbbc230343bed27a0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -52,7 +52,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 Esse fluxo de trabalho começa acessando um segmento de audiência conhecido. Os segmentos que estão habilitados para uso no Perfil de cliente em tempo real contêm uma ID de política de mesclagem na definição do segmento. Esta política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que por sua vez contêm quaisquer rótulos de uso de dados aplicáveis.
 
-Usando a API [Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real, você pode pesquisar uma definição de segmento por sua ID para encontrar sua política de mesclagem associada.
+Usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, você pode pesquisar uma definição de segmento por sua ID para encontrar sua política de mesclagem associada.
 
 **Formato da API**
 

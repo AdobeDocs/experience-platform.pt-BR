@@ -475,7 +475,7 @@ Depois de pressionar **Ok** , você poderá navegar até a nova fórmula na [Ado
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
-Quando o processo estiver concluído, a receita ficará parecida com esta:
+Quando o processo estiver concluído, a receita ficará parecida com isso:
 
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 

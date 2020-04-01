@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Perguntas frequentes e Guia de solução de problemas do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 260eddee41d337f25b90ab365a76ab2ffd3dedef
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -247,3 +247,4 @@ A seguir está uma lista de guias de solução de problemas e documentação de 
 | Serviço de Query | [API de serviço de Query](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Guia de solução de problemas do Serviço de Query](../query-service/troubleshooting-guide.md) |
 | Perfil do cliente em tempo real | [API de Perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
 | Sandboxes | [API do Sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guia de solução de problemas de caixas de proteção](../sandboxes/troubleshooting-guide.md) |
+| Segmentação | [API de segmentação](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |

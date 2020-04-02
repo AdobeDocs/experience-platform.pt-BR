@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: O Adobe Campaign é um conjunto de soluções que o ajudam a personalizar e fornecer campanhas em todos os canais online e offline.
 seo-description: O Adobe Campaign é um conjunto de soluções que o ajudam a personalizar e fornecer campanhas em todos os canais online e offline.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -45,7 +45,7 @@ Para **[!UICONTROL SFTP with SSH Key]** conexões, você deve fornecer Domínio,
 
 ## Atributos de destino {#destination-attributes}
 
-Ao [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) no destino do Adobe Campaign, recomendamos que você selecione um identificador exclusivo no schema [da](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)união. Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecionar quais campos de schema usar como atributos de destino em seus arquivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados em Destinos de marketing de email.
+Ao [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) no destino do Adobe Campaign, recomendamos que você selecione um identificador exclusivo no schema [da](../../profile/home.md#profile-fragments-and-union-schemas)união. Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecionar quais campos de schema usar como atributos de destino em seus arquivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados em Destinos de marketing de email.
 
 
 ## Configurar importação de dados para o Adobe Campaign {#import-data-into-campaign}

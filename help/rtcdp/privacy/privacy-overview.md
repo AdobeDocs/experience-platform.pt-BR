@@ -1,10 +1,10 @@
 ---
-title: Privacidade no perfil de dados do cliente em tempo real
-seo-title: Privacidade no perfil de dados do cliente em tempo real
+title: Privacidade no Perfil de dados do cliente em tempo real
+seo-title: Privacidade no Perfil de dados do cliente em tempo real
 description: O Perfil de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
 seo-description: O Perfil de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
 translation-type: tm+mt
-source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,12 +17,12 @@ A maioria dos recursos de CDP em tempo real é capacitada pela Adobe Experience 
 
 ## Privacy Service
 
-O Adobe Experience Platform Privacy Service permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade, como o Regulamento Geral de Proteção de Dados (RGPD) e o Ato de Privacidade do Consumidor da Califórnia (CCPA). Como a CDP em tempo real utiliza os recursos da plataforma de experiência para coleta e armazenamento de dados, as solicitações de acesso e exclusão para RGPD e CCPA devem ser gerenciadas dentro da plataforma. Consulte o documento de visão geral [](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) do Privacy Service para obter uma introdução mais detalhada do serviço.
+O Adobe Experience Platform Privacy Service permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade, como o Regulamento Geral de Proteção de Dados (RGPD) e o Ato de Privacidade do Consumidor da Califórnia (CCPA). Como a CDP em tempo real utiliza os recursos da plataforma de experiência para coleta e armazenamento de dados, as solicitações de acesso e exclusão para RGPD e CCPA devem ser gerenciadas dentro da plataforma. Consulte o documento de visão geral [](../../privacy-service/home.md) do Privacy Service para obter uma introdução mais detalhada do serviço.
 
 Existem dois métodos para enviar solicitações individuais de RGPD e CCPA para acesso e exclusão de dados do cliente:
 
-* Use a interface do usuário [](https://gdprui.cloud.adobe.io/) do Privacy Service para criar e monitorar o acesso e a exclusão de solicitações em um espaço de trabalho visual. Consulte o tutorial [](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) da interface do usuário do Privacy Service para obter instruções passo a passo.
-* Use a API [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) do Privacy Service para gerenciar o acesso e a exclusão de solicitações com chamadas RESTful da API. Consulte o tutorial [da API do](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md) Privacy Service para obter instruções passo a passo.
+* Use a interface do usuário [](https://gdprui.cloud.adobe.io/) do Privacy Service para criar e monitorar o acesso e a exclusão de solicitações em um espaço de trabalho visual. Consulte o tutorial [](../../privacy-service/ui/overview.md) da interface do usuário do Privacy Service para obter instruções passo a passo.
+* Use a API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) do Privacy Service para gerenciar o acesso e a exclusão de solicitações com chamadas RESTful da API. Consulte o tutorial [da API do](../../privacy-service/api/getting-started.md) Privacy Service para obter instruções passo a passo.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
@@ -35,4 +35,4 @@ Real-time CDP provides two types of consumer opt-out capabilities:
 
 ## Próximas etapas
 
-Este documento apresentou uma breve introdução aos recursos de privacidade da CDP em tempo real. Para obter informações mais detalhadas sobre as práticas recomendadas e as etapas para enviar solicitações de acesso/exclusão, consulte a documentação [do](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html)Privacy Service.
+Este documento apresentou uma breve introdução aos recursos de privacidade da CDP em tempo real. Para obter informações mais detalhadas sobre as práticas recomendadas e as etapas para enviar solicitações de acesso/exclusão, consulte a documentação [do](../../privacy-service/home.md)Privacy Service.

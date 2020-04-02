@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da Análise do espaço de trabalho da Data Science
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -209,9 +209,9 @@ Com o casamento entre a experiência em marca e o aprendizado de máquina da Ado
 
 Para obter informações adicionais, como um fluxo de trabalho diário completo, comece lendo a documentação de navegação da [Data Science Workspace](./walkthrough.md) .
 
-## Recursos adicionais
+## Recursos adicionais 
 
 O vídeo a seguir foi criado para oferecer suporte à sua compreensão da Data Science Workspace.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 

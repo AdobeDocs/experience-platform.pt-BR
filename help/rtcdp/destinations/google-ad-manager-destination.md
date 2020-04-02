@@ -4,7 +4,7 @@ seo-title: Destino do Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 seo-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou 
 
 Observe os seguintes detalhes específicos para os destinos do Google Ad Manager:
 
-* Você pode enviar as seguintes [identidades](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) para os destinos do Google Ad Manager: ID de cookie do **Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
+* Você pode enviar as seguintes [identidades](../../identity-service/namespaces.md) para os destinos do Google Ad Manager: ID de cookie do **Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
 * audiências ativadas são criadas de forma programática na plataforma do Google.
 * A CDP em tempo real da Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
 
@@ -55,7 +55,7 @@ Antes de criar o destino do Google Ad Manager na Adobe Real-time CDP, você deve
 * **[!UICONTROL Account Type]**: Selecione uma opção, dependendo da sua conta no Google:
    * Usar `DFP by Google` para DoubleClick for Publishers
    * Usar `AdX buyer` para Google AdX
-* **[!UICONTROL Account ID]**: Preencha a ID da sua conta com o Google. Essa pode ser a sua ID de rede ou a ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
+* **[!UICONTROL Account ID]**: Preencha a ID da sua conta com o Google. Essa pode ser sua ID de rede ou sua ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
 
 >[!NOTE]
 >

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -174,6 +174,14 @@ A ativação das definições de segmento para transmissão pode ser feita usand
 
 Uma vez que a segmentação de fluxo esteja ativada, uma linha de base deve ser estabelecida (essa é a execução inicial após a qual o segmento sempre estará atualizado). O sistema lida com a definição de linha de base automaticamente, no entanto, isso só é possível se a segmentação programada tiver sido ativada. Para obter detalhes sobre como ativar a segmentação programada, consulte [a seção anterior neste guia](#enable-scheduled-segmentation)do usuário.
 
+## Violações da política DULE
+
+>[!NOTE] As violações da política DULE só se aplicam se você estiver criando um segmento que foi atribuído a um destino.
+
+Quando terminar de criar seu segmento, ele será analisado pelo Data Governance para garantir que não haja violações de política no segmento. Para obter detalhes sobre DULE e violações de política, consulte a visão geral [do rótulo de uso de](../../data-governance/labels/overview.md)dados.
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
+
 ## Próximas etapas
 
 O Construtor de segmentos fornece um fluxo de trabalho avançado que permite isolar audiências comercializáveis dos dados do Perfil do cliente em tempo real. Depois de ler este guia, você pode:
@@ -182,6 +190,6 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Use a tela e os container do construtor de regras para controlar a ordem na qual as regras de segmento são executadas.
 - Estimativas de Visualização de sua audiência potencial, permitindo que você ajuste suas definições de segmento conforme necessário.
 - Ative todas as definições de segmento para segmentação programada.
-- Ative definições de segmento especificadas para a segmentação de streaming.
+- Habilitar definições de segmento especificadas para a segmentação de streaming.
 
 Para obter instruções passo a passo sobre como trabalhar com o Serviço de segmentação usando a API Perfil do cliente em tempo real, consulte o tutorial [Criação de segmentos de audiência usando APIs](../tutorials/create-a-segment.md) .

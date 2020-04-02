@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -36,7 +36,7 @@ Este tutorial percorrerá duas seções principais. Primeiro, você criará um m
 
 A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Para start, navegue até a plataforma [](https://platform.adobe.com) Adobe Experience e clique na guia Modelos **** ML à esquerda para acessar a área de trabalho da Data Science. Aqui, clique na sub-guia **Notebooks** e na tela do iniciador do Jupyterlab, crie um novo notebook selecionando o modelo do Construtor de receitas.
 
-O notebook Construtor de receita permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
+O notebook Construtor de receitas permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
 
 >[!NOTE] O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas Python.
 
@@ -491,10 +491,10 @@ Ao concluir este tutorial, você aprendeu a criar um modelo de aprendizado de m�
 
 Para continuar aprendendo como trabalhar com recursos na Data Science Workspace, visite a lista suspensa Fórmulas e modelos da Data Science Workspace.
 
-## Recursos adicionais
+## Recursos adicionais 
 
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão sobre a criação e implantação de modelos.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
 

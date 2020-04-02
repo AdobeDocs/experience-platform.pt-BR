@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Tutoriais de ingestão de dados
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: eef56cfc20eb8e4ac131bee20c5c3afbf82971d2
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
 
 # Ingressar dados na plataforma Experience
 
-A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A ingestão de dados da plataforma Adobe Experience representa os vários métodos pelos quais a plataforma ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso pelos serviços da plataforma downstream. A ingestão de dados inclui a ingestão em lote, a ingestão em streaming e a ingestão usando conectores de origem. Para saber mais, leia a visão geral [da Ingestão de](../ingestion/home.md) dados e a visão geral [das](../source-connectors/home.md)Fontes.
+A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A ingestão de dados da plataforma Adobe Experience representa os vários métodos pelos quais a plataforma ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso pelos serviços da plataforma downstream. A ingestão de dados inclui a ingestão em lote, a ingestão em streaming e a ingestão usando conectores de origem. Para saber mais, leia a visão geral [da Ingestão de](../ingestion/home.md) dados ou vá diretamente para a documentação [](../source-connectors/home.md)Fontes.
+
+## Criar um conector de origem na interface do usuário e na API
+
+Os conectores de origem permitem que você ingira dados de várias fontes, onde eles podem ser rotulados, estruturados e aprimorados usando os serviços da plataforma. Para começar a criar um conector usando a interface do usuário, visite a [criação de um conector de origem na visão geral](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)da interface do usuário. Para criar conectores de origem usando a API, visite a [criação de um conector de origem usando a visão geral](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)da API de Serviço de Fluxo.
 
 ## Dados do lote de assimilação
 
@@ -37,7 +41,5 @@ Com um conjunto de dados e conexões em vapor ativadas, é possível transmitir 
 
 Ao transmitir dados para a Adobe Experience Platform, fazer várias chamadas HTTP pode ser caro. Por exemplo, em vez de criar 200 solicitações HTTP com cargas de 1 KB, é muito mais eficiente criar 1 solicitação HTTP com 200 mensagens de 1 KB cada, com uma única carga de 200 KB. Quando usado corretamente, agrupar várias mensagens em uma única solicitação é uma excelente maneira de otimizar os dados que estão sendo enviados para a plataforma Experience. Para saber como enviar várias mensagens para a Experience Platform em uma única solicitação HTTP usando a assimilação de streaming, siga o tutorial [de](../ingestion/tutorials/streaming-multiple-messages.md)envio de várias mensagens.
 
-## Criar um conector de origem na interface do usuário e na API
 
-Os conectores de origem permitem que você ingira dados de várias fontes, onde eles podem ser rotulados, estruturados e aprimorados usando os serviços da plataforma. Para começar a criar um conector usando a interface do usuário, visite a [criação de um conector de origem na visão geral](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)da interface do usuário. Para criar conectores de origem usando a API, visite a [criação de um conector de origem usando a visão geral](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)da API de Serviço de Fluxo.
 

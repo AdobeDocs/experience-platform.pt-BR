@@ -15,7 +15,7 @@ A Adobe Experience Platform Data Science Workspace usa o aprendizado de máquina
 
 Os cientistas de dados de todos os níveis de habilidades encontrarão ferramentas sofisticadas e fáceis de usar que suportam o rápido desenvolvimento, treinamento e ajuste de fórmulas de aprendizado de máquina - todos os benefícios da tecnologia da IA, sem a complexidade.
 
-Com a Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviços inteligentes - capacitadas pelo aprendizado de máquina. Esses serviços funcionam com outros serviços da Adobe, incluindo o Público alvo da Adobe e a Adobe Analytics Cloud, para ajudá-lo a automatizar experiências digitais personalizadas e direcionadas em aplicativos para Web, desktop e dispositivos móveis.
+Com a Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviços inteligentes - capacitadas pelo aprendizado de máquina. Esses serviços funcionam com outros serviços da Adobe, incluindo o Público alvo da Adobe e a Adobe Analytics Cloud, para ajudar a automatizar experiências digitais personalizadas e direcionadas em aplicativos móveis, de desktop e da Web.
 
 Este guia fornece uma visão geral dos principais conceitos relacionados à Data Science Workspace.
 

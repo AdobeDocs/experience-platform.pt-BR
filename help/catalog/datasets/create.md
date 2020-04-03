@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conjunto de dados usando APIs
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ Com a ID do lote, você pode usar a API de acesso a dados para retornar e verifi
 
 Você também pode usar a API de acesso a dados para retornar o nome, o tamanho em bytes e um link para baixar o arquivo ou a pasta.
 
-As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encontradas no guia [do desenvolvedor de acesso a](../../data-access/api.md)dados.
+As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encontradas no guia [do desenvolvedor de acesso a](../../data-access/home.md)dados.
 
 ## Atualizar o schema de conjunto de dados
 

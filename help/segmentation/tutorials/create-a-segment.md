@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ A primeira etapa da segmentação é definir um segmento, representado em uma co
 
 Você pode criar uma nova definição de segmento, fazendo uma solicitação POST para o `/segment/definitions` terminal na API do Perfil do cliente em tempo real. O exemplo a seguir descreve como formatar uma solicitação de definição, incluindo quais informações são necessárias para que um segmento seja definido com sucesso.
 
-As definições de segmentos podem ser avaliadas de duas formas: segmentação em lote e segmentação em streaming. A segmentação em lote avalia os segmentos com base em uma programação predefinida ou quando a avaliação é acionada manualmente, enquanto a segmentação em streaming avalia os segmentos assim que os dados são ingeridos na Plataforma. Este tutorial usará a segmentação **em** lote. Para obter mais informações sobre a segmentação de streaming, leia a [visão geral da segmentação](../ui/streaming-segmentation.md)de streaming.
+As definições de segmentos podem ser avaliadas de duas formas: segmentação em lote e segmentação em streaming. A segmentação em lote avalia os segmentos com base em uma programação predefinida ou quando a avaliação é acionada manualmente, enquanto a segmentação em streaming avalia os segmentos assim que os dados são ingeridos na Plataforma. Este tutorial usará a segmentação **em** lote. Para obter mais informações sobre a segmentação de streaming, leia a [visão geral da segmentação](../api/streaming-segmentation.md)de streaming.
 
 **Formato da API**
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviço de segmentação da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -45,9 +45,9 @@ Para obter informações sobre como criar definições de segmentos usando a API
 
 >[!NOTE] A segmentação de fluxo contínuo é um recurso beta e estará disponível mediante solicitação.
 
-A segmentação de fluxo é um processo contínuo de seleção de dados que atualiza seus segmentos em resposta à atividade do usuário. Depois que um segmento é criado e salvo, a definição do segmento é aplicada em relação aos dados recebidos no Perfil do cliente em tempo real. Adições e remoções do segmento são processadas regularmente, garantindo que sua audiência do público alvo permaneça relevante.
+A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza seus segmentos em resposta à atividade do usuário. Depois que um segmento é criado e salvo, a definição do segmento é aplicada em relação aos dados recebidos no Perfil do cliente em tempo real. Adições e remoções do segmento são processadas regularmente, garantindo que sua audiência do público alvo permaneça relevante.
 
-Para saber mais sobre a segmentação de streaming, leia a documentação [de segmentação de](./ui/streaming-segmentation.md)streaming.
+Para saber mais sobre a segmentação de streaming, leia a documentação [de segmentação de](./api/streaming-segmentation.md)streaming.
 
 ### Segmentação em lote
 
@@ -204,8 +204,8 @@ Os dados de data permitem que você atribua contexto baseado em tempo às defini
 
 | Exemplo de campo | Declarações relevantes à data | Linha do tempo |
 | ------------- | ------------------------ | --------- |
-| people.firstPurchase | hoje, ontem, este mês, este ano | Relevante para o dia em que o segmento foi construído. |
-| people.lastPurchase | por último, durante, antes, depois, dentro | Relevante dentro de uma determinada semana/mês. |
+| person.firstPurchase | hoje, ontem, este mês, este ano | Relevante para o dia em que o segmento foi construído. |
+| person.lastPurchase | por último, durante, antes, depois, dentro | Relevante dentro de uma determinada semana/mês. |
 
 ### Eventos de experiência
 

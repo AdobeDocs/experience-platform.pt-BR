@@ -55,7 +55,7 @@ Ao reunir dados de várias fontes e combiná-los para ver uma visualização com
 
 ## Componentes em tempo real
 
-Esta seção apresenta os componentes que permitem ao Perfil de cliente em tempo real atualizar e monitorar dados de registro e de série de tempo em tempo real.
+Esta seção apresenta os componentes que permitem ao Perfil do cliente em tempo real atualizar e monitorar dados de registro e séries de tempo em tempo real.
 
 ### Segmentação de fluxo e ingestão
 

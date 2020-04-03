@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ Para baixar os dados completos do job como um arquivo CSV, clique em **Exportar 
 
 ## Criar uma nova solicitação de trabalho de privacidade
 
+>[!NOTE] Para criar uma solicitação de trabalho de privacidade, você deve fornecer informações de identidade para os clientes específicos cujos dados devem ser acessados ou excluídos. Leia o documento dos dados de [identidade para obter as solicitações](../identity-data.md) de privacidade antes de continuar com esta seção.
+
 A interface do usuário do Privacy Service fornece dois métodos para criar novas solicitações de trabalho:
 
-* Usar o Construtor de solicitações
-* Carregar um arquivo JSON
+* [Usar o Construtor de solicitações](#request-builder)
+* [Carregar um arquivo JSON](#json)
 
 As etapas para usar cada um desses métodos são fornecidas nas seções a seguir.
 
-### Usar o Construtor de solicitações
+### Usar o Construtor de solicitações {#request-builder}
 
-Usando o Construtor de solicitações, é possível criar manualmente uma nova solicitação de trabalho de privacidade na interface do usuário. O Construtor de solicitações é melhor usado para conjuntos mais simples e menores de solicitações, pois o Construtor de solicitações limita as solicitações a terem apenas o tipo de ID por usuário. Para solicitações mais complicadas, talvez seja melhor [carregar um arquivo](#upload-a-json-file) JSON.
+Usando o Construtor de solicitações, é possível criar manualmente uma nova solicitação de trabalho de privacidade na interface do usuário. O Construtor de solicitações é melhor usado para conjuntos mais simples e menores de solicitações, pois o Construtor de solicitações limita as solicitações a terem apenas o tipo de ID por usuário. Para solicitações mais complicadas, talvez seja melhor [carregar um arquivo](#json) JSON.
 
 Para start usando o Construtor de solicitações, clique em **Criar solicitação** abaixo do widget Relatório de status no lado direito da tela.
 
@@ -91,19 +93,31 @@ Para start usando o Construtor de solicitações, clique em **Criar solicitaçã
 
 A caixa de diálogo *Criar solicitação* é aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento atualmente selecionado.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selecione o Tipo **de** trabalho da solicitação (&quot;Excluir&quot; ou &quot;Acesso&quot;) e um ou mais **Produtos** disponíveis na lista. Em IDs **do** cliente, selecione um tipo de ID no menu suspenso (email, ECID ou AAID). Digite os valores da ID na caixa de texto à direita, pressionando **\&lt;enter>** para cada ID para adicioná-la à lista.
+Selecione o Tipo **de** trabalho da solicitação (&quot;Excluir&quot; ou &quot;Acesso&quot;) e um ou mais **Produtos** disponíveis na lista.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-As IDs incluídas nesta lista receberão uma cópia de todas as notificações por email do Privacy Service, que são enviadas quando um trabalho é concluído, concluído com erros ou expira. Quando terminar, clique em **Criar**.
+Em Tipo *de* Namespace, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas ao Privacy Service.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+Ao usar o tipo de namespace _padrão_ , selecione uma namespace no menu suspenso (email, ECID ou AAID) e digite os valores de ID na caixa de texto à direita, pressionando **\&lt;enter>** para cada ID para adicioná-la à lista.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+Ao usar o tipo de namespace _personalizado_ , você deve digitar manualmente na namespace antes de fornecer os valores de ID abaixo.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+Quando terminar, clique em **Criar**.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações de trabalho juntamente com seu status de processamento atual.
 
-### Carregar um arquivo JSON
+### Carregar um arquivo JSON {#json}
 
 Ao criar solicitações mais complicadas, como aquelas que usam vários tipos de ID para cada pessoa de dados sendo processada, você pode criar uma solicitação carregando um arquivo JSON.
 
@@ -113,12 +127,12 @@ Clique na seta ao lado de **Criar solicitação**, abaixo do widget Relatório d
 
 A caixa de diálogo *Carregar JSON* é exibida, fornecendo uma janela para que você arraste e solte seu arquivo JSON.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 Se você não tiver um arquivo JSON para carregar, clique em **Baixar Adobe-GDPR-Request.json** para baixar um modelo que você pode preencher de acordo com os valores coletados de suas pessoas de dados.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 Localize o arquivo JSON no computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo será exibido na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando-os e soltando-os na caixa de diálogo.

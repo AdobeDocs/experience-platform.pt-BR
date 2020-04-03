@@ -60,7 +60,7 @@ A guia **Atributos** permite navegar pelos atributos de Perfil pertencentes à c
 
 ### Eventos
 
-A guia **Eventos** permite que você crie uma audiência com base em eventos ou ações realizadas usando elementos de dados XDM ExperienceEvent. Você também pode encontrar Tipos de evento na guia **Eventos** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
+A guia **Eventos** permite criar uma audiência com base em eventos ou ações realizadas usando elementos de dados XDM ExperienceEvent. Você também pode encontrar Tipos de evento na guia **Eventos** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
 
 Além de poder procurar por elementos ExperienceEvent, você também pode procurar Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação que ExperienceEvents, sem exigir que você pesquise pela classe XDM ExperienceEvent procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;AddCart&quot; e &quot;RemoveCart&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmento.
 

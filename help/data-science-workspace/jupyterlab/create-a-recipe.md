@@ -36,7 +36,7 @@ Este tutorial percorrerá duas seções principais. Primeiro, você criará um m
 
 A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Para start, navegue até a plataforma [](https://platform.adobe.com) Adobe Experience e clique na guia Modelos **** ML à esquerda para acessar a área de trabalho da Data Science. Aqui, clique na sub-guia **Notebooks** e na tela do iniciador do Jupyterlab, crie um novo notebook selecionando o modelo do Construtor de receitas.
 
-O notebook Construtor de receitas permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
+O notebook Construtor de receita permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
 
 >[!NOTE] O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas Python.
 
@@ -475,7 +475,7 @@ Depois de pressionar **Ok** , você poderá navegar até a nova fórmula na [Ado
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
-Quando o processo estiver concluído, a receita ficará parecida com isso:
+Quando o processo estiver concluído, a receita ficará parecida com esta:
 
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 

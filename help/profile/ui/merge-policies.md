@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do usuário de políticas de mesclagem
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
 
 A plataforma Adobe Experience permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Plataforma usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada.
 
-Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário da plataforma Adobe Experience.
+Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário da Adobe Experience Platform.
 
 Se preferir trabalhar com políticas de mesclagem usando a API Perfil do cliente em tempo real, siga as instruções descritas no tutorial [da API de políticas de](../api/merge-policies.md)mesclagem.
 
@@ -86,6 +86,15 @@ Depois de fazer as alterações necessárias, clique em **Salvar** para retornar
 
 ![](../images/merge-policies/edited.png)
 
+## Violações da política de gestão de dados
+
+Ao criar ou atualizar uma política de mesclagem, é realizada uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte do Adobe Experience Platform Data Governance e são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados específicos da plataforma. Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tiver uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberá uma notificação &quot;Violação de política de controle de dados detectada&quot; ao tentar salvar sua política de mesclagem.
+
+Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite que você visualização os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia de linhagem ** Dados fornece o *Motivo da violação* e as ativações ** Afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
+
+Para saber mais sobre como o controle de dados é executado na Adobe Experience Platform, comece lendo a visão geral [do](../../data-governance/home.md)Data Governance.
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Próximas etapas
 

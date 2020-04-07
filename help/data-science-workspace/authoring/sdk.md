@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do desenvolvedor do SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 13b6c08b1038d48cdff7147dfcd7b65ea2f95599
+source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 ---
 
@@ -245,7 +245,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe Spark Data Saver:
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>Receber dados de saída como um DataFrame e armazená-los em um conjunto de dados da plataforma</p>
             </td>
             <td>

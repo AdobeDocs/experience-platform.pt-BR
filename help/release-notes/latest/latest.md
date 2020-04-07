@@ -1,91 +1,73 @@
 ---
 title: 'Notas de versão do Adobe Experience Platform '
-description: Notas de versão da plataforma Experience 11 de março de 2020
+description: Notas de versão da Experience Platform 8 de abril de 2020
 doc-type: release notes
-last-update: March 10, 2020
+last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
 
 ---
 
 
 # Notas de versão da Adobe Experience Platform
 
-## Data de lançamento: 11 de março de 2020
+## Data de lançamento: 8 de abril de 2020
 
 ## Governança de dados
 
-A plataforma Experience permite que as empresas reúnam dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e engajem os clientes. A plataforma de experiência inclui uma infraestrutura completa de controle de dados, incluindo a DULE (Data Usage Labeling and Implementation), para garantir o uso correto dos dados dentro da plataforma e quando compartilhados entre sistemas.
-
 O Adobe Experience Platform Data Governance é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental na plataforma da experiência em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
 
-### Novos recursos
+A introdução ao controle de dados exige uma compreensão completa dos regulamentos, obrigações contratuais e políticas corporativas aplicáveis aos dados do cliente. A partir daí, os dados podem ser classificados aplicando os rótulos de uso de dados apropriados, e seu uso pode ser controlado por meio da definição de políticas de uso de dados.
 
->[!NOTE]
->Alguns dos novos recursos a seguir estão atualmente em beta e não estão disponíveis para todos os usuários. Os recursos Beta estão sujeitos a alterações.
-
-| Recurso | Descrição |
-| ------- | ----------- |
-| Aplicação automatizada das políticas de uso de dados para a Plataforma de dados do cliente em tempo real | As políticas de uso de dados agora são aplicadas no fluxo de trabalho de ativação de dados para destinos. O controle de dados também é incorporado e aplicado ao fazer alterações que afetam ativações existentes (como alterações em rótulos de conjuntos de dados, políticas de mesclagem, definições de segmentos e outros). |
-| Linha de dados para aplicação | Quando uma política de uso de dados é violada no CDP em tempo real, a interface do usuário exibe uma notificação que contém informações de linhagem de dados para ajudar o usuário a entender por que as políticas foram violadas e o que podem fazer para resolver a violação. |
-
-
-### Problemas conhecidos
-
-* Nenhum
-
-Para obter mais informações sobre o Data Governance, consulte a visão geral [](../../data-governance/home.md)do Data Governance.
-
-## Ingestão de dados
-
-A plataforma Adobe Experience fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. A assimilação de dados da plataforma Adobe Experience oferece várias alternativas para a assimilação de dados, incluindo APIs em lote, APIs de fluxo, conectores nativos da Adobe, parceiros de integração de dados ou a interface do usuário da plataforma Adobe Experience.
+A estrutura DULE simplifica e simplifica o processo de categorização de dados e criação de políticas de uso de dados por meio da interface de usuário da plataforma Experience e da API do serviço de política DULE.
 
 ### Novos recursos
 
 | Recurso | Descrição |
-|------- | -----------|
-| Ingestão parcial em lote | A ingestão parcial em lote é a capacidade de assimilar dados que contenham erros, até um certo limite. Com esse recurso, os usuários podem assimilar com êxito todos os dados corretos na Adobe Experience Platform, enquanto todos os dados incorretos são armazenados em lote separadamente. Os detalhes são adicionados aos lotes com falha para explicar por que eles não passaram na validação. Para mais informações sobre a ingestão parcial do lote, consultar a documentação [relativa à ingestão](../../ingestion/batch-ingestion/partial.md)parcial do lote. |
+| -----------| ---------- |
+| Gerenciar políticas de uso de dados na interface do usuário | As políticas de uso de dados agora podem ser gerenciadas dentro da área de trabalho _Políticas_ na interface do usuário da plataforma de experiência. Consulte o guia [do usuário da](../../data-governance/policies/user-guide.md) política para obter mais informações. |
 
-### Problemas conhecidos
+**Problemas conhecidos**
 
-* Nenhum
+* Nenhum.
 
-Para saber mais sobre como ingerir dados na plataforma, visite a documentação [de ingestão de](../../ingestion/home.md)dados.
+Para obter mais informações, consulte a visão geral [do](../../data-governance/home.md)Data Governance.
 
+## Serviços inteligentes
 
-## Destinos
+Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o poder da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de especialização em ciência de dados. Além disso, os profissionais de marketing podem ativar previsões na Adobe Experience Cloud, na Adobe Experience Platform e em aplicativos de terceiros.
 
-Na Plataforma [de dados do cliente em tempo real da](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
-
-### Novos destinos
-
-Novos destinos estão disponíveis onde você pode ativar seus dados da plataforma Adobe Experience. Consulte abaixo para obter detalhes:
-
-| Destino | Descrição |
-|--- | ---|
-| Destinos de armazenamentos na nuvem | A Adobe Real-time CDP agora pode fornecer seus segmentos como arquivos de dados para os locais do armazenamento em nuvem Amazon S3 ou SFTP. Isso permite que você envie audiências e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
-| Destinos de publicidade | A placa de destino do Google agora é dividida em três placas de destino, para as três plataformas diferentes do Google atualmente suportadas pela CDP em tempo real da Adobe: Google Ads, Google Ad Manager, Google Display e Video 360. |
-
-Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/destinations-overview.md)
-
-## Serviço de identidade
-
-Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;.
-
-O Adobe Experience Platform Identity Service ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
-
-### Novos recursos
+**Principais recursos**
 
 | Recurso | Descrição |
-| ------- | ----------- |
-| Gráfico privado aprimorado | A funcionalidade Gráfico privado foi aprimorada para reduzir a latência de geração de gráficos de um processo em lote semanal para um gráfico atualizado diário, permitindo que os clientes do Serviço de identidade acessem gráficos de identidade e links mais atualizados. |
+|---|---|
+| AI do cliente | A IA do cliente fornece aos comerciantes o poder de gerar previsões de clientes a nível individual com explicações. Com a ajuda de fatores influentes, a IA do cliente pode informar o que um cliente deve fazer e por que. Além disso, os profissionais de marketing podem se beneficiar das previsões e insights de IA do cliente para personalizar as experiências do cliente, atendendo às ofertas e mensagens mais apropriadas. |
+| Atribuição AI | O AI de atribuição é um serviço de atribuição algorítmico e com vários canais que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com a Atribuição AI, os profissionais de marketing podem medir e otimizar o gasto de marketing e publicidade ao compreender o impacto de cada interação individual do cliente em cada fase das viagens do cliente. |
 
-### Problemas conhecidos
+**Problemas conhecidos**
+
+* Nenhum problema conhecido no momento.
+
+Para obter mais informações sobre os Serviços inteligentes e o que eles têm a oferta, consulte a visão geral [dos Serviços](../../intelligent-services/home.md)inteligentes.
+
+## Privacy Service
+
+As novas regulamentações legais e organizacionais estão dando aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação. O Adobe Experience Platform Privacy Service fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com o Privacy Service, você pode enviar solicitações para acessar e excluir dados pessoais ou privados de clientes dos aplicativos da Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| Suporte a PDPA | As solicitações de privacidade agora podem ser criadas e rastreadas sob o Personal Data Protection Act (PDPA) na Tailândia. Ao fazer solicitações de privacidade na API, a `regulation` matriz aceita o valor &quot;pdpa_tha&quot;. |
+| Tipos de Namespace na interface do usuário | Agora você pode especificar diferentes tipos de namespace no Construtor de solicitações na interface do usuário do Privacy Service. Consulte o guia [do](../../privacy-service/ui/user-guide.md) usuário para obter mais informações. |
+| Substituição de ponto final antigo | O ponto de extremidade da API antiga (`data/privacy/gdpr`) foi substituído. |
+
+Problemas conhecidos
 
 * Nenhum
 
-Para obter mais informações sobre o Serviço de identidade, consulte a visão geral [do Serviço de](../../identity-service/home.md)identidade.
+Para obter mais informações sobre o Privacy Service, leia a visão geral [](../../privacy-service/home.md)do Privacy Service para obter start.
 
 ## Fontes
 
@@ -97,15 +79,12 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Sinais preteridos para o conector do Adobe Audiência Manager | Os dados de nível de sinal do Gerenciador de Audiências não serão mais enviados. Observe que a associação de segmento para Características e segmentos ainda será incluída. Como resultado dessa alteração, os conjuntos de dados de entrada não serão mais gerados. |
-| Conjuntos de dados renomeados | Os conjuntos de dados gerados pelo conector do Gerenciador de Audiências terão nomes e descrições atualizados. |
-| Ative a alternância de Perfis no Gerenciador de Audiências | A alternância de Perfis pode ser ativada ou desativada para promover o conjunto de dados para o Perfil Cliente em tempo real. Alternar será ativado por padrão. |
-| Suporte de interface para sistemas de armazenamentos em nuvem | Novo conector de origem para o Armazenamento Gen2 do Azure Data Lake na interface do usuário. |
-| Suporte de interface para sistemas CRM | Novo conector de origem para HubSpot, Salesforce Service Cloud e ServiceNow na interface do usuário. |
-| Suporte de interface para sistemas de banco de dados | Novo conector de origem para AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server e MySQL na interface do usuário. |
+| Suporte a API e interface do usuário para bancos de dados | Novos conectores de origem para Apache Spark (em HDInsights), Azure Synapse Analytics, Azure Table Armazenamento, Hive (em HDInsights) e Phoenix. |
+| Suporte a API e interface para aplicativos baseados em pagamentos | Novos conectores de origem para o PayPal. |
+| Suporte a API e interface para aplicativos baseados em protocolos | Novos conectores de origem para OData genérico. |
 
 ### Problemas conhecidos
 
 * Nenhum
 
-Para saber mais sobre fontes, consulte a visão geral [das](../../source-connectors/home.md)fontes.
+Para obter mais informações sobre fontes, consulte a visão geral [das](../../source-connectors/home.md)fontes.

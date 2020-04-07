@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ Todos os recursos da plataforma Experience são isolados para caixas de proteç�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -253,7 +253,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos de uso de dados associad
 
 ## Filtrar campos de dados
 
-> [!NOTE] Esta etapa é opcional. Se você não quiser ajustar os dados incluídos em seu segmento com base em suas descobertas na etapa anterior da [pesquisa dos rótulos](#lookup-data-usage-labels-for-the-source-datasets)de uso de dados, vá para a etapa final de [avaliação dos dados para violações](#evaluate-data-for-policy-violations)de política.
+>[!NOTE] Esta etapa é opcional. Se você não quiser ajustar os dados incluídos em seu segmento com base em suas descobertas na etapa anterior da [pesquisa dos rótulos](#lookup-data-usage-labels-for-the-source-datasets)de uso de dados, vá para a etapa final de [avaliação dos dados para violações](#evaluate-data-for-policy-violations)de política.
 
 Se desejar ajustar os dados incluídos no segmento de audiência, você pode fazer isso usando um dos dois métodos a seguir:
 

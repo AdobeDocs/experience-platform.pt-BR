@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar uma política de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -122,7 +122,7 @@ Quando você encontrar a ação de marketing que deseja usar, registre o valor d
 
 ### Criar uma nova ação de marketing {#create-new}
 
-Você pode criar uma nova ação de marketing fazendo uma solicitação PUT ao `/marketingActions/custom/` endpoint e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
+Você pode criar uma nova ação de marketing fazendo uma solicitação PUT ao ponto de `/marketingActions/custom/` extremidade e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
 
 **Formato da API**
 
@@ -409,6 +409,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e os detalhes da polít
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma política DULE para uma ação de marketing. Agora você pode continuar com o tutorial sobre como [aplicar políticas](../enforcement/api-enforcement.md) DULE para saber como verificar violações de política e lidar com elas no aplicativo de experiência.
+Ao seguir este tutorial, você criou com êxito uma política de uso de dados para uma ação de marketing. Agora você pode continuar com o tutorial sobre como [impor políticas](../enforcement/api-enforcement.md) de uso de dados para saber como verificar violações de política e lidar com elas no aplicativo de experiência.
 
-Para obter mais informações sobre as diferentes operações disponíveis na API do Serviço de Política, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)Política. Para obter informações sobre como aplicar políticas DULE para dados de Perfil do cliente em tempo real, consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md)de audiência.
+Para obter mais informações sobre as diferentes operações disponíveis na API do Serviço de Política, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)Política. Para obter informações sobre como aplicar políticas para dados de Perfil do cliente em tempo real, consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md)de audiência.
+
+Para saber como gerenciar políticas de uso na interface do usuário da plataforma Experience, consulte o guia [do usuário da](user-guide.md)política.

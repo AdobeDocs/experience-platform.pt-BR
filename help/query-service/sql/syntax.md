@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sintaxe SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -317,7 +317,7 @@ where option can be one of:
 - `FORMAT`: Especifique o formato de saída, que pode ser TEXT, XML, JSON ou YAML. A saída não textual contém as mesmas informações que o formato de saída de texto, mas é mais fácil para os programas analisarem. Esse parâmetro assume como padrão `TEXT`.
 - `statement`: Qualquer `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS``CREATE MATERIALIZED VIEW AS` ou instrução, cujo plano de execução você deseja ver.
 
-> [!IMPORTANT] Lembre-se de que a instrução é executada quando a `ANALYZE` opção é usada. Embora `EXPLAIN` descarte qualquer saída que `SELECT` retorne, outros efeitos colaterais da declaração ocorrem como de costume.
+>[!IMPORTANT] Lembre-se de que a instrução é executada quando a `ANALYZE` opção é usada. Embora `EXPLAIN` descarte qualquer saída que `SELECT` retorne, outros efeitos colaterais da declaração ocorrem como de costume.
 
 #### Exemplo
 

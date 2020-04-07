@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Controle de dados da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -74,15 +74,11 @@ Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos
 
 Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados, como Informações pessoais identificáveis (PII), não podem ser exportados e um rótulo &quot;I&quot; (Dados de identidade) tiver sido aplicado ao conjunto de dados, você receberá uma resposta do Serviço de política informando que uma política de uso de dados foi violada.
 
-### Como criar e trabalhar com políticas de uso de dados
+Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API do serviço de política DULE ou a interface do usuário da plataforma Experience.
 
-Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API do serviço de política DULE.
+Para obter mais informações sobre como executar as operações principais fornecidas pela DULE Policy Service API, consulte o guia [do desenvolvedor do](api/getting-started.md)Policy Service. Para obter instruções passo a passo sobre como trabalhar com políticas DULE, consulte o tutorial sobre como [criar e avaliar políticas DULE usando a API](policies/create.md).
 
-Como um administrador de dados, você pode usar a API do Serviço de política para gerenciar e avaliar políticas relacionadas às ações de marketing que estão sendo realizadas em dados que contêm rótulos DULE. Usando a API, você pode criar e atualizar políticas, determinar o status de uma política e trabalhar com ações de marketing para avaliar se uma ação específica viola uma política de uso de dados.
-
-Na API do Serviço de Política, todas as políticas e ações de marketing são referidas como `core` `custom` recursos ou recursos. `core` os recursos são definidos e mantidos pela Adobe, enquanto `custom` os recursos são criados e mantidos por clientes individuais. Os `custom` recursos são, portanto, únicos e visíveis apenas para a organização que os criou.
-
-Para obter mais informações sobre como executar as operações principais fornecidas pela DULE Policy Service API, consulte o guia [do desenvolvedor do](api/getting-started.md)Policy Service. Para obter instruções passo a passo sobre como trabalhar com políticas DULE, consulte o tutorial sobre como [criar e avaliar políticas](policies/create.md)DULE.
+Para obter informações sobre como gerenciar políticas na interface do usuário da plataforma de experiência, consulte o guia [do usuário de](policies/user-guide.md)políticas.
 
 ## Versões futuras
 
@@ -96,7 +92,7 @@ As versões subsequentes fornecerão os seguintes recursos:
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução de alto nível ao Data Governance e à estrutura DULE. Agora você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
+Este documento forneceu uma introdução de alto nível ao Data Governance e à estrutura DULE. Agora, você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
 
 ## Apêndice
 
@@ -123,7 +119,7 @@ A tabela a seguir descreve os termos principais relacionados à Data Governance 
 | **Política** | Na estrutura de gerenciamento de dados, uma política é uma regra que descreve que tipo de ações de marketing são permitidas ou não para serem tomadas em dados específicos. |
 | **Rótulos sensíveis** | As etiquetas &quot;S&quot; sensíveis são usadas para categorizar dados que você e sua organização consideram confidenciais. |
 
-## Recursos adicionais
+## Recursos adicionais 
 
 O vídeo a seguir tem como objetivo dar suporte à compreensão sobre o controle de dados e descreve os principais aspectos da estrutura DULE (Data Usage Labeling and Implementation).
 

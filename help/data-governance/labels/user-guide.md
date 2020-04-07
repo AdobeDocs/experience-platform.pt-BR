@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário de etiquetas de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -99,7 +99,9 @@ Você pode repetir essas etapas para continuar adicionando e editando rótulos d
 
 Agora que você adicionou rótulos de uso de dados no nível do conjunto de dados e do campo, é possível começar a assimilar dados na Experience Platform. Para saber mais, leia a documentação [de ingestão de](../../ingestion/home.md)dados em start.
 
-## Recursos adicionais
+Agora você também pode definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte a visão geral [das políticas de uso de](../policies/overview.md)dados.
+
+## Recursos adicionais 
 
 O vídeo a seguir tem como objetivo oferecer suporte para a compreensão do Data Governance e descreve como aplicar rótulos a um conjunto de dados e a campos individuais.
 

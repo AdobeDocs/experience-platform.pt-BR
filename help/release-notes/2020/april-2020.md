@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
 
 ---
 
@@ -14,30 +14,48 @@ source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
 
 ## Data de lançamento: 8 de abril de 2020
 
-## Controle de acesso
+## Privacy Service
 
-A plataforma Experience aproveita os perfis de produto do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos da plataforma, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
+As novas regulamentações legais e organizacionais estão dando aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação. O Adobe Experience Platform Privacy Service fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com o Privacy Service, você pode enviar solicitações para acessar e excluir dados pessoais ou privados de clientes dos aplicativos da Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
 
-### Recursos principais
+**Novos recursos**
 
 | Recurso | Descrição |
-|--- | ---|
-| Permissões | No Admin Console, a guia _Permissões_ em um perfil de produto da Plataforma permite personalizar quais recursos da Plataforma estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: Modelagem de dados, Gestão de dados, Gerenciamento de Perfis, Identidades, Monitoramento de dados, Administração de Sandbox, Destinos, Fontes. |
-| Acesso a caixas de proteção | A guia _Permissões_ em um perfil de produto da Plataforma pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre [caixas de proteção](#sandboxes) abaixo para obter mais informações. |
+| --- | --- |
+| Suporte a PDPA | As solicitações de privacidade agora podem ser criadas e rastreadas sob o Personal Data Protection Act (PDPA) na Tailândia. Ao fazer solicitações de privacidade na API, a `regulation` matriz aceita o valor &quot;pdpa_tha&quot;. |
+| Tipos de Namespace na interface do usuário | Agora você pode especificar diferentes tipos de namespace no Construtor de solicitações na interface do usuário do Privacy Service. Consulte o guia [do](../../privacy-service/ui/user-guide.md) usuário para obter mais informações. |
+| Substituição de ponto final antigo | O ponto de extremidade da API antiga (`data/privacy/gdpr`) foi substituído. |
 
-Para obter mais informações, consulte a visão geral [do](../../access-control/home.md)controle de acesso.
+Problemas conhecidos
+
+* Nenhum
+
+Para obter mais informações sobre o Privacy Service, leia a visão geral [](../../privacy-service/home.md)do Privacy Service para obter start.
+
+<!-- ## Access control
+
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
+
+### Key features
+
+|Feature | Description|
+|--- | ---|
+|Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
+|Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
+
+For more information, please see the [access control overview](../../access-control/home.md).
 
 ## Sandboxes
 
-A plataforma Experience foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional. Para atender a essa necessidade, a plataforma Experience fornece caixas de proteção que particionam uma única instância da plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Recursos principais
+### Key features
 
-| Recurso | Descrição |
+|Feature | Description|
 |--- | ---|
-| Caixa de proteção de produção | A plataforma Experience fornece uma única caixa de proteção de produção, que não pode ser excluída ou redefinida. |
-| Caixas de proteção de não produção | É possível criar várias caixas de proteção que não sejam de produção para uma única instância da Plataforma, permitindo que você teste recursos, execute experiências e faça configurações personalizadas sem afetar sua caixa de proteção de produção. |
-| Comutador Sandbox | Na interface do usuário da plataforma Experience, o alternador de sandbox no canto superior esquerdo da tela permite alternar entre as sandboxes disponíveis por meio de um menu suspenso. |
-| `x-sandbox-name` header | Todas as chamadas para APIs da plataforma Experience devem incluir o novo cabeçalho, cujo valor faz referência ao `x-sandbox-name` `name` atributo da caixa de proteção em que a operação ocorrerá. |
+|Production sandbox | Experience Platform provides a single production sandbox, which cannot be deleted or reset.|
+|Non-production sandboxes | Multiple non-production sandboxes can be created for a single Platform instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
+|Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
+|`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
-Para obter mais informações, consulte a visão geral [das](../../sandboxes/home.md)caixas de proteção.
+For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform Privacy Service.
 
 O Privacy Service fornece uma API RESTful e uma interface de usuário para ajudar o empresa a gerenciar solicitações de privacidade de dados do cliente. Com o Privacy Service, você pode enviar solicitações para acessar e excluir dados de clientes particulares ou pessoais, facilitando a conformidade automatizada com as regulamentações organizacionais e legais de privacidade.
+
+## Ao fazer solicitações de privacidade na API, qual é a diferença entre uma ID de usuário e uma ID de usuário? {#user-ids}
+
+Para fazer um novo trabalho de privacidade na API, a carga JSON da solicitação deve conter um `users` storage que lista informações específicas para cada usuário ao qual a solicitação de privacidade se aplica. Cada item na `users` matriz é um objeto que representa um usuário específico, identificado pelo seu `key` valor.
+
+Por sua vez, cada objeto de usuário (ou `key`) contém sua própria `userIDs` matriz. Essa matriz lista valores de ID específicos **para esse usuário** específico.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+O storage contém dois objetos, representando usuários individuais identificados por seus `key` valores (&quot;DavidSmith&quot; e &quot;user12345&quot;). &quot;DavidSmith&quot; tem apenas uma ID listada (seu endereço de email), enquanto &quot;user12345&quot; tem duas (seu endereço de email e ECID).
+
+Para obter mais informações sobre como fornecer informações de identidade do usuário, consulte o guia sobre dados de [identidade para solicitações](identity-data.md)de privacidade.
+
 
 ## Posso usar o Privacy Service para limpar dados que foram enviados acidentalmente para a Plataforma?
 

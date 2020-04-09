@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Serviço de segmentação
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
+source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 ---
 
@@ -40,7 +40,7 @@ Todos os recursos da plataforma Experience são isolados para caixas de proteç�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->**Observação:** Para obter mais informações sobre como trabalhar com caixas de proteção na Experience Platform, consulte a documentação [de visão geral das](../../sandboxes/home.md)caixas de proteção.
+>[!NOTE] Para obter mais informações sobre como trabalhar com caixas de proteção na Experience Platform, consulte a documentação [de visão geral das](../../sandboxes/home.md)caixas de proteção.
 
 <!-- ## Estimates
 

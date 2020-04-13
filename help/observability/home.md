@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Insights de Observabilidade da Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 
 O Observability Insights é uma RESTful API que permite que você exponha as principais métricas de observabilidade na Adobe Experience Platform. Essas métricas fornecem insights sobre as estatísticas de uso da plataforma, verificações de integridade para serviços da plataforma, tendências históricas e indicadores de desempenho para várias funcionalidades da plataforma.
 
-Este documento demonstra uma chamada de exemplo para a API de informações de observação e fornece uma lista de métricas expostas que são compatíveis com o serviço. Para obter uma lista completa dos pontos finais de Observabilidade, consulte a referência [à API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
+Este documento demonstra uma chamada de exemplo para a API Observability Insights. Para obter uma lista completa dos pontos finais de Observabilidade, consulte a referência [à API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
 
 ## Introdução
 
@@ -23,11 +23,9 @@ Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tuto
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá. Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../sandboxes/home.md)caixa de proteção.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../sandboxes/home.md)caixa de proteção.
 
 ## Recuperar métricas de observabilidade
 
@@ -48,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{METRIC}` | A métrica que você deseja expor. Ao combinar várias métricas em uma única chamada, você deve usar um E comercial (`&`) para separar métricas individuais. Por exemplo, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | O identificador de um recurso específico da Plataforma cujas métricas você deseja expor. Essa ID pode ser opcional, obrigatória ou não aplicável, dependendo das métricas usadas. Para obter uma lista de métricas disponíveis, bem como IDs compatíveis (obrigatórias e opcionais) para cada métrica, consulte o documento de referência nas métricas [](metrics.md) disponíveis abaixo. |
+| `{ID}` | O identificador de um recurso específico da Plataforma cujas métricas você deseja expor. Essa ID pode ser opcional, obrigatória ou não aplicável, dependendo das métricas usadas. Para obter uma lista de métricas disponíveis, bem como IDs compatíveis (obrigatórias e opcionais) para cada métrica, consulte o documento de referência sobre métricas [](metrics.md)disponíveis. |
 | `{DATE_RANGE}` | O intervalo de datas das métricas que você deseja expor, no formato ISO 8601 (por exemplo, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Solicitação**

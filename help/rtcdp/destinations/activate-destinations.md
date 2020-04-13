@@ -4,7 +4,7 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -28,7 +28,14 @@ Para ativar os dados para destinos, você deve ter [conectado com êxito um dest
 5. *Condicional*. Esta etapa se aplica somente aos segmentos mapeados para destinos de marketing de email. <br> Na **[!UICONTROL Destination Attributes]** página, selecione **[!UICONTROL Add new field]** e selecione os atributos que deseja enviar para o destino.
 Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) exclusivo do seu schema de união. Para obter mais informações sobre atributos obrigatórios, consulte Identidade no artigo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) email.
    ![atributos de destino](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. Na **[!UICONTROL Schedule]** página, você pode ver a data de start para enviar dados para o destino, bem como a frequência de envio de dados para o destino.
+6. Na **[!UICONTROL Segment schedule]** página, você pode ver a data de start para enviar dados para o destino, bem como a frequência de envio de dados para o destino.
+
+   >[!IMPORTANT]
+   >
+   >Para destinos sociais, você deve selecionar a origem de sua audiência nesta etapa. Você pode prosseguir para a próxima etapa somente depois de selecionar uma das opções na imagem abaixo.
+
+   ![escolher origem de dados](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. Na **[!UICONTROL Review]** página, você pode ver um resumo de sua seleção. Selecione **[!UICONTROL Cancel]** para dividir o fluxo, **[!UICONTROL Back]** para modificar suas configurações ou **[!UICONTROL Finish]** para confirmar sua seleção e start enviando dados para o destino.
 
 ![confirmação de seleção](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -60,6 +67,10 @@ A presença desses arquivos no local do seu armazenamento é a confirmação da 
 ### Destinos de publicidade
 
 Verifique o destino de anúncio respectivo para o qual você está ativando seus dados. Se a ativação tiver sido bem-sucedida, as audiências serão preenchidas em sua plataforma de publicidade.
+
+### Destinos da rede social
+
+Para o Facebook, uma ativação bem-sucedida significa que uma audiência personalizada do Facebook seria criada programaticamente no Gerenciador [de anúncios do](https://www.facebook.com/adsmanager/manage/)Facebook. A associação de segmento na audiência seria adicionada e removida, pois os usuários são qualificados ou desqualificados para os segmentos ativados.
 
 ## Desativar ativação {#disable-activation}
 

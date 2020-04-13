@@ -4,7 +4,7 @@ seo-title: Extensão do Experience Cloud ID Service
 description: A extensão do Serviço da Experience Cloud ID é um destino de personalização na Plataforma de dados do cliente em tempo real da Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: A extensão do Serviço da Experience Cloud ID é um destino de personalização na Plataforma de dados do cliente em tempo real da Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,6 +18,8 @@ Essa extensão implementa o Serviço da Experience Cloud ID, que identifica visi
 O Serviço da Experience Cloud ID é uma extensão de personalização na Plataforma de dados do cliente em tempo real da Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página [de extensão do Serviço da](https://docs.adobe.com/content/help/pt-BR/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) Experience Cloud ID na documentação do Experience Platform Launch.
 
 Este destino é uma extensão do Experience Platform Launch. Para obter mais informações sobre como as extensões do Launch funcionam na Adobe Real-time CDP, consulte Visão geral [das extensões do Launch da plataforma](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience.
+
+![Extensão ECID da Adobe](/help/rtcdp/destinations/assets/adobe-ecid-extension.png)
 
 
 ## Pré-requisitos {#prerequisites}

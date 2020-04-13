@@ -4,12 +4,12 @@ seo-title: Extensão do Adobe Target v2
 description: A extensão Adobe Público alvo v2 é um destino de personalização na Plataforma de dados do cliente em tempo real da Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Extensão do Adobe Público alvo v2 (#adobe-público alvo-v2-extension)
+# Extensão do Adobe Target v2{#adobe-target-v2-extension}
 
 ## Visão geral {#overview}
 

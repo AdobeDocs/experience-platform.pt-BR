@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Métricas disponíveis
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ As tabelas a seguir listas todas as métricas expostas pelos Insights de Observa
 A tabela a seguir descreve as métricas para a assimilação de dados da plataforma Adobe Experience. Métricas em **negrito** são métricas de ingestão de streaming.
 
 | Métrica de insights | Descrição | Parâmetro do query de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Número total de conjuntos de dados criados. | N/D |
 | timeseries.ingestion.dataset.size | Tamanho cumulativo de todos os dados ingeridos para um conjunto de dados para ou todos os conjuntos de dados. | ID do conjunto de dados (opcional) |
 | timeseries.ingestion.dataset.dailysize | Tamanho dos dados ingeridos diariamente para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados (opcional) |
@@ -46,7 +46,7 @@ A tabela a seguir descreve as métricas para a assimilação de dados da platafo
 A tabela a seguir descreve as métricas do Adobe Experience Platform Identity Service.
 
 | Métrica de insights | Descrição | Parâmetro do query de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Número de registros gravados em sua fonte de dados pelo Serviço de identidade, para um conjunto de dados ou todos os conjuntos de dados. | ID do conjunto de dados (opcional) |
 | timeseries.identity.dataset.recordfailed.count | Número de registros falhados pelo Serviço de Identidade, para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados (opcional) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Número de registros de identidade ingeridos com êxito para uma namespace. | ID da Namespace (**obrigatório**) |
@@ -62,7 +62,7 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform Identity Se
 A tabela a seguir descreve as métricas do Adobe Experience Platform Privacy Service.
 
 | Métrica de insights | Descrição | Parâmetro do query de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Número total de empregos criados a partir do RGPD. | ENV (**obrigatório**) |
 | timeseries.gdpr.jobs.completedjobs.count | Número total de trabalhos concluídos do RGPD. | ENV (**obrigatório**) |
 | timeseries.gdpr.jobs.errorjobs.count | Número total de trabalhos de erro do RGPD. | ENV (**obrigatório**) |
@@ -72,7 +72,7 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform Privacy Ser
 A tabela a seguir descreve as métricas do Adobe Experience Platform Query Service.
 
 | Métrica de insights | Descrição | Parâmetro do query de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Número total de query agendados não recorrentes. | N/D |
 | timeseries.queryservice.query.scheduledrecurring.count | Número total de query programados recorrentes. | N/D |
 | timeseries.queryservice.query.batchquery.count | Número total de query em lote executados. | N/D |
@@ -85,7 +85,7 @@ A tabela a seguir descreve as métricas do Adobe Experience Platform Query Servi
 A tabela a seguir descreve as métricas do Perfil do cliente em tempo real.
 
 | Métrica de insights | Descrição | Parâmetro do query de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Número de registros lidos do lago de dados por Perfil, para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados (opcional) |
 | timeseries.profiles.dataset.recordsuccess.count | Número de registros gravados em sua fonte de dados por Perfil, para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados (opcional) |
 | timeseries.profiles.dataset.recordfailed.count | Número de registros falhados por Perfil, para um conjunto de dados ou para todos os conjuntos de dados. | ID do conjunto de dados (opcional) |

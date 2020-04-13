@@ -4,12 +4,12 @@ seo-title: Extensão Adobe Livefyre
 description: A extensão do Adobe Livefyre é um destino social na Plataforma de dados do cliente em tempo real da Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
 
-# Extensão Adobe Livefyre {#bing-ads-extension}
+# Extensão Adobe Livefyre {#adobe-livefyre-extension}
 
 ## Visão geral {#overview}
 

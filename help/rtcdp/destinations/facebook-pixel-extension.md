@@ -4,7 +4,7 @@ seo-title: Extensão de pixel do Facebook
 description: A extensão do Facebook Pixel é um destino de publicidade na Plataforma de dados de clientes em tempo real da Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ O pixel do Facebook é uma ferramenta de análise que permite medir a eficácia 
 O Facebook Pixel é uma extensão de publicidade na Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [do](https://developers.facebook.com/docs/facebook-pixel/)Facebook Pixel.
 
 Este destino é uma extensão do Experience Platform Launch. Para obter mais informações sobre como as extensões do Launch funcionam na Adobe Real-time CDP, consulte Visão geral [das extensões do Launch da plataforma](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience.
+
+![Extensão de pixel do Facebook](assets/facebook-pixel-extension.png)
 
 ## Pré-requisitos {#prerequisites}
 

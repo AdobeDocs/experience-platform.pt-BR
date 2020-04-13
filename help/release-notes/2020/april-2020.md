@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: 61b2df88bfe8cadd975eaa0b98872710aa3832d3
 
 ---
 
@@ -33,6 +33,22 @@ A estrutura DULE simplifica e simplifica o processo de categorização de dados 
 * Nenhum.
 
 Para obter mais informações, consulte a visão geral [do](../../data-governance/home.md)Data Governance.
+
+
+## Destinos
+
+Na Plataforma [de dados do cliente em tempo real da](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+
+### Novos destinos
+
+A Adobe Real-time CDP agora oferece suporte à ativação de dados para mais de cinquenta extensões de lançamento da Experience Cloud, permitindo análises, personalização e outros casos de uso. Consulte abaixo para obter detalhes:
+
+| Documentação | Descrição |
+|--- | ---|
+| [Tipos de destino e categorias](/help/rtcdp/destinations/destination-types.md) | Este artigo explica a diferença entre conexões e extensões na interface CDP em tempo real da Adobe e recomenda quando usar cada um desses destinos. |
+| [Extensões do Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Esta página explica o que são as extensões do Launch, os casos de uso do lista para usá-las e os links para a documentação de cada extensão do Launch no Adobe Real-time CDP. |
+
+Para obter mais informações, consulte a visão geral [de](/help/rtcdp/destinations/destinations-overview.md)Destinos.
 
 ## Serviços inteligentes
 

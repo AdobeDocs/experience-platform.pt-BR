@@ -4,7 +4,7 @@ seo-title: Destinos de publicidade
 description: Conecte sua Plataforma de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimos nessas plataformas.
 seo-description: Conecte sua Plataforma de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimos nessas plataformas.
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 
 ---
 
@@ -17,21 +17,21 @@ Ao se conectar a um destino de publicidade, suas audiências são enviadas como 
 
 Atualmente, a CDP em tempo real suporta os destinos de publicidade listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
-* [Adobe Advertising Cloud (extensão do lançamento da plataforma Experience)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Awin Advertising Conversion Tag (extensão do Experience Platform Launch)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Advertising Mastertag (extensão do Experience Platform Launch)](/help/rtcdp/destinations/awin-mastertag-extension.md)
-* [Beemray (Extensão do lançamento da plataforma Experience)](beemray-extension.md)
-* [Rastreamento de Evento universal do Bing Ads (extensão do lançamento da plataforma Experience)](/help/rtcdp/destinations/bing-ads-extension.md)
-* [Ramificação (extensão do Experience Platform Launch)](/help/rtcdp/destinations/branch-extension.md)
-* [DoubleClick Floodlight (extensão do Experience Platform Launch)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
-* [Pixel do Facebook (extensão do lançamento da plataforma Experience)](/help/rtcdp/destinations/facebook-pixel-extension.md)
-* [Flashspeak OneTag (extensão do Experience Platform Launch)](/help/rtcdp/destinations/flashtalking-extension.md)
+* [Extensão da Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+* [Extensão da tag de conversão de publicidade do Awin](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag extension](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Extensão de Beemray](beemray-extension.md)
+* [Extensão de rastreamento de Evento universal do Bing Ads](/help/rtcdp/destinations/bing-ads-extension.md)
+* [Extensão de ramificação](/help/rtcdp/destinations/branch-extension.md)
+* [Extensão Floodlight do DoubleClick](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
+* [Extensão de pixel do Facebook](/help/rtcdp/destinations/facebook-pixel-extension.md)
+* [Extensão Flashspeak OneTag](/help/rtcdp/destinations/flashtalking-extension.md)
 * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
-* [Google Ads (extensão do Experience Platform Launch)](/help/rtcdp/destinations/google-ads-extension.md)
+* [Extensão do Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Google gtag (extensão do Experience Platform Launch)](/help/rtcdp/destinations/gtag-advertising-extension.md)
-* [Tag do LinkedIn Insight (extensão do lançamento da plataforma Experience)](linkedin-extension.md)
-* [Rastreamento de conversão do Pinterest (extensão do lançamento da plataforma Experience)](pinterest-extension.md)
-* [Tag do Twitter Universal Website (extensão do lançamento da plataforma Experience)](twitter-uwt-extension.md)
+* [Extensão do Google gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
+* [Extensão da tag do LinkedIn Insight](linkedin-extension.md)
+* [Extensão de rastreamento de conversão do Pinterest](pinterest-extension.md)
+* [Extensão de tag do Twitter Universal Website](twitter-uwt-extension.md)
 

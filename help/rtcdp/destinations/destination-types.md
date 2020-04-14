@@ -4,7 +4,7 @@ seo-title: Tipos de destinos e Categorias
 description: 'Na Plataforma de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
 seo-description: Na Plataforma de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ Na Plataforma de dados do cliente em tempo real da Adobe, fazemos a distinção 
 
 ### Conexões
 
-**Os destinos de exportação** de Perfis e exportação **de** segmentos na plataforma de dados do cliente em tempo real da Adobe capturam os dados do evento, os combinam com outras fontes de dados para formar o perfil [do cliente em tempo](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)real, aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
+**Os destinos de exportação** de Perfis e exportação **de** segmentos na plataforma de dados do cliente em tempo real da Adobe capturam os dados do evento, os combinam com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
 
 <br> 
 
@@ -68,7 +68,7 @@ As extensões são úteis quando os dados do evento são usados para acionar uma
 
 ## categorias de destino
 
-Os destinos e extensões no catálogo [de](https://platform.adobe.com/destination/catalog) destinos são agrupados por categoria de destino (**Publicidade**, armazenamento **** Cloud, plataformas **de** Pesquisa, marketing **por** email etc.), dependendo do caso de uso de marketing que eles ajudam a atingir. Para obter mais informações sobre cada uma das categorias, bem como sobre os destinos incluídos em cada categoria, consulte a documentação [do catálogo de](/help/rtcdp/destinations/destinations-catalog.md)Destinos.
+As conexões e extensões no catálogo [de](https://platform.adobe.com/destination/catalog) destinos são agrupadas por categoria de destino (**Publicidade**, armazenamento **** Cloud, plataformas **de** Pesquisa, marketing **por** email etc.), dependendo do caso de uso de marketing que eles ajudam a atingir. Para obter mais informações sobre cada uma das categorias, bem como sobre os destinos incluídos em cada categoria, consulte a documentação [do catálogo de](/help/rtcdp/destinations/destinations-catalog.md)Destinos.
 
-![categorias de destino](/help/rtcdp/destinations/assets/destination-categories.png)
+![categorias de destino](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 

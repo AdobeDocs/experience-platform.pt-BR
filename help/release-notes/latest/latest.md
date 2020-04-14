@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Notas de versão da Adobe Experience Platform
 
 ## Data de lançamento: 8 de abril de 2020
+
+## Sistema do Experience Data Model (XDM)
+
+A normalização e a interoperabilidade são conceitos-chave por trás da plataforma da experiência. O Experience Data Model (XDM), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
+
+A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo que se comunique com os serviços na Adobe Experience Platform. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de forma mais rápida e integrada. Você pode obter informações importantes das ações do cliente, definir audiências do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+
+### Novos recursos
+
+| Recurso | Descrição |
+| --- | --- |
+| Informações de exibição alternativas automáticas | O Registro do Schema aplica automaticamente os valores personalizados de título e descrição configurados no `alternateDisplayInfo` descritor. |
+| Restrições de campo escalar | O Registro de Schemas não permite mais de 6000 campos escalares em um único schema. |
+| Revisão do desempenho | O Registro do Schema foi revisado para executar e atender melhor às demandas da Plataforma de experiência. |
+
+**Correções de erros**
+
+* XDM atualizado para XED convertido para suportar um formato XED mais limpo para campos URI aninhados no XDM padrão.
+
+**Problemas conhecidos**
+
+* Conhecido
 
 ## Governança de dados
 

@@ -4,12 +4,12 @@ seo-title: Extensão do Google Ads
 description: A extensão do Google Ads é um destino publicitário na Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: A extensão do Google Ads é um destino publicitário na Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
 
-# Destino de anúncios do Google
+# Extensão do Google Ads
 
 ## Visão geral {#overview}
 
@@ -19,7 +19,7 @@ O Google Ads é uma extensão de publicidade na Adobe Real-time Customer Data Pl
 
 Este destino é uma extensão do Experience Platform Launch. Para obter mais informações sobre como as extensões do Launch funcionam na Adobe Real-time CDP, consulte Visão geral [das extensões do Launch da plataforma](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience.
 
-![Extensão do Google Ads](/help/rtcdp/destinations/assets/google-ads-extension.png)
+![Extensão do Google Ads](/help/rtcdp/destinations/assets/google-extension-2.png)
 
 ## Pré-requisitos {#prerequisites}
 

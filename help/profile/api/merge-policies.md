@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -23,7 +23,7 @@ As políticas de mesclagem são privadas para sua Organização IMS, permitindo 
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
+O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
 
 **Objeto de política de mesclagem**
 
@@ -418,7 +418,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem recém-c
 
 Consulte a seção [componentes das políticas](#components-of-merge-policies) de mesclagem no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
 
-## Atualizar uma política de mesclagem
+## Atualizar uma política de mesclagem {#update}
 
 É possível modificar uma política de mesclagem existente editando atributos individuais (PATCH) ou substituindo toda a política de mesclagem por novos atributos (PUT). Os exemplos de cada um são mostrados abaixo.
 

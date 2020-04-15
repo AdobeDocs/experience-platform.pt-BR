@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitoramento da ingestão de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ Na interface do usuário [da plataforma de](https://platform.adobe.com)experiên
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-A página *Streaming end-to-end* de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que exibe a taxa de mensagens sendo transmitidas, bem como uma lista detalhada dos dados recebidos.
+A página *Streaming end-to-end* de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos recebidos pela Plataforma, um gráfico que mostra a taxa de eventos transmitidos que foram processados com êxito pelo Perfil [do cliente em tempo](../../profile/home.md)real, bem como uma lista detalhada dos dados recebidos.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-Por padrão, o gráfico mostra a taxa de ingestão nos últimos sete dias. Esse intervalo de datas pode ser ajustado para mostrar vários períodos de tempo clicando no botão realçado.
+Por padrão, o gráfico superior mostra a taxa de ingestão nos últimos sete dias. Esse intervalo de datas pode ser ajustado para mostrar vários períodos de tempo clicando no botão realçado.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Abaixo do gráfico há uma lista de todos os registros de ingestão de streaming que correspondem ao intervalo de datas exibido acima. Cada lote listado exibe sua ID, o nome do conjunto de dados, quando foi atualizado pela última vez, o número de registros no lote, bem como o número de erros (se houver). Você pode clicar em qualquer um dos registros para obter informações mais detalhadas sobre esse registro.
+O gráfico inferior mostra a taxa de eventos em streaming processados com êxito por Perfil nos últimos sete dias. Esse intervalo de datas pode ser ajustado para mostrar vários períodos de tempo clicando no botão realçado.
+
+> [!NOTE] Para que os dados sejam exibidos neste gráfico, os dados devem estar **explicitamente** habilitados para o Perfil. Para saber como ativar os dados de transmissão para o Perfil, leia o guia [do usuário dos](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)conjuntos de dados.
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+Abaixo dos gráficos há uma lista de todos os registros de ingestão de streaming que correspondem ao intervalo de datas exibido acima. Cada lote listado exibe sua ID, o nome do conjunto de dados, quando foi atualizado pela última vez, o número de registros no lote, bem como o número de erros (se houver). Você pode clicar em qualquer um dos registros para obter informações mais detalhadas sobre esse registro.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ Este tutorial requer uma compreensão prática dos seguintes componentes da Adob
 - [Segmentação](../home.md): Como o Perfil de cliente em tempo real divide um grande grupo de indivíduos contidos na loja de perfis em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 - [Controle](../../data-governance/home.md)de dados: O Data Governance fornece a infraestrutura para a rotulagem e aplicação de uso de dados (DULE), usando os seguintes componentes:
    - [Rótulos](../../data-governance/labels/user-guide.md)de uso de dados: Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.
-   - [Políticas](../../data-governance/api/getting-started.md)de uso de dados: Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos de uso de dados específicos.
+   - [Políticas](../../data-governance/policies/overview.md)de uso de dados: Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos de uso de dados específicos.
+   - [Aplicação](../../data-governance/enforcement/overview.md)de políticas: Permite que você aplique políticas de uso de dados e previna operações de dados que constituem violações de política.
+- [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
 
@@ -48,11 +50,11 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 - Tipo de conteúdo: application/json
 
-## Pesquisar uma política de mesclagem para uma definição de segmento
+## Pesquisar uma política de mesclagem para uma definição de segmento {#merge-policy}
 
 Esse fluxo de trabalho começa acessando um segmento de audiência conhecido. Os segmentos que estão habilitados para uso no Perfil de cliente em tempo real contêm uma ID de política de mesclagem na definição do segmento. Esta política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que por sua vez contêm quaisquer rótulos de uso de dados aplicáveis.
 
-Usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, você pode pesquisar uma definição de segmento por sua ID para encontrar sua política de mesclagem associada.
+Usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, você pode procurar uma definição de segmento por sua ID para encontrar sua política de mesclagem associada.
 
 **Formato da API**
 
@@ -117,9 +119,9 @@ Uma resposta bem-sucedida retorna os detalhes da definição do segmento.
 | -------- | ----------- |
 | `mergePolicyId` | A ID da política de mesclagem usada para a definição do segmento. Isso será usado na próxima etapa. |
 
-## Localizar os conjuntos de dados de origem da política de mesclagem
+## Localizar os conjuntos de dados de origem da política de mesclagem {#datasets}
 
-As políticas de mesclagem contêm informações sobre seus conjuntos de dados de origem, que por sua vez contêm rótulos DULE. Você pode pesquisar os detalhes de uma política de mesclagem fornecendo a ID da política de mesclagem em uma solicitação GET para a API do Perfil.
+As políticas de mesclagem contêm informações sobre seus conjuntos de dados de origem, que por sua vez contêm rótulos de uso de dados. Você pode pesquisar os detalhes de uma política de mesclagem fornecendo a ID da política de mesclagem em uma solicitação GET para a API do Perfil.
 
 **Formato da API**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | A ID da política de mesclagem obtida na etapa [](#lookup-a-merge-policy-for-a-segment-definition)anterior. |
+| `{MERGE_POLICY_ID}` | A ID da política de mesclagem obtida na etapa [](#merge-policy)anterior. |
 
 **Solicitação**
 
@@ -174,92 +176,195 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 | `attributeMerge.type` | O tipo de configuração de precedência de dados para a política de mesclagem. Se o valor for `dataSetPrecedence`, os conjuntos de dados associados a essa política de mesclagem serão listados em `attributeMerge > data > order`. Se o valor for `timestampOrdered`, todos os conjuntos de dados associados ao schema referenciado `schema.name` serão usados pela política de mesclagem. |
 | `attributeMerge.data.order` | Se o `attributeMerge.type` for `dataSetPrecedence`, esse atributo será uma matriz que contém as IDs dos conjuntos de dados usados por essa política de mesclagem. Essas IDs são usadas na próxima etapa. |
 
-## Rótulos de uso de dados de pesquisa para os conjuntos de dados de origem
+## Avaliar conjuntos de dados para violações de política
 
-Depois de coletar as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar essas IDs para pesquisar os rótulos de uso de dados configurados para os próprios conjuntos de dados e quaisquer campos de dados específicos contidos neles.
+>[!NOTE]  Esta etapa supõe que você tenha pelo menos uma política de uso de dados ativa que impeça a execução de ações de marketing específicas em dados que contenham determinados rótulos. Se você não tiver políticas de uso aplicáveis para os conjuntos de dados que estão sendo avaliados, siga o tutorial [de criação de](../../data-governance/policies/create.md) política para criar um antes de continuar com esta etapa.
 
-A chamada a seguir para a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) Catálogo recupera os rótulos de uso de dados associados a um único conjunto de dados fornecendo sua ID no caminho da solicitação:
+Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para avaliar esses conjuntos de dados em relação a ações de marketing específicas a fim de verificar violações da política de uso de dados.
+
+Para avaliar os conjuntos de dados, é necessário fornecer o nome da ação de marketing no caminho de uma solicitação POST, fornecendo as IDs do conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `{DATASET_ID}` | A ID do conjunto de dados cujos rótulos de uso de dados você deseja pesquisar. |
+| Parâmetro | Descrição |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo de a política ter sido definida pela Adobe ou pela sua organização, você deve usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
 
 **Solicitação**
 
+A solicitação a seguir testa a ação de `exportToThirdParty` marketing em relação aos conjuntos de dados obtidos na etapa [](#datasets)anterior. A carga da solicitação é uma matriz que contém as IDs de cada conjunto de dados.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `entityType` | Cada item na matriz de carga deve indicar o tipo de entidade que está sendo definida. Nesse caso de uso, o valor sempre será &quot;dataSet&quot;. |
+| `entityID` | Cada item na matriz de carga deve fornecer a ID exclusiva para um conjunto de dados. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de rótulos de uso de dados associados ao conjunto de dados como um todo, e quaisquer campos de dados específicos associados ao schema de origem.
+Uma resposta bem-sucedida retorna o URI para a ação de marketing, os rótulos de uso de dados que foram coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas de uso de dados que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou uma violação de política.
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | Propriedade | Descrição |
-| -------- | ----------- |
-| `dataset` | Um objeto que contém os rótulos de uso de dados aplicados ao conjunto de dados como um todo. |
-| `schemaFields` | Uma matriz de objetos que representa campos de schema específicos que têm rótulos de uso de dados aplicados a eles. |
-| `schemaFields.path` | O caminho do campo schema cujos rótulos de uso de dados estão listados no mesmo objeto. |
+| --- | --- |
+| `duleLabels` | Uma lista de rótulos de uso de dados que foram extraídos dos conjuntos de dados fornecidos. |
+| `discoveredLabels` | Uma lista dos conjuntos de dados que foram fornecidos na carga da solicitação, exibindo os rótulos no nível do conjunto de dados e no nível do campo que foram encontrados em cada um. |
+| `violatedPolicies` | Um storage que lista quaisquer políticas de uso de dados que foram violadas ao testar a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
+
+Usando os dados retornados na resposta da API, você pode configurar protocolos em seu aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrem.
 
 ## Filtrar campos de dados
 
->[!NOTE] Esta etapa é opcional. Se você não quiser ajustar os dados incluídos em seu segmento com base em suas descobertas na etapa anterior da [pesquisa dos rótulos](#lookup-data-usage-labels-for-the-source-datasets)de uso de dados, vá para a etapa final de [avaliação dos dados para violações](#evaluate-data-for-policy-violations)de política.
-
-Se desejar ajustar os dados incluídos no segmento de audiência, você pode fazer isso usando um dos dois métodos a seguir:
+Se o segmento de audiência não passar na avaliação, você poderá ajustar os dados incluídos no segmento por meio de um dos dois métodos descritos abaixo.
 
 ### Atualizar a política de mesclagem da definição do segmento
 
-Atualizar a política de mesclagem de uma definição de segmento ajusta os conjuntos de dados e campos que serão incluídos quando o trabalho de segmento for executado. Consulte a seção sobre como [atualizar uma política](../../profile/api/merge-policies.md) de mesclagem existente no tutorial de política de mesclagem para obter mais informações.
+Atualizar a política de mesclagem de uma definição de segmento ajusta os conjuntos de dados e campos que serão incluídos quando o trabalho de segmento for executado. Consulte a seção sobre como [atualizar uma política](../../profile/api/merge-policies.md#update) de mesclagem existente no tutorial de política de mesclagem de API para obter mais informações.
 
 ### Restringir campos de dados específicos ao exportar o segmento
 
@@ -267,11 +372,7 @@ Ao exportar um segmento para um conjunto de dados usando a API Perfil do cliente
 
 Considere um segmento que tem campos de dados chamados &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se você deseja exportar apenas o campo &quot;C&quot;, então o `fields` parâmetro conterá apenas o campo &quot;C&quot;. Ao fazer isso, os campos &quot;A&quot; e &quot;B&quot; seriam excluídos ao exportar o segmento.
 
-Consulte a seção sobre como [exportar um segmento](./evaluate-a-segment.md#export-a-segment) no tutorial de segmentação para obter mais informações.
-
-## Avaliar dados para violações de política
-
-Agora que você coletou os rótulos de uso de dados associados ao segmento de audiência, é possível testar esses rótulos em relação às ações de marketing para avaliar se há violações de política de uso de dados. Para obter etapas detalhadas sobre como executar avaliações de políticas usando a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE, consulte o documento sobre avaliação [de](../../data-governance/enforcement/overview.md)políticas.
+Consulte a seção sobre como [exportar um segmento](./evaluate-a-segment.md#export) no tutorial de segmentação para obter mais informações.
 
 ## Próximas etapas
 

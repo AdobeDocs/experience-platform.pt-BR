@@ -4,7 +4,7 @@ seo-title: Destinos da Pesquisa
 description: As plataformas Pesquisa detectam eventos de pesquisa, capturam feedback dos clientes em tempo real por meio de elementos de dados e compartilham dados com a CDP em tempo real da Adobe.
 seo-description: As plataformas Pesquisa detectam eventos de pesquisa, capturam feedback dos clientes em tempo real por meio de elementos de dados e compartilham dados com a CDP em tempo real da Adobe.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 

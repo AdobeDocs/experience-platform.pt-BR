@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -98,7 +98,7 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 
 * Os conectores de origem para armazenamentos baseados em nuvem não suportam a ingestão de arquivos compactados.
 
-Para obter mais informações sobre fontes, consulte Visão geral [das](../../source-connectors/home.md)fontes.
+Para obter mais informações sobre fontes, consulte Visão geral [das](../../sources/home.md)fontes.
 
 ## Área de trabalho da ciência de dados
 

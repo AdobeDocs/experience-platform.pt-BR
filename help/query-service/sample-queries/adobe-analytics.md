@@ -4,14 +4,14 @@ solution: Experience Platform
 title: query de amostra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # query de amostra para dados do Adobe Analytics
 
-Os dados de conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e ingeridos na Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform Query Service usa esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados do Adobe Analytics. Consulte a documentação [de mapeamento de campo do](../../source-connectors/ui/adobe-applications/analytics-mapping.md) Analytics para obter mais informações sobre o mapeamento para XDM ExperienceEvents.
+Os dados de conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e ingeridos na Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform Query Service usa esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados do Adobe Analytics. Consulte a documentação [de mapeamento de campo do](../../sources/connectors/adobe-applications/analytics-mapping.md) Analytics para obter mais informações sobre o mapeamento para XDM ExperienceEvents.
 
 ## Introdução
 

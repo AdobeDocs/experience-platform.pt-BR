@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -78,7 +78,7 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 
 * Nenhum
 
-Para obter mais informações sobre fontes, consulte a visão geral [das fontes](../../source-connectors/home.md)
+Para obter mais informações sobre fontes, consulte a visão geral [das fontes](../../sources/home.md)
 
 ## Destinos
 

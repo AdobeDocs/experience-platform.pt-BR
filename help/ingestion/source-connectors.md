@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,4 +15,4 @@ A plataforma Adobe Experience permite que os dados sejam assimilados de fontes e
 
 A plataforma Experience fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem que você autentique seus sistemas de armazenamentos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
-Para obter mais informações sobre esses conectores de origem, consulte a documentação [dos conectores de](../source-connectors/home.md)origem.
+Para obter mais informações sobre esses conectores de origem, consulte a documentação [dos conectores de](../sources/home.md)origem.

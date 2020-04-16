@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da ingestão de dados da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ A plataforma Experience permite configurar conexões de origem para vários prov
 
 Conexões de origem podem ser configuradas para coletar dados de outros aplicativos da Adobe (como o Adobe Analytics e o Adobe Audiência Manager), fontes de armazenamentos em nuvem de terceiros (como o Azure Blob, o Amazon S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como o Microsoft Dynamics e o Salesforce).
 
-Consulte a visão geral [das](../source-connectors/home.md) Fontes para obter mais informações.
+Consulte a visão geral [das](../sources/home.md) Fontes para obter mais informações.
 
 ## Próximas etapas
 

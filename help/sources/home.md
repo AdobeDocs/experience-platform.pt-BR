@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ As fontes na plataforma Experience são agrupadas nas seguintes categorias:
 A plataforma Experience permite que os dados sejam assimilados de outros aplicativos da Adobe, incluindo o Adobe Analytics, o Adobe Audiência Manager e o Experience Platform Launch. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral do conector do Adobe Audiência Manager](connectors/adobe-applications/audience-manager.md)
-- [Criar um conector de origem do Adobe Audiência Manager na interface do usuário](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [Criar um conector de origem do Adobe Audiência Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Visão geral do conector de dados do Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Criar um conector de origem do Adobe Analytics na interface do usuário](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [Criar um conector de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Criar um conector de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Publicidade
 

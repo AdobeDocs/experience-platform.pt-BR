@@ -1,0 +1,65 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Criar um conector de origem OData genérico na interface do usuário
+topic: overview
+translation-type: tm+mt
+source-git-commit: 8c67ba710b486501374020ab505b04931f327c0f
+
+---
+
+
+# Criar um conector de origem OData genérico na interface do usuário
+
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem Genérico Open Data Protocol (a seguir denominado &quot;OData&quot;) usando a interface de usuário da Plataforma.
+
+## Introdução
+
+Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+
+* [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+   * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+* [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+
+Se você já tiver uma conexão OData válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre a [configuração de um fluxo de conjunto de dados de protocolos](../../dataflow/protocols.md)
+
+### Reunir credenciais obrigatórias
+
+Para acessar sua conta OData na Plataforma, forneça os seguintes valores:
+
+| Credencial | Descrição |
+| ---------- | ----------- |
+| `url` | O URL raiz do serviço OData. |
+
+Para obter mais informações sobre a introdução, consulte [este documento](https://www.odata.org/getting-started/basic-tutorial/)OData.
+
+## Conecte sua conta OData
+
+Depois de reunir as credenciais necessárias, siga as etapas abaixo para criar uma nova conta OData para se conectar à Plataforma.
+
+Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho *Fontes* . A tela *Catálogo* exibe várias fontes para as quais você pode criar uma conta de entrada. Cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+
+Na categoria de *protocolos* , selecione OData **** genérico para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão de entrada, selecione Origem **do** Connect.
+
+![catálogo](../../../../images/tutorials/create/odata/catalog.png)
+
+A página *Conectar-se a OData* genérica é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+
+### Nova conta
+
+Se você estiver usando novas credenciais, selecione **Nova conta**. No formulário de entrada exibido, forneça à conexão um nome, uma descrição opcional e suas credenciais OData. Quando terminar, selecione **Connect** e aguarde algum tempo para a nova conta ser estabelecida.
+
+![connect](../../../../images/tutorials/create/odata/connect.png)
+
+### Conta existente
+
+Para conectar uma conta existente, selecione a conta OData à qual deseja se conectar e, em seguida, selecione **Avançar** para continuar.
+
+![existente](../../../../images/tutorials/create/odata/existing.png)
+
+## Próximas etapas
+
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta OData. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de conjunto de dados para trazer dados de protocolos para a Plataforma](../../dataflow/protocols.md).

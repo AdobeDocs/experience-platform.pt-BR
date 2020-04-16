@@ -4,7 +4,7 @@ solution: Experience Platform
 title: schemas e descritores XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ A capacidade de entender as relações entre seus clientes e suas interações c
 
 ## Criar um schema ad-hoc
 
-Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. schemas Ad-hoc são usados em vários workflows de ingestão [de](../ingestion/home.md) dados para a Experience Platform, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões [de](../source-connectors/home.md)origem. A criação de um schema ad-hoc é feita usando a API do Registro do Schema e deve ser usada em conjunto com outros tutoriais da Plataforma de experiência que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Para começar a criar um schema ad-hoc, consulte o tutorial para [criar um schema ad-hoc usando a API](../xdm/tutorials/ad-hoc.md).
+Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. schemas Ad-hoc são usados em vários workflows de ingestão [de](../ingestion/home.md) dados para a Experience Platform, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões [de](../sources/home.md)origem. A criação de um schema ad-hoc é feita usando a API do Registro do Schema e deve ser usada em conjunto com outros tutoriais da Plataforma de experiência que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Para começar a criar um schema ad-hoc, consulte o tutorial para [criar um schema ad-hoc usando a API](../xdm/tutorials/ad-hoc.md).
 
 ## Próximas etapas
 

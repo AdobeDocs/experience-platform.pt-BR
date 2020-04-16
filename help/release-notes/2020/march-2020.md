@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ---
 
@@ -108,4 +108,4 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 
 * Nenhum
 
-Para saber mais sobre fontes, consulte a visão geral [das](../../source-connectors/home.md)fontes.
+Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.

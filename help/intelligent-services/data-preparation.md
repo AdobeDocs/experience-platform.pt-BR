@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # Preparar dados para uso no Intelligent Services
 
-Para que os Serviços inteligentes detectem insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes aproveitam os schemas do Experience Data Model (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados que são usados no Intelligent Services devem estar em conformidade com o schema XDM ( **Consumer Experience Eventos)** .
+Para que os Serviços inteligentes detectem insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes aproveitam os schemas do Experience Data Model (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados no Intelligent Services devem estar em conformidade com o schema XDM **Consumer ExperienceEvent (CEE)** .
 
 Este documento fornece orientação geral sobre como mapear os dados de seus eventos de marketing de vários canais para esse schema, descrevendo informações sobre campos importantes dentro do schema para ajudá-lo a determinar como mapear efetivamente seus dados para sua estrutura.
 
@@ -52,7 +52,7 @@ O `xdm:channel` campo representa o canal de marketing relacionado ao ExperienceE
 
 ## Dados de mapeamento e assimilação
 
-Depois de determinar se seus dados da série de tempo podem ser mapeados para o schema CEE, você pode start o processo de inserir seus dados nos Serviços inteligentes. Entre em contato com os Serviços de consultoria da Adobe para ajudar a mapear seus dados para o schema e assimilá-los ao serviço.
+Depois de determinar se os dados de seus eventos de marketing podem ser mapeados para o schema CEE, você pode start o processo de inserir seus dados nos Serviços inteligentes. Entre em contato com os Serviços de consultoria da Adobe para ajudar a mapear seus dados para o schema e assimilá-los ao serviço.
 
 Se você tiver uma subscrição da plataforma Adobe Experience e quiser mapear e assimilar os dados, siga as etapas descritas na seção abaixo.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector do Gerenciador de Audiências
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -19,7 +19,7 @@ O conector de dados do Adobe Audiência Manager transmite dados primários colet
 
 O conector do Audiência Manager mapeia essas categorias de dados para o schema do Experience Data Model (XDM) e as envia para a Plataforma. Os dados em tempo real e os dados onboard são enviados como dados XDM ExperienceEvent, enquanto os dados do Perfil são enviados como Perfis individuais XDM.
 
-Para obter instruções sobre como criar uma conexão com o Gerenciador de Audiências da Adobe usando a interface do usuário da plataforma, consulte o tutorial [do conector do Gerenciador de](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)Audiências.
+Para obter instruções sobre como criar uma conexão com o Gerenciador de Audiências da Adobe usando a interface do usuário da plataforma, consulte o tutorial [do conector do Gerenciador de](../../tutorials/ui/create/adobe-applications/audience-manager.md)Audiências.
 
 ## O que é o Experience Data Model (XDM)?
 

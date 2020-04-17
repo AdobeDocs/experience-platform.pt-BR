@@ -4,7 +4,7 @@ solution: Experience Platform
 title: namespaces de identidade e qualificadores aceitos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## namespaces de identidade padrão
 
-Todas as identidades enviadas ao Privacy Service devem ser fornecidas sob uma namespace de identidade específica. As namespaces de identidade são um componente do Serviço [de identidade da plataforma](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) Adobe Experience que indica o contexto ao qual uma identidade está relacionada.
+Todas as identidades enviadas ao Privacy Service devem ser fornecidas sob uma namespace de identidade específica. As namespaces de identidade são um componente do Serviço [de identidade da plataforma](../../identity-service/home.md) Adobe Experience que indica o contexto ao qual uma identidade está relacionada.
 
 A tabela a seguir descreve vários tipos de identidade predefinidos e comumente usados, disponibilizados pela plataforma de experiência, juntamente com seus `namespace` valores associados:
 
@@ -31,7 +31,7 @@ A tabela a seguir descreve vários tipos de identidade predefinidos e comumente 
 
 >[!NOTE] Cada tipo de identidade também tem um valor `namespaceId` inteiro, que pode ser usado no lugar da `namespace` string ao definir a `type` propriedade da identidade como &quot;namespaceId&quot;. Consulte a seção sobre qualificadores [de](#namespace-qualifiers) namespace para obter mais informações.
 
-Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação GET para o `idnamespace/identities` endpoint na API do Serviço de Identidade. Consulte o guia [do desenvolvedor do Serviço de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) identidade para obter mais informações.
+Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação GET para o `idnamespace/identities` endpoint na API do Serviço de Identidade. Consulte o guia [do desenvolvedor do Serviço de](../../identity-service/api/getting-started.md) identidade para obter mais informações.
 
 ## Qualificadores de Namespace
 

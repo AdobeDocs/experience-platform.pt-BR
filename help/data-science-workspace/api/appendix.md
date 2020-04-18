@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apêndice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ A seguir está um exemplo de configuração que especifica o uso de uma CPU para
 
 ## Configurações de recursos PySpark e Spark {#resource-config}
 
-Os mecanismos PySpark e Spark têm a capacidade de modificar os recursos tecnológicos para fins de treinamento e pontuação, esses recursos estão descritos na tabela a seguir:
+Os mecanismos Spark têm a capacidade de modificar recursos computacionais para fins de treinamento e pontuação. Esses recursos estão descritos na tabela a seguir:
 
 | Recurso | Descrição | Tipo |
 | -------- | ----------- | ---- |

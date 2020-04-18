@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ Com o PySpark 3 (Spark 2.4) `sc = spark.sparkContext` é definido no carregament
 
 ![Carregar 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Carregar dados da experiência pode plataforma no PySpark 2.3 - obsoleto**
+**Carregamento de dados da plataforma Experience Cloud no PySpark 2.3 - obsoleto**
 
 ![Carga 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Carregar dados da experiência pode ser plataforma no PySpark 2.4**
+**Carregamento de dados da plataforma Experience Cloud no PySpark 2.4**
 
 Com o PySpark 3 (Spark 2.4), a definição `org_id` e `dataset_id` não é mais necessária. Além disso, `df = spark.read.format` foi substituído por uma mágica personalizada [`%dataset`](#magic) para facilitar a leitura e a gravação de conjuntos de dados.
 
@@ -695,7 +695,7 @@ O kernel Scala não suporta mais `%%sql` magia cintilante. É necessário conver
 
 ## Ler um conjunto de dados {#notebook-read-dataset-spark}
 
-No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para ler um conjunto de dados.
+No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para a leitura de um conjunto de dados.
 
 <table>
   <th>Notebook</th>

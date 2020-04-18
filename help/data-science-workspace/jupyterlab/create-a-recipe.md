@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Pa
 
 O notebook Construtor de receita permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
 
->[!NOTE] O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas Python.
+>[!NOTE]
+>O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Quando você clica no notebook do Recipe Builder no lançador, o notebook será aberto na guia. O modelo usado no notebook é a Receita de Previsão de Vendas de Retalho Python, que também pode ser encontrada [neste repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Você notará que na barra de ferramentas existem três ações adicionais, a sa
 
 ## Fazer edições em arquivos de receita
 
-<!-- Databricks update to recipe needed -->
 Para fazer edições nos arquivos de receita, navegue até a célula em Júpiter correspondente ao caminho do arquivo. Por exemplo, se você deseja fazer alterações em `evaluator.py`, procure por `%%writefile demo-recipe/evaluator.py`.
 
 Start fazendo as alterações necessárias na célula e, quando terminar, simplesmente execute a célula. O `%%writefile filename.py` comando gravará o conteúdo da célula no `filename.py`. Será necessário executar manualmente a célula para cada arquivo com alterações.
@@ -69,9 +69,6 @@ Agora que você sabe as noções básicas para o ambiente de notebook JupyterLab
 - [Arquivo do avaliador](#evaluator-file)
 - [Arquivo de Proteção de Dados](#data-saver-file)
 
-
-
-
 ### Arquivo de requisitos
 
 O arquivo requirements é usado para declarar bibliotecas adicionais que você deseja usar na fórmula. Você pode especificar o número da versão se houver uma dependência. Para procurar bibliotecas adicionais, visite https://anaconda.org. A lista das principais bibliotecas já em uso inclui:
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] As bibliotecas ou versões específicas que você adicionar podem ser incompatíveis com as bibliotecas acima.
-
-
+>[!NOTE]
+>As bibliotecas ou versões específicas que você adicionar podem ser incompatíveis com as bibliotecas acima.
 
 ### Arquivos de configuração
 
@@ -101,9 +97,9 @@ Os usuários devem preencher as seguintes variáveis antes de executar o treinam
 
 Para localizar o conjunto de dados e as IDs de schema, vá para a guia Dados dentro dos notebooks na barra de navegação esquerda (sob o ícone de pasta).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-As mesmas informações podem ser encontradas na [Adobe Experience Platform](https://platform.adobe.com/) nas guias **[Schema](https://platform.adobe.com/schema)**e**[ Conjuntos de dados](https://platform.adobe.com/dataset/overview)** .
+As mesmas informações podem ser encontradas na [Adobe Experience Platform](https://platform.adobe.com/) nas guias **[Schema](https://platform.adobe.com/schema)**e**[Conjuntos de dados](https://platform.adobe.com/dataset/overview)** .
 
 Por padrão, os seguintes parâmetros de configuração são definidos para você ao acessar os dados:
 
@@ -111,8 +107,6 @@ Por padrão, os seguintes parâmetros de configuração são definidos para voc�
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## Carregador de dados de treinamento
 
@@ -129,7 +123,8 @@ Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/ge
 - [SDK da plataforma](#platform-sdk)
 - [Fontes externas](#external-sources)
 
->[!NOTE] No notebook do Recipe Builder, os dados são carregados pelo carregador de `platform_sdk` dados.
+>[!NOTE]
+>No notebook do Recipe Builder, os dados são carregados pelo carregador de `platform_sdk` dados.
 
 ### SDK da plataforma
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 Agora seus dados estão no objeto dataframe e podem ser analisados e manipulados na [próxima seção](#data-preparation-and-feature-engineering).
 
-
-
 ### Do SDK de acesso a dados (obsoleto)
 
->[!CAUTION]  Não `data_access_sdk_python` é mais recomendado, consulte [Converter código de acesso a dados em SDK](../authoring/platform-sdk.md) da plataforma para obter um guia sobre como usar o carregador de `platform_sdk` dados.
+>[!CAUTION]
+> `data_access_sdk_python` não é mais recomendado, consulte [Converter código de acesso a dados para SDK](../authoring/platform-sdk.md) da plataforma para obter um guia sobre como usar o carregador de `platform_sdk` dados.
 
 Os usuários podem carregar dados usando o SDK de acesso a dados. A biblioteca pode ser importada na parte superior da página, incluindo a linha:
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] Conforme mencionado na seção [Arquivo de](#configuration-files)configuração, os seguintes parâmetros de configuração são definidos para você ao acessar dados da plataforma Experience:
+>[!NOTE]
+>Conforme mencionado na seção [Arquivo de](#configuration-files)configuração, os seguintes parâmetros de configuração são definidos para você ao acessar dados da plataforma Experience:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 A `load()` função no carregador de dados de pontuação deve ser concluída com o conjunto de dados de pontuação como saída.
 
-
-
 ### Arquivo Pipeline
 
-O `pipeline.py` arquivo inclui lógica para treinamento e pontuação. Iremos retomar ambos nas próximas duas seções.
+O `pipeline.py` arquivo inclui lógica para treinamento e pontuação.
 
 ### Treinamento
 
 O objetivo do treinamento é criar um modelo usando recursos e etiquetas no conjunto de dados de treinamento.
 
->[!NOTE]  Os _recursos_ se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os _rótulos_.
+>[!NOTE]\
+>_Os recursos_ se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os _rótulos_.
 
 A `train()` função deve incluir o modelo de treinamento e devolver o modelo treinado. Alguns exemplos de diferentes modelos podem ser encontrados na documentação [do guia do usuário](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 Observe que, dependendo de seu aplicativo, você terá argumentos em sua `GradientBoostingRegressor()` função. `xTrainingDataset` deve conter seus recursos usados para treinamento e `yTrainingDataset` conter suas etiquetas.
-
-
 
 ### Pontuação
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Treinamento e pontuação
 
 Quando terminar de fazer alterações no seu notebook e quiser treinar sua receita, clique nos botões associados na parte superior da barra para criar uma execução de treinamento na célula. Ao clicar no botão, um registro de comandos e saídas do script de treinamento aparecerá no bloco de anotações (sob a `evaluator.py` célula). Primeiro, o Conda instala todas as dependências e, em seguida, o treinamento é iniciado.
@@ -467,7 +458,11 @@ Para fins de depuração, se você quiser ver a saída oculta, adicione `debug` 
 
 ## Criar fórmula
 
-Quando terminar de editar a receita e estiver satisfeito com a saída de treinamento/pontuação, você poderá criar uma receita do notebook pressionando **Criar receita**. Depois de pressionar o botão, você será solicitado a inserir um nome de fórmula. Esse nome representará a fórmula real criada na Plataforma.
+Quando terminar de editar a receita e estiver satisfeito com a saída de treinamento/pontuação, você poderá criar uma receita do notebook pressionando **Criar receita** na navegação superior direita.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+Depois de pressionar o botão, você será solicitado a inserir um nome de fórmula. Este nome representa a fórmula real criada na Plataforma.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -475,7 +470,7 @@ Depois de pressionar **Ok** , você poderá navegar até a nova fórmula na [Ado
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
-Quando o processo estiver concluído, a receita ficará parecida com esta:
+Quando o processo estiver concluído, a receita ficará parecida com isso:
 
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
@@ -491,7 +486,7 @@ Ao concluir este tutorial, você aprendeu a criar um modelo de aprendizado de m�
 
 Para continuar aprendendo como trabalhar com recursos na Data Science Workspace, visite a lista suspensa Fórmulas e modelos da Data Science Workspace.
 
-## Recursos adicionais 
+## Recursos adicionais
 
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão sobre a criação e implantação de modelos.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ Alterações recentes nos notebooks JupyterLab exigem que você atualize os note
 
 - [Guia de migração do PySpark 2.3 para o 2.4](#pyspark-notebook-migration)
 - [Guia de migração do Spark 2.3 para o Spark 2.4 (Scala)](#spark-notebook-migration)
+
+O vídeo a seguir foi criado para ajudar a entender as mudanças necessárias para os notebooks JupyterLab:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## Guia de migração de notebooks PySpark 2.3 a 2.4 {#pyspark-notebook-migration}
 

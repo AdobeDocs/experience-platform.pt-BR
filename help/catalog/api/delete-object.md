@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Excluir um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -21,9 +21,11 @@ source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] O `DELETE /batches/{ID}` terminal foi substituído. Para excluir um lote, você deve estar usando a API [de ingestão de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lote.
+
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser excluído. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser excluído. Objetos válidos são: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**

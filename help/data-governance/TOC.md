@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda sobre o controle de dados da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [Visão geral do controle de dados](home.md)
 * Rótulos de uso de dados {#labels}
    * [Visão geral dos rótulos de uso de dados](labels/overview.md)
-   * [Guia do usuário de etiquetas de uso de dados](labels/user-guide.md)
+   * [Gerenciar rótulos de uso de dados na interface do usuário](labels/user-guide.md)
+   * [Gerenciar rótulos de uso de dados na API](labels/api.md)
    * [Rótulos de uso de dados suportados](labels/reference.md)
 * Políticas de uso de dados {#policies}
    * [Visão geral das políticas de uso de dados](policies/overview.md)

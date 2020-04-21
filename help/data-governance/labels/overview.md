@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Para obter mais informações sobre os rótulos de uso de dados disponíveis na 
 
 ## Próximas etapas
 
-Agora que você foi introduzido nos rótulos de uso de dados, pode continuar a ler o guia [do](user-guide.md) usuário para saber como gerenciar os rótulos na interface do usuário da plataforma de experiência.
+Agora que você foi introduzido nos rótulos de uso de dados, pode continuar a ler o guia [do](user-guide.md) usuário para saber como gerenciar os rótulos na interface do usuário da plataforma de experiência. Para obter etapas sobre como gerenciar rótulos usando APIs, consulte a seção apropriada no guia [do desenvolvedor do serviço de](../../catalog/api/labels.md)catálogo.

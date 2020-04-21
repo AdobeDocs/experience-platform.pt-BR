@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Catalog and Datasets Help
+user-guide-title: Ajuda de Catálogo e Conjuntos de Dados
 translation-type: tm+mt
-source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
    * [Excluir um objeto](api/delete-object.md)
    * [Criar um conjunto de dados](api/create-dataset.md)
    * [Criar um lote](api/create-batch.md)
+   * [Rótulos de uso de dados](api/labels.md)
    * [Apêndice](api/appendix.md)
 * Conjuntos de dados {#datasets}
    * [Visão geral dos conjuntos de dados](datasets/overview.md)

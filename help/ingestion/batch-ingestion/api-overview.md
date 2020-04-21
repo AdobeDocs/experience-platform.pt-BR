@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do desenvolvedor de assimilação de lote da plataforma Adobe Experience
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um
 
 Ao assimilar dados, é importante entender como os schemas do Experience Data Model (XDM) funcionam. Para obter mais informações sobre como os tipos de campos XDM mapeiam para diferentes formatos, leia o guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md)Schemas.
 
-Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no schema do público alvo, os dados serão convertidos no tipo de público alvo expresso.  Se não puder, o lote será reprovado com um `TypeCompatibilityException`.
+Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no schema do público alvo, os dados serão convertidos no tipo de público alvo expresso. Se não puder, o lote será reprovado com um `TypeCompatibilityException`.
 
 Por exemplo, nem JSON nem CSV têm um tipo de data ou data e hora. Como resultado, esses valores são expressos usando strings [formatadas com](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Unix Time formatado em milissegundos (153126395 (9000) e são convertidos no momento da ingestão para o tipo XDM do público alvo.
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parâmetro | Descrição |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência. |
 
 **Resposta**
@@ -494,7 +494,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -559,7 +559,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Para assimilar arquivos CSV, é necessário criar uma classe, um schema e um conjunto de dados compatível com CSV. Para obter informações detalhadas sobre como criar a classe e o schema necessários, siga as instruções fornecidas no tutorial [de criação de schemas](../../xdm/api/ad-hoc.md)ad-hoc.
 
->[!NOTE] As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
+>[!NOTE] As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
 
 ### Criar conjunto de dados
 
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Excluir um lote
+## Excluir um lote {#delete-a-batch}
 
 Um lote pode ser excluído executando a seguinte solicitação POST com o parâmetro de `action=REVERT` query para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o elegível para coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
 

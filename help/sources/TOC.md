@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar um conector de origem {#create}
       - Aplicativos da Adobe {#adobe-applications}
-         - [Conector do Adobe Audiência Manager](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Conector do Adobe Analytics](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Conector do Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Conector do Adobe Audiência Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Conector de atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicidade {#create}
          - [Conector Google Ads](tutorials/ui/create/advertising/ads.md)

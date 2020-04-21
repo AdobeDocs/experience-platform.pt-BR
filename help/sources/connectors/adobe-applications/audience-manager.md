@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector do Gerenciador de Audiências
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ Abaixo estão exemplos da estrutura do Gerenciador de Audiências mapeada para o
 
 ## Como os campos são mapeados do Adobe Audiência Manager para o XDM?
 
-Consulte a documentação para obter mais informações sobre os campos [de mapeamento do Gerenciador de][audience-manager-mapping-fields] Audiências.
+Consulte a documentação para obter mais informações sobre os campos [de mapeamento do Gerenciador de](./mapping/audience-manager.md) Audiências.
 
 ## Gestão de dados na plataforma
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados usando APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ Uma resposta bem-sucedida retorna os rótulos que foram adicionados ao conjunto 
 
 Você pode excluir os rótulos aplicados a um conjunto de dados, fazendo uma solicitação DELETE.
 
->[!NOTE] Você só deve usar essa operação ao preparar o conjunto de dados pai para exclusão.
-
 **Formato da API**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta com êxito HTTP status 200 (OK) indica que os rótulos foram excluídos. Você pode [procurar os rótulos](#lookup) existentes para o conjunto de dados em uma chamada separada para confirmar isso.
+Uma resposta com êxito HTTP status 200 (OK), indicando que os rótulos foram excluídos. Você pode [procurar os rótulos](#lookup) existentes para o conjunto de dados em uma chamada separada para confirmar isso.
 
 ## Próximas etapas
 

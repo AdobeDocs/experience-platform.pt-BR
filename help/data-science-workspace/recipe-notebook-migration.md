@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
+source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
 
 ---
 
@@ -53,24 +53,32 @@ Antes de criar a imagem do Docker, analise os exemplos para ler e gravar conjunt
 
 Esta seção descreve as alterações necessárias para ler um conjunto de dados e usa o exemplo [helper.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) , fornecido pela Adobe.
 
-Com as atualizações das receitas do Spark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `QSOption`. Além disso, são necessários novos `option` parâmetros. Tanto `QSOption.mode` quanto `QSOption.datasetId` são necessários. Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Analise a tabela a seguir para obter uma comparação sobre a leitura de conjuntos de dados:
+**Modo antigo de ler um conjunto de dados**
 
-<table>
-  <th>Modo antigo de ler um conjunto de dados</th>
-  <th>Nova maneira de ler um conjunto de dados</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  var df = sparkSession.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceApiKey, apiKey, iKey) .load(dataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-importe com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.adobe.platform.query") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {orgId}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.mode, "interative") .option(QSOption.datasetId, {dataSetId}) .load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```scala
+ var df = sparkSession.read.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .load(dataSetId)
+```
+
+**Nova maneira de ler um conjunto de dados**
+
+Com as atualizações das receitas do Spark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `QSOption`. Além disso, são necessários novos `option` parâmetros. Tanto `QSOption.mode` quanto `QSOption.datasetId` são necessários. Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Consulte o exemplo a seguir para obter uma comparação sobre a leitura de conjuntos de dados:
+
+```scala
+import com.adobe.platform.query.QSOption
+var df = sparkSession.read.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.mode, "interactive")
+  .option(QSOption.datasetId, {dataSetId})
+  .load()
+```
 
 >[!TIP]
 > O modo interativo expira se os query estiverem em execução por mais de 10 minutos. Se você estiver ingerindo mais de alguns gigabytes de dados, é recomendável alternar para o modo &quot;lote&quot;. O modo de lote demora mais para ser start, mas pode lidar com conjuntos maiores de dados.
@@ -79,24 +87,31 @@ importe com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.
 
 Esta seção descreve as alterações necessárias para gravar um conjunto de dados usando o exemplo [ScoringDataSaver.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) , fornecido pela Adobe.
 
-Com as atualizações das receitas do Spark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `QSOption`. Além disso, são necessários novos `option` parâmetros. `QSOption.datasetId` é necessário e substitui a necessidade de carregar o `{dataSetId}` em `.save()`. Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Analise a tabela a seguir para obter uma comparação sobre a gravação de conjuntos de dados:
+**Modo antigo de escrever um conjunto de dados**
 
-<table>
-  <th>Modo antigo de escrever um conjunto de dados</th>
-  <th>Nova maneira de escrever um conjunto de dados</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceApiKey, apiKey) .save (scoringResultsDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-importe com.adobe.platform.query.QSOptiondf.write.format("com.adobe.platform.query") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {orgId}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.datasetId, {dataSetId}) .save()
-</pre>
-  </td>
-  </tr>
-</table>
+```scala
+df.write.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .save(scoringResultsDataSetId)
+```
+
+**Nova maneira de escrever um conjunto de dados**
+
+Com as atualizações das receitas do Spark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `QSOption`. Além disso, são necessários novos `option` parâmetros. `QSOption.datasetId` é necessário e substitui a necessidade de carregar o `{dataSetId}` em `.save()`. Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Analise o exemplo a seguir para obter uma comparação sobre a gravação de conjuntos de dados:
+
+```scala
+import com.adobe.platform.query.QSOption
+df.write.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.datasetId, {dataSetId})
+  .save()
+```
 
 ### Pacote de arquivos de origem baseados em Docker (Spark) {#package-docker-spark}
 
@@ -174,24 +189,33 @@ Antes de criar a imagem do Docker, analise os exemplos para ler e gravar conjunt
 
 Esta seção descreve as alterações necessárias para ler um conjunto de dados usando o exemplo [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) , fornecido pela Adobe.
 
-Com as atualizações das receitas do Spark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `qs_option`. Além disso, são necessários novos `option` parâmetros. Tanto `qs_option.mode` quanto `qs_option.datasetId` são necessários. Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Analise a tabela a seguir para obter uma comparação sobre a leitura de conjuntos de dados:
+**Modo antigo de ler um conjunto de dados**
 
-<table>
-  <th>Modo antigo de ler um conjunto de dados</th>
-  <th>Nova maneira de ler um conjunto de dados</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.serviceToken(), service_token) .option(dataset_options.userToken(), user_token) .option(dataset_options.org d(), org_id) .option(dataset_options.serviceApiKey(), api_key) .load(dataset_id)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionpd = sparkSession.read.format("com.adobe.platform.query") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) option(qs_option.apiKey, {apiKey}) .option(qs_option.mode, "interative") .option(qs_option.datasetId, {dataSetId}) .load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```python
+dataset_options = get_dataset_options(spark.sparkContext)
+pd = spark.read.format("com.adobe.platform.dataset") 
+  .option(dataset_options.serviceToken(), service_token) 
+  .option(dataset_options.userToken(), user_token) 
+  .option(dataset_options.orgId(), org_id) 
+  .option(dataset_options.serviceApiKey(), api_key)
+  .load(dataset_id)
+```
+
+**Nova maneira de ler um conjunto de dados**
+
+Com as atualizações das receitas do Spark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `qs_option`. Além disso, são necessários novos `option` parâmetros. Tanto `qs_option.mode` quanto `qs_option.datasetId` são necessários. Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Consulte o exemplo a seguir para obter uma comparação sobre a leitura de conjuntos de dados:
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+pd = sparkSession.read.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.mode, "interactive") 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .load()
+```
 
 >[!TIP]
 > O modo interativo expira se os query estiverem em execução por mais de 10 minutos. Se você estiver ingerindo mais de alguns gigabytes de dados, é recomendável alternar para o modo &quot;lote&quot;. O modo de lote demora mais para ser start, mas pode lidar com conjuntos maiores de dados.
@@ -200,24 +224,31 @@ qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionpd = sparkSessio
 
 Esta seção descreve as alterações necessárias para gravar um conjunto de dados usando o exemplo [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) , fornecido pela Adobe.
 
-Com as atualizações das receitas do PySpark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `qs_option`. Além disso, são necessários novos `option` parâmetros.  `qs_option.datasetId` é necessário e substitui a necessidade de carregar o `{dataSetId}` em `.save()` . Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Analise a tabela a seguir para obter uma comparação sobre a leitura de conjuntos de dados:
+**Modo antigo de escrever um conjunto de dados**
 
-<table>
-  <th>Modo antigo de escrever um conjunto de dados</th>
-  <th>Nova maneira de escrever um conjunto de dados</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceApiKey, apiKey) .save (scoringResultsDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionscored_df.write.format("com.adobe.platform.query") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) .option qs_option.apiKey, {apiKey}) .option(qs_option.datasetId, {dataSetId}) .save()
-</pre>
-  </td>
-  </tr>
-</table>
+```python
+df.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, orgId)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceApiKey, apiKey)
+  .save(scoringResultsDataSetId)
+```
+
+**Nova maneira de escrever um conjunto de dados**
+
+Com as atualizações das receitas do PySpark, vários valores precisam ser adicionados e alterados. Primeiro, não `DataSetOptions` é mais usado. Replace `DataSetOptions` with `qs_option`. Além disso, são necessários novos `option` parâmetros.  `qs_option.datasetId` é necessário e substitui a necessidade de carregar o `{dataSetId}` em `.save()` . Por último, `orgId` e `serviceApiKey` é necessário mudar para `imsOrg` e `apiKey`. Consulte o exemplo a seguir para obter uma comparação sobre a leitura de conjuntos de dados:
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+scored_df.write.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .save()
+```
 
 ### Pacote de arquivos de origem baseados em Docker (PySpark) {#pyspark-package-docker}
 
@@ -376,31 +407,22 @@ Um comando mágico personalizado da Data Science Workspace para ler ou escrever 
 
 ## Carregar em um dataframe no LocalContext
 
-Com a introdução do Spark 2.4, a magia [`%dataset`](#magic) personalizada é fornecida. A tabela a seguir destaca as principais diferenças para carregar os dados nos notebooks PySpark (Spark 2.3) e PySpark (Spark 2.4):
+Com a introdução do Spark 2.4, a magia [`%dataset`](#magic) personalizada é fornecida. O exemplo a seguir destaca as principais diferenças para carregar o dataframe nos notebooks PySpark (Spark 2.3) e PySpark (Spark 2.4):
 
-<table>
-  <th>Notebook</th>
-  <th>PySpark 3 (Spark 2.3 - obsoleto)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>Código</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0 = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .load("5e6814113492718af97 (4844")
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
-</pre>
-  </td>
-  </tr>
-</table>
+**Usando o PySpark 3 (Spark 2.3 - obsoleto) - Kernel do PySpark 3**
+
+```python
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+pd0 = spark.read.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .load("5e68141134492718af974844")
+```
+
+**Usando o PySpark 3 (Spark 2.4) - Python 3 Kernel**
+
+```python
+%dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
+```
 
 | Elemento | Descrição |
 | ------- | ----------- |
@@ -504,29 +526,30 @@ Com o PySpark 3 (Spark 2.4), o `%%sql` Sparkmágico não é mais suportado e foi
 
 Com a introdução do Spark 2.4, é fornecida magia [`%dataset`](#magic) personalizada que torna a gravação de conjuntos de dados mais limpa. Para gravar em um conjunto de dados, use o seguinte exemplo do Spark 2.4:
 
-<table>
-  <th>Notebook</th>
-  <th>PySpark 3 (Spark 2.3 - obsoleto)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>Código</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.wire.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.wire.appMasterEnv.SERVICE_TOKEN")serviceApiKey = spark sparkContext.getConf().get("spark.wire.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0.write.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .option(dataset_options.userToken(), userToken) .option(dataset_options.serviceToken(), serviceToken) .option(dataset_options.serviceApiKey(), serviceApiKey) .save("5e6814113492718af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0pd0.description()pd0.show(10, False)
-</pre>
-  </td>
-  </tr>
-</table>
+**Usando o PySpark 3 (Spark 2.3 - obsoleto) - Kernel do PySpark 3**
+
+```python
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
+serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
+serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
+
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+
+pd0.write.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(dataset_options.userToken(), userToken)
+  .option(dataset_options.serviceToken(), serviceToken)
+  .option(dataset_options.serviceApiKey(), serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**Usando o PySpark 3 (Spark 2.4) - Python 3 Kernel**
+
+```python
+%dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
 
 | Elemento | descrição |
 | ------- | ----------- |
@@ -681,31 +704,32 @@ O kernel Scala não suporta mais `%%sql` magia cintilante. É necessário conver
 
 ## Ler um conjunto de dados {#notebook-read-dataset-spark}
 
-No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para ler um conjunto de dados.
+No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para a leitura de um conjunto de dados.
 
-<table>
-  <th>Notebook</th>
-  <th>Spark (Spark 2.3 - obsoleto)</th>
-  <th>Scala (Spark 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">Faísca</td>
-  <td align="center">Scala</td>
-  </tr>
-  <tr>
-  <th>código</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-importe com.adobe.platform.dataset.DataSetOptionsvar df1 = spark.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c 80f8-9b7025eea2b9") .load("5e6814113492718af974844")
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-importe org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()val df1 = spark.read.format("com.adobe.platform.query") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN") .option() "ims-org", sys.env("IMS_ORG_ID") .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID")) .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN")) .option("modo", interative") .option("dataset-id", "5e68141134492718af974844") .load()
-</pre>
-  </td>
-  </tr>
-</table>
+**Usando o Spark (Spark 2.3 - obsoleto) - Kernel do Spark**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+var df1 = spark.read.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80f8-9b7025eea2b9")
+  .load("5e68141134492718af974844")
+```
+
+**Usando Scala (Spark 2.4) - Scala Kernel**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+val df1 = spark.read.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .load()
+```
 
 | direcionado | descrição |
 | ------- | ----------- |
@@ -737,31 +761,41 @@ O notebook Scala (Spark 2.4) usa o kernel Scala, que requer mais valores na conf
 
 ## Gravar em um conjunto de dados
 
-Semelhante à [leitura de um conjunto de dados](#notebook-read-dataset-spark), a gravação em um conjunto de dados requer `option` valores adicionais descritos na tabela abaixo. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para gravar em um conjunto de dados.
+Semelhante à [leitura de um conjunto de dados](#notebook-read-dataset-spark), a gravação em um conjunto de dados requer `option` valores adicionais descritos no exemplo abaixo. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para gravar em um conjunto de dados.
 
-<table>
-  <th>Notebook</th>
-  <th>Spark (Spark 2.3 - obsoleto)</th>
-  <th>Scala (Spark 2.4)</th>
-  <tr>
-  <th>Kernel</th>
-  <td align="center">Faísca</td>
-  <td align="center">Scala</td>
-  </tr>
-  <tr>
-  <th>código</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.wire.appMasterEnv.USER_TOKEN").getvar serviceToken = spark.sparkContext.getConf.getOption("spark.wire.app MasterEnv.SERVICE_TOKEN").getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.wire.appMasterEnv.SERVICE_API_KEY").getdf1.write.format("com.adobe.platform.dataset") .option(DataSetOptions.org Id, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.serviceApiKey, serviceApiKey) .save("5e6814134927 18af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-importe org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()df1.write.format("com.adobe.platform.query") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")) .option("service-token ken", sys.env("PYDASDK_IMS_SERVICE_TOKEN")) .option("ims-org", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID")) .option("mode", "interative") .option("dataset-id", "5e68141134492718af974844") .save()
-</pre>
-  </td>
-  </tr>
-</table>
+**Usando o Spark (Spark 2.3 - obsoleto) - Kernel do Spark**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+
+var userToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.USER_TOKEN").get
+var serviceToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_TOKEN").get
+var serviceApiKey = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_API_KEY").get
+
+df1.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.serviceApiKey, serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**Usando Scala (Spark 2.4) - Scala Kernel**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+df1.write.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .save()
+```
 
 | direcionado | descrição |
 | ------- | ----------- |

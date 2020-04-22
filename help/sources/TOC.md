@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -153,3 +153,4 @@ source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
       - [Configurar um fluxo de dados para um conector de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Ativar dados de entrada para preencher perfis do cliente](tutorials/ui/profile.md)
    - [Monitorar os fluxos de contas e de conjunto de dados](tutorials/ui/monitor.md)
+- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

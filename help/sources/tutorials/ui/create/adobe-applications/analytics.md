@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Adobe Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: ac1e5dbe435d9e85e8ce3ad90c60dd31ba9248ff
 
 ---
 
@@ -15,7 +15,7 @@ Este tutorial fornece etapas para a criação de um conector de origem do Adobe 
 
 ## Criar uma conexão de origem com o Adobe Analytics
 
-Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela *Catálogo* exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de conexões existentes associadas a elas. Selecione a opção para o **Adobe Analytics** e clique em Fonte **de** Visualização para ver todas as conexões conectadas estabelecidas a ela.
+Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela *Catálogo* exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de conexões existentes associadas a elas. Selecione a opção para o **Adobe Analytics** e clique em Fonte **de** Visualização para ver todas as conexões estabelecidas em vínculo a ela.
 
 ![](../../../../images/tutorials/create/analytics/AA-sources_catalog.png)
 
@@ -23,7 +23,7 @@ A tela atividade *de origem lista todas as conexões estabelecidas anteriormente
 
 >[!NOTE] Várias conexões de entrada para uma fonte podem ser feitas para inserir dados diferentes.
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 Na lista dos conjuntos de relatórios disponíveis, selecione o que deseja trazer para a Plataforma e clique em **Avançar**.
 

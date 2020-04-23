@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Transmissão de várias mensagens em uma única solicitação HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -47,7 +47,7 @@ Em vez de usar um conjunto de dados existente, você pode criar um novo conjunto
 **Formato da API**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Propriedade | Descrição |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **Solicitação**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ A carga da solicitação é uma matriz de objetos JSON que representam o evento 
 **Formato da API**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Propriedade | Descrição |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **Solicitação**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [

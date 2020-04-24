@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do desenvolvedor da API de Registro do Schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 * Tipo de conteúdo: application/json
 
-## Conheça sua TENANT_ID {#know-your-tenant-id}
+## Conheça sua TENANT_ID {#know-your-tenant_id}
 
 Ao longo deste guia você verá referências a um `TENANT_ID`. Essa ID é usada para garantir que os recursos criados sejam devidamente nomeados e estejam contidos em sua Organização IMS. Se você não souber sua ID, poderá acessá-la executando a seguinte solicitação GET:
 
@@ -206,7 +206,7 @@ Os campos de um schema são listados dentro de seu `properties` objeto. Cada cam
 
 Para obter mais informações sobre a definição de tipos de campos na API, consulte o [apêndice](appendix.md) deste guia, incluindo exemplos de código e restrições opcionais para os tipos de dados mais usados.
 
-O campo de amostra a seguir ilustra um campo XDM formatado corretamente, com mais detalhes sobre restrições de nomenclatura e práticas recomendadas fornecidas abaixo. Essas práticas também podem ser aplicadas na definição de outros recursos que contenham atributos semelhantes.
+O campo de amostra a seguir ilustra um campo XDM corretamente formatado, com mais detalhes sobre restrições de nomenclatura e práticas recomendadas fornecidas abaixo. Essas práticas também podem ser aplicadas na definição de outros recursos que contenham atributos semelhantes.
 
 ```JSON
 "fieldName": {

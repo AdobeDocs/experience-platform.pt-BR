@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do SDK da plataforma
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -17,7 +17,7 @@ Este tutorial fornece informações sobre como converter `data_access_sdk_python
 - [Leitura básica dos dados](#basic-reading-of-data)
 - [Escrita básica dos dados](#basic-writing-of-data)
 
-## Autenticação de compilação
+## Autenticação de compilação {#build-authentication}
 
 A autenticação é necessária para fazer chamadas para a Adobe Experience Platform e é composta de uma chave de API, ID de organização IMS, um token de usuário e um token de serviço.
 
@@ -64,7 +64,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Leitura básica dos dados
+## Leitura básica dos dados {#basic-reading-of-data}
 
 Com o novo SDK da plataforma, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
 
@@ -99,7 +99,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrar por deslocamento e limite
+## Filtrar por deslocamento e limite {#filter-by-offset-and-limit}
 
 Como a filtragem por ID de lote não é mais suportada, para a leitura de dados no escopo, é necessário usar `offset` e `limit`.
 
@@ -117,7 +117,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Filtrar por data
+## Filtrar por data {#filter-by-date}
 
 A granularidade da filtragem de datas agora é definida pelo carimbo de data e hora, em vez de ser definida pelo dia.
 
@@ -153,7 +153,7 @@ O novo SDK da plataforma suporta as seguintes operações:
 | And (`&`) | `And()` |
 | Ou (`|`) | `Or()` |
 
-## Filtrar por colunas selecionadas
+## Filtrar por colunas selecionadas {#filter-by-selected-columns}
 
 Para refinar ainda mais a leitura de dados, também é possível filtrar por nome de coluna.
 
@@ -169,7 +169,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## Obter resultados classificados
+## Obter resultados classificados {#get-sorted-results}
 
 Os resultados recebidos podem ser classificados por colunas especificadas do conjunto de dados do público alvo e em sua ordem (asc/desc), respectivamente.
 
@@ -187,7 +187,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Escrita básica dos dados
+## Escrita básica dos dados {#basic-writing-of-data}
 
 >[!NOTE] A Organização IMS está definida dentro da `client_context`.
 

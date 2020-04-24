@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do desenvolvedor do SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,18 +13,9 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado e Pipelines de Recursos personalizados em máquina que podem ser usados na Adobe Experience Platform Data Science Workspace, fornecendo modelos implementáveis no PySpark e no Spark.
 
-Este documento fornece informações sobre as várias classes encontradas no SDK de criação de modelo:
+Este documento fornece informações sobre as várias classes encontradas no SDK de criação de modelo.
 
-- [DataLoader](#dataloader)
-   - [Carregar dados de um conjunto de dados de plataforma](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [Salvar dados em um conjunto de dados da plataforma](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 A classe DataLoader encapsula qualquer coisa relacionada à recuperação, filtragem e devolução de dados de entrada brutos. Exemplos de dados de entrada incluem aqueles para treinamento, pontuação ou engenharia de recursos. Os carregadores de dados estendem a classe abstrata `DataLoader` e devem substituir o método abstrato `load`.
 
@@ -83,7 +74,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe Spark Data Loader
     </tbody>
 </table>
 
-### Carregar dados de um conjunto de dados de plataforma
+### Carregar dados de um conjunto de dados de plataforma {#load-data-from-a-platform-dataset}
 
 O exemplo a seguir recupera dados da plataforma por ID e retorna um DataFrame, onde a ID do conjunto de dados (`datasetId`) é uma propriedade definida no arquivo de configuração.
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 A classe DataSaver encapsula qualquer coisa relacionada ao armazenamento de dados de saída, incluindo os dados de pontuação ou engenharia de recursos. Os servidores de dados estendem a classe abstrata `DataSaver` e devem substituir o método abstrato `save`.
 
@@ -258,7 +249,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe Spark Data Saver:
     </tbody>
 </table>
 
-### Salvar dados em um conjunto de dados da plataforma
+### Salvar dados em um conjunto de dados da plataforma {#save-data-to-a-platform-dataset}
 
 Para armazenar dados em um conjunto de dados da Plataforma, as propriedades devem ser fornecidas ou definidas no arquivo de configuração:
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 A classe DatasetTransformer modifica e transforma a estrutura de um conjunto de dados. O Tempo de Execução do Sensei Machine Learning não exige que esse componente seja definido e é implementado com base em seus requisitos.
 
@@ -459,7 +450,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe de transformador 
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 A classe FeaturePipelineFactory contém algoritmos de extração de recursos e define os estágios de um Recurso Pipeline de start a fim.
 
@@ -541,7 +532,7 @@ A tabela a seguir descreve os métodos de classe de um Spark FeaturePipelineFact
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 A classe PipelineFactory encapsula métodos e definições para treinamento e pontuação de modelo, onde lógica e algoritmos de treinamento são definidos na forma de um Spark Pipeline.
 
@@ -650,7 +641,7 @@ A tabela a seguir descreve os métodos de classe de um Spark PipelineFactory:
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 A classe MLEvaluator fornece métodos para definir métricas de avaliação e determinar conjuntos de dados de treinamento e teste.
 

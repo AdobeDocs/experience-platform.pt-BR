@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importar uma receita empacotada (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -121,21 +121,21 @@ Para a finalidade deste tutorial, você pode deixar os arquivos de configuraçã
 
 ### Importar fórmula baseada no Docker - Python {#python}
 
-Start navegando e selecionando **Workflows** localizados na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **Iniciar**.
+Start navegando e selecionando **[!UICONTROL Workflows]** localizado na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Digite um nome e uma descrição para a fórmula e selecione **Próximo** no canto superior direito.
+A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Insira um nome e uma descrição para a receita e selecione-a **[!UICONTROL Next]** no canto superior direito.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Encapsulamento de arquivos de origem em um tutorial de Recipe), um URL de Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem Python.
 
-Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem Python no campo URL **de** origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecione **Python** na lista suspensa *Tempo de execução* e **Classificação** na lista suspensa *Tipo* . Depois que tudo estiver preenchido, clique em **Avançar** no canto superior direito para prosseguir para *Gerenciar schemas*.
+Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem Python no **[!UICONTROL Source URL]** campo. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecione **[!UICONTROL Python]** na lista suspensa *Tempo de execução* e **[!UICONTROL Classification]** na lista suspensa *Tipo* . Depois que tudo estiver preenchido, clique **[!UICONTROL Next]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **Classificação**e **Regressão**. Se o modelo não se enquadrar em um desses tipos, selecione **Personalizado**.
+> *O tipo *suporta **[!UICONTROL Classification]**e **[!UICONTROL Regression]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Custom]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -143,9 +143,9 @@ Em seguida, selecione os schemas de entrada e saída do Retail Sales na seção 
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando Recurso **de** entrada ou Recurso **de** Público alvo na janela Propriedades **do** campo direita. Para a finalidade deste tutorial, defina **semanalmenteSales** como o Recurso **do** Público alvo e tudo o mais como Recurso **de** entrada. Clique em **Avançar** para revisar sua nova fórmula configurada.
+Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando **[!UICONTROL Input Feature]** ou **[!UICONTROL Target Feature]** na janela direita **[!UICONTROL Field Properties]** . Para a finalidade deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Target Feature]** e tudo o mais como **[!UICONTROL Input Feature]**. Clique **[!UICONTROL Next]** para revisar sua nova fórmula configurada.
 
-Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **Concluir** para criar a fórmula.
+Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **[!UICONTROL Finish]** para criar a receita.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -153,21 +153,21 @@ Siga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo
 
 ### Importar fórmula baseada no Docker - R {#r}
 
-Start navegando e selecionando **Workflows** localizados na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **Iniciar**.
+Start navegando e selecionando **[!UICONTROL Workflows]** localizado na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Digite um nome e uma descrição para a fórmula e selecione **Próximo** no canto superior direito.
+A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Insira um nome e uma descrição para a receita e selecione-a **[!UICONTROL Next]** no canto superior direito.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Arquivos de origem do pacote), um URL do Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem R.
 
-Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem R no campo URL **de** origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecione **R** no menu suspenso *Tempo de execução* e **Classificação** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique em **Avançar** no canto superior direito para prosseguir para *Gerenciar schemas*.
+Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem R no **[!UICONTROL Source URL]** campo. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecione **[!UICONTROL R]** no menu suspenso *Tempo de execução* e **[!UICONTROL Classification]** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique **[!UICONTROL Next]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **Classificação**e **Regressão**. Se o modelo não se enquadrar em um desses tipos, selecione **Personalizado**.
+> *O tipo *suporta **[!UICONTROL Classification]**e **[!UICONTROL Regression]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Custom]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -175,7 +175,7 @@ Em seguida, selecione os schemas de entrada e saída do Retail Sales na seção 
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando Recurso **de** entrada ou Recurso **de** Público alvo na janela Propriedades **do** campo direita. Para a finalidade deste tutorial, defina **semanalmenteSales** como o Recurso **do** Público alvo e tudo o mais como Recurso **de** entrada. Clique em **Avançar** para revisar sua nova receita configurada.
+Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando **[!UICONTROL Input Feature]** ou **[!UICONTROL Target Feature]** na janela direita **[!UICONTROL Field Properties]** . Para a finalidade deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Target Feature]** e tudo o mais como **[!UICONTROL Input Feature]**. Clique **[!UICONTROL Next]** para revisar sua nova receita configurada.
 
 Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **Concluir** para criar a fórmula.
 
@@ -185,21 +185,21 @@ Siga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo
 
 ### Importar fórmula baseada no Docker - PySpark {#pyspark}
 
-Start navegando e selecionando **Workflows** localizados na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **Iniciar**.
+Start navegando e selecionando **[!UICONTROL Workflows]** localizado na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Insira um nome e uma descrição para a receita e selecione **Próximo** no canto superior direito para prosseguir.
+A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Insira um nome e uma descrição para a receita e selecione **[!UICONTROL Next]** no canto superior direito para continuar.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Arquivos de origem do pacote), um URL de Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem PySpark.
 
-Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem do PySpark no campo URL **de** origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecione **PySpark** no menu suspenso *Runtime* . Depois que o tempo de execução PySpark é selecionado, o artefato padrão é preenchido automaticamente para o **Docker**. Em seguida, selecione **Classificação** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique em **Avançar** no canto superior direito para prosseguir para *Gerenciar schemas*.
+Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem do PySpark no **[!UICONTROL Source URL]** campo. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecione **[!UICONTROL PySpark]** no menu suspenso *Tempo de execução* . Depois que o tempo de execução do PySpark é selecionado, o artefato padrão é preenchido automaticamente para **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Classification]** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique **[!UICONTROL Next]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **Classificação**e **Regressão**. Se o modelo não se enquadrar em um desses tipos, selecione **Personalizado**.
+> *O tipo *suporta **[!UICONTROL Classification]**e **[!UICONTROL Regression]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Custom]**.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -207,9 +207,9 @@ Em seguida, selecione os schemas de entrada e saída do Retail Sales na seção 
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando Recurso **de** entrada ou Recurso **de** Público alvo na janela Propriedades **do** campo direita. Para a finalidade deste tutorial, defina **semanalmenteSales** como o Recurso **do** Público alvo e tudo o mais como Recurso **de** entrada. Clique em **Avançar** para revisar sua nova fórmula configurada.
+Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando **[!UICONTROL Input Feature]** ou **[!UICONTROL Target Feature]** na janela direita **[!UICONTROL Field Properties]** . Para a finalidade deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Target Feature]** e tudo o mais como **[!UICONTROL Input Feature]**. Clique **[!UICONTROL Next]** para revisar sua nova fórmula configurada.
 
-Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **Concluir** para criar a fórmula.
+Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **[!UICONTROL Finish]** para criar a receita.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -217,21 +217,21 @@ Siga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo
 
 ### Importar fórmula baseada no Docker - Scala {#scala}
 
-Start navegando e selecionando **Workflows** localizados na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **Iniciar**.
+Start navegando e selecionando **[!UICONTROL Workflows]** localizado na parte superior esquerda da interface do usuário da plataforma. Em seguida, selecione *Importar fórmula* e clique em **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Insira um nome e uma descrição para a receita e selecione **Próximo** no canto superior direito para prosseguir.
+A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibida. Insira um nome e uma descrição para a receita e selecione **[!UICONTROL Next]** no canto superior direito para continuar.
 
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
-> No [Package source files to a Recipe tutorial (Encapsulamento de arquivos de origem para um tutorial de Receita](./package-source-files-recipe.md) ), um URL de Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem Scala (Spark).
+> No [Package source files to a Recipe tutorial (Encapsulamento de arquivos de origem para um tutorial de Receita](./package-source-files-recipe.md) ), um URL de Docker foi fornecido no final da criação da receita de Vendas de Varejo usando os arquivos de origem Scala (Spark).
 
-Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem do Scala no campo URL *de* origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecione **Spark** no menu suspenso *Runtime* . Depois que o tempo de execução do Spark é selecionado, o artefato padrão é preenchido automaticamente para o **Docker**. Em seguida, selecione **Regressão** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique em **Avançar** no canto superior direito para prosseguir para *Gerenciar schemas*.
+Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem do Scala no campo URL *de* origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecione **[!UICONTROL Spark]** no menu suspenso *Tempo de execução* . Quando o tempo de execução do Spark é selecionado, o artefato padrão é preenchido automaticamente para **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Regression]** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique **[!UICONTROL Next]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **Classificação**e **Regressão**. Se o modelo não se enquadrar em um desses tipos, selecione **Personalizado**.
+> *O tipo *suporta **[!UICONTROL Classification]**e **[!UICONTROL Regression]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Custom]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
@@ -239,15 +239,15 @@ Em seguida, selecione os schemas de entrada e saída do Retail Sales na seção 
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando Recurso **de** entrada ou Recurso **de** Público alvo na janela Propriedades **do** campo direita. Para a finalidade deste tutorial, defina **semanalmenteSales** como o Recurso **do** Público alvo e tudo o mais como Recurso **de** entrada. Clique em **Avançar** para revisar sua nova fórmula configurada.
+Na seção Gerenciamento *de* recursos, clique na identificação do locatário no visualizador de schemas para expandir o schema de entrada Vendas de varejo. Selecione os recursos de entrada e saída destacando o recurso desejado e selecionando **[!UICONTROL Input Feature]** ou **[!UICONTROL Target Feature]** na janela direita **[!UICONTROL Field Properties]** . Para a finalidade deste tutorial, defina **[!UICONTROL weeklySales]** como o **[!UICONTROL Target Feature]** e tudo o mais como **[!UICONTROL Input Feature]**. Clique **[!UICONTROL Next]** para revisar sua nova fórmula configurada.
 
-Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **Concluir** para criar a fórmula.
+Revise a receita, adicione, modifique ou remova configurações conforme necessário. Clique em **[!UICONTROL Finish]** para criar a receita.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
 Siga para as [próximas etapas](#next-steps) para descobrir como criar um Modelo na Data Science Workspace usando a fórmula de vendas a varejo recém-criada.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Este tutorial forneceu insight sobre como configurar e importar uma receita para a Data Science Workspace. Agora você pode criar, treinar e avaliar um Modelo usando a fórmula recém-criada.
 

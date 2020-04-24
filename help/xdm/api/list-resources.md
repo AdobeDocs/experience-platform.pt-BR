@@ -4,18 +4,16 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # Recursos de Lista
 
-Você pode visualização uma lista de todos os recursos (schemas, classes, mixins ou tipos de dados) dentro de um container executando uma única solicitação GET.
+Você pode visualização uma lista de todos os recursos do Registro de Schemas de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação GET.
 
 >[!NOTE] Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros [de](#paging)paginação. Também é recomendável usar parâmetros de query para [filtrar os resultados](#filtering) e reduzir o número de recursos retornados.
->
-> Se quiser substituir totalmente o limite de 300 itens, use o cabeçalho Aceitar `application/vnd.adobe.xdm-v2+json` para retornar todos os resultados em uma única solicitação.
 
 **Formato da API**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{CONTAINER_ID}` | O container no qual os recursos estão localizados (&quot;global&quot; ou &quot;locatário&quot;). |
-| `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado da Biblioteca de Schemas. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado da Biblioteca de Schemas. Os tipos válidos são `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
 | `{QUERY_PARAMS`} | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
 
 **Solicitação**
@@ -48,7 +46,7 @@ O formato de resposta depende do cabeçalho Aceitar enviado na solicitação. Os
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para a listagem de recursos. (Limite: 300) |
 | application/vnd.adobe.xed+json | Retorna o schema JSON completo para cada recurso, com original `$ref` e `allOf` incluído. (Limite: 300) |
-| application/vnd.adobe.xdm-v2+json | Retorna o schema JSON completo para todos os resultados em uma única solicitação, substituindo o limite de 300 itens. |
+| application/vnd.adobe.xdm-v2+json | Ao usar o `/descriptors` terminal, esse cabeçalho Accept deve ser usado para utilizar os recursos de paginação. |
 
 **Resposta**
 

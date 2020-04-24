@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Além dos documentos mencionados acima, é altamente recomendável que você tam
 * [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Descreve schemas XDM, blocos componentes, princípios e práticas recomendadas para a composição de schemas a serem usados na plataforma da experiência.
 * [Tutorial](../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Fornece instruções detalhadas para a criação de schemas usando o Editor de Schemas na Plataforma de experiência.
 
-## Criar um schema de saída e um conjunto de dados
+## Criar um schema de saída e um conjunto de dados {#create-an-output-schema-and-dataset}
 
 O primeiro passo para enriquecer o Perfil do cliente em tempo real com insights de pontuação é saber qual objeto real (como uma pessoa) seus dados definem. Compreender seus dados permite descrever e projetar uma estrutura que esteja significando para seus dados, como projetar um banco de dados relacional.
 
@@ -73,7 +73,7 @@ A composição de um schema começa com a atribuição de uma classe. As classes
 
 Agora que você criou um conjunto de dados de schema de saída, você está pronto para continuar com a próxima seção para configurá-los e ativá-los para o enriquecimento do Perfil.
 
-## Configurar um schema de saída e um conjunto de dados
+## Configurar um schema de saída e um conjunto de dados {#configure-an-output-schema-and-dataset}
 
 Antes de habilitar um conjunto de dados para o Perfil, é necessário configurar o schema do conjunto de dados para que ele tenha um campo de identidade primário e, em seguida, habilitar o schema para o Perfil. Se quiser criar e ativar um novo schema, consulte o tutorial sobre como [criar um schema usando o Editor](../../xdm/tutorials/create-schema-ui.md)de Schemas. Caso contrário, siga as instruções abaixo para ativar um schema e um conjunto de dados existentes.
 
@@ -97,7 +97,7 @@ Antes de habilitar um conjunto de dados para o Perfil, é necessário configurar
 
 Quando os dados são ingeridos em um conjunto de dados habilitado para Perfis, esses mesmos dados também são ingeridos como registros de Perfis. Agora que seu schema e conjunto de dados estão preparados, gere alguns dados no conjunto de dados, executando execuções de pontuação usando um modelo apropriado, e continue com este tutorial para criar segmentos de insight usando o Construtor de segmentos.
 
-## Criar segmentos usando o Construtor de segmentos
+## Criar segmentos usando o Construtor de segmentos {#create-segments-using-the-segment-builder}
 
 Agora que você gerou e assimilou insights em seu conjunto de dados habilitado para Perfis, é possível gerenciar esses dados identificando subconjuntos de elementos relacionados usando o Construtor de segmentos. Siga as etapas abaixo para criar seus próprios segmentos.
 
@@ -117,6 +117,6 @@ Agora que você gerou e assimilou insights em seu conjunto de dados habilitado p
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Este documento o orientou pelas etapas necessárias para ativar um schema e um conjunto de dados para o Perfil e demonstrou brevemente o fluxo de trabalho para a criação de segmentos do insight usando o Construtor de segmentos. Para saber mais sobre segmentos e o Construtor de segmentos, consulte a visão geral [do serviço de](../../segmentation/home.md)Segmentação.

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empacotar arquivos de origem em uma fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -29,7 +29,7 @@ Conceitos para entender:
 
 Receba start de criação com arquivos de origem de empacotamento para criar um arquivo. Os arquivos de origem definem a lógica e os algoritmos de aprendizado da máquina usados para resolver um problema específico em mãos e são escritos em Python, R, PySpark ou Scala. Os arquivos de arquivamento criados assumem a forma de uma imagem Docker. Depois de criado, o arquivo de arquivamento empacotado é importado para a Data Science Workspace para criar uma fórmula [na interface do usuário](./import-packaged-recipe-ui.md) ou [usando a API](./import-packaged-recipe-api.md).
 
-### Criação de modelo baseado em Docker
+### Criação de modelo baseado em Docker {#docker-based-model-authoring}
 
 Uma imagem do Docker permite que um desenvolvedor empacote um aplicativo com todas as partes de que precisa, como bibliotecas e outras dependências, e envie-o como um pacote.
 

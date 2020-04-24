@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicar um modelo como um serviço (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ Dependendo do caso de uso e dos requisitos específicos, a criação de um Servi
 
 Observe que um Serviço ML pode ser criado usando uma Instância ML sem agendar nenhum treinamento ou experiência de pontuação. Esse Serviço ML criará entidades comuns de Experimento e uma única Execução de Experimento para treinamento e pontuação.
 
-### Serviço ML com Experimento programado para pontuação
+### Serviço ML com Experimento programado para pontuação {#ml-service-with-scheduled-experiment-for-scoring}
 
 A criação de um Serviço ML publicando uma Instância ML com Execuções de Experimento programadas para pontuação resultará na criação de uma entidade de Experimento comum para treinamento. A Execução do Experimento de treinamento resultante gerada será usada para todas as Execuções do Experimento de pontuação programadas. Certifique-se de que você tenha os valores `mlInstanceId`, `trainingDataSetId`e `scoringDataSetId` necessários para a criação do Serviço ML, e que eles existem e são valores válidos.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 A partir da `JSON` resposta, as teclas `trainingExperimentId` e `scoringExperimentId` sugerem que uma nova entidade de treinamento e pontuação do Experimento foi criada para este Serviço ML. A presença do `scoringSchedule` objeto se refere aos detalhes da pontuação da programação de Execução de Experimento. A `id` chave na resposta refere-se ao Serviço ML que você acabou de criar.
 
-### Serviço ML com Experimentos programados para treinamento e pontuação
+### Serviço ML com Experimentos programados para treinamento e pontuação {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Para publicar uma instância ML existente como um serviço ML com treinamento programado e classificações de execuções de experimento, você deve fornecer agendamentos de treinamento e pontuação. Quando um Serviço ML dessa configuração é criado, entidades de Experimento programadas para treinamento e pontuação também são criadas. Observe que os agendamentos de treinamento e pontuação não precisam ser os mesmos. Durante uma execução de trabalho de pontuação, o modelo treinado mais recente produzido pelas Execuções de Experiência de treinamento programado será buscado e usado para a execução de pontuação programada.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 A adição de `trainingExperimentId` e `scoringExperimentId` no corpo da resposta sugere a criação de entidades de Experimento para treinamento e pontuação. A presença de `trainingSchedule` e `scoringSchedule` sugere que as entidades de Experimento mencionadas acima para treinamento e pontuação são Experimentos programados. A `id` chave na resposta refere-se ao Serviço ML que você acabou de criar.
 
-## Recuperando Serviços ML
+## Recuperando Serviços ML {#retrieving-ml-services}
 
 Recuperar um Serviço ML existente é tão simples quanto fazer uma `GET` solicitação para o `/mlServices` terminal. Certifique-se de ter a identificação do Serviço ML específico que está a tentar obter.
 

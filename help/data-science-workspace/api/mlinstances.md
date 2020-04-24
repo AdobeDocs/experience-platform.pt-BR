@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInentons
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 Uma instância MLI é um emparelhamento de um [Mecanismo](./engines.md) existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
 
-## Criar uma instância MLI
+## Criar uma instância MLI {#create-an-mlinstance}
 
 Você pode criar uma instância MLI executando uma solicitação POST enquanto fornece uma carga de solicitação que consiste em uma ID de mecanismo (`{ENGINE_ID}`) válida e um conjunto apropriado de configurações padrão.
 

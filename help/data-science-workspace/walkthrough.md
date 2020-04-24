@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apresentação da Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ Em nosso tutorial, usaremos Python 3 no notebook Júpiter para mostrar como aces
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Configurar
+### Configurar {#setup}
 
 Com o notebook de vendas de varejo aberto, a primeira coisa que fazemos é carregar as bibliotecas necessárias para nosso fluxo de trabalho. A lista a seguir fornecerá uma breve descrição do uso de cada uma delas:
 - **número** - biblioteca de computação científica que adiciona suporte para matrizes e matrizes grandes e multidimensionais
@@ -55,7 +55,7 @@ Com o notebook de vendas de varejo aberto, a primeira coisa que fazemos é carre
 - **sklearn** - biblioteca de aprendizado de máquina que apresenta classificação, regressão, vetor de suporte e algoritmos de cluster
 - **avisos** - biblioteca que controla as mensagens de aviso
 
-### Explorar dados
+### Explorar dados {#exploring-data}
 
 #### Carregar dados
 
@@ -129,7 +129,7 @@ Usando o mesmo conjunto de dados de varejo, podemos gerar a matriz de correlaç�
 
 Observe a diagonal dos que estão no centro. Isso mostra que ao comparar uma variável com ela mesma, ela tem uma correlação positiva completa. Uma forte correlação positiva terá uma magnitude mais próxima de 1, enquanto correlações fracas estarão mais próximas de 0. A correlação negativa é mostrada com um coeficiente negativo que mostra uma tendência inversa.
 
-### Engenharia de recursos
+### Engenharia de recursos {#feature-engineering}
 
 Nesta seção, faremos modificações em nosso conjunto de dados de varejo. Executaremos as seguintes operações:
 
@@ -177,7 +177,7 @@ Um resumo do conjunto de dados após nossas modificações é mostrado abaixo:
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Formação e verificação
+### Formação e verificação {#training-and-verification}
 
 Agora, é hora de criar alguns modelos de dados e selecionar qual modelo é o melhor desempenho para prever vendas futuras. Avaliaremos os cinco algoritmos a seguir:
 

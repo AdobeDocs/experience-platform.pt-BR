@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introdução à IA do cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ Os guias da API do cliente exigem uma compreensão funcional dos vários serviç
 
 ## Download das pontuações da AI do cliente
 
->[!NOTE] Se você não precisar baixar pontuações brutas, ignore essa etapa e vá para o guia da interface do usuário.
+>[!NOTE] Se não precisar baixar pontuações brutas, ignore essa etapa e vá para o guia [de](./user-guide/configure.md)configuração.
 
 O download das pontuações da AI do cliente é feito por meio de uma combinação de chamadas de API. Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
 
@@ -42,4 +42,4 @@ Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas
 
 ## Próximas etapas
 
-Depois que você estiver pronto e tiver todas as suas credenciais e schemas no lugar, start seguindo o guia [da interface do usuário da IA do](./user-guide.md)cliente. Este guia aborda a criação de uma instância e o envio para treinamento e pontuação.
+Depois de concluir as etapas descritas no documento acima, visite a documentação [Entrada e Saída](./input-output.md) . Este documento fornece uma breve visão geral dos tipos de dados usados e produzidos na IA do cliente.

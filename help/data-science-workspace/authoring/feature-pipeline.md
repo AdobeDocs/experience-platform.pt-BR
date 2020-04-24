@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um pipeline de recurso
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -14,17 +14,6 @@ source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
 A Adobe Experience Platform permite que você crie e crie Pipelines de Recursos personalizados para executar engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime (a seguir denominado &quot;Runtime&quot;).
 
 Este documento descreve as várias classes encontradas em um Recurso Pipeline e fornece um tutorial passo a passo para a criação de um Recurso Pipeline personalizado usando o SDK [de criação de](./sdk.md) modelo no PySpark e no Spark.
-
-O tutorial aborda as seguintes etapas:
-- [Implemente suas classes Feature Pipeline](#implement-your-feature-pipeline-classes)
-   - [Definir variáveis em um arquivo de configuração](#define-variables-in-the-configuration-json-file)
-   - [Preparar os dados de entrada com DataLoader](#prepare-the-input-data-with-dataloader)
-   - [Transformar um conjunto de dados com DatasetTransformer](#transform-a-dataset-with-datasettransformer)
-   - [Recursos de dados do engenheiro com FeaturePipelineFactory](#engineer-data-features-with-featurepipelinefactory)
-   - [Armazenar seu conjunto de dados de recursos com o DataSaver](#store-your-feature-dataset-with-datasaver)
-   - [Especifique os nomes de classe implementados no arquivo do aplicativo](#specify-your-implemented-class-names-in-the-application-file)
-- [Criar o artefato binário](#build-the-binary-artifact)
-- [Criar um mecanismo de pipeline de recurso usando a API](#create-a-feature-pipeline-engine-using-the-api)
 
 ## Classes de pipeline de recurso
 
@@ -44,11 +33,11 @@ O diagrama a seguir mostra a ordem de execução do Tempo de execução:
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implemente suas classes Feature Pipeline
+## Implemente suas classes Feature Pipeline {#implement-your-feature-pipeline-classes}
 
 As seções a seguir fornecem detalhes e exemplos sobre a implementação das classes necessárias para um Recurso Pipeline.
 
-### Definir variáveis no arquivo JSON de configuração
+### Definir variáveis no arquivo JSON de configuração {#define-variables-in-the-configuration-json-file}
 
 O arquivo JSON de configuração consiste em pares de valores chave e destina-se a especificar quaisquer variáveis a serem posteriormente definidas durante o tempo de execução. Esses pares de valores chave podem definir propriedades como local do conjunto de dados de entrada, ID do conjunto de dados de saída, ID do locatário, cabeçalhos de coluna e assim por diante.
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### Preparar os dados de entrada com DataLoader
+### Preparar os dados de entrada com DataLoader {#prepare-the-input-data-with-dataloader}
 
 O DataLoader é responsável pela recuperação e filtragem de dados de entrada. Sua implementação do DataLoader deve estender a classe abstrata `DataLoader` e substituir o método abstrato `load`.
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### Transformar um conjunto de dados com DatasetTransformer
+### Transformar um conjunto de dados com DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 Um DatasetTransformer fornece a lógica para transformar um DataFrame de entrada e retorna um DataFrame derivado novo. Essa classe pode ser implementada para trabalhar em conjunto com um FeaturePipelineFactory, funcionar como o único componente de engenharia de recursos ou você pode optar por não implementar essa classe.
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Recursos de dados do engenheiro com FeaturePipelineFactory
+### Recursos de dados do engenheiro com FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 Um FeaturePipelineFactory permite implementar sua lógica de engenharia de recursos definindo e encadeando uma série de Transformadores Spark através de um Spark Pipeline. Essa classe pode ser implementada para trabalhar em cooperação com um DatasetTransformer, funcionar como o único componente de engenharia de recursos ou você pode optar por não implementar essa classe.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Armazenar seu conjunto de dados de recursos com o DataSaver
+### Armazenar seu conjunto de dados de recursos com o DataSaver {#store-your-feature-dataset-with-datasaver}
 
 O DataSaver é responsável por armazenar seus conjuntos de dados de recursos resultantes em um local de armazenamento. Sua implementação do DataSaver deve estender a classe abstrata `DataSaver` e substituir o método abstrato `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Especifique os nomes de classe implementados no arquivo do aplicativo
+### Especifique os nomes de classe implementados no arquivo do aplicativo {#specify-your-implemented-class-names-in-the-application-file}
 
 Agora que as classes do Feature Pipeline estão definidas e implementadas, você deve especificar os nomes das classes no arquivo do aplicativo.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## Criar o artefato binário
+## Criar o artefato binário {#build-the-binary-artifact}
 
 Agora que suas classes Feature Pipeline foram implementadas, você pode criá-las e compilá-las em um artefato binário que pode ser usado para criar um Feature Pipeline por meio de chamadas de API.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 A criação bem-sucedida do seu Recurso Pipeline gerará um `.jar` artefato no `/dist` diretório. Esse artefato é usado para criar um Recurso Pipeline.
 
-## Criar um mecanismo de pipeline de recurso usando a API
+## Criar um mecanismo de pipeline de recurso usando a API {#create-a-feature-pipeline-engine-using-the-api}
 
 Agora que você criou seu Feature Pipeline e construiu o artefato binário, você pode [criar um Feature Pipeline Engine usando a API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)Sensei Machine Learning. A criação bem-sucedida de um Mecanismo de pipeline de recurso fornecerá uma ID de mecanismo como parte do corpo da resposta. Certifique-se de salvar esse valor antes de continuar com as próximas etapas.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 

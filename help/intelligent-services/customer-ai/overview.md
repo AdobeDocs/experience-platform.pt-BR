@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da IA do cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ A IA do cliente trabalha analisando os dados existentes do Evento da Experiênci
 
 ## Próximas etapas
 
-Você pode começar seguindo o guia de [introdução](./getting-started.md) . Este guia o orienta a configurar todas as pré-solicitações necessárias para a API do cliente. Se você já tiver todas as suas credenciais e dados prontos, visite o guia [do usuário da IA do](./user-guide.md)cliente. Ele fornece etapas para usar a IA do cliente e demonstra a criação de segmentos do cliente usando pontuações de propensão.
+Você pode começar seguindo o guia de [introdução](./getting-started.md) . Este guia o orienta a configurar todos os pré-requisitos necessários para a API do cliente. Se você já tiver todas as suas credenciais e dados prontos, visite a [configuração de uma instância](./user-guide/configure.md)do AI do cliente. Ele fornece etapas para usar a IA do cliente.

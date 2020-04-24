@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicar um modelo como um serviço (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: af491361c5c3518e9bcc0af41a5aa79022229a2d
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -26,32 +26,32 @@ Este tutorial requer um Modelo existente com uma execução de treinamento bem-s
 
 Se preferir publicar um Modelo usando APIs de aprendizado de máquina, consulte o tutorial [da](./publish-model-service-api.md)API.
 
-## Publicar um modelo
+## Publicar um modelo {#publish-a-model}
 
-1. Na Adobe Experience Platform, clique no link **Modelos** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser publicado como um Serviço.
+1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser publicado como um Serviço.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
-1. Clique em **Publicar** próximo à parte superior direita da página de visão geral do Modelo para start de um processo de criação do Serviço.
+2. Clique **[!UICONTROL Publish]** próximo à parte superior direita da página Visão geral do Modelo para start de um processo de criação do Serviço.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-1. Insira um nome desejado para o Serviço e, opcionalmente, forneça uma descrição do Serviço, clique em **Avançar** ao terminar.
+3. Insira um nome desejado para o Serviço e, opcionalmente, forneça uma descrição do Serviço, clique **[!UICONTROL Next]** quando terminar.
    ![](../images/models-recipes/publish-model/3_configure_service.png)
-1. Todos os treinamentos bem-sucedidos executados para o Modelo são listados. O novo Serviço herdará configurações de treinamento e pontuação da execução de treinamento selecionada.
+4. Todos os treinamentos bem-sucedidos executados para o Modelo são listados. O novo Serviço herdará configurações de treinamento e pontuação da execução de treinamento selecionada.
    ![](../images/models-recipes/publish-model/4_select_training_run.png)
-1. Clique em **Concluir** para criar o Serviço e redirecionar para a Galeria **de** serviços para mostrar todos os Serviços disponíveis, incluindo o Serviço recém-criado.
+5. Clique em **[!UICONTROL Finish]** para criar o Serviço e redirecionar para **[!UICONTROL Service Gallery]** para mostrar todos os Serviços disponíveis, incluindo o Serviço recém-criado.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Pontuação usando um serviço
+## Pontuação usando um serviço {#access-a-service}
 
-1. No Adobe Experience Platform, clique na guia **Serviços** localizada na coluna de navegação esquerda para acessar a *Service Gallery*. Localize o Serviço que deseja usar e clique em **Pontuação**.
+1. No Adobe Experience Platform, clique na **[!UICONTROL Services]** guia localizada na coluna de navegação esquerda para acessar a *Service Gallery*. Localize o Serviço que deseja usar e clique em **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
-1. Selecione um conjunto de dados de entrada apropriado para a execução de pontuação e clique em **Avançar**.
+2. Selecione um conjunto de dados de entrada apropriado para a execução de pontuação e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
-1. Selecione um conjunto de dados de saída apropriado para os resultados da pontuação e clique em **Avançar**.
+3. Selecione um conjunto de dados de saída apropriado para os resultados da pontuação e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
-1. Quando um Serviço é criado, ele herda configurações de pontuação padrão. Você pode revisar essas configurações e ajustá-las conforme necessário clicando com o duplo nos valores. Quando estiver satisfeito com as configurações, clique em **Concluir** para começar a execução da pontuação.
+4. Quando um Serviço é criado, ele herda configurações de pontuação padrão. Você pode revisar essas configurações e ajustá-las conforme necessário clicando com o duplo nos valores. Quando estiver satisfeito com as configurações, clique em **[!UICONTROL Finish]** para começar a execução da pontuação.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-1. Na página *Visão geral* do serviço, os detalhes do novo trabalho de pontuação e seu progresso são mostrados. Quando o trabalho for concluído, o trabalho de pontuação **mais recente** será atualizado.
+5. Na página *Visão geral* do serviço, os detalhes do novo trabalho de pontuação e seu progresso são mostrados. Quando a tarefa for concluída, a tarefa de **[!UICONTROL Most Recent]** pontuação será atualizada.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da *Service Gallery*. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).

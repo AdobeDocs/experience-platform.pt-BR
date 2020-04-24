@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Agendar um modelo (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Para concluir este tutorial, é necessário ter acesso à plataforma Experience.
 
 Este tutorial requer um Serviço existente. Se você não tiver um Serviço acessível para trabalhar, poderá criar um seguindo o tutorial [Publicar seu modelo como um serviço na interface do usuário](./publish-model-service-ui.md) .
 
-## Configurar pontuação programada
+## Configurar pontuação programada {#configure-scheduled-scoring}
 
 A pontuação do modelo pode ser configurada para ser um processo automatizado em uma base programada. Depois que um Serviço é criado, você pode seguir as etapas abaixo para configurar e aplicar um agendamento de pontuação:
 
@@ -41,7 +41,7 @@ A pontuação do modelo pode ser configurada para ser um processo automatizado e
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configurar treinamento agendado
+## Configurar treinamento agendado {#configure-scheduled-training}
 
 A configuração de execuções de treinamento programado em um Serviço garante que o Modelo de aprendizado da máquina seja atualizado para os padrões de dados mais recentes. Sempre que uma execução de treinamento programada for concluída, o Modelo treinado resultante será usado para alimentar o Serviço até a próxima execução de treinamento programada.
 

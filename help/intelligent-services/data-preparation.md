@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ Este documento fornece orientação geral sobre como mapear os dados de seus eve
 
 O schema ExperienceEvent do consumidor descreve o comportamento de um indivíduo, pois ele se relaciona aos eventos de marketing digital (Web ou móveis), bem como à atividade de comércio online ou offline. O uso desse schema é necessário para os Serviços inteligentes devido aos campos semânticos bem definidos (colunas), evitando nomes desconhecidos que deixariam os dados menos claros.
 
+Os Serviços inteligentes utilizam vários campos chave dentro desse schema para gerar insights dos dados de seus eventos de marketing, que podem ser encontrados no nível raiz e expandidos para mostrar os subcampos necessários.
+
+![](./images/data-preparation/schema-expansion.gif)
+
 Como todos os schemas XDM, a mistura CEE é extensível. Em outras palavras, campos adicionais podem ser adicionados à mistura CEE e variações diferentes podem ser incluídas em vários schemas, se necessário.
 
 Um exemplo completo da mistura pode ser encontrado no repositório [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)público e deve ser usado como referência para os campos principais descritos na seção abaixo.
@@ -30,6 +34,8 @@ As seções abaixo destacam os principais campos da mistura CEE que devem ser ut
 ### xdm:canal
 
 Este campo representa o canal de marketing relacionado ao ExperienceEvent. O campo inclui informações sobre o tipo de canal, o tipo de mídia e o tipo de local. **Este campo _deve_ser fornecido para que a Atribuição AI funcione com seus dados**.
+
+![](./images/data-preparation/channel.png)
 
 **Exemplo de schema**
 
@@ -63,25 +69,25 @@ A tabela a seguir fornece alguns exemplos de canais de marketing mapeados para o
 
 Este campo é uma matriz de itens que representam os produtos selecionados por um cliente, incluindo o SKU do produto, o nome, o preço e a quantidade.
 
+![](./images/data-preparation/productListItems.png)
+
 **Exemplo de schema**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ Para obter informações completas sobre cada um dos subcampos obrigatórios par
 ### xdm:comércio
 
 Este campo contém informações específicas de comércio sobre o ExperienceEvent, incluindo o número do pedido de compra e as informações de pagamento.
+
+![](./images/data-preparation/commerce.png)
 
 **Exemplo de schema**
 
@@ -128,6 +136,8 @@ Para obter informações completas sobre cada um dos subcampos obrigatórios par
 
 Este campo representa detalhes da Web relacionados ao ExperienceEvent, como interação, detalhes da página e quem indicou.
 
+![](./images/data-preparation/web.png)
+
 **Exemplo de schema**
 
 ```json
@@ -155,6 +165,8 @@ Para obter informações completas sobre cada um dos subcampos obrigatórios par
 ### xdm:marketing
 
 Este campo contém informações relacionadas a atividades de marketing que estão ativas com o ponto de contato.
+
+![](./images/data-preparation/marketing.png)
 
 **Exemplo de schema**
 

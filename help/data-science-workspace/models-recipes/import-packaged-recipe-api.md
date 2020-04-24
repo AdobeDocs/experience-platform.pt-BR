@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importar uma fórmula empacotada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ Dependendo do formulário do arquivo de Receita empacotado a ser incluído como 
 - [Criar um mecanismo com um URL de docking](#create-an-engine-with-a-docker-url)
 - [Criar um mecanismo com um artefato binário (obsoleto)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Criar um mecanismo com um URL de docking
+### Criar um mecanismo com um URL de docking {#create-an-engine-with-a-docker-url}
 
 Para criar um Mecanismo com um arquivo de Receita empacotado armazenado em um container Docker, é necessário fornecer o URL do Docker ao arquivo de Receita empacotado.
 
@@ -199,11 +199,11 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo re
 
 Uma resposta bem-sucedida mostra uma carga JSON com informações relacionadas ao mecanismo recém-criado. A `id` chave representa o identificador exclusivo do Mecanismo e é necessária no próximo tutorial para criar uma instância MLI. Certifique-se de que o identificador de mecanismo esteja salvo antes de continuar com as próximas etapas.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Você criou um Mecanismo usando a API e um identificador exclusivo do Mecanismo foi obtido como parte do corpo da resposta. Você pode usar esse identificador de Mecanismo no próximo tutorial à medida que aprende a [criar, treinar e avaliar um Modelo usando a API](./train-evaluate-model-api.md).
 
-### Criar um mecanismo com um artefato binário (obsoleto)
+### Criar um mecanismo com um artefato binário (obsoleto) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 

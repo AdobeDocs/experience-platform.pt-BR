@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
 
 ---
 
@@ -22,7 +22,7 @@ Suas credenciais de registro do Docker são necessárias para carregar um arquiv
 
 **Formato da API**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -57,7 +57,7 @@ Você pode criar um Mecanismo executando uma solicitação POST ao fornecer seus
 
 **Formato da API**
 
-```http
+```https
 POST /engines
 ```
 
@@ -165,13 +165,93 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo re
 }
 ```
 
+## Criar um mecanismo de pipeline de recursos usando URLs Docker {#feature-pipeline-docker}
+
+Você pode criar um mecanismo de pipeline de recursos executando uma solicitação POST enquanto fornece seus metadados e um URL do Docker que faz referência a uma imagem do Docker.
+
+**Formato da API**
+
+```https
+POST /engines
+```
+
+**Solicitação**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "mlLibrary": "databricks-spark",
+    "artifacts": {
+       "default": {
+           "image": {
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            },
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. O valor pode ser definido como Spark ou PySpark. |
+| `algorithm` | O algoritmo que está sendo usado define esse valor como `fp` (pipeline de recursos). |
+| `name` | O nome desejado para o Mecanismo de pipeline de recursos. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da Receita. |
+| `description` | Uma descrição opcional para o mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
+| `mlLibrary` | Um campo que é necessário ao criar mecanismos para fórmulas PySpark e Scala. Esse campo deve ser definido como `databricks-spark`. |
+| `artifacts.default.image.location` | O local da imagem do Docker. Somente o Azure ACR ou o Dockerhub Público (não autenticado) são suportados. |
+| `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
+| `artifacts.default.image.packagingType` | O tipo de empacotamento do Mecanismo. Esse valor deve ser definido como `docker`. |
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo de pipeline de recursos recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um Mecanismo de pipeline de recurso PySpark.
+
+```json
+{
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
 ## Recuperar uma lista de mecanismos
 
 Você pode recuperar uma lista de mecanismos executando uma única solicitação GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 **Formato da API**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -246,7 +326,7 @@ Você pode recuperar os detalhes de um Mecanismo específico executando uma soli
 
 **Formato da API**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -321,7 +401,7 @@ A chamada de exemplo de API a seguir atualizará o nome e a descrição de um Me
 
 **Formato da API**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -389,7 +469,7 @@ Você pode excluir um Mecanismo executando uma solicitação DELETE ao especific
 
 **Formato da API**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -429,7 +509,7 @@ Você pode criar um Mecanismo usando artefatos locais `.jar` ou `.egg` binários
 
 **Formato da API**
 
-```http
+```https
 POST /engines
 ```
 
@@ -498,7 +578,7 @@ Você pode criar um Mecanismo de pipeline de recursos usando artefatos locais `.
 
 **Formato da API**
 
-```http
+```https
 POST /engines
 ```
 

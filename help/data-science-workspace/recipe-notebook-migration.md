@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### Alterar dependências (Spark) {#change-dependencies-spark}
 
-Se você estiver usando uma fórmula existente, serão necessárias alterações no arquivo pom.xml para dependências. Altere a versão de dependência do model-authoring-sdk para 1.0.0. Em seguida, atualize a versão do Spark no arquivo pom para 2.4.3 e a versão Scala para 2.11.12.
+Se você estiver usando uma fórmula existente, serão necessárias alterações no arquivo pom.xml para dependências. Altere a versão de dependência do model-authoring-sdk para 2.0.0. Em seguida, atualize a versão do Spark no arquivo pom para 2.4.3 e a versão Scala para 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
@@ -704,7 +704,7 @@ O kernel Scala não suporta mais `%%sql` magia cintilante. É necessário conver
 
 ## Ler um conjunto de dados {#notebook-read-dataset-spark}
 
-No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para a leitura de um conjunto de dados.
+No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para ler um conjunto de dados.
 
 **Usando o Spark (Spark 2.3 - obsoleto) - Kernel do Spark**
 

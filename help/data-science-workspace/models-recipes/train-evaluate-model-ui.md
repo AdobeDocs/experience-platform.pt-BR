@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Treinar e avaliar um modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
 
 # Treinar e avaliar um modelo (IU)
 
-Na Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 Este tutorial percorre as etapas para criar, treinar e avaliar um Modelo.
 
@@ -79,7 +79,7 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
 
 Este tutorial o orientou pela criação, treinamento e avaliação de um Modelo na Data Science Workspace. Depois de chegar a um Modelo otimizado, você pode usar o Modelo treinado para gerar insights seguindo a [Pontuação a modelo no tutorial da interface do usuário](./score-model-ui.md) .
 
-## Referência
+## Referência {#reference}
 
 ### Configurações de receita de vendas de varejo
 

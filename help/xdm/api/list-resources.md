@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # Recursos de Lista
 
 Você pode visualização uma lista de todos os recursos (schemas, classes, mixins ou tipos de dados) dentro de um container executando uma única solicitação GET.
+
+>[!NOTE] Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros [de](#paging)paginação. Também é recomendável usar parâmetros de query para [filtrar os resultados](#filtering) e reduzir o número de recursos retornados.
+>
+> Se quiser substituir totalmente o limite de 300 itens, use o cabeçalho Aceitar `application/vnd.adobe.xdm-v2+json` para retornar todos os resultados em uma única solicitação.
 
 **Formato da API**
 
@@ -42,8 +46,9 @@ O formato de resposta depende do cabeçalho Aceitar enviado na solicitação. Os
 
 | Aceitar cabeçalho | Descrição |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Retorna um breve resumo de cada recurso, geralmente o cabeçalho preferencial para listagem |
-| application/vnd.adobe.xed+json | Retorna o schema JSON completo para cada recurso, com original `$ref` e `allOf` incluído |
+| application/vnd.adobe.xed-id+json | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para a listagem de recursos. (Limite: 300) |
+| application/vnd.adobe.xed+json | Retorna o schema JSON completo para cada recurso, com original `$ref` e `allOf` incluído. (Limite: 300) |
+| application/vnd.adobe.xdm-v2+json | Retorna o schema JSON completo para todos os resultados em uma única solicitação, substituindo o limite de 300 itens. |
 
 **Resposta**
 
@@ -74,7 +79,7 @@ O Registro de Schemas suporta o uso de parâmetros de query para a página e fil
 
 >[!NOTE] Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (`&`).
 
-### Paginação
+### Paginação {#paging}
 
 Os parâmetros de query mais comuns para paginação incluem:
 
@@ -84,7 +89,7 @@ Os parâmetros de query mais comuns para paginação incluem:
 | `limit` | Limite o número de recursos retornados. Exemplo: `limit=5` retornará uma lista de cinco recursos. |
 | `orderby` | Classifique os resultados por uma propriedade específica. Exemplo: `orderby=title` classificará os resultados por título em ordem crescente (A-Z). Adicionar um título `-` antes (`orderby=-title`) classificará os itens por título em ordem decrescente (Z-A). |
 
-### Filtragem
+### Filtragem {#filtering}
 
 Você pode filtrar os resultados usando o `property` parâmetro, que é usado para aplicar um operador específico em relação a uma determinada propriedade JSON dentro dos recursos recuperados. Os operadores suportados incluem:
 

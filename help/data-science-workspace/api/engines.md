@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -489,7 +489,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo re
 }
 ```
 
-## Criar um mecanismo de pipeline de recurso usando artefatos binários - obsoleto
+## Criar um mecanismo de pipeline de recurso usando artefatos binários - obsoleto {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >Os artefatos binários não são mais suportados e estão definidos para serem removidos em uma data posterior.

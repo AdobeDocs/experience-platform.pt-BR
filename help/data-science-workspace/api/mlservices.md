@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviços
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,7 +15,7 @@ Um MLService é um modelo treinado publicado que fornece à sua organização a 
 
 As programações de treinamento e pontuação automatizadas são definidas com um carimbo de data e hora inicial, um carimbo de data e hora final e uma frequência representada como uma expressão <a href="https://en.wikipedia.org/wiki/Cron" target="_blank"></a>cron. As programações podem ser definidas ao [criar um MLService](#create-an-mlservice) ou aplicadas ao [atualizar um MLService](#update-an-mlservice)existente.
 
-## Criar um MLService
+## Criar um MLService {#create-an-mlservice}
 
 Você pode criar um MLService executando uma solicitação POST e uma carga que fornece um nome para o serviço e uma ID de instância MLI válida. A instância MLI usada para criar um MLService não é necessária para ter Experimentos de treinamento existentes, mas você pode optar por criar o MLService com um modelo treinado existente fornecendo a ID de experiência e a ID de execução de treinamento correspondentes.
 
@@ -103,7 +103,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService re
 }
 ```
 
-## Recuperar uma lista de MLServices
+## Recuperar uma lista de MLServices {#retrieve-a-list-of-mlservices}
 
 Você pode recuperar uma lista de MLServices executando uma única solicitação GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
@@ -162,7 +162,7 @@ Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, inclu
 }
 ```
 
-## Recuperar um MLService específico
+## Recuperar um MLService específico {#retrieve-a-specific-mlservice}
 
 Você pode recuperar os detalhes de um Experimento específico executando uma solicitação GET que inclui a ID do MLService desejada no caminho da solicitação.
 
@@ -206,7 +206,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService so
 }
 ```
 
-## Atualizar um MLService
+## Atualizar um MLService {#update-an-mlservice}
 
 Você pode atualizar um MLService existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do público alvo MLService no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
 

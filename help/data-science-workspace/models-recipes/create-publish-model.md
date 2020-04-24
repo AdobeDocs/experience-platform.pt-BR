@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar e publicar uma apresentação de modelo de aprendizado de máquina
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    * Lotes: Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade.
    * JupyterLab: O [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é uma interface baseada na Web de código aberto para o Project Júpitter e é totalmente integrado à plataforma Experience.
 
-## Preparar seus dados
+## Preparar seus dados {#prepare-your-data}
 
 Para criar um Modelo de aprendizado de máquina que faça recomendações personalizadas de produto para seus clientes, as compras anteriores de clientes em seu site devem ser analisadas. Esta seção explora como esses dados são ingeridos na Plataforma pelo Adobe Analytics e como eles são transformados em um conjunto de dados de recursos a ser usado pelo Modelo de aprendizado da máquina.
 
@@ -68,7 +68,7 @@ Os outros conjuntos de dados foram pré-preenchidos com lotes para fins de visua
 | Conjunto de dados de entrada do Recommendations | Schema de entrada do Recommendations | Os dados do Analytics são transformados em um conjunto de dados de treinamento usando um pipeline de recursos. Esses dados são usados para treinar o Modelo de aprendizado da máquina do Product Recommendations. `itemid` e `userid` correspondem a um produto comprado por esse cliente. |
 | Conjunto de dados de saída do Recommendations | Schema de saída do Recommendations | O conjunto de dados para o qual os resultados da pontuação são armazenados, conterá a lista de produtos recomendados para cada cliente. |
 
-## Criar seu modelo
+## Criar seu modelo {#author-your-model}
 
 O segundo componente do ciclo de vida da Data Science Workspace envolve a criação de Fórmulas e Modelos. A Receita de recomendações de produto foi projetada para gerar recomendações de produto em escala utilizando dados de compra anteriores e aprendizado de máquina.
 
@@ -85,7 +85,7 @@ As receitas são a base para um Modelo, pois contêm algoritmos de aprendizado d
 
 Agora você revisou os schemas de entrada e saída exigidos pela Receita do Recommendations do Produto. Agora você pode continuar para a próxima seção para descobrir como criar, treinar e avaliar um Modelo de recomendações de produto.
 
-## Treinar e avaliar seu modelo
+## Treinar e avaliar seu modelo {#train-and-evaluate-your-model}
 
 Agora que seus dados estão preparados e a Receita está pronta para ser usada, você pode criar, treinar e avaliar seu Modelo de aprendizado da máquina.
 
@@ -130,7 +130,7 @@ Sempre que uma execução de treinamento for concluída, você poderá visualiza
 3. Você pode ver o conjunto de dados, o schema e os parâmetros de configuração usados para cada execução de treinamento no painel direito.
 4. Navegue até a página Modelo e identifique a execução de treinamento de melhor desempenho observando suas métricas de avaliação.
 
-## Operacionalizar seu modelo
+## Operacionalizar seu modelo {#operationalize-your-model}
 
 A etapa final do fluxo de trabalho da Data Science é operacionalizar seu modelo para pontuar e consumir insights de seu armazenamento de dados.
 

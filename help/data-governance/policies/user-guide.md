@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário das políticas de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ A *[!UICONTROL Browse]* guia reaparece, que agora lista a política recém-criad
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral de como gerenciar as políticas de uso de dados na interface do usuário da plataforma Experience. Para obter etapas sobre como gerenciar políticas usando a API de política de DULE, consulte o tutorial [de criação de política de](./create.md)API. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.
+Este documento forneceu uma visão geral de como gerenciar as políticas de uso de dados na interface do usuário da plataforma Experience. Para obter etapas sobre como gerenciar políticas usando a DULE Policy API, consulte o guia [do](../api/getting-started.md)desenvolvedor. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.

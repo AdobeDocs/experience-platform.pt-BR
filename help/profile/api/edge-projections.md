@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|Propriedade|Descrição||`type` **(Obrigatório)** |O tipo de destino a criar. O único valor aceito, &quot;EDGE&quot;, cria um destino de borda.||`dataCenters` **(Obrigatório)** |Uma matriz de string que lista as bordas em direção às projeções a serem roteadas. Pode conter um ou mais dos seguintes valores: &quot;OR1&quot; - Estados Unidos ocidentais, &quot;VA5&quot; - Estados Unidos orientais, &quot;NLD1&quot; - EMEA.||`ttl` **(Obrigatório)** |Especifica a expiração da projeção. Intervalo de valores aceitos: 600 a 604800. Valor padrão: 3600.||`replicationPolicy` **(Obrigatório)** |Define o comportamento da replicação de dados do hub para as bordas.  Valores suportados: PROATIVO, REATIVO. Valor padrão: REATIVO.|
+| Propriedade | Descrição |
+|---|---|
+| `type` **(Obrigatório)** | O tipo de destino a ser criado. O único valor aceito, &quot;EDGE&quot;, cria um destino de borda. |
+| `dataCenters` **(Obrigatório)** | Uma matriz de string que lista as bordas em direção às projeções que devem ser roteadas. Pode conter um ou mais dos seguintes valores: &quot;OR1&quot; - Estados Unidos ocidentais, &quot;VA5&quot; - Estados Unidos orientais, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Obrigatório)** | Especifica a expiração da projeção. Intervalo de valores aceitos: 600 a 604800. Valor padrão: 3600. |
+| `replicationPolicy` **(Obrigatório)** | Define o comportamento da replicação de dados do hub para as bordas.  Valores suportados: PROATIVO, REATIVO. Valor padrão: REATIVO. |
 
 **Resposta**
 

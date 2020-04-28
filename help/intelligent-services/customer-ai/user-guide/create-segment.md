@@ -1,8 +1,14 @@
 ---
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+keywords: Experience Platform;insights; customer ai;popular topics
+solution: Experience Platform
+title: Criar segmentos de clientes com pontuações previstas
+topic: Create a segment
 translation-type: tm+mt
+source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 ---
+
+
 # Criar segmentos de clientes com pontuações previstas
 
 Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](../../../segmentation/tutorials/create-a-segment.md)segmentos.
@@ -13,7 +19,7 @@ Na interface do usuário da plataforma, clique **[!UICONTROL Segments]** no pain
 
 ![](../images/user-guide/segments.png)
 
-O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta nomeada **[!UICONTROL XDM Individual Profile]** e clique na pasta com a namespace de sua organização. A pasta nomeada **[!UICONTROL Customer AI]** contém os resultados das execuções de previsão e é nomeada após a instância à qual as pontuações pertencem. Clique em uma pasta de instância para acessar seus resultados da instância desejada.
+O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta nomeada **[!UICONTROL XDM Individual Profile]** e clique na pasta com a namespace de sua organização. A pasta nomeada **[!UICONTROL Customer AI]** contém os resultados das execuções de previsão e é nomeada após a instância à qual as pontuações pertencem. Clique em uma pasta de instância para acessar os resultados da instância desejada.
 
 ![](../images/user-guide/results.png)
 

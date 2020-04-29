@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ Clique em **Mesclar políticas** para visualização de uma lista de políticas 
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-Para obter mais informações sobre como trabalhar com políticas de mesclagem na interface do usuário, consulte o guia [do usuário Políticas de](merge-policies.md)mesclagem.
+Para obter mais informações sobre como trabalhar com políticas de mesclagem na interface do usuário, consulte o guia [do usuário](merge-policies.md)Mesclar políticas.
 
 ## schema União
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Perfil do cliente em tempo real
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre namespaces de identidade na plataforma Exper
 
 ## Enviando solicitações {#submit}
 
->[!NOTE] Esta seção aborda como formatar solicitações de privacidade para o Data Lake. É altamente recomendável que você leia a documentação da API [do Privacy Service ou da interface do usuário](../privacy-service/api/getting-started.md) do [](../privacy-service/ui/overview.md) Privacy Service para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
+>[!NOTE] Esta seção aborda como criar solicitações de privacidade para o armazenamento de dados do Perfil. É altamente recomendável que você leia a documentação da API [do Privacy Service ou da interface do usuário](../privacy-service/api/getting-started.md) do [](../privacy-service/ui/overview.md) Privacy Service para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
 A seção a seguir descreve como fazer solicitações de privacidade para o Perfil do cliente em tempo real e o Data Lake usando a API ou a interface do usuário do Privacy Service.
 

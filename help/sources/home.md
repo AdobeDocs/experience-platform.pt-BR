@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
 
 ---
 
@@ -67,12 +67,15 @@ A plataforma Experience oferece suporte para a assimilação de dados de um banc
 - [Conector Amazon Redshift](connectors/databases/redshift.md)
 - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
 - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
+- [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
 - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
 - [Conector Google BigQuery](connectors/databases/bigquery.md)
+- [Conector IBM DB2](connectors/databases/ibm-db2.md)
 - [Conector MariaDB](connectors/databases/mariadb.md)
 - [Conector do Microsoft SQL Server](connectors/databases/sql-server.md)
 - [Conector MySQL](connectors/databases/mysql.md)
+- [Conector Oracle](connectors/databases/oracle.md)
 - [Conector Phoenix](connectors/databases/phoenix.md)
 - [Conector PostgreSQL](connectors/databases/postgres.md)
 

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: namespaces de identidade e qualificadores aceitos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
 
 # Apêndice
 
-## namespaces de identidade padrão
+## namespaces de identidade padrão {#standard-namespaces}
 
 Todas as identidades enviadas ao Privacy Service devem ser fornecidas sob uma namespace de identidade específica. As namespaces de identidade são um componente do Serviço [de identidade da plataforma](../../identity-service/home.md) Adobe Experience que indica o contexto ao qual uma identidade está relacionada.
 

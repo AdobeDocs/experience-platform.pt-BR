@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Noções básicas da composição do schema
 topic: overview
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -60,7 +60,7 @@ Os Schemas são usados para assimilar dados na Experience Platform. Esses dados 
 
 Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot;. Após a ingestão dos dados, os dados nesses campos serão inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados pelo Perfil [do cliente em tempo](../../profile/home.md) real e por outros serviços da plataforma de experiência para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM ID ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;Identidade&quot;.
+Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), CRM ID ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;Identidade&quot;.
 
 É importante pensar nas identidades dos clientes durante a fase de planejamento do schema, a fim de ajudar a garantir que os dados estejam sendo reunidos para construir o perfil mais robusto possível. Consulte a visão geral [do Serviço de](../../identity-service/home.md) identidade para saber mais sobre como as informações de identidade podem ajudá-lo a fornecer experiências digitais aos seus clientes.
 

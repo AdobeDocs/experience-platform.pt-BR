@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de dados do Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -23,9 +23,7 @@ O Adobe Analytics é um mecanismo poderoso para ajudá-lo a saber mais sobre seu
 
 Em um nível superior, o Adobe Analytics coleta dados de vários canais digitais e vários data centers no mundo inteiro. Depois que os dados são coletados, as regras de identificação, segmentação e transformação do Visitante (VISTA) e as regras de processamento são aplicadas para moldar os dados recebidos. Depois que os dados brutos passam por esse processamento leve, eles são considerados prontos para consumo pelo Perfil do cliente em tempo real. Em um processo paralelo ao acima, os mesmos dados processados são agrupados em microlotes e ingeridos em conjuntos de dados de plataforma para consumo pela Data Science Workspace, pelo Query Service e por outros aplicativos de descoberta de dados.
 
-Consulte os seguintes documentos para obter mais informações sobre o VISTA e as regras de processamento:
-* [Visão geral das regras VISTA](https://marketing.adobe.com/resources/help/pt-BR/reference/VISTA.html)
-* [Visão geral das regras de processamento](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules.html)
+Consulte Visão geral [das regras de](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules.html) processamento para obter mais informações sobre as regras de processamento.
 
 ## Modelo de dados de experiência (XDM)
 

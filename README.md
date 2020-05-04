@@ -1,9 +1,14 @@
 ---
-source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 translation-type: tm+mt
 
 ---
 # Contribuir com conteúdo
+
+| Produção | Estágio |
+|---|---|
+| [![Status da compilação](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Status da compilação](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
+| [Prod. de saída](https://docs.adobe.com/content/help/pt-BR/experience-platform/landing/home.html) | [Etapa de saída](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
 Agradecemos as contribuições de conteúdo da nossa comunidade e dos funcionários da Adobe que não fazem parte das equipes de documentação.
 

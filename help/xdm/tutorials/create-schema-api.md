@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um schema usando a API de registro do Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -951,7 +951,7 @@ Executar uma solicitação GET para pesquisar o schema agora mostra a referênci
 
 Os Schemas são usados para assimilar dados na Experience Platform. Esses dados são usados em vários serviços para criar uma visualização única e unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a ingestão de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados pelo Perfil [do cliente em tempo](../../profile/home.md) real e por outros serviços da plataforma de experiência para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM ID ou outros campos de ID exclusivos.
+Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), CRM ID ou outros campos de ID exclusivos.
 
 Considere todos os identificadores exclusivos específicos da sua organização, pois também podem ser bons campos de identidade.
 

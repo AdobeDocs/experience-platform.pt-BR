@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviços de privacidade e aplicativos da Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -27,12 +27,12 @@ Veja a seguir uma lista de aplicativos da Experience Cloud que são integrados a
 | aplicação | Acesso/exclusão | Recusa de venda | Documentação e considerações |
 --- | :---: | :---: | ---
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>A Advertising Cloud aproveita os recursos globais de opção de não participação existentes fornecidos pelo Adobe Privacy Center. Consulte o guia sobre como [fazer solicitações](https://docs.adobe.com/content/help/pt-BR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidade de dados para obter mais informações.</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>O Analytics lida com solicitações de recusa usando variáveis de relatórios de [privacidade](https://docs.adobe.com/content/help/pt-BR/analytics/admin/data-governance/consent-variables.html)</li></ul> |
-| Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://marketing.adobe.com/resources/help/en_US/aam/aam-gdpr.html)</li><li>[Documentação de não participação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>O Analytics lida com solicitações de recusa usando variáveis de relatórios de [privacidade](https://docs.adobe.com/content/help/pt-BR/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/pt-BR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentação de não participação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentação de não participação](../segmentation/honoring-opt-outs.md)</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão do Data Lake](../catalog/privacy.md)</li><li>[Documentação de acesso/exclusão para o Perfil do cliente em tempo real](../profile/privacy.md)</li><li>A plataforma de experiência aceita solicitações de [cancelamento para segmentos](../segmentation/honoring-opt-outs.md)de audiência.</li></ul> |
 | Autenticação do Adobe Primetime | ✓ | N/D | <ul><li>[Documentação de acesso/exclusão](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>O Primetime não tem a capacidade de transferir dados, portanto, as solicitações de não participação na venda não são aplicáveis.</li></ul> |
-| Adobe Target | ✓ | N/D | <ul><li>[Documentação de acesso/exclusão](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)</li><li>O Público alvo não tem a capacidade de transferir dados, portanto, as solicitações de não participação na venda não são aplicáveis.</li></ul> |
+| Adobe Target | ✓ | N/D | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/pt-BR/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.translate.html)</li><li>O Público alvo não tem a capacidade de transferir dados, portanto, as solicitações de não participação na venda não são aplicáveis.</li></ul> |
 
 <!-- (To include once access/delete documentation is available)
 Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
@@ -45,8 +45,7 @@ Veja a seguir uma lista de aplicativos da Experience Cloud que não estão integ
 | aplicação | Descrição da documentação |
 | ------- | ----------- |
 | [Adobe Campaign Classic](https://helpx.adobe.com/br/campaign/kb/campaign-privacy.html) | Uma visão geral das funcionalidades do RGPD para o Adobe Campaign Classic. |
-| [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/pt_BR/dtm/opt-in.html) | Etapas para impedir que as tags da Adobe sejam acionadas até que o consentimento seja adquirido. |
+| [Adobe Dynamic Tag Manager](https://docs.adobe.com/content/help/en/dtm/using/tools/opt-in.html) | Etapas para impedir que as tags da Adobe sejam acionadas até que o consentimento seja adquirido. |
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Uma visão geral de como um administrador de privacidade do cliente ou um administrador de AEM pode lidar com solicitações de RGPD. |
-| [Adobe Experience Manager Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/c_gdpr_compliance.html) | Etapas para fazer com que o RGPD acesse e exclua solicitações usando o Livefyre. |
+| [Adobe Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Etapas para fazer com que o RGPD acesse e exclua solicitações usando o Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Como desenvolvedores podem usar extensões e o construtor de regras para definir soluções de opt-in/opt-out. |
-| [Adobe Social](https://marketing.adobe.com/resources/help/en_US/social/c_gdpr-request.html) | Etapas para usar o formulário de solicitação do RGPD para acessar ou excluir dados coletados pelo Social. |

@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
+source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
 
 ---
 
@@ -35,6 +35,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
    - Bancos de dados {#databases}
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
+      - [Conector Apache Cassandra](connectors/databases/cassandra.md)
       - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
       - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
@@ -73,6 +74,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
          - [Conector ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bancos de dados {#databases}
          - [Conector Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Conector Apache Cassandra](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive no conector Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Conector do Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)

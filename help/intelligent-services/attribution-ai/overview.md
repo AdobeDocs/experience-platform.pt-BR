@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do AI de atribuição
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -22,6 +22,10 @@ As saídas de IA de atribuição podem ser segregadas em várias dimensões e po
 Os dados da AI de atribuição podem ser da Adobe (por exemplo, Analytics) ou de fontes de dados que não são da Adobe.
 
 O AI de atribuição suporta duas categorias de pontuações, algorítmicas e baseadas em regras. As pontuações algorítmicas incluem pontuações incrementais e influenciadas. As pontuações baseadas em regras incluem Primeiro toque, Último toque, Linear, em forma de U e Decaimento de tempo.
+
+O vídeo a seguir foi projetado para suportar sua compreensão da IA de atribuição.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
 ## Pontuações algorítmicas de atribuição AI
 

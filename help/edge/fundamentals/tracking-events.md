@@ -4,7 +4,7 @@ seo-title: Rastreamento de eventos SDK da Web da plataforma Adobe Experience
 description: Saiba como rastrear eventos SDK da Web da Experience Platform
 seo-description: Saiba como rastrear eventos SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### Iniciar uma visualização
-
-Quando uma visualização é iniciada, é importante notificar o SDK definindo `viewStart` como `true` dentro do `event` comando. Isso indica, entre outras coisas, que o SDK deve recuperar e renderizar conteúdo personalizado. Mesmo que você não esteja usando a personalização atualmente, ela simplifica consideravelmente a ativação da personalização ou de outros recursos posteriormente, pois não será necessário modificar o código na página. Além disso, o rastreamento de visualizações é benéfico ao exibir relatórios de análise depois que os dados são coletados.
-
-A definição de uma visualização pode depender do contexto.
-
-* Em um site comum, cada página da Web é normalmente considerada uma visualização exclusiva. Nesse caso, um evento com `viewStart` definido para `true` ser executado o mais rápido possível na parte superior da página.
-* Em um aplicativo de página única \(SPA\), uma visualização é menos definida. Normalmente, significa que o usuário navegou no aplicativo e a maioria do conteúdo mudou. Para aqueles que estão familiarizados com os fundamentos técnicos dos aplicativos de página única, isso geralmente acontece quando o aplicativo carrega uma nova rota. Sempre que um usuário se move para uma nova visualização, no entanto, você escolhe definir uma _visualização_, um evento com `viewStart` definição para `true` deve ser executado.
-
-O evento com `viewStart` definido como `true` é o principal mecanismo para enviar dados para a Adobe Experience Cloud e solicitar conteúdo da Adobe Experience Cloud. Veja como você start uma visualização:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-Depois que os dados são enviados, o servidor responde com conteúdo personalizado, entre outras coisas. Esse conteúdo personalizado é automaticamente renderizado na sua visualização. Os manipuladores de links também são anexados automaticamente ao novo conteúdo da visualização.
-
 ## Uso da API sendBeacon
 
 Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para informar o SDK da Web da plataforma Adobe Experience `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando evento.  Exemplo:
@@ -138,7 +109,7 @@ Se quiser lidar com uma resposta de um evento, você pode ser notificado de um s
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {

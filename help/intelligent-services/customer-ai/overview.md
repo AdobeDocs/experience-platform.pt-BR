@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da IA do cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -35,6 +35,10 @@ O cliente não foi criado para:
 - A IA do cliente não é uma ferramenta de recomendações de produtos. Se você tiver milhares de SKUs, não use a API do cliente como proxy para uma solução de recomendações de produto real, como o Público alvo da Adobe.
 - A IA do cliente não pode prever em qual estágio da jornada de compra o cliente está, por exemplo, se ele estiver em fases de &quot;reconhecimento&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
 - Não use a Inteligência Artificial do Cliente para determinar os clientes que provavelmente comprarão uma inicialização de produto no futuro. Isso requer que alguns eventos bem-sucedidos estejam presentes no passado para que a IA do cliente possa treinar com êxito o algoritmo de aprendizado da máquina em seus dados.
+
+O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA do cliente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Como funciona?
 

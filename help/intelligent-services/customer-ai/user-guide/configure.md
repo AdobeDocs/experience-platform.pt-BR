@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuração de uma instância do AI do cliente
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -49,7 +49,7 @@ Clique **[!UICONTROL Enter Field Name]** e selecione um campo na lista suspensa.
 
 ![](../images/user-guide/goal.png)
 
-### Configurar um agendamento *(opcional)*{#configure-a-schedule}
+### Configurar um agendamento *(opcional)* {#configure-a-schedule}
 
 A etapa *avançada* é exibida. Esta etapa opcional permite configurar uma programação para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou clicar **[!UICONTROL Finish]** se nada for necessário.
 
@@ -76,4 +76,10 @@ Ao seguir esta seção, você configurou uma instância do AI do cliente e uma e
 ## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você configurou com êxito uma instância da IA do cliente e gerou pontuações de propensão. Agora você pode optar por usar o Construtor de segmentos para [criar segmentos de clientes com pontuações](./create-segment.md) previstas ou [descobrir insights com a IA](./discover-insights.md)do cliente.
+
+## Recursos adicionais
+
+O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do fluxo de trabalho de configuração para a IA do cliente. Além disso, as práticas recomendadas e exemplos de casos de uso são fornecidos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 

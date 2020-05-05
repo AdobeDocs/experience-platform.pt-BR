@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Pontuação de um modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -27,36 +27,36 @@ Uma execução de pontuação é criada usando configurações otimizadas de uma
 
 1. Encontre a execução de treinamento mais ideal para usar suas configurações para pontuação. Abra a execução de treinamento desejada clicando em seu nome.
 
-2. Na guia Training Run **Evaluation** (Avaliação **de execução de treinamento), clique no botão** Score(Pontuação) na parte superior direita da tela. Isso iniciará um novo fluxo de trabalho **Executar Pontuação** .
+2. Na guia Training Run (Execução de treinamento), clique no **[!UICONTROL Evaluation]** **[!UICONTROL Score]** botão na parte superior direita da tela. Isso iniciará um novo fluxo de trabalho *Executar Pontuação* .
    ![](../images/models-recipes/score/training_run_overview.png)
 
-3. Selecione o conjunto de dados de pontuação de entrada e clique em **Avançar**.
+3. Selecione o conjunto de dados de pontuação de entrada e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/score/scoring_input.png)
 
-4. Selecione o conjunto de dados de pontuação de saída, este é o conjunto de dados de saída dedicado no qual os resultados de pontuação são armazenados. Confirme sua seleção e clique em **Avançar**.
+4. Selecione o conjunto de dados de pontuação de saída, este é o conjunto de dados de saída dedicado no qual os resultados de pontuação são armazenados. Confirme sua seleção e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/score/scoring_results.png)
 
 5. A etapa final do fluxo de trabalho solicita que você configure sua execução de pontuação. Essas configurações são usadas pelo Modelo para a execução de pontuação.
 Observe que não será possível remover parâmetros herdados que foram definidos durante a criação do Modelo. Você pode editar ou reverter parâmetros não herdados clicando no duplo ou clicando no ícone reverter ao passar o mouse sobre a entrada.
    ![](../images/models-recipes/score/configuration.png)
-Revise e confirme as configurações de pontuação e clique em **Concluir** para criar e executar a execução da pontuação. Você será direcionado para a guia Execuções de **Pontuação** e a nova execução de pontuação mostrará um status.
+Revise e confirme as configurações de pontuação e clique em **[!UICONTROL Finish]** para criar e executar a execução da pontuação. Você será direcionado para a guia Execuções de *Pontuação* e a nova execução de pontuação mostrará um status.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Uma execução de pontuação exibirá um dos quatro status a seguir: Pendente, Concluído, Falha ou Em Execução e são atualizados automaticamente. Vá para a próxima etapa se o status for &quot;Concluído&quot; ou &quot;Falha&quot;.
 
 ## Resultados da pontuação da Visualização
 
-1. Encontre a execução de treinamento que foi usada para a execução de pontuação e clique no nome para visualização na página **Avaliação** .
+1. Encontre a execução de treinamento que foi usada para a execução de pontuação e clique no nome para visualização em sua **[!UICONTROL Evaluation]** página.
 
-2. Próximo à parte superior da página de avaliação da execução de treinamento, clique na guia **Execuções** de Pontuação para visualização de uma lista de execuções de pontuação existentes. Clique na lista de pontuação para visualização dos detalhes na coluna direita.
+2. Próximo à parte superior da página de avaliação da execução de treinamento, clique na **[!UICONTROL Scoring Runs]** guia para visualização de uma lista de execuções de pontuação existentes. Clique na lista de pontuação para visualização dos detalhes na coluna direita.
    ![](../images/models-recipes/score/view_details.png)
 
-3. Se a execução de pontuação selecionada tiver um status &quot;Concluído&quot; ou &quot;Falha&quot;, o link Logs **de Atividade de** Visualização encontrado na coluna direita estará ativo. Clique no link para visualização ou baixe os registros de execução. Se uma execução de pontuação falhou, os logs de execução podem fornecer informações úteis para determinar o motivo da falha.
+3. Se a execução de pontuação selecionada tiver um status &quot;Concluído&quot; ou &quot;Falha&quot;, o **[!UICONTROL View Activity Logs]** link encontrado na coluna direita estará ativo. Clique no link para visualização ou baixe os registros de execução. Se uma execução de pontuação falhou, os logs de execução podem fornecer informações úteis para determinar o motivo da falha.
    ![](../images/models-recipes/score/activity_logs.png)
 
-4. Clique no link Conjunto de Dados **de Resultados da Pontuação de** Pré-visualização encontrado na coluna direita. Você poderá ver uma pré-visualização do conjunto de dados de saída da execução de pontuação.
+4. Clique no **[!UICONTROL Preview Scoring Results Dataset]** link encontrado na coluna direita. Você poderá ver uma pré-visualização do conjunto de dados de saída da execução de pontuação.
    ![](../images/models-recipes/score/preview_results.png)
 
-5. Para obter o conjunto completo de resultados de pontuação, clique no link **Scoring Results Dataset** encontrado na coluna direita.
+5. Para obter o conjunto completo de resultados de pontuação, clique no **[!UICONTROL Scoring Results Dataset]** link encontrado na coluna direita.
 
 ## Próximas etapas
 

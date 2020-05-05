@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descobrindo insights no AI de Atribuição
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -152,3 +152,9 @@ A placa *Top campanha* exibe uma visão geral das campanhas e o desempenho da ca
 ## Próximas etapas
 
 Depois que você terminar de filtrar os dados e puder exibir as informações apropriadas, terá a opção de acessar as pontuações. Para obter um guia detalhado sobre como acessar suas pontuações, visite as pontuações de [acesso no tutorial do AI](./download-scores.md) de atribuição. Além disso, você também pode baixar seus dados de resumo conforme indicado em [mais ações](#more-actions). Selecionar &quot;Baixar dados de resumo&quot; faz o download dos dados de resumo agregados por datas.
+
+## Recursos adicionais
+
+O vídeo a seguir foi criado para ajudar a aprender como usar a página de insights da Atribuição AI para entender o ROI de canais e campanhas de marketing.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)

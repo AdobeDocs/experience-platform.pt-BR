@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda da Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
 
 ---
 
@@ -17,12 +17,14 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * Fundamentos {#fundamentals}
    * [Instalação do SDK](fundamentals/installing-the-sdk.md)
    * [Execução de comandos](fundamentals/executing-commands.md)
+   * [Configuração do Edge](fundamentals/edge-configuration.md)
    * [Configuração do SDK](fundamentals/configuring-the-sdk.md)
    * [Rastreamento de eventos](fundamentals/tracking-events.md)
    * [Mesclagem de dados de evento](fundamentals/merging-event-data.md)
    * [Depuração](fundamentals/debugging.md)
    * [Interagir com várias propriedades](fundamentals/interacting-with-multiple-properties.md)
    * [Renderização de conteúdo personalizado](fundamentals/rendering-personalization-content.md)
+   * [Gerenciando o Flicker](fundamentals/managing-flicker.md)
    * [Consentimento de suporte](fundamentals/supporting-consent.md)
    * [Suporte a navegadores no aplicativo](fundamentals/supporting-in-app-browsers.md)
 * O que implementar {#implement}
@@ -31,6 +33,8 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * Analytics {#analytics}
       * [Visão geral do Analytics](solution-specific/analytics/analytics-overview.md)
       * [Variáveis mapeadas automaticamente](solution-specific/analytics/automatically-mapped-vars.md)
+   * Target {#target}
+      * [Visão geral do Público alvo](solution-specific/target/target-overview.md)
 * Referência {#ref}
    * [Informações Coletadas Automaticamente](reference/automatic-information.md)
    * [Recuperando informações da biblioteca](reference/retrieving-library-information.md)

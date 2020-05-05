@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Treinar e avaliar um modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
 
 # Treinar e avaliar um modelo (IU)
 
-Na Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 Este tutorial percorre as etapas para criar, treinar e avaliar um Modelo.
 
@@ -23,42 +23,42 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
 
 ## Criar um modelo
 
-1. Na Adobe Experience Platform, clique no link **Modelos** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Clique em **Criar modelo** próximo à parte superior direita da página para iniciar um processo de criação do modelo.
+1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Clique **[!UICONTROL Create Model]** próximo à parte superior direita da página para iniciar um processo de criação de Modelo.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Navegue pela lista de Receitas existentes, localize e selecione a Receita a ser usada para criar o Modelo e clique em **Avançar**.
+2. Navegue pela lista de Receitas existentes, localize e selecione a Receita a ser usada para criar o Modelo e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Selecione um conjunto de dados de entrada apropriado e clique em **Avançar**. Isso definirá o conjunto de dados de treinamento de entrada padrão para o Modelo.
+3. Selecione um conjunto de dados de entrada apropriado e clique em **[!UICONTROL Next]**. Isso definirá o conjunto de dados de treinamento de entrada padrão para o Modelo.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Forneça um nome para o Modelo e reveja as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da Receita, a análise e a modificação dos valores de configuração clicando nos valores com o duplo. Para fornecer um novo conjunto de configurações, clique em **Carregar nova configuração** e arraste um arquivo JSON que contém configurações de Modelo para a janela do navegador. Clique em **Concluir** para criar o Modelo.
+4. Forneça um nome para o Modelo e reveja as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da Receita, a análise e a modificação dos valores de configuração clicando nos valores com o duplo. Para fornecer um novo conjunto de configurações, clique **[!UICONTROL Upload New Config]** e arraste um arquivo JSON contendo configurações de Modelo para a janela do navegador. Click **[!UICONTROL Finish]** to create the Model.
    >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita de Recomendações de Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Criar uma execução de treinamento
 
-1. Na Adobe Experience Platform, clique no link **Modelos** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser treinado.
+1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser treinado.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Para Modelos criados usando a interface do usuário da Data Science Workspace, uma execução de treinamento é gerada e executada automaticamente usando as configurações padrão e o conjunto de dados de treinamento de entrada.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Crie uma nova execução de treinamento clicando em **Treinar** próximo ao canto superior direito da página de visão geral do Modelo.
+3. Crie uma nova execução de treinamento clicando em **[!UICONTROL Train]** perto da parte superior direita da página Visão geral do modelo.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Selecione o conjunto de dados de entrada de treinamento para a execução de treinamento e clique em **Avançar**.
+4. Selecione o conjunto de dados de entrada de treinamento para a execução de treinamento e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteram-as e modificam-nas de acordo, clicando nos valores com o duplo. Clique em **Concluir** para criar e executar a execução do treinamento.
+5. As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteram-as e modificam-nas de acordo, clicando nos valores com o duplo. Clique em **[!UICONTROL Finish]** para criar e executar a execução do treinamento.
    >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita de Recomendações de Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Avaliar o modelo
 
-1. Na Adobe Experience Platform, clique no link **Modelos** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser avaliado.
+1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser avaliado.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Com várias execuções de treinamento concluídas, as métricas de avaliação podem ser comparadas em diferentes execuções de treinamento no gráfico de avaliação do Modelo, selecione uma métrica de avaliação usando a lista suspensa acima do gráfico.
@@ -98,7 +98,7 @@ Parâmetros adicionais determinam as propriedades técnicas do Modelo:
 | `ACP_DSW_INPUT_FEATURES` | String | Lista de atributos de schema de entrada separados por vírgulas. |
 | `ACP_DSW_TARGET_FEATURES` | String | Lista de atributos de schema de saída separados por vírgulas. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Booleano | Determina se os recursos de entrada e saída são modificáveis |
-| `tenantId` | String | Essa ID garante que os recursos criados sejam devidamente nomeados e estejam contidos em sua Organização IMS. [Siga as etapas aqui](../../xdm/api/getting-started.md#know-your-tenant-id) para localizar sua ID de locatário. |
+| `tenantId` | String | Essa ID garante que os recursos criados sejam devidamente nomeados e estejam contidos em sua Organização IMS. [Siga as etapas aqui](../../xdm/api/getting-started.md#know-your-tenant_id) para localizar sua ID de locatário. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | String | O schema de entrada usado para treinar um Modelo. |
 | `evaluation.labelColumn` | String | Rótulo de coluna para visualizações de avaliação. |
 | `evaluation.metrics` | String | lista separada por vírgulas de métricas de avaliação a serem usadas para avaliar um Modelo. |

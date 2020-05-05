@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fórmula de compra do produto
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -56,6 +56,6 @@ Essa fórmula usa schemas [](../../xdm/home.md) XDM para modelar os dados. O sch
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no schema **ProductPredição** é carregado. Daqui, o modelo é treinado com um classificador [de floresta](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)aleatório. Classificador de floresta aleatória é um tipo de algoritmo agrupado que se refere a um algoritmo que combina vários algoritmos para obter melhor desempenho preditivo. A ideia por trás do algoritmo é que o classificador aleatório de floresta constrói várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
+Primeiro, o conjunto de dados de treinamento no schema *ProductPredição* é carregado. Daqui, o modelo é treinado com um classificador [de floresta](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)aleatório. Classificador de floresta aleatória é um tipo de algoritmo agrupado que se refere a um algoritmo que combina vários algoritmos para obter melhor desempenho preditivo. A ideia por trás do algoritmo é que o classificador aleatório de floresta constrói várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
 
 Esse processo se start com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois é feita a média dos resultados de cada árvore decisória.

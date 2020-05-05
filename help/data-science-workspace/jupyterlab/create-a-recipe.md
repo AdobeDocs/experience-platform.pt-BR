@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -22,7 +22,7 @@ Este tutorial percorrerá duas seções principais. Primeiro, você criará um m
 
 ## Introdução ao ambiente notebook JupyterLab
 
-A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Para start, navegue até a plataforma [](https://platform.adobe.com) Adobe Experience e clique na guia Modelos **** ML à esquerda para acessar a área de trabalho da Data Science. Aqui, clique na sub-guia **Notebooks** e na tela do iniciador do Jupyterlab, crie um novo notebook selecionando o modelo do Construtor de receitas.
+A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Para start, navegue até [Adobe Experience Platform](https://platform.adobe.com) e clique na **[!UICONTROL Notebooks]** guia à esquerda. Crie um novo notebook selecionando o modelo do Construtor de receitas no Iniciador do JupyterLab.
 
 O notebook Construtor de receita permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
 

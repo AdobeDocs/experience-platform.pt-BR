@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da Análise do espaço de trabalho da Data Science
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -15,7 +15,7 @@ A Adobe Experience Platform Data Science Workspace usa o aprendizado de máquina
 
 Os cientistas de dados de todos os níveis de habilidades encontrarão ferramentas sofisticadas e fáceis de usar que suportam o rápido desenvolvimento, treinamento e ajuste de fórmulas de aprendizado de máquina - todos os benefícios da tecnologia da IA, sem a complexidade.
 
-Com a Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviços inteligentes - capacitadas pelo aprendizado de máquina. Esses serviços funcionam com outros serviços da Adobe, incluindo o Público alvo da Adobe e a Adobe Analytics Cloud, para ajudar a automatizar experiências digitais personalizadas e direcionadas em aplicativos móveis, de desktop e da Web.
+Com a Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviços inteligentes - capacitadas pelo aprendizado de máquina. Esses serviços funcionam com outros serviços da Adobe, incluindo o Público alvo da Adobe e a Adobe Analytics Cloud, para ajudá-lo a automatizar experiências digitais personalizadas e direcionadas em aplicativos para Web, desktop e dispositivos móveis.
 
 Este guia fornece uma visão geral dos principais conceitos relacionados à Data Science Workspace.
 
@@ -172,7 +172,6 @@ Todos os dados na Adobe Experience Platform estão em conformidade com um schema
 Se você não encontrar imediatamente os dados necessários, mas eles existem fora da Adobe Experience Platform, é uma tarefa relativamente simples de assimilar conjuntos de dados adicionais, que também se transformará no schema XDM padronizado.\
 Você pode usar o Notebook Júpiter para simplificar o pré-processamento de dados - possivelmente começando com um modelo de notebook ou um notebook usado anteriormente para a propensão a comprar.
 
-<!-- databricks update-->
 ![](./images/home/notebook_templates.png)
 
 ### Aumentar a receita
@@ -209,7 +208,7 @@ Com o casamento entre a experiência em marca e o aprendizado de máquina da Ado
 
 Para obter informações adicionais, como um fluxo de trabalho diário completo, comece lendo a documentação de navegação da [Data Science Workspace](./walkthrough.md) .
 
-## Recursos adicionais 
+## Recursos adicionais
 
 O vídeo a seguir foi criado para oferecer suporte à sua compreensão da Data Science Workspace.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do AI de atribuição
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ---
 
@@ -25,7 +25,7 @@ A página do serviço AI de atribuição é exibida. Esta página lista as inst�
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
-Em seguida, é exibida a página de configuração para a Atribuição AI, onde é possível fornecer informações básicas e especificar um conjunto de dados para a instância.
+Em seguida, é exibida a página de configuração para a Atribuição AI, onde você pode fornecer informações básicas e especificar um conjunto de dados para a instância.
 
 ![página de configuração](./images/user-guide/setup_attribution.png)
 
@@ -174,3 +174,9 @@ Depois de selecionar sua janela de treinamento, clique em **Concluir** no canto 
 ## Próximas etapas
 
 Ao seguir este tutorial, você criou com êxito uma instância de serviço na Atribuição AI. Depois que a instância terminar de marcar (aguarde até 24 horas), você estará pronto para [descobrir insights](./discover-insights.md)da Atribuição AI. Além disso, se desejar baixar os resultados da pontuação, visite a documentação de [download das pontuações](./download-scores.md) brutas.
+
+## Recursos adicionais
+
+O vídeo a seguir descreve um fluxo de trabalho completo para a criação de uma nova instância no AI de atribuição.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

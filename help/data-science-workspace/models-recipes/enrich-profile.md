@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -38,37 +38,37 @@ O primeiro passo para enriquecer o Perfil do cliente em tempo real com insights 
 
 A composição de um schema começa com a atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o schema conterá (registro ou série cronológica). Esta seção fornece instruções básicas para criar um schema usando o construtor de schemas. Para obter um tutorial mais detalhado, consulte o tutorial sobre como [criar um schema usando o Editor](../../xdm/tutorials/create-schema-ui.md)de Schemas.
 
-1. No Adobe Experience Platform, clique na guia **Schema** para acessar o navegador do schema. Clique em **Criar Schema** para acessar o Editor *de*Schemas, onde você pode criar e criar schemas interativamente.
+1. No Adobe Experience Platform, clique na **[!UICONTROL Schema]** guia para acessar o navegador do schema. Clique em **[!UICONTROL Create Schema]** acessar o Editor *de*Schemas, onde você pode criar e criar schemas interativamente.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Na janela *Composição* , clique em **Atribuir** para procurar as classes disponíveis.
-   * Para atribuir uma classe existente, clique e realce a classe desejada e clique em **Atribuir classe**.
+2. Na janela *Composição* , clique **[!UICONTROL Assign]** para navegar pelas classes disponíveis.
+   * Para atribuir uma classe existente, clique e realce a classe desejada e clique em **[!UICONTROL Assign Class]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * Para criar uma classe personalizada, clique em **Criar nova classe** encontrada perto do centro-superior da janela do navegador. Forneça um nome de classe, uma descrição e escolha o comportamento da classe. Clique em **Atribuir classe** quando terminar.
+   * Para criar uma classe personalizada, clique em **[!UICONTROL Create New Class]** encontrado próximo ao centro-superior da janela do navegador. Forneça um nome de classe, uma descrição e escolha o comportamento da classe. Clique **[!UICONTROL Assign Class]** quando terminar.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
    Nesse ponto, a estrutura do schema deve conter alguns campos de classe e você está pronto para atribuir combinações. Uma combinação é um grupo de um ou mais campos que descrevem um conceito específico.
 
-3. Na janela *Composição* , clique em **Adicionar** na subseção *Misturas* .
-   * Para atribuir uma mistura existente, clique e realce a mistura desejada e clique em **Adicionar mistura**. Diferentemente das classes, várias combinações podem ser atribuídas a um único schema, desde que seja apropriado.
+3. Na janela *Composição* , clique **[!UICONTROL Add]** na subseção *Misturas* .
+   * Para atribuir uma mistura existente, clique e realce a mistura desejada e clique em **[!UICONTROL Add Mixin]**. Diferentemente das classes, várias combinações podem ser atribuídas a um único schema, desde que seja apropriado.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * Para criar uma nova combinação, clique em **Criar nova combinação** encontrada perto do centro-superior da janela do navegador. Forneça um nome e uma descrição para a mistura e clique em **Atribuir mistura** após terminar.
+   * Para criar uma nova mixin, clique em **[!UICONTROL Create New Mixin]** encontrado próximo ao centro-superior da janela do navegador. Forneça um nome e uma descrição para o mixin e clique em **[!UICONTROL Assign Mixin]** quando terminar.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Para adicionar campos de mixagem, clique no nome da mistura dentro da janela *Composição* . Você receberá a opção de adicionar campos de combinação clicando em **Adicionar campo** na janela *Estrutura* . Certifique-se de fornecer as propriedades de mistura de acordo.
+   * Para adicionar campos de mixagem, clique no nome da mistura dentro da janela *Composição* . Você receberá a opção de adicionar campos de combinação clicando **[!UICONTROL Add Field]** na janela *Estrutura* . Certifique-se de fornecer as propriedades de mistura de acordo.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Quando terminar de criar o schema, clique no campo de nível superior do schema na janela *Estrutura* para exibir as propriedades do schema na janela de propriedades direita. Forneça um nome e uma descrição e clique em **Salvar** para criar o schema.
+4. Quando terminar de criar o schema, clique no campo de nível superior do schema na janela *Estrutura* para exibir as propriedades do schema na janela de propriedades direita. Forneça um nome e uma descrição e clique em **[!UICONTROL Save]** para criar o schema.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. Crie um conjunto de dados de saída usando seu schema recém-criado clicando em **Conjuntos** de dados na coluna de navegação esquerda e clique em **Criar conjunto de dados**. Na tela seguinte, escolha **Criar conjunto de dados a partir do schema**.
+5. Crie um conjunto de dados de saída usando seu schema recém-criado clicando **[!UICONTROL Datasets]** na coluna de navegação esquerda e, em seguida, clique em **[!UICONTROL Create dataset]**. Na tela seguinte, escolha **[!UICONTROL Create dataset from schema]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. Usando o navegador de schemas, localize e selecione o schema recém-criado e clique em **Avançar**.
+6. Usando o navegador de schemas, localize e selecione o schema recém-criado e clique em **[!UICONTROL Next]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. Forneça um nome e uma descrição opcional e clique em **Concluir** para criar o conjunto de dados.
+7. Forneça um nome e uma descrição opcional e clique em **[!UICONTROL Finish]** para criar o conjunto de dados.
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
 Agora que você criou um conjunto de dados de schema de saída, você está pronto para continuar com a próxima seção para configurá-los e ativá-los para o enriquecimento do Perfil.
@@ -83,16 +83,16 @@ Antes de habilitar um conjunto de dados para o Perfil, é necessário configurar
 2. Expanda a estrutura do schema e localize um campo apropriado para definir como o identificador principal. Clique no campo desejado para exibir suas propriedades.
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. Defina o campo como a identidade primária, ativando a propriedade **Identity** do campo, a propriedade **Primary Identity** e selecionando uma Namespace **** Identity apropriada. Clique em **Aplicar** depois de fazer as alterações.
+3. Defina o campo como a identidade primária, ativando a **[!UICONTROL Identity]** propriedade, a propriedade **[!UICONTROL Primary Identity]** e depois selecionando uma **[!UICONTROL Identity Namespace]**. Clique **[!UICONTROL Apply]** depois de fazer as alterações.
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. Clique no objeto de nível superior da estrutura do schema para exibir as propriedades do schema e ativar o schema para Perfil, alternando a chave do **Perfil** . Clique em **Salvar** para finalizar as alterações, o conjunto de dados que foram criados usando esse schema agora pode ser ativado para o Perfil.
+4. Clique no objeto de nível superior da estrutura do schema para exibir as propriedades do schema e ativar o schema para Perfil, alternando o **[!UICONTROL Profile]** switch. Clique **[!UICONTROL Save]** para finalizar as alterações, o conjunto de dados que foram criados usando esse schema agora pode ser ativado para o Perfil.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
 5. Use o navegador de conjunto de dados para encontrar o conjunto de dados no qual você deseja habilitar o Perfil e clique no nome dele para acessar seus detalhes.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Ative o conjunto de dados para o Perfil alternando o switch do **Perfil** encontrado na coluna de informações correta.
+6. Ative o conjunto de dados para o Perfil, alternando entre o **[!UICONTROL Profile]** switch encontrado na coluna de informações correta.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
 Quando os dados são ingeridos em um conjunto de dados habilitado para Perfis, esses mesmos dados também são ingeridos como registros de Perfis. Agora que seu schema e conjunto de dados estão preparados, gere alguns dados no conjunto de dados, executando execuções de pontuação usando um modelo apropriado, e continue com este tutorial para criar segmentos de insight usando o Construtor de segmentos.
@@ -101,7 +101,7 @@ Quando os dados são ingeridos em um conjunto de dados habilitado para Perfis, e
 
 Agora que você gerou e assimilou insights em seu conjunto de dados habilitado para Perfis, é possível gerenciar esses dados identificando subconjuntos de elementos relacionados usando o Construtor de segmentos. Siga as etapas abaixo para criar seus próprios segmentos.
 
-1. No Adobe Experience Platform, clique na guia **Segmentos** , seguida por **Criar segmento** para acessar o Construtor de segmentos.
+1. No Adobe Experience Platform, clique na **[!UICONTROL Segments]** guia seguida por **[!UICONTROL Create Segment]** para acessar o Construtor de segmentos.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. No Construtor de segmentos, o painel esquerdo fornece acesso aos blocos componentes principais dos segmentos: atributos, eventos e segmentos existentes. Cada bloco de construção aparece em sua própria guia. Selecione a classe à qual seu schema habilitado para Perfis se estende e procure e localize os blocos componentes do seu segmento.
@@ -113,7 +113,7 @@ Agora que você gerou e assimilou insights em seu conjunto de dados habilitado p
 4. Ao criar seu segmento, você pode pré-visualização os resultados estimados do segmento observando o painel Propriedades *do* segmento.
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. Selecione uma Política **de** mesclagem apropriada, forneça um nome e uma descrição opcional e clique em **Salvar** para concluir o novo segmento.
+5. Selecione uma descrição apropriada **[!UICONTROL Merge Policy]**, forneça um nome e uma descrição opcional e clique em **[!UICONTROL Save]** para concluir o novo segmento.
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia de solução de problemas da Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -103,4 +103,4 @@ Você pode configurar recursos adicionando o seguinte bloco à primeira célula 
 }
 ```
 
-Para obter mais informações sobre a configuração de recursos de cluster Spark, incluindo a lista completa de propriedades configuráveis, consulte o Guia [do Usuário do](./jupyterlab/overview.md#pyspark-spark-execution-resource)JupyterLab.
+Para obter mais informações sobre a configuração de recursos de cluster Spark, incluindo a lista completa de propriedades configuráveis, consulte o Guia [do Usuário do](./jupyterlab/overview.md#kernels)JupyterLab.

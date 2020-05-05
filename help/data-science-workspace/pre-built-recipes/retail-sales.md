@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fórmula de vendas de varejo
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -53,7 +53,7 @@ Essa fórmula usa schemas [](../../xdm/schema/field-dictionary.md) XDM para mode
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no schema **DSWRetailSales** é carregado. Daqui, o modelo é treinado usando um algoritmo [de regressor de](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)gradiente. O aumento de gradiente usa a ideia de que os alunos fracos (que é pelo menos um pouco melhor que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
+Primeiro, o conjunto de dados de treinamento no schema *DSWRetailSales* é carregado. Daqui, o modelo é treinado usando um algoritmo [de regressor de](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)gradiente. O aumento de gradiente usa a ideia de que os alunos fracos (que é pelo menos um pouco melhor que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
 
 O processo envolve três elementos: uma função de perda, um aluno fraco e um modelo aditivo.
 

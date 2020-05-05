@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introdução ao AI de atribuição
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 14d47f99f1edd7734245b25b7c39f3a71e7aac50
+source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
 
 ---
 
@@ -25,18 +25,26 @@ A Atribuição AI exige que os conjuntos de dados estejam em conformidade com o 
 
 - **Ponto de contato:** Qualquer evento digital ou interação digital que os clientes fazem no caminho para uma meta. Os exemplos incluem esforços de marketing relacionados à compra, impressões de exibição de anúncios visualizadas e cliques de pesquisa pagos.
 
-## Acessar e consultar pontuações
+## Download das pontuações da Atribuição AI
 
->[!NOTE] Se você não precisar query ou acessar as pontuações brutas, ignore essa etapa e vá para o guia [da interface do](./user-guide.md)usuário.
+>[!NOTE] Se não precisar baixar pontuações brutas, ignore essa etapa e prossiga para as [próximas etapas](#next-steps).
 
-O acesso e a consulta de pontuações para a Atribuição AI são feitos por meio do Floco de neve. Atualmente, você precisa enviar um email para o suporte da Adobe em attributionai-support@adobe.com para configurar e receber as credenciais para sua conta de leitor do Floco de neve ou exportar dados brutos em massa.
+Baixar as pontuações da Atribuição AI é feito por meio de uma combinação de chamadas de API. Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
 
-Depois que o suporte da Adobe tiver processado sua solicitação, você receberá um URL para a conta do leitor para Snowflake e as credenciais correspondentes abaixo:
+- Autorização: Portador `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-- URL do floco de neve
-- Nome do usuário
-- Password
+Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-## Próximas etapas
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+
+### Lendo chamadas de exemplo da API
+
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md) de API de exemplo no guia de solução de problemas da plataforma Experience.
+
+## Próximas etapas {#next-steps}
 
 Quando estiver pronto e tiver todas as suas credenciais e schemas no lugar, start seguindo o guia [da interface do usuário do](./user-guide.md)AI de atribuição. Este guia aborda a criação de uma instância e o envio para treinamento e pontuação.

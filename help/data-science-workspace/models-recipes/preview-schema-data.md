@@ -4,7 +4,7 @@ solution: Experience Platform
 title: schemas de Pré-visualização e conjuntos de dados
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 11eb1859f3e4b059765709e750f18b61509a2f93
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -13,15 +13,15 @@ source-git-commit: 11eb1859f3e4b059765709e750f18b61509a2f93
 
 Após a conclusão com êxito do script de inicialização no tutorial [Criar o schema de vendas de varejo e o conjunto de dados](./create-retails-sales-dataset.md) . schemas de saída e conjuntos de dados podem ser exibidos na plataforma da experiência. Para visualização dos schemas e conjuntos de dados, siga as etapas abaixo:
 
-1. Clique no link **Schemas** localizado na coluna de navegação esquerda e localize o schema de entrada criado pelo script de inicialização. O nome do schema corresponderá ao que foi definido na etapa anterior. `config.yaml` Visualização os detalhes do schema e sua composição clicando nele.
+1. Clique no **[!UICONTROL Schemas]** link localizado na coluna de navegação esquerda e localize o schema de entrada criado pelo script de inicialização. O nome do schema corresponderá ao que foi definido na etapa anterior. `config.yaml` Visualização os detalhes do schema e sua composição clicando nele.
 
    ![](../images/models-recipes/access-data/schema_overview.png)
 
-2. Clique no link **Conjuntos** de dados localizado na coluna de navegação esquerda e abra o conjunto de dados de entrada criado ao clicar no nome da lista. O nome do conjunto de dados corresponderá ao que foi definido na etapa anterior. `config.yaml`
+2. Clique no **[!UICONTROL Datasets]** link localizado na coluna de navegação esquerda e abra o conjunto de dados de entrada criado ao clicar no nome da lista. O nome do conjunto de dados corresponderá ao que foi definido na etapa anterior. `config.yaml`
 
    ![](../images/models-recipes/access-data/dataset_overview.png)
 
-3. Clique em Conjunto de dados de **Pré-visualização** localizado na pré-visualização superior direita de um subconjunto do conjunto de dados.
+3. Clique **[!UICONTROL Preview Dataset]** localizado na pré-visualização superior direita de um subconjunto de dados.
 
    ![](../images/models-recipes/access-data/preview_dataset.png)
 

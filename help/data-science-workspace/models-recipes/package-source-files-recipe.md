@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empacotar arquivos de origem em uma fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -35,24 +35,24 @@ Uma imagem do Docker permite que um desenvolvedor empacote um aplicativo com tod
 
 A imagem do Docker criada é enviada para o Registro de Container do Azure usando as credenciais fornecidas a você durante o fluxo de trabalho de criação da receita.
 
-Para obter suas credenciais do Registro de Container do Azure, faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Na coluna de navegação esquerda, navegue até **Workflows**. Selecione **Importar receita** seguida de selecionar **Iniciar**. Consulte a captura de tela abaixo para obter referência.
+Para obter suas credenciais do Registro de Container do Azure, faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Na coluna de navegação esquerda, navegue até **[!UICONTROL Workflows]**. Selecione **[!UICONTROL Import Recipe]** seguido de selecionar **[!UICONTROL Launch]**. Consulte a captura de tela abaixo para obter referência.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-A página *Configurar* é aberta. Forneça um Nome **de** Receita apropriado, por exemplo, &quot;Fórmula de Vendas de Varejo&quot; e, opcionalmente, forneça uma descrição ou um URL de documentação. Depois de concluído, clique em **Avançar**.
+A página *Configurar* é aberta. Forneça um Nome *de* Receita apropriado, por exemplo, &quot;Fórmula de Vendas de Varejo&quot; e, opcionalmente, forneça uma descrição ou um URL de documentação. Depois de concluído, clique em **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Selecione o *Tempo* de execução apropriado e escolha uma **Classificação** para *Tipo*. Suas credenciais do Registro de Container do Azure são geradas uma vez concluídas.
+Selecione o *Tempo* de execução apropriado e escolha um **[!UICONTROL Classification]** para *Tipo*. Suas credenciais do Registro de Container do Azure são geradas uma vez concluídas.
 
 >[!NOTE]
 >*Tipo *é a classe de problema de aprendizado de máquina para a qual a receita foi projetada e é usada após o treinamento para ajudar a avaliar a execução do treinamento.
 
 >[!TIP]
->- Para fórmulas Python, selecione o tempo de execução **Python** .
->- Para receitas R, selecione o tempo de execução **R** .
->- Para fórmulas PySpark, selecione o tempo de execução **PySpark** . Um tipo de artefato preenche automaticamente.
->- Para fórmulas Scala, selecione o tempo de execução **Spark** . Um tipo de artefato preenche automaticamente.
+>- Para fórmulas Python, selecione o **[!UICONTROL Python]** tempo de execução.
+>- Para R receitas, selecione o **[!UICONTROL R]** tempo de execução.
+>- Para fórmulas PySpark, selecione o **[!UICONTROL PySpark]** tempo de execução. Um tipo de artefato preenche automaticamente.
+>- Para fórmulas Scala, selecione o **[!UICONTROL Spark]** tempo de execução. Um tipo de artefato preenche automaticamente.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -189,7 +189,7 @@ Copie esse URL e siga para as [próximas etapas](#next-steps).
 
 ## Próximas etapas {#next-steps}
 
-Este tutorial passou do empacotamento de arquivos de origem para uma Receita, a etapa pré-requisito para importar uma Receita na Área de trabalho da Data Science. Agora você deve ter uma imagem do Docker no Registro de Container do Azure junto com o URL da imagem correspondente. Agora você está pronto para iniciar o tutorial sobre como **Importar uma receita empacotada para a Data Science Workspace**. Selecione um dos links do tutorial abaixo para começar.
+Este tutorial passou do empacotamento de arquivos de origem para uma Receita, a etapa pré-requisito para importar uma Receita na Área de trabalho da Data Science. Agora você deve ter uma imagem do Docker no Registro de Container do Azure junto com o URL da imagem correspondente. Agora você está pronto para começar o tutorial sobre como importar uma receita empacotada para a Data Science Workspace. Selecione um dos links do tutorial abaixo para começar:
 
 - [Importar uma receita empacotada na interface do usuário](./import-packaged-recipe-ui.md)
 - [Importar uma Receita empacotada usando a API](./import-packaged-recipe-api.md)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
+source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
 
 ---
 
@@ -65,6 +65,7 @@ A plataforma Experience oferece suporte para a assimilação de dados de um apli
 A plataforma Experience oferece suporte para a assimilação de dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [Conector Amazon Redshift](connectors/databases/redshift.md)
+- [Conector Apache Cassandra](connectors/databases/cassandra.md)
 - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
 - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
 - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)

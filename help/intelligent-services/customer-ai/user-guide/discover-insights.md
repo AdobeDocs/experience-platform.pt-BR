@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -122,3 +122,9 @@ Para visualização do novo segmento na interface do usuário da plataforma, cli
 ## Próximas etapas
 
 Este documento descreveu os insights fornecidos por uma instância de serviço de IA do cliente. Agora você pode continuar com o tutorial sobre como [baixar pontuações no AI](./download-scores.md) do cliente ou navegar pelos outros guias [do Adobe Intelligent Services](../../home.md) oferecidos.
+
+## Recursos adicionais
+
+O vídeo a seguir descreve como usar a IA do cliente para ver a saída dos modelos e fatores influentes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)

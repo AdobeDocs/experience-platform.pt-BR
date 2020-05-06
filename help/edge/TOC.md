@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda da Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+workflow-type: tm+mt
+source-wordcount: '89'
+ht-degree: 7%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
    * [Gerenciando o Flicker](fundamentals/managing-flicker.md)
    * [Consentimento de suporte](fundamentals/supporting-consent.md)
    * [Suporte a navegadores no aplicativo](fundamentals/supporting-in-app-browsers.md)
+   * [Recuperando a Experience Cloud ID](fundamentals/retrieving-experience-cloud-id.md)
 * O que implementar {#implement}
    * [Produtos](what-to-implement/commerce.md)
 * Considerações específicas da solução {#solutions}

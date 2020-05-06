@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar uma conexão de streaming usando a API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -177,6 +180,6 @@ Esta seção fornece informações complementares sobre a criação de conexões
 
 ### Conexões de streaming autenticadas
 
-A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como Perfil e identidade do cliente em tempo real, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando Tokens de acesso IMS como parte da solicitação POST - se o token IMS for válido, os registros serão marcados como coletados de fontes válidas.
+A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como Perfil e identidade do cliente em tempo real, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando Tokens de acesso IMS como parte da solicitação POST - se o token IMS for válido, os registros serão marcados como coletados de fontes confiáveis.
 
 Para obter mais informações sobre como criar uma conexão de streaming autenticada, consulte o tutorial [](create-authenticated-streaming-connection.md)Criar uma conexão de streaming autenticada.

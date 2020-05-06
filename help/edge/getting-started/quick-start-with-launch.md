@@ -4,7 +4,10 @@ seo-title: start rápido do SDK da Web do Adobe Experience Platform com Launch
 description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 translation-type: tm+mt
-source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
+source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,10 +28,7 @@ Atualmente, o SDK da Web da plataforma Adobe Experience só oferece suporte ao e
 
 Para poder enviar dados para a Adobe Experience Platform, você deve criar um schema XDM e um conjunto de dados que use esse schema.
 
-- [Crie um schema](../../xdm/tutorials/create-schema-ui.md) com as seguintes combinações:
-   - Detalhes da implementação do ExperienceEvent
-   - Detalhes do Ambiente ExperienceEvent
-   - Detalhes da Web do ExperienceEvent
+- [Criar um schema](../../xdm/tutorials/create-schema-ui.md)
 - Adicionar a combinação do SDK da Web da plataforma Adobe Experience ao schema criado
 - [Crie um conjunto de dados](https://platform.adobe.com/dataset/overview) com seu schema onde você gostaria que os dados fossem aterrados
 

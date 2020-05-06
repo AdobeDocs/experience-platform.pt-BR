@@ -3,7 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ajuda da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
+source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 11%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
    * Interface de destinos {#destinations-interface}
       * [Área de trabalho Destinos](destinations/destinations-workspace.md)
       * [Página de detalhes do destino](destinations/destination-details-page.md)
-   * Catálogo de destinos {#destinations-cat}
+   * Catálogo de destinos  {#destinations-cat}
       * [Visão geral do catálogo de destinos](destinations/destinations-catalog.md)
       * Destinos da Adobe{#adobe-destinations}
          * [Visão geral dos destinos da Adobe](destinations/adobe-destinations.md)
@@ -75,7 +78,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Fluxo de trabalho para criar destinos de armazenamentos na nuvem](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Destino do Amazon S3](destinations/amazon-s3-destination.md)
          * [Destino SFTP](destinations/sftp-destination.md)
-      * Destinos da plataforma de Gestão de dados {dmp-targ}
+      * Destinos da plataforma de Gestão de dados {#dmp-destinations}
          * [Visão geral dos destinos da plataforma de Gestão de dados](destinations/dmp-destinations.md)
          * [extensão DIL do Gerenciador de Audiências](/help/rtcdp/destinations/aam-dil-extension.md)
       * Destinos de marketing de email{#email-destinations}

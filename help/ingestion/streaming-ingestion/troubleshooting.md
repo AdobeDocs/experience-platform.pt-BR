@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Solução de problemas de ingestão de streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ As cargas de solicitação só podem ser avaliadas depois de terem sido enviadas
 
 Quando a validação síncrona não é compatível com o local solicitado, uma resposta de erro 501 é retornada. Consulte a visão geral [da validação de](../quality/streaming-validation.md) streaming para obter mais informações sobre a validação síncrona.
 
-### Como autenticar os dados enviados?
+### Como faço para garantir que os dados sejam coletados somente de fontes confiáveis?
 
 A plataforma Experience suporta a coleta de dados protegida. Quando a coleta de dados autenticada está ativada, os clientes devem enviar um JSON Web Token (JWT) e sua ID de organização IMS como cabeçalhos de solicitação. Para obter mais informações sobre como enviar dados autenticados para a Plataforma, consulte o guia sobre a coleta [de dados](../tutorials/create-authenticated-streaming-connection.md)autenticados.
 

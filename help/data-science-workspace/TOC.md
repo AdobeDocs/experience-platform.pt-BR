@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda da Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: f38a2ba85248bbd12f5ef2487e8d8e6fe3319b32
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 3%
 
 ---
 
@@ -26,6 +29,12 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [MLServices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Apêndice](api/appendix.md)
+* Aprendizagem de máquina em tempo real (Alpha) {#real-time-machine-learning}
+   * [Visão geral](real-time-machine-learning/home.md)
+   * [Introdução](real-time-machine-learning/getting-started.md)
+   * [Treinamento de um modelo ML em tempo real](real-time-machine-learning/training-ml-model.md)
+   * [Pontuação de um modelo ML em tempo real](real-time-machine-learning/scoring-ml-model.md)
+   * [Guia de referência de nó](real-time-machine-learning/node-reference.md)
 * Receitas pré-criadas {#pre-built-recipes}
    * [Fórmula de recomendação de produto](pre-built-recipes/product-recommendations.md)
    * [Previsão de compra de produto](pre-built-recipes/product-purchase-prediction.md)

@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
    - Bancos de dados {#databases}
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
-      - [Conector Apache Cassandra](connectors/databases/cassandra.md)
       - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
       - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [Conector ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bancos de dados {#databases}
          - [Conector Amazon Redshift](tutorials/api/create/databases/redshift.md)
-         - [Conector Apache Cassandra](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive no conector Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Conector do Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Coletar dados de automação de marketing](tutorials/api/collect/marketing-automation.md)
       - [Coletar dados de pagamento](tutorials/api/collect/payments.md)
       - [Coletar dados do protocolo](tutorials/api/collect/protocols.md)
-   - [Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/create-dataset-base-connection.md)
-   - [Criar uma conexão básica de conjunto de dados usando a API de Serviço de Fluxo](tutorials/api/cloud-storage-parquet.md)
+   - [Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
+   - [Criar uma conexão básica de conjunto de dados usando a API de Serviço de Fluxo](tutorials/api/create-dataset-base-connection.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar um conector de origem {#create}
       - Aplicativos da Adobe {#adobe-applications}

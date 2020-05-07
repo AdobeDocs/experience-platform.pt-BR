@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Analise seus dados usando notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3dc16c835cb6ab0949fc0d4bf18349d415d680ed
+source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+workflow-type: tm+mt
+source-wordcount: '1746'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Este tutorial foca em como usar notebooks Júpiter, criados na Data Science Work
 
 São introduzidos os seguintes conceitos:
 
-- **JupyterLab:** O [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface da Web da próxima geração para o Project Júpitter e é totalmente integrado à Adobe Experience Platform.
+- **JupyterLab:** [O JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface baseada na Web da próxima geração para o Project Júpitter e é totalmente integrado à Adobe Experience Platform.
 - **Lotes:** Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. Novos lotes são criados quando os dados são adicionados a um conjunto de dados.
 - **SDK de acesso a dados (obsoleto):** O SDK de acesso a dados agora está obsoleto. Use o guia SDK [da](../authoring/platform-sdk.md) plataforma.
 
@@ -51,7 +54,7 @@ A receita de vendas de varejo é um exemplo independente que usa o mesmo conjunt
 
 Vamos acessar dados internamente da Adobe Experience Platform e dados externamente. Usaremos a `data_access_sdk_python` biblioteca para acessar dados internos, como conjuntos de dados e schemas XDM. Para dados externos, usaremos a biblioteca dos pandas Python.
 
-#### Dados externos
+#### Dados externos {#external-data}
 
 Com o bloco de anotações Vendas de varejo aberto, localize o cabeçalho &quot;Carregar dados&quot;. O código Python a seguir usa a estrutura `DataFrame` de dados dos pandas e a função [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para ler o CSV hospedado no Github no DataFrame:
 
@@ -69,7 +72,7 @@ Finalmente, podemos dar uma olhada em como são os nossos dados. Podemos usar `d
 
 Agora, nós vamos acessar os dados da plataforma Experience.
 
-##### Por ID do conjunto de dados
+#### Por ID do conjunto de dados
 
 Para esta seção, estamos usando o conjunto de dados de Vendas de varejo que é o mesmo conjunto de dados usado no notebook de amostra de Vendas de varejo.
 
@@ -145,7 +148,7 @@ Analisando os valores mínimo e máximo para `store`, podemos ver que existem 45
 
 Isso significa que 22 lojas são de `storeType` 6, 17 são `A`, e 6 são `storeType``B``storeType` `C`.
 
-#### Visualização de dados
+### Visualização de dados
 
 Agora que conhecemos nossos valores de quadro de dados, queremos complementá-los com visualizações para tornar as coisas mais claras e fáceis de identificar padrões. Os gráficos também são úteis ao transmitir resultados para uma audiência. Algumas bibliotecas Python úteis para visualização incluem:
 - [Matplotlib](https://matplotlib.org/)
@@ -164,7 +167,7 @@ Nesta seção, iremos analisar rapidamente algumas vantagens do uso de cada bibl
 [ggpload](https://ggplot2.tidyverse.org/) é um pacote também construído sobre o matplotlib. Mas a principal diferença é que a ferramenta é uma porta de diagrama2 para R. Semelhante ao seaborn, o objetivo é melhorar o matplotlib. Os usuários que estiverem familiarizados com o ggpload2 for R devem considerar esta biblioteca.
 
 
-##### Gráficos de variação única
+### Gráficos de variação única
 
 Gráficos de variação única são gráficos de uma variável individual. Um gráfico univariado comum é usado para visualizar seus dados é a caixa e o gráfico de uísque.
 
@@ -174,7 +177,7 @@ Usando nosso conjunto de dados de varejo de antes, podemos gerar a caixa e o gr�
 
 Um gráfico de caixa e uísque é usado para mostrar a distribuição de dados. As linhas exteriores da parcela mostram os quartis superior e inferior, enquanto a caixa se estende pelo intervalo interquartil. A linha na caixa marca a mediana. Quaisquer pontos de dados mais de 1,5 vezes o quartil superior ou inferior são marcados como um círculo. Estes pontos são considerados exceções.
 
-##### Gráficos multivariados
+### Gráficos multivariados
 
 Os gráficos multivariados são usados para ver a interação entre variáveis. Com a visualização, os cientistas de dados podem ver se há correlações ou padrões entre as variáveis. Um gráfico multivariado comum usado é uma matriz de correlação. Com uma matriz de correlação, as dependências entre várias variáveis são quantificadas com o coeficiente de correlação.
 

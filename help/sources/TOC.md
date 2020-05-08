@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
+source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -137,6 +137,7 @@ ht-degree: 0%
          - [Conector Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive no conector Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Conector do Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Conector do Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Conector de Armazenamento de Tabela do Azure](tutorials/ui/create/databases/ats.md)
          - [Conector do Google Big Query](tutorials/ui/create/databases/bigquery.md)

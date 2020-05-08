@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector do Azure Data Explorer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ A documentação abaixo fornece informações sobre como conectar o Azure Data E
 
 ## Conecte o Azure Data Explorer à plataforma usando a interface do usuário
 
-- [Criar um conector de origem do Azure Data Explorer na interface do usuário](../../tutorials/ui/create/databases/ats.md)
+- [Criar um conector de origem do Azure Data Explorer na interface do usuário](../../tutorials/ui/create/databases/data-explorer.md)
 - [Configurar um fluxo de dados para um conector de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

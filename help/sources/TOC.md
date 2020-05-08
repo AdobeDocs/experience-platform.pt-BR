@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 0e9b5e56ea40528446b69c1af6f6e0bbf17f8d08
+source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 0%
          - [Conector MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Conector do Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [Conector MySQL](tutorials/ui/create/databases/mysql.md)
+         - [Conector Oracle](tutorials/ui/create/databases/oracle.md)
          - [Conector Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Conector PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - Automação de marketing {#marketing-automation}

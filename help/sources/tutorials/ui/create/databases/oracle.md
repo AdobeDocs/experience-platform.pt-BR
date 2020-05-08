@@ -1,0 +1,69 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Criar um conector de origem do Oracle DB na interface do usuário
+topic: overview
+translation-type: tm+mt
+source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 1%
+
+---
+
+
+# Criar um conector de origem Oracle na interface do usuário
+
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem Oracle usando a interface do usuário da Plataforma.
+
+## Introdução
+
+Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+
+* [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+   * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+* [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+
+Se você já tiver uma conexão válida do Oracle DB, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/databases.md).
+
+### Reunir credenciais obrigatórias
+
+Para acessar sua conta Oracle no Platform, você deve fornecer os seguintes valores:
+
+| Credencial | Descrição |
+| ---------- | ----------- |
+| `connectionString` | A string de conexão usada para conexão com o Oracle. O padrão da string de conexão Oracle é: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID da especificação de conexão para Oracle é `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+
+Para obter mais informações sobre a introdução, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
+
+## Conectar sua conta Oracle
+
+Depois de coletar as credenciais necessárias, você pode seguir as etapas abaixo para criar uma nova conta Oracle para se conectar à Plataforma.
+
+Faça logon na [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes para as quais você pode criar uma conta de entrada, e cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+
+Na categoria *Bancos* de Dados, selecione **[!UICONTROL Oracle DB]** e clique **no ícone + (+)** para criar um novo conector Oracle.
+
+![catálogo](../../../../images/tutorials/create/oracle/catalog.png)
+
+A página *[!UICONTROL Conectar-se ao Oracle DB]* é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+
+### Nova conta
+
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que é exibido, forneça à conexão um nome, uma descrição opcional e suas credenciais Oracle. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conta ser estabelecida.
+
+![connect](../../../../images/tutorials/create/oracle/new.png)
+
+### Conta existente
+
+Para conectar uma conta existente, selecione a conta Oracle com a qual deseja se conectar e, em seguida, selecione **[!UICONTROL Próximo]** para prosseguir.
+
+![existente](../../../../images/tutorials/create/oracle/existing.png)
+
+## Próximas etapas
+
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta Oracle. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Plataforma](../../dataflow/databases.md).

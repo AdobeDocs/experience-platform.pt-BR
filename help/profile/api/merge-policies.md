@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 33091568c850375b399435f375e854667493152c
+workflow-type: tm+mt
+source-wordcount: '2057'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ As políticas de mesclagem são privadas para sua Organização IMS, permitindo 
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
+O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
 
 **Objeto de política de mesclagem**
 
@@ -170,7 +173,7 @@ Onde o valor de `name` é o nome da classe XDM na qual o schema associado à pol
 
 ## Acessar políticas de mesclagem {#access-merge-policies}
 
-Usando a API Perfil do cliente em tempo real, o `/config/mergePolicies` endpoint permite executar uma solicitação de pesquisa para visualização de uma política de mesclagem específica por sua ID ou acessar todas as políticas de mesclagem na organização IMS, filtradas por critérios específicos.
+Usando a API Perfil do cliente em tempo real, o `/config/mergePolicies` endpoint permite executar uma solicitação de pesquisa para visualização de uma política de mesclagem específica por sua ID ou acessar todas as políticas de mesclagem na organização IMS, filtradas por critérios específicos. Você também pode usar o `/config/mergePolicies/bulk-get` endpoint para recuperar várias políticas de mesclagem por suas IDs. As etapas para executar cada uma dessas chamadas são descritas nas seções a seguir.
 
 ### Acessar uma única política de mesclagem por ID
 
@@ -217,6 +220,99 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+Consulte a seção [componentes das políticas](#components-of-merge-policies) de mesclagem no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
+
+### Recuperar várias políticas de mesclagem por suas IDs
+
+Você pode recuperar várias políticas de mesclagem, fazendo uma solicitação POST ao ponto de `/config/mergePolicies/bulk-get` extremidade e incluindo as IDs das políticas de mesclagem que deseja recuperar no corpo da solicitação.
+
+**Formato da API**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Solicitação**
+
+O corpo da solicitação inclui uma matriz &quot;ids&quot; com objetos individuais que contêm a &quot;id&quot; para cada política de mesclagem para a qual você deseja recuperar detalhes.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o Status HTTP 207 (Multi-Status) e os detalhes das políticas de mesclagem cujas IDs foram fornecidas na solicitação POST.
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
 }
 ```
 

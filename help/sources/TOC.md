@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
    - armazenamento em nuvem {#cloud-storage}
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
       - [Conector Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Conector do Armazenamento de Arquivo do Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Conector de Armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 0%
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Conector Blob do Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Conector do Armazenamento de Arquivo do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 0%
       - armazenamento em nuvem {#cloud-storage}
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Conector Azure Blob e Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Conector do Armazenamento de Arquivo do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Conector FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}

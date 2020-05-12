@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Coletar dados de armazenamento em nuvem por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4309d668acf43a237648b405973ebd0701b6f977
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+workflow-type: tm+mt
+source-wordcount: '1489'
+ht-degree: 1%
 
 ---
 
@@ -19,12 +22,12 @@ Este tutorial requer que você tenha acesso a um armazenamento em nuvem de terce
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
-   * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-* [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados na Experience Platform.
-* [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados na Experience Platform como arquivos em lote.
-* [Caixas de proteção](../../../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+   - [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   - [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
+- [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados na Experience Platform.
+- [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados na Experience Platform como arquivos em lote.
+- [Caixas de proteção](../../../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um armazenamento em nuvem usando a API de Serviço de Fluxo.
 
@@ -36,17 +39,17 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
 
-* Autorização: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+- Autorização: Portador `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de fluxo, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
-* Tipo de conteúdo: `application/json`
+- Tipo de conteúdo: `application/json`
 
 ## Criar uma classe e um schema XDM ad hoc
 
@@ -456,7 +459,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 }
 ```
 
-## Pesquisar especificações de fluxo de dados {#specs}
+## Recuperar especificações de fluxo de dados {#specs}
 
 Um dataflow é responsável por coletar dados de fontes e trazê-los para a Plataforma. Para criar um fluxo de dados, primeiro você deve obter as especificações de fluxo de dados responsáveis pela coleta de dados de armazenamentos em nuvem.
 
@@ -575,10 +578,10 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dad
 
 A última etapa para coletar dados de armazenamento em nuvem é criar um fluxo de dados. Agora, você tem os seguintes valores obrigatórios preparados:
 
-* [ID da conexão de origem](#source)
-* [ID de conexão do Público alvo](#target)
-* [ID de mapeamento](#mapping)
-* [ID de especificação do fluxo de dados](#specs)
+- [ID da conexão de origem](#source)
+- [ID de conexão do Público alvo](#target)
+- [ID de mapeamento](#mapping)
+- [ID de especificação do fluxo de dados](#specs)
 
 Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
@@ -653,5 +656,21 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 Ao seguir este tutorial, você criou um conector de origem para coletar dados do seu armazenamento em nuvem de forma programada. Os dados recebidos agora podem ser usados pelos serviços de plataforma downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
-* [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
+- [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
+- [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
+
+## Apêndice
+
+A seção a seguir lista os diferentes conectores de origem do armazenamento de nuvem e suas especificações de conexões.
+
+### Especificação da conexão
+
+| Nome do conector | Especificação da conexão |
+| -------------- | --------------- |
+| Amazon S3 (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| Amazon Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| Blob do Azure (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Armazenamento Gen2 do Azure Data Lake (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| Hubs de Evento do Azure (EventHub) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Armazenamento da Google Cloud | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |

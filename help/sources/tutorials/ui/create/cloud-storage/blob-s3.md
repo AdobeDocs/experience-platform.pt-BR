@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um conector de origem do Azure Blob ou Amazon S3 na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 2%
 
 ---
 
@@ -17,20 +20,20 @@ Os conectores de origem na Adobe Experience Platform fornecem a capacidade de as
 
 Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
-   * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-* [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+   - [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+- [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão básica Blob ou S3, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/cloud-storage.md).
+Se você já tiver uma conexão básica Blob ou S3, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
 ### Formatos de arquivo não suportados
 
 A plataforma Experience suporta os seguintes formatos de arquivo para serem assimilados de armazenamentos externos:
 
-* Valores separados por delimitador (DSV): Atualmente, o suporte para arquivos de dados formatados em DSV está limitado a valores separados por vírgulas. O valor dos cabeçalhos de campo nos arquivos formatados em DSV deve consistir apenas em caracteres alfanuméricos e sublinhados. O suporte para arquivos DSV gerais será fornecido no futuro.
-* JSON (JavaScript Object Notation): Os arquivos de dados formatados JSON devem ser compatíveis com XDM.
-* Parqueta Apache: Os arquivos de dados formatados do parâmetro devem ser compatíveis com XDM.
+- Valores separados por delimitador (DSV): Atualmente, o suporte para arquivos de dados formatados em DSV está limitado a valores separados por vírgulas. O valor dos cabeçalhos de campo nos arquivos formatados em DSV deve consistir apenas em caracteres alfanuméricos e sublinhados. O suporte para arquivos DSV gerais será fornecido no futuro.
+- JSON (JavaScript Object Notation): Os arquivos de dados formatados JSON devem ser compatíveis com XDM.
+- Parqueta Apache: Os arquivos de dados formatados do parâmetro devem ser compatíveis com XDM.
 
 ### Reunir credenciais obrigatórias
 
@@ -54,4 +57,4 @@ No formulário de entrada, forneça um nome, uma descrição opcional e suas cre
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão básica para sua conta do Azure Blob ou Amazon S3. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Plataforma](../../dataflow/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão básica para sua conta do Azure Blob ou Amazon S3. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Plataforma](../../dataflow/batch/cloud-storage.md).

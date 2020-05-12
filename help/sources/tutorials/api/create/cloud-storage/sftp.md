@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um conector SFTP usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: a038abcdc411b638f41b94dea0140518c12f5600
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 2%
 
 ---
 
@@ -56,84 +59,9 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 * Tipo de conteúdo: `application/json`
 
-## Pesquisar especificações de conexão
+## Criar uma conexão
 
-Para criar uma conexão SFTP, um conjunto de especificações de conexão SFTP deve existir no Serviço de fluxo. A primeira etapa na conexão da Plataforma ao SFTP é recuperar essas especificações.
-
-**Formato da API**
-
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para SFTP executando uma solicitação GET e usando parâmetros de query.
-
-Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="sftp"` para obter informações especificamente para SFTP.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sftp"
-```
-
-**Solicitação**
-
-A solicitação a seguir recupera as especificações de conexão de um servidor SFTP.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sftp"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna a especificação de conexão do servidor SFTP, incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
-
-```json
-{
-    "items": [
-        {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "name": "sftp",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for sftp",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to sftp",
-                        "properties": {
-                            "host": {
-                                "type": "string",
-                                "description": "Specify the name or IP address of the SFTP server."
-                            },
-                            "userName": {
-                                "type": "string",
-                                "description": "Specify the user who has access to the SFTP server."
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Specify the password for the user (userName).",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "host",
-                            "userName",
-                            "password"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Criar uma conexão básica
-
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta SFTP, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta SFTP, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -171,11 +99,11 @@ curl -X POST \
 | `auth.params.host` | O nome do host do servidor SFTP. |
 | `auth.params.username` | O nome de usuário associado ao servidor SFTP. |
 | `auth.params.password` | A senha associada ao servidor SFTP. |
-| `connectionSpec.id` | A especificação de conexão `id` do servidor SFTP recuperado na etapa anterior. |
+| `connectionSpec.id` | A ID da especificação da conexão do servidor STFP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão base recém-criada. Essa ID é necessária para explorar o servidor SFTP no próximo tutorial.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão recém-criada. Essa ID é necessária para explorar o servidor SFTP no próximo tutorial.
 
 ```json
 {

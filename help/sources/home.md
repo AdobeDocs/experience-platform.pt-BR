@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Pl
 
 - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
 - [Conector Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+- [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
+- [Conector Hubs de Evento do Azure](connectors/cloud-storage/eventhub.md)
 - [Conector do Armazenamento de Arquivo do Azure](connectors/cloud-storage/azure-file-storage.md)
 - [Conector FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
 - [Conector de Armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)

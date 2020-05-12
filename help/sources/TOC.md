@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 0%
    - Publicidade {#advertising}
       - [Conector Google Ads](connectors/advertising/ads.md)
    - armazenamento em nuvem {#cloud-storage}
+      - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
       - [Conector Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Conector Hubs de Evento do Azure](connectors/cloud-storage/eventhub.md)
       - [Conector do Armazenamento de Arquivo do Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Conector de Armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 0%
          - [Conector OData genérico](tutorials/ui/create/protocols/odata.md)
    - Configurar um fluxo de dados {#dataflow}
       - [Configurar um fluxo de dados para um conector de publicidade](tutorials/ui/dataflow/advertising.md)
-      - [Configurar um fluxo de dados para um conector de armazenamento em nuvem](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configurar um fluxo de dados para um conector de armazenamento de nuvem em lote](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Configurar um fluxo de dados para um conector de armazenamento de nuvem de streaming](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Configurar um fluxo de dados para um conector de banco de dados](tutorials/ui/dataflow/databases.md)
       - [Configurar um fluxo de dados para um conector CRM](tutorials/ui/dataflow/crm.md)
       - [Configurar um fluxo de dados para um conector bem-sucedido do cliente](tutorials/ui/dataflow/customer-success.md)

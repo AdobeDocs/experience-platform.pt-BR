@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector do Armazenamento de Arquivo do Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,4 +29,4 @@ A documentação abaixo fornece informações sobre como conectar o Armazenament
 ## Conectar o Armazenamento de Arquivo do Azure à Plataforma usando a interface do usuário
 
 - [Criar um conector de origem do Armazenamento de Arquivo do Azure na interface do usuário](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configurar um fluxo de dados para um conector de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configurar um fluxo de dados para um conector de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/batch/cloud-storage.md)

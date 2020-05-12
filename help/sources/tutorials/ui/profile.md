@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Ativar dados de origem de entrada para preencher perfis de clientes
 topic: overview
 translation-type: tm+mt
-source-git-commit: d6d2faf3d5eabcd8e948d3717fd8f8df4b9cb85a
+source-git-commit: 3e43e043df296c29cafb4c6933c8be1105c985ab
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
@@ -34,27 +37,27 @@ Para enriquecer os perfis do cliente, o schema de origem do conjunto de dados do
 
 Na área de trabalho Fontes, clique na guia **Procurar** para lista das conexões básicas. Na lista exibida, localize a conexão que contém o fluxo de dados com o qual você deseja preencher perfis. Clique no nome da conexão para acessar seus detalhes.
 
-![](../../images/tutorials/dataflow/cloud-storage/browse.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
 A tela atividade ** de origem da conexão é exibida, exibindo os conjuntos de dados nos quais a conexão está assimilando os dados de origem. Clique no nome do conjunto de dados que deseja ativar para o Perfil.
 
-![](../../images/tutorials/dataflow/cloud-storage/dataset-dataflow.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
 A tela atividade *do Conjunto* de Dados é exibida. A coluna *Propriedades* no lado direito da tela exibe os detalhes do conjunto de dados e inclui um switch de **Perfil** e um link para o schema ao qual o conjunto de dados obedece. Clique no nome do schema para visualização de sua composição.
 
-![](../../images/tutorials/dataflow/cloud-storage/select-dataset-schema.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
 O Editor *de* Schemas é exibido, mostrando a estrutura do schema na tela central. Na tela de desenho, selecione o campo a ser definido como a identidade primária. Na guia Propriedades *do* campo que é exibida, marque a caixa de seleção **Identidade** e, em seguida, a identidade **** Principal. Por fim, selecione uma namespace **de** identidade apropriada e clique em **Aplicar**.
 
-![](../../images/tutorials/dataflow/cloud-storage/set-schema-identity.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
 Clique no objeto de nível superior da estrutura do schema e a coluna de propriedades *do* Schema será exibida. Ative o schema para o Perfil, alternando a chave do **Perfil** . Clique em **Salvar** para finalizar as alterações.
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
 Agora que o schema está ativado para o Perfil, volte à tela de atividade *do* Conjunto de Dados e ative o conjunto de dados para o Perfil clicando no botão de alternância do **Perfil** na coluna *Propriedades* .
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-dataset-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
 Com o schema e o conjunto de dados habilitados para o Perfil, os dados ingeridos nesse conjunto de dados também preencherão os perfis do cliente.
 

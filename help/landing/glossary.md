@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
+source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+workflow-type: tm+mt
+source-wordcount: '6973'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 ## A
 
-**Controle de acesso:** O {#access-control} Controle de acesso for Experience Platform vincula usuários com permissões de acesso e ambientes de caixa de proteção por meio de perfis de produtos no Adobe Admin Console.
+**Controle de acesso:** {#access-control} O Controle de acesso for Experience Platform vincula usuários com permissões de acesso e ambientes de caixa de proteção por meio de perfis de produtos no Adobe Admin Console.
 
 **ID da chave de acesso:** A ID da chave de acesso é um identificador exclusivo associado a uma chave de acesso secreta do Amazon S3. A ID da chave de acesso e a chave de acesso secreta são usadas juntas para assinar solicitações AWS.
 
@@ -48,6 +51,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Inteligência artificial:** A inteligência artificial é uma teoria e desenvolvimento de sistemas computacionais que são capazes de executar tarefas que normalmente exigem inteligência humana, como percepção visual, reconhecimento de voz, tomada de decisão e tradução entre línguas.
 
 **Atributos:** Os atributos são características especificadas que representam um perfil.
+
+**Mesclagem de atributos:** A mesclagem de atributos define como uma política de mesclagem prioriza o valor do atributo do perfil no caso de conflitos de dados.
 
 **AI de atribuição:** O AI de atribuição é um serviço Adobe Sensei que oferece recursos algorítmicos de atribuição de vários canais durante todo o ciclo de vida do cliente.
 
@@ -103,23 +108,23 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Rótulos &quot;C&quot; de Dados do Contrato:** As `C` etiquetas de contrato são usadas para categorizar dados que têm obrigações contratuais ou estão relacionados às políticas de controle de dados de um cliente.
 
-**Rótulo do Contrato C1:** O rótulo de controle de dados do `C1` contrato especifica que os dados só podem ser exportados da Adobe Experience Cloud em um formulário agregado sem incluir identificadores individuais ou de dispositivos. Por exemplo, dados que se originaram de redes sociais.
+**Rótulo do Contrato C1:** `C1` o rótulo de controle de dados do contrato especifica que os dados só podem ser exportados da Adobe Experience Cloud em um formulário agregado sem incluir identificadores individuais ou de dispositivos. Por exemplo, dados que se originaram de redes sociais.
 
-**Rótulo do Contrato C2:** O rótulo de controle de dados do `C2` contrato especifica os dados que não podem ser exportados para terceiros. Alguns fornecedores de dados têm termos nos seus contratos que proíbem a exportação de dados de onde foram originalmente recolhidos.  Por exemplo, os contratos de redes sociais muitas vezes restringem a transferência de dados que você recebe deles. C2 é mais restritivo que C1, o que requer apenas agregação e dados anônimos.
+**Rótulo do Contrato C2:** `C2` o rótulo de controle de dados do contrato especifica dados que não podem ser exportados para terceiros. Alguns fornecedores de dados têm termos nos seus contratos que proíbem a exportação de dados de onde foram originalmente recolhidos.  Por exemplo, os contratos de redes sociais muitas vezes restringem a transferência de dados que você recebe deles. C2 é mais restritivo que C1, o que requer apenas agregação e dados anônimos.
 
-**Rótulo do Contrato C3:** O rótulo de `C3` controle de dados do contrato especifica dados que não podem ser combinados ou usados de outra forma com informações diretamente identificáveis. Alguns fornecedores de dados têm termos nos seus contratos que proíbem a combinação ou utilização desses dados com informações diretamente identificáveis.  Por exemplo, os contratos para dados provenientes de redes de anúncios, servidores de anúncios e provedores de dados de terceiros geralmente incluem proibições contratuais específicas sobre o uso de dados diretamente identificáveis.
+**Rótulo do Contrato C3:** `C3` o rótulo de controle de dados do contrato especifica dados que não podem ser combinados ou usados de outra forma com informações diretamente identificáveis. Alguns fornecedores de dados têm termos nos seus contratos que proíbem a combinação ou utilização desses dados com informações diretamente identificáveis.  Por exemplo, os contratos para dados provenientes de redes de anúncios, servidores de anúncios e provedores de dados de terceiros geralmente incluem proibições contratuais específicas sobre o uso de dados diretamente identificáveis.
 
-**Rótulo do Contrato C4:** O rótulo de controle de dados do `C4` contrato especifica que os dados não podem ser usados para direcionar qualquer anúncio ou conteúdo, seja no site ou entre sites. C4 é o rótulo mais restritivo, pois abrange os rótulos C5, C6 e C7.
+**Rótulo do Contrato C4:** `C4` o rótulo de controle de dados do contrato especifica que os dados não podem ser usados para direcionar qualquer anúncio ou conteúdo, seja no site ou entre sites. C4 é o rótulo mais restritivo, pois abrange os rótulos C5, C6 e C7.
 
-**Rótulo do Contrato C5:** O rótulo de controle de dados do `C5` contrato especifica que os dados não podem ser usados para direcionamento de conteúdo ou anúncios baseado em interesses entre sites. A definição de metas ou personalização baseada em interesses ocorre se as três condições a seguir forem atendidas:  Os dados coletados no site são usados para fazer inferências sobre o interesse de um usuário, são usados em outro contexto, como em outro site ou aplicativo, e são usados para selecionar qual conteúdo ou anúncios são fornecidos com base nessas inferências.
+**Rótulo do Contrato C5:** `C5` o rótulo de controle de dados do contrato especifica que os dados não podem ser usados para direcionamento de conteúdo ou anúncios baseado em interesses entre sites. A definição de metas ou personalização baseada em interesses ocorre se as três condições a seguir forem atendidas:  Os dados coletados no site são usados para fazer inferências sobre o interesse de um usuário, são usados em outro contexto, como em outro site ou aplicativo, e são usados para selecionar qual conteúdo ou anúncios são fornecidos com base nessas inferências.
 
-**Rótulo do Contrato C6:** O rótulo de controle de dados do `C6` contrato especifica que os dados não podem ser usados para direcionamento de anúncios no site. Os dados não podem ser usados para direcionamento de anúncios no site, incluindo a seleção e o delivery de anúncios nos sites ou aplicativos de sua organização, nem para medir o delivery e a eficácia desses anúncios.  Isso inclui o uso de dados no site coletados anteriormente sobre o interesse dos usuários em selecionar anúncios, processar dados sobre o que os anúncios foram exibidos, quando e onde eles foram mostrados e se os usuários tomaram alguma ação relacionada ao anúncio, como clicar em um anúncio ou fazer uma compra.
+**Rótulo do Contrato C6:** `C6` o rótulo de controle de dados do contrato especifica que os dados não podem ser usados para direcionamento de anúncios no site. Os dados não podem ser usados para direcionamento de anúncios no site, incluindo a seleção e o delivery de anúncios nos sites ou aplicativos de sua organização, nem para medir o delivery e a eficácia desses anúncios.  Isso inclui o uso de dados no site coletados anteriormente sobre o interesse dos usuários em selecionar anúncios, processar dados sobre o que os anúncios foram exibidos, quando e onde eles foram mostrados e se os usuários tomaram alguma ação relacionada ao anúncio, como clicar em um anúncio ou fazer uma compra.
 
-**Rótulo do Contrato C7:** O rótulo de controle de dados do `C7` contrato especifica que os dados não podem ser usados para direcionamento de conteúdo no site.  Os dados não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e o delivery de conteúdo nos sites ou aplicativos de sua organização, nem para medir o delivery e a eficácia de tal conteúdo.  Isso inclui informações coletadas anteriormente sobre o interesse dos usuários em selecionar conteúdo, processar dados sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo ele foi exibido, quando e onde ele foi exibido e se os usuários tomaram quaisquer ações relacionadas ao conteúdo, incluindo, por exemplo, clicar no conteúdo.
+**Rótulo do Contrato C7:** `C7` o rótulo de controle de dados do contrato especifica que os dados não podem ser usados para direcionamento de conteúdo no site.  Os dados não podem ser usados para direcionamento de conteúdo no site, incluindo a seleção e o delivery de conteúdo nos sites ou aplicativos de sua organização, nem para medir o delivery e a eficácia de tal conteúdo.  Isso inclui informações coletadas anteriormente sobre o interesse dos usuários em selecionar conteúdo, processar dados sobre qual conteúdo foi exibido, com que frequência ou por quanto tempo ele foi exibido, quando e onde ele foi exibido e se os usuários tomaram quaisquer ações relacionadas ao conteúdo, incluindo, por exemplo, clicar no conteúdo.
 
-**Rótulo do Contrato C8:** O rótulo de controle de dados do `C8` contrato especifica que os dados não podem ser usados para medir os sites ou aplicativos de sua organização. Os dados não podem ser usados para medir, entender e relatar sobre o uso pelos usuários dos sites ou aplicativos de sua organização. Isso não inclui direcionamento baseado em interesses, que é a coleta de informações sobre o uso desse serviço para personalizar subsequentemente o conteúdo e/ou a publicidade em outros contextos.
+**Rótulo do Contrato C8:** `C8` o rótulo de controle de dados do contrato especifica que os dados não podem ser usados para medir os sites ou aplicativos de sua organização. Os dados não podem ser usados para medir, entender e relatar sobre o uso pelos usuários dos sites ou aplicativos de sua organização. Isso não inclui direcionamento baseado em interesses, que é a coleta de informações sobre o uso desse serviço para personalizar subsequentemente o conteúdo e/ou a publicidade em outros contextos.
 
-**Rótulo do Contrato C9:** O rótulo de governança de dados `C9` do contrato especifica que os dados não podem ser usados em workflows da Data Science. Alguns contratos incluem proibições explícitas sobre os dados utilizados para a ciência dos dados.  Às vezes, são redigidos em termos que proíbem o uso de dados para inteligência artificial (AI), aprendizado de máquina (ML) ou modelagem.
+**Rótulo do Contrato C9:** `C9` o rótulo de controle de dados do contrato especifica que os dados não podem ser usados em workflows de Data Science. Alguns contratos incluem proibições explícitas sobre os dados utilizados para a ciência dos dados.  Às vezes, são redigidos em termos que proíbem o uso de dados para inteligência artificial (AI), aprendizado de máquina (ML) ou modelagem.
 
 **Coluna Data de Criação:** Selecionar uma `Created Date` coluna é uma opção ao especificar dados de terceiros por meio de uma conexão. Quando a estratégia de salvamento de anexo é selecionada e o conjunto de dados contém um schema relacionado a várias datas, o usuário deve escolher entre o schema de data/hora disponível para especificar uma coluna `Created Date` chave. `Created Date` não está disponível quando a estratégia de gravação de substituição está selecionada.
 
@@ -145,14 +150,6 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Fluxo de dados:** Um fluxo de dados é um conjunto ou uma coleção de mensagens que compartilham o mesmo schema e são enviadas pela mesma fonte.
 
-**Conjunto de dados:** Um conjunto de dados é um armazenamento e uma construção de gerenciamento para uma coleção de dados, geralmente uma tabela, que contém schema (colunas) e campos (linhas).
-
-**Fluxo do conjunto de dados:** Na Plataforma de dados do cliente em tempo real, um fluxo de conjunto de dados é uma representação visual dos conjuntos de dados de origem que fluem pelo Perfil do cliente em tempo real para destinos.
-
-**ID do conjunto de dados:** Um identificador gerado pela Adobe para um conjunto de dados assimilado.
-
-**Saída do conjunto de dados:** A saída do conjunto de dados fornece um mecanismo para determinar qual a opção *Criar tabela como selecionada* será usada para uma execução específica do Serviço de Query.
-
 **Controle de dados:** O controle de dados abrange as estratégias e tecnologias usadas para garantir que os dados estejam em conformidade com os regulamentos e as políticas da organização em relação ao uso dos dados.
 
 **Rótulos de controle de dados:** As etiquetas de controle de dados fornecem aos usuários a capacidade de classificar dados que refletem considerações relacionadas à privacidade e condições contratuais para serem compatíveis com regulamentos e políticas corporativas. Os rótulos de controle de dados adicionados a um conjunto de dados são herdados ou aplicados a todos os campos nesse conjunto de dados.  Os rótulos de controle de dados também podem ser aplicados diretamente aos campos.
@@ -170,6 +167,14 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Tipo de dados:** O tipo de dados é um objeto reutilizável com propriedades em uma representação hierárquica.
 
 **Rótulos de uso de dados:** As etiquetas de uso de dados fornecem aos usuários a capacidade de categorizar dados que refletem considerações relacionadas à privacidade e condições contratuais para serem compatíveis com regulamentos e políticas corporativas.
+
+**Fluxo de dados:** Na Plataforma de dados do cliente em tempo real, um fluxo de dados é um pipeline virtual de dados que flui para a Plataforma de uma fonte e de uma saída para destinos.
+
+**Conjunto de dados:** Um conjunto de dados é um armazenamento e uma construção de gerenciamento para uma coleção de dados, geralmente uma tabela, que contém schema (colunas) e campos (linhas).
+
+**ID do conjunto de dados:** Um identificador gerado pela Adobe para um conjunto de dados assimilado.
+
+**Saída do conjunto de dados:** A saída do conjunto de dados fornece um mecanismo para determinar qual a opção *Criar tabela como selecionada* será usada para uma execução específica do Serviço de Query.
 
 **Evento de decisão:** Um evento de decisão é usado para capturar observações sobre o resultado e o contexto de uma atividade de decisão. O evento de decisão captura informações sobre como a decisão foi tomada, quando estava ocorrendo, quais opções foram propostas (escolhidas) e que estado contextual existia que influenciaram a decisão ou podiam ser observadas durante o processo de decisão. O evento de decisão também captura a ID da proposta, um identificador globalmente exclusivo que pode ser usado para correlacionar a decisão a outros eventos.
 
@@ -214,6 +219,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Modelo de dados de experiência (XDM):** O Experience Data Model (XDM) é o conceito de usar schemas padrão para unificar dados para uso com a Experience Platform e os aplicativos da Adobe Experience Cloud. O XDM padroniza como os dados são estruturados e acelera e simplifica o processo de obtenção de insights de grandes quantidades de dados.
 
 **Inicialização da plataforma Experience:** O Launch é um ecossistema de gerenciamento de tags e SDK, integrado aos aplicativos da Experience Platform e da Experience Cloud. O Launch fornece ferramentas para implantar, unificar e gerenciar as integrações de análises, marketing e publicidade necessárias para potencializar as experiências relevantes do cliente em todos os dispositivos do cliente.
+
+**Extensões de lançamento da plataforma Experience:** As extensões do Experience Platform Launch permitem o delivery dos dados brutos do evento diretamente para os destinos da Plataforma de dados do cliente em tempo real. A instalação das extensões Launch requer acesso às propriedades Launch.
 
 **Experimento:** Um experimento é um processo de criação de um modelo treinado por meio do treinamento da instância com uma porção de amostra dos dados de produção ao vivo.
 
@@ -274,6 +281,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Configuração da identidade:** A identificação é o processo de identificação de fragmentos de dados e a junção deles para formar um registro completo de um perfil.
 
 **Símbolo de identidade:** O símbolo de identidade é a abreviação de uma namespace de identidade que pode ser usada como referência nas APIs.
+
+**Valor de identidade:** O valor de identificação é um dado associado a uma identidade atribuída no schema. Ao corresponder dados de registro em fragmentos de perfil, o valor de identidade e a namespace devem corresponder.
 
 **Rótulo de dados I1:** O rótulo de `I1` dados é usado para classificar dados diretamente identificáveis que podem identificar ou entrar em contato com uma pessoa específica em vez de um dispositivo.
 
@@ -345,9 +354,9 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Biblioteca de Ofertas:** No Serviço de decisão, a biblioteca de ofertas é uma biblioteca central usada para gerenciar ofertas personalizadas e de fallback, regras de decisão e atividades.
 
-**Organização:** Uma organização é o nome usado para identificar uma empresa ou um grupo específico em uma empresa nos produtos da Adobe. O administrador pode configurar e gerenciar o acesso e as permissões dos recursos para os usuários de uma organização.
+**Organização:** Uma organização é o nome usado para identificar uma empresa ou um grupo específico dentro de uma empresa nos produtos da Adobe. O administrador pode configurar e gerenciar o acesso e as permissões dos recursos para os usuários de uma organização.
 
-**Substituir estratégia de gravação:** A estratégia de `Overwrite` salvamento é uma opção para assimilar dados de terceiros por meio de uma conexão, na qual o usuário especifica se os dados ingeridos serão sobrescritos em um agendamento especificado. A Experience Platform assimilará o conjunto de dados especificado da fonte de terceiros e substituirá o conjunto de dados na Experience Platform.
+**Substituir estratégia de gravação:** `Overwrite` a estratégia de salvamento é uma opção para assimilar dados de terceiros por meio de uma conexão, na qual o usuário especifica se os dados ingeridos serão sobrescritos em um agendamento especificado. A Experience Platform assimilará o conjunto de dados especificado da fonte de terceiros e substituirá o conjunto de dados na Experience Platform.
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 
@@ -377,6 +386,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Exportação de Perfil:** A exportação do Perfil é um dos dois tipos de destinos na Plataforma de dados do cliente em tempo real. A exportação de Perfis gera um arquivo contendo perfis e atributos, e usa dados PII brutos com e-mail e é usada para integração com plataformas de marketing e automação de e-mail.
 
+**Fragmento do Perfil FProfile:** Um fragmento de perfil são as informações do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico.
+
 **ID do Perfil:** Uma ID de perfil é um identificador gerado automaticamente associado a um tipo de identidade e representa um perfil.
 
 **Propriedade:** No Experience Platform Launch, uma propriedade é um container para tudo o que é necessário para implantar um conjunto de tags.
@@ -389,7 +400,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Editor de Query:** O Editor de Query é uma ferramenta para escrever, validar e enviar instruções SQL no Query Service.
 
-**Serviço de Query para a plataforma Adobe Experience:** O Serviço *de Query da plataforma* Experience permite que os analistas de dados query ExperienceEvents e XDMs para uso em análise e aprendizado de máquina. Com o Serviço de Query, os cientistas e analistas de dados poderão obter todos os seus conjuntos de dados armazenados na plataforma da experiência - incluindo dados comportamentais, assim como POS (ponto de venda), gerenciamento de relacionamento com o cliente (CRM) e muito mais - e query esses conjuntos de dados para responder a perguntas específicas sobre os dados.
+**Serviço de Query para a plataforma Adobe Experience:** *O Serviço* de Query da plataforma Experience permite que os analistas de dados query ExperienceEvents e XDMs para uso em análise e aprendizado de máquina. Com o Serviço de Query, os cientistas e analistas de dados poderão obter todos os seus conjuntos de dados armazenados na plataforma da experiência - incluindo dados comportamentais, assim como POS (ponto de venda), gerenciamento de relacionamento com o cliente (CRM) e muito mais - e query esses conjuntos de dados para responder a perguntas específicas sobre os dados.
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 
@@ -433,7 +444,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Pontuação:** A pontuação é o processo de gerar insights a partir de dados usando um modelo treinado.
 
-**Regime:** O Schema é composto de uma combinação de classe e opcional e é usado para criar conjuntos de dados e fluxos de dados. Um schema inclui atributos comportamentais, carimbo de data e hora, identidade, definições de atributos e relacionamentos.
+**Schema:** O Schema é composto de uma combinação de classe e opcional e é usado para criar conjuntos de dados e fluxos de dados. Um schema inclui atributos comportamentais, carimbo de data e hora, identidade, definições de atributos e relacionamentos.
 
 **Descritor do Schema:** O descritor do Schema é um metadados adicionais relacionados ao schema que descreve o comportamento que pode ser usado pela plataforma de experiência para entender o comportamento pretendido do schema, como a relação entre dois schemas.
 
@@ -465,9 +476,9 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Serviços:** Uma poderosa estrutura para operacionalizar serviços AI e ML, aproveitando os serviços inteligentes da Adobe. Os serviços fornecem experiências personalizadas e em tempo real do cliente ou operacionalizam serviços inteligentes personalizados.
 
-**Rótulo de dados S1:** A etiqueta de `S1` dados é usada para classificar dados que especificam latitude e longitude que podem ser usados para determinar a localização precisa de um dispositivo.
+**Rótulo de dados S1:** `S1` o rótulo de dados é usado para classificar dados que especificam latitude e longitude que podem ser usados para determinar a localização precisa de um dispositivo.
 
-**Rótulo de dados S2:** O rótulo de `S2` dados é usado para classificar dados que podem ser usados para determinar uma área de cerca geográfica definida de maneira ampla.
+**Rótulo de dados S2:** `S2` o rótulo de dados é usado para classificar os dados que podem ser usados para determinar uma área de fronteira geográfica amplamente definida.
 
 **Fonte:** Fonte é um termo geral para qualquer conector de entrada na Plataforma de dados do cliente em tempo real.
 

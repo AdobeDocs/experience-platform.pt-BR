@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Armazenamento de Arquivo do Azure na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão prática dos seguintes componentes da Adob
    - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão com o Armazenamento File, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um dataflow](../../dataflow/cloud-storage.md).
+Se você já tiver uma conexão com o Armazenamento File, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um dataflow](../../dataflow/batch/cloud-storage.md).
 
 ### Reunir credenciais obrigatórias
 
@@ -67,4 +67,4 @@ Para conectar uma conta existente, selecione a conta do Armazenamento de Arquivo
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do Armazenamento de Arquivo do Azure. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Plataforma](../../dataflow/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do Armazenamento de Arquivo do Azure. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Plataforma](../../dataflow/batch/cloud-storage.md).

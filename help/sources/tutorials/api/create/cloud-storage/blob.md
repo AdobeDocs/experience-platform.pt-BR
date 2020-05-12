@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um conector Blob do Azure usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5c9bc1ec9170e4971a7d693038d12315aca616d5
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 2%
 
 ---
 
@@ -56,73 +59,9 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 * Tipo de conteúdo: `application/json`
 
-## Pesquisar especificações de conexão
+## Criar uma conexão
 
-Antes de conectar a Plataforma a um armazenamento Blob, verifique se as especificações de conexão existem para Blob. Se as especificações de conexão não existirem, não será possível estabelecer uma conexão.
-
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para Blob executando uma solicitação GET e usando parâmetros de query.
-
-**Formato da API**
-
-Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="azure-blob"` para obter informações especificamente para o Blob.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="azure-blob"
-```
-
-**Solicitação**
-
-A solicitação a seguir recupera as especificações de conexão para Blob.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="azure-blob"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna as especificações de conexão para Blob, incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
-
-```json
-{
-    "items": [
-        {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "name": "azure-blob",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "ConnectionString",
-                    "type": "ConnectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Criar uma conexão básica
-
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta Blob, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta Blob, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -141,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Blob Base Connection",
-        "description": "Base connection for an Azure Blob account",
+        "name": "Blob Connection",
+        "description": "Cnnection for an Azure Blob account",
         "auth": {
             "specName": "ConnectionString",
             "params": {
@@ -159,11 +98,11 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `auth.params.connectionString` | A string de conexão para seu armazenamento Blob. |
-| `connectionSpec.id` | A especificação de conexão `id` do seu armazenamento Blob recuperado na etapa anterior. |
+| `connectionSpec.id` | A ID da especificação de conexão do armazenamento Blob: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu armazenamento no próximo tutorial.
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu armazenamento no próximo tutorial.
 
 ```json
 {

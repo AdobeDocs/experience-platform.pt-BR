@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
+source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+workflow-type: tm+mt
+source-wordcount: '1049'
+ht-degree: 0%
 
 ---
 
@@ -26,14 +29,14 @@ Além disso, este tutorial requer que você já tenha criado um conector de banc
 
 ## Selecionar dados
 
-Depois de criar o conector do banco de dados, a etapa *Selecionar dados* é exibida, fornecendo uma interface interativa para que você explore a hierarquia do banco de dados.
+Depois de criar o conector do banco de dados, a etapa *[!UICONTROL Selecionar dados]* é exibida, fornecendo uma interface interativa para que você explore a hierarquia do banco de dados.
 
 - A metade esquerda da interface é um navegador, exibindo a lista de bancos de dados de sua conta.
 - A metade direita da interface permite que você pré-visualização até 100 linhas de dados.
 
-Selecione o banco de dados que deseja usar e clique em **Avançar**.
+Selecione o banco de dados que deseja usar e clique em **[!UICONTROL Avançar]**.
 
-![](../../../images/tutorials/dataflow/databases/select-data-next.png)
+![](../../../images/tutorials/dataflow/databases/add-data.png)
 
 ## Mapear campos de dados para um schema XDM
 
@@ -43,33 +46,35 @@ Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você p
 
 ### Usar um conjunto de dados existente
 
-Para assimilar dados em um conjunto de dados existente, selecione **Usar conjunto de dados** existente e clique no ícone do conjunto de dados.
+Para assimilar dados em um conjunto de dados existente, selecione Conjunto de dados **** existente e clique no ícone do conjunto de dados.
 
-![](../../../images/tutorials/dataflow/databases/use-existing-dataset.png)
+![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-A caixa de diálogo _Selecionar conjunto de dados_ é exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **Continuar**.
+A caixa de diálogo *[!UICONTROL Selecionar conjunto de dados]* é exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **[!UICONTROL Continuar]**.
 
-![](../../../images/tutorials/dataflow/databases/select-dataset.png)
+![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
 ### Usar um novo conjunto de dados
 
-Para assimilar dados em um novo conjunto de dados, selecione **Criar novo conjunto de dados** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos. Em seguida, clique no ícone schema.
+Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
 
-![](../../../images/tutorials/dataflow/databases/use-new-dataset.png)
+Você pode anexar um campo de schema digitando um nome de schema na barra de pesquisa **[!UICONTROL Selecionar schema]** . Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar Pesquisa **** avançada para uma tela de schemas existentes, incluindo seus respectivos detalhes.
 
-A caixa de diálogo _Selecionar schema_ é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **Concluído**.
+![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-![](../../../images/tutorials/dataflow/databases/select-schema.png)
+A caixa de diálogo *[!UICONTROL Selecionar schema] é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
+
+![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
 Com base em suas necessidades, você pode optar por mapear os campos diretamente ou usar as funções do mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre funções de mapeamento e mapeamento de dados, consulte o tutorial sobre como [mapear dados CSV para campos](../../../../ingestion/tutorials/map-a-csv-file.md)de schema XDM.
 
-Depois que os dados de origem forem mapeados, clique em **Avançar**.
+Depois que os dados de origem forem mapeados, clique em **[!UICONTROL Avançar]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping-data.png)
+![](../../../images/tutorials/dataflow/databases/mapping.png)
 
 ## Execuções de ingestão agendada
 
-A etapa *Agendamento* é exibida, permitindo que você configure um agendamento de ingestão para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. A tabela a seguir descreve os diferentes campos configuráveis para programação:
+A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um agendamento de ingestão para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. A tabela a seguir descreve os diferentes campos configuráveis para programação:
 
 | Campo | Descrição |
 | --- | --- |
@@ -77,48 +82,35 @@ A etapa *Agendamento* é exibida, permitindo que você configure um agendamento 
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
 | hora do Start | Um carimbo de data e hora UTC para o qual ocorrerá a primeira ingestão. |
 | Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *preenchimento retroativo* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *do* Start serão assimilados. Os arquivos carregados antes da hora *do* Start não serão ingeridos. |
+| Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
-Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Se desejar ingerir apenas uma vez por meio desse fluxo de trabalho, você pode fazer isso configurando a **Frequência** para &quot;Dia&quot; e aplicando um número muito grande para o **Intervalo**, como 10000 ou semelhante.
+Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Se desejar ingerir apenas uma vez por meio desse fluxo de trabalho, você pode fazer isso configurando a **[!UICONTROL Frequência]** para &quot;Dia&quot; e aplicando um número muito grande para o **[!UICONTROL Intervalo]**, como 10000 ou semelhante.
 
-Forneça os valores para o agendamento e clique em **Avançar**.
+Forneça valores para o agendamento e selecione **[!UICONTROL Próximo]**.
 
-![](../../../images/tutorials/dataflow/databases/scheduling.png)
+![](../../../images/tutorials/dataflow/databases/schedule.png)
 
 ## Dê um nome ao seu fluxo de dados
 
-A etapa de fluxo *de* Nome é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo de dados. Clique em Avançar quando terminar.&quot;
+A etapa de detalhes *[!UICONTROL do]* dataflow é exibida, onde você deve fornecer um nome e uma descrição opcional para o dataflow. Selecione **[!UICONTROL Próximo]** ao terminar.
 
-![](../../../images/tutorials/dataflow/databases/name-flow.png)
+![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## Revisar seu fluxo de dados
 
-A etapa *Revisar* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-- *Detalhes* da conexão: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
-- *Detalhes* do mapeamento: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
-- *Detalhes* da programação: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
+- *Conexão*: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
+- *Atribuir campos* do conjunto de dados e mapear: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
+- *Agendamento*: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
 
-Depois de revisar seu fluxo de dados, clique em **Concluir** e aguarde algum tempo para que o fluxo de dados seja criado.
+Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
 ## Monitore seu fluxo de dados
 
-Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Siga as etapas abaixo para acessar um monitor de conjunto de dados do dataflow.
-
-Na área de trabalho _Fontes_ , clique na guia **Procurar** para lista das conexões básicas. Na lista exibida, localize a conexão que contém o fluxo de dados que você deseja monitorar clicando em seu nome.
-
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
-
-A tela atividade ** de origem é exibida. Aqui, clique no nome de um conjunto de dados cuja atividade você deseja monitorar.
-
-![](../../../images/tutorials/dataflow/databases/select-dataflow-dataset.png)
-
-A tela atividade *do Conjunto* de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
-
-![](../../../images/tutorials/dataflow/databases/dataset-activity.png)
-
-Para obter mais informações sobre monitoramento de conjuntos de dados e ingestão, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../../ingestion/quality/monitor-data-flows.md)de fluxo contínuo.
+Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar seus fluxos de dados, consulte o tutorial em [contas e fluxos de dados](../monitor.md).
 
 ## Próximas etapas
 
@@ -135,13 +127,13 @@ As seções a seguir fornecem informações adicionais para trabalhar com conect
 
 Quando um fluxo de dados é criado, ele imediatamente se torna ativo e ingere dados de acordo com o agendamento que foi fornecido. Você pode desativar um fluxo de dados ativo a qualquer momento seguindo as instruções abaixo.
 
-Na área de trabalho _Fontes_ , clique na guia **Procurar** . Em seguida, clique no nome da conexão básica associada ao fluxo de dados que você deseja desativar.
+Na área de trabalho *[!UICONTROL Fontes]* , selecione a guia **[!UICONTROL Fluxos de dados]** . Em seguida, selecione o fluxo de dados que deseja desativar.
 
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
+![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-A página _atividade_ de origem é exibida. Selecione o fluxo de dados ativo na lista para abrir sua coluna *Propriedades* no lado direito da tela, que contém um botão de alternância **Ativado** . Clique na alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
+A coluna *Propriedades* é exibida no lado direito da tela, incluindo um botão de alternância **[!UICONTROL Ativado]** . Selecione a alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
 
-![](../../../images/tutorials/dataflow/databases/toggle-enabled.png)
+![](../../../images/tutorials/dataflow/databases/disable.png)
 
 ### Ativar dados de entrada para população de Perfis
 

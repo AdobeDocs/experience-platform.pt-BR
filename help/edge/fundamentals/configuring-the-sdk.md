@@ -4,7 +4,10 @@ seo-title: Configuração do SDK da Web da plataforma Adobe Experience
 description: Saiba como configurar o SDK da Web da Experience Platform
 seo-description: Saiba como configurar o SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 12%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 A configuração do SDK é feita com o `configure` comando.
 
->[!Iimportante]
+>[!IImportante]
 >`configure` deve ser _sempre_ o primeiro comando chamado.
 
 ```javascript
@@ -45,7 +48,7 @@ Sua ID de configuração atribuída, que vincula o SDK às contas e configuraç�
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matriz de sequências de caracteres | Não | `["web", "device", "environment", "placeContext"]` |
 
-Indica quais categorias de contexto devem ser coletadas automaticamente, conforme descrito em Informações [](../reference/automatic-information.md)Automáticas.  Se essa configuração não for especificada, todas as categorias serão usadas por padrão.
+Indica quais categorias de contexto devem ser coletadas automaticamente, conforme descrito em Informações [](../reference/automatic-information.md)automáticas.  Se essa configuração não for especificada, todas as categorias serão usadas por padrão.
 
 ### `debugEnabled`
 
@@ -57,7 +60,7 @@ Indica se a depuração deve ser ativada. Configurar essa configuração para `t
 
 | **Recurso** |  |  |
 | ---------------------- | ------------------ |
-| Validação síncrona | Valida os dados que estão sendo coletados em relação ao esquema e retorna um erro na resposta sob o seguinte rótulo: `collect:error OR success` |
+| Validação síncrona | Valida os dados que estão sendo coletados em relação ao schema e retorna um erro na resposta sob o seguinte rótulo: `collect:error OR success` |
 | Registro do console | Permite que mensagens de depuração sejam exibidas no console JavaScript do navegador |
 
 ### `edgeDomain`
@@ -67,14 +70,6 @@ Indica se a depuração deve ser ativada. Configurar essa configuração para `t
 | String | Não | `beta.adobedc.net` |
 
 O domínio usado para interagir com os serviços da Adobe. Isso só será usado se você tiver um domínio próprio (CNAME) que faça proxy das solicitações para a infraestrutura de borda da Adobe.
-
-### `errorsEnabled`
-
-| **Tipo** | **Obrigatório** | **Valor padrão** |
-| -------- | ------------ | ----------------- |
-| Booleano | Não | `true` |
-
-Indica se os erros devem ser suprimidos. Conforme descrito em [Executando comandos](executing-commands.md), erros _não capturados_ são registrados no console do desenvolvedor, independentemente de a depuração estar ativada no SDK da Web da Adobe Experience Platform. Ao configurar `errorsEnabled` como `false`, as promessas retornadas pelo SDK da Web da plataforma Adobe Experience nunca serão rejeitadas, embora erros ainda sejam registrados no console se o registro estiver ativado no SDK da Web da plataforma Adobe Experience.
 
 ### `orgId`
 
@@ -97,16 +92,16 @@ Indica se os dados associados aos cliques em links devem ser coletados automatic
 | **Propriedade** |  |
 | ------------ | ----------------------------------- |
 | Nome do link | Nome determinado pelo contexto do link |
-| URL de link | URL normalizado |
+| URL do link | URL normalizado |
 | Tipo de link | Definir para baixar, sair ou outras |
 
 ### `onBeforeEventSend`
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
-| Função | Não | () => não definido |
+| Função | Não | () => indefinido |
 
-Configure isso para configurar um retorno de chamada chamado para cada evento antes de ele ser enviado.  Um objeto com o campo `xdm` é enviado para o retorno de chamada.  Modifique o objeto xdm para alterar o que é enviado.  Dentro do retorno de chamada, os dados do `xdm` objeto já serão transmitidos no comando event e as informações coletadas automaticamente.  Para obter mais informações sobre o tempo desse retorno de chamada e um exemplo, consulte [Modificando eventos globalmente](tracking-events.md#modifying-events-globally).
+Configure isso para configurar um retorno de chamada chamado para cada evento antes de ele ser enviado.  Um objeto com o campo `xdm` é enviado para o retorno de chamada.  Modifique o objeto xdm para alterar o que é enviado.  Dentro do retorno de chamada, os dados do `xdm` objeto já serão transmitidos no comando do evento e as informações coletadas automaticamente.  Para obter mais informações sobre o tempo desse retorno de chamada e um exemplo, consulte [Modificando Eventos globalmente](tracking-events.md#modifying-events-globally).
 
 ## Opções de privacidade
 
@@ -134,7 +129,7 @@ Por exemplo, se você tivesse um elemento em sua página da Web com uma ID cujo 
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
 
-## Opções de público-alvo
+## Opções do Audiência
 
 ### `cookieDestinationsEnabled`
 
@@ -160,7 +155,7 @@ Permite destinos de URL, o que permite acionar URLs com base na qualificação d
 | -------- | ------------ | ----------------- |
 | Número | Não | none |
 
-A ID do contêiner que especifica quais sincronizações de ID são acionadas. Este é um número inteiro não negativo que pode ser obtido do seu consultor.
+A ID do container que especifica quais sincronizações de ID são acionadas. Este é um número inteiro não negativo que pode ser obtido do seu consultor.
 
 ### `idSyncEnabled`
 
@@ -176,4 +171,4 @@ Habilita o recurso de sincronização de ID, que permite acionar URLs para sincr
 | -------- | ------------ | ----------------- |
 | Booleano | Não | true |
 
-Ativa a configuração de cookies de terceiros da Adobe. O SDK tem a capacidade de persistir a ID de visitante em um contexto de terceiros para permitir que a mesma ID de visitante seja usada em todo o site. Isso é útil se você tem vários sites ou deseja compartilhar dados com parceiros; no entanto, às vezes isso não é desejado por motivos de privacidade.
+Ativa a configuração de cookies de terceiros da Adobe. O SDK tem a capacidade de persistir a ID do visitante em um contexto de terceiros para permitir que a mesma ID do visitante seja usada no site. Isso é útil se você tem vários sites ou deseja compartilhar dados com parceiros; no entanto, às vezes isso não é desejado por motivos de privacidade.

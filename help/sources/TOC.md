@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,11 @@ ht-degree: 0%
       - Publicidade {#advertising}
          - [Conector Google Ads](tutorials/api/create/advertising/ads.md)
       - armazenamento em nuvem {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Conector Blob do Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Conector Hubs de Evento do Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Conector do Armazenamento de Arquivo do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -128,8 +130,10 @@ ht-degree: 0%
       - Publicidade {#create}
          - [Conector Google Ads](tutorials/ui/create/advertising/ads.md)
       - armazenamento em nuvem {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Conector Azure Blob e Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Conector Hubs de Evento do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Conector do Armazenamento de Arquivo do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Conector FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
+source-git-commit: 4b6b9ca5ae7861f8e8b974550be14fbce6efdcf1
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,14 @@ Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de aco
 Os rótulos de uso de dados aplicados no nível do conjunto de dados são propagados para todos os campos no conjunto de dados. Os rótulos também podem ser aplicados diretamente a campos individuais (cabeçalhos de coluna) em um conjunto de dados, sem propagação.
 
 Para obter mais informações sobre os rótulos de uso de dados disponíveis na Experience Platform e as políticas de uso que eles representam, consulte o guia sobre os rótulos [de uso de dados](reference.md)suportados.
+
+## Herança de etiqueta para segmentos de audiência
+
+Todos os segmentos de audiência criados pelo [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) herdam os rótulos de uso de seus conjuntos de dados correspondentes. Isso permite que os aplicativos criados sobre a Plataforma de experiência (como a Plataforma de dados do cliente em tempo real) forneçam a aplicação automática da política de uso de dados ao ativar segmentos para destinos.
+
+Além de herdar rótulos de nível de conjunto de dados, os segmentos herdam todos os rótulos de nível de campo de seus conjuntos de dados associados por padrão. Dependendo de como seu aplicativo baseado em plataforma consome segmentos, você pode especificar potencialmente quais campos são usados, impedindo assim o segmento de herdar rótulos de campos excluídos.
+
+Para obter mais informações sobre como a aplicação automática funciona na CDP em tempo real, consulte a visão geral [da CDP Data Governance em tempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)real.
 
 ## Próximas etapas
 

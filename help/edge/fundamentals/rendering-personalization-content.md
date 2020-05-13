@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK Renderização de conteúdo persona
 description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK
 seo-description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
+source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 >
 >O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
-O SDK da Web da plataforma Adobe Experience oferece suporte à consulta das soluções de personalização na Adobe, incluindo o Público alvo da Adobe. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](managing-flicker.md).
+O SDK da Web da plataforma Adobe Experience oferece suporte à consulta das soluções de personalização na Adobe, incluindo o Público alvo da Adobe. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
 
 ## Renderização automática de conteúdo
 

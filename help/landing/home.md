@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da plataforma Adobe Experience
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
@@ -27,11 +27,11 @@ A documentação da plataforma de experiência é fornecida em vários formatos 
 
 >[!NOTE]
 >
->A partir de maio de 2020, a Adobe lançará atualizações no domínio e na barra de cabeçalho para unificar e melhorar sua experiência em todos os aplicativos da Experience Cloud. Isso inclui um novo menu Ajuda. O novo menu Ajuda inclui o seguinte:
+>A partir de maio de 2020, a Adobe está lançando atualizações no domínio e na barra de cabeçalho para unificar e melhorar sua experiência em todos os aplicativos da Experience Cloud. Isso inclui um novo menu Ajuda. O novo menu Ajuda inclui o seguinte:
 >
 >* Links para artigos em destaque
 >* Recomendações de documentação relevantes ao contexto
->* A capacidade de fornecer feedback sobre a documentação e reportar problemas
+>* A capacidade de fornecer feedback sobre a plataforma de experiência e reportar problemas
 >* Resultados de pesquisa aprimorados que também incluem resultados de fóruns da comunidade e conteúdo de vídeo.
 >
 > 

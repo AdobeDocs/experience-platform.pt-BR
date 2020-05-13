@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+source-git-commit: 5718a3930f1e12e62a7bbe60f249c7f6f3434fa7
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -26,21 +26,17 @@ Este guia do usuário requer uma compreensão dos vários serviços da plataform
 * [Serviço](../../identity-service/home.md)de identidade: Habilita o Perfil do cliente em tempo real, fazendo a ponte entre identidades de diferentes fontes de dados que estão sendo assimiladas na Plataforma.
 * [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 
-## Visão geral do Perfil
+## Visão geral
 
-Na interface do usuário [da plataforma de](http://platform.adobe.com)experiência, clique em **Perfis** na navegação à esquerda para abrir a guia _Visão geral_ na área de trabalho _Perfis_ . Esta guia exibe vários widgets que fornecem informações de alto nível sobre a loja de Perfis, incluindo o total de audiências endereçáveis, o número de registros de Perfis que foram ingeridos na última semana, bem como estatísticas relacionadas a registros bem-sucedidos e com falha no mesmo período.
+Na interface do usuário [da plataforma de](http://platform.adobe.com)experiência, clique em **Perfis** na navegação à esquerda para abrir a guia _Visão geral_ . Esta guia fornece links para a documentação e vídeos para ajudá-lo a entender e começar a trabalhar com perfis.
 
-![](../images/user-guide/profile-overview.png)
+![](../images/user-guide/profiles-overview.png)
 
-## Amostras de perfil de Visualização
+## Procurar Perfis
 
-Clique em **Procurar** para visualização de uma lista de amostra de perfis disponíveis. Esta amostra inclui até 50 perfis da contagem [total de](#profile-count)perfis. As amostras são atualizadas por um trabalho automático que coleta novos dados de perfil à medida que são ingeridos. Cada perfil listado exibe sua ID, nome, sobrenome e email pessoal. Clicar na ID de um perfil listado exibe seus detalhes no Visualizador do [Perfil](#profile-viewer).
+Clique na guia **Procurar** para procurar perfis por identidades. Esta guia também contém a contagem [total de](#profile-count)perfis.
 
-![](../images/user-guide/profile-samples.png)
-
-Você pode personalizar os atributos exibidos na lista clicando no ícone do seletor de colunas. Isso exibe uma lista suspensa contendo atributos comuns de perfil que você pode adicionar ou remover.
-
-![](../images/user-guide/column-selector.png)
+![](../images/user-guide/profiles-browse.png)
 
 ### contagem de Perfis {#profile-count}
 
@@ -50,43 +46,53 @@ A contagem de perfis também inclui perfis com atributos (dados de registro), be
 
 Quando a ingestão de perfis na Loja de Perfis aumenta ou diminui a contagem em mais de 5%, uma tarefa é acionada para atualizar a contagem. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se o tiver feito, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no Perfil Store, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem de perfis.
 
-![](../images/user-guide/profile-count.png)
+### namespace de identidade
 
-### Pesquisa de Perfis
+O seletor de namespace **de** identidade abre uma caixa de diálogo onde você pode escolher a namespace de identidade pela qual deseja pesquisar, e você pode personalizar os atributos exibidos em sua pesquisa selecionando o ícone de filtro e escolhendo quais atributos você gostaria de adicionar ou remover.
 
-Se você souber uma identidade vinculada para um determinado perfil (como seu endereço de email), poderá procurar esse perfil clicando em **Localizar um perfil**. Essa é a maneira mais confiável de acessar um perfil específico, independentemente de ele aparecer na lista de amostras.
+![](../images/user-guide/profiles-search-filter.png)
 
-![](../images/user-guide/find-a-profile.png)
+Na caixa de diálogo *Selecionar namespace* de identidade, escolha a namespace pela qual deseja pesquisar ou use a barra **Pesquisar** na caixa de diálogo para começar a digitar o nome de uma namespace. Você pode selecionar uma namespace para visualização com mais detalhes e, depois de encontrar a namespace que deseja pesquisar, pode selecionar o botão de opção e pressionar **Select (Selecionar** ) para continuar.
 
-Na caixa de diálogo exibida, selecione uma namespace de ID apropriada na lista suspensa (&quot;Email&quot; neste exemplo) e insira o valor de ID abaixo antes de clicar em **OK**. Se encontrado, os detalhes do perfil direcionado aparecem no visualizador de perfis, conforme descrito na próxima seção.
+![](../images/user-guide/profiles-select-identity-namespace.png)
 
-![](../images/user-guide/find-a-profile-details.png)
+### Valor de identidade
 
-### Visualizador de Perfis {#profile-viewer}
+Depois de selecionar uma namespace **de** identidade, você retorna à guia *Procurar* , onde pode inserir um valor **de** Identidade. Esse valor é específico para um perfil de cliente individual e deve ser uma entrada válida para a namespace fornecida. Por exemplo, a seleção da namespace **de** identidade &quot;Email&quot; exigiria um valor **de** identidade na forma de um endereço de email válido.
 
-Ao selecionar ou pesquisar um perfil específico, a tela _Detalhe_ do visualizador do perfil é aberta. Esta página exibe informações sobre o perfil selecionado, como os atributos básicos do perfil, as identidades vinculadas e os canais de contato disponíveis. As informações de perfil exibidas foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual.
+![](../images/user-guide/profiles-show-profile.png)
 
-![](../images/user-guide/profile-viewer-detail.png)
+Depois que um valor for inserido, selecione **Mostrar perfil** e um único perfil que corresponda ao valor será retornado. Selecione a ID **do** Perfil para visualização dos detalhes do perfil.
 
-O visualizador de perfis também fornece guias que permitem a visualização de eventos e associações de segmentos associadas a esse perfil, se houver.
+![](../images/user-guide/profiles-display-profile.png)
 
-![](../images/user-guide/profile-viewer-events-seg.png)
+### Detalhes do Perfil
+
+Ao selecionar a ID **do** Perfil, a guia _Detalhe_ é aberta. Esta página exibe informações sobre o perfil selecionado, incluindo atributos básicos, identidades vinculadas e canais de contato disponíveis. As informações de perfil exibidas foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual.
+
+![](../images/user-guide/profiles-profile-detail.png)
+
+Você pode visualização informações adicionais relacionadas ao perfil, incluindo Atributos, Eventos e Segmentos aos quais o perfil é membro.
+
+![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Mesclar políticas
 
 Clique em **Mesclar políticas** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
 
-![](../images/user-guide/profile-merge-policies.png)
-
 Para obter mais informações sobre como trabalhar com políticas de mesclagem na interface do usuário, consulte o guia [do usuário](merge-policies.md)Mesclar políticas.
+
+![](../images/user-guide/profiles-merge-policies.png)
 
 ## schema União
 
-Clique em Schema **de** União para visualização dos schemas de união para o armazenamento de dados do perfil. Um schema de união é uma combinação de todos os campos do Modelo de Dados de Experiência (XDM) na mesma classe, cujos schemas foram habilitados para uso no Perfil do Cliente em tempo real. Clique em uma classe na lista esquerda para visualização da estrutura de sua schema de união na tela.
+Clique em Schema **de** União para visualização dos schemas de união da Loja de Perfis. Um schema de união é uma combinação de todos os campos do Modelo de Dados de Experiência (XDM) na mesma classe, cujos schemas foram habilitados para uso no Perfil do Cliente em tempo real. Clique em uma classe na lista esquerda para visualização da estrutura de sua schema de união na tela.
 
-![](../images/user-guide/profile-union-schema.png)
+Por exemplo, selecionar &quot;Perfil XDM&quot; exibe o schema de união para a classe de Perfil Individual XDM.
 
 Consulte a seção sobre schemas de união no guia [de composição do](../../xdm/schema/composition.md) schema para obter mais informações sobre schemas de união e sua função no Perfil do cliente em tempo real.
+
+![](../images/user-guide/profiles-union-schema.png)
 
 ## Próximas etapas
 

@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Tarefas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+workflow-type: tm+mt
+source-wordcount: '1669'
+ht-degree: 2%
 
 ---
 
 
 # Tarefas de privacidade
 
-As seções a seguir percorrem as chamadas que você pode fazer usando o terminal raiz (`/`) na API do Privacy Service. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir percorrem as chamadas que você pode fazer usando o `/jobs` terminal na API do Privacy Service. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
-## Criar um trabalho de privacidade
+## Criar um trabalho de privacidade {#create-job}
 
 Antes de criar uma nova solicitação de cargo, é necessário coletar primeiro informações de identificação sobre as pessoas cujos dados você deseja acessar, excluir ou opt out de venda. Depois que você tiver os dados necessários, eles deverão ser fornecidos na carga de uma solicitação POST para o terminal raiz.
 
@@ -33,7 +36,7 @@ Esta seção demonstra como fazer uma solicitação de trabalho de acesso/exclus
 **Formato da API**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Solicitação**
@@ -157,7 +160,7 @@ Uma resposta bem-sucedida retorna os detalhes dos trabalhos recém-criados.
 | --- | --- |
 | `jobId` | Uma ID gerada pelo sistema exclusiva e somente leitura para um trabalho. Esse valor é usado na próxima etapa da pesquisa de um trabalho específico. |
 
-Depois de submeter a solicitação de emprego com êxito, você pode prosseguir para a próxima etapa de [verificação do status](#check-the-status-of-a-job)da tarefa.
+Depois de submeter a solicitação de emprego com êxito, você pode prosseguir para a próxima etapa de [verificação do status](#check-status)da tarefa.
 
 ### Criar um trabalho de não participação na venda {#opt-out}
 
@@ -166,7 +169,7 @@ Esta seção demonstra como fazer uma solicitação de trabalho de não particip
 **Formato da API**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Solicitação**
@@ -281,7 +284,7 @@ Uma resposta bem-sucedida retorna os detalhes dos trabalhos recém-criados.
 
 Depois de submeter a solicitação de emprego com êxito, você pode prosseguir para a próxima etapa de verificação do status da tarefa.
 
-## Verificar o status de uma tarefa
+## Verificar o status de uma tarefa {#check-status}
 
 Usando um dos `jobId` valores retornados na etapa anterior, você pode recuperar informações sobre essa tarefa, como seu status de processamento atual.
 
@@ -290,12 +293,12 @@ Usando um dos `jobId` valores retornados na etapa anterior, você pode recuperar
 **Formato da API**
 
 ```http
-GET /{JOB_ID}
+GET /jobs/{JOB_ID}
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{JOB_ID}` | A ID do trabalho que você deseja pesquisar, retornada `jobId` na resposta da etapa [](#create-a-job-request)anterior. |
+| `{JOB_ID}` | A ID do trabalho que você deseja pesquisar, retornada `jobId` na resposta da etapa [](#create-job)anterior. |
 
 **Solicitação**
 
@@ -391,10 +394,10 @@ Você pode visualização uma lista de todas as solicitações de trabalho dispo
 Esse formato de solicitação usa um parâmetro de `regulation` query no terminal raiz (`/`), portanto, começa com um ponto de interrogação (`?`), como mostrado abaixo. A resposta é paginada, permitindo que você use outros parâmetros de query (`page` e `size`) para filtrar a resposta. É possível separar vários parâmetros usando os E-mails (`&`).
 
 ```http
-GET ?regulation={REGULATION}
-GET ?regulation={REGULATION}&page={PAGE}
-GET ?regulation={REGULATION}&size={SIZE}
-GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 ```
 
 | Parâmetro | Descrição |

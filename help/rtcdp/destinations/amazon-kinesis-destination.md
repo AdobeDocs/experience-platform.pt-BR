@@ -4,15 +4,20 @@ seo-title: Destino da Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da plataforma Adobe Experience.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da plataforma Adobe Experience.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '446'
+ht-degree: 2%
 
 ---
 
 
-# Destino da Amazon Kinesis
+# (Beta) Destino da Amazon Kinesis
+
+
+>[!IMPORTANT]
+>
+>O [!DNL Amazon Kinesis] destino no Adobe Real-time CDP está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 
@@ -21,7 +26,7 @@ O [!DNL Kinesis Data Streams] serviço da Amazon Web Services permite coletar e 
 Você pode criar uma conexão de saída em tempo real com seu [!DNL Amazon Kinesis] armazenamento para transmitir dados da Adobe Experience Platform.
 
 * Para obter mais informações sobre [!DNL Amazon Kinesis], consulte a documentação [da](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
-* Para conectar-se a [!DNL Amazon Kinesis] chamadas de API, consulte o tutorial [da API de destinos de]transmissão contínua.
+* Para conectar-se a [!DNL Amazon Kinesis] chamadas de API, consulte o tutorial [da API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)transmissão contínua.
 * Para conectar-se [!DNL Amazon Kinesis] usando a interface do usuário CDP em tempo real da Adobe, consulte as seções abaixo.
 
 ![Amazon Kinesis na interface do usuário](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ Seus dados exportados da plataforma de experiência vêm no formato [!DNL Amazon
 
 >[!MORELIKETHIS]
 >
->* Tutorial do link para a API do Amazon Kinesis
+>* [Conecte-se ao Amazon Kinesis e ative dados usando chamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destino dos Hubs de Evento do Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Tipos de destino e categorias](/help/rtcdp/destinations/destination-types.md)
 

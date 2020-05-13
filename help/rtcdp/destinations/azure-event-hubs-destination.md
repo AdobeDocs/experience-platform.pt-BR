@@ -1,18 +1,22 @@
 ---
-title: Destino dos Hubs de Evento do Azure
-seo-title: Destino dos Hubs de Evento do Azure
+title: (Beta) Destino dos Hubs de Eventos do Azure
+seo-title: (Beta) Destino dos Hubs de Eventos do Azure
 description: Crie uma conexão de saída em tempo real com seu armazenamento de Hubs de Evento do Azure para transmitir dados da plataforma Experience.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento de Hubs de Evento do Azure para transmitir dados da plataforma Experience.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 2%
 
 ---
 
 
-# Destino dos Hubs de Evento do Azure
+# (Beta) Destino dos Hubs de Eventos do Azure
+
+>[!IMPORTANT]
+>
+>O [!DNL Azure Event Hubs] destino no Adobe Real-time CDP está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 Você pode criar uma conexão de saída em tempo real com seu [!DNL Azure Event Hubs] armazenamento para transmitir dados da Adobe Experience Platform.
 
 * Para obter mais informações sobre [!DNL Azure Event Hubs], consulte a documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
-* Para conectar-se a [!DNL Azure Event Hubs] chamadas de API, consulte o tutorial [da API de destinos de]transmissão contínua.
+* Para conectar-se a [!DNL Azure Event Hubs] chamadas de API, consulte o tutorial [da API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)transmissão contínua.
 * Para conectar-se [!DNL Azure Event Hubs] usando a interface do usuário CDP em tempo real da Adobe, consulte as seções abaixo.
 
 ![AWS Kinesis na interface do usuário](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -89,6 +93,6 @@ Seus dados exportados da plataforma de experiência vêm no formato [!DNL Azure 
 
 >[!MORELIKETHIS]
 >
->* Tutorial da API Link para Hubs de Eventos do Azure
+>* [Conecte-se aos Hubs de Evento do Azure e ative dados usando chamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destino AWS Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Tipos de destino e categorias](/help/rtcdp/destinations/destination-types.md)

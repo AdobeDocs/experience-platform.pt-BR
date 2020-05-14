@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 6%
+source-wordcount: '1026'
+ht-degree: 5%
 
 ---
 
@@ -104,6 +104,7 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 | ------- | ----------- |
 | Suporte adicional à API e à interface do usuário para sistemas de armazenamento em nuvem | Novos conectores de origem para o Armazenamento de Arquivo do Azure. |
 | Suporte adicional à API e à interface do usuário para bancos de dados | Novos conectores de origem para o Azure Data Explorer, IBM DB2 e Oracle DB. |
+| Adobe Audiência Manager para compartilhamento de dados da plataforma de experiência | O processo de provisionamento do conector do Gerenciador de Audiências foi atualizado. Os conjuntos de dados do Gerenciador de Audiências para o Perfil de clientes em tempo real agora estão desabilitados por padrão. Você pode escolher manualmente quais conjuntos de dados promover ao Perfil. As novas configurações padrão não são retroativas e afetam apenas o provisionamento de novos conectores do Gerenciador de Audiências. Consulte mais informações no guia [do usuário](../../catalog/datasets/user-guide.md)Conjuntos de dados. |
 
 **Problemas conhecidos**
 

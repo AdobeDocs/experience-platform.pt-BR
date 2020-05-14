@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Renderização de conteúdo persona
 description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK
 seo-description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -21,7 +21,7 @@ O SDK da Web da plataforma Adobe Experience oferece suporte à consulta das solu
 O SDK renderiza automaticamente o conteúdo personalizado quando você envia um evento para o servidor e define `renderDecisions` como uma opção `true` no evento.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ A renderização de conteúdo personalizado é assíncrona, portanto, não deve 
 Você pode solicitar que a lista de decisões seja retornada como uma promessa no `event` comando usando `scopes`. Um escopo é uma string que permite que a solução de personalização saiba qual decisão você deseja.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){

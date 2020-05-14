@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
+source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '961'
 ht-degree: 6%
 
 ---
@@ -87,7 +87,7 @@ O Experience Platform Web SDK e a Experience Platform Edge Network permitem que 
 | Adobe Analytics | Envie dados para os conjuntos de relatórios do Analytics por meio da configuração da borda. O XDM é nivelado em dados de contexto, suporta marcação de vários conjuntos |
 | Adobe Target | Suporte para o Público alvo da Adobe. Incluindo VEC, Compositor baseado em formulário, A/B, XT, Personalização automatizada, MVT |
 | Suporte ao Adobe Audiência Manager | Suporte para sincronizações de ID do Audiência Manager, destinos de URL e destinos de cookies |
-| `synceIdnetity` | Renomeado `setCustomersIds` para `syncIdentity` tornar mais claro |
+| Sincronização de identidade | Renomeado `setCustomersIds` para `syncIdentity` tornar mais claro |
 | Construtor de objetos XDM | Na extensão de inicialização, agora é possível criar objetos XDM como Elementos de dados |
 
 Para obter mais informações sobre o SDK da Web da plataforma e o Edge Network, consulte a [documentação](../../edge/home.md).

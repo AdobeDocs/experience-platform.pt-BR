@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK ao instalar o SDK
 description: Saiba como instalar o SDK da Web da Experience Platform
 seo-description: Saiba como instalar o SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Instalando o SDK
-
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Instalação do SDK
 
 A primeira etapa na implementação do SDK da Web da plataforma Adobe Experience é copiar e colar o seguinte &quot;código base&quot; o mais alto possível na `<head>` tag do seu HTML:
 
@@ -48,7 +47,7 @@ Esse código base, além de criar uma função global, também carrega um códig
 
 ## Suporte ao Internet Explorer
 
-Este SDK utiliza as promessas, que é um método para comunicar a conclusão de tarefas assíncronas. A implementação [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto o Internet Explorer. Para usar o SDK no Internet Explorer, é necessário ter o `window.Promise` polifill [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Esse SDK utiliza promessas, que é um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de públicos alvos, exceto o Internet Explorer. Para usar o SDK no Internet Explorer, é necessário ter o `window.Promise` polifill [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Para determinar se você já tem `window.Promise` polifill:
 

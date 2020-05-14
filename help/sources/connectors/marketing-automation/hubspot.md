@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Conector HubSpot
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1afa5e6acd5e4fd983505df11f4a76f6835ac30f
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
 
-# Conector HubSpot
+# Conector HubSpot (Beta)
 
 A plataforma Adobe Experience permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 

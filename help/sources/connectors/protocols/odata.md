@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Conector OData genérico
 topic: overview
 translation-type: tm+mt
-source-git-commit: e1c92c010ee718138d4234abcb7b9f2f75187b8c
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '155'
+ht-degree: 0%
 
 ---
 
 
-# Conector OData genérico
+# (Beta) Conector OData genérico
 
 A plataforma Adobe Experience permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 

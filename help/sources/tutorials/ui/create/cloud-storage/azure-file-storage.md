@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Criar um conector de origem do Armazenamento de Arquivo do Azure na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # Criar um conector de origem do Armazenamento de Arquivo do Azure na interface do usuário
+
+>[!NOTE]
+>O Armazenamento de Tabela do Azure está em beta. Os recursos e a documentação estão sujeitos a alterações.
 
 Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para autenticação de um conector de origem do Armazenamento de Arquivo do Azure usando a interface do usuário da Plataforma.
 

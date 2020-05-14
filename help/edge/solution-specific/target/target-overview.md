@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK e uso do Público alvo da Adobe
 description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK usando o Público alvo Adobe
 seo-description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK usando o Público alvo Adobe
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 2%
@@ -42,7 +42,7 @@ O SDK da Web AEP tem o poder de renderizar automaticamente suas experiências de
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ O Criador de experiências baseado em forma é uma interface não visual útil p
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 O AEP Web SDK fornece uma funcionalidade na qual você pode recuperar ações VEC sem depender do AEP Web SDK para renderizar as ações VEC para você. Envie um evento com `__view__` definição de `decisionScopes`.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 

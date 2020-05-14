@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Conector do Azure Synapse Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41aa36f146834537813fb7e05a17291dbd4f9d9b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
 
-# Conector do Azure Synapse Analytics
+# (Beta) Conector do Azure Synapse Analytics
 
 A plataforma Adobe Experience permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 

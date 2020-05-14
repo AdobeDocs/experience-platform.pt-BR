@@ -4,16 +4,15 @@ seo-title: Informações coletadas automaticamente pelo SDK da Web do Adobe Expe
 description: Descrição de cada informação que o SDK da Adobe Experience Cloud coleta automaticamente
 seo-description: Descrição de cada informação que o SDK da Adobe Experience Cloud coleta automaticamente
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 5%
 
 ---
 
 
-# (Beta) Informações coletadas automaticamente
-
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Informações coletadas automaticamente
 
 O SDK da Adobe Experience Cloud coleta várias informações automaticamente, sem nenhuma configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a `context` opção no `configure` comando. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
 
@@ -49,7 +48,7 @@ A largura da tela (em pixels).
 
 Detalhes sobre o ambiente do navegador.
 
-### Tipo de ambiente
+### Tipo de Ambiente
 
 Navegador
 
@@ -135,7 +134,7 @@ Detalhes sobre a página em que o usuário está.
 
 O URL da página atual.
 
-### URL do referenciador
+### URL de Quem indicou
 
 | **Caminho na carga:** | **Exemplo:** |
 | ---------------------------------- | ----------------------------------------- |

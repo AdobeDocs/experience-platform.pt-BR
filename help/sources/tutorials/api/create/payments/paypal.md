@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Criar um conector PayPal usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 34334a6ff5a3f0c16ad32b4d0438d4ee8513372f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 1%
 
 ---
 
 
 # Criar um conector PayPal usando a API de Serviço de Fluxo
+
+>[!NOTE]
+>O conector PayPal está em beta. Os recursos e a documentação estão sujeitos a alterações.
 
 O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 

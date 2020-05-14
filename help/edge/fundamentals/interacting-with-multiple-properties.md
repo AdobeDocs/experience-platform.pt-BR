@@ -4,20 +4,19 @@ seo-title: Adobe Experience Platform Web SDK Interagindo com várias propriedade
 description: Saiba como interagir com várias propriedades do SDK da Web da Experience Platform
 seo-description: Saiba como interagir com várias propriedades do SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Interagindo com várias propriedades
+# Interagir com várias propriedades
 
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+Há alguns casos em que você pode interagir com duas propriedades diferentes na mesma página. Eles incluem:
 
-Há alguns casos em que você pode interagir com duas propriedades diferentes na mesma página. Dentre eles:
-
-* Empresas que foram adquiridas e estão trabalhando na integração de seus sites
+* Empresas adquiridas e que estão trabalhando na integração de seus sites
 * Relações de compartilhamento de dados entre várias empresas
 * Clientes que estão testando novas soluções da Adobe e não querem interromper a implementação existente
 

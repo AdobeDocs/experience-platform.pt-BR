@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Criar um conector HubSpot usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: c08650ca1655e248f0a0f8a6b371c5fd005aab1c
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '627'
+ht-degree: 1%
 
 ---
 
 
 # Criar um conector HubSpot usando a API de Serviço de Fluxo
+
+>[!NOTE]
+>O conector HubSpot está em beta. Os recursos e a documentação estão sujeitos a alterações.
 
 O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 

@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Apache Spark no conector Azure HDInsights
 topic: overview
 translation-type: tm+mt
-source-git-commit: ae059f93f09dbbae4f1ef46f68901071afba9729
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 0%
 
 ---
 
 
-# Apache Spark no conector Azure HDInsights
+# (Beta) Apache Spark no conector do Azure HDInsights
 
 A plataforma Adobe Experience permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 

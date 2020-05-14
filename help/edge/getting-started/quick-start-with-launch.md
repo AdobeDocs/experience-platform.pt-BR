@@ -4,39 +4,34 @@ seo-title: start rápido do SDK da Web do Adobe Experience Platform com Launch
 description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 translation-type: tm+mt
-source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 4%
+source-wordcount: '529'
+ht-degree: 3%
 
 ---
 
 
-# Pré-requisitos (Beta)
+# Boas-vindas
 
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+Este guia o orientará pelas diferentes formas de configurar o SDK da Web da plataforma Adobe Experience no Launch. Para poder usar este recurso, é necessário ter uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
-Atualmente, o SDK da Web da plataforma Adobe Experience só oferece suporte ao envio de dados para a plataforma Adobe Experience usando o XDM. Você deve atender aos seguintes pré-requisitos.
-
-- Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse.
-- Esteja qualificado para a Adobe Experience Platform
+- Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse. O teste no desenvolvimento funcionará sem um CNAME, mas você precisará de um antes de ir para a produção
+- Esteja qualificado para a Plataforma de dados da plataforma Adobe Experience. Se você não comprou a plataforma, forneceremos a Experience Platform Data Services Foundation para uso com o SDK.
 - Usar a versão mais recente do serviço de ID de Visitante
-
-## Preparar plataforma
-
-Para poder enviar dados para a Adobe Experience Platform, você deve criar um schema XDM e um conjunto de dados que use esse schema.
-
-- [Criar um schema](../../xdm/tutorials/create-schema-ui.md)
-- Adicionar a combinação do SDK da Web da plataforma Adobe Experience ao schema criado
-- [Crie um conjunto de dados](https://platform.adobe.com/dataset/overview) com seu schema onde você gostaria que os dados fossem aterrados
 
 ## Criar uma ID de configuração
 
-Você pode criar uma ID de configuração usando a ferramenta [de configuração de](../fundamentals/edge-configuration.md) borda na inicialização.
+Você pode criar uma ID de configuração usando a ferramenta [de configuração de](../fundamentals/edge-configuration.md) borda na inicialização. Isso permitirá que você ative a rede Edge para enviar dados para as várias soluções. Detalhes sobre como localizar cada opção são encontrados na Página da Ferramenta [de Configuração de](../fundamentals/edge-configuration.md) Borda.
 
 >Observação: Sua organização deve estar na lista de permissões do recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
+
+## Preparar um Schema
+
+A Experience Platform Edge Network utiliza os dados como XDM. O XDM é um formato de dados que permite definir schemas. O schema define como o Edge Network espera que os dados sejam formatados. Para enviar dados, você precisará definir seu schema.
+
+- [Criar um schema](../../xdm/tutorials/create-schema-ui.md)
+- Adicionar a combinação do SDK da Web da plataforma Adobe Experience ao schema criado
 
 ## Instalar o SDK no Launch
 
@@ -44,28 +39,25 @@ Efetue login em Iniciar e instale a `AEP Web SDK` extensão. Como parte da insta
 
 Para obter mais detalhes sobre diferentes opções de configuração, consulte [Configuração do SDK](../fundamentals/configuring-the-sdk.md).
 
+## Criar uma base de elementos de dados em seu Schema
+
+Na inicialização, crie um Elemento de dados que faça referência ao schema alterando a extensão para AEP Web SDK e definindo o tipo como Objeto XDM. Isso carregará seu schema e permitirá que você mapeie os elementos de dados em diferentes partes do schema.
+
+![Elemento de data na inicialização](../../assets/edge_data_element.png)
+
 ## Enviar um evento
 
-Depois que a extensão é instalada, o start envia eventos adicionando uma ação &quot;Send Beacon&quot; da extensão AEP Web SDK. É recomendável enviar pelo menos um evento sempre que uma página for carregada com a opção &quot;Ocorre no start de uma visualização&quot; marcada.
+Depois que a extensão é instalada, o start envia eventos adicionando uma ação &quot;sendEvent&quot; da extensão AEP Web SDK a uma regra. Certifique-se de adicionar o elemento de dados que você acabou de criar ao evento como os dados XDM. Recomendamos que você envie pelo menos um evento sempre que uma página for carregada.
 
 Para obter mais detalhes sobre como rastrear eventos, consulte [Rastreamento de Eventos](../fundamentals/tracking-events.md).
 
-## Enviar dados
+## Próximas etapas
 
-Você pode enviar dados que correspondem ao schema criado anteriormente junto com seus eventos. Por exemplo, se você possuir um site de comércio e adicionar a mistura de comércio ao seu schema, você enviará a seguinte estrutura quando alguém visualização um produto.
+Depois que os dados estiverem fluindo, você poderá fazer o seguinte.
 
-```javascript
-{
-  "commerce": {
-    "productListAdds": {
-        "value":1
-    }
-  },
-  "productListItems":{
-      "name":"Floppy Green Hat",
-      "SKU":"HATFLP123",
-      "product":"1234567",
-      "quantity":2
-  }
-}
-```
+- [Crie seu schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- Saiba como [personalizar a experiência](../fundamentals/rendering-personalization-content.md)
+- Saiba mais sobre como enviar dados para várias soluções
+   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
+   - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
+   - [Adobe Target](../solution-specific/target/target-overview.md)

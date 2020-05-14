@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar uma conexão de streaming autenticada
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 2%
 
 ---
 
@@ -194,11 +197,3 @@ Se o `Authorization` cabeçalho não estiver presente, ou um token de acesso inv
     }
 }
 ```
-
-### Envio de mensagens para uma conexão de streaming não autenticada com autorização
-
-Se uma conexão de streaming não tiver a autenticação ativada, o cliente ainda poderá (opcionalmente) adicionar o cabeçalho `Authorization` à solicitação.
-
-Se o `Authorization` cabeçalho não estiver presente ou um token de acesso inválido/expirado for enviado, uma resposta HTTP 401 Não autorizado será retornada, os dados ainda serão publicados, mas com o `authenticatedRequest` campo definido como `false`.
-
-Se o `Authorization` cabeçalho estiver presente e for válido, os dados serão publicados com o `authenticatedRequest` campo definido como `true`.

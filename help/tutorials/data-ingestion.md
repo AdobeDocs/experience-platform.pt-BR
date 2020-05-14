@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Tutoriais de ingestão de dados
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Para assimilar dados CSV na Adobe Experience Platform, os dados devem ser mapead
 
 ## Criar uma conexão de streaming
 
-Para start de dados de streaming para a plataforma Experience, é necessário primeiro criar uma conexão HTTP de streaming. Ao criar uma conexão de streaming, você precisa fornecer detalhes importantes, como a fonte de dados de streaming, e se pretende enviar dados de uma fonte confiável (autenticada) ou não confiável (não autenticada). Isso pode ser feito usando a interface do usuário da plataforma ou as APIs da plataforma de experiência. Para saber mais, siga os tutoriais para [criar uma conexão de streaming usando a interface do usuário](../ingestion/tutorials/create-streaming-connection-ui.md) ou [criar uma conexão de streaming usando APIs](../ingestion/tutorials/create-streaming-connection.md).
+Para start de dados de streaming para a plataforma Experience, é necessário primeiro solicitar um terminal HTTP. Você tem a opção de configurar esse terminal para impor um comportamento autenticado. Isso pode ser feito usando a interface do usuário da plataforma ou as APIs da plataforma de experiência. Para saber mais, siga os tutoriais para [criar uma conexão de streaming usando a interface do usuário](../ingestion/tutorials/create-streaming-connection-ui.md) ou [criar uma conexão de streaming usando APIs](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Criar uma conexão de streaming autenticada
 

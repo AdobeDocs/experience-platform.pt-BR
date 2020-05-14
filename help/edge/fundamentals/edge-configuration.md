@@ -4,16 +4,15 @@ seo-title: Configuração de borda para o SDK da Web da Experience Platform
 description: 'Saiba como configurar a Experience Platform Edge Network. '
 seo-description: 'Saiba como configurar a Experience Platform Edge Network. '
 translation-type: tm+mt
-source-git-commit: efbc080117754cee01f21c9f9ec409204648e757
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 2%
 
 ---
 
 
-# Configuração do Edge (Beta)
-
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Configuração do Edge
 
 A configuração do SDK da Web da plataforma Adobe Experience é dividida entre dois locais. O comando [configure](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente, como o `edgeDomain`. A configuração da borda lida com todas as outras configurações do SDK. Quando uma solicitação é enviada para a Adobe Experience Platform Edge Network, ela `edgeConfigId` é usada para fazer referência à configuração do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
 
@@ -39,17 +38,17 @@ A ID usada no SDK como `edgeConfigId` é uma ID composta que especifica a config
 
 Abaixo estão cada uma das configurações disponíveis para um ambiente. A maioria das seções pode ser ativada ou desativada. Quando desativadas, suas configurações são salvas, mas não estão ativas.
 
-#### [!UICONTROL Identity]
+#### [!UICONTROL Identidade]
 
 A seção de identidade é a única seção que está sempre ativada. Ele tem duas configurações disponíveis: Sincronizações de ID ativadas e ID de Container de sincronização de ID.
 
 ![Seção de identidade da interface de usuário de configuração](../../assets/edge_configuration_identity.png)
 
-##### [!UICONTROL ID Sync Enabled]
+##### [!UICONTROL Sincronização de ID ativada]
 
 Controla se o SDK realiza ou não sincronizações de identidade com parceiros de terceiros.
 
-##### [!UICONTROL ID Sync Container ID]
+##### [!UICONTROL ID do Container de sincronização de ID]
 
 As sincronizações de ID podem ser agrupadas em container para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Isso controla qual container de sincronização de ID é executado para uma determinada ID de configuração.
 
@@ -63,13 +62,13 @@ As configurações listadas aqui permitem que você envie dados para a Adobe Exp
 
 As caixas de proteção são locais na plataforma Adobe Experience que permitem que os clientes isolem seus dados e implementações uns dos outros. Mais detalhes sobre como funcionam estão localizados na documentação [](../../sandboxes/home.md)Sandboxes.
 
-##### [!UICONTROL Streaming Inlet]
+##### [!UICONTROL Entrada de fluxo]
 
-Uma entrada de fluxo contínuo é uma fonte HTTP na Adobe Experience Platform. Eles são criados na [!UICONTROL Sources] guia da Adobe Experience Platform como uma API HTTP.
+Uma entrada de fluxo contínuo é uma fonte HTTP na Adobe Experience Platform. Eles são criados na guia [!UICONTROL Fontes] na Adobe Experience Platform como uma API HTTP.
 
-##### [!UICONTROL Event Dataset]
+##### [!UICONTROL Conjunto de dados do Evento]
 
-As configurações de borda suportam o envio de dados para conjuntos de dados com um schema de classe [!UICONTROL Experience Event].
+As configurações de borda suportam o envio de dados para conjuntos de dados com um schema de  de classe do [!UICONTROL Experience Evento].
 
 #### Adobe Target
 
@@ -81,21 +80,21 @@ Para configurar o Adobe Público alvo, você deve fornecer um código de cliente
 >
 >A Organização associada ao código do cliente deve corresponder à organização em que a ID de configuração é criada.
 
-##### [!UICONTROL Client Code]
+##### [!UICONTROL Código do cliente]
 
-A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode navegar até [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings] ao lado do [!UICONTROL download] botão para [!UICONTROL at.js] ou [!UICONTROL mbox.js]
+A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode navegar até [!UICONTROL Adobe Público alvo] > [!UICONTROL Configuração]> [!UICONTROL Implementação] > [!UICONTROL editar configurações] ao lado do botão [!UICONTROL de download]  [!UICONTROL para o arquivo at.jsou o arquivo da mbox.js]
 
-##### [!UICONTROL Property Token]
+##### [!UICONTROL Token de propriedade]
 
 O Público alvo permite que os clientes controlem permissões por meio do uso de propriedades. Detalhes podem ser encontrados na seção Permissões [](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) empresariais da Documentação do Público alvo.
 
-O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL setup] > Propriedades [UICONTROL]
+O token de propriedade pode ser encontrado no [!UICONTROL Adobe Público alvo] > [!UICONTROL configuração] > Propriedades [UICONTROL]
 
-##### [!UICONTROL Target Environment ID]
+##### [!UICONTROL ID do Ambiente do Público alvo]
 
 [Ambientes](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) no Público alvo Adobe ajudam você a gerenciar sua implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
 
-A Adobe recomenda configurar isso de forma diferente para cada um dos seus ambientes de configuração de `dev`borda, `stage`e `prod` para manter as coisas simples. No entanto, se você já tiver [!UICONTROL Adobe Target environments] definido, poderá usá-los.
+A Adobe recomenda configurar isso de forma diferente para cada um dos seus ambientes de configuração de `dev`borda, `stage`e `prod` para manter as coisas simples. No entanto, se você já tiver ambientes [!UICONTROL de Públicos alvos] da Adobe definidos, poderá usá-los.
 
 #### Adobe Audience Manager
 
@@ -103,11 +102,11 @@ Tudo o que é necessário para enviar dados para o Adobe Audiência Manager é h
 
 ![Bloco de configurações do Adobe Audiência Manage](../../assets/edge_configuration_aam.png)
 
-##### [!UICONTROL Cookie Destinations Enabled]
+##### [!UICONTROL Destinos de cookies ativados]
 
 Permite que o SDK compartilhe informações do segmento por meio de Destinos [de cookies](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) do Gerenciador de Audiências.
 
-##### [!UICONTROL URL Destinations Enabled]
+##### [!UICONTROL Destinos de URL ativados]
 
 Permite que o SDK compartilhe informações do segmento por meio de Destinos [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)URL. Eles estão configurados no Gerenciador de Audiências.
 
@@ -117,6 +116,6 @@ Controla se os dados são enviados para o Adobe Analytics. Detalhes adicionais e
 
 ![Bloco de configurações do Adobe Analytics](../../assets/edge_configuration_aa.png)
 
-##### [!UICONTROL Report Suite ID]
+##### [!UICONTROL ID de conjunto de relatórios]
 
 O conjunto de relatórios pode ser encontrado na seção Admin do Adobe Analytics em [!UICONTROL Admin > ReportSuites]. Se vários conjuntos de relatórios forem especificados, os dados serão copiados para cada conjunto de relatórios.

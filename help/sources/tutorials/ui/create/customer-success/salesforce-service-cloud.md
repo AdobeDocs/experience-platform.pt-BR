@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Criar um conector de origem da Salesforce Service Cloud na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '540'
+ht-degree: 0%
 
 ---
 
 
 # Criar um conector de origem da Salesforce Service Cloud na interface do usuário
+
+>[!NOTE]
+>O conector da Salesforce Service Cloud está em beta. Os recursos e a documentação estão sujeitos a alterações.
 
 Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem do Salesforce Service Cloud (a seguir denominado &quot;SSC&quot;) usando a interface do usuário da plataforma.
 

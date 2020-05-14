@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: Gerenciando o Flicker para experiências personalizadas
+seo-title: Adobe Experience Platform Web SDK gerenciando o flicker
+description: Saiba como gerenciar oscilações nas experiências do usuário
+seo-description: Saiba como gerenciar oscilações com as propriedades do SDK da Web da Experience Platform
 translation-type: tm+mt
-source-wordcount: '459'
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
+
+
 # Gerenciamento de oscilação
 
 Ao tentar renderizar o conteúdo de personalização, o SDK deve garantir que não haja oscilação. O Flicker, também chamado de FOOC (Flash of Original Content), é quando um conteúdo original é brevemente exibido antes que a alternativa seja exibida durante o teste/personalização. O SDK tenta aplicar estilos CSS a elementos da página para garantir que esses elementos fiquem ocultos até que o conteúdo de personalização seja renderizado com êxito.

@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Criar um Apache Spark no conector de origem do Azure HDInsights na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: ae059f93f09dbbae4f1ef46f68901071afba9729
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
 # Criar um Apache Spark no conector de origem do Azure HDInsights na interface do usuário
+
+> [!NOTE]
+> O Apache Spark no conector HDInsights do Azure está em beta. Os recursos e a documentação estão sujeitos a alterações.
 
 Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um Apache Spark no conector de origem do Azure HDInsights usando a interface de usuário da Plataforma.
 

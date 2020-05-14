@@ -4,9 +4,9 @@ seo-title: start rápido do SDK da Web do Adobe Experience Platform com Launch
 description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 3%
 Este guia o orientará pelas diferentes formas de configurar o SDK da Web da plataforma Adobe Experience no Launch. Para poder usar este recurso, é necessário ter uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
 - Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse. O teste no desenvolvimento funcionará sem um CNAME, mas você precisará de um antes de ir para a produção
-- Esteja qualificado para a Plataforma de dados da plataforma Adobe Experience. Se você não comprou a plataforma, forneceremos a Experience Platform Data Services Foundation para uso com o SDK.
+- Esteja qualificado para a Plataforma de dados da plataforma Adobe Experience. Se você não tiver adquirido a plataforma, forneceremos à Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
 - Usar a versão mais recente do serviço de ID de Visitante
 
 ## Criar uma ID de configuração
 
 Você pode criar uma ID de configuração usando a ferramenta [de configuração de](../fundamentals/edge-configuration.md) borda na inicialização. Isso permitirá que você ative a rede Edge para enviar dados para as várias soluções. Detalhes sobre como localizar cada opção são encontrados na Página da Ferramenta [de Configuração de](../fundamentals/edge-configuration.md) Borda.
 
->Observação: Sua organização deve estar na lista de permissões do recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
+>[!NOTE]
+>
+>Sua organização deve estar na lista de permissões do recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
 
 ## Preparar um Schema
 
@@ -56,6 +58,7 @@ Para obter mais detalhes sobre como rastrear eventos, consulte [Rastreamento de 
 Depois que os dados estiverem fluindo, você poderá fazer o seguinte.
 
 - [Crie seu schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Saiba mais sobre como depurar](../fundamentals/debugging.md)
 - Saiba como [personalizar a experiência](../fundamentals/rendering-personalization-content.md)
 - Saiba mais sobre como enviar dados para várias soluções
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)

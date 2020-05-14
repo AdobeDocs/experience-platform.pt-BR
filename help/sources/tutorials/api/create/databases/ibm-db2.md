@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Criar um conector IBM DB2 usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 2%
 
 ---
 
 
 # Criar um conector IBM DB2 usando a API de Serviço de Fluxo
+
+>[!NOTE]
+>O conector IBM DB2 está em beta. Os recursos e a documentação estão sujeitos a alterações.
 
 O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 

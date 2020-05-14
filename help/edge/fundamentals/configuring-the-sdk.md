@@ -4,19 +4,15 @@ seo-title: Configuração do SDK da Web da plataforma Adobe Experience
 description: Saiba como configurar o SDK da Web da Experience Platform
 seo-description: Saiba como configurar o SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '739'
 ht-degree: 12%
 
 ---
 
 
-# (Beta) Configurando o SDK
-
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Configuração do SDK
 
 A configuração do SDK é feita com o `configure` comando.
 

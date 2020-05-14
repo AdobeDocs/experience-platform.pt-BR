@@ -1,23 +1,26 @@
 ---
 title: Mesclagem de dados de evento
 seo-title: Mesclagem de dados de evento do SDK da Web do Adobe Experience Platform
-description: Saiba como unir os dados de eventos do SDK da Web da Experience Platform
-seo-description: Saiba como unir os dados de eventos do SDK da Web da Experience Platform
+description: Saiba como unir os dados do evento SDK da Web da Experience Platform
+seo-description: Saiba como unir os dados do evento SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Mesclando dados de eventos
+# Mesclagem de dados de evento
 
 >[!IMPORTANT]
 >
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+>Esse recurso ainda está em desenvolvimento e, portanto, nem todas as soluções poderão unir esses dados.
 
 Às vezes, nem todos os dados estão disponíveis quando um evento ocorre. Talvez você queira capturar os dados _que_ possui para que não sejam perdidos se, por exemplo, o usuário fechar o navegador. Por outro lado, você também pode incluir quaisquer dados que estarão disponíveis posteriormente.
 
-Nesses casos, é possível unir dados a eventos anteriores transmitindo `eventMergeId` como uma opção para `event` comandos da seguinte maneira:
+Nesses casos, é possível unir dados a eventos anteriores, passando `eventMergeId` como uma opção para `event` comandos da seguinte maneira:
 
 ```javascript
 alloy("event", {
@@ -55,20 +58,20 @@ alloy("event", {
 });
 ```
 
-Ao transmitir o mesmo valor de ID de mesclagem de eventos para ambos os comandos de evento neste exemplo, os dados no segundo comando de evento são aumentados para dados enviados anteriormente no primeiro comando de evento. Um registro para cada comando de evento é criado na Plataforma de dados de experiência, mas durante o relatório os registros são unidos usando a ID de mesclagem de evento e exibidos como um único evento.
+Ao transmitir o mesmo valor de ID de mesclagem de evento para ambos os comandos de evento neste exemplo, os dados no segundo comando de evento são aumentados para dados enviados anteriormente no primeiro comando de evento. Um registro para cada comando de evento é criado na plataforma Experience Data, mas durante o relatórios os registros são unidos usando a ID de mesclagem do evento e aparecem como um único evento.
 
-Se você estiver enviando dados sobre um evento específico para provedores de terceiros, também poderá incluir a mesma ID de mesclagem de evento com esses dados. Posteriormente, se você optar por importar os dados de terceiros para a Adobe Experience Platform, a ID de mesclagem do evento será usada para unir todos os dados coletados como resultado do evento discreto que ocorreu em sua página da Web.
+Se você estiver enviando dados sobre um determinado evento para provedores de terceiros, também poderá incluir a mesma ID de mesclagem de evento com esses dados. Posteriormente, se você optar por importar os dados de terceiros para a Adobe Experience Platform, a ID de mesclagem do evento será usada para unir todos os dados coletados como resultado do evento discreto que ocorreu em sua página da Web.
 
 ## Geração de uma ID de mesclagem de evento
 
-O valor da ID de mesclagem do evento pode ser qualquer sequência escolhida, mas lembre-se de que todos os eventos enviados usando a mesma ID são reportados como um único evento. Portanto, tenha cuidado para aplicar a exclusividade quando os eventos não devem ser mesclados. Se você desejar que o SDK gere uma ID exclusiva de mesclagem de evento em seu nome (seguindo a especificação [amplamente adotada do](https://www.ietf.org/rfc/rfc4122.txt)UID v4), use o `createEventMergeId` comando para fazer isso.
+O valor da ID de mesclagem do evento pode ser qualquer sequência escolhida, mas lembre-se de que todos os eventos enviados usando a mesma ID são reportados como um único evento, portanto, tenha cuidado para aplicar a exclusividade quando os eventos não devem ser mesclados. Se você deseja que o SDK gere uma ID exclusiva de mesclagem de evento em seu nome (seguindo a especificação [amplamente adotada do](https://www.ietf.org/rfc/rfc4122.txt)UID v4), use o `createEventMergeId` comando para fazer isso.
 
-Como em todos os comandos, uma promessa é retornada porque você pode executar o comando antes que o SDK termine de carregar. A promessa será resolvida com uma ID exclusiva de mesclagem de eventos assim que possível. Você pode esperar que a promessa seja resolvida antes de enviar dados para o servidor da seguinte forma:
+Como em todos os comandos, uma promessa é retornada porque você pode executar o comando antes que o SDK termine de carregar. A promessa será resolvida com uma ID exclusiva de mesclagem de evento assim que possível. Você pode esperar que a promessa seja resolvida antes de enviar dados para o servidor da seguinte forma:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -80,13 +83,13 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 
 // Time passes and more data becomes available
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -102,7 +105,7 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 ```
@@ -112,15 +115,15 @@ Siga este mesmo padrão se desejar acessar a ID de mesclagem do evento por outro
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   // send event merge ID to a third-party provider
-  console.log(eventMergeId);
+  console.log(results.eventMergeId);
 });
 ```
 
 ## Observação sobre o formato XDM
 
-Dentro do comando event, o evento `mergeId` é realmente adicionado à `xdm` carga.  Se desejado, o formulário `mergeId` pode ser enviado como parte da opção xdm, como segue:
+Dentro do comando evento, o objeto `mergeId` é adicionado à `xdm` carga.  Se desejado, o formulário `mergeId` pode ser enviado como parte da opção xdm, como segue:
 
 ```javascript
 alloy("event", {

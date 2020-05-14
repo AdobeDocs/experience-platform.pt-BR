@@ -4,16 +4,15 @@ seo-title: Execução de comandos do SDK da Web do Adobe Experience Platform
 description: Saiba como executar comandos do SDK da Web da Experience Platform
 seo-description: Saiba como executar comandos do SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Executando comandos
-
->[!IMPORTANT]
->
->O SDK da Web da plataforma Adobe Experience está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Execução de comandos
 
 Depois que o código base for implementado em sua página da Web, você poderá começar a executar comandos com o SDK. Não é necessário aguardar o carregamento do arquivo externo \(`alloy.js`\) do servidor antes de executar comandos. Se o SDK não tiver concluído o carregamento, os comandos serão enfileirados e processados pelo SDK assim que possível.
 
@@ -27,7 +26,7 @@ O `commandName` informa ao SDK o que fazer, embora `options` sejam os parâmetro
 
 ## Uma nota sobre promessas
 
-[As promessas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) são fundamentais para como o SDK se comunica com o código na sua página da Web. Uma promessa é uma estrutura de programação comum e não é específica para esse SDK ou mesmo para JavaScript. Uma promessa atua como um proxy para um valor que não é conhecido quando a promessa é criada. Quando o valor é conhecido, a promessa é &quot;resolvida&quot; com o valor. As funções de manipulador podem ser associadas a uma promessa, para que você possa ser notificado quando a promessa tiver sido resolvida ou quando um erro tiver ocorrido no processo de resolução da promessa. Para saber mais sobre as promessas, leia [este tutorial](https://javascript.info/promise-basics) ou qualquer outro recurso na web.
+[As promessas](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) são fundamentais para como o SDK se comunica com o código na sua página da Web. Uma promessa é uma estrutura de programação comum e não é específica para esse SDK ou mesmo para JavaScript. Uma promessa atua como um proxy para um valor que não é conhecido quando a promessa é criada. Quando o valor é conhecido, a promessa é &quot;resolvida&quot; com o valor. As funções de manipulador podem ser associadas a uma promessa, para que você possa ser notificado quando a promessa tiver sido resolvida ou quando um erro tiver ocorrido no processo de resolução da promessa. Para saber mais sobre as promessas, leia [este tutorial](https://javascript.info/promise-basics) ou qualquer outro recurso na web.
 
 ## Lidar com sucesso ou falha
 
@@ -35,7 +34,7 @@ Cada vez que um comando é executado, uma promessa é retornada. A promessa repr
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -59,12 +58,22 @@ Da mesma forma, se você não souber quando o comando falhar, poderá remover a 
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## Supressão de erros
+### Objetos de resposta
 
-Se a promessa for rejeitada e você não tiver adicionado uma `catch` chamada, o erro &quot;borbulha para cima&quot; e é registrado no console do desenvolvedor do seu navegador, independentemente de o registro estar ativado no SDK da Web da Adobe Experience Platform. Se isso for uma preocupação para você, é possível definir a opção de `suppressErrors` configuração como `true` descrito em [Configuração do SDK](configuring-the-sdk.md).
+Todas as promessas retornadas de comandos são resolvidas com um `result` objeto. O objeto de resultado conterá dados dependendo do comando e do consentimento do usuário. Por exemplo, as informações da biblioteca são passadas como uma propriedade do objeto de resultados no seguinte comando.
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### Consentimento
+
+Se um utilizador não tiver dado o seu consentimento para uma finalidade específica, a promessa será ainda resolvida; no entanto, o objeto response conterá apenas as informações que podem ser fornecidas no contexto do que o usuário consentiu.

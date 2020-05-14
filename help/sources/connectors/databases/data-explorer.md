@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Conector do Azure Data Explorer
 topic: overview
 translation-type: tm+mt
-source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
 
-# Conector do Azure Data Explorer
+# (Beta) Conector do Azure Data Explorer
 
 A Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como Microsoft, MySQL e Azure. Você pode trazer seus dados desses sistemas para a Plataforma.
 

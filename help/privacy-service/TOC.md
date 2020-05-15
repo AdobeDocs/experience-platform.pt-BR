@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Privacy Service
 translation-type: tm+mt
-source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '87'
 ht-degree: 11%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 11%
 * Privacy Service API {#api}
    * [Introdução](api/getting-started.md)
    * [Tarefas de privacidade](api/privacy-jobs.md)
+   * [Consentimento](api/consent.md)
    * [Apêndice](api/appendix.md)
 * Interface do usuário do Privacy Service {#ui}
    * [Visão geral da interface do usuário do Privacy Service](ui/overview.md)

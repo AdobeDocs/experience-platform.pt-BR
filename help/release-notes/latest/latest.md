@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
+source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1075'
 ht-degree: 5%
 
 ---
@@ -55,7 +55,15 @@ Para obter mais informações sobre como migrar seus notebooks e fórmulas para 
 
 Na Plataforma [de dados do cliente em tempo real da](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
-**Novos destinos**
+**Facebook**
+
+O Adobe Real-time CDP agora oferece suporte à ativação de dados para o Facebook, permitindo que você ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
+
+Para obter mais informações sobre a nova funcionalidade, consulte a página de destino [do](/help/rtcdp/destinations/facebook-destination.md) Facebook.
+
+<br> 
+
+**Destinos de armazenamentos em nuvem de streaming do Amazon Kinesis e do Azure Evento Hubs**
 
 A CDP em tempo real da Adobe agora oferece suporte à ativação de dados para os destinos de armazenamentos da nuvem em streaming, permitindo exportar dados e eventos da audiência para esses destinos no formato JSON. Em seguida, você pode descrever a lógica comercial sobre esses eventos em seus destinos. Consulte abaixo para obter detalhes:
 

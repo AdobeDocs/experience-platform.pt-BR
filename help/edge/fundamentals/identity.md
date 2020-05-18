@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK para recuperação da Experience Cl
 description: Saiba como obter a Adobe Experience Cloud Id.
 seo-description: Saiba como obter a Adobe Experience Cloud Id.
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 8%
+source-wordcount: '416'
+ht-degree: 10%
 
 ---
 
@@ -77,6 +77,14 @@ A chave do objeto é o Símbolo de Namespace [de](../../identity-service/namespa
 | String | Sim | none |
 
 Essa é a ID que você deseja sincronizar para a namespace em questão.
+
+#### `authenticationState`
+
+| **Tipo** | **Obrigatório** | **Valor padrão** | **Valores possíveis** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| String | Sim | ambíguo | ambíguo, autenticado e loggedOut |
+
+O estado de autenticação da ID.
 
 #### `primary`
 

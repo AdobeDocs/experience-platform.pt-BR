@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Entrada e saída de IA do cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+workflow-type: tm+mt
+source-wordcount: '828'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,31 @@ O documento a seguir descreve as diferentes entradas e saídas utilizadas na IA 
 ## Dados de entrada de IA do cliente
 
 A IA do cliente usa os dados do Evento de experiência do consumidor para calcular as pontuações de propensão. Para obter mais detalhes sobre o Evento de experiência do consumidor, consulte [Preparar dados para uso na documentação](../data-preparation.md)dos Serviços inteligentes.
+
+### Dados históricos
+
+A IA do cliente exige dados históricos para o treinamento do modelo, mas a quantidade de dados necessária se baseia em dois elementos principais: janela de resultados e população elegível.
+
+Por padrão, a API do cliente procura que um usuário tenha tido atividade nos últimos 120 dias se nenhuma definição de população qualificada for fornecida durante a configuração do aplicativo. Além da quantidade mínima de dados de Evento de experiência do consumidor que é necessária, a IA do cliente também precisa de uma quantidade mínima de eventos bem-sucedidos com base em uma definição de meta prevista. Atualmente, a API do cliente precisa de no mínimo 500 eventos bem-sucedidos.
+
+Os exemplos a seguir fornecidos usam uma fórmula simples para ajudar a determinar a quantidade mínima de dados necessária. Se você tiver mais do que o requisito mínimo, seu modelo provavelmente fornecerá resultados mais precisos. Se você tiver menos do que a quantidade mínima necessária, o modelo falhará, pois não há uma quantidade suficiente de dados para o treinamento do modelo.
+
+**Fórmula**:
+
+Comprimento mínimo dos dados necessários = população elegível + janela do resultado
+
+>[!NOTE]
+> 30 é o número mínimo de dias necessário para a população elegível. Se isso não for fornecido, o padrão será 120 dias.
+
+Exemplos :
+
+- Você deseja prever se um cliente provavelmente comprará um relógio nos próximos 30 dias. Você também deseja marcar os usuários que têm alguma atividade da Web nos últimos 60 dias. Neste caso, a duração mínima dos dados é de 60 dias + 30 dias. A população elegível é de 60 dias e a janela de resultados é de 30 dias, totalizando 90 dias.
+
+- Você deseja prever se o usuário provavelmente comprará um relógio nos próximos 7 dias. Neste caso, o comprimento mínimo de dados exigido é de 120 dias + 7 dias. O padrão da população elegível é 120 dias e a janela de resultados é 7 dias, totalizando 127 dias.
+
+- Você deseja prever se o cliente provavelmente comprará um relógio nos próximos 7 dias. Você também deseja marcar os usuários que têm alguma atividade da Web nos últimos 7 dias. Neste caso, a duração mínima dos dados é de 30 dias + 7 dias. A população elegível requer um mínimo de 30 dias e a janela de resultados é de 7 dias, totalizando 37 dias.
+
+Além dos dados mínimos necessários, a IA do cliente também funciona melhor com os dados recentes. Neste caso de uso, a IA do cliente está fazendo uma previsão para o futuro com base nos dados comportamentais recentes do usuário. Em outras palavras, dados mais recentes provavelmente gerarão uma previsão mais precisa.
 
 ## Dados de saída da IA do cliente
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,8 @@ A plataforma Experience oferece suporte para a assimilação de dados de um banc
 - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
 - [Conector Google BigQuery](connectors/databases/bigquery.md)
+- [Conector GreenPlum](connectors/databases/greenplum.md)
+- [Conector HP Vertica](connectors/databases/hp-vertica.md)
 - [Conector IBM DB2](connectors/databases/ibm-db2.md)
 - [Conector MariaDB](connectors/databases/mariadb.md)
 - [Conector do Microsoft SQL Server](connectors/databases/sql-server.md)

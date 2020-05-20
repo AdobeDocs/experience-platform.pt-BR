@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector Amazon Kinesis usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Para que o Serviço de Fluxo se conecte à sua conta Amazon Kinesis, é necessá
 | ---------- | ----------- |
 | `accessKeyId` | A ID da chave de acesso para sua conta do Kinesis. |
 | `secretKey` | A chave de acesso secreta para sua conta Kinesis. |
+| `region` |  | A região da sua conta Kinesis. |
 | `connectionSpec.id` | A ID da especificação de conexão Kinesis: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Para obter mais informações sobre esses valores, consulte [este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Para obter mais informações sobre esses valores, consulte [este documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
 
 ### Lendo chamadas de exemplo da API
 
@@ -103,6 +104,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | A ID da chave de acesso para sua conta do Kinesis. |
 | `auth.params.secretKey` | A chave de acesso secreta para sua conta Kinesis. |
+| `auth.params.region` | A região da sua conta Kinesis. |
 | `connectionSpec.id` | A ID da especificação de conexão Kinesis: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Resposta**

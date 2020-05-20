@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector Hubs de Evento do Azure usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Para que o Serviço de Fluxo se conecte à sua conta do Hubs de Eventos do Azure
 | ---------- | ----------- |
 | `sasKeyName` | O nome da regra de autorização, que também é conhecida como o nome da chave SAS. |
 | `sasKey` | A assinatura de acesso compartilhado gerada. |
-| `namespace` | A namespace do EventHub que você está acessando. |
+| `namespace` | A namespace dos Hubs de Evento que você está acessando. |
+| `connectionSpec.id` | A ID de especificação de conexão dos Hubs de Evento do Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Para obter mais informações sobre esses valores, consulte [este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Para obter mais informações sobre esses valores, consulte [este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Hubs de Evento.
 
 ### Lendo chamadas de exemplo da API
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | O nome da regra de autorização, que também é conhecida como o nome da chave SAS. |
 | `auth.params.sasKey` | A assinatura de acesso compartilhado gerada. |
+| `namespace` | A namespace dos Hubs de Evento que você está acessando. |
 | `connectionSpec.id` | A ID de especificação de conexão dos Hubs de Evento do Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Resposta**

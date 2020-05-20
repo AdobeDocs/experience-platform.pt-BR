@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Assinar eventos de ingestão de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+workflow-type: tm+mt
+source-wordcount: '851'
+ht-degree: 2%
 
 ---
 
@@ -38,40 +41,52 @@ O schema de evento de notificação de ingestão de dados é um schema do Modelo
 
 ## Assinar notificações de status de ingestão de dados
 
-Por meio de Eventos [de E/S da](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, você pode assinar vários tipos de notificação usando webhooks. Para saber mais sobre webhooks e como assinar Eventos de E/S da Adobe usando webhooks, consulte o guia de [introdução aos Eventos de E/S da Adobe Webhooks](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) .
+Por meio de Eventos [de E/S da](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, você pode assinar vários tipos de notificação usando webhooks. As seções abaixo descrevem as etapas para assinar as notificações da plataforma para eventos de ingestão de dados usando o Adobe Developer Console.
 
-### Criar uma nova integração usando o Console de E/S da Adobe
+### Criar um novo projeto no Adobe Developer Console
 
-Faça logon no Console [de E/S da](https://console.adobe.io/home) Adobe e clique na guia *Integrações* ou clique em **Criar integração** em Start rápido. Quando a tela *Integração* for exibida, clique em **Nova integração** para criar uma nova integração.
+Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
 
-![Criar nova integração](../images/quality/subscribe-events/create_integration_start.png)
+### Adicionar eventos da plataforma de experiência ao projeto
 
-A tela *Criar nova integração* é exibida. Selecione **Receber quase-eventos em tempo real** e clique em **Continuar**.
+Depois de criar um novo projeto, navegue até a tela de visão geral do projeto. Aqui, clique em **[!UICONTROL Adicionar evento]**.
 
-![Receber eventos quase em tempo real](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-A próxima tela fornece opções para criar integrações com diferentes eventos, produtos e serviços disponíveis para sua organização com base em suas subscrições, direitos e permissões. Para essa integração, selecione Notificações **de** plataforma em Plataforma de experiência e clique em **Continuar**.
+A caixa de diálogo _[!UICONTROL Adicionar eventos]_é exibida. Clique em Plataforma**[!UICONTROL  de ]**experiência para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações**[!UICONTROL  de ]**plataforma antes de clicar em**[!UICONTROL  Avançar ]**.
 
-![Selecionar fornecedor de eventos](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-O formulário Detalhes *da* integração é exibido, exigindo que você forneça um nome e uma descrição para a integração, bem como um certificado de chave pública.
+A tela seguinte exibe uma lista de tipos de evento para assinar. Selecione Notificação **[!UICONTROL de ingestão de]** dados e clique em **[!UICONTROL Avançar]**.
 
-Se você não tiver um certificado público, poderá gerar um no terminal usando o seguinte comando:
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+A tela seguinte solicita que você crie um JSON Web Token (JWT). Você tem a opção de gerar automaticamente um par de chaves ou fazer upload de sua própria chave pública gerada no terminal.
 
-Depois de gerar um certificado, arraste e solte o arquivo na caixa Certificados **de chaves** públicas ou clique em **Selecionar um arquivo** para navegar pelo diretório de arquivos e selecionar o certificado diretamente.
+Para os fins deste tutorial, a primeira opção é seguida. Clique na caixa de opção para **[!UICONTROL Gerar um par]** de teclas e clique no botão **[!UICONTROL Gerar par]** de teclas no canto inferior direito.
 
-Após adicionar o certificado, a opção Registro *do* Evento é exibida. Clique em **Adicionar registro** de Evento.
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![detalhes da integração](../images/quality/subscribe-events/create_integration_details.png)
+Quando o par de chaves é gerado, ele é baixado automaticamente pelo navegador. Você mesmo deve armazenar esse arquivo, pois ele não é persistente no Developer Console.
 
-A caixa de diálogo de detalhes *de registro do* Evento é expandida para mostrar controles adicionais. Aqui você pode selecionar seus tipos de evento desejados e registrar seu webhook. Insira um nome para o registro do evento, o URL do webhook *(Opcional)*, bem como uma breve descrição. Por fim, selecione os tipos de evento que deseja assinar (notificação de ingestão de dados) e clique em **Salvar**.
+A próxima tela permite que você analise os detalhes do par de chaves recém-gerado. Clique em **[!UICONTROL Avançar]** para continuar.
 
-![Selecionar eventos](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+Na tela seguinte, forneça um nome e uma descrição para o registro do evento. A prática recomendada é criar um nome exclusivo e facilmente identificável para ajudar a diferenciar esse registro de eventos de outros no mesmo projeto.
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+Mais adiante na mesma tela, você pode configurar opcionalmente como receber eventos. **[!UICONTROL O Webhook]** permite que você forneça um endereço de webhook personalizado para receber eventos, enquanto a ação **** Runtime permite que você faça o mesmo usando o [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+
+Este tutorial ignora esta etapa de configuração opcional. Quando terminar, clique em **[!UICONTROL Salvar eventos]** configurados para concluir o registro do evento.
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+A página de detalhes do registro de eventos recém-criado é exibida, onde você pode revisar eventos recebidos, executar o rastreamento de depuração e editar sua configuração.
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## Próximas etapas
 
-Depois de criar sua integração de E/S, você poderá visualização as notificações recebidas para essa integração. Consulte o guia de Eventos [de E/S da Adobe para](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) rastreamento para obter instruções detalhadas sobre como rastrear seus eventos.
+Depois de registrar as notificações de Plataforma no seu projeto, você poderá visualização eventos recebidos do painel do projeto. Consulte o guia de Eventos [de E/S da Adobe para](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) rastreamento para obter instruções detalhadas sobre como rastrear seus eventos.

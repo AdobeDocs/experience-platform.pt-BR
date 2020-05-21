@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Conector do Gerenciador de Audiências
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ Consulte a documentação para obter mais informações sobre os campos [de mape
 
 Os conjuntos de dados são uma construção de armazenamento e gerenciamento para uma coleção de dados, geralmente uma tabela, que contém schemas (colunas) e campos (linhas) e é disponibilizada por uma conexão de dados. Os dados do Gerenciador de Audiências consistem em dados em tempo real, dados de entrada e dados de Perfil. Para localizar os conjuntos de dados do Gerenciador de Audiências, use a função de pesquisa na interface do usuário com as convenções de nomenclatura fornecidas para cada tipo de dados.
 
-Embora os usuários tenham a capacidade de desativar conjuntos de dados, não é recomendável desativar conjuntos de dados que serão usados para associação de segmentos no Perfil.
+Os conjuntos de dados do Gerenciador de Audiências são desativados para o Perfil por padrão e os usuários têm a capacidade de ativar ou desativar conjuntos de dados com base em seus casos de uso. Não é recomendável desativar conjuntos de dados que serão usados para associação de segmentos no Perfil.
 
 | Nome do conjunto de dados | Descrição |
 | ------------ | ----------- |
@@ -66,7 +69,7 @@ Embora os usuários tenham a capacidade de desativar conjuntos de dados, não é
 
 ### Conexões
 
-O Adobe Audiência Manager cria uma conexão no Catálogo: Conexão **do Gerenciador de** Audiências. Catálogo é o sistema dos registros para localização e linhagem de dados na Adobe Experience Platform. Uma conexão é um objeto de Catálogo que é uma instância específica do cliente dos Conectores. Consulte a visão geral [do Serviço de](../../../catalog/home.md) catálogo para obter mais informações sobre Catálogo, conexões e conectores.
+O Adobe Audiência Manager cria uma conexão no Catálogo: **Conexão** do Gerenciador de Audiências. Catálogo é o sistema dos registros para localização e linhagem de dados na Adobe Experience Platform. Uma conexão é um objeto de Catálogo que é uma instância específica do cliente dos Conectores. Consulte a visão geral [do Serviço de](../../../catalog/home.md) catálogo para obter mais informações sobre Catálogo, conexões e conectores.
 
 ## Qual é a latência esperada para os dados do gerenciador de Audiências na plataforma?
 

@@ -4,9 +4,9 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,26 @@ Para ativar os dados para destinos, você deve ter [conectado com êxito um dest
    ![segmentos para destino](/help/rtcdp/destinations/assets/select-segments.png)
 5. *Condicional*. Essa etapa difere dependendo do tipo de destino em que você está ativando seus segmentos. <br> Para destinos *de marketing de* email e destinos *de armazenamentos de* nuvem, na página **[!UICONTROL Selecionar atributos]** , selecione **[!UICONTROL Adicionar novo campo]** e selecione os atributos que deseja enviar para o destino.
 Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) exclusivo do seu schema de união. Para obter mais informações sobre atributos obrigatórios, consulte Identidade no artigo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) email.
-   ![atributos](/help/rtcdp/destinations/assets/select-attributes-step.png)de destino Para destinos *de rede* social, na etapa de mapeamento **** Identidade, selecione atributos de origem para mapear identidades de público alvo.
-   ![mapeamento de identidade antes de preencher os campos](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)No exemplo abaixo, o endereço de email pessoal no schema de identidade foi colocado com hash na plataforma Experience para cumprir os requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email do Facebook. Pressione **[!UICONTROL Avançar]** após selecionar o mapeamento.
-   ![mapeamento de identidade após preencher campos](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+   ![atributos de destino](/help/rtcdp/destinations/assets/select-attributes-step.png)
+
+   <br> 
+
+   Para destinos ** sociais, na etapa de mapeamento **** Identidade, você pode selecionar atributos de origem para mapear como identidades de público alvo no destino. Essa etapa é opcional ou obrigatória, dependendo da identidade primária usada no schema. <br> 
+
+   *Endereço de email como identidade* principal: Se você estiver usando o endereço de email como identidade primária em seu schema, poderá ignorar a etapa de mapeamento de identidade, como mostrado abaixo:
+
+   ![Endereço de email como identidade](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *Outra ID como identidade* primária: Se estiver usando outra ID, como ID *de* recompensa ou ID *de* fidelidade, como a principal identidade do seu schema, é necessário mapear manualmente o endereço de email do seu schema de identidade como uma identidade de público alvo no destino social, como mostrado abaixo:
+
+   ![ID de fidelidade como identidade](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados na Adobe Experience Platform, de acordo com os requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)emails do Facebook. <br> Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real da Adobe executará hash nos endereços de email para atender aos requisitos do Facebook.
+
+   ![mapeamento de identidade após preencher campos](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. Na página Agendamento **[!UICONTROL do]** segmento, é possível visualizar a data do start para enviar dados para o destino, bem como a frequência do envio de dados para o destino.
 

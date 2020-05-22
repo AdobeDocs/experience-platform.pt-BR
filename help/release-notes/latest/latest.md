@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
+source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1299'
 ht-degree: 5%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [Notas de versão da Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Atualizações da interface do usuário {#ux}](#user-interface-updates-ux)
-   - [Área de trabalho da ciência de dados {#dsw}](#data-science-workspace-dsw)
-   - [Destinos {#destinations}](#destinations-destinations)
-   - [Experience Platform Web SDK e Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-   - [Fontes {#sources}](#sources-sources)
+- [Atualizações da interface do usuário](#ux)
+- [Área de trabalho da ciência de dados](#dsw)
+- [Destinos](#destinations)
+- [Experience Platform Web SDK e Experience Platform Edge Network](#edge)
+- [Perfil do cliente em tempo real](#profile)
+- [Fontes](#sources)
 
 ## Atualizações da interface do usuário {#ux}
 
@@ -100,6 +100,29 @@ O Experience Platform Web SDK e a Experience Platform Edge Network permitem que 
 
 Para obter mais informações sobre o SDK da Web da plataforma e o Edge Network, consulte a [documentação](../../edge/home.md).
 
+## Perfil do cliente em tempo real {#profile}
+
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. O Perfil permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| -----------| ---------- |
+| Novas métricas de Exportação de Perfil | Adicionadas métricas a trabalhos de exportação de perfil que mostram o número total de perfis exportados e o número de perfis em cada namespace. |
+| Novas métricas de Insights de Observabilidade | A API Observability Insights agora tem as seguintes métricas para a inclusão de streaming no Perfil: Taxa de Solicitação de Entrada, Taxa de Ingestão Bem-Sucedida, Tamanho de Registro Ingerido. |
+| Ponto de extremidade GET em massa | Adicionado o terminal GET em massa à API de Perfil do cliente em tempo real para permitir a recuperação de vários resultados em uma única chamada de API. Agora você pode obter até 100 IDs em massa para definições de segmento, trabalhos de segmento e políticas de mesclagem. |
+| Procurar perfil por identidade | Na interface do usuário da plataforma, agora é possível selecionar uma namespace de identidade e fornecer um valor de identidade para navegar em um perfil. |
+
+**Correções de erros**
+
+- Nenhum.
+
+**Problemas conhecidos**
+
+- Nenhum.
+
+Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados do Perfil, leia a visão geral [do Perfil do cliente em tempo](../../profile/home.md)real.
+
 ## Fontes {#sources}
 
 A plataforma Adobe Experience pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
@@ -116,6 +139,6 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 
 **Problemas conhecidos**
 
-- Nenhum
+- Nenhum.
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.

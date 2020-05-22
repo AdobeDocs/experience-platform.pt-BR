@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ajuda da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '439'
 ht-degree: 10%
 
 ---
@@ -125,7 +125,7 @@ ht-degree: 10%
    * Tutoriais da interface do usuário de destinos {#dest-tutorials}
       * [Conectar-se a um destino](/help/rtcdp/destinations/connect-destination.md)
       * [Ativar perfis e segmentos em um destino](destinations/activate-destinations.md)
-   * Tutoriais da API de destino {api-tutorials}
+   * Tutoriais da API de destino {#api-tutorials}
       * [Conecte-se aos destinos de streaming (AWS Kinesis e Hubs de Evento do Azure) e ative os dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Conectar-se aos destinos de marketing de email e ativar dados](/help/tutorials/destinations/email-marketing-api.md)
 * Privacidade e controle de dados {#privacy}

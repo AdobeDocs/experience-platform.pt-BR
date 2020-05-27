@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral dos Conectores de origem da plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -38,7 +38,7 @@ A plataforma Experience permite que os dados sejam assimilados de outros aplicat
 
 A plataforma Experience oferece suporte para a assimilação de dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector Google Ads](connectors/advertising/ads.md)
+- [Conector Google AdWords](connectors/advertising/ads.md)
 
 ### Armazenamento em nuvem
 

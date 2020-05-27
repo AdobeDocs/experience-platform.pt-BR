@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem do Microsoft SQL Server na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Para se conectar ao SQL Server on Platform, é necessário fornecer a seguinte p
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão associada à sua conta do SQL Server. |
+| `connectionString` | A cadeia de conexão associada à sua conta do SQL Server. O padrão da cadeia de conexão do SQL Server é: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 
 Consulte [este documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) para obter mais informações sobre como iniciar o SQL Server.
 

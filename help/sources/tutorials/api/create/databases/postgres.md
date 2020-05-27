@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar um conector PostgreSQL usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 2%
 
 ---
 
@@ -36,9 +36,10 @@ Para que o Serviço de Fluxo se conecte com o PSQL, é necessário fornecer a se
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão associada à sua conta PSQL. |
+| `connectionString` | A cadeia de conexão associada à sua conta PSQL. O padrão da cadeia de conexão PSQL é: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | A ID usada para gerar uma conexão. A ID de especificação de conexão fixa para PSQL é `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-Para obter mais informações sobre a introdução, consulte este documento [](https://www.postgresql.org/docs/9.2/app-psql.html)PSQL.
+Para obter mais informações sobre como obter uma string de conexão, consulte [este documento](https://www.postgresql.org/docs/9.2/app-psql.html)PSQL.
 
 ### Lendo chamadas de exemplo da API
 
@@ -60,72 +61,9 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 * Tipo de conteúdo: `application/json`
 
-## Pesquisar especificações de conexão
+## Criar uma conexão
 
-Para criar uma conexão PSQL, um conjunto de especificações de conexão PSQL deve existir no Serviço de Fluxo. A primeira etapa na conexão da Plataforma ao PSQL é recuperar essas especificações.
-
-**Formato da API**
-
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você também pode incluir o query `property=name=="postgre-sql"` para obter informações especificamente para o PSQL.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="postgre-sql"
-```
-
-**Solicitação**
-
-A solicitação a seguir recupera as especificações de conexão para PSQL.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="postgre-sql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna as especificações de conexão para PSQL, incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
-
-```json
-{
-    "items": [
-        {
-            "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
-            "name": "postgre-sql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for PostgreSQL",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to PostgreSQL",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "An ODBC connection string to connect to Azure Database for PostgreSQL.",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## Criar uma conexão básica
-
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta PSQL, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta PSQL, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -134,6 +72,8 @@ POST /connections
 ```
 
 **Solicitação**
+
+Para criar uma conexão PSQL, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para PSQL é `74a1c565-4e59-48d7-9d67-7c03b8a13137`.
 
 ```shell
 curl -X POST \
@@ -144,12 +84,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Base connection for PostgreSQL",
-        "description": "Base connection for PostgreSQL",
+        "name": "Test connection for PostgreSQL",
+        "description": "Test connection for PostgreSQL",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -161,8 +101,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | ------------- | --------------- |
-| `auth.params.connectionString` | A cadeia de conexão associada à sua conta PSQL. |
-| `connectionSpec.id` | A especificação de conexão `id` da sua conta PSQL recuperada na etapa anterior. |
+| `auth.params.connectionString` | A cadeia de conexão associada à sua conta PSQL. O padrão da cadeia de conexão PSQL é: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | A ID de especificação de conexão para PSQL é: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Resposta**
 
@@ -177,4 +117,4 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão b
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica PSQL usando a API do Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão PSQL usando a API do Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.

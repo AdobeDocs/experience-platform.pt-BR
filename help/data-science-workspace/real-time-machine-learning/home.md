@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral de aprendizado de máquina em tempo real
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 1%
@@ -61,7 +61,7 @@ O aprendizado de máquina em tempo real está atualmente em alfa. A funcionalida
 > Limitações de alfa:
 > - Atualmente, somente modelos baseados em ONNX são suportados.
 > - As funções usadas em nós não podem ser serializadas. Por exemplo, uma função lambda usada em um nó Pandas.
-> - Há 60 segundos de repouso após a implantação do Edge ser feita manualmente.
+> - Há 20 segundos de repouso após a implantação do Edge ser feita manualmente.
 > - Para um aprendizado profundo, seus dados precisam ser enviados de tal forma que, quando `df.values` são chamados, retorne um array aceitável pelo modelo DL. Isso ocorre porque o nó de pontuação do modelo ONNX usa `df.values` e envia a saída para a pontuação em relação ao modelo.
 
 

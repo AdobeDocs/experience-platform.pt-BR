@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introdução ao aprendizado de máquina em tempo real
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Para utilizar o aprendizado de máquina em tempo real, é necessário ter acesso
 
 Os guias para aprendizado de máquina em tempo real exigem uma compreensão funcional do Python 3, notebooks [de](../jupyterlab/overview.md)Júpiter, ciência de dados e aprendizado de máquina.
 
-Principais termos:
+**Principais termos:**
 
 - **DSL:** Idioma Específico do Domínio.
 - **Borda:** O serviço de pontuação do Machine Learning em tempo real pode ser executado em clusters do Edge mais próximos de suas ativações e aplicativos.

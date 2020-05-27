@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descritores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+workflow-type: tm+mt
+source-wordcount: '1499'
+ht-degree: 1%
 
 ---
 
@@ -301,20 +304,25 @@ Um descritor de identidade sinaliza que &quot;sourceProperty&quot; do &quot;sour
 
 #### Descritor de nome amigável
 
-Descritores de nome amigáveis permitem que um usuário modifique os `title` e `description` valores dos campos de schema da biblioteca principal. Especialmente útil ao trabalhar com &quot;eVars&quot; e outros campos &quot;genéricos&quot; que você deseja rotular como contendo informações específicas à sua organização. A interface do usuário pode usá-los para mostrar um nome mais amigável ou apenas para mostrar campos com um nome amigável.
+Descritores de nome amigáveis permitem que um usuário modifique os valores `title`, `description`e `meta:enum` os campos de schema da biblioteca principal. Especialmente útil ao trabalhar com &quot;eVars&quot; e outros campos &quot;genéricos&quot; que você deseja rotular como contendo informações específicas à sua organização. A interface do usuário pode usá-los para mostrar um nome mais amigável ou apenas para mostrar campos com um nome amigável.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -326,6 +334,7 @@ Descritores de nome amigáveis permitem que um usuário modifique os `title` e `
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | O novo título que você deseja exibir para este campo, escrito em Caixa alta/baixa. |
 | `xdm:description` | Uma descrição opcional pode ser adicionada junto com o título. |
+| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na interface do usuário da plataforma de experiência. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado apenas para os principais campos XDM definidos pela Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, você deve editar a propriedade do campo `meta:enum` diretamente por meio de uma solicitação [](./update-resource.md)PUT. |
 
 #### Descritor de relação
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem PostgreSQL na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Para acessar sua conta PSQL no Platform, forneça o seguinte valor:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão associada à sua conta PSQL. |
+| `connectionString` | A cadeia de conexão associada à sua conta PSQL. O padrão da cadeia de conexão PSQL é: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 Para obter mais informações sobre a introdução, consulte este documento [](https://www.postgresql.org/docs/9.2/app-psql.html)PSQL.
 

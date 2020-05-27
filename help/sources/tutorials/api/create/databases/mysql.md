@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar um conector MySQL usando a API do Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '586'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para con
 
 Este guia exige uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): A Plataforma de experiência permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../../../home.md): A Plataforma de experiência permite que os dados sejam assimilados de várias fontes, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Caixas de proteção](../../../../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao MySQL usando a API de Serviço de Fluxo.
@@ -36,9 +36,10 @@ Para que o Serviço de Fluxo se conecte ao seu armazenamento MySQL, é necessár
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão MySQL associada à sua conta. |
+| `connectionString` | A cadeia de conexão MySQL associada à sua conta. O padrão da cadeia de conexão MySQL é: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | A ID usada para gerar uma conexão. A ID de especificação de conexão fixa para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
-Você pode saber mais sobre sequências de conexão e como obtê-las lendo o documento [](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
+Para obter mais informações sobre como obter uma cadeia de conexão, consulte [este documento](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
 
 ### Lendo chamadas de exemplo da API
 
@@ -60,77 +61,9 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 * Tipo de conteúdo: `application/json`
 
-## Pesquisar especificações de conexão
+## Criar uma conexão
 
-Para criar uma conexão MySQL, um conjunto de especificações de conexão MySQL deve existir no Serviço de Fluxo. A primeira etapa na conexão da Plataforma ao MySQL é recuperar essas especificações.
-
-**Formato da API**
-
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você também pode incluir o query `property=name=="mysql"` para obter informações especificamente para o MySQL.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="mysql"
-```
-
-**Solicitação**
-
-A solicitação a seguir recupera a especificação de conexão para MySQL.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="mysql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna as especificações de conexão para MySQL, incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
-
-```json
-{
-    "items": [
-        {
-            "id": "26d738e0-8963-47ea-aadf-c60de735468a",
-            "name": "mysql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionStringAuth",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to MySql",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any MySql instance.",
-                                "format": "password",
-                                "pattern": "^([sS]erver=)(.*)( ?;[pP]ort=)(.*)(; ?[dD]atabase=)(.*)(; ?[uU]id=)(.*)(; ?[pP]wd=)(.*)(;)",
-                                "examples": [
-                                    "Server=myserver.mysql.database.azure.com; Port=3306; Database=my_sql_db; Uid=username; Pwd=password; SslMode=Preferred;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Criar uma conexão básica
-
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta MySQL, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta MySQL, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Solicitação**
+
+Para criar uma conexão MySQL, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`.
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -166,12 +101,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.connectionString` | A cadeia de conexão associada à sua conta MySQL. |
-| `connectionSpec.id` | A ID da especificação de conexão associada à sua conta MySQL. |
+| `auth.params.connectionString` | A cadeia de conexão MySQL associada à sua conta. O padrão da cadeia de conexão MySQL é: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | A ID de especificação de conexão fixa para MySQL: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
+Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu banco de dados no próximo tutorial.
 
 ```json
 {
@@ -182,4 +117,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, in
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica MySQL usando a API do Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão MySQL usando a API do Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.

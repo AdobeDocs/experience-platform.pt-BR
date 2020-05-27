@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
          - [Campos de mapeamento do Gerenciador de Audiências](connectors/adobe-applications/mapping/audience-manager.md)
          - [Campos de Target mapping](connectors/adobe-applications/mapping/target.md)
    - Publicidade {#advertising}
-      - [Conector Google Ads](connectors/advertising/ads.md)
+      - [Conector Google AdWords](connectors/advertising/ads.md)
    - armazenamento em nuvem {#cloud-storage}
       - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 0%
 - Tutoriais de API {#api-tutorials}
    - Criar um conector de origem {#create}
       - Publicidade {#advertising}
-         - [Conector Google Ads](tutorials/api/create/advertising/ads.md)
+         - [Conector Google AdWords](tutorials/api/create/advertising/ads.md)
       - armazenamento em nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 0%
          - [Conector do Adobe Audiência Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Conector de atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicidade {#create}
-         - [Conector Google Ads](tutorials/ui/create/advertising/ads.md)
+         - [Conector Google AdWords](tutorials/ui/create/advertising/ads.md)
       - armazenamento em nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)

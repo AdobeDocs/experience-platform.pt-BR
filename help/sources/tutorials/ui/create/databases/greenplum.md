@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem GreenPlum na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -36,7 +36,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão usada para se conectar à sua instância GreenPlum. O padrão da string de conexão para GreenPlum é `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | A cadeia de conexão usada para se conectar à sua instância GreenPlum. O padrão da string de conexão para GreenPlum é `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Para obter mais informações sobre como começar, consulte [este documento](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)GreenPlum.
 

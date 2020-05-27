@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem do Azure Blob ou Amazon S3 na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -37,9 +37,22 @@ A plataforma Experience suporta os seguintes formatos de arquivo para serem assi
 
 ### Reunir credenciais obrigatórias
 
-Para acessar seu armazenamento Blob na plataforma, você deve fornecer uma string **de conexão válida do Armazenamento** Azure. Você pode saber mais sobre sequências de conexão, incluindo maneiras de obtê-las por meio <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">deste documento</a>do Microsoft Azure.
+Para acessar seu armazenamento Blob na plataforma, é necessário fornecer um valor válido para a seguinte credencial:
 
-Da mesma forma, acessar seu bucket S3 na plataforma requer que você forneça sua chave **de acesso** S3 e chave **secreta** S3. For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Credencial | Descrição |
+| ---------- | ----------- |
+| `connectionString` | A string de conexão necessária para acessar dados no armazenamento Blob. O padrão da string de conexão Blob é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+Para obter mais informações sobre a introdução, visite [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Blob do Azure.
+
+Da mesma forma, acessar seu bucket S3 na plataforma exige que você forneça seus valores válidos para as seguintes credenciais:
+
+| Credencial | Descrição |
+| ---------- | ----------- |
+| `s3AccessKey` | A ID da chave de acesso para seu armazenamento S3. |
+| `s3SecretKey` | A ID da chave secreta para seu armazenamento S3. |
+
+Para obter mais informações sobre como começar, visite [este documento](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/)AWS.
 
 ## Conecte sua conta Blob ou S3
 

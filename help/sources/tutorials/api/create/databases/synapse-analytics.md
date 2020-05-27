@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar um conector do Azure Synapse Analytics usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 2%
+source-wordcount: '603'
+ht-degree: 1%
 
 ---
 
@@ -36,10 +36,10 @@ Para que o Serviço de Fluxo se conecte com o Synapse, é necessário fornecer v
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão usada para conectar-se ao Azure Synapse Analytics. |
+| `connectionString` | A string de conexão usada para conexão com o Synapse. O padrão da cadeia de conexão Synapse é `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão do Synapse é: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-Para obter mais informações sobre como começar, consulte [este documento](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell)Synapse.
+Para obter mais informações sobre como obter uma string de conexão, consulte [este documento](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell)Synapse.
 
 ### Lendo chamadas de exemplo da API
 
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
             }
         },
         "connectionSpec": {
@@ -101,12 +101,12 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `auth.params.connectionString` | A cadeia de conexão associada à sua conta do Synapse. |
-| `connectionSpec.id` | A ID da especificação da conexão Synapse: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | A string de conexão usada para conexão com o Synapse. O padrão da cadeia de conexão Synapse é `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | A ID da especificação de conexão do Synapse é: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu banco de dados no próximo tutorial.
 
 ```json
 {

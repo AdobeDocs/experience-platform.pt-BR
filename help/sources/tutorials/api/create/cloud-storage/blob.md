@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar um conector Blob do Azure usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,10 @@ Para que o Serviço de Fluxo se conecte ao seu armazenamento Blob, é necessári
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A string de conexão necessária para acessar dados no armazenamento Blob. |
+| `connectionString` | A string de conexão necessária para acessar dados no armazenamento Blob. O padrão da string de conexão Blob é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para Blob é: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-Para obter mais informações sobre a introdução, visite [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Blob do Azure.
+Para obter mais informações sobre como obter uma cadeia de conexão, consulte [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Blob do Azure.
 
 ### Lendo chamadas de exemplo da API
 
@@ -71,6 +72,8 @@ POST /connections
 
 **Solicitação**
 
+Para criar uma conexão Blob, a ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para Blob é `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.connectionString` | A string de conexão para seu armazenamento Blob. |
-| `connectionSpec.id` | A ID da especificação de conexão do armazenamento Blob: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | A string de conexão necessária para acessar dados no armazenamento Blob. O padrão da string de conexão Blob é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | A ID de especificação de conexão do armazenamento Blob é: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Resposta**
 

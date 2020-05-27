@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem do Armazenamento de Tabela do Azure na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Para acessar sua conta ATS na Plataforma, forneça os seguintes valores:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | Uma cadeia de conexão para se conectar à instância do Armazenamento de Tabela do Azure. |
+| `connectionString` | Uma cadeia de conexão para se conectar à instância do Armazenamento de Tabela do Azure. A cadeia de conexão para conexão com a instância ATS. O padrão da string de conexão para ATS é `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
 Para obter mais informações sobre a introdução, consulte [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)de Armazenamentos de Tabela do Azure.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector GreenPlum usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão usada para se conectar à sua instância GreenPlum. O padrão da string de conexão para GreenPlum é `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | A cadeia de conexão usada para se conectar à sua instância GreenPlum. O padrão da string de conexão para GreenPlum é `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | O identificador necessário para criar uma conexão. A ID de especificação de conexão fixa para GreenPlum é `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 Para obter mais informações sobre como adquirir uma string de conexão, consulte [este documento](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)GreenPlum.
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                    "connectionString": "HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>"
+                    "connectionString": "HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `auth.params.connectionString` | A cadeia de conexão associada à sua conta GreenPlum. |
-| `connectionSpec.id` | A ID da especificação de conexão DB2: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | A cadeia de conexão usada para conectar-se a uma conta GreenPlum. O padrão da string de conexão é: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | A ID de especificação de conexão do GreenPlum: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Resposta**
 

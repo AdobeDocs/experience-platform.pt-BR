@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Crie um conector MariaDB usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '579'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma de Experiência a Maria DB.
+Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma de Experiência à MariaDB.
 
 ## Introdução
 
@@ -28,17 +28,18 @@ Este guia exige uma compreensão prática dos seguintes componentes da Adobe Exp
 * [Fontes](../../../../home.md): A Plataforma de experiência permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
 * [Caixas de proteção](../../../../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao Maria DB usando a API de Serviço de Fluxo.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao MariaDB usando a API de Serviço de Fluxo.
 
 ### Reunir credenciais obrigatórias
 
-Para que o Serviço de Fluxo se conecte com a Maria DB, é necessário fornecer a seguinte propriedade de conexão:
+Para que o Serviço de Fluxo se conecte com a MariaDB, é necessário fornecer a seguinte propriedade de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão associada à autenticação Maria DB. |
+| `connectionString` | A cadeia de conexão associada à autenticação MariaDB. O padrão da string de conexão MariaDB é: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | A ID usada para gerar uma conexão. A ID de especificação de conexão fixa para MariaDB é `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Consulte [este documento](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) para obter mais informações sobre a introdução à Maria DB.
+Para obter mais informações sobre como obter uma string de conexão, consulte [este documento](https://mariadb.com/kb/en/about-mariadb-connector-odbc/)MariaDB.
 
 ### Lendo chamadas de exemplo da API
 
@@ -60,77 +61,9 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 * Tipo de conteúdo: `application/json`
 
-## Pesquisar especificações de conexão
+## Criar uma conexão
 
-Para se conectar ao Maria DB, é necessário que exista um conjunto de especificações de conexão do Maria DB dentro do Serviço de Fluxo. O primeiro passo para conectar a Plataforma à Maria DB é resgatar essas especificações.
-
-**Formato da API**
-
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="maria-db"` para obter informações específicas para Maria DB.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="maria-db"
-```
-
-**Solicitação**
-
-A solicitação a seguir recupera as especificações de conexão para Maria DB.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="maria-db"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna as especificações de conexão para Maria DB, incluindo seu identificador único (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
-
-```json
-{
-    "items": [
-        {
-            "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-            "name": "maria-db",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionStringAuth",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to Maria DB",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any Maria DB instance.",
-                                "format": "password",
-                                "pattern": "^(Server=)(.*)(;Port=)(.*)(;Database=)(.*)(;UID=)(.*)(;PWD=)(.*)",
-                                "examples": [
-                                    "Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## Criar uma conexão básica
-
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta Maria DB, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta MariaDB, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Solicitação**
+
+Para criar uma conexão MariaDB, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para MariaDB é `3000eb99-cd47-43f3-827c-43caf170f015`.
 
 ```shell
 curl -X POST \
@@ -149,12 +84,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "base connection for maria-db",
-        "description": "base connection for maria-db",
+        "name": "Test connection for maria-db",
+        "description": "Test connection for maria-db",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -166,12 +101,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.connectionString` | A cadeia de conexão associada à autenticação Maria DB. |
-| `connectionSpec.id` | A especificação de conexão (`id`) coletada na etapa anterior. |
+| `auth.params.connectionString` | A cadeia de conexão associada à autenticação MariaDB. O padrão da string de conexão MariaDB é: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | A ID de especificação da conexão MariaDB é: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu armazenamento em nuvem na próxima etapa.
+Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu banco de dados na próxima etapa.
 
 ```json
 {
@@ -182,4 +117,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, in
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica Maria DB usando a API de Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão MariaDB usando a API de Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.

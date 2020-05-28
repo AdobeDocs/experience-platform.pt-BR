@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Serviço de segmentação
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 O processo de trabalhos de segmento estabelecia definições de segmento anteriormente para gerar um segmento de audiência. Você pode usar o `/segment/jobs` endpoint para recuperar uma lista de trabalhos de segmento, criar um novo trabalho de segmento, recuperar detalhes de um trabalho de segmento específico ou excluir um trabalho de segmento específico.
 
 Para obter mais informações sobre como usar esse terminal, leia o guia [do desenvolvedor de trabalhos de](./segment-jobs.md)segmento.
+
+## Pesquisa de segmento
+
+A pesquisa por segmento é usada para pesquisar e indexar campos configuráveis contidos em várias fontes de dados e retorná-los em tempo quase real. Para começar a trabalhar com a pesquisa de segmentos, consulte o guia do desenvolvedor de [pesquisa](segment-search.md)
 
 ## Próximas etapas
 

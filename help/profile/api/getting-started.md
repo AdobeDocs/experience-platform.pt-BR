@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
@@ -75,10 +78,6 @@ Ao reunir dados de várias fontes na plataforma Experience, as políticas de mes
 Usando a API Perfil do cliente em tempo real, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para saber mais sobre como trabalhar com políticas de mesclagem usando a API, visite o subguia [de políticas de](merge-policies.md)mesclagem.
 
 Para obter um guia para trabalhar com políticas de mesclagem usando a interface do usuário da plataforma, consulte o guia [do usuário](../ui/merge-policies.md)Mesclar políticas.
-
-## Pesquisa de Perfis
-
-A pesquisa de Perfis é usada para pesquisar e indexar campos configuráveis contidos em várias fontes de dados e retorná-los em tempo quase real. Para começar a trabalhar com a pesquisa de Perfis, consulte o subguia [de pesquisa](profile-search.md)
 
 ## trabalhos do sistema Perfil
 

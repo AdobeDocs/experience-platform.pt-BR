@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da plataforma Adobe Experience
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 1%
+source-wordcount: '526'
+ht-degree: 2%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Visão geral da plataforma Adobe Experience
 
 >[!NOTE]
+>
 >A documentação da plataforma Adobe Experience foi movida recentemente. Analise a nova navegação e atualize os marcadores existentes.
 
 A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para criar e gerenciar soluções completas que impulsionam a experiência do cliente. A plataforma Experience permite que as organizações centralizem e padronizem os dados e o conteúdo do cliente de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar drasticamente o design e o delivery de experiências ricas e personalizadas.
@@ -42,6 +43,10 @@ De tempos em tempos, você pode receber uma pesquisa de comentários adicionais.
 ## Tutoriais da plataforma de experiência
 
 Comece a usar a plataforma com rapidez e facilidade seguindo os tutoriais passo a passo para tudo, desde a preparação de dados para ingestão até os algoritmos avançados de aprendizado de máquina. Esses tutoriais foram projetados para complementar as informações encontradas na documentação da plataforma de experiência, de modo que os melhores resultados mantenham os documentos em mãos enquanto completam os tutoriais. Visite os tutoriais [da plataforma de](../tutorials/home.md) experiência para começar.
+
+## Tutoriais em vídeo
+
+Assista aos tutoriais [](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) em vídeo para ver uma grande variedade de tópicos da plataforma de experiência.
 
 ## documentos de referência e recursos
 

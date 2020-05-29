@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 95e002c60389ca7e4c1dcf32bbcf6f552cd55d95
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+workflow-type: tm+mt
+source-wordcount: '1694'
+ht-degree: 1%
 
 ---
 
@@ -773,7 +776,7 @@ Usando essa carga no corpo da solicitação, você pode executar uma solicitaç�
 
 ## eventos de série de tempo de acesso em várias entidades do schema
 
-Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o subguia []descritores do guia do desenvolvedor da API do Registro do Schema](../../xdm/api/descriptors.md).
+Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o subguia [](../../xdm/api/descriptors.md)Descritores do guia do desenvolvedor da API do Registro do Schema.
 
 É possível incluir parâmetros de query no caminho da solicitação para especificar quais dados serão acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 

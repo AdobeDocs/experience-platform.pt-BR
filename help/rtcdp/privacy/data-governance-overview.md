@@ -4,7 +4,10 @@ seo-title: Controle de dados na plataforma de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
@@ -84,3 +87,7 @@ Se qualquer uma das ações acima acionar uma violação, essa ação será impe
 ## Próximas etapas
 
 Agora que você foi apresentado aos principais recursos de controle de dados em CDP em tempo real e como a plataforma de experiência os habilita, continue com a [documentação de controle de dados na plataforma](../../data-governance/home.md)Adobe Experience. A documentação fornece visões gerais dos conceitos essenciais do Data Governance, bem como workflows passo a passo para gerenciar rótulos e políticas de uso de dados.
+
+O vídeo a seguir fornece uma visão geral do controle de dados na CDP em tempo real, incluindo o uso de casos de uso de marketing em destinos e workflows de exemplo para diferentes cenários:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)

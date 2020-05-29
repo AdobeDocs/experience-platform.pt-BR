@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 1%
@@ -26,7 +26,7 @@ As políticas de mesclagem são privadas para sua Organização IMS, permitindo 
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
+O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
 
 **Objeto de política de mesclagem**
 
@@ -45,8 +45,8 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
-        "default": {BOOLEAN},
-        "updateEpoch": {UPDATE_TIME}
+        "default": "{BOOLEAN}",
+        "updateEpoch": "{UPDATE_TIME}"
     }
 ```
 
@@ -149,7 +149,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
     }
 ```
 
-### Schema {#schema}
+### Esquema {#schema}
 
 O objeto schema especifica o schema XDM para o qual essa política de mesclagem é criada.
 

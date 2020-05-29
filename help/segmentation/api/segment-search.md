@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API de segmentação
 topic: guide
 translation-type: tm+mt
-source-git-commit: 7c33ba8edc886d2b689e1125b5c378e16a487324
+source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1172'
 ht-degree: 2%
 
 ---
@@ -41,8 +41,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parâmetros | Descrição |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Obrigatório)** Em que {SCHEMA} representa o valor da classe do schema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é suportado. |
-| s={SEARCH_TERM} | *(Opcional)* Onde {SEARCH_TERM} representa um query que está em conformidade com a implementação da Microsoft da sintaxe [de pesquisa de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Se nenhum termo de pesquisa for especificado, todos os registros associados `schema.name` serão retornados. O [apêndice](#appendix) deste documento contém uma explicação mais detalhada. |
+| `schema.name={SCHEMA}` | **(Obrigatório)** Em que {SCHEMA} representa o valor da classe do schema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é suportado. |
+| `s={SEARCH_TERM}` | *(Opcional)* Onde {SEARCH_TERM} representa um query que está em conformidade com a implementação da Microsoft da sintaxe [de pesquisa de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Se nenhum termo de pesquisa for especificado, todos os registros associados `schema.name` serão retornados. O [apêndice](#appendix) deste documento contém uma explicação mais detalhada. |
 
 **Solicitação**
 
@@ -65,18 +65,22 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com as seguintes informaçõ
 {
   "namespaces": [
     {
-      "name": "AAMTraits",
+      "namespace": "AAMTraits",
+      "displayName": "AAMTraits",
       "count": 45
     },
     {
-      "name": "AAMSegments",
+      "namespace": "AAMSegments",
+      "displayName": "AAMSegment",
       "count": 10
     },
     {
-      "name": "SegmentsAISegments",
+      "namespace": "SegmentsAISegments",
+      "displayName": "SegmentSAISegment",
       "count": 3
     }
   ],
+  "totalCount": 3,
   "status": {
     "message": "Success"
   }
@@ -97,12 +101,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parâmetros | Descrição |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe do schema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é suportado. |
-| namespace={NAMESPACE} | **(Obrigatório)** Onde {NAMESPACE} contém a namespace na qual você deseja pesquisar. |
-| s={SEARCH_TERM} | *(Opcional)* Onde {SEARCH_TERM} contém um query que está em conformidade com a implementação da Microsoft da sintaxe [de pesquisa de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Se nenhum termo de pesquisa for especificado, todos os registros associados `schema.name` serão retornados. O [apêndice](#appendix) deste documento contém uma explicação mais detalhada. |
-| entityId={ENTITY_ID} | *(Opcional)* Limita sua pesquisa à pasta designada, especificada com {ENTITY_ID}. |
-| limit={LIMIT} | *(Opcional)* Onde {LIMIT} representa o número de resultados de pesquisa a serem retornados. O valor padrão é 50. |
-| page={PAGE} | *(Opcional)* Onde {PAGE} representa o número de página usado para paginar os resultados do query pesquisado. Observe que o número de página start em **0**. |
+| `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe do schema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é suportado. |
+| `namespace={NAMESPACE}` | **(Obrigatório)** Onde {NAMESPACE} contém a namespace na qual você deseja pesquisar. |
+| `s={SEARCH_TERM}` | *(Opcional)* Onde {SEARCH_TERM} contém um query que está em conformidade com a implementação da Microsoft da sintaxe [de pesquisa de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Se nenhum termo de pesquisa for especificado, todos os registros associados `schema.name` serão retornados. O [apêndice](#appendix) deste documento contém uma explicação mais detalhada. |
+| `entityId={ENTITY_ID}` | *(Opcional)* Limita sua pesquisa à pasta designada, especificada com {ENTITY_ID}. |
+| `limit={LIMIT}` | *(Opcional)* Onde {LIMIT} representa o número de resultados de pesquisa a serem retornados. O valor padrão é 50. |
+| `page={PAGE}` | *(Opcional)* Onde {PAGE} representa o número de página usado para paginar os resultados do query pesquisado. Observe que o número de página start em **0**. |
 
 
 **Solicitação**
@@ -168,9 +172,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parâmetros | Descrição |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe do schema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é suportado. |
-| namespace={NAMESPACE} | **(Obrigatório)** Onde {NAMESPACE} contém a namespace na qual você deseja pesquisar. |
-| entityId={ENTITY_ID} | **(Obrigatório)** A ID do objeto de pesquisa sobre o qual você deseja obter as informações estruturais, especificadas com {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Obrigatório)** Onde {SCHEMA} contém o valor da classe do schema associado aos objetos de pesquisa. Atualmente, somente `_xdm.context.segmentdefinition` é suportado. |
+| `namespace={NAMESPACE}` | **(Obrigatório)** Onde {NAMESPACE} contém a namespace na qual você deseja pesquisar. |
+| `entityId={ENTITY_ID}` | **(Obrigatório)** A ID do objeto de pesquisa sobre o qual você deseja obter as informações estruturais, especificadas com {ENTITY_ID}. |
 
 **Solicitação**
 

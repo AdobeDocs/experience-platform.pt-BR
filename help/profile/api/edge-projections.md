@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+workflow-type: tm+mt
+source-wordcount: '1940'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +19,9 @@ Para direcionar experiências coordenadas, consistentes e personalizadas para se
 ## Introdução
 
 Os pontos de extremidade da API usados neste guia fazem parte da API do Perfil do cliente em tempo real. Antes de continuar, leia o guia [do desenvolvedor do Perfil do cliente em tempo](getting-started.md)real. Em particular, a seção [de](getting-started.md#getting-started) introdução do guia do desenvolvedor do Perfil inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para quaisquer APIs da plataforma de experiência.
+
+>[!NOTE]
+>As solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um `Content-Type` cabeçalho. Mais de um `Content-Type` é usado neste documento. Preste especial atenção aos cabeçalhos nas chamadas de amostra para garantir que você esteja usando a solicitação correta `Content-Type` para cada solicitação.
 
 ## Destinos de projeção
 
@@ -422,6 +428,9 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 **Solicitação**
 
+>[!NOTE]
+>A solicitação POST para criar uma configuração requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
@@ -429,7 +438,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
         "selector": "emails,person(firstName)",
         "name": "my_test_projection",

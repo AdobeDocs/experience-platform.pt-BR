@@ -4,18 +4,23 @@ solution: Experience Platform
 title: Coletar dados do CRM por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 1%
 
 ---
 
 
 # Coletar dados do CRM por meio de conectores de origem e APIs
 
-Este tutorial aborda as etapas para recuperar dados de um sistema CRM e trazê-los para a Plataforma por meio de conectores de origem e APIs.
+O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+
+Este tutorial aborda as etapas para recuperar dados de um sistema CRM de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 
 ## Introdução
 
-Este tutorial requer que você tenha acesso a um sistema CRM por meio de uma conexão básica válida e informações sobre a tabela que deseja trazer para a Plataforma, incluindo o caminho e a estrutura da tabela. Se você não tiver essas informações, consulte o tutorial sobre como [explorar sistemas CRM usando a API](../explore/crm.md) do Serviço de Fluxo antes de tentar este tutorial.
+Este tutorial requer que você tenha acesso a um sistema CRM de terceiros por meio de uma conexão válida e informações sobre a tabela que deseja trazer para a Plataforma, incluindo o caminho e a estrutura da tabela. Se você não tiver essas informações, consulte o tutorial sobre como [explorar sistemas CRM usando a API](../explore/crm.md) do Serviço de Fluxo antes de tentar este tutorial.
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
@@ -54,11 +59,23 @@ Para trazer dados externos para a Plataforma por meio de conectores de origem, �
 
 Para criar uma classe e um schema ad-hoc, siga as etapas descritas no tutorial [do schema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Ao criar uma classe ad-hoc, todos os campos encontrados nos dados de origem devem ser descritos no corpo da solicitação.
 
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado um schema ad-hoc. Obtenha e armazene o identificador exclusivo (`$id`) do schema ad-hoc e prossiga para a próxima etapa deste tutorial.
+Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado um schema ad-hoc. O identificador exclusivo (`$id`) do schema ad-hoc é necessário para prosseguir para a próxima etapa deste tutorial.
 
 ## Criar uma conexão de origem {#source}
 
-Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a API de Serviço de Fluxo. Uma conexão de origem consiste em uma conexão básica, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a API de Serviço de Fluxo. Uma conexão de origem consiste em uma ID de conexão, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+
+Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
+
+Use os seguintes valores enum para conectores **baseados em** arquivo:
+
+| Data.format | Valor Enum |
+| ----------- | ---------- |
+| Arquivos delimitados | `delimited` |
+| Arquivos JSON | `json` |
+| Arquivos de parâmetro | `parquet` |
+
+Para todos os conectores **baseados em** tabela, use o valor enum: `tabular`.
 
 **Formato da API**
 
@@ -70,7 +87,7 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -81,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Source Connection for a CRM system",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -118,17 +135,19 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `baseConnectionId` | A ID de uma conexão básica para um sistema CRM. |
+| `baseConnectionId` | A ID de conexão exclusiva do sistema CRM de terceiros que você está acessando. |
 | `data.schema.id` | A ID do schema XDM ad-hoc. |
 | `params.path` | O caminho do arquivo de origem. |
+| `connectionSpec.id` | A ID de especificação de conexão associada ao seu sistema CRM específico de terceiros. Consulte o [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão de origem recém-criada. Armazene esse valor conforme necessário em etapas posteriores para criar uma conexão de público alvo.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão de origem recém-criada. Essa ID é necessária em uma etapa posterior para criar um fluxo de dados.
 
 ```json
 {
     "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
@@ -180,7 +199,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo seu identificador exclusivo (`$id`). Armazene essa ID conforme necessário em etapas posteriores para criar um conjunto de dados de público alvo, mapeamento e fluxo de dados.
+Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo seu identificador exclusivo (`$id`). Essa ID é necessária em etapas posteriores para criar um conjunto de dados de público alvo, mapeamento e fluxo de dados.
 
 ```json
 {
@@ -220,7 +239,7 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ## Criar um conjunto de dados de público alvo
 
-É possível criar um conjunto de dados de público alvo executando uma solicitação POST para a API do serviço de catálogo, fornecendo a ID do schema do público alvo dentro da carga.
+É possível criar um conjunto de dados de público alvo executando uma solicitação POST para a API [do serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, fornecendo a ID do schema do público alvo dentro da carga.
 
 **Formato da API**
 
@@ -253,7 +272,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados recém-criado no formato `"@/datasets/{DATASET_ID}"`. A ID do conjunto de dados é uma sequência de caracteres somente leitura, gerada pelo sistema, usada para fazer referência ao conjunto de dados em chamadas de API. Armazene a ID do conjunto de dados do público alvo conforme necessário em etapas posteriores para criar uma conexão de público alvo e um fluxo de dados.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados recém-criado no formato `"@/datasets/{DATASET_ID}"`. A ID do conjunto de dados é uma sequência de caracteres somente leitura, gerada pelo sistema, usada para fazer referência ao conjunto de dados em chamadas de API. A ID do conjunto de dados do público alvo é necessária em etapas posteriores para criar uma conexão de público alvo e um fluxo de dados.
 
 ```json
 [
@@ -261,15 +280,9 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 ]
 ```
 
-## Criar uma conexão básica de conjunto de dados
-
-Para criar uma conexão de público alvo e assimilar dados externos na Plataforma, é necessário adquirir uma conexão básica de conjunto de dados.
-
-Para criar uma conexão base de conjunto de dados, siga as etapas descritas no tutorial [de conexão base de](../create-dataset-base-connection.md)conjunto de dados.
-
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado uma conexão base de conjunto de dados. Obtenha e armazene o identificador exclusivo (`$id`) da conexão base e prossiga para a próxima etapa deste tutorial.
-
 ## Criar uma conexão de público alvo
+
+Uma conexão de público alvo representa a conexão com o destino onde os dados ingeridos chegam. Para criar uma conexão de público alvo, é necessário fornecer a ID de especificação de conexão fixa associada ao registro de dados. Esta ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 Agora você tem os identificadores exclusivos para uma conexão básica de conjunto de dados, um schema de público alvo e um conjunto de dados de público alvo. Usando esses identificadores, é possível criar uma conexão de público alvo usando a API de Serviço de Fluxo para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
@@ -283,18 +296,16 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
+        "name": "Target Connection for a CRM connector",
         "description": "Target Connection for CRM data",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -304,7 +315,7 @@ curl -X POST \
             "dataSetId": "5c8c3c555033b814b69f947f"
         },
         "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -312,12 +323,9 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `baseConnectionId` | A ID da conexão básica do conjunto de dados. |
 | `data.schema.id` | A `$id` do schema XDM do público alvo. |
 | `params.dataSetId` | A ID do conjunto de dados do público alvo. |
-| `connectionSpec.id` | A ID de especificação de conexão para seu CRM. |
-
->[!NOTE] Ao criar uma conexão de público alvo, certifique-se de usar o valor de conexão base do conjunto de dados para a conexão básica `id` em vez da conexão base do conector de origem de terceiros.
+| `connectionSpec.id` | A ID de especificação de conexão fixa para o registro de dados. Esta ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -386,7 +394,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluindo seu identificador exclusivo (`id`). Armazene esse valor conforme necessário na etapa posterior para criar um fluxo de dados.
+Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluindo seu identificador exclusivo (`id`). Esse valor é necessário em uma etapa posterior para criar um fluxo de dados.
 
 ```json
 {
@@ -456,7 +464,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 }
 ```
 
-## Pesquisar especificações de fluxo de dados {#specs}
+## Recuperar especificações de fluxo de dados {#specs}
 
 Um dataflow é responsável por coletar dados de fontes e trazê-los para a Plataforma. Para criar um fluxo de dados, primeiro você deve obter as especificações de fluxo de dados responsáveis pela coleta de dados do CRM.
 
@@ -478,7 +486,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados que é responsável por trazer os dados do seu sistema CRM para a Plataforma. Armazene o valor do `id` campo conforme necessário na próxima etapa para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados que é responsável por trazer os dados do seu sistema CRM para a Plataforma. Essa ID é necessária na próxima etapa para criar um novo fluxo de dados.
 
 ```json
 {
@@ -611,6 +619,8 @@ A última etapa para coletar dados do CRM é criar um fluxo de dados. Agora, voc
 
 Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
+Para agendar uma ingestão, é necessário primeiro definir o valor de tempo do start para cada tempo em segundos. Em seguida, você deve definir o valor de frequência para uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor do intervalo designa o período entre duas ingestões consecutivas e a criação de uma ingestão única não requer a definição de um intervalo. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
+
 **Formato da API**
 
 ```http
@@ -641,12 +651,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -663,10 +667,13 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `flowSpec.id` | ID de especificação do fluxo de dados |
-| `sourceConnectionIds` | ID da conexão de origem |
-| `targetConnectionIds` | ID de conexão do Público alvo |
-| `transformations.params.mappingId` | ID de mapeamento |
+| `flowSpec.id` | A ID de especificação de fluxo recuperada na etapa anterior. |
+| `sourceConnectionIds` | A ID da conexão de origem recuperada em uma etapa anterior. |
+| `targetConnectionIds` | A ID de conexão do público alvo recuperada em uma etapa anterior. |
+| `transformations.params.mappingId` | A ID de mapeamento recuperada em uma etapa anterior. |
+| `scheduleParams.startTime` | O tempo de start do fluxo de dados em tempo de época, em segundos. |
+| `scheduleParams.frequency` | Os valores de frequência selecionáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | O intervalo designa o período entre duas execuções consecutivas de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero. O intervalo não é necessário quando a frequência é definida como `once` e deve ser maior ou igual a `15` outros valores de frequência. |
 
 **Resposta**
 
@@ -675,6 +682,8 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 ```json
 {
     "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+
 }
 ```
 
@@ -684,3 +693,14 @@ Ao seguir este tutorial, você criou um conector de origem para coletar dados de
 
 * [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 * [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
+
+## Apêndice
+
+A seção a seguir lista os diferentes conectores de fonte CRM e suas especificações de conexões.
+
+### Especificação da conexão
+
+| Nome do conector | Especificação da conexão |
+| -------------- | --------------- |
+| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |

@@ -4,7 +4,7 @@ seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
+source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -35,8 +35,10 @@ Um varejista online quer atingir os clientes existentes por meio de plataformas 
 
 
 Uma companhia aérea tem níveis de clientes diferentes (Bronze, Prata e Ouro) e deseja fornecer a cada um dos níveis ofertas personalizadas por meio de plataformas sociais. No entanto, nem todos os clientes usam o aplicativo móvel da companhia aérea e alguns deles não fizeram logon no site da empresa. Os únicos identificadores que a empresa tem sobre esses clientes são IDs de associação e endereços de email.
-Para público alvo em redes sociais, eles podem integrar os dados do cliente de seu CRM para o CDP em tempo real da Adobe, usando os endereços de email com hash como identificadores.
-Em seguida, eles podem combinar seus dados offline com os dados de atividade online existentes, para criar novos segmentos de audiência que podem ser públicos alvos através do destino do Facebook.
+
+Para público alvo em redes sociais, eles podem integrar os dados do cliente de seu CRM para o CDP em tempo real da Adobe, usando os endereços de email como identificadores.
+
+Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente, para criar novos segmentos de audiência que podem público alvo pelo destino do Facebook.
 
 ## Especificações de destino {#destination-specs}
 

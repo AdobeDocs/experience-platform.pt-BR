@@ -4,18 +4,23 @@ solution: Experience Platform
 title: Coletar dados de automação de marketing por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2f7961a4ca0bc0fec2ed1f50f5101e4dd734a282
+source-git-commit: 14d06635b3ed3c38bae3573a275dd37c990c280e
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 1%
 
 ---
 
 
 # Coletar dados de automação de marketing por meio de conectores de origem e APIs
 
+O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+
 Este tutorial aborda as etapas para recuperar dados de um sistema de automação de marketing e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 
 ## Introdução
 
-Este tutorial requer que você tenha informações sobre o arquivo que deseja trazer para a Plataforma, incluindo o caminho e a estrutura do arquivo. Se você não tiver essas informações, consulte o tutorial sobre como [explorar um aplicativo de automação de marketing usando a API](../../api/create/marketing-automation/hubspot.md) do Serviço de Fluxo antes de tentar este tutorial.
+Este tutorial requer que você tenha acesso a um sistema de automação de marketing de terceiros por meio de uma conexão válida e informações sobre o arquivo que deseja trazer para a Plataforma, incluindo o caminho e a estrutura do arquivo. Se você não tiver essas informações, consulte o tutorial sobre como [explorar um sistema de automação de marketing de terceiros usando a API](../explore/marketing-automation.md) de Serviço de Fluxo antes de tentar este tutorial.
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
@@ -54,11 +59,23 @@ Para trazer dados externos para a Plataforma por meio de conectores de origem, �
 
 Para criar uma classe e um schema ad-hoc, siga as etapas descritas no tutorial [do schema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Ao criar uma classe ad-hoc, todos os campos encontrados nos dados de origem devem ser descritos no corpo da solicitação.
 
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado um schema ad-hoc. Obtenha e armazene o identificador exclusivo (`$id`) do schema ad-hoc e prossiga para a próxima etapa deste tutorial.
+Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado um schema ad-hoc. O identificador exclusivo (`$id`) do schema ad-hoc é necessário para prosseguir para a próxima etapa deste tutorial.
 
 ## Criar uma conexão de origem {#source}
 
-Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a API de Serviço de Fluxo. Uma conexão de origem consiste em uma conexão básica, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a API de Serviço de Fluxo. Uma conexão de origem consiste em uma ID de conexão, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+
+Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
+
+Use os seguintes valores enum para conectores **baseados em** arquivo:
+
+| Data.format | Valor Enum |
+| ----------- | ---------- |
+| Arquivos delimitados | `delimited` |
+| Arquivos JSON | `json` |
+| Arquivos de parâmetro | `parquet` |
+
+Para todos os conectores **baseados em** tabela, use o valor enum: `tabular`.
 
 **Formato da API**
 
@@ -77,13 +94,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Marketing automation source connection",
-        "baseConnectionId": "2fce94c1-9a93-4971-8e94-c19a93097129",
-        "description": "Marketing automation source connection",
+        "name": "Source connection for marketing automation",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "description": "Source connection for a marketing automationj connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/80a6e931bd5e00190b72daafb4e1e4f7913a114808be9ac0",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/5c65688f44feff94fe61cb3ae34de445fc885548b5ba5d57",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -99,10 +116,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `baseConnectionId` | A ID de conexão do aplicativo de automação de marketing |
-| `data.schema.id` | A `$id` do schema XDM ad-hoc. |
-| `params.path` | O caminho do arquivo de origem. |
-| `connectionSpec.id` | A ID de especificação de conexão do aplicativo de automação de marketing. |
+| `baseConnectionId` | A ID de conexão exclusiva do sistema de automação de marketing de terceiros que você está acessando. |
+| `data.schema.id` | A ID do schema XDM ad-hoc. |
+| `params.path` | O caminho do arquivo de origem que você está acessando. |
+| `connectionSpec.id` | A ID de especificação de conexão do seu sistema de automação de marketing. |
 
 **Resposta**
 
@@ -110,8 +127,8 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ```json
 {
-    "id": "c315c0ae-a339-44c4-95c0-aea33964c420",
-    "etag": "\"67010af9-0000-0200-0000-5e9795c40000\""
+    "id": "f44dbef2-a4f0-4978-8dbe-f2a4f0e978cf",
+    "etag": "\"5f00fba7-0000-0200-0000-5ed560520000\""
 }
 ```
 
@@ -119,7 +136,9 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 Em etapas anteriores, um schema XDM ad-hoc foi criado para estruturar os dados de origem. Para que os dados de origem sejam usados na Plataforma, um schema de público alvo também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um conjunto de dados da Plataforma no qual os dados de origem estão contidos.
 
-Um schema XDM de público alvo pode ser criado executando-se uma solicitação POST para a API [do Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schemas. Se você preferir usar a interface do usuário na Experience Platform, o tutorial [do Editor de](../../../../xdm/tutorials/create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no Editor de Schemas.
+Um schema XDM de público alvo pode ser criado executando-se uma solicitação POST para a API [do Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schemas.
+
+Se você preferir usar a interface do usuário na Experience Platform, o tutorial [do Editor de](../../../../xdm/tutorials/create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no Editor de Schemas.
 
 **Formato da API**
 
@@ -152,9 +171,6 @@ curl -X POST \
             },
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            },
-                    {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
         "meta:containerId": "tenant",
@@ -170,11 +186,11 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
-    "meta:altId": "_{TENANT_ID}.schemas.63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
+    "$id": "https://ns.adobe.com/{TENANT_ID/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
+    "meta:altId": "_{TENANT_ID.schemas.da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for marketing automation",
+    "title": "Target schema for a marketing automation connector",
     "type": "object",
     "description": "Target schema for marketing automation",
     "allOf": [
@@ -185,11 +201,6 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -216,18 +227,18 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1586992941717,
-        "repo:lastModifiedDate": 1586992941717,
+        "repo:createdDate": 1591042937856,
+        "repo:lastModifiedDate": 1591042937856,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{CREATED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
-        "xdm:lastModifiedUserId": "{CREATED_USER_ID}",
-        "eTag": "d11e63a422b84a843cdd58d0ba8a16ce0a2068eda49ab380c1605ddd10efdf23",
-        "meta:globalLibVersion": "1.9.2"
+        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
+        "eTag": "3f205600107156ffc394bef428e92cbe25b2faa34e15dd916c0d8bb58d9b7dd3",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "_{TENANT_ID"
 }
 ```
 
@@ -252,9 +263,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for marketing automation",
+        "name": "Target dataset for a marketing automation connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -270,22 +281,15 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 
 ```json
 [
-    "@/dataSets/5e9797ac6d771118ad8356db"
+    "@/dataSets/5ed5639d798a22191b6987b2"
 ]
 ```
 
-## Criar uma conexão básica de conjunto de dados
-
-Para criar uma conexão de público alvo e assimilar dados externos na Plataforma, é necessário adquirir uma conexão básica de conjunto de dados.
-
-Para criar uma conexão base de conjunto de dados, siga as etapas descritas no tutorial [de conexão base de](../create-dataset-base-connection.md)conjunto de dados.
-
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado uma conexão base de conjunto de dados. Obtenha e armazene o identificador exclusivo (`$id`) da conexão base e prossiga para a próxima etapa deste tutorial.
-
 ## Criar uma conexão de público alvo
 
-Agora você tem os identificadores exclusivos para uma conexão básica de conjunto de dados, um schema de público alvo e um conjunto de dados de público alvo. Usando esses identificadores, é possível criar uma conexão de público alvo usando a API de Serviço de Fluxo para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Uma conexão de público alvo representa a conexão com o destino onde os dados ingeridos chegam. Para criar uma conexão de público alvo, é necessário fornecer a ID de especificação de conexão fixa associada ao registro de dados. Esta ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
+Agora você tem os identificadores exclusivos de um schema de público alvo de um conjunto de dados de público alvo e a ID de especificação de conexão para o registro de dados. Usando esses identificadores, é possível criar uma conexão de público alvo usando a API de Serviço de Fluxo para especificar o conjunto de dados que conterá os dados de origem de entrada.
 **Formato da API**
 
 ```https
@@ -303,21 +307,19 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "44b1c1e43-a5ee-4d86-9c1e-43a5eebd8601",
-        "name": "Target Connection for marketing automation",
-        "description": "Target Connection for marketing automation",
+        "name": "Target Connection for a marketing automation connector",
+        "description": "Target Connection for a marketing automation connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5e9797ac6d771118ad8356db
+            "dataSetId": "5ed5639d798a22191b6987b2"
         },
             "connectionSpec": {
-            "id": "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -325,17 +327,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `baseConnectionId` | A ID da conexão básica do conjunto de dados. |
 | `data.schema.id` | A `$id` do schema XDM do público alvo. |
 | `params.dataSetId` | A ID do conjunto de dados do público alvo. |
-| `connectionSpec.id` | A ID de especificação de conexão para sua automação de marketing. |
-
->[!IMPORTANT] Ao criar uma conexão de público alvo, certifique-se de usar o valor de conexão base do conjunto de dados para a conexão básica em vez da ID de conexão do conector de origem de terceiros. `id`
+| `connectionSpec.id` | A ID de especificação de conexão fixa para o registro de dados. Esta ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
-    "id": "fd82157f-0eea-4c81-8215-7f0eeaec8139",
-    "etag": "\"5301d5ac-0000-0200-0000-5e97981a0000\""
+    "id": "4b3d05d8-b7aa-40de-bd05-d8b7aa80de65",
+    "etag": "\"dd00a1a2-0000-0200-0000-5ed564850000\""
 }
 ```
 
@@ -361,10 +360,18 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
+            {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Vid",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
             {
                 "destinationXdmPath": "person.name.firstName",
                 "sourceAttribute": "Properties_Firstname_Value",
@@ -374,24 +381,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "Properties_Lastname_Value",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "repositoryCreatedBy",
+                "destinationXdmPath": "_repo.createDate",
                 "sourceAttribute": "Added_At",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "Portal_Id",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -411,10 +402,10 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ```json
 {
-    "id": "280a3cc950894945bf815c5fc60f3803",
+    "id": "500a9b747fcf4908a21917d49bd61780",
     "version": 0,
-    "createdDate": 1586993661034,
-    "modifiedDate": 1586993661034,
+    "createdDate": 1591043336298,
+    "modifiedDate": 1591043336298,
     "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
     "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
@@ -575,6 +566,8 @@ A última etapa para coletar dados de automação de marketing é criar um fluxo
 
 Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
+Para agendar uma ingestão, é necessário primeiro definir o valor de tempo do start para cada tempo em segundos. Em seguida, você deve definir o valor de frequência para uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor do intervalo designa o período entre duas ingestões consecutivas e a criação de uma ingestão única não requer a definição de um intervalo. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
+
 **Formato da API**
 
 ```https
@@ -591,41 +584,50 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow for marketing automation",
-        "description": "Dataflow for marketing automation",
+        "name": "Dataflow for a marketing automation source",
+        "description": "collecting Hubspot.Contacts",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "c315c0ae-a339-44c4-95c0-aea33964c420"
+            "f44dbef2-a4f0-4978-8dbe-f2a4f0e978cf"
         ],
         "targetConnectionIds": [
-            "fd82157f-0eea-4c81-8215-7f0eeaec8139"
+            "4b3d05d8-b7aa-40de-bd05-d8b7aa80de65"
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": "date-time"
+                }
+            },
+            {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "280a3cc950894945bf815c5fc60f3803",
+                    "mappingId": "500a9b747fcf4908a21917d49bd61780",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "<START TIME>",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1591043454",
+            "frequency":"once",
+            "interval":"15"
         }
     }'
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `flowSpec.id` | ID de especificação do Dataflow. |
-| `sourceConnectionIds` | ID da conexão de origem. |
-| `targetConnectionIds` | ID de conexão do Público alvo. |
-| `transformations.params.mappingId` | ID de mapeamento. |
+| `flowSpec.id` | A ID de especificação de fluxo recuperada na etapa anterior. |
+| `sourceConnectionIds` | A ID da conexão de origem recuperada em uma etapa anterior. |
+| `targetConnectionIds` | A ID de conexão do público alvo recuperada em uma etapa anterior. |
+| `transformations.params.mappingId` | A ID de mapeamento recuperada em uma etapa anterior. |
+| `scheduleParams.startTime` | O tempo de start do fluxo de dados em tempo de época, em segundos. |
+| `scheduleParams.frequency` | Os valores de frequência selecionáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | O intervalo designa o período entre duas execuções consecutivas de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero. O intervalo não é necessário quando a frequência é definida como `once` e deve ser maior ou igual a `15` outros valores de frequência. |
 
 **Resposta**
 
@@ -633,7 +635,8 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 

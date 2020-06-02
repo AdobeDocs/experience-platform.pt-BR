@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conectar-se a destinos de streaming e ativar dados
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1847'
 ht-degree: 2%
 
 ---
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Para conexões Amazon Kinesis.* Forneça o nome do seu fluxo de dados existente na sua conta da Amazon Kinesis. A CDP em tempo real da Adobe exportará dados para esse fluxo.
 * `{REGION}`: *Para conexões Amazon Kinesis.* A região em sua conta Amazon Kinesis na qual o Adobe Real-time CDP fará o stream dos seus dados.
 * `{EVENT_HUB_NAME}`: *Para conexões de Hubs de Evento do Azure.* Preencha o nome do Hub do Evento do Azure no qual a CDP em tempo real da Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar um hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de eventos na documentação da Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Para conexões de Hubs de Evento do Azure.* Preencha a namespace dos Hubs do Evento do Azure onde a CDP em tempo real da Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar uma namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de Hubs de Evento na documentação da Microsoft.
 
 **Resposta**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Use o fluxo para o destino de streaming ao qual você deseja se conectar. Para obter a especificação do fluxo, execute uma operação GET no `flowspecs` endpoint. Consulte a documentação do Swagger aqui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Na resposta, procure `upsTo` e copie a ID correspondente do destino de streaming ao qual você deseja se conectar.
+* `{FLOW_SPEC_ID}`: A ID de especificação de fluxo para destinos baseados em perfis é `71471eba-b620-49e4-90fd-23f1fa0174d8`. Use esse valor na chamada.
 * `{SOURCE_CONNECTION_ID}`: Use a ID de conexão de origem obtida na etapa [Conectar-se à sua plataforma](#connect-to-your-experience-platform-data)de experiência.
 * `{TARGET_CONNECTION_ID}`: Use a ID de conexão do público alvo obtida na etapa [Conectar ao destino](#connect-to-streaming-destination)de streaming.
 
@@ -392,7 +390,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado e 
 ```
 
 
-## Ativar dados para o novo destino
+## Ativar dados para o novo destino {#activate-data}
 
 ![Etapas de destino visão geral etapa 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Use o fluxo de dados obtido na etapa anterior.
 * `{ETAG}`: Use a tag obtida na etapa anterior.
 * `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento dos segmentos que você deseja ativar, vá para https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, selecione API **do Serviço de** Segmentação no menu de navegação esquerdo e procure a `GET /segment/jobs` operação.
-* `{PROFILE_ATTRIBUTE}`: Por exemplo, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Por exemplo, `personalEmail.address` ou `person.lastName`
 
 **Resposta**
 
@@ -503,8 +513,23 @@ A resposta retornada deve incluir no `transformations` parâmetro os segmentos e
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ A resposta retornada deve incluir no `transformations` parâmetro os segmentos e
         }
     }
 ],
+```
+
+**Dados exportados**
+
+>[!IMPORTANT]
+>
+> Além dos atributos do perfil e dos segmentos na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados nos Hubs de Eventos AWS Kinesis e Azure também incluirão informações sobre o mapa de identidade. Isso representa a identidade dos perfis exportados (por exemplo, [ECID](https://docs.adobe.com/content/help/pt-BR/id-service/using/intro/id-request.html), ID móvel, ID do Google, endereço de email etc.). Veja um exemplo abaixo.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## Próximas etapas

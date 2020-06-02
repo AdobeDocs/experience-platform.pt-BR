@@ -4,9 +4,9 @@ seo-title: Destino da Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da plataforma Adobe Experience.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da plataforma Adobe Experience.
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '458'
 ht-degree: 2%
 
 ---
@@ -73,29 +73,44 @@ Consulte [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/acti
 
 ## Dados exportados {#exported-data}
 
-Seus dados exportados da plataforma de experiência vêm no formato [!DNL Amazon Kinesis] JSON. Por exemplo, um evento que contém a identidade de email com hash de uma audiência que saiu de um determinado segmento pode ser semelhante a:
+Seus dados exportados da plataforma de experiência vêm no formato [!DNL Amazon Kinesis] JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de uma audiência que se qualificou para um determinado segmento e saiu de outro. As identidades para este prospecto são ECID e email.
 
 ```
 {
-   "segmentMembership":{
-      "ups":{
-         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-            "lastQualificationTime":"2020-03-03T21:24:39Z",
-            "status":"exited"
-         }
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
       }
-   }
-},
-"identityMap":{
-   "email_lc_sha256":[
+    }
+  },
+  "identityMap": {
+    "ecid": [
       {
-         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+        "id": "14575006536349286404619648085736425115"
       },
       {
-         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+        "id": "66478888669296734530114754794777368480"
       }
-   ]
-},
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 

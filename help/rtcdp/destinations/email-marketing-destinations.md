@@ -4,7 +4,10 @@ seo-title: Destinos de marketing de email
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +24,11 @@ No fluxo de destino de conexão, descrito na seção abaixo, conecte-se ao Amazo
 
 ## Etapa 1 - Conectar ao destino {#connect-destination}
 
-1. Em **[!UICONTROL Connections > Destinations]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione **[!UICONTROL Connect destination]**.
+1. Em **[!UICONTROL Conexões > Destinos]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione o destino **[!UICONTROL do]** Connect.
 
-   ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-destination.png)
+   ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
-2. No assistente do Connect , selecione o local **[!UICONTROL Connection type]** do seu armazenamento. Você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect]**.
+2. No assistente do Connect , selecione o tipo **[!UICONTROL de]** conexão para o local do armazenamento. Você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
 
 Para conexões **** S3, você deve fornecer a ID da chave de acesso e a chave de acesso secreta.
 
@@ -53,7 +56,7 @@ Recomendamos que você selecione um identificador exclusivo do seu schema [de](.
 
 No seletor de campo Schema, escolha os outros campos que deseja exportar para o destino do email. Algumas opções recomendadas são:
 
-| Schema | Campo XDM |
+| Esquema | Campo XDM |
 ---------|----------
 | Nome | `person.name.firstName` |
 | Sobrenome | `person.name.lastName` |

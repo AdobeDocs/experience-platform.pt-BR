@@ -4,7 +4,10 @@ seo-title: Destino do Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel.
 seo-description: 'O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel. '
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ O Display &amp; Video 360, anteriormente conhecido como DoubleClick Bid Manager,
 
 Observe os seguintes detalhes que são específicos para os destinos do Google Display &amp; Video 360:
 
-* Você pode enviar as seguintes [identidades](../../identity-service/namespaces.md) para os destinos do Google Display &amp; Video 360: ID de cookie do **Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
+* Você pode enviar as seguintes [identidades](../../identity-service/namespaces.md) para os destinos do Google Display &amp; Video 360: **ID de cookie do Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
 * audiências ativadas são criadas de forma programática na plataforma do Google.
 * A CDP em tempo real da Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
 
@@ -43,17 +46,17 @@ Antes de criar o destino do Google Display &amp; Video 360 no Adobe Real-time CD
 
 ## Criar destino
 
-1. Em **[!UICONTROL Connections > Destinations]**, selecione Google Display &amp; Video 360 e selecione **[!UICONTROL Create destination]**.
+1. Em **[!UICONTROL Conexões > Destinos]**, selecione Google Display &amp; Video 360 e selecione **[!UICONTROL Criar destino]**.
    ![Destino do Connect Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. No fluxo de trabalho Criar destino, preencha o campo [!UICONTROL Basic Information] para o destino.
+2. No fluxo de trabalho Criar destino, preencha as Informações  básicas para o destino. <br>
    ![Informações básicas sobre o Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **[!UICONTROL Name]**: Preencha o nome preferencial para este destino.
-* **[!UICONTROL Description]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL Account Type]**: Selecione uma opção, dependendo da sua conta no Google:
+* **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
+* **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
+* **[!UICONTROL Tipo]** de conta: Selecione uma opção, dependendo da sua conta no Google:
    * Use `Invite Advertiser` para permitir que as audiências sejam compartilhadas somente com uma marca específica na sua conta de Vídeo e Vídeo 360.
    * Use `Invite Partner` para permitir que as audiências sejam compartilhadas com todas as marcas em sua conta de Vídeo e Vídeo 360.
-* **[!UICONTROL Account ID]**: Preencha sua ID de conta **[!DNL Invite partner]** ou **[!DNL Invite advertiser]** com o Google. Normalmente, essa é uma ID de seis ou sete dígitos.
+* **[!UICONTROL ID]** da conta: Preencha sua ID de conta **[!DNL Invite partner]** ou **[!DNL Invite advertiser]** com o Google. Normalmente, essa é uma ID de seis ou sete dígitos.
 
 >[!NOTE]
 >

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+workflow-type: tm+mt
+source-wordcount: '519'
+ht-degree: 2%
 
 ---
 
@@ -83,7 +86,7 @@ Os parâmetros de query mais comuns para paginação incluem:
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `start` | Especifique para onde os resultados listados devem começar. Exemplo: Os resultados da lista do terceiro item retornado serão `start=2` . |
+| `start` | Especifique onde os resultados listados devem começar. Esse valor pode ser obtido a partir do `_page.next` atributo de uma resposta de lista e usado para acessar a próxima página de resultados. Se o `_page.next` valor for nulo, então não há nenhuma página adicional disponível. |
 | `limit` | Limite o número de recursos retornados. Exemplo: `limit=5` retornará uma lista de cinco recursos. |
 | `orderby` | Classifique os resultados por uma propriedade específica. Exemplo: `orderby=title` classificará os resultados por título em ordem crescente (A-Z). Adicionar um título `-` antes (`orderby=-title`) classificará os itens por título em ordem decrescente (Z-A). |
 

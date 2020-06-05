@@ -4,7 +4,7 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
+source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Ative os dados que você tem na Plataforma de dados do cliente em tempo real da 
 
 ## Pré-requisitos {#prerequisites}
 
-Para ativar os dados para destinos, você deve ter [conectado com êxito um destino](/help/rtcdp/destinations/assets/connect-destination.png). Caso ainda não o tenha feito, vá para o catálogo [de](/help/rtcdp/destinations/destinations-catalog.md)destinos, navegue nos destinos suportados e configure um ou mais destinos.
+Para ativar os dados para destinos, você deve ter [conectado com êxito um destino](/help/rtcdp/destinations/assets/connect-destination-1.png). Caso ainda não o tenha feito, vá para o catálogo [de](/help/rtcdp/destinations/destinations-catalog.md)destinos, navegue nos destinos suportados e configure um ou mais destinos.
 
 ## Ativar dados {#activate-data}
 

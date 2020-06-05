@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
+source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -142,7 +142,8 @@ ht-degree: 0%
          - [Conector FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
-         - [Conector Microsoft Dynamics e Salesforce](tutorials/ui/create/crm/dynamics-salesforce.md)
+         - [Conector do Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [Conector Salesforce](tutorials/ui/create/crm/salesforce.md)
       - Sucesso do cliente {#customer-success}
          - [Conector da Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [Conector ServiceNow](tutorials/ui/create/customer-success/servicenow.md)

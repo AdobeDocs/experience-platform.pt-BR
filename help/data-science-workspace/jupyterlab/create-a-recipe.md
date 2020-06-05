@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '2330'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Este tutorial percorrerá duas seções principais. Primeiro, você criará um m
 
 ## Introdução ao ambiente notebook JupyterLab
 
-A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Para start, navegue até [Adobe Experience Platform](https://platform.adobe.com) e clique na **[!UICONTROL Notebooks]** guia à esquerda. Crie um novo notebook selecionando o modelo do Construtor de receitas no Iniciador do JupyterLab.
+A criação de uma fórmula do zero pode ser feita na Data Science Workspace. Para start, navegue até [Adobe Experience Platform](https://platform.adobe.com) e clique na guia **[!UICONTROL Notebooks]** à esquerda. Crie um novo notebook selecionando o modelo do Construtor de receitas no Iniciador do JupyterLab.
 
 O notebook Construtor de receita permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada na Data Science Workspace usando o notebook para obter a funcionalidade integrada ao notebook do Recipe Builder.
 
@@ -33,7 +36,7 @@ O notebook Construtor de receita permite que você execute treinamentos e execu�
 
 Quando você clica no notebook do Recipe Builder no lançador, o notebook será aberto na guia. O modelo usado no notebook é a Receita de Previsão de Vendas de Retalho Python, que também pode ser encontrada [neste repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Vão notar que na barra de ferramentas existem três ações adicionais, nomeadamente - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Esses ícones só aparecerão no notebook Construtor de receita. Mais informações sobre essas ações serão discutidas [na seção](#training-and-scoring) Treinamento e pontuação depois de criar a Receita no notebook.
+Você notará que na barra de ferramentas existem três ações adicionais, a saber: **[!UICONTROL Treinamento]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criação de Receita]**. Esses ícones só aparecerão no notebook Construtor de receita. Mais informações sobre essas ações serão discutidas [na seção](#training-and-scoring) Treinamento e pontuação depois de criar a Receita no notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -106,7 +109,7 @@ As duas seções a seguir abordarão o carregamento de dados e a preparação de
 
 ### Carregando dados {#loading-data}
 
-Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos no Adobe Experience Platform usando o SDK da plataforma (`platform_sdk`) ou de fontes externas usando as funções dos pandas `read_csv()` ou `read_json()` .
+Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos no [!DNL Adobe Experience Platform] usando o SDK da plataforma (`platform_sdk`) ou de fontes externas usando as funções dos pandas `read_csv()` ou `read_json()` .
 
 - [SDK da plataforma](#platform-sdk)
 - [Fontes externas](#external-sources)
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 Quando terminar de fazer alterações no seu notebook e quiser treinar sua receita, clique nos botões associados na parte superior da barra para criar uma execução de treinamento na célula. Ao clicar no botão, um registro de comandos e saídas do script de treinamento aparecerá no bloco de anotações (sob a `evaluator.py` célula). Primeiro, o Conda instala todas as dependências e, em seguida, o treinamento é iniciado.
 
-Observe que você deve executar o treinamento pelo menos uma vez antes de executar a pontuação. Clicar no **[!UICONTROL Run Scoring]** botão marcará o modelo treinado que foi gerado durante o treinamento. O script de pontuação será exibido em `datasaver.py`.
+Observe que você deve executar o treinamento pelo menos uma vez antes de executar a pontuação. Clicar no botão **[!UICONTROL Executar pontuação]** pontuará no modelo treinado que foi gerado durante o treinamento. O script de pontuação será exibido em `datasaver.py`.
 
 Para fins de depuração, se você quiser ver a saída oculta, adicione `debug` ao final da célula de saída e execute-a novamente.
 
 ## Criar fórmula {#create-recipe}
 
-Quando terminar de editar a receita e estiver satisfeito com a saída de treinamento/pontuação, você poderá criar uma receita do notebook pressionando **[!UICONTROL Create Recipe]** a barra de navegação superior direita.
+Quando terminar de editar a receita e estiver satisfeito com a saída de treinamento/pontuação, você poderá criar uma receita do notebook pressionando **[!UICONTROL Criar receita]** na navegação superior direita.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,11 +457,11 @@ Depois de pressionar o botão, você será solicitado a inserir um nome de fórm
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Depois de pressionar, **[!UICONTROL Ok]** você poderá navegar até a nova fórmula na [Adobe Experience Platform](https://platform.adobe.com/). Você pode clicar no **[!UICONTROL View Recipes]** botão para levar você até a guia **[!UICONTROL Recipes]** abaixo **[!UICONTROL ML Models]**
+Depois de pressionar **[!UICONTROL Ok]** , você poderá navegar até a nova fórmula na [Adobe Experience Platform](https://platform.adobe.com/). Você pode clicar no botão Receitas **[!UICONTROL de]** Visualização para levar você até a guia **[!UICONTROL Receitas]** em Modelos **[!UICONTROL ML]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
-Quando o processo estiver concluído, a receita ficará parecida com esta:
+Quando o processo estiver concluído, a receita ficará parecida com isso:
 
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 

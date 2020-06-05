@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -191,7 +191,7 @@ Depois de determinar se os dados de seus eventos de marketing podem ser mapeados
 
 Depois de decidir o intervalo de dados que deseja enviar, entre em contato com os Serviços de consultoria da Adobe para ajudar a mapear seus dados para o schema e assimilá-los ao serviço.
 
-Se você tiver uma subscrição da plataforma Adobe Experience e quiser mapear e assimilar os dados, siga as etapas descritas na seção abaixo.
+Se você tiver uma [!DNL Adobe Experience Platform] subscrição e quiser mapear e assimilar os dados, siga as etapas descritas na seção abaixo.
 
 ### Uso da plataforma Adobe Experience
 
@@ -217,7 +217,7 @@ Depois de criar e salvar o schema, você pode criar um novo conjunto de dados co
 
 #### Adicionar uma tag de namespace de identidade primária ao conjunto de dados
 
-Se você estiver trazendo dados do Adobe Audiência Manager, do Adobe Analytics ou de outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação PATCH para a API do serviço de catálogo.
+Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação PATCH para a API do serviço de catálogo.
 
 Se você estiver assimilando dados de um arquivo CSV local, poderá pular para a próxima seção sobre [mapeamento e assimilação de dados](#ingest).
 

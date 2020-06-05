@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Criar o schema de vendas de varejo e o conjunto de dados
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
 
 # Criar o schema de vendas de varejo e o conjunto de dados
 
-Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais da Adobe Experience Platform Data Science Workspace. Após a conclusão, o schema de vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros da organização IMS na plataforma da experiência.
+Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais da [!DNL Adobe Experience Platform] Data Science Workspace. Após a conclusão, o schema de vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros da organização IMS na plataforma da experiência.
 
 ## Introdução
 
 Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
-- Acesso à Adobe Experience Platform. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de prosseguir.
+- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de prosseguir.
 - Autorização para fazer chamadas à API da plataforma Experience. Complete o tutorial [Autenticar e acessar as APIs](../../tutorials/authentication.md) da plataforma Adobe Experience para obter os seguintes valores para concluir este tutorial com êxito:
    - Autorização: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`

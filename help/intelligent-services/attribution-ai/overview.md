@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Visão geral do AI de atribuição
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ O AI de atribuição é usado para atribuir créditos a pontos de contato que le
 
 As saídas de IA de atribuição podem ser segregadas em várias dimensões e podem ser utilizadas em diferentes estágios da jornada do cliente. Isso é feito sem a necessidade de traduzir as necessidades de negócios para problemas de aprendizado em máquinas, escolher algoritmos, treinamento ou implantar modelos.
 
-Os dados da AI de atribuição podem ser da Adobe (por exemplo, Analytics) ou de fontes de dados que não são da Adobe.
+Os dados da AI de atribuição podem ser da Adobe (por exemplo, [!DNL Analytics]) ou fontes de dados não pertencentes à Adobe.
 
 O AI de atribuição suporta duas categorias de pontuações, algorítmicas e baseadas em regras. As pontuações algorítmicas incluem pontuações incrementais e influenciadas. As pontuações baseadas em regras incluem Primeiro toque, Último toque, Linear, em forma de U e Decaimento de tempo.
 
@@ -57,7 +60,7 @@ A IA de atribuição pode ser usada para auxiliar nos seguintes casos de uso de 
 
 ### Recursos adicionais
 
-O AI de atribuição também oferta a integração com outras soluções da Adobe, como o Adobe Analytics. Isso permite que você use essas soluções para utilizar o modelo algorítmico personalizável para avaliar o desempenho da mídia e fornecer insights analíticos.
+O AI de atribuição também oferta a integração com outras soluções da Adobe, como [!DNL Adobe Analytics]. Isso permite que você use essas soluções para utilizar o modelo algorítmico personalizável para avaliar o desempenho da mídia e fornecer insights analíticos.
 
 ## Próximas etapas
 

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um conector do Microsoft Dynamics usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+workflow-type: tm+mt
+source-wordcount: '729'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,7 @@ O Serviço de fluxo é usado para coletar e centralizar dados do cliente de vár
 
 Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma a uma conta do Microsoft Dynamics (a seguir denominada &quot;Dinâmica&quot;) para coletar dados do CRM.
 
-Se você preferir usar a interface do usuário na Experience Platform, o tutorial [da interface do usuário do conector de origem do Salesforce ou](../../../ui/create/crm/dynamics-salesforce.md) Dinâmica fornece instruções passo a passo para executar ações semelhantes.
+Se você preferir usar a interface do usuário na Experience Platform, o tutorial [da interface do usuário do conector de origem](../../../ui/create/crm/dynamics.md) Dinâmico fornece instruções passo a passo para executar ações semelhantes.
 
 ## Introdução
 

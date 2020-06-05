@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Criar um pipeline de recurso
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '971'
+ht-degree: 0%
 
 ---
 
 
 # Criar um pipeline de recurso
 
-A Adobe Experience Platform permite que você crie e crie Pipelines de Recursos personalizados para executar engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime (a seguir denominado &quot;Runtime&quot;).
+[!DNL Adobe Experience Platform] permite que você crie e crie Pipelines de Recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de Execução do Sensei Machine Learning Framework (a seguir denominado &quot;Tempo de Execução&quot;).
 
 Este documento descreve as várias classes encontradas em um Recurso Pipeline e fornece um tutorial passo a passo para a criação de um Recurso Pipeline personalizado usando o SDK [de criação de](./sdk.md) modelo no PySpark e no Spark.
 

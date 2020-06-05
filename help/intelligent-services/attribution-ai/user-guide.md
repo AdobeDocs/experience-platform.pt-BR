@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do usuário do AI de atribuição
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Este documento serve como um guia para interagir com a Atribuição AI na interf
 
 ## Criar uma instância
 
-Na interface do usuário da Adobe Experience Platform, clique em **Serviços** no menu de navegação esquerdo. O navegador *Serviços* é exibido e exibe os serviços inteligentes da Adobe disponíveis. No container para Atribuição AI, clique em **Abrir**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os serviços inteligentes da Adobe disponíveis. No container para Atribuição AI, clique em **Abrir**.
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
@@ -25,7 +28,7 @@ A página do serviço AI de atribuição é exibida. Esta página lista as inst�
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
-Em seguida, é exibida a página de configuração para a Atribuição AI, onde você pode fornecer informações básicas e especificar um conjunto de dados para a instância.
+Em seguida, é exibida a página de configuração para a Atribuição AI, onde é possível fornecer informações básicas e especificar um conjunto de dados para a instância.
 
 ![página de configuração](./images/user-guide/setup_attribution.png)
 

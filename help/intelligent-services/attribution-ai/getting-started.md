@@ -4,17 +4,20 @@ solution: Experience Platform
 title: Introdução ao AI de atribuição
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
 
 # Introdução ao AI de atribuição
 
-Os guias a seguir exigem uma compreensão dos vários serviços da plataforma Adobe Experience envolvidos com o uso da API de atribuição. Antes de iniciar os tutoriais, reveja as seguintes documentos:
+Os guias a seguir exigem uma compreensão dos vários [!DNL Adobe Experience Platform] serviços envolvidos com o uso da API de atribuição. Antes de iniciar os tutoriais, reveja as seguintes documentos:
 
-- [Visão geral](../../xdm/home.md)do sistema do Experience Data Model (XDM): O XDM é a estrutura fundamental que permite à Adobe Experience Cloud, capacitada pela Experience Platform, fornecer a mensagem certa à pessoa certa, no canal certo, no momento certo. A metodologia na qual a plataforma de experiência é criada, o sistema XDM, opera schemas do modelo de dados de experiência para uso pelos serviços da plataforma.
-- [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados na Adobe Experience Platform.
+- [Visão geral](../../xdm/home.md)do sistema do Experience Data Model (XDM): O XDM é a estrutura fundamental que permite, [!DNL Adobe Experience Cloud]acionada pela plataforma Experience, entregar a mensagem certa para a pessoa certa, no canal certo, no momento exato. A metodologia na qual a plataforma de experiência é criada, o sistema XDM, opera schemas do modelo de dados de experiência para uso pelos serviços da plataforma.
+- [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados em [!DNL Adobe Experience Platform].
 - [Construção de schemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas na Plataforma de experiência.
 
 A Atribuição AI exige que os conjuntos de dados estejam em conformidade com o schema Consumer Experience Eventos (CEE), que é uma combinação no Modelo [de Dados de](../../xdm/home.md) Experiência (XDM). Entre em contato com o suporte da Adobe em attributionai-support@adobe.com para implementar ou fazer alterações nesses dados. Se os dados de gastos de mídia estiverem presentes, você poderá fazer mais análises, como receita incremental e ROI. Se os dados do perfil do cliente estiverem disponíveis, você poderá atribuir créditos adicionais ao nível do perfil do cliente.

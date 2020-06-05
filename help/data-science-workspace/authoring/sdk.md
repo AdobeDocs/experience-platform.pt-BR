@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Guia do desenvolvedor do SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
 
 # Guia do desenvolvedor do SDK
 
-O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado e Pipelines de Recursos personalizados em máquina que podem ser usados na Adobe Experience Platform Data Science Workspace, fornecendo modelos implementáveis no PySpark e no Spark.
+O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado e Pipelines de Recursos personalizados em máquina que podem ser usados na [!DNL Adobe Experience Platform] Data Science Workspace, fornecendo modelos implementáveis no PySpark e no Spark.
 
 Este documento fornece informações sobre as várias classes encontradas no SDK de criação de modelo.
 

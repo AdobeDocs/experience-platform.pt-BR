@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem do Azure Blob ou Amazon S3 na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
@@ -56,18 +56,30 @@ Para obter mais informações sobre como começar, visite [este documento](https
 
 ## Conecte sua conta Blob ou S3
 
-Com suas credenciais de armazenamento em nuvem prontas, você pode seguir as etapas abaixo para criar uma nova conexão básica de entrada para vincular sua conta Blob ou S3 à Plataforma.
+Depois de reunir as credenciais necessárias, siga as etapas abaixo para criar uma nova conta Blob ou S3 para se conectar à Plataforma.
 
-Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela *Catálogo* exibe várias fontes com as quais você pode criar conexões base de entrada e cada fonte mostra o número de conexões base existentes associadas a elas.
+Faça logon na [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes nas quais você pode criar uma conta de entrada e cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
 
-Na categoria do Armazenamento *da* Cloud, selecione o Armazenamento **Blob do** Azure ou o **Amazon S3** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para visualização de sua documentação ou para conexão com a fonte. Para criar uma nova conexão básica de entrada, clique em **Conectar fonte**.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+Na categoria *[!UICONTROL Bancos]* de Dados, selecione **[!UICONTROL Azure Blob Armazenamento]** ou **[!UICONTROL Amazon S3]** , clique **no ícone + (+)** para criar um novo conector Blob ou S3.
 
-No formulário de entrada, forneça um nome, uma descrição opcional e suas credenciais do Blob ou S3. Por fim, clique em **Conectar** e aguarde algum tempo para que a nova conexão básica seja estabelecida.
+![catálogo](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+A página *[!UICONTROL Conectar-se ao Armazenamento]* Blob do Azure é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+
+### Nova conta
+
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça à conexão um nome, uma descrição opcional e suas credenciais do Blob ou S3. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conta ser estabelecida.
+
+![connect](../../../../images/tutorials/create/blob/new.png)
+
+### Conta existente
+
+Para conectar uma conta existente, selecione a conta Blob ou S3 com a qual deseja se conectar e, em seguida, selecione **[!UICONTROL Avançar]** para continuar.
+
+![existente](../../../../images/tutorials/create/blob/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão básica para sua conta do Azure Blob ou Amazon S3. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Plataforma](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta Blob ou S3. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Plataforma](../../dataflow/batch/cloud-storage.md).

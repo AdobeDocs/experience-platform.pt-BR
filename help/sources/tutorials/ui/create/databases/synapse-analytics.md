@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Azure Synapse Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Na categoria *Bancos* de Dados, selecione **Azure Synapse Analytics** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão básica de entrada, selecione Origem **do** Connect.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/sources-catalog.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
 A página *Conectar-se ao Azure Synapse Analytics* é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
@@ -56,13 +56,13 @@ A página *Conectar-se ao Azure Synapse Analytics* é exibida. Nesta página, vo
 
 Se você estiver usando novas credenciais, selecione **Nova conta**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais do Synapse à conexão básica. Quando terminar, selecione **Connect** e aguarde algum tempo para a nova conexão básica ser estabelecida.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
 ### Conta existente
 
 Para conectar uma conta existente, selecione a conta do Synapse com a qual deseja se conectar e, em seguida, selecione **Avançar** para continuar.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
 ## Próximas etapas
 

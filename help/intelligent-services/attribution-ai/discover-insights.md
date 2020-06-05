@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descobrindo insights no AI de Atribuição
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ Para utilizar insights para a Atribuição AI, é necessário ter uma instância
 
 ## Visão geral dos insights da instância de serviço
 
-Na interface do usuário da Adobe Experience Platform, clique em **Serviços** no menu de navegação esquerdo. O navegador *Serviços* é exibido e exibe os Serviços inteligentes da Adobe disponíveis. No container para Atribuição AI, clique em **Abrir**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços inteligentes da Adobe disponíveis. No container para Atribuição AI, clique em **Abrir**.
 
 ![Acessar sua instância](./images/insights/open_Attribution_ai.png)
 

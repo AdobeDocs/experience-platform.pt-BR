@@ -4,7 +4,7 @@ seo-title: Depuração do SDK da Web da Adobe Experience Platform
 description: Saiba como alternar a depuração do SDK da Web da Experience Platform
 seo-description: Saiba como alternar a depuração do SDK da Web da Experience Platform
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Quando a depuração está ativada, o SDK gera mensagens para o console do naveg
 A depuração está desativada por padrão, mas pode ser alternada de três maneiras diferentes:
 
 * `configure` comando
-* `debug` comando
+* `setDebug` comando
 * parâmetro da string de query
 
 ## Alternar a depuração com o comando Configurar
@@ -42,7 +42,7 @@ alloy("configure", {
 Alterne a depuração com um `debug` comando separado da seguinte maneira:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```

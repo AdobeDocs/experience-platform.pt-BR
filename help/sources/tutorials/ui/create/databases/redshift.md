@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Amazon Redshift na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Na categoria *Bancos* de dados, selecione **Amazon Redshift** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão básica de entrada, selecione Origem **do** Connect.
 
-![](../../../../images/tutorials/create/redshift/sources-catalog.png)
+![](../../../../images/tutorials/create/redshift/catalog.png)
 
 A página *Conectar-se ao Amazon Redshift* é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
@@ -59,13 +59,13 @@ A página *Conectar-se ao Amazon Redshift* é exibida. Nesta página, você pode
 
 Se você estiver usando novas credenciais, selecione **Nova conta**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais do Redshift. Quando terminar, selecione **Connect** e aguarde algum tempo para a nova conexão básica ser estabelecida.
 
-![](../../../../images/tutorials/create/redshift/new-credentials.png)
+![](../../../../images/tutorials/create/redshift/new.png)
 
 ### Conta existente
 
 Para conectar uma conta existente, selecione a conta do Redshift à qual deseja se conectar e, em seguida, selecione **Avançar** para continuar.
 
-![](../../../../images/tutorials/create/redshift/existing-credentials.png)
+![](../../../../images/tutorials/create/redshift/existing.png)
 
 ## Próximas etapas
 

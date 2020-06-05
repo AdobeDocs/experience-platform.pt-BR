@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem de Armazenamento do Google Cloud na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -41,20 +41,30 @@ Para acessar seus dados GCS na Plataforma, é necessário fornecer uma ID **de c
 
 ## Conectar sua conta GCS
 
-Depois de reunir as credenciais necessárias, siga as etapas abaixo para criar uma nova conexão básica de entrada para vincular sua conta GCS à Plataforma.
+Depois de reunir as credenciais necessárias, siga as etapas abaixo para criar uma nova conta GCS para se conectar à Plataforma.
 
-Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho *Fontes* . A tela *Catálogo* exibe várias fontes com as quais você pode criar conexões base de entrada e cada fonte mostra o número de conexões base existentes associadas a elas.
+Faça logon na [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes nas quais você pode criar uma conta de entrada e cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
 
-Na categoria do Armazenamento *da* Cloud, selecione Armazenamento **da** Google Cloud para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar com a visualização de origem em sua documentação ou para se conectar com a fonte. Para criar uma nova conexão básica de entrada, clique em **Conectar fonte**.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+Na categoria *[!UICONTROL Bancos]* de dados, selecione Armazenamento **[!UICONTROL do]** Google Cloud clique **no ícone + (+)** para criar um novo conector GCS.
 
-A caixa de diálogo _Conectar-se ao Armazenamento_ do Google Cloud é exibida. No formulário de entrada, forneça um nome à conexão básica, uma descrição opcional e suas credenciais GCS. Quando terminar, clique em **Conectar** e aguarde algum tempo para que a nova conexão básica seja estabelecida.
+![catálogo](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+A página *[!UICONTROL Conectar-se ao Armazenamento]* do Google Cloud é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
-Depois que uma conexão básica for estabelecida, você poderá continuar até a próxima seção e configurar um fluxo de dados para trazer dados para a Plataforma.
+### Nova conta
+
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça à conexão um nome, uma descrição opcional e suas credenciais GCS. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conta ser estabelecida.
+
+![connect](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### Conta existente
+
+Para conectar uma conta existente, selecione a conta GCS à qual deseja se conectar e, em seguida, selecione **[!UICONTROL Avançar]** para continuar.
+
+![existente](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão básica com sua conta GCS. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Plataforma](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta GCS. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Plataforma](../../dataflow/batch/cloud-storage.md).

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Google Big Query na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Na categoria *Bancos* de dados, selecione **Google Big Query** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão básica de entrada, selecione Origem **do** Connect.
 
-![](../../../../images/tutorials/create/google-big-query/sources-catalog.png)
+![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 A página *Conectar-se ao Google Big Query* é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
@@ -59,13 +59,13 @@ A página *Conectar-se ao Google Big Query* é exibida. Nesta página, você pod
 
 Se você estiver usando novas credenciais, selecione **Nova conta**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais de GBQ à conexão básica. Quando terminar, selecione **Connect** e aguarde algum tempo para a nova conexão básica ser estabelecida.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-new-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Conta existente
 
 Para conectar uma conta existente, selecione a conta GBQ com a qual deseja se conectar e selecione **Avançar** para continuar.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-existing-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Próximas etapas
 

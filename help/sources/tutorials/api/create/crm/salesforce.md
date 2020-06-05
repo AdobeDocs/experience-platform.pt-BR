@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um conector Salesforce usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc999ce1ab426f412c0cc2b69173a336a14024f3
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+workflow-type: tm+mt
+source-wordcount: '732'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,7 @@ O Serviço de fluxo é usado para coletar e centralizar dados do cliente de vár
 
 Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma a uma conta Salesforce para coletar dados do CRM.
 
-Se você preferir usar a interface do usuário na Experience Platform, o tutorial [da interface do usuário do conector de origem do Salesforce ou](../../../ui/create/crm/dynamics-salesforce.md) Dinâmica fornece instruções passo a passo para executar ações semelhantes.
+Se você preferir usar a interface do usuário na Experience Platform, o tutorial [da interface do usuário do conector de origem do](../../../ui/create/crm/salesforce.md) Salesforce fornece instruções passo a passo para executar ações semelhantes.
 
 ## Introdução
 

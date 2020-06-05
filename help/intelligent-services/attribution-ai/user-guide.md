@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do AI de atribuição
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -28,7 +28,7 @@ A página do serviço AI de atribuição é exibida. Esta página lista as inst�
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
-Em seguida, é exibida a página de configuração para a Atribuição AI, onde é possível fornecer informações básicas e especificar um conjunto de dados para a instância.
+Em seguida, é exibida a página de configuração para a Atribuição AI, onde você pode fornecer informações básicas e especificar um conjunto de dados para a instância.
 
 ![página de configuração](./images/user-guide/setup_attribution.png)
 
@@ -52,7 +52,7 @@ Há três tipos diferentes de dados de entrada usados para definir eventos:
 - **Janela de pesquisa:** Fornece um período que indica quantos dias antes dos pontos de contato do evento de conversão devem ser incluídos.
 - **Pontos de contato:** eventos de marketing com nível de recipient, indivíduo ou cookie usados para avaliar o impacto numérico ou baseado em receita das conversões.
 
-### Definir eventos de conversão
+### Definir eventos de conversão {#define-conversion-events}
 
 Para definir um evento de conversão, é necessário dar um nome ao evento e selecioná-lo clicando no menu suspenso **Inserir nome** do campo.
 
@@ -144,7 +144,7 @@ Para alterar a hora do dia em que deseja que a pontuação ocorra, clique no íc
 
 ![ícone do relógio](./images/user-guide/time_of_day.png)
 
-### Modelagem com base na região (opcional)
+### Modelagem com base na região (opcional) {#region-based-modeling-optional}
 
 Os comportamentos de seus clientes podem diferir significativamente por país e região geográfica. Para empresas globais, o uso de modelos baseados em país ou em região pode aumentar a precisão da atribuição. Cada região adicionada cria um novo modelo com os dados dessa região.
 

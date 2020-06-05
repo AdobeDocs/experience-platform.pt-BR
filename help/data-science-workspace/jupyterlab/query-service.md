@@ -4,56 +4,59 @@ solution: Experience Platform
 title: Serviço de Query em Jupyter notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '799'
+ht-degree: 1%
 
 ---
 
 
 # Serviço de Query em Jupyter notebook
 
-A plataforma Adobe Experience permite que você use a Linguagem de Query Estruturada (SQL) na Área de Trabalho da Data Science, integrando o Serviço de Query ao JúpiterLab como um recurso padrão.
+[!DNL Adobe Experience Platform] permite usar a Linguagem de Query Estruturada (SQL) na Data Science Workspace integrando o Serviço de Query ao JupyterLab como um recurso padrão.
 
-Este tutorial demonstra query SQL de amostra para casos de uso comuns para explorar, transformar e analisar dados do Adobe Analytics.
+Este tutorial demonstra query SQL de amostra para casos de uso comuns para explorar, transformar e analisar [!DNL Adobe Analytics] dados.
 
 ## Introdução
 
 Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
-- Acesso à Adobe Experience Platform. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de continuar
+- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de continuar
 
-- Um conjunto de dados do Adobe Analytics
+- Um [!DNL Adobe Analytics] conjunto de dados
 
 - Um entendimento prático dos seguintes conceitos-chave usados neste tutorial:
    - [Modelo de dados de experiência (XDM) e sistema XDM](../../xdm/home.md)
    - [Serviço de Query](../../query-service/home.md)
    - [Sintaxe SQL do Query Service](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## Acesso ao JupyterLab e ao serviço de Query {#access-jupyterlab-and-query-service}
 
-1. Na Plataforma [de experiência](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** a partir da coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
+1. Na Plataforma [de experiência](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** na coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL File]** e selecione **[!UICONTROL New Launcher]**.
+   > [!NOTE] Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL Arquivo]** e selecione **[!UICONTROL Novo Iniciador]**.
 
-2. Na guia Iniciador, clique no **[!UICONTROL Blank]** ícone em um ambiente Python 3 para abrir um bloco de anotações vazio.
+2. Na guia Iniciador, clique no ícone **[!UICONTROL Em branco]** em um ambiente Python 3 para abrir um bloco de anotações vazio.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] O Python 3 é atualmente o único ambiente suportado para o Serviço de Query nos notebooks.
 
-3. No painel de seleção esquerdo, clique no **[!UICONTROL Data]** ícone e no duplo clique no **[!UICONTROL Datasets]** diretório para lista de todos os conjuntos de dados.
+3. No painel de seleção esquerdo, clique no ícone **[!UICONTROL Dados]** e no duplo clique no diretório **[!UICONTROL Conjuntos]** de dados para lista de todos os conjuntos de dados.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Encontre um conjunto de dados do Adobe Analytics para explorar e clique com o botão direito do mouse na listagem. Clique em **[!UICONTROL Query Data in Notebook]** para gerar query SQL no bloco de anotações vazio.
+4. Encontre um [!DNL Adobe Analytics] conjunto de dados para explorar e clique com o botão direito do mouse na listagem. Clique em Dados do **[!UICONTROL Query no Notebook]** para gerar query SQL no notebook vazio.
 
 5. Clique na primeira célula gerada que contém a função `qs_connect()` e execute-a clicando no botão Reproduzir. Essa função cria uma conexão entre a instância do seu notebook e o Serviço de Query.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copie o nome do conjunto de dados do Adobe Analytics do segundo query SQL gerado, ele será o valor depois `FROM`.
+6. Copie o nome do [!DNL Adobe Analytics] conjunto de dados do segundo query SQL gerado, ele será o valor depois `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -78,7 +81,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    target_day = "01"
    ```
 
-   - `target_table` : Nome do conjunto de dados do Adobe Analytics.
+   - `target_table` : Nome do [!DNL Adobe Analytics] conjunto de dados.
    - `target_year` : Ano específico a partir do qual se baseiam os dados do público alvo.
    - `target_month` : Mês específico do qual o público alvo é originário.
    - `target_day` : Dia específico do qual os dados do público alvo são originários.
@@ -86,13 +89,13 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
 ## Query de seus dados {#query-your-data}
 
-Insira os seguintes query SQL em células individuais do bloco de notas. Execute um query clicando em sua célula e depois clicando no **[!UICONTROL play]** botão. Os resultados do query bem-sucedidos ou os registros de erros são exibidos abaixo da célula executada.
+Insira os seguintes query SQL em células individuais do bloco de notas. Execute um query clicando em sua célula e depois clicando no botão **[!UICONTROL reproduzir]** . Os resultados do query bem-sucedidos ou os registros de erros são exibidos abaixo da célula executada.
 
-Quando um notebook está inativo por um longo período de tempo, a conexão entre o serviço de notebook e o serviço de Query pode falhar. Nesses casos, reinicie o JupyterLab clicando no **[!UICONTROL Power]** botão localizado no canto superior direito.
+Quando um notebook está inativo por um longo período de tempo, a conexão entre o serviço de notebook e o serviço de Query pode falhar. Nesses casos, reinicie o JupyterLab clicando no botão **[!UICONTROL Liga/desliga]** localizado no canto superior direito.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-O kernel do notebook será redefinido, mas as células permanecerão, execute novamente **[!UICONTROL all]** as células para continuar onde você parou.
+O kernel do notebook será redefinido, mas as células permanecerão, execute novamente **[!UICONTROL todas]** as células para continuar onde você parou.
 
 ### Contagem horária de visitantes {#hourly-visitor-count}
 

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Visão geral da IA do cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ O cliente não foi criado para:
 
 - A IA do cliente não deve ser usada para prever preços dinâmicos, ou o ponto de preço no qual o cliente fará uma compra.
 - A IA do cliente não pode determinar se dar uma oferta aumentará a probabilidade de o cliente comprar um item. Embora você possa decidir enviar ofertas de desconto com base nas pontuações de propensão, não é necessariamente a melhor maneira de converter esses clientes.
-- A IA do cliente não é uma ferramenta de recomendações de produtos. Se você tiver milhares de SKUs, não use a API do cliente como proxy para uma solução de recomendações de produto real, como o Público alvo da Adobe.
+- A IA do cliente não é uma ferramenta de recomendações de produtos. Se você tiver milhares de SKUs, não use a API do cliente como proxy para uma solução real de recomendações de produtos como [!DNL Adobe Target].
 - A IA do cliente não pode prever em qual estágio da jornada de compra o cliente está, por exemplo, se ele estiver em fases de &quot;reconhecimento&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
 - Não use a Inteligência Artificial do Cliente para determinar os clientes que provavelmente comprarão uma inicialização de produto no futuro. Isso requer que alguns eventos bem-sucedidos estejam presentes no passado para que a IA do cliente possa treinar com êxito o algoritmo de aprendizado da máquina em seus dados.
 

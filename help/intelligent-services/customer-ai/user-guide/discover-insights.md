@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1059'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Para utilizar insights para a IA do cliente, é necessário ter uma instância d
 
 ## Visão geral da instância do serviço
 
-Na interface do usuário do Adobe Experience Platform, clique **[!UICONTROL Services]** no painel de navegação esquerdo. O navegador *Serviços* é exibido e exibe os Serviços inteligentes disponíveis. No container para API do cliente, clique em **[!UICONTROL Open]**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTROL Serviços]** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços inteligentes disponíveis. No container para API do cliente, clique em **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ Em seguida, a página de insights para essa instância de serviço será exibida
 
 Há duas maneiras de visualização dos detalhes da instância do serviço: a primeira é do painel e a segunda, dentro da instância do serviço.
 
-Para obter detalhes da visualização dentro do painel, clique em um container de instância de serviço, evitando o hiperlink anexado ao nome. Isso abre um trilho certo que fornece detalhes adicionais, como descrição, frequência de pontuação, o objetivo da previsão e população elegível. Além disso, você pode optar por editar e excluir a instância clicando em **[!UICONTROL Edit]** ou **[!UICONTROL Delete]**.
+Para obter detalhes da visualização dentro do painel, clique em um container de instância de serviço, evitando o hiperlink anexado ao nome. Isso abre um trilho certo que fornece detalhes adicionais, como descrição, frequência de pontuação, o objetivo da previsão e população elegível. Além disso, você pode optar por editar e excluir a instância clicando em **[!UICONTROL Editar]** ou **[!UICONTROL Excluir]**.
 
 ![trilho direito](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ Para obter detalhes da visualização dentro do painel, clique em um container d
 
 ![falha ao executar mensagem](../images/insights/failed-run.png)
 
-A segunda maneira de visualização de detalhes adicionais para uma instância de serviço está localizada na página de insights. Você pode clicar **[!UICONTROL Show more]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados como a definição da pontuação, quando ela foi criada e o tipo de propensão. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configuração de uma instância](./configure.md)do AI do cliente.
+A segunda maneira de visualização de detalhes adicionais para uma instância de serviço está localizada na página de insights. Você pode clicar em **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados como a definição da pontuação, quando ela foi criada e o tipo de propensão. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configuração de uma instância](./configure.md)do AI do cliente.
 
 ![mostrar mais](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ A segunda maneira de visualização de detalhes adicionais para uma instância d
 
 ### Editar uma instância
 
-Para editar uma instância, clique **[!UICONTROL Edit]** na navegação superior direita.
+Para editar uma instância, clique em **[!UICONTROL Editar]** na navegação superior direita.
 
 ![clique no botão editar](../images/insights/edit-button.png)
 
-A caixa de diálogo Editar é exibida, permitindo que você edite a *Descrição* e a Frequência *de* Pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, clique **[!UICONTROL Edit]** no canto inferior direito.
+A caixa de diálogo Editar é exibida, permitindo que você edite a *Descrição* e a Frequência *de* Pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, clique em **[!UICONTROL Editar]** no canto inferior direito.
 
 ![editar fornecedor](../images/insights/edit-instance.png)
 
 ### Mais ações
 
-O **[!UICONTROL More actions]** botão está localizado na navegação superior direita ao lado de **[!UICONTROL Edit]**. Clicar **[!UICONTROL More actions]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
+O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Clicar em **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
-- **[!UICONTROL Delete]**: Exclui a instância.
-- **[!UICONTROL Access scores]**: Clicar nas pontuações *de* acesso abre uma caixa de diálogo que fornece um link para as pontuações de [download do tutorial de IA](./download-scores.md) do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
-- **[!UICONTROL View run history]**: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
+- **[!UICONTROL Excluir]**: Exclui a instância.
+- **[!UICONTROL Pontuações]** de acesso: Clicar nas pontuações *de* acesso abre uma caixa de diálogo que fornece um link para as pontuações de [download do tutorial de IA](./download-scores.md) do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
+- **[!UICONTROL Histórico]** de execução da Visualização: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
 
 ![mais ações](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ Para cada grupo de pontuação, é gerado um cartão que mostra os 10 fatores in
 
 ### Criar um segmento
 
-Clicar no **[!UICONTROL Create Segment]** botão em qualquer um dos compartimentos para propensão Baixa, Média e Alta redireciona você para o construtor de segmentos.
+Clicar no botão **[!UICONTROL Criar segmento]** em qualquer um dos compartimentos para propensão Baixa, Média e Alta redireciona você para o construtor de segmentos.
 
 >[!NOTE]
->O **[!UICONTROL Create Segment]** botão só estará disponível se o Perfil de cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite a visão geral [do Perfil do cliente em tempo](../../../rtcdp/overview.md)real.
+>O botão **[!UICONTROL Criar segmento]** só estará disponível se o Perfil do cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite a visão geral [do Perfil do cliente em tempo](../../../rtcdp/overview.md)real.
 
 ![Clique em criar segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Criar um segmento](../images/insights/create-segment.png)
 
-O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Create Segment]** na página Insights, a API do cliente adiciona automaticamente as informações dos buckets selecionados ao segmento. Para concluir a criação do segmento, basta preencher os container *Nome* e *Descrição* localizados no painel direito da interface do usuário do construtor de segmentos. Depois de fornecer um nome e uma descrição ao segmento, clique **[!UICONTROL Save]** no canto superior direito.
+O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights, a API do cliente adiciona automaticamente as informações dos buckets selecionados ao segmento. Para concluir a criação do segmento, basta preencher os container *Nome* e *Descrição* localizados no painel direito da interface do usuário do construtor de segmentos. Depois de fornecer um nome e uma descrição ao segmento, clique em **[!UICONTROL Salvar]** no canto superior direito.
 
 >!![NOTE] Como as pontuações de propensão são gravadas no perfil individual, elas estão disponíveis no Construtor de segmentos, como qualquer outro atributo do perfil. Ao navegar até o construtor de segmentos para criar novos segmentos, você pode ver todas as várias pontuações de propensão em sua IA do cliente de namespace.
 
 ![Preenchimento do segmento em](../images/insights/segment-saving.png)
 
-Para visualização do novo segmento na interface do usuário da plataforma, clique **[!UICONTROL Segments]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
+Para visualização do novo segmento na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 

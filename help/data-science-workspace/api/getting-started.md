@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do desenvolvedor da API Sensei Machine Learning
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +20,7 @@ Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a API [d
 
 ## Introdução
 
-Você deve ter concluído o tutorial de [autenticação](../../tutorials/authentication.md) para ter acesso aos seguintes cabeçalhos de solicitação para fazer chamadas às APIs da plataforma Adobe Experience:
+Você deve ter concluído o tutorial de [autenticação](../../tutorials/authentication.md) para ter acesso aos seguintes cabeçalhos de solicitação para fazer chamadas para [!DNL Adobe Experience Platform] APIs:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

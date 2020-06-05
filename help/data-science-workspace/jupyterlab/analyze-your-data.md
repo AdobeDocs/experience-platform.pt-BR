@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analise seus dados usando notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Este tutorial foca em como usar notebooks Júpiter, criados na Data Science Work
 
 São introduzidos os seguintes conceitos:
 
-- **JupyterLab:** [O JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface baseada na Web da próxima geração para o Project Júpitter e é totalmente integrado à Adobe Experience Platform.
+- **JupyterLab:** [O JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface baseada na Web da próxima geração para o Project Júpitter, e está totalmente integrado ao [!DNL Adobe Experience Platform].
 - **Lotes:** Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. Novos lotes são criados quando os dados são adicionados a um conjunto de dados.
 - **SDK de acesso a dados (obsoleto):** O SDK de acesso a dados agora está obsoleto. Use o guia SDK [da](../authoring/platform-sdk.md) plataforma.
 
@@ -38,7 +38,7 @@ Por padrão, a fórmula do Tensorflow funciona em um cluster de GPU e o Python �
 
 ### Criar um novo bloco de anotações
 
-Na interface do usuário da Adobe Experience Platform, clique na guia Data Science no menu superior para levá-lo à Área de trabalho da Data Science. Nesta página, clique na guia JupyterLab, que abrirá o JupyterLab. Você deve ver uma página semelhante a esta.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique na guia Data Science no menu superior para levá-lo à Data Science Workspace. Nesta página, clique na guia JupyterLab, que abrirá o JupyterLab. Você deve ver uma página semelhante a esta.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ A receita de vendas de varejo é um exemplo independente que usa o mesmo conjunt
 
 >[!NOTE] O `data_access_sdk_python` está obsoleto e não é mais recomendado. Consulte o tutorial de [conversão do SDK de acesso aos dados para SDK](../authoring/platform-sdk.md) da plataforma para converter seu código. As mesmas etapas abaixo ainda se aplicam a este tutorial.
 
-Vamos acessar dados internamente da Adobe Experience Platform e dados externamente. Usaremos a `data_access_sdk_python` biblioteca para acessar dados internos, como conjuntos de dados e schemas XDM. Para dados externos, usaremos a biblioteca dos pandas Python.
+Nós iremos acessar dados internamente de [!DNL Adobe Experience Platform] e dados externamente. Usaremos a `data_access_sdk_python` biblioteca para acessar dados internos, como conjuntos de dados e schemas XDM. Para dados externos, usaremos a biblioteca dos pandas Python.
 
 #### Dados externos
 
@@ -70,7 +70,7 @@ Finalmente, podemos dar uma olhada em como são os nossos dados. Podemos usar `d
 
 #### Dados da plataforma Experience
 
-Agora, nós vamos acessar os dados da plataforma Experience.
+Agora, vamos voltar a acessar [!DNL Experience Platform] os dados.
 
 ##### Por ID do conjunto de dados
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Se você estiver trabalhando em outros kernels diferentes de Python, consulte [esta página](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) para acessar os dados na plataforma Adobe Experience.
+Se você estiver trabalhando em outros kernels diferentes de Python, consulte [esta página](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) para acessar os dados no [!DNL Adobe Experience Platform].
 
 Selecionar a célula executável e pressionar o botão reproduzir na barra de ferramentas executará o código executável. A saída para `head()` será uma tabela com as chaves do conjunto de dados como colunas e as primeiras n linhas do conjunto de dados. `head()` aceita um argumento inteiro para especificar quantas linhas serão geradas. Por padrão, é 5.
 
@@ -190,7 +190,7 @@ Observe a diagonal de 1 ao centro. Isso mostra que ao comparar uma variável com
 
 ## Próximas etapas
 
-Este tutorial abordou como criar um novo notebook Júpiter na Data Science Workspace e como acessar dados externamente, bem como na Adobe Experience Platform. Especificamente, passamos pelos seguintes passos:
+Este tutorial abordou como criar um novo notebook Júpiter na Data Science Workspace e como acessar dados externamente e de [!DNL Adobe Experience Platform]. Especificamente, passamos pelos seguintes passos:
 - Crie um novo notebook Jupyter
 - Acessar conjuntos de dados e schemas
 - Explorar conjuntos de dados

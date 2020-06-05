@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descobrindo insights no AI de Atribuição
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -20,7 +20,7 @@ Este documento serve como um guia para interagir com insights de instância de s
 
 ## Introdução
 
-Para utilizar insights para a Atribuição AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância do serviço, visite o guia [da interface do usuário da](./user-guide.md)Atribuição AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Para utilizar insights para a Atribuição AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [da interface do usuário da](./user-guide.md)Atribuição AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
 
 ## Visão geral dos insights da instância de serviço
 
@@ -57,7 +57,7 @@ A caixa de diálogo Editar é exibida, permitindo que você edite a descrição 
 
 ![editar fornecedor](./images/insights/edit-popover.png)
 
-### Mais ações
+### Mais ações {#more-actions}
 
 O botão *Mais ações* está localizado na navegação superior direita ao lado de *Editar*. Clicar em **Mais ações** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector FTP e SFTP
 topic: overview
 translation-type: tm+mt
-source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # (Beta) Conector FTP e SFTP
 
-A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure. Você pode trazer seus dados desses sistemas para a Plataforma.
+A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure, permitindo que você traga seus dados desses sistemas.
 
 As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de Fontes. A plataforma permite trazer dados de um servidor FTP ou SFTP por lotes.
 

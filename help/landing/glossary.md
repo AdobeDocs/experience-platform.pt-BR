@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## C
 
-**Limite:** No serviço de decisão, o limite é usado em regras de decisão para definir quantas vezes uma oferta é apresentada. Há dois tipos de tampas, quantas vezes uma oferta pode ser proposta através da audiência de público alvo combinada, também conhecida como &quot;Cap Global&quot;, e quantas vezes uma oferta pode ser proposta ao mesmo usuário final, também conhecida como &quot;Cap de Perfil&quot;.
+**Limite:** No serviço de decisão, o limite é usado nas regras de decisão para definir quantas vezes uma oferta é apresentada. Há dois tipos de tampas, quantas vezes uma oferta pode ser proposta através da audiência de público alvo combinada, também conhecida como &quot;Cap Global&quot;, e quantas vezes uma oferta pode ser proposta ao mesmo usuário final, também conhecida como &quot;Cap de Perfil&quot;.
 
 **Catálogo:** Na Plataforma de dados do cliente em tempo real, em fontes e destinos, um catálogo é uma galeria com conexões disponíveis para aplicativos da Adobe e tecnologias de terceiros.
 
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **Componente de regra:** No Experience Platform Launch, os componentes da regra são os eventos, as condições e as ações que compõem uma regra.
 
-**Tempo de execução:** O tempo de execução especifica um ambiente de tempo de execução para uma fórmula de aprendizado de máquina. Os tempos de execução do Spark e do PySpark permitem o carregamento direto de um arquivo de origem de receita binária (.jar). Os tempos de execução Python, R e Tensorflow permitem a entrada de um URL para uma imagem de âncora para uma fonte de receita.
+**Tempo de execução:** O tempo de execução especifica um ambiente de tempo de execução para uma fórmula de aprendizado de máquina. Os tempos de execução Python, R, Spark, PySpark e Tensorflow permitem a entrada de um URL para uma imagem de âncora para uma fonte de receita.
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 

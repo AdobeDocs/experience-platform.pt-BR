@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector do Armazenamento de Arquivo do Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # (Beta) Conector do Armazenamento de Arquivo do Azure
 
-A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure. Você pode trazer seus dados desses sistemas para a Plataforma.
+A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure, permitindo que você traga seus dados desses sistemas.
 
 As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de Fontes. A plataforma permite trazer dados do Armazenamento de Arquivo do Azure por lotes.
 

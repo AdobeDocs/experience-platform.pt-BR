@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '3459'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 # Guias de migração de receitas e notebooks
 
 >[!NOTE]
->Os notebooks e as receitas que usam Python/R não são afetados. A migração se aplica somente às receitas e notebooks PySpark/Spark existentes.
+>Os notebooks e as receitas que usam Python/R não são afetados. A migração se aplica somente às receitas e notebooks PySpark/Spark (2.3).
 
 Os guias a seguir descrevem as etapas e informações necessárias para migrar receitas e notebooks existentes.
 
@@ -704,7 +707,7 @@ O kernel Scala não suporta mais `%%sql` magia cintilante. É necessário conver
 
 ## Ler um conjunto de dados {#notebook-read-dataset-spark}
 
-No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para ler um conjunto de dados.
+No Spark 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para a leitura de um conjunto de dados.
 
 **Usando o Spark (Spark 2.3 - obsoleto) - Kernel do Spark**
 

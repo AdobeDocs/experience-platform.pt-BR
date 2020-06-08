@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1114'
+ht-degree: 3%
 
 ---
 
@@ -495,145 +498,5 @@ curl -X DELETE \
     "title": "Success",
     "status": 200,
     "detail": "Engine deletion was successful"
-}
-```
-
-## Solicitações obsoletas
-
->[!IMPORTANT]
->Os artefatos binários não são mais suportados e estão definidos para serem removidos em uma data posterior. As novas receitas do PySpark e do Scala agora devem seguir os exemplos de imagem [do](#docker-image) encaixe para criar um Mecanismo.
-
-## Criar um mecanismo usando artefatos binários - obsoleto
-
-Você pode criar um Mecanismo usando artefatos locais `.jar` ou `.egg` binários executando uma solicitação POST enquanto fornece seus metadados e o caminho do artefato em formulários de várias partes.
-
-**Formato da API**
-
-```https
-POST /engines
-```
-
-**Solicitação**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "A name for this Engine",
-        "description": "A description for this Engine",
-        "algorithm": "Classification",
-        "type": "PySpark",
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da Receita. |
-| `description` | Uma descrição opcional para o mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
-| `algorithm` | Uma string que especifica o tipo de algoritmo de aprendizado da máquina. Os tipos de algoritmos suportados incluem &quot;Classificação&quot;, &quot;Regressão&quot; ou &quot;Personalizado&quot;. |
-| `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual o artefato binário é criado e pode ser &quot;PySpark&quot; ou &quot;Spark&quot;. |
-
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo recém-criado, incluindo seu identificador exclusivo (`id`).
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "A name for this Engine",
-    "description": "A description for this Engine",
-    "type": "PySpark",
-    "algorithm": "Classification",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-## Criar um mecanismo de pipeline de recurso usando artefatos binários - obsoleto {#create-a-feature-pipeline-engine-using-binary-artifacts}
-
->[!IMPORTANT]
->Os artefatos binários não são mais suportados e estão definidos para serem removidos em uma data posterior.
-
-Você pode criar um Mecanismo de pipeline de recursos usando artefatos locais `.jar` ou `.egg` binários executando uma solicitação POST enquanto fornece seus metadados e os caminhos do artefato em formulários multicomponentes. Um PySpark ou Spark Engine tem a capacidade de especificar recursos de computação, como o número de núcleos ou a quantidade de memória. Consulte a seção do apêndice sobre as configurações [de recursos](./appendix.md#resource-config) PySpark e Spark para obter mais informações.
-
-**Formato da API**
-
-```https
-POST /engines
-```
-
-**Solicitação**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "Feature Pipeline Engine",
-        "description": "A feature pipeline Engine",
-        "algorithm":"fp",
-        "type": "PySpark"
-    }' \
-    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
-    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da Receita. |
-| `description` | Uma descrição opcional para o mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
-| `algorithm` | Uma string que especifica o tipo de algoritmo de aprendizado da máquina. Defina esse valor como &quot;fp&quot; para especificar essa criação como um Mecanismo de pipeline de recurso. |
-| `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual os artefatos binários são criados e podem ser &quot;PySpark&quot; ou &quot;Spark&quot;. |
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo recém-criado, incluindo seu identificador exclusivo (`id`).
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "Feature Pipeline Engine",
-    "description": "A feature pipeline Engine",
-    "type": "PySpark",
-    "algorithm": "fp",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
 }
 ```

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de Armazenamento de Arquivo do Azure usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,8 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma conexão de Armazenamento de Arquivo do Azure, a ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão do Armazenamento de Arquivo do Azure é `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+A solicitação a seguir cria uma nova conexão de Armazenamento de Arquivo do Azure, configurada pelas propriedades fornecidas na carga:
+
 
 ```shell
 curl -X POST \

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Empacotar arquivos de origem em uma fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -35,24 +38,24 @@ Uma imagem do Docker permite que um desenvolvedor empacote um aplicativo com tod
 
 A imagem do Docker criada é enviada para o Registro de Container do Azure usando as credenciais fornecidas a você durante o fluxo de trabalho de criação da receita.
 
-Para obter suas credenciais do Registro de Container do Azure, faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Na coluna de navegação esquerda, navegue até **[!UICONTROL Workflows]**. Selecione **[!UICONTROL Import Recipe]** seguido de selecionar **[!UICONTROL Launch]**. Consulte a captura de tela abaixo para obter referência.
+Para obter suas credenciais do Registro de Container do Azure, faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Na coluna de navegação esquerda, navegue até **[!UICONTROL Workflows]**. Selecione **[!UICONTROL Importar receita]** seguida de selecionar **[!UICONTROL Iniciar]**. Consulte a captura de tela abaixo para obter referência.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-A página *Configurar* é aberta. Forneça um Nome *de* Receita apropriado, por exemplo, &quot;Fórmula de Vendas de Varejo&quot; e, opcionalmente, forneça uma descrição ou um URL de documentação. Depois de concluído, clique em **[!UICONTROL Next]**.
+A página *Configurar* é aberta. Forneça um Nome *de* Receita apropriado, por exemplo, &quot;Fórmula de Vendas de Varejo&quot; e, opcionalmente, forneça uma descrição ou um URL de documentação. Depois de concluído, clique em **[!UICONTROL Avançar]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Selecione o *Tempo* de execução apropriado e escolha um **[!UICONTROL Classification]** para *Tipo*. Suas credenciais do Registro de Container do Azure são geradas uma vez concluídas.
+Selecione o *Tempo* de execução apropriado e escolha uma **[!UICONTROL Classificação]** para *Tipo*. Suas credenciais do Registro de Container do Azure são geradas uma vez concluídas.
 
 >[!NOTE]
 >*Tipo *é a classe de problema de aprendizado de máquina para a qual a receita foi projetada e é usada após o treinamento para ajudar a avaliar a execução do treinamento.
 
 >[!TIP]
->- Para fórmulas Python, selecione o **[!UICONTROL Python]** tempo de execução.
->- Para R receitas, selecione o **[!UICONTROL R]** tempo de execução.
->- Para fórmulas PySpark, selecione o **[!UICONTROL PySpark]** tempo de execução. Um tipo de artefato preenche automaticamente.
->- Para fórmulas Scala, selecione o **[!UICONTROL Spark]** tempo de execução. Um tipo de artefato preenche automaticamente.
+>- Para fórmulas Python, selecione o tempo de execução **[!UICONTROL Python]** .
+>- Para receitas R, selecione o tempo de execução **[!UICONTROL R]** .
+>- Para fórmulas PySpark, selecione o tempo de execução **[!UICONTROL PySpark]** . Um tipo de artefato preenche automaticamente.
+>- Para fórmulas Scala, selecione o tempo de execução **[!UICONTROL Spark]** . Um tipo de artefato preenche automaticamente.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -193,46 +196,3 @@ Este tutorial passou do empacotamento de arquivos de origem para uma Receita, a 
 
 - [Importar uma receita empacotada na interface do usuário](./import-packaged-recipe-ui.md)
 - [Importar uma Receita empacotada usando a API](./import-packaged-recipe-api.md)
-
-## Criação de binários (obsoleto)
-
->[!CAUTION]
-> Os binários não são suportados nas novas fórmulas PySpark e Scala e estão definidos para serem removidos em uma versão futura. Siga os workflows [do](#docker-based-model-authoring) Docker ao trabalhar com PySpark e Scala. Os workflows a seguir só se aplicam às receitas do Spark 2.3.
-
-### Criar binários do PySpark (obsoleto)
-
-Se você não tiver feito isso, clone o repositório github no sistema local com o seguinte comando:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Navegue até o repositório clonado no sistema local e execute os seguintes comandos para criar o arquivo necessário `.egg` para importar uma receita do PySpark:
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-O `.egg` arquivo é gerado na `dist` pasta.
-
-Agora você pode seguir para as [próximas etapas](#next-steps).
-
-#### Criar binários Scala (obsoleto)
-
-Se você ainda não tiver feito isso, execute o seguinte comando para clonar o repositório Github para seu sistema local:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Para criar o `.jar` artefato usado para importar uma receita do Scala, navegue até o repositório clonado e siga as etapas abaixo:
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-O `.jar` artefato gerado com dependências é encontrado no `/target` diretório.
-
-Agora você pode seguir para as [próximas etapas](#next-steps).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector Gen2 do Armazenamento Azure Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Conector Gen2 do Armazenamento Azure Data Lake
 
-A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure. Você pode trazer seus dados desses sistemas para a Plataforma.
+A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure, permitindo que você traga seus dados desses sistemas.
 
 As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de Fontes. A plataforma permite trazer dados do Armazenamento Gen2 do Azure Data Lake por lotes.
 

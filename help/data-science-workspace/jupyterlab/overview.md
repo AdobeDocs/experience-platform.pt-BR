@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia do usuário do JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 6%
+source-wordcount: '3672'
+ht-degree: 11%
 
 ---
 
@@ -37,13 +37,14 @@ A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab na plataf
 
 ## Integração com outros serviços da plataforma {#service-integration}
 
-A normalização e a interoperabilidade são conceitos-chave por trás da plataforma da experiência. A integração do JupyterLab na plataforma como um IDE incorporado permite que ele interaja com outros serviços da plataforma, permitindo que você utilize a plataforma ao seu potencial total. Os seguintes serviços da plataforma estão disponíveis no JupyterLab:
+A normalização e a interoperabilidade são conceitos fundamentais subjacentes [!DNL Experience Platform]. A integração do JupyterLab [!DNL Platform] como um IDE incorporado permite que ele interaja com outros [!DNL Platform] serviços, permitindo que você utilize todo o seu potencial [!DNL Platform] . Os seguintes [!DNL Platform] serviços estão disponíveis no JupyterLab:
 
 * **Serviço de catálogo:** Acesse e explore conjuntos de dados com funcionalidades de leitura e gravação.
 * **Serviço de Query:** Acesse e explore conjuntos de dados usando SQL, fornecendo custos indiretos de acesso a dados mais baixos ao lidar com grandes quantidades de dados.
 * **Sensei ML Framework:** Desenvolvimento de modelo com a capacidade de treinar e pontuar dados, bem como criação de receita com um único clique.
+* **Modelo de dados de experiência (XDM):** A padronização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. [O Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
->[!NOTE] Algumas integrações de serviço da plataforma no JupyterLab estão limitadas a kernels específicos. Consulte a seção sobre [kernels](#kernels) para obter mais detalhes.
+>[!NOTE] Algumas integrações [!DNL Platform] de serviço no JupyterLab estão limitadas a kernels específicos. Consulte a seção sobre [kernels](#kernels) para obter mais detalhes.
 
 ## Principais recursos e operações comuns
 
@@ -230,6 +231,82 @@ Para abrir um novo *Iniciador*, clique em **Arquivo > Novo Iniciador**. Como alt
 
 Cada kernel suportado fornece funcionalidades incorporadas que permitem ler dados da plataforma a partir de um conjunto de dados dentro de um notebook. Entretanto, o suporte para paginação de dados está limitado aos notebooks Python e R.
 
+### Limites de dados do notebook
+
+As informações a seguir definem a quantidade máxima de dados que podem ser lidos, que tipo de dados foram usados e o período estimado de leitura dos dados. Para Python e R, um servidor notebook configurado com 40 GB de RAM foi usado para os benchmarks. Para PySpark e Scala, um cluster de databricks configurado com 64 GB de RAM, 8 núcleos, 2 DBU com um máximo de 4 trabalhadores foi usado para os benchmarks descritos abaixo.
+
+Os dados do schema ExperienceEvent usados variaram de tamanho, começando em mil (1K) linhas que variam de até um bilhão (1B) de linhas. Observe que para as métricas PySpark e Spark, um período de 10 dias foi usado para os dados XDM.
+
+Os dados do schema ad-hoc foram pré-processados usando o CTAS (Query Service Create Table as Select, Tabela de Criação de Serviço de ). Esses dados também variaram de tamanho a partir de mil linhas (1.000) de até 1 bilhão (1.000 linhas).
+
+#### Limites de dados do notebook Python
+
+**schema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 2 milhões de linhas (~6,1 GB de dados em disco) de dados XDM em menos de 22 minutos. A adição de linhas adicionais pode resultar em erros.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Tamanho no disco (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (em segundos) | 20.3 | 86.8 | 63 | 659 | 1315 |
+
+**schema ad-hoc:** Você deve ser capaz de ler no máximo 5 milhões de linhas (~5,6 GB de dados em disco) de dados não-XDM (ad-hoc) em menos de 14 minutos. A adição de linhas adicionais pode resultar em erros.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Tamanho no disco (em MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (em segundos) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
+
+#### Limites de dados do notebook R
+
+**schema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 1 milhão de linhas de dados XDM (dados de 3 GB no disco) em menos de 13 minutos.
+
+| Número de linhas | 1K | 10K | 100K | 1M |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Tamanho no disco (MB) | 18.73 | 187.5 | 308 | 3000 |
+| R Kernel (em segundos) | 14.03 | 69.6 | 86.8 | 775 |
+
+**schema ad-hoc:** Você deve ser capaz de ler no máximo 3 milhões de linhas de dados ad hoc (dados de 293 MB em disco) em aproximadamente 10 minutos.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Tamanho no disco (em MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| SDK R (em segundos) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
+
+#### Limites de dados do notebook PySpark (kernel Python):
+
+**schema XDM ExperienceEvent:** No modo Interativo, você deve ser capaz de ler no máximo 5 milhões de linhas (~13,42 GB de dados no disco) de dados XDM em cerca de 20 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se desejar ler conjuntos de dados maiores, sugerimos que você alterne para o modo Lote. No modo Lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (~1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Tamanho no disco | 2.93MB | 4.38MB | 29.02 | 2.69GB | 5.39GB | 8.09GB | 13.42GB | 26.82GB | 134.24GB | 268.39GB | 1.31TB |
+| SDK (modo interativo) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (Modo de lote) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
+
+**schema ad-hoc:** No modo Interativo, você deve ser capaz de ler no máximo 1 bilhão de linhas (~1,05 TB de dados no disco) de dados não XDM em menos de 3 minutos. No modo Lote, você deve ser capaz de ler no máximo 1 bilhão de linhas (~1,05 TB de dados no disco) de dados não XDM em cerca de 18 minutos.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Tamanho no disco | 1.12MB | 11.24MB | 109.48MB | 2.69GB | 2.14GB | 3.21GB | 5.36GB | 10.71GB | 53.58GB | 107.52GB | 535.88GB | 1.05TB |
+| Modo interativo do SDK (em segundos) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
+| Modo de lote do SDK (em segundos) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
+
+#### Limites de dados do notebook Spark (kernel Scala):
+
+**schema XDM ExperienceEvent:** No modo Interativo, você deve ser capaz de ler no máximo 5 milhões de linhas (~13,42 GB de dados no disco) de dados XDM em cerca de 18 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se desejar ler conjuntos de dados maiores, sugerimos que você alterne para o modo Lote. No modo Lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (~1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Tamanho no disco | 2.93MB | 4.38MB | 29.02 | 2.69GB | 5.39GB | 8.09GB | 13.42GB | 26.82GB | 134.24GB | 268.39GB | 1.31TB |
+| Modo interativo do SDK (em segundos) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
+| Modo de lote do SDK (em segundos) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
+
+**schema ad-hoc:** No modo Interativo, você deve ser capaz de ler no máximo 1 bilhão de linhas (~1,05 TB de dados no disco) de dados não XDM em menos de 3 minutos. No modo Lote, você deve ser capaz de ler no máximo 1 bilhão de linhas (~1,05 TB de dados no disco) de dados não XDM em cerca de 16 minutos.
+
+| Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Tamanho no disco | 1.12MB | 11.24MB | 109.48MB | 2.69GB | 2.14GB | 3.21GB | 5.36GB | 10.71GB | 53.58GB | 107.52GB | 535.88GB | 1.05TB |
+| Modo interativo do SDK (em segundos) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
+| Modo de lote do SDK (em segundos) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
+
 ### Leitura de um conjunto de dados em Python/R
 
 Os notebooks Python e R permitem paginar dados ao acessar os conjuntos de dados. O código de amostra para ler dados com e sem paginação é demonstrado abaixo.
@@ -296,7 +373,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: A identidade exclusiva do conjunto de dados a ser acessado
 
-### Leitura de um conjunto de dados no PySpark/Scala
+### Leitura de um conjunto de dados em PySpark/Spark/Scala
 
 Com um notebook PySpark ou Scala ativo aberto, expanda a guia **Data Explorer** da barra lateral esquerda e clique em **Conjuntos** de dados para visualização de uma lista de conjuntos de dados disponíveis. Clique com o botão direito do mouse na lista de conjuntos de dados que deseja acessar e clique em **Explorar dados no notebook**. As seguintes células de código são geradas:
 

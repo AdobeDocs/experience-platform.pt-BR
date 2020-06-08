@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector Gen2 do Armazenamento Azure Data Lake usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '570'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tuto
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de Fluxo, são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de fluxo, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | A ID principal de serviço da sua conta ADLS Gen2. |
 | `auth.params.servicePrincipalKey` | A chave principal de serviço da sua conta ADLS Gen2. |
 | `auth.params.tenant` | As informações de locatário de sua conta ADLS Gen2. |
-| `connectionSpec.id` | A ID de especificação de conexão ADLS Gen2: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
+| `connectionSpec.id` | ID da especificação de conexão ADLS Gen2: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
 
 **Resposta**
 

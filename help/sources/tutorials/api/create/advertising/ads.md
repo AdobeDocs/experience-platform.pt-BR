@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector Google AdWords usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tuto
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de Fluxo, são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de fluxo, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -74,7 +74,8 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma conexão Google AdWords, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para Google AdWords é `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+A solicitação a seguir cria uma nova conexão AdWords, configurada pelas propriedades fornecidas na carga:
+
 
 ```shell
 curl -X POST \

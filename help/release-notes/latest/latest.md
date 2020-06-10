@@ -1,127 +1,40 @@
 ---
 title: 'Notas de versão do Adobe Experience Platform '
-description: Notas de versão da plataforma Experience 13 de maio de 2020
+description: Notas de versão da plataforma Experience 10 de junho de 2020
 doc-type: release notes
-last-update: May 13, 2020
+last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
+source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 5%
+source-wordcount: '306'
+ht-degree: 6%
 
 ---
 
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 13 de maio de 2020**
+**Data de lançamento: 10 de junho de 2020**
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [Atualizações da interface do usuário](#ux)
 - [Área de trabalho da ciência de dados](#dsw)
-- [Destinos](#destinations)
-- [Experience Platform Web SDK e Experience Platform Edge Network](#edge)
-- [Perfil do cliente em tempo real](#profile)
 - [Fontes](#sources)
-
-## Atualizações da interface do usuário {#ux}
-
-A Adobe Experience Platform está lançando atualizações no domínio e na barra de cabeçalho para melhorar sua experiência e se unificar com outros aplicativos da Experience Cloud.
-
-- É mais fácil alternar entre suas organizações ou para um aplicativo diferente
-- Ajuda do usuário aprimorada, incluindo artigos em destaque e documentação relevante para contexto no menu Ajuda
-- Capacidade de fornecer feedback sobre a plataforma da experiência e os tíquetes de suporte a arquivos
-
-A implantação da nova experiência é gradual. Você pode visualização a experiência em [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Área de trabalho da ciência de dados {#dsw}
 
-A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para liberar insights de seus dados. Integrado à Adobe Experience Platform, a Data Science Workspace ajuda você a fazer previsões usando seus ativos de conteúdo e dados nas soluções da Adobe. Uma das maneiras de fazer isso é usando o JupyterLab. O JupyterLab é uma interface de usuário baseada na Web para o <a href="https://jupyter.org/" target="_blank">Project Júpitter</a> e é totalmente integrado à Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
+A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para liberar insights de seus dados. Integrado à Adobe Experience Platform, a Data Science Workspace ajuda você a fazer previsões usando seus ativos de conteúdo e dados nas soluções da Adobe.
 
-**Novos recursos**
+A Data Science Workspace tem trabalhado em novas maneiras para permitir melhores experiências e previsões através do uso de aprendizado de máquina em tempo real. O Aprendizado de máquina em tempo real oferece a capacidade de criar, testar e implantar modelos personalizados ou importados de aprendizado de máquina pré-treinados em formatos de modelo interoperáveis padrão do setor para pontuação/ativação em tempo real por meio de um terminal de API.
 
-| Recurso | Descrição |
-|--- | ---|
-| JupyterLab Launcher | O JupyterLab Launcher agora inclui iniciadores para notebooks Spark 2.4. Os iniciadores de notebook do Spark 2.3 agora estão marcados como obsoletos e definidos para serem removidos em uma versão subsequente. |
-| Spark 2.4 | As novas receitas Scala (Spark) e PySpark agora usam o Spark 2.4. |
-| Kernels | Os notebooks Scala (Spark) agora são criados pelo kernel Scala. Os notebooks PySpark agora são criados pelo kernel Python. O kernel do Spark e do PySpark está obsoleto e definido para ser removido em uma versão subsequente. |
-| Receitas | As novas receitas do PySpark e do Spark agora seguem o fluxo de trabalho do Docker, semelhante às receitas do Python e R. |
-
-Para obter mais informações sobre como migrar seus notebooks e fórmulas para usar o Spark 2.4, consulte o guia [de migração do](../../data-science-workspace/recipe-notebook-migration.md)notebook. Para obter informações mais gerais sobre a Data Science Workspace, consulte a documentação [de](../../data-science-workspace/home.md)visão geral.
-
-## Destinos {#destinations}
-
-Na Plataforma [de dados do cliente em tempo real da](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
-
-**Facebook**
-
-O Adobe Real-time CDP agora oferece suporte à ativação de dados para o Facebook, permitindo que você ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
-
-Para obter mais informações sobre a nova funcionalidade, consulte a página de destino [do](/help/rtcdp/destinations/facebook-destination.md) Facebook.
-
-<br> 
-
-**Destinos de armazenamentos em nuvem de streaming do Amazon Kinesis e do Azure Evento Hubs**
-
-A CDP em tempo real da Adobe agora oferece suporte à ativação de dados para os destinos de armazenamentos da nuvem em streaming, permitindo exportar dados e eventos da audiência para esses destinos no formato JSON. Em seguida, você pode descrever a lógica comercial sobre esses eventos em seus destinos. Consulte abaixo para obter detalhes:
-
->[!NOTE]
->
->Os destinos [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] no Adobe Real-time CDP estão atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-| Documentação | Descrição |
-|--- | ---|
-| [(Beta) Destino da Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) | Este artigo explica como criar uma conexão de saída em tempo real com seu [!DNL Amazon Kinesis] armazenamento para transmitir dados da Adobe Experience Platform. |
-| [(Beta) Destino dos Hubs de Eventos do Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md) | Este artigo explica como criar uma conexão de saída em tempo real com seu [!DNL Azure Event Hubs] armazenamento para transmitir dados da Adobe Experience Platform. |
-| [Tutorial da API - Conectar-se a destinos de streaming e ativar dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | Este tutorial demonstra como usar chamadas de API para se conectar aos dados da plataforma Adobe Experience, criar uma conexão com um destino de armazenamento de nuvem de streaming (Amazon Kinesis ou Hubs de Evento do Azure), criar um fluxo de dados para o seu novo destino criado e ativar os dados para o seu novo destino criado. |
-
-Para obter mais informações, consulte a visão geral [de](/help/rtcdp/destinations/destinations-overview.md)Destinos.
-
-## Experience Platform Web SDK e Experience Platform Edge Network {#edge}
-
-O Experience Platform Web SDK e a Experience Platform Edge Network permitem que os usuários enviem dados para a Adobe Experience Platform e outras soluções da Adobe em tempo real para dispositivos de usuário final e navegadores. A lista mais recente de casos de uso pode ser encontrada no nosso roteiro [](https://github.com/adobe/alloy/projects/5) público, que é atualizado com frequência.
-
-**Novos recursos**
+Observe que o aprendizado de máquina em tempo real está em alfa e ainda está sendo desenvolvido.
 
 | Recurso | Descrição |
 |--- | ---|
-| Suporte para ECID | O SDK oferece suporte ao ECID pronto para uso sem quaisquer bibliotecas ou informações adicionais para instalação |
-| Interface de usuário de configuração | Gerencie suas configurações de ID com a nova interface de usuário de configuração de borda no Launch, deve estar na lista de permissões para acessar |
-| Mistura SDK da Web da plataforma Adobe Experience | Um mixin para uso com o SDK da Web da Experience Platform que abrange todos os campos suportados. |
-| Controles de consentimento do curso | Dá ao empresa controles sobre aceitação e não participação do SDK da Web da Experience Platform |
-| Suporte à depuração do cliente na nova extensão do Experience Cloud Debugger | Consulte solicitações do SDK da Web da Experience Platform, bem como os rastreamentos de borda para ver como os dados fluem pelo sistema. |
-| Adobe Analytics | Envie dados para os conjuntos de relatórios do Analytics por meio da configuração da borda. O XDM é nivelado em dados de contexto, suporta marcação de vários conjuntos |
-| Adobe Target | Suporte para o Público alvo da Adobe. Incluindo VEC, Compositor baseado em formulário, A/B, XT, Personalização automatizada, MVT |
-| Suporte ao Adobe Audiência Manager | Suporte para sincronizações de ID do Audiência Manager, destinos de URL e destinos de cookies |
-| Sincronização de identidade | Renomeado `setCustomersIds` para `syncIdentity` tornar mais claro |
-| Construtor de objetos XDM | Na extensão de inicialização, agora é possível criar objetos XDM como Elementos de dados |
+| Iniciador de ML em tempo real do JupyterLab | O JupyterLab Launcher agora inclui um notebook Python para aprendizado de máquina em tempo real (Alpha). |
 
-Para obter mais informações sobre o SDK da Web da plataforma e o Edge Network, consulte a [documentação](../../edge/home.md).
-
-## Perfil do cliente em tempo real {#profile}
-
-A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. O Perfil permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
-
-**Novos recursos**
-
-| Recurso | Descrição |
-| -----------| ---------- |
-| Novas métricas de Exportação de Perfil | Adicionadas métricas a trabalhos de exportação de perfil que mostram o número total de perfis exportados e o número de perfis em cada namespace. |
-| Novas métricas de Insights de Observabilidade | A API Observability Insights agora tem as seguintes métricas para a inclusão de streaming no Perfil: Taxa de Solicitação de Entrada, Taxa de Ingestão Bem-Sucedida, Tamanho de Registro Ingerido. |
-| Ponto de extremidade GET em massa | Adicionado o terminal GET em massa à API de Perfil do cliente em tempo real para permitir a recuperação de vários resultados em uma única chamada de API. Agora você pode obter até 100 IDs em massa para definições de segmento, trabalhos de segmento e políticas de mesclagem. |
-| Procurar perfil por identidade | Na interface do usuário da plataforma, agora é possível selecionar uma namespace de identidade e fornecer um valor de identidade para navegar em um perfil. |
-
-**Correções de erros**
-
-- Nenhum.
-
-**Problemas conhecidos**
-
-- Nenhum.
-
-Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados do Perfil, leia a visão geral [do Perfil do cliente em tempo](../../profile/home.md)real.
+Para obter mais informações sobre o aprendizado de máquina em tempo real alfa, consulte a visão geral [de aprendizado de máquina em tempo](../../data-science-workspace/real-time-machine-learning/home.md)real.
 
 ## Fontes {#sources}
 
@@ -133,12 +46,7 @@ A plataforma Experience fornece uma RESTful API e uma interface interativa que p
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte adicional à API e à interface do usuário para sistemas de armazenamento em nuvem | Novos conectores de origem para o Armazenamento de Arquivo do Azure. |
-| Suporte adicional à API e à interface do usuário para bancos de dados | Novos conectores de origem para o Azure Data Explorer, IBM DB2 e Oracle DB. |
-| Adobe Audiência Manager para compartilhamento de dados da plataforma de experiência | O processo de provisionamento do conector do Gerenciador de Audiências foi atualizado. Os conjuntos de dados do Gerenciador de Audiências para o Perfil de clientes em tempo real agora estão desabilitados por padrão. Você pode escolher manualmente quais conjuntos de dados promover ao Perfil. As novas configurações padrão não são retroativas e afetam apenas o provisionamento de novos conectores do Gerenciador de Audiências. Consulte mais informações no guia [do usuário](../../catalog/datasets/user-guide.md)Conjuntos de dados. |
-
-**Problemas conhecidos**
-
-- Nenhum.
+| Suporte adicional à API e à interface do usuário para sistemas de armazenamento em nuvem | Novo conector de origem para o Apache HDFS |
+| Suporte adicional à API e à interface do usuário para bancos de dados | Novo conector de origem para Couchbase. |
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.

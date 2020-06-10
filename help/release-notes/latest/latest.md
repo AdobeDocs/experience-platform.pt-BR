@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 6%
+source-wordcount: '429'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 6%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Área de trabalho da ciência de dados](#dsw)
+- [Segmentação](#segmentation)
 - [Fontes](#sources)
 
 ## Área de trabalho da ciência de dados {#dsw}
@@ -35,6 +36,20 @@ Observe que o aprendizado de máquina em tempo real está em alfa e ainda está 
 | Iniciador de ML em tempo real do JupyterLab | O JupyterLab Launcher agora inclui um notebook Python para aprendizado de máquina em tempo real (Alpha). |
 
 Para obter mais informações sobre o aprendizado de máquina em tempo real alfa, consulte a visão geral [de aprendizado de máquina em tempo](../../data-science-workspace/real-time-machine-learning/home.md)real.
+
+## Segmentação {#segmentation}
+
+O Adobe Experience Platform Segmentation Service fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir dos dados do Perfil do cliente em tempo real. Esses segmentos são configurados e mantidos centralmente na Plataforma, tornando-os facilmente acessíveis por qualquer aplicativo da Adobe.
+
+O Serviço de segmentação define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da sua base de clientes. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Campos de data | Um recurso de &quot;aniversário&quot; para funções de data foi adicionado, permitindo que os usuários avaliem datas sem o ano. |
+
+Para obter mais informações sobre a segmentação, consulte a visão geral da [segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 

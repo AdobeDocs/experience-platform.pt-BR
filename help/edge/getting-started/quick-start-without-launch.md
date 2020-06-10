@@ -4,9 +4,9 @@ seo-title: 'start rápido do SDK da Web da Adobe Experience Platform '
 description: Guia de start rápido para usar o Experience Platform Web SDK para coletar dados
 seo-description: Guia de start rápido para usar o Experience Platform Web SDK para coletar dados
 translation-type: tm+mt
-source-git-commit: 7c5d4306f9964553cf48a208166fce265dcdd94d
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Boas-vindas
 
-Este guia o guia pelas diferentes formas de configurar o SDK da Web da plataforma Adobe Experience. Para poder usar este recurso, é necessário ter uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
+Este guia o guia pelas diferentes formas de configurar o SDK da Web da plataforma Adobe Experience. Para poder usar este recurso, é necessário estar na lista de permissão. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
 - Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse. O teste no desenvolvimento funciona sem um CNAME, mas você precisa de um antes de ir para a produção
 - Esteja qualificado para a Plataforma de dados da plataforma Adobe Experience.  Se você não tiver comprado a plataforma, forneceremos a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custo extra.
@@ -26,7 +26,7 @@ Você pode criar uma ID de configuração usando a ferramenta [de configuração
 
 >[!NOTE]
 >
->Sua organização deve estar na lista de permissões do recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
+>Sua organização deve estar na lista de permissão do recurso. Entre em contato com seu CSM para colocar a lista de permissão.
 
 ## Preparar um Schema
 

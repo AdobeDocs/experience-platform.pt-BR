@@ -1,0 +1,51 @@
+---
+title: 'Notas de versão do Adobe Experience Platform '
+description: Notas de versão da Experience Platform 10 de agosto de 2020
+doc-type: release notes
+last-update: August 10, 2020
+author: crhoades, ens28527
+translation-type: tm+mt
+source-git-commit: 7f9d1120ac323c60f899cb1cf855e55db20437ed
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 7%
+
+---
+
+
+# Notas de versão da Adobe Experience Platform
+
+**Data de lançamento: 10 de junho de 2020**
+
+Novos recursos da Adobe Experience Platform:
+
+- [Controle de acesso](#access-control)
+- [Sandboxes](#sandboxes)
+
+## Controle de acesso {#access-control}
+
+A plataforma Experience aproveita os perfis de produto do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos da plataforma, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
+
+**Principais recursos**
+
+| Recurso | Descrição |
+|--- | ---|
+| Permissões | No Admin Console, a guia _Permissões_ em um perfil de produto da Plataforma permite personalizar quais recursos da Plataforma estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: Modelagem de dados, Gestão de dados, Gerenciamento de Perfis, Identidades, Monitoramento de dados, Administração de Sandbox, Destinos, Fontes. |
+| Acesso a caixas de proteção | A guia _Permissões_ em um perfil de produto da Plataforma pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre [caixas de proteção](#sandboxes) abaixo para obter mais informações. |
+
+Para obter mais informações, consulte a visão geral [do](../../access-control/home.md)controle de acesso.
+
+## Sandboxes {#sandboxes}
+
+A plataforma Experience foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional. Para atender a essa necessidade, a plataforma Experience fornece caixas de proteção que particionam uma única instância da plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+
+**Principais recursos**
+
+| Recurso | Descrição |
+|--- | ---|
+| Caixa de proteção de produção | A plataforma Experience fornece uma única caixa de proteção de produção, que não pode ser excluída ou redefinida. |
+| Caixas de proteção de não produção | É possível criar várias caixas de proteção que não sejam de produção para uma única instância da Plataforma, permitindo que você teste recursos, execute experiências e faça configurações personalizadas sem afetar sua caixa de proteção de produção. |
+| Comutador Sandbox | Na interface do usuário da plataforma Experience, o alternador de sandbox no canto superior esquerdo da tela permite alternar entre as sandboxes disponíveis por meio de um menu suspenso. |
+| `x-sandbox-name` header | Todas as chamadas para APIs da plataforma Experience devem incluir o novo cabeçalho, cujo valor faz referência ao `x-sandbox-name` `name` atributo da caixa de proteção em que a operação ocorrerá. |
+
+Para obter mais informações, consulte a visão geral [das](../../sandboxes/home.md)caixas de proteção.

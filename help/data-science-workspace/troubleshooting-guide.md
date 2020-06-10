@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia de solução de problemas da Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Por fim, alterne &quot;Bloquear cookies de terceiros&quot; para &quot;DESLIGADO&
 
 ![cromo avançado](./images/faq/toggle-off.png)
 
->[!NOTE] Como alternativa, você pode desativar cookies de terceiros e a lista de permissões [*.]ds.adobe.net
+>[!NOTE] Como alternativa, você pode desativar cookies de terceiros e adicionar [*.]ds.adobe.net para a lista de permissão.
 
 Navegue até &quot;chrome://flags/&quot; na barra de endereços. Procure e desative o sinalizador *&quot;SameSite by default cookies&quot;* usando o menu suspenso à direita.
 
@@ -61,7 +64,7 @@ Em seguida, na barra de navegação superior, selecione o menu **Desenvolver** .
 
 ## Por que estou vendo uma mensagem &#39;403 Proibido&#39; ao tentar carregar ou excluir um arquivo no JupyterLab?
 
-Se o seu navegador estiver habilitado com software de bloqueio de anúncios, como o Ghostery ou o AdBlock Plus, o domínio &quot;\*.adobe.net&quot; deverá ser incluído na lista de permissões em cada software de bloqueio de anúncios para que o JupyterLab funcione normalmente. Isso ocorre porque as máquinas virtuais JupyterLab são executadas em um domínio diferente do domínio da plataforma de experiência.
+Se o seu navegador estiver habilitado com software de bloqueio de anúncios, como o Ghostery ou o AdBlock Plus, o domínio &quot;\*.adobe.net&quot; deverá ser permitido em cada software de bloqueio de anúncios para que o JupyterLab funcione normalmente. Isso ocorre porque as máquinas virtuais JupyterLab são executadas em um domínio diferente do domínio da plataforma de experiência.
 
 ## Por que algumas partes do meu notebook Júpiter parecem embaralhadas ou não são renderizadas como código?
 

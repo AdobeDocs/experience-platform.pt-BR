@@ -4,9 +4,9 @@ seo-title: Destino do Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 seo-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Observe os seguintes detalhes específicos para os destinos do Google Ad Manager
 
 ## Pré-requisitos
 
-### Lista branca
+### Permitir lista
 
 >[!NOTE]
 >
->A lista de permissões é obrigatória antes da configuração do primeiro destino do Google Ad Manager na CDP em tempo real da Adobe. Verifique se o processo de listagem de permissões descrito abaixo foi concluído pelo Google antes de criar um destino.
+>A lista allow é obrigatória antes de configurar seu primeiro destino do Google Ad Manager na CDP em tempo real da Adobe. Certifique-se de que o processo de permissão de lista descrito abaixo foi concluído pelo Google antes de criar um destino.
 
-Antes de criar o destino do Google Ad Manager na Adobe Real-time CDP, você deve entrar em contato com o Google solicitando que a Adobe seja incluída na lista de permissões como um provedor de dados e que sua conta seja incluída na lista de permissões. Entre em contato com o Google e forneça as seguintes informações:
+Antes de criar o destino do Google Ad Manager no Adobe Real-time CDP, você deve entrar em contato com o Google para a Adobe para que ele seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista permitida. Entre em contato com o Google e forneça as seguintes informações:
 
 * **ID** da conta: esta é a ID da conta da Adobe com o Google. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para obter essa ID.
 * **ID** do cliente: esta é a ID da conta do cliente da Adobe com o Google. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para obter essa ID.
@@ -52,6 +52,7 @@ Antes de criar o destino do Google Ad Manager na Adobe Real-time CDP, você deve
    ![Destino do Google Ad Manager do Connect](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. No fluxo de trabalho Criar destino, preencha as Informações  básicas para o destino. <br>
+
    ![Informações básicas sobre o Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **[!UICONTROL Nome]**: Preencha o nome preferencial para este destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.

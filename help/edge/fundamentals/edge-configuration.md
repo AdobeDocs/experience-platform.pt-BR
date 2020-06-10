@@ -4,9 +4,9 @@ seo-title: Configuração de borda para o SDK da Web da Experience Platform
 description: 'Saiba como configurar a Experience Platform Edge Network. '
 seo-description: 'Saiba como configurar a Experience Platform Edge Network. '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ As IDs de configuração de borda podem ser criadas no Launch usando a ferrament
 
 >[!NOTE]
 >
->A ferramenta de configuração de borda está disponível para clientes da lista de permissões, independentemente de usarem o Launch como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento no Launch. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na documentação Iniciar para obter mais detalhes.
+>A ferramenta de configuração de borda está disponível para os clientes na lista de permissão, independentemente de usarem o Launch como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento no Launch. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na documentação Iniciar para obter mais detalhes.
 
 Você pode criar uma configuração de borda clicando em **[UICONTROL New Edge Configuration]** na área superior direita da tela. Depois de fornecer um nome e uma descrição, você será solicitado a fornecer as configurações padrão para cada ambiente.
 

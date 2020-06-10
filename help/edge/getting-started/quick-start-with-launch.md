@@ -4,9 +4,9 @@ seo-title: start rápido do SDK da Web do Adobe Experience Platform com Launch
 description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 translation-type: tm+mt
-source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '548'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Boas-vindas
 
-Este guia o orientará pelas diferentes formas de configurar o SDK da Web da plataforma Adobe Experience no Launch. Para poder usar este recurso, é necessário ter uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
+Este guia o orientará pelas diferentes etapas sobre como configurar o SDK da Web da plataforma Adobe Experience no Launch. Para poder usar este recurso, você precisa ter permissões e estar na lista de permissão. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
 - Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse. O teste no desenvolvimento funcionará sem um CNAME, mas você precisará de um antes de ir para a produção
 - Esteja qualificado para a Plataforma de dados da plataforma Adobe Experience. Se você não tiver adquirido a plataforma, forneceremos à Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
@@ -26,7 +26,7 @@ Você pode criar uma ID de configuração usando a ferramenta [de configuração
 
 >[!NOTE]
 >
->Sua organização deve estar na lista de permissões do recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
+>Sua organização deve estar na lista de permissão do recurso. Entre em contato com seu CSM para colocar a lista de permissão.
 
 ## Preparar um Schema
 

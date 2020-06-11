@@ -4,9 +4,9 @@ seo-title: start rápido do SDK da Web do Adobe Experience Platform com Launch
 description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK da Web da Experience Platform para coletar dados
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '511'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 3%
 Este guia o orientará pelas diferentes etapas sobre como configurar o SDK da Web da plataforma Adobe Experience no Launch. Para poder usar este recurso, você precisa ter permissões e estar na lista de permissão. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
 - Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse. O teste no desenvolvimento funcionará sem um CNAME, mas você precisará de um antes de ir para a produção
-- Esteja qualificado para a Plataforma de dados da plataforma Adobe Experience. Se você não tiver adquirido a plataforma, forneceremos à Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
 - Usar a versão mais recente do serviço de ID de Visitante
 
 ## Criar uma ID de configuração

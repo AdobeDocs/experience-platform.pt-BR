@@ -4,7 +4,7 @@ seo-title: 'start rápido do SDK da Web da Adobe Experience Platform '
 description: Guia de start rápido para usar o Experience Platform Web SDK para coletar dados
 seo-description: Guia de start rápido para usar o Experience Platform Web SDK para coletar dados
 translation-type: tm+mt
-source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
+source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Em seguida, forneça sua configuração para o SDK. Isso é feito usando o `conf
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93:dev",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93:dev",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```

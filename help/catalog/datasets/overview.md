@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Visão geral dos conjuntos de dados
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +34,7 @@ Para obter mais informações sobre o XDM, consulte a visão geral [do Sistema](
 
 ## Como inserir dados em conjuntos de dados
 
-A ingestão de dados da plataforma Adobe Experience representa os vários métodos pelos quais a plataforma ingere dados de várias fontes. Independentemente do método de ingestão, todos os dados ingeridos com êxito são convertidos em arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos a serem ingeridos como uma única unidade. Esses arquivos em lote são adicionados aos conjuntos de dados dedicados e persistem no Data Lake.
+A ingestão de dados da plataforma Adobe Experience representa os vários métodos pelos quais a plataforma ingere dados de várias fontes. Independentemente do método de ingestão, todos os dados ingeridos com êxito são convertidos em arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade. Esses arquivos em lote são adicionados aos conjuntos de dados dedicados e persistem no Data Lake.
 
 Consulte a visão geral [da ingestão de](../../ingestion/home.md) dados para obter mais informações.
 
@@ -41,7 +44,10 @@ O Adobe Experience Platform Data Governance permite gerenciar dados do cliente p
 
 Os rótulos de uso de dados podem ser aplicados a conjuntos de dados inteiros ou a campos de conjuntos de dados individuais. Os rótulos adicionados no nível do conjunto de dados são herdados por todos os campos dentro desse conjunto de dados.
 
-Consulte a visão geral [do](../../data-governance/home.md) Data Governance para obter mais informações sobre o serviço. Para obter etapas sobre como trabalhar com rótulos de uso na interface do usuário da plataforma Experience, consulte o guia [do usuário de rótulos de uso de](../../data-governance/labels/user-guide.md)dados.
+Consulte a visão geral [do](../../data-governance/home.md) Data Governance para obter mais informações sobre o serviço. Para obter as etapas sobre como trabalhar com rótulos de uso em [!DNL Platform], consulte os seguintes guias:
+
+* [Gerenciar rótulos na interface do usuário](../../data-governance/labels/user-guide.md)
+* [Gerenciar rótulos na API](../../data-governance/labels/api.md)
 
 ## Conjuntos de dados em serviços de plataforma downstream
 

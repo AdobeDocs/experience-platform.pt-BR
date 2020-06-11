@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector Oracle usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -32,7 +32,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A string de conexão usada para conexão com o Oracle. O padrão da string de conexão Oracle é: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | A string de conexão usada para conexão com o Oracle. O padrão da string de conexão Oracle é: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID da especificação de conexão para Oracle é `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Para obter mais informações sobre a introdução, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `auth.params.connectionString` | A string de conexão usada para conexão com seu banco de dados Oracle. O padrão da string de conexão Oracle é: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `auth.params.connectionString` | A string de conexão usada para conexão com seu banco de dados Oracle. O padrão da string de conexão Oracle é: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | A ID da especificação da conexão Oracle: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Resposta**

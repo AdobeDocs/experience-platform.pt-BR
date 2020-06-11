@@ -4,20 +4,25 @@ solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados usando APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+workflow-type: tm+mt
+source-wordcount: '610'
+ht-degree: 3%
 
 ---
 
 
 # Gerenciar rótulos de uso de dados usando APIs
 
-Este documento fornece etapas sobre como gerenciar rótulos de uso de dados no nível do conjunto de dados e do campo usando a API do serviço de catálogo.
+A API de Serviço de Conjunto de Dados permite gerenciar programaticamente rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do serviço de catálogo que gerencia os metadados do conjunto de dados.
+
+Este documento fornece etapas sobre como gerenciar rótulos de uso de dados no nível do conjunto de dados e do campo usando a API do Serviço de Conjunto de Dados.
 
 ## Introdução
 
-Antes de ler este guia, é recomendável ler a visão geral [do serviço de](../../catalog/home.md) catálogo para obter uma introdução mais robusta ao serviço. Além disso, você também deve seguir as etapas descritas na seção [](../../catalog/api/getting-started.md) Introdução no guia do desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para a API do Catálogo.
+Antes de ler este guia, siga as etapas descritas na seção [](../../catalog/api/getting-started.md) Introdução no guia do desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para [!DNL Platform] APIs.
 
-Para fazer chamadas para os pontos finais descritos nas seções abaixo, é necessário ter o `id` valor exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte a seção do guia do desenvolvedor na [lista de objetos](../../catalog/api/list-objects.md) do Catálogo para localizar as IDs de seus conjuntos de dados existentes.
+Para fazer chamadas para os pontos finais descritos nas seções abaixo, é necessário ter o `id` valor exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte o guia na [listagem de objetos](../../catalog/api/list-objects.md) de Catálogo para localizar as IDs de seus conjuntos de dados existentes.
 
 ## Procurar rótulos para um conjunto de dados {#lookup}
 
@@ -26,7 +31,7 @@ Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjun
 **Formato da API**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Parâmetro | Descrição |
@@ -37,7 +42,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -79,8 +84,8 @@ Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-o
 **Formato da API**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Parâmetro | Descrição |
@@ -93,7 +98,7 @@ A solicitação POST a seguir adiciona uma série de rótulos ao conjunto de dad
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -146,7 +151,7 @@ Você pode excluir os rótulos aplicados a um conjunto de dados, fazendo uma sol
 **Formato da API**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Parâmetro | Descrição |
@@ -157,7 +162,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,3 +178,5 @@ Uma resposta com êxito HTTP status 200 (OK), indicando que os rótulos foram ex
 Agora que você adicionou rótulos de uso de dados no nível do conjunto de dados e do campo, é possível começar a assimilar dados na Experience Platform. Para saber mais, leia a documentação [de ingestão de](../../ingestion/home.md)dados em start.
 
 Agora você também pode definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte a visão geral [das políticas de uso de](../policies/overview.md)dados.
+
+Para obter mais informações sobre como gerenciar conjuntos de dados em [!DNL Experience Platform], consulte a visão geral [](../../catalog/datasets/overview.md)dos conjuntos de dados.

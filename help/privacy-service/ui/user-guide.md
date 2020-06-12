@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 0%
 
 ---
 
@@ -15,16 +18,17 @@ Este documento fornece etapas para criar e gerenciar solicitações de privacida
 
 ## Navegue pelo painel da interface do usuário do Privacy Service
 
-O painel para a interface do usuário do Privacy Service fornece dois widgets que permitem que você visualização o status de seus trabalhos de privacidade: Relatório **de** Status e Solicitações **** de Job. O painel também exibe a regra selecionada atual para as tarefas exibidas.
+O painel para a interface do usuário do Privacy Service fornece dois widgets que permitem que você visualização o status de seus trabalhos de privacidade: **Relatório** de Status e Solicitações **** de Job. O painel também exibe a regra selecionada atual para as tarefas exibidas.
 
 ![painel da interface](../images/user-guide/dashboard.png)
 
 ### Tipo de regulamento
 
-O Privacy Service suporta solicitações de trabalho para dois tipos de regulamento:
+O Privacy Service suporta solicitações de trabalho para três tipos de regulamento:
 
-* O Regulamento Geral sobre a Proteção de Dados (RGPD)
-* The California Consumer Privacy Act (CCPA).
+* O Regulamento Geral sobre a Proteção de Dados das Uniões (RGPD)
+* The California Consumer Privacy Act (CCPA)
+* Lei de proteção de dados pessoais da Tailândia (PDPA_THA)
 
 Os trabalhos para cada tipo de regulamento são rastreados separadamente. Para alternar entre tipos de regulamento, clique no menu suspenso Tipo **de** regulamento e selecione a regra desejada na lista.
 

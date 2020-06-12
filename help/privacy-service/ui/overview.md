@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Visão geral da interface do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
@@ -17,15 +20,17 @@ O Adobe Experience Platform Privacy Service fornece uma API RESTful e uma interf
 
 É necessário ter uma Adobe ID para autenticar na interface do usuário do Privacy Service. Além disso, você deve ter privilégios de Administrador de sistema na organização à qual sua Adobe ID está associada.
 
-Navegue até a página de logon da Adobe Experience Cloud em https://experience.adobe.com. Clique em **Fazer logon com uma Adobe ID** e insira suas credenciais da Adobe ID quando solicitado. Depois de entrar, clique em **Administração**.
+Navegue até a página de logon da Adobe Experience Cloud em https://experience.adobe.com. Clique em **[!UICONTROL Fazer logon com uma Adobe ID]** e insira suas credenciais da Adobe ID quando solicitado.
 
-![Guia Administração](../images/ui-overview/admin-tab.png)
+Depois de entrar, clique em **[!UICONTROL Privacidade UI]**.
 
->[!NOTE] A guia Administração só será exibida se você tiver privilégios de administrador do sistema em sua organização.
+![](../images/ui-overview/quick-access.png)
 
-Por fim, selecione **Iniciar a interface** do usuário do Privacy na próxima tela para abrir a interface do usuário do Privacy Service.
+### Logon da plataforma Experience
 
-![Página Administração](../images/ui-overview/admin-page.png)
+Se você tiver acesso à interface do usuário da plataforma Adobe Experience, também poderá acessar a interface do usuário do Privacy Service por meio da guia **[!UICONTROL Solicitações]** , na navegação à esquerda.
+
+![](../images/ui-overview/platform.png)
 
 ## Próximas etapas
 

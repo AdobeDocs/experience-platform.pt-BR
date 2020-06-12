@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,26 @@ Para que os Serviços inteligentes detectem insights de seus dados de eventos de
 
 Este documento fornece orientação geral sobre como mapear os dados de seus eventos de marketing de vários canais para esse schema, descrevendo informações sobre campos importantes dentro do schema para ajudá-lo a determinar como mapear efetivamente seus dados para sua estrutura.
 
-## Como entender o schema CEE
+## Resumo do fluxo de trabalho
+
+O processo de preparação varia dependendo se os dados são armazenados na Adobe Experience Platform ou externamente. Esta seção resume as etapas necessárias, considerando qualquer um dos cenários.
+
+### Preparação de dados externos
+
+Se seus dados forem armazenados fora do [!DNL Experience Platform], siga as etapas abaixo:
+
+1. Entre em contato com os Serviços de consultoria da Adobe para solicitar credenciais de acesso para um container dedicado do Armazenamento Blob do Azure.
+1. Usando suas credenciais de acesso, carregue seus dados no container Blob.
+1. Trabalhe com os Serviços de consultoria da Adobe para mapear seus dados para o schema [ExperienceEvent do](#cee-schema) consumidor e assimilá-los aos Serviços inteligentes.
+
+### [!DNL Experience Platform] preparação de dados
+
+Se seus dados já estiverem armazenados em [!DNL Platform], siga as etapas abaixo:
+
+1. Revise a estrutura do schema [ExperienceEvent do](#cee-schema) consumidor e determine se os dados podem ser mapeados para seus campos.
+1. Entre em contato com os Serviços de consultoria da Adobe para ajudar a mapear seus dados para o schema e assimilá-los aos Serviços inteligentes, ou [siga as etapas deste guia](#mapping) se desejar mapear os dados por conta própria.
+
+## Como entender o schema CEE {#cee-schema}
 
 O schema ExperienceEvent do consumidor descreve o comportamento de um indivíduo, pois ele se relaciona aos eventos de marketing digital (Web ou móveis), bem como à atividade de comércio online ou offline. O uso desse schema é necessário para os Serviços inteligentes devido aos campos semânticos bem definidos (colunas), evitando nomes desconhecidos que deixariam os dados menos claros.
 
@@ -59,7 +78,7 @@ Para obter informações completas sobre cada um dos subcampos obrigatórios par
 
 A tabela a seguir fornece alguns exemplos de canais de marketing mapeados para o `xdm:channel` schema:
 
-| Canal | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Pesquisa paga | https:/<span>/ns.adobe.com/xdm/canal-types/search | pago | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canais-types/social | won | clicks |
@@ -185,7 +204,7 @@ Este campo contém informações relacionadas a atividades de marketing que est�
 
 Para obter informações completas sobre cada um dos subcampos obrigatórios para `xdm:productListItems`, consulte as especificações do setor de [marketing](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
-## Dados de mapeamento e assimilação
+## Mapeamento e assimilação de dados (#mapeamento)
 
 Depois de determinar se os dados de seus eventos de marketing podem ser mapeados para o schema CEE, a próxima etapa é determinar quais dados você deve trazer para os Serviços inteligentes. Todos os dados históricos usados no Intelligent Services devem estar dentro do período mínimo de quatro meses de dados, além do número de dias planejado como um período de pesquisa.
 
@@ -237,7 +256,7 @@ PATCH /dataSets/{DATASET_ID}
 
 Dependendo da fonte de onde você está assimilando dados, é necessário fornecer valores apropriados `primaryIdentityNamespace` e de `sourceConnectorId` tag na carga da solicitação.
 
-A solicitação a seguir adiciona os valores de tag apropriados para o Gerenciador de Audiências:
+A solicitação a seguir adiciona os valores de tag apropriados para o Audience Manager:
 
 ```shell
 curl -X PATCH \

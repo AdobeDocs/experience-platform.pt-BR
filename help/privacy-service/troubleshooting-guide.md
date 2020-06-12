@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: 5921f89ce551a4bdec4c5038d579cebd0451f5f2
+workflow-type: tm+mt
+source-wordcount: '899'
+ht-degree: 0%
 
 ---
 
 
-# Perguntas frequentes sobre o Privacy Service
+# Guia de solução de problemas do Privacy Service
 
-Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform Privacy Service.
+O Adobe Experience Platform Privacy Service fornece uma API RESTful e uma interface de usuário para ajudar o empresa a gerenciar solicitações de privacidade de dados do cliente. Com o Privacy Service, você pode enviar solicitações para acessar e excluir dados de clientes particulares ou pessoais, facilitando a conformidade automatizada com as regulamentações organizacionais e legais de privacidade.
 
-O Privacy Service fornece uma API RESTful e uma interface de usuário para ajudar o empresa a gerenciar solicitações de privacidade de dados do cliente. Com o Privacy Service, você pode enviar solicitações para acessar e excluir dados de clientes particulares ou pessoais, facilitando a conformidade automatizada com as regulamentações organizacionais e legais de privacidade.
+Este documento fornece respostas para perguntas frequentes sobre o Privacy Service, bem como informações sobre erros frequentemente encontrados na API.
 
 ## Ao fazer solicitações de privacidade na API, qual é a diferença entre uma ID de usuário e uma ID de usuário? {#user-ids}
 
@@ -92,3 +95,18 @@ Para obter mais detalhes, consulte a seção sobre como [pesquisar uma tarefa pe
 ### Uso da interface
 
 No painel da interface do usuário do Privacy Service, localize o trabalho que deseja baixar no widget Solicitações **de** trabalho. Clique na ID do trabalho para abrir a página Detalhes _do_ trabalho. Aqui, clique em **Download** no canto superior direito para baixar o arquivo ZIP. Consulte o guia [do usuário do](ui/user-guide.md) Privacy Service para obter etapas mais detalhadas.
+
+## Mensagens de erro comuns
+
+A tabela a seguir descreve alguns erros comuns no Privacy Service, com descrições para ajudar a resolver seus respectivos problemas.
+
+| Mensagem de erro | Descrição |
+| --- | --- |
+| IDs de usuário não encontradas. | Algumas IDs de usuário fornecidas na solicitação não foram encontradas e foram ignoradas. Verifique se você está usando as namespaces e os valores de ID corretos na carga da solicitação. Consulte o documento sobre como [fornecer dados](./identity-data.md) de identidade para obter uma explicação mais detalhada. |
+| Namespace inválida | Uma namespace de identidade fornecida para uma ID de usuário era inválida. Consulte a seção sobre namespaces [](./api/appendix.md#standard-namespaces) de identidade padrão no apêndice do guia do desenvolvedor do Privacy Service para obter uma lista das namespaces aceitas. Se estiver usando uma namespace personalizada, certifique-se de que está configurando a propriedade da ID como &quot; `type` personalizada&quot;. |
+| Parcialmente concluído | A tarefa foi concluída com êxito, mas alguns dados não eram aplicáveis à solicitação e foram ignorados. |
+| Os dados não estão no formato necessário. | Um ou mais valores de dados para o aplicativo especificado foram formatados incorretamente. Verifique os detalhes do trabalho para obter mais informações. |
+| A Organização IMS não foi provisionada. | Esta mensagem ocorre quando a sua Organização IMS não foi provisionada para o Privacy Service. Entre em contato com o administrador para obter mais informações. |
+| O acesso e as permissões são necessários. | O acesso e as permissões são necessários para usar o Privacy Service. Entre em contato com o administrador para obter acesso. |
+| Ocorreu um problema ao carregar e arquivar os dados de acesso. | Quando esse erro ocorrer, carregue novamente os dados de acesso e tente novamente. |
+| A carga de trabalho foi excedida para o limite de taxa de documento atual. | Quando este erro ocorrer, reduza a taxa de envio e tente novamente. |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importar uma fórmula empacotada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Este tutorial usa a API [de aprendizado de máquina](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei para criar um [mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
 
-Antes de começar, é importante observar que a Adobe Experience Platform Data Science Workspace usa termos diferentes para fazer referência a elementos similares na API e na interface do usuário. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correspondentes:
+Antes de começar, é importante observar que a Adobe Experience Platform Data Science Workspace usa termos diferentes para fazer referência a elementos semelhantes dentro da API e da interface do usuário. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correspondentes:
 
 | Termo da interface do usuário | Termo da API |
 | ---- | ---- |
@@ -35,17 +35,15 @@ Este tutorial requer um arquivo de Receita empacotado no formato de um URL do Do
 
 - `{DOCKER_URL}`: Um endereço de URL para uma imagem do Docker de um serviço inteligente.
 
-Este tutorial requer que você tenha concluído o tutorial [](../../tutorials/authentication.md) Autenticação para a plataforma Adobe Experience para fazer chamadas com êxito para as APIs da plataforma. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Este tutorial requer que você tenha concluído o tutorial [Autenticação para Adobe Experience Platform](../../tutorials/authentication.md) para realizar com êxito chamadas para APIs da Platform. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.
-- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.
-- `{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.
+- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
+- `{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.
 
 ## Criar um mecanismo
 
-Dependendo do formulário do arquivo de Receita empacotado a ser incluído como parte da solicitação de API, um Mecanismo é criado de uma das duas maneiras:
-
-- [Criar um mecanismo com um URL de docking](#create-an-engine-with-a-docker-url)
+Os mecanismos podem ser criados realizando uma solicitação POST para o terminal /mecanismos. O Mecanismo criado é configurado com base no formulário do arquivo de Receita empacotado que deve ser incluído como parte da solicitação de API.
 
 ### Criar um mecanismo com um URL de docking {#create-an-engine-with-a-docker-url}
 

@@ -1,26 +1,49 @@
 ---
-keywords: Experience Platform;Tutorial;Feature Pipeline;Data Science Workspace;popular topics
-solution: Experience Platform
-title: Criar um pipeline de recurso
+keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
+solution: Adobe Experience Platform Data Science Workspace
+title: Criar um pipeline de recursos
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
 
 
-# Criar um pipeline de recurso
+# Criar um pipeline de recursos
 
-[!DNL Adobe Experience Platform] permite que você crie e crie Pipelines de Recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de Execução do Sensei Machine Learning Framework (a seguir denominado &quot;Tempo de Execução&quot;).
+>[!IMPORTANT]
+> No momento, os Pipelines de recursos estão disponíveis somente por meio da API.
 
-Este documento descreve as várias classes encontradas em um Recurso Pipeline e fornece um tutorial passo a passo para a criação de um Recurso Pipeline personalizado usando o SDK [de criação de](./sdk.md) modelo no PySpark e no Spark.
+O Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime (a seguir denominado &quot;Runtime&quot;).
+
+Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizado usando o SDK [de criação de](./sdk.md) modelo no PySpark.
+
+O fluxo de trabalho a seguir ocorre quando um pipeline de recursos é executado:
+
+1. A fórmula carrega o conjunto de dados em um pipeline.
+2. A transformação do recurso é feita no conjunto de dados e gravada de volta no Adobe Experience Platform.
+3. Os dados transformados são carregados para treinamento.
+4. O pipeline do recurso define os estágios com o Gradient Boosting Regressor como o modelo escolhido.
+5. O pipeline é usado para ajustar os dados de treinamento e o modelo treinado é criado.
+6. O modelo é transformado com o conjunto de dados de pontuação.
+7. Colunas interessantes da saída são então selecionadas e salvas de volta [!DNL Experience Platform] com os dados associados.
+
+## Introdução
+
+Para executar uma fórmula em qualquer organização, é necessário o seguinte:
+- Um conjunto de dados de entrada.
+- O Schema do conjunto de dados.
+- Um schema transformado e um conjunto de dados vazio com base nesse schema.
+- Um schema de saída e um conjunto de dados vazio com base nesse schema.
+
+Todos os conjuntos de dados acima precisam ser carregados na [!DNL Platform] interface do usuário. Para configurar isso, use o script [de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)inicialização fornecido pela Adobe.
 
 ## Classes de pipeline de recurso
 
-A tabela a seguir descreve as principais Classes abstratas que devem ser estendidas para criar um Pipeline de recurso:
+A tabela a seguir descreve as principais classes abstratas que devem ser estendidas para criar um pipeline de recursos:
 
 | Classe abstrata | Descrição |
 | -------------- | ----------- |
@@ -29,7 +52,7 @@ A tabela a seguir descreve as principais Classes abstratas que devem ser estendi
 | FeaturePipelineFactory | Uma classe FeaturePipelineFactory cria um Spark Pipeline que consiste em uma série de Spark Transformers para executar engenharia de recursos. Você pode optar por não fornecer uma classe FeaturePipelineFactory e implementar sua lógica de engenharia de recursos na classe DatasetTransformer. |
 | DataSaver | Uma classe DataSaver fornece a lógica para o armazenamento de um conjunto de dados de recurso. |
 
-Quando um trabalho de Pipeline de Recurso é iniciado, o Tempo de Execução primeiro executará o DataLoader para carregar dados de entrada como DataFrame e depois modifica o DataFrame executando DatasetTransformer, FeaturePipelineFactory ou ambos. Por fim, o conjunto de dados de recursos resultante é armazenado por meio do DataSaver.
+Quando um trabalho de Pipeline de recurso é iniciado, o Tempo de execução primeiro executa o DataLoader para carregar dados de entrada como um DataFrame e, em seguida, modifica o DataFrame executando DatasetTransformer, FeaturePipelineFactory ou ambos. Por fim, o conjunto de dados de recursos resultante é armazenado por meio do DataSaver.
 
 O diagrama a seguir mostra a ordem de execução do Tempo de execução:
 
@@ -44,8 +67,7 @@ As seções a seguir fornecem detalhes e exemplos sobre a implementação das cl
 
 O arquivo JSON de configuração consiste em pares de valores chave e destina-se a especificar quaisquer variáveis a serem posteriormente definidas durante o tempo de execução. Esses pares de valores chave podem definir propriedades como local do conjunto de dados de entrada, ID do conjunto de dados de saída, ID do locatário, cabeçalhos de coluna e assim por diante.
 
-O exemplo a seguir demonstra pares de valores chave encontrados em um arquivo de configuração. Expanda o exemplo para ver os detalhes:
-
+O exemplo a seguir demonstra os pares de valores chave encontrados em um arquivo de configuração:
 
 **exemplo JSON de configuração**
 
@@ -55,7 +77,7 @@ O exemplo a seguir demonstra pares de valores chave encontrados em um arquivo de
         "name": "fp",
         "parameters": [
             {
-                "key": "datasetId",
+                "key": "dataset_id",
                 "value": "000"
             },
             {
@@ -71,132 +93,74 @@ O exemplo a seguir demonstra pares de valores chave encontrados em um arquivo de
 ]
 ```
 
-
-
-Você pode acessar o JSON de configuração por meio de qualquer método de classe que defina `configProperties` como parâmetro. Por exemplo:
+Você pode acessar o JSON de configuração por meio de qualquer método de classe que defina `config_properties` como parâmetro. Por exemplo:
 
 **PySpark**
 
 ```python
-input_dataset_id = str(configProperties.get("datasetId"))
+dataset_id = str(config_properties.get(dataset_id))
 ```
 
-**Faísca**
-
-```scala
-val input_dataset_id: String = configProperties.get("datasetId")
-```
-
+Consulte o arquivo [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) fornecido pela Data Science Workspace para obter um exemplo mais detalhado de configuração.
 
 ### Preparar os dados de entrada com DataLoader {#prepare-the-input-data-with-dataloader}
 
 O DataLoader é responsável pela recuperação e filtragem de dados de entrada. Sua implementação do DataLoader deve estender a classe abstrata `DataLoader` e substituir o método abstrato `load`.
 
-O exemplo a seguir recupera um conjunto de dados da Plataforma por ID e o retorna como um DataFrame, onde a ID do conjunto de dados (`datasetId`) é uma propriedade definida no arquivo de configuração. Expanda cada exemplo para ver os detalhes:
-
+O exemplo a seguir recupera um [!DNL Platform] conjunto de dados por ID e o retorna como um DataFrame, onde a ID do conjunto de dados (`dataset_id`) é uma propriedade definida no arquivo de configuração.
 
 **Exemplo de PySpark**
 
 ```python
 # PySpark
 
-from sdk.data_loader import DataLoader
+from pyspark.sql.types import StringType, TimestampType
+from pyspark.sql.functions import col, lit, struct
+import logging
 
 class MyDataLoader(DataLoader):
-    def load(self, configProperties, spark):
+    def load_dataset(config_properties, spark, tenant_id, dataset_id):
+    PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
+    PLATFORM_SDK_PQS_INTERACTIVE = "interactive"
 
-        # preliminary checks
-        if configProperties is None :
-            raise ValueError("configProperties parameter is null")
-        if spark is None:
-            raise ValueError("spark parameter is null")
+    service_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+    user_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+    org_id = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+    api_key = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
 
-        # prepare variables
-        dataset_id = str(
-            configProperties.get("datasetId"))
-        service_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+    dataset_id = str(config_properties.get(dataset_id))
 
-        # validate variables
-        for arg in ['dataset_id', 'service_token', 'user_token', 'org_id', 'api_key']:
-            if eval(arg) == 'None':
-                raise ValueError("%s is empty" % arg)
+    for arg in ['service_token', 'user_token', 'org_id', 'dataset_id', 'api_key']:
+        if eval(arg) == 'None':
+            raise ValueError("%s is empty" % arg)
 
-        # load dataset through Spark session
-        df = spark.read.format("com.adobe.platform.dataset") \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('orgId', org_id) \
-            .option('serviceApiKey', api_key) \
-            .load(dataset_id)
+    query_options = get_query_options(spark.sparkContext)
 
-        # return as DataFrame
-        return df
+    pd = spark.read.format(PLATFORM_SDK_PQS_PACKAGE) \
+        .option(query_options.userToken(), user_token) \
+        .option(query_options.serviceToken(), service_token) \
+        .option(query_options.imsOrg(), org_id) \
+        .option(query_options.apiKey(), api_key) \
+        .option(query_options.mode(), PLATFORM_SDK_PQS_INTERACTIVE) \
+        .option(query_options.datasetId(), dataset_id) \
+        .load()
+    pd.show()
+
+    # Get the distinct values of the dataframe
+    pd = pd.distinct()
+
+    # Flatten the data
+    if tenant_id in pd.columns:
+        pd = pd.select(col(tenant_id + ".*"))
+
+    return pd
 ```
-
-
-
-
-**Exemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DataLoader
-import org.apache.spark.sql.{DataFrame, SparkSession}
-
-class MyDataLoader extends DataLoader {
-    override def load(configProperties: ConfigProperties, sparkSession: SparkSession): DataFrame = {
-
-        // preliminary checks
-        require(configProperties != null)
-        require(sparkSession != null)
-
-        // prepare variables
-        val dataSetId: String = configProperties
-            .get("datasetId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
-
-        // validate variables
-        List(dataSetId, serviceToken, userToken, orgId, apiKey).foreach(
-            value => required(value != "")
-        )
-
-        // load dataset through Spark session
-        var df = sparkSession.read.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .load(dataSetId)
-        
-        // return as DataFrame
-        df
-    }
-}
-```
-
-
 
 ### Transformar um conjunto de dados com DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 Um DatasetTransformer fornece a lógica para transformar um DataFrame de entrada e retorna um DataFrame derivado novo. Essa classe pode ser implementada para trabalhar em conjunto com um FeaturePipelineFactory, funcionar como o único componente de engenharia de recursos ou você pode optar por não implementar essa classe.
 
-O exemplo a seguir estende a classe DatasetTransformer. Expanda cada exemplo para ver os detalhes:
+O exemplo a seguir estende a classe DatasetTransformer:
 
 
 **Exemplo de PySpark**
@@ -205,54 +169,59 @@ O exemplo a seguir estende a classe DatasetTransformer. Expanda cada exemplo par
 # PySpark
 
 from sdk.dataset_transformer import DatasetTransformer
+from pyspark.ml.feature import StringIndexer
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import unix_timestamp, from_unixtime, to_date, lit, lag, udf, date_format, lower, col, split, explode
+from pyspark.sql import Window
+from .helper import setupLogger
 
 class MyDatasetTransformer(DatasetTransformer):
+    logger = setupLogger(__name__)
 
-    def transform(self, configProperties, dataset):
-        transformed = dataset
+    def transform(self, config_properties, dataset):
+        tenant_id = str(config_properties.get("tenantId"))
 
-        '''
-        Transformations
-        '''
+        # Flatten the data
+        if tenant_id in dataset.columns:
+            self.logger.info("Flatten the data before transformation")
+            dataset = dataset.select(col(tenant_id + ".*"))
+            dataset.show()
 
-        # return new DataFrame
-        return transformed
+        # Convert isHoliday boolean value to Int
+        # Rename the column to holiday and drop isHoliday
+        pd = dataset.withColumn("holiday", col("isHoliday").cast(IntegerType())).drop("isHoliday")
+        pd.show()
+
+        # Get the week and year from date
+        pd = pd.withColumn("week", date_format(to_date("date", "MM/dd/yy"), "w").cast(IntegerType()))
+        pd = pd.withColumn("year", date_format(to_date("date", "MM/dd/yy"), "Y").cast(IntegerType()))
+
+        # Convert the date to TimestampType
+        pd = pd.withColumn("date", to_date(unix_timestamp(pd["date"], "MM/dd/yy").cast("timestamp")))
+
+        # Convert categorical data
+        indexer = StringIndexer(inputCol="storeType", outputCol="storeTypeIndex")
+        pd = indexer.fit(pd).transform(pd)
+
+        # Get the WeeklySalesAhead and WeeklySalesLag column values
+        window = Window.orderBy("date").partitionBy("store")
+        pd = pd.withColumn("weeklySalesLag", lag("weeklySales", 1).over(window)).na.drop(subset=["weeklySalesLag"])
+        pd = pd.withColumn("weeklySalesAhead", lag("weeklySales", -1).over(window)).na.drop(subset=["weeklySalesAhead"])
+        pd = pd.withColumn("weeklySalesScaled", lag("weeklySalesAhead", -1).over(window)).na.drop(subset=["weeklySalesScaled"])
+        pd = pd.withColumn("weeklySalesDiff", (pd['weeklySales'] - pd['weeklySalesLag'])/pd['weeklySalesLag'])
+
+        pd = pd.na.drop()
+        self.logger.debug("Transformed dataset count is %s " % pd.count())
+
+        # return transformed dataframe
+        return pd
 ```
-
-
-
-
-**Exemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DatasetTransformer
-
-class MyDatasetTransformer extends DatasetTransformer {
-
-    override def transform(configProperties: ConfigProperties, dataset: Dataset[_]): Dataset[_] = {
-        val transformed = dataset
-
-        /*
-        transformations
-        */
-        
-        // return new DataFrame
-        transformed
-    }
-}
-```
-
-
 
 ### Recursos de dados do engenheiro com FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 Um FeaturePipelineFactory permite implementar sua lógica de engenharia de recursos definindo e encadeando uma série de Transformadores Spark através de um Spark Pipeline. Essa classe pode ser implementada para trabalhar em cooperação com um DatasetTransformer, funcionar como o único componente de engenharia de recursos ou você pode optar por não implementar essa classe.
 
-O exemplo a seguir estende a classe FeaturePipelieFactory e implementa uma série de transformadores Spark como vários estágios em um Spark Pipeline. Expanda cada exemplo para ver os detalhes:
-
+O exemplo a seguir estende a classe FeaturePipelineFactory:
 
 **Exemplo de PySpark**
 
@@ -260,78 +229,64 @@ O exemplo a seguir estende a classe FeaturePipelieFactory e implementa uma séri
 # PySpark
 
 from pyspark.ml import Pipeline
-from pyspark.ml.feature import HashingTF, Tokenizer
-from sdk.feature_pipeline_factory import FeaturePipelineFactory
+from pyspark.ml.regression import GBTRegressor
+from pyspark.ml.feature import VectorAssembler
+
+import numpy as np
+
+from sdk.pipeline_factory import PipelineFactory
 
 class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
-    def create_pipeline(self, configProperties):
+    def apply(self, config_properties):
+        if config_properties is None:
+            raise ValueError("config_properties parameter is null")
 
-        # Spark Transformers
-        tokenizer = Tokenizer(inputCol="lower_text", outputCol="words")
-        hashingTF = HashingTF(inputCol=tokenizer.getOutputCol(), outputCol="features")
+        tenant_id = str(config_properties.get("tenantId"))
+        input_features = str(config_properties.get("ACP_DSW_INPUT_FEATURES"))
 
-        # Chain together Spark Transformers as Spark Pipeline Stages
-        pipeline = Pipeline(stages=[tokenizer, hashingTF])
+        if input_features is None:
+            raise ValueError("input_features parameter is null")
+        if input_features.startswith(tenant_id):
+            input_features = input_features.replace(tenant_id + ".", "")
 
-        # return a Spark Pipeline
+        learning_rate = float(config_properties.get("learning_rate"))
+        n_estimators = int(config_properties.get("n_estimators"))
+        max_depth = int(config_properties.get("max_depth"))
+
+        feature_list = list(input_features.split(","))
+        feature_list.remove("date")
+        feature_list.remove("storeType")
+
+        cols = np.array(feature_list)
+
+        # Gradient-boosted tree estimator
+        gbt = GBTRegressor(featuresCol='features', labelCol='weeklySalesAhead', predictionCol='prediction',
+                       maxDepth=max_depth, maxBins=n_estimators, stepSize=learning_rate)
+
+        # Assemble the fields to a vector
+        assembler = VectorAssembler(inputCols=cols, outputCol="features")
+
+        # Construct the pipeline
+        pipeline = Pipeline(stages=[assembler, gbt])
+
         return pipeline
 
-    def get_param_map(self, configProperties, sparkSession):
+    def train(self, config_properties, dataframe):
         pass
+
+    def score(self, config_properties, dataframe, model):
+        pass
+
+    def getParamMap(self, config_properties, sparkSession):
+        return None
 ```
-
-
-
-
-**Exemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.FeaturePipelineFactory
-import org.apache.spark.ml.feature.{HashingTF, Tokenizer}
-import org.apache.spark.ml.Pipeline
-import org.apache.spark.ml.param.ParamMap
-import org.apache.spark.sql.SparkSession
-
-class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
-    def this() = this("MyFeaturePipeline")
-
-    override def createPipeline(configProperties: ConfigProperties): Pipeline = {
-        
-        // Spark Transformers
-        val tokenizer = new Tokenizer()
-            .setInputCol("lower_text")
-            .setOutputCol("words")
-        val hashingTF = new HashingTF()
-            .setInputCol(tokenizer.getOutputCol())
-            .setOutputCol("features")
-
-        // Chain together Spark Transformers as Spark Pipeline Stages
-        val pipeline = new Pipeline()
-            .setStages(Array(tokenizer, hashingTF))
-        
-        // return a Spark Pipeline
-        pipeline
-    }
-
-    override def getParamMap(configProperties: ConfigProperties, sparkSession: SparkSession): ParamMap = {
-        val map = new ParamMap()
-        map
-    }
-}
-```
-
-
 
 ### Armazenar seu conjunto de dados de recursos com o DataSaver {#store-your-feature-dataset-with-datasaver}
 
 O DataSaver é responsável por armazenar seus conjuntos de dados de recursos resultantes em um local de armazenamento. Sua implementação do DataSaver deve estender a classe abstrata `DataSaver` e substituir o método abstrato `save`.
 
-O exemplo a seguir estende a classe DataSaver que armazena dados para um conjunto de dados da plataforma por ID, onde a ID do conjunto de dados (`featureDatasetId`) e a ID do locatário (`tenantId`) são propriedades definidas no arquivo de configuração. Expanda cada exemplo para ver os detalhes:
-
+O exemplo a seguir estende a classe DataSaver que armazena dados para um [!DNL Platform] conjunto de dados por ID, onde a ID do conjunto de dados (`featureDatasetId`) e a ID do locatário (`tenantId`) são propriedades definidas na configuração.
 
 **Exemplo de PySpark**
 
@@ -395,152 +350,89 @@ class MyDataSaver(DataSaver):
 ```
 
 
-
-
-**Exemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.dataset.DataSetOptions
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.impl.Constants
-import com.adobe.platform.ml.sdk.DataSaver
-import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.TimestampType
-
-class MyDataSaver extends DataSaver {
-    override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
-
-        // Spark session
-        val sparkSession = dataFrame.sparkSession
-
-        // preliminary checks
-        require(configProperties != null)
-        require(dataFrame != null)
-
-        // prepare variables
-        val timestamp:String = "2019-01-01 00:00:00"
-        val output_dataset_id: String = configProperties
-            .get("featureDatasetId").getOrElse("")
-        val tenant_id:String = configProperties
-            .get("tenantId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
-
-        // validate variables
-        List(output_dataset_id, tenant_id, serviceToken, userToken, orgId, apiKey).foreach(
-            value => require(value != "")
-        )
-
-        // create and prepare DataFrame with valid columns
-        import sparkSession.implicits._
-
-        var output_df  = dataFrame.withColumn("date", $"date".cast("String"))
-        output_df = output_df.withColumn("timestamp", lit(timestamp).cast(TimestampType))
-        output_df = output_df.withColumn("_id", lit("empty"))
-        output_df = output_df.withColumn("eventType", lit("empty"))
-
-        // store data into dataset
-        output_df.select(tenant_id, "_id", "eventType", "timestamp").write.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .save(output_dataset_id)
-    }
-}
-```
-
 ### Especifique os nomes de classe implementados no arquivo do aplicativo {#specify-your-implemented-class-names-in-the-application-file}
 
-Agora que as classes do Feature Pipeline estão definidas e implementadas, você deve especificar os nomes das classes no arquivo do aplicativo.
+Agora que suas classes de pipeline de recursos estão definidas e implementadas, você deve especificar os nomes de suas classes no arquivo YAML do aplicativo.
 
-Os exemplos a seguir especificam nomes de classe implementados. Expanda o exemplo para ver os detalhes:
-
+Os exemplos a seguir especificam nomes de classe implementados:
 
 **Exemplo de PySpark**
 
 ```yaml
-# application.yaml
+#Name of the class which contains implementation to get the input data.
+feature.dataLoader: InputDataLoaderForFeaturePipeline
 
-# Name of the implementation of DataLoader abstract class
-feature.dataLoader: MyDataLoader
-
-# Name of the implementation of DatasetTransformer abstract class
+#Name of the class which contains implementation to get the transformed data.
 feature.dataset.transformer: MyDatasetTransformer
 
-# Name of the implementation of FeaturePipelineFactory abstract class
-feature.pipeline.class: MyFeaturePipelineFactory
+#Name of the class which contains implementation to save the transformed data.
+feature.dataSaver: DatasetSaverForTransformedData
 
-# Name of the implementation of DataSaver abstract class
-feature.dataSaver: MyDataSaver
+#Name of the class which contains implementation to get the training data
+training.dataLoader: TrainingDataLoader
+
+#Name of the class which contains pipeline. It should implement PipelineFactory.scala
+pipeline.class: TrainPipeline
+
+#Name of the class which contains implementation for evaluation metrics.
+evaluator: Evaluator
+evaluateModel: True
+
+#Name of the class which contains implementation to get the scoring data.
+scoring.dataLoader: ScoringDataLoader
+
+#Name of the class which contains implementation to save the scoring data.
+scoring.dataSaver: MyDatasetSaver
 ```
 
+## Crie seu mecanismo de pipeline de recursos usando a API {#create-feature-pipeline-engine-api}
 
+Agora que você criou seu pipeline de recursos, é necessário criar uma imagem Docker para fazer uma chamada para os pontos finais do pipeline de recursos na API de aprendizado de máquina do Sensei. Você precisa de um URL de imagem do Docker para fazer uma chamada para os pontos finais do pipeline de recursos.
 
+>[!TIP]
+>Se você não tiver um URL do Docker, visite os arquivos de origem do [pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma explicação passo a passo sobre como criar um URL de host do Docker.
 
-**Exemplo de Spark**
+Opcionalmente, você também pode usar a seguinte coleção Postman para ajudar a concluir o fluxo de trabalho da API do pipeline de recursos:
 
-```properties
-# application.properties
+https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
-# Name of the implementation of DataLoader abstract class
-feature.pipeline.class=MyDataLoader
+### Criar um mecanismo de pipeline de recursos {#create-engine-api}
 
-# Name of the implementation of DatasetTransformer abstract class
-feature.dataset.transformer=MyDatasetTransformer
+Depois de ter a localização da imagem do Docker, você pode [criar um mecanismo](../api/engines.md#feature-pipeline-docker) de pipeline de recursos usando a API de aprendizado de máquina do Sensei executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
 
-# Name of the implementation of FeaturePipelineFactory abstract class
-feature.dataLoader=MyFeaturePipelineFactory
+### Criar uma instância MLI {#create-mlinstance}
 
-# Name of the implementation of DataSaver abstract class
-feature.dataSaver=MyDataSaver
-```
+Usando a sua criação recém-criada `engineID`, é necessário [criar uma posição](../api/mlinstances.md#create-an-mlinstance) MLI fazendo uma solicitação POST para o `/mlInstance` endpoint. Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
 
+### Criar um experimento {#create-experiment}
 
+Em seguida, é necessário [criar um Experimento](../api/experiments.md#create-an-experiment). Para criar um Experimento, é necessário ter seu identificador exclusivo (`id`) MLIposition e fazer uma solicitação POST ao `/experiment` terminal. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento recém-criado, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
 
-## Criar o artefato binário {#build-the-binary-artifact}
+### Especificar a tarefa do pipeline do recurso de execução de Experimento {#specify-feature-pipeline-task}
 
-Agora que suas classes Feature Pipeline foram implementadas, você pode criá-las e compilá-las em um artefato binário que pode ser usado para criar um Feature Pipeline por meio de chamadas de API.
+Depois de criar um Experimento, é necessário alterar o modo do Experimento para `featurePipeline`. Para alterar o modo, faça com que um POST adicional seja enviado [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) com o seu `EXPERIMENT_ID` e no corpo `{ "mode":"featurePipeline"}` para especificar uma execução de teste do pipeline de recursos.
 
-**PySpark**
+Depois de concluído, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` recuperar [o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
 
-Para criar um Pipeline de recursos do PySpark, execute o script `setup.py` Python localizado no diretório raiz do SDK de criação de modelos.
+### Especificar a tarefa de treinamento de execução de Experimento {#training}
 
->[!NOTE] A criação de um Pipeline de recursos do PySpark requer a instalação do Python 3 em sua máquina.
+Em seguida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução do treinamento. Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o modo como `train` e envie uma matriz de tarefas que contenha seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento solicitado.
 
-```shell
-python3 setup.py bdist_egg
-```
+Depois de concluído, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` recuperar [o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
 
-A criação bem-sucedida do seu Recurso Pipeline gerará um `.egg` artefato no `/dist` diretório. Esse artefato é usado para criar um Recurso Pipeline.
+### Especificar a tarefa de pontuação da execução do Experimento {#scoring}
 
-**Faísca**
+>[!NOTE]
+> Para concluir esta etapa, é necessário ter pelo menos uma execução de treinamento bem-sucedida associada ao seu Experimento.
 
-Para criar um Pipeline de recursos de faísca, execute o seguinte comando de console no diretório raiz do SDK de criação de modelo:
+Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução da pontuação. Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o `mode` atributo como &quot;pontuação&quot;. Isso start a execução do seu Experimento de pontuação.
 
->[!NOTE] A criação de um Spark Feature Pipeline requer que você tenha o Scala e sbt instalados em sua máquina.
+Depois de concluído, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` recuperar [o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
 
-```shell
-mvn clean install
-```
-
-A criação bem-sucedida do seu Recurso Pipeline gerará um `.jar` artefato no `/dist` diretório. Esse artefato é usado para criar um Recurso Pipeline.
-
-## Criar um mecanismo de pipeline de recurso usando a API {#create-a-feature-pipeline-engine-using-the-api}
-
-Agora que você criou seu Feature Pipeline e construiu o artefato binário, você pode [criar um Feature Pipeline Engine usando a API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)Sensei Machine Learning. A criação bem-sucedida de um Mecanismo de pipeline de recurso fornecerá uma ID de mecanismo como parte do corpo da resposta. Certifique-se de salvar esse valor antes de continuar com as próximas etapas.
+Quando a pontuação for concluída, o pipeline do recurso deverá estar operacional.
 
 ## Próximas etapas {#next-steps}
 
-[//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
+[//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Ao ler este documento, você criou um Recurso Pipeline usando o SDK de criação de modelo, criou um artefato binário e usou o artefato para criar um Recurso Pipeline por meio de uma chamada de API. Agora você está pronto para [criar um Modelo](../api/mlinstances.md#create-an-mlinstance) de pipeline de recurso usando seus conjuntos de dados de transformação de mecanismos e start recém-criados e extraindo recursos de dados em escala.
+Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a API de aprendizado de máquina do Sensei. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando a API [de aprendizado de](../api/getting-started.md)máquina do Sensei.

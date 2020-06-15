@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: d9f4649f5946fa3eea8d6a2ab65a07568f9c697f
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1118'
 ht-degree: 3%
 
 ---
@@ -202,7 +202,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -219,6 +219,7 @@ curl -X POST \
 | `artifacts.default.image.location` | O local da imagem do Docker. Somente o Azure ACR ou o Dockerhub Público (não autenticado) são suportados. |
 | `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | O tipo de empacotamento do Mecanismo. Esse valor deve ser definido como `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Parâmetros `pipeline.json` do arquivo de configuração. |
 
 **Resposta**
 
@@ -242,7 +243,8 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo de
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }

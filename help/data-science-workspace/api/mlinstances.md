@@ -4,7 +4,10 @@ solution: Experience Platform
 title: MLInentons
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 4%
 
 ---
 
@@ -38,7 +41,7 @@ curl -X POST \
     -d '{
         "name": "A name for this MLInstance",
         "description": "A description for this MLInstance",
-        "engineId": "{ENGINE_ID}",
+        "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
         "tasks": [
             {
                 "name": "train",
@@ -84,10 +87,10 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLI recém-c
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
-    "engineId": "{ENGINE_ID}",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -161,10 +164,10 @@ Uma resposta bem-sucedida retorna uma lista de MLInentons e seus detalhes.
 {
     "children": [
         {
-            "id": "{MLINSTANCE_ID}",
+            "id": "46986c8f-7739-4376-8509-0178bdf32cda",
             "name": "A name for this MLInstance",
             "description": "A description for this MLInstance",
-            "engineId": "{ENGINE_ID}",
+            "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -173,10 +176,10 @@ Uma resposta bem-sucedida retorna uma lista de MLInentons e seus detalhes.
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{MLINSTANCE_ID}",
+            "id": "56986c8f-7739-4376-8509-0178bdf32cda",
             "name": "Retail Sales Model",
             "description": "A Model created with the Retail Sales Recipe",
-            "engineId": "{ENGINE_ID}",
+            "engineId": "32f4166f-85ba-4130-a995-a2b8e1edde32",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -211,7 +214,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -224,10 +227,10 @@ Uma resposta bem-sucedida retorna os detalhes da instância MLI.
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
-    "engineId": "{ENGINE_ID}",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "displayName": "Jane Doe",
@@ -254,7 +257,7 @@ Uma resposta bem-sucedida retorna os detalhes da instância MLI.
             ]
         },
         {
-            "name": "fp",
+            "name": "featurePipeline",
             "parameters": [
                 {
                     "key": "feature pipeline parameter",
@@ -321,7 +324,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -365,7 +368,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados da 
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
     "engineId": "00000000-0000-0000-0000-000000000000",
@@ -400,7 +403,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados da 
 
 ## Excluir MLInentons por ID do mecanismo
 
-Você pode excluir todas as MLInentons que compartilham o mesmo Mecanismo, executando uma solicitação DELETE que inclui a ID do Mecanismo como um parâmetro de query.
+É possível excluir todas as MLInentons que compartilham o mesmo Mecanismo, executando uma solicitação DELETE que inclui a ID do mecanismo como um parâmetro de query.
 
 **Formato da API**
 
@@ -416,7 +419,7 @@ DELETE /mlInstances?engineId={ENGINE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlInstances?engineId={ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -451,7 +454,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \

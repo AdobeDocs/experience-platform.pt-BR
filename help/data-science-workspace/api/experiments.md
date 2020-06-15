@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Experimentos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, onde um Experimento consiste em uma instância MLI, execuções de treinamento e execuções de pontuação.
 
-## Criar um experimento
+## Criar um experimento {#create-an-experiment}
 
 Você pode criar um Experimento executando uma solicitação POST ao fornecer um nome e uma ID de instância MLI válida na carga da solicitação.
 
@@ -64,7 +67,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 }
 ```
 
-## Criar e executar um treinamento ou uma execução de pontuação
+## Criar e executar um treinamento ou uma execução de pontuação {#experiment-training-scoring}
 
 Você pode criar execuções de treinamento ou pontuação executando uma solicitação POST e fornecendo uma ID de Experimento válida e especificando a tarefa de execução. As execuções de pontuação podem ser criadas somente se o Experimento tiver uma execução de treinamento existente e bem-sucedida. A criação bem-sucedida de uma execução de treinamento inicializará o procedimento de treinamento do modelo e sua conclusão bem-sucedida gerará um modelo treinado. A geração de modelos treinados substituirá os modelos existentes anteriormente, de modo que um Experimento só possa utilizar um único modelo treinado a qualquer momento.
 
@@ -95,7 +98,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `{TASK}` | Especifica a tarefa da execução. Defina esse valor como `train` para treinamento, `score` para pontuação ou `fp` para pipeline de recursos. |
+| `{TASK}` | Especifica a tarefa da execução. Defina esse valor como `train` para treinamento, `score` para pontuação ou `featurePipeline` para pipeline de recursos. |
 
 **Resposta**
 
@@ -216,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Resposta**
 

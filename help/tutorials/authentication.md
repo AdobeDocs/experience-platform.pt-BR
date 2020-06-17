@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Autenticar e acessar as APIs da plataforma Experience
+title: Autenticar e acessar APIs Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8c73363e88aab242ae258037deb80eeec872e519
+source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '877'
 ht-degree: 1%
 
 ---
 
 
-# Autenticar e acessar as APIs da plataforma Experience
+# Autenticar e acessar APIs de Experience Platform
 
-Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da plataforma Adobe Experience para fazer chamadas às APIs da plataforma Experience.
+Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor de Adobe Experience Platform para fazer chamadas para APIs de Experience Platform.
 
 ## Autenticar para fazer chamadas de API
 
@@ -25,29 +25,29 @@ Este tutorial aborda as etapas de autenticação através da criação de um tok
 
 ## Pré-requisitos
 
-Para fazer chamadas com êxito para APIs da plataforma Experience, é necessário o seguinte:
+Para fazer chamadas para APIs de Experience Platform com êxito, é necessário o seguinte:
 
-* Uma organização IMS com acesso à Adobe Experience Platform
-* Uma conta da Adobe ID registrada
-* Um administrador do Admin Console para adicioná-lo como um **desenvolvedor** e um **usuário** para um produto.
+* Uma organização IMS com acesso a Adobe Experience Platform
+* Uma conta de Adobe ID registrada
+* Um administrador da Admin Console para adicioná-lo como um **desenvolvedor** e um **usuário** para um produto.
 
-As seções a seguir percorrem as etapas para criar uma Adobe ID e se tornarem desenvolvedores e usuários de uma organização.
+As seções a seguir percorrem as etapas para criar um Adobe ID e se tornar um desenvolvedor e usuário para uma organização.
 
-### Criar uma Adobe ID
+### Criar um Adobe ID
 
-Se você não tiver uma Adobe ID, poderá criar uma usando as seguintes etapas:
+Se você não tiver um Adobe ID, poderá criar um usando as seguintes etapas:
 
 1. Ir para o console do desenvolvedor [Adobe](https://console.adobe.io)
 2. Clique em **criar uma nova conta**
 3. Concluir o processo de inscrição
 
-## Torne-se um desenvolvedor e usuário da Experience Platform para uma organização
+## Torne-se um desenvolvedor e usuário para Experience Platform de uma organização
 
 Antes de criar integrações em E/S da Adobe, sua conta deve ter permissões de desenvolvedor para um produto em uma organização IMS. Informações detalhadas sobre contas de desenvolvedor no Admin Console podem ser encontradas no documento [de](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) suporte para o gerenciamento de desenvolvedores.
 
 **Obter acesso do desenvolvedor**
 
-Entre em contato com um administrador do Admin Console em sua organização para adicioná-lo como desenvolvedor para um dos produtos da organização usando o [Admin Console](https://adminconsole.adobe.com/).
+Entre em contato com um administrador da Admin Console em sua organização para adicioná-lo como desenvolvedor para um dos produtos da organização usando o [Admin Console](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -59,7 +59,7 @@ Depois que você for atribuído como desenvolvedor, terá privilégios de acesso
 
 **Obter acesso do usuário**
 
-O administrador do Admin Console também deve adicioná-lo ao produto como usuário.
+O administrador da Admin Console também deve adicioná-lo ao produto como usuário.
 
 ![](images/authentication/assign-users.png)
 
@@ -67,8 +67,9 @@ Semelhante ao processo de adição de um desenvolvedor, o administrador deve atr
 
 ![](images/authentication/assign-user-details.png)
 
-
 ## Gerar credenciais de acesso no Adobe Developer Console
+
+>[!NOTE] Se você estiver seguindo esse documento no guia [do desenvolvedor do](../privacy-service/api/getting-started.md)Privacy Service, agora é possível voltar para esse guia para gerar as credenciais de acesso exclusivas do Privacy Service.
 
 Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso a seguir:
 
@@ -76,25 +77,25 @@ Usando o Adobe Developer Console, você deve gerar as três credenciais de acess
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Sua `{IMS_ORG}` e `{API_KEY}` só precisam ser geradas uma vez e podem ser reutilizadas em futuras chamadas à API da plataforma. No entanto, o seu `{ACCESS_TOKEN}` é temporário e precisa ser regenerado a cada 24 horas.
+Sua `{IMS_ORG}` e `{API_KEY}` só precisam ser geradas uma vez e podem ser reutilizadas em futuras chamadas de API da Platform. No entanto, o seu `{ACCESS_TOKEN}` é temporário e precisa ser regenerado a cada 24 horas.
 
 As etapas são abordadas em detalhes abaixo.
 
 ### Configuração única
 
-Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
+Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
 
 Depois de criar um novo projeto, clique em **[!UICONTROL Adicionar API]** na tela Visão geral _do_ projeto.
 
 ![](images/authentication/add-api-button.png)
 
-A tela _Adicionar uma API_ é exibida. Clique no ícone de produto da Adobe Experience Platform e selecione API **[!UICONTROL da plataforma de]** experiência antes de clicar em **[!UICONTROL Avançar]**.
+A tela _Adicionar uma API_ é exibida. Clique no ícone do produto para Adobe Experience Platform e selecione API **** Experience Platform antes de clicar em **[!UICONTROL Avançar]**.
 
 ![](images/authentication/add-platform-api.png)
 
-Depois de selecionar a Plataforma de experiência como a API a ser adicionada ao projeto, siga as etapas descritas no tutorial sobre como [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partir da etapa &quot;Configurar API&quot;) para concluir o processo.
+Depois de selecionar Experience Platform como a API a ser adicionada ao projeto, siga as etapas descritas no tutorial sobre como [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partir da etapa &quot;Configurar API&quot;) para concluir o processo.
 
-Depois que a API é adicionada ao projeto, a página de visão geral _do_ projeto exibe as seguintes credenciais necessárias em todas as chamadas às APIs da plataforma Experience:
+Depois que a API for adicionada ao projeto, a página de visão geral _do_ projeto exibirá as seguintes credenciais necessárias em todas as chamadas às APIs de Experience Platform:
 
 * `{API_KEY}` (ID do cliente)
 * `{IMS_ORG}` (ID da organização)
@@ -103,7 +104,7 @@ Depois que a API é adicionada ao projeto, a página de visão geral _do_ projet
 
 ### Autenticação para cada sessão
 
-A credencial final necessária que você deve coletar é sua `{ACCESS_TOKEN}`. Diferentemente dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando as APIs de plataforma.
+A credencial final necessária que você deve coletar é sua `{ACCESS_TOKEN}`. Diferentemente dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando as APIs do Platform.
 
 Para gerar um novo `{ACCESS_TOKEN}`, siga as etapas para [gerar um token](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) JWT no guia de credenciais do Developer Console.
 
@@ -152,10 +153,10 @@ Se sua resposta for semelhante à mostrada abaixo, suas credenciais serão váli
 
 ## Usar o Postman para autenticação JWT e chamadas de API
 
-[O Postman](https://www.getpostman.com/) é uma ferramenta popular para trabalhar com RESTful APIs. Esta publicação [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Média descreve como você pode configurar o carteiro para executar automaticamente a autenticação JWT e usá-la para consumir as APIs da plataforma Adobe Experience.
+[O Postman](https://www.getpostman.com/) é uma ferramenta popular para trabalhar com RESTful APIs. Esta publicação [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Média descreve como você pode configurar o postman para executar automaticamente a autenticação JWT e usá-la para consumir APIs de Adobe Experience Platform.
 
 ## Próximas etapas
 
-Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para APIs de plataforma. Agora você pode seguir com as chamadas de API de exemplo fornecidas na [documentação](../landing/documentation/overview.md).
+Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para APIs Platform. Agora você pode seguir com as chamadas de API de exemplo fornecidas na [documentação](../landing/documentation/overview.md).
 
-Além dos valores de autenticação reunidos neste tutorial, muitas APIs de plataforma também exigem um valor válido `{SANDBOX_NAME}` para ser fornecido como cabeçalho. Consulte a visão geral [das](../sandboxes/home.md) caixas de proteção para obter mais informações.
+Além dos valores de autenticação que você coletou neste tutorial, muitas APIs da Platform também exigem um valor válido `{SANDBOX_NAME}` para ser fornecido como cabeçalho. Consulte a visão geral [das](../sandboxes/home.md) caixas de proteção para obter mais informações.

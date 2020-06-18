@@ -4,21 +4,17 @@ solution: Experience Platform
 title: Otimizar um modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 
-# Otimizar um modelo
+# Otimizar um modelo usando a estrutura do Model Insights
 
-
-Este tutorial vai continuar:
-
-- Configuração do código de receita
-- Definição de métricas personalizadas
-- Uso de métricas de avaliação e gráficos de visualização pré-criados
-
-No final deste tutorial, você deve ser capaz de configurar o código da fórmula, definir métricas personalizadas, usar métricas de avaliação pré-criadas e gráficos de visualização padrão.
+O Model Insights Framework fornece ao cientista de dados ferramentas na Data Science Workspace para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos. A estrutura melhorará a velocidade e a eficácia do fluxo de trabalho de aprendizado de máquina, bem como a facilidade de uso para cientistas de dados. Isso é feito fornecendo um modelo padrão para cada tipo de algoritmo de aprendizado da máquina para auxiliar no ajuste do modelo. O resultado final permite que cientistas de dados e cientistas de dados cidadãos tomem decisões de otimização de modelos melhores para seus clientes finais.
 
 ## O que são métricas?
 
@@ -27,10 +23,6 @@ Depois de implementar e treinar um modelo, o próximo passo que um cientista da 
 - Área sob curva
 - Matriz de confusão
 - Relatório de classificação
-
-## O que é a Estrutura de Insights do Modelo?
-
-O Model Insights Framework fornece ao cientista de dados ferramentas na Data Science Workspace para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos. A estrutura melhorará a velocidade e a eficácia do fluxo de trabalho de aprendizado de máquina, bem como a facilidade de uso para cientistas de dados. Isso é feito fornecendo um modelo padrão para cada tipo de algoritmo de aprendizado da máquina para auxiliar no ajuste do modelo. O resultado final permite que cientistas de dados e cientistas de dados cidadãos tomem decisões de otimização de modelos melhores para seus clientes finais.
 
 ## Configuração do código de fórmula
 
@@ -166,7 +158,7 @@ A Estrutura do Sensei Model Insights oferecerá suporte a um modelo padrão para
 --- | --- | ---
 | Regressão | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Curva de sobreposição de valores previstos vs reais |
 | Classificação binária | - Matriz<br>de perfusão - Precisão<br>- Precisão<br>- pontuação F (especificamente F1,F2)<br>- AUC<br>- ROC | Matriz de curva e confusão de ROC |
-| Classificação multiclasse | - Matriz <br>- Para cada classe: precisão <br>- precisão <br>- pontuação F (especificamente F1, F2) | Matriz de curva e confusão de ROC |
+| Classificação multiclasse | - Matriz <br>- Para cada classe: <br>- precisão de evocação <br>- pontuação F (especificamente F1, F2) | Matriz de curva e confusão de ROC |
 | Agrupamento (sem verdade básica) | - NMI (pontuação normalizada de informação mútua), AMI (pontuação de informação mútua ajustada)<br>- RI (índice Rand), ARI (índice Rand ajustado)<br>- pontuação de homogeneidade, pontuação de integralidade e V-measurement<br>- FMI (índice Fowlkes-Mallows)<br>- Pureza<br>- Índice Jaccard | Gráfico de clusters mostrando clusters e centróides com tamanhos de cluster relativos refletindo os pontos de dados dentro do cluster |
 | Agrupamento (sem verdade básica) | - Inércia<br>- Coeficiente<br>de silhueta- CHI (índice Calinski-Harabaz)<br>- DBI (índice Davies-Bouldin)<br>- Índice Dunn | Gráfico de clusters mostrando clusters e centróides com tamanhos de cluster relativos refletindo os pontos de dados dentro do cluster |
 | Recomendação | -Precisão média (MAP) <br>- Média de precisão (MAP) normalizada Descontada Ganho acumulado <br>- Média de classificação <br>métrica Recírica K | TBD |

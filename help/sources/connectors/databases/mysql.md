@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector MySQL
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Conector MySQL
 
-A plataforma Adobe Experience permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+>[!NOTE]
+>O conector MySQL está em beta. Consulte a visão geral [das](../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-A plataforma Experience oferece suporte para a assimilação de dados de um banco de dados de terceiros. A plataforma pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui MySQL.
+O Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
-A documentação abaixo fornece informações sobre como conectar MySQL à plataforma usando APIs ou a interface do usuário:
+O Experience Platform oferece suporte para assimilar dados de um banco de dados de terceiros. A Platform pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou data warehouse. O suporte para provedores de banco de dados inclui MySQL.
 
-## Conectar MySQL à plataforma usando APIs
+A documentação abaixo fornece informações sobre como conectar o MySQL à Platform usando APIs ou a interface do usuário:
+
+## Conectar MySQL ao Platform usando APIs
 
 - [Criar um conector MySQL usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/mysql.md)
 - [Explore um sistema de banco de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
 - [Coletar dados de um banco de dados usando a API de Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar MySQL à plataforma usando a interface do usuário
+## Conectar MySQL ao Platform usando a interface do usuário
 
 - [Criar um conector de origem MySQL na interface do usuário](../../tutorials/ui/create/databases/mysql.md)
 - [Configurar um fluxo de dados para um conector de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,21 @@ Na interface do usuário do [Experience Platform](http://platform.adobe.com), cl
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Procurar Perfis
+## Procurar
 
-Clique na guia **Procurar** para procurar perfis por identidade.
+Selecione a guia *Procurar* para procurar perfis por identidade.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Métricas de Perfil {#profile-metrics}
 
-No lado direito da guia **Procurar** estão várias métricas de perfil importantes relacionadas aos dados do perfil, incluindo a contagem [total de](#profile-count) perfis, bem como uma lista de [perfis por namespace](#profiles-by-namespace).
+No lado direito da guia *Procurar* estão várias métricas importantes relacionadas aos dados do seu perfil, incluindo a contagem [total de](#profile-count) perfis, bem como uma lista de [perfis por namespace](#profiles-by-namespace).
 
 Essas métricas de perfil são avaliadas usando a política de mesclagem padrão de sua organização. Para obter mais informações sobre como trabalhar com políticas de mesclagem, incluindo como definir uma política de mesclagem padrão, consulte o guia [do usuário](merge-policies.md)Mesclar políticas.
 
 Além dessas métricas, a seção de métricas de perfil também fornece uma data e hora *última atualização* , mostrando quando as métricas foram avaliadas pela última vez.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### contagem de Perfis {#profile-count}
 
@@ -92,13 +94,13 @@ Ao selecionar a ID **do** Perfil, a guia _Detalhe_ é aberta. Esta página exibe
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Você pode visualização informações adicionais relacionadas ao perfil, incluindo Atributos, Eventos e Segmentos aos quais o perfil é membro.
+Você pode visualização informações adicionais relacionadas ao perfil, incluindo *Atributos*, *Eventos* e *Segmentos* aos quais o perfil é membro.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Mesclar políticas
 
-Clique em **Mesclar políticas** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
+Selecione a guia *Mesclar políticas* para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
 
 Para obter mais informações sobre políticas de mesclagem, consulte o guia [do usuário](merge-policies.md)Mesclar políticas.
 
@@ -106,7 +108,7 @@ Para obter mais informações sobre políticas de mesclagem, consulte o guia [do
 
 ## schema União
 
-Clique em Schema **de** União para visualização dos schemas de união da Loja de Perfis. Um schema de união é uma combinação de todos os campos do Modelo de Dados de Experiência (XDM) na mesma classe, cujos schemas foram habilitados para uso no Perfil do Cliente em tempo real. Clique em uma classe na lista esquerda para visualização da estrutura de sua schema de união na tela.
+Selecione a guia Schema *da* União para visualização dos schemas da união da Loja de Perfis. Um schema de união é uma combinação de todos os campos do Modelo de Dados de Experiência (XDM) na mesma classe, cujos schemas foram habilitados para uso no Perfil do Cliente em tempo real. Selecione uma classe na lista esquerda para visualização da estrutura de sua schema de união na tela.
 
 Por exemplo, selecionar &quot;Perfil XDM&quot; exibe o schema de união para a classe de Perfil Individual XDM.
 

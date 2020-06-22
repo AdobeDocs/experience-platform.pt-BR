@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 1%
 
 ---
 
 
 # Políticas
 
-As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados na plataforma da experiência.
+As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro do Experience Platform.
 
 O `/policies` terminal é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de uso de dados.
 
@@ -130,7 +133,7 @@ A resposta inclui uma &quot;contagem&quot; que mostra o número total de políti
 }
 ```
 
-## Procurar política específica
+## Procurar uma política
 
 Cada política contém um `id` campo que pode ser usado para solicitar os detalhes de uma política específica. Se o conteúdo `id` de uma política for desconhecido, poderá ser encontrado usando a solicitação de listagem (GET) para lista de todas as políticas dentro de um container específico (`core` ou `custom`), conforme mostrado na etapa anterior.
 
@@ -503,7 +506,7 @@ Uma solicitação de atualização bem-sucedida retornará um Status HTTP 200 (O
 
 ## Excluir uma política
 
-Se for necessário remover uma política criada, você poderá fazê-lo emitindo uma solicitação DELETE para o nome `id` da política que deseja excluir. É a prática recomendada executar uma solicitação de pesquisa (GET) primeiro para visualização da política e confirmar se ela é a política correta que você deseja remover. **Depois de excluídas, as políticas não podem ser recuperadas.**
+Se for necessário remover uma política que você criou, é possível fazê-lo emitindo uma solicitação DELETE para a política que deseja excluir. `id` É a prática recomendada executar uma solicitação de pesquisa (GET) primeiro para visualização da política e confirmar se ela é a política correta que você deseja remover. **Depois de excluídas, as políticas não podem ser recuperadas.**
 
 **Formato da API**
 

@@ -4,9 +4,9 @@ seo-title: Fluxo de trabalho de destinos de rede social
 description: Instruções para conectar-se à sua rede social e contas
 seo-description: Instruções para conectar-se à sua rede social e contas
 translation-type: tm+mt
-source-git-commit: ab53e2efffed536e8028beabd64aee843d1eeee8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Fluxo de trabalho para criar destinos de rede social
 
-Este tutorial usa o Facebook como exemplo, mas o fluxo de trabalho na Plataforma de dados do cliente em tempo real da Adobe será o mesmo para todos os destinos de rede social, uma vez mais, adicionado ao produto.
+Este tutorial usa o Facebook como exemplo, mas o fluxo de trabalho no Adobe Real-time Customer Data Platform será o mesmo para todos os destinos da rede social, uma vez mais, adicionado ao produto.
 
 1. Em **[!UICONTROL Destinos > Catálogo]**, role até a categoria **[!UICONTROL Social]** . Selecione o destino de sua rede social preferida e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
 
@@ -34,28 +34,18 @@ Este tutorial usa o Facebook como exemplo, mas o fluxo de trabalho na Plataforma
 
    ![Credenciais confirmadas](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. Na etapa **[!UICONTROL Configuração]** , digite um **[!UICONTROL Nome]** e uma **[!UICONTROL Descrição]** para o fluxo de ativação e preencha a ID **[!UICONTROL de]** conta da sua conta de anúncio de rede social. Selecione todos os casos de uso de marketing que devem ser aplicados a esse destino. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
+4. Na etapa **[!UICONTROL Configuração]** , digite um **[!UICONTROL Nome]** e uma **[!UICONTROL Descrição]** para o fluxo de ativação e preencha a ID **[!UICONTROL de]** conta da sua conta de anúncio de rede social. <br> Também nesta etapa, você pode selecionar qualquer caso **[!UICONTROL de uso de]** Marketing que deve ser aplicado a este destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar entre casos de uso de marketing definidos pela Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pela Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados. <br> Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 
    >[!IMPORTANT]
    >
-   > Para destinos do Facebook. **[!UICONTROL A ID]** da conta é a ID da conta do anúncio do Facebook. Você pode encontrar essa ID no Gerenciador de publicidades do Facebook. Prefixe a ID como `act_` mostrado abaixo:
+   > * O caso de uso de marketing da Personalização ** de identidade única é selecionado por padrão para destinos de rede social e não pode ser removido.
+   > * Para destinos do Facebook. **[!UICONTROL A ID]** da conta é a ID da conta do anúncio do Facebook. Você pode encontrar essa ID no Gerenciador de publicidades do Facebook. Prefixe a ID como `act_` mostrado abaixo:
 
-   ![Conectar ao destino da rede social - etapa de configuração](/help/rtcdp/destinations/assets/social-network-setup-step.png)
+
+   ![Conectar ao destino da rede social - etapa de configuração](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
 5. Seu destino agora é criado. Você pode selecionar **[!UICONTROL Salvar e sair]** se quiser ativar segmentos posteriormente ou selecionar **[!UICONTROL Próximo]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos em redes](#activate-segments)sociais, para o restante do fluxo de trabalho.
 
 ## Ativar segmentos em redes sociais {#activate-segments}
 
 Para obter instruções sobre como ativar segmentos em redes sociais, consulte [Ativar dados para destinos](/help/rtcdp/destinations/activate-destinations.md).
-
-
-<!--
-
-// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
-
-    >[!IMPORTANT]
-    >
-    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
-    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
-
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)

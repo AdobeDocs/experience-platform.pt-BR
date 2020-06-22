@@ -4,9 +4,9 @@ seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Visão geral
 
-Esta página explica como você pode se conectar aos locais do armazenamento em nuvem na Plataforma de dados do cliente em tempo real da Adobe.
+Esta página explica como você pode se conectar aos locais do armazenamento em nuvem na Adobe Real-time Customer Data Platform.
 
 1. Em **[!UICONTROL Conexões > Destinos]**, selecione o destino preferencial do armazenamento na nuvem e selecione o destino **[!UICONTROL do]** Connect.
 
@@ -31,13 +31,22 @@ Esta página explica como você pode se conectar aos locais do armazenamento em 
    ![Conectar ao destino do armazenamento na nuvem - etapa de autenticação](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. Na etapa **[!UICONTROL Configuração]** , digite um **[!UICONTROL Nome]** e uma **[!UICONTROL Descrição]** para o fluxo de ativação. <br>
+Também nesta etapa, você pode selecionar qualquer caso **[!UICONTROL de uso de]** Marketing que deve ser aplicado a este destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar entre casos de uso de marketing definidos pela Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pela Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados. <br>
 Para destinos do Amazon S3, insira o nome **[!UICONTROL do]** bucket e o caminho **[!UICONTROL da]** pasta no destino do armazenamento da nuvem onde os arquivos serão entregues. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 
-   ![Conectar-se ao destino do armazenamento da nuvem do Amazon S3 - etapa de autenticação](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Conectar-se ao destino do armazenamento da nuvem do Amazon S3 - etapa de autenticação](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   Para destinos SFTP, insira o caminho **[!UICONTROL da]** pasta onde os arquivos serão entregues.
+   Para destinos SFTP, insira o caminho **[!UICONTROL da]** pasta onde os arquivos serão entregues. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 
    ![Conectar-se ao destino do armazenamento na nuvem SFTP - etapa de autenticação](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   Para destinos Amazon Kinesis, forneça o nome do seu fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
+
+   ![Conectar-se ao destino do armazenamento na nuvem do Kinesis - etapa de autenticação](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   Para destinos do Hubs de Eventos do Azure, forneça o nome do seu fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
+
+   ![Conectar-se ao destino do armazenamento na nuvem do Kinesis - etapa de autenticação](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. Seu destino agora é criado. Você pode selecionar **[!UICONTROL Salvar e sair]** se quiser ativar segmentos posteriormente ou selecionar **[!UICONTROL Próximo]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para que o restante do fluxo de trabalho exporte dados.
 

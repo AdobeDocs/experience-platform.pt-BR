@@ -1,12 +1,12 @@
 ---
 title: Ativar perfis e segmentos em um destino
 seo-title: Ativar perfis e segmentos em um destino
-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
-seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+seo-description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
+source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Ativar perfis e segmentos em um destino
 
-Ative os dados que você tem na Plataforma de dados do cliente em tempo real da Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 
 ## Pré-requisitos {#prerequisites}
 
-Para ativar os dados para destinos, você deve ter [conectado com êxito um destino](/help/rtcdp/destinations/assets/connect-destination-1.png). Caso ainda não o tenha feito, vá para o catálogo [de](/help/rtcdp/destinations/destinations-catalog.md)destinos, navegue nos destinos suportados e configure um ou mais destinos.
+Para ativar os dados para destinos, você deve ter [conectado com êxito um destino](/help/rtcdp/destinations/connect-destination.md). Caso ainda não o tenha feito, vá para o catálogo [de](/help/rtcdp/destinations/destinations-catalog.md)destinos, navegue nos destinos suportados e configure um ou mais destinos.
 
 ## Ativar dados {#activate-data}
 
@@ -27,9 +27,18 @@ Para ativar os dados para destinos, você deve ter [conectado com êxito um dest
    ![ativar-fluxo](/help/rtcdp/destinations/assets/activate-flow.png)Observe que se já existir um fluxo de ativação para um destino, você pode ver os segmentos que estão sendo enviados para o destino. Selecione **[!UICONTROL Editar ativação]** no painel direito e siga as etapas abaixo para modificar os detalhes da ativação.
 3. Selecione **[!UICONTROL Ativar]**;
 4. No fluxo de trabalho **[!UICONTROL Ativar destino]** , na página **[!UICONTROL Selecionar segmentos]** , selecione quais segmentos enviar para o destino.
-   ![segmentos para destino](/help/rtcdp/destinations/assets/select-segments.png)
+   ![segmentos para destino](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *Condicional*. Essa etapa difere dependendo do tipo de destino em que você está ativando seus segmentos. <br> Para destinos *de marketing de* email e destinos *de armazenamentos de* nuvem, na página **[!UICONTROL Selecionar atributos]** , selecione **[!UICONTROL Adicionar novo campo]** e selecione os atributos que deseja enviar para o destino.
 Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) exclusivo do seu schema de união. Para obter mais informações sobre atributos obrigatórios, consulte Identidade no artigo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) email.
+
+   >[!NOTE]
+   > 
+   >Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez de todo o conjunto de dados), a imposição desses rótulos de nível de campo na ativação ocorrerá sob as seguintes condições:
+   >* Os campos são usados na definição do segmento.
+   >* Os campos são configurados como atributos projetados para o destino do público alvo.
+   >
+   > Considere a captura de tela abaixo. Por exemplo, se o campo `person.name.first.Name` tivesse determinados rótulos de uso de dados que entrassem em conflito com o caso de uso de marketing do destino, você veria uma violação da política de uso de dados na etapa de revisão (etapa 7). Para obter mais informações, consulte Controle de [dados em CDP em tempo real](/help/rtcdp/privacy/data-governance-overview.md#destinations)
+
    ![atributos de destino](/help/rtcdp/destinations/assets/select-attributes-step.png)
 
    <br> 
@@ -47,7 +56,7 @@ Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinati
    ![ID de fidelidade como identidade](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados na Adobe Experience Platform, de acordo com os requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)emails do Facebook. <br> Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real da Adobe executará hash nos endereços de email para atender aos requisitos do Facebook.
+   Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [de hash do](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email do Facebook. <br> Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real da Adobe executará hash nos endereços de email para atender aos requisitos do Facebook.
 
    ![mapeamento de identidade após preencher campos](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -61,7 +70,17 @@ Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinati
 
 7. Na página **[!UICONTROL Revisar]** , você pode ver um resumo de sua seleção. Selecione **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e start enviando dados para o destino.
 
+   >[!IMPORTANT]
+   >
+   >Nesta etapa, a CDP em tempo real verifica se há violações da política de uso de dados. Abaixo está um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho da ativação de segmentos até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte Aplicação de [política](/help/rtcdp/privacy/data-governance-overview.md#enforcement) na seção de documentação de controle de dados.
+
+![confirmação de seleção](/help/rtcdp/destinations/assets/data-policy-violation.png)
+
+Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar sua seleção e start enviando dados para o destino.
+
 ![confirmação de seleção](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+
 
 ## Editar ativação {#edit-activation}
 
@@ -106,5 +125,3 @@ Para desativar um fluxo de ativação existente, siga as etapas abaixo:
 1. Selecione **[!UICONTROL Destinos]** na barra de navegação esquerda, clique na guia **[!UICONTROL Procurar]** e clique no nome de destino.
 2. Clique no controle **[!UICONTROL Ativado]** no painel direito para alterar o estado do fluxo de ativação.
 3. Na janela **Atualizar estado** do fluxo de dados, selecione **Confirmar** para desativar o fluxo de ativação.
-
-No AWS Kinesis, gere uma chave de acesso - par de chaves de acesso secreto para conceder à CDP em tempo real da Adobe acesso à sua conta AWS Kinesis. Saiba mais na documentação do [AWS Kinesis](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).

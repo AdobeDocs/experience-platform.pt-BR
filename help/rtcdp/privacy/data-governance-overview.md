@@ -1,12 +1,12 @@
 ---
 title: Visão geral do controle de dados
-seo-title: Controle de dados na plataforma de dados do cliente em tempo real
+seo-title: Controle de dados na Platform de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '1085'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Controle de dados em CDP em tempo real
 
-A Plataforma de dados do cliente em tempo real (CDP em tempo real) reúne dados de vários sistemas corporativos, permitindo que os profissionais de marketing identifiquem, entendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que a CDP em tempo real esteja em conformidade com as políticas de uso ao manipular seus dados.
+A Real-time Customer Data Platform (Real-time CDP) reúne dados de vários sistemas corporativos, permitindo que os profissionais de marketing identifiquem, entendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que a CDP em tempo real esteja em conformidade com as políticas de uso ao manipular seus dados.
 
-O Adobe Experience Platform Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental na CDP em tempo real, permitindo que você defina políticas de uso, classifique seus dados com base nessas políticas e verifique violações de políticas ao executar determinadas ações de marketing.
+O controle de dados do Adobe Experience Platform permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental na CDP em tempo real, permitindo que você defina políticas de uso, classifique seus dados com base nessas políticas e verifique violações de políticas ao executar determinadas ações de marketing.
 
-A CDP em tempo real foi desenvolvida sobre a plataforma Adobe Experience e, portanto, a maioria dos recursos de controle de dados são abordados na documentação da plataforma Experience. Este documento é destinado a complementar a visão geral [do controle de](../../data-governance/home.md) dados da plataforma Experience e descreve os recursos de controle disponíveis na CDP em tempo real. Os seguintes tópicos são abordados:
+A CDP em tempo real foi desenvolvida sobre o Adobe Experience Platform e, portanto, a maioria dos recursos de controle de dados são abordados na documentação do Experience Platform. Este documento é destinado a complementar a visão geral [do controle de](../../data-governance/home.md) dados para o Experience Platform e descreve os recursos de controle disponíveis na CDP em tempo real. Os seguintes tópicos são abordados:
 
 * [Aplicar rótulos de uso aos seus dados](#labels)
 * [Gerenciar políticas de uso de dados](#policies)
@@ -28,20 +28,24 @@ A CDP em tempo real foi desenvolvida sobre a plataforma Adobe Experience e, port
 
 O controle de dados permite que você aplique rótulos de uso aos seus dados, no nível do conjunto de dados ou do campo do conjunto de dados. Os rótulos de uso de dados permitem que você categorize os dados de acordo com as políticas de uso que se aplicam a esses dados.
 
-Para obter informações detalhadas sobre como trabalhar com rótulos de uso de dados, consulte o guia [do usuário de rótulos de uso de](../../data-governance/labels/overview.md) dados da Adobe Experience Platform.
+Para obter informações detalhadas sobre como trabalhar com rótulos de uso de dados, consulte o guia [do usuário de rótulos de uso de](../../data-governance/labels/overview.md) dados para Adobe Experience Platform.
 
-## Definir restrições para destinos
+## Configurar casos de uso de marketing para destinos {#destinations}
 
-É possível definir restrições de uso de dados em um destino definindo casos de uso de marketing para esse destino. A definição de casos de uso para destinos permite verificar violações da política de uso e garantir que quaisquer perfis ou segmentos enviados para esse destino sejam compatíveis com as regras de controle de dados.
+É possível definir restrições de uso de dados em um destino definindo casos de uso de marketing (também chamados de ações de marketing) para esse destino. Um caso de uso de marketing para um destino indica a intenção dos dados que serão exportados para esse destino.
 
-Casos de uso de marketing podem ser definidos durante a fase _de Configuração_ para o fluxo de trabalho _Editar destino_ . Consulte a documentação de destino para obter mais informações.
+>[!NOTE] Para obter mais informações sobre ações de marketing e seu uso em políticas de uso de dados, consulte a visão geral [das políticas de uso de](../../data-governance/policies/overview.md) dados na documentação do Experience Platform.
+
+A definição de casos de uso de marketing em destinos permite garantir que quaisquer perfis ou segmentos enviados para esses destinos sejam compatíveis com as políticas de uso de dados. Portanto, você deve adicionar casos de uso de marketing apropriados aos seus destinos com base nas necessidades de sua organização para aplicar restrições de política à ativação.
+
+Os casos de uso de marketing só podem ser selecionados ao configurar um destino pela primeira vez. Dependendo do tipo de destino com o qual você está trabalhando, a oportunidade de configurar casos de uso de marketing aparecerá em diferentes pontos no fluxo de trabalho da configuração. Consulte a documentação [de](../destinations/destinations-overview.md) destino para obter etapas sobre como configurar seu destino específico.
 
 
 ## Gerenciar políticas de uso de dados {#policies}
 
 Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser definidas e ativadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro da CDP em tempo real. Consulte a seção &quot;Políticas de uso de dados&quot; na visão geral [do Experience Platform](../../data-governance/home.md) Data Governance para obter mais informações.
 
-A plataforma Adobe Experience fornece várias políticas **** principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser visualizadas fazendo uma solicitação para a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE, como mostra a seção &quot;Lista de todas as políticas&quot; no guia [do desenvolvedor do serviço de](../../data-governance/policies/overview.md)política. Você também pode criar suas próprias políticas **** personalizadas para modelar restrições de uso personalizadas, como mostrado na seção &quot;Criar uma política&quot; no guia do desenvolvedor.
+O Adobe Experience Platform fornece várias políticas **** principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser exibidas na interface do usuário navegando até a área de trabalho **[!UICONTROL Políticas]** e selecionando a guia **[!UICONTROL Procurar]** . Consulte o guia [de usuário de](../../data-governance/policies/user-guide.md) políticas na documentação do Experience Platform para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
 
 ## (Beta) Reforçar a conformidade de uso de dados {#enforce-data-usage-compliance}
 
@@ -58,6 +62,11 @@ Quando um segmento é ativado pela primeira vez, o Serviço de Política DULE ve
 
 * Os rótulos de uso de dados aplicados a campos e conjuntos de dados dentro do segmento a ser ativado.
 * A finalidade de comercialização do destino.
+
+>[!NOTE] Se houver rótulos de uso de dados que foram aplicados somente a determinados campos em um conjunto de dados (em vez de todo o conjunto de dados), a imposição desses rótulos de nível de campo na ativação ocorrerá somente sob as seguintes condições:
+>* Os campos são usados na definição do segmento.
+>* Os campos são configurados como atributos projetados para o destino do público alvo.
+
 
 ### Mensagens de violação de política {#enforcement}
 
@@ -86,7 +95,7 @@ Se qualquer uma das ações acima acionar uma violação, essa ação será impe
 
 ## Próximas etapas
 
-Agora que você foi apresentado aos principais recursos de controle de dados em CDP em tempo real e como a plataforma de experiência os habilita, continue com a [documentação de controle de dados na plataforma](../../data-governance/home.md)Adobe Experience. A documentação fornece visões gerais dos conceitos essenciais do Data Governance, bem como workflows passo a passo para gerenciar rótulos e políticas de uso de dados.
+Agora que você foi apresentado aos principais recursos do Data Governance em CDP em tempo real e como o Experience Platform os habilita, continue com a [documentação do Data Governance no Adobe Experience Platform](../../data-governance/home.md). A documentação fornece visões gerais dos conceitos essenciais do Data Governance, bem como workflows passo a passo para gerenciar rótulos e políticas de uso de dados.
 
 O vídeo a seguir fornece uma visão geral do controle de dados na CDP em tempo real, incluindo o uso de casos de uso de marketing em destinos e workflows de exemplo para diferentes cenários:
 

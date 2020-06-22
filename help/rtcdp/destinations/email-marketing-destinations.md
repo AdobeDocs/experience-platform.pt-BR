@@ -4,17 +4,17 @@ seo-title: Destinos de marketing de email
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 2%
+source-wordcount: '731'
+ht-degree: 1%
 
 ---
 
 
 # Destinos de marketing de email {#email-marketing-destinations}
 
-Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como enviar campanhas de email promocionais. A Plataforma de dados do cliente em tempo real da Adobe integra-se aos ESPs, permitindo que você ative segmentos para destinos de marketing por email.
+Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como o envio de campanhas de email promocionais. Dados do cliente em tempo real da Adobe A Platform integra-se aos ESPs, permitindo que você ative segmentos para destinos de marketing por email.
 
 Para enviar segmentos para destinos de marketing de email para suas campanhas, o Adobe Real-time CDP deve primeiro se conectar ao destino.
 
@@ -26,17 +26,28 @@ No fluxo de destino de conexão, descrito na seção abaixo, conecte-se ao Amazo
 
 1. Em **[!UICONTROL Conexões > Destinos]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione o destino **[!UICONTROL do]** Connect.
 
-   ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-destination-1.png)
+   ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. No assistente do Connect , selecione o tipo **[!UICONTROL de]** conexão para o local do armazenamento. Você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
+2. Na etapa **[!UICONTROL Autenticação]** , se você já tiver configurado uma conexão com o destino de marketing por email, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com seu destino de marketing de email. No seletor de tipo **** Conexão, você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
 
-Para conexões **** S3, você deve fornecer a ID da chave de acesso e a chave de acesso secreta.
+   Para conexões **** S3, é necessário fornecer a ID da chave de acesso à Amazon e a chave de acesso secreta.
 
-Para **SFTP com conexões de senha** , você deve fornecer Domínio, Porta, Nome de usuário e Senha.
+   Para **SFTP com conexões de senha** , você deve fornecer Domínio, Porta, Nome de usuário e Senha para seu servidor SFTP.
 
-Para **SFTP com conexões de chave** SSH, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH.
+   Para **SFTP com conexões de chave** SSH, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH para seu servidor SFTP.
 
-## Etapa 2 - Selecione os campos de schema a serem usados como atributos de destino nos arquivos exportados {#destination-attributes}
+3. Na etapa **[!UICONTROL Configuração]** , digite um **[!UICONTROL Nome]** e uma **[!UICONTROL Descrição]** para o novo destino, bem como o formato **** Arquivo para os arquivos exportados. <br>
+Se você selecionou a opção Amazon S3 como armazenamento na etapa anterior, insira o nome **[!UICONTROL do]** bucket e o caminho **[!UICONTROL da]** pasta no destino do armazenamento da nuvem onde os arquivos serão entregues. Para a opção armazenamento SFTP, insira o caminho **[!UICONTROL da]** pasta onde os arquivos serão entregues. <br>
+Também nesta etapa, você pode selecionar qualquer caso **[!UICONTROL de uso de]** Marketing que deve ser aplicado a este destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar entre casos de uso de marketing definidos pela Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pela Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados. <br>
+   ![Etapa de configuração de email](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## Etapa 2 - Selecione os membros do segmento a serem incluídos nas exportações de destino {#select-segments}
+
+Na página **[!UICONTROL Selecionar segmentos]** , selecione quais segmentos serão enviados para o destino. Encontre mais informações sobre os campos nas seções abaixo.
+
+![Selecionar segmentos](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## Etapa 3 - Selecione os campos de schema a serem usados como atributos de destino nos arquivos exportados {#destination-attributes}
 
 Nesta etapa, você está selecionando quais campos exportar para destinos de marketing de email.
 
@@ -44,7 +55,7 @@ Nesta etapa, você está selecionando quais campos exportar para destinos de mar
 
 ### Identidade {#identity}
 
-Recomendamos que você selecione um identificador exclusivo do seu schema [de](../../profile/home.md#profile-fragments-and-union-schemas)união. Este é o campo do qual as identidades de seus usuários são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seus campos XDM no schema unificado.
+Recomendamos que você selecione um identificador exclusivo do seu schema [de](../../profile/home.md#profile-fragments-and-union-schemas)união. Este é o campo do qual as identidades de seus usuários são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seus campos XDM no schema da união.
 
 | Identificador exclusivo | Campo XDM no Schema Unificado |
 ---------|----------

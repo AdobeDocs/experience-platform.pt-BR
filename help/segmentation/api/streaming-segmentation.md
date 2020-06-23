@@ -4,46 +4,47 @@ solution: Experience Platform
 title: Segmentação em streaming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 1%
 
 ---
 
 
-# Avalie eventos em tempo real com a segmentação de streaming (Beta)
+# Avalie os eventos em tempo quase real com a segmentação contínua
 
->[!NOTE] A segmentação de fluxo contínuo é um recurso beta e estará disponível mediante solicitação.
-
-A segmentação de fluxo (também conhecida como avaliação contínua do query) é a capacidade de avaliar instantaneamente um cliente assim que um evento entra em um grupo de segmentos específico. Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para a Adobe Experience Platform, o que significa que a associação de segmento será mantida atualizada sem executar tarefas de segmentação programadas.
+A segmentação contínua permite [!DNL Adobe Experience Platform] que os clientes façam a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam, o que diminui a necessidade de programar e executar tarefas de segmentação. [!DNL Platform] Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## Introdução
 
-Este guia do desenvolvedor requer um entendimento prático dos vários serviços da plataforma Adobe Experience envolvidos com a segmentação de streaming. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este guia do desenvolvedor requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de streaming. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
-- [Segmentação](../home.md): Fornece a capacidade de criar segmentos e audiências a partir dos dados do Perfil do cliente em tempo real.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
+- [!DNL Segmentation](../home.md): Fornece a capacidade de criar segmentos e audiências a partir de seus [!DNL Real-time Customer Profile] dados.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para APIs de plataforma.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para [!DNL Platform] APIs.
 
 ### Lendo chamadas de exemplo da API
 
-Este guia do desenvolvedor fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este guia do desenvolvedor fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE] Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -51,22 +52,39 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 Cabeçalhos adicionais podem ser necessários para concluir solicitações específicas. Os cabeçalhos corretos são mostrados em cada um dos exemplos dentro desse documento. Preste especial atenção às solicitações de amostra para garantir que todos os cabeçalhos obrigatórios sejam incluídos.
 
-### Tipos de query com segmentação contínua ativada
+### Tipos de query com segmentação contínua ativada {#streaming-segmentation-query-types}
 
-A tabela a seguir lista os diferentes tipos de query de segmentação e se eles suportam ou não a segmentação em streaming.
+>[!NOTE] Será necessário ativar a segmentação programada para a organização para que a segmentação de fluxo funcione. Informações sobre como ativar a segmentação programada podem ser encontradas na seção [ativar segmentação programada](#enable-scheduled-segmentation)
 
-| Tipo de Query | query de amostra | Segmentação de transmissão suportada |
-| ---------- | ------------ | --------------------------------- |
-| Demografia simples | &quot;Dê-me todas as pessoas cujo endereço residencial é no Canadá.&quot; | Compatível |
-| eventos série cronológica | &quot;Dê-me todas as pessoas que baixaram o Lightroom.&quot; | Compatível |
-| Demográfico e série cronológica | &quot;Dê-me todas as pessoas que moram no Canadá e fizeram um pedido nos últimos 30 dias.&quot; | Compatível |
-| Ausência de eventos | &quot;Dê-me todas as pessoas que abandonaram dois carrinhos separados em dois dias.&quot; | Compatível |
-| Multientidade | &quot;Dê-me todas as pessoas cujo tipo de direito é &#39;Experienciado&#39;.&quot; | Não suportado |
-| Funções avançadas de PQL | &quot;Dê-me todos os perfis que fizeram um pedido na semana passada e inclua o SKU e o Nome de todos os produtos comprados.&quot; | Não suportado |
+Para que um segmento seja avaliado usando a segmentação de fluxo contínuo, o query deve estar em conformidade com as diretrizes a seguir.
 
-## Recuperar todos os segmentos ativados de segmentação de streaming
+| Tipo de Query | Detalhes |
+| ---------- | ------- |
+| Ocorrência recebida | Qualquer definição de segmento que se refere a um único evento recebido sem nenhuma restrição de tempo. |
+| Ocorrência recebida dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido **nos últimos sete dias**. |
+| Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento recebido, sem restrição de tempo, e um ou mais atributos de perfil. |
+| Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido e um ou mais atributos do perfil, **nos últimos sete dias**. |
+| Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
-Antes de criar um novo segmento habilitado para streaming ou atualizar um segmento existente para ser habilitado para streaming, verifique se você não está duplicando as informações recuperando uma lista de todos os segmentos habilitados para streaming.
+A seção a seguir lista exemplos de definição de segmento que **não** serão ativados para a segmentação de streaming.
+
+| Tipo de Query | Detalhes |
+| ---------- | ------- | 
+| Ocorrência recebida dentro de uma janela de tempo relativa | Se a definição do segmento se refere a um evento recebido **não** dentro do **último período** de sete dias. Por exemplo, nas **últimas duas semanas**. |
+| Ocorrência recebida que se refere a um perfil em uma janela relativa | As seguintes opções **não** suportam a segmentação de streaming:<ul><li>Um evento recebido **não** dentro dos **últimos sete dias**.</li><li>Uma definição de segmento que inclui segmentos ou características de Adobe Audience Manager (AAM).</li></ul> |
+| Vários eventos que se referem a um perfil | As seguintes opções **não** suportam a segmentação de streaming:<ul><li>Um evento que **não** ocorre dentro **das últimas 24 horas**.</li><li>Uma definição de segmento que inclui segmentos ou características de Adobe Audience Manager (AAM).</li></ul> |
+| query de várias entidades | Os query de várias entidades **não** são suportados pela segmentação de streaming. |
+
+Além disso, algumas diretrizes se aplicam ao fazer a segmentação de streaming:
+
+| Tipo de Query | Orientação |
+| ---------- | -------- |
+| query de evento único | A janela de retrospectiva é limitada a **sete dias**. |
+| Query com histórico de eventos | <ul><li>A janela de retrospectiva é limitada a **um dia**.</li><li>Uma condição de pedido de tempo estrita **deve** existir entre os eventos.</li><li>Somente pedidos de tempo simples (antes e depois) entre os eventos são permitidos.</li><li>Os eventos individuais **não podem** ser negados. Entretanto, todo o query **pode** ser negado.</li></ul> |
+
+## Recuperar todos os segmentos habilitados para a segmentação em streaming
+
+Você pode recuperar uma lista de todos os seus segmentos que estão habilitados para a segmentação de streaming dentro da organização IMS, fazendo uma solicitação GET para o `/segment/definitions` endpoint.
 
 **Formato da API**
 
@@ -85,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
@@ -179,7 +197,7 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos na organização IMS q
 
 ## Criar um segmento habilitado para streaming
 
-Depois de confirmar que o segmento que você deseja criar ainda não existe, você pode criar um novo segmento habilitado para a segmentação de streaming.
+Um segmento será automaticamente habilitado para streaming se corresponder a um dos tipos de segmentação de [streaming listados acima](#streaming-segmentation-query-types).
 
 **Formato da API**
 
@@ -188,8 +206,6 @@ POST /segment/definitions
 ```
 
 **Solicitação**
-
-A solicitação a seguir cria um novo segmento que está com a segmentação de streaming ativada. Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -210,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] Esta é uma solicitação padrão de &quot;criar um segmento&quot;, com o parâmetro adicionado da `continuous` seção sendo definido como `enabled: true`. Para obter mais informações sobre como criar uma definição de segmento, leia a documentação sobre criação [de](../tutorials/create-a-segment.md)segmentos.
+>[!NOTE] Esta é uma solicitação padrão de &quot;criar um segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial sobre como [criar um segmento](../tutorials/create-a-segment.md).
 
 **Resposta**
 
@@ -269,174 +274,9 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento habilit
 }
 ```
 
-## Habilitar um segmento existente para a segmentação de streaming
+## Ativar avaliação agendada {#enable-scheduled-segmentation}
 
-Você pode ativar um segmento existente para a segmentação de fluxo contínuo fornecendo a ID da definição do segmento no caminho de uma solicitação PATCH. Além disso, a carga desta solicitação de PATCH deve incluir todos os detalhes da definição de segmento existente, que pode ser acessada fazendo uma solicitação GET para a definição de segmento em questão.
-
-### Procurar uma definição de segmento existente
-
-Para procurar uma definição de segmento existente, você deve fornecer sua ID no caminho de uma solicitação GET.
-
-**Formato da API**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | A ID da definição de segmento que você deseja pesquisar. |
-
-**Solicitação**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retornará detalhes da definição de segmento solicitada.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] Para a próxima solicitação, você precisará de todos os detalhes da definição de segmento que foram retornados nessa resposta. Por favor, copie os detalhes desta resposta a ser usada no corpo da próxima solicitação.
-
-### Habilitar o segmento existente para a segmentação de streaming
-
-Agora que você sabe os detalhes do segmento que deseja atualizar, é possível executar uma solicitação PATCH para atualizar o segmento para permitir a segmentação de streaming.
-
-**Formato da API**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Solicitação**
-
-A carga da solicitação a seguir fornece os detalhes da definição do segmento (obtida na etapa [](#look-up-an-existing-segment-definition)anterior) e a atualiza alterando sua `continuous.enabled` propriedade para `true`.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna os detalhes da definição de segmento recém-atualizada.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## Ativar avaliação agendada
-
-Depois que a avaliação de streaming estiver ativada, uma linha de base deverá ser criada (após a qual o segmento sempre estará atualizado). Isso é feito automaticamente pelo sistema, no entanto, a avaliação programada (também conhecida como segmentação programada) deve primeiro ser ativada para que a ativação da linha de base ocorra.
-
-Com a segmentação programada, sua Organização IMS pode criar uma programação recorrente para executar automaticamente as tarefas de exportação para avaliar segmentos.
+Depois que a avaliação de streaming estiver ativada, uma linha de base deverá ser criada (após a qual o segmento sempre estará atualizado). A avaliação agendada (também conhecida como segmentação agendada) deve ser ativada primeiro para que o sistema execute automaticamente a definição de linha de base. Com a segmentação programada, sua Organização IMS pode seguir uma programação recorrente para executar automaticamente as tarefas de exportação para avaliar segmentos.
 
 >[!NOTE] A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para o Perfil individual XDM. Se sua organização tiver mais de cinco políticas de mesclagem para o Perfil individual XDM em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
 
@@ -551,4 +391,4 @@ A mesma operação pode ser usada para desativar uma programação substituindo 
 
 Agora que você habilitou segmentos novos e existentes para a segmentação de fluxo contínuo e habilitou a segmentação programada para desenvolver uma linha de base e realizar avaliações recorrentes, você pode começar a criar segmentos para sua organização.
 
-Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário da plataforma Adobe Experience, visite o guia [do usuário do Construtor de](../ui/overview.md)segmentos.
+Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o guia [do usuário do Construtor de](../ui/overview.md)segmentos.

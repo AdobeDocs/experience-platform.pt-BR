@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Avaliar um segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '2841'
+ht-degree: 2%
 
 ---
 
@@ -15,26 +18,26 @@ Este documento fornece um tutorial para avaliar segmentos e acessar resultados d
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos vários serviços da plataforma Adobe Experience envolvidos na criação de segmentos de audiência. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos na criação de segmentos de audiência. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
-- [Serviço](../home.md)de segmentação da plataforma Adobe Experience: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Serviço](../home.md)de segmentação de Adobe Experience Platform: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Cabeçalhos obrigatórios
 
-Este tutorial também exige que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito às APIs da plataforma. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Este tutorial também exige que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito às APIs da Platform. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. As solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. As solicitações às APIs da Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE] Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
 
@@ -48,7 +51,7 @@ Depois de desenvolver, testar e salvar sua definição de segmento, você pode a
 
 Se você ainda não tiver concluído o tutorial [Criar um segmento usando a API](./create-a-segment.md) de Perfil do cliente em tempo real ou criado uma definição de segmento usando o Construtor [de](../ui/overview.md)segmento, faça isso antes de prosseguir com este tutorial.
 
-## Avaliação programada
+## Avaliação programada {#scheduled-evaulation}
 
 Por meio da avaliação programada, sua Organização IMS pode criar uma programação recorrente para executar automaticamente as tarefas de exportação.
 
@@ -410,7 +413,7 @@ Uma resposta bem-sucedida retorna os detalhes da tarefa de segmentação e forne
 
 ## Interpretar os resultados do segmento
 
-Quando os trabalhos de segmento são executados com êxito, o `segmentMembership` mapa é atualizado para cada perfil incluído no segmento. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que são ingeridos na Plataforma, permitindo a integração com outras soluções, como o Adobe Audiência Manager.
+Quando os trabalhos de segmento são executados com êxito, o `segmentMembership` mapa é atualizado para cada perfil incluído no segmento. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que sejam ingeridos no Platform, permitindo a integração com outras soluções, como o Adobe Audience Manager.
 
 O exemplo a seguir mostra a aparência do `segmentMembership` atributo para cada registro de perfil individual:
 
@@ -472,7 +475,7 @@ Uma das principais considerações é o schema no qual o conjunto de dados se ba
 Há duas maneiras de criar o conjunto de dados necessário:
 
 - **Uso de APIs:** As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faz referência ao Schema de União de Perfil individual XDM usando a API de catálogo.
-- **Usando a interface do usuário:** Para usar a interface do usuário da plataforma Adobe Experience para criar um conjunto de dados que faça referência ao schema da união, siga as etapas do tutorial [da](../ui/overview.md) interface do usuário e retorne a este tutorial para prosseguir com as etapas de [geração de perfis](#generate-xdm-profiles-for-audience-members)da audiência.
+- **Usando a interface do usuário:** Para usar a interface do usuário do Adobe Experience Platform para criar um conjunto de dados que faça referência ao schema da união, siga as etapas no tutorial [da](../ui/overview.md) interface do usuário e retorne a este tutorial para prosseguir com as etapas de [geração de perfis](#generate-xdm-profiles-for-audience-members)da audiência.
 
 Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa de [geração de perfis](#generate-xdm-profiles-for-audience-members)audiências.
 
@@ -948,10 +951,10 @@ curl -X GET \
 
 ## Próximas etapas
 
-Quando a exportação for concluída com êxito, seus dados estarão disponíveis no Data Lake na Experience Platform. Em seguida, você pode usar a API [de acesso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dados para acessar os dados usando a API `batchId` associada à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
+Quando a exportação for concluída com êxito, seus dados estarão disponíveis no Data Lake, no Experience Platform. Em seguida, você pode usar a API [de acesso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dados para acessar os dados usando a API `batchId` associada à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar a API de acesso a dados para acessar e baixar arquivos em lote, siga o tutorial [de acesso a](../../data-access/tutorials/dataset-data.md)dados.
 
-Você também pode acessar dados de segmento exportados com êxito usando o Adobe Experience Platform Query Service. Usando a interface do usuário ou RESTful API, o Serviço de Query permite que você grave, valide e execute query em dados dentro do Data Lake.
+Você também pode acessar dados de segmento exportados com êxito usando o Serviço de Query do Adobe Experience Platform. Usando a interface do usuário ou RESTful API, o Serviço de Query permite que você grave, valide e execute query em dados dentro do Data Lake.
 
 Para obter mais informações sobre como query dados de audiência, consulte a documentação [do serviço de](../../query-service/home.md)Query.

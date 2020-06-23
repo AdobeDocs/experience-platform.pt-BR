@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
@@ -17,31 +20,31 @@ Para obter informações sobre como criar segmentos usando a interface do usuár
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos vários serviços da plataforma Adobe Experience envolvidos na criação de segmentos de audiência. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos na criação de segmentos de audiência. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-- [Serviço](../home.md)de segmentação da plataforma Adobe Experience: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+- [Serviço](../home.md)de segmentação de Adobe Experience Platform: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE] Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -53,7 +56,7 @@ A primeira etapa da segmentação é definir um segmento, representado em uma co
 
 Você pode criar uma nova definição de segmento, fazendo uma solicitação POST para o `/segment/definitions` terminal na API do Perfil do cliente em tempo real. O exemplo a seguir descreve como formatar uma solicitação de definição, incluindo quais informações são necessárias para que um segmento seja definido com sucesso.
 
-As definições de segmentos podem ser avaliadas de duas formas: segmentação em lote e segmentação em streaming. A segmentação em lote avalia os segmentos com base em uma programação predefinida ou quando a avaliação é acionada manualmente, enquanto a segmentação em streaming avalia os segmentos assim que os dados são ingeridos na Plataforma. Este tutorial usará a segmentação **em** lote. Para obter mais informações sobre a segmentação de streaming, leia a [visão geral da segmentação](../api/streaming-segmentation.md)de streaming.
+As definições de segmentos podem ser avaliadas de duas formas: segmentação em lote e segmentação em streaming. A segmentação em lote avalia os segmentos com base em uma programação predefinida ou quando a avaliação é acionada manualmente, enquanto a segmentação em streaming avalia os segmentos assim que os dados são ingeridos no Platform. Este tutorial usará a segmentação **em** lote. Para obter mais informações sobre a segmentação de streaming, leia a [visão geral da segmentação](../api/streaming-segmentation.md)de streaming.
 
 **Formato da API**
 
@@ -119,7 +122,7 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento recém-
 }
 ```
 
-## Estimativa e pré-visualização de uma audiência
+## Estimativa e pré-visualização de uma audiência {#estimate-and-preview-an-audience}
 
 À medida que você desenvolve sua definição de segmento, você pode usar as ferramentas de estimativa e pré-visualização no Perfil do cliente em tempo real para visualização de informações de nível de resumo, para ajudar a garantir que você esteja isolando a audiência esperada. As estimativas fornecem informações estatísticas sobre uma definição de segmento, como o tamanho da audiência projetada e o intervalo de confiança. As Pré-visualizações fornecem listas paginadas de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado.
 

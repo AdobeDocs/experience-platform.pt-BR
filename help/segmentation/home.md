@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Serviço de segmentação da plataforma Adobe Experience
+title: Serviço de segmentação de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+workflow-type: tm+mt
+source-wordcount: '2386'
+ht-degree: 0%
 
 ---
 
 
 # Visão geral do Serviço de segmentação
 
-O Adobe Experience Platform Segmentation Service fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir dos dados do Perfil do cliente em tempo real. Esses segmentos são configurados e mantidos centralmente na Plataforma e são prontamente acessíveis por qualquer solução da Adobe.
+O Serviço de segmentação de Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir dos dados do Perfil do cliente em tempo real. Esses segmentos são configurados e mantidos centralmente no Platform e são prontamente acessíveis por qualquer solução da Adobe.
 
-Este documento fornece uma visão geral do Serviço de segmentação e o papel que ele desempenha na plataforma Adobe Experience.
+Este documento fornece uma visão geral do Serviço de segmentação e o papel que ele desempenha no Adobe Experience Platform.
 
 ## Introdução ao serviço de segmentação
 
@@ -27,7 +30,7 @@ Este documento fornece uma visão geral do Serviço de segmentação e o papel q
 
 A segmentação é o processo de definição de atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para diferenciar um grupo comercializável de pessoas da sua base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você esqueceu de comprar seus tênis?&quot;, você pode querer uma audiência de todos os usuários que procuraram tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra.
 
-Depois que um segmento é definido conceitualmente, ele é criado na plataforma da experiência. Normalmente, os segmentos são criados pelo profissional de marketing ou pelo especialista em audiências, embora algumas organizações prefiram que sejam criados pelo departamento de marketing, em colaboração com seus analistas de dados. Ao revisar os dados que estão sendo enviados para a Plataforma, o analista de dados compõe a definição do segmento selecionando quais campos e valores serão usados para criar as regras ou condições do segmento. Isso é feito usando a interface do usuário ou a API.
+Uma vez que um segmento tenha sido definido conceitualmente, ele é construído em Experience Platform. Normalmente, os segmentos são criados pelo profissional de marketing ou pelo especialista em audiências, embora algumas organizações prefiram que sejam criados pelo departamento de marketing, em colaboração com seus analistas de dados. Ao revisar os dados enviados à Platform, o analista de dados compõe a definição do segmento selecionando quais campos e valores serão usados para criar as regras ou condições do segmento. Isso é feito usando a interface do usuário ou a API.
 
 ## Criar segmentos
 
@@ -42,8 +45,6 @@ Para obter informações sobre como criar definições de segmentos usando a API
 ## Avaliar segmentos
 
 ### Segmentação em streaming
-
->[!NOTE] A segmentação de fluxo contínuo é um recurso beta e estará disponível mediante solicitação.
 
 A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza seus segmentos em resposta à atividade do usuário. Depois que um segmento é criado e salvo, a definição do segmento é aplicada em relação aos dados recebidos no Perfil do cliente em tempo real. Adições e remoções do segmento são processadas regularmente, garantindo que sua audiência do público alvo permaneça relevante.
 
@@ -74,7 +75,7 @@ Ao criar um novo segmento, é necessário fornecer um nome de segmento. O nome d
 ### Mesclar políticas
 
 As políticas de mesclagem são regras usadas pelo Perfil para determinar como os dados serão priorizados e combinados em uma visualização unificada em determinadas condições.
-Se uma política de mesclagem não estiver definida, a política padrão de mesclagem da plataforma será usada. Se você preferir usar uma política de mesclagem específica para a sua organização, poderá criar sua própria política e marcá-la como padrão da sua organização.
+Se uma política de mesclagem não estiver definida, a política de mesclagem padrão do Platform será usada. Se você preferir usar uma política de mesclagem específica para a sua organização, poderá criar sua própria política e marcá-la como padrão da sua organização.
 
 >[!NOTE] A estimativa de tamanhos de audiência é baseada na política padrão de mesclagem de perfis da organização.
 
@@ -93,7 +94,7 @@ Esses recursos avançados são discutidos com mais detalhes nas seções a segui
 
 ## Segmentação sequencial {#sequential}
 
-Uma jornada padrão do usuário é sequencial por natureza.  A plataforma Adobe Experience permite que você defina uma série ordenada de segmentos para refletir essa jornada, capturando assim sequências de eventos à medida que elas ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no Construtor de segmentos.
+Uma jornada padrão do usuário é sequencial por natureza.  O Adobe Experience Platform permite que você defina uma série ordenada de segmentos para refletir essa jornada, capturando assim sequências de eventos à medida que ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no Construtor de segmentos.
 
 Um exemplo de uma jornada do cliente que exigiria segmentação sequencial seria visualização do produto > adição do produto > finalização > Nenhuma compra.
 
@@ -111,7 +112,7 @@ Para ilustrar o valor desse recurso de segmentação avançada, considere a cola
 
 A segmentação estática exige que você defina segmentos individuais com um atributo de estado inicial exclusivo, antes de filtrar eventos de compra que não sejam iguais ao estado inicial. Um segmento explícito desse tipo diria &quot;Estou procurando pessoas de Utah onde o estado de sua compra não é Utah&quot;. A criação de uma audiência usando esse método exige a definição de um segmento para cada estado dos EUA, para um total de 50 segmentos.
 
-Como resultado das diferentes combinações de segmentos que inevitavelmente surgem à medida que você dimensiona, o processo manual necessário para a segmentação estática torna-se mais demorado, reduzindo a eficiência geral.
+Como resultado das diferentes combinações de segmentos que inevitavelmente surgem à medida que você dimensiona, o processo manual necessário para a segmentação estática se torna mais demorado, reduzindo a eficiência geral.
 
 **A solução**
 
@@ -209,7 +210,7 @@ Os dados de data permitem que você atribua contexto baseado em tempo às defini
 
 ### Eventos de experiência
 
-Como um schema da plataforma Adobe Experience, o XDM ExperienceEvents registra interações explícitas e implícitas com aplicativos integrados à plataforma, incluindo um instantâneo do sistema no momento em que a interação ocorreu. ExperienceEvents são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
+Como um schema Adobe Experience Platform, o XDM ExperienceEvents registra interações explícitas e implícitas entre os clientes e os aplicativos integrados da Platform, incluindo um instantâneo do sistema no momento em que a interação ocorreu. ExperienceEvents são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
 
 Conforme visto na tabela abaixo, os dados do evento são renderizados usando palavras-chave que ajudam a refinar o comportamento do evento e a especificar atributos do evento.
 
@@ -228,7 +229,7 @@ As definições de segmentos existentes também podem ser usadas como componente
 
 audiências externas também podem ser usadas como componentes de uma nova definição de segmento, adicionando suas regras de atributo ao novo segmento.
 
-Atualmente, somente o Adobe Audiência Manager é suportado como uma audiência. Fontes adicionais serão ativadas no futuro.
+Atualmente, somente Adobe Audience Manager é suportado como uma audiência. Fontes adicionais serão ativadas no futuro.
 
 ### Outros tipos de dados
 
@@ -256,6 +257,6 @@ O Serviço de segmentação fornece um fluxo de trabalho consolidado para constr
 - A segmentação é o processo de definição de um subconjunto de perfis da sua loja de perfis, que permite caracterizar o comportamento ou os atributos de um grupo comercializável desejado. O Serviço de segmentação torna esse processo possível.
 - Ao planejar um segmento, lembre-se de que um segmento pode ser referenciado e combinado a qualquer outro segmento.
 - Um segmento pode ser criado a partir de regras baseadas em dados de perfil, dados de séries de tempo relacionados ou ambos.
-- Os segmentos podem ser avaliados sob demanda ou continuamente. Quando avaliados sob demanda, todos os dados do perfil são passados pelas definições do segmento de uma só vez. Quando avaliados continuamente, os dados são transmitidos pelas definições de segmento à medida que entram na Plataforma.
+- Os segmentos podem ser avaliados sob demanda ou continuamente. Quando avaliados sob demanda, todos os dados do perfil são passados pelas definições do segmento de uma só vez. Quando avaliados continuamente, os dados são transmitidos pelas definições de segmento à medida que entram no Platform.
 
 Para saber como definir segmentos na interface do usuário, consulte o guia [Construtor de](./ui/overview.md)segmentos. Para obter informações sobre como criar definições de segmentos usando a API, consulte o tutorial sobre como [criar segmentos usando a API](./tutorials/create-a-segment.md).

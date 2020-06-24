@@ -1,43 +1,46 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Criar um schema usando o Editor de Schemas
+title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+workflow-type: tm+mt
+source-wordcount: '3409'
+ht-degree: 0%
 
 ---
 
 
-# Criar um schema usando o Editor de Schemas
+# Criar um esquema usando o Editor de esquemas.
 
-O Registro de Schemas fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos na Biblioteca de Schemas da plataforma Adobe Experience. A Biblioteca de Schemas contém recursos disponibilizados pela Adobe, parceiros da plataforma de experiência e fornecedores cujos aplicativos você usa, bem como recursos que você define e salva no Registro de Schemas.
+O Registro do Schema fornece uma interface de usuário e uma RESTful API a partir da qual você pode visualização e gerenciar todos os recursos na Biblioteca de Schemas do Adobe Experience Platform. A Biblioteca de Schemas contém recursos disponibilizados pela Adobe, parceiros de Experience Platform e fornecedores cujos aplicativos você usa, bem como recursos que você define e salva no Registro de Schemas.
 
-Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas na Plataforma de experiência. Se você preferir compor um schema usando a API do Registro do Schema, comece lendo o guia [do desenvolvedor do Registro do](../api/getting-started.md) Schema antes de tentar que o tutorial [crie um schema usando a API](create-schema-api.md).
+Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform. Se você preferir compor um schema usando a API do Registro do Schema, comece lendo o guia [do desenvolvedor do Registro do](../api/getting-started.md) Schema antes de tentar que o tutorial [crie um schema usando a API](create-schema-api.md).
 
 Este tutorial também inclui etapas para [definir uma nova classe](#create-new-class) que você poderia usar para compor um schema.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários aspectos da Adobe Experience Platform envolvidos no uso do Editor de Schemas. Antes de iniciar este tutorial, reveja a documentação para obter os seguintes conceitos:
+Este tutorial requer uma compreensão funcional dos vários aspectos do Adobe Experience Platform envolvido no uso do Editor de Schemas. Antes de iniciar este tutorial, reveja a documentação para obter os seguintes conceitos:
 
-* [Modelo de dados de experiência (XDM)](../home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+* [Modelo de dados de experiência (XDM)](../home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 * [Noções básicas da composição](../schema/composition.md)do schema: Uma visão geral dos schemas XDM e seus blocos de construção, incluindo classes, misturas, tipos de dados e campos.
 * [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Este tutorial requer que você tenha acesso à plataforma Experience. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de prosseguir.
+Este tutorial requer que você tenha acesso ao Experience Platform. Se você não tiver acesso a uma Organização IMS no Experience Platform, fale com o administrador do sistema antes de prosseguir.
 
-## Procurar schemas existentes na área de trabalho Schemas
+## Procurar schemas existentes na área de trabalho Schemas {#browse}
 
-A área de trabalho Schemas na plataforma Experience fornece uma visualização da Biblioteca de Schemas, permitindo que você visualização e gerencie todos os schemas disponíveis para você, bem como componha novos. A área de trabalho também inclui o Editor de Schemas, a tela na qual você irá compor um schema neste tutorial.
+A área de trabalho Schema fornece uma visualização da Biblioteca de Schemas, permitindo que você visualização e gerencie todos os schemas disponíveis para você, bem como componha novos. A área de trabalho também inclui o Editor de Schemas, a tela na qual você irá compor um schema neste tutorial.
 
-Depois de fazer logon na Experience Platform, clique em **Schemas** na navegação à esquerda e você será levado para a área de trabalho de Schemas. Você verá uma lista de schemas (uma representação da Biblioteca de Schemas) onde poderá visualização, gerenciar e personalizar todos os schemas disponíveis. A lista inclui o nome, o tipo, a classe e o comportamento (registro ou série de tempo) em que o schema se baseia, bem como a data e a hora em que o schema foi modificado pela última vez.
+Depois de fazer logon no Experience Platform, clique em **Schemas** na navegação à esquerda e você será direcionado para a área de trabalho de Schemas. Você verá uma lista de schemas (uma representação da Biblioteca de Schemas) onde poderá visualização, gerenciar e personalizar todos os schemas disponíveis. A lista inclui o nome, o tipo, a classe e o comportamento (registro ou série de tempo) em que o schema se baseia, bem como a data e a hora em que o schema foi modificado pela última vez.
 
 Clique no ícone de filtro ao lado da barra Pesquisar para usar os recursos de filtragem para todos os recursos no registro, incluindo classes, mixins e tipos de dados.
 
 ![Visualização da biblioteca de Schemas](../images/tutorials/create-schema/schemas_filter.png)
 
-## Criar e nomear um schema
+## Criar e nomear um schema {#create}
 
 Para começar a compor um schema, clique em **Criar Schema** no canto superior direito da área de trabalho dos Schemas.
 
@@ -59,7 +62,7 @@ Há várias considerações importantes a serem feitas ao decidir um nome para o
 
 Este tutorial compõe um schema para assimilar dados relacionados aos membros de um programa de fidelidade, portanto, o schema é denominado &quot;Membros de fidelidade&quot;.
 
-## Atribuir uma classe
+## Atribuir uma classe {#class}
 
 No lado esquerdo do editor está a seção *Composição* . Atualmente, contém duas subseções: *Schema* e *classe*.
 
@@ -79,11 +82,11 @@ A tela reaparece. A seção *Classe* agora contém a classe selecionada (Perfil 
 
 ![Classe de Perfil Individual XDM Atribuída](../images/tutorials/create-schema/class_assigned_structure.png)
 
-Os campos aparecem no formato &quot;fieldName| Tipo de dados&quot;. As etapas para definir campos de schema na interface do usuário são fornecidas posteriormente neste tutorial.
+Os campos aparecem no formato &quot;fieldName | Tipo de dados&quot;. As etapas para definir campos de schema na interface do usuário são fornecidas posteriormente neste tutorial.
 
 >[!NOTE] Você pode [alterar a classe de um schema](#change-class) em qualquer ponto durante o processo de composição inicial antes que o schema seja salvo, mas isso deve ser feito com extrema cautela. Misturas são compatíveis somente com certas classes, portanto, alterar a classe redefinirá a tela de desenho e quaisquer campos adicionados.
 
-## Adicionar uma mistura
+## Adicionar uma mistura {#mixin}
 
 Agora que uma classe foi atribuída, a seção *Composição* contém uma terceira subseção: *Misturas*.
 
@@ -111,7 +114,7 @@ Observe que o campo &quot;nome&quot; tem um tipo de dados de &quot;Nome da pesso
 
 Clique em diferentes campos na tela para ver quaisquer campos adicionais que contribuem para a estrutura do schema.
 
-## Adicionar outra mistura
+## Adicionar outra mistura {#mixin-2}
 
 Agora você pode repetir as mesmas etapas para adicionar outra mixin. Ao visualização da caixa de diálogo *Adicionar mistura* desta vez, observe que a mistura &quot;Detalhes da pessoa do Perfil&quot; está esmaecida e o botão de opção ao lado dela não pode ser selecionado. Isso evita que você duplique acidentalmente misturas que já foram incluídas no schema atual.
 
@@ -125,7 +128,7 @@ Semelhante ao campo &quot;nome&quot;, os campos que você acabou de adicionar re
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Definir uma nova mistura
+## Definir uma nova mistura {#define-mixin}
 
 O schema &quot;Membros de Fidelidade&quot; destina-se a capturar dados relacionados aos membros de um programa de fidelidade, de modo que serão necessários alguns campos específicos relacionados à fidelidade. Não há combinações padrão disponíveis que contenham os campos necessários, portanto, será necessário definir uma nova mistura.
 
@@ -139,7 +142,7 @@ Para este tutorial, nomeie a nova combinação como &quot;Detalhes da fidelidade
 
 Clique em **Adicionar mistura** para retornar ao editor de schemas. Os &quot;Detalhes de fidelidade&quot; agora devem aparecer em *Mixins* no lado esquerdo da tela, mas não há campos associados a ela ainda e, portanto, nenhum campo novo aparece em *Estrutura*.
 
-## Adicionar campos ao mixin
+## Adicionar campos ao mixin {#mixin-fields}
 
 Agora que você criou a combinação &quot;Detalhes da Fidelidade&quot;, é hora de definir os campos que a combinação contribuirá para o schema.
 
@@ -178,7 +181,7 @@ Diferentes opções de restrição estão disponíveis dependendo do tipo de dad
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Adicionar mais campos para mixagem
+## Adicionar mais campos para mixagem {#mixin-fields-2}
 
 Agora que você adicionou o campo &quot;loyaltyId&quot;, é possível adicionar campos adicionais para capturar informações relacionadas à fidelidade, como:
 
@@ -191,7 +194,7 @@ Quando concluído, o objeto Fidelidade conterá campos para: ID de Fidelidade, P
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Adicionar campo &#39;enum&#39; para mixagem
+## Adicionar campo &#39;enum&#39; para mixagem {#enum}
 
 Ao definir campos no Editor de Schemas, há algumas opções adicionais que podem ser aplicadas a tipos de campos básicos para fornecer restrições adicionais aos dados que o campo pode conter.
 
@@ -212,7 +215,7 @@ Mais informações sobre restrições adicionais disponíveis:
 * **Enum:** Indica que esse campo deve conter um dos valores de uma lista enumerada de valores possíveis.
 * **Identidade:** Indica que este campo é um campo de identidade. Mais informações sobre campos de identidade são fornecidas [posteriormente neste tutorial](#identity-field).
 
-## Converter um objeto de vários campos em um tipo de dados
+## Converter um objeto de vários campos em um tipo de dados {#datatype}
 
 Depois de adicionar vários campos específicos de fidelidade, o objeto &quot;fidelidade&quot; agora contém uma estrutura de dados comum que pode ser útil em outros schemas.
 
@@ -230,9 +233,9 @@ Em um schema futuro, agora é possível atribuir a um campo o **Tipo** de &quot;
 
 ## Definir um campo de schema como um campo de identidade {#identity-field}
 
-Os Schemas são usados para ingerir dados na plataforma da experiência, e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Para ajudar nesse processo, os campos principais podem ser marcados como campos &quot;Identidade&quot;.
+Schemas são usados para ingerir dados no Experience Platform, e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Para ajudar nesse processo, os campos principais podem ser marcados como campos &quot;Identidade&quot;.
 
-A Plataforma de experiência facilita a identificação de um campo de identidade através do uso de uma caixa de seleção **Identidade** no Editor de Schemas.
+O Experience Platform facilita a identificação de um campo de identidade através do uso de uma caixa de seleção **Identidade** no Editor de Schemas.
 
 Por exemplo, pode haver milhares de membros do programa de fidelidade pertencentes ao mesmo &quot;nível&quot;, mas cada membro do programa de fidelidade tem uma &quot;loyaltyId&quot; exclusiva (que, neste caso, é o endereço de email do membro individual). O fato de &quot;loyaltyId&quot; ser um identificador exclusivo para cada membro faz dele um bom candidato para um campo de identidade, enquanto &quot;level&quot; não é.
 
@@ -260,7 +263,7 @@ More information about relationships and other schema metadata can be found in t
 
 ## Ative o schema para uso no Perfil do cliente em tempo real {#profile}
 
-O Editor de Schemas fornece a capacidade de habilitar um schema para uso com o Perfil [Cliente em tempo](../../profile/home.md)real. O Perfil fornece uma visualização holística de cada cliente individual, criando um perfil robusto de 360° dos atributos do cliente, bem como uma conta com carimbo de data e hora de cada interação que o cliente teve em qualquer sistema integrado à plataforma Experience.
+O Editor de Schemas fornece a capacidade de habilitar um schema para uso com o Perfil [Cliente em tempo](../../profile/home.md)real. O Perfil fornece uma visualização holística de cada cliente individual, criando um perfil robusto de 360° dos atributos do cliente, bem como uma conta com carimbo de data e hora de cada interação que o cliente teve em qualquer sistema integrado ao Experience Platform.
 
 Para que um schema seja habilitado para uso com o Perfil de cliente em tempo real, ele deve ter uma identidade primária definida. Você receberá uma mensagem de erro &quot;Missing Primary Identity&quot; (Identidade primária ausente) se tentar habilitar um schema sem primeiro definir uma identidade primária.
 
@@ -282,7 +285,7 @@ Clique em **Perfil** e um pop-up será exibido, solicitando que você confirme q
 
 Agora que você terminou de compor um schema de &quot;Membros da Fidelidade&quot;, você pode ver o schema completo na seção *Estrutura* do editor. Clique em **Salvar** e o schema será salvo na Biblioteca de Schemas, tornando-o acessível pelo Registro de Schemas.
 
-Seu novo schema agora pode ser usado para assimilar dados na Plataforma. Lembre-se de que, uma vez que o schema tenha sido usado para ingerir dados, somente alterações aditivas poderão ser feitas. Consulte as [noções básicas da composição](../schema/composition.md) do schema para obter mais informações sobre o controle de versão do schema.
+Seu novo schema agora pode ser usado para assimilar dados no Platform. Lembre-se de que, uma vez que o schema tenha sido usado para ingerir dados, somente alterações aditivas poderão ser feitas. Consulte as [noções básicas da composição](../schema/composition.md) do schema para obter mais informações sobre o controle de versão do schema.
 
 O schema &quot;Membros da fidelidade&quot; também está disponível para exibição e gerenciamento usando a API do Registro do Schema. Para começar a trabalhar com a API, leia o guia [do desenvolvedor da API do Registro do](../api/getting-started.md)Schema.
 
@@ -292,7 +295,7 @@ As informações a seguir são complementares ao Tutorial do Editor de Schemas.
 
 ### Create a new class {#create-new-class}
 
-A Plataforma de experiência oferece a flexibilidade para definir um schema com base em uma classe exclusiva de sua organização.
+O Experience Platform oferece a flexibilidade para definir um schema com base em uma classe exclusiva de sua organização.
 
 Abra a caixa de diálogo *Atribuir classe* clicando em **Atribuir** na seção *Classe* do Editor de Schemas. Na caixa de diálogo, selecione **Criar nova classe**.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um schema usando a API de registro do Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Criar um schema usando a API de registro do Schema
 
-O Registro do Schema é usado para acessar a Biblioteca de Schemas na Adobe Experience Platform. A Biblioteca de Schemas contém recursos disponibilizados pela Adobe, parceiros da plataforma Experience e fornecedores cujos aplicativos você usa. O Registro fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
+O Registro do Schema é usado para acessar a Biblioteca de Schemas no Adobe Experience Platform. A Biblioteca de Schemas contém recursos disponibilizados pela Adobe, parceiros de Experience Platform e fornecedores cujos aplicativos você usa. O Registro fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
 
-Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão. Se você preferir usar a interface do usuário na Experience Platform, o Tutorial [do Editor de](create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no editor de schemas.
+Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão. Se você preferir usar a interface do usuário no Experience Platform, o Tutorial [do Editor de](create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no editor de schemas.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+* [Sistema](../home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
 * [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, consulte o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
 
@@ -33,7 +33,7 @@ Este tutorial descreve as etapas da composição de um schema de Membros de Fide
 
 ## Compor um schema com uma classe padrão
 
-Um schema pode ser considerado como o modelo para os dados que você deseja assimilar na Experience Platform. Cada schema é composto de uma classe e zero ou mais combinações. Em outras palavras, não é necessário adicionar uma mistura para definir um schema, mas na maioria dos casos, pelo menos uma é usada.
+Um schema pode ser considerado como o modelo para os dados que você deseja assimilar no Experience Platform. Cada schema é composto de uma classe e zero ou mais combinações. Em outras palavras, não é necessário adicionar uma mistura para definir um schema, mas na maioria dos casos, pelo menos uma é usada.
 
 ### Atribuir uma classe
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Resposta **
+**Resposta**
 
 O formato de resposta depende do cabeçalho Aceitar enviado com a solicitação. Experimente com cabeçalhos Aceitar diferentes para ver qual deles atende melhor às suas necessidades.
 
@@ -952,9 +952,9 @@ Executar uma solicitação GET para pesquisar o schema agora mostra a referênci
 
 ### Definir um descritor de identidade
 
-Os Schemas são usados para assimilar dados na Experience Platform. Esses dados são usados em vários serviços para criar uma visualização única e unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a ingestão de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados pelo Perfil [do cliente em tempo](../../profile/home.md) real e por outros serviços da plataforma de experiência para fornecer uma visualização agrupada de cada cliente individual.
+Schemas são usados para assimilar dados no Experience Platform. Esses dados são usados em vários serviços para criar uma visualização única e unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a ingestão de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados pelo Perfil [do cliente em tempo](../../profile/home.md) real e por outros serviços de Experience Platform para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), CRM ID ou outros campos de ID exclusivos.
+Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, ID de [Experience Cloud (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), ID de CRM ou outros campos de ID exclusivos.
 
 Considere todos os identificadores exclusivos específicos da sua organização, pois também podem ser bons campos de identidade.
 
@@ -1165,7 +1165,7 @@ A resposta é uma lista filtrada de schemas, contendo apenas aqueles que atendem
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você compôs com êxito um schema usando misturas padrão e uma mistura definida por você. Agora você pode usar esse schema para criar um conjunto de dados e assimilar dados de registro na Adobe Experience Platform.
+Ao seguir este tutorial, você compôs com êxito um schema usando misturas padrão e uma mistura definida por você. Agora você pode usar esse schema para criar um conjunto de dados e assimilar dados de registro no Adobe Experience Platform.
 
 O schema Membros de Fidelidade completa, conforme criado neste tutorial, está disponível no apêndice a seguir. Ao observar o schema, você pode ver como as combinações contribuem para a estrutura geral e quais campos estão disponíveis para a ingestão de dados.
 

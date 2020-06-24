@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,23 @@ Para adicionar uma nova regra à definição do segmento, arraste um bloco da gu
 
 Você pode arrastar e soltar uma audiência da guia *[!UICONTROL Audiência]* na tela do construtor de regras para fazer referência à associação de audiência na nova definição de segmento. Isso permite que você inclua ou exclua a associação de audiência como um atributo na nova regra de segmento.
 
-Para [!DNL Platform] audiências criadas usando o Construtor de segmentos, você tem a opção de converter a audiência no conjunto de regras que foram usadas na definição de segmentos para essa audiência. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original.
+Para [!DNL Platform] audiências criadas usando o Construtor [!UICONTROL de]segmentos, você tem a opção de converter a audiência no conjunto de regras que foram usadas na definição de segmento para essa audiência. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo alterações recentes na definição do segmento antes de convertê-lo para a lógica da regra.
 
 >[!NOTE] Ao adicionar uma audiência de uma fonte externa, somente a associação de audiência é referenciada. Não é possível converter a audiência em regras e, portanto, as regras usadas para criar a audiência original não podem ser modificadas na nova definição de segmento.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+Se surgirem conflitos ao converter audiências em regras, o Construtor [!UICONTROL de] segmentos tentará preservar as opções existentes da melhor forma possível.
+
+### visualização de código
+
+Como alternativa, você pode visualização uma versão baseada em código de uma regra criada no Construtor de [!UICONTROL segmentos]. Depois de criar sua regra na tela do construtor de regras, você pode selecionar visualização **[!UICONTROL de]** código para ver seu segmento como PQL.
+
+![](../images/segment-builder/code-view.png)
+
+A visualização de código fornece um botão que permite copiar o valor do segmento a ser usado em chamadas de API. Para obter a versão mais recente do segmento, certifique-se de ter salvo as alterações mais recentes no segmento.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Contêineres
 
@@ -225,6 +237,6 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Use a tela e os container do construtor de regras para controlar a ordem na qual as regras de segmento são executadas.
 - Estimativas de Visualização de sua audiência potencial, permitindo que você ajuste suas definições de segmento conforme necessário.
 - Ative todas as definições de segmento para segmentação programada.
-- Habilitar definições de segmento especificadas para a segmentação de streaming.
+- Ative definições de segmento especificadas para a segmentação de streaming.
 
 Para obter instruções passo a passo sobre como trabalhar com [!DNL Segmentation Service] a [!DNL Segmentation Service] API, consulte o tutorial de [criação de segmentos de audiência usando APIs](../tutorials/create-a-segment.md) .

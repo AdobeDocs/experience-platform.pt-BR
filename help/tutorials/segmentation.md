@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tutoriais de segmentação
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,7 @@ O Adobe Experience Platform permite que você reúna dados de várias fontes e o
 
 Os segmentos que estão habilitados para uso no Perfil de cliente em tempo real contêm uma ID de política de mesclagem na definição do segmento. Esta política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que por sua vez contêm quaisquer rótulos de uso de dados aplicáveis. Para obter etapas específicas que abrangem a imposição da conformidade de uso de dados para um segmento de audiência, siga o tutorial de imposição de conformidade de uso de [dados para segmentos](../segmentation/tutorials/governance.md).
 
-## Segmentação de transmissão (Beta)
-
->[!NOTE]
->A segmentação de fluxo contínuo está em beta e estará disponível mediante solicitação. Os recursos e a documentação estão sujeitos a alterações.
+## Segmentação em streaming
 
 A segmentação contínua é a capacidade de avaliar instantaneamente um cliente assim que um evento entra em um grupo de segmentos específico. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para o Adobe Experience Platform, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados. Para saber mais, visite a visão geral [da segmentação de](../segmentation/api/streaming-segmentation.md)streaming.
 

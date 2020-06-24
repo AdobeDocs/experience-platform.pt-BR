@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -63,7 +63,7 @@ A guia **[!UICONTROL Atributos]** permite navegar pelos [!DNL Profile] atributos
 
 ### Eventos
 
-A guia **[!UICONTROL Eventos]** permite que você crie uma audiência com base em eventos ou ações realizadas usando elementos de dados XDM ExperienceEvent. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Eventos]** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
+A guia **[!UICONTROL Eventos]** permite criar uma audiência com base em eventos ou ações realizadas usando elementos de dados XDM ExperienceEvent. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Eventos]** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
 
 Além de poder procurar [!DNL ExperienceEvent] elementos, também é possível procurar Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação [!DNL ExperienceEvents], sem exigir que você pesquise pela [!DNL XDM ExperienceEvent] classe procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmentos.
 
@@ -165,7 +165,7 @@ No momento, os agendamentos só podem ser criados usando a API. Para obter etapa
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Segmentação em streaming
+## Segmentação em streaming {#streaming-segmentation}
 
 >[!NOTE] Para que a segmentação de fluxo funcione, o cliente precisará ativar a segmentação programada para a organização. Para obter detalhes sobre como ativar a segmentação programada, consulte [a seção anterior neste guia](#enable-scheduled-segmentation)do usuário.
 

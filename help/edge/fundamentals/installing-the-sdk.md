@@ -1,12 +1,12 @@
 ---
-title: Instalação do SDK da Web da plataforma Adobe Experience
-seo-title: Adobe Experience Platform Web SDK ao instalar o SDK
-description: Saiba como instalar o SDK da Web da Experience Platform
-seo-description: Saiba como instalar o SDK da Web da Experience Platform
+title: Instalação do Adobe Experience Platform Web SDK
+seo-title: Adobe Experience Platform Web SDK instalando o SDK
+description: Saiba como instalar o SDK da Web do Experience Platform
+seo-description: Saiba como instalar o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Instalação do SDK
 
-O SDK da Web AEP está disponível em um CDN para uso. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
+O Adobe Experience Platform Web SDK está disponível em uma rede de delivery de conteúdo (CDN) para você usar. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Adicionar o código
 
-A primeira etapa na implementação do SDK da Web da plataforma Adobe Experience é copiar e colar o seguinte &quot;código base&quot; o mais alto possível na `<head>` tag do seu HTML:
+A primeira etapa na implementação do SDK Adobe Experience Platform Web é copiar e colar o seguinte &quot;código base&quot; o mais alto possível na `<head>` tag do seu HTML:
 
 ```markup
 <script>

@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
+source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -54,7 +54,7 @@ A contagem de perfis exibe o número total de perfis que sua organização tem d
 
 A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de séries cronológicas (eventos), como perfis Analytics da Adobe. A contagem de perfis é atualizada regularmente para fornecer um número total atualizado de perfis no Platform.
 
-Quando a ingestão de perfis na Loja de Perfis aumenta ou diminui a contagem em mais de 5%, uma tarefa é acionada para atualizar a contagem. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se o tiver feito, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no Perfil Store, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem de perfis.
+Quando a ingestão de registros na Loja de Perfis aumenta ou diminui a contagem em mais de 5%, uma tarefa é acionada para atualizar a contagem. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se o tiver feito, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no Perfil Store, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem de perfis.
 
 ### Perfis por namespace {#profiles-by-namespace}
 

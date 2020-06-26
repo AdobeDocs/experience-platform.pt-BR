@@ -1,12 +1,12 @@
 ---
 title: Depuração
-seo-title: Depuração do SDK da Web da Adobe Experience Platform
-description: Saiba como alternar a depuração do SDK da Web da Experience Platform
-seo-description: Saiba como alternar a depuração do SDK da Web da Experience Platform
+seo-title: Depuração do SDK da Web do Adobe Experience Platform
+description: Saiba como alternar a depuração do SDK da Web do Experience Platform
+seo-description: Saiba como alternar a depuração do SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Quando a depuração está ativada, o SDK gera mensagens para o console do navegador que podem ser úteis na depuração da sua implementação e na compreensão de como o SDK está se comportando. A depuração também resulta em uma validação síncrona do lado do servidor dos dados coletados em relação ao schema que você configurou.
 
-A depuração está desativada por padrão, mas pode ser alternada de três maneiras diferentes:
+A depuração está desativada por padrão, mas pode ser ativada de três maneiras diferentes:
 
 * `configure` comando
 * `setDebug` comando
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >Isso permite a depuração para todos os usuários da página da Web, em vez de somente para seu navegador pessoal.
 
 ## Alternar a depuração com o comando Depurar
@@ -61,7 +62,7 @@ Semelhante ao `debug` comando, se você preferir não alterar o código em sua p
 
 ## Prioridade e duração
 
-Quando a depuração é definida pelo parâmetro de string de query ou comando, ela substitui qualquer `debug` opção definida no `debug` `configure` comando. Nesses dois casos, a depuração também permanece alternada durante a sessão. Em outras palavras, se você ativar a depuração usando o comando debug ou o parâmetro da string de query, ela permanecerá ativada até uma das seguintes opções:
+Quando a depuração é definida pelo parâmetro de string de query ou comando, ela substitui qualquer `debug` opção definida no `debug` `configure` comando. Nesses dois casos, a depuração também permanece ativada durante a sessão. Em outras palavras, se você ativar a depuração usando o comando debug ou o parâmetro da string de query, ela permanecerá ativada até uma das seguintes opções:
 
 * O fim da sessão
 * Execute o `debug` comando

@@ -1,12 +1,12 @@
 ---
 title: Renderização de conteúdo personalizado
 seo-title: Adobe Experience Platform Web SDK Renderização de conteúdo personalizado
-description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK
-seo-description: Saiba como renderizar conteúdo personalizado com o Experience Platform Web SDK
+description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
+seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral das opções de personalização
 
-O SDK da Web da plataforma Adobe Experience oferece suporte à consulta das soluções de personalização na Adobe, incluindo o Público alvo da Adobe. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
+O Adobe Experience Platform Web SDK oferece suporte à consulta das soluções de personalização na Adobe, incluindo o Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
 
 ## Renderização automática de conteúdo
 
@@ -90,9 +90,10 @@ Isso retornará uma lista de decisões como um objeto JSON para cada decisão.
 }
 ```
 
-{info}Se você usar escopos de Público alvo se tornam mBoxes no servidor, somente eles são solicitações ao mesmo tempo, em vez de individualmente. A mbox global é sempre enviada.
-{info}
+>[!TIP]
+>
+> Se você usar escopos de Público alvo para se tornarem mBoxes no servidor, somente eles serão solicitações ao mesmo tempo, em vez de individualmente. A mbox global é sempre enviada.
 
 ### Recuperar conteúdo automático
 
-Se você deseja que `result.decisions` as decisões de renderização automática sejam incluídas, é possível definir `renderDecisions` como falso e incluir o escopo especial `__view__`
+Se desejar que `result.decisions` as decisões de renderização automática sejam incluídas, é possível definir `renderDecisions` como falso e incluir o escopo especial `__view__`.

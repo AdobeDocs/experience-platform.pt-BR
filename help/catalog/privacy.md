@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -17,20 +20,20 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 ## Introdução
 
-É recomendável que você tenha uma compreensão prática dos seguintes serviços da plataforma de experiência antes de ler este guia:
+É recomendável que você tenha uma compreensão funcional dos seguintes serviços de Experience Platform antes de ler este guia:
 
 * [Privacy Service](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais nos aplicativos da Adobe Experience Cloud.
-* [Serviço](home.md)de catálogo: O sistema de registro para localização e linhagem de dados na Experience Platform. Fornece uma API que pode ser usada para atualizar metadados do conjunto de dados.
-* [Sistema](../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+* [Serviço](home.md)de catálogo: O sistema de registro para localização e linhagem de dados no Experience Platform. Fornece uma API que pode ser usada para atualizar metadados do conjunto de dados.
+* [Sistema](../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [Serviço](../identity-service/home.md)de identidade: Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 
-O Adobe Experience Platform Identity Service combina dados de identidade do cliente em sistemas e dispositivos. O Serviço de identidade usa namespaces **de** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma ID da Adobe Advertising Cloud (&quot;AdCloud&quot;) ou uma ID de Público alvo da Adobe (&quot;TNTID&quot;).
+O Serviço de identidade do Adobe Experience Platform faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. O Serviço de identidade usa namespaces **de** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma ID da Advertising Cloud da Adobe (&quot;AdCloud&quot;) ou uma ID da Adobe Target (&quot;TNTID&quot;).
 
 O Serviço de identidade mantém um armazenamento de namespaces de identidade definidas globalmente (padrão) e definidas pelo usuário (personalizadas). namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizadas para atender às suas necessidades específicas.
 
-Para obter mais informações sobre namespaces de identidade na plataforma Experience, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
+Para obter mais informações sobre namespaces de identidade no Experience Platform, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
 
 ## Adicionar dados de identidade a conjuntos de dados
 
@@ -40,7 +43,9 @@ Ao criar solicitações de privacidade para o Data Lake, devem ser fornecidos va
 
 Esta seção aborda as etapas de adição de um descritor de identidade a um schema XDM do conjunto de dados existente. Se você já tiver um conjunto de dados com um descritor de identidade, poderá pular para a [próxima seção](#nested-maps).
 
->[!IMPORTANT] Ao decidir quais campos de schema definir como identidades, lembre-se das [limitações do uso de campos](#nested-maps)do tipo de mapa aninhados.
+>[!IMPORTANT]
+>
+>Ao decidir quais campos de schema definir como identidades, lembre-se das [limitações do uso de campos](#nested-maps)do tipo de mapa aninhados.
 
 Há dois métodos de adicionar um descritor de identidade a um schema de conjunto de dados:
 
@@ -49,7 +54,7 @@ Há dois métodos de adicionar um descritor de identidade a um schema de conjunt
 
 ### Uso da interface {#identity-ui}
 
-Na interface do usuário da plataforma Experience, a _[!UICONTROL Schemas]_área de trabalho permite editar seus schemas XDM existentes. Para adicionar um descritor de identidade a um schema, selecione-o na lista e siga as etapas para[definir um campo de schema como um campo](../xdm/tutorials/create-schema-ui.md#identity-field)de identidade no tutorial do Editor de Schemas.
+Na interface do usuário do Experience Platform, a área de trabalho de _[!UICONTROL Schemas]_permite que você edite seus schemas XDM existentes. Para adicionar um descritor de identidade a um schema, selecione-o na lista e siga as etapas para[definir um campo de schema como um campo](../xdm/tutorials/create-schema-ui.md#identity-field)de identidade no tutorial do Editor de Schemas.
 
 Depois de definir os campos apropriados dentro do schema como campos de identidade, você pode ir para a próxima seção sobre [envio de solicitações](#submit)de privacidade.
 
@@ -121,9 +126,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do de
 
 ## Enviando solicitações {#submit}
 
->[!NOTE] Esta seção aborda como formatar solicitações de privacidade para o Data Lake. É altamente recomendável que você consulte a documentação da interface do usuário [do Privacy Service ou da API](../privacy-service/ui/overview.md) do [](../privacy-service/api/getting-started.md) Privacy Service para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
+>[!NOTE] Esta seção aborda como formatar solicitações de privacidade para o Data Lake. É altamente recomendável que você reveja a documentação da interface do usuário [do](../privacy-service/ui/overview.md) Privacy Service ou da API [do](../privacy-service/api/getting-started.md) Privacy Service para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
-A seção a seguir descreve como fazer solicitações de privacidade para o Data Lake usando a interface do usuário ou a API do Privacy Service.
+A seção a seguir descreve como fazer solicitações de privacidade para o Data Lake usando a interface do usuário do Privacy Service ou a API.
 
 ### Uso da interface
 
@@ -180,9 +185,9 @@ curl -X POST \
 
 ## Excluir processamento de solicitação
 
-Quando a Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação ao Privacy Service de que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são então removidos do Data Lake dentro de sete dias. Durante esse período de sete dias, os dados são excluídos por software e, portanto, não podem ser acessados por nenhum serviço da plataforma.
+Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação para o Privacy Service que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são então removidos do Data Lake dentro de sete dias. Durante esse período de sete dias, os dados são excluídos por software e, portanto, não podem ser acessados por nenhum serviço da Platform.
 
-Em versões futuras, a Plataforma enviará uma confirmação ao Privacy Service depois que os dados forem fisicamente excluídos.
+Em versões futuras, a Platform enviará a confirmação ao Privacy Service depois que os dados forem fisicamente excluídos.
 
 ## Próximas etapas
 

@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 1%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 1%
 
 # Mesclar políticas
 
-A plataforma Adobe Experience permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Plataforma usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia mostra as etapas para trabalhar com políticas de mesclagem usando a API. Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
+O Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia mostra as etapas para trabalhar com políticas de mesclagem usando a API. Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
 
 ## Introdução
 
-Os pontos de extremidade da API usados neste guia fazem parte da API do Perfil do cliente em tempo real. Antes de continuar, consulte o guia [do desenvolvedor da API do Perfil do cliente em tempo](getting-started.md)real. Em particular, a seção [de](getting-started.md#getting-started) introdução do guia do desenvolvedor do Perfil inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para quaisquer APIs da plataforma de experiência.
+O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Componentes das políticas de mesclagem {#components-of-merge-policies}
 
-As políticas de mesclagem são privadas para sua Organização IMS, permitindo que você crie políticas diferentes para unir schemas da maneira específica que você precisa. Qualquer API que acesse dados de Perfil requer uma política de mesclagem, embora um padrão seja usado se não for fornecido explicitamente. A plataforma fornece uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para um schema específico e marcá-la como padrão para sua organização. Cada organização pode potencialmente ter várias políticas de mesclagem por schema, no entanto, cada schema pode ter apenas uma política de mesclagem padrão. Qualquer política de mesclagem definida como padrão será usada nos casos em que o nome do schema for fornecido e uma política de mesclagem for necessária, mas não fornecida. Quando você define uma política de mesclagem como padrão, qualquer política de mesclagem existente definida anteriormente como padrão será automaticamente atualizada para não ser mais usada como padrão.
+As políticas de mesclagem são privadas para sua Organização IMS, permitindo que você crie políticas diferentes para unir schemas da maneira específica que você precisa. Qualquer API que acesse dados de Perfil requer uma política de mesclagem, embora um padrão seja usado se não for fornecido explicitamente. A Platform fornece uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para um schema específico e marcá-la como padrão para sua organização. Cada organização pode potencialmente ter várias políticas de mesclagem por schema, no entanto, cada schema pode ter apenas uma política de mesclagem padrão. Qualquer política de mesclagem definida como padrão será usada nos casos em que o nome do schema for fornecido e uma política de mesclagem for necessária, mas não fornecida. Quando você define uma política de mesclagem como padrão, qualquer política de mesclagem existente definida anteriormente como padrão será automaticamente atualizada para não ser mais usada como padrão.
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
+O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
 
 **Objeto de política de mesclagem**
 
@@ -59,7 +59,7 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
 | `attributeMerge` | [Objeto de mesclagem](#attribute-merge) de atributo que indica a maneira pela qual a política de mesclagem priorizará os valores de atributos do perfil em caso de conflitos de dados. |
 | `schema` | O objeto [schema](#schema) no qual a política de mesclagem pode ser usada. |
 | `default` | Valor booliano que indica se essa política de mesclagem é o padrão para o schema especificado. |
-| `version` | Versão da política de mesclagem mantida pela plataforma. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
+| `version` | A Platform manteve a versão da política de mesclagem. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
 | `updateEpoch` | Data da última atualização da política de mesclagem. |
 
 **Exemplo de política de mesclagem**
@@ -86,7 +86,7 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
 
 ### Gráfico de identidade {#identity-graph}
 
-[O Adobe Experience Platform Identity Service](../../identity-service/home.md) gerencia os gráficos de identidade usados globalmente e para cada organização na Experience Platform. O `identityGraph` atributo da política de mesclagem define como determinar as identidades relacionadas para um usuário.
+[O Serviço](../../identity-service/home.md) de identidade do Adobe Experience Platform gerencia os gráficos de identidade usados globalmente e para cada organização no Experience Platform. O `identityGraph` atributo da política de mesclagem define como determinar as identidades relacionadas para um usuário.
 
 **objeto identityGraph**
 
@@ -693,7 +693,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem atualiza
 
 ## Excluir uma política de mesclagem
 
-Uma política de mesclagem pode ser excluída fazendo uma solicitação DELETE para o `/config/mergePolicies` ponto de extremidade e incluindo a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
+Uma política de mesclagem pode ser excluída ao fazer uma solicitação DELETE ao `/config/mergePolicies` ponto final e incluir a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -724,7 +724,7 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua Organização IMS, pode usá-las para criar segmentos de audiência a partir dos dados do Perfil do cliente em tempo real. Consulte a documentação [do Serviço de segmentação da plataforma](../../segmentation/home.md) Adobe Experience para começar a definir e trabalhar com segmentos.
+Agora que você sabe como criar e configurar políticas de mesclagem para sua Organização IMS, pode usá-las para criar segmentos de audiência a partir dos dados do Perfil do cliente em tempo real. Consulte a documentação [do Serviço de segmentação de](../../segmentation/home.md) Adobe Experience Platform para começar a definir e trabalhar com segmentos.
 
 
 

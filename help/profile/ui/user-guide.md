@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
+source-git-commit: 59dff7687f8a0c5b5084eb1ce7dd222cc18d8dbf
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Quando a ingestão de registros na Loja de Perfis aumenta ou diminui a contagem 
 
 A métrica *Perfis por namespace* exibe a contagem total e o detalhamento das namespaces em todos os perfis unidos na Loja de Perfis. O número total de perfis por namespace (em outras palavras, adicionar os valores mostrados para cada namespace) sempre será maior que a métrica de contagem de perfis porque um perfil pode ter várias namespaces associadas a ela. Por exemplo, se um cliente interagir com sua marca em mais de um canal, várias namespaces serão associadas a esse cliente individual.
 
-Semelhante à métrica de contagem [de](#profile-count) perfis, quando a ingestão de perfis na Loja de Perfis aumenta ou diminui a contagem em mais de 5%, uma tarefa é acionada para atualizar as métricas de namespace. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se o tiver feito, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no Perfil Store, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar as métricas.
+Semelhante à métrica de contagem [de](#profile-count) perfis, quando a ingestão de registros na Loja de Perfis aumenta ou diminui a contagem em mais de 5%, uma tarefa é acionada para atualizar as métricas de namespace. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se o tiver feito, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no Perfil Store, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar as métricas.
 
 ### Política de mesclagem
 

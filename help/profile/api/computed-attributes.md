@@ -4,12 +4,15 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '2431'
+ht-degree: 1%
 
 ---
 
 
-# (Alfa) Atributos calculados
+# (Alfa) Ponto de extremidade de atributos computados
 
 >[!IMPORTANT]
 >A funcionalidade de atributo calculado descrita neste documento está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
@@ -18,19 +21,17 @@ Os atributos calculados permitem calcular automaticamente o valor dos campos com
 
 Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil ou em um evento. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias.
 
-Este guia o ajudará a entender melhor os atributos calculados na Adobe Experience Platform e inclui exemplos de chamadas de API para executar operações CRUD básicas usando o `/config/computedAttributes` endpoint.
+Este guia o ajudará a entender melhor os atributos calculados no Adobe Experience Platform e inclui chamadas de API de amostra para executar operações CRUD básicas usando o `/config/computedAttributes` endpoint.
 
 ## Introdução
 
-Os pontos de extremidade da API usados neste guia fazem parte da API do Perfil do cliente em tempo real. Antes de continuar, leia o guia [do desenvolvedor do Perfil do cliente em tempo](getting-started.md)real.
-
-Em particular, a seção [de](getting-started.md) introdução do guia do desenvolvedor do Perfil inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para quaisquer APIs da plataforma de experiência.
+O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Noções básicas sobre atributos calculados
 
-A plataforma Adobe Experience permite importar e mesclar facilmente dados de várias fontes para gerar Perfis de clientes em tempo real. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
+O Adobe Experience Platform permite importar e mesclar facilmente dados de várias fontes para gerar Perfis de clientes em tempo real. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
 
-Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão desses dados rapidamente, a Plataforma permite que você crie atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
+Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão rápida desses dados, a Platform permite que você crie atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
 Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As Expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de evento e perfil recebidos ou evento recebido, dados de perfil e eventos históricos.
 
@@ -55,7 +56,7 @@ O fluxo de trabalho neste tutorial usa um schema habilitado para Perfis e segue 
 
 ### Visualização de um schema
 
-As etapas a seguir usam a interface do usuário da plataforma Adobe Experience para localizar um schema, adicionar uma combinação e definir um campo. Se você preferir usar a API do Registro do Schema, consulte o guia [do desenvolvedor do Registro do](../../xdm/api/getting-started.md) Schema para obter as etapas sobre como criar uma combinação, adicionar uma mistura a um schema e habilitar um schema para uso com o Perfil do Cliente em tempo real.
+As etapas a seguir usam a interface do usuário do Adobe Experience Platform para localizar um schema, adicionar uma combinação e definir um campo. Se você preferir usar a API do Registro do Schema, consulte o guia [do desenvolvedor do Registro do](../../xdm/api/getting-started.md) Schema para obter as etapas sobre como criar uma combinação, adicionar uma mistura a um schema e habilitar um schema para uso com o Perfil do Cliente em tempo real.
 
 Na interface do usuário, clique em **Schemas** no painel esquerdo e use a barra de pesquisa na guia *Procurar* para encontrar rapidamente o schema que deseja atualizar.
 
@@ -67,7 +68,7 @@ Depois de localizar o schema, clique no seu nome para abrir o Editor de Schemas,
 
 ### Criar uma mistura
 
-Para criar uma nova mistura, clique em **Adicionar** ao lado de *Misturas* na seção *Composição* no lado esquerdo do editor. Isso abre a caixa de diálogo **Adicionar mixagem** , onde você pode ver as misturas existentes. Clique no botão de opção para **Criar nova combinação** para definir sua nova combinação.
+Para criar uma nova mistura, clique em **Adicionar** ao lado de *Misturas* na seção *Composição* no lado esquerdo do editor. Isso abre a caixa de diálogo **Adicionar mixagem** , onde você pode ver as misturas existentes. Clique no botão de opção para **Criar nova mistura** para definir sua nova combinação.
 
 Dê um nome e uma descrição ao mixin e clique em **Adicionar mixin** quando concluído.
 
@@ -353,7 +354,7 @@ A resposta também inclui uma `children` matriz composta de um ou mais objetos, 
 | Propriedade | Descrição |
 |---|---|
 | `_page.totalCount` | O número total de atributos calculados definidos pela Organização IMS. |
-| `_page.pageSize` | O número de atributos calculados retornados nesta página de resultados. Se `pageSize` for igual a `totalCount`, isso significa que há apenas uma página de resultados e todos os atributos calculados foram retornados. Se não forem iguais, há páginas adicionais de resultados que podem ser acessadas. Consulte `_links.next` para obter detalhes. |
+| `_page.pageSize` | O número de atributos calculados retornados nesta página de resultados. Se `pageSize` for igual a `totalCount`, isso significa que há apenas uma página de resultados e todos os atributos calculados foram retornados. Se não forem iguais, há páginas adicionais de resultados que podem ser acessadas. See `_links.next` for details. |
 | `children` | Uma matriz composta de um ou mais objetos, cada um contendo os detalhes de um único atributo calculado. Se nenhum atributo calculado tiver sido definido, a `children` matriz ficará vazia. |
 | `id` | Um valor exclusivo, somente leitura, gerado pelo sistema, atribuído automaticamente a um atributo calculado quando ele é criado. Para obter mais informações sobre os componentes de um objeto de atributo calculado, consulte a seção sobre como [criar um atributo](#create-a-computed-attribute) calculado anteriormente neste tutorial. |
 | `_links.next` | Se uma única página de atributos calculados for retornada, `_links.next` será um objeto vazio, como mostra a resposta de amostra acima. Se sua organização tiver muitos atributos calculados, eles serão retornados em várias páginas que você pode acessar, fazendo uma solicitação GET para o `_links.next` valor. |
@@ -479,9 +480,9 @@ Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um co
 
 ## Excluir um atributo calculado
 
-Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação DELETE para o `/config/computedAttributes` ponto de extremidade e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação.
+Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação DELETE ao ponto de extremidade e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação. `/config/computedAttributes`
 
->[!Note]
+>[!NObservação]
 >Tenha cuidado ao excluir um atributo calculado, pois ele pode estar em uso em mais de um schema e a operação DELETE não pode ser desfeita.
 
 **Formato da API**

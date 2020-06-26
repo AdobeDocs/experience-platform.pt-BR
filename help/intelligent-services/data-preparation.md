@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
+source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1878'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Este documento fornece orientação geral sobre como mapear os dados de seus eve
 
 ## Resumo do fluxo de trabalho
 
-O processo de preparação varia dependendo se os dados são armazenados na Adobe Experience Platform ou externamente. Esta seção resume as etapas necessárias, considerando qualquer um dos cenários.
+O processo de preparação varia dependendo de seus dados serem armazenados no Adobe Experience Platform ou externamente. Esta seção resume as etapas necessárias, considerando qualquer um dos cenários.
 
 ### Preparação de dados externos
 
@@ -28,7 +28,7 @@ Se seus dados forem armazenados fora do [!DNL Experience Platform], siga as etap
 
 1. Entre em contato com os Serviços de consultoria da Adobe para solicitar credenciais de acesso para um container dedicado do Armazenamento Blob do Azure.
 1. Usando suas credenciais de acesso, carregue seus dados no container Blob.
-1. Trabalhe com os Serviços de consultoria da Adobe para mapear seus dados para o schema [ExperienceEvent do](#cee-schema) consumidor e assimilá-los aos Serviços inteligentes.
+1. Trabalhe com os Serviços de consultoria da Adobe para obter seus dados mapeados para o schema [ExperienceEvent do](#cee-schema) consumidor e assimilados aos Serviços inteligentes.
 
 ### [!DNL Experience Platform] preparação de dados
 
@@ -41,6 +41,8 @@ Se seus dados já estiverem armazenados em [!DNL Platform], siga as etapas abaix
 
 O schema ExperienceEvent do consumidor descreve o comportamento de um indivíduo, pois ele se relaciona aos eventos de marketing digital (Web ou móveis), bem como à atividade de comércio online ou offline. O uso desse schema é necessário para os Serviços inteligentes devido aos campos semânticos bem definidos (colunas), evitando nomes desconhecidos que deixariam os dados menos claros.
 
+O schema CEE, como todos os schemas XDM ExperienceEvent, captura o estado baseado na série de tempo do sistema quando um evento (ou conjunto de eventos) ocorreu, incluindo o ponto no tempo e a identidade do assunto envolvido. Os Eventos de experiência são registros de fato do que ocorreu, e portanto são imutáveis e representam o que aconteceu sem agregação ou interpretação.
+
 Os Serviços inteligentes utilizam vários campos chave dentro desse schema para gerar insights dos dados de seus eventos de marketing, que podem ser encontrados no nível raiz e expandidos para mostrar os subcampos necessários.
 
 ![](./images/data-preparation/schema-expansion.gif)
@@ -51,13 +53,38 @@ Um exemplo completo da mistura pode ser encontrado no repositório [XDM](https:/
 
 ## Campos principais
 
-As seções abaixo destacam os principais campos da mistura CEE que devem ser utilizados para que os Serviços inteligentes gerem insights úteis, incluindo descrições e links para documentação de referência para mais exemplos.
+Há vários campos chave na combinação CEE que devem ser utilizados para que os Serviços inteligentes gerem informações úteis. Esta seção descreve o caso de uso e os dados esperados para esses campos e fornece links para a documentação de referência para mais exemplos.
 
->[!IMPORTANT] O `xdm:channel` campo (explicado na primeira seção abaixo) é **necessário** para que a AI de atribuição funcione com seus dados, enquanto a IA do cliente não tem nenhum campo obrigatório. Todos os outros campos principais são altamente recomendados, mas não obrigatórios.
+### Campos obrigatórios
 
-### xdm:canal
+Embora a utilização de todos os campos principais seja altamente recomendada, há dois campos que são **necessários** para que os Serviços inteligentes funcionem:
 
-Este campo representa o canal de marketing relacionado ao ExperienceEvent. O campo inclui informações sobre o tipo de canal, o tipo de mídia e o tipo de local. **Este campo _deve_ser fornecido para que a Atribuição AI funcione com seus dados**.
+* [Um campo de identidade primário](#identity)
+* [xdm:timestamp](#timestamp)
+* [xdm:canal](#channel) (obrigatório apenas para a Atribuição AI)
+
+#### Identidade primária {#identity}
+
+Um dos campos no seu schema deve ser definido como um campo de identidade principal, que permite que os Serviços inteligentes vinculem cada instância dos dados da série de tempo a uma pessoa individual.
+
+Você deve determinar o melhor campo a ser usado como uma identidade primária com base na fonte e na natureza dos dados. Um campo de identidade deve incluir uma namespace **de** identidade que indica o tipo de dados de identidade que o campo espera como um valor. Alguns valores de namespace válidos incluem:
+
+* &quot;email&quot;
+* &quot;Telefone&quot;
+* &quot;mcid&quot; (para IDs de Adobe Audience Manager)
+* &quot;aaid&quot; (para Adobe Analytics IDs)
+
+Se não tiver certeza de qual campo você deve usar como identidade primária, entre em contato com os Serviços de consultoria da Adobe para determinar a melhor solução.
+
+#### xdm:timestamp {#timestamp}
+
+Esse campo representa a data e hora em que o evento ocorreu. Esse valor deve ser fornecido como uma string, de acordo com o padrão ISO 8601.
+
+#### xdm:canal {#channel}
+
+>[!NOTE] Este campo é obrigatório somente ao usar a Atribuição AI.
+
+Este campo representa o canal de marketing relacionado ao ExperienceEvent. O campo inclui informações sobre o tipo de canal, o tipo de mídia e o tipo de local.
 
 ![](./images/data-preparation/channel.png)
 
@@ -74,7 +101,7 @@ Este campo representa o canal de marketing relacionado ao ExperienceEvent. O cam
 
 Para obter informações completas sobre cada um dos subcampos obrigatórios para `xdm:channel`, consulte as especificações da [experiência do schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) do canal. Para obter alguns exemplos de mapeamentos, consulte a [tabela abaixo](#example-channels).
 
-#### Exemplos de mapeamentos de canal {#example-channels}
+##### Exemplos de mapeamentos de canal {#example-channels}
 
 A tabela a seguir fornece alguns exemplos de canais de marketing mapeados para o `xdm:channel` schema:
 
@@ -89,7 +116,11 @@ A tabela a seguir fornece alguns exemplos de canais de marketing mapeados para o
 | Redirecionamento de código QR | https:/<span>/ns.adobe.com/xdm/canal-types/direct | proprietário | clicks |
 | Dispositivo móvel | https:/<span>/ns.adobe.com/xdm/canal-types/mobile | proprietário | clicks |
 
-### xdm:productListItems
+### Campos recomendados
+
+O restante dos campos principais são descritos nesta seção. Embora esses campos não sejam necessariamente necessários para que os Serviços inteligentes funcionem, é altamente recomendável que você use tantos deles quanto possível para obter insights mais ricos.
+
+#### xdm:productListItems
 
 Este campo é uma matriz de itens que representam os produtos selecionados por um cliente, incluindo o SKU do produto, o nome, o preço e a quantidade.
 
@@ -118,7 +149,7 @@ Este campo é uma matriz de itens que representam os produtos selecionados por u
 
 Para obter informações completas sobre cada um dos subcampos obrigatórios para `xdm:productListItems`, consulte as especificações do schema [de detalhes do](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) comércio.
 
-### xdm:comércio
+#### xdm:comércio
 
 Este campo contém informações específicas de comércio sobre o ExperienceEvent, incluindo o número do pedido de compra e as informações de pagamento.
 
@@ -156,7 +187,7 @@ Este campo contém informações específicas de comércio sobre o ExperienceEve
 
 Para obter informações completas sobre cada um dos subcampos obrigatórios para `xdm:commerce`, consulte as especificações do schema [de detalhes do](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) comércio.
 
-### xdm:web
+#### xdm:web
 
 Este campo representa detalhes da Web relacionados ao ExperienceEvent, como interação, detalhes da página e quem indicou.
 
@@ -186,7 +217,7 @@ Este campo representa detalhes da Web relacionados ao ExperienceEvent, como inte
 
 Para obter informações completas sobre cada um dos subcampos obrigatórios para `xdm:productListItems`, consulte as especificações do schema [de detalhes da Web](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent.
 
-### xdm:marketing
+#### xdm:marketing
 
 Este campo contém informações relacionadas a atividades de marketing que estão ativas com o ponto de contato.
 
@@ -212,11 +243,11 @@ Depois de decidir o intervalo de dados que deseja enviar, entre em contato com o
 
 Se você tiver uma [!DNL Adobe Experience Platform] subscrição e quiser mapear e assimilar os dados, siga as etapas descritas na seção abaixo.
 
-### Uso da plataforma Adobe Experience
+### Uso do Adobe Experience Platform
 
->[!NOTE] As etapas abaixo exigem uma subscrição para a plataforma Experience. Se você não tiver acesso à Plataforma, pule para a seção de [próximas etapas](#next-steps) .
+>[!NOTE] As etapas abaixo exigem uma subscrição. Se você não tiver acesso ao Platform, pule para a [próxima seção de etapas](#next-steps) .
 
-Esta seção descreve o fluxo de trabalho para mapear e assimilar dados na Experience Platform para uso em Serviços inteligentes, incluindo links para tutoriais para etapas detalhadas.
+Esta seção descreve o fluxo de trabalho para mapear e assimilar dados no Experience Platform para uso em Serviços inteligentes, incluindo links para tutoriais para etapas detalhadas.
 
 #### Criar um schema CEE e um conjunto de dados
 
@@ -234,7 +265,13 @@ Depois de criar e salvar o schema, você pode criar um novo conjunto de dados co
 * [Criar um conjunto de dados na interface do usuário](../catalog/datasets/user-guide.md#create) (Siga o fluxo de trabalho para usar um schema existente)
 * [Criar um conjunto de dados na API](../catalog/datasets/create.md)
 
+Após a criação do conjunto de dados, é possível encontrá-lo na interface do usuário do Platform na área de trabalho *[!UICONTROL Conjuntos]* de dados.
+
+![](images/data-preparation/dataset-location.png)
+
 #### Adicionar uma tag de namespace de identidade primária ao conjunto de dados
+
+>[!NOTE] As versões futuras dos Serviços inteligentes integrarão o Serviço [de identificação de](../identity-service/home.md) Adobe Experience Platform nos recursos de identificação do cliente. Assim, as etapas descritas abaixo estão sujeitas a alterações.
 
 Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação PATCH para a API do serviço de catálogo.
 
@@ -256,7 +293,7 @@ PATCH /dataSets/{DATASET_ID}
 
 Dependendo da fonte de onde você está assimilando dados, é necessário fornecer valores apropriados `primaryIdentityNamespace` e de `sourceConnectorId` tag na carga da solicitação.
 
-A solicitação a seguir adiciona os valores de tag apropriados para o Audience Manager:
+A solicitação a seguir adiciona os valores de tag apropriados para Audience Manager:
 
 ```shell
 curl -X PATCH \
@@ -292,7 +329,7 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Para obter mais informações sobre como trabalhar com namespaces de identidade na Plataforma, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
+>[!NOTE] Para obter mais informações sobre como trabalhar com namespaces de identidade no Platform, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
 
 **Resposta**
 
@@ -306,9 +343,9 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 
 #### Mapear e assimilar dados {#ingest}
 
-Depois de criar um schema CEE e um conjunto de dados, você pode fazer um start mapeando suas tabelas de dados para o schema e ingerir esses dados na Plataforma. Consulte o tutorial sobre como [mapear um arquivo CSV para um schema](../ingestion/tutorials/map-a-csv-file.md) XDM para obter etapas sobre como executar isso na interface do usuário. Depois que um conjunto de dados é preenchido, o mesmo conjunto de dados pode ser usado para assimilar arquivos de dados adicionais.
+Depois de criar um schema CEE e um conjunto de dados, você pode fazer um start mapeando suas tabelas de dados para o schema e ingerir esses dados no Platform. Consulte o tutorial sobre como [mapear um arquivo CSV para um schema](../ingestion/tutorials/map-a-csv-file.md) XDM para obter etapas sobre como executar isso na interface do usuário. Depois que um conjunto de dados é preenchido, o mesmo conjunto de dados pode ser usado para assimilar arquivos de dados adicionais.
 
-Se seus dados forem armazenados em um aplicativo de terceiros suportado, você também poderá optar por criar um conector [de](../sources/home.md) origem para assimilar seus dados de eventos de marketing na Plataforma em tempo real.
+Se seus dados forem armazenados em um aplicativo de terceiros suportado, você também poderá optar por criar um conector [de](../sources/home.md) origem para assimilar seus dados de eventos de marketing ao Platform em tempo real.
 
 ## Próximas etapas {#next-steps}
 

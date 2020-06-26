@@ -4,21 +4,24 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '1501'
+ht-degree: 2%
 
 ---
 
 
 # Trabalhos do sistema do Perfil (Excluir solicitações)
 
-A plataforma Adobe Experience permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos na plataforma são armazenados no Data Lake e no armazenamento de dados em tempo real do Perfil do cliente. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do repositório de Perfis para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da API Perfil do cliente em tempo real para criar um trabalho do sistema do Perfil, também conhecido como &quot;solicitação de exclusão&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
+O Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos no Platform são armazenados no Data Lake, bem como no armazenamento de dados do Perfil do cliente em tempo real. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da API Perfil do cliente em tempo real para criar um trabalho do sistema do Perfil, também conhecido como &quot;solicitação de exclusão&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
 
 >[!NOTE]
 >Se você estiver tentando excluir conjuntos de dados ou lotes do Data Lake, visite a visão geral [do Serviço de](../../catalog/home.md) Catálogo para obter instruções.
 
 ## Introdução
 
-Os pontos de extremidade da API usados neste guia fazem parte da API do Perfil do cliente em tempo real. Antes de continuar, consulte o guia [do desenvolvedor da API do Perfil do cliente em tempo](getting-started.md)real. Em particular, a seção [de](getting-started.md#getting-started) introdução do guia do desenvolvedor do Perfil inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para quaisquer APIs da plataforma de experiência.
+O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Visualização de solicitações de exclusão
 
@@ -90,7 +93,7 @@ A resposta inclui uma matriz &quot;filhos&quot; com um objeto para cada solicita
 |---|---|
 | _page.count | O número total de solicitações. Essa resposta foi truncada para espaço. |
 | _page.next | Se existir uma página adicional de resultados, visualização a próxima página de resultados substituindo o valor da ID em uma solicitação [de](#view-a-specific-delete-request) pesquisa pelo valor &quot;próximo&quot; fornecido. |
-| jobType | O tipo de trabalho que está sendo criado. Nesse caso, sempre retornará &quot;EXCLUIR&quot;. |
+| jobType | O tipo de trabalho que está sendo criado. Nesse caso, sempre retornará &quot;DELETE&quot;. |
 | status | O status da solicitação de exclusão. Os valores possíveis são &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CONCLUÍDO&quot;, &quot;ERRO&quot;. |
 | métricas | Um objeto que inclui o número de registros que foram processados (&quot;recordsProcessed&quot;) e o tempo em segundos que a solicitação está sendo processada, ou o tempo que a solicitação levou para ser concluída (&quot;timeTakenInSec&quot;). |
 
@@ -100,10 +103,10 @@ A inicialização de uma nova solicitação de exclusão é feita por meio de um
 
 ### Excluir um conjunto de dados
 
-Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. A Plataforma de experiência permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
+Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. O Experience Platform permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
 
 >[!CAUTION]
-> Ao tentar excluir um conjunto de dados habilitado para Perfis usando a interface do usuário da plataforma de experiência, o conjunto de dados é desabilitado para inclusão, mas não será excluído até que uma solicitação de exclusão seja criada usando a API. Para obter mais informações, consulte o [apêndice](#appendix) a este documento.
+> Ao tentar excluir um conjunto de dados habilitado para Perfis usando a interface do usuário do Experience Platform, o conjunto de dados é desativado para inclusão, mas não será excluído até que uma solicitação de exclusão seja criada usando a API. Para obter mais informações, consulte o [apêndice](#appendix) a este documento.
 
 **Formato da API**
 
@@ -266,7 +269,7 @@ A resposta fornece os detalhes da solicitação de exclusão, incluindo seu stat
 
 | Propriedades | Descrição |
 |---|---|
-| jobType | O tipo de trabalho que está sendo criado, nesse caso, ele sempre retornará &quot;EXCLUIR&quot;. |
+| jobType | O tipo de trabalho que está sendo criado, nesse caso, ele sempre retornará &quot;DELETE&quot;. |
 | status | O status da solicitação de exclusão. Valores possíveis: &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CONCLUÍDO&quot;, &quot;ERRO&quot;. |
 | métricas | Uma matriz que inclui o número de registros que foram processados (&quot;recordsProcessed&quot;) e o tempo em segundos que a solicitação está sendo processada, ou o tempo que a solicitação levou para ser concluída (&quot;timeTakenInSec&quot;). |
 
@@ -274,7 +277,7 @@ Quando o status da solicitação de exclusão for &quot;CONCLUÍDA&quot;, você 
 
 ## Remover uma solicitação de exclusão
 
-A Plataforma de experiência permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso na etapa de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação DELETE para o `/system/jobs` ponto de extremidade e incluir a ID da solicitação de exclusão que você deseja remover para o caminho da solicitação.
+O Experience Platform permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso na etapa de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação DELETE ao ponto de extremidade `/system/jobs` e incluir a ID da solicitação de exclusão que você deseja remover ao caminho da solicitação.
 
 **Formato da API**
 
@@ -303,15 +306,15 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe as etapas envolvidas na exclusão de conjuntos de dados e lotes da loja de Perfis na plataforma da experiência, é possível excluir com segurança os dados que foram adicionados erroneamente ou que sua organização não precisa mais. Lembre-se de que uma solicitação de exclusão não pode ser desfeita, portanto, você deve excluir apenas os dados de que está confiante que não precisa agora e que não serão necessários no futuro.
+Agora que você sabe as etapas envolvidas na exclusão de conjuntos de dados e lotes da Loja de Perfis no Experience Platform, é possível excluir com segurança os dados que foram adicionados erroneamente ou que sua organização não precisa mais. Lembre-se de que uma solicitação de exclusão não pode ser desfeita, portanto, você deve excluir apenas os dados de que está confiante que não precisa agora e que não serão necessários no futuro.
 
 ## Apêndice {#appendix}
 
 As informações a seguir são complementares ao ato de excluir um conjunto de dados do repositório de Perfis.
 
-### Excluir um conjunto de dados usando a interface do usuário da plataforma de experiência
+### Exclusão de um conjunto de dados usando a interface do Experience Platform
 
-Ao usar a interface do usuário da plataforma Experience para excluir um conjunto de dados que foi ativado para o Perfil, uma caixa de diálogo é aberta perguntando: &quot;Tem certeza de que deseja excluir esse conjunto de dados do Experience Data Lake? Use a API &#39;jobs de sistemas de perfis&#39; para excluir esse conjunto de dados do Serviço de Perfis.&quot;
+Ao usar a interface do usuário do Experience Platform para excluir um conjunto de dados que foi ativado para o Perfil, uma caixa de diálogo é aberta perguntando: &quot;Tem certeza de que deseja excluir esse conjunto de dados do Experience Data Lake? Use a API &#39;jobs de sistemas de perfis&#39; para excluir esse conjunto de dados do Serviço de Perfis.&quot;
 
 Clicar em **Excluir** na interface do usuário desativa o conjunto de dados para ingestão, mas NÃO exclui automaticamente o conjunto de dados no backend. Para excluir permanentemente o conjunto de dados, uma solicitação de exclusão deve ser criada manualmente usando as etapas neste guia para [criar uma solicitação](#create-a-delete-request)de exclusão.
 

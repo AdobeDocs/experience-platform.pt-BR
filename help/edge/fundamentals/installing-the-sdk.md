@@ -4,21 +4,22 @@ seo-title: Adobe Experience Platform Web SDK instalando o SDK
 description: Saiba como instalar o SDK da Web do Experience Platform
 seo-description: Saiba como instalar o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
+source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
-# Instalação do SDK
+# Instalação do SDK {#installing-the-sdk}
 
 O Adobe Experience Platform Web SDK está disponível em uma rede de delivery de conteúdo (CDN) para você usar. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
 
-[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+* Versão reduzida: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Versão não modificada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
-## Adicionar o código
+## Adicionar o código {#adding-the-code}
 
 A primeira etapa na implementação do SDK Adobe Experience Platform Web é copiar e colar o seguinte &quot;código base&quot; o mais alto possível na `<head>` tag do seu HTML:
 
@@ -51,7 +52,7 @@ Neste exemplo, a função global é renomeada `mycustomname`, em vez de `alloy`.
 
 Esse código base, além de criar uma função global, também carrega um código adicional contido em um arquivo externo \(`alloy.js`\) hospedado em um servidor. Por padrão, esse código é carregado de forma assíncrona para permitir que sua página da Web seja o mais eficiente possível. Esta é a implementação recomendada.
 
-## Suporte ao Internet Explorer
+## Suporte ao Internet Explorer {#support-internet-explore}
 
 Esse SDK utiliza promessas, que é um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de públicos alvos, exceto o Internet Explorer. Para usar o SDK no Internet Explorer, é necessário ter o `window.Promise` polifill [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
@@ -71,9 +72,9 @@ Se você tiver determinado que precisa preencher politicamente `window.Promise`,
 
 Isso carrega um script que garante que `window.Promise` seja uma implementação Promise válida.
 
-## Carregamento sincronizado do arquivo JavaScript
+## Carregamento sincronizado do arquivo JavaScript {#loading-javascript-synchronously}
 
-Como explicado anteriormente, o código base que você copiou e colou no HTML de seu site carrega um arquivo externo com código adicional. Esse código adicional contém a funcionalidade principal do SDK. Qualquer comando que você tentar executar enquanto este arquivo estiver sendo carregado será colocado na fila e processado depois que o arquivo for carregado. Este é o método de instalação mais eficiente.
+Conforme explicado na seção [Adicionando o código](#adding-the-code), o código base que você copiou e colou no HTML de seu site carrega um arquivo externo com código adicional. Esse código adicional contém a funcionalidade principal do SDK. Qualquer comando que você tentar executar enquanto este arquivo estiver sendo carregado será colocado na fila e processado depois que o arquivo for carregado. Este é o método de instalação mais eficiente.
 
 Em determinadas circunstâncias, no entanto, talvez você queira carregar o arquivo sincronicamente \(mais detalhes sobre essas circunstâncias serão documentados posteriormente\). Isso impede que o restante do documento HTML seja analisado e renderizado pelo navegador até que o arquivo externo seja carregado e executado. Esse atraso adicional antes da exibição do conteúdo primário para os usuários geralmente é desencorajado, mas pode fazer sentido dependendo das circunstâncias.
 

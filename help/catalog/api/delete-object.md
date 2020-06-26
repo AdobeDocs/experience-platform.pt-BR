@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Excluir um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
 
 # Excluir um objeto
 
-É possível excluir um objeto de Catálogo fornecendo sua ID no caminho de uma solicitação DELETE.
+É possível excluir um objeto de Catálogo fornecendo sua ID no caminho de uma solicitação de DELETE.
 
->[!WARNING] Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outro lugar na Experience Platform.
+>[!WARNING] Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outro lugar no Experience Platform.
 
 **Formato da API**
 
@@ -21,7 +24,9 @@ source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] O `DELETE /batches/{ID}` terminal foi substituído. Para excluir um lote, você deve estar usando a API [de ingestão de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lote.
+>[!IMPORTANT]
+>
+>O `DELETE /batches/{ID}` terminal foi substituído. Para excluir um lote, você deve estar usando a API [de ingestão de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lote.
 
 | Parâmetro | Descrição |
 | --- | --- |
@@ -43,7 +48,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz que contém a ID do conjunto de dados excluído. Essa ID deve corresponder àquela enviada na solicitação DELETE. A execução de uma solicitação GET no objeto excluído retorna o status HTTP 404 (Não encontrado), confirmando que o conjunto de dados foi excluído com êxito.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz que contém a ID do conjunto de dados excluído. Essa ID deve corresponder àquela enviada na solicitação de DELETE. A execução de uma solicitação GET no objeto excluído retorna o status HTTP 404 (Não encontrado), confirmando que o conjunto de dados foi excluído com êxito.
 
 ```json
 [

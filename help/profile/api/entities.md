@@ -4,23 +4,21 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 1%
 
 ---
 
 
-# Entidades (acesso ao Perfil)
+# Ponto de extremidade Entidades (acesso ao Perfil)
 
-A plataforma Adobe Experience permite que você acesse dados de Perfil do cliente em tempo real usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar os dados do Perfil usando a interface do usuário da plataforma, consulte o guia [do usuário do](../ui/user-guide.md)Perfil.
+O Adobe Experience Platform permite acessar os dados do Perfil do cliente em tempo real usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário do Platform, consulte o guia [do usuário do](../ui/user-guide.md)Perfil.
 
 ## Introdução
 
-Os pontos de extremidade da API usados neste guia fazem parte da API do Perfil do cliente em tempo real. Antes de continuar, consulte o guia [do desenvolvedor da API do Perfil do cliente em tempo](getting-started.md)real.
-
-Em particular, a seção [de](getting-started.md#getting-started) introdução do guia do desenvolvedor do Perfil inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para quaisquer APIs da plataforma de experiência.
+O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Acessar dados do perfil por identidade
 
@@ -776,7 +774,7 @@ Usando essa carga no corpo da solicitação, você pode executar uma solicitaç�
 
 ## eventos de série de tempo de acesso em várias entidades do schema
 
-Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o subguia [](../../xdm/api/descriptors.md)Descritores do guia do desenvolvedor da API do Registro do Schema.
+Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o guia do desenvolvedor da API do Registro do Schema, guia do ponto de extremidade [dos descritores](../../xdm/api/descriptors.md).
 
 É possível incluir parâmetros de query no caminho da solicitação para especificar quais dados serão acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
@@ -886,7 +884,7 @@ Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver
 
 ## Próximas etapas
 
-Ao seguir este guia, você acessou com êxito os campos de dados, perfis e dados de séries de tempo do Perfil do cliente em tempo real. Para saber como acessar outros recursos de dados armazenados na Plataforma, consulte a visão geral [do Acesso aos](../../data-access/home.md)dados.
+Ao seguir este guia, você acessou com êxito os campos de dados, perfis e dados de séries de tempo do Perfil do cliente em tempo real. Para saber como acessar outros recursos de dados armazenados no Platform, consulte a visão geral [do Acesso aos](../../data-access/home.md)dados.
 
 ## Apêndice {#appendix}
 

@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Configurar um conjunto de dados para Perfil e serviço de identidade usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 1%
 
 ---
 
@@ -22,22 +25,22 @@ Este tutorial aborda o processo de habilitação de um conjunto de dados para us
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários serviços da plataforma Adobe Experience envolvidos no gerenciamento de conjuntos de dados habilitados para Perfis. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços relacionados da Plataforma:
+Este tutorial requer uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para Perfis. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços da Platform relacionados:
 
 - [Perfil](../home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-- [Serviço](../../identity-service/home.md)de identidade: Habilita o Perfil do cliente em tempo real, fazendo a ponte entre identidades de diferentes fontes de dados que estão sendo assimiladas na Plataforma.
+- [Serviço](../../identity-service/home.md)de identidade: Habilita o Perfil do cliente em tempo real, fazendo a ponte entre identidades de diferentes fontes de dados que estão sendo ingeridas no Platform.
 - [Serviço](../../catalog/home.md)de catálogo: Uma RESTful API que permite criar conjuntos de dados e configurá-los para o Perfil do cliente em tempo real e o Serviço de identidade.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -47,7 +50,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 - Tipo de conteúdo: application/json
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá. Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs da Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá. Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -245,7 +248,7 @@ O Perfil do cliente em tempo real e o Serviço de identidade consomem dados XDM 
 
 ## Confirmar a assimilação de dados pelo Perfil do cliente em tempo real {#confirm-data-ingest-by-real-time-customer-profile}
 
-Ao fazer upload de dados para um novo conjunto de dados pela primeira vez, ou como parte de um processo que envolve um novo ETL ou fonte de dados, é recomendável verificar cuidadosamente os dados para garantir que eles tenham sido carregados conforme esperado. Usando a API de acesso de Perfil do cliente em tempo real, é possível recuperar dados em lote à medida que eles são carregados em um conjunto de dados. Se você não conseguir recuperar nenhuma das entidades esperadas, seu conjunto de dados pode não estar habilitado para o Perfil do cliente em tempo real. Depois de confirmar que o conjunto de dados foi ativado, verifique se o formato e os identificadores dos dados de origem suportam suas expectativas. Para obter instruções detalhadas sobre como usar a API Perfil do cliente em tempo real para acessar os dados do Perfil, siga o [subguia sobre Entidades, também conhecido como &quot;API de acesso ao Perfil&quot;](../api/entities.md).
+Ao fazer upload de dados para um novo conjunto de dados pela primeira vez, ou como parte de um processo que envolve um novo ETL ou fonte de dados, é recomendável verificar cuidadosamente os dados para garantir que eles tenham sido carregados conforme esperado. Usando a API de acesso de Perfil do cliente em tempo real, é possível recuperar dados em lote à medida que eles são carregados em um conjunto de dados. Se você não conseguir recuperar nenhuma das entidades esperadas, seu conjunto de dados pode não estar habilitado para o Perfil do cliente em tempo real. Depois de confirmar que o conjunto de dados foi ativado, verifique se o formato e os identificadores dos dados de origem suportam suas expectativas. Para obter instruções detalhadas sobre como usar a API Perfil do cliente em tempo real para acessar os dados do Perfil, siga o guia [de ponto de extremidade de](../api/entities.md)entidades, também conhecido como &quot;API de acesso ao Perfil&quot;.
 
 ## Confirmar a assimilação de dados pelo Serviço de Identidade {#confirm-data-ingest-by-identity-service}
 

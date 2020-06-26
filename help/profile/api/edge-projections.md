@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# Destinos de borda e projeções
+# Configurações de projeção de borda e pontos finais de destino
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. A plataforma Adobe Experience permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos da Adobe, como o Público alvo da Adobe e o Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a API de Perfil do cliente em tempo real para trabalhar com projeções de borda, incluindo destinos e configurações.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos da Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a API de Perfil do cliente em tempo real para trabalhar com projeções de borda, incluindo destinos e configurações.
 
 ## Introdução
 
-Os pontos de extremidade da API usados neste guia fazem parte da API do Perfil do cliente em tempo real. Antes de continuar, leia o guia [do desenvolvedor do Perfil do cliente em tempo](getting-started.md)real. Em particular, a seção [de](getting-started.md#getting-started) introdução do guia do desenvolvedor do Perfil inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para quaisquer APIs da plataforma de experiência.
+O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 >[!NOTE]
 >As solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um `Content-Type` cabeçalho. Mais de um `Content-Type` é usado neste documento. Preste especial atenção aos cabeçalhos nas chamadas de amostra para garantir que você esteja usando a solicitação correta `Content-Type` para cada solicitação.
@@ -171,7 +171,7 @@ Uma resposta bem-sucedida retorna os detalhes do destino de borda recém-criado,
 
 | Propriedade | Descrição |
 |---|---|
-| `self.href` | Este caminho é usado para pesquisar (GET) o destino diretamente e também pode ser usado para atualizar (PUT) ou excluir (DELETE) o destino. |
+| `self.href` | Esse caminho é usado para pesquisar (GET) o destino diretamente e também pode ser usado para atualizar (PUT) ou excluir (DELETE) o destino. |
 | `id` | A ID exclusiva somente leitura gerada pelo sistema para o destino. Essa ID é usada para fazer referência ao destino diretamente e ao criar configurações de projeção. |
 | `version` | Esse valor somente leitura mostra a versão atual do destino. Quando um destino é atualizado, o número da versão é incrementado automaticamente. |
 
@@ -292,7 +292,7 @@ A resposta inclui os detalhes atualizados para o destino, incluindo sua ID e a n
 
 ### Excluir um destino
 
-Se sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação DELETE para o `/config/destinations` ponto final e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
+Se sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação DELETE ao ponto de extremidade e incluindo a ID do destino que você deseja excluir no caminho da solicitação. `/config/destinations`
 
 >[!CAUTION]
 >A resposta da API à solicitação de exclusão é imediata, no entanto, as alterações reais nos dados nas bordas ocorrem de forma assíncrona. Em outras palavras, os dados do perfil serão removidos de todas as bordas (o `dataCenters` especificado no destino da projeção), mas o processo levará tempo para ser concluído.
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Solicitação**
 
-A solicitação a seguir lista todas as configurações de projeção associadas à classe de schema do Experience Data Model, Perfil Individual XDM. Para obter mais informações sobre o XDM e sua função na Plataforma, comece lendo a visão geral [do Sistema](../../xdm/home.md)XDM.
+A solicitação a seguir lista todas as configurações de projeção associadas à classe de schema do Experience Data Model, Perfil Individual XDM. Para obter mais informações sobre o XDM e sua função no Platform, comece lendo a visão geral [do sistema](../../xdm/home.md)XDM.
 
 ```shell
 curl -X GET \
@@ -639,4 +639,4 @@ Retorna somente os valores dos campos `type` e `city` para cada elemento na `add
 
 ## Próximas etapas
 
-Este guia mostra as etapas envolvidas para configurar projeções de borda e destinos, incluindo como formatar corretamente o `selector` parâmetro. Agora você pode criar novos destinos de borda e projeções específicas às necessidades de sua organização. Para descobrir ações adicionais disponíveis por meio da API do Perfil, consulte o guia [do desenvolvedor da API do Perfil do cliente em tempo](getting-started.md)real.
+Este guia mostra as etapas envolvidas para configurar projeções e destinos, incluindo como formatar corretamente o `selector` parâmetro. Agora você pode criar novos destinos de projeção e configurações específicas às necessidades de sua organização.

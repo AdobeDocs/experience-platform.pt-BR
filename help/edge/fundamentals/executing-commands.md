@@ -1,10 +1,10 @@
 ---
 title: Execução de comandos
-seo-title: Execução de comandos do SDK da Web do Adobe Experience Platform
-description: Saiba como executar comandos do SDK da Web da Experience Platform
-seo-description: Saiba como executar comandos do SDK da Web da Experience Platform
+seo-title: Execução de comandos Adobe Experience Platform Web SDK
+description: Saiba como executar comandos do SDK da Web do Experience Platform
+seo-description: Saiba como executar comandos do SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%

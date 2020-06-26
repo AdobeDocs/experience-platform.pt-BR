@@ -1,12 +1,12 @@
 ---
 title: Rastreamento de eventos
-seo-title: Rastreamento de eventos SDK da Web da plataforma Adobe Experience
-description: Saiba como rastrear eventos SDK da Web da Experience Platform
-seo-description: Saiba como rastrear eventos SDK da Web da Experience Platform
+seo-title: Rastreamento de eventos SDK da Web Adobe Experience Platform
+description: Saiba como rastrear eventos SDK da Web do Experience Platform
+seo-description: Saiba como rastrear eventos SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Rastreamento de eventos
 
-Para enviar dados do evento para a Adobe Experience Cloud, use o `sendEvent` comando. O `sendEvent` comando é a principal maneira de enviar dados para a Experience Cloud e recuperar conteúdo personalizado, identidades e destinos de audiência.
+Para enviar dados do evento para a Adobe Experience Cloud, use o `sendEvent` comando. O `sendEvent` comando é a principal maneira de enviar dados para o Experience Cloud e recuperar conteúdo personalizado, identidades e destinos de audiência.
 
 Os dados enviados para a Adobe Experience Cloud são divididos em duas categorias:
 
@@ -23,9 +23,9 @@ Os dados enviados para a Adobe Experience Cloud são divididos em duas categoria
 
 ## Envio de dados XDM
 
-Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um schema que você criou na Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
+Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um schema que você criou no Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Quaisquer dados XDM que você deseja que façam parte de suas análises, personalização, audiências ou destinos devem ser enviados usando a `xdm` opção.
+Todos os dados XDM que você deseja que façam parte de suas análises, personalização, audiências ou destinos devem ser enviados usando a `xdm` opção.
 
 ```javascript
 alloy("sendEvent", {
@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## Uso da API sendBeacon
 
-Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para informar o SDK da Web da plataforma Adobe Experience `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando evento.  Exemplo:
+Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para informar o SDK da Web do Adobe Experience Platform `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando evento.  Exemplo:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` uma só vez. Em muitos navegadores, o limite é de 64K. Se o navegador rejeitar o evento porque a carga é muito grande, o SDK da Web da plataforma Adobe Experience volta ao uso do método de transporte normal (por exemplo, busca).
+Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` uma só vez. Em muitos navegadores, o limite é de 64K. Se o navegador rejeita o evento porque a carga é muito grande, o SDK da Adobe Experience Platform Web volta ao uso do método de transporte normal (por exemplo, busca).
 
 ## Tratamento de respostas de eventos
 

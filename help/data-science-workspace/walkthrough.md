@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Apresentação da Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '1638'
+ht-degree: 0%
 
 ---
 
 
-# Apresentação da Data Science Workspace
+# [!DNL Data Science Workspace] passagem
 
-Este documento fornece uma apresentação para a Adobe Experience Platform Data Science Workspace. Especificamente vamos passar pelo fluxo de trabalho geral que um cientista de dados passaria para resolver um problema usando o aprendizado de máquina.
+Este documento fornece uma passagem para o Adobe Experience Platform [!DNL Data Science Workspace]. Especificamente vamos passar pelo fluxo de trabalho geral que um cientista de dados passaria para resolver um problema usando o aprendizado de máquina.
 
 ## Pré-requisitos
 
-- Uma conta da Adobe ID registrada
-   - A conta da Adobe ID deve ter sido adicionada a uma organização com acesso à Adobe Experience Platform e à Data Science Workspace
+- Uma conta de Adobe ID registrada
+   - A conta Adobe ID deve ter sido adicionada a uma organização com acesso ao Adobe Experience Platform e ao [!DNL Data Science Workspace]
 
 ## Motivação do cientista da informação
 
@@ -26,26 +29,26 @@ Um varejista enfrenta muitos desafios para se manter competitivo no mercado atua
 
 A solução de um cientista de dados é aproveitar a riqueza de dados históricos a que um varejista tem acesso, prever tendências futuras e otimizar as decisões de preços. Usaremos dados de vendas passadas para treinar nosso modelo de aprendizado de máquina e usar o modelo para prever tendências futuras de venda. Com isso, o varejista poderá ter insights para ajudá-lo a fazer mudanças nos preços.
 
-Nesta visão geral, vamos passar pelos passos que um cientista de dados passaria para pegar um conjunto de dados e criar um modelo para prever vendas semanais. Iremos para as seguintes seções no Notebook de amostra de vendas a varejo na Adobe Experience Platform Data Science Workspace:
+Nesta visão geral, vamos passar pelos passos que um cientista de dados passaria para pegar um conjunto de dados e criar um modelo para prever vendas semanais. Iremos para as seguintes seções no Notebook Sample Retail Sales no Adobe Experience Platform [!DNL Data Science Workspace]:
 
-- [Configurar](#setup)
+- [Configuração](#setup)
 - [Como explorar dados](#exploring-data)
 - [Engenharia de recursos](#feature-engineering)
 - [Treinamento e verificação](#training-and-verification)
 
-### Notebooks na Data Science Workspace
+### Notebooks em [!DNL Data Science Workspace]
 
-Primeiro, queremos criar um notebook JupyterLab para abrir a amostra de notebook &quot;Vendas de varejo&quot;. Seguir as etapas feitas pelo cientista de dados no notebook nos permitirá compreender um fluxo de trabalho típico.
+Primeiro, queremos criar um [!DNL JupyterLab] notebook para abrir a amostra de notebook &quot;Vendas de varejo&quot;. Seguir as etapas feitas pelo cientista de dados no notebook nos permitirá compreender um fluxo de trabalho típico.
 
-Na interface do usuário da Adobe Experience Platform, clique na guia Data Science no menu superior para levá-lo à Área de trabalho da Data Science. Nesta página, clique na guia JupyterLab, que abrirá o JupyterLab. Você deve ver uma página semelhante a esta.
+Na interface do usuário do Adobe Experience Platform, clique na guia Data Science no menu superior para levá-lo ao [!DNL Data Science Workspace]. Nesta página, clique na [!DNL JupyterLab] guia que abrirá o [!DNL JupyterLab] iniciador. Você deve ver uma página semelhante a esta.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Em nosso tutorial, usaremos Python 3 no notebook Júpiter para mostrar como acessar e explorar os dados. Na página Iniciador, há exemplos de notebooks fornecidos. Usaremos a amostra &quot;Vendas a varejo&quot; para Python 3.
+Em nosso tutorial, usaremos o [!DNL Python] 3 no [!DNL Jupyter Notebook] para mostrar como acessar e explorar os dados. Na página Iniciador, há exemplos de notebooks fornecidos. Usaremos a amostra &quot;Vendas a varejo&quot; para [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Configurar {#setup}
+### Configuração {#setup}
 
 Com o notebook de vendas de varejo aberto, a primeira coisa que fazemos é carregar as bibliotecas necessárias para nosso fluxo de trabalho. A lista a seguir fornecerá uma breve descrição do uso de cada uma delas:
 - **número** - biblioteca de computação científica que adiciona suporte para matrizes e matrizes grandes e multidimensionais
@@ -59,7 +62,7 @@ Com o notebook de vendas de varejo aberto, a primeira coisa que fazemos é carre
 
 #### Carregar dados
 
-Depois que as bibliotecas são carregadas, podemos start a olhar para os dados. O código Python a seguir usa a estrutura `DataFrame` de dados dos pandas e a função [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para ler o CSV hospedado no Github nos pandas DataFrame:
+Depois que as bibliotecas são carregadas, podemos start a olhar para os dados. O [!DNL Python] código a seguir usa a estrutura `DataFrame` de dados dos pandas e a função [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para ler o CSV hospedado [!DNL Github] nos pandas DataFrame:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -73,7 +76,7 @@ Finalmente, podemos dar uma olhada em como são os nossos dados. Podemos usar `d
 
 #### Resumo estatístico
 
-Podemos aproveitar a biblioteca de pandas do Python para obter o tipo de dados de cada atributo. A saída da chamada a seguir nos fornecerá informações sobre o número de entradas e o tipo de dados para cada uma das colunas:
+Podemos aproveitar a biblioteca de [!DNL Python's] pandas para obter o tipo de dados de cada atributo. A saída da chamada a seguir nos fornecerá informações sobre o número de entradas e o tipo de dados para cada uma das colunas:
 
 ```PYTHON
 df.info()
@@ -215,7 +218,7 @@ Finalmente, visualizaremos nosso modelo de previsão com os valores de vendas se
 
 Com essa visão geral, passamos pelo fluxo de trabalho que um cientista de dados passaria para resolver um problema de vendas no varejo. Especificamente, passamos pelos passos a seguir para chegar a uma solução que prevê vendas semanais futuras.
 
-- [Configurar](#setup)
+- [Configuração](#setup)
 - [Como explorar dados](#exploring-data)
 - [Engenharia de recursos](#feature-engineering)
 - [Treinamento e verificação](#training-and-verification)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 
-Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector básico do banco de dados.
+Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector básico do banco de dados.
 
 ## Introdução
 
-Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+- [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
@@ -40,7 +40,7 @@ Selecione o banco de dados que deseja usar e clique em **[!UICONTROL Avançar]**
 
 ## Mapear campos de dados para um schema XDM
 
-A etapa *Mapeamento* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um conjunto de dados da Plataforma.
+A etapa *Mapeamento* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um conjunto de dados Platform.
 
 Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
 
@@ -114,7 +114,7 @@ Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um banco de dados externo e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados pelos serviços de plataforma downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um banco de dados externo e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados pelos serviços da Platform de downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 - [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
@@ -131,10 +131,10 @@ Na área de trabalho *[!UICONTROL Fontes]* , selecione a guia **[!UICONTROL Flux
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-A coluna *Propriedades* é exibida no lado direito da tela, incluindo um botão de alternância **[!UICONTROL Ativado]** . Selecione a alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
+A coluna *[!UICONTROL Propriedades]* é exibida no lado direito da tela, incluindo um botão de alternância **[!UICONTROL Ativado]** . Selecione a alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### Ativar dados de entrada para população de Perfis
+### Ativar dados de entrada para [!DNL Profile] população
 
-Os dados de entrada do conector de origem podem ser usados para enriquecer e preencher os dados de Perfil do cliente em tempo real. Para obter mais informações sobre como preencher os dados do Perfil do cliente real, consulte o tutorial sobre a população [do](../profile.md)Perfil.
+Os dados de entrada do conector de origem podem ser usados para enriquecer e preencher seus [!DNL Real-time Customer Profile] dados. Para obter mais informações sobre como preencher seus [!DNL Real-time Customer Profile] dados, consulte o tutorial sobre a população [do](../profile.md)Perfil.

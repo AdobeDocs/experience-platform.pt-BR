@@ -4,48 +4,48 @@ solution: Experience Platform
 title: Coletar dados de um banco de dados de terceiros por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a831a0e72ac614bb4646ea3aa5f511984e5aa07
+source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 2%
+source-wordcount: '1522'
+ht-degree: 1%
 
 ---
 
 
 # Coletar dados de um banco de dados de terceiros por meio de conectores de origem e APIs
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para recuperar dados de um banco de dados de terceiros e assimilá-los na Plataforma por meio de conectores de origem e APIs.
+Este tutorial aborda as etapas para recuperar dados de um banco de dados de terceiros e assimilá-los [!DNL Platform] por meio de conectores de origem e APIs.
 
 ## Introdução
 
-Este tutorial requer uma conexão válida com um banco de dados de terceiros, bem como informações sobre o arquivo que você deseja trazer para a Plataforma (incluindo o caminho e a estrutura do arquivo). Se você não tiver essas informações, consulte o tutorial sobre como [explorar um banco de dados usando a API](../explore/database-nosql.md) do Serviço de Fluxo antes de tentar este tutorial.
+Este tutorial requer uma conexão válida com um banco de dados de terceiros, bem como informações sobre o arquivo que você deseja trazer [!DNL Platform] (incluindo o caminho e a estrutura do arquivo). Se você não tiver essas informações, consulte o tutorial sobre como [explorar um banco de dados usando a API](../explore/database-nosql.md) do Serviço de Fluxo antes de tentar este tutorial.
 
-Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+* [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-* [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados na Experience Platform.
-* [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados na Experience Platform como arquivos em lote.
-* [Caixas de proteção](../../../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
+* [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
+* [Caixas de proteção](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um banco de dados ou a um sistema NoSQL usando a API de Serviço de Fluxo.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de fluxo, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Criar uma classe e um schema XDM ad hoc
 
-Para trazer dados externos para a Plataforma por meio de conectores de origem, é necessário criar uma classe e um schema XDM ad-hoc para os dados de origem brutos.
+Para trazer dados externos para dentro [!DNL Platform] por meio de conectores de origem, uma classe e um schema XDM ad-hoc devem ser criados para os dados de fonte bruta.
 
 Para criar uma classe e um schema ad-hoc, siga as etapas descritas no tutorial [do schema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Ao criar uma classe ad-hoc, todos os campos encontrados nos dados de origem devem ser descritos no corpo da solicitação.
 
@@ -63,7 +63,7 @@ Continue seguindo as etapas descritas no guia do desenvolvedor até que você te
 
 ## Criar uma conexão de origem {#source}
 
-Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a API de Serviço de Fluxo. Uma conexão de origem consiste em uma conexão básica, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a [!DNL Flow Service] API. Uma conexão de origem consiste em uma conexão básica, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
 
 **Formato da API**
 
@@ -122,9 +122,9 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Criar um schema XDM de público alvo {#target}
 
-Em etapas anteriores, um schema XDM ad-hoc foi criado para estruturar os dados de origem. Para que os dados de origem sejam usados na Plataforma, um schema de público alvo também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um conjunto de dados da Plataforma no qual os dados de origem estão contidos. Este schema XDM do público alvo também estende a classe Perfil individual XDM.
+Em etapas anteriores, um schema XDM ad-hoc foi criado para estruturar os dados de origem. Para que os dados de origem sejam usados em [!DNL Platform], um schema de público alvo também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um [!DNL Platform] conjunto de dados no qual os dados de origem estão contidos. Esse schema XDM do público alvo também estende a [!DNL XDM Individual Profile] classe.
 
-Um schema XDM de público alvo pode ser criado executando-se uma solicitação POST para a API [do Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schemas. Se você preferir usar a interface do usuário na Experience Platform, o tutorial [do Editor de](../../../../xdm/tutorials/create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no Editor de Schemas.
+Um schema XDM de público alvo pode ser criado executando-se uma solicitação POST para a API [do Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schemas. Se você preferir usar a interface do usuário no [!DNL Experience Platform], o tutorial [do Editor de](../../../../xdm/tutorials/create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no Editor de Schemas.
 
 **Formato da API**
 
@@ -134,7 +134,7 @@ POST /tenant/schemas
 
 **Solicitação**
 
-A solicitação de exemplo a seguir cria um schema XDM que estende a classe de Perfil Individual XDM.
+A solicitação de exemplo a seguir cria um schema XDM que estende a [!DNL Individual Profile] classe XDM.
 
 ```shell
 curl -X POST \
@@ -269,7 +269,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 
 ## Criar uma conexão básica de conjunto de dados
 
-Para assimilar dados externos na Plataforma, uma conexão básica de conjunto de dados da Plataforma de experiência deve ser adquirida primeiro.
+Para ingerir dados externos em [!DNL Platform], uma conexão de base de [!DNL Experience Platform] conjunto de dados deve ser adquirida primeiro.
 
 Para criar uma conexão base de conjunto de dados, siga as etapas descritas no tutorial [de conexão base de](../create-dataset-base-connection.md)conjunto de dados.
 
@@ -277,7 +277,7 @@ Continue seguindo as etapas descritas no guia do desenvolvedor até que você te
 
 ## Criar uma conexão de público alvo
 
-Agora você tem os identificadores exclusivos para uma conexão básica de conjunto de dados, um schema de público alvo e um conjunto de dados de público alvo. Usando esses identificadores, é possível criar uma conexão de público alvo usando a API de Serviço de Fluxo para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Agora você tem os identificadores exclusivos para uma conexão básica de conjunto de dados, um schema de público alvo e um conjunto de dados de público alvo. Usando esses identificadores, é possível criar uma conexão de público alvo usando a [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -338,7 +338,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conex
 
 ## Criar um mapeamento {#mapping}
 
-Para que os dados de origem sejam ingeridos em um conjunto de dados de público alvo, eles devem primeiro ser mapeados para o schema de público alvo ao qual o conjunto de dados de público alvo adere. Isso é obtido executando uma solicitação POST para a API do serviço de conversão com mapeamentos de dados definidos na carga da solicitação.
+Para que os dados de origem sejam ingeridos em um conjunto de dados de público alvo, eles devem primeiro ser mapeados para o schema de público alvo ao qual o conjunto de dados de público alvo adere. Isso é obtido executando uma solicitação POST para a [!DNL Conversion Service] API com mapeamentos de dados definidos na carga da solicitação.
 
 **Formato da API**
 
@@ -468,7 +468,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Recuperar especificações de fluxo de dados {#specs}
 
-Um dataflow é responsável por coletar dados de fontes e trazê-los para a Plataforma. Para criar um fluxo de dados, primeiro você deve obter as especificações do fluxo de dados executando uma solicitação GET para a API do Serviço de Fluxo. As especificações de fluxo de dados são responsáveis por coletar dados de um banco de dados externo ou de um sistema NoSQL.
+Um dataflow é responsável por coletar dados de fontes e trazê-los para [!DNL Platform]. Para criar um fluxo de dados, primeiro você deve obter as especificações do fluxo de dados executando uma solicitação GET para a [!DNL Flow Service] API. As especificações de fluxo de dados são responsáveis por coletar dados de um banco de dados externo ou de um sistema NoSQL.
 
 **Formato da API**
 
@@ -488,7 +488,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados responsável por trazer dados do banco de dados ou do sistema NoSQL para a Plataforma. Essa ID é necessária na próxima etapa para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados responsável por trazer dados do banco de dados ou do sistema NoSQL para [!DNL Platform]. Essa ID é necessária na próxima etapa para criar um novo fluxo de dados.
 
 ```json
 {
@@ -685,7 +685,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um conector de origem para coletar dados de um banco de dados de terceiros de forma programada. Os dados recebidos agora podem ser usados pelos serviços de plataforma downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou um conector de origem para coletar dados de um banco de dados de terceiros de forma programada. Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 * [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
@@ -698,18 +698,18 @@ A seção a seguir lista os diferentes conectores de origem do armazenamento de 
 
 | Nome do conector | ID de especificação da conexão |
 | -------------- | --------------- |
-| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| Apache Hive no Azure HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| Apache Spark no Azure HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
-| Azure Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
-| Análise do Azure Synapse | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
-| Armazenamento de Tabela do Azure | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
-| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
-| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
-| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
-| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
-| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
-| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
-| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
-| Phoenix | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
-| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
+| [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| [!DNL Apache Hive] em [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark] em [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| [!DNL CouchBase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
+| [!DNL Google BigQuery] | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| [!DNL IBM DB2] | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| [!DNL MariaDB] | `000eb99-cd47-43f3-827c-43caf170f015` |
+| [!DNL Microsoft SQL Server] | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| [!DNL Phoenix] | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |

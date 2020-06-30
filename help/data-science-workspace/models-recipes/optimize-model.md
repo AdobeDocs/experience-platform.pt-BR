@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Otimizar um modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Otimizar um modelo usando a estrutura do Model Insights
 
-O Model Insights Framework fornece ao cientista de dados ferramentas na Data Science Workspace para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos. A estrutura melhorará a velocidade e a eficácia do fluxo de trabalho de aprendizado de máquina, bem como a facilidade de uso para cientistas de dados. Isso é feito fornecendo um modelo padrão para cada tipo de algoritmo de aprendizado da máquina para auxiliar no ajuste do modelo. O resultado final permite que cientistas de dados e cientistas de dados cidadãos tomem decisões de otimização de modelos melhores para seus clientes finais.
+A Framework Model Insights fornece ao cientista de dados ferramentas [!DNL Data Science Workspace] para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos. A estrutura melhorará a velocidade e a eficácia do fluxo de trabalho de aprendizado de máquina, bem como a facilidade de uso para cientistas de dados. Isso é feito fornecendo um modelo padrão para cada tipo de algoritmo de aprendizado da máquina para auxiliar no ajuste do modelo. O resultado final permite que cientistas de dados e cientistas de dados cidadãos tomem decisões de otimização de modelos melhores para seus clientes finais.
 
 ## O que são métricas?
 
@@ -28,7 +28,7 @@ Depois de implementar e treinar um modelo, o próximo passo que um cientista da 
 
 Atualmente, o Model Insights Framework suporta os seguintes tempos de execução:
 - [Scala](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 O código de amostra para fórmulas pode ser encontrado no repositório [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) em `recipes`. Arquivos específicos deste repositório serão referenciados neste tutorial.
@@ -95,19 +95,19 @@ Uma vez definido na fórmula, a próxima etapa é ativá-la nas receitas. Isso �
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Na Área de trabalho da Data Science, o usuário poderia ver os insights na guia &quot;Métricas de avaliação&quot; na página do experimento.
+No [!DNL Data Science Workspace], o usuário poderá ver os insights na guia &quot;Métricas de avaliação&quot; na página de experimentos.
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-A partir de agora, não há métricas de avaliação padrão para Python ou Tensorflow. Assim, para obter as métricas de avaliação para Python ou Tensorflow, será necessário criar uma métrica de avaliação personalizada. Isso pode ser feito com a implementação da `Evaluator` classe.
+A partir de agora, não há métricas de avaliação padrão para [!DNL Python] ou [!DNL Tensorflow]. Assim, para obter as métricas de avaliação para [!DNL Python] ou [!DNL Tensorflow], será necessário criar uma métrica de avaliação personalizada. Isso pode ser feito com a implementação da `Evaluator` classe.
 
-#### Métricas de avaliação personalizadas para Python
+#### Métricas de avaliação personalizadas para [!DNL Python]
 
 Para métricas de avaliação personalizadas, há dois métodos principais que precisam ser implementados para o avaliador: `split()` e `evaluate()`.
 
-Para Python, esses métodos seriam definidos em [evaluate.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para a `Evaluator` classe. Siga o link [evaluate.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para obter um exemplo do `Evaluator`.
+Para [!DNL Python], esses métodos seriam definidos em [evaluate.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para a `Evaluator` classe. Siga o link [evaluate.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para obter um exemplo do `Evaluator`.
 
-A criação de métricas de avaliação no Python requer que o usuário implemente os métodos `evaluate()` e `split()` .
+A criação de métricas de avaliação no [!DNL Python] exige que o usuário implemente os `evaluate()` métodos e `split()` métodos.
 
 O `evaluate()` método retorna o objeto de métrica que contém uma matriz de objetos de métrica com propriedades de `name`, `value`e `valueType`.
 
@@ -117,7 +117,7 @@ O `split()` método deve retomar os dados de formação e de ensaio que são dep
 
 #### Métricas de avaliação personalizadas para Tensorflow
 
-Para o Tensorflow, semelhante ao Python, os métodos `evaluate()` e `split()` `Evaluator` a classe devem ser implementados. No caso `evaluate()`, as métricas devem ser retornadas enquanto `split()` retorna o comboio e os conjuntos de dados de ensaio.
+Para [!DNL Tensorflow]que, semelhante a [!DNL Python], os métodos `evaluate()` e `split()` na `Evaluator` classe precisem ser implementados. No caso `evaluate()`, as métricas devem ser retornadas enquanto `split()` retorna o comboio e os conjuntos de dados de ensaio.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -152,7 +152,7 @@ Os dados são carregados pela primeira vez em um conjunto de dados a partir de u
 
 ## Uso de métricas pré-criadas e gráficos de visualização
 
-A Estrutura do Sensei Model Insights oferecerá suporte a um modelo padrão para cada tipo de algoritmo de aprendizado de máquina. A tabela abaixo mostra classes comuns de algoritmos de aprendizado de máquina de alto nível e métricas de avaliação e visualizações correspondentes.
+O [!DNL Sensei Model Insights Framework] oferecerá suporte a um modelo padrão para cada tipo de algoritmo de aprendizado de máquina. A tabela abaixo mostra classes comuns de algoritmos de aprendizado de máquina de alto nível e métricas de avaliação e visualizações correspondentes.
 
 | Tipo de Algoritmo ML | Métricas de avaliação | Visualizações |
 --- | --- | ---

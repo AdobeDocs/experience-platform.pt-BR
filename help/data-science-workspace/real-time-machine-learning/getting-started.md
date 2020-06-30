@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introdução ao aprendizado de máquina em tempo real
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
 
-Para utilizar o aprendizado de máquina em tempo real, é necessário ter acesso a uma organização provisionada com a Adobe Experience Platform e a Data Science Workspace. Além disso, é necessário ter um conjunto de dados completo para uso em treinamento e pontuação.
+Para utilizar o aprendizado de máquina em tempo real, é necessário ter acesso a uma organização provisionada com Adobe Experience Platform e [!DNL Data Science Workspace]. Além disso, é necessário ter um conjunto de dados completo para uso em treinamento e pontuação.
 
 Os guias para aprendizado de máquina em tempo real exigem uma compreensão funcional do Python 3, notebooks [de](../jupyterlab/overview.md)Júpiter, ciência de dados e aprendizado de máquina.
 
@@ -25,23 +25,23 @@ Os guias para aprendizado de máquina em tempo real exigem uma compreensão func
 
 - **DSL:** Idioma Específico do Domínio.
 - **Borda:** O serviço de pontuação do Machine Learning em tempo real pode ser executado em clusters do Edge mais próximos de suas ativações e aplicativos.
-- **Hub:** O alfa atual está executando o serviço de pontuação Aprendizado de máquina em tempo real no Adobe Experience Platform Hub enquanto a Experience Edge Network está em desenvolvimento.
+- **Hub:** O alfa atual está executando o serviço de pontuação de aprendizado de máquina em tempo real no Adobe Experience Platform Hub enquanto a Experience Edge Network está em desenvolvimento.
 - **Nó:** Um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
 
-## Conjuntos de dados na plataforma Adobe Experience
+## Conjuntos de dados no Adobe Experience Platform
 
-Para start usando o aprendizado de máquina em tempo real, é necessário ter acesso a um conjunto de dados. Você tem a opção de usar um conjunto de dados externo e carregá-lo no ambiente JupyterLab ou criar um novo conjunto de dados na Plataforma, se ainda não tiver feito isso.
+Para start usando o aprendizado de máquina em tempo real, é necessário ter acesso a um conjunto de dados. Você tem a opção de usar um conjunto de dados externo e carregá-lo no seu [!DNL JupyterLab] ambiente ou criar um novo conjunto de dados no Platform, se ainda não tiver feito isso.
 
 >[!NOTE]
 >Se você já tiver um conjunto de dados que deseja usar, pule para as [Próximas etapas](#next-steps).
 
 ### Usar um conjunto de dados externo
 
-Para saber mais sobre o uso de um conjunto de dados externo, como o carregamento de dados para seu ambiente JupyterLab, visite o tutorial sobre como [analisar seus dados usando notebooks](../jupyterlab/analyze-your-data.md#external-data).
+Para saber mais sobre como usar um conjunto de dados externo, como carregar dados para seu [!DNL JupyterLab] ambiente, visite o tutorial sobre como [analisar seus dados usando notebooks](../jupyterlab/analyze-your-data.md#external-data).
 
 ### Criar um novo conjunto de dados
 
-Para criar um novo conjunto de dados para uso em Aprendizagem de máquina em tempo real, é necessário um schema de dados para o conjunto de dados. Em seguida, é necessário assimilar dados usando o schema criado. Use os seguintes tutoriais para criar e preencher um conjunto de dados para Plataforma:
+Para criar um novo conjunto de dados para uso em Aprendizagem de máquina em tempo real, é necessário um schema de dados para o conjunto de dados. Em seguida, é necessário assimilar dados usando o schema criado. Use os seguintes tutoriais para criar e preencher um conjunto de dados para [!DNL Platform]:
 
 - [Criar e preencher um conjunto de dados na API](../../catalog/datasets/create.md)
 - [Criar e preencher um conjunto de dados na interface do usuário](../../ingestion/tutorials/ingest-batch-data.md)

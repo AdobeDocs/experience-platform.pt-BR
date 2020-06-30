@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar uma política de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 O DULE (Data Usage Labeling and Implacation, Rotulação e Aplicação de Uso de Dados) é o mecanismo principal do Adobe Experience Platform Data Governance. A API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE permite que você crie e gerencie políticas DULE para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos DULE.
 
-Este documento fornece um tutorial passo a passo para a criação de uma política DULE usando a API de serviço de política. Para obter um guia mais abrangente das diferentes operações disponíveis na API, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)política.
+Este documento fornece um tutorial passo a passo para a criação de uma política DULE usando a [!DNL Policy Service] API. Para obter um guia mais abrangente das diferentes operações disponíveis na API, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)política.
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes conceitos chave envolvidos na criação e avaliação de políticas DULE:
 
-* [Controle](../home.md)de dados: A estrutura pela qual a Platform aplica a conformidade de uso de dados.
+* [Controle](../home.md)de dados: A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
 * [Rótulos](../labels/overview.md)de uso de dados: Os rótulos de uso de dados são aplicados aos campos de dados XDM, especificando restrições para como esses dados podem ser acessados.
-* [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
-* [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, consulte o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API do serviço de política DULE, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) [!DNL Policy Service] desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API DULE, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
 ## Definir uma ação de marketing {#define-action}
 
-Na estrutura de controle de dados, uma ação de marketing é uma ação executada por um consumidor de dados de Experience Platform, para a qual há necessidade de verificar violações das políticas de uso de dados.
+No [!DNL Data Governance] quadro, uma ação de marketing é uma ação que um consumidor de [!DNL Experience Platform] dados toma, para a qual há necessidade de verificar violações das políticas de uso de dados.
 
 A primeira etapa na criação de uma política DULE é determinar que ação de marketing a política avaliará. Isso pode ser feito usando uma das seguintes opções:
 
@@ -44,7 +44,7 @@ Você pode pesquisar ações de marketing existentes a serem avaliadas pela sua 
 
 **Formato da API**
 
-Dependendo de se você estiver pesquisando uma ação de marketing fornecida pelo Experience Platform ou uma ação de marketing personalizada criada por sua organização, use os pontos de extremidade `marketingActions/core` ou `marketingActions/custom` , respectivamente.
+Dependendo de se você estiver pesquisando uma ação de marketing fornecida por [!DNL Experience Platform] ou uma ação de marketing personalizada criada por sua organização, use os pontos de extremidade `marketingActions/core` ou `marketingActions/custom` , respectivamente.
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e os detalhes da polít
 
 Ao seguir este tutorial, você criou com êxito uma política de uso de dados para uma ação de marketing. Agora você pode continuar com o tutorial sobre como [impor políticas](../enforcement/api-enforcement.md) de uso de dados para saber como verificar violações de política e lidar com elas no aplicativo de experiência.
 
-Para obter mais informações sobre as diferentes operações disponíveis na API do Serviço de Política, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)Política. Para obter informações sobre como aplicar políticas para dados de Perfil do cliente em tempo real, consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md)de audiência.
+Para obter mais informações sobre as diferentes operações disponíveis na [!DNL Policy Service] API, consulte o guia [do desenvolvedor do](../api/getting-started.md)Policy Service. Para obter informações sobre como aplicar políticas para [!DNL Real-time Customer Profile] dados, consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md)de audiência.
 
-Para saber como gerenciar políticas de uso na interface do usuário do Experience Platform, consulte o guia [do usuário da](user-guide.md)política.
+Para saber como gerenciar políticas de uso na interface do [!DNL Experience Platform] usuário, consulte o guia [do usuário da](user-guide.md)política.

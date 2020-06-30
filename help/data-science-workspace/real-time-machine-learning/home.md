@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral de aprendizado de máquina em tempo real
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 >[!IMPORTANT]
 >O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
 
-O aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do conteúdo de sua experiência digital para seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no Experience Edge.
+O aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do conteúdo de sua experiência digital para seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no [!DNL Experience Edge].
 
-Uma combinação de computação contínua no Hub e no Edge reduz drasticamente a latência tradicionalmente envolvida na potencialização de experiências hiper-personalizadas relevantes e responsivas. Assim, o aprendizado de máquina em tempo real oferece inferências com uma latência incrivelmente baixa para a tomada de decisões síncrona. Os exemplos incluem a renderização de conteúdo personalizado de página da Web ou a criação de uma oferta ou desconto para reduzir a rotatividade e aumentar as conversões em uma loja da Web.
+Uma combinação de computação ininterrupta no Hub e no Hub reduz [!DNL Edge] drasticamente a latência tradicionalmente envolvida na potencialização de experiências hiper-personalizadas relevantes e responsivas. Assim, o aprendizado de máquina em tempo real oferece inferências com uma latência incrivelmente baixa para a tomada de decisões síncrona. Os exemplos incluem a renderização de conteúdo personalizado de página da Web ou a criação de uma oferta ou desconto para reduzir a rotatividade e aumentar as conversões em uma loja da Web.
 
 ## Arquitetura de aprendizado de máquina em tempo real {#architecture}
 
@@ -35,15 +35,15 @@ O fluxo de trabalho a seguir descreve as etapas e os resultados típicos envolvi
 
 ### Inclusão de dados e preparações
 
-Os dados são assimilados e transformados com o Modelo de dados de experiência (XDM) na Adobe Experience Platform. Esses dados são usados para treinamento de modelo. Para saber mais sobre o XDM, visite a visão geral [do](../../xdm/home.md)XDM.
+Os dados são ingeridos e transformados com o [!DNL Experience Data Model] (XDM) no Adobe Experience Platform. Esses dados são usados para treinamento de modelo. Para saber mais sobre o XDM, visite a visão geral [do](../../xdm/home.md)XDM.
 
 ### Criação  
 
-Crie um modelo de aprendizado de máquina em tempo real criando-o do zero ou trazendo-o para um modelo ONNX serializado pré-treinado em notebooks Jupyter da Adobe Experience Platform.
+Crie um modelo de aprendizado de máquina em tempo real criando-o do zero ou trazendo-o para um modelo ONNX serializado pré-treinado em notebooks Adobe Experience Platform Jupyter.
 
 ### Implantação
 
-Implante seu modelo no Experience Edge para criar um serviço de aprendizado de máquina em tempo real na Service Gallery usando o endpoint da Predição API.
+Implante seu modelo para [!DNL Experience Edge] criar um serviço de Aprendizagem de máquina em tempo real na Galeria [!UICONTROL de] serviços usando o endpoint da API de previsão.
 
 ### Inferência
 
@@ -51,7 +51,7 @@ Use o endpoint da API REST de previsão para gerar insights de aprendizado da m�
 
 ### Delivery
 
-Os profissionais de marketing podem definir segmentos e regras que mapeiam as pontuações de aprendizado de máquina em tempo real para experiências usando o Público alvo da Adobe. Isso permite que visitantes do site de sua marca sejam mostrados como uma experiência hiper-personalizada da mesma página ou da próxima em tempo real.
+Os profissionais de marketing podem então definir segmentos e regras que mapeiam as pontuações de aprendizado de máquina em tempo real para experiências usando o Adobe Target. Isso permite que visitantes do site de sua marca sejam mostrados como uma experiência hiper-personalizada da mesma página ou da próxima em tempo real.
 
 ## Funcionalidade atual
 
@@ -61,7 +61,7 @@ O aprendizado de máquina em tempo real está atualmente em alfa. A funcionalida
 > Limitações de alfa:
 > - Atualmente, somente modelos baseados em ONNX são suportados.
 > - As funções usadas em nós não podem ser serializadas. Por exemplo, uma função lambda usada em um nó Pandas.
-> - Há 20 segundos de repouso após a implantação do Edge ser feita manualmente.
+> - Há 20 segundos de espera após a [!DNL Edge] implantação ser feita manualmente.
 > - Para um aprendizado profundo, seus dados precisam ser enviados de tal forma que, quando `df.values` são chamados, retorne um array aceitável pelo modelo DL. Isso ocorre porque o nó de pontuação do modelo ONNX usa `df.values` e envia a saída para a pontuação em relação ao modelo.
 
 

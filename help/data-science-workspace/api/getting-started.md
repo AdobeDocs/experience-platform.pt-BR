@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Guia do desenvolvedor da API Sensei Machine Learning
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '196'
 ht-degree: 2%
 
 ---
 
 
-# Guia do desenvolvedor da API Sensei Machine Learning
+# [!DNL Sensei Machine Learning] Guia do desenvolvedor da API
 
-A API Sensei Machine Learning fornece um mecanismo para que os cientistas de dados organizem e gerenciem serviços de aprendizado de máquina, desde a integração de algoritmos até a experimentação e a implantação de serviços.
+A [!DNL Sensei Machine Learning] API fornece um mecanismo para os cientistas de dados organizarem e gerenciarem serviços de aprendizado de máquina, desde a integração de algoritmos até a experimentação e a implantação de serviços.
 
 Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a API [de aprendizado de máquina](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Sensei e demonstra chamadas de API para executar operações CRUD em vários recursos da Data Science Workspace.
 
@@ -26,11 +26,11 @@ Você deve ter concluído o tutorial de [autenticação](../../tutorials/authent
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 

@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Modelo de domínio de decisão de Oferta
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '2614'
+ht-degree: 0%
 
 ---
 
 
 # Visão geral do modelo de domínio de decisão de Ofertas
 
-A decisão de Oferta é um caso de uso do serviço de decisão no qual você formaliza e gerencia centralmente as regras e previsões usadas para envolver clientes com ofertas. A decisão de Oferta é considerada um tipo de decisão de _**conteúdo**_. Nesse caso de uso, as opções _**de**_ decisão são conhecidas como _**ofertas**_ e são caracterizadas como tal pelo conteúdo anexado a elas. Para obter uma introdução do modelo de objeto usado pelo serviço de decisão, consulte o Modelo [de domínio do serviço de](experience-model.md)decisão.
+A decisão de Oferta é um caso de uso no qual você formaliza e gerencia centralmente as regras e previsões usadas para envolver clientes com ofertas. [!DNL Decisioning Service] A decisão de Oferta é considerada um tipo de decisão de _**conteúdo**_. Nesse caso de uso, as opções _**de**_ decisão são conhecidas como _**ofertas**_ e são caracterizadas como tal pelo conteúdo anexado a elas. Para obter uma introdução do modelo de objeto usado pelo [!DNL Decisioning Service], consulte o Modelo [de Domínio do Serviço de](experience-model.md)Decisão.
 
 O objetivo é apresentar ao usuário final uma &quot;Melhor Oferta&quot; em qualquer canal com base em critérios de definição de metas, restrições de custo e frequência, bem como interações anteriores entre canais, incluindo Ofertas anteriores propostas.
 
@@ -60,7 +63,7 @@ ofertas gerais, também chamadas de ofertas personalizadas, são as opções no 
 
 As disposições definem as restrições de conteúdo e são usadas com uma atividade para especificar o local no qual a próxima melhor experiência será disponibilizada. Isso reduz ainda mais o número de opções que podem ser consideradas e é outra restrição imposta pela atividade. Isso é chamado de restrição de posicionamento. Somente as opções que tiverem conteúdo que atenda a uma restrição de disposição, como oferta, serão consideradas. Este aspecto é avaliado nas fases iniciais da estratégia de decisão. Quando os objetos de opção mudam, as restrições de posicionamento de cada atividade são reavaliadas e a opção pode ser considerada ou sair dela para uma ou mais atividades.
 
-Não é responsabilidade do Serviço de Decisão formalizar os detalhes complexos das dependências de conteúdo. Em vez disso, cada cliente identificará a lista de disposições em todos os canais e fornecerá a essas disposições identificadores e nomes exclusivos. Ao fazer referência a uma disposição específica, o designer afirma que o conteúdo fornecido se encaixará na disposição.
+Não é da responsabilidade do [!DNL Decisioning Service] para formalizar os complexos detalhes das dependências de conteúdo. Em vez disso, cada cliente identificará a lista de disposições em todos os canais e fornecerá a essas disposições identificadores e nomes exclusivos. Ao fazer referência a uma disposição específica, o designer afirma que o conteúdo fornecido se encaixará na disposição.
 
 Quando o conteúdo é desenvolvido, o profissional de marketing de oferta e o designer de conteúdo simplesmente (tem que) concordar em um &quot;contrato implícito&quot; que se apoia no nome &quot;Imagem principal do Home page&quot; ou &quot;Script de abertura de chamada de serviço&quot;. A primeira pode ser acordada como uma imagem de largura de 600px e altura de 350px e a segunda pode restringir o conteúdo ao texto em duas variantes de linguagem que não sejam mais de 50 palavras em três ou quatro frases com uma estrutura semântica. Disposição para não armazenar todo o significado do contrato oculto.
 
@@ -98,7 +101,7 @@ Quando uma decisão é solicitada, o cliente pode solicitar propostas para vári
 
 No momento, as restrições de duplicação não são gravadas no repositório de objetos de negócios. Em vez disso, a eliminação da duplicação é a estratégia padrão em tempo de execução. Um parâmetro de solicitação pode substituir o comportamento padrão para suprimir a etapa de eliminação da duplicação.
 
-### Restrições de Perfil - Regra de elegibilidade
+### [!DNL Profile] restrições - Regras de elegibilidade
 
 Até à data, as restrições discutidas têm sido aplicáveis independentemente de quem é feita a seleção da oferta. A decisão de experiência também oferece suporte a um caso de uso em que a personalização de proposições se baseia em eventos de registro e de série de tempo de um cliente. As regras são avaliadas por perfil, para decidir se uma oferta se qualifica ou deve ser suprimida para esse usuário. Para fazer isso, uma regra de elegibilidade pode ser associada a cada oferta. Além dos eventos de perfil e experiência de um usuário final, a regra de elegibilidade levará em conta os dados de contexto em tempo real. Esses dados são fornecidos pelo serviço de delivery e podem assumir a forma de dados não relacionados a um perfil, como níveis de inventário, condições meteorológicas, horários de voo.
 
@@ -140,7 +143,7 @@ Quando os clientes criam e vinculam o gráfico de objetos para decisões, normal
 
 - Criação de ofertas com as várias representações e regras de negócios (restrições). Este fluxo de trabalho central fornece as opções entre as quais precisamos selecionar as melhores. As tags do primeiro fluxo de trabalho são usadas para categorizar ofertas e as disposições são usadas para indicar quais opções podem ser apresentadas e onde.
 
-   - Esse fluxo de trabalho também define restrições absolutas para as ofertas. Elas são absolutas porque sempre serão aplicadas e não estão afetando apenas a classificação entre um conjunto de ofertas. Por exemplo, quando uma restrição de calendário é definida, é imposto que a oferta nunca será selecionada antes da data/hora do start definida e nunca depois da data/hora de término. As restrições que serão definidas neste fluxo de trabalho são as restrições [do](#calendar-constraints)calendário, as restrições [de](#capping-constraints) limite e as restrições [de](#profile-constraints---eligibility-rules)qualificação. Um subfluxo de trabalho aqui é a definição de regras adicionais que determinam quem está qualificado para receber uma determinada oferta.
+   - Esse fluxo de trabalho também define restrições absolutas para as ofertas. Elas são absolutas porque sempre serão aplicadas e não estão afetando apenas a classificação entre um conjunto de ofertas. Por exemplo, quando uma restrição de calendário é definida, é imposto que a oferta nunca será selecionada antes da data/hora do start definida e nunca depois da data/hora de término. As restrições que serão definidas neste fluxo de trabalho são as restrições [do](#calendar-constraints)calendário, as restrições [de](#capping-constraints) limite e as restrições [de](#profile-constraints---eligibility-rules)qualificação. Um subfluxo de trabalho aqui é a definição de regras adicionais que determinam quem está qualificado para receber determinada oferta.
 
       - Ao mesmo tempo, as restrições são criadas para uma oferta, suas representações são selecionadas. Esse fluxo de trabalho presume que o conteúdo já foi criado em algum lugar e é simplesmente carregado e escolhido no repositório de conteúdo. Aqui é onde as disposições do primeiro fluxo de trabalho entram em vigor. Uma oferta pode selecionar disposições e associar o conteúdo a essa [disposição](#offer-placements).
 

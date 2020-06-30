@@ -4,33 +4,36 @@ solution: Experience Platform
 title: Monitorar os fluxos de contas e de conjunto de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc0a406bdea7b31e046d02427805a9deba557e93
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
 
 # Monitorar os fluxos de contas e de conjunto de dados
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para exibir contas e fluxos de conjunto de dados existentes da área de trabalho *Fontes* .
+Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para exibir contas e fluxos de conjunto de dados existentes da área de trabalho *[!UICONTROL Fontes]* .
 
 ## Introdução
 
-Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+- [Sistema](../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Monitorar contas
 
-Faça logon na <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho *Fontes* . A tela *Catálogo* exibe várias fontes com as quais você pode criar fluxos de conjunto de dados de contas. Cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+Faça logon no <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes com as quais você pode criar fluxos de conjunto de dados de contas. Cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
 
-Selecione *Contas* no cabeçalho superior para visualização contas existentes.
+Selecione *[!UICONTROL Contas]* no cabeçalho superior para visualização contas existentes.
 
 ![catálogo](../../images/tutorials/monitor/catalog.png)
 
-As páginas *Contas* são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre sua origem, nome de usuário, número de fluxos de conjunto de dados e data de criação.
+As páginas *[!UICONTROL Contas]* são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre sua origem, nome de usuário, número de fluxos de conjunto de dados e data de criação.
 
 Selecione o ícone na parte superior esquerda para abrir a janela de classificação.
 
@@ -40,17 +43,17 @@ O painel de classificação permite acessar contas de uma fonte específica. Sel
 
 ![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
 
-Na página *Contas* , é possível visualização uma lista dos fluxos existentes do conjunto de dados associados à conta acessada. Selecione o fluxo do conjunto de dados que deseja visualização.
+Na página *[!UICONTROL Contas]* , é possível visualização uma lista dos fluxos existentes do conjunto de dados associados à conta acessada. Selecione o fluxo do conjunto de dados que deseja visualização.
 
 ![página de contas](../../images/tutorials/monitor/dataset-flows.png)
 
-A tela atividade *do fluxo do* Conjunto de dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
+A tela atividade *[!UICONTROL do fluxo do]* Conjunto de dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
 
 ![dataset-flow-atividade](../../images/tutorials/monitor/dataset-flows-activity.png)
 
 ## Monitorar fluxos de conjunto de dados
 
-Os fluxos de conjunto de dados podem ser acessados diretamente da página *Catálogo* sem exibir *Contas*. Selecione Fluxos *de conjunto de* dados do cabeçalho superior para visualização de uma lista de fluxos de conjunto de dados existentes.
+Os fluxos de conjunto de dados podem ser acessados diretamente da página *[!UICONTROL Catálogo]* sem exibir *[!UICONTROL Contas]*. Selecione Fluxos *[!UICONTROL de conjunto de]* dados do cabeçalho superior para visualização de uma lista de fluxos de conjunto de dados existentes.
 
 ![fluxos de conjunto de dados](../../images/tutorials/monitor/dataset-flows-list.png)
 
@@ -58,7 +61,7 @@ Semelhante às contas, você pode classificar a lista de fluxos de conjunto de d
 
 ![select-dataset-flows](../../images/tutorials/monitor/dataset-flows-sort.png)
 
-A tela atividade *do fluxo do* Conjunto de dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
+A tela atividade *[!UICONTROL do fluxo do]* Conjunto de dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
 
 ![dataset-flow-atividade](../../images/tutorials/monitor/dataset-flows-activity.png)
 
@@ -66,7 +69,7 @@ Para obter mais informações sobre monitoramento de conjuntos de dados e ingest
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você acessou com êxito contas e fluxos de conjunto de dados existentes da área de trabalho *Fontes* . Os dados recebidos agora podem ser usados pelos serviços de plataforma downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você acessou com êxito contas e fluxos de conjunto de dados existentes da área de trabalho *[!UICONTROL Fontes]* . Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../profile/home.md)
 - [Visão geral da Análise do espaço de trabalho da Data Science](../../../data-science-workspace/home.md)

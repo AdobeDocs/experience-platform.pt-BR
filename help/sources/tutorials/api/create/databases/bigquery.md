@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Criar um conector do Google BigQuery usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '696'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conector do Google BigQuery usando a API de Serviço de Fluxo
+# Criar um [!DNL Google BigQuery] conector usando a [!DNL Flow Service] API
 
 >[!NOTE]
->O conector do Google BigQuery está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+>O [!DNL Google BigQuery] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Google BigQuery (a seguir denominado &quot;BigQuery&quot;).
+Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se conectar [!DNL Experience Platform] (a seguir, &quot;BigQuery&quot;) [!DNL Google BigQuery] .
 
 ## Introdução
 
 Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços Platform.
-* [Caixas de proteção](../../../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao BigQuery usando a API de Serviço de Fluxo.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao BigQuery usando a [!DNL Flow Service] API.
 
 ### Reunir credenciais obrigatórias
 
-Para que o Serviço de Fluxo se conecte ao BigQuery, você deve fornecer as seguintes propriedades de conexão:
+Para [!DNL Flow Service] se conectar ao BigQuery, é necessário fornecer as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `project` | A ID do projeto padrão do projeto BigQuery para o query. |
+| `project` | A ID do projeto padrão para o [!DNL BigQuery] query. |
 | `clientID` | O valor da ID usado para gerar o token de atualização. |
 | `clientSecret` | O valor secreto usado para gerar o token de atualização. |
-| `refreshToken` | O token de atualização obtido do Google usado para autorizar o acesso ao BigQuery. |
+| `refreshToken` | O token de atualização obtido do [!DNL Google] usado para autorizar o acesso ao [!DNL BigQuery]. |
 
 Para obter mais informações sobre esses valores, consulte [este documento](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)BigQuery.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform, incluindo os pertencentes ao Serviço de Fluxo, são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no [!DNL Experience Platform], incluindo os pertencentes ao [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,13 +65,13 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Pesquisar especificações de conexão
 
-Para criar uma conexão BigQuery, um conjunto de especificações de conexão BigQuery deve existir no Serviço de Fluxo. A primeira etapa para conectar o Platform ao BigQuery é recuperar essas especificações.
+Para criar uma [!DNL BigQuery] conexão, um conjunto de especificações de [!DNL BigQuery] conexão deve existir dentro [!DNL Flow Service]. A primeira etapa para conectar-se [!DNL Platform] a [!DNL BigQuery] é recuperar essas especificações.
 
 **Formato da API**
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para BigQuery executando uma solicitação GET e usando parâmetros de query.
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão [!DNL BigQuery] executando uma solicitação GET e usando parâmetros de query.
 
-Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="google-big-query"` para obter informações especificamente para o BigQuery.
+Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="google-big-query"` para obter informações especificamente para [!DNL BigQuery].
 
 ```http
 GET /connectionSpecs
@@ -80,7 +80,7 @@ GET /connectionSpecs?property=name=="google-big-query"
 
 **Solicitação**
 
-A solicitação a seguir recupera as especificações de conexão para BigQuery.
+A solicitação a seguir recupera as especificações de conexão para [!DNL BigQuery].
 
 ```shell
 curl -X GET \
@@ -93,7 +93,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna as especificações de conexão para BigQuery, incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
+Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL BigQuery], incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
 
 ```json
 {
@@ -146,7 +146,7 @@ Uma resposta bem-sucedida retorna as especificações de conexão para BigQuery,
 
 ## Criar uma conexão básica
 
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta BigQuery, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por [!DNL BigQuery] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -184,11 +184,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.project` | A ID do projeto padrão BigQuery para query. contra. |
+| `auth.params.project` | A ID do projeto padrão do [!DNL BigQuery] query. contra. |
 | `auth.params.clientId` | O valor da ID usado para gerar o token de atualização. |
 | `auth.params.clientSecret` | O valor do cliente usado para gerar o token de atualização. |
-| `auth.params.refreshToken` | O token de atualização obtido do Google usado para autorizar o acesso ao BigQuery. |
-| `connectionSpec.id` | A especificação de conexão `id` da sua conta BigQuery recuperada na etapa anterior. |
+| `auth.params.refreshToken` | O token de atualização obtido do [!DNL Google] usado para autorizar o acesso ao [!DNL BigQuery]. |
+| `connectionSpec.id` | A especificação de conexão `id` da sua [!DNL BigQuery] conta recuperada na etapa anterior. |
 
 **Resposta**
 
@@ -203,4 +203,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, in
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica BigQuery usando a API Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão [!DNL BigQuery] básica usando a [!DNL Flow Service] API e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API](../../explore/database-nosql.md)do Serviço de Fluxo.

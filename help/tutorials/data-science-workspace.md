@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tutoriais da Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Para saber mais, siga o tutorial [de importação de uma](../data-science-worksp
 
 ## Comboio e avaliação de um modelo
 
-Na área de trabalho da Adobe Experience Platform Data Science, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na área de trabalho da Adobe Experience Platform Data Science, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 **Este tutorial o ajudará a:**
 - Criar um novo modelo.
@@ -137,7 +137,7 @@ Para saber mais, visite o tutorial para [criar um pipeline](../data-science-work
 
 ## Criar um aplicativo de aprendizado de máquina em tempo real (alfa)
 
-Uma combinação de computação contínua no Hub e no Edge reduz drasticamente a latência tradicionalmente envolvida na potencialização de experiências hiper-personalizadas relevantes e responsivas. Assim, o aprendizado de máquina em tempo real oferece inferências com uma latência incrivelmente baixa para a tomada de decisões síncrona. Os exemplos incluem a renderização de conteúdo personalizado da página da Web, a criação de uma oferta e descontos para reduzir a taxa de processamento enquanto aumentam as conversões em uma loja da Web.
+Uma combinação de computação ininterrupta no Hub e no Hub reduz [!DNL Edge] drasticamente a latência tradicionalmente envolvida na potencialização de experiências hiper-personalizadas relevantes e responsivas. Assim, o aprendizado de máquina em tempo real oferece inferências com uma latência incrivelmente baixa para a tomada de decisões síncrona. Os exemplos incluem a renderização de conteúdo personalizado da página da Web, a criação de uma oferta e descontos para reduzir a taxa de processamento enquanto aumentam as conversões em uma loja da Web.
 
 **Este guia o ajudará a:**
 - Entenda a arquitetura de aprendizado de máquina em tempo real.

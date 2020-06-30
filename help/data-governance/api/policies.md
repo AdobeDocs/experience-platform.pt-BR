@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Políticas
 
-As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro do Experience Platform.
+As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro de [!DNL Experience Platform]você.
 
 O `/policies` terminal é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de uso de dados.
 
@@ -406,7 +406,7 @@ Uma solicitação de atualização bem-sucedida retorna um Status HTTP 200 (OK) 
 
 Uma parte específica de uma política pode ser atualizada usando uma solicitação PATCH. Diferentemente das solicitações PUT que _reescrevem_ a política, as solicitações PATCH atualizam somente o caminho especificado no corpo da solicitação. Isso é especialmente útil quando você deseja ativar ou desativar uma política, pois é necessário enviar apenas o caminho específico que deseja atualizar (`/status`) e seu valor (`ENABLE` ou `DISABLE`).
 
-A API do Serviço de Política suporta atualmente operações PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e permite combinar várias atualizações em uma única chamada adicionando cada uma como um objeto dentro da matriz, como mostrado nos exemplos a seguir.
+A [!DNL Policy Service] API suporta atualmente as operações PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e permite combinar várias atualizações em uma única chamada adicionando cada uma como um objeto dentro da matriz, como mostrado nos exemplos a seguir.
 
 **Formato da API**
 

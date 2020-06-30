@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral das políticas de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Visão geral das políticas de uso de dados
 
-Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados no Experience Platform.
+Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro de [!DNL Experience Platform].
 
 Este documento fornece uma visão geral de alto nível das políticas de uso de dados e fornece links para documentação adicional para trabalhar com políticas na interface do usuário ou na API.
 
 ## Ações de marketing {#marketing-actions}
 
-**As ações** de marketing (também chamadas de casos **de uso de** marketing) no contexto da estrutura de controle de dados são ações que um consumidor de dados de Experience Platform pode realizar, para as quais sua organização deseja restringir o uso de dados. Dessa forma, uma política de uso de dados é definida pelo seguinte:
+**As ações** de marketing (também chamadas de casos **de uso de** marketing) no contexto da estrutura de controle de dados são ações que um consumidor de [!DNL Experience Platform] dados pode realizar, para as quais sua organização deseja restringir o uso de dados. Dessa forma, uma política de uso de dados é definida pelo seguinte:
 
 1. Uma ação de marketing específica
 2. Os rótulos de uso de dados com os quais a ação está restrita não são executados
 
-Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados (como Informações pessoais identificáveis (PII)) não podem ser exportados e você tentar exportar um conjunto de dados que contenha um rótulo &quot;I&quot; (Dados de identidade), você receberá uma resposta do Serviço de política informando que uma política de uso de dados foi violada.
+Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados (como Informações pessoais identificáveis (PII)) não podem ser exportados e você tentar exportar um conjunto de dados que contenha um rótulo &quot;I&quot; (Dados de identidade), você receberá uma resposta da [!DNL Policy Service] informando que uma política de uso de dados foi violada.
 
 >[!NOTE] As ações de marketing por si só não restringem o uso de dados. Eles devem ser incluídos nas políticas de uso de dados habilitadas para que essas ações sejam avaliadas em caso de violação de política.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conectores de origem de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: a9ce046d6ee8622e23f31edbbf777b045109c13b
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Visão geral dos conectores de origem
 
-O Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece uma RESTful API e uma interface de usuário interativa que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de ingestão e gerenciar o throughput de ingestão de dados.
+[!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de ingestão e gerenciar o throughput de ingestão de dados.
 
-Com o Experience Platform, você pode centralizar os dados coletados de fontes diferentes e usar os insights obtidos com ele para fazer mais.
+Com [!DNL Experience Platform]isso, você pode centralizar os dados coletados de fontes diferentes e usar os insights obtidos com eles para fazer mais.
 
 ## Tipos de fontes
 
-As fontes no Experience Platform são agrupadas nas seguintes categorias:
+As fontes em [!DNL Experience Platform] são agrupadas nas seguintes categorias:
 
 ### Aplicativos da Adobe
 
-O Experience Platform permite que os dados sejam assimilados de outros aplicativos da Adobe, incluindo Adobe Analytics, Adobe Audience Manager e Experience Platform Launch. Consulte os seguintes documentos relacionados para obter mais informações:
+[!DNL Experience Platform] permite que os dados sejam assimilados de outros aplicativos da Adobe, incluindo o Adobe Analytics, o Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Criar um conector de fonte de Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -36,88 +36,88 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 
 ### Publicidade
 
-O Experience Platform oferece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+[!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector Google AdWords](connectors/advertising/ads.md)
+- [!DNL Google AdWords](connectors/advertising/ads.md) conector
 
 ### Armazenamento em nuvem
 
-As fontes de armazenamentos na nuvem podem trazer seus próprios dados para o Platform sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
+As fontes de armazenamentos na nuvem podem inserir seus próprios dados [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
-- [Conector Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
-- [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
-- [Conector HDFS Apache](connectors/cloud-storage/hdfs.md)
-- [Conector Hubs de Evento do Azure](connectors/cloud-storage/eventhub.md)
-- [Conector do Armazenamento de Arquivo do Azure](connectors/cloud-storage/azure-file-storage.md)
-- [Conector FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
-- [Conector de Armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+- [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) conector
+- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) conector
+- [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) conector
+- [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) conector
+- [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) conector
+- [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) conector
+- [!DNL FTP and SFTP](connectors/cloud-storage/ftp-sftp.md) conector
+- [!DNL Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md) conector
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM)
 
-Os sistemas CRM fornecem dados que podem ajudar a construir relações com os clientes, o que, por sua vez, cria fidelidade e impulsiona a retenção dos clientes. O Experience Platform oferece suporte para a assimilação de dados do CRM do Microsoft Dynamics 365 e do Salesforce. Consulte os seguintes documentos relacionados para obter mais informações:
+Os sistemas CRM fornecem dados que podem ajudar a construir relações com os clientes, o que, por sua vez, cria fidelidade e impulsiona a retenção dos clientes. [!DNL Experience Platform] fornece suporte para assimilar dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
-- [Conector Salesforce](connectors/crm/salesforce.md)
+- [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) conector
+- [!DNL Salesforce](connectors/crm/salesforce.md) conector
 
 ### Sucesso do cliente
 
-O Experience Platform oferece suporte para a assimilação de dados de um aplicativo de terceiros com sucesso. Consulte os seguintes documentos relacionados para obter mais informações:
+[!DNL Experience Platform] fornece suporte para assimilar dados de um aplicativo de cliente bem-sucedido de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [Conector da Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
-- [Conector ServiceNow](connectors/customer-success/servicenow.md)
+- [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) conector
+- [!DNL ServiceNow](connectors/customer-success/servicenow.md) conector
 
 ### Banco de dados
 
-O Experience Platform oferece suporte para assimilar dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+[!DNL Experience Platform] fornece suporte para assimilar dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector Amazon Redshift](connectors/databases/redshift.md)
-- [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
-- [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
-- [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
-- [Conector Analytics do Azure Synapse](connectors/databases/synapse-analytics.md)
-- [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
-- [Conector Couchbase](connectors/databases/couchbase.md)
-- [Conector Google BigQuery](connectors/databases/bigquery.md)
-- [Conector GreenPlum](connectors/databases/greenplum.md)
-- [Conector HP Vertica](connectors/databases/hp-vertica.md)
-- [Conector IBM DB2](connectors/databases/ibm-db2.md)
-- [Conector MariaDB](connectors/databases/mariadb.md)
-- [Conector do Microsoft SQL Server](connectors/databases/sql-server.md)
-- [Conector MySQL](connectors/databases/mysql.md)
-- [Conector Oracle](connectors/databases/oracle.md)
-- [Conector Phoenix](connectors/databases/phoenix.md)
-- [Conector PostgreSQL](connectors/databases/postgres.md)
+- [!DNL Amazon Redshift](connectors/databases/redshift.md) conector
+- [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) conector
+- [!DNL Apache Spark on Azure HDInsights](connectors/databases/spark.md) conector
+- [!DNL Azure Data Explorer](connectors/databases/data-explorer.md) conector
+- [!DNL Azure Synapse Analytics](connectors/databases/synapse-analytics.md) conector
+- [!DNL Azure Table Storage](connectors/databases/ats.md) conector
+- [!DNL Couchbase](connectors/databases/couchbase.md) conector
+- [!DNL Google BigQuery](connectors/databases/bigquery.md) conector
+- [!DNL GreenPlum](connectors/databases/greenplum.md) conector
+- [!DNL HP Vertica](connectors/databases/hp-vertica.md) conector
+- [!DNL IBM DB2](connectors/databases/ibm-db2.md) conector
+- [!DNL MariaDB](connectors/databases/mariadb.md) conector
+- [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) conector
+- [!DNL MySQL](connectors/databases/mysql.md) conector
+- [!DNL Oracle](connectors/databases/oracle.md) conector
+- [!DNL Phoenix](connectors/databases/phoenix.md) conector
+- [!DNL PostgreSQL](connectors/databases/postgres.md) conector
 
 ### Automação de marketing
 
-O Experience Platform oferece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+[!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector HubSpot](connectors/marketing-automation/hubspot.md)
+- [!DNL HubSpot](connectors/marketing-automation/hubspot.md) conector
 
 ### Pagamentos
 
-O Experience Platform oferece suporte para assimilar dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+[!DNL Experience Platform] fornece suporte para a assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector PayPal](connectors/payments/paypal.md)
+- [!DNL PayPal](connectors/payments/paypal.md) conector
 
 ### Protocolos
 
-O Experience Platform oferece suporte para assimilar dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+[!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector OData genérico](connectors/protocols/odata.md)
+- [!DNL Generic OData](connectors/protocols/odata.md) conector
 
 ## Controle de acesso para fontes na ingestão de dados
 
-As permissões para fontes na ingestão de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia *Permissões* em um perfil de produto específico. No painel **Editar permissões** , é possível acessar as permissões pertencentes às fontes por meio da entrada do menu de ingestão *de* dados. A permissão Fontes **de** Visualização concede acesso somente leitura a fontes disponíveis na guia *Catálogo* e a fontes autenticadas na guia *Procurar* , enquanto a permissão **Gerenciar fontes** concede acesso total a fontes de leitura, criação, edição e desativação.
+As permissões para fontes na ingestão de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia *[!UICONTROL Permissões]* em um perfil de produto específico. No painel **[!UICONTROL Editar permissões]** , é possível acessar as permissões pertencentes às fontes por meio da entrada do menu de ingestão *[!UICONTROL de]* dados. A permissão Fontes **[!UICONTROL de]** Visualização concede acesso somente leitura a fontes disponíveis na guia *[!UICONTROL Catálogo]* e a fontes autenticadas na guia *[!UICONTROL Procurar]* , enquanto a permissão **[!UICONTROL Gerenciar fontes]** concede acesso total a fontes de leitura, criação, edição e desativação.
 
 A tabela a seguir descreve como a interface se comporta com base em diferentes combinações dessas permissões:
 
 | Nível de permissão | Descrição |
 | ---- | ----|
-| **Fontes** de Visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia *Catálogo* , bem como nas guias *Procurar*, *Contas* e *DataFlow* . |
-| **Gerenciar fontes** em | Além das funções incluídas nas Fontes **de** Visualização, concede acesso à opção Fonte *do* Connect no *Catálogo* e à opção *Selecionar dados* na *Navegação*. **Gerenciar fontes** também permite ativar ou desativar *DataFlows* e editar seus agendamentos. |
-| **Fontes** de Visualização desativadas e **gerenciamento de fontes** desativadas | Revogar todo o acesso às fontes. |
+| **[!UICONTROL Fontes]** de Visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia *Catálogo* , bem como nas guias *Procurar*, *Contas* e *DataFlow* . |
+| **[!UICONTROL Gerenciar fontes]** em | Além das funções incluídas nas Fontes **[!UICONTROL de]** Visualização, concede acesso à opção Fonte *[!UICONTROL do]* Connect no *[!UICONTROL Catálogo]* e à opção *[!UICONTROL Selecionar dados]* na *[!UICONTROL Navegação]*. **[!UICONTROL Gerenciar fontes]** também permite ativar ou desativar *[!UICONTROL DataFlows]* e editar seus agendamentos. |
+| **[!UICONTROL Fontes]** de Visualização desativadas e **[!UICONTROL gerenciamento de fontes]** desativadas | Revogar todo o acesso às fontes. |
 
 Para obter mais informações sobre as permissões disponíveis concedidas pela Admin Console, incluindo essas quatro fontes, consulte a visão geral [do](../access-control/home.md)controle de acesso.
 

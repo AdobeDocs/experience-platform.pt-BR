@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Impor políticas de uso de dados usando a API do Serviço de Política
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '875'
+ht-degree: 2%
 
 ---
 
@@ -15,18 +18,18 @@ Depois de criar rótulos de uso de dados para seus dados e criar políticas de u
 
 >[!NOTE] Por padrão, somente as políticas cujo status está definido para `ENABLED` poder participar da avaliação. Para permitir que `DRAFT` as políticas participem da avaliação, é necessário incluir o parâmetro query `includeDraft=true` no caminho da solicitação.
 
-Este documento fornece etapas sobre como usar a API do Serviço de Política para verificar violações de política em diferentes cenários.
+Este documento fornece etapas sobre como usar a [!DNL Policy Service] API para verificar violações de políticas em diferentes cenários.
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes conceitos chave envolvidos na aplicação das políticas DULE:
 
-* [Controle](../home.md)de dados: A estrutura pela qual a Plataforma aplica a conformidade de uso de dados.
+* [Controle](../home.md)de dados: A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
    * [Rótulos](../labels/overview.md)de uso de dados: Os rótulos de uso de dados são aplicados a conjuntos de dados (e/ou campos individuais nesses conjuntos de dados), especificando restrições para como esses dados podem ser usados.
    * [Políticas](../policies/overview.md)de uso de dados: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que são permitidas ou restritas para determinados conjuntos de rótulos DULE.
-* [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, consulte o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API do serviço de política DULE, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) [!DNL Policy Service] desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API DULE, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
 ## Avaliar usando rótulos DULE e uma ação de marketing
 
@@ -362,4 +365,4 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos DULE
 
 Ao ler esse documento, você verificou com êxito violações de política ao executar uma ação de marketing em um conjunto de dados ou em um conjunto de rótulos DULE. Usando os dados retornados nas respostas da API, você pode configurar protocolos em seu aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrem.
 
-Para obter etapas sobre como aplicar políticas de uso de dados para segmentos de audiência no Perfil do cliente em tempo real, consulte o seguinte [tutorial](../../segmentation/tutorials/governance.md).
+Para obter etapas sobre como aplicar políticas de uso de dados para segmentos de audiência em [!DNL Real-time Customer Profile], consulte o seguinte [tutorial](../../segmentation/tutorials/governance.md).

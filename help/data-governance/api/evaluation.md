@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -490,6 +493,6 @@ Na resposta abaixo, você pode ver que a lista de `duleLabels` agora é menor, c
 }
 ```
 
-## Avaliação de políticas para o Perfil do cliente em tempo real
+## Avaliação de políticas para [!DNL Real-time Customer Profile]
 
-A API do Serviço de Política também pode ser usada para verificar violações de política que envolvam o uso de segmentos de Perfil do Cliente em tempo real. Consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md) de audiência para obter mais informações.
+A [!DNL Policy Service] API também pode ser usada para verificar violações de política que envolvam o uso de [!DNL Real-time Customer Profile] segmentos. Consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md) de audiência para obter mais informações.

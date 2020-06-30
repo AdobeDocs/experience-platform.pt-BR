@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Criar um pipeline de recursos
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Crie seu mecanismo de pipeline de recursos usando a API {#create-feature-pipeline-engine-api}
 
-Agora que você criou seu pipeline de recursos, é necessário criar uma imagem Docker para fazer uma chamada para os pontos finais do pipeline de recursos na API de aprendizado de máquina do Sensei. Você precisa de um URL de imagem do Docker para fazer uma chamada para os pontos finais do pipeline de recursos.
+Agora que você criou seu pipeline de recursos, é necessário criar uma imagem Docker para fazer uma chamada para os pontos finais do pipeline de recursos na [!DNL Sensei Machine Learning] API. Você precisa de um URL de imagem do Docker para fazer uma chamada para os pontos finais do pipeline de recursos.
 
 >[!TIP]
 >Se você não tiver um URL do Docker, visite os arquivos de origem do [pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma explicação passo a passo sobre como criar um URL de host do Docker.
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Criar um mecanismo de pipeline de recursos {#create-engine-api}
 
-Depois de ter a localização da imagem do Docker, você pode [criar um mecanismo](../api/engines.md#feature-pipeline-docker) de pipeline de recursos usando a API de aprendizado de máquina do Sensei executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
+Depois que você tiver o local da imagem do Docker, poderá [criar um mecanismo](../api/engines.md#feature-pipeline-docker) de pipeline de recursos usando a [!DNL Sensei Machine Learning] API executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
 
 ### Criar uma instância MLI {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Quando a pontuação for concluída, o pipeline do recurso deverá estar operaci
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a API de aprendizado de máquina do Sensei. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando a API [de aprendizado de](../api/getting-started.md)máquina do Sensei.
+Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a [!DNL Sensei Machine Learning] API. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando o [!DNL Sensei Machine Learning API](../api/getting-started.md).

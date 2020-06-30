@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Publicar um modelo como um serviço (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Publicar um modelo como um serviço (API)
 
-Este tutorial aborda o processo de publicação de um modelo como um serviço usando a API [de aprendizado de máquina](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)sensei.
+Este tutorial aborda o processo de publicação de um modelo como um serviço usando o [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Introdução
 
@@ -22,7 +22,7 @@ Este tutorial requer uma compreensão do Adobe Experience Platform Data Science 
 
 Para acompanhar este tutorial, você deve ter um Mecanismo ML, uma Instância ML e um Experimento existentes. Para obter etapas sobre como criá-las na API, consulte o tutorial sobre como [importar uma receita](./import-packaged-recipe-api.md)empacotada.
 
-Finalmente, antes de iniciar este tutorial, reveja a seção [Introdução](../api/getting-started.md) do guia do desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API de aprendizado de máquina do Sensei, incluindo os cabeçalhos necessários usados neste tutorial:
+Por fim, antes de iniciar este tutorial, reveja a seção [Introdução](../api/getting-started.md) [!DNL Sensei Machine Learning] do guia do desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas para a API com êxito, incluindo os cabeçalhos necessários usados neste tutorial:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ A tabela a seguir descreve alguns termos comuns usados neste tutorial:
 
 | Termo | Definição |
 --- | ---
-| **Instância de aprendizado de máquina (Instância ML)** | Uma instância de um Mecanismo Sensei para um locatário específico, contendo dados específicos, parâmetros e código do Sensei. |
+| **Instância de aprendizado de máquina (Instância ML)** | Uma instância de um [!DNL Sensei] Mecanismo para um locatário específico, contendo dados, parâmetros e [!DNL Sensei] código específicos. |
 | **Experimento** | Uma entidade de guarda-chuva para executar execuções de experimento de treinamento, marcar execuções de experimento ou ambos. |
 | **Experiência agendada** | Um termo para descrever a automação do treinamento ou a pontuação de Execuções de Experimento, regido por um agendamento definido pelo usuário. |
 | **Execução do experimento** | Uma instância específica de treinamento ou experiência de pontuação. Execuções de vários experimentos de um determinado experimento podem diferir nos valores do conjunto de dados usados para treinamento ou pontuação. |

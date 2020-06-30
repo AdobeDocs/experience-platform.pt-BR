@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Modelo de domínio de decisão de experiência
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0f13ea667eecf936c69bcd98b0035a4355d73631
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '1367'
+ht-degree: 0%
 
 ---
 
 
-# Modelo de domínio de decisão de experiência
+# Modelo de domínio de experiência [!DNL Decisioning]
 
-Nesta seção, os componentes do Serviço de tomada de decisão são explicados e as formas como esses componentes interagem são detalhados. Os conceitos e suas relações formam o *Domínio* do problema de decisão. Esses componentes fundamentais entram em ação independentemente de como você usa o Serviço de tomada de decisão.
+Nesta seção, os componentes de [!DNL Decisioning Service] são explicados e a forma como esses componentes interagem são detalhados. Os conceitos e suas relações formam o *Domínio* do problema de decisão. Esses componentes fundamentais entram em cena independentemente de como você usa [!DNL Decisioning Service].
 
 ## Opções de decisão
 
-Uma opção *de* decisão de experiência é uma experiência potencial que pode ser apresentada a um cliente específico. Uma opção também é referida como uma escolha ou alternativa. Ao decidir a próxima melhor opção para um cliente, o Serviço de Decisão considera as opções ***d<sub>1</sub>***para***<sub>dN</sub>*** entre um conjunto finito de opções **`D`**.
+Uma opção *de* decisão de experiência é uma experiência potencial que pode ser apresentada a um cliente específico. Uma opção também é referida como uma escolha ou alternativa. Ao decidir a próxima melhor opção para um cliente, [!DNL Decisioning Service] considera as opções ***d<sub>1</sub>***para***<sub>dN</sub>*** entre um conjunto finito de opções **`D`**.
 
 As decisões são tomadas identificando a melhor opção entre um conjunto de opções disponíveis. Uma abordagem é eliminar sucessivamente as opções *de* decisão ***<sub>di</sub>***do conjunto*** D ***até que apenas uma seja deixada e, em seguida, escolher um &quot;vencedor&quot; aleatoriamente do conjunto restante. Outra forma de tomada de decisão consiste em classificar as restantes opções (elegíveis) de acordo com os resultados esperados.
 
@@ -30,7 +33,7 @@ No domínio Decisão de experiência, as opções a partir das quais uma ou mais
 Para encontrar a decisão ideal, cada resultado recebe um valor ***de*** utilitário `U(o) = U(f(d))`.
 Para o caso de uso da Decisão de Oferta, essa função calcularia o custo para atender à oferta e o valor ganho pela empresa quando a oferta é aceita pelo cliente. O resultado seria usado para encontrar a decisão ideal (oferta) maximizando o valor do utilitário em todas as opções (oferta).
 
-De um modo geral, não é possível prever com segurança qual será o resultado de uma determinada decisão e, por conseguinte, é necessária uma abordagem probabilística. O valor ***do*** utilitário `U(o)` se torna o valor do utilitário ***esperado de uma opção*** de decisão `EU(d)`
+De um modo geral, não é possível prever com segurança qual será o resultado de uma determinada decisão e, por conseguinte, é necessária uma abordagem probabilística. O valor ***do*** utilitário `U(o)` se torna o valor do utilitário ***esperado de uma opção de decisão*** `EU(d)`
 
 ## Propostas de decisão
 
@@ -47,9 +50,9 @@ O quadro de decisão geral é mostrado no diagrama a seguir.
 
 ## Atividades de decisão
 
-*As atividades* de decisão configuram o algoritmo e os parâmetros de fornecimento para uma estratégia de decisão específica. Os parâmetros de estratégia incluem as restrições aplicadas às opções e à função de classificação. Todas as decisões são tomadas no contexto de uma atividade. O Serviço de tomada de decisão hospeda muitas atividades, e as atividades podem ser reutilizadas em canais. Em qualquer momento, a melhor opção é avaliada com base no conjunto mais atual de restrições, regras e modelos.
+*As atividades* de decisão configuram o algoritmo e os parâmetros de fornecimento para uma estratégia de decisão específica. Os parâmetros de estratégia incluem as restrições aplicadas às opções e à função de classificação. Todas as decisões são tomadas no contexto de uma atividade. [!DNL Decisioning Service] hosts com muitas atividades e atividades podem ser reutilizadas em canais. Em qualquer momento, a melhor opção é avaliada com base no conjunto mais atual de restrições, regras e modelos.
 
-Uma atividade de decisão define a coleta das opções de decisão a serem consideradas. Ele filtros o subconjunto de todas as opções que são de interesse nesta atividade. Isso permite que o serviço de decisão gerencie categorias tópicas no catálogo de todas as opções.
+Uma atividade de decisão define a coleta das opções de decisão a serem consideradas. Ele filtros o subconjunto de todas as opções que são de interesse nesta atividade. Isso permite que o usuário gerencie categorias tópicas no catálogo de todas as opções. [!DNL Decisioning service]
 
 Uma atividade de decisão especifica uma opção *de* fallback se as restrições combinadas desqualificarem todas as outras opções. Isso significa que há sempre uma resposta para a questão: Qual é atualmente a opção &quot;melhor&quot;?
 
@@ -63,6 +66,6 @@ Os dados de contexto de decisão podem ser divididos em dados relacionados ao pe
 
 - *As entidades* do Perfil são usadas para representar dados do usuário final, mas nem todas as entidades do perfil representam um indivíduo. Pode ser um lar, um grupo social, ou qualquer outro assunto. Os eventos de experiência são registros de dados da série cronológica ligados a um perfil. Se houver experiência, esses dados serão *sujeitos* a essa experiência.
 - Por outro lado, há as entidades *empresariais*. Podem ser considerados como os *objetos* das interações. Essas entidades são frequentemente referenciadas nos eventos de experiência de entidades perfis. Exemplos de entidades de negócios são sites e páginas, lojas, detalhes do produto, conteúdo digital, dados de inventário do produto e assim por diante.
-- A última categoria de dados no contexto de decisão são os dados criados durante a operação do Serviço de Decisão. Cada evento de decisão se encaixa nessa categoria, junto com as respostas dos clientes, os dados da proposta formam um conjunto de dados interno chamado histórico ** proposition-response.
+- A última categoria de dados no contexto de decisão são os dados criados durante a operação do [!DNL Decisioning Service]. Cada evento de decisão se encaixa nessa categoria, junto com as respostas dos clientes, os dados da proposta formam um conjunto de dados interno chamado histórico ** proposition-response.
 
-Há três caminhos que os dados podem tomar para se tornarem parte do contexto de decisão. Os dados de registro e de série cronológica podem ser carregados por meio de arquivos de conjunto de dados. Este caminho é principalmente para sincronização em massa com sistemas externos. Os dados de registro e de séries cronológicas também podem ser transmitidos para a Plataforma, onde os dados são indexados e unidos a entidades de formulário. Pelo terceiro caminho, os dados de contexto podem ser passados como parâmetros para a solicitação de decisão. Esta forma de dados tem um caráter efêmero e só é relevante para a decisão solicitada. Não é persistente como uma entidade e não está disponível para outras solicitações.
+Há três caminhos que os dados podem tomar para se tornarem parte do contexto de decisão. Os dados de registro e de série cronológica podem ser carregados por meio de arquivos de conjunto de dados. Este caminho é principalmente para sincronização em massa com sistemas externos. Os dados dos registros e das séries cronológicas também podem ser transmitidos para [!DNL Platform] onde os dados são indexados e unidos às entidades de formulário. Pelo terceiro caminho, os dados de contexto podem ser passados como parâmetros para a solicitação de decisão. Esta forma de dados tem um caráter efêmero e só é relevante para a decisão solicitada. Não é persistente como uma entidade e não está disponível para outras solicitações.

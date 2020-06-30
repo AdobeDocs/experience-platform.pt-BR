@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Obter histórico de cluster de uma identidade
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 1%
 
 ---
 
 
 # Obter o histórico de cluster de uma identidade
 
-As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. O Serviço de identidade fornece visibilidade para as associações de cluster de uma determinada identidade ao longo do tempo.
+As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. [!DNL Identity Service] fornece visibilidade às associações de cluster de uma determinada identidade ao longo do tempo.
 
 Use o `graph-type` parâmetro opcional para indicar o tipo de saída do qual o cluster será obtido. As opções são:
 

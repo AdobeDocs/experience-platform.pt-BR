@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Controle de dados de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Visão geral do controle de dados
 
-Um dos principais recursos do Adobe Experience Platform é reunir dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e engajem os clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados na Platform sejam compatíveis com as políticas de uso de dados.
+Um dos principais recursos do Adobe Experience Platform é reunir dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e engajem os clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados dentro [!DNL Platform] estejam em conformidade com as políticas de uso de dados.
 
-O controle de dados do Adobe Experience Platform permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental no Experience Platform em vários níveis, incluindo a catalogação, a linhagem de dados, a rotulagem de uso de dados, as políticas de uso de dados e o controle do uso de dados para ações de marketing.
+O controle de dados do Adobe Experience Platform permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo a catalogação, a linhagem de dados, a rotulagem de uso de dados, as políticas de uso de dados e o controle do uso de dados para ações de marketing.
 
 ## Funções de controle de dados
 
@@ -44,7 +44,7 @@ Os profissionais de marketing são o ponto final do controle de dados. Eles soli
 
 ## Estrutura DULE
 
-A DULE (Data Usage Labeling and Implementation) é a estrutura principal para o Experience Platform Data Governance. DULE simplifica e simplifica o processo de categorização de dados e criação de políticas de uso de dados. Depois que os rótulos de dados forem aplicados e as políticas de uso de dados estiverem em vigor, as ações de marketing poderão ser avaliadas para garantir o uso correto dos dados.
+A DULE (Data Usage Labeling and Implementation) é a estrutura principal para o [!DNL Experience Platform] Data Governance. DULE simplifica e simplifica o processo de categorização de dados e criação de políticas de uso de dados. Depois que os rótulos de dados forem aplicados e as políticas de uso de dados estiverem em vigor, as ações de marketing poderão ser avaliadas para garantir o uso correto dos dados.
 
 Há três elementos chave na estrutura DULE: Etiquetas, políticas e aplicação.
 
@@ -66,17 +66,17 @@ A estrutura DULE inclui rótulos de uso de dados predefinidos que podem ser usad
 
 >[!NOTE] Consulte o guia nos rótulos [de uso de dados](labels/reference.md) suportados para obter uma lista completa dos rótulos disponíveis, bem como as definições para cada tipo de etiqueta.
 
-As etiquetas podem ser aplicadas a qualquer momento, proporcionando flexibilidade na forma como você escolhe administrar os dados. As práticas recomendadas encorajam a rotulação de dados assim que eles são ingeridos no Experience Platform ou assim que os dados forem disponibilizados no Platform.
+As etiquetas podem ser aplicadas a qualquer momento, proporcionando flexibilidade na forma como você escolhe administrar os dados. As práticas recomendadas encorajam a rotulação de dados assim que eles são ingeridos [!DNL Experience Platform], ou assim que os dados estiverem disponíveis em [!DNL Platform].
 
 Consulte a visão geral sobre rótulos [de uso de](./labels/overview.md) dados para obter mais informações.
 
 ## Políticas de uso de dados
 
-Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados no Experience Platform.
+Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro de [!DNL Experience Platform].
 
 Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados, como Informações pessoais identificáveis (PII), não podem ser exportados e um rótulo &quot;I&quot; (Dados de identidade) tiver sido aplicado ao conjunto de dados, você receberá uma resposta do Serviço de política informando que uma política de uso de dados foi violada.
 
-Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a DULE Policy Service API ou a interface de usuário do Experience Platform.
+Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API do serviço de política DULE ou a interface do [!DNL Experience Platform] usuário.
 
 >[!IMPORTANT] Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente.
 
@@ -117,7 +117,7 @@ A tabela a seguir descreve os termos principais relacionados à Data Governance 
 | **Geofence** | Uma geofence é um limite geográfico virtual, definido pela tecnologia GPS ou RFID, que permite que o software dispare uma resposta quando um dispositivo móvel entra ou sai de uma área específica. |
 | **Rótulos de identidade** | Os rótulos &quot;I&quot; de identidade são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica. |
 | **Direcionamento baseado em interesse** | A definição de metas baseada em juros, também conhecida como personalização, ocorre se as três condições a seguir forem atendidas: os dados coletados no site são, usados para fazer inferências sobre o interesse de um usuário, são usados em outro contexto, como em outro site ou aplicativo (fora do site) e são usados para selecionar qual conteúdo ou anúncios são fornecidos com base nessas inferências. |
-| **Ação de marketing** | Uma ação de marketing, no contexto da estrutura de controle de dados, é uma ação que um consumidor de dados de Experience Platform, para a qual há necessidade de verificar violações das políticas de uso de dados |
+| **Ação de marketing** | Uma ação de marketing, no contexto da estrutura de controle de dados, é uma ação que um consumidor de [!DNL Experience Platform] dados toma, para a qual há necessidade de verificar violações das políticas de uso de dados |
 | **Política** | Na estrutura de gerenciamento de dados, uma política é uma regra que descreve que tipo de ações de marketing são permitidas ou não para serem tomadas em dados específicos. |
 | **Rótulos sensíveis** | As etiquetas &quot;S&quot; sensíveis são usadas para categorizar dados que você e sua organização consideram confidenciais. |
 

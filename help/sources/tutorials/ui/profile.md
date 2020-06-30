@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ativar dados de origem de entrada para preencher perfis de clientes
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3e43e043df296c29cafb4c6933c8be1105c985ab
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
@@ -14,55 +14,55 @@ ht-degree: 0%
 
 # Ativar dados de origem de entrada para preencher perfis de clientes
 
-Os dados de entrada do conector de origem podem ser usados para enriquecer e preencher os dados de Perfil do cliente em tempo real.
+Os dados de entrada do conector de origem podem ser usados para enriquecer e preencher seus [!DNL Real-time Customer Profile] dados.
 
 ## Introdução
 
-Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+- [Sistema](../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Além disso, este tutorial requer que você já tenha criado e configurado um conector de origem.  Uma lista de tutoriais para criar conectores diferentes na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../home.md)origem.
 
-## Preencha seus dados de Perfil do cliente em tempo real
+## Preencher seus [!DNL Real-time Customer Profile] dados
 
-Para enriquecer os perfis do cliente, o schema de origem do conjunto de dados do público alvo deve ser compatível para uso no Perfil do cliente em tempo real. Um schema compatível satisfaz os seguintes requisitos:
+Para enriquecer os perfis do cliente, o schema de origem do conjunto de dados do público alvo deve ser compatível para uso em [!DNL Real-time Customer Profile]. Um schema compatível satisfaz os seguintes requisitos:
 
 - O schema tem pelo menos um atributo especificado como uma propriedade de identidade.
 - O schema tem uma propriedade de identidade definida como a identidade primária.
 - Existe um mapeamento no fluxo de dados no qual a identidade primária é um atributo de público alvo.
 
-Na área de trabalho Fontes, clique na guia **Procurar** para lista das conexões básicas. Na lista exibida, localize a conexão que contém o fluxo de dados com o qual você deseja preencher perfis. Clique no nome da conexão para acessar seus detalhes.
+Na área de trabalho Fontes, clique na guia **[!UICONTROL Procurar]** para lista das conexões básicas. Na lista exibida, localize a conexão que contém o fluxo de dados com o qual você deseja preencher perfis. Clique no nome da conexão para acessar seus detalhes.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-A tela atividade ** de origem da conexão é exibida, exibindo os conjuntos de dados nos quais a conexão está assimilando os dados de origem. Clique no nome do conjunto de dados que deseja ativar para o Perfil.
+A tela atividade ** de origem da conexão é exibida, exibindo os conjuntos de dados nos quais a conexão está assimilando os dados de origem. Clique no nome do conjunto de dados para o qual deseja habilitar [!DNL Profile].
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
-A tela atividade *do Conjunto* de Dados é exibida. A coluna *Propriedades* no lado direito da tela exibe os detalhes do conjunto de dados e inclui um switch de **Perfil** e um link para o schema ao qual o conjunto de dados obedece. Clique no nome do schema para visualização de sua composição.
+A tela atividade *[!UICONTROL do Conjunto]* de Dados é exibida. A coluna *[!UICONTROL Propriedades]* no lado direito da tela exibe os detalhes do conjunto de dados e inclui um switch de **[!UICONTROL Perfil]** e um link para o schema ao qual o conjunto de dados obedece. Clique no nome do schema para visualização de sua composição.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-O Editor *de* Schemas é exibido, mostrando a estrutura do schema na tela central. Na tela de desenho, selecione o campo a ser definido como a identidade primária. Na guia Propriedades *do* campo que é exibida, marque a caixa de seleção **Identidade** e, em seguida, a identidade **** Principal. Por fim, selecione uma namespace **de** identidade apropriada e clique em **Aplicar**.
+O Editor *[!UICONTROL de]* Schemas é exibido, mostrando a estrutura do schema na tela central. Na tela de desenho, selecione o campo a ser definido como a identidade primária. Na guia Propriedades *[!UICONTROL do]* campo que é exibida, marque a caixa de seleção **[!UICONTROL Identidade]** e, em seguida, a identidade **** Principal. Por fim, selecione uma namespace **[!UICONTROL de]** identidade apropriada e clique em **[!UICONTROL Aplicar]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
-Clique no objeto de nível superior da estrutura do schema e a coluna de propriedades *do* Schema será exibida. Ative o schema para o Perfil, alternando a chave do **Perfil** . Clique em **Salvar** para finalizar as alterações.
+Clique no objeto de nível superior da estrutura do schema e a coluna de propriedades *[!UICONTROL do]* Schema será exibida. Ative o schema para [!DNL Profile] alternar a chave do **[!UICONTROL Perfil]** . Clique em **[!UICONTROL Salvar]** para finalizar as alterações.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-Agora que o schema está ativado para o Perfil, volte à tela de atividade *do* Conjunto de Dados e ative o conjunto de dados para o Perfil clicando no botão de alternância do **Perfil** na coluna *Propriedades* .
+Agora que o schema está ativado para [!DNL Profile], volte à tela de atividade ** do Conjunto de Dados e ative o conjunto de dados para [!DNL Profile] , clicando no botão de alternância do **[!UICONTROL Perfil]** na coluna *Propriedades* .
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
-Com o schema e o conjunto de dados habilitados para o Perfil, os dados ingeridos nesse conjunto de dados também preencherão os perfis do cliente.
+Com o schema e o conjunto de dados habilitados para [!DNL Profile], os dados assimilados nesse conjunto de dados também preencherão os perfis do cliente.
 
->[!NOTE] Os dados existentes em um conjunto de dados recentemente habilitado não são consumidos pelo Perfil
+>[!NOTE] Os dados existentes em um conjunto de dados recentemente habilitado não são consumidos por [!DNL Profile]
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você ativou com êxito os dados de entrada para a população do Perfil. Para obter mais informações, consulte a visão geral [do Perfil do cliente em tempo](../../../profile/home.md)real.
+Ao seguir este tutorial, você ativou com êxito os dados de entrada para a [!DNL Profile] população. Para obter mais informações, consulte a visão geral [do Perfil do cliente em tempo](../../../profile/home.md)real.

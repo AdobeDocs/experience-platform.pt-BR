@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de referência dos nós de aprendizado de máquina em tempo real
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ O guia a seguir descreve as bibliotecas de nós compatíveis para o aprendizado 
 
 ## Descobrindo nós para uso em seu pipeline ML
 
-Copie o seguinte código em um notebook Python para visualização de todos os nós disponíveis para uso.
+Copie o seguinte código em um [!DNL Python] notebook para visualização de todos os nós disponíveis para uso.
 
 ```python
 from pprint import pprint

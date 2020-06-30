@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Apêndice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 4%
 
 ---
 
 
 # Apêndice
 
-As seções a seguir fornecem informações de referência para vários recursos da API Sensei Machine Learning.
+As seções a seguir fornecem informações de referência para vários recursos da [!DNL Sensei Machine Learning] API.
 
 ## Parâmetros de Query para recuperação de ativos {#query}
 
-A API Sensei Machine Learning fornece suporte para parâmetros de query com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos estão descritos na tabela a seguir:
+A [!DNL Sensei Machine Learning] API fornece suporte para parâmetros de query com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos estão descritos na tabela a seguir:
 
 | Parâmetro de consulta | Descrição | Valor padrão |
 | --------------- | ----------- | ------- |

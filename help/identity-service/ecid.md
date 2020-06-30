@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Adobe Experience Platform ECID
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '162'
+ht-degree: 9%
 
 ---
 
 
 # Visão geral da ECID
 
-O ECID (Experience Cloud Identifier) é o módulo do lado do cliente que fornece acesso ao gerenciamento de identidade, atendendo três funções principais:
+O [!DNL Experience Cloud Identifier] (ECID) é o módulo do lado do cliente que fornece acesso ao gerenciamento de identidade, atendendo três funções principais:
 
 - Identifique cada visitante
 - Fornecer sincronização com os parceiros
 - Feed links emparelhados para conectar-se com IDs offline ou outras ao gráfico
 
-A identificação de usuários on-line requer a instrumentação do site ou aplicativo móvel com o ECID, que fornece uma ID universal e persistente que identifica seus visitantes em todas as soluções da Adobe Experience Platform.
+A identificação de usuários on-line requer a instrumentação do site ou aplicativo móvel com o ECID, que fornece uma ID universal e persistente que identifica seus visitantes em todas as soluções do Adobe Experience Platform.
 
 Se você estiver trabalhando com uma implementação de site, explore os recursos [aqui](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html).
 
@@ -25,5 +28,5 @@ Se você estiver trabalhando com um aplicativo móvel, veja como a ECID é usada
 
 A implantação dessas ferramentas pode ser simples e fácil de gerenciar se você usar o [Adobe Launch](https://docs.adobe.com/content/help/pt-BR/launch/using/overview.html).
 
-Consulte também a documentação [](../privacy-service/identity-data.md) do Privacy Service para obter informações sobre como usar o ECID para fins de conformidade com o RGPD.
+Consulte também a documentação [do](../privacy-service/identity-data.md) Privacy Service para obter informações sobre a utilização do ECID para fins de conformidade com o RGPD.
 

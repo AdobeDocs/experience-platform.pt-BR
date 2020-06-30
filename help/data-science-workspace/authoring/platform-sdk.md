@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guia do SDK da plataforma
+title: Guia do SDK do Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 5%
 
 ---
 
 
-# Guia do SDK da plataforma
+# [!DNL Platform] Guia do SDK
 
 Este tutorial fornece informações sobre como converter `data_access_sdk_python` para o novo Python `platform_sdk` em Python e R. Este tutorial fornece informações sobre as seguintes operações:
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Leitura básica dos dados {#basic-reading-of-data}
 
-Com o novo SDK da plataforma, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
+Com o novo [!DNL Platform] SDK, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
 
 Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opções de filtragem:
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-O novo SDK da plataforma suporta as seguintes operações:
+O novo [!DNL Platform] SDK oferece suporte às seguintes operações:
 
 | Operação | Função |
 | --------- | -------- |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Próximas etapas
 
-Depois de configurar o carregador de `platform_sdk` dados, os dados passam por preparação e são divididos para os conjuntos de dados `train` e `val` . Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção sobre preparação de [dados e engenharia](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) de recursos no tutorial para criar uma receita usando notebooks JupyterLab.
+Depois de configurar o carregador de `platform_sdk` dados, os dados passam por preparação e são divididos para os conjuntos de dados `train` e `val` . Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção sobre preparação de [dados e engenharia](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) de recursos no tutorial para criar uma fórmula usando [!DNL JupyterLab] notebooks.

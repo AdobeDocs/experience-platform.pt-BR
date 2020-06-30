@@ -4,61 +4,64 @@ solution: Experience Platform
 title: Treinar e avaliar um modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '975'
+ht-degree: 2%
 
 ---
 
 
 # Treinar e avaliar um modelo (IU)
 
-Na Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na área de trabalho da Adobe Experience Platform Data Science, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 Este tutorial percorre as etapas para criar, treinar e avaliar um Modelo.
 
 ## Introdução
 
-Para concluir este tutorial, é necessário ter acesso à plataforma Experience. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de prosseguir.
+Para concluir este tutorial, é necessário ter acesso a [!DNL Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de prosseguir.
 
 Este tutorial requer uma Receita existente. Se você não tiver uma Receita, siga o tutorial [Importar uma Receita empacotada na interface do usuário](./import-packaged-recipe-ui.md) antes de continuar.
 
 ## Criar um modelo
 
-1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Clique **[!UICONTROL Create Model]** próximo à parte superior direita da página para iniciar um processo de criação de Modelo.
+1. No Adobe Experience Platform, clique no link **[!UICONTROL Modelos]** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Clique em **[!UICONTROL Criar modelo]** próximo à parte superior direita da página para iniciar um processo de criação do modelo.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Navegue pela lista de Receitas existentes, localize e selecione a Receita a ser usada para criar o Modelo e clique em **[!UICONTROL Next]**.
+2. Navegue pela lista de Receitas existentes, localize e selecione a Receita a ser usada para criar o Modelo e clique em **[!UICONTROL Avançar]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Selecione um conjunto de dados de entrada apropriado e clique em **[!UICONTROL Next]**. Isso definirá o conjunto de dados de treinamento de entrada padrão para o Modelo.
+3. Selecione um conjunto de dados de entrada apropriado e clique em **[!UICONTROL Avançar]**. Isso definirá o conjunto de dados de treinamento de entrada padrão para o Modelo.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Forneça um nome para o Modelo e reveja as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da Receita, a análise e a modificação dos valores de configuração clicando nos valores com o duplo. Para fornecer um novo conjunto de configurações, clique **[!UICONTROL Upload New Config]** e arraste um arquivo JSON contendo configurações de Modelo para a janela do navegador. Click **[!UICONTROL Finish]** to create the Model.
+4. Forneça um nome para o Modelo e reveja as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da Receita, a análise e a modificação dos valores de configuração clicando nos valores com o duplo. Para fornecer um novo conjunto de configurações, clique em **[!UICONTROL Carregar nova configuração]** e arraste um arquivo JSON que contém configurações de Modelo para a janela do navegador. Clique em **[!UICONTROL Concluir]** para criar o Modelo.
    >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita de Recomendações de Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Criar uma execução de treinamento
 
-1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser treinado.
+1. No Adobe Experience Platform, clique no link **[!UICONTROL Modelos]** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser treinado.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Para Modelos criados usando a interface do usuário da Data Science Workspace, uma execução de treinamento é gerada e executada automaticamente usando as configurações padrão e o conjunto de dados de treinamento de entrada.
+2. Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Para Modelos criados usando a interface do [!DNL Data Science Workspace] usuário, uma execução de treinamento é gerada e executada automaticamente usando as configurações padrão e o conjunto de dados de treinamento de entrada.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Crie uma nova execução de treinamento clicando em **[!UICONTROL Train]** perto da parte superior direita da página Visão geral do modelo.
+3. Crie uma nova execução de treinamento clicando em **[!UICONTROL Treinar]** próximo ao canto superior direito da página de visão geral do Modelo.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Selecione o conjunto de dados de entrada de treinamento para a execução de treinamento e clique em **[!UICONTROL Next]**.
+4. Selecione o conjunto de dados de entrada de treinamento para a execução de treinamento e clique em **[!UICONTROL Avançar]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteram-as e modificam-nas de acordo, clicando nos valores com o duplo. Clique em **[!UICONTROL Finish]** para criar e executar a execução do treinamento.
+5. As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteram-as e modificam-nas de acordo, clicando nos valores com o duplo. Clique em **[!UICONTROL Concluir]** para criar e executar a execução do treinamento.
    >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita de Recomendações de Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Avaliar o modelo
 
-1. Na Adobe Experience Platform, clique no **[!UICONTROL Models]** link localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser avaliado.
+1. No Adobe Experience Platform, clique no link **[!UICONTROL Modelos]** localizado na coluna de navegação esquerda para lista de todos os modelos existentes. Localize e clique no nome do Modelo a ser avaliado.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Todas as execuções de treinamento existentes com seus status de treinamento atuais são listadas. Com várias execuções de treinamento concluídas, as métricas de avaliação podem ser comparadas em diferentes execuções de treinamento no gráfico de avaliação do Modelo, selecione uma métrica de avaliação usando a lista suspensa acima do gráfico.
@@ -77,7 +80,7 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
 
 ## Próximas etapas
 
-Este tutorial o orientou pela criação, treinamento e avaliação de um Modelo na Data Science Workspace. Depois de chegar a um Modelo otimizado, você pode usar o Modelo treinado para gerar insights seguindo a [Pontuação a modelo no tutorial da interface do usuário](./score-model-ui.md) .
+Este tutorial o orientou pela criação, treinamento e avaliação de um Modelo em [!DNL Data Science Workspace]. Depois de chegar a um Modelo otimizado, você pode usar o Modelo treinado para gerar insights seguindo a [Pontuação a modelo no tutorial da interface do usuário](./score-model-ui.md) .
 
 ## Referência {#reference}
 

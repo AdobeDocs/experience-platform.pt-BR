@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Guia do usuário das políticas de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
 
 # Guia do usuário das políticas de uso de dados
 
-O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho _Políticas_ na interface do usuário do Experience Platform.
+O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho _Políticas_ na interface do [!DNL Experience Platform] usuário.
 
 >[!IMPORTANT] Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente. Consulte a seção sobre como [ativar políticas](#enable) para obter etapas sobre como fazer isso na interface do usuário.
 
 ## Pré-requisitos
 
-Este guia exige uma compreensão funcional dos seguintes conceitos de Experience Platform:
+Este guia exige um entendimento prático dos seguintes [!DNL Experience Platform] conceitos:
 
-- [Governança de dados](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Políticas de uso de dados](./overview.md)
 
 ## Políticas de uso de dados de Visualização {#view-policies}
 
-Na interface do usuário do Experience Platform, clique em **[!UICONTROL Políticas]** para abrir a área de trabalho *[!UICONTROL Políticas]* . Na guia **[!UICONTROL Procurar]** , é possível visualizar uma lista de políticas disponíveis, incluindo seus rótulos, ações de marketing e status associados.
+Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Políticas]** para abrir a área de trabalho *[!UICONTROL Políticas]* . Na guia **[!UICONTROL Procurar]** , é possível visualizar uma lista de políticas disponíveis, incluindo seus rótulos, ações de marketing e status associados.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Clique em uma política listada para visualização sua descrição e tipo. Se u
 
 ## Criar uma política de uso de dados personalizada {#create-policy}
 
-Para criar uma nova política de uso de dados personalizada, clique em **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho *Políticas* .
+Para criar uma nova política de uso de dados personalizada, clique em **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho *[!UICONTROL Políticas]* .
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Se a ação de marketing não estiver sendo usada por nenhuma política de uso e
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral de como gerenciar políticas de uso de dados na interface do usuário do Experience Platform. Para obter etapas sobre como gerenciar políticas usando a DULE Policy API, consulte o guia [do](../api/getting-started.md)desenvolvedor. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.
+Este documento forneceu uma visão geral de como gerenciar políticas de uso de dados na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar políticas usando a DULE Policy API, consulte o guia [do](../api/getting-started.md)desenvolvedor. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.
 
-O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na interface do Experience Platform:
+O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na [!DNL Experience Platform] interface do usuário:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

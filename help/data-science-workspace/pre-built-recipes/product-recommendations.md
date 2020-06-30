@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Fórmula de recomendação de produto
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '421'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +26,7 @@ A fórmula Recomendações de produto usa o aprendizado de máquina para analisa
 
 ## Como começar?
 
-Para começar, siga o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a receita do Recommendations de produto em um notebook de Júpiter seguindo o fluxo de trabalho do [notebook para a fórmula](../jupyterlab/create-a-recipe.md) e implementando a fórmula na Experience Platform Data Science Workspace.
+Para começar, siga o tutorial do Adobe Experience Platform Lab (consulte o link Lab abaixo). Este tutorial mostrará como criar a receita do Recommendations de produto em um notebook de Júpiter, seguindo o [notebook para o fluxo de trabalho da receita](../jupyterlab/create-a-recipe.md) e implementando a fórmula no [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Laboratório: Preveja o futuro com a área de trabalho da Data Science](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos do laboratório](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)

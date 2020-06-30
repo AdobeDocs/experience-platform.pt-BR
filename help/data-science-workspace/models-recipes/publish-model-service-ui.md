@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicar um modelo como um serviço (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Se preferir publicar um Modelo usando APIs de aprendizado de máquina, consulte 
 
 ## Pontuação usando um serviço {#access-a-service}
 
-1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a *Service Gallery*. Localize o Serviço que deseja usar e clique em **[!UICONTROL Pontuação]**.
+1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a *[!UICONTROL Service Gallery]*. Localize o Serviço que deseja usar e clique em **[!UICONTROL Pontuação]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Selecione um conjunto de dados de entrada apropriado para a execução de pontuação e clique em **[!UICONTROL Avançar]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -52,4 +52,4 @@ Se preferir publicar um Modelo usando APIs de aprendizado de máquina, consulte 
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da *Service Gallery*. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).
+Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da *[!UICONTROL Service Gallery]*. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).

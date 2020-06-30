@@ -4,57 +4,57 @@ solution: Experience Platform
 title: Criar um conector Salesforce usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '683'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conector Salesforce usando a API de Serviço de Fluxo
+# Criar um [!DNL Salesforce] conector usando a [!DNL Flow Service] API
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma a uma conta Salesforce para coletar dados do CRM.
+Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se conectar [!DNL Platform] a uma [!DNL Salesforce] conta para coletar dados do CRM.
 
-Se você preferir usar a interface do usuário na Experience Platform, o tutorial [da interface do usuário do conector de origem do](../../../ui/create/crm/salesforce.md) Salesforce fornece instruções passo a passo para executar ações semelhantes.
+Se preferir usar a interface do usuário no [!DNL Experience Platform], o tutorial [da interface do usuário do conector de origem do](../../../ui/create/crm/salesforce.md) Salesforce fornece instruções passo a passo para executar ações semelhantes.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): A Plataforma de experiência permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Caixas de proteção](../../../../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito à Plataforma a uma conta do Salesforce usando a API de Serviço de Fluxo.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL Platform] a uma [!DNL Salesforce] conta usando a [!DNL Flow Service] API.
 
 ### Reunir credenciais obrigatórias
 
-Para que o Serviço de Fluxo se conecte ao Salesforce, é necessário fornecer valores para as seguintes propriedades de conexão:
+Para [!DNL Flow Service] se conectar a [!DNL Salesforce], é necessário fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `environmentUrl` | O URL da instância de origem do Salesforce. |
-| `username` | O nome de usuário da conta de usuário do Salesforce. |
-| `password` | A senha da conta de usuário do Salesforce. |
-| `securityToken` | O token de segurança da conta de usuário do Salesforce. |
+| `environmentUrl` | O URL da instância de [!DNL Salesforce] origem. |
+| `username` | O nome de usuário da conta de [!DNL Salesforce] usuário. |
+| `password` | A senha da conta de [!DNL Salesforce] usuário. |
+| `securityToken` | O token de segurança da conta de [!DNL Salesforce] usuário. |
 
 Para obter mais informações sobre como começar, visite [este documento](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)do Salesforce.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos na plataforma Experience, incluindo os pertencentes ao Serviço de Fluxo, são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no [!DNL Experience Platform], incluindo os pertencentes ao [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,13 +64,13 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Pesquisar especificações de conexão
 
-Antes de conectar a Plataforma a uma conta Salesforce, verifique se as especificações de conexão existem para o Salesforce. Se as especificações de conexão não existirem, não será possível estabelecer uma conexão.
+Antes de se conectar [!DNL Platform] a uma [!DNL Salesforce] conta, verifique se as especificações de conexão existem para [!DNL Salesforce]. Se as especificações de conexão não existirem, não será possível estabelecer uma conexão.
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para o Salesforce executando uma solicitação GET e usando parâmetros de query.
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão [!DNL Salesforce] executando uma solicitação GET e usando parâmetros de query.
 
 **Formato da API**
 
-Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="salesforce"` para obter informações especificamente para o Salesforce.
+Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="salesforce"` para obter informações especificamente para [!DNL Salesforce].
 
 ```http
 GET /connectionSpecs
@@ -79,7 +79,7 @@ GET /connectionSpecs?property=name=="salesforce"
 
 **Solicitação**
 
-A solicitação a seguir recupera as especificações de conexão do Salesforce.
+A solicitação a seguir recupera as especificações de conexão para [!DNL Salesforce].
 
 ```shell
 curl -X GET \
@@ -92,7 +92,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna as especificações de conexão do Salesforce, incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
+Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL Salesforce], incluindo seu identificador exclusivo (`id`). Essa ID é necessária na próxima etapa para criar uma conexão básica.
 
 ```json
 {
@@ -145,7 +145,7 @@ Uma resposta bem-sucedida retorna as especificações de conexão do Salesforce,
 
 ## Criar uma conexão básica
 
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por conta Salesforce, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por [!DNL Salesforce] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 Execute a seguinte solicitação POST para criar uma conexão básica.
 
@@ -185,10 +185,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.username` | O nome de usuário associado à sua conta do Salesforce. |
-| `auth.params.password` | A senha associada à sua conta do Salesforce. |
-| `auth.params.securityToken` | O token de segurança associado à sua conta do Salesforce. |
-| `connectionSpec.id` | A especificação de conexão `id` da sua conta Salesforce recuperada na etapa anterior. |
+| `auth.params.username` | O nome de usuário associado à sua [!DNL Salesforce] conta. |
+| `auth.params.password` | A senha associada à sua [!DNL Salesforce] conta. |
+| `auth.params.securityToken` | O token de segurança associado à sua [!DNL Salesforce] conta. |
+| `connectionSpec.id` | A especificação de conexão `id` da sua [!DNL Salesforce] conta recuperada na etapa anterior. |
 
 **Resposta**
 
@@ -203,4 +203,4 @@ Uma resposta bem-sucedida contém o identificador exclusivo (`id`) da conexão b
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica para sua conta do Salesforce usando APIs e uma ID exclusiva foi obtida como parte do corpo da resposta. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar sistemas CRM usando a API](../../explore/crm.md)de Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão básica para sua [!DNL Salesforce] conta usando APIs e uma ID exclusiva foi obtida como parte do corpo da resposta. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar sistemas CRM usando a API](../../explore/crm.md)de Serviço de Fluxo.

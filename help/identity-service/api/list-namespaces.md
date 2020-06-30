@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Lista disponível namespace
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +33,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta inclui uma matriz de objetos, com cada objeto representando uma namespace disponível. Namespaces com um valor &quot;personalizado&quot; de &quot;falso&quot; são namespaces padrão, enquanto aquelas com um valor &quot;personalizado&quot; de &quot;verdadeiro&quot; são namespaces que sua organização criou.
+A resposta inclui uma matriz de objetos, com cada objeto representando uma namespace disponível. Namespaces com um valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL falso]&quot; são namespaces padrão, enquanto aquelas com um valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL verdadeiro]&quot; são namespaces que sua organização criou.
 
 >[!NOTE] Essa resposta foi truncada para espaço.
 

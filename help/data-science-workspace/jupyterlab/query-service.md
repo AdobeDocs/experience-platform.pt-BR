@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Serviço de Query em Jupyter notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Serviço de Query em Jupyter notebook
 
-[!DNL Adobe Experience Platform] permite usar a Linguagem de Query Estruturada (SQL) na Data Science Workspace integrando o Serviço de Query ao JupyterLab como um recurso padrão.
+[!DNL Adobe Experience Platform] permite usar a Linguagem de Query Estruturada (SQL) em [!DNL Data Science Workspace] integrando-se [!DNL Query Service] em [!DNL JupyterLab] um recurso padrão.
 
 Este tutorial demonstra query SQL de amostra para casos de uso comuns para explorar, transformar e analisar [!DNL Adobe Analytics] dados.
 
@@ -22,19 +22,19 @@ Este tutorial demonstra query SQL de amostra para casos de uso comuns para explo
 
 Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
-- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de continuar
+- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de continuar
 
 - Um [!DNL Adobe Analytics] conjunto de dados
 
 - Um entendimento prático dos seguintes conceitos-chave usados neste tutorial:
-   - [Modelo de dados de experiência (XDM) e sistema XDM](../../xdm/home.md)
-   - [Serviço de Query](../../query-service/home.md)
-   - [Sintaxe SQL do Query Service](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## Acesso ao JupyterLab e ao serviço de Query {#access-jupyterlab-and-query-service}
+## Acesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Na Plataforma [de experiência](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** na coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
+1. Em [!DNL Experience Platform](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** na coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
 4. Encontre um [!DNL Adobe Analytics] conjunto de dados para explorar e clique com o botão direito do mouse na listagem. Clique em Dados do **[!UICONTROL Query no Notebook]** para gerar query SQL no notebook vazio.
 
-5. Clique na primeira célula gerada que contém a função `qs_connect()` e execute-a clicando no botão Reproduzir. Essa função cria uma conexão entre a instância do seu notebook e o Serviço de Query.
+5. Clique na primeira célula gerada que contém a função `qs_connect()` e execute-a clicando no botão Reproduzir. Essa função cria uma conexão entre a sua instância do notebook e a do notebook [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -85,13 +85,14 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    - `target_year` : Ano específico a partir do qual se baseiam os dados do público alvo.
    - `target_month` : Mês específico do qual o público alvo é originário.
    - `target_day` : Dia específico do qual os dados do público alvo são originários.
+
    >[!NOTE] É possível alterar esses valores a qualquer momento. Ao fazer isso, certifique-se de executar a célula de variáveis para que as alterações sejam aplicadas.
 
 ## Query de seus dados {#query-your-data}
 
 Insira os seguintes query SQL em células individuais do bloco de notas. Execute um query clicando em sua célula e depois clicando no botão **[!UICONTROL reproduzir]** . Os resultados do query bem-sucedidos ou os registros de erros são exibidos abaixo da célula executada.
 
-Quando um notebook está inativo por um longo período de tempo, a conexão entre o serviço de notebook e o serviço de Query pode falhar. Nesses casos, reinicie o JupyterLab clicando no botão **[!UICONTROL Liga/desliga]** localizado no canto superior direito.
+Quando um notebook está inativo por um longo período de tempo, a conexão entre ele e o notebook pode [!DNL Query Service] quebrar. Nesses casos, reinicie [!DNL JupyterLab] clicando no botão **[!UICONTROL Liga/desliga]** , localizado no canto superior direito.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +120,7 @@ ORDER  BY Hour;
 
 No query acima, o público alvo `_acp_year` na cláusula `WHERE` é definido como o valor de `target_year`. Inclua variáveis em query SQL, contendo-as entre chaves (`{}`).
 
-A primeira linha do query contém a variável opcional `hourly_visitor`. Os resultados do Query serão armazenados nessa variável como um dataframe de Pandas. Armazenar resultados em um dataframe permite visualizar posteriormente os resultados do query usando um pacote Python desejado. Execute o seguinte código Python em uma nova célula para gerar um gráfico de barras:
+A primeira linha do query contém a variável opcional `hourly_visitor`. Os resultados do Query serão armazenados nessa variável como um dataframe de Pandas. Armazenar resultados em um dataframe permite visualizar posteriormente os resultados do query usando um [!DNL Python] pacote desejado. Execute o seguinte [!DNL Python] código em uma nova célula para gerar um gráfico de barras:
 
 ```python
 trace = go.Bar(
@@ -209,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Execute o seguinte código Python para gerar um histograma para o número de eventos por sessão de visita:
+Execute o seguinte [!DNL Python] código para gerar um histograma para o número de eventos por sessão de visita:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +284,4 @@ LIMIT  10;
 
 ## Próximas etapas <!-- omit in toc -->
 
-Este tutorial demonstrou alguns casos de uso do Serviço de Query em notebooks de Júpiter. Siga o tutorial [Analisar seus dados usando Notebooks](./analyze-your-data.md) de Júpiter para ver como operações semelhantes são executadas usando o SDK de Acesso a Dados.
+Este tutorial demonstrou alguns casos de uso de exemplo [!DNL Query Service] para uso em [!DNL Jupyter] notebooks. Siga o tutorial [Analisar seus dados usando Notebooks](./analyze-your-data.md) de Júpiter para ver como operações semelhantes são executadas usando o SDK de Acesso a Dados.

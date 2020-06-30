@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Colaborar no JupyterLab usando Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
 
 
-# Colaborar no JupyterLab usando Git
+# Colaborar em [!DNL JupyterLab] usar [!DNL Git]
 
-O Git é um sistema distribuído de controle de versão para rastrear alterações no código fonte durante o desenvolvimento de software. O Git é pré-instalado no ambiente JupyterLab da Data Science Workspace.
+[!DNL Git] é um sistema distribuído de controle de versão para rastrear alterações no código fonte durante o desenvolvimento de software. O Git é pré-instalado dentro do [!DNL Data Science Workspace JupyterLab] ambiente.
 
 ## Pré-requisitos
 
 >[!NOTE]
 > O servidor Git que você pretende usar precisa estar acessível pela Internet.
 
-O ambiente JupyterLab da Data Science Workspace é um ambiente hospedado e não implantado em seu firewall corporativo, e, portanto, o servidor Git ao qual você se conecta deve estar acessível na Internet pública. Este pode ser um repositório público ou privado no [GitHub](https://github.com/) ou em outra instância de um servidor Git que você mesmo tenha decidido hospedar.
+O [!DNL Data Science Workspace JupyterLab] ambiente é um ambiente hospedado e não é implantado dentro de seu firewall corporativo, e, portanto, o servidor Git ao qual você se conecta deve estar acessível através da Internet pública. Esse repositório pode ser público ou privado no [GitHub](https://github.com/) ou em outra instância de um [!DNL Git] servidor que você mesmo tenha decidido hospedar.
 
-## Conecte o Git ao ambiente Notebooks JupyterLab da Data Science
+## Conecte-se [!DNL Git] ao [!DNL Data Science Workspace JupyterLab Notebooks] ambiente
 
-Start iniciando [!DNL Adobe Experience Platform] e navegando até o ambiente Notebooks [JupyterLabs](https://platform.adobe.com/notebooks/jupyterLab) .
+Start iniciando [!DNL Adobe Experience Platform] e navegando até o [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) ambiente.
 
-No JupyterLab, selecione **[!UICONTROL Arquivo]** e passe o mouse sobre **[!UICONTROL Novo]**. Na lista suspensa que é exibida, selecione **[!UICONTROL Terminal]**.
+Em [!DNL JupyterLab], selecione **[!UICONTROL Arquivo]** e passe o mouse sobre **[!UICONTROL Novo]**. Na lista suspensa que é exibida, selecione **[!UICONTROL Terminal]**.
 
 ![Navegação no JupyterLab](../images/jupyterlab/tutorials/open-terminal.png)
 
@@ -55,4 +55,4 @@ Em seguida, clone o repositório que deseja usar usando o `git clone` comando. C
 
 ## Próximas etapas
 
-Depois de terminar de clonar seu repositório, você pode usar o Git como normalmente usaria em sua máquina local para colaborar com outras pessoas em notebooks. Para obter mais informações sobre o que você pode fazer dentro do JupyterLab, consulte o guia [do usuário do](./overview.md)JupyterLab.
+Depois de terminar de clonar seu repositório, você pode usar o Git como normalmente usaria em sua máquina local para colaborar com outras pessoas em notebooks. Para obter mais informações sobre o que você pode fazer dentro [!DNL JupyterLab], consulte o [!DNL JupyterLab user guide](./overview.md).

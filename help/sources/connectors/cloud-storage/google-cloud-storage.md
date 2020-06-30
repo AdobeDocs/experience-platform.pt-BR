@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector de Armazenamento do Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Conector de Armazenamento do Google Cloud
 
-A plataforma Adobe Experience fornece conectividade nativa para provedores de nuvem como AWS, plataforma Google Cloud e Azure, permitindo que você traga seus dados desses sistemas.
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
-As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de Fontes. A plataforma permite trazer dados do Armazenamento do Google Cloud por lotes.
+As fontes de armazenamentos na nuvem podem inserir seus próprios dados [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de Fontes. [!DNL Platform] permite trazer dados de [!DNL Google Cloud Storage] lotes.
 
-## Configuração de pré-requisito para conectar sua conta de Armazenamento do Google Cloud
+## Configuração de pré-requisito para conectar sua [!DNL Google Cloud Storage] conta
 
-Para se conectar à plataforma, é necessário primeiro habilitar a interoperabilidade para sua conta de Armazenamento da Google Cloud. Para acessar a configuração de interoperabilidade, abra a Plataforma do Google Cloud e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento]** no painel de navegação.
+Para se conectar a [!DNL Platform], é necessário primeiro habilitar a interoperabilidade para sua [!DNL Google Cloud Storage] conta. Para acessar a configuração de interoperabilidade, abra [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento]** no painel de navegação.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-A página **[!UICONTROL Configurações]** é exibida. Aqui, você pode ver informações sobre sua ID de projeto do Google e detalhes sobre sua conta de Armazenamento do Google Cloud. Para acessar as configurações de interoperabilidade, selecione **[!UICONTROL Interoperabilidade]** no cabeçalho superior.
+A página **[!UICONTROL Configurações]** é exibida. Aqui, você pode ver informações relacionadas à ID do seu [!DNL Google] projeto e detalhes sobre sua [!DNL Google Cloud Storage] conta. Para acessar as configurações de interoperabilidade, selecione **[!UICONTROL Interoperabilidade]** no cabeçalho superior.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -34,13 +34,13 @@ Para gerar uma nova ID de chave de acesso e uma chave de acesso secreta para sua
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar sua conta do Armazenamento do Google Cloud à Plataforma.
+Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar sua [!DNL Google Cloud Storage] conta ao [!DNL Platform].
 
-A documentação abaixo fornece informações sobre como conectar o Armazenamento do Google Cloud à plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Google Cloud Storage] a [!DNL Platform] APIs ou à interface do usuário:
 
-## Conectar o Armazenamento do Google Cloud à plataforma
+## Conectar-se [!DNL Google Cloud Storage] a [!DNL Platform]
 
-A documentação abaixo fornece informações sobre como conectar o Armazenamento do Google Cloud à plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Google Cloud Storage] a [!DNL Platform] APIs ou à interface do usuário:
 
 ### Uso de APIs
 

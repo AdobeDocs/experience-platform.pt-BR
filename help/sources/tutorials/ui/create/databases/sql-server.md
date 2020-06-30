@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Criar um conector de origem do Microsoft SQL Server na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 
-# Criar um conector de origem do Microsoft SQL Server na interface do usuário
+# Criar um conector de origem do [!DNL Microsoft] SQL Server na interface do usuário
 
 > [!NOTE]
-> O conector do Microsoft SQL Server está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+> O conector [!DNL Microsoft] SQL Server está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem do Microsoft SQL Server (a seguir denominado &quot;SQL Server&quot;) usando a interface de usuário do Platform.
+Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem do [!DNL Microsoft] SQL Server (a seguir denominado &quot;SQL Server&quot;) usando a interface do [!DNL Platform] usuário.
 
 ## Introdução
 
@@ -32,7 +32,7 @@ Se você já tiver uma conexão básica com o SQL Server, poderá ignorar o rest
 
 ### Reunir credenciais obrigatórias
 
-Para se conectar ao SQL Server no Platform, é necessário fornecer a seguinte propriedade de conexão:
+Para se conectar ao SQL Server em, [!DNL Platform]é necessário fornecer a seguinte propriedade de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -42,25 +42,25 @@ Consulte [este documento](https://docs.microsoft.com/en-us/dotnet/framework/data
 
 ## Conectar sua conta do SQL Server
 
-Depois de coletar as credenciais necessárias, você pode seguir as etapas abaixo para criar uma nova conexão básica de entrada para vincular sua conta do SQL Server à Platform.
+Depois de coletar as credenciais necessárias, você pode seguir as etapas abaixo para criar uma nova conexão básica de entrada para vincular sua conta do SQL Server [!DNL Platform].
 
-Faça logon no <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho *Fontes* . A tela *Catálogo* exibe várias fontes com as quais você pode criar conexões base de entrada e cada fonte mostra o número de conexões base existentes associadas a elas.
+Faça logon no <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes com as quais você pode criar conexões base de entrada e cada fonte mostra o número de conexões base existentes associadas a elas.
 
-Na categoria *Bancos* de Dados, selecione **Microsoft SQL Server** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão básica de entrada, selecione Origem **do** Connect.
+Na categoria *[!UICONTROL Bancos]* de Dados, selecione **[!UICONTROL Microsoft SQL Server]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão básica de entrada, selecione Origem **[!UICONTROL do]** Connect.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-A página *Conectar-se ao Microsoft SQL Server* é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página *[!UICONTROL Conectar-se ao Microsoft SQL Server]* é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Nova conta
 
-Se você estiver usando novas credenciais, selecione **Nova conta**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais do SQL Server à conexão básica. Quando terminar, selecione **Connect** e aguarde algum tempo para a nova conexão básica ser estabelecida.
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais do SQL Server à conexão básica. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão básica ser estabelecida.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta do SQL Server à qual deseja se conectar e, em seguida, selecione **Próximo** para prosseguir.
+Para conectar uma conta existente, selecione a conta do SQL Server à qual deseja se conectar e, em seguida, selecione **[!UICONTROL Próximo]** para prosseguir.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 

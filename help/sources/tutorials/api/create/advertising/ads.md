@@ -4,60 +4,60 @@ solution: Experience Platform
 title: Criar um conector Google AdWords usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
+source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 1%
+source-wordcount: '598'
+ht-degree: 2%
 
 ---
 
 
-# Criar um conector Google AdWords usando a API de Serviço de Fluxo
+# Criar um [!DNL Google AdWords] conector usando a [!DNL Flow Service] API
 
 >[!NOTE]
->O conector Google AdWords está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+>O [!DNL Google AdWords] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Google AdWords.
+Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se conectar [!DNL Experience Platform] a [!DNL Google AdWords].
 
 ## Introdução
 
 Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços Platform.
-* [Caixas de proteção](../../../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao anúncio usando a API de Serviço de Fluxo.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao anúncio usando a [!DNL Flow Service] API.
 
 ### Reunir credenciais obrigatórias
 
-Para que o Serviço de fluxo se conecte com AdWords, é necessário fornecer valores para as seguintes propriedades de conexão:
+Para [!DNL Flow Service] se conectar ao AdWords, é necessário fornecer valores para as seguintes propriedades de conexão:
 
 | **Credencial** | **Descrição** |
 | -------------- | --------------- |
 | ID do cliente | A ID do cliente do cliente da conta AdWords. |
 | Token do desenvolvedor | O token do desenvolvedor associado à conta do gerente. |
-| Atualizar token | O token de atualização obtido do Google para autorizar o acesso ao AdWords. |
-| ID do cliente | A ID do cliente do aplicativo Google usada para adquirir o token de atualização. |
-| Segredo do cliente | O segredo do cliente do aplicativo google usado para adquirir o token de atualização. |
-| ID da especificação da conexão | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para Google AdWords é: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| Atualizar token | O token de atualização obtido [!DNL Google] para autorizar o acesso ao AdWords. |
+| ID do cliente | A ID do cliente do [!DNL Google] aplicativo usado para adquirir o token de atualização. |
+| Segredo do cliente | O segredo do cliente do [!DNL Google] aplicativo usado para adquirir o token de atualização. |
+| ID da especificação da conexão | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Google AdWords] é: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Para obter mais informações sobre esses valores, consulte este documento [do](https://developers.google.com/adwords/api/docs/guides/authentication)Google AdWords.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform, incluindo os pertencentes ao Serviço de Fluxo, são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -67,7 +67,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Criar uma conexão
 
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta do Google AdWords, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por [!DNL Google AdWords] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -111,12 +111,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | A ID do cliente da sua conta AdWords. |
-| `auth.params.developerToken` | O token de desenvolvedor da sua conta AdWords. |
-| `auth.params.refreshToken` | O token de atualização da sua conta AdWords. |
-| `auth.params.clientID` | A ID do cliente da sua conta AdWords. |
-| `auth.params.clientSecret` | O segredo do cliente da sua conta AdWords. |
-| `connectionSpec.id` | A ID de especificação de conexão do Google AdWords: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | A ID do cliente da sua [!DNL AdWords] conta. |
+| `auth.params.developerToken` | O token de desenvolvedor da sua [!DNL AdWords] conta. |
+| `auth.params.refreshToken` | O token de atualização da sua [!DNL AdWords] conta. |
+| `auth.params.clientID` | A ID do cliente da sua [!DNL AdWords] conta. |
+| `auth.params.clientSecret` | O segredo do cliente da sua [!DNL AdWords] conta. |
+| `connectionSpec.id` | A ID da especificação da [!DNL Google AdWords] conexão: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Resposta**
 
@@ -131,4 +131,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão Google AdWords usando a API de Serviço de Fluxo e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar sistemas de publicidade usando a API](../../explore/advertising.md)de Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma [!DNL Google AdWords] conexão usando a [!DNL Flow Service] API e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar sistemas de publicidade usando a API](../../explore/advertising.md)de Serviço de Fluxo.

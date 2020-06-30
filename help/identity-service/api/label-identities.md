@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Rotular um campo como identidade
 topic: api guide
 translation-type: tm+mt
-source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 1%
 
 ---
 
 
 # Rotular um campo como identidade
 
-Os campos que contêm informações de identificação pessoal (PII) podem ser rotulados como campos de identidade. Um valor fornecido em um campo de identidade é interpretado como uma identidade pelo Serviço de identidade. A namespace da identidade é especificada como parte da rotulagem do campo.
+Os campos que contêm informações de identificação pessoal (PII) podem ser rotulados como campos de identidade. Um valor fornecido em um campo de identidade é interpretado como uma identidade por [!DNL Identity Service]. A namespace da identidade é especificada como parte da rotulagem do campo.
 
 Os seguintes critérios devem ser atendidos para que um campo seja rotulado como identidade:
 

@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Criar um conector de origem HDFS Apache na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conector de origem HDFS Apache na interface do usuário
+# Criar um conector de origem [!DNL Apache] HDFS na interface do usuário
 
 >[!NOTE]
->O conector HDFS Apache está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+>O conector [!DNL Apache] HDFS está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-Os conectores de origem fornecem [!DNL Adobe Experience Platform] a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para autenticação de um conector de origem do Apache Hadoop Distributed File System (a seguir denominado &quot;HDFS&quot;) usando a interface do [!DNL Platform] usuário.
+Os conectores de origem fornecem [!DNL Adobe Experience Platform] a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para autenticação de um conector de origem [!DNL Apache Hadoop Distributed File System] (a seguir denominado &quot;HDFS&quot;) usando a interface do [!DNL Platform] usuário.
 
 ## Introdução
 

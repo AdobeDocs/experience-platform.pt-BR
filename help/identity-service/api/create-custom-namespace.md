@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Criar uma namespace personalizada
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 5%
 
 ---
 
 
 # Criação de uma namespace personalizada
 
-Usando a API de Namespace de identidade, você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
+Usando a [!DNL Identity Namespace] API, você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
 
 Para obter recomendações sobre como criar namespaces personalizadas, consulte [a documentação](../troubleshooting-guide.md)de Perguntas frequentes do Serviço de identidade.
 

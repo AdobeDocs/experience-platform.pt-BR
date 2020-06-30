@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Ações de marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
 
 # Ações de marketing
 
-Uma ação de marketing, no contexto do Adobe Experience Platform Data Governance, é uma ação executada por um consumidor de dados da Plataforma de experiência, para a qual há necessidade de verificar violações das políticas de uso de dados.
+Uma ação de marketing, no contexto do Adobe Experience Platform Data Governance, é uma ação que um consumidor de [!DNL Experience Platform] dados toma, para a qual há necessidade de verificar violações das políticas de uso de dados.
 
 Trabalhar com ações de marketing na API exige que você use o `/marketingActions` terminal.
 
@@ -139,7 +142,7 @@ O objeto response contém os detalhes da ação de marketing, incluindo o caminh
 
 ## Criar ou atualizar uma ação de marketing
 
-A API do Serviço de Política permite que você defina suas próprias ações de marketing, bem como atualize as existentes. A criação e atualização são feitas usando uma operação PUT para o nome da ação de marketing.
+A [!DNL Policy Service] API permite que você defina suas próprias ações de marketing, bem como atualize as existentes. A criação e atualização são feitas usando uma operação PUT para o nome da ação de marketing.
 
 **Formato da API**
 
@@ -192,7 +195,7 @@ Se criado com êxito, você receberá um Status HTTP 201 (Criado) e o corpo da r
 
 ## Excluir uma ação de marketing
 
-É possível excluir ações de marketing enviando uma solicitação DELETE para o site `{marketingActionName}` da ação de marketing que você deseja remover.
+É possível excluir ações de marketing enviando uma solicitação de DELETE para o site `{marketingActionName}` da ação de marketing que você deseja remover.
 
 >[!NOTE] Não é possível excluir ações de marketing referenciadas por políticas existentes. Tentar fazer isso resultará em um erro 400 (solicitação incorreta) junto com uma mensagem de erro que inclui a `id` (ou várias IDs) de qualquer política (ou políticas) que contenha uma referência à ação de marketing que você está tentando excluir.
 

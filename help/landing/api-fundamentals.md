@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Fundamentos da API do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
 
 # Fundamentos da API do Adobe Experience Platform
 
-As APIs da plataforma Adobe Experience utilizam várias tecnologias e sintaxes subjacentes que são importantes de entender para gerenciar eficientemente os recursos da plataforma baseados em JSON. Este documento fornece uma breve visão geral dessas tecnologias, além de links para a documentação externa para obter mais informações.
+As APIs de Adobe Experience Platform empregam várias tecnologias e sintaxes subjacentes que são importantes de entender para gerenciar com eficácia [!DNL Platform] os recursos baseados em JSON. Este documento fornece uma breve visão geral dessas tecnologias, além de links para a documentação externa para obter mais informações.
 
 ## Ponteiro JSON {#json-pointer}
 
-JSON Pointer é uma sintaxe de sequência padronizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos em documentos JSON. Um ponteiro JSON é uma string de tokens separados por `/` caracteres, que especifica chaves de objeto ou índices de matriz, e os tokens podem ser uma string ou um número. As strings de ponteiro JSON são usadas em muitas operações PATCH para APIs de plataforma, conforme descrito posteriormente neste documento. Para obter mais informações sobre o ponteiro JSON, consulte a documentação [de visão geral do ponteiro](https://rapidjson.org/md_doc_pointer.html)JSON.
+JSON Pointer é uma sintaxe de sequência padronizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos em documentos JSON. Um ponteiro JSON é uma string de tokens separados por `/` caracteres, que especifica chaves de objeto ou índices de matriz, e os tokens podem ser uma string ou um número. As strings de ponteiro JSON são usadas em muitas operações PATCH para [!DNL Platform] APIs, conforme descrito posteriormente neste documento. Para obter mais informações sobre o ponteiro JSON, consulte a documentação [de visão geral do ponteiro](https://rapidjson.org/md_doc_pointer.html)JSON.
 
 ### Exemplo de objeto de schema JSON
 
@@ -77,12 +80,12 @@ JSON Pointer é uma sintaxe de sequência padronizada ([RFC 6901](https://tools.
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!Note]
->Ao lidar com os `xdm:sourceProperty` e `xdm:destinationProperty` atributos dos descritores do Modelo de Dados de Experiência (XDM), qualquer `properties` chave deve ser **excluída** da string Ponteiro JSON. Consulte o subguia do desenvolvedor da API de registro do Schema em [descritores](../xdm/api/descriptors.md) para obter mais informações.
+>[!NObservação]
+>Ao lidar com os atributos `xdm:sourceProperty` e `xdm:destinationProperty` dos descritores [!DNL Experience Data Model] (XDM), qualquer `properties` chave deve ser **excluída** da string Ponteiro JSON. Consulte o subguia do desenvolvedor da API de registro do Schema em [descritores](../xdm/api/descriptors.md) para obter mais informações.
 
 ## Patch JSON
 
-Há muitas operações PATCH para APIs de plataforma que aceitam objetos Patch JSON para suas cargas de solicitação. O Patch JSON é um formato padronizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para descrever alterações em um documento JSON. Ele permite que você defina atualizações parciais para JSON sem precisar enviar o documento inteiro em um corpo de solicitação.
+Há muitas operações PATCH para [!DNL Platform] APIs que aceitam objetos Patch JSON para suas cargas de solicitação. O Patch JSON é um formato padronizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para descrever alterações em um documento JSON. Ele permite que você defina atualizações parciais para JSON sem precisar enviar o documento inteiro em um corpo de solicitação.
 
 ### Exemplo de objeto de correção JSON
 
@@ -93,7 +96,7 @@ Há muitas operações PATCH para APIs de plataforma que aceitam objetos Patch J
 }
 ```
 
-* `op`: O tipo de operação de patch. Embora o Patch JSON suporte vários tipos de operação diferentes, nem todas as operações PATCH nas APIs de plataforma são compatíveis com cada tipo de operação. Os tipos de operação disponíveis são:
+* `op`: O tipo de operação de patch. Embora o Patch JSON suporte vários tipos de operação diferentes, nem todas as operações PATCH em [!DNL Platform] APIs são compatíveis com cada tipo de operação. Os tipos de operação disponíveis são:
    * `add`
    * `remove`
    * `replace`
@@ -110,4 +113,4 @@ O Schema JSON é um formato usado para descrever e validar a estrutura dos dados
 
 ## Próximas etapas
 
-Este documento apresentou algumas das tecnologias e sintaxes envolvidas com o gerenciamento de recursos baseados em JSON para a plataforma Experience. Para obter mais informações sobre como trabalhar com APIs de plataforma, incluindo práticas recomendadas e respostas a perguntas frequentes, consulte o guia [de solução de problemas da](troubleshooting.md)plataforma.
+Este documento apresentou algumas das tecnologias e sintaxes envolvidas com o gerenciamento de recursos baseados em JSON para [!DNL Experience Platform]. Para obter mais informações sobre como trabalhar com [!DNL Platform] APIs, incluindo práticas recomendadas e respostas a perguntas frequentes, consulte o guia [de solução de problemas da](troubleshooting.md)Platform.

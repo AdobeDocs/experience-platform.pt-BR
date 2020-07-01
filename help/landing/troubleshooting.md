@@ -1,38 +1,38 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Perguntas frequentes e Guia de solução de problemas do Adobe Experience Platform
+title: Guia de solução de problemas e perguntas frequentes do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '1959'
 ht-degree: 2%
 
 ---
 
 
-# Perguntas frequentes da plataforma e guia de solução de problemas
+# [!DNL Platform] Perguntas frequentes e guia de solução de problemas
 
-Este documento fornece respostas a perguntas frequentes sobre a plataforma Adobe Experience, bem como um guia de solução de problemas de alto nível para erros comuns que podem ser encontrados em qualquer API da plataforma Experience. Para obter guias de solução de problemas em serviços individuais da Plataforma, consulte o diretório [de solução de problemas de](#service-troubleshooting-directory) serviço abaixo.
+Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform, bem como um guia de solução de problemas de alto nível para erros comuns que podem ser encontrados em qualquer [!DNL Experience Platform] API. Para obter guias de solução de problemas em [!DNL Platform] serviços individuais, consulte o diretório [de solução de problemas de](#service-troubleshooting-directory) serviço abaixo.
 
 ## Perguntas frequentes {#faq}
 
-Veja a seguir uma lista de respostas para perguntas frequentes sobre a Adobe Experience Platform.
+Veja a seguir uma lista de respostas para perguntas frequentes sobre o Adobe Experience Platform.
 
-## O que são APIs da plataforma Experience? {#what-are-experience-platform-apis}
+## O que são [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-A plataforma Experience oferta várias RESTful APIs que usam solicitações HTTP para acessar os recursos da plataforma. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API em E/S da Adobe.
+[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API em E/S da Adobe.
 
 ## Como formatar uma solicitação de API? {#how-do-i-format-an-api-request}
 
-Os formatos de solicitação variam dependendo da API de plataforma usada. A melhor maneira de aprender como estruturar suas chamadas de API é seguindo os exemplos fornecidos na documentação do serviço de plataforma específico que você está usando.
+Os formatos de solicitação variam dependendo da [!DNL Platform] API que está sendo usada. A melhor maneira de aprender como estruturar suas chamadas de API é seguindo os exemplos fornecidos na documentação do [!DNL Platform] serviço específico que você está usando.
 
 ### Lendo chamadas de exemplo da API
 
-A documentação da plataforma Experience mostra exemplos de chamadas da API de duas maneiras diferentes. Primeiro, a chamada é apresentada em seu formato **de** API, uma representação de modelo mostrando somente a operação (GET, POST, PUT, PATCH, DELETE) e o ponto de extremidade que está sendo usado (por exemplo, `/global/classes`). Alguns modelos também mostram a localização das variáveis para ajudar a ilustrar como uma chamada deve ser formulada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+A documentação para [!DNL Experience Platform] mostra exemplos de chamadas de API de duas maneiras diferentes. Primeiro, a chamada é apresentada em seu formato **de** API, uma representação de modelo mostrando somente a operação (GET, POST, PUT, PATCH, DELETE) e o ponto de extremidade que está sendo usado (por exemplo, `/global/classes`). Alguns modelos também mostram a localização das variáveis para ajudar a ilustrar como uma chamada deve ser formulada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-As chamadas são então mostradas como comandos cURL em uma **solicitação**, o que inclui os cabeçalhos necessários e o &quot;caminho base&quot; completo necessário para interagir com a API com êxito. O caminho base deve ser pré-aberto para todos os pontos finais. Por exemplo, o `/global/classes` endpoint mencionado é `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Você verá o formato da API/padrão de solicitação em toda a documentação e deverá usar o caminho completo mostrado no exemplo de Solicitação ao fazer suas próprias chamadas para APIs de plataforma.
+As chamadas são então mostradas como comandos cURL em uma **solicitação**, o que inclui os cabeçalhos necessários e o &quot;caminho base&quot; completo necessário para interagir com a API com êxito. O caminho base deve ser pré-aberto para todos os pontos finais. Por exemplo, o `/global/classes` endpoint mencionado é `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Você verá o formato da API/padrão de solicitação em toda a documentação e deverá usar o caminho completo mostrado no exemplo de Solicitação ao fazer suas próprias chamadas para APIs da Platform.
 
 ### Exemplo de solicitação de API
 
@@ -84,15 +84,15 @@ A resposta ilustra o que você esperaria receber após uma chamada bem-sucedida 
 }
 ```
 
-Para obter mais informações sobre endpoints específicos nas APIs de plataforma, incluindo cabeçalhos obrigatórios e corpos de solicitação, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
+Para obter mais informações sobre endpoints específicos nas APIs da Platform, incluindo cabeçalhos obrigatórios e corpos de solicitação, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
 
 ## Qual é a minha organização IMS? {#what-is-my-ims-organization}
 
-Uma organização IMS é uma representação da Adobe de um cliente. Todas as soluções licenciadas da Adobe são integradas a essa organização de clientes. Quando uma organização IMS tem direito à plataforma de experiência, ela pode atribuir acesso aos desenvolvedores. A ID de organização IMS (`x-gw-ims-org-id`) representa a organização para a qual uma chamada de API deve ser executada e, portanto, é necessária como um cabeçalho em todas as solicitações de API. Essa ID pode ser encontrada no [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): na guia **Integrações** , navegue até a seção **Visão geral** de qualquer integração específica para localizar a ID em Credenciais **do** cliente. Para obter uma apresentação passo a passo sobre como autenticar na Plataforma, consulte o tutorial [de](../tutorials/authentication.md)autenticação.
+Uma organização IMS é uma representação da Adobe de um cliente. Todas as soluções licenciadas da Adobe são integradas a essa organização de clientes. Quando uma organização IMS tem direito a [!DNL Experience Platform], ela pode atribuir acesso a desenvolvedores. A ID de organização IMS (`x-gw-ims-org-id`) representa a organização para a qual uma chamada de API deve ser executada e, portanto, é necessária como um cabeçalho em todas as solicitações de API. Essa ID pode ser encontrada no [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): na guia **Integrações** , navegue até a seção **Visão geral** de qualquer integração específica para localizar a ID em Credenciais **do** cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](../tutorials/authentication.md)autenticação.
 
 ## Onde posso encontrar minha chave de API? {#where-can-i-find-my-api-key}
 
-Uma chave de API é necessária como um cabeçalho em todas as solicitações de API. Ele pode ser encontrado por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). No console, na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica e você encontrará a chave em Credenciais **** do cliente. Para obter uma apresentação passo a passo sobre como autenticar na Plataforma, consulte o tutorial [de](../tutorials/authentication.md)autenticação.
+Uma chave de API é necessária como um cabeçalho em todas as solicitações de API. Ele pode ser encontrado por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). No console, na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica e você encontrará a chave em Credenciais **** do cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](../tutorials/authentication.md)autenticação.
 
 ## Como faço para obter um token de acesso? {#how-do-i-get-an-access-token}
 
@@ -100,7 +100,7 @@ Tokens de acesso são necessários no cabeçalho de autorização de todas as ch
 
 ## Como usar parâmetros de query? {#how-do-i-user-query-parameters}
 
-Alguns pontos finais da API de plataforma aceitam parâmetros de query para localizar informações específicas e filtrar os resultados retornados na resposta. Os parâmetros de Query são anexados a caminhos de solicitação com um símbolo de ponto de interrogação (`?`), seguido por um ou mais parâmetros de query usando o formato `paramName=paramValue`. Ao combinar vários parâmetros em uma única chamada, você deve usar um E comercial (`&`) para separar os parâmetros individuais. O exemplo a seguir demonstra como uma solicitação que usa vários parâmetros de query é representada na documentação.
+Alguns pontos de extremidade [!DNL Platform] da API aceitam parâmetros de query para localizar informações específicas e filtrar os resultados retornados na resposta. Os parâmetros de Query são anexados a caminhos de solicitação com um símbolo de ponto de interrogação (`?`), seguido por um ou mais parâmetros de query usando o formato `paramName=paramValue`. Ao combinar vários parâmetros em uma única chamada, você deve usar um E comercial (`&`) para separar os parâmetros individuais. O exemplo a seguir demonstra como uma solicitação que usa vários parâmetros de query é representada na documentação.
 
 Exemplos de parâmetros de query usados com frequência incluem:
 
@@ -114,19 +114,19 @@ Para obter informações detalhadas sobre quais parâmetros de query estão disp
 
 ## Como indicar um campo JSON para atualizar em uma solicitação PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-Muitas operações PATCH em APIs de plataforma usam strings de ponteiro [](https://tools.ietf.org/html/rfc6901) JSON para indicar propriedades JSON a serem atualizadas. Normalmente, eles são incluídos nas cargas de solicitação usando o formato Patch [](https://tools.ietf.org/html/rfc6902) JSON. Consulte o guia [de fundamentos da](api-fundamentals.md) API para obter informações detalhadas sobre a sintaxe necessária para essas tecnologias.
+Muitas operações PATCH em [!DNL Platform] APIs usam strings de ponteiro [JSON](https://tools.ietf.org/html/rfc6901) para indicar propriedades JSON a serem atualizadas. Normalmente, eles são incluídos nas cargas de solicitação usando o formato Patch [](https://tools.ietf.org/html/rfc6902) JSON. Consulte o guia [de fundamentos da](api-fundamentals.md) API para obter informações detalhadas sobre a sintaxe necessária para essas tecnologias.
 
-## Posso usar o Postman para fazer chamadas para APIs de plataforma? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Posso usar o Postman para fazer chamadas para [!DNL Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[O Postman](https://www.getpostman.com/) é uma ferramenta útil para visualizar chamadas para RESTful APIs. Esta publicação [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Média descreve como você pode configurar o Postman para realizar automaticamente a autenticação e usá-la para consumir APIs da plataforma Experience.
+[O Postman](https://www.getpostman.com/) é uma ferramenta útil para visualizar chamadas para RESTful APIs. Esta publicação [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Média descreve como você pode configurar o Postman para executar automaticamente a autenticação e usá-la para consumir [!DNL Experience Platform] APIs.
 
-## Quais são os requisitos do sistema para a Plataforma? {#what-are-the-system-requirements-for-platform}
+## Quais são os requisitos do sistema para [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
 Dependendo de se você estiver usando a interface do usuário ou a API, os seguintes requisitos de sistema se aplicam:
 
 **Para operações baseadas na interface do usuário:**
-- Um navegador da Web moderno e padrão. Embora a versão mais recente do Chrome seja recomendada, as principais versões atuais e anteriores do Firefox, do Internet Explorer e do Safari também são compatíveis.
-   - Cada vez que uma nova versão principal é lançada, os start da plataforma suportam a versão mais recente e o suporte para a terceira versão mais recente é descartado.
+- Um navegador da Web moderno e padrão. Embora a versão mais recente do [!DNL Chrome] seja recomendada, as principais versões atuais e anteriores do [!DNL Firefox], [!DNL Internet Explorer]e do Safari também são suportadas.
+   - Cada vez que uma nova versão principal é lançada, [!DNL Platform] os start que suportam a versão mais recente são descartados enquanto o suporte para a terceira versão mais recente é descartado.
 - Todos os navegadores devem ter cookies e JavaScript ativado.
 
 **Para interações de API e desenvolvedor:**
@@ -134,11 +134,11 @@ Dependendo de se você estiver usando a interface do usuário ou a API, os segui
 
 ## Erros e solução de problemas {#errors-and-troubleshooting}
 
-A seguir está uma lista de erros que podem ocorrer ao usar qualquer serviço da plataforma Experience. Para obter guias de solução de problemas em serviços individuais da Plataforma, consulte o diretório [de solução de problemas de](#service-troubleshooting-directory) serviço abaixo.
+A seguir está uma lista de erros que podem ocorrer ao usar qualquer [!DNL Experience Platform] serviço. Para obter guias de solução de problemas em [!DNL Platform] serviços individuais, consulte o diretório [de solução de problemas de](#service-troubleshooting-directory) serviço abaixo.
 
 ## Códigos de status da API {#api-status-codes}
 
-Os seguintes códigos de status podem ser encontrados em qualquer API da plataforma de experiência. Cada uma tem várias causas, pelo que as explicações apresentadas nesta seção são de natureza geral. Para obter mais detalhes sobre erros específicos em serviços de plataforma individuais, consulte o diretório [de solução de problemas de](#service-troubleshooting-directory) serviço abaixo.
+Os seguintes códigos de status podem ser encontrados em qualquer [!DNL Experience Platform] API. Cada uma tem várias causas, pelo que as explicações apresentadas nesta seção são de natureza geral. Para obter mais detalhes sobre erros específicos em [!DNL Platform] serviços individuais, consulte o diretório [de solução de problemas de](#service-troubleshooting-directory) serviço abaixo.
 
 | Código de status | Descrição | Causas possíveis |
 --- | --- | ---
@@ -146,11 +146,11 @@ Os seguintes códigos de status podem ser encontrados em qualquer API da platafo
 | 401 | Falha na autenticação | A solicitação não passou em uma verificação de autenticação. Seu token de acesso pode estar ausente ou ser inválido. Consulte a seção [OAuth token errors](#oauth-token-is-missing) abaixo para obter mais detalhes. |
 | 403 | Proibido | O recurso foi encontrado, mas você não tem as credenciais certas para visualização-lo. |
 | 404 | Não encontrado | Não foi possível localizar o recurso solicitado no servidor. O recurso pode ter sido excluído ou o caminho solicitado foi inserido incorretamente. |
-| 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisar filtrar seus resultados. (Consulte o subguia do desenvolvedor da API do serviço de catálogo sobre como [filtrar dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar novamente sua solicitação e entre em contato com o administrador se o problema persistir. |
+| 500 | Erro interno do servidor | Este é um erro do lado do servidor. Se você estiver fazendo muitas chamadas simultâneas, pode estar atingindo o limite da API e precisar filtrar seus resultados. (Consulte o subguia do guia do desenvolvedor da [!DNL Catalog Service] API sobre [filtragem de dados](../catalog/api/filter-data.md) para saber mais.) Aguarde um momento antes de tentar novamente sua solicitação e entre em contato com o administrador se o problema persistir. |
 
 ## Erros de cabeçalho de solicitação {#request-header-errors}
 
-Todas as chamadas de API na plataforma exigem cabeçalhos de solicitação específicos. Para ver quais cabeçalhos são necessários para serviços individuais, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API. Para localizar os valores dos cabeçalhos de autenticação necessários, consulte o tutorial [](../tutorials/authentication.md)Autenticação. Se algum desses cabeçalhos estiver ausente ou for inválido ao fazer uma chamada de API, os seguintes erros podem ocorrer.
+Todas as chamadas de API em [!DNL Platform] exigem cabeçalhos de solicitação específicos. Para ver quais cabeçalhos são necessários para serviços individuais, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API. Para localizar os valores dos cabeçalhos de autenticação necessários, consulte o tutorial [](../tutorials/authentication.md)Autenticação. Se algum desses cabeçalhos estiver ausente ou for inválido ao fazer uma chamada de API, os seguintes erros podem ocorrer.
 
 ### O token OAuth está ausente {#oauth-token-is-missing}
 
@@ -217,7 +217,7 @@ Esta mensagem de erro é exibida quando um cabeçalho organizacional IMS (`x-gw-
 }
 ```
 
-Essa mensagem de erro é exibida quando o usuário ou a integração de E/S da Adobe (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no cabeçalho) não tem direito a fazer chamadas para APIs da plataforma Experience para a Organização IMS fornecida no `Authorization` `x-gw-ims-org-id` cabeçalho. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no Console [de E/S da](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a ID em Credenciais **do** cliente.
+Essa mensagem de erro é exibida quando a integração de E/S do usuário ou Adobe (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no cabeçalho `Authorization` ) não tem direito a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no `x-gw-ims-org-id` cabeçalho. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no Console [de E/S da](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a ID em Credenciais **do** cliente.
 
 ### Tipo de conteúdo válido não especificado
 
@@ -235,7 +235,7 @@ Esta mensagem de erro é exibida quando uma solicitação POST, PUT ou PATCH tem
 
 ## Diretório de solução de problemas de serviço {#service-troubleshooting-directory}
 
-A seguir está uma lista de guias de solução de problemas e documentação de referência da API para APIs da plataforma Experience. Cada guia de solução de problemas fornece respostas a perguntas frequentes e soluções para problemas específicos aos serviços individuais da plataforma. Os documentos de referência da API fornecem um guia abrangente para todos os pontos de extremidade disponíveis para cada serviço e mostram exemplos de corpos de solicitação, respostas e códigos de erro que você pode receber.
+A seguir está uma lista de guias de solução de problemas e documentação de referência da API para [!DNL Experience Platform] APIs. Cada guia de solução de problemas fornece respostas a perguntas frequentes e soluções para problemas específicos a [!DNL Platform] serviços individuais. Os documentos de referência da API fornecem um guia abrangente para todos os pontos de extremidade disponíveis para cada serviço e mostram exemplos de corpos de solicitação, respostas e códigos de erro que você pode receber.
 
 | Serviço de | Referência da API | Solução de problemas |
 --- | --- | ---

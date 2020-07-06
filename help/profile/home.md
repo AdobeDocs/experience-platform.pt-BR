@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Um dos principais recursos do Perfil do cliente em tempo real é a capacidade de
 
 Ao reunir dados de várias fontes e combiná-los para ver uma visualização completa de cada um de seus clientes individuais, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para obter mais informações sobre como trabalhar com políticas de mesclagem usando a API de Perfil do cliente em tempo real, consulte o guia [de ponto de extremidade de políticas de](api/merge-policies.md)mesclagem. Para trabalhar com políticas de mesclagem usando a interface do usuário Experience Platform, consulte o guia [do usuário das políticas de](ui/merge-policies.md)mesclagem.
 
-## (Alfa) Configurar atributos calculados
+### (Alfa) Configurar atributos calculados
 
 >[!IMPORTANT]
 >A funcionalidade de atributo calculada descrita neste documento está em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
@@ -63,7 +63,7 @@ Os atributos calculados permitem calcular automaticamente o valor dos campos com
 
 ## Componentes em tempo real
 
-Esta seção apresenta os componentes que permitem ao Perfil do cliente em tempo real atualizar e monitorar dados de registro e séries de tempo em tempo real.
+Esta seção apresenta os componentes que permitem ao Perfil de cliente em tempo real atualizar e monitorar dados de registro e de série de tempo em tempo real.
 
 ### Segmentação de fluxo e ingestão
 
@@ -80,7 +80,7 @@ A Platform pode ser configurada para enviar seus dados de registro e série de t
 >[!NObservação]
 >Os dados coletados por meio das soluções da Adobe, incluindo a Analytics Cloud, a Marketing Cloud e a Advertising Cloud, fluem para o Experience Platform e são assimilados ao Perfil.
 
-### Métricas de ingestão de streaming de Perfis
+### Métricas de ingestão de Perfil
 
 Insights de Observabilidade permitem que você exponha métricas principais no Adobe Experience Platform. Além das estatísticas de uso e indicadores de desempenho do Platform para várias funcionalidades do Platform, há métricas específicas relacionadas ao Perfil que permitem obter informações sobre as taxas de solicitação recebidas, taxas de ingestão bem-sucedidas, tamanhos de registro ingeridos e muito mais. Para saber mais, comece lendo a visão geral [do](../observability/home.md)Observability Insights e para obter uma lista completa das métricas de Perfil, consulte a documentação sobre as métricas [](../observability/metrics.md)disponíveis.
 

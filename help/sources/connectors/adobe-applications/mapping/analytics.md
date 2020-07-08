@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Campos de mapeamento do Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '3328'
+ht-degree: 11%
 
 ---
 
 
 # Campos de mapeamento do Analytics
 
-A plataforma Adobe Experience permite que você assimile dados do Adobe Analytics por meio do ADC (Analytics Data Connector). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos do Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
+Adobe Experience Platform permite que você ingira dados do Adobe Analytics por meio do Analytics Data Connector (ADC). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -19,11 +22,13 @@ A plataforma Adobe Experience permite que você assimile dados do Adobe Analytic
 
 Os campos selecionados são mapeados diretamente do Adobe Analytics para o Experience Data Model (XDM).
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
->[!NOTE] Role para a esquerda/direita para visualização do conteúdo completo da tabela.
+>[!NOTE]
+>
+>Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
-| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
 | m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Uma variável personalizada, que pode variar de 1 a 250. Cada organização usará essas eVars personalizadas de forma diferente. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Variáveis de tráfego personalizadas, que podem variar de 1 a 75. |
@@ -102,11 +107,11 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 | videototaltime | media.mediaTimed.totalTimePlayed | Objeto | <!-- MISSING --> | {id (cadeia), valor (número)} |
 | videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | Objeto | O tempo de start da qualidade do vídeo. | {id (cadeia), valor (número)} |
 | videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | Objeto | <!-- MISSING --> | {id (cadeia), valor (número)} |
-| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | Objeto | Contagem de buffer de qualidade de vídeo | {id (cadeia), valor (número)} |
+| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | Objeto | Contagem de buffer de qualidade do vídeo | {id (cadeia), valor (número)} |
 | videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | Objeto | Tempo de buffer de qualidade do vídeo | {id (cadeia), valor (número)} |
-| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Objeto | Contagem de alterações da qualidade do vídeo | {id (cadeia), valor (número)} |
-| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Objeto | Taxa média de bits de qualidade de vídeo | {id (cadeia), valor (número)} |
-| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Objeto | Contagem de erros de qualidade de vídeo | {id (cadeia), valor (número)} |
+| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Objeto | Contagem de alternância de qualidade do vídeo | {id (cadeia), valor (número)} |
+| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Objeto | Taxa média de bits de qualidade do vídeo | {id (cadeia), valor (número)} |
+| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Objeto | Contagem de erros de qualidade do vídeo | {id (cadeia), valor (número)} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | Objeto | <!-- MISSING --> | {id (cadeia), valor (número)} |
 | videoprogress10 | media.mediaTimed.progress10 | Objeto | <!-- MISSING --> | {id (cadeia), valor (número)} |
 | videoprogress25 | media.mediaTimed.progress25 | Objeto | <!-- MISSING --> | {id (cadeia), valor (número)} |
@@ -122,7 +127,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 
 Esses campos têm uma única fonte, mas mapeiam para **várias** localizações XDM.
 
-| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
 | s_resolution | device.screenWidth, device.screenHeight | integer | ID numérica que representa a resolução do monitor. |
 | mobileosversion | ambiente.operatingSystem, ambiente.operatingSystemVersion | string | Versão do sistema operacional móvel. |
@@ -132,11 +137,13 @@ Esses campos têm uma única fonte, mas mapeiam para **várias** localizações 
 
 Para serem gerados no XDM, é necessário transformar campos selecionados provenientes do ADC, exigindo lógica além de uma cópia direta do Adobe Analytics.
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
->[!NOTE] Role para a esquerda/direita para visualização do conteúdo completo da tabela.
+>[!NOTE]
+>
+>Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
-| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ----------- |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variáveis de tráfego personalizadas, que variam de 1 a 75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hieries.hier1 - _experience.analytics.customDimensions.hierarquias.hier5 | Objeto | Usada pelas variáveis de hierarquia. Contém um | lista de valores delimitada. | {values (array), delimitador (string)} |
@@ -159,7 +166,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 | m_product_lista | productListItems[].items | matriz | A lista do produto, como transmitida pela variável products. | {SKU (cadeia), quantidade (número inteiro), priceTotal (número)} |
 | m_ref_type | web.webReferrer.type | string | Uma ID numérica que representa o tipo de referência para a ocorrência. 1 significa que dentro do site, 2 significa outros sites, 3 significa mecanismos de pesquisa, 4 significa disco rígido, 5 significa USENET, 6 significa Digitado/Marcado (sem quem indicou), 7 significa email, 8 significa Sem JavaScript e 9 significa Redes sociais. |
 | m_search_engine | search.searchEngine | string | A ID numérica que representa o mecanismo de pesquisa que indicou o visitante para o site. |
-| post_currency | commerce.order.currencyCode | string | O código de moeda usado durante a transação. |
+| post_currency | commerce.order.currencyCode | string | O código de câmbio que foi usado durante a transação. |
 | post_cust_hit_time_gmt | carimbo de data e hora | string | Isso é usado somente em conjuntos de dados com carimbo de data e hora. Este é o carimbo de data e hora enviado com ele, com base no horário Unix. |
 | post_cust_visid | identityMap | objeto | A ID do visitante do cliente. |
 | post_cust_visid | endUserIDs._experience.aacustomid.Primary | booleano | A ID do visitante do cliente. |
@@ -174,11 +181,11 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 | hitid_low | _id | string | Usado em conjunto com hitid_high para identificar exclusivamente uma ocorrência. |
 | ip | environment.ipV4 | string | O Endereço IP, com base no cabeçalho HTTP da solicitação de imagem. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | booleano | A versão do JavaScript usada. |
-| mcvisid_high + mcvisid_low | identityMap | objeto | A ID do Visitante da Experience Cloud. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | A ID do Visitante da Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.Primary | booleano | A ID do Visitante da Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | A ID do Visitante da Experience Cloud. |
-| mcvisid_low | identityMap | objeto | A ID do Visitante da Experience Cloud. |
+| mcvisid_high + mcvisid_low | identityMap | objeto | A ID do Visitante do Experience Cloud. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | A ID do Visitante do Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.Primary | booleano | A ID do Visitante do Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | A ID do Visitante do Experience Cloud. |
+| mcvisid_low | identityMap | objeto | A ID do Visitante do Experience Cloud. |
 | sdid_high + sdid_low | _experience.público alvo.plementalDataID | string | ID de identificação de ocorrência. O campo sdid_high e sdid_low do Analytics é a ID de dados suplementar usada para unir duas (ou mais) ocorrências recebidas. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Proximidade de beacon do Mobile Services. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | integer | O nome do capítulo do vídeo. |
@@ -190,11 +197,13 @@ Os campos selecionados (conhecidos como &quot;pós-valores&quot;) exigem transfo
 
 Para saber mais sobre como executar essas transformações usando o Serviço de Query, visite a documentação de funções [definidas pela](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
->[!NOTE] Role para a esquerda/direita para visualização do conteúdo completo da tabela.
+>[!NOTE]
+>
+>Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
-| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
 | post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Uma variável personalizada, que pode variar de 1 a 250. Cada organização usará essas eVars personalizadas de forma diferente. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Variáveis de tráfego personalizadas, que podem variar de 1 a 75. |
@@ -226,7 +235,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 | visit_num | _experience.analytics.session.num | integer | Uma variável usada na dimensão Número da visita. Isso start em 1 e aumenta cada vez que um novo start de visita (por usuário). |
 | visit_page_num | _experience.analytics.session.deep | integer | Uma variável usada na dimensão Profundidade de ocorrência. Esse valor aumenta em 1 para cada ocorrência gerada pelo usuário e redefine após cada visita. |
 | visit_quem indicou | _experience.analytics.session.web.web.referrer.URL | string | A primeira quem indicou da visita. |
-| visit_search_page_num | _experience.analytics.session.search.pageDepth | integer | O nome da primeira página da visita. |
+| visit_search_page_num | _experience.analytics.session.search.pageDepth | integer | Nome da primeira página da visita. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variáveis de tráfego personalizadas 1-75. |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hieries.hier1 - _experience.analytics.customDimensions.hierarquias.hier5 | Objeto | Usada pelas variáveis de hierarquia e contém uma lista de valores delimitada. | {values (array), delimitador (string)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lista.lista1.lista[] - _experience.analytics.customDimensions.lista.lista3.lista[] | matriz | Uma lista de valores variáveis. Contém uma lista delimitada de valores personalizados, dependendo da implementação. | {value (string), key (string)} |
@@ -249,7 +258,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 |  | mvvar3_instance | .lista.items[] | Objeto | Lista de valores variáveis. Contém uma lista delimitada de valores personalizados, dependendo da implementação. |
 | cor | device.colorDepth | integer | ID de profundidade de cor, com base no valor da coluna c_color. |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | string | A ID numérica, que representa o tipo de quem indicou da primeira quem indicou do visitante. |
-| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | integer | Carimbo de data e hora da primeira ocorrência do visitante no horário Unix. |
+| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | integer | Carimbo de data e hora, em horário Unix, da primeira ocorrência de um visitante. |
 | geo_country | placeContext.geo.countryCode | string | Abreviação do país de onde o hit veio, com base no IP. |
 | geo_latitude | placeContext.geo._schema.latitude | número | <!-- MISSING --> |
 | geo_longitude | placeContext.geo._schema.longitude | número | <!-- MISSING --> |

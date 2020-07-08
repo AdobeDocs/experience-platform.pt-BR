@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Treinar e avaliar um modelo (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1191'
+ht-degree: 1%
 
 ---
 
@@ -23,8 +26,8 @@ Siga este [tutorial](../../tutorials/authentication.md) para obter autorização
 No tutorial, agora você deve ter os seguintes valores:
 
 - `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.
-- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.
-- `{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.
+- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
+- `{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.
 
 - Link para uma imagem do Docker de um serviço inteligente
 
@@ -34,7 +37,9 @@ Estaremos consumindo as APIs para criar uma Execução de Experimento para trein
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] Os termos &quot;Mecanismo&quot;, &quot;MLInposition&quot;, &quot;MLService&quot;, &quot;Experimento&quot; e &quot;Modelo&quot; são chamados de termos diferentes na interface do usuário. Se você for da interface do usuário, a tabela a seguir mapeará as diferenças.
+>[!NOTE]
+>
+>Os termos &quot;Mecanismo&quot;, &quot;MLInposition&quot;, &quot;MLService&quot;, &quot;Experimento&quot; e &quot;Modelo&quot; são chamados de termos diferentes na interface do usuário. Se você for da interface do usuário, a tabela a seguir mapeará as diferenças.
 > 
 > | Termo da interface do usuário | Termo da API |
 > --- | ---
@@ -62,8 +67,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.\
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.\
 `{JSON_PAYLOAD}`: A configuração da nossa instância MLI. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
@@ -117,7 +122,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] No `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação no `tasks` array. A ID `{ENGINE_ID}` é o Mecanismo que você deseja usar e o `tag` campo é um parâmetro opcional usado para identificar a Instância.
+>[!NOTE]
+>
+>No `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação no `tasks` array. A ID `{ENGINE_ID}` é o Mecanismo que você deseja usar e o `tag` campo é um parâmetro opcional usado para identificar a Instância.
 
 A resposta conterá o `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInentes de modelo com configurações diferentes.
 
@@ -171,9 +178,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.\
 `{JSON_PAYLOAD}`: Objeto de experimento criado. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
@@ -227,9 +234,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.\
 `{JSON_PAYLOAD}`: Dados a serem publicados. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
@@ -315,9 +322,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: A ID correspondente ao Experimento que você deseja público alvo. Isso pode ser encontrado na resposta ao criar seu Experimento.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.\
 `{JSON_PAYLOAD}`: Para criar uma execução de treinamento, é necessário incluir o seguinte no corpo:
 
 ```JSON
@@ -386,8 +393,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: A ID que representa o Experimento.\
 `{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do Experimento.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.
 
 **Resposta**
 
@@ -449,7 +456,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: A ID correspondente à Execução do experimento que você deseja público alvo. Isso pode ser encontrado na resposta ao criar sua Execução de Experimento.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
 
 A resposta representa o Modelo treinado que foi criado.
 
@@ -483,7 +490,7 @@ A resposta representa o Modelo treinado que foi criado.
 
 ### Parar e excluir um Experimento programado
 
-Se você quiser interromper a execução de um Experimento programado antes de seu teste, isso pode ser feito consultando uma solicitação DELETE para o `endTime``{EXPERIMENT_ID}`
+Se você quiser interromper a execução de um Experimento programado antes de seu teste, isso pode ser feito consultando uma solicitação DELETE ao `endTime``{EXPERIMENT_ID}`
 
 **Solicitação**
 
@@ -496,9 +503,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  A ID correspondente ao Experimento.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
 
->[!NOTE] A chamada da API desativará a criação de novas execuções do Experimento. No entanto, não interromperá a execução de Execuções de Experimento já em execução.
+>[!NOTE]
+>
+>A chamada da API desativará a criação de novas execuções do Experimento. No entanto, não interromperá a execução de Execuções de Experimento já em execução.
 
 A seguir está a Resposta notificando que o Experimento foi excluído com êxito.
 

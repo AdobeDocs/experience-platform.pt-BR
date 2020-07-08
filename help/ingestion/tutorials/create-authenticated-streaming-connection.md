@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar uma conexão de streaming autenticada
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 2%
@@ -14,38 +14,40 @@ ht-degree: 2%
 
 # Criação de uma conexão de streaming autenticada
 
-A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como Perfil e identidade do cliente em tempo real, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando tokens de acesso como parte da solicitação POST.
+A coleta de dados autenticada permite que os serviços de Adobe Experience Platform, como o Perfil e a identidade do cliente em tempo real, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando tokens de acesso como parte da solicitação POST.
 
 ## Introdução
 
-O registro de conexão de transmissão contínua é necessário para que os dados de transmissão de start para a Adobe Experience Platform. Ao registrar uma conexão de streaming, é necessário fornecer alguns detalhes principais, como a fonte de dados de streaming.
+O registro da conexão de transmissão contínua é necessário para que os dados de transmissão de start sejam enviados para o Adobe Experience Platform. Ao registrar uma conexão de streaming, é necessário fornecer alguns detalhes principais, como a fonte de dados de streaming.
 
-Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Plataforma.
+Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Platform.
 
-Este tutorial também exige um conhecimento prático de vários serviços da plataforma Adobe Experience. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial também exige um conhecimento prático de vários serviços de Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura normalizada através da qual a Plataforma organiza os dados de experiência.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência.
 - [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de ingestão de streaming.
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **Solicitação**
 
->[!NOTE] Os valores para a lista `providerId` e para a lista `connectionSpec` devem **** ser usados conforme mostrado no exemplo, pois são o que especifica para a API que você está criando uma conexão de streaming para a assimilação de streaming.
+>[!NOTE]
+>
+>Os valores para a lista `providerId` e para a lista `connectionSpec` devem **** ser usados conforme mostrado no exemplo, pois são o que especifica para a API que você está criando uma conexão de streaming para a assimilação de streaming.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -173,7 +177,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Próximas etapas
 
-Agora que você criou uma conexão de streaming autenticada, é possível fazer streaming de séries de tempo ou dados de registro, permitindo a assimilação de dados na Plataforma. Para saber como transmitir dados de séries de tempo para a Plataforma, vá para o tutorial [de dados de séries de tempo de](./streaming-time-series-data.md)streaming. Para saber como transmitir dados de registro em fluxo para a Plataforma, vá para o tutorial [de dados de registro em](./streaming-record-data.md)fluxo contínuo.
+Agora que você criou uma conexão de streaming autenticada, é possível fazer streaming de séries cronológicas ou gravar dados, permitindo a assimilação de dados no Platform. Para saber como transmitir dados de séries de tempo para o Platform, vá para o tutorial [de dados de séries de tempo de](./streaming-time-series-data.md)transmissão. Para saber como transmitir dados de registro para o Platform, vá para o tutorial [de dados de registro de](./streaming-record-data.md)transmissão.
 
 ## Apêndice
 

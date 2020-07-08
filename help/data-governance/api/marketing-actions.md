@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ações de marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 Na solicitação a seguir, observe que a carga `name` na solicitação é a mesma da chamada `{marketingActionName}` da API. Ao contrário `id` de uma política que é somente leitura e gerada pelo sistema, a criação de uma ação de marketing exige que você forneça o nome _pretendido_ da ação de marketing à medida que ela é criada.
 
->[!NOTE] A falha ao fornecer o `{marketingActionName}` na chamada resultará em um erro 405 (método não permitido), pois você não tem permissão para executar uma PUT diretamente no `/marketingActions/custom` terminal. Além disso, se a carga `name` não corresponder à `{marketingActionName}` no caminho, você receberá um erro 400 (solicitação incorreta).
+>[!NOTE]
+>
+>A falha ao fornecer o `{marketingActionName}` na chamada resultará em um erro 405 (método não permitido), pois você não tem permissão para executar uma PUT diretamente no `/marketingActions/custom` terminal. Além disso, se a carga `name` não corresponder à `{marketingActionName}` no caminho, você receberá um erro 400 (solicitação incorreta).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ Se criado com êxito, você receberá um Status HTTP 201 (Criado) e o corpo da r
 
 É possível excluir ações de marketing enviando uma solicitação de DELETE para o site `{marketingActionName}` da ação de marketing que você deseja remover.
 
->[!NOTE] Não é possível excluir ações de marketing referenciadas por políticas existentes. Tentar fazer isso resultará em um erro 400 (solicitação incorreta) junto com uma mensagem de erro que inclui a `id` (ou várias IDs) de qualquer política (ou políticas) que contenha uma referência à ação de marketing que você está tentando excluir.
+>[!NOTE]
+>
+>Não é possível excluir ações de marketing referenciadas por políticas existentes. Tentar fazer isso resultará em um erro 400 (solicitação incorreta) junto com uma mensagem de erro que inclui a `id` (ou várias IDs) de qualquer política (ou políticas) que contenha uma referência à ação de marketing que você está tentando excluir.
 
 **Formato da API**
 

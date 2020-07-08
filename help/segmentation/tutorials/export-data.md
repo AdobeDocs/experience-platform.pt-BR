@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Exportar dados usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -20,26 +20,28 @@ Além de criar um trabalho de exportação, você também pode acessar os dados 
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários serviços da plataforma Adobe Experience envolvidos no trabalho com dados do Perfil. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer um entendimento prático dos vários serviços de Adobe Experience Platform envolvidos no trabalho com dados de Perfis. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
-- [Serviço](../home.md)de segmentação da plataforma Adobe Experience: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Serviço](../home.md)de segmentação de Adobe Experience Platform: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Cabeçalhos obrigatórios
 
-Este tutorial também exige que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito às APIs da plataforma. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Este tutorial também exige que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito às APIs da Platform. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. As solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. As solicitações às APIs da Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
 
@@ -47,7 +49,7 @@ Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
 
 ## Criar um trabalho de exportação
 
-Exportar dados de Perfil requer primeiro criar um conjunto de dados no qual os dados serão exportados e, em seguida, iniciar um novo trabalho de exportação. Ambas as etapas podem ser realizadas usando APIs da plataforma de experiência, com a primeira usando a API de serviço de catálogo e a última usando a API de Perfil do cliente em tempo real. As instruções detalhadas para completar cada etapa são descritas nas seções a seguir.
+Exportar dados de Perfil requer primeiro criar um conjunto de dados no qual os dados serão exportados e, em seguida, iniciar um novo trabalho de exportação. Ambas as etapas podem ser realizadas usando APIs de Experience Platform, com a primeira usando a API de serviço de catálogo e a última usando a API de Perfil do cliente em tempo real. As instruções detalhadas para completar cada etapa são descritas nas seções a seguir.
 
 - [Criar um conjunto de dados](#create-a-target-dataset) de público alvo - Crie um conjunto de dados para manter os dados exportados.
 - [Iniciar uma nova tarefa](#initiate-export-job) de exportação - Preencha o conjunto de dados com dados de Perfil individual do XDM.
@@ -58,7 +60,7 @@ Ao exportar dados do Perfil, um conjunto de dados do público alvo deve ser cria
 
 Uma das principais considerações é o schema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar um segmento, o conjunto de dados deve ser baseado no Schema de União de Perfil individual (`https://ns.adobe.com/xdm/context/profile__union`) do XDM. Um schema união é um schema gerado pelo sistema e somente leitura que agregação os campos de schemas que compartilham a mesma classe, neste caso, que é a classe de Perfil Individual XDM. Para obter mais informações sobre schemas de visualização de união, consulte a seção Perfil do cliente em tempo [real do guia](../../xdm/schema/composition.md#union)do desenvolvedor do Registro de Schemas.
 
-As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faz referência ao Schema de União de Perfil individual XDM usando a API de catálogo. Você também pode usar a interface do usuário da plataforma Adobe Experience para criar um conjunto de dados que faça referência ao schema da união. As etapas para usar a interface do usuário são descritas [neste tutorial da interface do usuário para exportar segmentos](./create-dataset-export-segment.md) , mas também são aplicáveis aqui. Depois de concluído, você pode retornar a este tutorial para prosseguir com as etapas para [iniciar um novo trabalho](#initiate-export-job)de exportação.
+As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faz referência ao Schema de União de Perfil individual XDM usando a API de catálogo. Você também pode usar a interface do usuário do Adobe Experience Platform para criar um conjunto de dados que faça referência ao schema da união. As etapas para usar a interface do usuário são descritas [neste tutorial da interface do usuário para exportar segmentos](./create-dataset-export-segment.md) , mas também são aplicáveis aqui. Depois de concluído, você pode retornar a este tutorial para prosseguir com as etapas para [iniciar um novo trabalho](#initiate-export-job)de exportação.
 
 Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa para [iniciar um novo trabalho](#initiate-export-job)de exportação.
 
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **(Obrigatório)** O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
 | `evaluationInfo.segmentation` | *(Opcional)* Um valor booliano que, se não fornecido, assumirá o padrão `false`. Um valor de `true` indica que a segmentação precisa ser feita no trabalho de exportação. |
 
->[!NOTE] Para exportar apenas dados de Perfil, e não incluir dados relacionados do ExperienceEvent, remova o objeto &quot;additionalFields&quot; da solicitação.
+>[!NOTE]
+>
+>Para exportar apenas dados de Perfil, e não incluir dados relacionados do ExperienceEvent, remova o objeto &quot;additionalFields&quot; da solicitação.
 
 **Resposta**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## Cancelar uma tarefa de exportação
 
-A plataforma de experiência permite cancelar um trabalho de exportação existente, que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, você pode executar uma solicitação DELETE para o `/export/jobs` ponto final e incluir o trabalho `id` de exportação que deseja cancelar ao caminho da solicitação.
+O Experience Platform permite cancelar um trabalho de exportação existente, o que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, você pode executar uma solicitação DELETE para o `/export/jobs` ponto de extremidade e incluir o trabalho `id` de exportação que deseja cancelar no caminho da solicitação.
 
 **Formato da API**
 
@@ -558,10 +562,10 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 204 (Sem conte
 
 ## Próximas etapas
 
-Quando a exportação for concluída com êxito, seus dados estarão disponíveis no Data Lake na Experience Platform. Em seguida, você pode usar a API [de acesso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dados para acessar os dados usando a API `batchId` associada à exportação. Dependendo do tamanho da exportação, os dados podem estar em pedaços e o lote pode consistir em vários arquivos.
+Quando a exportação for concluída com êxito, seus dados estarão disponíveis no Data Lake, no Experience Platform. Em seguida, você pode usar a API [de acesso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dados para acessar os dados usando a API `batchId` associada à exportação. Dependendo do tamanho da exportação, os dados podem estar em pedaços e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar a API de acesso a dados para acessar e baixar arquivos em lote, siga o tutorial [de acesso a](../../data-access/tutorials/dataset-data.md)dados.
 
-Você também pode acessar os dados exportados com êxito do Perfil do cliente em tempo real usando o Serviço de Query da plataforma Adobe Experience. Usando a interface do usuário ou RESTful API, o Serviço de Query permite que você grave, valide e execute query em dados dentro do Data Lake.
+Você também pode acessar os dados exportados com êxito do Perfil do cliente em tempo real usando o Serviço de Query do Adobe Experience Platform. Usando a interface do usuário ou RESTful API, o Serviço de Query permite que você grave, valide e execute query em dados dentro do Data Lake.
 
 Para obter mais informações sobre como query dados de audiência, consulte a documentação [do serviço de](../../query-service/home.md)Query.

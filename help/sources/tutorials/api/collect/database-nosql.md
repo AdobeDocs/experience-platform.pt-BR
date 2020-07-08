@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Coletar dados de um banco de dados de terceiros por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 1%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | A ID do conjunto de dados do público alvo. |
 | `connectionSpec.id` | A ID de especificação de conexão do banco de dados de terceiros. |
 
->[!NOTE] Ao criar uma conexão de público alvo, certifique-se de usar o valor de conexão base do conjunto de dados para a conexão básica `id` em vez da conexão base do conector de origem de terceiros.
+>[!NOTE]
+>
+>Ao criar uma conexão de público alvo, certifique-se de usar o valor de conexão base do conjunto de dados para a conexão básica `id` em vez da conexão base do conector de origem de terceiros.
 
 **Resposta**
 

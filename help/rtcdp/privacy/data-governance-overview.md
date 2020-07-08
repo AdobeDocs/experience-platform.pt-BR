@@ -4,7 +4,7 @@ seo-title: Controle de dados na Platform de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 1%
@@ -34,7 +34,9 @@ Para obter informações detalhadas sobre como trabalhar com rótulos de uso de 
 
 É possível definir restrições de uso de dados em um destino definindo casos de uso de marketing (também chamados de ações de marketing) para esse destino. Um caso de uso de marketing para um destino indica a intenção dos dados que serão exportados para esse destino.
 
->[!NOTE] Para obter mais informações sobre ações de marketing e seu uso em políticas de uso de dados, consulte a visão geral [das políticas de uso de](../../data-governance/policies/overview.md) dados na documentação do Experience Platform.
+>[!NOTE]
+>
+>Para obter mais informações sobre ações de marketing e seu uso em políticas de uso de dados, consulte a visão geral [das políticas de uso de](../../data-governance/policies/overview.md) dados na documentação do Experience Platform.
 
 A definição de casos de uso de marketing em destinos permite garantir que quaisquer perfis ou segmentos enviados para esses destinos sejam compatíveis com as políticas de uso de dados. Portanto, você deve adicionar casos de uso de marketing apropriados aos seus destinos com base nas necessidades de sua organização para aplicar restrições de política à ativação.
 
@@ -63,7 +65,9 @@ Quando um segmento é ativado pela primeira vez, o Serviço de Política DULE ve
 * Os rótulos de uso de dados aplicados a campos e conjuntos de dados dentro do segmento a ser ativado.
 * A finalidade de comercialização do destino.
 
->[!NOTE] Se houver rótulos de uso de dados que foram aplicados somente a determinados campos em um conjunto de dados (em vez de todo o conjunto de dados), a imposição desses rótulos de nível de campo na ativação ocorrerá somente sob as seguintes condições:
+>[!NOTE]
+>
+>Se houver rótulos de uso de dados que foram aplicados somente a determinados campos em um conjunto de dados (em vez de todo o conjunto de dados), a imposição desses rótulos de nível de campo na ativação ocorrerá somente sob as seguintes condições:
 >* Os campos são usados na definição do segmento.
 >* Os campos são configurados como atributos projetados para o destino do público alvo.
 

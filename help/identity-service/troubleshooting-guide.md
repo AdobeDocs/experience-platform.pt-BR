@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia de solução de problemas do Serviço de identificação do Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -56,7 +56,7 @@ Campos como CEP e endereços IP não devem ser rotulados como identidades para i
 
 ## Por que meus campos de identidade não estão vinculando da maneira que eu espero?
 
-Usando o [`/cluster/members` endpoint](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível visualização das identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre como [fornecer dados XDM ao Serviço](./home.md) de identidade na visão geral do Serviço de identidade para obter mais informações.
+Usando o [`/cluster/members` endpoint](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível visualização das identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre como [fornecer dados XDM ao serviço](./home.md) de identidade na visão geral do serviço de identidade para obter mais informações.
 
 ## O que é uma namespace de identidade?
 
@@ -120,7 +120,9 @@ Se você estiver enviando valores de PII com hash para o Serviço de identidade,
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
->[!NOTE] An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
+>[!NOTE]
+>
+>An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
 
 Write|XDM identity field|`identityMap`
 ---|---|---

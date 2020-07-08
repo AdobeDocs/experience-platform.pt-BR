@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Atualizar uma caixa de proteção
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
 
 Você pode atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação PATCH que inclui os da caixa de proteção `name` no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
 
->[!NOTE] Atualmente, apenas a propriedade de uma caixa de proteção pode ser atualizada. `title`
+>[!NOTE]
+>
+>Atualmente, apenas a propriedade de uma caixa de proteção pode ser atualizada. `title`
 
 **Formato da API**
 

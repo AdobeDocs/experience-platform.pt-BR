@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 2%
 
 ---
 
@@ -193,7 +196,9 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.cancel` para [cancelar o query](#cancel-a-query)criado.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.cancel` para [cancelar o query](#cancel-a-query)criado.
 
 ### Recuperar um query por ID
 
@@ -262,7 +267,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.cancel` para [cancelar o query](#cancel-a-query)criado.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.cancel` para [cancelar o query](#cancel-a-query)criado.
 
 ### Cancelar um query
 

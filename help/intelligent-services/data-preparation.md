@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 1%
@@ -82,7 +82,9 @@ Esse campo representa a data e hora em que o evento ocorreu. Esse valor deve ser
 
 #### xdm:canal {#channel}
 
->[!NOTE] Este campo é obrigatório somente ao usar a Atribuição AI.
+>[!NOTE]
+>
+>Este campo é obrigatório somente ao usar a Atribuição AI.
 
 Este campo representa o canal de marketing relacionado ao ExperienceEvent. O campo inclui informações sobre o tipo de canal, o tipo de mídia e o tipo de local.
 
@@ -245,7 +247,9 @@ Se você tiver uma [!DNL Adobe Experience Platform] subscrição e quiser mapear
 
 ### Uso do Adobe Experience Platform
 
->[!NOTE] As etapas abaixo exigem uma subscrição. Se você não tiver acesso ao Platform, pule para a [próxima seção de etapas](#next-steps) .
+>[!NOTE]
+>
+>As etapas abaixo exigem uma subscrição. Se você não tiver acesso ao Platform, pule para a [próxima seção de etapas](#next-steps) .
 
 Esta seção descreve o fluxo de trabalho para mapear e assimilar dados no Experience Platform para uso em Serviços inteligentes, incluindo links para tutoriais para etapas detalhadas.
 
@@ -256,7 +260,9 @@ Quando estiver pronto para o start preparando seus dados para ingestão, a prime
 * [Criar um schema na interface do usuário](../xdm/tutorials/create-schema-ui.md)
 * [Criar um schema na API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] Os tutoriais acima seguem um fluxo de trabalho genérico para criar um schema. Ao escolher uma classe para o schema, você deve usar a classe **** XDM ExperienceEvent. Depois que essa classe for escolhida, você poderá adicionar a mistura CEE ao schema.
+>[!IMPORTANT]
+>
+>Os tutoriais acima seguem um fluxo de trabalho genérico para criar um schema. Ao escolher uma classe para o schema, você deve usar a classe **** XDM ExperienceEvent. Depois que essa classe for escolhida, você poderá adicionar a mistura CEE ao schema.
 
 Depois de adicionar o mixin CEE ao schema, você pode adicionar outras combinações, conforme necessário, para campos adicionais em seus dados.
 
@@ -271,7 +277,9 @@ Após a criação do conjunto de dados, é possível encontrá-lo na interface d
 
 #### Adicionar uma tag de namespace de identidade primária ao conjunto de dados
 
->[!NOTE] As versões futuras dos Serviços inteligentes integrarão o Serviço [de identificação de](../identity-service/home.md) Adobe Experience Platform nos recursos de identificação do cliente. Assim, as etapas descritas abaixo estão sujeitas a alterações.
+>[!NOTE]
+>
+>As versões futuras dos Serviços inteligentes integrarão o Serviço [de identificação de](../identity-service/home.md) Adobe Experience Platform nos recursos de identificação do cliente. Assim, as etapas descritas abaixo estão sujeitas a alterações.
 
 Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação PATCH para a API do serviço de catálogo.
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Para obter mais informações sobre como trabalhar com namespaces de identidade no Platform, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
+>[!NOTE]
+>
+>Para obter mais informações sobre como trabalhar com namespaces de identidade no Platform, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
 
 **Resposta**
 

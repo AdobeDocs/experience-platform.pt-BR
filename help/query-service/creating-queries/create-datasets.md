@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Gerar conjuntos de dados a partir dos resultados do query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 0%
 
 ---
 
 
 # Gerar conjuntos de dados a partir dos resultados do query
 
-O verdadeiro poder do Serviço de Query é revelado quando os query são usados para gerar conjuntos de dados no lago de dados para serem usados como entrada em mais query ou em outros serviços, como a Data Science Workspace, o Perfil do cliente em tempo real ou a área de trabalho da Análise.
+O verdadeiro poder do Serviço de Query é revelado quando os query são usados para gerar conjuntos de dados no lago de dados para serem usados como entrada em mais query ou em outros serviços, como Data Science Workspace, Perfil de cliente em tempo real ou Analysis Workspace.
 
 O Serviço de Query permite a criação de conjuntos de dados da interface do usuário. Siga estas etapas:
 
 1. Grave seu query usando um cliente conectado e valide a saída.
-2. Faça logon na interface do usuário da plataforma e vá para Query.
+2. Faça logon na interface do usuário do Platform e vá para Query.
 3. Encontre seu query na lista e passe o mouse sobre a linha.
 4. Clique em **Criar conjunto de dados**. ![Imagem](../images/queries/create-datasets/click-create-dataset.png)
 5. Insira um nome de conjunto de dados, anexado à sua ID LDAP (não precisa ser exclusivo ou seguro para SQL); o sistema gera um &quot;nome de tabela&quot; com base no nome fornecido aqui).
@@ -25,7 +28,9 @@ O Serviço de Query permite a criação de conjuntos de dados da interface do us
 
 Depois que um conjunto de dados é criado, ele pode ser acessado como qualquer outro conjunto de dados no lago de dados e usado para diversos casos de uso.
 
->[!NOTE] Em uma implementação ativa, você deve aplicar rótulos de controle de dados após a criação do conjunto de dados.
+>[!NOTE]
+>
+>Em uma implementação ativa, você deve aplicar rótulos de controle de dados após a criação do conjunto de dados.
 
 ## Gerar conjuntos de dados com um schema do Modelo de dados de experiência predefinido
 

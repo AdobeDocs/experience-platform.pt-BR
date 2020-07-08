@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Configuração de uma instância do AI do cliente
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 0%
 
 ---
 
@@ -17,11 +20,11 @@ Os Serviços inteligentes fornecem IA do cliente como um serviço Adobe Sensei s
 
 ## Configurar sua instância {#set-up-your-instance}
 
-Na interface do usuário da plataforma, clique **[!UICONTROL Services]** no painel de navegação esquerdo. O **[!UICONTROL Services]** navegador é exibido e exibe todos os serviços disponíveis. No container para API do cliente, clique em **[!UICONTROL Open]**.
+Na interface do usuário do Platform, clique em **[!UICONTROL Serviços]** no painel de navegação esquerdo. O navegador **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No container para API do cliente, clique em **[!UICONTROL Abrir]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-A tela *Customer AI* (AI do cliente) exibe todas as instâncias existentes do Customer AI. Clique em **[!UICONTROL Create instance]**.
+A tela *Customer AI* (AI do cliente) exibe todas as instâncias existentes do Customer AI. Clique em **[!UICONTROL Criar instância]**.
 
 ![](../images/user-guide/dashboard.png)
 
@@ -37,7 +40,7 @@ Abaixo estão informações importantes sobre valores que devem ser fornecidos �
 
 * Por padrão, as pontuações de propensão são geradas para todos os perfis, a menos que uma população qualificada seja especificada. Você pode especificar uma população qualificada definindo condições para incluir ou excluir perfis com base em eventos.
 
-Forneça os valores necessários e clique em **[!UICONTROL Next]**.
+Forneça os valores necessários e clique em **[!UICONTROL Avançar]**.
 
 ![](../images/user-guide/setup.png)
 
@@ -45,13 +48,13 @@ Forneça os valores necessários e clique em **[!UICONTROL Next]**.
 
 A etapa *Definir meta* é exibida e fornece um ambiente interativo para que você defina visualmente uma meta. Uma meta é composta de um ou mais eventos, nos quais cada ocorrência de evento é baseada na condição que contém. O objetivo de uma instância da API do cliente é determinar a probabilidade de atingir sua meta dentro de um determinado intervalo de tempo.
 
-Clique **[!UICONTROL Enter Field Name]** e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor do público alvo para concluir o evento. É possível configurar eventos adicionais clicando em **[!UICONTROL Add event]**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **[!UICONTROL Next]**.
+Clique em **[!UICONTROL Inserir nome]** do campo e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor do público alvo para concluir o evento. eventos adicionais podem ser configurados clicando em **[!UICONTROL Adicionar evento]**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **[!UICONTROL Avançar]**.
 
 ![](../images/user-guide/goal.png)
 
 ### Configurar um agendamento *(opcional)* {#configure-a-schedule}
 
-A etapa *avançada* é exibida. Esta etapa opcional permite configurar uma programação para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou clicar **[!UICONTROL Finish]** se nada for necessário.
+A etapa *avançada* é exibida. Esta etapa opcional permite configurar uma programação para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou clicar em **[!UICONTROL Concluir]** se nada for necessário.
 
 Configure um agendamento de pontuação configurando a Frequência *de* Pontuação. As execuções de previsão automatizadas podem ser programadas para serem executadas semanalmente ou mensalmente.
 
@@ -59,17 +62,19 @@ Configure um agendamento de pontuação configurando a Frequência *de* Pontuaç
 
 Abaixo da configuração da programação, você pode definir exclusões de previsão para impedir que eventos que atendem a determinadas condições sejam avaliados ao gerar pontuações. Este recurso pode ser usado para filtrar entradas de dados irrelevantes.
 
-Para excluir determinados eventos, clique **[!UICONTROL Add exclusion]** e defina o evento da mesma forma que a meta é definida. Para remover uma exclusão, clique nas elipses (**[!UICONTROL ...]**) na parte superior direita do container do evento e clique em **[!UICONTROL Remove Container]**.
+Para excluir determinados eventos, clique em **[!UICONTROL Adicionar exclusão]** e defina o evento da mesma forma que a meta é definida. Para remover uma exclusão, clique nas elipses (**[!UICONTROL ...]**) na parte superior direita do container do evento e clique em **[!UICONTROL Remover Container]**.
 
 ![](../images/user-guide/exclusion.png)
 
-Exclua eventos conforme necessário e clique em **[!UICONTROL Finish]** para criar a instância.
+Exclua eventos conforme necessário e clique em **[!UICONTROL Concluir]** para criar a instância.
 
 ![](../images/user-guide/advanced.png)
 
 Se a instância for criada com êxito, uma execução de previsão será acionada imediatamente e as execuções subsequentes serão executadas de acordo com a programação definida.
 
->[!NOTE] Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
+>[!NOTE]
+>
+>Dependendo do tamanho dos dados de entrada, as execuções de previsão podem levar até 24 horas para serem concluídas.
 
 Ao seguir esta seção, você configurou uma instância do AI do cliente e uma execução de previsão foi executada. Após a conclusão bem-sucedida da execução, insights pontuados preenchem automaticamente perfis com pontuações previstas. Aguarde até 24 horas antes de continuar com a próxima seção deste tutorial.
 

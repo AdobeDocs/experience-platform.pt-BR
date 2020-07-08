@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar um conjunto de dados
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 Para criar um conjunto de dados usando a API de catálogo, é necessário saber o `$id` valor do schema do Modelo de dados de experiência (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do schema, você pode criar um conjunto de dados, fazendo uma solicitação POST para o `/datasets` ponto final na API do catálogo.
 
->[!NOTE] Este documento só aborda como criar um objeto de conjunto de dados no Catálogo. Para obter as etapas completas sobre como criar, preencher e monitorar um conjunto de dados, consulte o [tutorial](../datasets/create.md)a seguir.
+>[!NOTE]
+>
+>Este documento só aborda como criar um objeto de conjunto de dados no Catálogo. Para obter as etapas completas sobre como criar, preencher e monitorar um conjunto de dados, consulte o [tutorial](../datasets/create.md)a seguir.
 
 **Formato da API**
 
@@ -52,7 +57,9 @@ curl -X POST \
 | `name` | O nome do conjunto de dados a ser criado. |
 | `schemaRef.id` | O `$id` valor de URI para o schema XDM no qual o conjunto de dados será baseado. |
 
->[!NOTE] Este exemplo usa o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) para sua `containerFormat` propriedade. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia [do desenvolvedor de ingestão em](../../ingestion/batch-ingestion/api-overview.md)lote.
+>[!NOTE]
+>
+>Este exemplo usa o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) para sua `containerFormat` propriedade. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia [do desenvolvedor de ingestão em](../../ingestion/batch-ingestion/api-overview.md)lote.
 
 **Resposta**
 

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar uma caixa de proteção
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
@@ -41,7 +44,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O identificador que será usado para acessar a caixa de proteção em solicitações futuras. Esse valor deve ser exclusivo e a prática recomendada é torná-lo o mais descritivo possível. Não pode conter espaços nem letras maiúsculas. |
-| `title` | Um nome legível para humanos usado para fins de exibição na interface do usuário da plataforma. |
+| `title` | Um nome legível para humanos usado para fins de exibição na interface do usuário do Platform. |
 | `type` | O tipo de caixa de proteção a ser criada. Atualmente, somente as caixas de proteção do tipo &quot;desenvolvimento&quot; podem ser criadas por uma organização. |
 
 **Resposta**
@@ -58,4 +61,6 @@ Uma resposta bem-sucedida retorna os detalhes da caixa de proteção recém-cria
 }
 ```
 
->[!NOTE] As caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que elas `state` se tornarão &quot;ativas&quot; ou &quot;com falha&quot;.
+>[!NOTE]
+>
+>As caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que elas `state` se tornarão &quot;ativas&quot; ou &quot;com falha&quot;.

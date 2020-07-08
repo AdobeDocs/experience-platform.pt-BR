@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Acessar pontuações no AI de atribuição
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Além disso, para acessar as pontuações da Atribuição AI, é necessário ter
 
 ## Find your dataset ID {#dataset-id}
 
-Na instância de serviço para insights de AI de atribuição, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Access scores]**.
+Em sua instância de serviço para insights de AI de atribuição, clique na lista suspensa *Mais ações* na navegação superior direita e selecione Pontuações **[!UICONTROL de]** acesso.
 
 ![mais ações](./images/download-scores/more-actions.png)
 
@@ -220,7 +223,9 @@ Copie o `href` valor para qualquer objeto de arquivo na `data` matriz e prossiga
 
 Para baixar os dados do arquivo, faça uma solicitação GET para o `"href"` valor copiado na etapa anterior para [recuperar os arquivos](#retrieving-your-files).
 
->[!NOTE] Se você estiver fazendo essa solicitação diretamente na linha de comando, talvez seja solicitado que você adicione uma saída após os cabeçalhos da solicitação. O exemplo de solicitação a seguir usa `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Se você estiver fazendo essa solicitação diretamente na linha de comando, talvez seja solicitado que você adicione uma saída após os cabeçalhos da solicitação. O exemplo de solicitação a seguir usa `--output {FILENAME.FILETYPE}`.
 
 **Formato da API**
 
@@ -244,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação GET.
+>[!TIP]
+>
+>Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação GET.
 
 **Resposta**
 
@@ -258,7 +265,9 @@ Este documento descreveu as etapas necessárias para baixar as pontuações da A
 
 ## Acessar pontuações usando Floco de Neve
 
->[!IMPORTANT] Entre em contato com attributionai-support@adobe.com para obter mais detalhes sobre como acessar as pontuações usando o SnowFlake.
+>[!IMPORTANT]
+>
+>Entre em contato com attributionai-support@adobe.com para obter mais detalhes sobre como acessar as pontuações usando o SnowFlake.
 
 Você pode acessar as pontuações agregadas da Atribuição AI por meio do Floco de neve. Atualmente, você precisa enviar um email para o suporte da Adobe em attributionai-support@adobe.com para configurar e receber as credenciais da sua conta de leitor para o Floco de neve.
 
@@ -268,7 +277,9 @@ Depois que o suporte da Adobe tiver processado sua solicitação, você receber�
 - Nome do usuário
 - Password
 
->[!NOTE] A conta do leitor é para consultar os dados usando clientes sql, planilhas e soluções BI que suportam o conector JDBC.
+>[!NOTE]
+>
+>A conta do leitor é para consultar os dados usando clientes sql, planilhas e soluções BI que suportam o conector JDBC.
 
 Depois de ter suas credenciais e URL, você pode query as tabelas de modelo, agregadas por data do ponto de contato ou data de conversão.
 

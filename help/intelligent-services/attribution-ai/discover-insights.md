@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descobrindo insights no AI de Atribuição
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -20,7 +20,7 @@ Este documento serve como um guia para interagir com insights de instância de s
 
 ## Introdução
 
-Para utilizar insights para a Atribuição AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [da interface do usuário da](./user-guide.md)Atribuição AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Para utilizar insights para a Atribuição AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância do serviço, visite o guia [da interface do usuário da](./user-guide.md)Atribuição AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
 
 ## Visão geral dos insights da instância de serviço
 
@@ -30,7 +30,9 @@ Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços
 
 A página do serviço AI de atribuição é exibida. Esta página lista as instâncias de serviço da Atribuição AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique no nome de uma instância de serviço para começar.
 
->[!NOTE] Somente as instâncias de serviço que concluíram execuções de pontuação bem-sucedidas podem ser selecionadas.
+>[!NOTE]
+>
+>Somente as instâncias de serviço que concluíram execuções de pontuação bem-sucedidas podem ser selecionadas.
 
 ![Criar instância](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ O botão *Mais ações* está localizado na navegação superior direita ao lado
 
 Os insights da AI de atribuição permitem filtrar seus dados e atualizar automaticamente os visuais da interface com base nos filtros selecionados.
 
->[!NOTE] Por padrão, cada filtro é definido como &quot;Todos&quot;, exceto o filtro do modelo *de* Atribuição, que é definido como &quot;Conversões atribuídas incrementais e influenciadas&quot;.
+>[!NOTE]
+>
+>Por padrão, cada filtro é definido como &quot;Todos&quot;, exceto o filtro do modelo *de* Atribuição, que é definido como &quot;Conversões atribuídas incrementais e influenciadas&quot;.
 
 ### evento de conversão
 
@@ -82,7 +86,7 @@ Na instância, a lista suspensa eventos *de* conversão permite selecionar qualq
 
 ![evento de conversão](./images/insights/conversion-event.png)
 
-### Modelos de atribuição
+### Modelo de atribuição
 
 Clicar no modelo *de* Atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do AI [de](./overview.md) atribuição que contém uma tabela com informações sobre cada modelo.
 
@@ -98,21 +102,25 @@ O filtro *Produto* permite selecionar entre quaisquer produtos que foram inicial
 
 O filtro *Geografia* preenche códigos de países com base em modelos baseados em região. Dependendo dos seus dados, este filtro pode ou não estar presente.
 
->[!NOTE] Os códigos de país têm dois caracteres. Uma lista completa pode ser encontrada aqui [ISO 3166-1 alfa-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Os códigos de país têm dois caracteres. Uma lista completa pode ser encontrada aqui [ISO 3166-1 alfa-2](https://datahub.io/core/country-list).
 
 ### Região
 
->[!NOTE] Esse filtro só estará presente se você tiver realizado a modelagem [opcional baseada na](./user-guide.md#region-based-modeling-optional) região da etapa no guia da interface do usuário do AI de atribuição ao criar a instância do serviço.
+>[!NOTE]
+>
+>Esse filtro só estará presente se você tiver realizado a modelagem [opcional baseada na](./user-guide.md#region-based-modeling-optional) região da etapa no guia da interface do usuário do AI de atribuição ao criar a instância do serviço.
 
 Esse filtro permite que você selecione quaisquer regiões configuradas no processo de criação de instâncias.
 
-### Canal
+### Channel
 
 Clicar no filtro *Canal* revela uma lista suspensa que contém todos os canais de marketing disponíveis. Você pode selecionar vários canais para compará-los.
 
-![Canal](./images/insights/channel.png)
+![Channel](./images/insights/channel.png)
 
-### Intervalo de data
+### Date Range
 
 Clique no ícone de calendário para abrir o intervalo de datas. As datas de início e término do evento de conversão determinam a quantidade de dados preenchidos na interface do usuário. Você pode escolher restringir ou ampliar o intervalo de datas para focar ou expandir a quantidade de dados preenchidos.
 

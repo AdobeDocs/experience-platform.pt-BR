@@ -4,42 +4,47 @@ solution: Experience Platform
 title: Criar um conjunto de dados usando APIs
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1263'
+ht-degree: 1%
 
 ---
 
 
 # Criar um conjunto de dados usando APIs
 
-Este documento fornece etapas gerais para a criação de um conjunto de dados usando as APIs da plataforma Adobe Experience e preenchendo o conjunto de dados usando um arquivo.
+Este documento fornece etapas gerais para a criação de um conjunto de dados usando APIs Adobe Experience Platform e preenchendo o conjunto de dados usando um arquivo.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: A Experience Platform permite que você ingira dados como arquivos em lote.
-* [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
-* [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: O Experience Platform permite que você ingira dados como arquivos em lote.
+* [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -57,7 +62,7 @@ Este tutorial inicia onde o tutorial [da API do Registro do](../../xdm/tutorials
 
 Se você não tiver concluído o tutorial Registro do Schema, start para lá e continue com este tutorial de conjunto de dados somente depois de ter composto o schema necessário.
 
-A chamada a seguir pode ser usada para visualização do schema Membros de Fidelidade que você criou durante o tutorial da API do Registro do Schema:
+A chamada a seguir pode ser usada para visualização do schema Membros da Fidelidade que você criou durante o tutorial da API do Registro do Schema:
 
 **Formato da API**
 
@@ -207,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Este tutorial usa o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia do desenvolvedor de ingestão em [lote](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>Este tutorial usa o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia do desenvolvedor de ingestão em [lote](../../ingestion/batch-ingestion/api-overview.md)
 
 **Resposta**
 
@@ -289,7 +296,9 @@ Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resp
 
 Depois de criar com êxito um novo lote para upload, agora é possível fazer upload de arquivos para o conjunto de dados específico. É importante lembrar que, ao definir o conjunto de dados, você especificou o formato de arquivo como parquet. Portanto, os arquivos carregados devem estar nesse formato.
 
->[!NOTE] O maior arquivo de carregamento de dados suportado é de 512 MB. Se o arquivo de dados for maior que este, ele precisará ser dividido em partes com até 512 MB, para ser carregado um de cada vez. É possível carregar cada arquivo no mesmo lote repetindo essa etapa para cada arquivo, usando a mesma ID de lote. Não há limite para o número se os arquivos forem carregados como parte de um lote.
+>[!NOTE]
+>
+>O maior arquivo de carregamento de dados suportado é de 512 MB. Se o arquivo de dados for maior que este, ele precisará ser dividido em partes com até 512 MB, para ser carregado um de cada vez. É possível carregar cada arquivo no mesmo lote repetindo essa etapa para cada arquivo, usando a mesma ID de lote. Não há limite para o número se os arquivos forem carregados como parte de um lote.
 
 **Formato da API**
 
@@ -446,7 +455,9 @@ Uma resposta negativa retorna um objeto com o valor de `"failed"` em seu `"statu
 }
 ```
 
->[!NOTE] Um intervalo de sondagem recomendado é de dois minutos.
+>[!NOTE]
+>
+>Um intervalo de sondagem recomendado é de dois minutos.
 
 ## Ler dados do conjunto de dados
 
@@ -464,4 +475,4 @@ Para obter mais informações sobre a atualização de schemas, consulte o Guia 
 
 Depois de atualizar o schema, você poderá seguir novamente as etapas neste tutorial para assimilar novos dados que estejam em conformidade com o schema revisado.
 
-É importante lembrar que a evolução do schema é meramente aditiva, o que significa que você não pode introduzir uma alteração de quebra em um schema depois que ela for salva no registro e usada para a ingestão de dados. Para saber mais sobre as práticas recomendadas para a composição de schemas para uso com a Adobe Experience Platform, consulte o guia sobre as [noções básicas da composição](../../xdm/schema/composition.md)do schema.
+É importante lembrar que a evolução do schema é meramente aditiva, o que significa que você não pode introduzir uma alteração de quebra em um schema depois que ela for salva no registro e usada para a ingestão de dados. Para saber mais sobre as práticas recomendadas para a composição de schema, consulte o guia sobre as [noções básicas da composição](../../xdm/schema/composition.md)do schema.

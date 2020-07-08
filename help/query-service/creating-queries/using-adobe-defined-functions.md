@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funções definidas pela Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
@@ -92,7 +95,9 @@ Os ADFs de Atribuição encontrados no Serviço de Query permitem que essas aloc
 
 Este exemplo foca na atribuição de último toque, mas a Adobe também oferta a atribuição de primeiro toque.
 
->[!NOTE] Outras opções com tempos limite e expiração com base em eventos estarão disponíveis em versões futuras do Query Service.
+>[!NOTE]
+>
+>Outras opções com tempos limite e expiração com base em eventos estarão disponíveis em versões futuras do Query Service.
 
 **Sintaxe:**
 

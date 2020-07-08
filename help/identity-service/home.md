@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Os relacionamentos de identidade que [!DNL Identity Service] definem e mantêm s
 
 Uma identidade são dados exclusivos de uma entidade, geralmente uma pessoa individual. Uma identidade como ID de login, ECID ou ID de fidelidade é chamada de identidade **** conhecida.
 
-As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder as múltiplas identidades de um cliente nos sistemas.
+As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder às múltiplas identidades de um cliente nos sistemas.
 
 **Identidades** desconhecidas ou anônimas identificam um dispositivo sem identificar a pessoa real que o utiliza. Esta categoria inclui informações como o endereço IP do visitante e a ID do cookie. Embora os dados comportamentais possam ser coletados de um dispositivo usando identidades desconhecidas, a associação dessas identidades em dispositivos ou mídias é limitada até que o cliente forneça PII durante sua jornada.
 
@@ -94,7 +94,9 @@ Dependendo da sua estratégia de coleta de dados corporativos, os campos de dado
 
 Ao [!DNL Experience Platform] oferta uma variedade de namespaces padrão, talvez seja necessário criar namespaces adicionais para categorizar suas identidades corretamente. Para obter mais informações, consulte a seção sobre como [visualizar e criar namespaces para sua organização](./namespaces.md) na visão geral da namespace de identidade.
 
->[!NOTE] namespaces de identidade são qualificadores de identidades. Como resultado, uma vez que uma namespace é criada, ela não pode ser excluída.
+>[!NOTE]
+>
+>namespaces de identidade são qualificadores de identidades. Como resultado, uma vez que uma namespace é criada, ela não pode ser excluída.
 
 ### Incluir dados de identidade em [!DNL Experience Data Model] (XDM)
 
@@ -109,7 +111,9 @@ Qualquer campo do tipo `string` nos schemas que implementam classes XDM de regis
 Os campos de identidade também permitem a vinculação de identidades se compartilharem dados PII comuns.
 Por exemplo, ao rotular os campos de número de telefone como campos de identidade, [!DNL Identity Service] o gráfico automaticamente relacionamentos com os outros indivíduos encontrados usando o mesmo número de telefone.
 
->[!NOTE] A namespace das identidades resultantes é fornecida no momento em que o campo é rotulado.
+>[!NOTE]
+>
+>A namespace das identidades resultantes é fornecida no momento em que o campo é rotulado.
 
 ### Configurar um conjunto de dados para [!DNL Identity Service]
 

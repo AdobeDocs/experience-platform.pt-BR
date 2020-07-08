@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apêndice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 4%
@@ -27,7 +27,9 @@ A [!DNL Sensei Machine Learning] API fornece suporte para parâmetros de query c
 | `orderby` | Indica as propriedades a serem usadas para classificação na ordem de prioridade. Inclua um traço (**-**) antes de um nome de propriedade para classificar em ordem decrescente; caso contrário, os resultados são classificados em ordem crescente. | `orderby=created` |
 | `property` | Indica a expressão de comparação que um objeto deve satisfazer para ser retornado. | `property=deleted==false` |
 
->[!NOTE] Ao combinar vários parâmetros de query, eles devem ser separados por e-mails (**&amp;**).
+>[!NOTE]
+>
+>Ao combinar vários parâmetros de query, eles devem ser separados por e-mails (**&amp;**).
 
 ## Configurações de CPU Python e GPU {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ A seguir está um exemplo de configuração que especifica o uso de uma CPU para
 ]
 ```
 
->[!NOTE] Os valores de `cpus` e `gpus` não significam o número de CPUs ou GPUs, mas sim o número de máquinas físicas. Esses valores são permitidos `"1"` e, caso contrário, lançarão uma exceção.
+>[!NOTE]
+>
+>Os valores de `cpus` e `gpus` não significam o número de CPUs ou GPUs, mas sim o número de máquinas físicas. Esses valores são permitidos `"1"` e, caso contrário, lançarão uma exceção.
 
 ## Configurações de recursos PySpark e Spark {#resource-config}
 

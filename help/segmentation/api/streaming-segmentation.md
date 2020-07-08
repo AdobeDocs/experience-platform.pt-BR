@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segmentação em streaming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 1%
@@ -14,7 +14,9 @@ ht-degree: 1%
 
 # Avalie os eventos em tempo quase real com a segmentação contínua
 
->[!NOTE] O documento a seguir explica como usar a segmentação de fluxo contínuo usando a API. Para obter informações sobre como usar a segmentação de streaming usando a interface do usuário, leia o guia [do Construtor de](../ui/overview.md#streaming-segmentation)segmentos.
+>[!NOTE]
+>
+>O documento a seguir explica como usar a segmentação de fluxo contínuo usando a API. Para obter informações sobre como usar a segmentação de streaming usando a interface do usuário, leia o guia [do Construtor de](../ui/overview.md#streaming-segmentation)segmentos.
 
 A segmentação contínua permite [!DNL Adobe Experience Platform] que os clientes façam a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam, o que diminui a necessidade de programar e executar tarefas de segmentação. [!DNL Platform] Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 
@@ -46,7 +48,9 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -56,7 +60,9 @@ Cabeçalhos adicionais podem ser necessários para concluir solicitações espec
 
 ### Tipos de query com segmentação contínua ativada {#streaming-segmentation-query-types}
 
->[!NOTE] Será necessário ativar a segmentação programada para a organização para que a segmentação de fluxo funcione. Informações sobre como ativar a segmentação programada podem ser encontradas na seção [ativar segmentação programada](#enable-scheduled-segmentation)
+>[!NOTE]
+>
+>Será necessário ativar a segmentação programada para a organização para que a segmentação de fluxo funcione. Informações sobre como ativar a segmentação programada podem ser encontradas na seção [ativar segmentação programada](#enable-scheduled-segmentation)
 
 Para que um segmento seja avaliado usando a segmentação de fluxo contínuo, o query deve estar em conformidade com as diretrizes a seguir.
 
@@ -232,7 +238,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Esta é uma solicitação padrão de &quot;criar um segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial sobre como [criar um segmento](../tutorials/create-a-segment.md).
+>[!NOTE]
+>
+>Esta é uma solicitação padrão de &quot;criar um segmento&quot;. Para obter mais informações sobre como criar uma definição de segmento, leia o tutorial sobre como [criar um segmento](../tutorials/create-a-segment.md).
 
 **Resposta**
 
@@ -280,7 +288,9 @@ Uma resposta bem-sucedida retorna os detalhes da definição de segmento habilit
 
 Depois que a avaliação de streaming estiver ativada, uma linha de base deverá ser criada (após a qual o segmento sempre estará atualizado). A avaliação agendada (também conhecida como segmentação agendada) deve ser ativada primeiro para que o sistema execute automaticamente a definição de linha de base. Com a segmentação programada, sua Organização IMS pode seguir uma programação recorrente para executar automaticamente as tarefas de exportação para avaliar segmentos.
 
->[!NOTE] A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para o Perfil individual XDM. Se sua organização tiver mais de cinco políticas de mesclagem para o Perfil individual XDM em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
+>[!NOTE]
+>
+>A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para o Perfil individual XDM. Se sua organização tiver mais de cinco políticas de mesclagem para o Perfil individual XDM em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
 
 ### Criar um agendamento
 

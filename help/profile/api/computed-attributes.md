@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Depois de localizar o schema, clique no seu nome para abrir o Editor de Schemas,
 
 ### Criar uma mistura
 
-Para criar uma nova mistura, clique em **Adicionar** ao lado de *Misturas* na seção *Composição* no lado esquerdo do editor. Isso abre a caixa de diálogo **Adicionar mixagem** , onde você pode ver as misturas existentes. Clique no botão de opção para **Criar nova mistura** para definir sua nova combinação.
+Para criar uma nova mistura, clique em **Adicionar** ao lado de *Misturas* na seção *Composição* no lado esquerdo do editor. Isso abre a caixa de diálogo **Adicionar mixagem** , onde você pode ver as misturas existentes. Clique no botão de opção para **Criar nova combinação** para definir sua nova combinação.
 
 Dê um nome e uma descrição ao mixin e clique em **Adicionar mixin** quando concluído.
 
@@ -483,6 +483,8 @@ Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um co
 Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação DELETE ao ponto de extremidade e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação. `/config/computedAttributes`
 
 >[!NObservação]
+>
+>
 >Tenha cuidado ao excluir um atributo calculado, pois ele pode estar em uso em mais de um schema e a operação DELETE não pode ser desfeita.
 
 **Formato da API**

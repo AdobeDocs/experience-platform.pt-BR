@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
+title: Introdução à API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---

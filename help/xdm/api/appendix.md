@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Apêndice do desenvolvedor do Registro do Schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1296'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +20,7 @@ Este documento fornece informações complementares relacionadas ao trabalho com
 
 O Experience Data Model (XDM) é uma especificação documentada publicamente, impulsionada pela Adobe para melhorar a interoperabilidade, a expressividade e a potência das experiências digitais. A Adobe mantém o código-fonte e as definições formais de XDM em um projeto de código-fonte [aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas na notação XDM Standard, usando a notação JSON-LD (JavaScript Object Notation for Linked Data) e o Schema JSON como a gramática para definir schemas XDM.
 
-Ao analisar as definições formais de XDM no repositório público, você pode ver que o XDM padrão é diferente do que você vê na Adobe Experience Platform. O que você está vendo na plataforma Experience é chamado de Modo de compatibilidade e fornece um mapeamento simples entre o XDM padrão e a forma como ele é usado na plataforma.
+Ao analisar as definições formais de XDM no repositório público, você pode ver que o XDM padrão é diferente do que você vê no Adobe Experience Platform. O que você está vendo no Experience Platform é chamado de Modo de compatibilidade, e ele fornece um mapeamento simples entre o XDM padrão e a forma como ele é usado no Platform.
 
 ### Como o Modo de compatibilidade funciona
 
@@ -46,19 +49,21 @@ A seguir está uma comparação lado a lado mostrando campos relacionados ao ani
 
 ### Por que o Modo de compatibilidade é necessário?
 
-A Adobe Experience Platform foi projetada para trabalhar com várias soluções e serviços, cada um com seus próprios desafios e limitações técnicas (por exemplo, como determinadas tecnologias lidam com caracteres especiais). A fim de ultrapassar estas limitações, foi desenvolvido o Modo de Compatibilidade.
+O Adobe Experience Platform foi projetado para trabalhar com várias soluções e serviços, cada um com seus próprios desafios e limitações técnicas (por exemplo, como determinadas tecnologias lidam com caracteres especiais). A fim de ultrapassar estas limitações, foi desenvolvido o Modo de Compatibilidade.
 
-A maioria dos serviços da plataforma Experience, incluindo Catálogo, Data Lake e Perfil do cliente em tempo real, usam o Modo de compatibilidade no lugar do XDM padrão. A API do Registro do Schema também usa o Modo de compatibilidade e os exemplos neste documento são mostrados usando o Modo de compatibilidade.
+A maioria dos serviços de Experience Platform, incluindo Catálogo, Data Lake e Perfil do cliente em tempo real, usa o Modo de compatibilidade no lugar do XDM padrão. A API do Registro do Schema também usa o Modo de compatibilidade e os exemplos neste documento são mostrados usando o Modo de compatibilidade.
 
-Vale a pena saber que um mapeamento ocorre entre o XDM padrão e a forma como ele é operacionalizado na plataforma da experiência, mas não deve afetar seu uso dos serviços da plataforma.
+Vale a pena saber que um mapeamento ocorre entre o XDM padrão e a forma como ele é operacionalizado no Experience Platform, mas não deve afetar seu uso dos serviços da Platform.
 
 O projeto de código aberto está disponível para você, mas quando se trata de interagir com recursos por meio do Registro de Schemas, os exemplos de API neste documento fornecem as práticas recomendadas que você deve conhecer e seguir.
 
 ## Definição de tipos de campos XDM na API {#field-types}
 
-Os schemas XDM são definidos usando padrões de Schema JSON e tipos de campo básicos, com restrições adicionais para nomes de campo que são impostas pela plataforma de experiência. O XDM permite que você defina tipos de campo adicionais por meio do uso de formatos e restrições opcionais. Os tipos de campo XDM são expostos pelo atributo de nível de campo, `meta:xdmType`.
+Os schemas XDM são definidos usando padrões de Schema JSON e tipos de campo básicos, com restrições adicionais para nomes de campo que são impostas pelo Experience Platform. O XDM permite que você defina tipos de campo adicionais por meio do uso de formatos e restrições opcionais. Os tipos de campo XDM são expostos pelo atributo de nível de campo, `meta:xdmType`.
 
->[!NOTE] `meta:xdmType` é um valor gerado pelo sistema e, portanto, não é necessário adicionar essa propriedade ao JSON para o seu campo. A prática recomendada é usar tipos de Schemas JSON (como string e integer) com as restrições mín/máx apropriadas, conforme definido na tabela abaixo.
+>[!NOTE]
+>
+>`meta:xdmType` é um valor gerado pelo sistema e, portanto, não é necessário adicionar essa propriedade ao JSON para seu campo. A prática recomendada é usar tipos de Schemas JSON (como string e integer) com as restrições mín/máx apropriadas, conforme definido na tabela abaixo.
 
 A tabela a seguir descreve a formatação apropriada para definir tipos de campos escalares e tipos de campos mais específicos usando propriedades opcionais. Mais informações sobre propriedades opcionais e palavras-chave específicas do tipo estão disponíveis na documentação [do Schema](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
 
@@ -241,7 +246,7 @@ A tabela abaixo descreve o mapeamento entre &quot;meta:xdmType&quot; e outros fo
 | Tipo<br>XDM(meta:xdmType) | JSON<br>(Schema JSON) | Parquet<br>(tipo/anotação) | SQL Spark | Java | Scala | .NET | CosmosDB | MongoDB | Aerospie | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | tipo:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | String | System.String | String | string | String | string |
-| número | tipo:número | DUPLO | DoubleType | java.lang.Duplo | Duplo | Sistema.Duplo | Número | duplo | Duplo | duplo |
+| número | tipo:número | DUPLO | DoubleType | java.lang.Double | Duplo | System.Double | Número | duplo | Duplo | duplo |
 | long | tipo:<br>número inteiro máximo:2^53+1<br>mínimo:-2^53+1 | INT64 | LongType | java.lang.Long | Longo | System.Int64 | Número | long | Número inteiro | int64 |
 | int | type:<br>integermaximum:2^31<br>mínimo:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Número | int | Número inteiro | int32 |
 | short | type:<br>integermaximum:2^15<br>mínimo:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Curto | System.Int16 | Número | int | Número inteiro | int32 |

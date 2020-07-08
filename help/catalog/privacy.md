@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -39,7 +39,9 @@ Para obter mais informações sobre namespaces de identidade no Experience Platf
 
 Ao criar solicitações de privacidade para o Data Lake, devem ser fornecidos valores de identidade válidos (e suas namespaces associadas) para cada cliente individual, a fim de localizar seus dados e processá-los de acordo. Portanto, todos os conjuntos de dados sujeitos a solicitações de privacidade devem conter um descritor **de** identidade em seu schema XDM associado.
 
->[!NOTE] Todos os conjuntos de dados baseados em schemas que não suportam metadados de descritor de identidade (como conjuntos de dados ad-hoc) não podem ser processados em solicitações de privacidade.
+>[!NOTE]
+>
+>Todos os conjuntos de dados baseados em schemas que não suportam metadados de descritor de identidade (como conjuntos de dados ad-hoc) não podem ser processados em solicitações de privacidade.
 
 Esta seção aborda as etapas de adição de um descritor de identidade a um schema XDM do conjunto de dados existente. Se você já tiver um conjunto de dados com um descritor de identidade, poderá pular para a [próxima seção](#nested-maps).
 
@@ -60,7 +62,9 @@ Depois de definir os campos apropriados dentro do schema como campos de identida
 
 ### Uso da API {#identity-api}
 
->[!NOTE] Esta seção supõe que você saiba o valor de ID de URI exclusivo do schema XDM do seu conjunto de dados. Se você não souber esse valor, poderá recuperá-lo usando a API do serviço de catálogo. Após ler a seção [Introdução](./api/getting-started.md) do guia do desenvolvedor, siga as etapas descritas para [listar](./api/list-objects.md) ou [pesquisar](./api/look-up-object.md) objetos do Catálogo para encontrar seu conjunto de dados. A ID do schema pode ser encontrada em `schemaRef.id`
+>[!NOTE]
+>
+>Esta seção supõe que você saiba o valor de ID de URI exclusivo do schema XDM do seu conjunto de dados. Se você não souber esse valor, poderá recuperá-lo usando a API do serviço de catálogo. Após ler a seção [Introdução](./api/getting-started.md) do guia do desenvolvedor, siga as etapas descritas para [listar](./api/list-objects.md) ou [pesquisar](./api/look-up-object.md) objetos do Catálogo para encontrar seu conjunto de dados. A ID do schema pode ser encontrada em `schemaRef.id`
 >
 > Esta seção inclui chamadas para a API do Registro do Schema. Para obter informações importantes relacionadas ao uso da API, incluindo o conhecimento de sua identidade `{TENANT_ID}` e do conceito de container, consulte a seção [Introdução](../xdm/api/getting-started.md) do guia do desenvolvedor.
 
@@ -126,7 +130,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do de
 
 ## Enviando solicitações {#submit}
 
->[!NOTE] Esta seção aborda como formatar solicitações de privacidade para o Data Lake. É altamente recomendável que você reveja a documentação da interface do usuário [do](../privacy-service/ui/overview.md) Privacy Service ou da API [do](../privacy-service/api/getting-started.md) Privacy Service para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
+>[!NOTE]
+>
+>Esta seção aborda como formatar solicitações de privacidade para o Data Lake. É altamente recomendável que você reveja a documentação da interface do usuário [do](../privacy-service/ui/overview.md) Privacy Service ou da API [do](../privacy-service/api/getting-started.md) Privacy Service para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
 A seção a seguir descreve como fazer solicitações de privacidade para o Data Lake usando a interface do usuário do Privacy Service ou a API.
 

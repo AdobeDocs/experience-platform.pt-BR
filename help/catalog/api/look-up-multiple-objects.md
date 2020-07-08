@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Pesquisar vários objetos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
 
 Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornecerá um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
 
->[!NOTE] Mesmo ao solicitar objetos de Catálogo específicos, ainda é prática recomendada o parâmetro `properties` query para retornar somente as propriedades de que você precisa.
+>[!NOTE]
+>
+>Mesmo ao solicitar objetos de Catálogo específicos, ainda é prática recomendada o parâmetro `properties` query para retornar somente as propriedades de que você precisa.
 
 **Formato da API**
 
@@ -22,7 +27,8 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> || `{ID}` | Um identificador para um dos objetos específicos que você deseja recuperar. |
+| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | Um identificador para um dos objetos específicos que você deseja recuperar. |
 
 **Solicitação**
 
@@ -41,7 +47,9 @@ curl -X GET \
 
 Uma resposta bem-sucedida retorna uma lista dos conjuntos de dados especificados, contendo apenas as propriedades solicitadas (`name`, `description`e `files`) para cada um.
 
->[!NOTE] Se um objeto retornado não contiver mais uma das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, como mostrado em &quot;Conjunto de dados de amostra 3&quot; e &quot;Conjunto de dados de amostra 4&quot; abaixo.
+>[!NOTE]
+>
+>Se um objeto retornado não contiver mais uma das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, como mostrado em &quot;Conjunto de dados de amostra 3&quot; e &quot;Conjunto de dados de amostra 4&quot; abaixo.
 
 ```json
 {

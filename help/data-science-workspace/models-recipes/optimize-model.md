@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Otimizar um modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ Depois que uma classe avaliadora é ativada, várias métricas serão calculadas
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] Se a métrica não estiver definida, as métricas padrão estarão ativas.
+>[!NOTE]
+>
+>Se a métrica não estiver definida, as métricas padrão estarão ativas.
 
 Uma métrica específica pode ser ativada alterando o valor para `evaluation.metrics.com`. No exemplo a seguir, a métrica da Pontuação F está ativada.
 
@@ -83,7 +85,9 @@ A tabela a seguir indica as métricas padrão para cada classe. Um usuário tamb
 
 O avaliador personalizado pode ser fornecido estendendo a interface do `MLEvaluator.scala` em seu `Evaluator.scala` arquivo. No arquivo [Evaluator.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) de exemplo, definimos funções personalizadas `split()` e `evaluate()` . Nossa `split()` função divide nossos dados aleatoriamente com uma proporção de 8:2 e nossa `evaluate()` função define e retorna 3 métricas: MAPE, MAE e RMSE.
 
->[!IMPORTANT] Para a `MLMetric` classe, não use `"measures"` para `valueType` ao criar uma nova `MLMetric` outra métrica, a métrica não será preenchida na tabela de métricas de avaliação personalizadas.
+>[!IMPORTANT]
+>
+>Para a `MLMetric` classe, não use `"measures"` para `valueType` ao criar uma nova `MLMetric` outra métrica, a métrica não será preenchida na tabela de métricas de avaliação personalizadas.
 >  
 > Faça o seguinte: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Não é isso: `metrics.add(new MLMetric("MAPE", mape, "measures"))`

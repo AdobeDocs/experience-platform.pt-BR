@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Clicar em uma pasta listada permite que você transfira a hierarquia de pastas p
 
 Quando a janela pré-visualização for preenchida, você poderá clicar em **[!UICONTROL Avançar]** para fazer upload de todos os arquivos dentro da pasta selecionada. Se desejar fazer upload para um arquivo específico, selecione-o na lista antes de clicar em **[!UICONTROL Avançar]**.
 
->[!NOTE] Os formatos de arquivo suportados incluem CSV, JSON e Parquet. Os arquivos JSON e Parquet devem ser compatíveis com XDM.
+>[!NOTE]
+>
+>Os formatos de arquivo suportados incluem CSV, JSON e Parquet. Os arquivos JSON e Parquet devem ser compatíveis com XDM.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 

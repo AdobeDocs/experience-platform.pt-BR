@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Uniões
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +34,7 @@ A `timeSeriesEvents` matriz é uma lista de eventos da série de tempo relaciona
 
 ### Mapa de associação de segmento
 
-O `segmentMembership` mapa armazena os resultados das avaliações de segmentos. Quando os trabalhos de segmento são executados com êxito usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, o mapa é atualizado. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que são ingeridos na Plataforma, permitindo a integração com outras soluções, como o Adobe Audiência Manager.
+O `segmentMembership` mapa armazena os resultados das avaliações de segmentos. Quando os trabalhos de segmento são executados com êxito usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, o mapa é atualizado. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que sejam ingeridos no Platform, permitindo a integração com outras soluções, como o Adobe Audience Manager.
 
 Consulte o tutorial sobre como [criar segmentos usando APIs](../../segmentation/tutorials/create-a-segment.md) para obter mais informações.
 
@@ -39,7 +42,9 @@ Consulte o tutorial sobre como [criar segmentos usando APIs](../../segmentation/
 
 Para que um schema seja incluído na visualização de união mesclada, a tag &quot;união&quot; deve ser adicionada ao `meta:immutableTags` atributo do schema. Isso é feito por meio de uma solicitação PATCH para atualizar o schema e adicionar a `meta:immutableTags` matriz com um valor de &quot;união&quot;.
 
->[!NOTE] Tags imutáveis são tags que devem ser definidas, mas nunca removidas.
+>[!NOTE]
+>
+>Tags imutáveis são tags que devem ser definidas, mas nunca removidas.
 
 **Formato da API**
 
@@ -161,7 +166,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma `results` matriz 
 
 Você pode visualização uma união específica executando uma solicitação GET que inclui o cabeçalho `$id` e, dependendo do cabeçalho Aceitar, alguns ou todos os detalhes da união.
 
->[!NOTE] Pesquisas de União estão disponíveis usando os pontos de extremidade `/unions` e `/schemas` para permitir o uso em exportações de Perfis para um conjunto de dados.
+>[!NOTE]
+>
+>Pesquisas de União estão disponíveis usando os pontos de extremidade `/unions` e `/schemas` para permitir o uso em exportações de Perfis para um conjunto de dados.
 
 **Formato da API**
 

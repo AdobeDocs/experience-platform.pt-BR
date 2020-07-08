@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Consentimento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 1%
@@ -63,10 +63,12 @@ curl -X POST \
 | --- | --- |
 | `optOutOfSale` | Quando definido como true, indica que os usuários fornecidos desejam `entities` recusar a venda ou compartilhar seus dados pessoais. |
 | `entities` | Uma matriz de objetos que indica aos usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma matriz de `values` para corresponder usuários individuais a essa namespace. |
-| `nameSpace` | Cada objeto na `entities` matriz deve conter uma das namespaces [de identidade](./appendix.md#standard-namespaces) padrão reconhecidas pela API do Privacy Service. |
+| `nameSpace` | Cada objeto na `entities` matriz deve conter uma das namespaces [de identidade](./appendix.md#standard-namespaces) padrão reconhecidas pela API Privacy Service. |
 | `values` | Uma matriz de valores para cada usuário, correspondente ao fornecido `nameSpace`. |
 
->[!NOTE] Para obter mais informações sobre como determinar quais valores de identidade de cliente enviar para o Privacy Service, consulte o guia sobre como [fornecer dados](../identity-data.md)de identidade.
+>[!NOTE]
+>
+>Para obter mais informações sobre como determinar quais valores de identidade do cliente enviar para o Privacy Service, consulte o guia sobre como [fornecer dados](../identity-data.md)de identidade.
 
 **Resposta**
 

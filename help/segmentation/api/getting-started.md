@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Serviço de segmentação
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -14,36 +14,38 @@ ht-degree: 0%
 
 # Guia do desenvolvedor do Serviço de segmentação
 
-A segmentação permite que você construa segmentos e gere audiências na Adobe Experience Platform a partir dos dados do Perfil do cliente em tempo real.
+A segmentação permite criar segmentos e gerar audiências no Adobe Experience Platform a partir dos dados do Perfil do cliente em tempo real.
 
 ## Introdução
 
-Este guia exige uma compreensão de trabalho dos vários serviços da plataforma Adobe Experience envolvidos com o uso da segmentação.
+Este guia exige uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos com o uso da segmentação.
 
 - [Segmentação](../home.md): Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
-- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
+- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 - [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-- [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para usar a segmentação com êxito usando a API.
 
 ### Lendo chamadas de exemplo da API
 
-A documentação da API do Serviço de segmentação fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+A documentação da API do Serviço de segmentação fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Cabeçalhos obrigatórios
 
-A documentação da API também exige que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito para os pontos de extremidade da plataforma. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em chamadas à API da plataforma Experience, conforme mostrado abaixo:
+A documentação da API também exige que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito para pontos de extremidade da Platform. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção na qual a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs da Platform exigem um cabeçalho que especifique o nome da caixa de proteção na qual a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre como trabalhar com caixas de proteção na Experience Platform, consulte a documentação [de visão geral das](../../sandboxes/home.md)caixas de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre como trabalhar com caixas de proteção no Experience Platform, consulte a documentação [de visão geral das](../../sandboxes/home.md)caixas de proteção.
 
 <!-- ## Estimates
 
@@ -93,4 +95,4 @@ A pesquisa por segmento é usada para pesquisar e indexar campos configuráveis 
 
 ## Próximas etapas
 
-Para começar a fazer chamadas usando a API de segmentação, selecione um dos subguias para saber como usar pontos de extremidade específicos relacionados à segmentação. Para saber mais sobre como trabalhar com segmentos usando a interface do usuário da plataforma, consulte o guia [do usuário de](../ui/overview.md)Segmentação.
+Para começar a fazer chamadas usando a API de segmentação, selecione um dos subguias para saber como usar pontos de extremidade específicos relacionados à segmentação. Para saber mais sobre como trabalhar com segmentos usando a interface do usuário do Platform, consulte o guia [do usuário de](../ui/overview.md)Segmentação.

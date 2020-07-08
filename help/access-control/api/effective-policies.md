@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Políticas eficazes de Visualização
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Para obter uma lista completa de permissões e tipos de recursos que podem ser fornecidos no storage de carga, consulte a seção do apêndice sobre permissões e tipos [de recursos](#accepted-permissions-and-resource-types)aceitos.
+>[!NOTE]
+>
+>Para obter uma lista completa de permissões e tipos de recursos que podem ser fornecidos no storage de carga, consulte a seção do apêndice sobre permissões e tipos [de recursos](#accepted-permissions-and-resource-types)aceitos.
 
 **Resposta**
 
@@ -60,7 +65,7 @@ Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos 
 
 ## Próximas etapas
 
-Este documento abordou como fazer chamadas para a API do Controle de acesso para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para a plataforma Experience, consulte a visão geral [do](../home.md)controle de acesso.
+Este documento abordou como fazer chamadas para a API do Controle de acesso para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso, consulte a visão geral [do](../home.md)controle de acesso.
 
 ## Apêndice
 

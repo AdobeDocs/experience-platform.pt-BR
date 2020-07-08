@@ -4,7 +4,10 @@ solution: Experience Platform
 title: objetos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +45,9 @@ curl -X GET \
 
 Uma resposta bem-sucedida retorna uma lista de objetos de Catálogo na forma de pares de valores chave, filtrados pelos parâmetros de query fornecidos na solicitação. Para cada par de valores chave, a chave representa um identificador exclusivo para o objeto Catalog em questão, que pode ser usado em outra chamada para [visualização desse objeto](look-up-object.md) específico para obter mais detalhes.
 
->[!NOTE] Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em &quot;Conjunto de dados de amostra 3&quot; e &quot;Conjunto de dados de amostra 4&quot; abaixo.
+>[!NOTE]
+>
+>Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em &quot;Conjunto de dados de amostra 3&quot; e &quot;Conjunto de dados de amostra 4&quot; abaixo.
 
 ```json
 {

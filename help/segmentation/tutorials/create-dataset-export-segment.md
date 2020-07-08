@@ -4,35 +4,40 @@ solution: Experience Platform
 title: Criar um conjunto de dados para exportar um segmento de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
 
 # Criar um conjunto de dados para exportar um segmento de audiência
 
-A plataforma Adobe Experience permite que você segmente facilmente perfis de clientes em audiências com base em atributos específicos. Depois que os segmentos forem criados, você poderá exportar essa audiência para um conjunto de dados no qual ela possa ser acessada e executada. Para que a exportação seja bem-sucedida, o conjunto de dados deve ser configurado corretamente.
+O Adobe Experience Platform permite segmentar facilmente perfis de clientes em audiências com base em atributos específicos. Depois que os segmentos forem criados, você poderá exportar essa audiência para um conjunto de dados no qual ela possa ser acessada e executada. Para que a exportação seja bem-sucedida, o conjunto de dados deve ser configurado corretamente.
 
-Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de audiência usando a interface do usuário da plataforma de experiência.
+Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de audiência usando a interface do usuário do Experience Platform.
 
-Este tutorial está diretamente relacionado às etapas descritas no tutorial para [avaliar e acessar os resultados](./evaluate-a-segment.md)do segmento. O tutorial de avaliação de um segmento fornece etapas para a criação de um conjunto de dados usando a API de catálogo, enquanto este tutorial descreve as etapas para criar um conjunto de dados usando a interface do usuário da plataforma de experiência.
+Este tutorial está diretamente relacionado às etapas descritas no tutorial para [avaliar e acessar os resultados](./evaluate-a-segment.md)do segmento. O tutorial de avaliação de um segmento fornece etapas para a criação de um conjunto de dados usando a API de catálogo, enquanto este tutorial descreve as etapas para criar um conjunto de dados usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
-Para exportar um segmento, o conjunto de dados deve ser baseado no Schema de União de Perfil individual do XDM. Um schema de união é um schema gerado pelo sistema e somente leitura que agregação os campos de todos os schemas que compartilham a mesma classe, neste caso, que é a classe de Perfil Individual XDM. Para obter mais informações sobre schemas de visualização de união, consulte a seção Perfil do cliente em tempo [real do guia](../../xdm/schema/composition.md#union)do desenvolvedor do Registro de Schemas.
+Para exportar um segmento, o conjunto de dados deve ser baseado no Schema de União de Perfil individual do XDM. Um schema união é um schema gerado pelo sistema e somente leitura que agregação os campos de todos os schemas que compartilham a mesma classe, neste caso, que é a classe de Perfil Individual XDM. Para obter mais informações sobre schemas de visualização de união, consulte a seção Perfil do cliente em tempo [real do guia](../../xdm/schema/composition.md#union)do desenvolvedor do Registro de Schemas.
 
 Para visualização de schemas de união na interface do usuário, clique em **Perfis** na navegação à esquerda e clique na guia schema *de* União, como mostrado abaixo.
 
-![Guia schema de União na interface do usuário da plataforma Experience](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Guia schema de União na interface do usuário do Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Área de trabalho de conjuntos de dados
 
-A área de trabalho dos conjuntos de dados na interface do usuário da plataforma de experiência permite que você visualização e gerencie todos os conjuntos de dados criados pela organização do IMS, bem como criar novos conjuntos.
+A área de trabalho dos conjuntos de dados na interface do Experience Platform permite que você visualização e gerencie todos os conjuntos de dados criados pela organização do IMS, bem como criar novos.
 
 Para visualização da área de trabalho dos conjuntos de dados, clique em **Conjuntos** de dados na navegação à esquerda e, em seguida, clique na guia *Procurar* . A área de trabalho dos conjuntos de dados contém uma lista de conjuntos de dados, incluindo colunas que mostram *Nome*, *Criado* (data e hora), *Origem*, *Schema* e Status *do***&#x200B;Último Lote, bem como a data e a hora em que o conjunto de dados foi Última Atualização. Dependendo da largura de cada coluna, talvez seja necessário rolar para a esquerda ou para a direita para ver todas as colunas.
 
->[!NOTE] Clique no ícone de filtro ao lado da barra de pesquisa para usar os recursos de filtragem para visualização somente dos conjuntos de dados habilitados para o Perfil do cliente em tempo real.
+>[!NOTE]
+>
+>Clique no ícone de filtro ao lado da barra de pesquisa para usar os recursos de filtragem para visualização somente dos conjuntos de dados habilitados para o Perfil do cliente em tempo real.
 
 ![Visualização de todos os conjuntos de dados](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 

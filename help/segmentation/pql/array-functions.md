@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funções de storage, lista e definição
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 A `notIn` função é usada para determinar se um item não é membro de uma matriz ou lista.
 
->[!NOTE] A `notIn` função *também* garante que nenhum dos valores seja igual a nulo. Portanto, os resultados não são uma negação exata da `in` função.
+>[!NOTE]
+>
+>A `notIn` função *também* garante que nenhum dos valores seja igual a nulo. Portanto, os resultados não são uma negação exata da `in` função.
 
 **Formato**
 

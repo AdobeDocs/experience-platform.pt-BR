@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: fd6516d1c1d3792b41de65d0f44d78af1124ccc7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 0%
@@ -23,6 +23,8 @@ Para visualização de todos os pontos de extremidade e operações CRUD dispon�
 ## (Alfa) Atributos calculados
 
 >[!IMPORTANT]
+>
+>
 >A funcionalidade de atributo calculado está em alfa e não está disponível para todos os usuários. A documentação e funcionalidade estão sujeitas a alterações.
 
 Os atributos calculados permitem calcular automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil, o que significa que você pode agregação valores em todos os registros e eventos. Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil ou em um evento. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Você pode criar, visualização, editar e excluir atributos calculados usando o `config/computedAttributes` terminal. Para saber como usar esse terminal, visite o guia [de ponto de extremidade de atributos](computed-attributes.md)computados.

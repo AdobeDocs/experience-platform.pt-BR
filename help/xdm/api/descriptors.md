@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descritores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Descritores
 
-Os Schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. A plataforma Adobe Experience permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores.
+Os Schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. O Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores.
 
 Os descritores de Schema são metadados de nível de locatário, o que significa que são exclusivos à sua organização IMS e que todas as operações do descritor ocorrem no container do locatário.
 
@@ -22,7 +22,9 @@ Cada schema pode ter uma ou mais entidades de descritor de schema aplicadas a el
 
 Este documento fornece exemplos de chamadas de API para descritores, bem como uma lista completa de descritores disponíveis e os campos necessários para definir cada tipo.
 
->[!NOTE] Os descritores requerem cabeçalhos Accept exclusivos que substituem `xed` por `xdm`, mas que, de outra forma, pareçam muito semelhantes aos cabeçalhos Accept usados em outros locais do Registro do Schema. Os cabeçalhos de Aceitação corretos foram incluídos nas chamadas de amostra abaixo, mas tenha cuidado extra para garantir que os cabeçalhos corretos estejam sendo usados.
+>[!NOTE]
+>
+>Os descritores requerem cabeçalhos Accept exclusivos que substituem `xed` por `xdm`, mas que, de outra forma, pareçam muito semelhantes aos cabeçalhos Accept usados em outros locais do Registro do Schema. Os cabeçalhos de Aceitação corretos foram incluídos nas chamadas de amostra abaixo, mas tenha cuidado extra para garantir que os cabeçalhos corretos estejam sendo usados.
 
 ## Descritores de Lista
 
@@ -236,7 +238,7 @@ A execução de uma solicitação de pesquisa (GET) para visualização do descr
 
 ## Excluir descritor
 
-Ocasionalmente, talvez seja necessário remover um descritor definido no Registro do Schema. Isso é feito fazendo uma solicitação DELETE que faz referência ao `@id` descritor que você deseja remover.
+Ocasionalmente, talvez seja necessário remover um descritor definido no Registro do Schema. Isso é feito fazendo uma solicitação DELETE referenciando o nome `@id` do descritor que você deseja remover.
 
 **Formato da API**
 
@@ -277,7 +279,7 @@ As seções a seguir fornecem uma visão geral dos tipos de descritor disponíve
 
 #### Descritor de identidade
 
-Um descritor de identidade sinaliza que &quot;sourceProperty&quot; do &quot;sourceSchema&quot; é um campo de identidade, conforme descrito pelo Serviço [de identidade da plataforma](../../identity-service/home.md)Adobe Experience.
+Um descritor de identidade sinaliza que &quot;sourceProperty&quot; do &quot;sourceSchema&quot; é um campo de identidade, conforme descrito pelo Serviço [de identidade do](../../identity-service/home.md)Adobe Experience Platform.
 
 ```json
 {
@@ -334,7 +336,7 @@ Descritores de nome amigáveis permitem que um usuário modifique os valores `ti
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | O novo título que você deseja exibir para este campo, escrito em Caixa alta/baixa. |
 | `xdm:description` | Uma descrição opcional pode ser adicionada junto com o título. |
-| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na interface do usuário da plataforma de experiência. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado apenas para os principais campos XDM definidos pela Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, você deve editar a propriedade do campo `meta:enum` diretamente por meio de uma solicitação [](./update-resource.md)PATCH. |
+| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na interface do usuário do Experience Platform. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado apenas para os principais campos XDM definidos pela Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, você deve editar a propriedade do campo `meta:enum` diretamente por meio de uma solicitação [](./update-resource.md)PATCH. |
 
 #### Descritor de relação
 

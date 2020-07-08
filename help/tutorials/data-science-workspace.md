@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tutoriais da Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -30,7 +30,7 @@ A API Sensei Machine Learning fornece um mecanismo para que os cientistas de dad
 - [MLServices](../data-science-workspace/api/mlservices.md) - Saiba como criar um MLService, recuperar as informações de um MLService, atualizar um MLService e excluir um MLService.
 - [Insights](../data-science-workspace/api/insights.md) - saiba como recuperar as informações de um Insight, adicionar um novo Modelo de Insight e recuperar uma lista de métricas padrão para algoritmos.
 
-Para saber mais e obter os valores necessários para executar operações CRUD com a API de aprendizado de máquina do Sensei, visite o guia [de](../data-science-workspace/api/getting-started.md)introdução.
+Para saber mais e obter os valores necessários para executar operações CRUD com a API Sensei Machine Learning, visite o guia [de](../data-science-workspace/api/getting-started.md)introdução.
 
 ## Como usar notebooks JupyterLab
 
@@ -60,6 +60,8 @@ Para saber mais, siga os arquivos de origem do [pacote em um tutorial](../data-s
 ## Importar uma fórmula
 
 >[!NOTE]
+>
+>
 >Este tutorial requer que você tenha um URL de arquivo de origem do Docker. Visite os arquivos de origem do [pacote em um tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) de fórmula se você não tiver um URL de arquivo de origem do Docker.
 
 Os tutoriais de importação de fórmula fornecem insights sobre como configurar e importar uma receita empacotada. Até o final deste tutorial, você pode criar, treinar e avaliar um Modelo na Área de Trabalho de Ciência de Dados do Adobe Experience Platform.
@@ -72,7 +74,7 @@ Para saber mais, siga o tutorial [de importação de uma](../data-science-worksp
 
 ## Comboio e avaliação de um modelo
 
-Na área de trabalho da Adobe Experience Platform Data Science, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na área de trabalho da Adobe Experience Platform Data Science, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 **Este tutorial o ajudará a:**
 - Criar um novo modelo.

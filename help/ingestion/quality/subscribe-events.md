@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Assinar eventos de ingestão de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 2%
@@ -14,19 +14,21 @@ ht-degree: 2%
 
 # Notificações de ingestão de dados
 
-O processo de assimilação de dados na Adobe Experience Platform é composto de várias etapas. Após identificar os arquivos de dados que precisam ser ingeridos na Plataforma, o processo de ingestão é iniciado e cada etapa ocorre consecutivamente até que os dados sejam ingeridos com êxito ou falhem. O processo de ingestão pode ser iniciado usando a API [de ingestão de dados da plataforma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience ou a interface do usuário da plataforma Experience.
+O processo de assimilação de dados em Adobe Experience Platform é composto de várias etapas. Após identificar os arquivos de dados que precisam ser ingeridos no Platform, o processo de ingestão é iniciado e cada etapa ocorre consecutivamente até que os dados sejam ingeridos com êxito ou falhem. O processo de ingestão pode ser iniciado usando a API [de ingestão de dados do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform ou a interface do usuário do Experience Platform.
 
-Os dados carregados na plataforma devem percorrer várias etapas para chegar ao destino, ao Data Lake ou ao armazenamento de dados do Perfil do cliente em tempo real. Cada etapa envolve o processamento dos dados, a validação dos dados e o armazenamento dos dados antes de passá-los para a próxima etapa. Dependendo da quantidade de dados que está sendo ingerida, isso pode se tornar um processo demorado e sempre há uma chance de o processo falhar devido a erros de validação, semântica ou processamento. No evento de uma falha, os problemas de dados precisam ser corrigidos e todo o processo de ingestão deve ser reiniciado usando os arquivos de dados corrigidos.
+Os dados carregados no Platform devem passar por várias etapas para chegar ao seu destino, ao Data Lake ou ao armazenamento de dados do Perfil do cliente em tempo real. Cada etapa envolve o processamento dos dados, a validação dos dados e o armazenamento dos dados antes de passá-los para a próxima etapa. Dependendo da quantidade de dados que está sendo ingerida, isso pode se tornar um processo demorado e sempre há uma chance de o processo falhar devido a erros de validação, semântica ou processamento. No evento de uma falha, os problemas de dados precisam ser corrigidos e todo o processo de ingestão deve ser reiniciado usando os arquivos de dados corrigidos.
 
-Para auxiliar no monitoramento do processo de ingestão, a Plataforma de experiência permite a assinatura de um conjunto de eventos publicados em cada etapa do processo, notificando o status dos dados ingeridos e as possíveis falhas.
+Para auxiliar no monitoramento do processo de ingestão, o Experience Platform possibilita a assinatura de um conjunto de eventos publicados em cada etapa do processo, notificando o status dos dados ingeridos e de possíveis falhas.
 
 ## eventos de notificação de status disponíveis
 
 Abaixo está uma lista de notificações de status de ingestão de dados disponíveis que podem ser assinadas.
 
->[!NOTE] Há apenas um tópico de evento fornecido para todas as notificações de ingestão de dados. Para distinguir entre diferentes status, é possível usar o código do evento.
+>[!NOTE]
+>
+>Há apenas um tópico de evento fornecido para todas as notificações de ingestão de dados. Para distinguir entre diferentes status, é possível usar o código do evento.
 
-| Serviço de plataforma | Status | Descrição do Evento | Código do Evento |
+| Serviço Platform | Status | Descrição do Evento | Código do Evento |
 | ---------------- | ------ | ----------------- | ---------- |
 | Aterrissagem de dados | success | Ingestão - lote bem-sucedido | ing_load_success |
 | Aterrissagem de dados | falha | Ingestão - Falha no lote | ing_load_failure |
@@ -41,19 +43,19 @@ O schema de evento de notificação de ingestão de dados é um schema do Modelo
 
 ## Assinar notificações de status de ingestão de dados
 
-Por meio de Eventos [de E/S da](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, você pode assinar vários tipos de notificação usando webhooks. As seções abaixo descrevem as etapas para assinar as notificações da plataforma para eventos de ingestão de dados usando o Adobe Developer Console.
+Por meio de Eventos [de E/S da](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, você pode assinar vários tipos de notificação usando webhooks. As seções abaixo descrevem as etapas para assinar notificações da Platform para eventos de ingestão de dados usando o Adobe Developer Console.
 
 ### Criar um novo projeto no Adobe Developer Console
 
-Acesse o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
+Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
 
-### Adicionar eventos da plataforma de experiência ao projeto
+### Adicionar eventos Experience Platform ao projeto
 
 Depois de criar um novo projeto, navegue até a tela de visão geral do projeto. Aqui, clique em **[!UICONTROL Adicionar evento]**.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-A caixa de diálogo _[!UICONTROL Adicionar eventos]_é exibida. Clique em Plataforma**[!UICONTROL  de ]**experiência para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações**[!UICONTROL  de ]**plataforma antes de clicar em**[!UICONTROL  Avançar ]**.
+A caixa de diálogo _[!UICONTROL Adicionar eventos]_é exibida. Clique em**[!UICONTROL  Experience Platform ]**para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações****Platform antes de clicar em**[!UICONTROL  Avançar ]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
@@ -89,4 +91,4 @@ A página de detalhes do registro de eventos recém-criado é exibida, onde voc�
 
 ## Próximas etapas
 
-Depois de registrar as notificações de Plataforma no seu projeto, você poderá visualização eventos recebidos do painel do projeto. Consulte o guia de Eventos [de E/S da Adobe para](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) rastreamento para obter instruções detalhadas sobre como rastrear seus eventos.
+Depois de registrar as notificações da Platform em seu projeto, você poderá visualização eventos recebidos do painel do projeto. Consulte o guia de Eventos [de E/S da Adobe para](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) rastreamento para obter instruções detalhadas sobre como rastrear seus eventos.

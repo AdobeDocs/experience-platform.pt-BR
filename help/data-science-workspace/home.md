@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da Análise do espaço de trabalho da Data Science
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Se preferir, você pode adaptar uma receita pré-criada às suas necessidades, i
 
 ### Fluxo de trabalho focado no cientista de dados
 
-Qualquer que seja o seu nível de experiência em ciência de dados, [!DNL Data Science Workspace] ajuda a simplificar e acelerar o processo de encontrar insights nos dados e aplicá-los a experiências digitais.
+Qualquer que seja o seu nível de conhecimento em ciência de dados, [!DNL Data Science Workspace] ajuda a simplificar e acelerar o processo de encontrar insights nos dados e aplicá-los a experiências digitais.
 
 ### Exploração de dados
 
@@ -123,7 +123,9 @@ Os cientistas de dados podem aproveitar as novas tecnologias e conjuntos de dado
 
 O Controle de acesso for [!DNL Experience Platform] é administrado por meio da [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção. Consulte a visão geral [do](../access-control/home.md) controle de acesso para obter mais informações.
 
->[!IMPORTANT] Para usar [!DNL Data Science Workspace], a permissão [!UICONTROL &quot;Gerenciar a área de trabalho de dados&quot; deve estar ativada] .
+>[!IMPORTANT]
+>
+>Para usar [!DNL Data Science Workspace], a permissão [!UICONTROL &quot;Gerenciar a área de trabalho de dados&quot; deve estar ativada] .
 
 A tabela a seguir descreve os efeitos da ativação ou desativação dessa permissão:
 

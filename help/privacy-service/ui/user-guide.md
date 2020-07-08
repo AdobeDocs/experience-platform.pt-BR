@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Este documento fornece etapas para criar e gerenciar solicitações de privacidade usando a interface do usuário do Privacy Service.
 
-## Navegue pelo painel da interface do usuário do Privacy Service
+## Navegue pelo painel de interface do usuário do Privacy Service
 
 O painel para a interface do usuário do Privacy Service fornece dois widgets que permitem que você visualização o status de seus trabalhos de privacidade: **Relatório** de Status e Solicitações **** de Job. O painel também exibe a regra selecionada atual para as tarefas exibidas.
 
@@ -24,7 +24,7 @@ O painel para a interface do usuário do Privacy Service fornece dois widgets qu
 
 ### Tipo de regulamento
 
-O Privacy Service suporta solicitações de trabalho para três tipos de regulamento:
+O Privacy Service suporta solicitações de emprego para três tipos de regulamento:
 
 * O Regulamento Geral sobre a Proteção de Dados das Uniões (RGPD)
 * The California Consumer Privacy Act (CCPA)
@@ -54,13 +54,17 @@ Para visualização de mais detalhes sobre um dado ponto de dados, clique no pon
 
 ![Filtro aplicado do widget](../images/user-guide/apply-filter.png)
 
->[!NOTE] Quando um filtro é aplicado ao widget Solicitações de trabalho, você pode remover o filtro clicando no **X** no pílula de filtro. Solicitações de trabalho, em seguida, retornam à lista de rastreamento padrão.
+>[!NOTE]
+>
+>Quando um filtro é aplicado ao widget Solicitações de trabalho, você pode remover o filtro clicando no **X** no pílula de filtro. Solicitações de trabalho, em seguida, retornam à lista de rastreamento padrão.
 
 ### Solicitações de trabalho
 
 O widget Solicitações de trabalho lista todas as solicitações de trabalho disponíveis em sua organização, incluindo detalhes como tipo de solicitação, status atual, data de vencimento e e-mail do solicitante.
 
->[!NOTE] Os dados para trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
+>[!NOTE]
+>
+>Os dados para trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
 
 Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título Solicitações de trabalho. A lista é automaticamente filtros à medida que você digita, mostrando solicitações que contêm valores que correspondem aos seus termos de pesquisa. Você também pode usar o menu suspenso **Solicitado** para selecionar um intervalo de tempo para os trabalhos listados.
 
@@ -70,7 +74,7 @@ Para visualização dos detalhes de uma solicitação de trabalho específica, c
 
 ![Detalhes do Trabalho de IU do RGPD](../images/user-guide/job-details.png)
 
-Essa caixa de diálogo contém informações de status sobre cada solução da Experience Cloud e seu estado atual em relação ao trabalho geral. Como cada tarefa de privacidade é assíncrona, a página exibe a data e a hora de comunicação mais recentes (GMT) de cada solução, já que algumas exigem mais tempo do que outras para processar a solicitação.
+Essa caixa de diálogo contém informações de status sobre cada solução de Experience Cloud e seu estado atual em relação ao trabalho geral. Como cada tarefa de privacidade é assíncrona, a página exibe a data e a hora de comunicação mais recentes (GMT) de cada solução, já que algumas exigem mais tempo do que outras para processar a solicitação.
 
 Se uma solução tiver fornecido dados adicionais, ela poderá ser visualizada nessa caixa de diálogo. É possível visualização desses dados clicando em linhas de produtos individuais.
 
@@ -78,7 +82,9 @@ Para baixar os dados completos do job como um arquivo CSV, clique em **Exportar 
 
 ## Criar uma nova solicitação de trabalho de privacidade
 
->[!NOTE] Para criar uma solicitação de trabalho de privacidade, você deve fornecer informações de identidade para os clientes específicos cujos dados devem ser acessados ou excluídos. Leia o documento dos dados de [identidade para obter as solicitações](../identity-data.md) de privacidade antes de continuar com esta seção.
+>[!NOTE]
+>
+>Para criar uma solicitação de trabalho de privacidade, você deve fornecer informações de identidade para os clientes específicos cujos dados devem ser acessados ou excluídos. Leia o documento dos dados de [identidade para obter as solicitações](../identity-data.md) de privacidade antes de continuar com esta seção.
 
 A interface do usuário do Privacy Service fornece dois métodos para criar novas solicitações de trabalho:
 
@@ -103,7 +109,7 @@ Selecione o Tipo **de** trabalho da solicitação (&quot;Excluir&quot; ou &quot;
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Em Tipo *de* Namespace, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas ao Privacy Service.
+Em Tipo *de* Namespace, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas para a Privacy Service.
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -145,6 +151,6 @@ Quando terminar, clique em **Criar**. A caixa de diálogo desaparece e o novo tr
 
 ### Próximas etapas
 
-Ao ler este documento, você aprendeu a usar a interface do usuário do Privacy Service para criar um trabalho de privacidade, visualização os detalhes de um trabalho e monitorar seu status de processamento, além de baixar os resultados após sua conclusão.
+Ao ler este documento, você aprendeu a usar a interface do usuário do Privacy Service para criar um trabalho de privacidade, visualização os detalhes de um trabalho e monitore seu status de processamento, e baixe os resultados após sua conclusão.
 
-Para obter etapas sobre como executar essas operações de forma programática usando a API Privacy Service, consulte o guia [do](../api/getting-started.md)desenvolvedor.
+Para obter etapas sobre como executar essas operações de forma programática usando a API de Privacy Service, consulte o guia [do](../api/getting-started.md)desenvolvedor.

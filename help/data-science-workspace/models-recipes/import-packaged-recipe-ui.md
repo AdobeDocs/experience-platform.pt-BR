@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importar uma receita empacotada (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -35,7 +35,9 @@ O fluxo de trabalho para importar uma fórmula de pacote consiste nas seguintes 
 
 Cada instância da receita em [!DNL Data Science Workspace] é acompanhada de um conjunto de configurações que adaptam a instância da receita para atender a um caso de uso específico. Os arquivos de configuração definem os comportamentos padrão de treinamento e pontuação de um Modelo criado usando essa instância da fórmula.
 
->[!NOTE] Os arquivos de configuração são específicos para cada fórmula e maiúsculas e minúsculas.
+>[!NOTE]
+>
+>Os arquivos de configuração são específicos para cada fórmula e maiúsculas e minúsculas.
 
 Abaixo está um exemplo de arquivo de configuração mostrando os comportamentos padrão de treinamento e pontuação para a receita de vendas de varejo.
 

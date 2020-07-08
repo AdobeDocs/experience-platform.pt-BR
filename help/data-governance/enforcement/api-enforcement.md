@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Impor políticas de uso de dados usando a API do Serviço de Política
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 
->[!NOTE] Por padrão, somente as políticas cujo status está definido para `ENABLED` poder participar da avaliação. Para permitir que `DRAFT` as políticas participem da avaliação, é necessário incluir o parâmetro query `includeDraft=true` no caminho da solicitação.
+>[!NOTE]
+>
+>Por padrão, somente as políticas cujo status está definido para `ENABLED` poder participar da avaliação. Para permitir que `DRAFT` as políticas participem da avaliação, é necessário incluir o parâmetro query `includeDraft=true` no caminho da solicitação.
 
 Este documento fornece etapas sobre como usar a [!DNL Policy Service] API para verificar violações de políticas em diferentes cenários.
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 A solicitação a seguir testa a ação `exportToThirdParty` de marketing contra rótulos `C1` e `C3`. Como a política de uso de dados criada anteriormente neste tutorial define o `C1` rótulo como uma das `deny` condições em sua expressão de política, a ação de marketing deve acionar uma violação de política.
 
->[!NOTE] Os rótulos de uso de dados fazem distinção entre maiúsculas e minúsculas. As violações de política ocorrem somente quando os rótulos definidos em suas expressões de política são correspondidos exatamente. Neste exemplo, um `C1` rótulo acionaria uma violação, ao passo que um `c1` rótulo não.
+>[!NOTE]
+>
+>Os rótulos de uso de dados fazem distinção entre maiúsculas e minúsculas. As violações de política ocorrem somente quando os rótulos definidos em suas expressões de política são correspondidos exatamente. Neste exemplo, um `C1` rótulo acionaria uma violação, ao passo que um `c1` rótulo não.
 
 ```shell
 curl -X GET \

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Atualizar um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +19,9 @@ source-git-commit: 4361032b419622d7decc02194d38885b114749e4
 * Uso de campos
 * Uso da notação de Patch JSON
 
->[!NOTE] As operações PATCH em um objeto não podem modificar seus campos expansíveis, que representam objetos inter-relacionados.  As modificações a objetos interrelacionados devem ser feitas diretamente.
+>[!NOTE]
+>
+>As operações PATCH em um objeto não podem modificar seus campos expansíveis, que representam objetos inter-relacionados.  As modificações a objetos interrelacionados devem ser feitas diretamente.
 
 ## Atualizar usando campos
 

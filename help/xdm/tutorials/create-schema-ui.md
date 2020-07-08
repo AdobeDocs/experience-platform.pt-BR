@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -84,7 +84,9 @@ A tela reaparece. A seção *Classe* agora contém a classe selecionada (Perfil 
 
 Os campos aparecem no formato &quot;fieldName | Tipo de dados&quot;. As etapas para definir campos de schema na interface do usuário são fornecidas posteriormente neste tutorial.
 
->[!NOTE] Você pode [alterar a classe de um schema](#change-class) em qualquer ponto durante o processo de composição inicial antes que o schema seja salvo, mas isso deve ser feito com extrema cautela. Misturas são compatíveis somente com certas classes, portanto, alterar a classe redefinirá a tela de desenho e quaisquer campos adicionados.
+>[!NOTE]
+>
+>Você pode [alterar a classe de um schema](#change-class) em qualquer ponto durante o processo de composição inicial antes que o schema seja salvo, mas isso deve ser feito com extrema cautela. Misturas são compatíveis somente com certas classes, portanto, alterar a classe redefinirá a tela de desenho e quaisquer campos adicionados.
 
 ## Adicionar uma mistura {#mixin}
 
@@ -108,7 +110,9 @@ A tela do schema é exibida novamente. A seção *Misturas* agora lista a combin
 
 Esse mixin contribui com vários campos sob o nome de nível superior &quot;pessoa&quot; com o tipo de dados &quot;Pessoa&quot;. Este grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
 
->[!NOTE] Lembre-se de que os campos podem usar tipos escalares (como string, integer, array ou data) como seu tipo de dados, bem como qualquer &quot;tipo de dados&quot; (um grupo de campos que representa um conceito comum) no Registro do Schema.
+>[!NOTE]
+>
+>Lembre-se de que os campos podem usar tipos escalares (como string, integer, array ou data) como seu tipo de dados, bem como qualquer &quot;tipo de dados&quot; (um grupo de campos que representa um conceito comum) no Registro do Schema.
 
 Observe que o campo &quot;nome&quot; tem um tipo de dados de &quot;Nome da pessoa&quot;, o que significa que também descreve um conceito comum e contém subcampos relacionados ao nome, como nome, sobrenome e nome completo.
 
@@ -247,7 +251,9 @@ Agora, todos os dados ingeridos no campo &quot;leyaltyId&quot; serão usados par
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Depois que um campo de schema for definido como a identidade primária, você receberá uma mensagem de erro se tentar definir outro campo no schema como principal. Cada schema pode conter apenas um campo de identidade principal.
+>[!NOTE]
+>
+>Depois que um campo de schema for definido como a identidade primária, você receberá uma mensagem de erro se tentar definir outro campo no schema como principal. Cada schema pode conter apenas um campo de identidade principal.
 
 Para saber mais sobre como trabalhar com identidades, consulte a documentação do Serviço [de](../../identity-service/home.md) identidade.
 
@@ -279,7 +285,9 @@ Clique em **Perfil** e um pop-up será exibido, solicitando que você confirme q
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Uma vez que um schema tenha sido ativado para Perfil do cliente em tempo real e salvo, ele não poderá ser desativado.
+>[!NOTE]
+>
+>Uma vez que um schema tenha sido ativado para Perfil do cliente em tempo real e salvo, ele não poderá ser desativado.
 
 ## Próximas etapas
 
@@ -303,13 +311,17 @@ Em seguida, você pode atribuir a sua nova classe um Nome **de** exibição (um 
 
 ![Detalhes da nova classe](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Ao criar um schema que implemente uma classe definida pela sua organização, lembre-se de que as combinações estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há combinações compatíveis listadas na caixa de diálogo *Adicionar mistura* . Em vez disso, será necessário selecionar **Criar nova mistura** e definir uma mistura para uso com essa classe. Na próxima vez que você redigir um schema que implementa a nova classe, a combinação definida será listada e estará disponível para uso.
+>[!NOTE]
+>
+>Ao criar um schema que implemente uma classe definida pela sua organização, lembre-se de que as combinações estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há combinações compatíveis listadas na caixa de diálogo *Adicionar mistura* . Em vez disso, será necessário selecionar **Criar nova mistura** e definir uma mistura para uso com essa classe. Na próxima vez que você redigir um schema que implementa a nova classe, a combinação definida será listada e estará disponível para uso.
 
 ### Alterar a classe de um schema {#change-class}
 
 A qualquer momento durante o processo inicial de composição do schema, antes de o schema ser salvo, é possível alterar a classe na qual o schema se baseia.
 
->[!WARNING] Tenha cuidado antes de mudar de classe. Misturas são compatíveis apenas com certas classes, portanto, alterar a classe redefine a tela e remove quaisquer campos adicionados a esse ponto.
+>[!WARNING]
+>
+>Tenha cuidado antes de mudar de classe. Misturas são compatíveis apenas com certas classes, portanto, alterar a classe redefine a tela e remove quaisquer campos adicionados a esse ponto.
 
 Para alterar a classe, clique em **Atribuir** ao lado de *Classe* na seção *Composição* do editor.
 

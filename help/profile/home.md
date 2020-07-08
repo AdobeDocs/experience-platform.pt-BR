@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Os atributos calculados permitem calcular automaticamente o valor dos campos com
 
 ## Componentes em tempo real
 
-Esta seção apresenta os componentes que permitem ao Perfil de cliente em tempo real atualizar e monitorar dados de registro e de série de tempo em tempo real.
+Esta seção apresenta os componentes que permitem ao Perfil do cliente em tempo real atualizar e monitorar dados de registro e séries de tempo em tempo real.
 
 ### Segmentação de fluxo e ingestão
 
@@ -129,6 +129,8 @@ O Experience Platform tem uma série de diretrizes a serem seguidas para usar o 
 --->
 
 >[!NOTE]
+>
+>
 >Uma entidade que não seja uma pessoa se refere a qualquer classe XDM que **não** faz parte do Perfil.
 
 ## Próximos passos e recursos adicionais

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -144,7 +147,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.cancel` para [interromper uma execução de um query](#immediately-stop-a-run-for-a-specific-scheduled-query)agendado especificado.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.cancel` para [interromper uma execução de um query](#immediately-stop-a-run-for-a-specific-scheduled-query)agendado especificado.
 
 ### Acionar imediatamente uma execução para um query programado específico
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do SDK do Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 5%
@@ -78,7 +78,9 @@ Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opç
 - [Filtrar dados por coluna](#filter-by-selected-columns)
 - [Obtendo resultados classificados](#get-sorted-results)
 
->[!NOTE] A Organização IMS está definida dentro da `client_context`.
+>[!NOTE]
+>
+>A Organização IMS está definida dentro da `client_context`.
 
 ### Python
 
@@ -192,7 +194,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## Escrita básica dos dados {#basic-writing-of-data}
 
->[!NOTE] A Organização IMS está definida dentro da `client_context`.
+>[!NOTE]
+>
+>A Organização IMS está definida dentro da `client_context`.
 
 Para gravar dados em Python e R, use um dos seguintes exemplos:
 

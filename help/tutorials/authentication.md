@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Autenticar e acessar APIs Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '877'
 ht-degree: 1%
@@ -69,7 +69,9 @@ Semelhante ao processo de adição de um desenvolvedor, o administrador deve atr
 
 ## Gerar credenciais de acesso no Adobe Developer Console
 
->[!NOTE] Se você estiver seguindo esse documento no guia [do desenvolvedor do](../privacy-service/api/getting-started.md)Privacy Service, agora é possível voltar para esse guia para gerar as credenciais de acesso exclusivas do Privacy Service.
+>[!NOTE]
+>
+>Se você estiver seguindo esse documento no guia [do desenvolvedor do](../privacy-service/api/getting-started.md)Privacy Service, agora é possível voltar para esse guia para gerar as credenciais de acesso exclusivas do Privacy Service.
 
 Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso a seguir:
 

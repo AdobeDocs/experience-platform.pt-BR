@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -30,7 +30,9 @@ Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTR
 
 A página Serviço de IA do cliente é exibida. Esta página lista as instâncias de serviço da API do cliente e exibe informações sobre elas, incluindo o nome da instância, o tipo de propensão, a frequência de execução da instância e o status da última atualização.
 
->[!NOTE] Somente as instâncias de serviço que concluíram execuções de pontuação bem-sucedidas têm insights.
+>[!NOTE]
+>
+>Somente as instâncias de serviço que concluíram execuções de pontuação bem-sucedidas têm insights.
 
 ![Criar instância](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ Para obter detalhes da visualização dentro do painel, clique em um container d
 
 ![trilho direito](../images/insights/success-run.png)
 
->[!NOTE] No evento de que uma execução de pontuação falhe, uma mensagem de erro é fornecida. A mensagem de erro é listada em Detalhes *da* última execução no painel direito, que está visível apenas para execução com falha.
+>[!NOTE]
+>
+>No evento de que uma execução de pontuação falhe, uma mensagem de erro é fornecida. A mensagem de erro é listada em Detalhes *da* última execução no painel direito, que está visível apenas para execução com falha.
 
 ![falha ao executar mensagem](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ O botão **[!UICONTROL Mais ações]** está localizado na navegação superior 
 
 O Resumo da Pontuação exibe o número total de perfis pontuados e os categoriza em compartimentos com propensão alta, média e baixa. Os compartimentos de propensão são determinados com base no intervalo de pontuação, baixa é menor que 24, média é de 25 a 74 e alta é acima de 74. Cada bucket tem uma cor correspondente à legenda.
 
->[!NOTE] Se for uma pontuação de propensão de conversão, as pontuações altas serão exibidas em verde e as pontuações baixas em vermelho. Se você está predizendo que a propensão de churn é invertida, as altas pontuações estão em vermelho e as baixas pontuações são verdes. O bucket médio permanece amarelo independentemente do tipo de propensão escolhido.
+>[!NOTE]
+>
+>Se for uma pontuação de propensão de conversão, as pontuações altas serão exibidas em verde e as pontuações baixas em vermelho. Se você está predizendo que a propensão de churn é invertida, as altas pontuações estão em vermelho e as baixas pontuações são verdes. O bucket médio permanece amarelo independentemente do tipo de propensão escolhido.
 
 ![resumo da pontuação](../images/insights/scoring-summary.png)
 
@@ -118,7 +124,7 @@ O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!U
 
 ![Preenchimento do segmento em](../images/insights/segment-saving.png)
 
-Para visualização do novo segmento na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
+Para visualização do novo segmento na interface do usuário do Platform, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 

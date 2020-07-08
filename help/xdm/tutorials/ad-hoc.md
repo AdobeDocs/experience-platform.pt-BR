@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Criar um schema ad-hoc
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
 
 # Criar um schema ad-hoc
 
-Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. Os schemas ad-hoc são usados em vários workflows de ingestão de dados para a Experience Platform, incluindo a inclusão de arquivos CSV e a criação de certos tipos de conexões de origem.
+Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. schemas ad-hoc são usados em vários workflows de ingestão de dados para o Experience Platform, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
 
-Este documento fornece etapas gerais para a criação de um schema ad-hoc usando a API [do Registro do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema. Ela deve ser usada em conjunto com outros tutoriais da plataforma de experiência que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um schema ad-hoc para seu caso de uso específico.
+Este documento fornece etapas gerais para a criação de um schema ad-hoc usando a API [do Registro do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema. Ela deve ser usada em conjunto com outros tutoriais de Experience Platform que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um schema ad-hoc para seu caso de uso específico.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional do sistema do Experience Data Model (XDM). Antes de iniciar este tutorial, reveja a seguinte documentação XDM:
 
-- [Visão geral](../home.md)do sistema XDM: Uma visão geral de alto nível do XDM e sua implementação na plataforma da experiência.
+- [Visão geral](../home.md)do sistema XDM: Uma visão geral de alto nível do XDM e sua implementação no Experience Platform.
 - [Noções básicas da composição](../schema/composition.md)do schema: Uma visão geral dos componentes básicos dos schemas XDM.
 
 Antes de iniciar este tutorial, consulte o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
@@ -38,7 +41,9 @@ POST /tenant/classes
 
 A solicitação a seguir cria uma nova classe XDM, configurada pelos atributos fornecidos na carga. Ao fornecer uma `$ref` propriedade definida como `https://ns.adobe.com/xdm/data/adhoc` na `allOf` matriz, essa classe herda o `adhoc` comportamento. A solicitação também define um `_adhoc` objeto, que contém os campos personalizados para a classe.
 
->[!NOTE] Os campos personalizados definidos em `_adhoc` variam dependendo do caso de uso do schema ad-hoc. Consulte o fluxo de trabalho específico no tutorial apropriado para ver os campos personalizados necessários com base em casos de uso.
+>[!NOTE]
+>
+>Os campos personalizados definidos em `_adhoc` variam dependendo do caso de uso do schema ad-hoc. Consulte o fluxo de trabalho específico no tutorial apropriado para ver os campos personalizados necessários com base em casos de uso.
 
 ```shell
 curl -X POST \
@@ -143,7 +148,7 @@ Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nom
 
 ## Criar um schema ad-hoc
 
-Depois de criar uma classe ad-hoc, você pode criar um novo schema que implemente essa classe, fazendo uma solicitação POST para o `/tenant/schemas` ponto de extremidade.
+Depois de criar uma classe ad-hoc, você pode criar um novo schema que implemente essa classe fazendo uma solicitação POST ao `/tenant/schemas` ponto final.
 
 **Formato da API**
 
@@ -216,7 +221,9 @@ Uma resposta bem-sucedida retorna os detalhes do schema recém-criado, incluindo
 
 ## Visualização do schema ad-hoc completo
 
->[!NOTE] Esta etapa é opcional. Se você não quiser inspecionar a estrutura de campo do seu schema ad-hoc, vá para a seção de [próximas etapas](#next-steps) no final deste tutorial.
+>[!NOTE]
+>
+>Esta etapa é opcional. Se você não quiser inspecionar a estrutura de campo do seu schema ad-hoc, vá para a seção de [próximas etapas](#next-steps) no final deste tutorial.
 
 Depois que o schema ad-hoc for criado, você poderá fazer uma solicitação de pesquisa (GET) para visualização o schema em seu formulário expandido. Isso é feito usando o cabeçalho Accept apropriado na solicitação GET, como demonstrado abaixo.
 

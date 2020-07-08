@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Obter histórico de cluster de uma identidade
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 1%
@@ -68,7 +68,9 @@ curl -X GET \
 
 Use o `POST` método como um equivalente em lote do `GET` método descrito acima para retornar os históricos de cluster de várias identidades.
 
->[!NOTE] O pedido deve indicar no máximo 1000 identidades. As solicitações que excederem 1000 identidades resultarão em um código de status 400.
+>[!NOTE]
+>
+>O pedido deve indicar no máximo 1000 identidades. As solicitações que excederem 1000 identidades resultarão em um código de status 400.
 
 **Formato da API**
 
@@ -210,7 +212,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] A resposta sempre terá uma entrada para cada XID fornecido na solicitação, independentemente de os XIDs de uma solicitação pertencerem ao mesmo cluster ou se um ou mais têm algum cluster associado.
+>[!NOTE]
+>
+>A resposta sempre terá uma entrada para cada XID fornecido na solicitação, independentemente de os XIDs de uma solicitação pertencerem ao mesmo cluster ou se um ou mais têm algum cluster associado.
 
 ## Próximas etapas
 

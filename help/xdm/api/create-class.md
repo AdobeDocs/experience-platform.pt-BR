@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar uma classe
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
 
 O principal bloco de construção de um schema é uma classe. A classe contém o conjunto mínimo de campos que devem ser definidos para capturar os dados principais de um schema. Por exemplo, se você estivesse projetando um schema para carros e caminhões eles provavelmente usariam uma classe chamada Veículo que descrevia as propriedades comuns básicas de todos os veículos.
 
-Há várias classes padrão fornecidas pela Adobe e outros parceiros da plataforma Experience, mas você também pode definir suas próprias classes e salvá-las no Registro do Schema. Em seguida, é possível compor um schema que implementa a classe criada e definir combinações compatíveis com a classe recém-definida.
+Há várias classes padrão fornecidas pela Adobe e outros parceiros de Experience Platform, mas você também pode definir suas próprias classes e salvá-las no Registro do Schema. Em seguida, é possível compor um schema que implementa a classe criada e definir combinações compatíveis com a classe recém-definida.
 
->[!NOTE] Ao compor um schema com base em uma classe definida, você não poderá usar as mixagens padrão. Cada mixin define as classes com as quais são compatíveis em seus `meta:intendedToExtend` atributos. Depois de começar a definir misturas compatíveis com sua nova classe (usando o `$id` da nova classe no `meta:intendedToExtend` campo da mistura), você poderá reutilizar essas misturas toda vez que definir um schema que implemente a classe definida. Consulte as seções sobre como [criar misturas](create-mixin.md) e [criar schemas](create-schema.md) para obter mais informações.
+>[!NOTE]
+>
+>Ao compor um schema com base em uma classe definida, você não poderá usar as mixagens padrão. Cada mixin define as classes com as quais são compatíveis em seus `meta:intendedToExtend` atributos. Depois de começar a definir misturas compatíveis com sua nova classe (usando o `$id` da nova classe no `meta:intendedToExtend` campo da mistura), você poderá reutilizar essas misturas toda vez que definir um schema que implemente a classe definida. Consulte as seções sobre como [criar misturas](create-mixin.md) e [criar schemas](create-schema.md) para obter mais informações.
 
 **Formato da API**
 

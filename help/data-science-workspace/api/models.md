@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modelos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 4%
@@ -220,7 +220,9 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes de seu Modelo, 
 
 Você pode atualizar um Modelo existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do Modelo de público alvo no caminho da solicitação e fornece uma carga JSON que contém propriedades atualizadas.
 
->[!TIP] Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para recuperar o Modelo por ID. Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>[!TIP]
+>
+>Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para recuperar o Modelo por ID. Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
 
 **Formato da API**
 

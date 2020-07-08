@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Dicionário de campos do Experience Data Model (XDM)
 topic: overview
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '25199'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,9 @@ A tabela abaixo inclui o nome do campo (nem todos os campos XDM são namespacado
 
 Você pode usar a funcionalidade de pesquisa no Editor de Schemas para visualização dos detalhes desses recursos, como mostrado no tutorial [do Editor de](../tutorials/create-schema-ui.md)Schemas.
 
->[!NOTE] Se um campo estiver marcado como &quot;**DEPRECATED**&quot;, isso significa que não deve mais ser usado em novas implementações. O campo continua disponível para compatibilidade com versões anteriores, mas não será mais suportado em versões futuras.
+>[!NOTE]
+>
+>Se um campo estiver marcado como &quot;**DEPRECATED**&quot;, isso significa que não deve mais ser usado em novas implementações. O campo continua disponível para compatibilidade com versões anteriores, mas não será mais suportado em versões futuras.
 
 | Nome do campo | Title | Descrição | Tipo | Formato | Tipo XDM | Incluído em |
 |----------|----|------|--------|-----|-----------|--------------|
@@ -97,7 +99,7 @@ Você pode usar a funcionalidade de pesquisa no Editor de Schemas para visualiza
 | xdm:bitrateAverage | Taxa média de bits | Uma média ponderada de todos os valores de taxa de bits relacionados à duração da reprodução ocorrida durante uma sessão de reprodução. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:bitrateChanges | Alterações da taxa de bits | O número de eventos de alteração da taxa de bits que ocorreram durante uma sessão de reprodução. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:rejeições | Devoluções | Mensagens assíncronas que foram retornadas como temporariamente não entregues no sistema de recebimento. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/mutationevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-directmarketing |
-| xdm:marca | Marca | Marca dos produtos Master/Variant. | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:marca | Marca | Marca dos produtos Principais/variantes. | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:broadcastChannel | Canal de distribuição | canal de distribuição de onde o conteúdo foi reproduzido. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:broadcastContentType | Tipo de conteúdo de transmissão | O tipo do delivery de fluxo. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:broadcastNetwork | Rede de transmissão | O nome da rede do programador. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
@@ -269,10 +271,10 @@ Você pode usar a funcionalidade de pesquisa no Editor de Schemas para visualiza
 | xdm:manufaturname | Nome do fabricante | Fabricante do produto | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:marketing | Marketing | As informações relacionadas às atividades de marketing que estão ativas com o ponto de contato. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-marketing |
 | xdm:marketSegment | Segmento de mercado | O segmento de mercado indicado no qual a organização participa. Esse é um campo de forma livre e é aconselhável usar um valor estruturado para query ou para usar a `xdm:identifier` propriedade. | string |  | string | https://ns.adobe.com/xdm/common/organization |
-| xdm:masterProductDescription | Descrição do produto mestre | A descrição do produto. | string |  | string | https://ns.adobe.com/xdm/context/product |
-| xdm:masterProductID | Identificador de produto mestre | A ID exclusiva interna do produto no sistema de backend de comércio. | string | uri | string | https://ns.adobe.com/xdm/context/product |
-| xdm:masterProductName | Nome do produto mestre | O nome localizado do produto. | string |  | string | https://ns.adobe.com/xdm/context/product |
-| xdm:masterProductSKU | SKU do produto mestre | O SKU exclusivo (Stock Keeping Unit) do produto mestre atribuído pelo fornecedor ou fabricante (para atualização). | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductDescription | Descrição Principal do produto | A descrição do produto. | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductID | Identificador de produto Principal | A ID exclusiva interna do produto no sistema de backend de comércio. | string | uri | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductName | Nome do produto Principal | O nome localizado do produto. | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductSKU | SKU de produto Principal | O SKU exclusivo (Stock Keeping Unit) do produto principal atribuído pelo fornecedor ou fabricante (para atualização). | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:measurementAdNotVisible | Anúncio medido não visível | Indicador de que o anúncio não está visível conforme medido por uma biblioteca de visualização no momento da impressão. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
 | xdm:measurementMuted | Medido mudo | Indicador de anúncio silenciado, medido por uma biblioteca de visualização no momento da impressão. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
 | xdm:measurementWindowInative | Janela Medida Inativa | Indicador de anúncio sendo exibido em uma janela inativa, conforme medido por uma biblioteca de visualização no momento da impressão. | objeto |  | objeto | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |

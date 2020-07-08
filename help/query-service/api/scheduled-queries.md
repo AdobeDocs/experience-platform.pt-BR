@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 3%
 
 ---
 
@@ -214,7 +217,9 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.delete` para [excluir o query](#delete-a-specified-scheduled-query)programado criado.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.delete` para [excluir o query](#delete-a-specified-scheduled-query)programado criado.
 
 ### Solicitar detalhes de um query agendado especificado
 
@@ -295,7 +300,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do query progra
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.delete` para [excluir o query](#delete-a-specified-scheduled-query)programado criado.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.delete` para [excluir o query](#delete-a-specified-scheduled-query)programado criado.
 
 ### Atualizar detalhes de um query programado especificado
 
@@ -408,9 +415,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Excluir um query programado especificado
 
-Você pode excluir um query programado especificado, fazendo uma solicitação DELETE para o ponto de extremidade `/schedules` e fornecendo a ID do query programado que deseja excluir no caminho da solicitação.
+Você pode excluir um query programado especificado, fazendo uma solicitação DELETE ao ponto de extremidade `/schedules` e fornecendo a ID do query programado que deseja excluir no caminho da solicitação.
 
->[!NOTE] O agendamento **deve** ser desativado antes de ser excluído.
+>[!NOTE]
+>
+>O agendamento **deve** ser desativado antes de ser excluído.
 
 **Formato da API**
 

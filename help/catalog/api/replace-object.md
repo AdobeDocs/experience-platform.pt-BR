@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Substituir um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
 
 É possível substituir o conteúdo de um objeto de Catálogo usando uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
 
->[!NOTE] Se você precisar apenas atualizar alguns campos específicos em um objeto de Catálogo, o uso de uma solicitação PATCH pode ser mais eficiente.
+>[!NOTE]
+>
+>Se você precisar apenas atualizar alguns campos específicos em um objeto de Catálogo, o uso de uma solicitação PATCH pode ser mais eficiente.
 
 **Formato da API**
 

@@ -1,31 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ingressar dados na Adobe Experience Platform
+title: Insira dados no Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1291'
+ht-degree: 0%
 
 ---
 
 
-# Ingressar dados na Adobe Experience Platform
+# Insira dados no Adobe Experience Platform
 
-O Adobe Experience Platform permite importar facilmente dados para a Plataforma como arquivos em lote. Exemplos de dados a serem ingeridos podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema do Modelo de Dados de Experiência (XDM) conhecido no Registro do Schema.
+O Adobe Experience Platform permite importar facilmente dados para o Platform como arquivos em lote. Exemplos de dados a serem ingeridos podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema do Modelo de Dados de Experiência (XDM) conhecido no Registro do Schema.
 
 ## Introdução
 
-Para concluir este tutorial, é necessário ter acesso à plataforma Experience. Se você não tiver acesso a uma organização IMS na plataforma Experience, fale com o administrador do sistema antes de prosseguir.
+Para concluir este tutorial, é necessário ter acesso ao Experience Platform. Se você não tiver acesso a uma Organização IMS no Experience Platform, fale com o administrador do sistema antes de prosseguir.
 
 Se preferir assimilar dados usando as APIs de ingestão de dados, comece lendo o guia [do desenvolvedor de ingestão de](../batch-ingestion/api-overview.md)lote.
 
 ## Área de trabalho de conjuntos de dados
 
-A área de trabalho de conjuntos de dados na plataforma Experience permite que você visualização e gerencie todos os conjuntos de dados criados pela organização IMS, bem como criar novos conjuntos.
+A área de trabalho de conjuntos de dados no Experience Platform permite que você visualização e gerencie todos os conjuntos de dados criados pela organização IMS, bem como criar novos conjuntos.
 
 Visualização a área de trabalho Conjuntos de dados clicando em **Conjuntos** de dados na navegação à esquerda. A área de trabalho Conjuntos de dados contém uma lista de conjuntos de dados, incluindo colunas que mostram _Nome_, _Criado_ (data e hora), _Origem_, _Schema_ e Status _do___&#x200B;Último Lote, bem como a data e a hora em que o conjunto de dados foi Última Atualização.
 
->[!NOTE] Clique no ícone de filtro ao lado da barra Pesquisar para usar os recursos de filtragem para visualização somente dos conjuntos de dados habilitados para o Perfil.
+>[!NOTE]
+>
+>Clique no ícone de filtro ao lado da barra Pesquisar para usar os recursos de filtragem para visualização somente dos conjuntos de dados habilitados para o Perfil.
 
 ![Visualização de todos os conjuntos de dados](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -73,7 +78,7 @@ Também na guia Informações há uma alternância de _Perfil_ usada para habili
 
 ## Habilitar conjunto de dados para o Perfil do cliente em tempo real
 
-Os conjuntos de dados são usados para assimilar dados na plataforma da experiência, e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Essas informações agrupadas são chamadas de Perfil do cliente em tempo real. Para que a Plataforma saiba quais informações devem ser incluídas no Perfil em tempo real, os conjuntos de dados podem ser marcados para inclusão usando a alternância de **Perfil** .
+Os conjuntos de dados são usados para assimilar dados no Experience Platform, e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Essas informações agrupadas são chamadas de Perfil do cliente em tempo real. Para que a Platform saiba quais informações devem ser incluídas no Perfil em tempo real, os conjuntos de dados podem ser marcados para inclusão usando a alternância de **Perfil** .
 
 Por padrão, essa alternância está desativada. Se você optar por alternar no Perfil, todos os dados ingeridos no conjunto de dados serão usados para ajudar a identificar um indivíduo e unir seu Perfil em tempo real.
 
@@ -97,13 +102,15 @@ Os dados podem ser adicionados a um conjunto de dados de várias maneiras difere
 
 Para começar a adicionar dados ao conjunto de dados, clique na guia **Adicionar dados** . Agora você pode arrastar e soltar arquivos ou procurar no computador os arquivos que deseja adicionar.
 
->[!NOTE] A plataforma oferece suporte a dois tipos de arquivos para ingestão de dados, parquet ou JSON. Você pode adicionar até cinco arquivos de cada vez, com o tamanho máximo de cada arquivo de 10 GB.
+>[!NOTE]
+>
+>A Platform oferece suporte a dois tipos de arquivos para ingestão de dados, parquet ou JSON. Você pode adicionar até cinco arquivos de cada vez, com o tamanho máximo de cada arquivo de 10 GB.
 
 ![Guia Adicionar dados](../images/tutorials/ingest-batch-data/add_data.png)
 
 ## Carregar um arquivo
 
-Depois que você arrastar e soltar (ou navegar e selecionar) um parquet ou arquivo JSON que deseja carregar, a Plataforma começará imediatamente a processar o arquivo e uma caixa de diálogo **Carregando** aparecerá na guia **Adicionar dados** mostrando o progresso do upload do arquivo.
+Depois que você arrastar e soltar (ou navegar e selecionar) um parquet ou arquivo JSON que deseja carregar, a Platform começará imediatamente a processar o arquivo e uma caixa de diálogo **Carregar** aparecerá na guia **Adicionar dados** mostrando o progresso do upload do arquivo.
 
 ![Caixa de diálogo de upload](../images/tutorials/ingest-batch-data/uploading.png)
 
@@ -135,6 +142,6 @@ Clique em Conjunto de dados de **Pré-visualização** para abrir uma caixa de d
 
 ## Próximas etapas
 
-Agora que você criou um conjunto de dados e assimilou dados com êxito na Experience Platform, pode repetir essas etapas para criar um novo conjunto de dados ou assimilar mais dados no conjunto de dados existente.
+Agora que você criou um conjunto de dados e assimilou dados com êxito no Experience Platform, pode repetir essas etapas para criar um novo conjunto de dados ou assimilar mais dados no conjunto de dados existente.
 
 Para saber mais sobre a ingestão em lote, leia a visão geral [da Ingestão em](../batch-ingestion/overview.md)lote.

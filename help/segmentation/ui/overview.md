@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2683'
 ht-degree: 0%
@@ -63,13 +63,15 @@ A guia **[!UICONTROL Atributos]** permite navegar pelos [!DNL Profile] atributos
 
 ### Eventos
 
-A guia **[!UICONTROL Eventos]** permite criar uma audiência com base em eventos ou ações realizadas usando elementos de dados XDM ExperienceEvent. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Eventos]** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
+A guia **[!UICONTROL Eventos]** permite que você crie uma audiência com base em eventos ou ações realizadas usando elementos de dados XDM ExperienceEvent. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Eventos]** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
 
 Além de poder procurar [!DNL ExperienceEvent] elementos, também é possível procurar Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação [!DNL ExperienceEvents], sem exigir que você pesquise pela [!DNL XDM ExperienceEvent] classe procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmentos.
 
 Qualquer tipo de componente pode ser pesquisado digitando seu nome na barra de pesquisa, que usa a sintaxe [de pesquisa de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Os resultados da pesquisa começam a ser preenchidos à medida que palavras inteiras são inseridas. Por exemplo, para criar uma regra baseada no campo XDM `ExperienceEvent.commerce.productViews`, digite &quot;visualizações de produto&quot; no start de pesquisa. Depois que a palavra &quot;produto&quot; é digitada, os resultados da pesquisa começam a ser exibidos. Cada resultado inclui a hierarquia de objetos à qual pertence.
 
->[!NOTE] Os campos de schema personalizados definidos pela sua organização podem levar até 24 horas para serem exibidos e se tornarem disponíveis para uso nas regras de criação.
+>[!NOTE]
+>
+>Os campos de schema personalizados definidos pela sua organização podem levar até 24 horas para serem exibidos e se tornarem disponíveis para uso nas regras de criação.
 
 Você pode arrastar e soltar facilmente [!DNL ExperienceEvents] e [!UICONTROL Tipos de evento] na definição do segmento.
 
@@ -105,7 +107,9 @@ Você pode arrastar e soltar uma audiência da guia *[!UICONTROL Audiência]* na
 
 Para [!DNL Platform] audiências criadas usando o Construtor [!UICONTROL de]segmentos, você tem a opção de converter a audiência no conjunto de regras que foram usadas na definição de segmento para essa audiência. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo alterações recentes na definição do segmento antes de convertê-lo para a lógica da regra.
 
->[!NOTE] Ao adicionar uma audiência de uma fonte externa, somente a associação de audiência é referenciada. Não é possível converter a audiência em regras e, portanto, as regras usadas para criar a audiência original não podem ser modificadas na nova definição de segmento.
+>[!NOTE]
+>
+>Ao adicionar uma audiência de uma fonte externa, somente a associação de audiência é referenciada. Não é possível converter a audiência em regras e, portanto, as regras usadas para criar a audiência original não podem ser modificadas na nova definição de segmento.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -137,7 +141,9 @@ Um container filho também pode ser extraído e adicionado em linha ao container
 
 Depois de clicar em **[!UICONTROL Desvincular container]** , o container filho será removido e os critérios aparecerão em linha.
 
->[!NOTE] Ao desvincular container, tenha cuidado para que a lógica continue a atender à definição de segmento desejada.
+>[!NOTE]
+>
+>Ao desvincular container, tenha cuidado para que a lógica continue a atender à definição de segmento desejada.
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -161,7 +167,9 @@ A seção Propriedades *[!UICONTROL do]* segmento também é onde você pode esp
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] As estimativas de Audiência são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em sua loja de perfis, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmentos podem ser encontradas na seção [de geração de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimativas do tutorial de criação de segmentos.
+>[!NOTE]
+>
+>As estimativas de Audiência são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em sua loja de perfis, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmentos podem ser encontradas na seção [de geração de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimativas do tutorial de criação de segmentos.
 
 ## Ativar a segmentação programada {#enable-scheduled-segmentation}
 
@@ -171,7 +179,9 @@ A avaliação sob demanda envolve o uso da API para realizar a avaliação e cri
 
 A ativação das definições de segmento para avaliação programada pode ser feita usando a interface do usuário ou a API. Na interface do usuário, volte para a guia *[!UICONTROL Procurar]* em **[!UICONTROL Segmentos]** e alterne para **[!UICONTROL Avaliar todos os segmentos]**. Isso fará com que todos os segmentos sejam avaliados com base na programação definida pela sua organização.
 
->[!NOTE] A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] dentro de um único ambiente de sandbox, você não poderá usar a avaliação agendada.
+>[!NOTE]
+>
+>A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] dentro de um único ambiente de sandbox, você não poderá usar a avaliação agendada.
 
 No momento, os agendamentos só podem ser criados usando a API. Para obter etapas detalhadas sobre como criar, editar e trabalhar com programações usando a API, siga o tutorial para avaliar e acessar os resultados do segmento, especificamente a seção sobre avaliação [programada usando a API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -179,7 +189,9 @@ No momento, os agendamentos só podem ser criados usando a API. Para obter etapa
 
 ## Segmentação em streaming {#streaming-segmentation}
 
->[!NOTE] Para que a segmentação de fluxo funcione, o cliente precisará ativar a segmentação programada para a organização. Para obter detalhes sobre como ativar a segmentação programada, consulte [a seção anterior neste guia](#enable-scheduled-segmentation)do usuário.
+>[!NOTE]
+>
+>Para que a segmentação de fluxo funcione, o cliente precisará ativar a segmentação programada para a organização. Para obter detalhes sobre como ativar a segmentação programada, consulte [a seção anterior neste guia](#enable-scheduled-segmentation)do usuário.
 
 Um query será avaliado automaticamente com a segmentação de streaming se atender a qualquer um dos seguintes critérios:
 
@@ -223,7 +235,9 @@ Informações adicionais sobre a última avaliação de segmento podem ser encon
 
 ## Violações da política DULE
 
->[!NOTE] As violações da política DULE só se aplicam se você estiver criando um segmento que foi atribuído a um destino.
+>[!NOTE]
+>
+>As violações da política DULE só se aplicam se você estiver criando um segmento que foi atribuído a um destino.
 
 Depois que você terminar de criar seu segmento, ele será analisado [!DNL Data Governance] para garantir que não haja violações de política dentro do segmento. Para obter detalhes sobre DULE e violações de política, consulte a visão geral [do rótulo de uso de](../../data-governance/labels/overview.md)dados.
 
@@ -237,6 +251,6 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Use a tela e os container do construtor de regras para controlar a ordem na qual as regras de segmento são executadas.
 - Estimativas de Visualização de sua audiência potencial, permitindo que você ajuste suas definições de segmento conforme necessário.
 - Ative todas as definições de segmento para segmentação programada.
-- Ative definições de segmento especificadas para a segmentação de streaming.
+- Habilitar definições de segmento especificadas para a segmentação de streaming.
 
 Para obter instruções passo a passo sobre como trabalhar com [!DNL Segmentation Service] a [!DNL Segmentation Service] API, consulte o tutorial de [criação de segmentos de audiência usando APIs](../tutorials/create-a-segment.md) .

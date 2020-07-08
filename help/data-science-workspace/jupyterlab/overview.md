@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
 ht-degree: 11%
@@ -33,7 +33,9 @@ A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab no Platfo
 | **Bibliotecas de desenvolvimento** | No [!DNL Experience Platform], [!DNL JupyterLab] fornece bibliotecas pré-instaladas para [!DNL Python], R e PySpark. Consulte o [apêndice](#supported-libraries) para obter uma lista completa das bibliotecas suportadas. |
 | **Controladora de biblioteca** | Quando as bibliotecas pré-instaladas não atendem às suas necessidades, bibliotecas adicionais podem ser instaladas para Python e R, e são temporariamente armazenadas em container isolados para manter a integridade dos dados [!DNL Platform] e mantê-los seguros. Consulte a seção [kernels](#kernels) para obter mais detalhes. |
 
->[!NOTE] As bibliotecas adicionais só estão disponíveis para a sessão em que foram instaladas. É necessário reinstalar as bibliotecas adicionais necessárias ao iniciar novas sessões.
+>[!NOTE]
+>
+>As bibliotecas adicionais só estão disponíveis para a sessão em que foram instaladas. É necessário reinstalar as bibliotecas adicionais necessárias ao iniciar novas sessões.
 
 ## Integração com outros [!DNL Platform] serviços {#service-integration}
 
@@ -44,7 +46,9 @@ A normalização e a interoperabilidade são conceitos fundamentais subjacentes 
 * **[!DNL Sensei ML Framework]:**Desenvolvimento de modelo com a capacidade de treinar e pontuar dados, bem como criação de receita com um único clique.
 * **[!DNL Experience Data Model (XDM)]:**A normalização e a interoperabilidade são conceitos-chave por detrás da Adobe Experience Platform.[O Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
->[!NOTE] Algumas integrações [!DNL Platform] de serviço em [!DNL JupyterLab] estão limitadas a kernels específicos. Consulte a seção sobre [kernels](#kernels) para obter mais detalhes.
+>[!NOTE]
+>
+>Algumas integrações [!DNL Platform] de serviço em [!DNL JupyterLab] estão limitadas a kernels específicos. Consulte a seção sobre [kernels](#kernels) para obter mais detalhes.
 
 ## Principais recursos e operações comuns
 
@@ -70,7 +74,7 @@ A [!DNL JupyterLab] interface consiste em uma barra de menus, uma barra lateral 
 
 **Barra de menus**
 
-A barra de menus na parte superior da interface tem menus de nível superior que expõem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
+A barra de menus na parte superior da interface tem menus de nível superior que exibem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
 
 * **Arquivo:** Ações relacionadas a arquivos e diretórios
 * **Editar:** Ações relacionadas à edição de documentos e outras atividades
@@ -598,6 +602,8 @@ timedf.show()
 ```
 
 >[!TIP]
+>
+>
 >No Scala, é possível usar `sys.env()` para declarar e retornar um valor de dentro `option`. Isso elimina a necessidade de definir variáveis se você sabe que elas só serão usadas uma única vez. O exemplo a seguir retira `val userToken` do exemplo acima e o declara em linha dentro `option` como uma alternativa:
 > 
 ```scala

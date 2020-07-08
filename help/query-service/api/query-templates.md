@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 3%
 
 ---
 
@@ -102,7 +105,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
 
 ### Criar um modelo de query
 
@@ -163,7 +168,9 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do mod
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
 
 ### Recuperar um modelo de query especificado
 
@@ -219,7 +226,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de qu
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
 
 ### Atualizar um modelo de query especificado
 
@@ -237,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **Solicitação**
 
->[!NOTE] A solicitação PUT exige que o sql e o campo de nome sejam preenchidos e **substituirá** o conteúdo atual desse modelo de query.
+>[!NOTE]
+>
+>A solicitação PUT exige que o sql e o campo de nome sejam preenchidos e **substituirá** o conteúdo atual desse modelo de query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -287,11 +298,13 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com as informaçõe
 }
 ```
 
->[!NOTE] Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>[!NOTE]
+>
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
 
 ### Excluir um modelo de query especificado
 
-Você pode excluir um modelo de query específico, fazendo uma solicitação DELETE para o e fornecendo a ID do modelo de query no caminho da solicitação. `/query-templates/{TEMPLATE_ID}`
+É possível excluir um modelo de query específico, solicitando DELETE ao e fornecendo a ID do modelo de query no caminho da solicitação. `/query-templates/{TEMPLATE_ID}`
 
 **Formato da API**
 

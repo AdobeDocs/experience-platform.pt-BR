@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviço de segmentação de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 0%
@@ -40,7 +40,9 @@ Para saber como criar e usar segmentos no Construtor de segmentos (a implementa�
 
 Para obter informações sobre como criar definições de segmentos usando a API, consulte o tutorial sobre como [criar segmentos de audiência usando a API](./tutorials/create-a-segment.md).
 
->[!NOTE] No evento em que um schema é estendido, todos os uploads futuros devem atualizar os campos recém-adicionados de acordo. Para obter mais informações sobre como personalizar o Modelo de dados de experiência (XDM), visite o tutorial [do Editor de](../xdm/tutorials/create-schema-ui.md)Schemas.
+>[!NOTE]
+>
+>No evento em que um schema é estendido, todos os uploads futuros devem atualizar os campos recém-adicionados de acordo. Para obter mais informações sobre como personalizar o Modelo de dados de experiência (XDM), visite o tutorial [do Editor de](../xdm/tutorials/create-schema-ui.md)Schemas.
 
 ## Avaliar segmentos
 
@@ -70,14 +72,18 @@ A composição de seus segmentos (por meio da API ou do Construtor de segmentos)
 
 Ao criar um novo segmento, é necessário fornecer um nome de segmento. O nome do segmento é usado para identificar um segmento específico entre a coleção criada pelo Serviço de segmentação. Os nomes de segmentos devem, portanto, ser descritivos, concisos e exclusivos.
 
->[!NOTE] Ao planejar um segmento, lembre-se de que os segmentos podem ser referenciados e combinados a qualquer outro segmento. Ao selecionar um nome, considere a possibilidade de seu segmento conter partes reutilizáveis.
+>[!NOTE]
+>
+>Ao planejar um segmento, lembre-se de que os segmentos podem ser referenciados e combinados a qualquer outro segmento. Ao selecionar um nome, considere a possibilidade de seu segmento conter partes reutilizáveis.
 
 ### Mesclar políticas
 
 As políticas de mesclagem são regras usadas pelo Perfil para determinar como os dados serão priorizados e combinados em uma visualização unificada em determinadas condições.
 Se uma política de mesclagem não estiver definida, a política de mesclagem padrão do Platform será usada. Se você preferir usar uma política de mesclagem específica para a sua organização, poderá criar sua própria política e marcá-la como padrão da sua organização.
 
->[!NOTE] A estimativa de tamanhos de audiência é baseada na política padrão de mesclagem de perfis da organização.
+>[!NOTE]
+>
+>A estimativa de tamanhos de audiência é baseada na política padrão de mesclagem de perfis da organização.
 
 ### Outros metadados de segmento
 
@@ -138,7 +144,9 @@ Os recursos do arquiteto de dados incluem acesso a dados da Web da navegação d
 
 **A solução**
 
->[!NOTE] Neste exemplo, presumiremos que o arquiteto de dados já estabeleceu uma Namespace de ID.
+>[!NOTE]
+>
+>Neste exemplo, presumiremos que o arquiteto de dados já estabeleceu uma Namespace de ID.
 
 Usando a API, o arquiteto de dados relaciona a chave do schema ExperienceEvent com a classe &quot;products&quot;. Isso permite que o arquiteto de dados utilize os campos adicionais da classe &quot;products&quot; como se fossem nativos do schema ExperienceEvent. Como etapa final do trabalho de configuração, o arquiteto de dados precisa trazer os dados apropriados para o Perfil do cliente em tempo real. Isso é feito habilitando o conjunto de dados &quot;produtos&quot; para uso com o Perfil. Com o trabalho de configuração concluído, o arquiteto de dados ou o comerciante pode criar o segmento de público alvo no Construtor de segmentos.
 

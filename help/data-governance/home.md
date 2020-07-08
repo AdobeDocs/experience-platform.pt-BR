@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Controle de dados de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 0%
@@ -64,7 +64,9 @@ A estrutura DULE inclui rótulos de uso de dados predefinidos que podem ser usad
 * **Rótulos de dados de identidade &quot;I&quot;:** Rotule e categorize os dados que podem identificar ou entrar em contato com uma pessoa específica.
 * **Rótulos de dados &quot;S&quot; sensíveis:** Rótulo e categorizar dados relacionados a dados confidenciais, como dados geográficos.
 
->[!NOTE] Consulte o guia nos rótulos [de uso de dados](labels/reference.md) suportados para obter uma lista completa dos rótulos disponíveis, bem como as definições para cada tipo de etiqueta.
+>[!NOTE]
+>
+>Consulte o guia nos rótulos [de uso de dados](labels/reference.md) suportados para obter uma lista completa dos rótulos disponíveis, bem como as definições para cada tipo de etiqueta.
 
 As etiquetas podem ser aplicadas a qualquer momento, proporcionando flexibilidade na forma como você escolhe administrar os dados. As práticas recomendadas encorajam a rotulação de dados assim que eles são ingeridos [!DNL Experience Platform], ou assim que os dados estiverem disponíveis em [!DNL Platform].
 
@@ -78,7 +80,9 @@ Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto 
 
 Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API do serviço de política DULE ou a interface do [!DNL Experience Platform] usuário.
 
->[!IMPORTANT] Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente.
+>[!IMPORTANT]
+>
+>Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente.
 
 Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte a visão geral [das](./policies/overview.md)políticas.
 
@@ -94,7 +98,7 @@ As versões subsequentes fornecerão os seguintes recursos:
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução de alto nível ao Data Governance e à estrutura DULE. Agora você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
+Este documento forneceu uma introdução de alto nível ao Data Governance e à estrutura DULE. Agora, você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
 
 ## Apêndice
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experimentos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, on
 
 Você pode criar um Experimento executando uma solicitação POST ao fornecer um nome e uma ID de instância MLI válida na carga da solicitação.
 
->[!NOTE] Ao contrário do treinamento de modelo na interface do usuário, a criação de um Experimento por meio de uma chamada explícita de API não cria e executa automaticamente uma execução de treinamento.
+>[!NOTE]
+>
+>Ao contrário do treinamento de modelo na interface do usuário, a criação de um Experimento por meio de uma chamada explícita de API não cria e executa automaticamente uma execução de treinamento.
 
 **Formato da API**
 
@@ -240,9 +242,11 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 
 ## Recuperar uma lista de execuções de Experimento
 
-Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um Experimento específico, executando uma única solicitação GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um Experimento específico executando uma única solicitação GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
->[!NOTE] Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (&amp;).
+>[!NOTE]
+>
+>Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (&amp;).
 
 **Formato da API**
 
@@ -301,7 +305,9 @@ Uma resposta bem-sucedida retorna uma carga contendo uma lista de execuções e 
 
 Você pode atualizar um Experimento existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do Experimento do público alvo no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
 
->[!TIP] Para garantir o sucesso desta solicitação PUT, recomenda-se que você primeiro execute uma solicitação GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>[!TIP]
+>
+>Para garantir o sucesso desta solicitação PUT, recomenda-se que você primeiro execute uma solicitação GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
 
 A amostra de chamada de API a seguir atualiza o nome de um Experimento ao ter essas propriedades inicialmente:
 

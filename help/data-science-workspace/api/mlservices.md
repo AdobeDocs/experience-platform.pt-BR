@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviços
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 2%
@@ -213,7 +213,9 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService so
 
 Você pode atualizar um MLService existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do público alvo MLService no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
 
->[!TIP] Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>[!TIP]
+>
+>Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
 
 **Formato da API**
 

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Pontuação de um modelo (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 1%
 
 ---
 
@@ -31,9 +34,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.\
 `{JSON_PAYLOAD}`: Objeto de Execução de Experimento a ser enviado. O exemplo que usamos em nosso tutorial é mostrado aqui:
 
 ```JSON
@@ -119,9 +122,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.\
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da chave da API específica encontrado na integração exclusiva da Adobe Experience Platform.\
+`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.\
 `{EXPERIMENT_ID}`: A ID correspondente ao Experimento que você deseja público alvo. Isso pode ser encontrado na resposta ao criar seu Experimento.\
 `{JSON_PAYLOAD}`: Dados a serem publicados. O exemplo que usamos em nosso tutorial é o seguinte:
 
@@ -184,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:  A ID correspondente ao Experimento em que a execução está localizada.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
 
 Como há várias Execuções de Experimento para um Experimento específico, a resposta retornada terá uma matriz de IDs de Execução.
 
@@ -214,7 +217,7 @@ Como há várias Execuções de Experimento para um Experimento específico, a r
 
 ### Parar e excluir um Experimento programado
 
-Se você quiser interromper a execução de um Experimento programado antes de seu teste, isso pode ser feito consultando uma solicitação DELETE para o `endTime``{EXPERIMENT_ID}`
+Se você quiser interromper a execução de um Experimento programado antes de seu teste, isso pode ser feito consultando uma solicitação DELETE ao `endTime``{EXPERIMENT_ID}`
 
 **Solicitação**
 
@@ -227,9 +230,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  A ID correspondente ao Experimento.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na integração exclusiva da Adobe Experience Platform.
+`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
 
->[!NOTE] A chamada da API desativará a criação de novas execuções do Experimento. No entanto, não interromperá a execução de Execuções de Experimento já em execução.
+>[!NOTE]
+>
+>A chamada da API desativará a criação de novas execuções do Experimento. No entanto, não interromperá a execução de Execuções de Experimento já em execução.
 
 A seguir está a Resposta notificando que o Experimento foi excluído com êxito.
 

@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Gravando query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
 
 # Orientações gerais para a execução de query no Query Service
 
-Este documento detalha detalhes importantes a serem conhecidos ao escrever query no Adobe Experience Platform Query Service.
+Este documento detalha detalhes importantes que você deve saber ao escrever query no Serviço de Query.
 
 Para obter informações detalhadas sobre a sintaxe SQL usada no Query Service, leia a documentação [da sintaxe](../sql/syntax.md)SQL.
 
 ## Modelos de execução de Query
 
-O Adobe Experience Platform Query Service tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
+O serviço de Query Adobe Experience Platform tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
 
 ### Execução interativa de query
 
@@ -31,13 +34,15 @@ A execução de query interativos tem as seguintes limitações:
 | Máximo de linhas retornadas | 50,000 |
 | Máximo de query simultâneos | 5 |
 
->[!NOTE] Para substituir a limitação máxima de linhas, inclua `LIMIT 0` o query. O tempo limite de 10 minutos do query ainda se aplica.
+>[!NOTE]
+>
+>Para substituir a limitação máxima de linhas, inclua `LIMIT 0` o query. O tempo limite de 10 minutos do query ainda se aplica.
 
-Por padrão, os resultados de query interativos são retornados ao cliente e **não** são persistentes. Para persistir nos resultados como um conjunto de dados na Experience Platform, o query deve usar a `CREATE TABLE AS SELECT` sintaxe.
+Por padrão, os resultados de query interativos são retornados ao cliente e **não** são persistentes. Para persistir nos resultados como um conjunto de dados no Experience Platform, o query deve usar a `CREATE TABLE AS SELECT` sintaxe.
 
 ### Execução de query não interativos
 
-Query enviados por meio da API de serviço de Query são executados de forma não interativa. Execução não interativa significa que o Serviço de Query recebe a chamada da API e executa o query na ordem em que é recebido. query não interativos sempre resultam na geração de um novo conjunto de dados na plataforma da experiência para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente.
+Query enviados por meio da API de serviço de Query são executados de forma não interativa. Execução não interativa significa que o Serviço de Query recebe a chamada da API e executa o query na ordem em que é recebido. query não interativos sempre resultam na geração de um novo conjunto de dados no Experience Platform para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente.
 
 ## Acessar um campo específico em um objeto
 
@@ -67,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | O nome da sua tabela de análise. |
 
->[!NOTE] Como cada tipo de notação retorna os mesmos resultados, o que você escolhe usar é de sua preferência.
+>[!NOTE]
+>
+>Como cada tipo de notação retorna os mesmos resultados, o que você escolhe usar é de sua preferência.
 
 Ambos os query de exemplo acima retornam um objeto nivelado, em vez de um único valor:
 
@@ -147,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] As aspas de Duplo **não podem** ser usadas com acesso ao campo de notação de pontos.
+>[!NOTE]
+>
+>As aspas de Duplo **não podem** ser usadas com acesso ao campo de notação de pontos.
 
 ### Aspas anteriores
 

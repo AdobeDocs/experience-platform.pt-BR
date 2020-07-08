@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicar um modelo como um serviço (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -338,7 +338,9 @@ Uma resposta bem-sucedida retorna os detalhes do Serviço ML.
 }
 ```
 
->[!NOTE] A recuperação de Serviços ML diferentes pode retornar uma resposta com mais ou menos pares de valores chave. A resposta acima é uma representação de um Serviço [ML com treinamento agendado e classificação de Execuções](#ml-service-with-scheduled-experiments-for-training-and-scoring)de Experimento.
+>[!NOTE]
+>
+>A recuperação de Serviços ML diferentes pode retornar uma resposta com mais ou menos pares de valores chave. A resposta acima é uma representação de um Serviço [ML com treinamento agendado e classificação de Execuções](#ml-service-with-scheduled-experiments-for-training-and-scoring)de Experimento.
 
 
 ## Agendar treinamento ou pontuação
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] Não tente modificar o `startTime` em treinamentos agendados existentes e trabalhos de pontuação. Se for `startTime` necessário modificar, considere publicar o mesmo Modelo e reprogramar o treinamento e a pontuação de trabalhos.
+>[!WARNING]
+>
+>Não tente modificar o `startTime` em treinamentos agendados existentes e trabalhos de pontuação. Se for `startTime` necessário modificar, considere publicar o mesmo Modelo e reprogramar o treinamento e a pontuação de trabalhos.
 
 **Resposta**
 

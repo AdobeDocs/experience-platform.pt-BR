@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Definir uma relação entre dois schemas usando o Editor de Schemas de Schemas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
 
 # Definir uma relação entre dois schemas usando o Editor de Schemas
 
-A capacidade de entender as relações entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante da plataforma Adobe Experience. A definição desses relacionamentos na estrutura dos schemas do Modelo de Dados de Experiência (XDM) permite que você obtenha insights complexos sobre os dados do cliente.
+A capacidade de entender os relacionamentos entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante do Adobe Experience Platform. A definição desses relacionamentos na estrutura dos schemas do Modelo de Dados de Experiência (XDM) permite que você obtenha insights complexos sobre os dados do cliente.
 
-Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando o Editor de Schemas na interface do usuário da Plataforma de experiência. Para obter etapas sobre como definir relações de schema usando a API, consulte o tutorial sobre como [definir uma relação usando a API](relationship-api.md)de Registro de Schemas.
+Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando o Editor de Schemas na interface do usuário do Experience Platform. Para obter etapas sobre como definir relações de schema usando a API, consulte o tutorial sobre como [definir uma relação usando a API](relationship-api.md)de Registro de Schemas.
 
 ## Introdução
 
-Este tutorial requer uma compreensão do Sistema XDM e do Editor de Schemas na interface do usuário da plataforma de experiência. Antes de iniciar este tutorial, reveja a seguinte documentação:
+Este tutorial requer uma compreensão funcional do Sistema XDM e do Editor de Schemas na interface do usuário do Experience Platform. Antes de iniciar este tutorial, reveja a seguinte documentação:
 
-* [Sistema XDM na plataforma](../home.md)Experience: Uma visão geral do XDM e sua implementação na plataforma da experiência.
+* [Sistema XDM no Experience Platform](../home.md): Uma visão geral do XDM e sua implementação no Experience Platform.
 * [Noções básicas da composição](../schema/composition.md)do schema: Uma introdução dos blocos de construção dos schemas XDM.
 * [Crie um schema usando o Editor](create-schema-ui.md)de Schemas: Um tutorial que aborda as noções básicas de como trabalhar com o Editor de Schemas.
 
@@ -45,7 +48,9 @@ O schema de destino &quot;Hotéis&quot; contém campos que descrevem um hotel, i
 
 ## Criar uma mistura de relacionamento
 
->[!NOTE] Essa etapa só é necessária se o schema de origem não tiver um campo do tipo string dedicado para ser usado como referência a outro schema. Se esse campo já estiver definido no schema de origem, pule para a próxima etapa da [definição de um campo](#relationship-field)de relação.
+>[!NOTE]
+>
+>Essa etapa só é necessária se o schema de origem não tiver um campo do tipo string dedicado para ser usado como referência a outro schema. Se esse campo já estiver definido no schema de origem, pule para a próxima etapa da [definição de um campo](#relationship-field)de relação.
 
 Para definir uma relação entre dois schemas, o schema de origem deve ter um campo dedicado para ser usado como referência ao schema de destino. É possível adicionar esse campo ao schema de origem criando uma nova combinação.
 

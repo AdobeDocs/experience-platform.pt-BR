@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabalhar com tempo de execução do serviço de decisão usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../tutorials/authentication.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../tutorials/authentication.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -53,7 +55,9 @@ Também é necessário para solicitações de tempo de execução:
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` é uma string no formato UUID que é globalmente exclusiva e não deve ser reutilizada para chamadas de API diferentes
+>[!NOTE]
+>
+>`UUID` é uma string no formato UUID que é globalmente exclusiva e não deve ser reutilizada para chamadas de API diferentes
 
 [!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no repositório de objetos de negócios, Repositório de objetos principais do XDM. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, existem apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo do objeto quando essa descrição é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
 

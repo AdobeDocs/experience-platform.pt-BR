@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analise seus dados usando notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ A receita de vendas de varejo é um exemplo independente que usa o mesmo conjunt
 
 ### Dados de acesso
 
->[!NOTE] O `data_access_sdk_python` está obsoleto e não é mais recomendado. Consulte o tutorial de [conversão do SDK de acesso a dados para o SDK](../authoring/platform-sdk.md) do Platform para converter seu código. As mesmas etapas abaixo ainda se aplicam a este tutorial.
+>[!NOTE]
+>
+>O `data_access_sdk_python` está obsoleto e não é mais recomendado. Consulte o tutorial de [conversão do SDK de acesso a dados para o SDK](../authoring/platform-sdk.md) do Platform para converter seu código. As mesmas etapas abaixo ainda se aplicam a este tutorial.
 
 Nós iremos acessar dados internamente de [!DNL Adobe Experience Platform] e dados externamente. Usaremos a `data_access_sdk_python` biblioteca para acessar dados internos, como conjuntos de dados e schemas XDM. Para dados externos, usaremos a biblioteca de [!DNL Python] pandas.
 
@@ -86,7 +88,9 @@ Como o conjunto de dados é o mesmo, queremos substituir os dados de carregament
 
 Agora, podemos clicar com o botão direito do mouse no `Retail-Training-<your-alias>` conjunto de dados e selecionar a opção &quot;Explorar dados no notebook&quot; na lista suspensa. Uma entrada de código executável será exibida no seu notebook.
 
->[!TIP] consulte o [!DNL Platform SDK](../authoring/platform-sdk.md) guia para converter seu código.
+>[!TIP]
+>
+>consulte o [!DNL Platform SDK](../authoring/platform-sdk.md) guia para converter seu código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

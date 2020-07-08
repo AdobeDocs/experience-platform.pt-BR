@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInentons
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 4%
@@ -273,7 +273,9 @@ Uma resposta bem-sucedida retorna os detalhes da instância MLI.
 
 Você pode atualizar uma instância MLI existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID da instância MLI do público alvo no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
 
->[!TIP] Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>[!TIP]
+>
+>Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
 
 A chamada de API de exemplo a seguir atualizará os parâmetros de treinamento e pontuação de uma MLInpresence ao ter essas propriedades inicialmente:
 

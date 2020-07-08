@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funções de data e hora
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 4%
 
 ---
 
@@ -140,11 +143,13 @@ A `occurs` função pode ser escrita usando qualquer um dos seguintes formatos:
 | --------- | ----------- |
 | `{COMPARISON}` | Um operador de comparação. Pode ser qualquer um dos seguintes operadores: `>`, `>=`, `<`, `<=`, `=`, `!=`. Mais informações sobre as funções de comparação podem ser encontradas no documento [de funções de](./comparison-functions.md)comparação. |
 | `{INTEGER}` | Um número inteiro não negativo. |
-| `{TIME_UNIT}` | Uma unidade de tempo. Pode ser qualquer uma das seguintes palavras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`,, `decade(s)`,, `century``centuries``millennium``millennia`. |
-| `{DIRECTION}` | Uma preposição que descreve quando comparar a data com. Pode ser qualquer uma das seguintes palavras: `before`, `after`, `from`... |
+| `{TIME_UNIT}` | Uma unidade de tempo. Pode ser qualquer uma das seguintes palavras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`, . |
+| `{DIRECTION}` | Uma preposição que descreve quando comparar a data com. Pode ser qualquer uma das seguintes palavras: `before`, `after`, `from`. |
 | `{TIME}` | Pode ser um literal de carimbo de data e hora (`today`, `now`, `yesterday`, `tomorrow`), uma unidade de hora relativa (uma de `this`, `last`ou `next` seguida por uma unidade de hora) ou um atributo de carimbo de data e hora. |
 
->[!NOTE] O uso da palavra `on` é opcional. Ela está lá para melhorar a legibilidade de algumas combinações, como `timestamp occurs on date(2019,12,31)`.
+>[!NOTE]
+>
+>O uso da palavra `on` é opcional. Ela está lá para melhorar a legibilidade de algumas combinações, como `timestamp occurs on date(2019,12,31)`.
 
 **Exemplo**
 
@@ -160,7 +165,7 @@ O seguinte query PQL verifica se um item foi vendido entre 8 de janeiro de 2015 
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 ```
 
-## Now
+## Agora
 
 `now` é uma palavra reservada que representa o carimbo de data e hora da execução de PQL.
 

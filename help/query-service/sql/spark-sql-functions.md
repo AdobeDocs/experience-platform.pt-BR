@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funções SQL Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '4903'
+ht-degree: 5%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
 
 Os auxiliares SQL Spark fornecem funções SQL Spark incorporadas para estender a funcionalidade SQL.
 
-Referência: Documentação da função SQL [Spark](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
+Referência: [Documentação da função SQL Spark](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] Nem todas as funções na documentação externa são suportadas.
+>[!NOTE]
+>
+>Nem todas as funções na documentação externa são suportadas.
 
 ## Categorias
 
@@ -55,7 +60,7 @@ Exemplo:
  6
 ```
 
-#### Adicionar
+#### Add
 
 `expr1 + expr2`: Devoluções `expr1`+`expr2`.
 
@@ -573,7 +578,9 @@ Exemplos:
  0.8446490682263027
 ```
 
->[!NOTE] Esta função não é determinística em casos gerais.
+>[!NOTE]
+>
+>Esta função não é determinística em casos gerais.
 
 #### randn
 
@@ -590,7 +597,9 @@ Exemplos:
  1.1164209726833079
 ```
 
->[!NOTE] Esta função não é determinística em casos gerais.
+>[!NOTE]
+>
+>Esta função não é determinística em casos gerais.
 
 #### impressão
 
@@ -1735,7 +1744,9 @@ Exemplos:
 ```
 
 Desde: 1.5.0
->[!NOTE] a lógica RSE para matrizes está disponível desde 2.4.0.
+>[!NOTE]
+>
+>a lógica RSE para matrizes está disponível desde 2.4.0.
 
 #### embaralhamento
 
@@ -1751,7 +1762,9 @@ Exemplos:
 ```
 
 Desde: 2.4.0
->[!NOTE] não é determinista.
+>[!NOTE]
+>
+>não é determinista.
 
 #### fatia
 
@@ -2386,7 +2399,9 @@ Exemplo:
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] A função é não-determinística.
+>[!NOTE]
+>
+>A função é não-determinística.
 
 ### Avaliação dos dados
 
@@ -2422,7 +2437,9 @@ Exemplos:
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] A lógica `concat` para matrizes está disponível desde 2.4.0.
+>[!NOTE]
+>
+>`concat` lógica para matrizes está disponível desde 2.4.0.
 
 #### concat_ws
 
@@ -2841,7 +2858,7 @@ Exemplo:
 
 #### tamanho
 
-`size(expr)`: Retorna o tamanho de uma matriz ou mapa. A função retornará -1 se sua entrada for nula e `spark.sql.legacy.sizeOfNull` estiver definida como true. Se `spark.sql.legacy.sizeOfNull` for definida como false, a função retornará null para entrada nula. Por padrão, o `spark.sql.legacy.sizeOfNull` parâmetro é definido como true.
+`size(expr)`: Retorna o tamanho de uma matriz ou mapa. A função retornará -1 se sua entrada for nula e `spark.sql.legacy.sizeOfNull` estiver definida como true. Se `spark.sql.legacy.sizeOfNull` for definida como false, a função retornará null para entrada nula. By default, the `spark.sql.legacy.sizeOfNull` parameter is set to true.
 
 Exemplos:
 

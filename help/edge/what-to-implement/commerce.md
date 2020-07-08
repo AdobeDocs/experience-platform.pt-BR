@@ -1,10 +1,10 @@
 ---
 title: Produtos
-seo-title: Suporte a produtos com o SDK da Web do Adobe Experience Platform
+seo-title: Suporte a produtos com SDK Adobe Experience Platform Web
 description: Saiba como adicionar dados se você tiver produtos ou um carrinho de compras com o Experience Platform Web SDK
 seo-description: Saiba como adicionar dados se você tiver produtos ou um carrinho de compras com o Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 5%
@@ -19,13 +19,17 @@ Se você tiver produtos em seu site, esse é um conjunto padrão de itens que vo
 Este documento usa a combinação Detalhes [do Comércio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent. A `commerce` mistura é dividida em duas partes: o `commerce` objeto e a `productListItems` matriz. O `commerce` objeto permite indicar quais ações estão acontecendo na `productListItems` matriz.
 
 >[!Tip]
->Se você estiver familiarizado com o Adobe Analytics, a variável `commerce` está mais relacionada à `events` . O `productListItems` está mais relacionado à `products` variável.
+>
+>
+>Se você estiver familiarizado com o Adobe Analytics, o The `commerce` está mais relacionado à `events` variável. O `productListItems` está mais relacionado à `products` variável.
 
 ## Ações relacionadas a produtos
 
 Abaixo está uma lista de `measures` disponível no `commerce` objeto.
 
 >[!Tip]
+>
+>
 >Uma medida tem dois campos: `id` e `value`. Na maioria das vezes, você usará apenas o `value` campo (por exemplo, `'value':1`). O `id` campo permite definir um identificador exclusivo que você pode usar para rastrear quando a medida foi enviada. Consulte a documentação XDM para [Medir](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **Medição** | **Recomendação** | **Descrição** |
@@ -116,7 +120,7 @@ A lista do produto indica quais produtos estão relacionados à ação correspon
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Opcional | Moeda [ISO 4217](https://pt.wikipedia.org/wiki/ISO_4217) para o produto. Isso só é útil quando você pode ter produtos com códigos monetários diferentes e quando se aplica. Por exemplo, quando há uma compra ou adição ao carrinho. |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Altamente recomendado | Só deve ser definido quando aplicável. Por exemplo, pode não ser possível partir do zero `productView` porque diferentes variações do produto podem ter preços diferentes, mas sim preços `productListAdds`. |
 | [produto](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Altamente recomendado | A ID XDM do produto. |
-| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Altamente recomendado | O método usado para adicionar um item de produto à lista pelo visitante. Definido com `productListAdds` medidas e deve ser usado somente quando um produto é adicionado à lista. Os exemplos incluem `add to cart button`, `quick add`e `upsell`. |
+| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Altamente recomendado | O método usado para adicionar um item de produto à lista pelo visitante. Definido com `productListAdds` medidas e deve ser usado somente quando um produto é adicionado à lista. Examples include `add to cart button`, `quick add`, and `upsell`. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | Altamente recomendado | Isso é definido para o nome de exibição ou para o nome legível por humanos do produto. |
 | [quantidade](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmquantity) | Altamente recomendado | O número de unidades que o cliente indicou que necessitavam do produto. Deve ser definido como `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters`, e assim por diante. |
 | [SKU](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md) | Altamente recomendado | Unidade de Manutenção de Loja. É o identificador exclusivo do produto. |

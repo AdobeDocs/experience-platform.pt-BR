@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do AI de atribuição
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -60,7 +60,9 @@ Para definir um evento de conversão, é necessário dar um nome ao evento e sel
 
 Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. O segundo menu suspenso é usado para fornecer mais contexto ao seu evento por meio do uso de operações. Para esse evento de conversão, a operação padrão *existe* é usada.
 
->[!NOTE] Uma string sob seu nome *de* conversão é atualizada conforme você define seu evento.
+>[!NOTE]
+>
+>Uma string sob seu nome *de* conversão é atualizada conforme você define seu evento.
 
 ![sem menu suspenso](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ Para a finalidade desse ponto de contato, selecione **igual**.
 
 Quando um operador para um ponto de contato é selecionado, *Inserir valor* do campo é disponibilizado. Os valores suspensos para *Inserir valor* do campo são preenchidos com base no operador e no valor do ponto de contato selecionado anteriormente. Se um valor não for preenchido na lista suspensa, você poderá digitar esse valor manualmente. Clique na lista suspensa e selecione **CLIQUE**.
 
->[!NOTE] Os operadores &quot;existe&quot; e &quot;não existe&quot; não têm valores de campo associados a eles.
+>[!NOTE]
+>
+>Os operadores &quot;existe&quot; e &quot;não existe&quot; não têm valores de campo associados a eles.
 
 ![menu suspenso do ponto de contato](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ Clicar em **Adicionar grupo** oferece a opção de criar campos adicionais separ
 
 ![visão geral do ponto de contato](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Use a string em Nome *do ponto de* contato para obter uma visão geral rápida do ponto de contato. Observe que a string corresponde ao nome do ponto de contato.
+>[!NOTE]
+>
+>Use a string em Nome *do ponto de* contato para obter uma visão geral rápida do ponto de contato. Observe que a string corresponde ao nome do ponto de contato.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Clique na lista suspensa em Frequência *de* pontuação para selecionar entre p
 
 Para alterar a hora do dia em que deseja que a pontuação ocorra, clique no ícone do relógio. Na nova sobreposição exibida, digite a hora do dia em que deseja que a pontuação ocorra. Clique fora da sobreposição para fechá-la.
 
->[!NOTE] Pode levar até 24 horas para que cada processo de pontuação seja concluído.
+>[!NOTE]
+>
+>Pode levar até 24 horas para que cada processo de pontuação seja concluído.
 
 ![ícone do relógio](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ Em seguida, selecione um operador.
 
 Por fim, digite o código do país na lista suspensa *Inserir valor* do campo.
 
->[!NOTE] Os códigos de país têm dois caracteres. Uma lista completa pode ser encontrada aqui [ISO 3166-1 alfa-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Os códigos de país têm dois caracteres. Uma lista completa pode ser encontrada aqui [ISO 3166-1 alfa-2](https://datahub.io/core/country-list).
 
 ![região](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Por fim, digite o código do país na lista suspensa *Inserir valor* do campo.
 
 Para garantir que você obtenha o modelo mais preciso possível, é importante treinar seu modelo com dados históricos que representem sua empresa. Por padrão, o modelo é treinado com 2 trimestres (6 meses) de dados. Selecione a lista suspensa para alterar o padrão. Você pode optar por treinar com um a quatro trimestres de dados (de 3 a 12 meses).
 
->[!NOTE] Uma janela de treinamento mais curta é mais sensível às tendências recentes, enquanto uma janela de treinamento mais longa cria um modelo mais robusto e é menos sensível às tendências recentes.
+>[!NOTE]
+>
+>Uma janela de treinamento mais curta é mais sensível às tendências recentes, enquanto uma janela de treinamento mais longa cria um modelo mais robusto e é menos sensível às tendências recentes.
 
 ![janela de treinamento](./images/user-guide/training_window.png)
 

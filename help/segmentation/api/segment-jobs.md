@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabalhos de segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Este guia fornece informações para ajudá-lo a entender melhor os trabalhos de
 
 Os pontos finais da API usados neste guia fazem parte da API de segmentação. Antes de continuar, consulte o guia [do desenvolvedor de](./getting-started.md)Segmentação.
 
-Em particular, a seção [de](./getting-started.md#getting-started) introdução do guia do desenvolvedor de Segmentação inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra no documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da plataforma de experiência.
+Em particular, a seção [de](./getting-started.md#getting-started) introdução do guia do desenvolvedor de Segmentação inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra no documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de trabalhos de segmento
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos de segmento para a organização IMS especificada como JSON. A resposta a seguir retorna uma lista de todos os trabalhos de segmento bem-sucedidos para a organização IMS.
 
->[!NOTE] A resposta a seguir foi truncada para espaço e mostrará somente o primeiro trabalho retornado.
+>[!NOTE]
+>
+>A resposta a seguir foi truncada para espaço e mostrará somente o primeiro trabalho retornado.
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento solicitados.
 
->[!NOTE] A resposta a seguir foi truncada para o espaço, mostrando apenas detalhes parciais de cada tarefa de segmento. A resposta completa vai lista os detalhes completos dos trabalhos de segmento solicitados.
+>[!NOTE]
+>
+>A resposta a seguir foi truncada para o espaço, mostrando apenas detalhes parciais de cada tarefa de segmento. A resposta completa vai lista os detalhes completos dos trabalhos de segmento solicitados.
 
 ```json
 {
@@ -424,7 +428,7 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento
 
 ## Cancelar ou excluir um trabalho de segmento específico
 
-Você pode solicitar a exclusão de um trabalho de segmento especificado, fazendo uma solicitação DELETE para o `/segment/jobs` terminal e fornecendo o `id` valor do trabalho de segmento no caminho da solicitação.
+Você pode solicitar a exclusão de um trabalho de segmento especificado, fazendo uma solicitação DELETE ao ponto de `/segment/jobs` extremidade e fornecendo o `id` valor do trabalho de segmento no caminho da solicitação.
 
 **Formato da API**
 

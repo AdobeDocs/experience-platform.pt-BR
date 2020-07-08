@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
+title: Trabalhos do sistema do Perfil - API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 2%
 
 ---
 
 
-# Trabalhos do sistema do Perfil (Excluir solicitações)
+# Ponto final de trabalhos do sistema de Perfil (Excluir solicitações)
 
 O Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos no Platform são armazenados no Data Lake, bem como no armazenamento de dados do Perfil do cliente em tempo real. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da API Perfil do cliente em tempo real para criar um trabalho do sistema do Perfil, também conhecido como &quot;solicitação de exclusão&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
 

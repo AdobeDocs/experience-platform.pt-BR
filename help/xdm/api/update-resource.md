@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Atualizar um recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +18,9 @@ Você pode modificar ou atualizar recursos no container locatário usando uma so
 
 Para obter mais informações sobre o Patch JSON, incluindo operações disponíveis, consulte a documentação [oficial do Patch](http://jsonpatch.com/)JSON.
 
->[!NOTE] Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte o documento sobre a [substituição de um recurso usando uma operação](replace-resource.md)PUT.
+>[!NOTE]
+>
+>Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte o documento sobre a [substituição de um recurso usando uma operação](replace-resource.md)PUT.
 
 ## Adicionar misturas a um schema
 

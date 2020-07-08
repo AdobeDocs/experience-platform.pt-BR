@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Filtrar dados do catálogo usando parâmetros de query
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2060'
+ht-degree: 1%
 
 ---
 
@@ -202,7 +205,7 @@ Há algumas limitações a serem consideradas ao usar tags:
 * Os únicos objetos de Catálogo que atualmente suportam tags são conjuntos de dados, lotes e conexões.
 * Os nomes das tags são exclusivos à sua organização IMS.
 * Os processos da Adobe podem aproveitar as tags para determinados comportamentos. Os nomes dessas tags recebem o prefixo &quot;adobe&quot; como padrão. Portanto, você deve evitar essa convenção ao declarar nomes de tags.
-* Os seguintes nomes de tags são reservados para uso em toda a plataforma de experiência e, portanto, não podem ser declarados como um nome de tag para sua organização:
+* Os seguintes nomes de tags são reservados para uso em todo o Experience Platform e, portanto, não podem ser declarados como um nome de tag para sua organização:
    * `unifiedProfile`: Esse nome de tag é reservado para conjuntos de dados a serem assimilados pelo Perfil [Cliente em tempo](../../profile/home.md)real.
    * `unifiedIdentity`: Este nome de tag é reservado para conjuntos de dados a serem assimilados pelo Serviço [de](../../identity-service/home.md)Identidade.
 
@@ -576,7 +579,7 @@ O valor do `property` parâmetro suporta vários tipos diferentes de expressões
 
 | Símbolo(s) | Descrição | Exemplo |
 | --- | --- | --- |
-| (Nenhum) | A indicação do nome da propriedade sem operador retorna somente objetos onde a propriedade existe, independentemente de seu valor. | `property=name` |
+| (None) | A indicação do nome da propriedade sem operador retorna somente objetos onde a propriedade existe, independentemente de seu valor. | `property=name` |
 | ! | Prefixar um &quot;`!`&quot; no valor de um `property` parâmetro retorna somente objetos onde a propriedade **não** existe. | `property=!name` |
 | ~ | Retorna somente objetos cujos valores de propriedade (string) correspondem a uma expressão regular fornecida após o símbolo tilde (`~`). | `property=name~^example` |
 | == | Retorna somente objetos cujos valores de propriedade correspondam exatamente à string fornecida após o símbolo duplo igual (`==`). | `property=name==exampleName` |
@@ -586,7 +589,9 @@ O valor do `property` parâmetro suporta vários tipos diferentes de expressões
 | > | Retorna somente objetos cujos valores de propriedade sejam maiores que (mas não iguais a) uma quantia informada. | `property=version>1.0.0` |
 | >= | Retorna somente objetos cujos valores de propriedade sejam maiores que (ou iguais a) uma quantia informada. | `property=version>=1.0.0` |
 
->[!NOTE] A `name` propriedade suporta o uso de um curinga `*`, seja como a string de pesquisa inteira ou como parte dela. Caracteres curingas correspondem a caracteres vazios, de modo que a string de pesquisa `te*st` corresponda ao valor &quot;test&quot;. Os asteriscos são evitados duplicando-os (`**`). Um duplo-asterisco em uma string de pesquisa representa um único asterisco como uma string literal.
+>[!NOTE]
+>
+>A `name` propriedade suporta o uso de um curinga `*`, seja como a string de pesquisa inteira ou como parte dela. Caracteres curingas correspondem a caracteres vazios, de modo que a string de pesquisa `te*st` corresponda ao valor &quot;test&quot;. Os asteriscos são evitados duplicando-os (`**`). Um duplo-asterisco em uma string de pesquisa representa um único asterisco como uma string literal.
 
 **Solicitação**
 

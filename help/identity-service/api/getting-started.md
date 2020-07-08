@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introdução
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -61,7 +63,9 @@ A tabela abaixo mostra os caminhos de exemplo usando regiões:
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] As solicitações feitas sem especificar uma região podem resultar no roteamento de chamadas para a região incorreta ou causar falhas inesperadas de chamadas.
+>[!NOTE]
+>
+>As solicitações feitas sem especificar uma região podem resultar no roteamento de chamadas para a região incorreta ou causar falhas inesperadas de chamadas.
 
 Se você não conseguir localizar a região dentro do perfil IMS Org, entre em contato com o administrador do sistema para obter suporte.
 
@@ -77,7 +81,9 @@ Para limitar a carga em respostas, as APIs adaptam suas respostas ao tipo de con
 
 Os exemplos neste documento não abrangem a funcionalidade completa da [!DNL Identity Service] API. Para obter a API completa, consulte a Referência [da API do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Swagger.
 
->[!NOTE] Todas as identidades retornadas estarão no formulário XID nativo quando o XID nativo for usado na solicitação. É recomendável usar o formulário de ID/namespace. Para obter mais informações, consulte a seção sobre como [obter o XID de uma identidade](./create-custom-namespace.md).
+>[!NOTE]
+>
+>Todas as identidades retornadas estarão no formulário XID nativo quando o XID nativo for usado na solicitação. É recomendável usar o formulário de ID/namespace. Para obter mais informações, consulte a seção sobre como [obter o XID de uma identidade](./create-custom-namespace.md).
 
 ## Próximas etapas
 

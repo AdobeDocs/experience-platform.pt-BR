@@ -4,39 +4,44 @@ solution: Experience Platform
 title: Validação de ingestão de fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '842'
+ht-degree: 3%
 
 ---
 
 
 # Validação de ingestão de fluxo
 
-A ingestão de streaming permite carregar seus dados na Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
+A ingestão de streaming permite carregar seus dados para o Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
-- [Ingestão](../streaming-ingestion/overview.md)de transmissão: Um dos métodos pelos quais os dados podem ser enviados para a plataforma Experience.
+- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+- [Ingestão](../streaming-ingestion/overview.md)de transmissão: Um dos métodos pelos quais os dados podem ser enviados para o Experience Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience, incluindo os pertencentes ao Registro do Schema, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform, incluindo os pertencentes ao Registro do Schema, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -161,7 +166,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | O corpo JSON de um dado que você deseja assimilar. |
 
->[!NOTE] Nenhum parâmetro de query extra é necessário, pois a validação assíncrona é ativada por padrão.
+>[!NOTE]
+>
+>Nenhum parâmetro de query extra é necessário, pois a validação assíncrona é ativada por padrão.
 
 **Resposta**
 

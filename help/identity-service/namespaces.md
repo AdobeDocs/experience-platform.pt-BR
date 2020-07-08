@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -72,7 +72,9 @@ As Namespaces que você definir são privadas para sua organização e exigem um
 
 Semelhante às namespaces padrão, você pode clicar em uma namespace personalizada na guia *[!UICONTROL Procurar]* para visualização de seus detalhes. Entretanto, com uma namespace personalizada, você também pode editar seu Nome de exibição e Descrição na área de detalhes.
 
->[!NOTE] Depois que uma namespace é criada, ela não pode ser excluída e seu &quot;Símbolo de identidade&quot; (ou &quot;código&quot; na API) e &quot;Tipo&quot; não pode ser alterado.
+>[!NOTE]
+>
+>Depois que uma namespace é criada, ela não pode ser excluída e seu &quot;Símbolo de identidade&quot; (ou &quot;código&quot; na API) e &quot;Tipo&quot; não pode ser alterado.
 
 ## Namespaces nos dados de identidade
 

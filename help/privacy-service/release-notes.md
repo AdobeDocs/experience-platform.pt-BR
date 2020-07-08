@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Notas de versão de Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 580cce74ab7da9547417a9e74e88b5ddab52171f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 5%
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 Este documento contém informações sobre novos recursos para o Adobe Experience Platform Privacy Service, bem como melhorias e correções significativas de erros.
 
->[!NOTE] As notas de versão mais recentes para outros serviços de Experience Platform podem ser encontradas [aqui](../release-notes/latest/latest.md).
+>[!NOTE]
+>
+>As notas de versão mais recentes para outros serviços de Experience Platform podem ser encontradas [aqui](../release-notes/latest/latest.md).
 
 ## 8 de abril de 2020
 

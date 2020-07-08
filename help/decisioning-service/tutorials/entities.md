@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gerenciar entidades do serviço de decisão usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -102,7 +104,9 @@ Quando o administrador conceder acesso a container para usuários regulares ou i
 
 O contexto dos [!DNL Platform] container está atualmente [!DNL Decisioning Service] definido `dma_offers`.
 
->[!NOTE] O contexto para [!DNL Platform Decisioning Containers] está prestes a mudar para `acp`. A filtragem é opcional, mas os filtros somente `dma_offers` exigirão edições em uma versão futura. Para se preparar para essa alteração, os clientes não devem usar filtros ou aplicar ambos os contextos de produto como filtro.
+>[!NOTE]
+>
+>O contexto para [!DNL Platform Decisioning Containers] está prestes a mudar para `acp`. A filtragem é opcional, mas os filtros somente `dma_offers` exigirão edições em uma versão futura. Para se preparar para essa alteração, os clientes não devem usar filtros ou aplicar ambos os contextos de produto como filtro.
 
 **Solicitação**
 
@@ -233,7 +237,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Embora `instanceId` seja fornecido como um parâmetro de caminho, os aplicativos não devem, sempre que possível, construir o caminho em si e, em vez disso, seguir links para instâncias contidas em operações de lista e pesquisa. Ver seções ‎ 6.4.4 e ‎ 6.4.6 para mais pormenores.
+>[!NOTE]
+>
+>Embora `instanceId` seja fornecido como um parâmetro de caminho, os aplicativos não devem, sempre que possível, construir o caminho em si e, em vez disso, seguir links para instâncias contidas em operações de lista e pesquisa. Ver seções ‎ 6.4.4 e ‎ 6.4.6 para mais pormenores.
 
 **Resposta**
 
@@ -326,7 +332,9 @@ A resposta depende do `{schemaId}` especificado. Por exemplo, para &quot;https<s
 }
 ```
 
->[!NOTE] O resultado contém as instâncias para o schema em questão ou a primeira página dessa lista. Observe que as instâncias podem estar em conformidade com mais de um schema e, portanto, podem aparecer em mais de uma lista.
+>[!NOTE]
+>
+>O resultado contém as instâncias para o schema em questão ou a primeira página dessa lista. Observe que as instâncias podem estar em conformidade com mais de um schema e, portanto, podem aparecer em mais de uma lista.
 
 Os recursos da página são transitórios e são somente leitura; eles não podem ser atualizados ou excluídos. O modelo de paginação fornece acesso aleatório a subconjuntos de listas grandes durante um longo período de tempo sem manter nenhum estado por cliente.
 
@@ -347,22 +355,17 @@ A paginação é controlada pelos seguintes parâmetros:
 A filtragem dos resultados da lista é possível e acontece independentemente do mecanismo de paginação. Os Filtros simplesmente ignoram as instâncias na ordem do lista ou solicitam explicitamente que incluam apenas as instâncias que satisfazem uma determinada condição. Um cliente pode solicitar que a expressão de propriedade seja usada como filtro ou pode especificar uma lista de URIs a serem usados como valores da chave primária das instâncias.
 
 - **`property`**: Contém um caminho de nome de propriedade seguido por um operador de comparação seguido por um valor. <br/>
-A lista de instâncias retornadas contém aquelas para as quais a expressão é avaliada como true. Por exemplo, supondo que a instância tenha uma propriedade payload 
-`status` e os valores possíveis são `draft`, `approved`, `archived` e `deleted` o parâmetro do query `property=_instance.status==approved` retorna somente as instâncias para as quais o status é aprovado. <br/>
-<br/>
-A propriedade a ser comparada com o valor fornecido é identificada como um caminho. Os componentes individuais do caminho são separados por ".", como: '_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
+A lista de instâncias retornadas contém aquelas para as quais a expressão é avaliada como true. Por exemplo, supondo que a instância tenha uma propriedade payload `status` e que os valores possíveis sejam `draft`, `approved`e `archived` , em seguida, o parâmetro de query `deleted` `property=_instance.status==approved` retorna somente as instâncias para as quais o status é aprovado. <br/>
 
-Para propriedades que têm valores de string, numéricos ou de data/hora, os operadores permitidos são: `==`, `!=`, `<`, `<=`, `>` e `>=`. Além disso, para propriedades com um valor de string, um operador `~` pode ser usado. O `~` operador corresponde à propriedade em questão de acordo com uma expressão regular. O valor da string da propriedade deve corresponder à expressão **inteira** para que as entidades sejam incluídas nos resultados filtrados. Por exemplo, procurar a string `cars` em qualquer lugar dentro do valor da propriedade requer que a expressão regular seja `.*cars.*`. Sem a entrelinha ou a direita `.*`, somente as entidades corresponderiam que tinham um valor de propriedade começando ou terminando com `cars`, respectivamente. Para o `~` operador, a comparação de caracteres de letras não diferencia maiúsculas de minúsculas. Para todos os outros operadores, a comparação faz distinção entre maiúsculas e minúsculas.<br/><br/>
-Não apenas as propriedades de carga de instância podem ser usadas em expressões de filtro. As propriedades de envelopes são comparadas da mesma maneira, por exemplo, `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
-<br/>
-O parâmetro `property` query pode ser repetido para que várias condições de filtro sejam aplicadas, por exemplo, para retornar todas as instâncias que foram modificadas pela última vez após uma determinada data e antes de uma determinada data. Os valores nessas expressões devem ser codificados em URL. Se nenhuma expressão for fornecida e o nome da propriedade for listado, os itens que se qualificam são aqueles que têm uma propriedade com o nome especificado.<br/>
-<br/>
 
-- **`id`**: Às vezes, uma lista precisa ser filtrada pelo URI das instâncias. O parâmetro `property` query pode ser usado para filtrar uma instância, mas para obter mais de uma instância, uma lista de URIs pode ser fornecida à solicitação. O `id` parâmetro é repetido e cada ocorrência especifica um valor de URI. `id={URI_1}&id={URI_2},…` Os valores de URI devem ser codificados por URL.
 
-Os resultados paginados serão retornados como um tipo MIME especial `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`.
+**`id`**: Às vezes, uma lista precisa ser filtrada pelo URI das instâncias. O parâmetro `property` query pode ser usado para filtrar uma instância, mas para obter mais de uma instância, uma lista de URIs pode ser fornecida à solicitação. O `id` parâmetro é repetido e cada ocorrência especifica um valor de URI. `id={URI_1}&id={URI_2},…` Os valores de URI devem ser codificados por URL.`!=``<``~``~`****`cars``.*cars.*``.*``cars``~`<br/><br/>`property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`<br/><br/>`property`<br/><br/>
+
+- Os resultados paginados serão retornados como um tipo MIME especial `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`.`property``id``id={URI_1}&id={URI_2},…`
 
 **Solicitação**
+
+**Resposta**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderby${ORDER_BY_PROPERTY_PATH}&property={TIMESTAMP_PROPERTY_PATH}>=2019-02-19T03:19:03.627Z&property${TIMESTAMP_PROPERTY_PATH}<=2019-06-19T03:19:03.627Z \ 
@@ -373,7 +376,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**Resposta**
+**A resposta contém a lista de itens de resultado dentro dos resultados da propriedade JSON ao lado de duas propriedades que indicam o número de resultados nesta página e o número total de itens na lista filtrada começando com a página que acabou de ser retornada.**
 
 ```json
 { 
@@ -435,13 +438,13 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
 } 
 ```
 
-A resposta contém a lista de itens de resultado dentro dos resultados da propriedade JSON ao lado de duas propriedades que indicam o número de resultados nesta página e o número total de itens na lista filtrada começando com a página que acabou de ser retornada.
+Pesquisa de texto completo e query estruturados
 
-### Pesquisa de texto completo e query estruturados
-
-Nos casos em que os clientes desejam fornecer condições de filtro mais complexas e instâncias de pesquisa por termos contidos em propriedades de sequência de caracteres, o repositório oferta uma API de pesquisa mais potente.
+### Nos casos em que os clientes desejam fornecer condições de filtro mais complexas e instâncias de pesquisa por termos contidos em propriedades de sequência de caracteres, o repositório oferta uma API de pesquisa mais potente.
 
 **Solicitação**
+
+**Além dos parâmetros de paginação e filtragem das APIs de lista, essa API permite que os clientes adicionem parâmetros de texto completo e query booleano.**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_ID}"&… \ 
@@ -454,21 +457,21 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_I
 
 <!-- TODO: needs example response -->
 
-Além dos parâmetros de paginação e filtragem das APIs de lista, essa API permite que os clientes adicionem parâmetros de texto completo e query booleano.
-
 A pesquisa de texto completo é controlada pelos seguintes parâmetros:
 
-- **`q`**: Contém uma lista de termos não ordenados, separada por espaços, que são normalizados antes de serem correspondidos com qualquer propriedade de string das instâncias. As propriedades de string são analisadas para termos e esses termos também são normalizados. O query de pesquisa tenta corresponder a um ou mais dos termos especificados no `q` parâmetro. Os caracteres +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, :, / têm um significado especial para determinar os limites de palavras dentro da string de query e devem ser evitados com uma barra invertida ao aparecerem em em um token que deve corresponder ao caractere. A string de query pode ser cercada por aspas de duplo para a correspondência exata da string e para evitar caracteres especiais.
-- **`field`**: Se os termos de pesquisa só devem ser comparados com um subconjunto das propriedades, o parâmetro field pode indicar o caminho para essa propriedade. O parâmetro pode ser repetido para indicar mais de uma propriedade que deve ser comparada.
+**`q`**: Contém uma lista de termos não ordenados, separada por espaços, que são normalizados antes de serem correspondidos com qualquer propriedade de string das instâncias. As propriedades de string são analisadas para termos e esses termos também são normalizados. O query de pesquisa tenta corresponder a um ou mais dos termos especificados no `q` parâmetro. Os caracteres +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, :, / têm um significado especial para determinar os limites de palavras dentro da string de query e devem ser evitados com uma barra invertida ao aparecerem em em um token que deve corresponder ao caractere. A string de query pode ser cercada por aspas de duplo para a correspondência exata da string e para evitar caracteres especiais.
+
+- **`field`**: Se os termos de pesquisa só devem ser comparados com um subconjunto das propriedades, o parâmetro field pode indicar o caminho para essa propriedade. O parâmetro pode ser repetido para indicar mais de uma propriedade que deve ser comparada.`q`[]
 - **`qop`**: Contém um parâmetro de controle usado para modificar o comportamento correspondente da pesquisa. Quando o parâmetro é definido como e todos os termos de pesquisa devem corresponder e quando o parâmetro está ausente ou seu valor é definido como ou então qualquer um dos termos pode contar para uma correspondência.
+- **`qop`**Atualização e correção de instâncias
 
-### Atualização e correção de instâncias
-
-Para atualizar uma instância, um cliente pode substituir a lista completa das propriedades de uma vez ou usar uma solicitação PATCH JSON para manipular valores de propriedade individuais, incluindo listas.
+### Para atualizar uma instância, um cliente pode substituir a lista completa das propriedades de uma vez ou usar uma solicitação PATCH JSON para manipular valores de propriedade individuais, incluindo listas.
 
 Em ambos os casos, o URL da solicitação especifica o caminho para a instância física e, em ambos os casos, a resposta será uma carga de recebimento JSON como a retornada da operação [de](#create-instances)criação. De preferência, um cliente deve usar o `Location` cabeçalho ou um link HAL recebido de uma chamada de API anterior para esse objeto como o caminho de URL completo para essa API. Se isso não for possível, o cliente poderá criar o URL a partir do `containerId` e do `instanceId`.
 
-**Solicitação** (PUT)
+**Solicitação** (PUT)`Location``containerId``instanceId`
+
+**Solicitação** (PATCH)
 
 ```shell
 curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -488,7 +491,7 @@ curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }'  
 ```
 
-**Solicitação** (PATCH)
+**A solicitação PATCH aplica as instruções e valida a entidade resultante em relação ao schema e as mesmas regras de entidade e integridade referencial que a solicitação PUT.**
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -505,24 +508,24 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-A solicitação PATCH aplica as instruções e valida a entidade resultante em relação ao schema e as mesmas regras de entidade e integridade referencial que a solicitação PUT.
-
 **Controle de edições de valor de propriedade**
 
-Você pode impedir que as propriedades sejam definidas ao criar e/ou ao atualizar, usando as seguintes anotações:
+**Você pode impedir que as propriedades sejam definidas ao criar e/ou ao atualizar, usando as seguintes anotações:**
 
-- **`"meta:usereditable"`**: Booliano - Quando uma solicitação se origina de um agente de usuário que identifica o chamador com um token de acesso de conta técnica ou de usuário, as propriedades com as quais você está anotado não `"meta:usereditable": false` devem estar presentes na carga. Se estiverem, não devem ter um valor diferente daquele que está definido no momento. Se os valores forem diferentes, a solicitação de atualização ou patch será rejeitada com um status 422 Entidade não processável.
+**`"meta:usereditable"`**: Booliano - Quando uma solicitação se origina de um agente de usuário que identifica o chamador com um token de acesso de conta técnica ou de usuário, as propriedades com as quais você está anotado não `"meta:usereditable": false` devem estar presentes na carga. Se estiverem, não devem ter um valor diferente daquele que está definido no momento. Se os valores forem diferentes, a solicitação de atualização ou patch será rejeitada com um status 422 Entidade não processável.
+
 - **`"meta:immutable"`**: Booliano - As propriedades anotadas com `"meta:immutable": true` não podem ser alteradas depois de definidas. Isso se aplica a solicitações provenientes de um usuário final, integração de conta técnica ou um serviço especial.
-
-**Teste para atualização simultânea**
+- **Teste para atualização simultânea**`"meta:immutable": true`
 
 Há condições nas quais vários clientes tentam atualizar uma instância simultaneamente. O repositório é operado em um cluster de nós de computação sem gerenciamento central de transações. Para evitar que um cliente escreva uma instância que é escrita simultaneamente por outra, os clientes podem usar uma atualização condicional ou solicitação de patch. Ao especificar a `etag` string no cabeçalho, `If-Match` o repositório garante que somente a primeira solicitação seja bem-sucedida e que as solicitações de continuação por outros clientes que usam o mesmo `etag` valor falhem. O `etag` valor muda a cada modificação da instância. Os clientes devem recuperar a instância para obter o `etag` valor mais recente e, em seguida, somente um cliente de entre muitos que tentam a atualização pode ter êxito com esse valor. Outros clientes serão rejeitados com uma mensagem de conflito 409.
 
-### Excluindo instâncias
+Excluindo instâncias`etag``If-Match``etag``etag``etag`
 
-As instâncias podem ser excluídas com uma chamada DELETE. De preferência, um cliente deve usar o `Location` cabeçalho ou um link HAL recebido de uma chamada de API anterior para isso como o caminho de URL completo. Se isso não for possível, o cliente poderá criar o URL a partir do `containerId` e do físico `instanceId`.
+### As instâncias podem ser excluídas com uma chamada DELETE. De preferência, um cliente deve usar o `Location` cabeçalho ou um link HAL recebido de uma chamada de API anterior para isso como o caminho de URL completo. Se isso não for possível, o cliente poderá criar o URL a partir do `containerId` e do físico `instanceId`.
 
-**Solicitação**
+**Solicitação**`instanceId`
+
+**Resposta**
 
 ```shell
 curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -533,7 +536,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**Resposta**
+Ao receber uma solicitação de exclusão, o repositório verifica se há outras instâncias, de qualquer schema, ainda referenciam a instância a ser excluída. Em um sistema distribuído e altamente disponível, a integridade referencial não pode ser verificada imediatamente. Quando houver relações de chave estrangeira definidas, as verificações serão feitas de forma assíncrona. Isso resulta em uma resposta ligeiramente atrasada ao resultado da solicitação de exclusão. Quando essas verificações são executadas, a resposta imediata inclui o status 202 Aceito e um link para verificar o resultado da operação de exclusão no `Location` cabeçalho. Um cliente deve então verificar o link para o resultado.**
 
 ```json
 { 
@@ -549,15 +552,15 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-Ao receber uma solicitação de exclusão, o repositório verifica se há outras instâncias, de qualquer schema, ainda referenciam a instância a ser excluída. Em um sistema distribuído e altamente disponível, a integridade referencial não pode ser verificada imediatamente. Quando houver relações de chave estrangeira definidas, as verificações serão feitas de forma assíncrona. Isso resulta em uma resposta ligeiramente atrasada ao resultado da solicitação de exclusão. Quando essas verificações são executadas, a resposta imediata inclui o status 202 Aceito e um link para verificar o resultado da operação de exclusão no `Location` cabeçalho. Um cliente deve então verificar o link para o resultado.
-
 Se for encontrada uma instância que referencie a instância que está sendo excluída, o resultado será uma rejeição da operação de exclusão. Se nenhuma outra referência de chave estrangeira for descoberta, a exclusão será concluída. Se o resultado ainda não for decidido, a resposta indicará que em outra resposta 202 Aceita com o mesmo cabeçalho `Location` e solicitará que o cliente continue verificando. Quando o resultado for determinado, a resposta indicará que com um status 200 Ok e a carga da resposta conterá o resultado da solicitação de exclusão original. Observe que a resposta 200 Ok significa apenas que o resultado é conhecido e o corpo da resposta conterá a confirmação ou rejeição da solicitação de exclusão.
 
-## Criação de ofertas e seus subcomponentes
+Criação de ofertas e seus subcomponentes`Location`
 
-As APIs descritas na seção anterior aplicam-se uniformemente a todos os tipos de objetos de negócios. A única diferença entre, digamos, criar uma oferta e uma atividade seria o cabeçalho que `content-type` anota o schema JSON na carga JSON da solicitação que está em conformidade com o schema. Portanto, as seções a seguir só precisarão se concentrar nesses schemas e nas relações entre eles.
+## As APIs descritas na seção anterior aplicam-se uniformemente a todos os tipos de objetos de negócios. A única diferença entre, digamos, criar uma oferta e uma atividade seria o cabeçalho que `content-type` anota o schema JSON na carga JSON da solicitação que está em conformidade com o schema. Portanto, as seções a seguir só precisarão se concentrar nesses schemas e nas relações entre eles.
 
 Ao usar as APIs com o tipo de conteúdo `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"`, as próprias propriedades da instância são incorporadas na `_instance` propriedade próxima à qual há uma `_links` propriedade. Esse será o formato geral no qual todas as instâncias serão representadas:
+
+[!NOTE]`_instance``_links`
 
 ```json
 { 
@@ -571,14 +574,16 @@ Ao usar as APIs com o tipo de conteúdo `application/vnd.adobe.platform.xcore.ha
 }
 ```
 
->[!NOTE] Por motivos de brevidade, em todos os trechos JSON, somente as propriedades da instância são ilustradas e somente quando necessário, as propriedades do envelope e a seção _links são mostradas.
+>[!NOTE]Por motivos de brevidade, em todos os trechos JSON, somente as propriedades da instância são ilustradas e somente quando necessário, as propriedades do envelope e a seção _links são mostradas.
+>
+>Propriedades gerais da oferta
 
-### Propriedades gerais da oferta
+### O Oferta é um tipo de opção de decisão e o schema JSON do oferta herda as propriedades de opção padrão que cada instância de opção terá.
 
-O Oferta é um tipo de opção de decisão e o schema JSON do oferta herda as propriedades de opção padrão que cada instância de opção terá.
+**`@id`** - Um identificador exclusivo para cada opção que é a chave primária e usada para referenciar a opção de outros objetos. Essa propriedade é atribuída quando a instância é criada, é imutável e não é editável.
 
-- **`@id`** - Um identificador exclusivo para cada opção que é a chave primária e usada para referenciar a opção de outros objetos. Essa propriedade é atribuída quando a instância é criada, é imutável e não é editável.
 - **`xdm:name`** - Cada opção tem um nome que é usado para fins de pesquisa e exibição. O nome não é imutável e não pode ser usado para identificar exclusivamente a instância. O nome pode ser selecionado livremente, mas deve ser exclusivo em instâncias de oferta.
+- Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
 
 ```json
 { 
@@ -590,19 +595,19 @@ O Oferta é um tipo de opção de decisão e o schema JSON do oferta herda as pr
 }
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
+Cada instância de oferta pode ter um conjunto opcional de propriedades que são características apenas para essa instância. ofertas diferentes podem ter chaves diferentes para essas propriedades, mas os valores devem ser strings. Essas propriedades podem ser usadas em regras de decisão e segmentação. Eles também estão acessíveis para reunir a experiência decidida para personalizar ainda mais as mensagens.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-Cada instância de oferta pode ter um conjunto opcional de propriedades que são características apenas para essa instância. ofertas diferentes podem ter chaves diferentes para essas propriedades, mas os valores devem ser strings. Essas propriedades podem ser usadas em regras de decisão e segmentação. Eles também estão acessíveis para reunir a experiência decidida para personalizar ainda mais as mensagens.
+Ciclo de vida da Oferta
 
-### Ciclo de vida da Oferta
-
-Há um fluxo de transição de estado simples que todas as Opções seguirão. Eles start em um estado de rascunho e quando estiverem prontos seu estado será definido para aprovação. Quando a data final for ultrapassada, eles poderão ser movidos para o estado arquivado. Nesse estado, podem ser eliminados ou reutilizados, transferindo-os para o estado de redação.
+### Há um fluxo de transição de estado simples que todas as Opções seguirão. Eles start em um estado de rascunho e quando estiverem prontos seu estado será definido para aprovação. Quando a data final for ultrapassada, eles poderão ser movidos para o estado arquivado. Nesse estado, podem ser eliminados ou reutilizados, transferindo-os para o estado de redação.
 
 ![](../images/entities/offer-lifecycle.png)
 
-- **`xdm:status`** - Essa propriedade é usada para o gerenciamento do ciclo de vida da instância. O valor representa um estado de fluxo de trabalho que é usado para indicar se a oferta ainda está em construção (valor = rascunho), pode ser considerado pelo tempo de execução (valor = aprovado) ou se não deve ser usada por mais tempo (valor = arquivado).
+**`xdm:status`** - Essa propriedade é usada para o gerenciamento do ciclo de vida da instância. O valor representa um estado de fluxo de trabalho que é usado para indicar se a oferta ainda está em construção (valor = rascunho), pode ser considerado pelo tempo de execução (valor = aprovado) ou se não deve ser usada por mais tempo (valor = arquivado).
 
-Uma operação PATCH simples na instância é normalmente usada para manipular uma `xdm:status` propriedade:
+- Uma operação PATCH simples na instância é normalmente usada para manipular uma `xdm:status` propriedade:
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
 
 ```json
 [
@@ -614,14 +619,14 @@ Uma operação PATCH simples na instância é normalmente usada para manipular u
 ]
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
+Representações e disposições[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-### Representações e disposições
-
-Ofertas são opções de decisão que têm representações de conteúdo. Quando uma decisão é tomada, a opção é selecionada e seu identificador é usado para obter o conteúdo ou as referências de conteúdo para a disposição que precisa ser fornecida. Uma oferta pode ter mais de uma representação, mas cada uma delas precisa ter uma referência de posicionamento diferente. Isso garante que, com uma determinada disposição, a representação possa ser determinada de forma inequívoca.
+### Ofertas são opções de decisão que têm representações de conteúdo. Quando uma decisão é tomada, a opção é selecionada e seu identificador é usado para obter o conteúdo ou as referências de conteúdo para a disposição que precisa ser fornecida. Uma oferta pode ter mais de uma representação, mas cada uma delas precisa ter uma referência de posicionamento diferente. Isso garante que, com uma determinada disposição, a representação possa ser determinada de forma inequívoca.
 Durante a operação de decisão, a disposição é determinada em conjunto com o objeto de atividade. Ofertas que não têm uma representação com essa disposição como referência são automaticamente eliminadas da lista de opções.
 
 Antes que as representações possam ser adicionadas a uma oferta, as instâncias de posicionamento devem existir. Essas instâncias são criadas com o identificador`https://ns.adobe.com/experience/offer-management/offer-placement`do schema.
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
 
 ```json
 {
@@ -636,47 +641,47 @@ Antes que as representações possam ser adicionadas a uma oferta, as instância
 } 
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
+Uma instância **de Disposição** pode ter as seguintes propriedades:`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-Uma instância **de Disposição** pode ter as seguintes propriedades:
+**`xdm:name`** - Contém o nome atribuído para a disposição para se referir a ela em interações humanas e interfaces do usuário.**
 
-- **`xdm:name`** - Contém o nome atribuído para a disposição para se referir a ela em interações humanas e interfaces do usuário.
 - **`xdm:description`** - Usado para transmitir intenções legíveis humanas de como o conteúdo nesta disposição é usado no delivery geral de mensagens. Quando os canais de delivery definem novas disposições, eles podem adicionar mais informações nesta propriedade para que um criador de conteúdo possa criar ou selecionar o conteúdo de acordo. Essas instruções não são formalmente interpretadas ou aplicadas. Essa propriedade serve apenas como um lugar para comunicar as intenções.
 - **`xdm:channel`** - O URI de um canal. O canal indica onde o conteúdo dinâmico deve ser entregue. A restrição de canal é usada para transmitir não apenas onde a oferta será usada, mas também para determinar o editor ou validador de conteúdo usado para a experiência.
 - **`xdm:componentType`** - Um identificador de modelo, ou seja, URI, para o conteúdo que pode ser exibido no local descrito por essa disposição. Os tipos de componentes são: link de imagem, html ou texto sem formatação. Cada tipo de componente pode implicar um conjunto específico de propriedades (um modelo) que o item de conteúdo pode ter. A lista de tipos de componentes pode ser estendida. Há três valores predefinidos de tipo de componente:
-   - `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
+- `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
    - `https://ns.adobe.com/experience/offer-management/content-component-text`
    - `https://ns.adobe.com/experience/offer-management/content-component-html`
-- **`xdm:contentTypes`**, uma restrição para os tipos de mídia dos componentes que são esperados nesta disposição. Pode haver mais de um tipo de mídia para um tipo de componente, como formatos de imagem diferentes.
+   - **`xdm:contentTypes`**, uma restrição para os tipos de mídia dos componentes que são esperados nesta disposição. Pode haver mais de um tipo de mídia para um tipo de componente, como formatos de imagem diferentes.
+- **Os itens de representação** em uma oferta têm uma estrutura de objeto na propriedade array `xdm:representations`. Cada item pode ter as seguintes propriedades:
 
-**Os itens de representação** em uma oferta têm uma estrutura de objeto na propriedade array `xdm:representations`. Cada item pode ter as seguintes propriedades:
+**`xdm:placement`** - Essa propriedade contém a referência à instância de posicionamento. O valor é verificado quando a representação é adicionada à oferta. Uma instância de disposição com esse URI deve existir e não deve ser marcada como excluída. Além disso, uma verificação é executada para garantir que uma instância oferta não tenha duas representações com o mesmo valor para sua referência de posicionamento.**`xdm:representations`
 
-- **`xdm:placement`** - Essa propriedade contém a referência à instância de posicionamento. O valor é verificado quando a representação é adicionada à oferta. Uma instância de disposição com esse URI deve existir e não deve ser marcada como excluída. Além disso, uma verificação é executada para garantir que uma instância oferta não tenha duas representações com o mesmo valor para sua referência de posicionamento.
 - **`xdm:components`** - Os componentes de conteúdo são os fragmentos associados a uma representação da oferta específica. Esses fragmentos são usados posteriormente para compor a experiência do usuário final. Observe que o Serviço de decisão por si só não compõe a experiência completa do usuário final. As seguintes propriedades fazem parte do modelo de cada componente.
-   - **`@type`** - essa propriedade identifica o tipo de componente. Outro nome para esse conceito é o modelo de fragmento de conteúdo. O `@type` de um componente é simplesmente um URI para um modelo definido pelo aplicativo ou serviço que está montando a experiência do usuário final.
-   - **`repo:id`** - essa propriedade contém um identificador global exclusivo para o recurso principal do componente no repositório em que o ativo é armazenado.
+- **`@type`** - essa propriedade identifica o tipo de componente. Outro nome para esse conceito é o modelo de fragmento de conteúdo. O `@type` de um componente é simplesmente um URI para um modelo definido pelo aplicativo ou serviço que está montando a experiência do usuário final.
+   - **`repo:id`** - essa propriedade contém um identificador global exclusivo para o recurso principal do componente no repositório em que o ativo é armazenado.`@type`
    - **`repo:name`** - Essa propriedade contém um nome legível para o ativo no repositório. Esse nome é definido pelo usuário e não é garantido que seja exclusivo.
    - **`repo:resolveURL`** - esta propriedade contém um localizador de recursos exclusivo para ler o ativo em um repositório de conteúdo. Isso facilitará a obtenção do ativo sem que o cliente entenda quais APIs chamar. O URL retorna os bytes do recurso principal do ativo.
    - **`dc:format`** - esta propriedade provém da iniciativa Dublin Core Metadata. O formato pode ser usado para determinar o software, hardware ou outro equipamento necessário para exibir ou operar o recurso. A prática recomendada é selecionar um valor de um vocabulário controlado (por exemplo, a lista de tipos de mídia da Internet que definem formatos de mídia do computador).
    - **`dc:language`** - Essa propriedade contém o idioma ou os idiomas do recurso. Os idiomas são especificados no código de idioma, conforme definido em IETF RFC 3066.
+   - Há três tipos de componentes predefinidos expressos na `@type` propriedade:
 
-Há três tipos de componentes predefinidos expressos na `@type` propriedade:
+https<span></span>://ns.adobe.com/experience/oferta-management/content-component-imagelink
 
-- https<span></span>://ns.adobe.com/experience/oferta-management/content-component-imagelink
 - https<span></span>://ns.adobe.com/experience/oferta-management/content-component-text
 - https<span></span>://ns.adobe.com/experience/oferta-management/content-component-html
+- Dependendo do valor da `@type` propriedade, `xdm:components` conterão propriedades adicionais:
 
-Dependendo do valor da `@type` propriedade, `xdm:components` conterão propriedades adicionais:
+**`xdm:linkURL`** - Presente quando o componente for um link de imagem. Essa propriedade conterá o link associado à imagem e para o qual o usuário final `user-agent` navegará quando interagir com o conteúdo da oferta.`xdm:components`
 
-- **`xdm:linkURL`** - Presente quando o componente for um link de imagem. Essa propriedade conterá o link associado à imagem e para o qual o usuário final `user-agent` navegará quando interagir com o conteúdo da oferta.
-- **`xdm:copyline`** - Usado quando o componente é um texto. Além de fazer referência a um ativo de texto, por exemplo, para Ofertas de texto de formulário longo que podem ter formatação nele, uma string de texto curta pode ser armazenada diretamente na propriedade xdm:copyline.
+- **`xdm:copyline`** - Usado quando o componente é um texto. Além de fazer referência a um ativo de texto, por exemplo, para Ofertas de texto de formulário longo que podem ter formatação nele, uma string de texto curta pode ser armazenada diretamente na propriedade xdm:copyline.`user-agent`
+- **`xdm:copyline`**Propriedades adicionais podem ser usadas pelos clientes para definir e avaliar as instruções de manuseio de contexto. Por exemplo, o cliente Biblioteca da interface de Oferta adiciona as seguintes propriedades opcionais para lidar com a exibição com mais facilidade:
 
-Propriedades adicionais podem ser usadas pelos clientes para definir e avaliar as instruções de manuseio de contexto. Por exemplo, o cliente Biblioteca da interface de Oferta adiciona as seguintes propriedades opcionais para lidar com a exibição com mais facilidade:
+Dentro de cada item na `xdm:components` matriz, o cliente da interface de usuário da biblioteca de Ofertas adiciona as seguintes propriedades. Essas propriedades não devem ser excluídas ou manipuladas sem compreender o impacto na interface do usuário:
 
-- Dentro de cada item na `xdm:components` matriz, o cliente da interface de usuário da biblioteca de Ofertas adiciona as seguintes propriedades. Essas propriedades não devem ser excluídas ou manipuladas sem compreender o impacto na interface do usuário:
-   - **`offerui:previewThumbnail`** - Essa é uma propriedade opcional que a interface do usuário da biblioteca de Ofertas usa para exibir uma renderização do ativo. Essa representação não é igual ao próprio ativo. Por exemplo, o conteúdo pode ser HTML e a execução é uma imagem bitmap que mostra apenas uma aproximação dele. Essa representação (qualidade inferior) é exibida no bloco de representação da oferta.
+- **`offerui:previewThumbnail`** - Essa é uma propriedade opcional que a interface do usuário da biblioteca de Ofertas usa para exibir uma renderização do ativo. Essa representação não é igual ao próprio ativo. Por exemplo, o conteúdo pode ser HTML e a execução é uma imagem bitmap que mostra apenas uma aproximação dele. Essa representação (qualidade inferior) é exibida no bloco de representação da oferta.
+   - **`offerui:previewThumbnail`**Um exemplo de operação PATCH em uma instância de oferta mostra como manipular as representações:
 
-Um exemplo de operação PATCH em uma instância de oferta mostra como manipular as representações:
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
 
 ```json
 [
@@ -697,22 +702,22 @@ Um exemplo de operação PATCH em uma instância de oferta mostra como manipular
 ]' 
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
-
 A operação PATCH pode falhar quando `xdm:representations` ainda não houver propriedade. Nesse caso, a operação de adição acima pode ser precedida por outra operação de adição que cria a `xdm:representations` matriz ou a operação de adição única define a matriz diretamente.
-Os schemas e as propriedades descritas são usados para todos os tipos de oferta, ofertas de personalização e ofertas de fallback. As duas seções a seguir sobre restrições e regras de decisão explicam os aspectos das ofertas de personalização.
+Os schemas e as propriedades descritas são usados para todos os tipos de oferta, ofertas de personalização e ofertas de fallback. As duas seções a seguir sobre restrições e regras de decisão explicam os aspectos das ofertas de personalização.`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-## Configuração de restrições de oferta
+Configuração de restrições de oferta`xdm:representations``xdm:representations`
 
-### Restrições do calendário
+## Restrições do calendário
 
-As opções de decisão em geral podem receber um start e data e hora de término que serve como uma restrição de calendário. As propriedades são incorporadas na propriedade `xdm:selectionConstraint`:
+### As opções de decisão em geral podem receber um start e data e hora de término que serve como uma restrição de calendário. As propriedades são incorporadas na propriedade `xdm:selectionConstraint`:
 
-- **`xdm:startDate`** - Essa propriedade indica a data e a hora do start. O valor é uma string formatada de acordo com as regras RFC 3339, ou seja, como este carimbo de data e hora: &quot;2019-06-13T11:21:23.356Z&quot;.
+**`xdm:startDate`** - Essa propriedade indica a data e a hora do start. O valor é uma string formatada de acordo com as regras RFC 3339, ou seja, como este carimbo de data e hora: &quot;2019-06-13T11:21:23.356Z&quot;.
 As opções de decisão que não atingiram a data e hora de start ainda não são consideradas elegíveis na decisão.
-- **`xdm:endDate`** - Essa propriedade indica a data e a hora de término. O valor é uma string formatada de acordo com as regras RFC 3339, ou seja, como este carimbo de data e hora: &quot;2019-07-13T11:00:00.000Z&quot;As opções de decisão que passaram na data e hora de término não são mais consideradas elegíveis no processo de decisão.
 
-A alteração de uma restrição de calendário pode ser realizada com a seguinte chamada PATCH:
+- **`xdm:endDate`** - Essa propriedade indica a data e a hora de término. O valor é uma string formatada de acordo com as regras RFC 3339, ou seja, como este carimbo de data e hora: &quot;2019-07-13T11:00:00.000Z&quot;As opções de decisão que passaram na data e hora de término não são mais consideradas elegíveis no processo de decisão.
+- **`xdm:endDate`**A alteração de uma restrição de calendário pode ser realizada com a seguinte chamada PATCH:
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
 
 ```json
 [
@@ -727,16 +732,16 @@ A alteração de uma restrição de calendário pode ser realizada com a seguint
 ]' 
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
+Limitação de restrições[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-### Limitação de restrições
+### Uma restrição de limite é um componente em uma opção de decisão que define os parâmetros para o limite. A limitação é o processo de limitar quantas vezes uma opção pode ser proposta, para um perfil individual e para todos os perfis. As propriedades têm um valor inteiro que deve ser maior ou igual a 1. As propriedades são aninhadas dentro de uma propriedade `xdm:cappingConstraint`:
 
-Uma restrição de limite é um componente em uma opção de decisão que define os parâmetros para o limite. A limitação é o processo de limitar quantas vezes uma opção pode ser proposta, para um perfil individual e para todos os perfis. As propriedades têm um valor inteiro que deve ser maior ou igual a 1. As propriedades são aninhadas dentro de uma propriedade `xdm:cappingConstraint`:
+**`xdm:globalCap`** - Um limite máximo global é um limite para o número total de vezes que uma oferta pode ser proposta.
 
-- **`xdm:globalCap`** - Um limite máximo global é um limite para o número total de vezes que uma oferta pode ser proposta.
 - **`xdm:profileCap`** - Um limite máximo para o perfil é um limite para o número de vezes que uma oferta pode ser proposta a um determinado perfil.
+- **`xdm:profileCap`**A configuração ou alteração da restrição de limite em uma oferta de personalização pode ser realizada com a seguinte chamada PATCH:
 
-A configuração ou alteração da restrição de limite em uma oferta de personalização pode ser realizada com a seguinte chamada PATCH:
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
 
 ```json
 [
@@ -751,19 +756,19 @@ A configuração ou alteração da restrição de limite em uma oferta de person
 ]' 
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
+Para remover os valores de limite, a operação &quot;adicionar&quot; é substituída pela operação &quot;remover&quot;. Observe que os valores de limite existem individualmente e também podem ser definidos ou removidos individualmente.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-Para remover os valores de limite, a operação &quot;adicionar&quot; é substituída pela operação &quot;remover&quot;. Observe que os valores de limite existem individualmente e também podem ser definidos ou removidos individualmente.
+Restrições de elegibilidade
 
-### Restrições de elegibilidade
-
-Ofertas podem ser selecionadas condicionalmente no processo de decisão. Quando uma oferta de personalização tem uma referência a uma regra de elegibilidade, a condição da regra deve ser avaliada como true para que o objeto de oferta seja considerado para um determinado perfil. As regras de elegibilidade são criadas e gerenciadas independentemente das opções de decisão e a mesma regra pode ser referenciada de várias ofertas de personalização.
+### Ofertas podem ser selecionadas condicionalmente no processo de decisão. Quando uma oferta de personalização tem uma referência a uma regra de elegibilidade, a condição da regra deve ser avaliada como true para que o objeto de oferta seja considerado para um determinado perfil. As regras de elegibilidade são criadas e gerenciadas independentemente das opções de decisão e a mesma regra pode ser referenciada de várias ofertas de personalização.
 
 A referência à regra é incorporada na propriedade `xdm:selectionConstraint`:
 
-- **`xdm:eligibilityRule`** - Esta propriedade contém uma referência a uma regra de elegibilidade. O valor é a `@id` de uma instância de schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
+**`xdm:eligibilityRule`** - Esta propriedade contém uma referência a uma regra de elegibilidade. O valor é a `@id` de uma instância de schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
 
-A adição e exclusão de uma regra também pode ser realizada com uma operação PATCH:
+- **`xdm:eligibilityRule`**A adição e exclusão de uma regra também pode ser realizada com uma operação PATCH:`@id`
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
 
 ```
 [
@@ -775,18 +780,18 @@ A adição e exclusão de uma regra também pode ser realizada com uma operaçã
 ]'
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
+Observe que a regra de elegibilidade é incorporada na `xdm:selectionConstraint` propriedade juntamente com as restrições do calendário. As operações PATCH não devem tentar remover toda a `SelectionConstraint` propriedade.`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-Observe que a regra de elegibilidade é incorporada na `xdm:selectionConstraint` propriedade juntamente com as restrições do calendário. As operações PATCH não devem tentar remover toda a `SelectionConstraint` propriedade.
+Definição da prioridade de uma oferta`xdm:selectionConstraint``SelectionConstraint`
 
-## Definição da prioridade de uma oferta
-
-As opções de decisão de qualificação serão classificadas para determinar a melhor opção para o perfil em questão. Para suportar a classificação e fornecer um padrão caso a classificação não possa ser determinada por outro mecanismo, uma prioridade básica pode ser definida para cada oferta de personalização.
+## As opções de decisão de qualificação serão classificadas para determinar a melhor opção para o perfil em questão. Para suportar a classificação e fornecer um padrão caso a classificação não possa ser determinada por outro mecanismo, uma prioridade básica pode ser definida para cada oferta de personalização.
 A prioridade básica é incorporada na propriedade `xdm:rank`:
 
-- **`xdm:priority`** - Essa propriedade representa a ordem padrão na qual uma oferta é selecionada sobre outra caso não haja nenhuma ordem de classificação específica do perfil conhecida. Se, após comparar o valor de prioridade, duas ou mais ofertas de personalização ainda estiverem ligadas, uma é escolhida aleatoriamente e usada na apresentação da oferta. O valor para essa propriedade deve ser um número inteiro maior ou igual a 0.
+**`xdm:priority`** - Essa propriedade representa a ordem padrão na qual uma oferta é selecionada sobre outra caso não haja nenhuma ordem de classificação específica do perfil conhecida. Se, após comparar o valor de prioridade, duas ou mais ofertas de personalização ainda estiverem ligadas, uma é escolhida aleatoriamente e usada na apresentação da oferta. O valor para essa propriedade deve ser um número inteiro maior ou igual a 0.
 
-O ajuste da prioridade básica pode ser feito com a seguinte chamada PATCH:
+- **`xdm:priority`**O ajuste da prioridade básica pode ser feito com a seguinte chamada PATCH:
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm propriedades de classificação.
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
@@ -805,15 +810,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm propriedades de classificação.
+Gerenciar regras de decisão[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-## Gerenciar regras de decisão
+## As Regras de elegibilidade mantêm as condições que são avaliadas para determinar se uma determinada opção de decisão é qualificada para um determinado perfil. Anexar uma regra a uma ou mais opções de decisão define implicitamente que para essa opção a regra deve ser avaliada como true para que a opção seja considerada para esse usuário. A regra pode conter testes em atributos de perfil, pode avaliar expressões envolvendo eventos de experiência para esse perfil e pode incluir dados de contexto que foram passados para a solicitação de decisão. Por exemplo, uma condição pode ser descrita como:
 
-As Regras de elegibilidade mantêm as condições que são avaliadas para determinar se uma determinada opção de decisão é qualificada para um determinado perfil. Anexar uma regra a uma ou mais opções de decisão define implicitamente que para essa opção a regra deve ser avaliada como true para que a opção seja considerada para esse usuário. A regra pode conter testes em atributos de perfil, pode avaliar expressões envolvendo eventos de experiência para esse perfil e pode incluir dados de contexto que foram passados para a solicitação de decisão. Por exemplo, uma condição pode ser descrita como:
+&quot;Incluir indivíduos que tenham status de elite e tenham voado em um voo três vezes nos últimos seis meses que tenha o número de voo do voo atual.&quot;
 
-> &quot;Incluir indivíduos que tenham status de elite e tenham voado em um voo três vezes nos últimos seis meses que tenha o número de voo do voo atual.&quot;
+> As instâncias são criadas com o identificador de schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule. A `_instance` propriedade para a chamada de criação ou atualização é semelhante:
 
-As instâncias são criadas com o identificador de schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule. A `_instance` propriedade para a chamada de criação ou atualização é semelhante:
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
 
 ```json
 {
@@ -832,28 +837,28 @@ As instâncias são criadas com o identificador de schemahttps://ns.adobe.com/ex
 }
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
-
-O valor na propriedade de condição da regra contém uma expressão PQL. Os dados de contexto são referenciados por meio da expressão de caminho especial @{schemaID}.
+O valor na propriedade de condição da regra contém uma expressão PQL. Os dados de contexto são referenciados por meio da expressão de caminho especial @{schemaID}.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/eligibility-rule`
 
 As regras são alinhadas naturalmente com os segmentos no [!DNL Experience Platform] e, muitas vezes, uma regra simplesmente reutiliza a intenção de um segmento testando a `segmentMembership` propriedade de um perfil. A `segmentMembership` propriedade contém os resultados de condições de segmentos que já foram avaliadas. Isso permite que uma organização defina suas audiências específicas de domínio uma vez, nomeie-as e avalie as condições uma vez.
 
-## Gerenciamento de coleções de ofertas
+Gerenciamento de coleções de ofertas[!DNL Experience Platform]`segmentMembership``segmentMembership`
 
-### Criação de tags e ofertas de marcação
+## Criação de tags e ofertas de marcação
 
-As Ofertas podem ser organizadas em coleções nas quais cada coleção define a condição do filtro que deve ser aplicada. Atualmente, a expressão de filtro em uma coleção pode ter um de dois formulários:
+### As Ofertas podem ser organizadas em coleções nas quais cada coleção define a condição do filtro que deve ser aplicada. Atualmente, a expressão de filtro em uma coleção pode ter um de dois formulários:
 
-1. O `@id` parâmetro da oferta deve corresponder a um em uma lista de identificadores para que a oferta esteja na coleção. Esse filtro é simplesmente uma lista discriminada dos URIs das ofertas na coleção.
-2. Uma oferta pode ter uma lista de referências de tags e o filtro da coleção consiste em uma lista de tags. A oferta está na coleção quando:\
-   a. qualquer tag do filtro corresponde a uma das tags da oferta\
-   b. todas as tags do filtro correspondem a uma das tags da oferta
+O `@id` parâmetro da oferta deve corresponder a um em uma lista de identificadores para que a oferta esteja na coleção. Esse filtro é simplesmente uma lista discriminada dos URIs das ofertas na coleção.
 
-As tags são instâncias simples às quais as instâncias de oferta podem ser vinculadas. São instâncias próprias com um nome para exibi-las. O nome deve ser exclusivo entre instâncias para facilitar a exibição na interface do usuário.
+1. Uma oferta pode ter uma lista de referências de tags e o filtro da coleção consiste em uma lista de tags. A oferta está na coleção quando:`@id`
+2. a. qualquer tag do filtro corresponde a uma das tags da oferta\
+   b. todas as tags do filtro correspondem a uma das tags da oferta\
+   As tags são instâncias simples às quais as instâncias de oferta podem ser vinculadas. São instâncias próprias com um nome para exibi-las. O nome deve ser exclusivo entre instâncias para facilitar a exibição na interface do usuário.
 
 Os objetos de tag servem para estabelecer uma categorização entre as opções de decisão (oferta). Uma tag pode ser vinculada por muitas ofertas e uma oferta pode ter muitas referências de tag. Uma categoria de ofertas é estabelecida fazendo referência a todas as ofertas que estão relacionadas a um determinado conjunto de instâncias de tags.
 
 As instâncias de tag são criadas com o identificador de schemahttps://ns.adobe.com/experience/offer-management/tag. A `_instance` propriedade para a chamada de criação ou atualização é semelhante:
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/tag`.
 
 ```json
 {
@@ -861,10 +866,10 @@ As instâncias de tag são criadas com o identificador de schemahttps://ns.adobe
 } 
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/tag`.
+Uma instância de oferta pode ser criada com a lista de referências de tag, como:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/tag`
 
 
-Uma instância de oferta pode ser criada com a lista de referências de tag, como:
+Como alternativa, uma oferta pode ser corrigida para alterar sua lista de tags:
 
 ```json
 {
@@ -876,7 +881,7 @@ Uma instância de oferta pode ser criada com a lista de referências de tag, com
 }
 ```
 
-Como alternativa, uma oferta pode ser corrigida para alterar sua lista de tags:
+Para ambos os casos, consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para a sintaxe cURL completa. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`.
 
 ```json
 [
@@ -888,13 +893,13 @@ Como alternativa, uma oferta pode ser corrigida para alterar sua lista de tags:
 ]' 
 ```
 
-Para ambos os casos, consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para a sintaxe cURL completa. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`.
+Observe que a `xdm:tags` propriedade já deve existir para que a operação de adição tenha êxito. Não existem tags em uma instância, a operação PATCH pode primeiro adicionar a propriedade array e depois adicionar uma referência de tag a essa matriz.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-Observe que a `xdm:tags` propriedade já deve existir para que a operação de adição tenha êxito. Não existem tags em uma instância, a operação PATCH pode primeiro adicionar a propriedade array e depois adicionar uma referência de tag a essa matriz.
+Definir filtros para coleções de ofertas`xdm:tags`
 
-### Definir filtros para coleções de ofertas
+### As instâncias de filtro são criadas com o identificador de schemahttps://ns.adobe.com/experience/offer-management/offer-filter. A `_instance` propriedade para a chamada de criação ou atualização pode ser semelhante a:
 
-As instâncias de filtro são criadas com o identificador de schemahttps://ns.adobe.com/experience/offer-management/offer-filter. A `_instance` propriedade para a chamada de criação ou atualização pode ser semelhante a:
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/offer-filter`.
 
 ```json
 {
@@ -907,15 +912,15 @@ As instâncias de filtro são criadas com o identificador de schemahttps://ns.ad
 }
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/offer-filter`.
+**`xdm:filterType`** - Essa propriedade indica se o filtro está configurado usando tags ou se faz referência direta a ofertas por suas ids. Quando o filtro é configurado para usar tags, o tipo de filtro pode indicar ainda mais se todas as tags devem corresponder às tags em uma oferta específica ou se qualquer uma dessas tags for suficiente para que a oferta se qualifique para o filtro. Os valores válidos desta propriedade enum são:](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-filter`
 
-- **`xdm:filterType`** - Essa propriedade indica se o filtro está configurado usando tags ou se faz referência direta a ofertas por suas ids. Quando o filtro é configurado para usar tags, o tipo de filtro pode indicar ainda mais se todas as tags devem corresponder às tags em uma oferta específica ou se qualquer uma dessas tags for suficiente para que a oferta se qualifique para o filtro. Os valores válidos desta propriedade enum são:
-   - `offers`
+- `offers`
    - `anyTags`
    - `allTags`
-- **`ids`** - Uma propriedade contém uma matriz de URIs que são referências a instâncias de oferta ou a instâncias de tag, dependendo do valor de `xdm:filterType`. .
+   - **`ids`** - Uma propriedade contém uma matriz de URIs que são referências a instâncias de oferta ou a instâncias de tag, dependendo do valor de `xdm:filterType`. .
+- A chamada a seguir ilustra a aparência da propriedade `_instance` para a chamada de criação ou atualização caso as ofertas sejam referenciadas diretamente:`xdm:filterType`
 
-A chamada a seguir ilustra a aparência da propriedade `_instance` para a chamada de criação ou atualização caso as ofertas sejam referenciadas diretamente:
+Gerenciamento de atividades`_instance`
 
 ```json
 {
@@ -935,11 +940,11 @@ A chamada a seguir ilustra a aparência da propriedade `_instance` para a chamad
 } 
 ```
 
-## Gerenciamento de atividades
-
-Uma atividade oferta é usada para controlar o processo de decisão. Ela especifica o filtro de oferta aplicado ao inventário total para restringir ofertas por tópico/categoria, a disposição para restringir o inventário às ofertas que se encaixam no espaço reservado e especifica uma opção de fallback se as restrições combinadas desqualificarem todas as opções de personalização disponíveis (oferta).
+## Uma atividade oferta é usada para controlar o processo de decisão. Ela especifica o filtro de oferta aplicado ao inventário total para restringir ofertas por tópico/categoria, a disposição para restringir o inventário às ofertas que se encaixam no espaço reservado e especifica uma opção de fallback se as restrições combinadas desqualificarem todas as opções de personalização disponíveis (oferta).
 
 As instâncias de atividade são criadas com o identificador`https://ns.adobe.com/experience/offer-management/offer-activity`de schema. A `_instance` propriedade para a chamada de criação ou atualização é semelhante:
+
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/offer-activity`.
 
 ```json
 {
@@ -953,17 +958,17 @@ As instâncias de atividade são criadas com o identificador`https://ns.adobe.co
 }
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/offer-activity`.
+**`xdm:name`** - Esta propriedade obrigatória contém o nome da atividade. O nome é exibido em várias interfaces do usuário.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-activity`
 
-- **`xdm:name`** - Esta propriedade obrigatória contém o nome da atividade. O nome é exibido em várias interfaces do usuário.
 - **`xdm:status`** - Essa propriedade é usada para o gerenciamento do ciclo de vida da instância. O valor representa um estado de fluxo de trabalho que é usado para indicar se a atividade ainda está em construção (valor = rascunho), pode ser considerado pelo tempo de execução (valor = live) ou se não deve ser usada por mais tempo (valor = arquivado).
 - **`xdm:placement`** - Uma propriedade obrigatória que contenha uma referência a uma disposição de oferta aplicada ao inventário quando uma decisão é tomada no contexto dessa atividade. O valor é o URI (`@id`) da disposição da oferta usada.
 - **`xdm:filter`** - Uma propriedade obrigatória que contenha uma referência a um filtro de oferta aplicado ao inventário quando uma decisão é tomada no contexto desta atividade. O valor é o URI (`@id`) do filtro de oferta usado.
 - **`xdm:fallback`** - Uma propriedade obrigatória contendo uma referência a uma oferta de fallback. Uma oferta de fallback é usada quando a decisão para essa atividade não qualifica nenhuma das ofertas de personalização. O valor é o URI (`@id`) de uma instância de oferta de fallback.
+- **`xdm:fallback`**Gerenciando ofertas de fallback`@id`
 
-### Gerenciando ofertas de fallback
+### Antes que as instâncias de atividade possam ser criadas, é necessário que exista uma oferta de fallback qualificada para o posicionamento da atividade. As instâncias de oferta de fallback são criadas com o identificador`https://ns.adobe.com/experience/offer-management/fallback-offer`de schema. A `_instance` propriedade para a chamada de criação ou atualização contém as mesmas propriedades gerais que uma oferta de personalização possui, mas não pode ter outras restrições.
 
-Antes que as instâncias de atividade possam ser criadas, é necessário que exista uma oferta de fallback qualificada para o posicionamento da atividade. As instâncias de oferta de fallback são criadas com o identificador`https://ns.adobe.com/experience/offer-management/fallback-offer`de schema. A `_instance` propriedade para a chamada de criação ou atualização contém as mesmas propriedades gerais que uma oferta de personalização possui, mas não pode ter outras restrições.
+Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/fallback-offer`.
 
 ```json
 {
@@ -984,5 +989,5 @@ Antes que as instâncias de atividade possam ser criadas, é necessário que exi
 }  
 ```
 
-Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/fallback-offer`.
+See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/fallback-offer`.
 

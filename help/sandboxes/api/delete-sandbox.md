@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Excluir uma caixa de proteção
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
 
 # Excluir uma caixa de proteção
 
-É possível excluir uma caixa de proteção fazendo uma solicitação DELETE que inclua a caixa de proteção `name` no caminho da solicitação.
+Você pode excluir uma caixa de proteção fazendo uma solicitação DELETE que inclui a caixa de proteção `name` no caminho da solicitação.
 
->[!NOTE] Fazer esta chamada de API atualiza a propriedade da caixa de proteção para &quot; `status` excluída&quot; e a desativa. As solicitações GET ainda podem recuperar os detalhes da caixa de proteção após sua exclusão.
+>[!NOTE]
+>
+>Fazer esta chamada de API atualiza a propriedade da caixa de proteção para &quot; `status` excluída&quot; e a desativa. As solicitações GET ainda podem recuperar os detalhes da caixa de proteção após sua exclusão.
 
 **Formato da API**
 

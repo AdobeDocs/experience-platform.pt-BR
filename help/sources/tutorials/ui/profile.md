@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ativar dados de origem de entrada para preencher perfis de clientes
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ Agora que o schema está ativado para [!DNL Profile], volte à tela de atividade
 
 Com o schema e o conjunto de dados habilitados para [!DNL Profile], os dados assimilados nesse conjunto de dados também preencherão os perfis do cliente.
 
->[!NOTE] Os dados existentes em um conjunto de dados recentemente habilitado não são consumidos por [!DNL Profile]
+>[!NOTE]
+>
+>Os dados existentes em um conjunto de dados recentemente habilitado não são consumidos por [!DNL Profile]
 
 ## Próximas etapas
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Você pode visualização uma lista de todos os recursos do Registro de Schemas de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação GET.
 
->[!NOTE] Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros [de](#paging)paginação. Também é recomendável usar parâmetros de query para [filtrar os resultados](#filtering) e reduzir o número de recursos retornados.
+>[!NOTE]
+>
+>Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros [de](#paging)paginação. Também é recomendável usar parâmetros de query para [filtrar os resultados](#filtering) e reduzir o número de recursos retornados.
 
 **Formato da API**
 
@@ -78,7 +80,9 @@ A solicitação acima usou o cabeçalho `application/vnd.adobe.xed-id+json` Acei
 
 O Registro de Schemas suporta o uso de parâmetros de query para a página e filtrar os resultados ao listar os recursos.
 
->[!NOTE] Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (`&`).
+>[!NOTE]
+>
+>Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (`&`).
 
 ### Paginação {#paging}
 
@@ -103,6 +107,8 @@ Você pode filtrar os resultados usando o `property` parâmetro, que é usado pa
 | `<=` | Filtros se a propriedade é menor ou igual ao valor fornecido. | `property=version<=5` |
 | `>=` | Filtros se a propriedade é maior ou igual ao valor fornecido. | `property=version>=5` |
 | `~` | Filtros se a propriedade corresponde a uma expressão regular fornecida. | `property=title~test$` |
-| (Nenhum) | A indicação apenas do nome da propriedade retorna somente entradas nas quais a propriedade existe. | `property=title` |
+| (None) | A indicação apenas do nome da propriedade retorna somente entradas nas quais a propriedade existe. | `property=title` |
 
->[!TIP] Você pode usar o `property` parâmetro para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a classe de Perfil individual XDM.
+>[!TIP]
+>
+>Você pode usar o `property` parâmetro para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a classe de Perfil individual XDM.

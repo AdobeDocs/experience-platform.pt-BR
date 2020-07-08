@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Guia do usuário do Sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
 
 # Guia do usuário do Sandbox
 
-Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário da plataforma Adobe Experience.
+Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário do Adobe Experience Platform.
 
 ## Caixas de proteção de Visualização
 
-Na interface do usuário da plataforma de experiência, clique em **Caixas** de proteção na navegação esquerda para abrir o painel _Caixas de proteção_ . O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
+Na interface do usuário do Experience Platform, clique em **Caixas** de proteção na navegação esquerda para abrir o painel _Caixas de proteção_ . O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -45,7 +48,9 @@ Quando terminar, clique em **Criar**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Como você está restrito à criação de tipos de caixa de proteção que não sejam de produção, a opção de **tipo** está bloqueada em &quot;Não-produção&quot; e não pode ser manipulada.
+>[!NOTE]
+>
+>Como você está restrito à criação de tipos de caixa de proteção que não sejam de produção, a opção de **tipo** está bloqueada em &quot;Não-produção&quot; e não pode ser manipulada.
 
 Quando terminar de criar a caixa de proteção, atualize a página e a nova caixa de proteção aparecerá no painel _Sandboxes_ com o status &quot;Criação&quot;. As novas caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seu status muda para &quot;Ativo&quot;.
 
@@ -53,7 +58,9 @@ Quando terminar de criar a caixa de proteção, atualize a página e a nova caix
 
 ## Redefinir uma caixa de proteção
 
->[!NOTE] Essa funcionalidade só está disponível para caixas de proteção que não sejam de produção. As caixas de proteção de produção não podem ser redefinidas.
+>[!NOTE]
+>
+>Essa funcionalidade só está disponível para caixas de proteção que não sejam de produção. As caixas de proteção de produção não podem ser redefinidas.
 
 A redefinição de uma caixa de proteção que não seja de produção exclui todos os recursos associados a essa caixa de proteção (schemas, conjuntos de dados etc.), mantendo o nome da caixa de proteção e as permissões associadas. Essa caixa de proteção &quot;limpa&quot; continua disponível com o mesmo nome para usuários que têm acesso a ela.
 
@@ -71,7 +78,9 @@ Uma mensagem de confirmação é exibida e o estado da caixa de proteção muda 
 
 ## Excluir uma caixa de proteção
 
->[!NOTE] Essa funcionalidade só está disponível para caixas de proteção que não sejam de produção. As caixas de proteção de produção não podem ser excluídas.
+>[!NOTE]
+>
+>Essa funcionalidade só está disponível para caixas de proteção que não sejam de produção. As caixas de proteção de produção não podem ser excluídas.
 
 A exclusão de uma caixa de proteção que não seja de produção remove permanentemente todos os recursos associados a essa caixa de proteção, incluindo permissões.
 
@@ -87,4 +96,4 @@ Uma mensagem de confirmação é exibida e a caixa de proteção é removida da 
 
 ## Próximas etapas
 
-Este documento demonstrou como gerenciar caixas de proteção na interface do usuário da plataforma de experiência. Para obter informações sobre como gerenciar caixas de proteção usando a API Sandbox, consulte o guia [do desenvolvedor da](../api/getting-started.md)caixa de proteção.
+Este documento demonstrou como gerenciar caixas de proteção na interface do usuário do Experience Platform. Para obter informações sobre como gerenciar caixas de proteção usando a API Sandbox, consulte o guia [do desenvolvedor da](../api/getting-started.md)caixa de proteção.

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Avaliar um segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 2%
@@ -37,7 +37,9 @@ Todos os recursos no Experience Platform são isolados para caixas de proteção
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
 
@@ -55,7 +57,9 @@ Se você ainda não tiver concluído o tutorial [Criar um segmento usando a API]
 
 Por meio da avaliação programada, sua Organização IMS pode criar uma programação recorrente para executar automaticamente as tarefas de exportação.
 
->[!NOTE] A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para o Perfil individual XDM. Se sua organização tiver mais de cinco políticas de mesclagem para o Perfil individual XDM em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
+>[!NOTE]
+>
+>A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para o Perfil individual XDM. Se sua organização tiver mais de cinco políticas de mesclagem para o Perfil individual XDM em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
 
 ### Criar um agendamento
 

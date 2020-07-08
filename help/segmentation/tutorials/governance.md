@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1372'
+ht-degree: 1%
 
 ---
 
@@ -15,36 +18,38 @@ Este tutorial aborda as etapas para impor a conformidade de uso de dados para se
 
 ## Introdução
 
-Este tutorial requer uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Perfil](../../profile/home.md)do cliente em tempo real: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados do Modelo de dados de experiência (XDM) na plataforma. O Perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
+- [Perfil](../../profile/home.md)do cliente em tempo real: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados do Modelo de dados de experiência (XDM) na Platform. O Perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
    - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas pelo Perfil do cliente em tempo real para determinar quais dados podem ser mesclados em uma visualização unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para fins de controle de dados.
 - [Segmentação](../home.md): Como o Perfil de cliente em tempo real divide um grande grupo de indivíduos contidos na loja de perfis em grupos menores que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 - [Controle](../../data-governance/home.md)de dados: O Data Governance fornece a infraestrutura para a rotulagem e aplicação de uso de dados (DULE), usando os seguintes componentes:
    - [Rótulos](../../data-governance/labels/user-guide.md)de uso de dados: Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.
    - [Políticas](../../data-governance/policies/overview.md)de uso de dados: Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos de uso de dados específicos.
    - [Aplicação](../../data-governance/enforcement/overview.md)de políticas: Permite que você aplique políticas de uso de dados e previna operações de dados que constituem violações de política.
-- [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -178,7 +183,9 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 
 ## Avaliar conjuntos de dados para violações de política
 
->[!NOTE]  Esta etapa supõe que você tenha pelo menos uma política de uso de dados ativa que impeça a execução de ações de marketing específicas em dados que contenham determinados rótulos. Se você não tiver políticas de uso aplicáveis para os conjuntos de dados que estão sendo avaliados, siga o tutorial [de criação de](../../data-governance/policies/create.md) política para criar um antes de continuar com esta etapa.
+>[!NOTE]
+>
+> Esta etapa supõe que você tenha pelo menos uma política de uso de dados ativa que impeça a execução de ações de marketing específicas em dados que contenham determinados rótulos. Se você não tiver políticas de uso aplicáveis para os conjuntos de dados que estão sendo avaliados, siga o tutorial [de criação de](../../data-governance/policies/create.md) política para criar um antes de continuar com esta etapa.
 
 Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para avaliar esses conjuntos de dados em relação a ações de marketing específicas a fim de verificar violações da política de uso de dados.
 
@@ -376,4 +383,4 @@ Consulte a seção sobre como [exportar um segmento](./evaluate-a-segment.md#exp
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de audiência e os testou em busca de violações de política contra ações de marketing específicas. Para obter mais informações sobre o controle de dados na plataforma Experience, consulte a visão geral [do controle de](../../data-governance/home.md)dados.
+Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de audiência e os testou em busca de violações de política contra ações de marketing específicas. Para obter mais informações sobre o controle de dados no Experience Platform, consulte a visão geral [do controle de](../../data-governance/home.md)dados.

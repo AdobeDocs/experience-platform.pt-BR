@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do notebook Aprendizagem de máquina em tempo real
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ Em seguida, altere o valor da `model_path` string no bloco de anotações ML *em
 Esta seção descreve como criar um DSL. Você criará os nós que incluem qualquer pré-processamento de dados junto com o nó ONNX. Em seguida, um gráfico DSL é criado usando nós e bordas. As bordas conectam nós usando o formato baseado em tupla (node_1, node_2). O gráfico não deve ter ciclos.
 
 >[!IMPORTANT]
+>
+>
 >O uso do nó ONNX é obrigatório. Sem o nó ONNX, o aplicativo não terá êxito.
 
 ### Criação de nó
@@ -383,7 +385,7 @@ dsl_dict['edge']['applicationDsl']['nodes'][0]['id'] = new_node_id
 
 ![Nó atualizado](../images/rtml/updated-node.png)
 
-Depois de atualizar a ID do nó, você poderá publicar novamente um DSL atualizado no Edge.
+Após atualizar a ID do nó, você poderá publicar novamente um DSL atualizado na borda.
 
 ```python
 # Republish the updated DSL to Edge

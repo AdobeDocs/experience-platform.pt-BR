@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Apêndice do guia do desenvolvedor do serviço de catálogo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '908'
+ht-degree: 0%
 
 ---
 
@@ -103,9 +106,11 @@ POST /
 
 A solicitação a seguir cria um novo conjunto de dados e, em seguida, cria visualizações relacionadas para esse conjunto de dados. Este exemplo demonstra o uso de linguagem de modelo para acessar valores retornados em chamadas anteriores para uso em chamadas subsequentes.
 
-Por exemplo, se você deseja fazer referência a um valor que foi retornado de uma subsolicitação anterior, é possível criar uma referência no formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, como demonstrado abaixo). É possível fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de subsolicitação anterior usando esses modelos.
+Por exemplo, se você deseja fazer referência a um valor que foi retornado de uma subsolicitação anterior, é possível criar uma referência no formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, conforme demonstrado abaixo). É possível fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de subsolicitação anterior usando esses modelos.
 
->[!NOTE] Quando uma subsolicitação executada retorna somente a referência a um objeto (como é o padrão para a maioria das solicitações POST e PUT na API de catálogo), essa referência recebe alias do valor `id` e pode ser usada como `<<{OBJECT_ID}.id>>`.
+>[!NOTE]
+>
+>Quando uma subsolicitação executada retorna somente a referência a um objeto (como é o padrão para a maioria das solicitações POST e PUT na API de catálogo), essa referência recebe alias do valor `id` e pode ser usada como `<<{OBJECT_ID}.id>>`.
 
 ```shell
 curl -X POST \
@@ -187,6 +192,6 @@ Ocasionalmente, talvez você queira validar um objeto sem salvar as informaçõe
 
 ## compactação de dados
 
-Compaction é um serviço da plataforma Experience que mescla dados de arquivos pequenos em arquivos maiores sem alterar dados. Por motivos de desempenho, às vezes é benéfico combinar um conjunto de arquivos pequenos em arquivos maiores para fornecer acesso mais rápido aos dados ao ser consultado.
+Compaction é um serviço Experience Platform que une dados de arquivos pequenos em arquivos maiores sem alterar dados. Por motivos de desempenho, às vezes é benéfico combinar um conjunto de arquivos pequenos em arquivos maiores para fornecer acesso mais rápido aos dados ao ser consultado.
 
 Quando os arquivos em um lote ingerido forem compactados, seu objeto de Catálogo associado será atualizado para fins de monitoramento.

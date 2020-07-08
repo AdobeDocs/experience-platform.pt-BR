@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guia do desenvolvedor de assimilação de lote da plataforma Adobe Experience
+title: Guia do desenvolvedor de ingestão em lote de Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2577'
+ht-degree: 6%
 
 ---
 
@@ -21,29 +24,31 @@ A ingestão de dados fornece uma RESTful API através da qual você pode executa
 
 As seções a seguir fornecem informações adicionais que você precisará conhecer ou ter em mãos para fazer chamadas com êxito para a API de ingestão em lote.
 
-Este guia exige uma compreensão prática dos seguintes componentes da Adobe Experience Platform:
+Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Ingestão](./overview.md)em lote: Permite assimilar dados no Adobe Experience Platform como arquivos em lote.
-- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual a plataforma Experience organiza os dados da experiência do cliente.
-- [Caixas de proteção](../../sandboxes/home.md): A plataforma Experience fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Ingestão](./overview.md)em lote: Permite assimilar dados em Adobe Experience Platform como arquivos em lote.
+- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+- [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um `Content-Type` cabeçalho adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada. Os seguintes tipos de conteúdo são usados neste guia:
 
@@ -73,7 +78,9 @@ A tabela abaixo mostra as conversões suportadas ao assimilar dados.
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] Booleanos e matrizes não podem ser convertidos em outros tipos.
+>[!NOTE]
+>
+>Booleanos e matrizes não podem ser convertidos em outros tipos.
 
 ## Restrições de ingestão
 
@@ -85,13 +92,17 @@ A ingestão de dados em lote tem algumas restrições:
 
 ## Ingest arquivos JSON
 
->[!NOTE] As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
+>[!NOTE]
+>
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
 
 ### Criar lote
 
 Primeiro, você precisará criar um lote, com JSON como o formato de entrada. Ao criar o lote, será necessário fornecer uma ID de conjunto de dados. Você também precisará garantir que todos os arquivos carregados como parte do lote estejam em conformidade com o schema XDM vinculado ao conjunto de dados fornecido.
 
->[!NOTE] Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, o sinalizador `isMultiLineJson` precisa ser definido. Para obter mais informações, leia o guia [de solução de problemas de ingestão em](./troubleshooting.md)lote.
+>[!NOTE]
+>
+>Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, o sinalizador `isMultiLineJson` precisa ser definido. Para obter mais informações, leia o guia [de solução de problemas de ingestão em](./troubleshooting.md)lote.
 
 **Formato da API**
 
@@ -151,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
->[!NOTE] Consulte a seção de apêndice para obter um [exemplo de um arquivo](#data-transformation-for-batch-ingestion)de dados JSON devidamente formatado.
+>[!NOTE]
+>
+>Consulte a seção de apêndice para obter um [exemplo de um arquivo](#data-transformation-for-batch-ingestion)de dados JSON devidamente formatado.
 
 **Formato da API**
 
@@ -167,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitação**
 
->[!NOTE] A API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
+>[!NOTE]
+>
+>A API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -221,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## Ingest Parquet files
 
->[!NOTE] As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
+>[!NOTE]
+>
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
 
 ### Criar lote
 
@@ -282,7 +299,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Carregar arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -298,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitação**
 
->[!CAUTION] Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
+>[!CAUTION]
+>
+>Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -352,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Incorporar arquivos grandes do Parquet
 
->[!NOTE] Esta seção detalha como carregar arquivos com mais de 256 MB. Os arquivos grandes são carregados em partes e depois suturados por um sinal de API.
+>[!NOTE]
+>
+>Esta seção detalha como carregar arquivos com mais de 256 MB. Os arquivos grandes são carregados em partes e depois suturados por um sinal de API.
 
 ### Criar lote
 
@@ -467,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitação**
 
->[!CAUTION] Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
+>[!CAUTION]
+>
+>Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -494,7 +517,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -559,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Para assimilar arquivos CSV, é necessário criar uma classe, um schema e um conjunto de dados compatível com CSV. Para obter informações detalhadas sobre como criar a classe e o schema necessários, siga as instruções fornecidas no tutorial [de criação de schemas](../../xdm/api/ad-hoc.md)ad-hoc.
 
->[!NOTE] As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
+>[!NOTE]
+>
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
 
 ### Criar conjunto de dados
 
@@ -695,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
->[!NOTE] Consulte a seção de apêndice para obter um [exemplo de um arquivo](#data-transformation-for-batch-ingestion)de dados CSV corretamente formatado.
+>[!NOTE]
+>
+>Consulte a seção de apêndice para obter um [exemplo de um arquivo](#data-transformation-for-batch-ingestion)de dados CSV corretamente formatado.
 
 **Formato da API**
 
@@ -711,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitação**
 
->[!CAUTION] Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
+>[!CAUTION]
+>
+>Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -900,7 +929,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carregar arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -916,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitação**
 
->[!CAUTION] Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream. Não use a opção curl -F, pois o padrão é a solicitação de várias partes incompatível com a API.
+>[!CAUTION]
+>
+>Esta API suporta carregamento de uma única peça. Verifique se o tipo de conteúdo é application/octet-stream. Não use a opção curl -F, pois o padrão é a solicitação de várias partes incompatível com a API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -972,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Transformação de dados para ingestão em lote
 
-Para assimilar um arquivo de dados na Experience Platform, a estrutura hierárquica do arquivo deve estar em conformidade com o schema do [Experience Data Model (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual está sendo feito upload.
+Para assimilar um arquivo de dados no Experience Platform, a estrutura hierárquica do arquivo deve estar em conformidade com o schema do Modelo de Dados de [Experiência (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual está sendo feito upload.
 
 Informações sobre como mapear um arquivo CSV para estar em conformidade com um schema XDM podem ser encontradas no documento de transformações [de](../../etl/transformations.md) amostra, juntamente com um exemplo de um arquivo de dados JSON devidamente formatado. Arquivos de amostra fornecidos no documento podem ser encontrados aqui:
 

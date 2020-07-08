@@ -4,7 +4,7 @@ seo-title: Configuração de borda para o SDK da Web Experience Platform
 description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 2%
@@ -24,7 +24,9 @@ As IDs de configuração de borda podem ser criadas no Adobe [!DNL Launch] usand
 
 >[!NOTE]
 >
->A ferramenta de configuração de borda está disponível para clientes na lista de permissões, independentemente de usarem [!DNL Launch] como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento em [!DNL Launch]. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na [!DNL Launch] documentação para obter mais detalhes.
+>
+>
+>A ferramenta de configuração de borda está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Launch] como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento em [!DNL Launch]. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na [!DNL Launch] documentação para obter mais detalhes.
 
 Você pode criar uma configuração de borda clicando em **[UICONTROL New Edge Configuration]** na área superior direita da tela. Depois de fornecer um nome e uma descrição, você será solicitado a fornecer as configurações padrão para cada ambiente.
 
@@ -77,6 +79,8 @@ Para configurar o Adobe Target, você deve fornecer um código de cliente. Os ou
 ![bloco de configurações Adobe Target](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
+>
+>
 >
 >A Organização associada ao código do cliente deve corresponder à organização em que a ID de configuração é criada.
 

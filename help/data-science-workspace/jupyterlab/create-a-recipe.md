@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ Criar uma receita do zero pode ser feito dentro [!DNL Data Science Workspace]. P
 O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma receita para ser usada no [!DNL Data Science Workspace] uso do notebook para obter a funcionalidade integrada ao notebook Construtor de receita.
 
 >[!NOTE]
+>
+>
 >O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -46,7 +48,9 @@ Para fazer edições nos arquivos de receita, navegue até a célula em Júpiter
 
 Start fazendo as alterações necessárias na célula e, quando terminar, simplesmente execute a célula. O `%%writefile filename.py` comando gravará o conteúdo da célula no `filename.py`. Será necessário executar manualmente a célula para cada arquivo com alterações.
 
->[!NOTE] Você deve executar as células manualmente quando aplicável.
+>[!NOTE]
+>
+>Você deve executar as células manualmente quando aplicável.
 
 ## Introdução ao notebook Recipe Builder
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >As bibliotecas ou versões específicas que você adicionar podem ser incompatíveis com as bibliotecas acima.
 
 ### Arquivos de configuração {#configuration-files}
@@ -115,6 +121,8 @@ Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/ge
 - [Fontes externas](#external-sources)
 
 >[!NOTE]
+>
+>
 >No notebook do Recipe Builder, os dados são carregados pelo carregador de `platform_sdk` dados.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ Agora seus dados estão no objeto dataframe e podem ser analisados e manipulados
 ### Do SDK de acesso a dados (obsoleto)
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` não é mais recomendado, consulte [Converter código de acesso a dados para Platform SDK](../authoring/platform-sdk.md) para obter um guia sobre como usar o carregador de `platform_sdk` dados.
 
 Os usuários podem carregar dados usando o SDK de acesso a dados. A biblioteca pode ser importada na parte superior da página, incluindo a linha:
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >Conforme mencionado na seção [Arquivo de](#configuration-files)configuração, os seguintes parâmetros de configuração são definidos para você ao acessar os dados de [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -291,7 +303,9 @@ O `pipeline.py` arquivo inclui lógica para treinamento e pontuação.
 
 O objetivo do treinamento é criar um modelo usando recursos e etiquetas no conjunto de dados de treinamento.
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_Os recursos_ se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os _rótulos_.
 
 A `train()` função deve incluir o modelo de treinamento e devolver o modelo treinado. Alguns exemplos de diferentes modelos podem ser encontrados na documentação [do guia do usuário](https://scikit-learn.org/stable/user_guide.html)scikit-learn.

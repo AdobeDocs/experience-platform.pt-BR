@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Redefinir uma caixa de proteção
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
@@ -59,4 +62,6 @@ Uma resposta bem-sucedida retorna os detalhes da caixa de proteção atualizada,
 }
 ```
 
->[!NOTE] Quando uma caixa de proteção é redefinida, o sistema demora aproximadamente 15 minutos para ser provisionado. Depois de provisionada, a caixa de proteção `state` se torna &quot;ativa&quot; ou &quot;falhou&quot;.
+>[!NOTE]
+>
+>Quando uma caixa de proteção é redefinida, o sistema demora aproximadamente 15 minutos para ser provisionado. Depois de provisionada, a caixa de proteção `state` se torna &quot;ativa&quot; ou &quot;falhou&quot;.

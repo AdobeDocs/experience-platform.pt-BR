@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral das políticas de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -27,11 +27,15 @@ Este documento fornece uma visão geral de alto nível das políticas de uso de 
 
 Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados (como Informações pessoais identificáveis (PII)) não podem ser exportados e você tentar exportar um conjunto de dados que contenha um rótulo &quot;I&quot; (Dados de identidade), você receberá uma resposta da [!DNL Policy Service] informando que uma política de uso de dados foi violada.
 
->[!NOTE] As ações de marketing por si só não restringem o uso de dados. Eles devem ser incluídos nas políticas de uso de dados habilitadas para que essas ações sejam avaliadas em caso de violação de política.
+>[!NOTE]
+>
+>As ações de marketing por si só não restringem o uso de dados. Eles devem ser incluídos nas políticas de uso de dados habilitadas para que essas ações sejam avaliadas em caso de violação de política.
 
 Quando o uso de dados ocorre no serviço de sua organização, as ações de marketing relevantes devem ser indicadas para que qualquer violação de política possa ser identificada. Em seguida, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para verificar violações de política na sua integração.
 
->[!NOTE] Se você estiver usando a Real-time Customer Data Platform, poderá configurar casos de uso de marketing em destinos para automatizar a aplicação de políticas. Consulte o documento sobre o controle de [dados na CDP](../../rtcdp/privacy/data-governance-overview.md) em tempo real para obter mais informações.
+>[!NOTE]
+>
+>Se você estiver usando a Real-time Customer Data Platform, poderá configurar casos de uso de marketing em destinos para automatizar a aplicação de políticas. Consulte o documento sobre o controle de [dados na CDP](../../rtcdp/privacy/data-governance-overview.md) em tempo real para obter mais informações.
 
 Consulte o apêndice deste documento para obter uma lista de ações [de marketing definidas pela Adobe](#core-actions)disponíveis. Você também pode definir suas próprias ações de marketing personalizadas usando a API do DULE Policy Service ou a interface do usuário do Experience Platform. Mais informações sobre como trabalhar com ações e políticas de marketing são fornecidas na próxima seção.
 
@@ -47,7 +51,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão usar a DULE Policy Service API ou a interface do usuário do Experience Platform para gerenciar e avaliar políticas relacionadas às ações de marketing que estão sendo realizadas em dados que contêm rótulos de uso de dados. Você pode criar e atualizar políticas, determinar o status de uma política e trabalhar com ações de marketing para avaliar se uma ação específica viola uma política de uso de dados.
 
->[!IMPORTANT] Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
+>[!IMPORTANT]
+>
+>Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
 
 Para obter instruções passo a passo sobre como trabalhar com ações de marketing e políticas de uso de dados na API, consulte o tutorial sobre como [criar e avaliar políticas](create.md)de uso de dados. Para obter mais informações sobre as operações principais fornecidas pela API do Serviço de Política, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)Política.
 
@@ -65,7 +71,9 @@ A seção a seguir fornece informações adicionais sobre as políticas de uso d
 
 A tabela abaixo descreve as principais ações de marketing fornecidas prontamente pela Adobe.
 
->[!NOTE] As ações principais de marketing devem ser vistas como um ponto de partida para ajudá-lo a identificar quais políticas de uso criar e verificar violações. As definições e a forma como são interpretadas dependem das necessidades e políticas de sua organização.
+>[!NOTE]
+>
+>As ações principais de marketing devem ser vistas como um ponto de partida para ajudá-lo a identificar quais políticas de uso criar e verificar violações. As definições e a forma como são interpretadas dependem das necessidades e políticas de sua organização.
 
 | Ação de marketing | Descrição |
 | --- | --- |

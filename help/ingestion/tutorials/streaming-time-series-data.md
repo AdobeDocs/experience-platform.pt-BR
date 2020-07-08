@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Transmissão de dados de séries temporais
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1173'
+ht-degree: 2%
 
 ---
 
 
-# Transmitir dados de séries de tempo para a Adobe Experience Platform
+# Transmitir dados de séries de tempo para o Adobe Experience Platform
 
-Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingsion Service.
+Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs de serviço de ingestão de dados do Adobe Experience Platform.
 
 ## Introdução
 
-Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer um conhecimento prático de vários serviços de Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura normalizada através da qual a Plataforma organiza os dados de experiência.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência.
 - [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 - [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da API do Registro do Schema e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
 
@@ -27,21 +30,23 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -208,7 +213,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | O `$id` que você recebeu anteriormente ao compor o schema. Deve ser algo parecido com isto: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] &#x200B; códigos de Namespace de **identidade &#x200B;**
+>[!NOTE]
+>
+>&#x200B; códigos de Namespace de **identidade &#x200B;**
 >
 > Certifique-se de que os códigos sejam válidos - o exemplo acima usa &quot;email&quot;, que é uma namespace de identidade padrão. Outras namespaces de identidade padrão comumente usadas podem ser encontradas nas Perguntas frequentes [do Serviço de](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)identidade.
 >
@@ -237,7 +244,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com informações sobre a na
 
 Depois de criar o schema, será necessário criar um conjunto de dados para assimilar os dados do registro.
 
->[!NOTE] Esse conjunto de dados será ativado para o Perfil **e a** identidade **do cliente em tempo** real ao configurar as tags apropriadas.
+>[!NOTE]
+>
+>Esse conjunto de dados será ativado para o Perfil **e a** identidade **do cliente em tempo** real ao configurar as tags apropriadas.
 
 **Formato da API**
 
@@ -285,7 +294,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz que contém a I
 
 ## Ingressar dados de série cronológica na conexão de streaming
 
-Com o conjunto de dados e a conexão de streaming ativada, você pode assimilar registros JSON formatados em XDM para assimilar dados de séries de tempo na Plataforma.
+Com o conjunto de dados e a conexão de streaming ativada, você pode assimilar registros JSON formatados em XDM para assimilar dados de séries de tempo no Platform.
 
 **Formato da API**
 
@@ -300,7 +309,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Solicitação**
 
->[!NOTE] Você precisará gerar o seu próprio `xdmEntity._id` e `xdmEntity.timestamp`. Uma boa maneira de gerar uma ID é usar uma UUID. Além disso, a chamada de API a seguir **não** requer cabeçalhos de autenticação.
+>[!NOTE]
+>
+>Você precisará gerar o seu próprio `xdmEntity._id` e `xdmEntity.timestamp`. Uma boa maneira de gerar uma ID é usar uma UUID. Além disso, a chamada de API a seguir **não** requer cabeçalhos de autenticação.
 
 
 ```shell
@@ -395,7 +406,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo Perfil 
 
 Para validar os registros ingeridos anteriormente, você pode usar a API [de acesso ao](../../profile/api/entities.md) Perfil para recuperar os dados das séries de tempo. Isso pode ser feito usando uma solicitação GET para o `/access/entities` endpoint e usando parâmetros de query opcionais. Vários parâmetros podem ser usados, separados por E comercial (&amp;).&quot;
 
->[!NOTE] Se a ID da política de mesclagem não estiver definida e o schema.</span>name ou relatedSchema</span>.name for `_xdm.context.profile`, o Acesso ao Perfil buscará **todas** as identidades relacionadas.
+>[!NOTE]
+>
+>Se a ID da política de mesclagem não estiver definida e o schema.</span>name ou relatedSchema</span>.name for `_xdm.context.profile`, o Acesso ao Perfil buscará **todas** as identidades relacionadas.
 
 **Formato da API**
 
@@ -493,6 +506,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Ao ler este documento, agora você entende como assimilar dados de registro na Plataforma usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, é possível monitorar seus dados ingeridos com start por meio da interface do usuário da plataforma. Para mais informações, leia o guia de ingestão [de dados de](../quality/monitor-data-flows.md) monitorização.
+Ao ler este documento, agora você entende como assimilar dados de registro no Platform usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode monitorar seus dados ingeridos com start por meio da interface do usuário do Platform. Para mais informações, leia o guia de ingestão [de dados de](../quality/monitor-data-flows.md) monitorização.
 
 Para obter mais informações sobre a ingestão de streaming em geral, leia a visão geral [da ingestão de](../streaming-ingestion/overview.md)streaming.

@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Download de pontuações na IA do cliente
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ Atualmente, existem duas maneiras de baixar as pontuações do AI do cliente:
 
 ## Find your dataset ID {#dataset-id}
 
-Na sua instância de serviço para insights de IA do cliente, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Access scores]**.
+Em sua instância de serviço para insights de IA do cliente, clique na lista suspensa *Mais ações* na navegação superior direita e selecione Pontuações **[!UICONTROL de]** acesso.
 
 ![mais ações](../images/insights/more-actions.png)
 
@@ -240,7 +243,9 @@ Copie o `href` valor para qualquer objeto de arquivo na `data` matriz e prossiga
 
 Para baixar os dados do arquivo, faça uma solicitação GET para o `"href"` valor copiado na etapa anterior para [recuperar os arquivos](#retrieving-your-files).
 
->[!NOTE] Se você estiver fazendo essa solicitação diretamente na linha de comando, talvez seja solicitado que você adicione uma saída após os cabeçalhos da solicitação. O exemplo de solicitação a seguir usa `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Se você estiver fazendo essa solicitação diretamente na linha de comando, talvez seja solicitado que você adicione uma saída após os cabeçalhos da solicitação. O exemplo de solicitação a seguir usa `--output {FILENAME.FILETYPE}`.
 
 **Formato da API**
 
@@ -264,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação GET.
+>[!TIP]
+>
+>Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação GET.
 
 **Resposta**
 
@@ -276,7 +283,9 @@ A resposta baixa o arquivo solicitado no diretório atual. Neste exemplo, o nome
 
 Uma maneira alternativa de baixar seus dados de pontuação é exportar sua audiência para um conjunto de dados. Depois que um trabalho de segmentação for concluído com êxito (o valor do `status` atributo é &quot;SUCEDIDO&quot;), você poderá exportar sua audiência para um conjunto de dados no qual ele possa ser acessado e executado. Para saber mais sobre a segmentação, visite a visão geral [da](../../../segmentation/home.md)segmentação.
 
->[!IMPORTANT] Para utilizar esse método de exportação, o Perfil do cliente em tempo real precisa ser habilitado para o conjunto de dados.
+>[!IMPORTANT]
+>
+>Para utilizar esse método de exportação, o Perfil do cliente em tempo real precisa ser habilitado para o conjunto de dados.
 
 A seção [Exportar um segmento](../../../segmentation/tutorials/evaluate-a-segment.md) no guia de avaliação de segmento cobre as etapas necessárias para exportar um conjunto de dados de audiência. O guia descreve e fornece exemplos do seguinte:
 

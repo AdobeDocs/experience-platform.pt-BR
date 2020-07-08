@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Substituir um recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,9 @@ O Registro de Schemas permite que você substitua um recurso inteiro por meio de
 
 Esse método é especialmente útil se você deseja atualizar várias informações no recurso de uma só vez.
 
->[!NOTE] Se você quiser apenas atualizar parte de um recurso em vez de substituí-lo totalmente, consulte o documento sobre como [atualizar um recurso usando uma operação](update-resource.md)PATCH.
+>[!NOTE]
+>
+>Se você quiser apenas atualizar parte de um recurso em vez de substituí-lo totalmente, consulte o documento sobre como [atualizar um recurso usando uma operação](update-resource.md)PATCH.
 
 **Formato da API**
 

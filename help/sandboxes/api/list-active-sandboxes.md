@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Lista de caixas de proteção ativas para o usuário atual
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 1%
 
 ---
 
 
 # Lista de caixas de proteção ativas para o usuário atual
 
->[!NOTE] Diferentemente de outros pontos de extremidade fornecidos na API do Sandbox, esse ponto de extremidade está disponível para todos os usuários, incluindo aqueles sem permissões de acesso à Administração do Sandbox.
+>[!NOTE]
+>
+>Diferentemente de outros pontos de extremidade fornecidos na API do Sandbox, esse ponto de extremidade está disponível para todos os usuários, incluindo aqueles sem permissões de acesso à Administração do Sandbox.
 
 Você pode lista as caixas de proteção que estão ativas para o usuário atual, fazendo uma solicitação GET para o ponto de extremidade raiz (`/`).
 

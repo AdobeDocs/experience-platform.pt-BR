@@ -4,18 +4,23 @@ solution: Experience Platform
 title: campo Target mapping
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '427'
+ht-degree: 0%
 
 ---
 
 
 # Campos de Target mapping
 
-A plataforma Adobe Experience permite que você ingira dados do Público alvo da Adobe pelo conector de origem do Público alvo. Ao usar o conector, todos os dados dos campos do Público alvo devem ser mapeados para os campos do Modelo de dados de [experiência (XDM)](../../../../xdm/home.md) associados à classe XDM ExperienceEvent.
+O Adobe Experience Platform permite que você ingira dados do Adobe Target através do conector de fonte do Público alvo. Ao usar o conector, todos os dados dos campos do Público alvo devem ser mapeados para os campos do Modelo de dados de [experiência (XDM)](../../../../xdm/home.md) associados à classe XDM ExperienceEvent.
 
 A tabela a seguir descreve os campos de um schema do Evento de experiência (campo *XDM ExperienceEvent) e os campos correspondentes do Público alvo para os quais eles devem ser mapeados (campo* Solicitação de ** Público alvo). Também são fornecidas notas adicionais para alguns mapeamentos.
 
->[!NOTE] Role para a esquerda/direita para visualização do conteúdo completo da tabela.
+>[!NOTE]
+>
+>Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
 | Campo XDM ExperienceEvent | campo Solicitação de Público alvo | Notas |
 | ------------------------- | -------------------- | ----- |
@@ -23,7 +28,7 @@ A tabela a seguir descreve os campos de um schema do Evento de experiência (cam
 | **`dataSource`** |  | Configurado para &quot;1&quot; para todos os clientes. |
 | `dataSource._id` | Um valor gerado pelo sistema que não pode ser passado com a solicitação. | A ID exclusiva dessa fonte de dados. Isso seria fornecido pelo indivíduo ou sistema que criou a fonte de dados. |
 | `dataSource.code` | Um valor gerado pelo sistema que não pode ser passado com a solicitação. | Um atalho para o @id completo. Pelo menos um código ou @id pode ser usado. Às vezes, esse código é chamado de código de integração da fonte de dados. |
-| `dataSource.tags` | Um valor gerado pelo sistema que não pode ser passado com a solicitação. | As tags são usadas para indicar como os aliases representados por uma determinada fonte de dados devem ser interpretados por aplicativos que usam esses aliases.<br><br>Exemplos:<br><ul><li>`isAVID`: Fontes de dados que representam IDs de visitante do Analytics.</li><li>`isCRSKey`: Fontes de dados que representam aliases que devem ser usadas como chaves no CRS.</li></ul>As tags são definidas quando a fonte de dados é criada, mas também são incluídas em mensagens de pipeline ao referenciar uma determinada fonte de dados. |
+| `dataSource.tags` | Um valor gerado pelo sistema que não pode ser passado com a solicitação. | As tags são usadas para indicar como os aliases representados por uma determinada fonte de dados devem ser interpretados por aplicativos que usam esses aliases.<br><br>Exemplos:<br><ul><li>`isAVID`: Fontes de dados que representam IDs de visitante da Analytics.</li><li>`isCRSKey`: Fontes de dados que representam aliases que devem ser usadas como chaves no CRS.</li></ul>As tags são definidas quando a fonte de dados é criada, mas também são incluídas em mensagens de pipeline ao referenciar uma determinada fonte de dados. |
 | **`timestamp`** | carimbo de data e hora do Evento |
 | **`channel`** | `context.channel` | Só funciona com delivery de visualização. As opções são &quot;web&quot; e &quot;móvel&quot;, sendo &quot;web&quot; o padrão. |
 | **`endUserIds`** |
@@ -47,7 +52,7 @@ A tabela a seguir descreve os campos de um schema do Evento de experiência (cam
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
 | `experience.target.environmentID` | Mapeamento interno do Público alvo para ambientes definidos pelo cliente (como dev, qa ou prod). |
-| `experience.target.supplementalDataID` | Identificador usado para unir eventos de Público alvo a eventos do Analytics |
+| `experience.target.supplementalDataID` | Identificador usado para unir eventos de Público alvo a eventos Analytics |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Lista (matriz) de atividades para as quais o visitante se qualificou |

@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Conectar-se com o RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
 
 # Conectar-se com o RStudio
 
-Este documento percorre as etapas para conectar o R Studio com o Adobe Experience Platform Query Service.
+Este documento percorre as etapas para conectar o R Studio ao serviço de Query.
 
 Depois de instalar o RStudio, na tela do *Console* que é exibida, primeiro será necessário preparar seu script R para usar o PostgreSQL.
 
@@ -40,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` e `{PORT_NUMBER}` | O terminal do host e sua porta para o Serviço de Query. |
 | `{USERNAME}` e `{PASSWORD}` | As credenciais de logon que serão usadas. O nome de usuário assume a forma de `ORG_ID@AdobeOrg`. |
 
->[!NOTE] Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, visite a página de [credenciais na Plataforma](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon na Plataforma, clique em **Query** e, em seguida, clique em **Credenciais**.
+>[!NOTE]
+>
+>Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, visite a página de [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon no Platform, clique em **Query** e, em seguida, clique em **Credenciais**.
 
 ## Próximas etapas
 

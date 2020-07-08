@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar uma política de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 2%
@@ -217,7 +217,9 @@ Essa expressão é chamada de expressão **de** política e é um objeto que con
 }
 ```
 
->[!NOTE] Somente operadores OR e AND são suportados.
+>[!NOTE]
+>
+>Somente operadores OR e AND são suportados.
 
 Depois de configurar sua expressão de política, você pode criar uma nova política de DULE, fazendo uma solicitação POST para o `/policies/custom` ponto de extremidade.
 
@@ -322,7 +324,9 @@ Registre a ID de URI da política DULE recém-criada, como ela é usada na próx
 
 ## Ativar a política DULE
 
->[!NOTE] Embora esta etapa seja opcional se você deseja deixar sua política DULE em `DRAFT` status, observe que por padrão uma política deve ter seu status definido como `ENABLED` para participar da avaliação. Consulte o tutorial sobre como [aplicar políticas](../enforcement/api-enforcement.md) DULE para obter informações sobre como fazer exceções para políticas em `DRAFT` status.
+>[!NOTE]
+>
+>Embora esta etapa seja opcional se você deseja deixar sua política DULE em `DRAFT` status, observe que por padrão uma política deve ter seu status definido como `ENABLED` para participar da avaliação. Consulte o tutorial sobre como [aplicar políticas](../enforcement/api-enforcement.md) DULE para obter informações sobre como fazer exceções para políticas em `DRAFT` status.
 
 Por padrão, as políticas DULE que têm sua `status` propriedade definida para `DRAFT` não participam da avaliação. Você pode habilitar sua política para avaliação fazendo uma solicitação PATCH para o `/policies/custom/` ponto de extremidade e fornecendo o identificador exclusivo da política no final do caminho da solicitação.
 

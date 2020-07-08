@@ -4,15 +4,20 @@ solution: Experience Platform
 title: Conjuntos de dados vs tabelas e schemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
 # Conjuntos de dados vs tabelas e schemas
 
-Revise a lista de conjuntos de dados disponíveis na interface do usuário [da plataforma](https://platform.adobe.com/datasets)Adobe Experience, observando os nomes dos conjuntos de dados.
->[!NOTE] Alguns nomes de conjuntos de dados têm espaços e podem não ser seguros para SQL.
+Revise a lista de conjuntos de dados disponíveis na interface do usuário [do](https://platform.adobe.com/datasets)Adobe Experience Platform, observando os nomes dos conjuntos de dados.
+>[!NOTE]
+>
+>Alguns nomes de conjuntos de dados têm espaços e podem não ser seguros para SQL.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -39,7 +44,7 @@ Para visualização das tabelas disponíveis no Platform com SQL, você pode usa
 (2 rows)
 ```
 
-`SHOW TABLES;` é um comando personalizado que fornece uma visualização mais detalhada e apresenta a tabela, bem como o nome do conjunto de dados encontrado na interface do usuário da plataforma.
+`SHOW TABLES;` é um comando personalizado que fornece uma visualização mais detalhada e apresenta a tabela, bem como o nome do conjunto de dados encontrado na interface do usuário do Platform.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -51,7 +56,9 @@ Para visualização das tabelas disponíveis no Platform com SQL, você pode usa
 
 Para visualização do schema raiz de uma tabela, use o `\d table_name` comando.
 
->[!NOTE] O schema apresentado mostra os campos raiz, a maioria complexos, referenciados a um tipo de Objeto na interface do usuário do schema do Conjunto de Dados.
+>[!NOTE]
+>
+>O schema apresentado mostra os campos raiz, a maioria complexos, referenciados a um tipo de Objeto na interface do usuário do schema do Conjunto de Dados.
 
 `\d luma_midvalues`
 

@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: campo de mapeamento do Gerenciador de Audiências
+title: campo de mapeamento Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Campos de mapeamento do Gerenciador de Audiências
+# campos de mapeamento de Audience Manager
 
-As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audiência Manager (dados em tempo real, onboard e Perfil) e seus campos XDM correspondentes.
+As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (dados em tempo real, onboard e Perfil) e seus campos XDM correspondentes.
 
 Consulte o dicionário [de campos](../../../../xdm/schema/field-dictionary.md) XDM para obter mais informações sobre cada campo XDM.
 
@@ -47,7 +50,9 @@ Tipo: ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] Os campos de entrada estão programados para serem descontinuados em uma versão futura.
+>[!NOTE]
+>
+>Os campos de entrada estão programados para serem descontinuados em uma versão futura.
 
 ## dados do Perfil
 

@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Visão geral da ingestão em lote da plataforma Adobe Experience
+title: Visão geral da ingestão em lote de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 2%
 
 ---
 
 
 # Visão geral da ingestão em lote
 
-A API de ingestão em lote permite que você ingira dados na Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
+A API de ingestão em lote permite que você ingira dados em Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
 
 A referência [da API de ingestão de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) dados fornece informações adicionais sobre essas chamadas de API.
 
@@ -21,7 +24,7 @@ O diagrama a seguir descreve o processo de ingestão em lote:
 
 ## Uso da API
 
-A API de ingestão de dados permite que você ingira dados como lotes (uma unidade de dados que consiste em um ou mais arquivos para serem ingeridos como uma única unidade) na Experience Platform em três etapas básicas:
+A API de ingestão de dados permite que você ingira dados como lotes (uma unidade de dados que consiste em um ou mais arquivos para serem ingeridos como uma única unidade) em Experience Platform em três etapas básicas:
 
 1. Crie um novo lote.
 2. Faça upload de arquivos para um conjunto de dados especificado que corresponda ao schema XDM dos dados.
@@ -44,21 +47,23 @@ Para carregar um arquivo maior que 512 MB, o arquivo precisará ser dividido em 
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas da plataforma Experience.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas da API da plataforma da experiência, como mostrado abaixo:
+Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos da plataforma Experience são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obter mais informações sobre caixas de proteção na Plataforma, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>[!NOTE]
+>
+>Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -123,7 +128,9 @@ Depois de criar com êxito um novo lote para upload, os arquivos podem ser carre
 
 Você pode fazer upload de arquivos usando a **Small File Upload API**. No entanto, se os arquivos forem muito grandes e o limite do gateway for excedido (como tempos limite estendidos, solicitações de tamanho de corpo excedido e outras restrições), você poderá alternar para a API **de upload de arquivo** grande. Essa API carrega o arquivo em blocos e une os dados usando a chamada **Large File Upload Complete API** .
 
->[!NOTE] Os exemplos abaixo usam o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) . Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia [do desenvolvedor de ingestão em](./api-overview.md)lote.
+>[!NOTE]
+>
+>Os exemplos abaixo usam o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) . Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia [do desenvolvedor de ingestão em](./api-overview.md)lote.
 
 ### Upload de arquivo pequeno
 
@@ -384,7 +391,7 @@ O `"status"` campo é o que mostra o status atual do lote solicitado. Os lotes p
 | Abortado | Uma operação abort foi chamada **explicitamente** (por meio da API de assimilação em lote) para o lote especificado. Quando o lote estiver em um estado **Carregado** , ele não poderá ser abortado. |
 | Ativo | O lote foi promovido com êxito e está disponível para consumo a jusante. Esse status pode ser usado alternadamente com o **Success**. |
 | Excluído | Os dados do lote foram completamente removidos. |
-| Failed | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Os dados de um lote com falha **não** serão exibidos. Esse status pode ser usado alternadamente com a **Falha**. |
+| Falha | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Os dados de um lote com falha **não** serão exibidos. Esse status pode ser usado alternadamente com a **Falha**. |
 | Inativo | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não está mais disponível para consumo a jusante. |
 | Carregado | Os dados do lote estão completos e o lote está pronto para promoção. |
 | Carregando | Os dados para este lote estão sendo carregados e o lote **não** está pronto para ser promovido no momento. |

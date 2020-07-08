@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Excluir um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 É possível excluir um objeto de Catálogo fornecendo sua ID no caminho de uma solicitação de DELETE.
 
->[!WARNING] Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outro lugar no Experience Platform.
+>[!WARNING]
+>
+>Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outro lugar no Experience Platform.
 
 **Formato da API**
 
@@ -56,4 +58,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz que conté
 ]
 ```
 
->[!NOTE] Se nenhum objeto de Catálogo corresponder à ID fornecida em sua solicitação, você ainda poderá receber um Código de status HTTP 200, mas a matriz de respostas ficará vazia.
+>[!NOTE]
+>
+>Se nenhum objeto de Catálogo corresponder à ID fornecida em sua solicitação, você ainda poderá receber um Código de status HTTP 200, mas a matriz de respostas ficará vazia.

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,6 +44,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Uma resposta bem-sucedida retorna uma carga contendo os detalhes do registro do Docker, incluindo o URL do Docker (`host`), nome de usuário (`username`) e senha (`password`).
 
 >[!NOTE]
+>
+>
 >Sua senha do Docker muda sempre que `{ACCESS_TOKEN}` é atualizada.
 
 ```json
@@ -383,7 +385,9 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Mecanismo de
 
 Você pode modificar e atualizar um Mecanismo existente sobrescrevendo suas propriedades por meio de uma solicitação PUT que inclua a ID do Mecanismo de público alvo no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
->[!NOTE] Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>[!NOTE]
+>
+>Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
 
 A chamada de exemplo de API a seguir atualizará o nome e a descrição de um Mecanismo ao ter essas propriedades inicialmente:
 

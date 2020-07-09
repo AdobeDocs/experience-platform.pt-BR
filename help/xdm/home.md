@@ -4,38 +4,41 @@ solution: Experience Platform
 title: Sistema do Experience Data Model (XDM)
 topic: overview
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: 8ea3b09f86fe11ce7043f22c56ff9756b909e716
+workflow-type: tm+mt
+source-wordcount: '1777'
+ht-degree: 0%
 
 ---
 
 
 # Visão geral do sistema XDM
 
-A padronização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. O Experience Data Model (XDM), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
+A normalização e a interoperabilidade são conceitos-chave por detrás da Adobe Experience Platform. O Experience Data Model (XDM), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
-A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo a ser usado para se comunicar com os serviços da plataforma. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum que pode fornecer insights de uma forma mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir audiências do cliente por meio de segmentos e expressar atributos do cliente para fins de personalização.
+A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo a ser usado para se comunicar com os serviços da Platform. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum que pode fornecer insights de uma forma mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir audiências do cliente por meio de segmentos e expressar atributos do cliente para fins de personalização.
 
-O XDM é a estrutura fundamental que permite à Adobe Experience Cloud, capacitada pela Experience Platform, fornecer a mensagem certa à pessoa certa, no canal certo, no momento certo. A metodologia na qual a Experience Platform é construída, o Sistema **** XDM, opera schemas do Modelo de Dados da Experiência para uso pelos serviços da Plataforma.
+O XDM é a estrutura fundamental que permite à Adobe Experience Cloud, capacitada pela Experience Platform, entregar a mensagem certa para a pessoa certa, no canal certo, no momento certo. A metodologia na qual o Experience Platform é criado, o Sistema **** XDM, opera schemas do Modelo de Dados da Experiência para uso pelos serviços da Platform.
 
-Este documento fornece uma visão geral da função do Sistema XDM na plataforma da experiência.
+Este documento fornece uma visão geral da função do Sistema XDM no Experience Platform.
 
 ## schemas XDM
 
-A plataforma Experience usa schemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, torna-se mais fácil manter o significado e, portanto, obter valor dos dados.
+O Experience Platform usa schemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, torna-se mais fácil manter o significado e, portanto, obter valor dos dados.
 
-Para que os dados possam ser ingeridos na Plataforma, um schema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que pode ser contido em cada campo. Schemas consistem em uma classe base e zero ou mais combinações.
+Para que os dados possam ser ingeridos no Platform, um schema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que pode ser contido em cada campo. Schemas consistem em uma classe base e zero ou mais combinações.
 
 Para obter mais informações sobre o modelo de composição do schema, incluindo princípios de design e práticas recomendadas, consulte os [fundamentos da composição](schema/composition.md)do schema.
 
 ### Registro do Schema e biblioteca do Schema
 
-O Registro **de** Schemas fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos relacionados ao schema na Biblioteca **de** Schemas da plataforma Adobe Experience. A Biblioteca de Schemas contém recursos padrão do setor disponibilizados pela Adobe, bem como recursos dos parceiros e fornecedores da plataforma Experience cujos aplicativos você usa. A interface do usuário e a API do Registro do Schema também podem ser usadas para criar e gerenciar novos schemas e recursos exclusivos à sua organização.
+O Registro **do** Schema fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos relacionados ao schema na Biblioteca **do** Schema. A Biblioteca de Schemas contém recursos padrão do setor disponibilizados pela Adobe, bem como recursos de parceiros e fornecedores de Experience Platform cujos aplicativos você usa. A interface do usuário e a API do Registro do Schema também podem ser usadas para criar e gerenciar novos schemas e recursos exclusivos à sua organização.
 
 Para obter um guia abrangente das principais operações disponíveis no Registro do Schema, consulte o guia [do desenvolvedor do Registro do](api/getting-started.md)Schema.
 
 ## Comportamentos de dados no Sistema XDM {#data-behaviors}
 
-Os dados destinados ao uso na plataforma Experience são agrupados em dois tipos de comportamento:
+Os dados destinados ao uso no Experience Platform são agrupados em dois tipos de comportamento:
 
 * **Registrar dados**: Fornece informações sobre os atributos de um assunto. Um sujeito pode ser uma organização ou um indivíduo.
 * **Dados** das séries cronológicas: Fornece um instantâneo do sistema no momento em que uma ação foi tomada, direta ou indiretamente, por um participante do registro.
@@ -62,23 +65,23 @@ Embora nem todos os eventos sejam facilmente categorizados em todas as fontes de
 
 ![Jornada do cliente ExperienceEvent](images/overview/experience-event-journey.png)
 
-## schemas XDM e serviços da plataforma de experiência
+## schemas XDM e serviços de Experience Platform
 
-A plataforma de experiência é agnóstica de schema, o que significa que qualquer schema que esteja em conformidade com o padrão XDM está disponível para uso pelos serviços da plataforma. As formas como diferentes serviços da plataforma usam schemas são descritas abaixo com mais detalhes.
+Experience Platform é um agnóstico do schema, o que significa que qualquer schema que esteja em conformidade com o padrão XDM está disponível para uso pelos serviços da Platform. As formas pelas quais os diferentes serviços da Platform usam schemas são descritas abaixo com mais detalhes.
 
 ### Serviço de catálogo, ingestão de dados e lago de dados
 
-O serviço de catálogo é o sistema de registro dos ativos da plataforma de experiência e seus schemas relacionados. Catálogo não são os arquivos ou diretórios reais que contêm dados, mas ele armazena os metadados e as descrições desses arquivos e diretórios.
+O serviço de catálogo é o sistema de registro dos ativos Experience Platform e de seus schemas relacionados. Catálogo não são os arquivos ou diretórios reais que contêm dados, mas ele armazena os metadados e as descrições desses arquivos e diretórios.
 
 Os dados do catálogo são armazenados no Data Lake, um armazenamento de dados altamente granular contendo todos os dados gerenciados pela Platform, independentemente da origem ou do formato de arquivo.
 
-Para começar a assimilar dados na Experience Platform, um conjunto de dados é criado usando o Serviço de Catálogo. O conjunto de dados faz referência a um schema XDM que descreve a estrutura dos dados a serem assimilados. Se um conjunto de dados for criado sem um schema, a Plataforma de experiência derivará um &quot;schema observado&quot;, inspecionando o tipo e o conteúdo dos campos de dados assimilados. Os conjuntos de dados são rastreados no Catálogo e armazenados no Data Lake ao lado dos schemas e dos schemas observados nos quais se baseiam.
+Para começar a assimilar dados no Experience Platform, um conjunto de dados é criado usando o serviço de catálogo. O conjunto de dados faz referência a um schema XDM que descreve a estrutura dos dados a serem assimilados. Se um conjunto de dados for criado sem um schema, o Experience Platform derivará um &quot;schema observado&quot; inspecionando o tipo e o conteúdo dos campos de dados assimilados. Os conjuntos de dados são rastreados no Catálogo e armazenados no Data Lake ao lado dos schemas e dos schemas observados nos quais se baseiam.
 
-Para obter mais informações sobre Catálogo, consulte a visão geral [do Serviço de](../catalog/home.md)Catálogo. Para obter mais informações sobre a ingestão de dados da plataforma Adobe Experience, consulte a visão geral [da ingestão de](../ingestion/home.md)dados.
+Para obter mais informações sobre Catálogo, consulte a visão geral [do Serviço de](../catalog/home.md)Catálogo. Para obter mais informações sobre a ingestão de dados de Adobe Experience Platform, consulte a visão geral [da ingestão de](../ingestion/home.md)dados.
 
 ### Serviço de Query
 
-O Adobe Experience Platform Query Service permite que você use dados padrão do SQL para o query Experience Platform para suportar muitos casos de uso diferentes.
+O Serviço de Query de Adobe Experience Platform permite que você use SQL padrão para dados de Experience Platform de query para suportar muitos casos de uso diferentes.
 
 Após a composição de um schema e a criação de um conjunto de dados que faz referência a esse schema, os dados são assimilados e armazenados no Data Lake. Usando o Serviço de Query, você pode associar qualquer conjunto de dados no Data Lake e capturar os resultados do query como um novo conjunto de dados para uso em relatórios, aprendizado de máquina ou para ingestão no Perfil de cliente em tempo real.
 
@@ -86,7 +89,7 @@ Para saber mais sobre o Serviço de Query, consulte a introdução [do Serviço 
 
 ### Perfil do cliente em tempo real
 
-O Perfil do cliente em tempo real oferece um perfil centralizado para o gerenciamento de experiências direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas, bem como contas acionáveis com carimbos de data e hora de eventos que envolvam o indivíduo que ocorreram em qualquer um dos sistemas que você usa com a plataforma Experience.
+O Perfil do cliente em tempo real oferece um perfil centralizado para o gerenciamento de experiências direcionado e personalizado. Cada perfil contém dados agregados em todos os sistemas, bem como contas acionáveis com carimbos de data e hora de eventos que envolvam o indivíduo que ocorreram em qualquer um dos sistemas que você usa com o Experience Platform.
 
 O Perfil Cliente em tempo real consome dados formatados em schema com base nas classes XDM Individual Perfil ou XDM ExperienceEvent, e responde aos query com base nesses dados. O Perfil não suporta o uso de schemas com base em outras classes.
 
@@ -100,22 +103,27 @@ Consulte a visão geral [do Perfil do cliente em tempo](../profile/home.md) real
 
 ### Área de trabalho da ciência de dados
 
-A Adobe Experience Platform Data Science Workspace usa o aprendizado da máquina e a inteligência artificial para obter insights dos dados armazenados na Experience Platform. A Data Science Workspace permite que os cientistas de dados construam receitas com base nos dados XDM Individual Perfil e XDM ExperienceEvent sobre clientes e suas atividades, facilitando previsões como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
+A Adobe Experience Platform Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para obter insights dos dados armazenados no Experience Platform. A Data Science Workspace permite que os cientistas de dados construam receitas com base nos dados XDM Individual Perfil e XDM ExperienceEvent sobre clientes e suas atividades, facilitando previsões como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
 
-Com a Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviços inteligentes, capacitadas pelo aprendizado de máquina. Esses serviços funcionam com outras soluções da Adobe, incluindo o Público alvo da Adobe e a Adobe Analytics Cloud, para ajudar a automatizar experiências digitais personalizadas e direcionadas.
+Com a Data Science Workspace, os cientistas de dados podem criar facilmente APIs de serviços inteligentes, capacitadas pelo aprendizado de máquina. Esses serviços funcionam com outras soluções da Adobe, incluindo a Adobe Target e a Adobe Analytics Cloud, para ajudar a automatizar experiências digitais personalizadas e direcionadas.
 
-Para obter mais informações sobre como usar os dados da plataforma de experiência para fornecer insights, consulte a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
+Para obter mais informações sobre como usar dados de Experience Platform para fornecer insights, consulte a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
 
 ### Serviço de tomada de decisão
 
-O Serviço de tomada de decisão oferece a capacidade de configurar decisões personalizadas de ofertas em aplicativos integrados à plataforma. As Ofertas podem ser recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas.
+O Serviço de tomada de decisão oferece a capacidade de configurar decisões personalizadas de ofertas em aplicativos integrados à Platform. As Ofertas podem ser recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas.
 
 O Serviço de tomada de decisão aproveita os dados do Perfil do cliente em tempo real e, portanto, só é compatível com conjuntos de dados baseados em schemas que implementam o Perfil individual XDM ou a classe ExperienceEvent XDM.
 
 Consulte a visão geral [do serviço de](../decisioning-service/home.md) decisão para obter mais informações.
 
-## Próximas etapas
+## Próximos passos e recursos adicionais
 
-Agora que você entende melhor o papel dos schemas em toda a plataforma de experiência, você está pronto para o start compondo o seu.
+Agora que você entende melhor o papel dos schema, você está pronto para start compondo o seu próprio. Para continuar complementando seu aprendizado, leia a documentação sugerida e assista ao vídeo abaixo.
 
-Para aprender os princípios de design e as práticas recomendadas para a composição de schemas a serem usados com a plataforma de experiência, comece lendo as [noções básicas da composição](schema/composition.md)do schema. Para obter instruções passo a passo sobre como criar um schema, consulte os tutoriais sobre como criar um schema [usando a API](tutorials/create-schema-api.md) ou [usando a interface](tutorials/create-schema-ui.md)do usuário.
+Para aprender os princípios de design e as práticas recomendadas para a composição de schema, comece lendo as [noções básicas da composição](schema/composition.md)do schema. Para obter instruções passo a passo sobre como criar um schema, consulte os tutoriais sobre como criar um schema [usando a API](tutorials/create-schema-api.md) ou [usando a interface](tutorials/create-schema-ui.md)do usuário.
+
+Para reforçar a compreensão do sistema XDM no Experience Platform, assista ao seguinte vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+

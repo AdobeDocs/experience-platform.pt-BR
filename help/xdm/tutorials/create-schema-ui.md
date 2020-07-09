@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ Clique em **Perfil** e um pop-up será exibido, solicitando que você confirme q
 >
 >Uma vez que um schema tenha sido ativado para Perfil do cliente em tempo real e salvo, ele não poderá ser desativado.
 
-## Próximas etapas
+## Próximos passos e recursos adicionais
 
 Agora que você terminou de compor um schema de &quot;Membros da Fidelidade&quot;, você pode ver o schema completo na seção *Estrutura* do editor. Clique em **Salvar** e o schema será salvo na Biblioteca de Schemas, tornando-o acessível pelo Registro de Schemas.
 
 Seu novo schema agora pode ser usado para assimilar dados no Platform. Lembre-se de que, uma vez que o schema tenha sido usado para ingerir dados, somente alterações aditivas poderão ser feitas. Consulte as [noções básicas da composição](../schema/composition.md) do schema para obter mais informações sobre o controle de versão do schema.
 
 O schema &quot;Membros da fidelidade&quot; também está disponível para exibição e gerenciamento usando a API do Registro do Schema. Para começar a trabalhar com a API, leia o guia [do desenvolvedor da API do Registro do](../api/getting-started.md)Schema.
+
+>[!WARNING]
+>
+>A [!DNL Platform] interface do usuário exibida nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+
+O vídeo a seguir mostra como criar um schema simples na [!DNL Platform] interface do usuário.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+O vídeo a seguir destina-se a reforçar sua compreensão sobre como trabalhar com mixins e classes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Apêndice
 

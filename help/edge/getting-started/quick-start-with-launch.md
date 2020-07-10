@@ -4,10 +4,10 @@ seo-title: start rápido do Adobe Experience Platform Web SDK com o Launch
 description: Guia de start rápido para usar a extensão do SDK Experience Platform Web para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK Experience Platform Web para coletar dados
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 5%
+source-wordcount: '553'
+ht-degree: 4%
 
 ---
 
@@ -33,6 +33,10 @@ A Experience Platform Edge Network utiliza dados como XDM. O XDM é um formato d
 
 - [Criar um schema](../../xdm/tutorials/create-schema-ui.md)
 - Adicione o mixin do SDK da Web para Adobe Experience Platform ao schema criado
+
+O vídeo a seguir tem o objetivo de oferecer suporte à criação de um schema, conjunto de dados e conector de fonte de transmissão para seus dados do SDK da Web.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Instalar o SDK no Adobe Launch
 

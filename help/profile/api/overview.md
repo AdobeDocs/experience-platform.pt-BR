@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor da API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Os atributos calculados permitem calcular automaticamente o valor dos campos com
 
 O Adobe Experience Platform permite a personalização em tempo real das experiências do cliente, tornando os dados facilmente acessíveis em servidores estrategicamente localizados chamados &quot;bordas&quot;. A API Perfil do cliente em tempo real fornece pontos de extremidade para trabalhar com bordas através de componentes chamados &quot;projeções&quot;. Isso inclui configurações de projeção para determinar quais dados devem ser projetados para cada borda, bem como destinos de projeção para definir onde rotear uma projeção. Para obter informações detalhadas sobre como trabalhar com projeções de borda, visite o guia [de configurações de](edge-projections.md)projeção e pontos de extremidade de destino.
 
-## Entidades
+## Entidades (acesso ao Perfil) {#entities}
 
 Por meio do Adobe Experience Platform, você pode acessar os dados do Perfil do cliente em tempo real usando RESTful APIs ou a interface do usuário. Para saber como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API, siga as etapas descritas no guia [de endpoint das](entities.md)entidades. Para acessar perfis usando a interface do usuário do Platform, consulte o guia [do usuário do](../ui/user-guide.md)Perfil.
 

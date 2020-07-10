@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Trabalhos do sistema do Perfil - API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parâmetro | Descrição |
 |---|---|
-| `start` | Deslocar a página de resultados retornados, de acordo com a hora de criação da solicitação. Exemplo: `start=4` |
-| `limit` | Limite o número de resultados retornados. Exemplo: `limit=10` |
-| `page` | Retorna uma página específica de resultados, de acordo com a hora de criação da solicitação. Exemplo: `page=2` |
-| `sort` | Classifique os resultados por um campo específico em ordem crescente (`asc`) ou decrescente (`desc`). O parâmetro de classificação não funciona ao retornar várias páginas de resultados. Exemplo: `sort=batchId:asc` |
+| `start` | Deslocar a página de resultados retornados, de acordo com a hora de criação da solicitação. Exemplo: *`start=4`* |
+| `limit` | Limite o número de resultados retornados. Exemplo: *`limit=10`* |
+| `page` | Retorna uma página específica de resultados, de acordo com a hora de criação da solicitação. Exemplo: ***`page=2`*** |
+| `sort` | Classifique os resultados por um campo específico em ordem crescente (*`asc`*) ou decrescente (**`desc`**). O parâmetro de classificação não funciona ao retornar várias páginas de resultados. Exemplo: `sort=batchId:asc` |
 
 **Solicitação**
 
@@ -91,11 +91,11 @@ A resposta inclui uma matriz &quot;filhos&quot; com um objeto para cada solicita
 
 | Propriedade | Descrição |
 |---|---|
-| _page.count | O número total de solicitações. Essa resposta foi truncada para espaço. |
-| _page.next | Se existir uma página adicional de resultados, visualização a próxima página de resultados substituindo o valor da ID em uma solicitação [de](#view-a-specific-delete-request) pesquisa pelo valor &quot;próximo&quot; fornecido. |
-| jobType | O tipo de trabalho que está sendo criado. Nesse caso, sempre retornará &quot;DELETE&quot;. |
-| status | O status da solicitação de exclusão. Os valores possíveis são &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CONCLUÍDO&quot;, &quot;ERRO&quot;. |
-| métricas | Um objeto que inclui o número de registros que foram processados (&quot;recordsProcessed&quot;) e o tempo em segundos que a solicitação está sendo processada, ou o tempo que a solicitação levou para ser concluída (&quot;timeTakenInSec&quot;). |
+| `_page.count` | O número total de solicitações. Essa resposta foi truncada para espaço. |
+| `_page.next` | Se existir uma página adicional de resultados, visualização a próxima página de resultados substituindo o valor da ID em uma solicitação [de](#view-a-specific-delete-request) pesquisa pelo `"next"` valor fornecido. |
+| `jobType` | O tipo de trabalho que está sendo criado. Nesse caso, ele sempre voltará `"DELETE"`. |
+| `status` | O status da solicitação de exclusão. Os valores possíveis são `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Um objeto que inclui o número de registros que foram processados (`"recordsProcessed"`) e o tempo em segundos que a solicitação está sendo processada, ou o tempo que a solicitação levou para ser concluída (`"timeTakenInSec"`). |
 
 ## Criar uma solicitação de exclusão {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 |---|---|
-| dataSetId | **(Obrigatório)** A ID do conjunto de dados que você deseja excluir. |
+| `dataSetId` | **(Obrigatório)** A ID do conjunto de dados que você deseja excluir. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão recém-criada, incluindo uma ID exclusiva gerada pelo sistema e somente leitura para a solicitação. Isso pode ser usado para procurar a solicitação e verificar seu status. A solicitação `status` no momento da criação é feita `"NEW"` até que comece o processamento. A resposta `dataSetId` deve corresponder à `dataSetId` enviada na solicitação.
+Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão recém-criada, incluindo uma ID exclusiva gerada pelo sistema e somente leitura para a solicitação. Isso pode ser usado para procurar a solicitação e verificar seu status. A solicitação **`status`** no momento da criação é feita *`"NEW"`* até que comece o processamento. A resposta **`dataSetId`** deve corresponder à ***`dataSetId`*** enviada na solicitação.
 
 ```json
 {
@@ -151,15 +151,15 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 
 | Propriedade | Descrição |
 |---|---|
-| id | A ID exclusiva gerada pelo sistema e somente leitura da solicitação de exclusão. |
-| dataSetId | A ID do conjunto de dados, conforme especificado na solicitação POST. |
+| `id` | A ID exclusiva gerada pelo sistema e somente leitura da solicitação de exclusão. |
+| `dataSetId` | A ID do conjunto de dados, conforme especificado na solicitação POST. |
 
 ### Excluir um lote
 
 Para excluir um lote, a ID do lote deve ser incluída no corpo da solicitação POST. Lembre-se de que não é possível excluir lotes para conjuntos de dados com base em schemas de registro. Somente lotes para conjuntos de dados com base em schemas de séries de tempo podem ser excluídos.
 
 >[!NOTE]
-> O motivo pelo qual você não pode excluir lotes de conjuntos de dados com base em schemas de registro é porque os lotes de conjuntos de dados de tipo de registro substituem registros anteriores e, portanto, não podem ser &quot;desfeitos&quot; ou excluídos. A única maneira de remover o impacto de lotes errados para conjuntos de dados baseados em schemas de registro é assimilar o lote com os dados corretos para substituir os registros incorretos.
+> O motivo pelo qual você não pode excluir lotes de conjuntos de dados com base em schemas de registro é porque os lotes de conjuntos de dados de tipo de registro substituem registros anteriores e, portanto, não podem ser &quot;desfeitos&quot; ou excluídos. A única maneira de remover o impacto de lotes errados para conjuntos de dados baseados em schemas de registro é ingerir novamente o lote com os dados corretos para substituir os registros incorretos.
 
 Para obter mais informações sobre o comportamento de registro e série de tempo, consulte a [seção sobre comportamentos](../../xdm/home.md#data-behaviors) de dados XDM na visão geral do Sistema XDM.
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 |---|---|
-| batchId | **(Obrigatório)** A ID do lote que você deseja excluir. |
+| `batchId` | **(Obrigatório)** A ID do lote que você deseja excluir. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão recém-criada, incluindo uma ID exclusiva gerada pelo sistema e somente leitura para a solicitação. Isso pode ser usado para procurar a solicitação e verificar seu status. O &quot;status&quot; da solicitação no momento da criação é &quot;NOVO&quot; até que o processamento seja iniciado. O &quot;batchId&quot; na resposta deve corresponder ao &quot;batchId&quot; enviado na solicitação.
+Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão recém-criada, incluindo uma ID exclusiva gerada pelo sistema e somente leitura para a solicitação. Isso pode ser usado para procurar a solicitação e verificar seu status. A solicitação `"status"` no momento da criação é feita `"NEW"` até que comece o processamento. A resposta `"batchId"` deve corresponder à `"batchId"` enviada na solicitação.
 
 ```json
 {
@@ -206,8 +206,8 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 
 | Propriedade | Descrição |
 |---|---|
-| id | A ID exclusiva gerada pelo sistema e somente leitura da solicitação de exclusão. |
-| batchId | A ID do lote, conforme especificado na solicitação POST. |
+| `id` | A ID exclusiva gerada pelo sistema e somente leitura da solicitação de exclusão. |
+| `batchId` | A ID do lote, conforme especificado na solicitação POST. |
 
 Se você tentar iniciar uma solicitação de exclusão para um lote de conjuntos de dados de Registro, ocorrerá um erro de nível 400, semelhante ao seguinte:
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parâmetro | Descrição |
 |---|---|
-| {DELETE_REQUEST_ID} | **(Obrigatório)** A ID da solicitação de exclusão que você deseja visualização. |
+| `{DELETE_REQUEST_ID}` | **(Obrigatório)** A ID da solicitação de exclusão que você deseja visualização. |
 
 **Solicitação**
 
@@ -269,11 +269,11 @@ A resposta fornece os detalhes da solicitação de exclusão, incluindo seu stat
 
 | Propriedades | Descrição |
 |---|---|
-| jobType | O tipo de trabalho que está sendo criado, nesse caso, ele sempre retornará &quot;DELETE&quot;. |
-| status | O status da solicitação de exclusão. Valores possíveis: &quot;NOVO&quot;, &quot;PROCESSAMENTO&quot;, &quot;CONCLUÍDO&quot;, &quot;ERRO&quot;. |
-| métricas | Uma matriz que inclui o número de registros que foram processados (&quot;recordsProcessed&quot;) e o tempo em segundos que a solicitação está sendo processada, ou o tempo que a solicitação levou para ser concluída (&quot;timeTakenInSec&quot;). |
+| `jobType` | O tipo de trabalho que está sendo criado, nesse caso, ele sempre retornará `"DELETE"`. |
+| `status` | O status da solicitação de exclusão. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Uma matriz que inclui o número de registros que foram processados (`"recordsProcessed"`) e o tempo em segundos que a solicitação está sendo processada, ou o tempo que a solicitação levou para ser concluída (`"timeTakenInSec"`). |
 
-Quando o status da solicitação de exclusão for &quot;CONCLUÍDA&quot;, você poderá confirmar que os dados foram excluídos tentando acessar os dados excluídos usando a API de acesso a dados. Para obter instruções sobre como usar a API de acesso a dados para acessar conjuntos de dados e lotes, consulte a documentação [de acesso a](../../data-access/home.md)dados.
+Quando o status da solicitação de exclusão for `"COMPLETED"` você poderá confirmar que os dados foram excluídos ao tentar acessar os dados excluídos usando a API de acesso a dados. Para obter instruções sobre como usar a API de acesso a dados para acessar conjuntos de dados e lotes, consulte a documentação [de acesso a](../../data-access/home.md)dados.
 
 ## Remover uma solicitação de exclusão
 

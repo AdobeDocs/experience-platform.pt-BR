@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar um conector de origem do Adobe Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 2%
+source-wordcount: '769'
+ht-degree: 1%
 
 ---
 
@@ -95,7 +95,7 @@ Para obter mais informações sobre como rotular dados provenientes da Analytics
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Próximas etapas
+## Próximos passos e recursos adicionais
 
 Depois que a conexão é criada, um schema de público alvo e um fluxo de conjunto de dados são criados automaticamente para conter os dados recebidos. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a ingestão inicial for concluída, os dados da Analytics e serão usados pelos serviços Platform de downstream, como Perfil do cliente em tempo real e Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
 
@@ -103,3 +103,12 @@ Depois que a conexão é criada, um schema de público alvo e um fluxo de conjun
 * [Visão geral do Serviço de segmentação](../../../../../segmentation/home.md)
 * [Visão geral da Análise do espaço de trabalho da Data Science](../../../../../data-science-workspace/home.md)
 * [Visão geral do Serviço de Query](../../../../../query-service/home.md)
+
+O vídeo a seguir é destinado a oferecer suporte à sua compreensão da assimilação de dados usando o conector de origem Analytics da Adobe:
+
+>[!WARNING]
+>
+> A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+

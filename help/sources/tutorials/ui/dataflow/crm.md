@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector CRM na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -123,10 +123,16 @@ Para obter mais informações sobre monitoramento de conjuntos de dados e ingest
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um CRM e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um CRM e obteve informações sobre o monitoramento de conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados de entrada agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 * [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
 
 ## Apêndice
 

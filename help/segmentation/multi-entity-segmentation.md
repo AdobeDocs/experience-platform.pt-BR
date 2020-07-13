@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Segmentação de várias entidades
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,17 @@ source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
 
 A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais baseados em produtos, lojas ou outras classes que não sejam perfis. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos para o schema do Perfil.
 
-Para obter mais informações sobre a segmentação de várias entidades, leia a visão geral [da](./home.md)segmentação.
+Para saber mais sobre a segmentação de várias entidades, continue lendo a documentação e complete seu aprendizado assistindo ao vídeo abaixo ou explorando a visão geral [da](./home.md)segmentação.]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários serviços da plataforma Adobe Experience envolvidos no uso da segmentação. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer um entendimento prático dos vários serviços de Adobe Experience Platform envolvidos no uso da segmentação. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [Perfil](../profile/home.md)do cliente em tempo real: Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
-- [Serviço](./home.md)de segmentação da plataforma Adobe Experience: Permite criar segmentos a partir do Perfil do cliente em tempo real.
-- [Modelo de dados de experiência (XDM)](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+- [Serviço](./home.md)de segmentação de Adobe Experience Platform: Permite criar segmentos a partir do Perfil do cliente em tempo real.
+- [Modelo de dados de experiência (XDM)](../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
 
 ## Como definir relações XDM
 

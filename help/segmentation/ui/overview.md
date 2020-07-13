@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -233,6 +233,12 @@ Informações adicionais sobre a última avaliação de segmento podem ser encon
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Demonstração de vídeo de segmentação contínua
+
+O vídeo a seguir é destinado a suportar sua compreensão da segmentação de streaming. Mostra um exemplo de experiência do cliente seguido de um rápido tour dos principais recursos na [!DNL Platform] interface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## Violações da política DULE
 
 >[!NOTE]
@@ -243,7 +249,7 @@ Depois que você terminar de criar seu segmento, ele será analisado [!DNL Data 
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Próximas etapas
+## Próximos passos e recursos adicionais {#next-steps}
 
 O Construtor de segmentos fornece um fluxo de trabalho avançado que permite isolar audiências comercializáveis dos [!DNL Real-time Customer Profile] dados. Depois de ler este guia, você pode:
 
@@ -253,4 +259,16 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Ative todas as definições de segmento para segmentação programada.
 - Habilitar definições de segmento especificadas para a segmentação de streaming.
 
-Para obter instruções passo a passo sobre como trabalhar com [!DNL Segmentation Service] a [!DNL Segmentation Service] API, consulte o tutorial de [criação de segmentos de audiência usando APIs](../tutorials/create-a-segment.md) .
+Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente sua aprendizagem assistindo aos vídeos abaixo. Para obter instruções passo a passo sobre como trabalhar com [!DNL Segmentation Service] a [!DNL Segmentation Service] API, consulte o tutorial de [criação de segmentos de audiência usando APIs](../tutorials/create-a-segment.md) .
+
+>[!WARNING]
+>
+> A [!DNL Platform] interface do usuário exibida nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+
+**Criar um segmento:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Criar um segmento dinâmico:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

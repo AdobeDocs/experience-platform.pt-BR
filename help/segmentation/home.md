@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Serviço de segmentação de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2408'
 ht-degree: 0%
 
 ---
@@ -129,6 +129,10 @@ Ao atribuir uma variável ao atributo de estado da compra, seu segmento dinâmic
 Com o recurso avançado de segmentação de várias entidades, é possível criar segmentos usando várias classes XDM, adicionando extensões aos schemas pessoais. Como resultado, o Serviço de segmentação pode acessar campos adicionais durante a definição do segmento como se eles fossem nativos no armazenamento de dados do perfil.
 
 A segmentação de várias entidades proporciona a flexibilidade necessária para identificar audiências com base em dados relevantes às suas necessidades comerciais. Esse processo pode ser feito de forma rápida e fácil, sem precisar de especialização em consultas a bancos de dados. Isso permite que você adicione dados principais aos seus segmentos sem precisar fazer alterações dispendiosas nos fluxos de dados ou aguardar uma união de dados back-end.
+
+O vídeo a seguir tem como objetivo oferecer suporte à sua compreensão da segmentação de várias entidades e descreve a segmentação de várias entidades e o contexto do segmento (carga do segmento).
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ### Caso de uso: Promoção orientada por preços
 

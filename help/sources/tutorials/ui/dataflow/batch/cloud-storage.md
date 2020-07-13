@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -129,10 +129,16 @@ Depois que seu fluxo de dados de armazenamento em nuvem for criado, você poder�
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um armazenamento de nuvem externo e obteve insight sobre conjuntos de dados de monitoramento. Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um armazenamento de nuvem externo e obteve insight sobre conjuntos de dados de monitoramento. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados de entrada agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do Perfil do cliente em tempo real](../../../../../profile/home.md)
 * [Visão geral da Análise do espaço de trabalho da Data Science](../../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## Apêndice
 

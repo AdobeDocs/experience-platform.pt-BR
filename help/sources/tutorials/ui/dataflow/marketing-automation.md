@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de automação de marketing na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -103,23 +103,9 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![revisão](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
-## Monitore seu fluxo de dados
+## Monitore e exclua seu fluxo de dados
 
-Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Siga as etapas abaixo para acessar um monitor de conjunto de dados do dataflow.
-
-Na área de trabalho *[!UICONTROL Fontes]* , selecione a fonte de automação de marketing que deseja visualização na categoria *[!UICONTROL de automação]* de marketing. Selecione *[!UICONTROL Connect Source]* para iniciar a interface de autenticação. Para visualização de um fluxo de dados existente, selecione Conta ** existente e selecione a conta que deseja acessar.
-
-![monitor](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
-
-A tela atividade ** de origem é exibida. Aqui, clique no nome de um conjunto de dados cuja atividade você deseja monitorar.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/marketing-automation/select-dataflow-dataset.png)
-
-A tela atividade *[!UICONTROL do Conjunto]* de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
-
-![atividade de conjunto de dados](../../../images/tutorials/dataflow/marketing-automation/dataset-activity.png)
-
-Para obter mais informações sobre monitoramento de conjuntos de dados e ingestão, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../../ingestion/quality/monitor-data-flows.md)de fluxo contínuo.
+Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar e excluir seu fluxo de dados, consulte o tutorial sobre como [monitorar e excluir fluxos de dados](../monitor.md).
 
 ## Próximas etapas
 

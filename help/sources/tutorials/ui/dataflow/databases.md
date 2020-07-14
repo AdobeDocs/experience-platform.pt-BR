@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um
 | --- | --- |
 | Frequência | As frequências selecionáveis incluem Minuto, Hora, Dia e Semana. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| hora do Start | Um carimbo de data e hora UTC para o qual ocorrerá a primeira ingestão. |
+| hora do Start | Um carimbo de data e hora UTC para o qual ocorrerá a primeira ingestão. O valor de tempo do start deve ser definido em cada tempo, em segundos. |
 | Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *preenchimento retroativo* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *do* Start serão assimilados. Os arquivos carregados antes da hora *do* Start não serão ingeridos. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 

@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Monitorar os fluxos de contas e de conjunto de dados
+title: Monitorar e excluir fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# Monitorar os fluxos de contas e de conjunto de dados
+# Monitorar e excluir fluxos de dados
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para exibir contas e fluxos de conjunto de dados existentes da área de trabalho *[!UICONTROL Fontes]* .
+Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho *[!UICONTROL Fontes]* . Este tutorial também fornece etapas para excluir fluxos de dados da área de trabalho *[!UICONTROL Fontes]* .
 
 ## Introdução
 
@@ -27,15 +27,15 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 ## Monitorar contas
 
-Faça logon no <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes com as quais você pode criar fluxos de conjunto de dados de contas. Cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes com as quais você pode criar contas e fluxos de dados. Cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
 
 Selecione *[!UICONTROL Contas]* no cabeçalho superior para visualização contas existentes.
 
 ![catálogo](../../images/tutorials/monitor/catalog.png)
 
-As páginas *[!UICONTROL Contas]* são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre sua origem, nome de usuário, número de fluxos de conjunto de dados e data de criação.
+As páginas *[!UICONTROL Contas]* são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
 
-Selecione o ícone na parte superior esquerda para abrir a janela de classificação.
+Selecione o ícone de funil na parte superior esquerda para abrir a janela de classificação.
 
 ![account](../../images/tutorials/monitor/accounts-list.png)
 
@@ -43,33 +43,63 @@ O painel de classificação permite acessar contas de uma fonte específica. Sel
 
 ![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
 
-Na página *[!UICONTROL Contas]* , é possível visualização uma lista dos fluxos existentes do conjunto de dados associados à conta acessada. Selecione o fluxo do conjunto de dados que deseja visualização.
+Na página *[!UICONTROL Contas]* , é possível visualização de uma lista de fluxos de dados existentes associados à conta acessada. Selecione o fluxo de dados que deseja visualização.
 
-![página de contas](../../images/tutorials/monitor/dataset-flows.png)
+![página de contas](../../images/tutorials/monitor/dataflows.png)
 
-A tela atividade *[!UICONTROL do fluxo do]* Conjunto de dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
+A tela *[!UICONTROL atividade]* Dataflow é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
 
-![dataset-flow-atividade](../../images/tutorials/monitor/dataset-flows-activity.png)
+![dataset-flow-atividade](../../images/tutorials/monitor/dataflow-activity.png)
 
-## Monitorar fluxos de conjunto de dados
+## Monitorar fluxos de dados
 
-Os fluxos de conjunto de dados podem ser acessados diretamente da página *[!UICONTROL Catálogo]* sem exibir *[!UICONTROL Contas]*. Selecione Fluxos *[!UICONTROL de conjunto de]* dados do cabeçalho superior para visualização de uma lista de fluxos de conjunto de dados existentes.
+Os fluxos de dados podem ser acessados diretamente da página *[!UICONTROL Catálogo]* sem exibir *[!UICONTROL Contas]*. Selecione *[!UICONTROL Fluxos de dados]* no cabeçalho superior para visualização de uma lista de fluxos de dados existentes.
 
-![fluxos de conjunto de dados](../../images/tutorials/monitor/dataset-flows-list.png)
+![catálogo-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Semelhante às contas, você pode classificar a lista de fluxos de conjunto de dados usando o ícone de classificação na parte superior esquerda. Selecione a fonte que deseja visualização e selecione o fluxo do conjunto de dados na lista à direita.
+Uma lista de fluxos de dados existentes é exibida. Nesta página há uma lista de fluxos de dados visualizáveis, incluindo informações sobre sua fonte, nome de usuário, número de fluxos de dados e status. Selecione o ícone de funil na parte superior esquerda para classificar.
 
-![select-dataset-flows](../../images/tutorials/monitor/dataset-flows-sort.png)
+![lista de dados](../../images/tutorials/monitor/dataflows-list.png)
 
-A tela atividade *[!UICONTROL do fluxo do]* Conjunto de dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
+O painel de classificação é exibido. Selecione a fonte que deseja acessar no menu de rolagem e selecione o fluxo de dados na lista à direita.
 
-![dataset-flow-atividade](../../images/tutorials/monitor/dataset-flows-activity.png)
+![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-Para obter mais informações sobre monitoramento de conjuntos de dados e ingestão, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../ingestion/quality/monitor-data-flows.md)de fluxo contínuo.
+A tela *[!UICONTROL atividade]* Dataflow é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
+
+![dataset-flow-atividade](../../images/tutorials/monitor/dataflow-activity.png)
+
+Para obter mais informações sobre monitoramento de fluxos de dados e ingestão, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../ingestion/quality/monitor-data-flows.md)de fluxo contínuo.
+
+## Excluir um fluxo de dados
+
+Você pode excluir os fluxos de dados que foram criados incorretamente ou que não são mais necessários acessando a tela de fluxos de dados. Localize o fluxo de dados que deseja excluir usando o ícone de funil de classificação e selecione o fluxo de dados para abrir o painel **[!UICONTROL Propriedades]** .
+
+Para excluir um fluxo de dados, selecione **[!UICONTROL Excluir]** das propriedades na parte superior direita.
+
+![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
+
+Uma mensagem de confirmação final é exibida. Selecione **[!UICONTROL Excluir]** para confirmar.
+
+![confirmar-excluir](../../images/tutorials/monitor/confirm-delete.png)
+
+Após alguns instantes, uma caixa de confirmação verde é exibida na parte inferior da tela para confirmar a exclusão bem-sucedida.
+
+![delete- bem-sucedido](../../images/tutorials/monitor/deletion-confirmed.png)
+
+Como alternativa, você pode excluir um fluxo de dados da tela *[!UICONTROL Contas]* . Localize a conta que deseja acessar usando o ícone de funil de classificação e selecione a conta na lista.
+
+![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
+
+A página *[!UICONTROL Contas]* é exibida. Selecione o fluxo de dados que deseja excluir e selecione **[!UICONTROL Excluir]** no painel de propriedades para concluir o processo.
+
+![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
+
+Siga as etapas de confirmação descritas acima para concluir o processo.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você acessou com êxito contas e fluxos de conjunto de dados existentes da área de trabalho *[!UICONTROL Fontes]* . Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você acessou com êxito contas e fluxos de dados existentes na área de trabalho *[!UICONTROL Fontes]* . Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../profile/home.md)
 - [Visão geral da Análise do espaço de trabalho da Data Science](../../../data-science-workspace/home.md)

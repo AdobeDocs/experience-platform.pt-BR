@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,14 @@ Se você perguntasse a uma pessoa &quot;Qual é a sua identificação?&quot; sem
 Os clientes podem interagir com a sua marca através de uma combinação de canais online e offline, resultando no desafio de como reconciliar essas interações fragmentadas em uma única identidade de cliente.
 
 [!DNL Experience Platform] soluciona esse desafio através de dois conceitos: [namespaces](#identity-namespaces) de identidade e gráficos [de](#identity-graphs)identidade.
+
+O vídeo a seguir é destinado a suportar a compreensão de identidades e gráficos de identidade. O vídeo a seguir aborda os três recursos da coleção de identidade, gráficos de identidade e as APIs. Ele também descreve como os algoritmos determinísticos e probabilísticos são usados para construir gráficos de identidade privados e discute a função dos gráficos de identidade privados, do Gráfico de Cooperativa do Serviço de Identidade do Adobe Experience Platform e de terceiros.
+
+>[!IMPORTANT]
+>
+> Gráficos privados probabilísticos ainda estão em desenvolvimento e estão definidos para serem lançados em uma data posterior.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ### namespaces de identidade
 
@@ -122,6 +130,14 @@ Durante o processo de ingestão em streaming, extrai [!DNL Identity Service ]aut
 ### Ingressar dados em [!DNL Identity Service]
 
 [!DNL Identity Service] consome dados em conformidade com XDM enviados para [!DNL Experience Platform] a ingestão [em](../ingestion/batch-ingestion/overview.md) lote ou a ingestão [em](../ingestion/streaming-ingestion/overview.md)streaming.
+
+O vídeo a seguir é destinado a suportar sua compreensão do Serviço de identidade. Este vídeo mostra como rotular os campos de dados como identidades, assimilar dados de identidade e, em seguida, verificar se os dados foram enviados para o Gráfico privado do Adobe Experience Platform Identity Service.
+
+>[!WARNING]
+>
+> A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Governação de dados
 

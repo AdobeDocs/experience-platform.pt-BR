@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário do Sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ Depois que uma caixa de proteção é selecionada, a tela é atualizada com a ca
 ![](../images/ui/sandbox-switched.png)
 
 ## Criar uma nova caixa de proteção
+
+Use o vídeo a seguir para obter uma visão geral rápida sobre como usar [!DNL Sandboxes] em [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 Para criar uma nova caixa de proteção na interface do usuário, clique em **Caixas de proteção** na navegação esquerda e, em seguida, clique em **Criar caixa de proteção**.
 

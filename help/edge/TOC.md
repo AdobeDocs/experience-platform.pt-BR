@@ -3,15 +3,15 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
+source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 12%
+source-wordcount: '94'
+ht-degree: 14%
 
 ---
 
 
-# Adobe Experience Platform Web SDK {#edge}
+# SDK da Web Adobe Experience Platform {#edge}
 
 * [Visão geral do SDK da Web](home.md)
 * Introdução {#get-started}
@@ -34,13 +34,14 @@ ht-degree: 12%
 * Considerações específicas da solução {#solutions}
    * Analytics {#analytics}
       * [Visão geral do Analytics](solution-specific/analytics/analytics-overview.md)
+      * [Mapeamento manual de variáveis no Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Variáveis mapeadas automaticamente](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
-      * [Visão geral do Gerenciador de Audiências](solution-specific/audience-manager/audience-manager-overview.md)
+      * [Visão geral do Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Visão geral do Target](solution-specific/target/target-overview.md)
       * [Gerenciamento de oscilação](solution-specific/target/flicker-management.md)
 * Referência {#ref}
    * [Informações Coletadas Automaticamente](reference/automatic-information.md)
    * [Recuperando informações da biblioteca](reference/retrieving-library-information.md)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

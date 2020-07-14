@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de protocolo na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -85,19 +85,19 @@ A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um
 | hora do Start | Um carimbo de data e hora UTC para o qual ocorrerá a primeira ingestão. |
 | Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *[!UICONTROL preenchimento retroativo]* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *[!UICONTROL preenchimento retroativo]* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *[!UICONTROL do]* Start serão assimilados. Os arquivos carregados antes da hora *[!UICONTROL do]* Start não serão ingeridos. |
 
-Os fluxos de conjuntos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Se desejar ingerir apenas uma vez por meio desse fluxo de trabalho, você pode fazer isso configurando a **[!UICONTROL Frequência]** para &quot;Dia&quot; e aplicando um número muito grande para o **[!UICONTROL Intervalo]**, como 10000 ou semelhante.
+Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Se desejar ingerir apenas uma vez por meio desse fluxo de trabalho, você pode fazer isso configurando a **[!UICONTROL Frequência]** para &quot;Dia&quot; e aplicando um número muito grande para o **[!UICONTROL Intervalo]**, como 10000 ou semelhante.
 
 Forneça os valores para o agendamento e clique em **[!UICONTROL Avançar]**.
 
 ![programação](../../../images/tutorials/dataflow/protocols/scheduling.png)
 
-## Nomear o fluxo do conjunto de dados
+## Dê um nome ao seu fluxo de dados
 
 A etapa de detalhes *[!UICONTROL do fluxo do conjunto de]* dados é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Clique em **[!UICONTROL Avançar]** ao concluir.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
-## Revisar o fluxo do conjunto de dados
+## Revisar seu fluxo de dados
 
 A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
@@ -109,9 +109,9 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![revisão](../../../images/tutorials/dataflow/protocols/review.png)
 
-## Monitorar o fluxo do conjunto de dados
+## Monitore e exclua seu fluxo de dados
 
-Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Para obter mais informações sobre como monitorar os fluxos do conjunto de dados, consulte o tutorial sobre [contas e fluxos](../monitor.md)do conjunto de dados.
+Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar e excluir seu fluxo de dados, consulte o tutorial sobre como [monitorar e excluir fluxos de dados](../monitor.md).
 
 ## Próximas etapas
 

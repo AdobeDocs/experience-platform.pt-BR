@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de pagamento na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -93,13 +93,13 @@ Forneça os valores para o agendamento e clique em **[!UICONTROL Avançar]**.
 
 ![programação](../../../images/tutorials/dataflow/payments/scheduling.png)
 
-## Nomear o fluxo do conjunto de dados
+## Dê um nome ao seu fluxo de dados
 
 A etapa de detalhes *[!UICONTROL do fluxo do conjunto de]* dados é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Selecione **[!UICONTROL Próximo]** ao terminar.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## Revisar o fluxo do conjunto de dados
+## Revisar seu fluxo de dados
 
 A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
@@ -111,9 +111,9 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![revisão](../../../images/tutorials/dataflow/payments/review.png)
 
-## Monitorar o fluxo do conjunto de dados
+## Monitore e exclua seu fluxo de dados
 
-Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Para obter mais informações sobre como monitorar os fluxos do conjunto de dados, consulte o tutorial sobre [contas e fluxos](../monitor.md)do conjunto de dados.
+Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar e excluir seu fluxo de dados, consulte o tutorial sobre como [monitorar e excluir fluxos de dados](../monitor.md).
 
 ## Próximas etapas
 

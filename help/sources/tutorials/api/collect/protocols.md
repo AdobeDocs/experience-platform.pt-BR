@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Coletar dados de protocolo por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: d5a21462b9f0362414dfe4f73a6c4e4a2c92af61
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1605'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,18 @@ Continue seguindo as etapas descritas no guia do desenvolvedor até que você te
 
 Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
 
+Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
+
+Use os seguintes valores enum para conectores **baseados em** arquivo:
+
+| Data.format | Valor Enum |
+| ----------- | ---------- |
+| Arquivos delimitados | `delimited` |
+| Arquivos JSON | `json` |
+| Arquivos de parâmetro | `parquet` |
+
+Para todos os conectores **baseados em** tabela, use o valor enum: `tabular`.
+
 **Formato da API**
 
 ```http
@@ -84,7 +96,7 @@ curl -X POST \
         "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Protocols source connection to ingest Orders",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -275,17 +287,11 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 ]
 ```
 
-## Criar uma conexão básica de conjunto de dados
-
-Para ingerir dados externos em [!DNL Platform], uma conexão de base de [!DNL Experience Platform] conjunto de dados deve ser adquirida primeiro.
-
-Para criar uma conexão base de conjunto de dados, siga as etapas descritas no tutorial [de conexão base de](../create-dataset-base-connection.md)conjunto de dados.
-
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado uma conexão base de conjunto de dados. Obtenha e armazene o identificador exclusivo (`$id`) e continue a usá-lo como a ID de conexão na próxima etapa para criar uma conexão de público alvo.
-
 ## Criar uma conexão de público alvo
 
-Agora você tem com você os identificadores exclusivos para uma conexão básica de conjunto de dados, um schema de público alvo e um conjunto de dados de público alvo. Agora é possível criar uma conexão de público alvo usando a [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Uma conexão de público alvo representa a conexão com o destino onde os dados ingeridos chegam. Para criar uma conexão de público alvo, é necessário fornecer a ID de especificação de conexão fixa associada ao registro de dados. Esta ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Agora você tem os identificadores exclusivos de um schema de público alvo de um conjunto de dados de público alvo e a ID de especificação de conexão para o registro de dados. Usando esses identificadores, é possível criar uma conexão de público alvo usando a [!DNL Flow Service] API para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -304,7 +310,6 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "name": "Target Connection for protocols",
         "description": "Target Connection for protocols",
         "data": {
@@ -325,10 +330,9 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `baseConnectionId` | A ID da conexão básica do conjunto de dados. |
 | `data.schema.id` | A `$id` do schema XDM do público alvo. |
 | `params.dataSetId` | A ID do conjunto de dados do público alvo. |
-| `connectionSpec.id` | A ID de especificação de conexão para seu aplicativo de protocolos. |
+| `connectionSpec.id` | A ID de especificação de conexão fixa para o registro de dados. Esta ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Resposta**
 
@@ -441,7 +445,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Resposta**
 
@@ -578,6 +581,9 @@ A última etapa para coletar dados é criar um fluxo de dados. Neste ponto, voc�
 
 Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
 
+Para agendar uma ingestão, é necessário primeiro definir o valor de tempo do start para cada tempo em segundos. Em seguida, você deve definir o valor de frequência para uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor do intervalo designa o período entre duas ingestões consecutivas e a criação de uma ingestão única não requer a definição de um intervalo. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
+
+
 **Formato da API**
 
 ```http
@@ -633,13 +639,25 @@ curl -X POST \
     }'
 ```
 
+| Propriedade | Descrição |
+| -------- | ----------- |
+| `flowSpec.id` | A ID de especificação de fluxo de dados associada à fonte de protocolos de terceiros. |
+| `sourceConnectionIds` | A ID de conexão de origem associada à fonte de protocolos de terceiros. |
+| `targetConnectionIds` | A ID de conexão do público alvo associada à fonte de protocolos de terceiros. |
+| `transformations.params.deltaColum` | A coluna designada usada para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
+| `transformations.params.mappingId` | A ID de mapeamento associada à origem dos protocolos de terceiros. |
+| `scheduleParams.startTime` | O tempo de start do fluxo de dados em tempo de época, em segundos. |
+| `scheduleParams.frequency` | Os valores de frequência selecionáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | O intervalo designa o período entre duas execuções consecutivas de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero. O intervalo não é necessário quando a frequência é definida como `once` e deve ser maior ou igual a `15` outros valores de frequência. |
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna a ID `id` do fluxo de dados recém-criado.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 

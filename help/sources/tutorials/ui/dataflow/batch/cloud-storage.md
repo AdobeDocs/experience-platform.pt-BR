@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -123,9 +123,9 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Monitore seu fluxo de dados
+## Monitore e exclua seu fluxo de dados
 
-Depois que seu fluxo de dados de armazenamento em nuvem for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Para obter mais informações sobre como monitorar conjuntos de dados, consulte o tutorial sobre como [monitorar fluxos de dados](../../../../../ingestion/quality/monitor-data-flows.md)de transmissão contínua.
+Depois que seu fluxo de dados de armazenamento em nuvem for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Para obter mais informações sobre monitoramento e exclusão de fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Próximas etapas
 

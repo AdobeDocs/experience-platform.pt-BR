@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Monitore seu fluxo de dados
+## Monitore e exclua seu fluxo de dados
 
-Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar seus fluxos de dados, consulte o tutorial em [contas e fluxos de dados](../monitor.md).
+Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar e excluir seu fluxo de dados, consulte o tutorial sobre como [monitorar e excluir fluxos de dados](../monitor.md).
 
 ## Próximas etapas
 

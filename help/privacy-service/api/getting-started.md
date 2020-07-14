@@ -5,7 +5,7 @@ title: Guia do desenvolvedor do Privacy Service
 description: Use a RESTful API para gerenciar os dados pessoais das pessoas em questão nos aplicativos da Adobe Experience Cloud
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6f93191defad6a79a3f6623da3492ab405787b5c
+source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 0%
@@ -19,7 +19,7 @@ O Adobe Experience Platform Privacy Service fornece uma API RESTful e uma interf
 
 Este guia aborda como usar a API Privacy Service. Para obter detalhes sobre como usar a interface do usuário, consulte a visão geral [da interface do](../ui/overview.md)Privacy Service. Para obter uma lista abrangente de todos os pontos de extremidade disponíveis na API Privacy Service, consulte a referência [à](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
 
-## Introdução
+## Introdução {#getting-started}
 
 Este guia exige um entendimento prático dos seguintes recursos do Experience Platform:
 

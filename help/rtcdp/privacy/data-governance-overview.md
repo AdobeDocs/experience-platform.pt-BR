@@ -4,10 +4,10 @@ seo-title: Controle de dados na Platform de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 1%
+source-wordcount: '1056'
+ht-degree: 0%
 
 ---
 
@@ -49,10 +49,7 @@ Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos
 
 O Adobe Experience Platform fornece várias políticas **** principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser exibidas na interface do usuário navegando até a área de trabalho **[!UICONTROL Políticas]** e selecionando a guia **[!UICONTROL Procurar]** . Consulte o guia [de usuário de](../../data-governance/policies/user-guide.md) políticas na documentação do Experience Platform para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
 
-## (Beta) Reforçar a conformidade de uso de dados {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Este recurso está atualmente em beta e não está disponível para todos os usuários. Ele pode ser ativado mediante solicitação. A documentação e a funcionalidade estão sujeitas a alterações.
+## Impor conformidade de uso de dados {#enforce-data-usage-compliance}
 
 Depois que os dados forem rotulados e as políticas de uso forem definidas, você poderá aplicar a conformidade de uso de dados com as políticas. Ao ativar segmentos de audiência para destinos em CDP em tempo real, o Data Governance automaticamente aplica as políticas de uso caso ocorram violações.
 

@@ -4,9 +4,9 @@ seo-title: Configuração de borda para o SDK da Web Experience Platform
 description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ As IDs de configuração de borda podem ser criadas no Adobe [!DNL Launch] usand
 >
 >A ferramenta de configuração de borda está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Launch] como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento em [!DNL Launch]. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na [!DNL Launch] documentação para obter mais detalhes.
 
-Você pode criar uma configuração de borda clicando em **[UICONTROL New Edge Configuration]** na área superior direita da tela. Depois de fornecer um nome e uma descrição, você será solicitado a fornecer as configurações padrão para cada ambiente.
+Você pode criar uma configuração de borda clicando em **[!UICONTROL Nova configuração]** de borda na área superior direita da tela. Depois de fornecer um nome e uma descrição, você será solicitado a fornecer as configurações padrão para cada ambiente.
 
 ### Configurações de Ambiente padrão
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Controle de dados de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,6 @@ Atualmente, o Data Governance oferece suporte à rotulagem DULE em dois níveis 
 
 As versões subsequentes fornecerão os seguintes recursos:
 
-* Rótulos de uso de dados personalizados: Crie novos rótulos e definições com base nas necessidades de sua organização.
 * Aplicação da política: Use a estrutura de política para aconselhar e aplicar políticas em diferentes padrões de acesso a dados.
 * Auditoria: Monitore atividades de acesso aos dados e identifique e reporte problemas de conformidade.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados usando APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '995'
 ht-degree: 3%
 
 ---
@@ -14,19 +14,223 @@ ht-degree: 3%
 
 # Gerenciar rótulos de uso de dados usando APIs
 
-A API de Serviço de Conjunto de Dados permite gerenciar programaticamente rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do serviço de catálogo que gerencia os metadados do conjunto de dados.
+Este documento fornece etapas sobre como gerenciar rótulos de uso de dados usando a API de serviço de política e a API de serviço de conjunto de dados.
 
-Este documento fornece etapas sobre como gerenciar rótulos de uso de dados no nível do conjunto de dados e do campo usando a API do Serviço de Conjunto de Dados.
+A API [de serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) política fornece vários pontos de extremidade que permitem criar e gerenciar rótulos de uso de dados para sua organização.
+
+A API de Serviço de Conjunto de Dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ele faz parte dos recursos de catálogo de dados do Adobe Experience Platform, mas é separado da API do serviço de catálogo que gerencia os metadados do conjunto de dados.
 
 ## Introdução
 
 Antes de ler este guia, siga as etapas descritas na seção [](../../catalog/api/getting-started.md) Introdução no guia do desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para [!DNL Platform] APIs.
 
-Para fazer chamadas para os pontos finais descritos nas seções abaixo, é necessário ter o `id` valor exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte o guia na [listagem de objetos](../../catalog/api/list-objects.md) de Catálogo para localizar as IDs de seus conjuntos de dados existentes.
+Para fazer chamadas para os pontos de extremidade do Serviço de Conjunto de Dados descritos neste documento, é necessário ter o `id` valor exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte o guia na [listagem de objetos](../../catalog/api/list-objects.md) de Catálogo para localizar as IDs de seus conjuntos de dados existentes.
 
-## Procurar rótulos para um conjunto de dados {#lookup}
+## Lista de todas as etiquetas {#list-labels}
 
-Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente fazendo uma solicitação GET.
+Usando a [!DNL Policy Service] API, você pode lista todos os rótulos `core` ou `custom` rótulos fazendo uma solicitação GET para `/labels/core` ou `/labels/custom`, respectivamente.
+
+**Formato da API**
+
+```http
+GET /labels/core
+GET /labels/custom
+```
+
+**Solicitação**
+
+A solicitação a seguir lista todos os rótulos personalizados criados em sua organização.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperados do sistema. Como a solicitação de exemplo acima foi feita para `/labels/custom`, a resposta abaixo mostra somente rótulos personalizados.
+
+```json
+{
+    "_page": {
+        "count": 2
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom?{?limit,start,property}",
+            "templated": true
+        }
+    },
+    "children": [
+        {
+            "name": "L1",
+            "category": "Custom",
+            "friendlyName": "Banking Information",
+            "description": "Data containing banking information for a customer.",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594396718731,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594396718731,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L1"
+                }
+            }
+        },
+        {
+            "name": "L2",
+            "category": "Custom",
+            "friendlyName": "Purchase History Data",
+            "description": "Data containing information on past transactions",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594397415663,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594397728708,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+                }
+            }
+        }
+    ]
+}
+```
+
+## Procurar uma etiqueta {#look-up-label}
+
+Você pode procurar um rótulo específico incluindo a propriedade desse rótulo no caminho de uma solicitação GET para a API do Serviço de Política. `name`
+
+**Formato da API**
+
+```http
+GET /labels/core/{LABEL_NAME}
+GET /labels/custom/{LABEL_NAME}
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{LABEL_NAME}` | A `name` propriedade do rótulo personalizado que você deseja pesquisar. |
+
+**Solicitação**
+
+A solicitação a seguir recupera o rótulo personalizado `L2`, conforme indicado no caminho.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado.
+
+```json
+{
+    "name": "L2",
+    "category": "Custom",
+    "friendlyName": "Purchase History Data",
+    "description": "Data containing information on past transactions",
+    "imsOrg": "{IMS_ORG}",
+    "sandboxName": "{SANDBOX_NAME}",
+    "created": 1594397415663,
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
+    "updated": 1594397728708,
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
+    "_links": {
+        "self": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+        }
+    }
+}
+```
+
+## Criar ou atualizar um rótulo personalizado {#create-update-label}
+
+Para criar ou atualizar um rótulo personalizado, é necessário fazer uma solicitação PUT para a API do Serviço de Política.
+
+**Formato da API**
+
+```http
+PUT /labels/custom/{LABEL_NAME}
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{LABEL_NAME}` | A `name` propriedade de um rótulo personalizado. Se um rótulo personalizado com esse nome não existir, um novo rótulo será criado. Se existir, esse rótulo será atualizado. |
+
+**Solicitação**
+
+A solicitação a seguir cria um novo rótulo, `L3`que tem como objetivo descrever os dados que contêm informações relacionadas aos planos de pagamento selecionados dos clientes.
+
+```shell
+curl -X PUT \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "L3",
+        "category": "Custom",
+        "friendlyName": "Payment Plan",
+        "description": "Data containing information on selected payment plans."
+      }'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `name` | Um identificador de string exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e aplicação do rótulo a conjuntos de dados e campos, portanto, recomenda-se que seja curto e conciso. |
+| `category` | A categoria da etiqueta. Embora você possa criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se quiser que o rótulo apareça na interface do usuário. |
+| `friendlyName` | Um nome amigável para o rótulo, usado para fins de exibição. |
+| `description` | (Opcional) Uma descrição do rótulo para fornecer mais contexto. |
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o código HTTP 200 (OK) se um rótulo existente foi atualizado, ou 201 (Criado) se um novo rótulo foi criado.
+
+```json
+{
+  "name": "L3",
+  "category": "Custom",
+  "friendlyName": "Payment Plan",
+  "description": "Data containing information on selected payment plans.",
+  "imsOrg": "{IMS_ORG}",
+  "sandboxName": "{SANDBOX_NAME}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L3"
+    }
+  }
+}
+```
+
+## Procurar rótulos para um conjunto de dados {#look-up-dataset-labels}
+
+Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente, fazendo uma solicitação GET para a API do Serviço de Conjunto de Dados.
 
 **Formato da API**
 
@@ -77,9 +281,9 @@ Uma resposta bem-sucedida retorna os rótulos de uso de dados que foram aplicado
 | `labels` | Uma lista de rótulos de uso de dados que foram aplicados ao conjunto de dados. |
 | `optionalLabels` | Uma lista de campos individuais no conjunto de dados que têm rótulos de uso de dados aplicados a eles. |
 
-## Aplicar rótulos a um conjunto de dados
+## Aplicar rótulos a um conjunto de dados {#apply-dataset-labels}
 
-Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-os na carga de uma solicitação POST ou PUT. O uso de qualquer um desses métodos substitui quaisquer rótulos existentes e os substitui pelos fornecidos na carga.
+Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-os na carga de uma solicitação POST ou PUT para a API do Serviço de Conjunto de Dados. O uso de qualquer um desses métodos substitui quaisquer rótulos existentes e os substitui pelos fornecidos na carga.
 
 **Formato da API**
 
@@ -105,18 +309,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
-  "optionalLabels": [
-    {
-      "option": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
-        "contentType": "application/vnd.adobe.xed-full+json;version=1",
-        "schemaPath": "/properties/repositoryCreatedBy"
-      },
-      "labels": [ "S1", "S2" ]
-    }
-  ]
-}'
+        "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+        "optionalLabels": [
+          {
+            "option": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1",
+              "schemaPath": "/properties/repositoryCreatedBy"
+            },
+            "labels": [ "S1", "S2" ]
+          }
+        ]
+      }'
 ```
 
 | Propriedade | Descrição |
@@ -144,9 +348,9 @@ Uma resposta bem-sucedida retorna os rótulos que foram adicionados ao conjunto 
 }
 ```
 
-## Excluir rótulos de um conjunto de dados
+## Remover rótulos de um conjunto de dados {#remove-dataset-labels}
 
-Você pode excluir os rótulos aplicados a um conjunto de dados, fazendo uma solicitação DELETE.
+Você pode remover os rótulos aplicados a um conjunto de dados, fazendo uma solicitação DELETE à API do Serviço de Conjunto de Dados.
 
 **Formato da API**
 
@@ -156,7 +360,7 @@ DELETE /datasets/{DATASET_ID}/labels
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DATASET_ID}` | O `id` valor exclusivo do conjunto de dados cujos rótulos você deseja excluir. |
+| `{DATASET_ID}` | O `id` valor exclusivo do conjunto de dados cujos rótulos você deseja remover. |
 
 **Solicitação**
 
@@ -171,11 +375,13 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta com êxito HTTP status 200 (OK), indicando que os rótulos foram excluídos. Você pode [procurar os rótulos](#lookup) existentes para o conjunto de dados em uma chamada separada para confirmar isso.
+Uma resposta com êxito HTTP status 200 (OK), indicando que os rótulos foram removidos. Você pode [procurar os rótulos](#look-up-dataset-labels) existentes para o conjunto de dados em uma chamada separada para confirmar isso.
 
 ## Próximas etapas
 
-Agora que você adicionou rótulos de uso de dados no nível do conjunto de dados e do campo, é possível começar a assimilar dados na Experience Platform. Para saber mais, leia a documentação [de ingestão de](../../ingestion/home.md)dados em start.
+Ao ler este documento, você aprendeu a gerenciar rótulos de uso de dados usando APIs.
+
+Depois de adicionar rótulos de uso de dados no nível do conjunto de dados e do campo, você pode começar a assimilar dados no Experience Platform. Para saber mais, leia a documentação [de ingestão de](../../ingestion/home.md)dados em start.
 
 Agora você também pode definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte a visão geral [das políticas de uso de](../policies/overview.md)dados.
 

@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de protocolo na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 2590c28df6d0fff3e207eb232a02abe16830ee17
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 1%
+source-wordcount: '1205'
+ht-degree: 0%
 
 ---
 
 
 # Configurar um fluxo de dados para um conector de protocolo na interface do usuário
 
-Um fluxo de conjunto de dados é uma tarefa programada que recupera e assimila dados de uma fonte para um conjunto de dados Adobe Experience Platform. Este tutorial fornece etapas para configurar um novo fluxo de conjunto de dados usando sua conta de protocolos.
+Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Adobe Experience Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de protocolos.
 
 ## Introdução
 
@@ -70,30 +70,45 @@ A caixa de diálogo *[!UICONTROL Selecionar schema]* é exibida. Selecione o sch
 
 Com base em suas necessidades, você pode optar por mapear os campos diretamente ou usar as funções do mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre funções de mapeamento e mapeamento de dados, consulte o tutorial sobre como [mapear dados CSV para campos](../../../../ingestion/tutorials/map-a-csv-file.md)de schema XDM.
 
-A tela *[!UICONTROL Mapeamento]* também permite definir a coluna ** Delta. Quando o fluxo do conjunto de dados é criado, é possível definir qualquer campo de carimbo de data e hora como base para decidir quais registros serão assimilados em ingestões incrementais programadas.
+A tela *[!UICONTROL Mapeamento]* também permite definir a coluna ** Delta. Quando o fluxo de dados é criado, você pode definir qualquer campo de carimbo de data e hora como base para decidir quais registros serão assimilados em ingestões incrementais programadas.
 
 Depois que os dados de origem forem mapeados, clique em **[!UICONTROL Avançar]**.
 
 ![](../../../images/tutorials/dataflow/protocols/mapping.png)
 
+## Execuções de ingestão agendada
+
 A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um agendamento de ingestão para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. A tabela a seguir descreve os diferentes campos configuráveis para programação:
 
 | Campo | Descrição |
 | --- | --- |
-| Frequência | As frequências selecionáveis incluem Minuto, Hora, Dia e Semana. |
+| Frequência | As frequências selecionáveis incluem Uma vez, Minuto, Hora, Dia e Semana. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| hora do Start | Um carimbo de data e hora UTC para o qual ocorrerá a primeira ingestão. |
-| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *[!UICONTROL preenchimento retroativo]* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *[!UICONTROL preenchimento retroativo]* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *[!UICONTROL do]* Start serão assimilados. Os arquivos carregados antes da hora *[!UICONTROL do]* Start não serão ingeridos. |
+| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer |
+| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *preenchimento retroativo* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *do* Start serão assimilados. Os arquivos carregados antes da hora *do* Start não serão ingeridos. |
+| Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
-Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Se desejar ingerir apenas uma vez por meio desse fluxo de trabalho, você pode fazer isso configurando a **[!UICONTROL Frequência]** para &quot;Dia&quot; e aplicando um número muito grande para o **[!UICONTROL Intervalo]**, como 10000 ou semelhante.
+Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
 
-Forneça os valores para o agendamento e clique em **[!UICONTROL Avançar]**.
+Para definir a hora de ingestão do start, ajuste a data e a hora exibidas na caixa da hora do start. Como alternativa, você pode selecionar o ícone de calendário para editar o valor de hora do start. O tempo de Start deve ser maior ou igual ao tempo UTC atual.
 
-![programação](../../../images/tutorials/dataflow/protocols/scheduling.png)
+Selecione **[!UICONTROL Carregar dados incrementais por]** para atribuir a coluna delta. Este campo fornece uma distinção entre dados novos e existentes.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Configurar um fluxo de dados de ingestão única
+
+Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**.
+
+>[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 
 ## Dê um nome ao seu fluxo de dados
 
-A etapa de detalhes *[!UICONTROL do fluxo do conjunto de]* dados é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Clique em **[!UICONTROL Avançar]** ao concluir.
+A etapa de detalhes *[!UICONTROL do]* Dataflow é exibida, onde você deve fornecer um nome e uma descrição opcional para o dataflow. Clique em **[!UICONTROL Avançar]** ao concluir.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
@@ -115,7 +130,7 @@ Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de conjunto de dados para trazer dados de um sistema de automação de marketing e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um sistema de automação de marketing e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 - [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
@@ -124,11 +139,11 @@ Ao seguir este tutorial, você criou com êxito um fluxo de conjunto de dados pa
 
 As seções a seguir fornecem informações adicionais para trabalhar com conectores de origem.
 
-### Desativar um fluxo de conjunto de dados
+### Desativar um fluxo de dados
 
-Quando um fluxo de conjunto de dados é criado, ele imediatamente se torna ativo e ingere dados de acordo com o agendamento fornecido. Você pode desativar um fluxo de conjunto de dados ativo a qualquer momento seguindo as instruções abaixo.
+Quando um fluxo de dados é criado, ele imediatamente se torna ativo e ingere dados de acordo com o agendamento que foi fornecido. Você pode desativar um fluxo de dados ativo a qualquer momento seguindo as instruções abaixo.
 
-Na tela Fluxos *[!UICONTROL do]* conjunto de dados, selecione o nome do fluxo do conjunto de dados que deseja desativar.
+Na tela *[!UICONTROL Fluxos de dados]* , selecione o nome do fluxo de dados que deseja desativar.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/protocols/view-dataset-flows.png)
 

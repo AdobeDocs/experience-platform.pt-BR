@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário de etiquetas de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,30 @@ Você pode repetir essas etapas para continuar adicionando e editando rótulos d
 ![Selecione vários campos para aplicar rótulos de nível de campo simultaneamente.](../images/labels/fields_select_multiple.png)
 
 É importante lembrar que a herança move somente do nível superior para baixo (conjunto de dados → campos), o que significa que os rótulos aplicados no nível do campo não são propagados para outros campos ou conjuntos de dados.
+
+## Gerenciamento de rótulos personalizados
+
+Você pode criar seus próprios rótulos de uso personalizados na área de trabalho *[!UICONTROL Políticas]* na [!DNL Experience Platform] interface do usuário. Clique em **[!UICONTROL Políticas]** na navegação à esquerda e, em seguida, clique em **[!UICONTROL Rótulos]** para visualização de uma lista de rótulos existentes. Aqui, clique em **[!UICONTROL Criar rótulo]**.
+
+![](../images/labels/create-label-btn.png)
+
+A caixa de diálogo *[!UICONTROL Criar rótulo]* é exibida. Aqui, forneça as seguintes informações para a nova etiqueta:
+
+* **[!UICONTROL Identificador]**: Um identificador exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e, portanto, deve ser curto e conciso.
+* **[!UICONTROL Nome]**: Um nome de exibição amigável para o rótulo.
+* **[!UICONTROL Descrição]**: (Opcional) Uma descrição do rótulo para fornecer mais contexto.
+
+Quando terminar, clique em **[!UICONTROL Criar]**.
+
+![](../images/labels/create-label.png)
+
+A caixa de diálogo é fechada e o rótulo personalizado recém-criado é exibido na lista na guia *[!UICONTROL Rótulos]* .
+
+![](../images/labels/label-created.png)
+
+O rótulo agora pode ser selecionado em Rótulos ** personalizados ao editar rótulos de uso para conjuntos de dados e campos, ou ao criar políticas de uso de dados.
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Próximas etapas
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de aco
 
 Os rótulos de uso de dados aplicados no nível do conjunto de dados são propagados para todos os campos no conjunto de dados. Os rótulos também podem ser aplicados diretamente a campos individuais (cabeçalhos de coluna) em um conjunto de dados, sem propagação.
 
-Para obter mais informações sobre rótulos de uso de dados disponíveis em [!DNL Experience Platform] e as políticas de uso que eles representam, consulte o guia sobre rótulos [de uso de dados](reference.md)suportados.
+[!DNL Platform] fornece várias etiquetas &quot;principais&quot; de uso de dados prontas para uso, que abrangem uma grande variedade de restrições comuns aplicáveis ao controle de dados. Para obter mais informações sobre esses rótulos e as políticas de uso que eles representam, consulte o guia sobre os rótulos [](reference.md)de uso de dados principais.
+
+Além das etiquetas fornecidas pela Adobe, você também pode definir suas próprias etiquetas personalizadas. Para obter etapas sobre como fazer isso na interface do usuário, consulte o guia [do usuário de etiquetas de uso de](./user-guide.md)dados. Para obter etapas sobre como executar isso usando chamadas de API, consulte o guia [da API de rótulos de uso de](./api.md)dados.
 
 ## Herança de etiqueta para segmentos de audiência
 
@@ -34,14 +36,13 @@ Além de herdar rótulos de nível de conjunto de dados, os segmentos herdam tod
 
 Para obter mais informações sobre como a aplicação automática funciona na CDP em tempo real, consulte a visão geral [da CDP em tempo real da](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Herança dos controles de exportação de dados do Adobe Audience Manager
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+O Experience Platform tem a capacidade de compartilhar segmentos com o Adobe Audience Manager. Todos os Controles de exportação de dados que foram aplicados a segmentos de Audience Manager são traduzidos para rótulos e ações de marketing equivalentes reconhecidos pelo Controle de dados de Experience Platform.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+Para obter uma referência sobre como os controles de exportação de dados específicos mapeiam para rótulos de uso de dados no Platform, consulte a documentação [do](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+
 
 ## Próximas etapas
 
-Agora que você foi introduzido nos rótulos de uso de dados, pode continuar a ler o guia [do](user-guide.md) usuário para saber como gerenciar os rótulos na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar rótulos usando APIs, consulte a seção apropriada no guia [do desenvolvedor do serviço de](../../catalog/api/labels.md)catálogo.
+Agora que você foi introduzido nos rótulos de uso de dados, pode continuar a ler o guia [do](user-guide.md) usuário para saber como gerenciar os rótulos na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar rótulos usando APIs, consulte o guia [da API de etiquetas de](./api.md)uso.

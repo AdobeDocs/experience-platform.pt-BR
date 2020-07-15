@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
+source-git-commit: dd0ce5b5c45133b570970b1d1d7e2f484b89c2e9
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -78,17 +78,29 @@ A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um
 
 | Campo | Descrição |
 | --- | --- |
-| Frequência | As frequências selecionáveis incluem Minuto, Hora, Dia e Semana. |
+| Frequência | As frequências selecionáveis incluem Uma vez, Minuto, Hora, Dia e Semana. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| hora do Start | Um carimbo de data e hora UTC para o qual ocorrerá a primeira ingestão. O valor de tempo do start deve ser definido em cada tempo, em segundos. |
+| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer |
 | Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *preenchimento retroativo* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *do* Start serão assimilados. Os arquivos carregados antes da hora *do* Start não serão ingeridos. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
-Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Se desejar ingerir apenas uma vez por meio desse fluxo de trabalho, você pode fazer isso configurando a **[!UICONTROL Frequência]** para &quot;Dia&quot; e aplicando um número muito grande para o **[!UICONTROL Intervalo]**, como 10000 ou semelhante.
+Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
 
-Forneça valores para o agendamento e selecione **[!UICONTROL Próximo]**.
+Para definir a hora de ingestão do start, ajuste a data e a hora exibidas na caixa da hora do start. Como alternativa, você pode selecionar o ícone de calendário para editar o valor de hora do start. O tempo de Start deve ser maior ou igual ao tempo UTC atual.
 
-![](../../../images/tutorials/dataflow/databases/schedule.png)
+Selecione **[!UICONTROL Carregar dados incrementais por]** para atribuir a coluna delta. Este campo fornece uma distinção entre dados novos e existentes.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Configurar um fluxo de dados de ingestão única
+
+Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**.
+
+>[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 
 ## Dê um nome ao seu fluxo de dados
 

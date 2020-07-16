@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Recursos de Lista
 
-Você pode visualização uma lista de todos os recursos do Registro de Schemas de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação GET.
+Você pode visualização uma lista de todos os [!DNL Schema Registry] recursos de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação GET.
 
 >[!NOTE]
 >
->Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros [de](#paging)paginação. Também é recomendável usar parâmetros de query para [filtrar os resultados](#filtering) e reduzir o número de recursos retornados.
+>Ao listar recursos, o resultado [!DNL Schema Registry] limita a 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros [de](#paging)paginação. Também é recomendável usar parâmetros de query para [filtrar os resultados](#filtering) e reduzir o número de recursos retornados.
 
 **Formato da API**
 
@@ -30,7 +30,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{CONTAINER_ID}` | O container no qual os recursos estão localizados (&quot;global&quot; ou &quot;locatário&quot;). |
-| `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado da Biblioteca de Schemas. Os tipos válidos são `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
+| `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado do [!DNL Schema Library]. Os tipos válidos são `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
 | `{QUERY_PARAMS`} | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
 
 **Solicitação**
@@ -78,7 +78,7 @@ A solicitação acima usou o cabeçalho `application/vnd.adobe.xed-id+json` Acei
 
 ## Uso de parâmetros de query {#query}
 
-O Registro de Schemas suporta o uso de parâmetros de query para a página e filtrar os resultados ao listar os recursos.
+O [!DNL Schema Registry] oferece suporte ao uso de parâmetros de query para a página e filtrar resultados ao listar recursos.
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ Você pode filtrar os resultados usando o `property` parâmetro, que é usado pa
 
 >[!TIP]
 >
->Você pode usar o `property` parâmetro para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a classe de Perfil individual XDM.
+>Você pode usar o `property` parâmetro para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a [!DNL XDM Individual Profile] classe.

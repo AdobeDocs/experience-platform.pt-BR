@@ -4,9 +4,9 @@ seo-title: Configuração de borda para o SDK da Web Experience Platform
 description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode na
 
 O Público alvo permite que os clientes controlem permissões por meio do uso de propriedades. Detalhes podem ser encontrados na seção Permissões [](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) empresariais da documentação do Público alvo.
 
-O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL configuração] > Propriedades [UICONTROL]
+O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL configuração] > [!UICONTROL Propriedades]
 
 ##### [!UICONTROL ID do Ambiente do Público alvo]
 

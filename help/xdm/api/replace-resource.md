@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Substituir um recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Substituir um recurso
 
-O Registro de Schemas permite que você substitua um recurso inteiro por meio de uma operação PUT. Essa operação basicamente regrava o recurso, portanto, o corpo da solicitação deve incluir todos os campos que seriam necessários ao criar um novo recurso usando uma solicitação POST.
+O [!DNL Schema Registry] permite que você substitua um recurso inteiro por meio de uma operação PUT. Essa operação basicamente regrava o recurso, portanto, o corpo da solicitação deve incluir todos os campos que seriam necessários ao criar um novo recurso usando uma solicitação POST.
 
 Esse método é especialmente útil se você deseja atualizar várias informações no recurso de uma só vez.
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RESOURCE_TYPE}` | O tipo de recurso a ser atualizado da Biblioteca de Schemas. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | O tipo de recurso a ser atualizado do [!DNL Schema Library]. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | O `$id` URI codificado por URL ou `meta:altId` do recurso. |
 
 **Solicitação**

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar uma classe
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 O principal bloco de construção de um schema é uma classe. A classe contém o conjunto mínimo de campos que devem ser definidos para capturar os dados principais de um schema. Por exemplo, se você estivesse projetando um schema para carros e caminhões eles provavelmente usariam uma classe chamada Veículo que descrevia as propriedades comuns básicas de todos os veículos.
 
-Há várias classes padrão fornecidas pela Adobe e outros parceiros de Experience Platform, mas você também pode definir suas próprias classes e salvá-las no Registro do Schema. Em seguida, é possível compor um schema que implementa a classe criada e definir combinações compatíveis com a classe recém-definida.
+Há várias classes padrão fornecidas pela Adobe e outros [!DNL Experience Platform] parceiros, mas você também pode definir suas próprias classes e salvá-las no [!DNL Schema Registry]. Em seguida, é possível compor um schema que implementa a classe criada e definir combinações compatíveis com a classe recém-definida.
 
 >[!NOTE]
 >
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `_{TENANT_ID}` | A `TENANT_ID` namespace de sua organização. Todos os recursos criados pela sua organização devem incluir essa propriedade para evitar colisões com outros recursos no Registro do Schema. |
+| `_{TENANT_ID}` | A `TENANT_ID` namespace de sua organização. Todos os recursos criados pela sua organização devem incluir essa propriedade para evitar colisões com outros recursos no [!DNL Schema Registry]. |
 | `allOf` | Uma lista de recursos cujas propriedades devem ser herdadas pela nova classe. Um dos `$ref` objetos dentro da matriz define o comportamento da classe. Neste exemplo, a classe herda o comportamento &quot;record&quot;. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes da classe recém-criada, incluindo `$id`, `meta:altId`e `version`. Esses três valores são somente leitura e são atribuídos pelo Registro do Schema.
+Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes da classe recém-criada, incluindo `$id`, `meta:altId`e `version`. Esses três valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {

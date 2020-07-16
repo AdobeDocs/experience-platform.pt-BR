@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral dos rótulos de uso de dados
 
-O DULE (Data Usage Labeling and Implacation, Rotulação e Aplicação de Uso de Dados) é o mecanismo principal do Adobe Experience Platform Data Governance. Os recursos DULE permitem aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas.
+O DULE (Data Usage Labeling and Implementation, Rotulação e Aplicação de Uso de Dados) é o mecanismo principal do Adobe Experience Platform [!DNL Data Governance]. Os recursos DULE permitem aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas.
 
 Este documento fornece uma visão geral dos rótulos de uso de dados (também conhecidos como rótulos DULE) no [!DNL Experience Platform]. Antes de ler este guia, consulte a visão geral [do](../home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE.
 
@@ -38,9 +38,9 @@ Para obter mais informações sobre como a aplicação automática funciona na C
 
 ### Herança dos controles de exportação de dados do Adobe Audience Manager
 
-O Experience Platform tem a capacidade de compartilhar segmentos com o Adobe Audience Manager. Todos os Controles de exportação de dados que foram aplicados a segmentos de Audience Manager são traduzidos para rótulos e ações de marketing equivalentes reconhecidos pelo Controle de dados de Experience Platform.
+[!DNL Experience Platform] tem a capacidade de compartilhar segmentos com o Adobe Audience Manager. Todos os Controles de exportação de dados que foram aplicados a segmentos Audience Manager são traduzidos para rótulos equivalentes e ações de marketing reconhecidas por [!DNL Experience Platform][!DNL Data Governance].
 
-Para obter uma referência sobre como os controles de exportação de dados específicos mapeiam para rótulos de uso de dados no Platform, consulte a documentação [do](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+Para obter uma referência sobre como os controles de exportação de dados específicos mapeiam para rótulos de uso de dados em [!DNL Platform], consulte a documentação [do](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
 
 ## Próximas etapas

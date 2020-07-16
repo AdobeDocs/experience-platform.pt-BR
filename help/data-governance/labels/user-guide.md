@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário de etiquetas de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ A próxima seção fornece etapas para a criação de um novo conjunto de dados 
 
 >[!NOTE]
 >
->Neste exemplo, um conjunto de dados é criado usando um schema do Modelo de Dados de Experiência (XDM) pré-configurado. Para obter mais informações sobre schemas XDM, consulte a visão geral [do Sistema](../../xdm/home.md) XDM e [as noções básicas da composição](../../xdm/schema/composition.md)do schema.
+>Neste exemplo, um conjunto de dados é criado usando um schema pré-configurado [!DNL Experience Data Model] (XDM). Para obter mais informações sobre schemas XDM, consulte a visão geral [do Sistema](../../xdm/home.md) XDM e [as noções básicas da composição](../../xdm/schema/composition.md)do schema.
 
 Para criar um novo conjunto de dados, clique em **[!UICONTROL Criar conjunto]** de dados no canto superior direito da área de trabalho _[!UICONTROL Conjuntos]_de dados.
 

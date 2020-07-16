@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criar uma mistura
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
 
 Mixins são um conjunto de campos usados para descrever um conceito específico, como &quot;endereço&quot; ou &quot;preferências de perfil&quot;. Há várias combinações padrão disponíveis ou você pode definir suas próprias quando quiser capturar informações exclusivas de sua organização. Cada mistura contém um `meta:intendedToExtend` campo que lista as classes com as quais a mistura é compatível.
 
-Você pode achar útil revisar todas as combinações disponíveis para se familiarizar com os campos incluídos em cada uma. Você pode lista (GET) todas as combinações compatíveis com uma classe específica executando uma solicitação em relação a cada um dos container &quot;global&quot; e &quot;locatário&quot;, retornando somente as combinações nas quais o campo &quot;meta:pretendidoToExtend&quot; corresponde à classe que você está usando. Os exemplos abaixo retornarão todas as combinações que podem ser usadas com a classe de Perfil individual XDM:
+Você pode achar útil revisar todas as combinações disponíveis para se familiarizar com os campos incluídos em cada uma. Você pode lista (GET) todas as combinações compatíveis com uma classe específica executando uma solicitação em relação a cada um dos container &quot;global&quot; e &quot;locatário&quot;, retornando somente as combinações nas quais o campo &quot;meta:pretendidoToExtend&quot; corresponde à classe que você está usando. Os exemplos abaixo retornarão todas as combinações que podem ser usadas com a [!DNL XDM Individual Profile] classe:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -99,7 +102,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes da combinação recém-criada, incluindo o `$id`, `meta:altId`e `version`. Esses valores são somente leitura e são atribuídos pelo Registro do Schema.
+Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes da combinação recém-criada, incluindo o `$id`, `meta:altId`e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {

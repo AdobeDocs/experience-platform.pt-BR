@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Pesquisar um recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '174'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{CONTAINER_ID}` | O container no qual os recursos estão localizados (&quot;global&quot; ou &quot;locatário&quot;). |
-| `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado da Biblioteca de Schemas. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado do [!DNL Schema Library]. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | O `$id` URI codificado por URL ou `meta:altId` do recurso. |
 
 **Solicitação**

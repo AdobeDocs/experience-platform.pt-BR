@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Uniões
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Uniões
 
-As Uniões (ou visualizações uniões) são schemas somente leitura gerados pelo sistema que agregação os campos de todos os schemas que compartilham a mesma classe (Perfil XDM ExperienceEvent ou XDM Individual) e estão habilitados para o Perfil [Cliente em tempo](../../profile/home.md)real.
+Uniões (ou visualizações uniões) são schemas somente leitura gerados pelo sistema que agregação os campos de todos os schemas que compartilham a mesma classe ([!DNL XDM ExperienceEvent] ou [!DNL XDM Individual Profile]) e estão habilitados para [!DNL Real-time Customer Profile](../../profile/home.md).
 
 Este documento aborda conceitos essenciais para trabalhar com o união na API do Registro do Schema, incluindo chamadas de amostra para várias operações. Para obter informações mais gerais sobre uniões no XDM, consulte a seção sobre uniões nas [noções básicas da composição](../schema/composition.md#union)do schema.
 
 ## Misturas de União
 
-O Registro do Schema inclui automaticamente três combinações dentro do schema da união: `identityMap`, `timeSeriesEvents`e `segmentMembership`.
+O [!DNL Schema Registry] inclui automaticamente três combinações dentro do schema da união: `identityMap`, `timeSeriesEvents`e `segmentMembership`.
 
 ### Mapa de identidade
 
@@ -30,7 +30,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### eventos série cronológica
 
-A `timeSeriesEvents` matriz é uma lista de eventos da série de tempo relacionados aos schemas de registro associados à união. Quando os dados do Perfil são exportados para conjuntos de dados, essa matriz é incluída para cada registro. Isso é útil para vários casos de uso, como aprendizado de máquina em que os modelos precisam de todo o histórico de comportamento do perfil, além de seus atributos de registro.
+A `timeSeriesEvents` matriz é uma lista de eventos da série de tempo relacionados aos schemas de registro associados à união. Quando [!DNL Profile] os dados são exportados para conjuntos de dados, essa matriz é incluída para cada registro. Isso é útil para vários casos de uso, como aprendizado de máquina em que os modelos precisam de todo o histórico de comportamento do perfil, além de seus atributos de registro.
 
 ### Mapa de associação de segmento
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` o schema que você deseja ativar para uso no Perfil. |
+| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` o schema no qual você deseja habilitar para uso [!DNL Profile]. |
 
 **Solicitação**
 
@@ -117,7 +117,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 ## uniões Listas
 
-Quando você define a tag &quot;união&quot; em um schema, o Registro do Schema cria e mantém automaticamente uma união para a classe na qual o schema se baseia. A união `$id` é semelhante ao padrão `$id` de uma classe, sendo a única diferença que é anexada por dois sublinhados e a palavra &quot;união&quot; (`"__union"`).
+Quando você define a tag &quot;união&quot; em um schema, o [!DNL Schema Registry] cria e mantém automaticamente uma união para a classe na qual o schema se baseia. A união `$id` é semelhante ao padrão `$id` de uma classe, sendo a única diferença que é anexada por dois sublinhados e a palavra &quot;união&quot; (`"__union"`).
 
 Para visualização de uma lista de uniões disponíveis, é possível executar uma solicitação GET para o `/unions` endpoint.
 
@@ -168,7 +168,7 @@ Você pode visualização uma união específica executando uma solicitação GE
 
 >[!NOTE]
 >
->Pesquisas de União estão disponíveis usando os pontos de extremidade `/unions` e `/schemas` para permitir o uso em exportações de Perfis para um conjunto de dados.
+>Pesquisas de União estão disponíveis usando os pontos de extremidade `/unions` e `/schemas` para permitir o uso em [!DNL Profile] exportações para um conjunto de dados.
 
 **Formato da API**
 
@@ -265,7 +265,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Solicitação**
 
-A solicitação a seguir procura todos os schemas que fazem parte da união de classe do Perfil individual XDM.
+A solicitação a seguir procura todos os schemas que fazem parte da união da [!DNL XDM Individual Profile] classe.
 
 ```SHELL
 curl -X GET \

@@ -4,54 +4,54 @@ solution: Experience Platform
 title: Guia do desenvolvedor da API de Registro do Schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
 
 
-# Guia do desenvolvedor da API de Registro do Schema
+# [!DNL Schema Registry] Guia do desenvolvedor da API
 
-O Registro do Schema é usado para acessar a Biblioteca de Schemas no Adobe Experience Platform, fornecendo uma interface do usuário e uma API RESTful a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
+O [!DNL Schema Registry] é usado para acessar a Biblioteca de Schemas no Adobe Experience Platform, fornecendo uma interface do usuário e uma API RESTful a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
 
-Usando a API do Registro do Schema, você pode executar operações CRUD básicas para visualização e gerenciamento de todos os schemas e recursos relacionados disponíveis para você no Adobe Experience Platform. Isso inclui aqueles definidos pela Adobe, parceiros de Experience Platform e fornecedores cujos aplicativos você usa. Você também pode usar chamadas de API para criar novos schemas e recursos para sua organização, bem como visualização e editar recursos que já foram definidos.
+Usando a API do Registro do Schema, você pode executar operações CRUD básicas para visualização e gerenciamento de todos os schemas e recursos relacionados disponíveis para você no Adobe Experience Platform. Isso inclui aqueles definidos pela Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. Você também pode usar chamadas de API para criar novos schemas e recursos para sua organização, bem como visualização e editar recursos que já foram definidos.
 
-Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a API de registro do Schema. O guia então fornece exemplos de chamadas de API para executar operações principais usando o Registro do Schema.
+Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a [!DNL Schema Registry] API. O guia então fornece exemplos de chamadas de API para executar operações principais usando o [!DNL Schema Registry].
 
 ## Pré-requisitos
 
 Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [!DNL Experience Data Model (XDM) System](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM.
-* [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para a API do Registro do Schema.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas à [!DNL Schema Registry] API com êxito.
 
 ## Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ## Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform, incluindo os pertencentes ao Registro do Schema, estão isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no [!DNL Experience Platform], incluindo os pertencentes ao [!DNL Schema Registry], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
-Todas as solicitações de pesquisa (GET) para o Registro do Schema exigem um cabeçalho Accept adicional, cujo valor determina o formato das informações retornadas pela API. Consulte a seção [Aceitar cabeçalho](#accept) abaixo para obter mais detalhes.
+Todas as solicitações de pesquisa (GET) para o [!DNL Schema Registry] exigem um cabeçalho Accept adicional, cujo valor determina o formato das informações retornadas pela API. Consulte a seção [Aceitar cabeçalho](#accept) abaixo para obter mais detalhes.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna informações sobre o uso do Registro do Schema por parte de sua organização. Isso inclui um `tenantId` atributo cujo valor é o seu `TENANT_ID`.
+Uma resposta bem-sucedida retorna informações relacionadas ao uso do [!DNL Schema Registry]. Isso inclui um `tenantId` atributo cujo valor é o seu `TENANT_ID`.
 
 ```JSON
 {
@@ -161,17 +161,17 @@ Uma resposta bem-sucedida retorna informações sobre o uso do Registro do Schem
 
 ## Entenda o `CONTAINER_ID` {#container}
 
-As chamadas à API do Registro do Schema exigem o uso de um `CONTAINER_ID`. Há dois container contra os quais as chamadas de API podem ser feitas: o container **** global e o container **do** locatário.
+As chamadas à [!DNL Schema Registry] API exigem o uso de uma `CONTAINER_ID`. Há dois container contra os quais as chamadas de API podem ser feitas: o container **** global e o container **do** locatário.
 
 ### container global
 
-O container global contém todas as classes padrão, mixins, tipos de dados e schemas fornecidos pela Adobe e por parceiros de Experience Platform. Você só pode executar solicitações de lista e pesquisa (GET) em relação ao container global.
+O container global contém todas as classes padrão, mixins, tipos de dados e schemas fornecidos pela Adobe e [!DNL Experience Platform] parceiros. Você só pode executar solicitações de lista e pesquisa (GET) em relação ao container global.
 
 ### container de inquilino
 
 Para não ser confundido com o seu exclusivo `TENANT_ID`, o container locatário armazena todas as classes, misturas, tipos de dados, schemas e descritores definidos por uma Organização IMS. Elas são exclusivas de cada organização, o que significa que não são visíveis ou gerenciáveis por outras Organizações IMS. Você pode executar todas as operações CRUD (GET, POST, PUT, PATCH, DELETE) em relação aos recursos criados no container do locatário.
 
-Quando você cria uma classe, combinação, schema ou tipo de dados no container do locatário, ela é salva no Registro do Schema e recebe um `$id` URI que inclui seu `TENANT_ID`. Isso `$id` é usado em toda a API para fazer referência a recursos específicos. Exemplos de `$id` valores são fornecidos na próxima seção.
+Quando você cria uma classe, combinação, schema ou tipo de dados no container do locatário, ela é salva no e recebe um [!DNL Schema Registry] URI que inclui seu `$id` `TENANT_ID`. Isso `$id` é usado em toda a API para fazer referência a recursos específicos. Exemplos de `$id` valores são fornecidos na próxima seção.
 
 ## identificação do Schema {#schema-identification}
 
@@ -189,7 +189,7 @@ As chamadas para a API do Registro do Schema oferecerão suporte ao `$id` URI co
 
 ## Aceitar cabeçalho {#accept}
 
-Ao executar operações de lista e pesquisa (GET) na API do Registro do Schema, um cabeçalho Accept é necessário para determinar o formato dos dados retornados pela API. Ao procurar recursos específicos, um número de versão também deve ser incluído no cabeçalho Aceitar.
+Ao executar operações de lista e pesquisa (GET) na [!DNL Schema Registry] API, é necessário um cabeçalho Accept para determinar o formato dos dados retornados pela API. Ao procurar recursos específicos, um número de versão também deve ser incluído no cabeçalho Aceitar.
 
 A tabela a seguir lista valores de cabeçalho compatíveis com o Accept, incluindo aqueles com números de versão, juntamente com descrições do que a API retornará quando for usada.
 
@@ -242,4 +242,4 @@ Consulte o [apêndice](appendix.md) para obter mais informações sobre como def
 
 ## Próximas etapas
 
-Este documento cobriu os conhecimentos de pré-requisito necessários para fazer chamadas para a API do Registro do Schema, incluindo as credenciais de autenticação necessárias. Agora você pode continuar com as chamadas de amostra fornecidas neste guia do desenvolvedor e seguir com suas instruções. Para obter uma apresentação passo a passo sobre como fazer um schema na API, consulte o [tutorial](../tutorials/create-schema-api.md)a seguir.
+Este documento cobriu os conhecimentos pré-requisitos necessários para fazer chamadas para a [!DNL Schema Registry] API, incluindo as credenciais de autenticação necessárias. Agora você pode continuar com as chamadas de amostra fornecidas neste guia do desenvolvedor e seguir com suas instruções. Para obter uma apresentação passo a passo sobre como fazer um schema na API, consulte o [tutorial](../tutorials/create-schema-api.md)a seguir.

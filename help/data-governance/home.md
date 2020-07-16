@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Controle de dados de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
 
 
-# Visão geral do controle de dados
+# [!DNL Data Governance]visão geral
 
 Um dos principais recursos do Adobe Experience Platform é reunir dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e engajem os clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados dentro [!DNL Platform] estejam em conformidade com as políticas de uso de dados.
 
-O controle de dados do Adobe Experience Platform permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo a catalogação, a linhagem de dados, a rotulagem de uso de dados, as políticas de uso de dados e o controle do uso de dados para ações de marketing.
+O Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo a catalogação, a linhagem de dados, a rotulagem de uso de dados, as políticas de uso de dados e o controle do uso de dados para ações de marketing.
 
 ## Funções de controle de dados
 
@@ -44,7 +44,7 @@ Os profissionais de marketing são o ponto final do controle de dados. Eles soli
 
 ## Estrutura DULE
 
-A DULE (Data Usage Labeling and Implementation) é a estrutura principal para o [!DNL Experience Platform] Data Governance. DULE simplifica e simplifica o processo de categorização de dados e criação de políticas de uso de dados. Depois que os rótulos de dados forem aplicados e as políticas de uso de dados estiverem em vigor, as ações de marketing poderão ser avaliadas para garantir o uso correto dos dados.
+A DULE (Data Usage Labeling and Implementation) é a estrutura principal para [!DNL Experience Platform][!DNL Data Governance]. DULE simplifica e simplifica o processo de categorização de dados e criação de políticas de uso de dados. Depois que os rótulos de dados forem aplicados e as políticas de uso de dados estiverem em vigor, as ações de marketing poderão ser avaliadas para garantir o uso correto dos dados.
 
 Há três elementos chave na estrutura DULE: Etiquetas, políticas e aplicação.
 
@@ -54,7 +54,7 @@ Há três elementos chave na estrutura DULE: Etiquetas, políticas e aplicação
 
 ## Rótulos de uso de dados
 
-O controle de dados permite que os administradores de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para classificar dados de acordo com o tipo de políticas que se aplicam.
+[!DNL Data Governance] permite que os administradores de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para categorizar dados de acordo com o tipo de políticas aplicadas.
 
 A estrutura DULE inclui rótulos de uso de dados predefinidos que podem ser usados para classificar dados de três formas:
 
@@ -76,9 +76,9 @@ Consulte a visão geral sobre rótulos [de uso de](./labels/overview.md) dados p
 
 Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro de [!DNL Experience Platform].
 
-Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados, como Informações pessoais identificáveis (PII), não podem ser exportados e um rótulo &quot;I&quot; (Dados de identidade) tiver sido aplicado ao conjunto de dados, você receberá uma resposta do Serviço de política informando que uma política de uso de dados foi violada.
+Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor dizendo que tipos específicos de dados, como Informações pessoais identificáveis (PII), não podem ser exportados e um rótulo &quot;I&quot; (Dados de identidade) tiver sido aplicado ao conjunto de dados, você receberá uma resposta da [!DNL Policy Service] informando que uma política de uso de dados foi violada.
 
-Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API do serviço de política DULE ou a interface do [!DNL Experience Platform] usuário.
+Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API DULE [!DNL Policy Service] ou a interface do [!DNL Experience Platform] usuário.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Para obter mais informações sobre políticas de uso de dados e ações de mark
 
 ## Versões futuras
 
-Atualmente, o Data Governance oferece suporte à rotulagem DULE em dois níveis (conjunto de dados e campo). O Data Governance também suporta a criação e o gerenciamento de políticas de uso de dados e ações de marketing por meio da DULE Policy Service API.
+[!DNL Data Governance] suporta atualmente a rotulagem DULE em dois níveis (conjunto de dados e campo). [!DNL Data Governance] também suporta a criação e o gerenciamento de políticas de uso de dados e ações de marketing por meio da API DULE [!DNL Policy Service] .
 
 As versões subsequentes fornecerão os seguintes recursos:
 
@@ -97,15 +97,15 @@ As versões subsequentes fornecerão os seguintes recursos:
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução de alto nível ao Data Governance e à estrutura DULE. Agora, você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
+Este documento proporcionou uma introdução de alto nível à estrutura DULE [!DNL Data Governance] e à estrutura DULE. Agora você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
 
 ## Apêndice
 
-A seção a seguir fornece informações adicionais sobre o Data Governance.
+A seção a seguir fornece informações adicionais sobre [!DNL Data Governance].
 
-### Terminologia do Data Governance
+### [!DNL Data Governance] terminologia
 
-A tabela a seguir descreve os termos principais relacionados à Data Governance e à estrutura DULE.
+A tabela a seguir descreve os termos principais relacionados à estrutura DULE [!DNL Data Governance] e à estrutura DULE.
 
 | Termo | Definição |
 |---|---|
@@ -126,6 +126,6 @@ A tabela a seguir descreve os termos principais relacionados à Data Governance 
 
 ## Recursos adicionais
 
-O vídeo a seguir tem como objetivo dar suporte à compreensão sobre o controle de dados e descreve os principais aspectos da estrutura DULE (Data Usage Labeling and Implementation).
+O vídeo a seguir tem como objetivo oferecer suporte para sua compreensão de [!DNL Data Governance]e descreve os principais aspectos da estrutura DULE (Data Usage Labeling and Implementation).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)

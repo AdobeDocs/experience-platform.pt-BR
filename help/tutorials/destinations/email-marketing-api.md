@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Criar destinos de marketing por email
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
 
 
-# Crie destinos de marketing por email e ative dados no Platform de dados do cliente em tempo real da Adobe
+# Crie destinos de marketing por email e ative dados em [!DNL Real-time Customer Data Platform]
 
 Este tutorial demonstra como usar chamadas de API para se conectar aos dados do seu Adobe Experience Platform, criar um destino [de marketing por](../../rtcdp/destinations/email-marketing-destinations.md)email, criar um fluxo de dados para o novo destino criado e ativar os dados para o novo destino criado.
 
@@ -26,9 +26,9 @@ Se você preferir usar a interface do usuário no CDP em tempo real da Adobe par
 
 Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-* [Serviço](../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização de dados e linhagem dentro do Experience Platform.
-* [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados no [!DNL Experience Platform].
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para ativar dados para destinos de marketing por email no Adobe Real-time CDP.
 
@@ -36,27 +36,27 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 Para concluir as etapas neste tutorial, você deve ter as seguintes credenciais prontas, dependendo do tipo de destinos aos quais você está conectando e ativando segmentos.
 
-* Para conexões do Amazon S3 com plataformas de marketing de email: `accessId`, `secretKey`
+* Para conexões [!DNL Amazon] S3 com plataformas de marketing de email: `accessId`, `secretKey`
 * Para conexões SFTP com plataformas de marketing de email: `domain`, `port`, `username`ou `password` `ssh key` (dependendo do método de conexão com o local FTP)
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Coletar valores para cabeçalhos obrigatórios e opcionais
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Os recursos no Experience Platform podem ser isolados para caixas de proteção virtuais específicas. Em solicitações para APIs da Platform, você pode especificar o nome e a ID da caixa de proteção em que a operação ocorrerá. Esses são parâmetros opcionais.
+Os recursos em [!DNL Experience Platform] podem ser isolados para caixas de proteção virtuais específicas. Em solicitações para [!DNL Platform] APIs, você pode especificar o nome e a ID da caixa de proteção em que a operação ocorrerá. Esses são parâmetros opcionais.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NObservação]
->Para obter mais informações sobre caixas de proteção no Experience Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Experience Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
@@ -134,17 +134,17 @@ Uma resposta bem-sucedida contém uma lista de destinos disponíveis e seus iden
 }
 ```
 
-## Conecte-se aos seus dados de Experience Platform {#connect-to-your-experience-platform-data}
+## Conecte-se aos seus [!DNL Experience Platform] dados {#connect-to-your-experience-platform-data}
 
 ![Etapas de destino visão geral etapa 2](../images/destinations/flow-api-destinations-step2.png)
 
-Em seguida, você deve se conectar aos dados do Experience Platform para poder exportar os dados do perfil e ativá-los no destino preferencial. Este conjunto consiste em duas etapas descritas abaixo.
+Em seguida, você deve se conectar aos seus [!DNL Experience Platform] dados, para poder exportar os dados do perfil e ativá-los no destino preferido. Este conjunto consiste em duas etapas descritas abaixo.
 
-1. Primeiro, você deve executar uma chamada para autorizar o acesso aos seus dados no Experience Platform, configurando uma conexão básica.
-2. Em seguida, usando a ID de conexão básica, você fará outra chamada na qual você cria uma conexão de origem, que estabelece a conexão com seus dados de Experience Platform.
+1. Primeiro, você deve executar uma chamada para autorizar o acesso aos seus dados no [!DNL Experience Platform], configurando uma conexão básica.
+2. Em seguida, usando a ID de conexão básica, você fará outra chamada na qual criará uma conexão de origem, que estabelece a conexão com seus [!DNL Experience Platform] dados.
 
 
-### Autorizar acesso aos seus dados no Experience Platform
+### Autorizar acesso aos seus dados em [!DNL Experience Platform]
 
 **Formato da API**
 
@@ -208,7 +208,7 @@ Uma resposta bem-sucedida contém o identificador exclusivo (`id`) da conexão b
 }
 ```
 
-### Conecte-se aos seus dados de Experience Platform
+### Conecte-se aos seus [!DNL Experience Platform] dados
 
 **Formato da API**
 
@@ -270,11 +270,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Use a ID obtida na etapa anterior.
-* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o serviço de Perfil unificado - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão de origem recém-criada ao Serviço de Perfil Unificado. Isso confirma que você se conectou com êxito aos dados de Experience Platform. Armazene esse valor conforme necessário em uma etapa posterior.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) para a conexão de origem recém-criada [!DNL Unified Profile Service]. Isso confirma que você se conectou com êxito aos seus [!DNL Experience Platform] dados. Armazene esse valor conforme necessário em uma etapa posterior.
 
 ```json
 {
@@ -359,8 +359,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão obtida na etapa [Obtenha a lista dos destinos](#get-the-list-of-available-destinations)disponíveis.
 * `{S3 or SFTP}`: preencha o tipo de conexão desejado para esse destino. No catálogo [de](../../rtcdp/destinations/destinations-catalog.md)destino, role até o destino desejado para ver se os tipos de conexão S3 e/ou SFTP são suportados.
-* `{ACCESS_ID}`: Sua ID de acesso para a localização do armazenamento Amazon S3.
-* `{SECRET_KEY}`: Sua chave secreta para a localização do armazenamento Amazon S3.
+* `{ACCESS_ID}`: Sua ID de acesso para a localização do armazenamento [!DNL Amazon] S3.
+* `{SECRET_KEY}`: Sua chave secreta para a localização do armazenamento [!DNL Amazon] S3.
 
 **Resposta**
 
@@ -448,8 +448,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Use a ID de conexão básica obtida na etapa acima.
 * `{CONNECTION_SPEC_ID}`: Use as especificações de conexão obtidas na etapa [Obtenha a lista dos destinos](#get-the-list-of-available-destinations)disponíveis.
-* `{BUCKETNAME}`: Seu bucket Amazon S3, onde o CDP em tempo real depositará a exportação de dados.
-* `{FILEPATH}`: O caminho no diretório bucket do Amazon S3 no qual o CDP em tempo real depositará a exportação de dados.
+* `{BUCKETNAME}`: Seu bucket [!DNL Amazon] S3, onde o CDP em tempo real depositará a exportação de dados.
+* `{FILEPATH}`: O caminho no diretório de bucket [!DNL Amazon] S3 onde o CDP em tempo real depositará a exportação de dados.
 
 **Resposta**
 
@@ -465,7 +465,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ![Etapas de destino visão geral etapa 4](../images/destinations/flow-api-destinations-step4.png)
 
-Usando as IDs obtidas nas etapas anteriores, agora é possível criar um fluxo de dados entre seus dados de Experience Platform e o destino para o qual você ativará os dados. Pense nessa etapa como construindo o pipeline, através do qual os dados fluirão posteriormente, entre o Experience Platform e o destino desejado.
+Usando as IDs obtidas nas etapas anteriores, agora é possível criar um fluxo de dados entre seus [!DNL Experience Platform] dados e o destino para o qual você ativará os dados. Pense nessa etapa como construindo o pipeline, através do qual os dados fluirão posteriormente, entre [!DNL Experience Platform] o destino desejado.
 
 Para criar um fluxo de dados, execute uma solicitação POST, como mostrado abaixo, enquanto fornece os valores mencionados abaixo dentro da carga.
 

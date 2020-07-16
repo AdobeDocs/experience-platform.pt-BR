@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Atualizar um recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Atualizar um recurso
 
-Você pode modificar ou atualizar recursos no container locatário usando uma solicitação PATCH. O Registro de Schemas suporta todas as operações padrão de Patch JSON, incluindo adicionar, remover e substituir.
+Você pode modificar ou atualizar recursos no container locatário usando uma solicitação PATCH. O [!DNL Schema Registry] oferece suporte a todas as operações padrão de Patch JSON, incluindo adicionar, remover e substituir.
 
 Para obter mais informações sobre o Patch JSON, incluindo operações disponíveis, consulte a documentação [oficial do Patch](http://jsonpatch.com/)JSON.
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RESOURCE_TYPE}` | O tipo de recurso a ser atualizado da Biblioteca de Schemas. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | O tipo de recurso a ser atualizado do [!DNL Schema Library]. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | O `$id` URI codificado por URL ou `meta:altId` do recurso. |
 
 **Solicitação**
@@ -110,7 +110,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RESOURCE_TYPE}` | O tipo de recurso a ser atualizado da Biblioteca de Schemas. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | O tipo de recurso a ser atualizado do [!DNL Schema Library]. Os tipos válidos são `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | O `$id` URI codificado por URL ou `meta:altId` do recurso. |
 
 **Solicitação**

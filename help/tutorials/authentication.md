@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Autenticar e acessar APIs Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '850'
 ht-degree: 1%
 
 ---
 
 
-# Autenticar e acessar APIs de Experience Platform
+# Autenticar e acessar [!DNL Experience Platform] APIs
 
-Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor de Adobe Experience Platform para fazer chamadas para APIs de Experience Platform.
+Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor de Adobe Experience Platform para fazer chamadas para [!DNL Experience Platform] APIs.
 
 ## Autenticar para fazer chamadas de API
 
@@ -25,7 +25,7 @@ Este tutorial aborda as etapas de autenticação através da criação de um tok
 
 ## Pré-requisitos
 
-Para fazer chamadas para APIs de Experience Platform com êxito, é necessário o seguinte:
+Para realizar chamadas com êxito para [!DNL Experience Platform] APIs, é necessário o seguinte:
 
 * Uma organização IMS com acesso a Adobe Experience Platform
 * Uma conta de Adobe ID registrada
@@ -38,16 +38,16 @@ As seções a seguir percorrem as etapas para criar um Adobe ID e se tornar um d
 Se você não tiver um Adobe ID, poderá criar um usando as seguintes etapas:
 
 1. Ir para o console do desenvolvedor [Adobe](https://console.adobe.io)
-2. Clique em **criar uma nova conta**
+2. Clique em **[!UICONTROL criar uma nova conta]**
 3. Concluir o processo de inscrição
 
-## Torne-se um desenvolvedor e usuário para Experience Platform de uma organização
+## Torne-se um desenvolvedor e usuário para [!DNL Experience Platform] uma organização
 
 Antes de criar integrações em E/S da Adobe, sua conta deve ter permissões de desenvolvedor para um produto em uma organização IMS. Informações detalhadas sobre contas de desenvolvedor no Admin Console podem ser encontradas no documento [de](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) suporte para o gerenciamento de desenvolvedores.
 
 **Obter acesso do desenvolvedor**
 
-Entre em contato com um administrador da Admin Console em sua organização para adicioná-lo como desenvolvedor para um dos produtos da organização usando o [Admin Console](https://adminconsole.adobe.com/).
+Entre em contato com um [!DNL Admin Console] administrador em sua organização para adicioná-lo como desenvolvedor para um dos produtos da organização usando o [!DNL Admin Console](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -59,7 +59,7 @@ Depois que você for atribuído como desenvolvedor, terá privilégios de acesso
 
 **Obter acesso do usuário**
 
-O administrador da Admin Console também deve adicioná-lo ao produto como usuário.
+O [!DNL Admin Console] administrador também deve adicioná-lo ao produto como usuário.
 
 ![](images/authentication/assign-users.png)
 
@@ -71,7 +71,7 @@ Semelhante ao processo de adição de um desenvolvedor, o administrador deve atr
 
 >[!NOTE]
 >
->Se você estiver seguindo esse documento no guia [do desenvolvedor do](../privacy-service/api/getting-started.md)Privacy Service, agora é possível voltar para esse guia para gerar as credenciais de acesso exclusivas do Privacy Service.
+>Se você estiver seguindo esse documento no guia [do desenvolvedor do](../privacy-service/api/getting-started.md)Privacy Service, agora é possível voltar para esse guia para gerar as credenciais de acesso exclusivas para [!DNL Privacy Service].
 
 Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso a seguir:
 
@@ -79,7 +79,7 @@ Usando o Adobe Developer Console, você deve gerar as três credenciais de acess
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Sua `{IMS_ORG}` e `{API_KEY}` só precisam ser geradas uma vez e podem ser reutilizadas em futuras chamadas de API da Platform. No entanto, o seu `{ACCESS_TOKEN}` é temporário e precisa ser regenerado a cada 24 horas.
+Sua `{IMS_ORG}` e `{API_KEY}` só precisam ser geradas uma vez e podem ser reutilizadas em futuras chamadas [!DNL Platform] de API. No entanto, o seu `{ACCESS_TOKEN}` é temporário e precisa ser regenerado a cada 24 horas.
 
 As etapas são abordadas em detalhes abaixo.
 
@@ -95,9 +95,9 @@ A tela _Adicionar uma API_ é exibida. Clique no ícone do produto para Adobe Ex
 
 ![](images/authentication/add-platform-api.png)
 
-Depois de selecionar Experience Platform como a API a ser adicionada ao projeto, siga as etapas descritas no tutorial sobre como [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partir da etapa &quot;Configurar API&quot;) para concluir o processo.
+Depois de selecionar [!DNL Experience Platform] como a API a ser adicionada ao projeto, siga as etapas descritas no tutorial sobre como [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partir da etapa &quot;Configurar API&quot;) para concluir o processo.
 
-Depois que a API for adicionada ao projeto, a página de visão geral _do_ projeto exibirá as seguintes credenciais necessárias em todas as chamadas às APIs de Experience Platform:
+Depois que a API é adicionada ao projeto, a página de visão geral _do_ projeto exibe as seguintes credenciais necessárias em todas as chamadas para [!DNL Experience Platform] APIs:
 
 * `{API_KEY}` (ID do cliente)
 * `{IMS_ORG}` (ID da organização)
@@ -106,13 +106,13 @@ Depois que a API for adicionada ao projeto, a página de visão geral _do_ proje
 
 ### Autenticação para cada sessão
 
-A credencial final necessária que você deve coletar é sua `{ACCESS_TOKEN}`. Diferentemente dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando as APIs do Platform.
+A credencial final necessária que você deve coletar é sua `{ACCESS_TOKEN}`. Diferentemente dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando [!DNL Platform] APIs.
 
 Para gerar um novo `{ACCESS_TOKEN}`, siga as etapas para [gerar um token](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) JWT no guia de credenciais do Developer Console.
 
 ## Testar credenciais de acesso
 
-Depois de coletar as três credenciais necessárias, você pode tentar fazer a seguinte chamada de API. Esta chamada fará a lista de todas as classes do Modelo de Dados de Experiência (XDM) no `global` container do Registro do Schema:
+Depois de coletar as três credenciais necessárias, você pode tentar fazer a seguinte chamada de API. Esta chamada fará a lista de todas as classes [!DNL Experience Data Model] (XDM) no `global` container do Registro do Schema:
 
 **Formato da API**
 
@@ -159,6 +159,6 @@ Se sua resposta for semelhante à mostrada abaixo, suas credenciais serão váli
 
 ## Próximas etapas
 
-Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para APIs Platform. Agora você pode seguir com as chamadas de API de exemplo fornecidas na [documentação](../landing/documentation/overview.md).
+Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para [!DNL Platform] APIs. Agora você pode seguir com as chamadas de API de exemplo fornecidas na [documentação](../landing/documentation/overview.md).
 
-Além dos valores de autenticação que você coletou neste tutorial, muitas APIs da Platform também exigem um valor válido `{SANDBOX_NAME}` para ser fornecido como cabeçalho. Consulte a visão geral [das](../sandboxes/home.md) caixas de proteção para obter mais informações.
+Além dos valores de autenticação que você coletou neste tutorial, muitas [!DNL Platform] APIs também exigem um valor válido `{SANDBOX_NAME}` para ser fornecido como cabeçalho. Consulte a visão geral [das](../sandboxes/home.md) caixas de proteção para obter mais informações.

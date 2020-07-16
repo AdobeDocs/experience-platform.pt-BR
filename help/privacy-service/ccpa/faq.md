@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Perguntas frequentes sobre CCPA
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Perguntas frequentes sobre CCPA
 
-Este documento fornece respostas para perguntas frequentes sobre o California Consumer Protection Act (CCPA) e sua implementação na Adobe Experience Cloud.
+Este documento fornece respostas para perguntas frequentes sobre a CCPA [!DNL California Consumer Protection Act] (CCPA) e sua implementação na Adobe Experience Cloud.
 
 ## O que é CCPA?
 
-A California Consumer Privacy Act (CCPA) é a nova lei de privacidade da Califórnia que confere aos seus residentes novos direitos em relação às suas informações pessoais e impõe responsabilidades de proteção de dados a determinadas entidades que exercem negócios na Califórnia.
+A [!DNL California Consumer Privacy Act] (CCPA) é a nova lei de privacidade da Califórnia que confere aos seus residentes novos direitos em relação às suas informações pessoais, e impõe responsabilidades de proteção de dados a determinadas entidades que fazem negócios na Califórnia.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ A informação pessoal é a informação que &quot;identifica, relaciona, descre
 
 ## Quais tipos de informações pessoais ou identificadores usados na Adobe Experience Cloud estão sujeitos a esses novos requisitos?
 
-Os seguintes identificadores são comumente usados em aplicativos de Experience Cloud e podem estar sujeitos aos requisitos de CCPA:
+Os seguintes identificadores são comumente usados em [!DNL Experience Cloud] aplicativos e podem estar sujeitos aos requisitos do CCPA:
 
 - Nome
 - Endereço postal
@@ -48,9 +48,9 @@ As informações pessoais também podem incluir a Internet ou outras informaçõ
 - Histórico de pesquisa
 - Informações relacionadas à interação do consumidor com um site, aplicativo ou anúncio
 
-Embora o CCPA cubra um grande conjunto de informações pessoais, os termos padrão do contrato da Adobe determinam que as informações pessoais confidenciais (como SSN, informações de licença do motorista, informações de conta financeira e dados biométricos) sejam geralmente proibidas de importar e usar em aplicativos Experience Cloud.
+Embora o CCPA cubra um grande conjunto de informações pessoais, os termos padrão do contrato da Adobe determinam que informações pessoais confidenciais (como SSN, informações sobre a licença do motorista, informações sobre a conta financeira e dados biométricos) sejam geralmente proibidas de importar e usar em [!DNL Experience Cloud] aplicativos.
 
-## Como as diferentes funções e responsabilidades do CCPA se aplicam ao Experience Cloud?
+## Como se aplicam as diferentes funções e responsabilidades da CCPA [!DNL Experience Cloud]?
 
 Conforme definido pelo CCPA, as seguintes funções se aplicam à Adobe e a seus clientes:
 
@@ -75,7 +75,7 @@ Os serviços da Adobe podem ser usados para permitir o compartilhamento de deter
 
 ## Como posso suportar os requisitos de privacidade do consumidor na CCPA se eu mantiver certos tipos de dados que são cobertos pelos requisitos?
 
-Depois que você tiver tomado as etapas necessárias para autenticar os clientes da CA, o Adobe Experience Platform Privacy Service permitirá que você envie solicitações de privacidade do consumidor para aplicativos Experience Cloud compatíveis. Consulte a visão geral [do](../home.md) Privacy Service para obter mais informações. Para obter informações sobre como seus aplicativos Experience Cloud específicos podem atender às solicitações de privacidade, consulte o guia sobre aplicativos [de](../experience-cloud-apps.md)Privacy Service e Experience Cloud.
+Depois que você tiver tomado as etapas necessárias para autenticar os consumidores da CA, o Adobe Experience Platform [!DNL Privacy Service] permitirá que você envie solicitações de privacidade do consumidor para [!DNL Experience Cloud] aplicativos compatíveis. Consulte a visão geral [do](../home.md) Privacy Service para obter mais informações. Para obter informações sobre como seus aplicativos específicos podem atender às solicitações de privacidade, consulte o guia sobre aplicativos [!DNL Experience Cloud] Privacy Service e Experience Cloud [](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

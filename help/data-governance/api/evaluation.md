@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Avaliação das políticas
 
-Depois que as ações de marketing forem criadas e as políticas forem definidas, você poderá usar a API do Serviço de Política para avaliar se alguma política é violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
+Depois que as ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a [!DNL Policy Service] API para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas assumem a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 
 Por padrão, **somente as políticas cujo status está definido como &quot;ATIVADO&quot; participam da avaliação**, no entanto, você pode usar o parâmetro de query `?includeDraft=true` para incluir as políticas &quot;RASCUNHO&quot; na avaliação.
 

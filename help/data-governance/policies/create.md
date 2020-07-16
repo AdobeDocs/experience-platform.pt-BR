@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar uma política de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Criar uma política de uso de dados na API
 
-O DULE (Data Usage Labeling and Implacation, Rotulação e Aplicação de Uso de Dados) é o mecanismo principal do Adobe Experience Platform Data Governance. A API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE permite que você crie e gerencie políticas DULE para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos DULE.
+O DULE (Data Usage Labeling and Implementation, Rotulação e Aplicação de Uso de Dados) é o mecanismo principal do Adobe Experience Platform [!DNL Data Governance]. A API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE permite que você crie e gerencie políticas DULE para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos DULE.
 
 Este documento fornece um tutorial passo a passo para a criação de uma política DULE usando a [!DNL Policy Service] API. Para obter um guia mais abrangente das diferentes operações disponíveis na API, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)política.
 
@@ -22,9 +22,9 @@ Este documento fornece um tutorial passo a passo para a criação de uma políti
 
 Este tutorial requer um entendimento prático dos seguintes conceitos chave envolvidos na criação e avaliação de políticas DULE:
 
-* [Controle](../home.md)de dados: A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
+* [!DNL Data Governance](../home.md): A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
 * [Rótulos](../labels/overview.md)de uso de dados: Os rótulos de uso de dados são aplicados aos campos de dados XDM, especificando restrições para como esses dados podem ser acessados.
-* [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 * [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) [!DNL Policy Service] desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API DULE, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.

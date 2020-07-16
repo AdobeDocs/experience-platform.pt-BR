@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
+source-git-commit: 9fbd30adcb29c8925f02745be924477eb4e3fe2a
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '681'
 ht-degree: 4%
 
 ---
@@ -73,7 +73,7 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte a API e interface para excluir fluxos de dados | Os fluxos de dados que foram feitos com erros ou se tornaram desnecessários agora podem ser excluídos por meio de APIs ou usando a interface do usuário. |
+| Suporte de interface para exclusão de fluxos de dados | Os fluxos de dados que foram feitos com erros ou se tornaram desnecessários agora podem ser excluídos por meio da interface do usuário. |
 | Suporte a API e interface para ingestão única | A ingestão única para fluxos de dados, onde somente a data do start é fornecida e nenhuma ingestão futura está programada, agora pode ser executada por meio de APIs ou por meio da interface do usuário. |
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.

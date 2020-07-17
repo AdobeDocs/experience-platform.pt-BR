@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Atributos calculados - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2404'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ Este guia o ajudará a entender melhor os atributos calculados no Adobe Experien
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Noções básicas sobre atributos calculados
 
-O Adobe Experience Platform permite importar e mesclar facilmente dados de várias fontes para gerar Perfis de clientes em tempo real. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
+O Adobe Experience Platform permite importar e unir facilmente dados de várias fontes para gerar [!DNL Real-time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
 
-Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão rápida desses dados, a Platform permite que você crie atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
+Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão desses dados rapidamente, [!DNL Platform] permite criar atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
 Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As Expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de evento e perfil recebidos ou evento recebido, dados de perfil e eventos históricos.
 
@@ -39,9 +39,9 @@ Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&qu
 
 Casos de uso para atributos calculados podem variar de cálculos simples a referências muito complexas. Estes são alguns exemplos de casos de uso para atributos calculados:
 
-1. **Porcentagens:** Um atributo calculado simples pode incluir a captura de dois campos numéricos em um registro e a divisão deles para criar uma porcentagem. Por exemplo, você pode pegar o número total de emails enviados para um indivíduo e dividi-lo pelo número de emails que o indivíduo abre. Olhar para o campo de atributo calculado resultante mostraria rapidamente a porcentagem do total de emails abertos pelo indivíduo.
-1. **Uso do aplicativo:** Outro exemplo inclui a capacidade de agregação do número de vezes que um usuário abre seu aplicativo. Rastreando o número total de aberturas do aplicativo, com base em eventos individuais abertos, você pode fornecer ofertas ou mensagens especiais aos usuários em seus 100 anos abertos, encorajando um envolvimento mais profundo com a sua marca.
-1. **Valores da duração:** A coleta de totais em execução, como um valor de compra vitalício para um cliente, pode ser muito difícil. Isso requer a atualização do total histórico sempre que ocorrer um novo evento de compra. Um atributo calculado permite que você faça isso com muito mais facilidade, mantendo o valor do tempo de vida em um único campo que é atualizado automaticamente após cada evento de compra bem-sucedido relacionado ao cliente.
+1. **[!UICONTROL Porcentagens]:**Um atributo calculado simples pode incluir a captura de dois campos numéricos em um registro e a divisão deles para criar uma porcentagem. Por exemplo, você pode pegar o número total de emails enviados para um indivíduo e dividi-lo pelo número de emails que o indivíduo abre. Olhar para o campo de atributo calculado resultante mostraria rapidamente a porcentagem do total de emails abertos pelo indivíduo.
+1. **[!UICONTROL Uso]do aplicativo:**Outro exemplo inclui a capacidade de agregação do número de vezes que um usuário abre seu aplicativo. Rastreando o número total de aberturas do aplicativo, com base em eventos individuais abertos, você pode fornecer ofertas ou mensagens especiais aos usuários em seus 100 anos abertos, encorajando um envolvimento mais profundo com a sua marca.
+1. **[!UICONTROL Valores]de duração:**A coleta de totais em execução, como um valor de compra vitalício para um cliente, pode ser muito difícil. Isso requer a atualização do total histórico sempre que ocorrer um novo evento de compra. Um atributo calculado permite que você faça isso com muito mais facilidade, mantendo o valor do tempo de vida em um único campo que é atualizado automaticamente após cada evento de compra bem-sucedido relacionado ao cliente.
 
 ## Configurar um atributo calculado
 
@@ -50,65 +50,65 @@ Para configurar um atributo calculado, primeiro é necessário identificar o cam
 >[!NOTE]
 >Atributos calculados não podem ser adicionados a campos em combinações definidas pela Adobe. O campo deve estar dentro da `tenant` namespace, o que significa que deve ser um campo definido e adicionado a um schema.
 
-Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para o Perfil e aparecer como parte do schema da união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões habilitados para o Perfil, consulte a seção do guia do desenvolvedor do Registro do Schema sobre como [habilitar um schema para Perfil e exibir schemas](../../xdm/api/getting-started.md)de união. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
+Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de uniões. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
 
-O fluxo de trabalho neste tutorial usa um schema habilitado para Perfis e segue as etapas para definir uma nova combinação que contém o campo de atributo calculado e garante que seja a namespace correta. Se você já tiver um campo que esteja na namespace correta dentro de um schema habilitado para Perfis, poderá prosseguir diretamente para a etapa de [criação de um atributo](#create-a-computed-attribute)calculado.
+O fluxo de trabalho neste tutorial usa um schema [!DNL Profile]habilitado e segue as etapas para definir uma nova combinação que contém o campo de atributo calculado e garante que seja a namespace correta. Se você já tiver um campo que esteja na namespace correta dentro de um schema habilitado para Perfis, poderá prosseguir diretamente para a etapa de [criação de um atributo](#create-a-computed-attribute)calculado.
 
 ### Visualização de um schema
 
-As etapas a seguir usam a interface do usuário do Adobe Experience Platform para localizar um schema, adicionar uma combinação e definir um campo. Se você preferir usar a API do Registro do Schema, consulte o guia [do desenvolvedor do Registro do](../../xdm/api/getting-started.md) Schema para obter as etapas sobre como criar uma combinação, adicionar uma mistura a um schema e habilitar um schema para uso com o Perfil do Cliente em tempo real.
+As etapas a seguir usam a interface do usuário do Adobe Experience Platform para localizar um schema, adicionar uma combinação e definir um campo. Se você preferir usar a [!DNL Schema Registry] API, consulte o guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md) Schemas para obter as etapas sobre como criar uma combinação, adicionar uma mistura a um schema e habilitar um schema para uso com [!DNL Real-time Customer Profile].
 
-Na interface do usuário, clique em **Schemas** no painel esquerdo e use a barra de pesquisa na guia *Procurar* para encontrar rapidamente o schema que deseja atualizar.
+Na interface do usuário, clique em **[!UICONTROL Schemas]** no painel esquerdo e use a barra de pesquisa na guia *[!UICONTROL Procurar]* para encontrar rapidamente o schema que deseja atualizar.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Depois de localizar o schema, clique no seu nome para abrir o Editor de Schemas, onde você pode fazer edições no schema.
+Depois de localizar o schema, clique em seu nome para abrir o local [!DNL Schema Editor] onde você pode fazer edições ao schema.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
 ### Criar uma mistura
 
-Para criar uma nova mistura, clique em **Adicionar** ao lado de *Misturas* na seção *Composição* no lado esquerdo do editor. Isso abre a caixa de diálogo **Adicionar mixagem** , onde você pode ver as misturas existentes. Clique no botão de opção para **Criar nova combinação** para definir sua nova combinação.
+Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de *Misturas* na seção *[!UICONTROL Composição]* no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova combinação]** para definir sua nova combinação.
 
-Dê um nome e uma descrição ao mixin e clique em **Adicionar mixin** quando concluído.
+Dê um nome e uma descrição ao mixin e clique em **[!UICONTROL Adicionar mixin]** quando concluído.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
 ### Adicionar um campo de atributo calculado ao schema
 
-A sua nova mistura deve aparecer agora na seção *Misturas* em *Composição*. Clique no nome do mixin e vários botões de campo **** Adicionar aparecerão na seção *Estrutura* do editor.
+A sua nova mistura deve aparecer agora na seção *[!UICONTROL Misturas]* em *[!UICONTROL Composição]*. Clique no nome do mixin e vários botões de campo **** Adicionar aparecerão na seção *[!UICONTROL Estrutura]* do editor.
 
-Selecione **Adicionar campo** ao lado do nome do schema para adicionar um campo de nível superior ou selecione para adicionar o campo em qualquer lugar no schema que você preferir.
+Selecione **[!UICONTROL Adicionar campo]** ao lado do nome do schema para adicionar um campo de nível superior ou selecione para adicionar o campo em qualquer lugar no schema que você preferir.
 
-Depois de clicar em **Adicionar campo** , um novo objeto é aberto, nomeado para sua ID de locatário, mostrando que o campo está na namespace correta. Dentro desse objeto, um campo *Novo* é exibido. Isso se o campo no qual você definirá o atributo calculado.
+Depois de clicar em **[!UICONTROL Adicionar campo]** , um novo objeto é aberto, nomeado para sua ID de locatário, mostrando que o campo está na namespace correta. Dentro desse objeto, um campo *[!UICONTROL Novo]* é exibido. Isso se o campo no qual você definirá o atributo calculado.
 
 ![](../images/computed-attributes/New-field.png)
 
 ### Configurar o campo
 
-Usando a seção Propriedades *de* campo no lado direito do editor, forneça as informações necessárias para o novo campo, incluindo seu nome, nome de exibição e tipo.
+Usando a seção Propriedades *[!UICONTROL de]* campo no lado direito do editor, forneça as informações necessárias para o novo campo, incluindo seu nome, nome de exibição e tipo.
 
 >[!NOTE]
 >O tipo do campo deve ser do mesmo tipo que o valor do atributo calculado. Por exemplo, se o valor do atributo calculado for uma string, o campo que está sendo definido no schema deverá ser uma string.
 
-Quando terminar, clique em **Aplicar** e o nome do campo, bem como seu tipo, aparecerão na seção *Estrutura* do editor.
+Quando terminar, clique em **[!UICONTROL Aplicar]** e o nome do campo, bem como seu tipo, aparecerão na seção *[!UICONTROL Estrutura]* do editor.
 
 ![](../images/computed-attributes/Apply.png)
 
-### Ativar schema para Perfil
+### Ativar schema para [!DNL Profile]
 
-Antes de continuar, verifique se o schema foi ativado para o Perfil. Clique no nome do schema na seção *Estrutura* do editor para que a guia Propriedades *do* Schema seja exibida. Se o controle deslizante do **Perfil** estiver azul, o schema foi ativado para Perfil.
+Antes de continuar, verifique se o schema foi ativado para [!DNL Profile]. Clique no nome do schema na seção *[!UICONTROL Estrutura]* do editor para que a guia Propriedades *[!UICONTROL do]* Schema seja exibida. Se o controle deslizante do **[!UICONTROL Perfil]** estiver azul, o schema foi ativado para [!DNL Profile].
 
 >[!NOTE]
->Não é possível desfazer a habilitação de um schema para Perfil. Portanto, se você clicar no controle deslizante depois que ele for habilitado, não será necessário arriscar desabilitá-lo.
+>A ativação de um schema para [!DNL Profile] não pode ser desfeita, portanto, se você clicar no controle deslizante depois que ele for ativado, não será necessário arriscar desabilitá-lo.
 
 ![](../images/computed-attributes/Profile.png)
 
-Agora você pode clicar em **Salvar** para salvar o schema atualizado e continuar com o restante do tutorial usando a API.
+Agora você pode clicar em **[!UICONTROL Salvar]** para salvar o schema atualizado e continuar com o restante do tutorial usando a API.
 
 ### Criar um atributo calculado {#create-a-computed-attribute}
 
-Com o campo de atributo calculado identificado e a confirmação de que o schema está ativado para o Perfil, agora é possível configurar um atributo calculado.
+Com o campo de atributo calculado identificado e a confirmação de que o schema está ativado para [!DNL Profile], agora é possível configurar um atributo calculado.
 
 Comece fazendo uma solicitação POST para o `/config/computedAttributes` ponto de extremidade com um corpo de solicitação contendo os detalhes do atributo calculado que você deseja criar.
 
@@ -151,7 +151,7 @@ curl -X POST \
 | `path` | O caminho para o campo que contém o atributo calculado. Esse caminho é encontrado no `properties` atributo do schema e NÃO deve incluir o nome do campo no caminho. Ao gravar o caminho, omita os vários níveis de `properties` atributos. |
 | `{TENANT_ID}` | Se você não estiver familiarizado com sua ID de locatário, consulte as etapas para localizar sua ID de locatário no guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md#know-your-tenant_id)Schemas. |
 | `description` | Uma descrição do atributo calculado. Isso é especialmente útil depois que vários atributos calculados forem definidos, pois ajudará outras pessoas na organização IMS a determinar o atributo calculado correto a ser usado. |
-| `expression.value` | Uma expressão válida de Linguagem de Query de Perfil (PQL). Para obter mais informações sobre o PQL e links para query suportados, leia a visão geral [do](../../segmentation/pql/overview.md)PQL. |
+| `expression.value` | Uma expressão válida [!DNL Profile Query Language] (PQL). Para obter mais informações sobre o PQL e links para query suportados, leia a visão geral [do](../../segmentation/pql/overview.md)PQL. |
 | `schema.name` | A classe na qual o schema que contém o campo de atributo calculado se baseia. Exemplo: `_xdm.context.experienceevent` para um schema com base na classe XDM ExperienceEvent. |
 
 **Resposta**
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Uma expressão válida de Linguagem de Query de Perfil (PQL). Para obter mais informações sobre o PQL e links para query suportados, leia a visão geral [do](../../segmentation/pql/overview.md)PQL. |
+| `{NEW_EXPRESSION_VALUE}` | Uma expressão válida [!DNL Profile Query Language] (PQL). Para obter mais informações sobre o PQL e links para query suportados, leia a visão geral [do](../../segmentation/pql/overview.md)PQL. |
 
 **Resposta**
 

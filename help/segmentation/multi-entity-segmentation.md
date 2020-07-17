@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentação de várias entidades
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -34,14 +34,14 @@ A definição de relações com a estrutura dos schemas do Modelo de Dados de Ex
 
 Esse processo pode ser feito usando a API do Registro do Schema ou o Editor do Schema. Para obter um guia detalhado sobre como usar a API para definir uma relação entre dois schemas, leia [o tutorial sobre como definir uma relação entre dois schemas usando a API](../xdm/tutorials/relationship-api.md). Para obter um guia detalhado sobre como usar o Editor de Schemas para definir uma relação entre dois schemas, leia [o tutorial sobre como definir uma relação entre dois schemas usando o Editor](../xdm/tutorials/relationship-ui.md)de Schemas.
 
-## Como usar a criação de segmentos que usam relações XDM
+## Como criar segmentos que usam relações XDM
 
-Depois de definir seus relacionamentos XDM, você pode usar as APIs de Perfil do cliente em tempo real para criar um segmento.
+Depois de definir seus relacionamentos XDM, você pode usar a API do Serviço de segmentação para criar um segmento.
 
-Esse processo pode ser feito usando a API de Perfil do cliente em tempo real ou o Construtor de segmentos. Para obter um guia detalhado sobre como usar a API para criar um segmento, leia [o tutorial sobre como criar um segmento usando a API](./tutorials/create-a-segment.md)de Perfil do cliente em tempo real. Para obter um guia detalhado sobre como usar o Construtor de segmentos para criar um segmento, leia [o guia](./ui/overview.md)do usuário do Construtor de segmentos.
+Esse processo pode ser feito usando a API de segmentação ou a interface do usuário do Construtor de segmentos. Para obter um guia detalhado sobre como usar a API para criar um segmento, leia [o tutorial sobre como criar um segmento usando a API](./tutorials/create-a-segment.md)de segmentação. Para obter um guia detalhado sobre como usar o Construtor de segmentos para criar um segmento, leia [o guia](./ui/overview.md)do usuário do Construtor de segmentos.
 
 ## Como avaliar e acessar segmentos para segmentos multientidades
 
-Depois de criar um segmento, você pode avaliar e acessar os resultados do segmento usando as APIs de Perfil do cliente em tempo real. A avaliação de um segmento multientidade é muito semelhante à avaliação de um segmento regular.
+Depois de criar um segmento, você pode avaliar e acessar os resultados do segmento usando a [!DNL Segmentation Service] API. A avaliação de um segmento multientidade é muito semelhante à avaliação de um segmento regular.
 
-Esse processo só pode ser feito usando a API de Perfil do cliente em tempo real. Para obter um guia detalhado sobre como usar a API para avaliar e acessar segmentos, leia [o tutorial sobre como avaliar e acessar segmentos](./tutorials/evaluate-a-segment.md).
+Esse processo só pode ser feito usando a [!DNL Segmentation Service] API. Para obter um guia detalhado sobre como usar a API para avaliar e acessar segmentos, leia o tutorial sobre como [avaliar e acessar segmentos](./tutorials/evaluate-a-segment.md).

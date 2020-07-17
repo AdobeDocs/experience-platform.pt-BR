@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entidades - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Ponto de extremidade Entidades (acesso ao Perfil)
 
-O Adobe Experience Platform permite acessar os dados do Perfil do cliente em tempo real usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário do Platform, consulte o guia [do usuário do](../ui/user-guide.md)Perfil.
+O Adobe Experience Platform permite acessar [!DNL Real-time Customer Profile] dados usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário, consulte o guia [!DNL Platform] do usuário do [](../ui/user-guide.md)Perfil.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Acessar dados do perfil por identidade
 
-Você pode acessar uma entidade de Perfil fazendo uma solicitação GET ao ponto de `/access/entities` extremidade e fornecendo a identidade da entidade como uma série de parâmetros de query. Essa identidade consiste em um valor de ID (`entityId`) e a namespace de identidade (`entityIdNS`).
+Você pode acessar uma [!DNL Profile] entidade fazendo uma solicitação GET ao ponto de `/access/entities` extremidade e fornecendo a identidade da entidade como uma série de parâmetros de query. Essa identidade consiste em um valor de ID (`entityId`) e a namespace de identidade (`entityIdNS`).
 
 Os parâmetros de Query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
@@ -774,7 +774,7 @@ Usando essa carga no corpo da solicitação, você pode executar uma solicitaç�
 
 ## eventos de série de tempo de acesso em várias entidades do schema
 
-Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o guia do desenvolvedor da API do Registro do Schema, guia do ponto de extremidade [dos descritores](../../xdm/api/descriptors.md).
+Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o guia do desenvolvedor da [!DNL Schema Registry] API [descritores do endpoint guide](../../xdm/api/descriptors.md).
 
 É possível incluir parâmetros de query no caminho da solicitação para especificar quais dados serão acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
@@ -884,11 +884,11 @@ Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver
 
 ## Próximas etapas
 
-Ao seguir este guia, você acessou com êxito os campos de dados, perfis e dados de séries de tempo do Perfil do cliente em tempo real. Para saber como acessar outros recursos de dados armazenados no Platform, consulte a visão geral [do Acesso aos](../../data-access/home.md)dados.
+Ao seguir este guia, você acessa com êxito os campos de [!DNL Real-time Customer Profile] dados, perfis e dados das séries de tempo. Para saber como acessar outros recursos de dados armazenados em [!DNL Platform], consulte a visão geral [do Acesso a](../../data-access/home.md)dados.
 
 ## Apêndice {#appendix}
 
-A seção a seguir fornece informações complementares sobre como acessar dados do Perfil usando a API.
+A seção a seguir fornece informações complementares sobre como acessar [!DNL Profile] dados usando a API.
 
 ### Query parameters {#query-parameters}
 

@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Guia do desenvolvedor da API de segmentação
+title: Guia de ponto de extremidade de pesquisa de segmento
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
 
 
-# Pesquisa de segmento
+# Guia de ponto de extremidade de Pesquisa de segmentos
 
-A Pesquisa de segmento é usada para pesquisar e indexar campos configuráveis contidos em várias fontes de dados e retorná-los em tempo quase real.
+A Pesquisa de segmento é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real.
 
 Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmentos e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 
 ## Introdução
 
-Os pontos finais da API usados neste guia fazem parte da API de segmentação. Antes de continuar, consulte o guia [do desenvolvedor de](getting-started.md)Segmentação.
+Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte o guia [de](./getting-started.md) introdução para obter informações importantes que você precisa saber para fazer chamadas à API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
-Em particular, a seção [de](getting-started.md) introdução do guia do desenvolvedor de Segmentação inclui links para tópicos relacionados, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para a API da plataforma de experiência.
-
-Além dos cabeçalhos necessários descritos na seção de introdução, todas as solicitações para a API de pesquisa de segmento exigem o seguinte cabeçalho adicional:
+Além dos cabeçalhos necessários descritos na seção de introdução, todas as solicitações ao terminal de Pesquisa de segmento exigem o seguinte cabeçalho adicional:
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,11 +221,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações estruturai
 
 ## Próximas etapas
 
-Depois de ler este guia, agora você tem uma melhor compreensão de como a Pesquisa de segmentos funciona. Para obter mais informações sobre Segmentação, leia a visão geral [da](../home.md)Segmentação.
+Depois de ler este guia, agora você tem uma melhor compreensão de como a Pesquisa de segmentos funciona.
 
 ## Apêndice {#appendix}
 
-As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. Os query de pesquisa são escritos da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para pesquisar por um segmento chamado AAM ou Plataforma, você usaria o seguinte query de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
+As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. Os query de pesquisa são escritos da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para pesquisar por um segmento chamado AAM ou Platform, você usaria o seguinte query de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como o exemplo mostrado acima.
 

@@ -4,19 +4,19 @@ solution: Adobe Experience Platform
 title: Configurar um conjunto de dados para Perfil e serviço de identidade usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1020'
 ht-degree: 1%
 
 ---
 
 
-# Configurar um conjunto de dados para Perfil e serviço de identidade usando APIs
+# Configurar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service] usando APIs
 
-Este tutorial aborda o processo de habilitação de um conjunto de dados para uso no Perfil do cliente em tempo real e no Serviço de identidade, detalhado nas seguintes etapas:
+Este tutorial aborda o processo de ativação de um conjunto de dados para uso em [!DNL Real-time Customer Profile] e [!DNL Identity Service], detalhado nas seguintes etapas:
 
-1. Ative um conjunto de dados para uso no Perfil do cliente em tempo real, usando uma das duas opções:
+1. Ative um conjunto de dados para uso em [!DNL Real-time Customer Profile], usando uma das duas opções:
    - [Criar um novo conjunto de dados](#create-a-dataset-enabled-for-profile-and-identity)
    - [Configurar um conjunto de dados existente](#configure-an-existing-dataset)
 1. [Inserir dados no conjunto de dados](#ingest-data-into-the-dataset)
@@ -25,22 +25,22 @@ Este tutorial aborda o processo de habilitação de um conjunto de dados para us
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para Perfis. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços da Platform relacionados:
+Este tutorial requer uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados [!DNL Profile]habilitados. Antes de iniciar este tutorial, reveja a documentação dos seguintes [!DNL Platform] serviços relacionados:
 
-- [Perfil](../home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-- [Serviço](../../identity-service/home.md)de identidade: Habilita o Perfil do cliente em tempo real, fazendo a ponte entre identidades de diferentes fontes de dados que estão sendo ingeridas no Platform.
-- [Serviço](../../catalog/home.md)de catálogo: Uma RESTful API que permite criar conjuntos de dados e configurá-los para o Perfil do cliente em tempo real e o Serviço de identidade.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [!DNL Real-time Customer Profile](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [!DNL Identity Service](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de fontes de dados diferentes em [!DNL Platform]que estão sendo ingeridas.
+- [!DNL Catalog Service](../../catalog/home.md): Uma API RESTful que permite criar conjuntos de dados e configurá-los para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -50,13 +50,13 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 - Tipo de conteúdo: application/json
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs da Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá. Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá. Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-## Criar um conjunto de dados habilitado para Perfil e identidade {#create-a-dataset-enabled-for-profile-and-identity}
+## Criar um conjunto de dados habilitado para [!DNL Profile] e [!DNL Identity] {#create-a-dataset-enabled-for-profile-and-identity}
 
-Você pode ativar um conjunto de dados para o Perfil do cliente em tempo real e o Serviço de identificação imediatamente após a criação ou em qualquer momento após a criação do conjunto de dados. Se você deseja ativar um conjunto de dados que já foi criado, siga as etapas para [configurar um conjunto de dados](#configure-an-existing-dataset) existente encontrado posteriormente neste documento. Para criar um novo conjunto de dados, é necessário saber a ID de um schema XDM existente habilitado para o Perfil do cliente em tempo real. Para obter informações sobre como procurar ou criar um schema habilitado para Perfis, consulte o tutorial sobre como [criar um schema usando a API](../../xdm/tutorials/create-schema-api.md)do Registro do Schema. A chamada a seguir para a API de catálogo ativa um conjunto de dados para o Perfil e o Serviço de identidade.
+Você pode ativar um conjunto de dados para [!DNL Real-time Customer Profile] e imediatamente [!DNL Identity Service] após a criação ou em qualquer ponto depois que o conjunto de dados for criado. Se você deseja ativar um conjunto de dados que já foi criado, siga as etapas para [configurar um conjunto de dados](#configure-an-existing-dataset) existente encontrado posteriormente neste documento. Para criar um novo conjunto de dados, é necessário saber a ID de um schema XDM existente habilitado para o Perfil do cliente em tempo real. Para obter informações sobre como procurar ou criar um schema habilitado para Perfis, consulte o tutorial sobre como [criar um schema usando a API](../../xdm/tutorials/create-schema-api.md)do Registro do Schema. A chamada a seguir para a API [!DNL Catalog] ativa um conjunto de dados para [!DNL Profile] e [!DNL Identity Service].
 
 **Formato da API**
 
@@ -66,7 +66,7 @@ POST /dataSets
 
 **Solicitação**
 
-Ao incluir `unifiedProfile` e `unifiedIdentity` em `tags` no corpo da solicitação, o conjunto de dados será imediatamente ativado para o Perfil e o Serviço de identidade, respectivamente. Os valores dessas tags devem ser uma matriz que contenha a string `"enabled:true"`.
+Ao incluir `unifiedProfile` e `unifiedIdentity` em `tags` no corpo da solicitação, o conjunto de dados será imediatamente ativado para [!DNL Profile] e [!DNL Identity Service], respectivamente. Os valores dessas tags devem ser uma matriz que contenha a string `"enabled:true"`.
 
 ```shell
 curl -X POST \
@@ -96,8 +96,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 |---|---|
-| `schemaRef.id` | A ID do schema habilitado para o Perfil em que o conjunto de dados será baseado. |
-| `{TENANT_ID}` | A namespace no Registro do Schema que contém recursos pertencentes à sua Organização IMS. Consulte a seção [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) do guia do desenvolvedor do Registro do Schema para obter mais informações. |
+| `schemaRef.id` | A ID do schema [!DNL Profile]-ativado no qual o conjunto de dados será baseado. |
+| `{TENANT_ID}` | A namespace dentro da qual [!DNL Schema Registry] contém recursos pertencentes à sua Organização IMS. Consulte a seção [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) do guia do [!DNL Schema Registry] desenvolvedor para obter mais informações. |
 
 **Resposta**
 
@@ -111,11 +111,11 @@ Uma resposta bem-sucedida mostra uma matriz que contém a ID do conjunto de dado
 
 ## Configurar um conjunto de dados existente {#configure-an-existing-dataset}
 
-As etapas a seguir abordam como ativar um conjunto de dados criado anteriormente para o Perfil do cliente em tempo real e o Serviço de identidade. Se você já tiver criado um conjunto de dados habilitado para Perfis, siga para as etapas para [assimilar dados](#ingest-data-into-the-dataset).
+As etapas a seguir abordam como ativar um conjunto de dados criado anteriormente para [!DNL Real-time Customer Profile] e [!DNL Identity Service]. Se você já tiver criado um conjunto de dados habilitado para Perfis, siga para as etapas para [assimilar dados](#ingest-data-into-the-dataset).
 
 ### Verificar se o conjunto de dados está ativado {#check-if-the-dataset-is-enabled}
 
-Usando a API Catálogo, você pode inspecionar um conjunto de dados existente para determinar se ele está habilitado para uso no Perfil do cliente em tempo real e no Serviço de identidade. A chamada a seguir recupera os detalhes de um conjunto de dados por ID.
+Usando a [!DNL Catalog] API, você pode inspecionar um conjunto de dados existente para determinar se ele está habilitado para uso em [!DNL Real-time Customer Profile] e [!DNL Identity Service]. A chamada a seguir recupera os detalhes de um conjunto de dados por ID.
 
 **Formato da API**
 
@@ -195,11 +195,11 @@ curl -X GET \
 }
 ```
 
-Sob a `tags` propriedade, você pode ver isso `unifiedProfile` e `unifiedIdentity` ambos estão presentes com o valor `enabled:true`. Portanto, o Perfil do cliente em tempo real e o Serviço de identidade estão habilitados para esse conjunto de dados, respectivamente.
+Sob a `tags` propriedade, você pode ver isso `unifiedProfile` e `unifiedIdentity` ambos estão presentes com o valor `enabled:true`. Portanto, [!DNL Real-time Customer Profile] e [!DNL Identity Service] são ativados para esse conjunto de dados, respectivamente.
 
 ### Ativar o conjunto de dados {#enable-the-dataset}
 
-Se o conjunto de dados existente não tiver sido ativado para o Perfil ou o Serviço de identidade, é possível ativá-lo fazendo uma solicitação PATCH usando a ID do conjunto de dados.
+Se o conjunto de dados existente não tiver sido ativado para [!DNL Profile] ou [!DNL Identity Service], você poderá ativá-lo fazendo uma solicitação PATCH usando a ID do conjunto de dados.
 
 **Formato da API**
 
@@ -241,14 +241,14 @@ O corpo da solicitação inclui uma `tags` propriedade, que contém duas subprop
 
 ## Inserir dados no conjunto de dados {#ingest-data-into-the-dataset}
 
-O Perfil do cliente em tempo real e o Serviço de identidade consomem dados XDM à medida que são ingeridos em um conjunto de dados. Para obter instruções sobre como carregar dados em um conjunto de dados, consulte o tutorial sobre como [criar um conjunto de dados usando APIs](../../catalog/datasets/create.md). Ao planejar quais dados serão enviados para seu conjunto de dados habilitado para Perfis, considere as seguintes práticas recomendadas:
+Os dados XDM são [!DNL Real-time Customer Profile] e [!DNL Identity Service] consomem conforme são ingeridos em um conjunto de dados. Para obter instruções sobre como carregar dados em um conjunto de dados, consulte o tutorial sobre como [criar um conjunto de dados usando APIs](../../catalog/datasets/create.md). Ao planejar quais dados serão enviados para seu conjunto de dados [!DNL Profile]habilitado, considere as seguintes práticas recomendadas:
 
 - Inclua todos os dados que você deseja usar como critérios de segmento de audiência.
-- Inclua quantos identificadores você puder determinar a partir dos dados do perfil para maximizar seu gráfico de identidade. Isso permite que o Serviço de identidade costure identidades em conjuntos de dados de forma mais eficaz.
+- Inclua quantos identificadores você puder determinar a partir dos dados do perfil para maximizar seu gráfico de identidade. Isso permite [!DNL Identity Service] costurar identidades em conjuntos de dados de forma mais eficaz.
 
-## Confirmar a assimilação de dados pelo Perfil do cliente em tempo real {#confirm-data-ingest-by-real-time-customer-profile}
+## Confirmar a assimilação de dados por [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
 
-Ao fazer upload de dados para um novo conjunto de dados pela primeira vez, ou como parte de um processo que envolve um novo ETL ou fonte de dados, é recomendável verificar cuidadosamente os dados para garantir que eles tenham sido carregados conforme esperado. Usando a API de acesso de Perfil do cliente em tempo real, é possível recuperar dados em lote à medida que eles são carregados em um conjunto de dados. Se você não conseguir recuperar nenhuma das entidades esperadas, seu conjunto de dados pode não estar habilitado para o Perfil do cliente em tempo real. Depois de confirmar que o conjunto de dados foi ativado, verifique se o formato e os identificadores dos dados de origem suportam suas expectativas. Para obter instruções detalhadas sobre como usar a API Perfil do cliente em tempo real para acessar os dados do Perfil, siga o guia [de ponto de extremidade de](../api/entities.md)entidades, também conhecido como &quot;API de acesso ao Perfil&quot;.
+Ao fazer upload de dados para um novo conjunto de dados pela primeira vez, ou como parte de um processo que envolve um novo ETL ou fonte de dados, é recomendável verificar cuidadosamente os dados para garantir que eles tenham sido carregados conforme esperado. Usando a API [!DNL Real-time Customer Profile] de acesso, é possível recuperar dados em lote à medida que eles são carregados em um conjunto de dados. Se você não conseguir recuperar nenhuma das entidades esperadas, seu conjunto de dados pode não estar habilitado para [!DNL Real-time Customer Profile]. Depois de confirmar que o conjunto de dados foi ativado, verifique se o formato e os identificadores dos dados de origem suportam suas expectativas. Para obter instruções detalhadas sobre como usar a [!DNL Real-time Customer Profile] API para acessar [!DNL Profile] os dados, siga o guia [de endpoint](../api/entities.md)das entidades, também conhecido como &quot;[!DNL Profile Access] API&quot;.
 
 ## Confirmar a assimilação de dados pelo Serviço de Identidade {#confirm-data-ingest-by-identity-service}
 

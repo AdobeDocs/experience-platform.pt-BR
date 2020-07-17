@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2750'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Guia do usuário do Construtor] de segmentos
+# [!DNL Segment Builder] guia do usuário
 
 [!DNL Adobe Experience Platform Segmentation Service] fornece uma API RESTful e uma interface de usuário para criar definições de segmentos a partir de [!DNL Real-time Customer Profile] dados.
 
@@ -41,9 +41,9 @@ Clicar em **[!UICONTROL Criar segmento]** no canto superior direito abre a área
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Área de trabalho do Construtor] de segmentos
+## [!DNL Segment Builder] espaço de trabalho
 
-[!UICONTROL O Construtor] de segmentos fornece uma área de trabalho avançada que permite interagir com elementos [!DNL Profile] de dados. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados.
+[!DNL Segment Builder] fornece uma área de trabalho avançada que permite interagir com elementos [!DNL Profile] de dados. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados.
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -51,7 +51,7 @@ Clicar em **[!UICONTROL Criar segmento]** no canto superior direito abre a área
 
 Os elementos básicos das definições de segmentos são **[!UICONTROL Atributos]** e **[!UICONTROL Eventos]**. Além disso, os atributos e eventos contidos nas **[!UICONTROL Audiências]** existentes também podem ser usados como componentes para novas definições.
 
-É possível ver esses blocos de construção na seção *Campos* no lado esquerdo da área de trabalho do Construtor de [!UICONTROL segmentos] . *[!UICONTROL Os campos]* contêm uma guia para cada um dos blocos de construção principais: **[!UICONTROL Atributos]**, **[!UICONTROL Eventos]** e **[!UICONTROL Audiências]**.
+É possível ver esses blocos de construção na seção *[!UICONTROL Campos]* no lado esquerdo da [!DNL Segment Builder] área de trabalho. *[!UICONTROL Os campos]* contêm uma guia para cada um dos blocos de construção principais: **[!UICONTROL Atributos]**, **[!UICONTROL Eventos]** e **[!UICONTROL Audiências]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -95,7 +95,7 @@ Você também pode pesquisar [!UICONTROL Audiências] usando a barra de pesquisa
 
 ## Tela do construtor de regras {#rule-builder-canvas}
 
-Uma definição de segmento é uma coleção de regras usadas para descrever as principais características ou comportamento de uma audiência de público alvo. Essas regras são criadas usando a tela *[!UICONTROL do construtor de]* regras, localizada no centro do Construtor [!UICONTROL de]segmentos.
+Uma definição de segmento é uma coleção de regras usadas para descrever as principais características ou comportamento de uma audiência de público alvo. Essas regras são criadas usando a tela *[!UICONTROL do construtor de]* regras, localizada no centro de [!DNL Segment Builder].
 
 Para adicionar uma nova regra à definição do segmento, arraste um bloco da guia *[!UICONTROL Campos]* e solte-o na tela do construtor de regras. Você receberá então opções específicas de contexto, de acordo com o tipo de dados que está sendo adicionado. Os tipos de dados disponíveis incluem: sequências de caracteres, datas, [!DNL ExperienceEvents], [!UICONTROL Tipos de evento]e [!UICONTROL Audiências].
 
@@ -105,7 +105,7 @@ Para adicionar uma nova regra à definição do segmento, arraste um bloco da gu
 
 Você pode arrastar e soltar uma audiência da guia *[!UICONTROL Audiência]* na tela do construtor de regras para fazer referência à associação de audiência na nova definição de segmento. Isso permite que você inclua ou exclua a associação de audiência como um atributo na nova regra de segmento.
 
-Para [!DNL Platform] audiências criadas usando o Construtor [!UICONTROL de]segmentos, você tem a opção de converter a audiência no conjunto de regras que foram usadas na definição de segmento para essa audiência. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo alterações recentes na definição do segmento antes de convertê-lo para a lógica da regra.
+Para [!DNL Platform] audiências criadas usando [!DNL Segment Builder], você recebe a opção de converter a audiência no conjunto de regras que foram usadas na definição de segmento para essa audiência. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo alterações recentes na definição do segmento antes de convertê-lo para a lógica da regra.
 
 >[!NOTE]
 >
@@ -113,11 +113,11 @@ Para [!DNL Platform] audiências criadas usando o Construtor [!UICONTROL de]segm
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-Se surgirem conflitos ao converter audiências em regras, o Construtor [!UICONTROL de] segmentos tentará preservar as opções existentes da melhor forma possível.
+Se surgirem conflitos ao converter audiências em regras, [!DNL Segment Builder] tentará preservar ao máximo as opções existentes.
 
 ### visualização de código
 
-Como alternativa, você pode visualização uma versão baseada em código de uma regra criada no Construtor de [!UICONTROL segmentos]. Depois de criar sua regra na tela do construtor de regras, você pode selecionar visualização **[!UICONTROL de]** código para ver seu segmento como PQL.
+Como alternativa, você pode visualização uma versão baseada em código de uma regra criada no [!DNL Segment Builder]. Depois de criar sua regra na tela do construtor de regras, você pode selecionar visualização **[!UICONTROL de]** código para ver seu segmento como PQL.
 
 ![](../images/segment-builder/code-view.png)
 

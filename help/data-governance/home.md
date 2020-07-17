@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Controle de dados de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Há três elementos chave na estrutura DULE: Etiquetas, políticas e aplicação
 
 ## Rótulos de uso de dados
 
-[!DNL Data Governance] permite que os administradores de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para categorizar dados de acordo com o tipo de políticas aplicadas.
+[!DNL Data Governance] permite que os gerentes de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para categorizar dados de acordo com o tipo de políticas aplicadas.
 
 A estrutura DULE inclui rótulos de uso de dados predefinidos que podem ser usados para classificar dados de três formas:
 
@@ -86,18 +86,9 @@ Depois que os rótulos de uso de dados forem aplicados, os administradores de da
 
 Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte a visão geral [das](./policies/overview.md)políticas.
 
-## Versões futuras
-
-[!DNL Data Governance] suporta atualmente a rotulagem DULE em dois níveis (conjunto de dados e campo). [!DNL Data Governance] também suporta a criação e o gerenciamento de políticas de uso de dados e ações de marketing por meio da API DULE [!DNL Policy Service] .
-
-As versões subsequentes fornecerão os seguintes recursos:
-
-* Aplicação da política: Use a estrutura de política para aconselhar e aplicar políticas em diferentes padrões de acesso a dados.
-* Auditoria: Monitore atividades de acesso aos dados e identifique e reporte problemas de conformidade.
-
 ## Próximas etapas
 
-Este documento proporcionou uma introdução de alto nível à estrutura DULE [!DNL Data Governance] e à estrutura DULE. Agora você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
+Este documento proporcionou uma introdução de alto nível à estrutura DULE [!DNL Data Governance] e à estrutura DULE. Agora, você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
 
 ## Apêndice
 

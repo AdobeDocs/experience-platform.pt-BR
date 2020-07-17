@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Projeções do Edge - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Configurações de projeção de borda e pontos finais de destino
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos da Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a API de Perfil do cliente em tempo real para trabalhar com projeções de borda, incluindo destinos e configurações.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos da Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a [!DNL Real-time Customer Profile] API para trabalhar com projeções de borda, incluindo destinos e configurações.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 >[!NOTE]
 >As solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um `Content-Type` cabeçalho. Mais de um `Content-Type` é usado neste documento. Preste especial atenção aos cabeçalhos nas chamadas de amostra para garantir que você esteja usando a solicitação correta `Content-Type` para cada solicitação.
@@ -325,7 +325,7 @@ A solicitação de exclusão retorna o status HTTP 204 (Sem conteúdo) e um corp
 
 ## Configurações de projeção
 
-As configurações de projeção fornecem informações sobre quais dados devem estar disponíveis em cada borda. Em vez de projetar um schema completo do Experience Data Model (XDM) para a borda, uma projeção fornece apenas dados específicos ou campos do schema. Sua organização pode definir mais de uma configuração de projeção para cada schema XDM.
+As configurações de projeção fornecem informações sobre quais dados devem estar disponíveis em cada borda. Em vez de projetar um schema completo [!DNL Experience Data Model] (XDM) para a borda, uma projeção fornece apenas dados específicos, ou campos, do schema. Sua organização pode definir mais de uma configuração de projeção para cada schema XDM.
 
 ### Lista de todas as configurações de projeção
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Solicitação**
 
-A solicitação a seguir lista todas as configurações de projeção associadas à classe de schema do Experience Data Model, Perfil Individual XDM. Para obter mais informações sobre o XDM e sua função no Platform, comece lendo a visão geral [do sistema](../../xdm/home.md)XDM.
+A solicitação a seguir lista todas as configurações de projeção associadas à classe [!DNL Experience Data Model] schema, [!DNL XDM Individual Profile]. Para obter mais informações sobre o XDM e sua função dentro [!DNL Platform], comece lendo a visão geral [do Sistema](../../xdm/home.md)XDM.
 
 ```shell
 curl -X GET \

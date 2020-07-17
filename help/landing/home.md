@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
+source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '747'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ O Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do me
 
 Criado com APIs abertas, [!DNL Experience Platform] expõe a funcionalidade completa do sistema aos desenvolvedores, suportando a fácil integração de soluções corporativas usando ferramentas conhecidas. [!DNL Experience Platform] também apoia os parceiros na construção e integração de seus próprios produtos e tecnologias, conforme necessário. Este poder e flexibilidade tornam-se [!DNL Experience Platform] únicos no mercado. Ela oferece aos parceiros, clientes e a uma comunidade de desenvolvedores uma base para a criação de inovações que impulsionam a Experience Business: excedendo as expectativas do cliente, fornecendo uma experiência continuamente aprimorada e totalmente personalizada, obtida de uma visualização de 360 graus do cliente e de suas preferências individuais.
 
-Os vídeos a seguir descrevem uma experiência hipotética criada com o Adobe Experience Platform, como visto da perspectiva de um cliente. Veja como [!DNL Experience Platform] cria uma experiência rica, relevante e em tempo real.
+Os vídeos a seguir descrevem como [!DNL Experience Platform] criar experiências ricas, relevantes e em tempo real, primeiro da perspectiva do cliente, depois de uma perspectiva técnica nos bastidores.
 
 **Perspectiva do cliente:**
 

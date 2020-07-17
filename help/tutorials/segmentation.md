@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tutoriais de segmentação
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Depois de desenvolver, testar e salvar sua definição de segmento, você pode a
 
 ## Exportar dados de segmento
 
-A exportação de segmentos que contêm [!DNL Profile] dados requer primeiro a [criação de um conjunto de dados no qual os dados serão exportados](../segmentation/tutorials/create-dataset-export-segment.md)e, em seguida, o início de uma nova tarefa de exportação. As etapas para gerar um trabalho de exportação podem ser encontradas no tutorial [da API de](../segmentation/tutorials/export-data.md)exportação.
+A exportação de segmentos que contêm [!DNL Profile] dados requer primeiro a [criação de um conjunto de dados no qual os dados serão exportados](../segmentation/tutorials/create-dataset-export-segment.md)e, em seguida, o início de uma nova tarefa de exportação. As etapas para gerar um trabalho de exportação podem ser encontradas no tutorial sobre a [avaliação de um segmento](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Configurar políticas de mesclagem
 

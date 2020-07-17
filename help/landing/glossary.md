@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
+source-wordcount: '6593'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **Controle de acesso:** {#access-control} Controle de acesso para [!DNL Experience Platform] links usuários com permissões de acesso e ambientes de caixa de proteção por meio de perfis de produtos no Adobe Admin Console.
 
-**ID da chave de acesso:** A ID da chave de acesso é um identificador exclusivo associado a uma chave de acesso secreta do Amazon S3. A ID da chave de acesso e a chave de acesso secreta são usadas juntas para assinar solicitações AWS.
+**ID da chave de acesso:** A ID da chave de acesso é um identificador exclusivo associado a uma chave de acesso secreto [!DNL Amazon] S3. A ID da chave de acesso e a chave de acesso secreta são usadas juntas para assinar solicitações AWS.
 
 **Ação:** Em [!DNL Experience Platform Launch], uma ação é um tipo específico de componente de regra que define o que deve ocorrer depois que um evento ocorre e as condições são avaliadas e passadas.
 
@@ -354,7 +354,7 @@ ht-degree: 0%
 
 **Biblioteca de Ofertas:** Na biblioteca de ofertas [!DNL Decisioning Service], ela é uma biblioteca central usada para gerenciar ofertas personalizadas e de fallback, regras de decisão e atividades.
 
-**Organização:** Uma organização é o nome usado para identificar uma empresa ou um grupo específico em uma empresa nos produtos da Adobe. O administrador pode configurar e gerenciar o acesso e as permissões dos recursos para os usuários de uma organização.
+**Organização:** Uma organização é o nome usado para identificar uma empresa ou um grupo específico dentro de uma empresa nos produtos da Adobe. O administrador pode configurar e gerenciar o acesso e as permissões dos recursos para os usuários de uma organização.
 
 **Substituir estratégia de gravação:** `Overwrite` a estratégia de salvamento é uma opção para assimilar dados de terceiros por meio de uma conexão, na qual o usuário especifica se os dados ingeridos serão sobrescritos em um agendamento especificado. [!DNL Experience Platform] assimilará o conjunto de dados especificado da fonte de terceiros e substituirá o conjunto de dados em [!DNL Experience Platform].
 

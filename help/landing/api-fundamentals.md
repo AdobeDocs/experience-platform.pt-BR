@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fundamentos da API do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ JSON Pointer é uma sintaxe de sequência padronizada ([RFC 6901](https://tools.
 >[!NObservação]
 >
 >
->Ao lidar com os atributos `xdm:sourceProperty` e `xdm:destinationProperty` dos descritores [!DNL Experience Data Model] (XDM), qualquer `properties` chave deve ser **excluída** da string Ponteiro JSON. Consulte o subguia do desenvolvedor da API de registro do Schema em [descritores](../xdm/api/descriptors.md) para obter mais informações.
+>Ao lidar com os atributos `xdm:sourceProperty` e `xdm:destinationProperty` dos descritores [!DNL Experience Data Model] (XDM), qualquer `properties` chave deve ser **excluída** da string Ponteiro JSON. Consulte o subguia do desenvolvedor da [!DNL Schema Registry] API em [descritores](../xdm/api/descriptors.md) para obter mais informações.
 
 ## Patch JSON
 

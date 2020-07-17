@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Trabalhos do sistema do Perfil - API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # Ponto final de trabalhos do sistema de Perfil (Excluir solicitações)
 
-O Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos no Platform são armazenados no Data Lake, bem como no armazenamento de dados do Perfil do cliente em tempo real. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da API Perfil do cliente em tempo real para criar um trabalho do sistema do Perfil, também conhecido como &quot;solicitação de exclusão&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
+O Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos [!DNL Platform] são armazenados no armazenamento [!DNL Data Lake] e no [!DNL Real-time Customer Profile] armazenamento de dados. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da [!DNL Real-time Customer Profile] API para criar um trabalho do [!DNL Profile] sistema, também conhecido como &quot;[!DNL delete request]&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
 
 >[!NOTE]
->Se você estiver tentando excluir conjuntos de dados ou lotes do Data Lake, visite a visão geral [do Serviço de](../../catalog/home.md) Catálogo para obter instruções.
+>Se você estiver tentando excluir conjuntos de dados ou lotes do [!DNL Data Lake], visite a visão geral [do Serviço de](../../catalog/home.md) catálogo para obter instruções.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Visualização de solicitações de exclusão
 
@@ -103,10 +103,10 @@ A inicialização de uma nova solicitação de exclusão é feita por meio de um
 
 ### Excluir um conjunto de dados
 
-Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. O Experience Platform permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
+Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. [!DNL Experience Platform] permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
 
 >[!CAUTION]
-> Ao tentar excluir um conjunto de dados habilitado para Perfis usando a interface do usuário do Experience Platform, o conjunto de dados é desativado para inclusão, mas não será excluído até que uma solicitação de exclusão seja criada usando a API. Para obter mais informações, consulte o [apêndice](#appendix) a este documento.
+> Ao tentar excluir um conjunto de dados [!DNL Profile]habilitado usando a [!DNL Experience Platform] interface do usuário, o conjunto de dados é desabilitado para inclusão, mas não será excluído até que uma solicitação de exclusão seja criada usando a API. Para obter mais informações, consulte o [apêndice](#appendix) a este documento.
 
 **Formato da API**
 
@@ -161,7 +161,7 @@ Para excluir um lote, a ID do lote deve ser incluída no corpo da solicitação 
 >[!NOTE]
 > O motivo pelo qual você não pode excluir lotes de conjuntos de dados com base em schemas de registro é porque os lotes de conjuntos de dados de tipo de registro substituem registros anteriores e, portanto, não podem ser &quot;desfeitos&quot; ou excluídos. A única maneira de remover o impacto de lotes errados para conjuntos de dados baseados em schemas de registro é ingerir novamente o lote com os dados corretos para substituir os registros incorretos.
 
-Para obter mais informações sobre o comportamento de registro e série de tempo, consulte a [seção sobre comportamentos](../../xdm/home.md#data-behaviors) de dados XDM na visão geral do Sistema XDM.
+Para obter mais informações sobre o comportamento de registro e série de tempo, consulte a [seção sobre comportamentos](../../xdm/home.md#data-behaviors) de dados XDM na [!DNL XDM System] visão geral.
 
 **Formato da API**
 
@@ -277,7 +277,7 @@ Quando o status da solicitação de exclusão for `"COMPLETED"` você poderá co
 
 ## Remover uma solicitação de exclusão
 
-O Experience Platform permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso na etapa de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação DELETE ao ponto de extremidade `/system/jobs` e incluir a ID da solicitação de exclusão que você deseja remover ao caminho da solicitação.
+[!DNL Experience Platform] permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso no estágio de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação DELETE ao ponto de extremidade `/system/jobs` e incluir a ID da solicitação de exclusão que você deseja remover ao caminho da solicitação.
 
 **Formato da API**
 
@@ -306,19 +306,19 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe as etapas envolvidas na exclusão de conjuntos de dados e lotes da Loja de Perfis no Experience Platform, é possível excluir com segurança os dados que foram adicionados erroneamente ou que sua organização não precisa mais. Lembre-se de que uma solicitação de exclusão não pode ser desfeita, portanto, você deve excluir apenas os dados de que está confiante que não precisa agora e que não serão necessários no futuro.
+Agora que você sabe as etapas envolvidas na exclusão de conjuntos de dados e lotes do [!DNL Profile Store] dentro [!DNL Experience Platform], é possível excluir com segurança os dados que foram adicionados erroneamente ou que sua organização não precisa mais. Lembre-se de que uma solicitação de exclusão não pode ser desfeita, portanto, você deve excluir apenas os dados de que está confiante que não precisa agora e que não serão necessários no futuro.
 
 ## Apêndice {#appendix}
 
-As informações a seguir são complementares ao ato de excluir um conjunto de dados do repositório de Perfis.
+As informações a seguir complementam o ato de excluir um conjunto de dados do [!DNL Profile Store].
 
-### Exclusão de um conjunto de dados usando a interface do Experience Platform
+### Excluir um conjunto de dados usando a [!DNL Experience Platform] interface do usuário
 
-Ao usar a interface do usuário do Experience Platform para excluir um conjunto de dados que foi ativado para o Perfil, uma caixa de diálogo é aberta perguntando: &quot;Tem certeza de que deseja excluir esse conjunto de dados do Experience Data Lake? Use a API &#39;jobs de sistemas de perfis&#39; para excluir esse conjunto de dados do Serviço de Perfis.&quot;
+Ao usar a interface do [!DNL Experience Platform] usuário para excluir um conjunto de dados para o qual foi ativado [!DNL Profile], uma caixa de diálogo é aberta perguntando: &quot;Tem certeza de que deseja excluir esse conjunto de dados do [!DNL Experience Data Lake]? Use a API &#39;p[!DNL rofile systems jobs]&#39; para excluir esse conjunto de dados do [!DNL Profile Service].&quot;
 
-Clicar em **Excluir** na interface do usuário desativa o conjunto de dados para ingestão, mas NÃO exclui automaticamente o conjunto de dados no backend. Para excluir permanentemente o conjunto de dados, uma solicitação de exclusão deve ser criada manualmente usando as etapas neste guia para [criar uma solicitação](#create-a-delete-request)de exclusão.
+Clicar em **[!UICONTROL Excluir]** na interface do usuário desativa o conjunto de dados para ingestão, mas NÃO exclui automaticamente o conjunto de dados no backend. Para excluir permanentemente o conjunto de dados, uma solicitação de exclusão deve ser criada manualmente usando as etapas neste guia para [criar uma solicitação](#create-a-delete-request)de exclusão.
 
-A imagem a seguir mostra o aviso ao tentar excluir um conjunto de dados habilitado para Perfis usando a interface do usuário.
+A imagem a seguir mostra o aviso ao tentar excluir um conjunto de dados [!DNL Profile]habilitado usando a interface do usuário.
 
 ![](../images/delete-profile-dataset.png)
 

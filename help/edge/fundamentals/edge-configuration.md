@@ -4,9 +4,9 @@ seo-title: Configuração de borda para o SDK da Web Experience Platform
 description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configuração do Edge
 
-A configuração do SDK da Web do Adobe Experience Platform é dividida entre dois locais. O comando [configure](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente, como o `edgeDomain`. A configuração da borda lida com todas as outras configurações do SDK. Quando uma solicitação é enviada para a Adobe Experience Platform Edge Network, ela `edgeConfigId` é usada para fazer referência à configuração do lado do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
+A configuração do Adobe Experience Platform [!DNL Web SDK] é dividida entre dois locais. O comando [configure](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente, como o `edgeDomain`. A configuração da borda lida com todas as outras configurações do SDK. Quando uma solicitação é enviada para o Adobe Experience Platform [!DNL Edge Network], o `edgeConfigId` é usado para fazer referência à configuração do lado do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
 
 ## Criando uma ID de configuração de borda
 
@@ -90,7 +90,7 @@ A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode na
 
 ##### [!UICONTROL Token de propriedade]
 
-O Público alvo permite que os clientes controlem permissões por meio do uso de propriedades. Detalhes podem ser encontrados na seção Permissões [](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) empresariais da documentação do Público alvo.
+[!DNL Target] permite que os clientes controlem permissões por meio do uso de propriedades. Os detalhes podem ser encontrados na seção Permissões [](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) empresariais da [!DNL Target] documentação.
 
 O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL configuração] > [!UICONTROL Propriedades]
 
@@ -108,11 +108,11 @@ Tudo o que é necessário para enviar dados ao Adobe Audience Manager é ativar 
 
 ##### [!UICONTROL Destinos de cookies ativados]
 
-Permite que o SDK compartilhe informações do segmento por meio de Destinos [de cookies](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) do Audience Manager.
+Permite que o SDK compartilhe informações do segmento por meio dos Destinos [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) cookies [!DNL Audience Manager].
 
 ##### [!UICONTROL Destinos de URL ativados]
 
-Permite que o SDK compartilhe informações do segmento por meio de Destinos [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)URL. Eles estão configurados no Audience Manager.
+Permite que o SDK compartilhe informações do segmento por meio de Destinos [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)URL. Eles estão configurados em [!DNL Audience Manager].
 
 #### Adobe Analytics
 

@@ -4,9 +4,9 @@ seo-title: Mapeamento manual de variáveis no Analytics com o SDK da Web
 description: Como mapear manualmente variáveis no Analytics usando regras de processamento
 seo-description: mapeie manualmente variáveis para o Analytics usando regras de processamento com o SDK da Web
 translation-type: tm+mt
-source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '371'
 ht-degree: 11%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 11%
 
 # Mapeamento manual de variáveis no Analytics
 
-O SDK da Web Adobe Experience Platform (AEP) pode mapear determinadas variáveis automaticamente, mas as variáveis personalizadas devem ser mapeadas manualmente.
+O Adobe Experience Platform (AEP) [!DNL Web SDK] pode mapear determinadas variáveis automaticamente, mas as variáveis personalizadas devem ser mapeadas manualmente.
 
-Para dados XDM que não são mapeados automaticamente para o Analytics, você pode usar dados [de](https://docs.adobe.com/content/help/pt-BR/analytics/implementation/vars/page-vars/contextdata.html) contexto para corresponder ao seu [schema](https://docs.adobe.com/content/help/pt-BR/experience-platform/xdm/schema/composition.html). Em seguida, ele pode ser mapeado para o Analytics usando regras [de](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) processamento para preencher variáveis do Analytics.
+Para dados XDM que não são mapeados automaticamente para [!DNL Analytics], você pode usar dados [de](https://docs.adobe.com/content/help/pt-BR/analytics/implementation/vars/page-vars/contextdata.html) contexto para corresponder ao seu [schema](https://docs.adobe.com/content/help/pt-BR/experience-platform/xdm/schema/composition.html). Em seguida, ele pode ser mapeado para [!DNL Analytics] usar regras [de](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) processamento para preencher [!DNL Analytics] variáveis.
 
-Além disso, você pode usar um conjunto padrão de ações e listas de produtos para enviar ou recuperar dados com o SDK da Web AEP. Para fazer isso, consulte [Produtos](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html).
+Além disso, você pode usar um conjunto padrão de ações e listas de produtos para enviar ou recuperar dados com o AEP [!DNL Web SDK]. Para fazer isso, consulte [Produtos](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html).
 
 ## Dados de contexto
 
-Para serem usados pela Analytics, os dados XDM são nivelados usando a notação de pontos e disponibilizados como `contextData`. A lista de pares de valores a seguir mostra um exemplo de `context data`:
+Para serem usados por [!DNL Analytics], os dados XDM são nivelados usando a notação de pontos e disponibilizados como `contextData`. A lista de pares de valores a seguir mostra um exemplo de `context data`:
 
 ```javascript
 {
@@ -49,7 +49,7 @@ Para serem usados pela Analytics, os dados XDM são nivelados usando a notação
 
 ## Regras de processamento
 
-Todos os dados coletados pela rede de borda podem ser acessados pelas regras [de](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)processamento. No Analytics, você pode usar regras de processamento para incorporar dados de contexto às variáveis do Analytics.
+Todos os dados coletados pela rede de borda podem ser acessados pelas regras [de](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)processamento. Em [!DNL Analytics], é possível usar regras de processamento para incorporar dados de contexto em [!DNL Analytics] variáveis.
 
 Por exemplo, na regra a seguir, o Analytics é definido para preencher termos de Pesquisa **interna (eVar2)** com os dados associados a **a.x_atag.search.term(Context Data)**.
 
@@ -58,9 +58,9 @@ Por exemplo, na regra a seguir, o Analytics é definido para preencher termos de
 
 ## Schema XDM
 
-O Experience Platform usa schemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, torna-se mais fácil manter o significado e, portanto, obter valor dos dados. Os dados de contexto do Analytics funcionam com a estrutura definida pelo schema.
+[!DNL Experience Platform] usa schemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, torna-se mais fácil manter o significado e, portanto, obter valor dos dados. [!DNL Analytics] os dados de contexto funcionam com a estrutura definida pelo schema.
 
-O exemplo a seguir mostra como o [`event` comando](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) pode ser usado com a `xdm` opção para enviar e recuperar dados com o AEP Web SDK. Neste exemplo, o `event` comando corresponde ao Schema [Detalhes de Comércio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent para que productListItems `name` e `SKU` valores sejam rastreados:
+O exemplo a seguir mostra como o [`event` comando](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) pode ser usado com a `xdm` opção para enviar e recuperar dados com o AEP [!DNL Web SDK]. Neste exemplo, o `event` comando corresponde ao Schema [Detalhes de Comércio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent para que productListItems `name` e `SKU` valores sejam rastreados:
 
 
 ```
@@ -85,4 +85,4 @@ alloy("event",{
 });
 ```
 
-Para obter mais informações sobre o rastreamento de eventos com o SDK da Web AEP, consulte [Rastreamento de eventos](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).
+Para obter mais informações sobre o rastreamento de eventos com o AEP [!DNL Web SDK], consulte [Rastreamento de eventos](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).

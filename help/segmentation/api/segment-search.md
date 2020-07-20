@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Guia de ponto de extremidade de pesquisa de segmento
+title: Ponto de extremidade de pesquisa de segmento
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
 
 
-# Guia de ponto de extremidade de Pesquisa de segmentos
+# Ponto de extremidade de Pesquisa de segmento
 
 A Pesquisa de segmento é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real.
 

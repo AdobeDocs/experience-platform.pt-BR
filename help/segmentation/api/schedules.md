@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Programações
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 3%
 
 ---
 
 
-# Guia de ponto de extremidade de programação
+# Ponto de extremidade de programação
 
 As programações são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia. Você pode usar o `/config/schedules` ponto de extremidade para recuperar uma lista de programações, criar uma nova programação, recuperar detalhes de uma programação específica, atualizar uma programação específica ou excluir uma programação específica.
 

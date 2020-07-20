@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Exportar guia de ponto de extremidade de trabalhos
+title: Exportar ponto de extremidade de trabalhos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
 
 
-# Exportar guia de ponto de extremidade de trabalhos
+# Exportar ponto de extremidade de trabalhos
 
 Os trabalhos de exportação são processos assíncronos usados para persistir membros de segmentos de audiência em conjuntos de dados. Você pode usar o `/export/jobs` endpoint na API de segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
+
+>[!NOTE]
+>
+>Este guia cobre o uso de trabalhos de exportação no [!DNL Segmentation API]. Para obter informações sobre como gerenciar trabalhos de exportação para [!DNL Real-time Customer Profile] dados, consulte o guia sobre trabalhos de [exportação na API do Perfil](../../profile/api/export-jobs.md)
 
 ## Introdução
 

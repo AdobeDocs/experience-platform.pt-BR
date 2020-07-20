@@ -4,9 +4,9 @@ seo-title: Configuração do SDK da Web Adobe Experience Platform
 description: Saiba como configurar o SDK da Web do Experience Platform
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '737'
 ht-degree: 12%
 
 ---
@@ -74,7 +74,7 @@ O domínio usado para interagir com os serviços da Adobe. Isso só será usado 
 | -------- | ------------ | ----------------- |
 | String | Sim | none |
 
-Sua ID de organização de Experience Cloud atribuída.  Ao configurar várias instâncias em uma página, você deve configurar uma diferente `orgId` para cada instância.
+Your assigned [!DNL Experience Cloud] organization ID.  Ao configurar várias instâncias em uma página, você deve configurar uma diferente `orgId` para cada instância.
 
 ## Coleta de dados
 
@@ -134,7 +134,7 @@ Por exemplo, se você tivesse um elemento em sua página da Web com uma ID cujo 
 | -------- | ------------ | ----------------- |
 | Booleano | Não | `true` |
 
-Permite destinos [!UICONTROL de]cookies de Audience Manager, o que permite a configuração de cookies com base na qualificação de segmentos.
+Habilita destinos [!DNL Audience Manager] de cookies, o que permite a configuração de cookies com base na qualificação de segmentos.
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ Permite destinos [!UICONTROL de]cookies de Audience Manager, o que permite a con
 | -------- | ------------ | ----------------- |
 | Booleano | Não | `true` |
 
-Permite destinos [!UICONTROL de Audience Manager]URL, o que permite acionar URLs com base na qualificação de segmentos.
+Habilita destinos [!DNL Audience Manager] de URL, o que permite acionar URLs com base na qualificação de segmentos.
 
 ## Opções de identidade
 

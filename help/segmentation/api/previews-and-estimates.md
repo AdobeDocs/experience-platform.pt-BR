@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guia de pontos de extremidade de Pré-visualizações e estimativas
+title: Pré-visualizações e endpoints de estimativas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 2%
 
 ---
 
 
-# Guia de pontos de extremidade de Pré-visualizações e estimativas
+# Pré-visualizações e endpoints de estimativas
 
 À medida que você desenvolve a definição do segmento, você pode usar as ferramentas de estimativa e pré-visualização dentro das informações de nível de resumo da visualização para ajudar a garantir que você esteja isolando a audiência esperada. [!DNL Adobe Experience Platform] **As Pré-visualizações** fornecem listas paginadas de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado. **As estimativas** fornecem informações estatísticas sobre uma definição de segmento, como o tamanho da audiência projetada, o intervalo de confiança e o desvio padrão do erro.
 

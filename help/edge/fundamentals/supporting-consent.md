@@ -1,12 +1,12 @@
 ---
 title: Consentimento de suporte
-seo-title: Preferência de consentimento do SDK da Web do Adobe Experience Platform
-description: Saiba como oferecer suporte às preferências de consentimento com o Experience Platform Web SDK
-seo-description: Saiba como oferecer suporte às preferências de consentimento com o Experience Platform Web SDK
+seo-title: Preferência de consentimento do SDK da Web para Adobe Experience Platform
+description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
+seo-description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Como o usuário optou por opt out, as promessas que foram retornadas de comandos
 
 >[!NOTE]
 >
->Atualmente, o SDK suporta apenas a `general` finalidade. Embora planejemos criar um conjunto mais robusto de propósitos ou categorias que corresponderão aos diferentes recursos e ofertas de produtos da Adobe, a implementação atual é uma abordagem de aceitação total ou parcial.  Isso se aplica somente ao SDK da Web da plataforma Adobe Experience e NÃO a outras bibliotecas do Adobe JavaScript.
+>Atualmente, o SDK suporta apenas a `general` finalidade. Embora planejemos criar um conjunto mais robusto de propósitos ou categorias que corresponderão aos diferentes recursos e ofertas de produtos da Adobe, a implementação atual é uma abordagem de aceitação total ou parcial.  Isso se aplica somente ao Adobe Experience Platform [!DNL Web SDK] e NÃO a outras bibliotecas do Adobe JavaScript.
 
 ## Persistência das preferências de consentimento
 

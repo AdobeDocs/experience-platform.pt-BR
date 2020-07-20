@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Trabalhos de segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 3%
 
 ---
 
 
-# Guia de ponto de extremidade de trabalhos de segmento
+# Ponto de extremidade de trabalhos de segmento
 
 Um trabalho de segmento é um processo assíncrono que cria um novo segmento de audiência. Ele faz referência a uma definição [de](./segment-definitions.md)segmento, bem como a qualquer política [de](../../profile/api/merge-policies.md) mesclagem que controla como [!DNL Real-time Customer Profile] mescla atributos sobrepostos em seus fragmentos de perfil. Quando uma tarefa de segmento é concluída com êxito, você pode coletar várias informações sobre o segmento, como quaisquer erros que possam ter ocorrido durante o processamento e o tamanho final da sua audiência.
 

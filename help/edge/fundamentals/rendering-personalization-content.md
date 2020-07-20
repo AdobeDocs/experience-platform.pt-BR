@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK Renderização de conteúdo persona
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral das opções de personalização
 
-O Adobe Experience Platform Web SDK oferece suporte à consulta das soluções de personalização na Adobe, incluindo o Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
+O Adobe Experience Platform [!DNL Web SDK] suporta a consulta das soluções de personalização na Adobe, incluindo o Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
 
 ## Renderização automática de conteúdo
 
@@ -92,7 +92,7 @@ Isso retornará uma lista de decisões como um objeto JSON para cada decisão.
 
 >[!TIP]
 >
-> Se você usar escopos de Público alvo para se tornarem mBoxes no servidor, somente eles serão solicitações ao mesmo tempo, em vez de individualmente. A mbox global é sempre enviada.
+> Se você usar [!DNL Target] escopos que se tornam mBoxes no servidor, somente eles são solicitações ao mesmo tempo, em vez de individualmente. A mbox global é sempre enviada.
 
 ### Recuperar conteúdo automático
 

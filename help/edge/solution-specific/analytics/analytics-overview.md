@@ -1,12 +1,12 @@
 ---
 title: Envio de dados para o Adobe Analytics
-seo-title: Envio de dados para o Adobe Analytics com o SDK da Web da Adobe Experience Platform
+seo-title: Envio de dados para o Adobe Analytics com o Adobe Experience Platform Web SDK
 description: Saiba como enviar dados para o Adobe Analytics com o Experience Platform Web SDK
 seo-description: Saiba como enviar dados para o Adobe Analytics com o Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 890004b54cb4daf08f188147ed5c97d56e4055fb
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Envio de dados para o Adobe Analytics
 
-O SDK da Web da plataforma Adobe Experience pode enviar dados para o Adobe Analytics. Isso funciona se traduzindo `xdm` em um formato que o Adobe Analytics pode usar.
+O Adobe Experience Platform [!DNL Web SDK] pode enviar dados para a Adobe Analytics. Isso funciona se traduzindo `xdm` em um formato que o Adobe Analytics pode usar.
 
-## Configurar
+## Configuração
 
-O Adobe Analytics coleta automaticamente os dados que você está enviando caso tenha um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
+O Adobe Analytics coleta automaticamente os dados que você está enviando se você tiver um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
 
 ## Dados mapeados automaticamente
 
-A Adobe Experience Platform Edge Network mapeia automaticamente muitas variáveis XDM. A lista completa de variáveis mapeadas automaticamente é listada [aqui](../analytics/automatically-mapped-vars.md).
+O Adobe Experience Platform mapeia [!DNL Edge Network] automaticamente muitas variáveis XDM. A lista completa de variáveis mapeadas automaticamente é listada [aqui](../analytics/automatically-mapped-vars.md).
 
 ## Dados mapeados manualmente
 

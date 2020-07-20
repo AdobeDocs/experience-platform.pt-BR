@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do desenvolvedor do serviço de segmentação de Adobe Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] permite que você crie segmentos e gere audiências a partir [!DNL Adobe Experience Platform] de seus [!DNL Real-time Customer Profile] dados.
 
-A [!DNL Segmentation Service] API fornece vários pontos de extremidade que permitem gerenciar programaticamente suas operações de segmentação em [!DNL Experience Platform]. Este documento de visão geral fornece introduções de alto nível para cada um desses pontos de extremidade e links para seus guias de ponto de extremidade associados para obter detalhes. Antes de ler os guias de ponto de extremidade individuais, consulte o guia [de](getting-started.md) introdução para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de amostra e muito mais.
+A [!DNL Segmentation Service] API fornece vários pontos de extremidade que permitem gerenciar programaticamente suas operações de segmentação em [!DNL Experience Platform]. Este documento de visão geral fornece introduções de alto nível para cada um desses pontos de extremidade e links para seus guias de ponto de extremidade associados para obter detalhes. Antes de ler os guias de ponto de extremidade individuais, consulte o guia [de](./getting-started.md) introdução para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de amostra e muito mais.
 
 Para visualização de todos os pontos de extremidade e operações CRUD disponíveis, consulte a referência [à API do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação.
 

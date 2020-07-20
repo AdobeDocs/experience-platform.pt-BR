@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Definições de segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1041'
 ht-degree: 4%
 
 ---
 
 
-# Guia de ponto final de definições de segmentos
+# Ponto de extremidade de definições de segmentos
 
 O Adobe Experience Platform permite criar segmentos que definem um grupo de atributos ou comportamentos específicos a partir de um grupo de perfis. Uma definição de segmento é um objeto que encapsula um query gravado em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado PQL. Os predicados de PQL definem as regras para o segmento com base nas condições relacionadas a qualquer registro ou dados de série de tempo que você fornecer [!DNL Real-time Customer Profile]. Consulte o guia [](../pql/overview.md) PQL para obter mais informações sobre como escrever query PQL.
 

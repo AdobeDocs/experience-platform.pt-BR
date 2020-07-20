@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK instalando o SDK
 description: Saiba como instalar o SDK da Web do Experience Platform
 seo-description: Saiba como instalar o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 1%
 
 # Instalação do SDK {#installing-the-sdk}
 
-O Adobe Experience Platform Web SDK está disponível em uma rede de delivery de conteúdo (CDN) para você usar. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
+O Adobe Experience Platform [!DNL Web SDK] está disponível em uma rede de delivery de conteúdo (CDN) para você usar. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
 
 * Versão reduzida: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
 * Versão não modificada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Adicionar o código {#adding-the-code}
 
-A primeira etapa na implementação do SDK Adobe Experience Platform Web é copiar e colar o seguinte &quot;código base&quot; o mais alto possível na `<head>` tag do seu HTML:
+A primeira etapa na implementação do Adobe Experience Platform [!DNL Web SDK] é copiar e colar o seguinte &quot;código base&quot; o mais alto possível na `<head>` tag do seu HTML:
 
 ```markup
 <script>
@@ -54,11 +54,11 @@ Esse código base, além de criar uma função global, também carrega um códig
 
 ## Suporte ao Internet Explorer {#support-internet-explore}
 
-Esse SDK utiliza promessas, que é um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de públicos alvos, exceto o Internet Explorer. Para usar o SDK no Internet Explorer, é necessário ter o `window.Promise` polifill [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Esse SDK utiliza promessas, que é um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de públicos alvos, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], é necessário ter o `window.Promise` polifill [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Para determinar se você já tem `window.Promise` polifill:
 
-1. Abra seu site no Internet Explorer.
+1. Abra seu site em [!DNL Internet Explorer].
 1. Abra o console de depuração do navegador.
 1. Digite `window.Promise` no console e pressione Enter.
 

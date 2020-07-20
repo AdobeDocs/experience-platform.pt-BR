@@ -4,21 +4,24 @@ solution: Experience Platform
 title: query de amostra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 2%
 
 ---
 
 
-# query de amostra para dados de Público alvo da Adobe
+# query de amostra para dados de Adobe Target
 
-Os dados do Público alvo da Adobe são transformados em schema XDM do Experience Evento e ingeridos na plataforma da experiência como conjuntos de dados para você. Há muitos casos de uso para o Serviço de Query com esses dados, e os query de amostra a seguir devem funcionar com seus conjuntos de dados de Públicos alvos da Adobe.
+Os dados do Adobe Target são transformados em schema XDM do Experience Evento e assimilados [!DNL Experience Platform] como conjuntos de dados para você. Há muitos casos de uso [!DNL Query Service] com esses dados, e os query de amostra a seguir devem funcionar com seus conjuntos de dados de Adobe Target.
 
 >[!NOTE]
 >Nos exemplos a seguir, será necessário editar o SQL para preencher os parâmetros esperados para seus query com base no conjunto de dados, nas variáveis ou no período de tempo que você está interessado em avaliar. Forneça parâmetros onde quer que você veja `{ }` no SQL.
 
-## Nome padrão do conjunto de dados para a fonte de dados do Público alvo na Plataforma:
+## Nome padrão do conjunto de dados para a fonte de dados do Público alvo em [!DNL Platform]:
 
-Eventos de experiência do Público alvo da Adobe (nome amigável) <br>`adobe_target_experience_events` (nome a ser usado no query)
+Eventos de experiência do Adobe Target (nome amigável) <br>`adobe_target_experience_events` (nome a ser usado no query)
 
 ## Mapeamento de campo XDM parcial de alto nível
 

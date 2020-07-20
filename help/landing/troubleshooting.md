@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas e perguntas frequentes do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1962'
 ht-degree: 2%
 
 ---
@@ -248,6 +248,6 @@ A seguir está uma lista de guias de solução de problemas e documentação de 
 | Modelo de dados de experiência (XDM) | [API de registro do Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [Perguntas frequentes do sistema XDM e guia de solução de problemas](../xdm/troubleshooting-guide.md) |
 | Serviço de identidade | [API do Serviço de Identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Guia de solução de problemas do Serviço de identidade](../identity-service/troubleshooting-guide.md) |
 | Serviço de Query | [API de serviço de Query](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Guia de solução de problemas do Serviço de Query](../query-service/troubleshooting-guide.md) |
-| Perfil do cliente em tempo real | [API de Perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
+| Perfil do cliente em tempo real | [API de Perfil do cliente em tempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Guia de solução de problemas do Perfil](../profile/troubleshooting.md) |
 | Sandboxes | [API do Sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guia de solução de problemas de caixas de proteção](../sandboxes/troubleshooting-guide.md) |
 | Segmentação | [API de segmentação](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |

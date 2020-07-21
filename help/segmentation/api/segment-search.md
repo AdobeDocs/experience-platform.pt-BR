@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Ponto de extremidade de pesquisa de segmento
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,7 @@ Depois de ler este guia, agora você tem uma melhor compreensão de como a Pesqu
 
 ## Apêndice {#appendix}
 
-As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. Os query de pesquisa são escritos da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para pesquisar por um segmento chamado AAM ou Platform, você usaria o seguinte query de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
+As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. Os query de pesquisa são escritos da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para pesquisar por um segmento chamado AAM ou [!DNL Platform], você usaria o seguinte query de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como o exemplo mostrado acima.
 

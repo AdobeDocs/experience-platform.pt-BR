@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do desenvolvedor de ingestão em lote de Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2552'
 ht-degree: 6%
 
 ---
@@ -27,28 +27,28 @@ As seções a seguir fornecem informações adicionais que você precisará conh
 Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [Ingestão](./overview.md)em lote: Permite assimilar dados em Adobe Experience Platform como arquivos em lote.
-- [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-- [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um `Content-Type` cabeçalho adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada. Os seguintes tipos de conteúdo são usados neste guia:
 
@@ -57,7 +57,7 @@ As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um
 
 ## Tipos
 
-Ao assimilar dados, é importante entender como os schemas do Experience Data Model (XDM) funcionam. Para obter mais informações sobre como os tipos de campos XDM mapeiam para diferentes formatos, leia o guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md)Schemas.
+Ao assimilar dados, é importante entender como os schemas [!DNL Experience Data Model] (XDM) funcionam. Para obter mais informações sobre como os tipos de campos XDM mapeiam para diferentes formatos, leia o guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md)Schemas.
 
 Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no schema do público alvo, os dados serão convertidos no tipo de público alvo expresso. Se não puder, o lote será reprovado com um `TypeCompatibilityException`.
 
@@ -238,7 +238,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 >[!NOTE]
 >
->As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
 
 ### Criar lote
 
@@ -299,7 +299,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Carregar arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -517,7 +517,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -718,7 +718,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carregar arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
 
 >[!NOTE]
 >
@@ -1003,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Transformação de dados para ingestão em lote
 
-Para assimilar um arquivo de dados no Experience Platform, a estrutura hierárquica do arquivo deve estar em conformidade com o schema do Modelo de Dados de [Experiência (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual está sendo feito upload.
+Para assimilar um arquivo de dados, [!DNL Experience Platform]a estrutura hierárquica do arquivo deve estar em conformidade com o schema do Modelo de Dados de [Experiência (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual o upload está sendo feito.
 
 Informações sobre como mapear um arquivo CSV para estar em conformidade com um schema XDM podem ser encontradas no documento de transformações [de](../../etl/transformations.md) amostra, juntamente com um exemplo de um arquivo de dados JSON devidamente formatado. Arquivos de amostra fornecidos no documento podem ser encontrados aqui:
 

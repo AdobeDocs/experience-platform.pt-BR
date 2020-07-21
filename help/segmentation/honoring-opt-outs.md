@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aceitar opções
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ The [!DNL Profile Privacy] mixin contains the following fields:
 
 Para visualização da estrutura completa da [!DNL Profile Privacy] mistura, consulte o repositório [público GitHub do](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM ou pré-visualização a mistura usando a interface do usuário do Platform.
 
-### Detalhes das preferências de Perfil
+### [!DNL Profile Preferences Details]
 
-A combinação Detalhes das preferências do Perfil fornece vários campos que representam preferências para perfis do cliente (como formato do email, idioma preferencial e fuso horário). Um dos campos incluídos nessa combinação, OptInOut (`optInOut`), permite que valores de opção de não participação sejam definidos para canais individuais.
+A [!DNL Profile Preferences Details] combinação fornece vários campos que representam preferências para perfis do cliente (como formato do email, idioma preferencial e fuso horário). Um dos campos incluídos nessa combinação, OptInOut (`optInOut`), permite que valores de opção de não participação sejam definidos para canais individuais.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-A combinação Detalhes das preferências de Perfil contém os seguintes campos relacionados a opções de não participação:
+O [!DNL Profile Preferences Details] mixin contém os seguintes campos relacionados a opções de não participação:
 
 - OptInOut (`optInOut`): Um objeto em que cada chave representa um URI válido e conhecido para um canal de comunicação e o estado ativo da opção de não participação para cada canal. Cada canal pode ter um de quatro valores possíveis:
    - Não fornecido (`not_provided`): Não foi fornecida uma solicitação de opção de não participação para este canal.

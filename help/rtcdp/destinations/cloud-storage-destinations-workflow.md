@@ -4,9 +4,9 @@ seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Esta página explica como você pode se conectar aos locais do armazenamento em 
 
    ![Conectar-se ao destino do armazenamento na nuvem](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Na etapa **[!UICONTROL Autenticação]** , se você tiver configurado anteriormente uma conexão com o destino do armazenamento na nuvem, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com o destino do armazenamento na nuvem. Preencha as credenciais de autenticação de sua conta e selecione **[!UICONTROL Conectar ao destino]**. <br> Consulte destino [do Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , destino do [Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) , destino dos Hubs [do Evento do](/help/rtcdp/destinations/azure-event-hubs-destination.md) Azure e destino [SFTP](/help/rtcdp/destinations/sftp-destination.md) para obter detalhes sobre as credenciais inseridas na etapa **Autenticação** .
+2. Na etapa **[!UICONTROL Autenticação]** , se você tiver configurado anteriormente uma conexão com o destino do armazenamento na nuvem, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com o destino do armazenamento na nuvem. Preencha as credenciais de autenticação de sua conta e selecione **[!UICONTROL Conectar ao destino]**. <br> Consulte destino [do Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) destino, [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) destino e destino [SFTP](/help/rtcdp/destinations/sftp-destination.md) para obter detalhes sobre as credenciais inseridas na etapa **Autenticação** .
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ Para destinos do Amazon S3, insira o nome **[!UICONTROL do]** bucket e o caminho
 
    ![Conectar-se ao destino do armazenamento na nuvem SFTP - etapa de autenticação](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Para destinos Amazon Kinesis, forneça o nome do seu fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
+   Para [!DNL Amazon Kinesis] destinos, forneça o nome do seu fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 
    ![Conectar-se ao destino do armazenamento na nuvem do Kinesis - etapa de autenticação](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Para destinos do Hubs de Eventos do Azure, forneça o nome do seu fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
+   Para [!DNL Azure Event Hubs] destinos, forneça o nome do seu fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo. Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 
    ![Conectar-se ao destino do armazenamento na nuvem do Kinesis - etapa de autenticação](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 

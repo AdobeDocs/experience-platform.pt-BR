@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial aborda as etapas para impor a conformidade de uso de dados para se
 Este tutorial requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados [!DNL Experience Data Model] (XDM) no [!DNL Platform]. O Perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
-   - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas para [!DNL Real-time Customer Profile] determinar quais dados podem ser mesclados em uma visualização unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para fins de controle de dados.
+   - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas para [!DNL Real-time Customer Profile] determinar quais dados podem ser mesclados em uma visualização unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para [!DNL Data Governance] fins.
 - [!DNL Segmentation](../home.md): Como [!DNL Real-time Customer Profile] divide um grande grupo de indivíduos contidos na loja de perfis em grupos menores que compartilham características semelhantes e respondem de forma semelhante às estratégias de marketing.
 - [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] fornece a infraestrutura para a identificação e aplicação da utilização de dados (DULE), usando os seguintes componentes:
    - [Rótulos](../../data-governance/labels/user-guide.md)de uso de dados: Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.

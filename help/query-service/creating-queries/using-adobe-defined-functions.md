@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções definidas pela Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '287'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Um dos grandes diferenciais da Adobe é que eles entendem os dados de experiência e o que os clientes precisam para poder fazer com esses dados. Você pode usar essa compreensão para criar funções auxiliares que facilitem seu trabalho.
 
-Este documento cobre funções definidas pela Adobe (ADFs) para suportar três atividades principais do Analytics:
+Este documento cobre funções definidas pela Adobe (ADFs) para suportar três [!DNL Analytics] atividades principais:
 - [Sessões](#sessionization)
 - [Atribuição](#attribution)
 - [Definição de caminho](#pathing)
@@ -91,13 +91,13 @@ A atribuição é a forma como você aloca métricas ou conversões, como receit
 
 No Adobe Analytics, as configurações de atribuição são configuradas usando variáveis como eVars e são geradas conforme os dados são assimilados.
 
-Os ADFs de Atribuição encontrados no Serviço de Query permitem que essas alocações sejam definidas e geradas no momento do query.
+Os ADFs de Atribuição encontrados em [!DNL Query Service] permitem que essas alocações sejam definidas e geradas no momento do query.
 
 Este exemplo foca na atribuição de último toque, mas a Adobe também oferta a atribuição de primeiro toque.
 
 >[!NOTE]
 >
->Outras opções com tempos limite e expiração com base em eventos estarão disponíveis em versões futuras do Query Service.
+>Outras opções com tempos limite e expiração com base em eventos estarão disponíveis em versões futuras do [!DNL Query Service].
 
 **Sintaxe:**
 

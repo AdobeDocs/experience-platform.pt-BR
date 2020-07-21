@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Visão geral da ingestão em lote de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
 
 
-# Visão geral da ingestão em lote
+# [!DNL Batch Ingestion]visão geral
 
-A API de ingestão em lote permite que você ingira dados em Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
+A [!DNL Batch Ingestion] API permite que você ingira dados em arquivos Adobe Experience Platform como lote. Os dados que estão sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estão em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
 
 A referência [da API de ingestão de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) dados fornece informações adicionais sobre essas chamadas de API.
 
@@ -24,17 +24,17 @@ O diagrama a seguir descreve o processo de ingestão em lote:
 
 ## Uso da API
 
-A API de ingestão de dados permite que você ingira dados como lotes (uma unidade de dados que consiste em um ou mais arquivos para serem ingeridos como uma única unidade) em Experience Platform em três etapas básicas:
+A [!DNL Data Ingestion] API permite que você ingira dados como lotes (uma unidade de dados que consiste em um ou mais arquivos para serem ingeridos como uma única unidade) [!DNL Experience Platform] em três etapas básicas:
 
 1. Crie um novo lote.
 2. Faça upload de arquivos para um conjunto de dados especificado que corresponda ao schema XDM dos dados.
 3. Sinal da extremidade do lote.
 
 
-### Pré-requisitos de ingestão de dados
+### [!DNL Data Ingestion] pré-requisitos
 
 - Os dados a serem carregados devem estar nos formatos Parquet ou JSON.
-- Um conjunto de dados criado nos serviços [](../../catalog/home.md)de catálogo.
+- Um conjunto de dados criado no [!DNL Catalog services](../../catalog/home.md).
 - O conteúdo do arquivo parquet deve corresponder a um subconjunto do schema do conjunto de dados para o qual está sendo feito upload.
 - Tenha seu Token de acesso exclusivo após a autenticação.
 
@@ -47,23 +47,23 @@ Para carregar um arquivo maior que 512 MB, o arquivo precisará ser dividido em 
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -237,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Conclusão do lote de sinais
 
-Depois que todos os arquivos forem carregados no lote, o lote poderá ser sinalizado para conclusão. Ao fazer isso, as entradas Catalog **DataSetFile** são criadas para os arquivos concluídos e associadas ao lote gerado acima. O lote de Catálogo é marcado como bem-sucedido, o que aciona os fluxos downstream para assimilar os dados disponíveis.
+Depois que todos os arquivos forem carregados no lote, o lote poderá ser sinalizado para conclusão. Ao fazer isso, as entradas [!DNL Catalog] DataSetFile **** são criadas para os arquivos concluídos e associadas ao lote gerado acima. O [!DNL Catalog] lote é marcado como bem-sucedido, o que aciona os fluxos downstream para assimilar os dados disponíveis.
 
 **Solicitação**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Avaliar um segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Por meio da avaliação programada, sua Organização IMS pode criar uma program
 
 >[!NOTE]
 >
->A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para o Perfil individual XDM. Se sua organização tiver mais de cinco políticas de mesclagem para o Perfil individual XDM em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
+>A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] dentro de um único ambiente de sandbox, você não poderá usar a avaliação agendada.
 
 ### Criar um agendamento
 
@@ -157,11 +157,11 @@ As etapas a seguir são necessárias para exportar sua audiência:
 
 Ao exportar uma audiência, um conjunto de dados de público alvo deve ser criado primeiro. É importante que o conjunto de dados seja configurado corretamente para garantir que a exportação seja bem-sucedida.
 
-Uma das principais considerações é o schema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar um segmento, o conjunto de dados deve ser baseado no Schema de União de Perfil individual (`https://ns.adobe.com/xdm/context/profile__union`) do XDM. Um schema união é um schema gerado pelo sistema e somente leitura que agregação os campos de schemas que compartilham a mesma classe, neste caso, que é a classe de Perfil Individual XDM. Para obter mais informações sobre schemas de visualização de união, consulte a seção Perfil do cliente em tempo [real do guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro de Schemas.
+Uma das principais considerações é o schema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar um segmento, o conjunto de dados deve ser baseado no [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Um schema união é um schema gerado pelo sistema e somente leitura que agregação os campos de schemas que compartilham a mesma classe, neste caso, que é a classe de Perfil Individual XDM. Para obter mais informações sobre schemas de visualização de união, consulte a seção Perfil do cliente em tempo [real do guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro de Schemas.
 
 Há duas maneiras de criar o conjunto de dados necessário:
 
-- **Uso de APIs:** As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faz referência ao Schema de União de Perfil individual XDM usando a API de catálogo.
+- **Uso de APIs:** As etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faça referência ao [!DNL XDM Individual Profile Union Schema] uso da [!DNL Catalog] API.
 - **Usando a interface do usuário:** Para usar a interface do [!DNL Adobe Experience Platform] usuário para criar um conjunto de dados que faça referência ao schema da união, siga as etapas no tutorial [da](../ui/overview.md) interface do usuário e retorne a este tutorial para prosseguir com as etapas de [geração de perfis](#generate-xdm-profiles-for-audience-members)da audiência.
 
 Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa de [geração de perfis](#generate-xdm-profiles-for-audience-members)audiências.
@@ -228,10 +228,10 @@ Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas n
 
 ## Próximas etapas
 
-Quando a exportação for concluída com êxito, seus dados estarão disponíveis no Data Lake em [!DNL Experience Platform]. Em seguida, você pode usar a API [de acesso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dados para acessar os dados usando a API `batchId` associada à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
+Depois que a exportação for concluída com êxito, seus dados estarão disponíveis no [!DNL Data Lake] em [!DNL Experience Platform]. Em seguida, você pode usar o para acessar os dados usando o [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) `batchId` associado à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar a [!DNL Data Access] API para acessar e baixar arquivos em lote, siga o tutorial [Acesso a](../../data-access/tutorials/dataset-data.md)dados.
 
-Você também pode acessar dados de segmento exportados com êxito usando [!DNL Adobe Experience Platform Query Service]. Usando a interface do usuário ou a RESTful API, [!DNL Query Service] você pode gravar, validar e executar query em dados dentro do Data Lake.
+Você também pode acessar dados de segmento exportados com êxito usando [!DNL Adobe Experience Platform Query Service]. Usando a interface do usuário ou a RESTful API, [!DNL Query Service] você pode gravar, validar e executar query em dados dentro da [!DNL Data Lake].
 
 Para obter mais informações sobre como query dados de audiência, consulte a documentação em [!DNL Query Service](../../query-service/home.md).

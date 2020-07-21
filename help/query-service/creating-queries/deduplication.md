@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Dados desduplicação-duplicados
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
 
 
-# Dados desduplicação-duplicados no serviço de Query
+# Dados desduplicação-duplicados em [!DNL Query Service]
 
-O Serviço de Query Adobe Experience Platform suporta dados desduplicação-duplicados quando pode ser necessário remover uma linha inteira de um cálculo ou ignorar um conjunto específico de campos porque apenas parte dos dados na linha é um duplicado. O padrão comum de desduplicação-duplicado envolve o uso da `ROW_NUMBER()` função em uma janela para uma ID, ou par de IDs, ao longo do tempo ordenado (usando o campo Modelo de Dados de Experiência (XDM) `timestamp` ) para retornar um novo campo que representa o número de vezes que um duplicado foi detectado. Quando esse valor é `1`, refere-se à instância original e, na maioria dos casos, essa é a instância que você deseja usar, ignorando todas as outras instâncias. Isso será feito com mais frequência dentro de uma subseleção em que o desduplicação-duplicado é feito em um nível mais alto, `SELECT` como executar uma contagem de agregações.
+O Adobe Experience Platform [!DNL Query Service] suporta dados desduplicação-duplicados quando pode ser necessário remover uma linha inteira de um cálculo ou ignorar um conjunto específico de campos porque somente parte dos dados na linha é um duplicado. O padrão comum de desduplicação-duplicado envolve o uso da `ROW_NUMBER()` função em uma janela para uma ID, ou par de IDs, durante o tempo ordenado (usando o campo [!DNL Experience Data Model] (XDM) `timestamp` ) para retornar um novo campo que representa o número de vezes que um duplicado foi detectado. Quando esse valor é `1`, refere-se à instância original e, na maioria dos casos, essa é a instância que você deseja usar, ignorando todas as outras instâncias. Isso será feito com mais frequência dentro de uma subseleção em que o desduplicação-duplicado é feito em um nível mais alto, `SELECT` como executar uma contagem de agregações.
 
 ## Casos de uso
 
@@ -31,7 +31,7 @@ No caso de ExperienceEvents do duplicado, você provavelmente desejará ignorar 
 
 >[!CAUTION]
 >
->Muitos DataSets no Experience Platform, incluindo os produzidos pelo Adobe Analytics Data Connector, já têm o nível de ExperienceEvent desduplicação-duplicado aplicado. Portanto, reaplicar esse nível de desduplicação-duplicado é desnecessário e vai retardar seu query. É importante entender a fonte de seus DataSets e saber se desduplicação-duplicado no nível do ExperienceEvent já foi aplicado. Para todos os DataSets que são transmitidos (por exemplo, os de Adobe Target), será necessário aplicar o nível de ExperienceEvent desduplicação-duplicado, pois essas fontes de dados têm uma semântica de &#39;pelo menos uma vez&#39;.
+>Muitos DataSets no [!DNL Experience Platform], incluindo os produzidos pelo Adobe Analytics Data Connector, já têm nível de ExperienceEvent desduplicação-duplicado aplicado. Portanto, reaplicar esse nível de desduplicação-duplicado é desnecessário e vai retardar seu query. É importante entender a fonte de seus DataSets e saber se desduplicação-duplicado no nível do ExperienceEvent já foi aplicado. Para todos os DataSets que são transmitidos (por exemplo, os de Adobe Target), será necessário aplicar o nível de ExperienceEvent desduplicação-duplicado, pois essas fontes de dados têm uma semântica de &#39;pelo menos uma vez&#39;.
 
 **Âmbito:** Global
 

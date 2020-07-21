@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmissão de dados de registro
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1059'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Transmitir dados de registro para Adobe Experience Platform
 
-Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs de serviço de ingestão de dados do Adobe Experience Platform.
+Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs de Adobe Experience Platform [!DNL Data Ingestion Service] .
 
 ## Introdução
 
 Este tutorial requer um conhecimento prático de vários serviços de Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência.
-- [Perfil](../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
-- [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da API do Registro do Schema e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
 
 Além disso, este tutorial requer que você já tenha criado uma conexão de streaming. Para obter mais informações sobre como criar uma conexão de streaming, leia o tutorial [](./create-streaming-connection.md)Criar uma conexão de streaming.
 
@@ -30,31 +30,31 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
-## Compor um schema com base na classe do Perfil individual XDM
+## Compor um schema com base fora da [!DNL XDM Individual Profile] classe
 
-Para criar um conjunto de dados, primeiro será necessário criar um novo schema que implemente a classe de Perfil individual XDM. Para obter mais informações sobre como criar schemas, leia o guia [do desenvolvedor da API de Registro de](../../xdm/api/getting-started.md)Schemas.
+Para criar um conjunto de dados, primeiro será necessário criar um novo schema que implemente a [!DNL XDM Individual Profile] classe. Para obter mais informações sobre como criar schemas, leia o guia [do desenvolvedor da API de Registro de](../../xdm/api/getting-started.md)Schemas.
 
 **Formato da API**
 
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | O nome que você deseja usar para o seu schema. Esse nome deve ser exclusivo. |
 | `description` | Uma descrição significativa do schema que você está criando. |
-| `meta:immutableTags` | Neste exemplo, a `union` tag é usada para persistir seus dados no Perfil [Cliente em tempo](../../profile/home.md)real. |
+| `meta:immutableTags` | Neste exemplo, a `union` tag é usada para persistir nos dados [!DNL Real-time Customer Profile](../../profile/home.md). |
 
 **Resposta**
 
@@ -161,7 +161,7 @@ Em seguida, adicione um descritor [de](../../xdm/api/descriptors.md) identidade 
 
 1. O endereço de email de trabalho se tornará um campo obrigatório. Isso significa que as mensagens enviadas sem esse campo falharão na validação e não serão ingeridas.
 
-2. O Perfil do cliente em tempo real usará o endereço de email como um identificador para ajudar a juntar mais informações sobre esse indivíduo.
+2. [!DNL Real-time Customer Profile] usará o endereço de email como um identificador para ajudar a juntar mais informações sobre esse indivíduo.
 
 ### Solicitação
 
@@ -221,7 +221,7 @@ Depois de criar o schema, será necessário criar um conjunto de dados para assi
 
 >[!NOTE]
 >
->Este conjunto de dados será ativado para o Perfil **do cliente em tempo** real e o Serviço **de** identidade.
+>Este conjunto de dados será ativado para **[!DNL Real-time Customer Profile]** e **[!DNL Identity Service]**.
 
 **Formato da API**
 
@@ -264,7 +264,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz que contém a I
 
 ## Ingressar dados de registro na conexão de streaming
 
-Com o conjunto de dados e a conexão de streaming ativada, você pode assimilar registros JSON formatados em XDM para assimilar dados de registro no Platform.
+Com o conjunto de dados e a conexão de streaming ativada, você pode assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Platform].
 
 **Formato da API**
 
@@ -326,7 +326,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo Perfil transmitido.
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo streaming [!DNL Profile].
 
 ```json
 {
@@ -348,11 +348,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo Perfil 
 
 ## Recuperar os dados de registro recém-ingeridos
 
-Para validar os registros ingeridos anteriormente, você pode usar a API [de acesso ao](../../profile/api/entities.md) Perfil para recuperar os dados do registro.
+Para validar os registros ingeridos anteriormente, você pode usar o para recuperar os dados [!DNL Profile Access API](../../profile/api/entities.md) do registro.
 
 >[!NOTE]
 >
->Se a ID da política de mesclagem não estiver definida e o schema.</span>name ou relatedSchema</span>.name for `_xdm.context.profile`, o Acesso ao Perfil buscará **todas** as identidades relacionadas.
+>Se a ID da política de mesclagem não estiver definida e o schema.</span>name ou relatedSchema</span>.name for `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** as identidades relacionadas.
 
 **Formato da API**
 
@@ -431,7 +431,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Ao ler este documento, agora você entende como assimilar dados de registro no Platform usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode monitorar seus dados ingeridos com start por meio da interface do usuário do Platform. Para mais informações, leia o guia de ingestão [de dados de](../quality/monitor-data-flows.md) monitorização.
+Ao ler este documento, agora você entende como assimilar dados de registro [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode monitorar seus dados ingeridos por start por meio da [!DNL Platform] interface do usuário. Para mais informações, leia o guia de ingestão [de dados de](../quality/monitor-data-flows.md) monitorização.
 
 Para obter mais informações sobre a ingestão de streaming em geral, leia a visão geral [da ingestão de](../streaming-ingestion/overview.md)streaming.
 

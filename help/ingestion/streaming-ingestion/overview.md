@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral de ingestão de transmissão de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '249'
 ht-degree: 3%
 
 ---
@@ -14,29 +14,29 @@ ht-degree: 3%
 
 # Visão geral da assimilação de transmissão
 
-A ingestão de transmissão para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para o Experience Platform em tempo real.
+A ingestão de transmissão para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para [!DNL Experience Platform] em tempo real.
 
 ## O que você pode fazer com a ingestão de streaming?
 
-O Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes gerando um Perfil de cliente em tempo real para cada um de seus clientes individuais. A ingestão de streaming desempenha um papel fundamental na criação desses perfis, permitindo que você forneça dados de Perfis no Data Lake com o mínimo de latência possível.
+O Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes, gerando um [!DNL Real-time Customer Profile] para cada um de seus clientes individuais. A inclusão de streaming desempenha um papel fundamental na criação desses perfis, permitindo que você forneça [!DNL Profile] dados para o [!DNL Data Lake] com o mínimo de latência possível.
 
 O vídeo a seguir foi criado para ajudar a compreender a ingestão de streaming e descreve os conceitos acima.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### Registros de perfil de fluxo e ExperienceEvents
+### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 
-Com a ingestão de streaming, os usuários podem transmitir registros de perfis e ExperienceEvents para a Platform em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para APIs de ingestão de fluxo contínuo são automaticamente persistentes no Data Lake.
+Com a ingestão de streaming, os usuários podem transmitir registros de perfis [!DNL ExperienceEvents] e até [!DNL Platform] segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para APIs de ingestão de streaming são automaticamente persistentes no [!DNL Data Lake].
 
 Leia o guia [de](../tutorials/create-streaming-connection.md) criação de conexão de streaming para obter mais informações.
 
 ### Fluxo para conjuntos de dados
 
-Quando estiver confiante de que seus dados estão limpos, você poderá ativar seus conjuntos de dados para o Perfil do cliente em tempo real e o Serviço de identidade.
+Quando estiver confiante de que seus dados estão limpos, você poderá ativar seus conjuntos de dados para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 
-Para obter mais informações sobre como habilitar um conjunto de dados para o Perfil e o Serviço de identidade, leia o guia [de](../../profile/tutorials/dataset-configuration.md)configuração de um conjunto de dados.
+Para obter mais informações sobre como habilitar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o guia [](../../profile/tutorials/dataset-configuration.md)configurar um conjunto de dados.
 
-## Qual é a latência esperada para a ingestão de streaming no Platform?
+## What is the expected latency for streaming ingestion on [!DNL Platform]?
 
 | Destino | Latência esperada |
 | --------- | ---------------- |
@@ -45,4 +45,4 @@ Para obter mais informações sobre como habilitar um conjunto de dados para o P
 
 ## Extensão da Adobe Experience Platform
 
-Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de streaming. A extensão Experience Platform fornece ações para enviar beacons formatados no Modelo de dados de experiência (XDM) para ingestão em tempo real ao Experience Platform. Visite a documentação da Extensão [do](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) Experience Platform para obter mais informações.
+Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de streaming. A [!DNL Experience Platform] extensão fornece ações para enviar beacons formatados em [!DNL Experience Data Model] (XDM) para ingestão em tempo real [!DNL Experience Platform]. Visite a documentação da Extensão [do](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) Experience Platform para obter mais informações.

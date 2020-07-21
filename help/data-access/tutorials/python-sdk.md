@@ -4,21 +4,21 @@ solution: Experience Platform
 title: SDK seguro de acesso a dados Python
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
 
-# Secure Python [!DNL Data Access] SDK
+# SDK seguro [!DNL Python] [!DNL Data Access]
 
-O Secure Python [!DNL Data Access] SDK é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados do Adobe Experience Platform.
+O Secure [!DNL Python] [!DNL Data Access] SDK é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados do Adobe Experience Platform.
 
 ## Introdução
 
-Você deve ter concluído o tutorial de [autenticação](../../tutorials/authentication.md) para ter acesso aos valores para fazer chamadas para o [!DNL Data Access] SDK do Secure Python:
+Você deve ter concluído o tutorial de [autenticação](../../tutorials/authentication.md) para ter acesso aos valores para fazer chamadas ao SDK seguro [!DNL Python][!DNL Data Access] :
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
@@ -63,7 +63,7 @@ Todos os pacotes são enviados para `./dist` depois da construção.
 python3 setup.py bdist_wheel --universal
 ```
 
-No diretório do projeto, carregue a roda no ambiente Python 3.
+A partir do diretório do projeto, carregue a roda no seu [!DNL Python] ambiente 3.
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -148,7 +148,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Cláusula ORDER BY
 
-A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). No SDK Python, isso é feito usando a `sort()` função.
+A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). No [!DNL Python] SDK, isso é feito usando a `sort()` função.
 
 Um exemplo de uso da `sort()` função pode ser visto abaixo:
 

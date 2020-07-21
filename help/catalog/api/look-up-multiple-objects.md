@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Pesquisar vários objetos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '176'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Pesquisar vários objetos
 
-Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornecerá um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
+Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] fornecer um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
 
 >[!NOTE]
 >
->Mesmo ao solicitar objetos de Catálogo específicos, ainda é prática recomendada o parâmetro `properties` query para retornar somente as propriedades de que você precisa.
+>Mesmo ao solicitar [!DNL Catalog] objetos específicos, ainda é prática recomendada o parâmetro `properties` query para retornar somente as propriedades necessárias.
 
 **Formato da API**
 
@@ -27,7 +27,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a recuperar. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Um identificador para um dos objetos específicos que você deseja recuperar. |
 
 **Solicitação**
@@ -49,7 +49,7 @@ Uma resposta bem-sucedida retorna uma lista dos conjuntos de dados especificados
 
 >[!NOTE]
 >
->Se um objeto retornado não contiver mais uma das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, como mostrado em &quot;Conjunto de dados de amostra 3&quot; e &quot;Conjunto de dados de amostra 4&quot; abaixo.
+>Se um objeto retornado não contiver mais uma ou mais das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
 
 ```json
 {

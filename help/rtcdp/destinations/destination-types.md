@@ -1,21 +1,24 @@
 ---
 title: Tipos de destinos e Categorias
 seo-title: Tipos de destinos e Categorias
-description: 'Na Plataforma de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
-seo-description: Na Plataforma de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
+description: 'Na Platform de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
+seo-description: Na Platform de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
 translation-type: tm+mt
-source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
 
 # Tipos e Categorias de destino
 
-Leia esta página para entender os diferentes tipos e categorias dos destinos da Adobe Real-time Customer Data Platform.
+Leia esta página para entender os diferentes tipos e categorias dos destinos da Platform de dados do cliente em tempo real da Adobe.
 
 ## Tipos de destino
 
-Na Plataforma de dados do cliente em tempo real da Adobe, fazemos a distinção entre dois tipos de destino - conexões e extensões. Existem dois tipos de destinos de conexão, destinos de exportação de Perfil e destinos de exportação de segmento.
+Na Adobe Real-time Customer Data Platform, distinguimos entre dois tipos de destino - conexões e extensões. Existem dois tipos de destinos de conexão, destinos de exportação de Perfil e destinos de exportação de segmento.
 
 ![Tipos de destinos](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -23,7 +26,7 @@ Na Plataforma de dados do cliente em tempo real da Adobe, fazemos a distinção 
 
 ### Conexões
 
-**Os destinos de exportação** de Perfis e exportação **de** segmentos na plataforma de dados do cliente em tempo real da Adobe capturam os dados do evento, os combinam com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportação]** de Perfis e exportação **[!UICONTROL de]** segmentos nos dados do cliente em tempo real da Adobe A Platform captura dados do evento, combina-os com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
 
 <br> 
 
@@ -33,7 +36,7 @@ Os destinos de exportação de Perfil geram um arquivo que contém perfis e/ou a
 
 #### Destinos de exportação do segmento
 
-Os destinos de exportação do segmento enviam os perfis e os segmentos para os quais eles se qualificaram para plataformas de destino. Esses destinos usam IDs de segmento ou IDs de usuário. Os destinos de publicidade como [Google Display e Video 360](/help/rtcdp/destinations/google-dv360-destination.md) ou [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) são exemplos desses tipos de destinos.
+Os destinos de exportação do segmento enviam os perfis e os segmentos para os quais eles se qualificaram para plataformas de destino. Esses destinos usam IDs de segmento ou IDs de usuário. Destinos de publicidade como [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) ou [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) são exemplos desses tipos de destinos.
 
 #### Destinos de exportação de Perfis e segmentos - visão geral do vídeo
 
@@ -45,15 +48,15 @@ O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 ### Extensões
 
-A CDP em tempo real da Adobe aproveita o poder e a flexibilidade do Experience Platform Launch para incluir extensões do Launch na interface CDP em tempo real da Adobe.
+A CDP em tempo real da Adobe aproveita o poder e a flexibilidade do Experience Platform Launch para incluir extensões de lançamento na interface CDP em tempo real da Adobe.
 
 >[!TIP]
 >
->Para obter informações detalhadas sobre as extensões do Experience Platform Launch, incluindo casos de uso e como encontrá-las na interface, consulte a visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
+>Para obter informações detalhadas sobre extensões de Experience Platform Launch, incluindo casos de uso e como encontrá-las na interface, consulte a visão geral [das extensões de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)lançamento.
 
 Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. Pense nas extensões como um tipo de destino de Encaminhamento de **Eventos** . Esse é um tipo mais simples de integração com as plataformas de destino, que apenas encaminha dados brutos do evento. Exemplos disso são a extensão [de personalização](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou a [Confirmar voz da extensão](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
-![Extensões do Experience Platform Launch em comparação com outros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![extensões de Experience Platform Launch em relação a outros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
 <br> 
 

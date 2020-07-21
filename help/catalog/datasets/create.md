@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conjunto de dados usando APIs
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 1%
 
 ---
@@ -20,31 +20,31 @@ Este documento fornece etapas gerais para a criação de um conjunto de dados us
 
 Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: O Experience Platform permite que você ingira dados como arquivos em lote.
-* [Sistema](../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-* [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: [!DNL Experience Platform] permite que você ingira dados como arquivos em lote.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -60,9 +60,9 @@ Essas definições padrão permitem que os dados sejam interpretados de forma co
 
 Este tutorial inicia onde o tutorial [da API do Registro do](../../xdm/tutorials/create-schema-api.md) Schema termina, utilizando o schema Membros da Fidelidade criado durante esse tutorial.
 
-Se você não tiver concluído o tutorial Registro do Schema, start para lá e continue com este tutorial de conjunto de dados somente depois de ter composto o schema necessário.
+Se você não tiver concluído o [!DNL Schema Registry] tutorial, start lá e continue com este tutorial de conjunto de dados somente depois de ter composto o schema necessário.
 
-A chamada a seguir pode ser usada para visualização do schema Membros da Fidelidade que você criou durante o tutorial da API do Registro do Schema:
+A chamada a seguir pode ser usada para visualização do schema Membros de Fidelidade que você criou durante o tutorial da [!DNL Schema Registry] API:
 
 **Formato da API**
 
@@ -329,7 +329,7 @@ Um arquivo carregado com êxito retorna um corpo de resposta em branco e o Statu
 
 ## Conclusão do lote de sinais
 
-Depois de carregar todos os arquivos de dados no lote, você pode sinalizar o lote para conclusão. A conclusão da sinalização faz com que o serviço crie entradas de Catálogo para os arquivos carregados e as associe ao lote gerado anteriormente. `DataSetFile` O lote de Catálogo é marcado como bem-sucedido, o que aciona todos os fluxos downstream que podem então funcionar nos dados agora disponíveis.
+Depois de carregar todos os arquivos de dados no lote, você pode sinalizar o lote para conclusão. A conclusão da sinalização faz com que o serviço crie [!DNL Catalog]`DataSetFile` entradas para os arquivos carregados e as associe ao lote gerado anteriormente. O [!DNL Catalog] lote é marcado como bem-sucedido, o que aciona todos os fluxos downstream que podem então funcionar nos dados agora disponíveis.
 
 **Formato da API**
 

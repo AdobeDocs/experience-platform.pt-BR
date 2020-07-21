@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guia de solução de problemas de ingestão em lote da Adobe Experience Platform
+title: Guia de solução de problemas de ingestão em lote de Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 1%
 
 ---
 
 
 # Guia de solução de problemas de ingestão em lote
 
-Essa documentação ajudará a responder a perguntas frequentes sobre APIs de assimilação de dados em lote da plataforma Adobe Experience.
+Essa documentação ajudará a responder a perguntas frequentes sobre as APIs de Adobe Experience Platform [!DNL Batch Data Ingestion] .
 
 ## Chamadas de API em lote
 
@@ -35,7 +38,7 @@ Se partes de um arquivo grande forem encontradas sobrepostas ou ausentes, o serv
 
 ### Quais são os formatos de assimilação compatíveis?
 
-Atualmente, o Parquet e o JSON são suportados. O CSV é suportado em uma base herdada - enquanto os dados serão promovidos para verificações principais e preliminares serão feitas, nenhum recurso moderno, como conversão, particionamento ou validação de linha será suportado.
+Atualmente, o Parquet e o JSON são suportados. O CSV é suportado em uma base herdada - enquanto os dados serão promovidos para verificações principais e preliminares, nenhum recurso moderno, como conversão, particionamento ou validação de linha será suportado.
 
 ### Onde deve ser especificado o formato de entrada do lote?
 
@@ -106,7 +109,7 @@ Para JSON de várias linhas, um objeto pode ocupar várias linhas, enquanto todo
 ]
 ```
 
-Por padrão, a ingestão de dados em lote usa JSON de linha única.
+Por padrão, [!DNL Batch Data Ingestion] usa JSON de linha única.
 
 ### A ingestão de CSV é suportada?
 
@@ -165,17 +168,17 @@ Com essa solicitação, você receberá uma resposta semelhante a esta:
 
 Um lote pode, em seu ciclo de vida, passar pelos seguintes estados:
 
-| Status | Dados gravados no mestre | Descrição |
+| Status | Dados escritos para Principal | Descrição |
 | ------ | ---------------------- | ----------- |
 | Abandonado |  | O cliente não conseguiu concluir o lote no período de tempo esperado. |
-| Abortado |  | O cliente chamou explicitamente, por meio das APIs de ingestão de dados em lote, uma operação de anulação para o lote especificado. Quando um lote está no estado Carregado, o lote não pode ser abortado. |
-| Ativo/Sucesso | x | O lote foi promovido com êxito de estágio para mestre e agora está disponível para consumo de downstream. **Observação:** Ativo e bem-sucedido são usados alternadamente. |
+| Abortado |  | O cliente chamou explicitamente, por meio das [!DNL Batch Data Ingestion] APIs, uma operação de anulação para o lote especificado. Quando um lote está no estado Carregado, o lote não pode ser abortado. |
+| Ativo/Sucesso | x | O lote foi promovido com sucesso do estágio para o principal e agora está disponível para consumo a jusante. **Observação:** Ativo e bem-sucedido são usados alternadamente. |
 | Arquivado |  | O lote foi arquivado em armazenamento frio. |
 | Falha/falha |  | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Um erro acionável é registrado, juntamente com o lote, para permitir que os clientes corrijam e reenviem os dados. **Observação:** Falha e Falha são usadas alternadamente. |
-| Inativo | x | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não estará mais disponível para consumo downstream, mas os dados subjacentes permanecerão no Master até que tenham sido retidos, arquivados ou excluídos de outra forma. |
+| Inativo | x | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não estará mais disponível para consumo downstream, mas os dados subjacentes permanecerão Principais até que tenham sido retidos, arquivados ou excluídos de outra forma. |
 | Carregando |  | O cliente está gravando dados para o lote no momento. O lote **não** está pronto para promoção nesse momento. |
 | Carregado |  | O cliente concluiu a gravação de dados para o lote. O lote está pronto para promoção. |
-| Retenção |  | Os dados foram retirados do Master e em um arquivo designado no Adobe Data Lake. |
+| Retenção |  | Os dados foram retirados do Principal e em um arquivo designado no Adobe Data Lake. |
 | Armazenamento temporário |  | O cliente assinou com êxito o lote para promoção, e os dados estão sendo preparados para consumo a jusante. |
 | Tentando novamente |  | O cliente assinou o lote para promoção, mas devido a um erro, o lote está sendo tentado novamente por um serviço de Monitoramento em lote. Esse estado pode ser usado para informar aos clientes que pode haver um atraso na assimilação dos dados. |
 | Parado |  | O cliente assinou o lote para promoção, mas após `n` tentativas por um serviço de Monitoramento em lote, a promoção em lote parou. |
@@ -190,7 +193,7 @@ Quando um lote está em &quot;Tentando novamente&quot;, isso significa que a ing
 
 ### O que significa quando um lote está &quot;parado&quot;?
 
-Quando um lote está em &quot;Parado&quot;, isso significa que os Serviços de ingestão de dados estão com dificuldade para ingerir o lote e todas as tentativas foram esgotadas.
+Quando um lote está em &quot;Parado&quot;, isso significa que [!DNL Data Ingestion Services] há dificuldade em ingerir o lote e todas as tentativas estão esgotadas.
 
 ### O que significa se um lote ainda estiver &quot;Carregando&quot;?
 
@@ -225,7 +228,7 @@ Depois que os erros forem corrigidos, o lote poderá ser carregado novamente.
 
 ### Como os lotes devem ser excluídos?
 
-Em vez de excluir diretamente do Catálogo, os lotes devem ser removidos usando um dos métodos fornecidos abaixo:
+Em vez de eliminar diretamente do [!DNL Catalog], os lotes devem ser removidos utilizando um dos métodos abaixo indicados:
 
 1. Se o lote estiver em andamento, o lote deve ser abortado.
 2. Se o lote for dominado com êxito, o lote deve ser revertido.
@@ -236,11 +239,11 @@ As seguintes métricas em nível de lote estão disponíveis para lotes no estad
 
 | Métrica | Descrição |
 | ------ | ----------- |
-| inputByteSize | O número total de bytes preparados para o processamento dos Serviços de ingestão de dados. |
-| inputRecordSize | O número total de linhas preparadas para o processamento do Data Ingsion Services. |
-| outputByteSize | O número total de bytes gerados pelos Serviços de ingestão de dados para o Data Lake. |
-| outputRecordSize | O número total de linhas geradas pelo Data Ingsion Services para Data Lake. |
-| partitionCount | O número total de partições gravadas no Data Lake. |
+| inputByteSize | O número total de bytes preparados para [!DNL Data Ingestion Services] processamento. |
+| inputRecordSize | O número total de linhas preparadas para [!DNL Data Ingestion Services] processamento. |
+| outputByteSize | O número total de bytes gerados por [!DNL Data Ingestion Services] até [!DNL Data Lake]. |
+| outputRecordSize | O número total de linhas distribuídas por [!DNL Data Ingestion Services] até [!DNL Data Lake]. |
+| partitionCount | O número total de partições gravadas em [!DNL Data Lake]. |
 
 ### Por que as métricas não estão disponíveis em alguns lotes?
 
@@ -256,6 +259,6 @@ Há dois motivos para as métricas não estarem disponíveis no lote:
 | 106 | O arquivo de conjunto de dados está vazio. |
 | 118 | O arquivo CSV contém uma linha de cabeçalho vazia. |
 | 200 | O lote foi aceito para processamento e será transição para um estado final, como Ativo ou Falha. Depois de submetido, o lote pode ser monitorizado usando o `GetBatch` endpoint. |
-| 400 | Solicitação incorreta. Retornado se houver partes ausentes ou sobrepostas em um lote. |
+| 400 | Solicitação inválida. Retornado se houver partes ausentes ou sobrepostas em um lote. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

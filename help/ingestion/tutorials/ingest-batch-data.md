@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Insira dados no Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1277'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Se preferir assimilar dados usando as APIs de ingestão de dados, comece lendo o
 
 A área de trabalho de conjuntos de dados dentro [!DNL Experience Platform] permite que você visualização e gerencie todos os conjuntos de dados criados pela organização IMS, bem como criar novos conjuntos.
 
-Visualização a área de trabalho Conjuntos de dados clicando em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda. A área de trabalho Conjuntos de dados contém uma lista de conjuntos de dados, incluindo colunas que mostram _Nome_, _Criado_ (data e hora), _Origem_, _Schema_ e Status _do___&#x200B;Último Lote, bem como a data e a hora em que o conjunto de dados foi Última Atualização.
+Visualização a área de trabalho Conjuntos de dados clicando em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda. A área de trabalho Conjuntos de dados contém uma lista de conjuntos de dados, incluindo colunas que mostram _[!UICONTROL Nome]_,_[!UICONTROL  Criado]_ (data e hora), _[!UICONTROL Origem]_,_[!UICONTROL  Schema]_e Status _[!UICONTROL do]___Último Lote, bem como a data e a hora em que o conjunto de dados foi Última Atualização.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Depois que o conjunto de dados tiver um nome e uma descrição, clique em **[!UI
 
 Um conjunto de dados vazio foi criado e você foi retornado para a guia Atividade **** Conjunto de dados na área de trabalho Conjuntos de dados. Você deve ver o nome do conjunto de dados no canto superior esquerdo do espaço de trabalho, juntamente com uma notificação de que &quot;Nenhum lote foi adicionado.&quot; Isso é esperado, pois você ainda não adicionou nenhum lote a esse conjunto de dados.
 
-No lado direito da área de trabalho dos Conjuntos de dados, você verá a guia **[!UICONTROL Informações]** contendo informações relacionadas ao seu novo conjunto de dados, como ID _do_ Conjunto de dados, _Nome_, _Descrição_, Nome _da_______ tabela, Schema, Streaming eSource. A guia Informações também inclui informações sobre quando o conjunto de dados foi _criado_ e sua data de _Última modificação_ .
+No lado direito da área de trabalho dos Conjuntos de dados, você verá a guia **[!UICONTROL Informações]** contendo informações relacionadas ao seu novo conjunto de dados, como ID _[!UICONTROL do]_Conjunto de dados,_[!UICONTROL  Nome]_, _[!UICONTROL Descrição]_, Nome_[!UICONTROL  da]_______tabela, Schema, Streaming eSource. A guia Informações também inclui informações sobre quando o conjunto de dados foi_[!UICONTROL  criado]_ e sua data de _[!UICONTROL Última modificação]_.
 
-Também na guia Informações há uma alternância de _Perfil_ usada para habilitar seu conjunto de dados para uso com [!DNL Real-time Customer Profile]. O uso dessa alternância e [!DNL Real-time Customer Profile]será explicado com mais detalhes na seção a seguir.
+Também na guia Informações há uma alternância de _[!UICONTROL Perfil]_usada para habilitar seu conjunto de dados para uso com[!DNL Real-time Customer Profile]. O uso dessa alternância e[!DNL Real-time Customer Profile]será explicado com mais detalhes na seção a seguir.
 
 ![atividade do conjunto de dados](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -88,7 +88,7 @@ Para ativar o conjunto de dados para [!DNL Real-time Customer Profile], clique n
 
 ![Alternar Perfil](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-Será exibida uma caixa de diálogo solicitando que você confirme que deseja ativar o conjunto de dados para o Perfil do cliente em tempo real.
+Será exibida uma caixa de diálogo solicitando que você confirme que deseja ativar o conjunto de dados para [!DNL Real-time Customer Profile].
 
 ![Habilitar caixa de diálogo Perfil](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
@@ -98,7 +98,7 @@ Clique em **[!UICONTROL Ativar]** e a alternância ficará azul, indicando que e
 
 ## Adicionar dados ao conjunto de dados
 
-Os dados podem ser adicionados a um conjunto de dados de várias maneiras diferentes. Você pode optar por usar as APIs de ingestão de dados ou um parceiro ETL, como Unifi ou Informatica. Para este tutorial, os dados serão adicionados ao conjunto de dados usando a guia **[!UICONTROL Adicionar dados]** na interface do usuário.
+Os dados podem ser adicionados a um conjunto de dados de várias maneiras diferentes. Você poderia optar por usar [!DNL Data Ingestion] APIs ou um parceiro ETL, como [!DNL Unifi] ou [!DNL Informatica]. Para este tutorial, os dados serão adicionados ao conjunto de dados usando a guia **[!UICONTROL Adicionar dados]** na interface do usuário.
 
 Para começar a adicionar dados ao conjunto de dados, clique na guia **[!UICONTROL Adicionar dados]** . Agora você pode arrastar e soltar arquivos ou procurar no computador os arquivos que deseja adicionar.
 
@@ -116,19 +116,19 @@ Depois de arrastar e soltar (ou navegar e selecionar) um parquet ou arquivo JSON
 
 ## Métricas do conjunto de dados
 
-Após a conclusão do upload do arquivo, a guia Atividade **[!UICONTROL do conjunto de]** dados não mostra mais que &quot;Nenhum lote foi adicionado.&quot; Em vez disso, a guia Atividade de conjunto de dados agora mostra as métricas de conjunto de dados. Todas as métricas mostrarão &quot;0&quot; neste estágio, pois o lote ainda não foi carregado.
+Após a conclusão do upload do arquivo, a guia Atividade **[!UICONTROL do conjunto de]** dados não mostra mais que &quot;Nenhum lote foi adicionado.&quot; Em vez disso, a guia Atividade ** do conjunto de dados agora mostra as métricas do conjunto de dados. Todas as métricas mostrarão &quot;0&quot; neste estágio, pois o lote ainda não foi carregado.
 
-Na parte inferior da guia, há uma lista que mostra a ID _do_ lote dos dados que foram ingeridos pelo processo [&quot;Adicionar dados ao conjunto de dados&quot;](#add-data-to-dataset) . Também estão incluídas as informações relacionadas ao lote, incluindo a data de _assimilação_ , o número de _Registros ingeridos_ e o _Status_ atual do lote.
+Na parte inferior da guia, há uma lista que mostra a ID _[!UICONTROL do]_lote dos dados que foram ingeridos pelo processo[&quot;Adicionar dados ao conjunto de dados&quot;](#add-data-to-dataset). Também estão incluídas as informações relacionadas ao lote, incluindo a data de_[!UICONTROL  assimilação]_ , o número de _[!UICONTROL Registros ingeridos]_e o_[!UICONTROL  Status]_atual do lote.
 
 ![Métricas do conjunto de dados](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Detalhes do lote
 
-Clique na ID _do_ lote para visualização de uma visão geral **[!UICONTROL do]** lote, mostrando detalhes adicionais sobre o lote. Quando o lote terminar de ser carregado, as informações sobre o lote serão atualizadas para mostrar o número de _Registros ingeridos_ e o Tamanho _do_ arquivo. O _Status_ também será alterado para &quot;Êxito&quot; ou &quot;Falha&quot;. Se o lote falhar, a seção Código _de_ erro conterá detalhes sobre quaisquer erros durante a ingestão.
+Clique na ID _[!UICONTROL do]_lote para visualização de uma visão geral**[!UICONTROL  do ]**lote, mostrando detalhes adicionais sobre o lote. Quando o lote terminar de ser carregado, as informações sobre o lote serão atualizadas para mostrar o número de_[!UICONTROL  Registros ingeridos]_ e o Tamanho _[!UICONTROL do]_arquivo. O_[!UICONTROL  Status]_ também será alterado para &quot;Êxito&quot; ou &quot;Falha&quot;. Se o lote falhar, a seção Código _[!UICONTROL de]_erro conterá detalhes sobre quaisquer erros durante a ingestão.
 
 Para obter mais informações e perguntas frequentes sobre a ingestão em lote, consulte o guia [de solução de problemas de ingestão em](../batch-ingestion/troubleshooting.md)lote.
 
-Para retornar à tela Atividade **do Conjunto de** Dados, clique no nome do conjunto de dados (Detalhes _da_ Fidelidade) na navegação estrutural.
+Para retornar à tela Atividade **[!UICONTROL do Conjunto de]** Dados, clique no nome do conjunto de dados (Detalhes _[!UICONTROL da]_Fidelidade) na navegação estrutural.
 
 ![Visão geral do lote](../images/tutorials/ingest-batch-data/batch_overview.png)
 

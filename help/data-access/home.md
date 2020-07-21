@@ -4,31 +4,31 @@ solution: Experience Platform
 title: Visão geral do acesso aos dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 0%
+source-wordcount: '188'
+ht-degree: 2%
 
 ---
 
 
-# Visão geral do acesso aos dados
+# [!DNL Data Access]visão geral
 
-[!DNL Data Access] suporta Adobe Experience Platform, fornecendo aos usuários ferramentas voltadas para a descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
+[!DNL Data Access] oferece suporte ao Adobe Experience Platform, fornecendo aos usuários ferramentas voltadas para a descoberta e acessibilidade de conjuntos de dados assimilados dentro [!DNL Experience Platform].
 
 ![Acesso aos dados no Experience Platform](images/Data_Access_Experience_Platform.png)
 
-## API de acesso aos dados
+## [!DNL Data Access] API
 
 Informações detalhadas sobre o uso da [!DNL Data Access] API para conexão [!DNL Platform] podem ser encontradas no guia [do desenvolvedor do](api.md)Data Access.
 
-## Python SDK
+## [!DNL Python] SDK
 
 Você pode ler e gravar com conjuntos de dados usando o [!DNL Python] SDK. Informações mais detalhadas sobre o [!DNL Python] SDK podem ser encontradas no tutorial [do](./tutorials/python-sdk.md)Python SDK.
 
-[!DNL Data Science Workspace] usa o SDK Python em notebooks e receitas. Para obter mais informações sobre [!DNL Data Science Workspace], leia a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
+[!DNL Data Science Workspace] usa o [!DNL Python] SDK em notebooks e receitas. Para obter mais informações sobre [!DNL Data Science Workspace], leia a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
 
-## SDK do Spark
+## [!DNL Spark] SDK
 
 Você pode ler e gravar com conjuntos de dados usando o [!DNL Spark] SDK. Informações mais detalhadas sobre o [!DNL Spark] SDK podem ser encontradas no tutorial [do SDK do](./tutorials/spark-sdk.md)Spark.
 

@@ -1,18 +1,21 @@
 ---
-title: Destinos da plataforma de Gestão de dados (DMP)
-seo-title: Destinos da plataforma de Gestão de dados (DMP)
+title: Destinos do Gestão de dados Platform (DMP)
+seo-title: Destinos do Gestão de dados Platform (DMP)
 description: As Plataformas de Gestão de dados (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
 seo-description: As Plataformas de Gestão de dados (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# Destinos da Plataforma de Gestão de dados (DMP) {#dmp-destinations}
+# [!DNL Data Management Platform] Destinos (DMP) {#dmp-destinations}
 
-As Plataformas de Gestão de dados (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
+[!DNL Data Management Platforms] (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
 
-Atualmente, a Plataforma de dados do cliente em tempo real da Adobe oferece suporte aos destinos da Plataforma de Gestão de dados (DMP) listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, a Adobe Real-time Customer Data Platform suporta os destinos de Platform de Gestão de dados (DMP) listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
-* [extensão DIL do Gerenciador de Audiências](/help/rtcdp/destinations/aam-dil-extension.md)
+* [extensão Audience Manager DIL](/help/rtcdp/destinations/aam-dil-extension.md)

@@ -4,11 +4,14 @@ solution: Experience Platform
 title: Referência SQL
 topic: reference
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '42'
+ht-degree: 0%
 
 ---
 
 
 # Referência SQL
 
-O Serviço de Query fornece a capacidade de usar o SQL ANSI padrão para `SELECT` instruções e outros comandos limitados. O Serviço de Query não inclui a funcionalidade Linguagem de definição de dados ou Linguagem de manipulação de dados. Os dados consultados por meio do serviço vêm do Experience Data Lake, que contém conjuntos de dados praticamente imutáveis.
+[!DNL Query Service] fornece a capacidade de usar o SQL ANSI padrão para `SELECT` instruções e outros comandos limitados. [!DNL Query Service] não inclui a funcionalidade Linguagem de definição de dados ou Linguagem de manipulação de dados. Os dados consultados por meio do serviço vêm de [!DNL Experience Data Lake], que contém principalmente conjuntos de dados imutáveis.

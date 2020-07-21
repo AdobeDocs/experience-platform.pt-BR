@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Visão geral do acesso aos dados
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 2%
+source-wordcount: '1332'
+ht-degree: 3%
 
 ---
 
 
-# Dados do conjunto de dados do Query usando a API de acesso aos dados
+# Dados do conjunto de dados do Query usando [!DNL Data Access] API
 
-Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API de acesso a dados no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da API de acesso a dados, como paginação e downloads parciais.
+Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API [!DNL Data Access] no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da [!DNL Data Access] API, como paginação e downloads parciais.
 
 ## Introdução
 
@@ -24,23 +24,23 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para as APIs da Platform, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção no Platform, consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -48,23 +48,23 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Diagrama de sequência
 
-Este tutorial segue as etapas descritas no diagrama de sequência abaixo, destacando a funcionalidade principal da API de acesso a dados.</br>
+Este tutorial segue as etapas descritas no diagrama de sequência abaixo, destacando a funcionalidade principal da [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-A API de catálogo permite recuperar informações sobre lotes e arquivos. A API de acesso a dados permite acessar e baixar esses arquivos via HTTP como downloads completos ou parciais, dependendo do tamanho do arquivo.
+A [!DNL Catalog] API permite recuperar informações relacionadas a lotes e arquivos. A [!DNL Data Access] API permite acessar e baixar esses arquivos via HTTP como downloads completos ou parciais, dependendo do tamanho do arquivo.
 
 ## Localize os dados
 
-Antes de começar a usar a API de acesso a dados, é necessário identificar o local dos dados que deseja acessar. Na API Catálogo, há dois pontos de extremidade que você pode usar para navegar pelos metadados de uma organização e recuperar a ID de um lote ou arquivo que você deseja acessar:
+Antes de começar a usar a [!DNL Data Access] API, é necessário identificar o local dos dados que deseja acessar. Na [!DNL Catalog] API, há dois pontos finais que você pode usar para navegar nos metadados de uma organização e recuperar a ID de um lote ou arquivo que você deseja acessar:
 
 - `GET /batches`: Retorna uma lista de lotes em sua organização
 - `GET /dataSetFiles`: Retorna uma lista de arquivos em sua organização
 
-Para obter uma lista abrangente dos pontos de extremidade na API do catálogo, consulte a Referência [da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)API.
+Para obter uma lista abrangente dos pontos de extremidade na [!DNL Catalog] API, consulte a Referência [da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)API.
 
 ## Recuperar uma lista de lotes sob sua Organização IMS
 
-Usando a API de catálogo, você pode retornar uma lista de lotes em sua organização:
+Usando a [!DNL Catalog] API, é possível retornar uma lista de lotes em sua organização:
 
 **Formato da API**
 
@@ -195,7 +195,7 @@ Uma lista completa de parâmetros e filtros pode ser encontrada na referência [
 
 ## Recuperar uma lista de todos os arquivos pertencentes a um determinado lote
 
-Agora que você tem a ID do lote que deseja acessar, é possível usar a API de acesso a dados para obter uma lista de arquivos pertencentes a esse lote.
+Agora que você tem a ID do lote que deseja acessar, é possível usar a [!DNL Data Access] API para obter uma lista de arquivos pertencentes a esse lote.
 
 **Formato da API**
 
@@ -252,7 +252,7 @@ A resposta contém uma matriz de dados que lista todos os arquivos dentro do lot
 
 ## Acessar um arquivo usando uma ID de arquivo
 
-Depois de ter uma ID de arquivo exclusiva, você pode usar a API de acesso a dados para acessar os detalhes específicos sobre o arquivo, incluindo seu nome, tamanho em bytes e um link para baixá-lo.
+Depois de ter uma ID de arquivo exclusiva, você pode usar a [!DNL Data Access] API para acessar os detalhes específicos sobre o arquivo, incluindo seu nome, tamanho em bytes e um link para baixá-lo.
 
 **Formato da API**
 
@@ -385,7 +385,7 @@ Os cabeçalhos de resposta contêm os metadados do arquivo consultado, incluindo
 
 ## Acessar o conteúdo de um arquivo
 
-Você também pode acessar o conteúdo de um arquivo usando a API de acesso a dados.
+Você também pode acessar o conteúdo de um arquivo usando a [!DNL Data Access] API.
 
 **Formato da API**
 
@@ -414,7 +414,7 @@ Uma resposta bem-sucedida retorna o conteúdo do arquivo.
 
 ## Download do conteúdo parcial de um arquivo
 
-A API de acesso a dados permite o download de arquivos em blocos. Um cabeçalho de intervalo pode ser especificado durante uma `GET /files/{FILE_ID}` solicitação para baixar um intervalo específico de bytes de um arquivo. Se o intervalo não for especificado, a API baixará o arquivo inteiro por padrão.
+A [!DNL Data Access] API permite o download de arquivos em blocos. Um cabeçalho de intervalo pode ser especificado durante uma `GET /files/{FILE_ID}` solicitação para baixar um intervalo específico de bytes de um arquivo. Se o intervalo não for especificado, a API baixará o arquivo inteiro por padrão.
 
 O exemplo HEAD na seção [](#retrieve-the-metadata-of-a-file) anterior fornece o tamanho de um arquivo específico em bytes.
 
@@ -454,7 +454,7 @@ O corpo da resposta inclui os primeiros 100 bytes do arquivo (conforme especific
 
 ## Configurar paginação de resposta da API
 
-As respostas na API de acesso a dados são paginadas. Por padrão, o número máximo de entradas por página é 100. Parâmetros de paginação podem ser usados para modificar o comportamento padrão.
+As respostas dentro da [!DNL Data Access] API são paginadas. Por padrão, o número máximo de entradas por página é 100. Parâmetros de paginação podem ser usados para modificar o comportamento padrão.
 
 - `limit`: Você pode especificar o número de entradas por página de acordo com seus requisitos usando o parâmetro &quot;limit&quot;.
 - `start`: O deslocamento pode ser definido pelo parâmetro de query &quot;start&quot;.

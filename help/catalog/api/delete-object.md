@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Excluir um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Excluir um objeto
 
-É possível excluir um objeto de Catálogo fornecendo sua ID no caminho de uma solicitação de DELETE.
+É possível excluir um [!DNL Catalog] objeto fornecendo sua ID no caminho de uma solicitação de DELETE.
 
 >[!WARNING]
 >
->Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outro lugar no Experience Platform.
+>Tenha cuidado extra ao excluir objetos, pois isso não pode ser desfeito e pode produzir alterações de quebra em outros lugares do [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -32,7 +32,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser excluído. Objetos válidos são: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser excluído. Objetos válidos são: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
@@ -60,4 +60,4 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz que conté
 
 >[!NOTE]
 >
->Se nenhum objeto de Catálogo corresponder à ID fornecida em sua solicitação, você ainda poderá receber um Código de status HTTP 200, mas a matriz de respostas ficará vazia.
+>Se nenhum [!DNL Catalog] objeto corresponder à ID fornecida em sua solicitação, você ainda poderá receber um Código de status HTTP 200, mas a matriz de resposta ficará vazia.

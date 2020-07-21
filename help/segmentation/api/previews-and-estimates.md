@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Pré-visualizações e endpoints de estimativas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | A expressão PQL para query dos dados. |
 | `predicateType` | O tipo de predicado para a expressão do query em `predicateExpression`. Atualmente, o único valor aceito para essa propriedade é `pql/text`. |
-| `predicateModel` | O nome do schema do Modelo de Dados de Experiência (XDM) no qual os dados do perfil se baseiam. |
+| `predicateModel` | O nome do schema [!DNL Experience Data Model] (XDM) no qual os dados do perfil se baseiam. |
 
 **Resposta**
 
@@ -167,7 +167,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando a API [de acesso ao](../../profile/api/entities.md)Perfil. |
+| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando o [!DNL Profile Access API](../../profile/api/entities.md). |
 
 ## Recuperar os resultados de uma ordem de produção de estimativa específica {#get-estimate}
 
@@ -226,4 +226,4 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 
 ## Próximas etapas
 
-Depois de ler esse guia, agora você tem um melhor entendimento de como trabalhar com pré-visualizações e estimativas. Para saber mais sobre os outros pontos de extremidade da API do Serviço de segmentação, leia a visão geral [do guia do desenvolvedor do Serviço de](./overview.md)segmentação.
+Depois de ler esse guia, agora você tem um melhor entendimento de como trabalhar com pré-visualizações e estimativas. Para saber mais sobre os outros pontos de extremidade da [!DNL Segmentation Service] API, leia a visão geral [do guia do desenvolvedor do Serviço de](./overview.md)segmentação.

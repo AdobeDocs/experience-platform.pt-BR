@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Apêndice do guia do desenvolvedor do serviço de catálogo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 
-# Apêndice do guia do desenvolvedor do serviço de catálogo
+# [!DNL Catalog Service] apêndice do guia do desenvolvedor
 
-Este documento contém informações adicionais para ajudá-lo a trabalhar com a API de catálogo.
+Este documento contém informações adicionais para ajudá-lo a trabalhar com a [!DNL Catalog] API.
 
 ## Visualização de objetos interrelacionados {#view-interrelated-objects}
 
-Alguns objetos de Catálogo podem ser inter-relacionados a outros objetos de Catálogo. Quaisquer campos prefixados por `@` em cargas de resposta denotam objetos relacionados. Os valores desses campos assumem a forma de um URI, que pode ser usado em uma solicitação GET separada para recuperar os objetos relacionados que representam.
+Alguns [!DNL Catalog] objetos podem ser inter-relacionados a outros [!DNL Catalog] objetos. Quaisquer campos prefixados por `@` em cargas de resposta denotam objetos relacionados. Os valores desses campos assumem a forma de um URI, que pode ser usado em uma solicitação GET separada para recuperar os objetos relacionados que representam.
 
 O conjunto de dados de exemplo retornado no documento ao [procurar um conjunto de dados](look-up-object.md) específico contém um `files` campo com o seguinte valor de URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. O conteúdo do `files` campo pode ser visualizado usando este URI como o caminho para uma nova solicitação GET.
 
@@ -92,9 +92,9 @@ Uma resposta bem-sucedida retorna uma lista de objetos relacionados. Neste exemp
 
 ## Fazer várias solicitações em uma única chamada
 
-O endpoint raiz da API de catálogo permite que várias solicitações sejam feitas em uma única chamada. A carga da solicitação contém uma matriz de objetos que representam o que normalmente seriam solicitações individuais, que são então executadas em ordem.
+O endpoint raiz da [!DNL Catalog] API permite que várias solicitações sejam feitas em uma única chamada. A carga da solicitação contém uma matriz de objetos que representam o que normalmente seriam solicitações individuais, que são então executadas em ordem.
 
-Se essas solicitações forem modificações ou adições ao Catálogo e qualquer uma das alterações falhar, todas as alterações serão revertidas.
+Se essas solicitações forem modificações ou adições e uma das alterações falhar, todas as alterações serão revertidas. [!DNL Catalog]
 
 **Formato da API**
 
@@ -144,14 +144,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | ID fornecida pelo usuário que está anexada ao objeto de resposta para que você possa corresponder solicitações a respostas. O catálogo não armazena esse valor e simplesmente o retorna na resposta para fins de referência. |
-| `resource` | O caminho do recurso relativo à raiz da API de catálogo. O protocolo e o domínio não devem fazer parte deste valor e devem receber o prefixo &quot;/&quot;. <br/><br/> Ao usar PATCH ou DELETE como a ID da subsolicitação `method`, inclua a ID do objeto no caminho do recurso. Para não ser confundido com o fornecido pelo usuário, `id`o caminho do recurso usa a ID do próprio objeto Catalog (por exemplo, `resource: "/dataSets/1234567890"`). |
+| `id` | ID fornecida pelo usuário que está anexada ao objeto de resposta para que você possa corresponder solicitações a respostas. [!DNL Catalog] não armazena esse valor e simplesmente o retorna na resposta para fins de referência. |
+| `resource` | O caminho do recurso relativo à raiz da [!DNL Catalog] API. O protocolo e o domínio não devem fazer parte deste valor e devem receber o prefixo &quot;/&quot;. <br/><br/> Ao usar PATCH ou DELETE como a ID da subsolicitação `method`, inclua a ID do objeto no caminho do recurso. Para não ser confundido com o fornecido pelo usuário, `id`o caminho do recurso usa a ID do próprio [!DNL Catalog] objeto (por exemplo, `resource: "/dataSets/1234567890"`). |
 | `method` | O nome do método (GET, PUT, POST, PATCH ou DELETE) relacionado à ação realizada na solicitação. |
 | `body` | O documento JSON que normalmente seria transmitido como carga em uma solicitação POST, PUT ou PATCH. Esta propriedade não é necessária para solicitações GET ou DELETE. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de objetos que contém o `id` que você atribuiu a cada solicitação, o código de status HTTP para a solicitação individual e a resposta `body`. Como as três solicitações de amostra foram todas para criar novos objetos, o `body` de cada objeto é uma matriz que contém apenas a ID do objeto recém-criado, como é o padrão com as respostas POST mais bem-sucedidas no Catálogo.
+Uma resposta bem-sucedida retorna uma matriz de objetos que contém o `id` que você atribuiu a cada solicitação, o código de status HTTP para a solicitação individual e a resposta `body`. Como as três solicitações de amostra foram todas para criar novos objetos, o `body` de cada objeto é uma matriz que contém apenas a ID do objeto recém-criado, como é o padrão com as respostas POST mais bem-sucedidas em [!DNL Catalog].
 
 ```json
 [
@@ -176,7 +176,7 @@ Tenha cuidado ao inspecionar a resposta a uma solicitação múltipla, pois ser�
 
 ## Cabeçalhos de solicitação adicionais
 
-O Catálogo fornece várias convenções de cabeçalho para ajudar a manter a integridade dos seus dados durante as atualizações.
+[!DNL Catalog] fornece várias convenções de cabeçalho para ajudar a manter a integridade dos seus dados durante as atualizações.
 
 ### Se-Correspondência
 
@@ -192,6 +192,6 @@ Ocasionalmente, talvez você queira validar um objeto sem salvar as informaçõe
 
 ## compactação de dados
 
-Compaction é um serviço Experience Platform que une dados de arquivos pequenos em arquivos maiores sem alterar dados. Por motivos de desempenho, às vezes é benéfico combinar um conjunto de arquivos pequenos em arquivos maiores para fornecer acesso mais rápido aos dados ao ser consultado.
+A compactação é um [!DNL Experience Platform] serviço que une dados de arquivos pequenos em arquivos maiores sem alterar dados. Por motivos de desempenho, às vezes é benéfico combinar um conjunto de arquivos pequenos em arquivos maiores para fornecer acesso mais rápido aos dados ao ser consultado.
 
-Quando os arquivos em um lote ingerido forem compactados, seu objeto de Catálogo associado será atualizado para fins de monitoramento.
+Quando os arquivos em um lote ingerido forem compactados, seu [!DNL Catalog] objeto associado será atualizado para fins de monitoramento.

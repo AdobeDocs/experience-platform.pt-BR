@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de storage, lista e definição
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funções de storage, lista e definição
 
-O PQL (Perfil Query Language) oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
+[!DNL Profile Query Language] (PQL) O oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
 
 ## Em
 

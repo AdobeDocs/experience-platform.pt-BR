@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Substituir um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '138'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Substituir um objeto
 
-É possível substituir o conteúdo de um objeto de Catálogo usando uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
+É possível substituir o conteúdo de um [!DNL Catalog] objeto usando uma solicitação PUT, na qual todo o recurso é substituído pela carga da solicitação.
 
 >[!NOTE]
 >
->Se você precisar apenas atualizar alguns campos específicos em um objeto de Catálogo, o uso de uma solicitação PATCH pode ser mais eficiente.
+>Se você precisar apenas atualizar alguns campos específicos em um [!DNL Catalog] objeto, o uso de uma solicitação PATCH pode ser mais eficiente.
 
 **Formato da API**
 
@@ -28,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser substituído. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser substituído. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**

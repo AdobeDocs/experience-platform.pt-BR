@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir uma relação entre dois schemas usando o Editor de Schemas de Schemas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -62,7 +62,7 @@ A caixa de diálogo [!UICONTROL _Adicionar mistura _]é exibida. Aqui, clique em
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-A tela reaparece com &quot;Relacionamento de[!UICONTROL fidelidade]&quot; na seção _Misturas_ . Clique no nome da combinação e, em seguida, clique em **[!UICONTROL Adicionar campo]** ao lado do campo de nível raiz &quot;Membros[!UICONTROL de]fidelidade&quot;.
+A tela reaparece com &quot;HotelFavorito&quot;, que aparece na seção _Mixins_ . Clique no nome da combinação e, em seguida, clique em **[!UICONTROL Adicionar campo]** ao lado do campo de nível raiz &quot;Membros[!UICONTROL de]fidelidade&quot;.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Quando terminar, clique em **[!UICONTROL Aplicar]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-O campo atualizado &quot;[!UICONTROL loyaltyRelationship]&quot; aparece na tela. Clique em **[!UICONTROL Salvar]** para finalizar as alterações no schema.
+O campo atualizado &quot;[!UICONTROL favoriteHotel]&quot; aparece na tela. Clique em **[!UICONTROL Salvar]** para finalizar as alterações no schema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 

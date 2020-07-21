@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Funções definidas pela Adobe
 topic: functions
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '2156'
+ht-degree: 3%
 
 ---
 
 
 # Funções definidas pela Adobe
 
-As funções definidas pela Adobe (ADFs) são funções pré-criadas no Serviço de Query que ajudam a executar tarefas comuns relacionadas a negócios nos dados do ExperienceEvent. Incluem funções para Sessões e Atribuição, como as encontradas no Adobe Analytics. Consulte a documentação [do](https://docs.adobe.com/content/help/en/analytics/landing/home.html) Adobe Analytics para obter mais informações sobre o Adobe Analytics e os conceitos por trás dos ADFs definidos nesta página. Este documento fornece informações para as funções definidas pela Adobe disponíveis no Query Service.
+As funções definidas pela Adobe (ADFs) são funções pré-criadas em [!DNL Query Service] que ajudam a executar tarefas comuns relacionadas aos negócios nos [!DNL ExperienceEvent] dados. Incluem funções para Sessões e Atribuição, como as encontradas no Adobe Analytics. Consulte a documentação [do](https://docs.adobe.com/content/help/pt-BR/analytics/landing/home.html) Adobe Analytics para obter mais informações sobre o Adobe Analytics e os conceitos por trás dos ADFs definidos nesta página. Este documento fornece informações para as funções definidas pela Adobe disponíveis em [!DNL Query Service].
 
 ## Funções da janela
 
-A maior parte da lógica comercial exige a coleta de pontos de contato para um cliente e a solicitação desses pontos por tempo. Esse suporte é fornecido pelo Spark SQL na forma de funções de janela. As funções de janela fazem parte do SQL padrão e são suportadas por muitos outros mecanismos SQL.
+A maior parte da lógica comercial exige a coleta de pontos de contato para um cliente e a solicitação desses pontos por tempo. Esse suporte é fornecido pelo [!DNL Spark] SQL na forma de funções de janela. As funções de janela fazem parte do SQL padrão e são suportadas por muitos outros mecanismos SQL.
 
 Uma função de janela atualiza uma agregação e retorna um único item para cada linha no subconjunto solicitado. A função de agregação mais básica é `SUM()`. `SUM()` leva suas linhas e oferece um total. Se você aplicar `SUM()` a uma janela, transformando-a em uma função de janela, você receberá uma soma cumulativa com cada linha.
 
-A maioria dos auxiliares SQL Spark são funções de janela que atualizam cada linha na janela, com o estado dessa linha adicionado.
+A maioria dos [!DNL Spark] auxiliares SQL são funções de janela que atualizam cada linha na janela, com o estado dessa linha adicionado.
 
 ### Especificação
 
@@ -33,7 +36,7 @@ Sintaxe: `OVER ([partition] [order] [frame])`
 
 ## Sessões
 
-Quando você está trabalhando com dados ExperienceEvent provenientes de um site, aplicativo móvel, sistema de resposta de voz interativo ou qualquer outro canal de interação do cliente, isso ajuda se os eventos puderem ser agrupados em torno de um período de atividade relacionado. Normalmente, você tem uma intenção específica de conduzir sua atividade como pesquisar um produto, pagar uma conta, verificar o saldo da conta, preencher um aplicativo e assim por diante. Esse agrupamento ajuda a associar os eventos para descobrir mais contexto sobre a experiência do cliente.
+Quando você trabalha com [!DNL ExperienceEvent] dados originários de um site, aplicativo móvel, sistema de resposta de voz interativo ou qualquer outro canal de interação do cliente, isso ajuda se os eventos puderem ser agrupados em um período relacionado de atividade. Normalmente, você tem uma intenção específica de conduzir sua atividade como pesquisar um produto, pagar uma conta, verificar o saldo da conta, preencher um aplicativo e assim por diante. Esse agrupamento ajuda a associar os eventos para descobrir mais contexto sobre a experiência do cliente.
 
 Para obter mais informações sobre sessões no Adobe Analytics, consulte a documentação sobre sessões [sensíveis ao](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)contexto.
 
@@ -91,13 +94,13 @@ LIMIT 10
 
 Associar ações de clientes ao sucesso é uma parte importante do entendimento dos fatores que influenciam a experiência do cliente. Os ADFs a seguir suportam a primeira e a última atribuição com diferentes configurações de expiração.
 
-Para obter mais informações sobre atribuição no Adobe Analytics, consulte a visão geral [do QI de](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) atribuição no Guia de análise do Analytics.
+Para obter mais informações sobre atribuição no Adobe Analytics, consulte a visão geral [do IQ de](https://docs.adobe.com/content/help/pt-BR/analytics/analyze/analysis-workspace/panels/attribution.html) atribuição no Guia de [!DNL Analytics] análise.
 
 ### Atribuição de primeiro toque
 
-Retorna o valor da atribuição de primeiro toque e os detalhes de um único canal no conjunto de dados público alvo ExperienceEvent. O query retorna um `struct` objeto com o valor de primeiro toque, o carimbo de data e hora e a atribuição para cada linha retornada para o canal selecionado.
+Retorna o valor da atribuição de primeiro toque e os detalhes de um único canal no conjunto de dados do público alvo [!DNL ExperienceEvent] . O query retorna um `struct` objeto com o valor de primeiro toque, o carimbo de data e hora e a atribuição para cada linha retornada para o canal selecionado.
 
-Esse query é útil se você quiser ver qual interação levou a uma série de ações do cliente. No exemplo mostrado abaixo, o código de rastreamento inicial (`em:946426`) nos dados do ExperienceEvent é atribuído a 100% (`1.0`) da responsabilidade pelas ações do cliente, pois foi a primeira interação.
+Esse query é útil se você quiser ver qual interação levou a uma série de ações do cliente. No exemplo mostrado abaixo, o código de rastreamento inicial (`em:946426`) nos [!DNL ExperienceEvent] dados é atribuído a 100% (`1.0`) da responsabilidade pelas ações do cliente, já que foi a primeira interação.
 
 ### Especificação
 
@@ -113,8 +116,8 @@ Sintaxe: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([p
 | Parâmetros de objeto retornados | Descrição |
 | ---------------------- | ------------- |
 | `name` | A `channelName` entrada como rótulo no ADF |
-| `value` | O valor de `channelValue` que é o primeiro toque em ExperienceEvent |
-| `timestamp` | O carimbo de data e hora do ExperienceEvent onde o primeiro toque ocorreu |
+| `value` | O valor a partir `channelValue` desse é o primeiro toque na [!DNL ExperienceEvent] |
+| `timestamp` | O carimbo de data e hora do [!DNL ExperienceEvent] local em que ocorreu o primeiro toque |
 | `fraction` | A atribuição do primeiro toque expressa como crédito fracionário |
 
 #### Exemplo de Query
@@ -151,9 +154,9 @@ LIMIT 10
 
 ### Atribuição de último toque
 
-Retorna o valor da atribuição de último toque e os detalhes de um único canal no conjunto de dados público alvo ExperienceEvent. O query retorna um `struct` objeto com o último valor de toque, carimbo de data e hora e atribuição para cada linha retornada para o canal selecionado.
+Retorna o valor da atribuição de último toque e os detalhes de um único canal no conjunto de dados do público alvo [!DNL ExperienceEvent] . O query retorna um `struct` objeto com o último valor de toque, carimbo de data e hora e atribuição para cada linha retornada para o canal selecionado.
 
-Esse query é útil se você quiser ver a interação final em uma série de ações do cliente. No exemplo mostrado abaixo, o código de rastreamento no objeto retornado é a última interação em cada registro ExperienceEvent. A cada código é atribuída uma responsabilidade de 100% (`1.0`) pelas ações do cliente, pois foi a última interação.
+Esse query é útil se você quiser ver a interação final em uma série de ações do cliente. No exemplo mostrado abaixo, o código de rastreamento no objeto retornado é a última interação em cada [!DNL ExperienceEvent] registro. A cada código é atribuída uma responsabilidade de 100% (`1.0`) pelas ações do cliente, pois foi a última interação.
 
 ### Especificação
 
@@ -169,8 +172,8 @@ Sintaxe: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([pa
 | Parâmetros de objeto retornados | Descrição |
 | ---------------------- | ------------- |
 | `name` | A `channelName` entrada como rótulo no ADF |
-| `value` | O valor de `channelValue` que é o último toque em ExperienceEvent |
-| `timestamp` | O carimbo de data e hora do ExperienceEvent em que o `channelValue` foi usado |
+| `value` | O valor de `channelValue` que é o último toque na [!DNL ExperienceEvent] |
+| `timestamp` | O carimbo de data e hora do [!DNL ExperienceEvent] local em que o `channelValue` foi usado |
 | `fraction` | A atribuição do último toque expressa como crédito fracionário |
 
 #### Exemplo de Query
@@ -206,9 +209,9 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribuição de primeiro toque com condição de expiração
 
-Retorna o valor da atribuição de primeiro toque e os detalhes de um único canal no conjunto de dados ExperienceEvent do público alvo, que expira depois ou antes de uma condição. O query retorna um `struct` objeto com o valor de primeiro toque, o carimbo de data e hora e a atribuição para cada linha retornada para o canal selecionado.
+Retorna o valor da atribuição de primeiro toque e os detalhes de um único canal no conjunto de dados do público alvo, que expira após ou antes de uma condição. [!DNL ExperienceEvent] O query retorna um `struct` objeto com o valor de primeiro toque, o carimbo de data e hora e a atribuição para cada linha retornada para o canal selecionado.
 
-Esse query é útil se você quiser ver qual interação resultou em uma série de ações do cliente em uma parte do conjunto de dados ExperienceEvent determinada por uma condição de escolha. No exemplo mostrado abaixo, uma compra é registrada (`commerce.purchases.value IS NOT NULL`) em cada um dos quatro dias mostrados nos resultados (15, 21, 23 e 29 de julho) e o código de rastreamento inicial em cada dia recebe 100% (`1.0`) de responsabilidade pelas ações do cliente.
+Esse query é útil se você quiser ver qual interação levou a uma série de ações do cliente dentro de uma parte do [!DNL ExperienceEvent] conjunto de dados determinada por uma condição de escolha. No exemplo mostrado abaixo, uma compra é registrada (`commerce.purchases.value IS NOT NULL`) em cada um dos quatro dias mostrados nos resultados (15, 21, 23 e 29 de julho) e o código de rastreamento inicial em cada dia recebe 100% (`1.0`) de responsabilidade pelas ações do cliente.
 
 #### Especificação
 
@@ -225,8 +228,8 @@ Sintaxe: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, e
 | Parâmetros de objeto retornados | Descrição |
 | ---------------------- | ------------- |
 | `name` | A `channelName` entrada como rótulo no ADF |
-| `value` | O valor de `channelValue` que é o primeiro toque no ExperienceEvent antes da `expCondition` |
-| `timestamp` | O carimbo de data e hora do ExperienceEvent onde o primeiro toque ocorreu |
+| `value` | O valor de `channelValue` que é o primeiro toque no [!DNL ExperienceEvent] anterior ao `expCondition` |
+| `timestamp` | O carimbo de data e hora do [!DNL ExperienceEvent] local em que ocorreu o primeiro toque |
 | `fraction` | A atribuição do primeiro toque expressa como crédito fracionário |
 
 #### Exemplo de Query
@@ -262,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribuição de primeiro toque com tempo limite de expiração
 
-Retorna o valor da atribuição de primeiro toque e os detalhes de um único canal no conjunto de dados ExperienceEvent do público alvo por um período de tempo especificado. O query retorna um `struct` objeto com o valor de primeiro toque, o carimbo de data e hora e a atribuição para cada linha retornada para o canal selecionado. Esse query é útil se você quiser ver qual interação, dentro de um intervalo de tempo selecionado, levou a uma ação do cliente. No exemplo mostrado abaixo, o primeiro toque retornado para cada ação do cliente é a primeira interação nos sete dias anteriores (`expTimeout = 86400 * 7`).
+Retorna o valor da atribuição de primeiro toque e os detalhes de um único canal no conjunto de dados do público alvo [!DNL ExperienceEvent] por um período de tempo especificado. O query retorna um `struct` objeto com o valor de primeiro toque, o carimbo de data e hora e a atribuição para cada linha retornada para o canal selecionado. Esse query é útil se você quiser ver qual interação, dentro de um intervalo de tempo selecionado, levou a uma ação do cliente. No exemplo mostrado abaixo, o primeiro toque retornado para cada ação do cliente é a primeira interação nos sete dias anteriores (`expTimeout = 86400 * 7`).
 
 #### Especificação
 
@@ -279,7 +282,7 @@ Sintaxe: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVal
 | ---------------------- | ------------- |
 | `name` | A `channelName` entrada como rótulo no ADF |
 | `value` | O valor de `channelValue` que é o primeiro toque dentro do `expTimeout` intervalo especificado |
-| `timestamp` | O carimbo de data e hora do ExperienceEvent onde o primeiro toque ocorreu |
+| `timestamp` | O carimbo de data e hora do [!DNL ExperienceEvent] local em que ocorreu o primeiro toque |
 | `fraction` | A atribuição do primeiro toque expressa como crédito fracionário |
 
 #### Exemplo de Query
@@ -315,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribuição de último toque com condição de expiração
 
-Retorna o valor da atribuição de último toque e os detalhes de um único canal no conjunto de dados ExperienceEvent do público alvo, que expira depois ou antes de uma condição. O query retorna um `struct` objeto com o último valor de toque, carimbo de data e hora e atribuição para cada linha retornada para o canal selecionado. Esse query é útil se você quiser ver a última interação em uma série de ações do cliente dentro de uma parte do conjunto de dados ExperienceEvent determinada por uma condição de escolha. No exemplo mostrado abaixo, uma compra é registrada (`commerce.purchases.value IS NOT NULL`) em cada um dos quatro dias mostrados nos resultados (15, 21, 23 e 29 de julho) e o último código de rastreamento em cada dia recebe 100% (`1.0`) de responsabilidade pelas ações do cliente.
+Retorna o valor da atribuição de último toque e os detalhes de um único canal no conjunto de dados do público alvo, que expira após ou antes de uma condição. [!DNL ExperienceEvent] O query retorna um `struct` objeto com o último valor de toque, carimbo de data e hora e atribuição para cada linha retornada para o canal selecionado. Esse query é útil se você quiser ver a última interação em uma série de ações do cliente dentro de uma parte do [!DNL ExperienceEvent] conjunto de dados determinada por uma condição de escolha. No exemplo mostrado abaixo, uma compra é registrada (`commerce.purchases.value IS NOT NULL`) em cada um dos quatro dias mostrados nos resultados (15, 21, 23 e 29 de julho) e o último código de rastreamento em cada dia recebe 100% (`1.0`) de responsabilidade pelas ações do cliente.
 
 #### Especificação
 
@@ -332,8 +335,8 @@ Sintaxe: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, ex
 | Parâmetros de objeto retornados | Descrição |
 | ---------------------- | ------------- |
 | `name` | A `channelName` entrada como rótulo no ADF |
-| `value` | O valor de `channelValue` que é o último toque no ExperienceEvent antes da `expCondition` |
-| `timestamp` | O carimbo de data e hora do ExperienceEvent onde o último toque ocorreu |
+| `value` | O valor de `channelValue` que é o último toque no [!DNL ExperienceEvent] anterior ao `expCondition` |
+| `timestamp` | O carimbo de data e hora do [!DNL ExperienceEvent] local em que ocorreu o último toque |
 | `percentage` | A atribuição do último toque expressa como crédito fracionário |
 
 #### Exemplo de Query
@@ -369,7 +372,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribuição de último toque com tempo limite de expiração
 
-Retorna o valor da atribuição de último toque e os detalhes de um único canal no conjunto de dados ExperienceEvent do público alvo por um período de tempo especificado. O query retorna um `struct` objeto com o último valor de toque, carimbo de data e hora e atribuição para cada linha retornada para o canal selecionado. Esse query é útil se você quiser ver a última interação dentro de um intervalo de tempo selecionado. No exemplo mostrado abaixo, o último toque retornado para cada ação do cliente é a interação final dentro dos sete dias seguintes (`expTimeout = 86400 * 7`).
+Retorna o valor da atribuição de último toque e os detalhes de um único canal no conjunto de dados do público alvo [!DNL ExperienceEvent] por um período de tempo especificado. O query retorna um `struct` objeto com o último valor de toque, carimbo de data e hora e atribuição para cada linha retornada para o canal selecionado. Esse query é útil se você quiser ver a última interação dentro de um intervalo de tempo selecionado. No exemplo mostrado abaixo, o último toque retornado para cada ação do cliente é a interação final dentro dos sete dias seguintes (`expTimeout = 86400 * 7`).
 
 #### Especificação
 
@@ -386,7 +389,7 @@ Sintaxe: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValu
 | ---------------------- | ------------- |
 | `name` | A `channelName` entrada como rótulo no ADF |
 | `value` | O valor de `channelValue` que é o último toque dentro do `expTimeout` intervalo especificado |
-| `timestamp` | O carimbo de data e hora do ExperienceEvent onde o último toque ocorreu |
+| `timestamp` | O carimbo de data e hora do [!DNL ExperienceEvent] local em que ocorreu o último toque |
 | `percentage` | A atribuição do último toque expressa como crédito fracionário |
 
 #### Exemplo de Query
@@ -647,4 +650,4 @@ LIMIT 10
 
 ## Próximas etapas
 
-Usando as funções descritas aqui, você pode gravar query para acessar seus próprios conjuntos de dados ExperienceEvent usando o Serviço de Query. Para obter mais informações sobre como criar query no Serviço de Query, consulte a documentação sobre como [criar query](../creating-queries/creating-queries.md).
+Usando as funções descritas aqui, você pode gravar query para acessar seus próprios [!DNL ExperienceEvent] conjuntos de dados usando [!DNL Query Service]. Para obter mais informações sobre como criar query no, consulte [!DNL Query Service]a documentação sobre como [criar query](../creating-queries/creating-queries.md).

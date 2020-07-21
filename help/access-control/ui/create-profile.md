@@ -4,24 +4,27 @@ solution: Experience Platform
 title: Criar um novo perfil de produto
 topic: user guide
 translation-type: tm+mt
-source-git-commit: d961bad816d37ade5367ab25c19594dc1b625153
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
 
 # Criar um novo perfil de produto
 
-Para que o start crie um novo perfil, navegue até a guia Perfis *de* produto e clique em **Novo Perfil**.
+Para que o start crie um novo perfil, navegue até a guia Perfis *[!UICONTROL de]* produto e clique em **[!UICONTROL Novo Perfil]**.
 
 ![botão novo perfil](../images/new-profile-button.png)
 
-A caixa de diálogo _Criar novo Perfil_ é exibida, solicitando que você insira um Nome **de** Perfil e uma **Descrição** para o novo perfil. Se desejar que o nome para exibição do perfil seja diferente, desmarque **Igual ao Nome** do Perfil e insira o nome para exibição na caixa de texto exibida. Em Notificações *de* usuário, é possível alternar se os usuários serão notificados por email quando forem adicionados ou removidos do perfil.
+A caixa de diálogo _[!UICONTROL Criar novo Perfil]_é exibida, solicitando que você insira um Nome**[!UICONTROL  de ]**Perfil e uma**[!UICONTROL  Descrição ]**para o novo perfil. Se desejar que o nome para exibição do perfil seja diferente, desmarque**[!UICONTROL  Igual ao Nome ]**do Perfil e insira o nome para exibição na caixa de texto exibida. Em Notificações*[!UICONTROL  de ]*usuário, é possível alternar se os usuários serão notificados por email quando forem adicionados ou removidos do perfil.
 
-Quando terminar, clique em **Avançar**.
+Quando terminar, clique em **[!UICONTROL Avançar]**.
 
 ![detalhes do novo perfil](../images/new-profile-details.png)
 
-A tela seguinte solicita que você escolha quais serviços de plataforma serão incluídos no perfil. Clique no botão de alternância ao lado de um serviço para desativá-lo. Se um serviço estiver desativado, todas as funções associadas a esse serviço não estarão disponíveis para os usuários atribuídos a esse perfil de produto. Quando terminar, clique em **Concluído**.
+A tela seguinte solicita que você escolha quais [!DNL Platform] serviços incluir no perfil. Clique no botão de alternância ao lado de um serviço para desativá-lo. Se um serviço estiver desativado, todas as funções associadas a esse serviço não estarão disponíveis para os usuários atribuídos a esse perfil de produto. Quando terminar, clique em **[!UICONTROL Concluído]**.
 
 ![novos serviços de perfil](../images/new-profile-services.png)
 

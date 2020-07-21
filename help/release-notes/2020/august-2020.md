@@ -1,13 +1,13 @@
 ---
 title: 'Notas de versão do Adobe Experience Platform '
-description: Notas de versão da Experience Platform 10 de agosto de 2020
+description: Notas de versão de Experience Platform 10 de agosto de 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 7f9d1120ac323c60f899cb1cf855e55db20437ed
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '302'
 ht-degree: 7%
 
 ---
@@ -17,35 +17,35 @@ ht-degree: 7%
 
 **Data de lançamento: 10 de junho de 2020**
 
-Novos recursos da Adobe Experience Platform:
+Novos recursos no Adobe Experience Platform:
 
-- [Controle de acesso](#access-control)
-- [Sandboxes](#sandboxes)
+- [!DNL Access control](#access-control)
+- [!DNL Sandboxes](#sandboxes)
 
-## Controle de acesso {#access-control}
+## [!DNL Access control] {#access-control}
 
-A plataforma Experience aproveita os perfis de produto do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos da plataforma, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
+[!DNL Experience Platform] aproveita perfis de produtos [do Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos do Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 |--- | ---|
-| Permissões | No Admin Console, a guia _Permissões_ em um perfil de produto da Plataforma permite personalizar quais recursos da Plataforma estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: Modelagem de dados, Gestão de dados, Gerenciamento de Perfis, Identidades, Monitoramento de dados, Administração de Sandbox, Destinos, Fontes. |
-| Acesso a caixas de proteção | A guia _Permissões_ em um perfil de produto da Plataforma pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre [caixas de proteção](#sandboxes) abaixo para obter mais informações. |
+| Permissões | Na guia [!DNL Admin Console], dentro de um perfil de [!DNL Platform] produto, você pode personalizar quais [!DNL Platform] recursos estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: [!UICONTROL Modelagem]De Dados, [!UICONTROL Gestão de dados], Gerenciamento [!UICONTROL De]Perfis, [!UICONTROL Identidades], Monitoramento [!UICONTROL De]Dados, Administração Sandbox, Destinos, Fontes. |
+| Acesso a caixas de proteção | A guia [!UICONTROL _Permissões _]em um perfil de[!DNL Platform]produto pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre[caixas de proteção](#sandboxes)abaixo para obter mais informações. |
 
 Para obter mais informações, consulte a visão geral [do](../../access-control/home.md)controle de acesso.
 
-## Sandboxes {#sandboxes}
+## [!DNL Sandboxes] {#sandboxes}
 
-A plataforma Experience foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional. Para atender a essa necessidade, a plataforma Experience fornece caixas de proteção que particionam uma única instância da plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+[!DNL Experience Platform] foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional. Para atender a essa necessidade, [!DNL Experience Platform] fornece caixas de proteção que dividem uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 |--- | ---|
-| Caixa de proteção de produção | A plataforma Experience fornece uma única caixa de proteção de produção, que não pode ser excluída ou redefinida. |
-| Caixas de proteção de não produção | É possível criar várias caixas de proteção que não sejam de produção para uma única instância da Plataforma, permitindo que você teste recursos, execute experiências e faça configurações personalizadas sem afetar sua caixa de proteção de produção. |
-| Comutador Sandbox | Na interface do usuário da plataforma Experience, o alternador de sandbox no canto superior esquerdo da tela permite alternar entre as sandboxes disponíveis por meio de um menu suspenso. |
-| `x-sandbox-name` header | Todas as chamadas para APIs da plataforma Experience devem incluir o novo cabeçalho, cujo valor faz referência ao `x-sandbox-name` `name` atributo da caixa de proteção em que a operação ocorrerá. |
+| Caixa de proteção de produção | [!DNL Experience Platform] fornece uma única caixa de proteção de produção, que não pode ser excluída ou redefinida. |
+| Caixas de proteção de não produção | É possível criar várias caixas de proteção de não produção para uma única [!DNL Platform] instância, permitindo testar recursos, executar experiências e fazer configurações personalizadas sem afetar a caixa de proteção de produção. |
+| Comutador Sandbox | Na interface do [!DNL Experience Platform] usuário, o alternador da caixa de proteção no canto superior esquerdo da tela permite alternar entre as caixas de proteção disponíveis por meio de um menu suspenso. |
+| `x-sandbox-name` header | Todas as chamadas para [!DNL Experience Platform] APIs agora devem incluir o novo `x-sandbox-name` cabeçalho, cujo valor faz referência ao `name` atributo da caixa de proteção em que a operação ocorrerá. |
 
 Para obter mais informações, consulte a visão geral [das](../../sandboxes/home.md)caixas de proteção.

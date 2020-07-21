@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da ingestão em lote parcial de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Além disso, o [apêndice](#appendix) a este tutorial fornece uma referência pa
 Este tutorial requer um conhecimento prático dos vários serviços de Adobe Experience Platform envolvidos com a ingestão parcial do lote. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [Ingestão](./overview.md)em lote: O método que [!DNL Platform] ingere e armazena dados de arquivos de dados, como CSV e Parquet.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para [!DNL Platform] APIs.
 
@@ -42,7 +42,7 @@ Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tu
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações às APIs do Platform exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -91,7 +91,7 @@ Para criar uma nova conexão de origem, siga as etapas listadas na visão geral 
 
 A alternância de ingestão ** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão ** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a *[!UICONTROL alternância de ingestão]* parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -105,7 +105,7 @@ Para usar um conjunto de dados existente, selecione um start selecionando um con
 
 A alternância de ingestão ** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão ** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a *[!UICONTROL alternância de ingestão]* parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -115,13 +115,13 @@ Agora, você pode fazer upload de dados usando o botão **Adicionar dados** e el
 
 ### Usar o fluxo &quot;[!UICONTROL Mapear CSV para o schema]XDM&quot; {#map-flow}
 
-Para usar o fluxo &quot;[!UICONTROL Mapear CSV para o schema]XDM&quot;, siga as etapas listadas no tutorial [](../tutorials/map-a-csv-file.md)Mapear um arquivo CSV. Depois de atingir a etapa *Adicionar dados* , anote os campos *[!UICONTROL Inclusão]* parcial e Diagnóstico *[!UICONTROL de]* erro.
+Para usar o fluxo &quot;[!UICONTROL Mapear CSV para o schema]XDM&quot;, siga as etapas listadas no tutorial [](../tutorials/map-a-csv-file.md)Mapear um arquivo CSV. Depois de atingir a etapa *[!UICONTROL Adicionar dados]* , anote os campos *[!UICONTROL Inclusão]* parcial e Diagnóstico *[!UICONTROL de]* erro.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
 A alternância de ingestão ** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão ** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a *[!UICONTROL alternância de ingestão]* parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 

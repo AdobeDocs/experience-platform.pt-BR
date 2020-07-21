@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Comandos de metadados
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,5 @@ Para metadados em seu conjunto de dados, os seguintes comandos PSQL são suporta
 
 Todos os comandos com os quais o start se  `\d` podem ser combinados. Por exemplo, você pode emitir `\dtsn` para exibir uma lista de todas as tabelas, sequências e schemas. `\d` por si só mostra todas as tabelas visíveis, visualizações, visualizações materializadas e sequências.
 
-Para obter informações adicionais sobre os comandos listados acima, consulte a documentação em [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). No entanto, lembre-se de que nem todas as opções mostradas na documentação do PostgreSQL são suportadas pelo Experience Platform.
+Para obter informações adicionais sobre os comandos listados acima, consulte a documentação em [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). No entanto, lembre-se de que nem todas as opções mostradas na documentação do PostgreSQL são suportadas por [!DNL Experience Platform].
 

@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Declarações preparadas
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 8%
 
 ---
 
 
 # Declarações preparadas
 
-No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. O Adobe Experience Platform Query Service suporta declarações preparadas usando um query parametrizado. Isso pode ser usado para otimizar o desempenho, pois não será mais necessário analisar novamente um query várias vezes.
+No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. O Adobe Experience Platform [!DNL Query Service] suporta declarações preparadas usando um query parametrizado. Isso pode ser usado para otimizar o desempenho, pois não será mais necessário analisar novamente um query várias vezes.
 
 ## Uso de declarações preparadas
 

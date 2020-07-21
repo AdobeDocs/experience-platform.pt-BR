@@ -4,20 +4,23 @@ solution: Experience Platform
 title: query ExperienceEvent
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# query ExperienceEvent
+# [!DNL ExperienceEvent] query
 
-Além dos query SQL padrão, o Adobe Experience Platform Query Service oferece suporte à gravação de query usando ExperienceEvents. Um ExperienceEvent é uma classe Experience Data Model (XDM) que representa um instantâneo não agregado imutável do sistema quando um usuário interage com um site ou serviço, e pode, portanto, ser usado para análise de domínio de tempo. Para obter mais informações sobre o XDM e Eventos de experiência, consulte a visão geral do Sistema XDM. Ao combinar o Serviço de Query com o ExperienceEvents, você pode efetivamente rastrear tendências comportamentais entre seus usuários. O documento a seguir fornece exemplos de query que envolvem ExperienceEvents.
+Além dos query SQL padrão, o Adobe Experience Platform [!DNL Query Service] oferece suporte à gravação de query usando [!DNL ExperienceEvents]. Um [!DNL ExperienceEvent] é uma classe [!DNL Experience Data Model] (XDM) que representa um instantâneo não agregado imutável do sistema quando um usuário interage com um site ou serviço e, portanto, pode ser usado para análise de domínio de tempo. Mais informações sobre o XDM e [!DNL Experience Events] podem ser encontradas na [!DNL XDM System] visão geral. Ao combinar [!DNL Query Service] com [!DNL ExperienceEvents], você pode efetivamente rastrear tendências comportamentais entre seus usuários. O documento a seguir fornece exemplos de query que envolvem [!DNL ExperienceEvents].
 
 ## Criação de um relatório de tendências de eventos por dia em um intervalo de datas específico
 
 O exemplo a seguir cria um relatório de tendências de eventos em um intervalo de datas especificado, agrupado por data. Especificamente, ela resume vários valores de análise como A, B e C e, em seguida, resume o número de vezes que parkas foi visualizado.
 
-A coluna de carimbo de data e hora encontrada nos conjuntos de dados do Experience Evento está em UTC. O exemplo a seguir usa a `from_utc_timestamp()` função para transformar o carimbo de data e hora de UTC para EDT. Em seguida, ele usa a `date_format()` função para isolar a data do restante do carimbo de data e hora.
+A coluna de carimbo de data e hora encontrada nos [!DNL Experience Event] conjuntos de dados está em UTC. O exemplo a seguir usa a `from_utc_timestamp()` função para transformar o carimbo de data e hora de UTC para EDT. Em seguida, ele usa a `date_format()` função para isolar a data do restante do carimbo de data e hora.
 
 ```sql
 SELECT 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: objetos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser listado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser listado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Um parâmetro de query usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por E comercial (`&`). Consulte o guia sobre como [filtrar dados](filter-data.md) do catálogo para obter mais informações. |
 
 **Solicitação**
@@ -43,11 +43,11 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de objetos de Catálogo na forma de pares de valores chave, filtrados pelos parâmetros de query fornecidos na solicitação. Para cada par de valores chave, a chave representa um identificador exclusivo para o objeto Catalog em questão, que pode ser usado em outra chamada para [visualização desse objeto](look-up-object.md) específico para obter mais detalhes.
+Uma resposta bem-sucedida retorna uma lista de [!DNL Catalog] objetos na forma de pares de valores chave, filtrados pelos parâmetros de query fornecidos na solicitação. Para cada par de valores-chave, a chave representa um identificador exclusivo para o [!DNL Catalog] objeto em questão, que pode ser usado em outra chamada para [visualização desse objeto](look-up-object.md) específico para obter mais detalhes.
 
 >[!NOTE]
 >
->Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em &quot;Conjunto de dados de amostra 3&quot; e &quot;Conjunto de dados de amostra 4&quot; abaixo.
+>Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pelo `properties` query, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
 
 ```json
 {

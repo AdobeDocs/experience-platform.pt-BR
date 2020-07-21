@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conjuntos de dados vs tabelas e schemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Abra a linha de comando PSQL e use os detalhes da conexão aqui: [https://platfo
 
 ![](../images/clients/psql/connect-bi.png)
 
-Para visualização das tabelas disponíveis no Platform com SQL, você pode usar `\d` ou `SHOW TABLES;`.
+Para visualização das tabelas disponíveis com [!DNL Platform] SQL, você pode usar `\d` ou `SHOW TABLES;`.
 
 
 `\d` exibe a visualização PostgreSQL padrão
@@ -44,7 +44,7 @@ Para visualização das tabelas disponíveis no Platform com SQL, você pode usa
 (2 rows)
 ```
 
-`SHOW TABLES;` é um comando personalizado que fornece uma visualização mais detalhada e apresenta a tabela, bem como o nome do conjunto de dados encontrado na interface do usuário do Platform.
+`SHOW TABLES;` é um comando personalizado que fornece uma visualização mais detalhada e apresenta a tabela, bem como o nome do conjunto de dados encontrado na [!DNL Platform] interface do usuário.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 

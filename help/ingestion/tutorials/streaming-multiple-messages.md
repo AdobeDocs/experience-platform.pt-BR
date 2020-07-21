@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmissão de várias mensagens em uma única solicitação HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1459'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Envio de várias mensagens em uma única solicitação HTTP
 
-Ao transmitir dados para o Adobe Experience Platform, fazer várias chamadas HTTP pode ser caro. Por exemplo, em vez de criar 200 solicitações HTTP com cargas de 1 KB, é muito mais eficiente criar 1 solicitação HTTP com 200 mensagens de 1 KB cada, com uma única carga de 200 KB. Quando usado corretamente, agrupar várias mensagens em uma única solicitação é uma excelente maneira de otimizar os dados que estão sendo enviados para o Experience Platform.
+Ao transmitir dados para o Adobe Experience Platform, fazer várias chamadas HTTP pode ser caro. Por exemplo, em vez de criar 200 solicitações HTTP com cargas de 1 KB, é muito mais eficiente criar 1 solicitação HTTP com 200 mensagens de 1 KB cada, com uma única carga de 200 KB. Quando usado corretamente, agrupar várias mensagens em uma única solicitação é uma excelente maneira de otimizar os dados que estão sendo enviados para [!DNL Experience Platform].
 
-Este documento fornece um tutorial para enviar várias mensagens para o Experience Platform dentro de uma única solicitação HTTP usando a ingestão de streaming.
+Este documento fornece um tutorial para enviar várias mensagens para [!DNL Experience Platform] dentro de uma única solicitação HTTP usando a ingestão de streaming.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional da ingestão de dados do Adobe Experience Platform. Antes de iniciar este tutorial, reveja a seguinte documentação:
+Este tutorial requer uma compreensão funcional da Adobe Experience Platform [!DNL Data Ingestion]. Antes de iniciar este tutorial, reveja a seguinte documentação:
 
-- [Visão geral](../home.md)da ingestão de dados: Abrange os conceitos principais de ingestão de dados de Experience Platform, incluindo métodos de ingestão e conectores de dados.
-- [Visão geral](../streaming-ingestion/overview.md)da assimilação de transmissão: O fluxo de trabalho e os blocos componentes da assimilação de streaming, como conexões de streaming, conjuntos de dados, Perfil individual XDM e ExperienceEvent XDM.
+- [Visão geral](../home.md)da ingestão de dados: Abrange os conceitos principais de [!DNL Experience Platform Data Ingestion], incluindo métodos de ingestão e conectores de dados.
+- [Visão geral](../streaming-ingestion/overview.md)da assimilação de transmissão: O fluxo de trabalho e os blocos componentes da assimilação de streaming, como conexões de streaming, conjuntos de dados [!DNL XDM Individual Profile]e [!DNL XDM ExperienceEvent].
 
-Este tutorial também exige que você tenha concluído o tutorial [Autenticação para Adobe Experience Platform](../../tutorials/authentication.md) para fazer chamadas com êxito para as APIs da Platform. A conclusão do tutorial de autenticação fornece o valor para o cabeçalho de Autorização necessário para todas as chamadas de API neste tutorial. O cabeçalho é mostrado nas chamadas de amostra da seguinte maneira:
+Este tutorial também exige que você tenha concluído o tutorial [Autenticação para Adobe Experience Platform](../../tutorials/authentication.md) para fazer chamadas com êxito para [!DNL Platform] APIs. A conclusão do tutorial de autenticação fornece o valor para o cabeçalho de Autorização necessário para todas as chamadas de API neste tutorial. O cabeçalho é mostrado nas chamadas de amostra da seguinte maneira:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 
@@ -35,7 +35,7 @@ Todas as solicitações POST exigem um cabeçalho adicional:
 
 ## Criar uma conexão de streaming
 
-Primeiro, você deve criar uma conexão de streaming antes de poder start os dados de streaming para o Experience Platform. Leia o guia [Criar uma conexão](./create-streaming-connection.md) de streaming para saber como criar uma conexão de streaming.
+Primeiro, você deve criar uma conexão de streaming antes de poder start os dados de streaming. [!DNL Experience Platform] Leia o guia [Criar uma conexão](./create-streaming-connection.md) de streaming para saber como criar uma conexão de streaming.
 
 Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Platform.
 
@@ -43,7 +43,7 @@ Depois de registrar uma conexão de streaming, você, como produtor de dados, te
 
 O exemplo a seguir mostra como enviar várias mensagens para um conjunto de dados específico em uma única solicitação HTTP. Insira a ID do conjunto de dados no cabeçalho da mensagem para que a mensagem seja assimilada diretamente nela.
 
-Você pode obter a ID de um conjunto de dados existente usando a interface do usuário do Platform ou usando uma operação de listagem na API. A ID do conjunto de dados pode ser encontrada no [Experience Platform](https://platform.adobe.com) , indo até a guia **Conjuntos** de dados, clicando no conjunto de dados para o qual deseja obter a ID e copiando a string do campo ID **do** Conjunto de dados na guia **Informações** . Consulte a visão geral [do serviço de](../../catalog/home.md) catálogo para obter informações sobre como recuperar conjuntos de dados usando a API.
+Você pode obter a ID de um conjunto de dados existente usando a [!DNL Platform] interface do usuário ou uma operação de listagem na API. A ID do conjunto de dados pode ser encontrada no [Experience Platform](https://platform.adobe.com) , indo até a guia **[!UICONTROL Conjuntos]** de dados, clicando no conjunto de dados para o qual deseja obter a ID e copiando a string do campo ID **[!UICONTROL do]** Conjunto de dados na guia **[!UICONTROL Informações]** . Consulte a visão geral [do serviço de](../../catalog/home.md) catálogo para obter informações sobre como recuperar conjuntos de dados usando a API.
 
 Em vez de usar um conjunto de dados existente, você pode criar um novo conjunto de dados. Leia o tutorial para [criar um conjunto de dados usando APIs](../../catalog/api/create-dataset.md) para obter mais informações sobre como criar um conjunto de dados usando APIs.
 
@@ -219,9 +219,9 @@ Antes de continuar com este tutorial, é recomendável primeiro revisar o guia d
 O exemplo a seguir mostra o que acontece quando o lote inclui mensagens válidas e inválidas.
 
 A carga da solicitação é uma matriz de objetos JSON que representam o evento no schema XDM. Observe que as seguintes condições precisam ser atendidas para uma validação bem-sucedida da mensagem:
-- O `imsOrgId` campo no cabeçalho da mensagem deve corresponder à definição de entrada. Se a carga da solicitação não incluir um `imsOrgId` campo, o DCCS (Data Collection Core Service) adicionará o campo automaticamente.
-- O cabeçalho da mensagem deve fazer referência a um schema XDM existente criado na interface do usuário do Platform.
-- O `datasetId` campo precisa fazer referência a um conjunto de dados existente no Platform e seu schema precisa corresponder ao schema fornecido no `header` objeto dentro de cada mensagem incluída no corpo da solicitação.
+- O `imsOrgId` campo no cabeçalho da mensagem deve corresponder à definição de entrada. Se a carga da solicitação não incluir um `imsOrgId` campo, o [!DNL Data Collection Core Service] (DCCS) adicionará o campo automaticamente.
+- O cabeçalho da mensagem deve fazer referência a um schema XDM existente criado na [!DNL Platform] interface do usuário.
+- O `datasetId` campo precisa fazer referência a um conjunto de dados existente no [!DNL Platform]e seu schema precisa corresponder ao schema fornecido no `header` objeto dentro de cada mensagem incluída no corpo da solicitação.
 
 **Formato da API**
 
@@ -489,7 +489,7 @@ A carga de resposta inclui um status para cada mensagem junto com um GUID no `xa
 
 O exemplo de resposta acima mostra mensagens de erro para a solicitação anterior. Ao comparar essa resposta com a resposta válida anterior, você pode observar que a solicitação resultou em um sucesso parcial, com uma mensagem sendo ingerida com sucesso e três mensagens resultando em falha. Observe que ambas as respostas retornam um código de status &#39;207&#39;. Para obter mais informações sobre códigos de status, consulte a tabela de códigos [de](#response-codes) resposta no Apêndice deste tutorial.
 
-A primeira mensagem foi enviada com êxito à Platform e não é afetada pelos resultados das outras mensagens. Como resultado, ao tentar reenviar as mensagens com falha, não é necessário reincluir essa mensagem.
+A primeira mensagem foi enviada com êxito para [!DNL Platform] e não é afetada pelos resultados das outras mensagens. Como resultado, ao tentar reenviar as mensagens com falha, não é necessário reincluir essa mensagem.
 
 A segunda mensagem falhou porque faltou um corpo de mensagem. A solicitação de coleção espera que os elementos de mensagem tenham seções de cabeçalho e corpo válidas. A adição do seguinte código após o cabeçalho na segunda mensagem corrigirá a solicitação, permitindo que a segunda mensagem passe na validação:
 
@@ -508,11 +508,11 @@ A segunda mensagem falhou porque faltou um corpo de mensagem. A solicitação de
     },
 ```
 
-A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual ID de organização IMS corresponde à conexão de streaming que você está usando, é possível executar uma `GET inlet` solicitação usando a API [de ingestão de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)dados. Consulte [recuperação de uma conexão](./create-streaming-connection.md#get-data-collection-url) de streaming para obter um exemplo de como recuperar conexões de streaming criadas anteriormente.
+A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual ID de organização IMS corresponde à conexão de streaming que você está usando, é possível executar uma `GET inlet` solicitação usando o [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [recuperação de uma conexão](./create-streaming-connection.md#get-data-collection-url) de streaming para obter um exemplo de como recuperar conexões de streaming criadas anteriormente.
 
-A quarta mensagem falhou porque não seguiu o schema XDM esperado. Os itens `xdmSchema` incluídos no cabeçalho e no corpo da solicitação não correspondem ao schema XDM da `{DATASET_ID}`. A correção do schema no cabeçalho e no corpo da mensagem permite que ele passe a validação do DCCS e seja enviado com êxito para a Platform. O corpo da mensagem também deve ser atualizado para corresponder ao schema XDM do para `{DATASET_ID}` que ele passe a validação de streaming no Platform. Para obter mais informações sobre o que acontece com as mensagens que fluem com êxito para o Platform, consulte a seção [confirmar mensagens assimiladas](#confirm-messages-ingested) deste tutorial.
+A quarta mensagem falhou porque não seguiu o schema XDM esperado. Os itens `xdmSchema` incluídos no cabeçalho e no corpo da solicitação não correspondem ao schema XDM da `{DATASET_ID}`. A correção do schema no cabeçalho e no corpo da mensagem permite que ele passe pela validação do DCCS e seja enviado com êxito para [!DNL Platform]. O corpo da mensagem também deve ser atualizado para corresponder ao schema XDM do para `{DATASET_ID}` que ele passe a validação de streaming [!DNL Platform]. Para obter mais informações sobre o que acontece com as mensagens que fluem com êxito para o Platform, consulte a seção [confirmar mensagens assimiladas](#confirm-messages-ingested) deste tutorial.
 
-### Recuperar mensagens com falha do Platform
+### Recuperar mensagens com falha de [!DNL Platform]
 
 Mensagens com falha são identificadas por um código de status de erro na matriz de respostas.
 As mensagens inválidas são coletadas e armazenadas em um lote de &quot;erro&quot; no conjunto de dados especificado por `{DATASET_ID}`.
@@ -521,15 +521,15 @@ Leia o guia de [recuperação de lotes](../quality/retrieve-failed-batches.md) c
 
 ## Confirmar mensagens ingeridas
 
-As mensagens que passam na validação do DCCS são transmitidas para a Platform. No Platform, as mensagens em lote são testadas por validação de fluxo contínuo antes de serem ingeridas no lago de dados. O status dos lotes, com ou sem êxito, é exibido no conjunto de dados especificado por `{DATASET_ID}`.
+As mensagens que passam na validação do DCCS são transmitidas para [!DNL Platform]. Em [!DNL Platform], as mensagens em lote são testadas pela validação de streaming antes de serem ingeridas no [!DNL Data Lake]. O status dos lotes, com ou sem êxito, é exibido no conjunto de dados especificado por `{DATASET_ID}`.
 
-Você pode visualização o status das mensagens em lote que são transmitidas com êxito para o Platform usando a interface do usuário [do](https://platform.adobe.com) Experience Platform, indo até a guia **Conjuntos** de dados, clicando no conjunto de dados para o qual você está fazendo streaming e verificando a guia Atividade **do** Conjunto de dados.
+Você pode visualização o status das mensagens em lote que são enviadas com êxito para [!DNL Platform] usar a interface do usuário [do](https://platform.adobe.com) Experience Platform, indo até a guia **[!UICONTROL Conjuntos]** de dados, clicando no conjunto de dados para o qual você está fazendo streaming e verificando a guia Atividade **** do Conjunto de dados.
 
-As mensagens em lote que passam pela validação de streaming no Platform são ingeridas no lago de dados. As mensagens estão disponíveis para análise ou exportação.
+As mensagens em lote que passam pela validação do streaming [!DNL Platform] são ingeridas no [!DNL Data Lake]. As mensagens estão disponíveis para análise ou exportação.
 
 ## Próximas etapas
 
-Agora que você sabe como enviar várias mensagens em uma única solicitação e verificar quando as mensagens são ingeridas com êxito no conjunto de dados do público alvo, é possível fazer o start do streaming dos seus próprios dados para a Platform. Para obter uma visão geral de como query e recuperar dados ingeridos da Platform, consulte o guia Acesso [](../../data-access/tutorials/dataset-data.md) aos dados.
+Agora que você sabe como enviar várias mensagens em uma única solicitação e verificar quando as mensagens são ingeridas com êxito no conjunto de dados do público alvo, é possível fazer o start do streaming dos seus próprios dados para [!DNL Platform]. Para obter uma visão geral de como query e recuperar dados ingeridos de [!DNL Platform], consulte o [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guia.
 
 ## Apêndice
 
@@ -547,5 +547,5 @@ A tabela a seguir mostra os códigos de status retornados por mensagens de respo
 | 403 | Não autorizado:  O token de autorização fornecido é inválido ou expirou. Isso só é retornado para entradas com autenticação ativada. |
 | 413 | Carga muito grande - emitida quando a solicitação de carga total é maior que 1 MB. |
 | 429 | Demasiadas solicitações dentro de uma duração de tempo especificada. |
-| 500 | Erro ao processar a carga. Consulte o corpo da resposta para obter uma mensagem de erro mais específica (por exemplo, schema de carga de mensagem não especificado ou não corresponde à definição XDM no Platform). |
+| 500 | Erro ao processar a carga. Consulte o corpo da resposta para obter uma mensagem de erro mais específica (por exemplo, schema de carga de mensagem não especificado ou não corresponde à definição XDM em [!DNL Platform]). |
 | 503 | O serviço não está disponível no momento. Os clientes devem tentar novamente pelo menos 3 vezes usando uma estratégia de back-off exponencial. |

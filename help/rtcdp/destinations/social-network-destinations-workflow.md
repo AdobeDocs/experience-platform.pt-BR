@@ -4,9 +4,9 @@ seo-title: Fluxo de trabalho de destinos de rede social
 description: Instruções para conectar-se à sua rede social e contas
 seo-description: Instruções para conectar-se à sua rede social e contas
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Fluxo de trabalho para criar destinos de rede social
 
-Este tutorial usa o Facebook como exemplo, mas o fluxo de trabalho no Adobe Real-time Customer Data Platform será o mesmo para todos os destinos da rede social, uma vez mais, adicionado ao produto.
+Este tutorial usa [!DNL Facebook] como exemplo, mas o fluxo de trabalho no Adobe Real-time Customer Data Platform será o mesmo para todos os destinos da rede social, uma vez mais, adicionado ao produto.
 
 1. Em **[!UICONTROL Destinos > Catálogo]**, role até a categoria **[!UICONTROL Social]** . Selecione o destino de sua rede social preferida e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
 
@@ -39,7 +39,7 @@ Este tutorial usa o Facebook como exemplo, mas o fluxo de trabalho no Adobe Real
    >[!IMPORTANT]
    >
    > * O caso de uso de marketing da Personalização ** de identidade única é selecionado por padrão para destinos de rede social e não pode ser removido.
-   > * Para destinos do Facebook. **[!UICONTROL A ID]** da conta é a ID da conta do anúncio do Facebook. Você pode encontrar essa ID no Gerenciador de publicidades do Facebook. Prefixe a ID como `act_` mostrado abaixo:
+   > * Para [!DNL Facebook] destinos. **[!UICONTROL A ID]** da conta é sua [!DNL Facebook Ad Account ID]. Você pode encontrar essa ID no [!DNL Facebook Ads Manager]. Prefixe a ID como `act_` mostrado abaixo:
 
 
    ![Conectar ao destino da rede social - etapa de configuração](/help/rtcdp/destinations/assets/social-networks-setup-step.png)

@@ -4,15 +4,15 @@ seo-title: Destino da Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '442'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) Destino da Amazon Kinesis
+# (Beta) [!DNL Amazon Kinesis] destino
 
 
 >[!IMPORTANT]
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-O [!DNL Kinesis Data Streams] serviço da Amazon Web Services permite coletar e processar grandes fluxos de registros de dados em tempo real.
+O [!DNL Kinesis Data Streams] serviço por [!DNL Amazon Web Services] permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
 Você pode criar uma conexão de saída em tempo real com seu [!DNL Amazon Kinesis] armazenamento para transmitir dados do Adobe Experience Platform.
 
@@ -34,9 +34,9 @@ Você pode criar uma conexão de saída em tempo real com seu [!DNL Amazon Kines
 
 ## Casos de uso {#use-cases}
 
-Ao usar destinos de streaming como o Amazon Kinesis, você pode facilmente alimentar eventos de segmentação de alto valor e atributos associados ao perfil em seus sistemas de escolha.
+Ao usar destinos de streaming como [!DNL Amazon Kinesis], você pode facilmente alimentar eventos de segmentação de alto valor e atributos de perfil associados em seus sistemas preferidos.
 
-Por exemplo, um prospecto baixou um white paper que os qualifica em um segmento de &quot;alta propensão para converter&quot;. Ao mapear o segmento em que o prospecto cai para o destino da Amazônia Kinesis, você receberia esse evento na Amazon Kinesis. Lá, você pode usar uma abordagem faça-você-mesmo e descrever a lógica comercial sobre o evento, pois você acha que funcionaria melhor com seus sistemas de TI corporativos.
+Por exemplo, um prospecto baixou um white paper que os qualifica em um segmento de &quot;alta propensão para converter&quot;. Ao mapear o segmento no qual o prospecto cai para o [!DNL Amazon Kinesis] destino, você receberá esse evento [!DNL Amazon Kinesis]. Lá, você pode usar uma abordagem faça-você-mesmo e descrever a lógica comercial sobre o evento, pois você acha que funcionaria melhor com seus sistemas de TI corporativos.
 
 ## Destino do Connect {#connect-destination}
 
@@ -46,7 +46,7 @@ Para [!DNL Amazon Kinesis] destinos, insira as seguintes informações no fluxo 
 
 ### Na etapa Autenticação {#authentication-step}
 
-* **Chave de acesso e chave** secreta dos Serviços Web da Amazon: Em [!DNL Amazon Web Services], gere uma chave de acesso - par de chaves de acesso secreto para conceder à Adobe o acesso CDP em tempo real à sua [!DNL Amazon Kinesis] conta. Saiba mais na documentação [dos Serviços da Web da](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]chave de acesso e chave **secreta: Em[!DNL Amazon Web Services], gere uma chave de acesso - par de chaves de acesso secreto para conceder à Adobe o acesso CDP em tempo real à sua[!DNL Amazon Kinesis]conta. Saiba mais na documentação[dos Serviços da Web da](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **região**: Indica em qual [!DNL Amazon Web Services] região os dados serão transmitidos.
 
 ![Campos de entrada na etapa da conta](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -73,7 +73,7 @@ Consulte [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/acti
 
 ## Dados exportados {#exported-data}
 
-Seus dados de Experience Platform exportados chegam [!DNL Amazon Kinesis] no formato JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de uma audiência que se qualificou para um determinado segmento e saiu de outro. As identidades para este prospecto são ECID e email.
+Seus [!DNL Experience Platform] dados exportados chegam [!DNL Amazon Kinesis] no formato JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de uma audiência que se qualificou para um determinado segmento e saiu de outro. As identidades para este prospecto são ECID e email.
 
 ```
 {

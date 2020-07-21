@@ -4,9 +4,9 @@ seo-title: 'start rápido do Adobe Experience Platform Web SDK '
 description: Guia de start rápido para usar o Experience Platform Web SDK para coletar dados
 seo-description: Guia de start rápido para usar o Experience Platform Web SDK para coletar dados
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '517'
 ht-degree: 5%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 5%
 
 # Boas-vindas
 
-Este guia o guia pelas diferentes maneiras de configurar o Adobe Experience Platform [!DNL Web SDK]. Para poder usar este recurso, é necessário estar na lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
+Este guia o guia pelas diferentes maneiras de configurar o SDK da Web do Adobe Experience Platform. Para usar esse recurso, é necessário incluir uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
-- Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tem um CNAME para [!DNL Analytics], você deve usar esse. O teste no desenvolvimento funciona sem um CNAME, mas você precisa de um antes de ir para a produção
-- Tenha direito ao Adobe Experience Platform [!DNL Data Platform].  Se você não tiver comprado a Platform, forneceremos [!DNL Experience Platform Data Services Foundation] o uso de forma limitada com o SDK sem custos adicionais.
-- Usar a versão mais recente do serviço de ID de Visitante
+- Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para Analytics, use esse. Testar no desenvolvimento funciona sem um CNAME, mas é necessário um antes de ir para a produção.
+- Tenha direito ao Adobe Experience Platform.  Se você não tiver comprado a Platform, a Adobe fornecerá a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custo extra.
+- Use a versão mais recente do serviço de ID de Visitante.
 
 ## Criar uma ID de configuração
 

@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-* [Governança de dados](#governance)
-* [Ingestão de dados](#ingestion)
-* [Destinos](#destinations)
-* [Serviço de identidade](#identity)
-* [Fontes](#sources)
+* [!DNL Data Governance](#governance)
+* [!DNL Data Ingestion](#ingestion)
+* [!DNL Destinations](#destinations)
+* [!DNL Identity Service](#identity)
+* [!DNL Sources](#sources)
 
-## Governança de dados {#governance}
+## [!DNL Data Governance] {#governance}
 
-O Experience Platform permite que as empresas reúnam dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e engajem os clientes. O Experience Platform inclui uma infraestrutura completa de controle de dados, incluindo a DULE (Data Usage Labeling and Implementation), para garantir o uso correto dos dados no Platform e quando compartilhados entre sistemas.
+[!DNL Experience Platform] permite que as empresas reúnam dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e envolvam clientes. [!DNL Experience Platform] inclui uma infraestrutura completa de controle de dados, incluindo a DULE (Data Usage Labeling and Implementation), para garantir o uso correto dos dados dentro [!DNL Platform] e quando compartilhados entre sistemas.
 
-O Adobe Experience Platform Data Governance é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental no Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
+O Adobe Experience Platform [!DNL Data Governance] é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
 
 **Novos recursos**
 
@@ -40,7 +40,7 @@ O Adobe Experience Platform Data Governance é uma série de estratégias e tecn
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Aplicação automatizada das políticas de uso de dados para a Platform de dados do cliente em tempo real | As políticas de uso de dados agora são aplicadas no fluxo de trabalho de ativação de dados para destinos. O controle de dados também é incorporado e aplicado ao fazer alterações que afetam ativações existentes (como alterações em rótulos de conjuntos de dados, políticas de mesclagem, definições de segmentos e outros). |
+| Aplicação automatizada de políticas de uso de dados para [!DNL Real-time Customer Data Platform] | As políticas de uso de dados agora são aplicadas no fluxo de trabalho de ativação de dados para destinos. [!DNL Data Governance] também é incorporado e aplicado ao fazer alterações que afetam ativações existentes (como alterações em rótulos de conjuntos de dados, políticas de mesclagem, definições de segmentos e outros). |
 | Linha de dados para aplicação | Quando uma política de uso de dados é violada no CDP em tempo real, a interface do usuário exibe uma notificação que contém informações de linhagem de dados para ajudar o usuário a entender por que as políticas foram violadas e o que podem fazer para resolver a violação. |
 
 
@@ -48,11 +48,11 @@ O Adobe Experience Platform Data Governance é uma série de estratégias e tecn
 
 * None
 
-Para obter mais informações sobre o Data Governance, consulte a visão geral [](../../data-governance/home.md)do Data Governance.
+Para obter mais informações sobre [!DNL Data Governance], consulte a visão geral [do](../../data-governance/home.md)Data Governance.
 
 ## Ingestão de dados {#ingestion}
 
-O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. A assimilação de dados do Adobe Experience Platform oferece várias alternativas para a assimilação de dados, incluindo APIs em lote, APIs de fluxo, conectores nativos da Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
+O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] fornece várias alternativas para a assimilação de dados, incluindo APIs em lote, APIs de transmissão, conectores nativos da Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
 
 **Novos recursos**
 
@@ -77,34 +77,34 @@ Novos destinos estão disponíveis onde você pode ativar seus dados de Adobe Ex
 
 | Destino | Descrição |
 |--- | ---|
-| Destinos de armazenamentos na nuvem | A Adobe Real-time CDP agora pode fornecer seus segmentos como arquivos de dados para os locais do armazenamento em nuvem Amazon S3 ou SFTP. Isso permite que você envie audiências e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
-| Destinos de publicidade | A placa de destino do Google agora é dividida em três placas de destino, para as três plataformas diferentes do Google atualmente suportadas pela CDP em tempo real da Adobe: Google Ads, Google Ad Manager, Google Display e Video 360. |
+| Destinos de armazenamentos na nuvem | A CDP em tempo real da Adobe agora pode fornecer seus segmentos como arquivos de dados para os locais de armazenamento em nuvem [!DNL Amazon S3] ou SFTP. Isso permite que você envie audiências e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
+| Destinos de publicidade | A placa de [!DNL Google] destino agora é dividida em três placas de destino, para as três [!DNL Google] plataformas diferentes atualmente suportadas no Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Exibir e vídeo 360. |
 
 Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/destinations-overview.md)
 
-## Serviço de identidade {#identity}
+## [!DNL Identity Service] {#identity}
 
 Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;.
 
-O Serviço de identificação do Adobe Experience Platform ajuda você a obter uma melhor visualização do seu cliente e do seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+O Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização do seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Gráfico privado aprimorado | A funcionalidade Gráfico privado foi aprimorada para reduzir a latência de geração de gráficos de um processo em lote semanal para um gráfico atualizado diário, permitindo que os clientes do Serviço de identidade acessem gráficos de identidade e links mais atualizados. |
+| Gráfico privado aprimorado | A funcionalidade Gráfico privado foi aprimorada para reduzir a latência de geração de gráficos de um processo em lote semanal para um gráfico atualizado diário, permitindo que [!DNL Identity Service] os clientes acessem gráficos de identidade e links mais atualizados. |
 
 **Problemas conhecidos**
 
 * None
 
-Para obter mais informações sobre o Serviço de identidade, consulte a visão geral [do Serviço de](../../identity-service/home.md)identidade.
+Para obter mais informações sobre [!DNL Identity Service], consulte a visão geral [do Serviço de](../../identity-service/home.md)identidade.
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando os serviços Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
-O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
+[!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
 **Novos recursos**
 
@@ -112,10 +112,10 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 | ------- | ----------- |
 | Sinais preteridos para o conector Adobe Audience Manager | Os dados de nível de sinal do Gerenciador de Audiências não serão mais enviados. Observe que a associação de segmento para Características e segmentos ainda será incluída. Como resultado dessa alteração, os conjuntos de dados de entrada não serão mais gerados. |
 | Conjuntos de dados renomeados | Os conjuntos de dados gerados pelo conector do Gerenciador de Audiências terão nomes e descrições atualizados. |
-| Ative a alternância de Perfis no Gerenciador de Audiências | A alternância de Perfis pode ser ativada ou desativada para promover o conjunto de dados para o Perfil Cliente em tempo real. Alternar será ativado por padrão. |
-| Suporte de interface para sistemas de armazenamentos em nuvem | Novo conector de origem para o Armazenamento Gen2 do Azure Data Lake na interface do usuário. |
-| Suporte de interface para sistemas CRM | Novo conector de origem para HubSpot, Salesforce Service Cloud e ServiceNow na interface do usuário. |
-| Suporte de interface para sistemas de banco de dados | Novo conector de origem para AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server e MySQL na interface do usuário. |
+| Ativar [!DNL Profile] alternância no Gerenciador de Audiências | [!DNL Profile] alternância pode ser ativada ou desativada para promover o conjunto de dados para [!DNL Real-time Customer Profile]. Alternar será ativado por padrão. |
+| Suporte de interface para sistemas de armazenamentos em nuvem | Novo conector de origem para [!DNL Azure Data Lake Storage Gen2] na interface do usuário. |
+| Suporte de interface para sistemas CRM | Novo conector de fonte para [!DNL HubSpot], [!DNL Salesforce Service Cloud]e [!DNL ServiceNow] na interface do usuário. |
+| Suporte de interface para sistemas de banco de dados | Novo conector de fonte para [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]e [!DNL MySQL] na interface do usuário. |
 
 **Problemas conhecidos**
 

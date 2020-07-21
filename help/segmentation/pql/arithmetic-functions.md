@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Funções aritméticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 5%
 
 ---
 
 
 # Funções aritméticas
 
-As funções aritméticas são usadas para executar cálculos básicos em valores em Linguagem do Query do Perfil (PQL). Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
+As funções aritméticas são usadas para executar cálculos básicos em valores em [!DNL Profile Query Language] (PQL). Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
 
-## Adicionar
+## Add
 
 A função `+` (adição) é usada para localizar a soma de duas expressões de argumento.
 

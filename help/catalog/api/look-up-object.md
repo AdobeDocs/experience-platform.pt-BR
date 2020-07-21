@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Pesquisar um objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 3%
 
 ---
 
 
 # Pesquisar um objeto
 
-Se você souber o identificador exclusivo de um objeto de Catálogo específico, poderá executar uma solicitação GET para visualização dos detalhes desse objeto.
+Se você souber o identificador exclusivo de um [!DNL Catalog] objeto específico, poderá executar uma solicitação GET para visualização dos detalhes desse objeto.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto Catalog a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja recuperar. |
 
 **Solicitação**

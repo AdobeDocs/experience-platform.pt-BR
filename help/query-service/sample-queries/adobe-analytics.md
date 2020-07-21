@@ -4,14 +4,17 @@ solution: Experience Platform
 title: query de amostra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 1%
 
 ---
 
 
 # query de amostra para dados do Adobe Analytics
 
-Os dados de conjuntos de relatórios selecionados do Adobe Analytics são transformados em XDM ExperienceEvents e ingeridos na Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform Query Service usa esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados do Adobe Analytics. Consulte a documentação [de mapeamento de campo do](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obter mais informações sobre o mapeamento para XDM ExperienceEvents.
+Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM [!DNL ExperienceEvents] e assimilados em Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] utiliza esses dados, e os query de amostra incluídos devem funcionar com seus conjuntos de dados da Adobe Analytics. Consulte a documentação [de mapeamento de campo da](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obter mais informações sobre o mapeamento para XDM [!DNL ExperienceEvents].
 
 ## Introdução
 
@@ -126,9 +129,9 @@ ORDER BY Hour;
 
 ## Variáveis de comercialização (sintaxe de produto)
 
-No Adobe Analytics, dados personalizados de nível de produto podem ser coletados por meio de variáveis especialmente configuradas chamadas de &quot;Variáveis de comercialização&quot;. Eles são baseados em um Evento personalizado ou eVar. A diferença entre essas variáveis e seu uso padrão é que elas representam um valor separado para cada produto encontrado na ocorrência, em vez de apenas um valor para a ocorrência. Essas variáveis são chamadas de Variáveis de comercialização de sintaxe de produto. Isso permite a coleta de informações como uma &quot;quantia de desconto&quot; por produto ou informações sobre a &quot;localização na página&quot; do produto nos resultados de pesquisa do cliente.
+No Adobe Analytics, dados personalizados em nível de produto podem ser coletados por meio de variáveis especialmente configuradas chamadas &quot;Variáveis de comercialização&quot;. Eles são baseados em um Evento personalizado ou eVar. A diferença entre essas variáveis e seu uso padrão é que elas representam um valor separado para cada produto encontrado na ocorrência, em vez de apenas um valor para a ocorrência. Essas variáveis são chamadas de Variáveis de comercialização de sintaxe de produto. Isso permite a coleta de informações como uma &quot;quantia de desconto&quot; por produto ou informações sobre a &quot;localização na página&quot; do produto nos resultados de pesquisa do cliente.
 
-Estes são os campos XDM para acessar as variáveis de comercialização no conjunto de dados do Analytics:
+Estes são os campos XDM para acessar as variáveis de comercialização em seu [!DNL Analytics] conjunto de dados:
 
 ### eVars
 
@@ -162,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Esse próximo query &quot;explode&quot; o e retorna cada eVar de comercialização e cada evento por produto. `productListItems` O `_id` campo é incluído para mostrar a relação com a ocorrência original. O `_id` valor é uma chave primária exclusiva no conjunto de dados ExperienceEvent.
+Esse próximo query &quot;explode&quot; o e retorna cada eVar de comercialização e cada evento por produto. `productListItems` O `_id` campo é incluído para mostrar a relação com a ocorrência original. O `_id` valor é uma chave primária exclusiva no [!DNL ExperienceEvent] conjunto de dados.
 
 ```sql
 SELECT
@@ -213,7 +216,7 @@ No relatórios, os pedidos, a receita, as visualizações de produtos e as adiç
 | pesquisa interna:camisa de verão | 19.99 | 1 | 1 | 1 |
 | pesquisa interna:chapéu de inverno | 12.99 | 1 | 1 | 1 |
 
-Estes são os campos XDM para produzir a Sintaxe de conversão no conjunto de dados do Analytics:
+Estes são os campos XDM para produzir a Sintaxe de conversão no seu [!DNL Analytics] conjunto de dados:
 
 ### eVars
 

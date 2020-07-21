@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
 workflow-type: tm+mt
-source-wordcount: '6593'
+source-wordcount: '6665'
 ht-degree: 0%
 
 ---
@@ -192,6 +192,8 @@ ht-degree: 0%
 
 **Catálogo de destino:** Um catálogo de destino é uma lista de destinos disponíveis no [!DNL Real-time Customer Data Platform].
 
+**Regras de chamada direta:** no [!DNL Experience Platform Launch], você pode configurar uma [!UICONTROL regra] de chamada  direta que é executada quando é chamada diretamente da página. Se o carregamento de sua página ou a ação no site for muito simples, ou se for exclusiva e puder executar um conjunto específico de instruções toda vez (definido [!DNL eVar4] como X e acionado [!DNL event2] toda vez), você poderá usar uma [!UICONTROL regra] de chamada direta. Consulte [!DNL Launch] a documentação referente à criação de [!UICONTROL regras] de chamada direta.
+
 **Nome de exibição:** O nome de exibição é um nome amigável para o usuário de um campo que é mostrado na interface do usuário.
 
 **MÓDULO:** DULE é um acrônimo para Rotulagem e Aplicação do Uso de *Dados*. DULE é uma parte essencial do gerenciamento de dados e uma coleção de recursos principais que permite a rotulagem de uso de dados e a aplicação de políticas de acesso a dados para necessidades de governança em uma organização.
@@ -220,7 +222,7 @@ ht-degree: 0%
 
 **Experience Platform Launch:** [!DNL Launch] é um ecossistema de gerenciamento de tags e SDK, integrado com [!DNL Experience Platform] e [!DNL Experience Cloud] aplicativos. [!DNL Launch] fornece ferramentas para implantar, unificar e gerenciar as integrações de análises, marketing e publicidade necessárias para potencializar as experiências relevantes do cliente em todos os dispositivos do cliente.
 
-**Extensões de Experience Platform Launch:** [!DNL Experience Platform Launch] as extensões permitem o delivery de dados brutos do evento diretamente para [!DNL Real-time Customer Data Platform] destinos. A instalação de [!DNL Launch] extensões requer acesso às [!DNL Launch] propriedades.
+**Extensões de Experience Platform Launch:** [!DNL Experience Platform Launch] extensões permitem o delivery de dados brutos do evento diretamente para [!DNL Real-time Customer Data Platform] destinos. A instalação de [!DNL Launch] extensões requer acesso às [!DNL Launch] propriedades.
 
 **Experimento:** Um experimento é um processo de criação de um modelo treinado por meio do treinamento da instância com uma porção de amostra dos dados de produção ao vivo.
 
@@ -354,7 +356,7 @@ ht-degree: 0%
 
 **Biblioteca de Ofertas:** Na biblioteca de ofertas [!DNL Decisioning Service], ela é uma biblioteca central usada para gerenciar ofertas personalizadas e de fallback, regras de decisão e atividades.
 
-**Organização:** Uma organização é o nome usado para identificar uma empresa ou um grupo específico dentro de uma empresa nos produtos da Adobe. O administrador pode configurar e gerenciar o acesso e as permissões dos recursos para os usuários de uma organização.
+**Organização:** Uma organização é o nome usado para identificar uma empresa ou um grupo específico em uma empresa nos produtos da Adobe. O administrador pode configurar e gerenciar o acesso e as permissões dos recursos para os usuários de uma organização.
 
 **Substituir estratégia de gravação:** `Overwrite` a estratégia de salvamento é uma opção para assimilar dados de terceiros por meio de uma conexão, na qual o usuário especifica se os dados ingeridos serão sobrescritos em um agendamento especificado. [!DNL Experience Platform] assimilará o conjunto de dados especificado da fonte de terceiros e substituirá o conjunto de dados em [!DNL Experience Platform].
 

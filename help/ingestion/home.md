@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral de ingestão de dados de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 10%
 
 ---
@@ -36,7 +36,7 @@ Consulte a visão geral [da ingestão de](./streaming-ingestion/overview.md) str
 
 [!DNL Experience Platform] permite configurar conexões de origem para vários provedores de dados. Essas conexões permitem que você se autentique em suas fontes de dados externas, defina horários para execuções de ingestão e gerencie o throughput de ingestão.
 
-Conexões de origem podem ser configuradas para coletar dados de outros aplicativos da Adobe (como o Adobe Analytics e o Adobe Audience Manager), fontes de armazenamentos em nuvem de terceiros (como [!DNL Azure Blob][!DNL Amazon] S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como o Microsoft Dynamics e o Salesforce).
+Conexões de origem podem ser configuradas para coletar dados de outros aplicativos da Adobe (como o Adobe Analytics e o Adobe Audience Manager), fontes de armazenamentos em nuvem de terceiros (como [!DNL Azure Blob]S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Amazon] e [!DNL Microsoft Dynamics] [!DNL Salesforce]).
 
 Consulte a visão geral [das](../sources/home.md) Fontes para obter mais informações.
 

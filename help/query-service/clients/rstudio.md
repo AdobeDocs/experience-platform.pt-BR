@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Conectar-se com o RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
 
-# Conectar-se com o RStudio
+# Conectar-se com [!DNL RStudio]
 
-Este documento percorre as etapas para conectar o R Studio ao serviço de Query.
+Este documento percorre as etapas para conectar o R Studio ao Adobe Experience Platform [!DNL Query Service].
 
-Depois de instalar o RStudio, na tela do *Console* que é exibida, primeiro será necessário preparar seu script R para usar o PostgreSQL.
+Depois de instalar [!DNL RStudio], na tela *Console* que é exibida, primeiro será necessário preparar seu script R para usar [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Depois de preparar seu script R para usar o PostgreSQL, agora é possível conectar o RStudio ao Query Service carregando o driver PostgreSQL.
+Depois de preparar seu script R para usar [!DNL PostgreSQL], agora é possível conectar-se [!DNL RStudio] ao [!DNL Query Service] carregando o [!DNL PostgreSQL] driver.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -45,11 +45,11 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, visite a página de [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon no Platform, clique em **Query** e, em seguida, clique em **Credenciais**.
+>Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, visite a página de [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon [!DNL Platform], clique em **[!UICONTROL Query]** e, em seguida, clique em **[!UICONTROL Credenciais]**.
 
 ## Próximas etapas
 
-Agora que você se conectou ao Serviço de Query, é possível gravar query para executar e editar instruções SQL. Por exemplo, você pode usar `dbGetQuery(con, sql)` para executar query, onde `sql` é o query SQL que deseja executar.
+Agora que você se conectou a [!DNL Query Service], é possível gravar query para executar e editar instruções SQL. Por exemplo, você pode usar `dbGetQuery(con, sql)` para executar query, onde `sql` é o query SQL que deseja executar.
 
 O query a seguir usa um conjunto de dados contendo [ExperienceEvents](../creating-queries/experience-event-queries.md) e cria um histograma das visualizações de página de um site, dada a altura de tela do dispositivo.
 

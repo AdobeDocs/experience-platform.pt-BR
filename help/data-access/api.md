@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Data Access
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 4%
 
 ---
@@ -242,4 +242,4 @@ Para obter exemplos adicionais, consulte o tutorial [de acesso a](tutorials/data
 
 ## Assinar eventos de ingestão de dados
 
-A Platform disponibiliza eventos específicos de alto valor para a subscrição por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de ingestão de dados para receber notificações de possíveis atrasos e falhas. Consulte o tutorial sobre como [assinar notificações](../ingestion/quality/subscribe-events.md) de ingestão de dados para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para a subscrição por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de ingestão de dados para receber notificações de possíveis atrasos e falhas. Consulte o tutorial sobre como [assinar notificações](../ingestion/quality/subscribe-events.md) de ingestão de dados para obter mais informações.

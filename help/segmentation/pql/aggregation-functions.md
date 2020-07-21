@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Funções de agregação
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 8%
 
 ---
 
 
 # Funções de agregação
 
-As funções de agregação são usadas para agrupar vários valores em matrizes de linguagem de Query de Perfil (PQL) para formar um único valor de resumo. Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
+As funções de agregação são usadas para agrupar vários valores em matrizes [!DNL Profile Query Language] (PQL) para formar um único valor de resumo. Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
 
 ## Contagem
 

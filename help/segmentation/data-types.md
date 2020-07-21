@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Tipos de dados do Serviço de segmentação de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '406'
 ht-degree: 2%
 
 ---
 
 
-# Tipos de dados suportados pelo Serviço de segmentação de Adobe Experience Platform
+# Tipos de dados suportados pelo Adobe Experience Platform [!DNL Segmentation Service]
 
 Todos os tipos de dados XDM são suportados dentro [!DNL Segmentation Service]. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 
@@ -39,7 +39,7 @@ Os dados de data permitem que você atribua contexto baseado em tempo às defini
 
 ## Eventos de experiência
 
-Como um schema Adobe Experience Platform, o XDM ExperienceEvents registra interações explícitas e implícitas com aplicativos [!DNL Platform]integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. ExperienceEvents são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
+Como um schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registre interações explícitas e implícitas do cliente com aplicativos [!DNL Platform]integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
 
 Conforme visto na tabela abaixo, os dados do evento são renderizados usando palavras-chave que ajudam a refinar o comportamento do evento e a especificar atributos do evento.
 

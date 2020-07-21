@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Gravando query
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
 
 
-# Orientações gerais para a execução de query no Query Service
+# Orientações gerais para a execução de query em [!DNL Query Service]
 
-Este documento detalha detalhes importantes que você deve saber ao escrever query no Serviço de Query.
+Este documento detalha detalhes importantes a serem conhecidos ao escrever query no Adobe Experience Platform [!DNL Query Service].
 
-Para obter informações detalhadas sobre a sintaxe SQL usada no Query Service, leia a documentação [da sintaxe](../sql/syntax.md)SQL.
+Para obter informações detalhadas sobre a sintaxe SQL usada em [!DNL Query Service], leia a documentação [da sintaxe](../sql/syntax.md)SQL.
 
 ## Modelos de execução de Query
 
-O serviço de Query Adobe Experience Platform tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
+Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
 
 ### Execução interativa de query
 
-Os Query podem ser executados interativamente enviando-os por meio da interface do usuário do serviço de Query ou [por meio de um cliente](../clients/overview.md)conectado. Ao executar o Serviço de Query por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e o Serviço de Query até que o query enviado retorne ou atinja o tempo limite.
+Os Query podem ser executados interativamente enviando-os por meio da [!DNL Query Service] interface do usuário ou [por meio de um cliente](../clients/overview.md)conectado. Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até o query enviado retornar ou expirar.
 
 A execução de query interativos tem as seguintes limitações:
 
@@ -38,11 +38,11 @@ A execução de query interativos tem as seguintes limitações:
 >
 >Para substituir a limitação máxima de linhas, inclua `LIMIT 0` o query. O tempo limite de 10 minutos do query ainda se aplica.
 
-Por padrão, os resultados de query interativos são retornados ao cliente e **não** são persistentes. Para persistir nos resultados como um conjunto de dados no Experience Platform, o query deve usar a `CREATE TABLE AS SELECT` sintaxe.
+Por padrão, os resultados de query interativos são retornados ao cliente e **não** são persistentes. Para persistir nos resultados como um conjunto de dados no, [!DNL Experience Platform]o query deve usar a `CREATE TABLE AS SELECT` sintaxe.
 
 ### Execução de query não interativos
 
-Query enviados por meio da API de serviço de Query são executados de forma não interativa. Execução não interativa significa que o Serviço de Query recebe a chamada da API e executa o query na ordem em que é recebido. query não interativos sempre resultam na geração de um novo conjunto de dados no Experience Platform para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente.
+Query enviados por meio da [!DNL Query Service] API são executados de forma não interativa. Execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa o query na ordem em que é recebido. query não interativos sempre resultam na geração de um novo conjunto de dados para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente. [!DNL Experience Platform]
 
 ## Acessar um campo específico em um objeto
 
@@ -189,4 +189,4 @@ Aspas traseiras **não** são necessárias se você estiver usando a notação e
 
 ## Próximas etapas
 
-Ao ler este documento, você foi apresentado a algumas considerações importantes ao escrever query usando o Query Service. Para obter mais informações sobre como usar a sintaxe SQL para gravar seus próprios query, leia a documentação [da sintaxe](../sql/syntax.md)SQL.
+Ao ler este documento, você foi apresentado a algumas considerações importantes ao escrever query usando [!DNL Query Service]. Para obter mais informações sobre como usar a sintaxe SQL para gravar seus próprios query, leia a documentação [da sintaxe](../sql/syntax.md)SQL.

@@ -1,17 +1,20 @@
 ---
-title: Home page e Painéis da plataforma de dados do cliente em tempo real
-seo-title: Home page e Painéis da plataforma de dados do cliente em tempo real
-description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
-seo-description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
+title: Home page e Painéis Platform de dados do cliente em tempo real
+seo-title: Home page e Painéis Platform de dados do cliente em tempo real
+description: Painéis, Home page e experiência de usuário iniciante do Adobe Experience Platform
+seo-description: Painéis, Home page e experiência de usuário iniciante do Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '634'
+ht-degree: 0%
 
 ---
 
 
-# Visão geral das métricas da Plataforma de dados do cliente em tempo real
+# [!DNL Real-time Customer Data Platform] visão geral das métricas
 
-O home page da Adobe Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
+O home page Adobe Real-time Customer Data Platform (Real-time CDP), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
 
 O home page é apenas um dos locais onde os cartões de métrica aparecem. A CDP em tempo real fornece cartões de métricas em toda a sua experiência. Essas métricas informam sobre as audiências de dados, perfis e segmentos no sistema.
 
@@ -36,17 +39,17 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![imagem](assets/home-recent.jpg)
 
-Métricas adicionais — por exemplo, para perfis e segmentos — estão disponíveis em outras partes da Plataforma de dados do cliente em tempo real.
+Métricas adicionais — por exemplo, para perfis e segmentos — estão disponíveis em outras partes da Platform de dados do cliente em tempo real.
 
 ### Conjuntos de dados
 
-O **[!UICONTROL Datasets]** contador mostra o número de conjuntos de dados no sistema e a quantidade de dados na Plataforma. Este contador é atualizado quando um conjunto de dados é criado.
+O contador **[!UICONTROL de conjuntos]** de dados mostra o número de conjuntos de dados no sistema e a quantidade de dados no [!DNL Platform]. Este contador é atualizado quando um conjunto de dados é criado.
 
 Para obter mais informações sobre conjuntos de dados, consulte a visão geral [dos](../catalog/datasets/overview.md)conjuntos de dados.
 
 ### Perfis
 
-A **[!UICONTROL Profiles]** contagem mostra o número total de pessoas com perfis no Perfil Cliente em tempo real. Ela não inclui fragmentos de perfil. Esta é a sua audiência totalmente endereçável.
+A contagem de **[!UICONTROL Perfis]** mostra o número total de pessoas com perfis no [!DNL Real-time Customer Profile]. Ela não inclui fragmentos de perfil. Esta é a sua audiência totalmente endereçável.
 
 Essa contagem usa a política [de](profile/merge-policies.md) mesclagem padrão conforme definida na configuração da política de mesclagem no Perfil Unificado.
 
@@ -56,13 +59,13 @@ Para obter mais informações sobre perfis, consulte [Uma visualização unifica
 
 ### Segmentos
 
-**[!UICONTROL Segments]** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados.
+**[!UICONTROL Segmentos]** mostra o número total de segmentos criados para a organização. Esse número é atualizado quando novos segmentos são criados.
 
 Para obter mais informações sobre segmentos, consulte Visão geral [do Serviço de](segmentation/segmentation-overview.md)segmentação.
 
 ### Destinos
 
-**[!UICONTROL Destinations]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando novos destinos são criados.
+**[!UICONTROL Destinos]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando novos destinos são criados.
 
 Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/destinations-overview.md)Destinos.
 
@@ -102,32 +105,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Conjuntos de dados recentes
 
-O **[!UICONTROL Recent datasets]** cartão mostra os cinco conjuntos de dados mais recentes criados na organização. Esta lista é atualizada quando um novo conjunto de dados é criado.
+O cartão de conjuntos de dados **** recentes mostra os cinco conjuntos de dados mais recentes criados na organização. Esta lista é atualizada quando um novo conjunto de dados é criado.
 
-Clique em um conjunto de dados para visualização dos detalhes desse item ou **[!UICONTROL View all]** para ver a lista de conjuntos de dados. Daí, você pode clicar em uma fonte específica para obter detalhes.
+Clique em um conjunto de dados para visualização dos detalhes desse item ou **[!UICONTROL Visualização todos]** para ver a lista de conjuntos de dados. Daí, você pode clicar em uma fonte específica para obter detalhes.
 
 Para obter mais informações sobre conjuntos de dados, consulte a visão geral [dos](../catalog/datasets/overview.md)conjuntos de dados.
 
 ### Fontes recentes
 
-O cartão de **[!UICONTROL Recent sources]** métricas mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova fonte é criada.
+O cartão de métricas de fontes **** recentes mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova fonte é criada.
 
-Clique em uma fonte para visualização dos detalhes desse item ou **[!UICONTROL View all]** para ver a lista de fontes. Daí, você pode clicar em uma fonte específica para obter detalhes.
+Clique em uma fonte para visualização dos detalhes desse item ou **[!UICONTROL Visualização todos]** para ver a lista das fontes. Daí, você pode clicar em uma fonte específica para obter detalhes.
 
 Para obter mais informações sobre fontes, consulte Visão geral [das](sources/sources-overview.md)fontes.
 
 ### Segmentos recentes
 
-O cartão de **[!UICONTROL Recent segments]** métricas mostra os cinco segmentos mais recentes criados na organização. Essa lista é atualizada quando um novo segmento é criado.
+O cartão de métricas de segmentos **** recentes mostra os cinco segmentos mais recentes criados na organização. Essa lista é atualizada quando um novo segmento é criado.
 
-Clique em um segmento para visualização dos detalhes desse item ou **[!UICONTROL View all]** para ver informações sobre mais segmentos.
+Clique em um segmento para visualização dos detalhes do item ou **[!UICONTROL Visualização todos]** para ver informações sobre mais segmentos.
 
 Para obter mais informações sobre segmentos, consulte Visão geral [do Serviço de](segmentation/segmentation-overview.md)segmentação.
 
 ### Destinos recentes
 
-O cartão de **[!UICONTROL Recent destinations]** métricas mostra os cinco destinos mais recentes criados na organização. Essa lista é atualizada quando um novo destino é criado.
+O cartão de métricas de destinos **** recentes mostra os cinco destinos mais recentes criados na organização. Essa lista é atualizada quando um novo destino é criado.
 
-Clique em um destino para visualização dos detalhes desse item ou **[!UICONTROL View all]** para ver informações sobre mais destinos.
+Clique em um destino para visualização dos detalhes desse item ou **[!UICONTROL Visualização todos]** para ver informações sobre mais destinos.
 
 Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/destinations-overview.md)Destinos.

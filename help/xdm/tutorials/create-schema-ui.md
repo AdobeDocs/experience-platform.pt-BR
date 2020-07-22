@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3376'
 ht-degree: 0%
@@ -273,7 +273,7 @@ O Editor de Schemas fornece a capacidade de ativar um schema para uso com [!DNL 
 
 Para que um schema seja habilitado para uso com [!DNL Real-time Customer Profile], ele deve ter uma identidade primária definida. Você receberá uma mensagem de erro &quot;Missing Primary Identity&quot; (Identidade primária ausente) se tentar habilitar um schema sem primeiro definir uma identidade primária.
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 Para ativar o schema &quot;Membros da Fidelidade&quot; para uso no, comece clicando em &quot;Membros da Fidelidade&quot; na seção [!DNL Profile]Estrutura ** do editor.
 

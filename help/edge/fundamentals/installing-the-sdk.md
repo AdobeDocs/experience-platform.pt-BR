@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK instalando o SDK
 description: Saiba como instalar o SDK da Web do Experience Platform
 seo-description: Saiba como instalar o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '583'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,10 @@ Se você tiver determinado que precisa preencher politicamente `window.Promise`,
 ```
 
 Isso carrega um script que garante que `window.Promise` seja uma implementação Promise válida.
+
+>[!NOTE]
+>
+>Se você optar por carregar uma implementação Promise diferente, verifique se ela suporta `Promise.prototype.finally`.
 
 ## Carregamento sincronizado do arquivo JavaScript {#loading-javascript-synchronously}
 

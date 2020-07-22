@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um schema usando a API de registro do Schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 1%
@@ -1015,7 +1015,7 @@ Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) com um corpo de res
 }
 ```
 
-## Ativar schema para uso em [!DNL Real-time Customer Profile]
+## Ativar schema para uso em [!DNL Real-time Customer Profile] {#profile}
 
 Ao adicionar a tag &quot;união&quot; ao `meta:immutableTags` atributo, você pode ativar o schema Membros de Fidelidade para uso por [!DNL Real-time Customer Profile].
 

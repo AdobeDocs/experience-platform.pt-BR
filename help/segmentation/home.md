@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Serviço de segmentação de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -215,8 +215,10 @@ Outro desafio tradicional para os comerciantes tem sido criar anúncios para red
 - Objeto
 - Mapa
 - Eventos
+- audiências externas
+- Segmentos
 
-Informações mais detalhadas sobre esses tipos de dados suportados podem ser encontradas no documento [de tipos de dados de](./data-types.md)suporte.
+Informações mais detalhadas sobre esses tipos de dados suportados podem ser encontradas no documento [de tipos de dados](./data-types.md)suportados.
 
 ## Próximas etapas
 

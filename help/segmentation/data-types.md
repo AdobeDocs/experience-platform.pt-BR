@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipos de dados do Serviço de segmentação de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 2%
+source-wordcount: '456'
+ht-degree: 3%
 
 ---
 
@@ -50,15 +50,15 @@ Conforme visto na tabela abaixo, os dados do evento são renderizados usando pal
 | Botão de alternância &quot;Aplicar regra de tempo&quot; | Incorpora dados de data. |
 | É igual, não é igual, start com, não start, termina com, não termina com, contém, não contém, existe, não existe | Incorpora dados de string. |
 
-## Segmentos
-
-As definições de segmentos existentes também podem ser usadas como componentes de uma nova definição de segmento, adicionando seus atributos e regras baseadas em eventos ao novo segmento.
-
-## Audiences
+### Compartilhamento de público
 
 audiências externas também podem ser usadas como componentes de uma nova definição de segmento, adicionando suas regras de atributo ao novo segmento.
 
-Atualmente, somente Adobe Audience Manager é suportado como uma audiência. Fontes adicionais serão ativadas no futuro.
+Atualmente, apenas o Adobe Audience Manager é suportado como uma audiência externa, com fontes adicionais sendo ativadas no futuro. Para obter mais informações sobre como usar o Adobe Audience Manager audiência com o Platform, consulte o guia de compartilhamento de [audiências na documentação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)do Adobe Audience Manager.
+
+### Compartilhamento de segmentos
+
+Os segmentos criados no Platform podem ser usados em outros serviços [principais da](https://docs.adobe.com/content/help/pt-BR/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Para ativar este recurso, você precisará entrar em contato com o arquiteto da solução ou com seu consultor.
 
 ## Outros tipos de dados
 

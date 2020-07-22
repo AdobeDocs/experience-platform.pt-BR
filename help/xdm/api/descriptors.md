@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descritores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 1%
@@ -369,7 +369,7 @@ Descritores de relacionamento descrevem uma relação entre dois schemas diferen
 
 #### Descritor de identidade de referência
 
-Os descritores de identidade de referência fornecem um contexto de referência para um campo de schema, permitindo que ele seja vinculado ao campo de identidade principal de um schema de destino. Os campos já devem ser rotulados com um descritor de identidade antes que um descritor de referência possa ser aplicado a eles.
+Os descritores de identidade de referência fornecem um contexto de referência para a identidade primária de um campo de schema, permitindo que ele seja referenciado por campos em outros schemas. Os campos já devem ser rotulados com um descritor de identidade antes que um descritor de referência possa ser aplicado a eles.
 
 ```json
 {

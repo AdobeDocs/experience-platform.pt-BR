@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dicionário de campos do Experience Data Model (XDM)
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '25163'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Consulte as [noções básicas da composição](composition.md) do schema para o
 
 A tabela abaixo inclui o nome do campo (nem todos os campos XDM são namespacados usando &quot;xdm&quot;) juntamente com seu título e descrição, tipo e formato, quando necessário, bem como o tipo XDM correspondente e os recursos (mixins, tipos de dados e schemas) nos quais o campo pode ser encontrado.
 
-Você pode usar a funcionalidade de pesquisa no para visualização [!DNL Schema Editor] dos detalhes desses recursos, conforme mostrado no tutorial [do Editor de](../tutorials/create-schema-ui.md)Schemas.
+Você pode usar a funcionalidade de pesquisa no para visualização [!DNL Schema Editor] dos detalhes desses recursos, conforme mostrado no tutorial [do Editor de](../tutorials/create-schema-ui.md#browse)Schemas.
 
 >[!NOTE]
 >

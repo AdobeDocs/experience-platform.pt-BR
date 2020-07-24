@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
+source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '815'
 ht-degree: 5%
 
 ---
@@ -42,10 +42,10 @@ O Adobe Experience Platform foi projetado para funcionar de forma ideal nas vers
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox |
 
-Estes navegadores não são suportados:
+Estes sistemas operacionais e navegadores não são suportados:
 
-* Internet Explorer 10
 * Windows 8
+* Internet Explorer 10
 * Opera
 
 ## Suporte de idioma

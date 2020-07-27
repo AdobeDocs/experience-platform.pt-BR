@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar segmentos de clientes com pontuações previstas
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Criar segmentos de clientes com pontuações previstas
 
-Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](../../../segmentation/tutorials/create-a-segment.md)segmentos.
+Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](../../../segmentation/ui/overview.md)segmentos.
 
 >[!IMPORTANT]
 >
@@ -24,7 +24,7 @@ Na interface do usuário do Platform, clique em **[!UICONTROL Segmentos]** no pa
 
 ![](../images/user-guide/segments.png)
 
-O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta chamada Perfil **[!UICONTROL individual]** XDM e clique na pasta com a namespace de sua organização. A pasta chamada AI **[!UICONTROL do]** cliente contém os resultados de execuções de previsão e são nomeados após a instância à qual as pontuações pertencem. Clique em uma pasta de instância para acessar os resultados da instância desejada.
+O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta chamada Perfil **[!UICONTROL individual]** XDM e clique na pasta com a namespace de sua organização. A pasta chamada AI **[!UICONTROL do]** cliente contém os resultados de execuções de previsão e são nomeados após a instância à qual as pontuações pertencem. Clique em uma pasta de instância para acessar seus resultados da instância desejada.
 
 ![](../images/user-guide/results.png)
 

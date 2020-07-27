@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral das caixas de proteção
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Em resumo, as caixas de proteção oferecem os seguintes benefícios:
 
 ## Controle de acesso para caixas de proteção
 
-Por padrão, todos os usuários de uma organização têm acesso a uma caixa de proteção de produção. O acesso a caixas de proteção que não sejam de produção deve ser concedido por um administrador do sistema, administrador do produto ou administrador do perfil do produto por meio da [Adobe Admin Console](https://adminconsole.adobe.com).
+Por padrão, todos os usuários de uma organização têm acesso a uma caixa de proteção de produção. O acesso a caixas de proteção que não sejam de produção deve ser concedido por um administrador do sistema, administrador do produto ou administrador do perfil do produto por meio do [Adobe Admin Console](https://adminconsole.adobe.com).
 
 Para visualização, criar, atualizar ou excluir caixas de proteção que não sejam de produção, os usuários também devem receber permissões de Administração de caixa de proteção.
 
@@ -46,11 +46,11 @@ Para obter mais informações sobre como gerenciar funções e permissões para 
 
 ## Caixas de proteção na interface do usuário do Experience Platform
 
-Na interface [do usuário do](https://platform.adobe.com)Experience Platform, os usuários podem alternar entre as caixas de proteção às quais têm acesso usando o controle do alternador **de** caixa de proteção na parte superior esquerda da tela.  Os usuários com privilégios de Administração de Sandbox também têm acesso à guia **Sandboxes** na navegação à esquerda, onde podem visualização e gerenciar caixas de proteção para sua organização. Para obter mais informações sobre como trabalhar com caixas de proteção na interface do usuário, consulte o guia [do usuário da](ui/overview.md)caixa de proteção.
+Na interface [do usuário do](https://platform.adobe.com)Experience Platform, os usuários podem alternar entre as caixas de proteção às quais têm acesso usando o controle do alternador **de** caixa de proteção na parte superior esquerda da tela.  Os usuários com privilégios de Administração de Sandbox também têm acesso à guia **[!UICONTROL Sandboxes]** na navegação à esquerda, onde podem visualização e gerenciar caixas de proteção para sua organização. Para obter mais informações sobre como trabalhar com caixas de proteção na interface do usuário, consulte o guia [do usuário da](ui/overview.md)caixa de proteção.
 
 ## Caixas de proteção em APIs de Experience Platform
 
-Ao fazer chamadas para APIs de Experience Platform, um nome de caixa de proteção deve ser fornecido no cabeçalho `x-sandbox-name`. Por exemplo, ao fazer uma chamada para a API [do serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) catálogo para visualização de todos os conjuntos de dados na caixa de proteção Produção, o nome da caixa de proteção (&quot;prod&quot;) é fornecido como um cabeçalho na solicitação da API:
+Ao fazer chamadas para APIs de Experience Platform, um nome de caixa de proteção deve ser fornecido no cabeçalho `x-sandbox-name`. Por exemplo, ao fazer uma chamada para o [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para visualização de todos os conjuntos de dados na caixa de proteção Produção, o nome da caixa de proteção (&quot;prod&quot;) é fornecido como um cabeçalho na solicitação da API:
 
 ```shell
 curl -X GET \

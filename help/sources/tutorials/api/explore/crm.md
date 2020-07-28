@@ -56,7 +56,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Explore suas tabelas de dados
 
-Usando a conexão básica para seu sistema CRM, você pode explorar suas tabelas de dados executando solicitações GET. Use a chamada a seguir para localizar o caminho da tabela na qual você deseja inspecionar ou assimilar [!DNL Platform].
+Usando a conexão básica para seu sistema CRM, você pode explorar suas tabelas de dados realizando solicitações de GET. Use a chamada a seguir para localizar o caminho da tabela na qual você deseja inspecionar ou assimilar [!DNL Platform].
 
 **Formato da API**
 
@@ -109,9 +109,9 @@ Uma resposta bem-sucedida é uma matriz de tabelas de acordo com seu sistema CRM
 ]
 ```
 
-## Inspecione a estrutura de uma tabela
+## Inspect a estrutura de uma tabela
 
-Para inspecionar a estrutura de uma tabela do seu sistema CRM, execute uma solicitação GET enquanto especifica o caminho de uma tabela como parâmetro de query.
+Para inspecionar a estrutura de uma tabela do seu sistema CRM, execute uma solicitação de GET enquanto especifica o caminho de uma tabela como um parâmetro de query.
 
 **Formato da API**
 

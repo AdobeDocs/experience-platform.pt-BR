@@ -22,7 +22,7 @@ Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, pers
 
 ## Casos de uso
 
-Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois exemplos de casos de uso que os clientes Adobe Real-time Customer Data Platform podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois exemplos de casos de uso que os clientes da Adobe Real-time Customer Data Platform podem resolver usando esse recurso.
 
 
 ### Caso de uso nº 1
@@ -36,9 +36,9 @@ Um varejista online quer atingir os clientes existentes por meio de plataformas 
 
 Uma companhia aérea tem níveis de clientes diferentes (Bronze, Prata e Ouro) e deseja fornecer a cada um dos níveis ofertas personalizadas por meio de plataformas sociais. No entanto, nem todos os clientes usam o aplicativo móvel da companhia aérea e alguns deles não fizeram logon no site da empresa. Os únicos identificadores que a empresa tem sobre esses clientes são IDs de associação e endereços de email.
 
-Para público alvo em redes sociais, eles podem integrar os dados do cliente de seu CRM para o CDP em tempo real da Adobe, usando os endereços de email como identificadores.
+Para público alvo-los nas mídias sociais, eles podem integrar os dados do cliente de seu CRM para o CDP em tempo real do Adobe, usando os endereços de email como identificadores.
 
-Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente, para criar novos segmentos de audiência que podem público alvo até o [!DNL Facebook] destino.
+Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente, para criar novos segmentos de audiência que possam público alvo até o [!DNL Facebook] destino.
 
 ## Especificações de destino {#destination-specs}
 

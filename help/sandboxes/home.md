@@ -38,7 +38,7 @@ Em resumo, as caixas de proteção oferecem os seguintes benefícios:
 
 ## Controle de acesso para caixas de proteção
 
-Por padrão, todos os usuários de uma organização têm acesso a uma caixa de proteção de produção. O acesso a caixas de proteção que não sejam de produção deve ser concedido por um administrador do sistema, administrador do produto ou administrador do perfil do produto por meio do [Adobe Admin Console](https://adminconsole.adobe.com).
+Por padrão, todos os usuários de uma organização têm acesso a uma caixa de proteção de produção. O acesso a caixas de proteção que não sejam de produção deve ser concedido por um administrador do sistema, administrador do produto ou administrador do perfil do produto por meio da [Adobe Admin Console](https://adminconsole.adobe.com).
 
 Para visualização, criar, atualizar ou excluir caixas de proteção que não sejam de produção, os usuários também devem receber permissões de Administração de caixa de proteção.
 

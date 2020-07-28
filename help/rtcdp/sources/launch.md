@@ -1,8 +1,8 @@
 ---
-title: Tutorial Implementar tags de site com o Adobe Launch
+title: Tutorial Implementar tags de site com Adobe Launch
 seo-title: Implementar tags de site com o Adobe Launch
-description: Usar o Adobe Launch para implementar tags de site no Adobe Experience Platform
-seo-description: Usar o Adobe Launch para implementar tags de site no Adobe Experience Platform
+description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
+seo-description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # Tutorial: Implementar tags de site com o Adobe Launch
 
-Este tutorial explica como implementar as tags de seu site para enviar dados ao Adobe Experience Platform usando o Adobe Launch.
+Este tutorial explica como implementar as tags de seu site para enviar dados para o Adobe Experience Platform usando o Adobe Launch.
 
 ## Pré-requisitos
 
@@ -48,8 +48,8 @@ Primeiro, instale a extensão Adobe Experience Platform [!DNL Web SDK] .
 
    As únicas configurações necessárias no momento são:
 
-   * **ID de configuração:** Especifique a ID de configuração obtida de seu representante da Adobe.
-   * **Domínio de borda:** Especifique o domínio de borda obtido do seu representante da Adobe.
+   * **ID de configuração:** Especifique a ID de configuração obtida do seu representante de Adobe.
+   * **Domínio de borda:** Especifique o domínio de borda obtido do seu representante de Adobe.
 
 1. Clique em **[!UICONTROL Salvar]** e prossiga para a próxima etapa.
 

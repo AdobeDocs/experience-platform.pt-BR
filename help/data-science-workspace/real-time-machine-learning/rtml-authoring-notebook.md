@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
 
-O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real. Usando o modelo de notebook em tempo **[!UICONTROL real ML]** Python fornecido pela Adobe, este guia cobre o treinamento de um modelo, a criação de uma DSL, a publicação de DSL no Edge e a pontuação da solicitação. À medida que você avança pela implementação do modelo de aprendizado de máquina em tempo real, espera-se que você modifique o modelo para atender às necessidades do seu conjunto de dados.
+O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real. Usando o modelo de notebook em tempo **[!UICONTROL real ML]** Python fornecido pelo Adobe, este guia aborda o treinamento de um modelo, a criação de um DSL, a publicação de DSL no Edge e a pontuação da solicitação. À medida que você avança pela implementação do modelo de aprendizado de máquina em tempo real, espera-se que você modifique o modelo para atender às necessidades do seu conjunto de dados.
 
 ## Criar um notebook de aprendizado de máquina em tempo real
 
@@ -385,7 +385,7 @@ dsl_dict['edge']['applicationDsl']['nodes'][0]['id'] = new_node_id
 
 ![Nó atualizado](../images/rtml/updated-node.png)
 
-Após atualizar a ID do nó, você poderá publicar novamente um DSL atualizado na borda.
+Depois de atualizar a ID do nó, você poderá publicar novamente um DSL atualizado no Edge.
 
 ```python
 # Republish the updated DSL to Edge
@@ -399,7 +399,7 @@ Você retornará o DSL atualizado.
 
 ## Pontuação {#scoring}
 
-Após a publicação para [!DNL Edge], a pontuação é feita por uma solicitação POST de um cliente. Normalmente, isso pode ser feito a partir de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso do Postman. O modelo ML *[!UICONTROL em tempo]* real usa o EdgeUtils para demonstrar esse processo.
+Após a publicação para [!DNL Edge], a pontuação é feita por uma solicitação de POST de um cliente. Normalmente, isso pode ser feito a partir de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso do Postman. O modelo ML *[!UICONTROL em tempo]* real usa o EdgeUtils para demonstrar esse processo.
 
 >[!NOTE]
 >É necessário um pequeno tempo de processamento antes da pontuação dos start.

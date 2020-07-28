@@ -395,13 +395,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo streami
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | A ID da conexão de streaming criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerou o lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
+| `xactionId` | Um identificador exclusivo gerou o lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro em vários sistemas e na depuração. |
 | `receivedTimeMs`: Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 | `synchronousValidation.status` | Como o parâmetro query `synchronousValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
 
 ## Recuperar os dados de séries de tempo ingeridos recentemente
 
-Para validar os registros ingeridos anteriormente, você pode usar o para recuperar os dados das séries de tempo [!DNL Profile Access API](../../profile/api/entities.md) . Isso pode ser feito usando uma solicitação GET para o `/access/entities` endpoint e usando parâmetros de query opcionais. Vários parâmetros podem ser usados, separados por E comercial (&amp;).&quot;
+Para validar os registros ingeridos anteriormente, você pode usar o para recuperar os dados das séries de tempo [!DNL Profile Access API](../../profile/api/entities.md) . Isso pode ser feito usando uma solicitação de GET para o `/access/entities` ponto de extremidade e usando parâmetros de query opcionais. Vários parâmetros podem ser usados, separados por E comercial (&amp;).&quot;
 
 >[!NOTE]
 >

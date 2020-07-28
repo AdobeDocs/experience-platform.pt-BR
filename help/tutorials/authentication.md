@@ -18,7 +18,7 @@ Este documento fornece um tutorial passo a passo para obter acesso a uma conta d
 
 ## Autenticar para fazer chamadas de API
 
-Para manter a segurança de seus aplicativos e usuários, todas as solicitações para APIs de E/S da Adobe devem ser autenticadas e autorizadas usando padrões como OAuth e JSON Web Tokens (JWT). O JWT é então usado junto com informações específicas do cliente para gerar seu token de acesso pessoal.
+Para manter a segurança de seus aplicativos e usuários, todas as solicitações para APIs de E/S de Adobe devem ser autenticadas e autorizadas usando padrões como OAuth e JSON Web Tokens (JWT). O JWT é então usado junto com informações específicas do cliente para gerar seu token de acesso pessoal.
 
 Este tutorial aborda as etapas de autenticação através da criação de um token de acesso descrito no seguinte fluxograma:
 ![](images/authentication/authentication-flowchart.png)
@@ -29,7 +29,7 @@ Para realizar chamadas com êxito para [!DNL Experience Platform] APIs, é neces
 
 * Uma organização IMS com acesso a Adobe Experience Platform
 * Uma conta de Adobe ID registrada
-* Um administrador da Admin Console para adicioná-lo como um **desenvolvedor** e um **usuário** para um produto.
+* Um administrador de Admin Console para adicioná-lo como um **desenvolvedor** e um **usuário** para um produto.
 
 As seções a seguir percorrem as etapas para criar um Adobe ID e se tornar um desenvolvedor e usuário para uma organização.
 
@@ -37,13 +37,13 @@ As seções a seguir percorrem as etapas para criar um Adobe ID e se tornar um d
 
 Se você não tiver um Adobe ID, poderá criar um usando as seguintes etapas:
 
-1. Ir para o console do desenvolvedor [Adobe](https://console.adobe.io)
+1. Ir para o Console do desenvolvedor do [Adobe](https://console.adobe.io)
 2. Clique em **[!UICONTROL criar uma nova conta]**
 3. Concluir o processo de inscrição
 
 ## Torne-se um desenvolvedor e usuário para [!DNL Experience Platform] uma organização
 
-Antes de criar integrações em E/S da Adobe, sua conta deve ter permissões de desenvolvedor para um produto em uma organização IMS. Informações detalhadas sobre contas de desenvolvedor no Admin Console podem ser encontradas no documento [de](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) suporte para o gerenciamento de desenvolvedores.
+Antes de criar integrações em E/S de Adobe, sua conta deve ter permissões de desenvolvedor para um produto em uma organização IMS. Informações detalhadas sobre contas de desenvolvedor no Admin Console podem ser encontradas no documento [de](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) suporte para o gerenciamento de desenvolvedores.
 
 **Obter acesso do desenvolvedor**
 
@@ -55,7 +55,7 @@ O administrador deve atribuí-lo como desenvolvedor a pelo menos um perfil de pr
 
 ![](images/authentication/add-developer.png)
 
-Depois que você for atribuído como desenvolvedor, terá privilégios de acesso para criar integrações em E/S [da Adobe](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para a API da Adobe.
+Depois de ser atribuído como desenvolvedor, você terá privilégios de acesso para criar integrações em E/S do [Adobe](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para a API do Adobe.
 
 **Obter acesso do usuário**
 
@@ -73,7 +73,7 @@ Semelhante ao processo de adição de um desenvolvedor, o administrador deve atr
 >
 >Se você estiver seguindo esse documento no guia [do desenvolvedor do](../privacy-service/api/getting-started.md)Privacy Service, agora é possível voltar para esse guia para gerar as credenciais de acesso exclusivas para [!DNL Privacy Service].
 
-Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso a seguir:
+Usando o Console do desenvolvedor do Adobe, você deve gerar as três credenciais de acesso a seguir:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -85,7 +85,7 @@ As etapas são abordadas em detalhes abaixo.
 
 ### Configuração única
 
-Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
+Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Console do desenvolvedor do Adobe.
 
 Depois de criar um novo projeto, clique em **[!UICONTROL Adicionar API]** na tela Visão geral _do_ projeto.
 

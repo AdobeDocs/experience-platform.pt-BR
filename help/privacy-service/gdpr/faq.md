@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Perguntas frequentes sobre o RGPD
 
-Este documento fornece respostas para perguntas frequentes sobre o RGPD [!DNL General Data Protection Regulation] (Global Voices Online) e sua implementação na Adobe Experience Cloud.
+Este documento fornece respostas para perguntas frequentes sobre o RGPD [!DNL General Data Protection Regulation] (Global Voices in Design) e sua implementação no Adobe Experience Cloud.
 
 As definições para os vários termos relacionados com o RGPD utilizados neste documento podem ser encontradas no artigo terminológico do [RGPD](terminology.md) .
 

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral dos conectores de origem
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de ingestão e gerenciar o throughput de ingestão de dados.
 
@@ -24,14 +24,14 @@ Com [!DNL Experience Platform]isso, você pode centralizar os dados coletados de
 
 As fontes em [!DNL Experience Platform] são agrupadas nas seguintes categorias:
 
-### Aplicativos da Adobe
+### aplicativos Adobe
 
-[!DNL Experience Platform] permite que os dados sejam assimilados de outros aplicativos da Adobe, incluindo o Adobe Analytics, o Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
+[!DNL Experience Platform] permite que os dados sejam assimilados de outros aplicativos de Adobe, incluindo Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Criar um conector de fonte de Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Visão geral do conector de dados Analytics](connectors/adobe-applications/analytics.md)
-- [Criar um conector de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Visão geral do conector de dados Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Criar um conector de origem Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Criar um conector de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Publicidade
@@ -119,14 +119,14 @@ A tabela a seguir descreve como a interface se comporta com base em diferentes c
 | **[!UICONTROL Gerenciar fontes]** em | Além das funções incluídas nas Fontes **[!UICONTROL de]** Visualização, concede acesso à opção Fonte *[!UICONTROL do]* Connect no *[!UICONTROL Catálogo]* e à opção *[!UICONTROL Selecionar dados]* na *[!UICONTROL Navegação]*. **[!UICONTROL Gerenciar fontes]** também permite ativar ou desativar *[!UICONTROL DataFlows]* e editar seus agendamentos. |
 | **[!UICONTROL Fontes]** de Visualização desativadas e **[!UICONTROL gerenciamento de fontes]** desativadas | Revogar todo o acesso às fontes. |
 
-Para obter mais informações sobre as permissões disponíveis concedidas pela Admin Console, incluindo essas quatro fontes, consulte a visão geral [do](../access-control/home.md)controle de acesso.
+Para obter mais informações sobre as permissões disponíveis concedidas através do Admin Console, incluindo essas quatro fontes, consulte a visão geral [do](../access-control/home.md)controle de acesso.
 
 ## Termos e condições {#terms-and-conditions}
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), Você reconhece pela presente que o Beta é fornecido ***&quot;no estado em que se encontra&quot; sem garantia de qualquer tipo***.
 
-A Adobe não tem a obrigação de manter, corrigir, atualizar, alterar, modificar ou, de outra forma, suportar o Beta. Recomenda-se que tenha cuidado e que não se baseie de forma alguma no funcionamento ou desempenho corretos desses materiais Beta e/ou associados. O Beta é considerado Informações confidenciais da Adobe.
+O Adobe não tem a obrigação de manter, corrigir, atualizar, alterar, modificar ou suportar o Beta. Recomenda-se que tenha cuidado e que não se baseie de forma alguma no funcionamento ou desempenho corretos desses materiais Beta e/ou associados. O Beta é considerado Informações Confidenciais do Adobe.
 
-Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta, incluindo, mas não se limitando a, problemas ou defeitos que você encontrar ao usar o Beta, sugestões, melhorias e recomendações) fornecido por Você à Adobe é atribuído à Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
+Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante a utilização do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
 
 Enviar feedback em aberto ou criar um tíquete de suporte para compartilhar suas sugestões ou relatar um erro, busque um aprimoramento de recurso.

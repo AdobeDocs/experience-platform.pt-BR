@@ -114,7 +114,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto de ID de lote. Ne
 
 ## Recuperar a próxima chamada de API com sua ID de lote {#retrieve-the-next-api-call-with-your-batch-id}
 
-Depois de ter a ID do lote, você poderá fazer uma nova solicitação GET para `/batches`. A solicitação retorna um link usado como a próxima solicitação de API.
+Depois de ter a ID do lote, você poderá fazer uma nova solicitação de GET para `/batches`. A solicitação retorna um link usado como a próxima solicitação de API.
 
 **Formato da API**
 
@@ -168,7 +168,7 @@ Uma resposta bem-sucedida retorna uma carga que contém um `_links` objeto. Dent
 
 ## Recuperar seus arquivos {#retrieving-your-files}
 
-Usando o `href` valor obtido na etapa anterior como uma chamada de API, faça uma nova solicitação GET para recuperar seu diretório de arquivos.
+Usando o `href` valor obtido na etapa anterior como uma chamada de API, faça uma nova solicitação de GET para recuperar seu diretório de arquivos.
 
 **Formato da API**
 
@@ -234,14 +234,14 @@ A resposta contém uma matriz de dados que pode ter uma única entrada ou uma li
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `_links.self.href` | O URL de solicitação GET usado para baixar um arquivo em seu diretório. |
+| `_links.self.href` | O URL de solicitação de GET usado para baixar um arquivo em seu diretório. |
 
 
 Copie o `href` valor para qualquer objeto de arquivo na `data` matriz e prossiga para a próxima etapa.
 
 ## Baixar seus dados de arquivo
 
-Para baixar os dados do arquivo, faça uma solicitação GET para o `"href"` valor copiado na etapa anterior para [recuperar os arquivos](#retrieving-your-files).
+Para baixar os dados do arquivo, faça uma solicitação de GET para o `"href"` valor copiado na etapa anterior [que recupera os arquivos](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação GET.
+>Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação de GET.
 
 **Resposta**
 

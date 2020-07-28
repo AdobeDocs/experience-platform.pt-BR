@@ -50,6 +50,7 @@ A composição de um schema começa com a atribuição de uma classe. As classes
 
    * Para criar uma classe personalizada, clique em **[!UICONTROL Criar nova classe]** encontrada perto do centro-superior da janela do navegador. Forneça um nome de classe, uma descrição e escolha o comportamento da classe. Clique em **[!UICONTROL Atribuir classe]** quando terminar.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    Nesse ponto, a estrutura do schema deve conter alguns campos de classe e você está pronto para atribuir combinações. Uma combinação é um grupo de um ou mais campos que descrevem um conceito específico.
 
 3. Na janela *Composição* , clique em **[!UICONTROL Adicionar]** na subseção *Misturas* .

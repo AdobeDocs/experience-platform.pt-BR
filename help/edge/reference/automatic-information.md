@@ -1,20 +1,20 @@
 ---
 title: Informações coletadas automaticamente
-seo-title: Informações coletadas automaticamente pelo SDK da Web do Adobe Experience Platform
-description: Descrição de cada informação que o SDK da Adobe Experience Cloud coleta automaticamente
-seo-description: Descrição de cada informação que o SDK da Adobe Experience Cloud coleta automaticamente
+seo-title: Informações coletadas automaticamente pelo Adobe Experience Platform Web SDK
+description: Descrição de cada informação que o Adobe Experience Cloud SDK coleta automaticamente
+seo-description: Descrição de cada informação que o Adobe Experience Cloud SDK coleta automaticamente
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 
 # Informações coletadas automaticamente
 
-O SDK da Adobe Experience Cloud coleta várias informações automaticamente, sem nenhuma configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a `context` opção no `configure` comando. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
+O SDK do Adobe Experience Cloud coleta várias informações automaticamente sem nenhuma configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a `context` opção no `configure` comando. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
 
 ## Dispositivo (`device`)
 
@@ -50,13 +50,13 @@ Detalhes sobre o ambiente do navegador.
 
 ### Tipo de Ambiente
 
-Navegador
+Browser
 
 | **Caminho na carga:** | **Exemplo:** |
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-O tipo de ambiente pelo qual a experiência foi revelada. O SDK da plataforma Adobe Experience para JavaScript sempre é definido `browser`.
+O tipo de ambiente pelo qual a experiência foi revelada. O SDK Adobe Experience Platform para JavaScript sempre define `browser`.
 
 ### Altura do visor
 

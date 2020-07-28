@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Guia do desenvolvedor do Privacy Service
-description: Use a RESTful API para gerenciar os dados pessoais das pessoas em questão nos aplicativos da Adobe Experience Cloud
+description: Use a RESTful API para gerenciar os dados pessoais de seus participantes de dados em aplicativos Adobe Experience Cloud
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] guia do desenvolvedor
 
-O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem gerenciar (acessar e excluir) os dados pessoais de seus sujeitos de dados (clientes) nos aplicativos da Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem [!DNL Experience Cloud] aplicativos.
+O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permite gerenciar (acessar e excluir) os dados pessoais de seus sujeitos de dados (clientes) em todos os aplicativos Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem [!DNL Experience Cloud] aplicativos.
 
 Este guia aborda como usar a [!DNL Privacy Service] API. Para obter detalhes sobre como usar a interface do usuário, consulte a visão geral [da interface do](../ui/overview.md)Privacy Service. Para obter uma lista abrangente de todos os pontos de extremidade disponíveis na [!DNL Privacy Service] API, consulte a referência [da](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
 
@@ -23,7 +23,7 @@ Este guia aborda como usar a [!DNL Privacy Service] API. Para obter detalhes sob
 
 Este guia exige um entendimento prático dos seguintes [!DNL Experience Platform] recursos:
 
-* [!DNL Privacy Service](../home.md): Fornece uma API RESTful e uma interface de usuário que permitem gerenciar o acesso e a exclusão de solicitações de seus participantes de dados (clientes) nos aplicativos da Adobe Experience Cloud.
+* [!DNL Privacy Service](../home.md): Fornece uma API RESTful e uma interface de usuário que permite gerenciar o acesso e a exclusão de solicitações de seus participantes de dados (clientes) em aplicativos Adobe Experience Cloud.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para a API do Privacy Service.
 
@@ -43,11 +43,11 @@ Isso envolve obter permissões de desenvolvedor para [!DNL Experience Platform] 
 
 ### Obtenha acesso de desenvolvedor a [!DNL Experience Platform]
 
-Para obter acesso do desenvolvedor ao [!DNL Platform], siga as etapas iniciais no tutorial [de autenticação do](../../tutorials/authentication.md)Experience Platform. Quando você chegar à etapa &quot;Gerar credenciais de acesso no Adobe Developer Console&quot;, volte a este tutorial para gerar as credenciais específicas para [!DNL Privacy Service].
+Para obter acesso do desenvolvedor ao [!DNL Platform], siga as etapas iniciais no tutorial [de autenticação do](../../tutorials/authentication.md)Experience Platform. Quando você chegar à etapa &quot;Gerar credenciais de acesso no Console do desenvolvedor do Adobe&quot;, volte a este tutorial para gerar as credenciais específicas para [!DNL Privacy Service].
 
 ### Gerar credenciais de acesso
 
-Usando o Adobe Developer Console, você deve gerar as três credenciais de acesso a seguir:
+Usando o Console do desenvolvedor do Adobe, você deve gerar as três credenciais de acesso a seguir:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -59,7 +59,7 @@ As etapas para gerar esses valores são abordadas em detalhes abaixo.
 
 #### Configuração única
 
-Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
+Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Console do desenvolvedor do Adobe.
 
 Depois de criar um novo projeto, clique em **[!UICONTROL Adicionar API]** na tela Visão geral _[!UICONTROL do]_projeto.
 

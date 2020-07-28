@@ -20,7 +20,7 @@ O `/policies` terminal é usado para todas as chamadas de API relacionadas à ex
 
 ## Lista de todas as políticas
 
-Para visualização de uma lista de políticas, uma solicitação GET pode ser feita para `/policies/core` ou `/policies/custom` que retorna todas as políticas para o container especificado.
+Para visualização de uma lista de políticas, uma solicitação de GET pode ser feita para `/policies/core` ou `/policies/custom` que retorna todas as políticas para o container especificado.
 
 **Formato da API**
 
@@ -312,7 +312,7 @@ Se criado com êxito, você receberá um Status HTTP 201 (Criado) e o corpo da r
 
 ## Atualizar uma política
 
-Talvez seja necessário atualizar uma política de uso de dados após sua criação. Isso é feito por meio de uma solicitação PUT à política `id` com uma carga que inclui a forma atualizada da política, em sua totalidade. Por outras palavras, o pedido da PUT está essencialmente a _reformular_ a política, pelo que o organismo deve incluir todas as informações necessárias, como se pode ver no exemplo seguinte.
+Talvez seja necessário atualizar uma política de uso de dados após sua criação. Isso é feito por meio de uma solicitação PUT à política `id` com uma carga que inclui a forma atualizada da política, em sua totalidade. Por outras palavras, o pedido de PUT está essencialmente a _reescrever_ a política, pelo que o organismo deve incluir todas as informações necessárias, como mostra o exemplo abaixo.
 
 **Formato da API**
 
@@ -404,9 +404,9 @@ Uma solicitação de atualização bem-sucedida retorna um Status HTTP 200 (OK) 
 
 ## Atualizar uma parte de uma política
 
-Uma parte específica de uma política pode ser atualizada usando uma solicitação PATCH. Diferentemente das solicitações PUT que _reescrevem_ a política, as solicitações PATCH atualizam somente o caminho especificado no corpo da solicitação. Isso é especialmente útil quando você deseja ativar ou desativar uma política, pois é necessário enviar apenas o caminho específico que deseja atualizar (`/status`) e seu valor (`ENABLE` ou `DISABLE`).
+Uma parte específica de uma política pode ser atualizada usando uma solicitação de PATCH. Diferentemente das solicitações de PUT que _reescrevem_ a política, as solicitações de PATCH atualizam somente o caminho especificado no corpo da solicitação. Isso é especialmente útil quando você deseja ativar ou desativar uma política, pois é necessário enviar apenas o caminho específico que deseja atualizar (`/status`) e seu valor (`ENABLE` ou `DISABLE`).
 
-A [!DNL Policy Service] API suporta atualmente as operações PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e permite combinar várias atualizações em uma única chamada adicionando cada uma como um objeto dentro da matriz, como mostrado nos exemplos a seguir.
+A [!DNL Policy Service] API suporta atualmente operações de PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e permite combinar várias atualizações em uma única chamada adicionando cada uma como um objeto dentro da matriz, como mostrado nos exemplos a seguir.
 
 **Formato da API**
 
@@ -432,7 +432,7 @@ Neste exemplo, estamos usando a operação &quot;substituir&quot; para alterar o
 ]
 ```
 
-Ao enviar várias operações PATCH em uma única solicitação, lembre-se de que elas serão processadas na ordem em que aparecem no storage, portanto, verifique se você está enviando as solicitações na ordem correta, onde necessário.
+Ao enviar várias operações de PATCH em uma única solicitação, lembre-se de que elas serão processadas na ordem em que aparecem no storage, portanto, verifique se você está enviando as solicitações na ordem correta, onde necessário.
 
 ```SHELL
 curl -X PATCH \
@@ -506,7 +506,7 @@ Uma solicitação de atualização bem-sucedida retornará um Status HTTP 200 (O
 
 ## Excluir uma política
 
-Se for necessário remover uma política que você criou, é possível fazê-lo emitindo uma solicitação DELETE para a política que deseja excluir. `id` É a prática recomendada executar uma solicitação de pesquisa (GET) primeiro para visualização da política e confirmar se ela é a política correta que você deseja remover. **Depois de excluídas, as políticas não podem ser recuperadas.**
+Se for necessário remover uma política que você criou, é possível fazer isso emitindo uma solicitação de DELETE para a política que deseja excluir. `id` É prática recomendada executar uma solicitação de pesquisa (GET) primeiro para visualização da política e confirmar se ela é a política correta que você deseja remover. **Depois de excluídas, as políticas não podem ser recuperadas.**
 
 **Formato da API**
 

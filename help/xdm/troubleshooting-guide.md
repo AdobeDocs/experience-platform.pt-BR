@@ -60,7 +60,7 @@ Os campos podem ser marcados como identidades usando a API ou a interface do usu
 
 Na API, as identidades são estabelecidas pela criação de descritores de identidade. Os descritores de identidade sinalizam que uma propriedade específica de um schema é um identificador exclusivo.
 
-Os descritores de identidade são criados por uma solicitação POST para o terminal /descriptors. Se bem-sucedido, você receberá um Status HTTP 201 (Criado) e um objeto de resposta contendo os detalhes do novo descritor.
+Os descritores de identidade são criados por uma solicitação de POST para o terminal /descriptors. Se bem-sucedido, você receberá um Status HTTP 201 (Criado) e um objeto de resposta contendo os detalhes do novo descritor.
 
 Para obter mais detalhes sobre como criar descritores de identidade na API, consulte a seção documento sobre [descritores](api/descriptors.md) no guia do [!DNL Schema Registry] desenvolvedor.
 
@@ -80,7 +80,7 @@ Os Schemas são ativados para uso [!DNL Real-time Customer Profile](../profile/h
 
 #### Habilitar um schema existente para [!DNL Profile] usar a API
 
-Faça uma solicitação PATCH para atualizar o schema e adicionar o `meta:immutableTags` atributo como uma matriz que contém o valor &quot;união&quot;. Se a atualização for bem-sucedida, a resposta mostrará o schema atualizado que agora contém a tag de união.
+Faça uma solicitação de PATCH para atualizar o schema e adicione o `meta:immutableTags` atributo como uma matriz que contém o valor &quot;união&quot;. Se a atualização for bem-sucedida, a resposta mostrará o schema atualizado que agora contém a tag de união.
 
 Para obter mais informações sobre como usar a API para ativar um schema para uso em [!DNL Real-time Customer Profile], consulte o documento [união](./api/unions.md) do guia do [!DNL Schema Registry] desenvolvedor.
 
@@ -205,7 +205,7 @@ Para obter uma lista de códigos de namespace de identidade suportados, consulte
 
 ### Aceitar erros de cabeçalho
 
-A maioria das solicitações GET na [!DNL Schema Registry] API requer um cabeçalho Accept (Aceitar) para que o sistema determine como formatar a resposta. A seguir está uma lista de erros comuns associados ao cabeçalho Accept (Aceitar). Para obter listas de cabeçalhos Accept compatíveis para solicitações de API diferentes, consulte as seções correspondentes no guia [do desenvolvedor do Registro do](api/getting-started.md)Schema.
+A maioria das solicitações de GET na [!DNL Schema Registry] API requer um cabeçalho Accept (Aceitar) para que o sistema determine como formatar a resposta. A seguir está uma lista de erros comuns associados ao cabeçalho Accept (Aceitar). Para obter listas de cabeçalhos Accept compatíveis para solicitações de API diferentes, consulte as seções correspondentes no guia [do desenvolvedor do Registro do](api/getting-started.md)Schema.
 
 #### Aceitar parâmetro de cabeçalho é obrigatório
 
@@ -278,4 +278,4 @@ Para obter uma lista dos cabeçalhos Aceitar suportados, consulte a seção [Ace
 }
 ```
 
-Se você tentar incluir uma versão no cabeçalho Aceitar ao listar os recursos GET, você receberá esse erro. As versões são necessárias somente ao tentar uma solicitação de pesquisa em um único recurso. Remova a versão do cabeçalho Accept (Aceitar) para resolver o erro.
+Se você tentar incluir uma versão no cabeçalho Aceitar ao listar os recursos (GET), você receberá esse erro. As versões são necessárias somente ao tentar uma solicitação de pesquisa em um único recurso. Remova a versão do cabeçalho Accept (Aceitar) para resolver o erro.

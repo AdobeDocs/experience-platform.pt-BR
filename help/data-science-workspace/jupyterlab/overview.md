@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -20,7 +20,7 @@ Este documento fornece uma visão geral de [!DNL JupyterLab] e seus recursos, be
 
 ## [!DNL JupyterLab] em [!DNL Experience Platform]
 
-A integração com o JupyterLab é acompanhada de alterações arquitetônicas, considerações de design, extensões de notebook personalizadas, bibliotecas pré-instaladas e uma interface temática da Adobe.
+A integração com o JByterLab é acompanhada de mudanças arquitetônicas, considerações de design, extensões de notebook personalizadas, bibliotecas pré-instaladas e um tema de Adobe.
 
 A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab no Platform:
 
@@ -44,7 +44,7 @@ A normalização e a interoperabilidade são conceitos fundamentais subjacentes 
 * **[!DNL Catalog Service]:**Acesse e explore conjuntos de dados com funcionalidades de leitura e gravação.
 * **[!DNL Query Service]:**Acesse e explore conjuntos de dados usando SQL, fornecendo custos indiretos de acesso a dados mais baixos ao lidar com grandes quantidades de dados.
 * **[!DNL Sensei ML Framework]:**Desenvolvimento de modelo com a capacidade de treinar e pontuar dados, bem como criação de receita com um único clique.
-* **[!DNL Experience Data Model (XDM)]:**A normalização e a interoperabilidade são conceitos-chave por detrás da Adobe Experience Platform.[O Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
+* **[!DNL Experience Data Model (XDM)]:**A normalização e a interoperabilidade são conceitos-chave por detrás da Adobe Experience Platform.[O Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
 >[!NOTE]
 >
@@ -74,7 +74,7 @@ A [!DNL JupyterLab] interface consiste em uma barra de menus, uma barra lateral 
 
 **Barra de menus**
 
-A barra de menus na parte superior da interface tem menus de nível superior que exibem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
+A barra de menus na parte superior da interface tem menus de nível superior que expõem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
 
 * **Arquivo:** Ações relacionadas a arquivos e diretórios
 * **Editar:** Ações relacionadas à edição de documentos e outras atividades
@@ -160,7 +160,7 @@ O *Launcher* personalizado fornece modelos de notebook úteis para seus kernels 
 | Eventos XDM | Um notebook pré-preenchido demonstrando a exploração de dados nos dados do Evento da experiência de pós-valor, com foco nos recursos comuns em toda a estrutura de dados. |
 | Query XDM | Um notebook pré-preenchido demonstrando query comerciais de amostra sobre os dados do Evento Experience. |
 | Agregação | Um notebook pré-preenchido demonstrando workflows de amostra para agregação de grandes quantidades de dados em blocos menores e gerenciáveis. |
-| Agrupamento | Um notebook pré-preenchido demonstrando o processo completo de modelagem de aprendizado de máquina usando algoritmos de cluster. |
+| Geração de cluster | Um notebook pré-preenchido demonstrando o processo completo de modelagem de aprendizado de máquina usando algoritmos de cluster. |
 
 Alguns modelos de notebook estão limitados a determinados kernels. A disponibilidade do modelo para cada kernel está mapeada na seguinte tabela:
 
@@ -175,7 +175,7 @@ Alguns modelos de notebook estão limitados a determinados kernels. A disponibil
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Query XDM</strong></th>
         <th><strong>Agregação</strong></th>
-        <th><strong>Agrupamento</strong></th>
+        <th><strong>Geração de cluster</strong></th>
     </tr>
     <tr>
         <th><strong>[!DNL Python]</strong></th>

@@ -12,19 +12,19 @@ ht-degree: 2%
 ---
 
 
-# Conecte-se aos destinos de streaming e ative os dados no Platform de dados do cliente em tempo real da Adobe usando APIs
+# Conecte-se aos destinos de streaming e ative os dados no Adobe Real-time Customer Data Platform usando APIs em tempo real
 
 >[!NOTE]
 >
 >Os destinos [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] no Adobe Real-time CDP estão atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
-Este tutorial demonstra como usar chamadas de API para se conectar aos dados do seu Adobe Experience Platform, criar uma conexão com um destino de armazenamento de nuvem de fluxo ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou [Azure Evento Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), criar um fluxo de dados para o seu novo destino criado e ativar os dados para o seu novo destino criado.
+Este tutorial demonstra como usar chamadas de API para se conectar aos dados do seu Adobe Experience Platform, criar uma conexão com um destino de armazenamento de nuvem em streaming (Hubs[de Evento](/help/rtcdp/destinations/amazon-kinesis-destination.md) Amazon Kinesis [ou](/help/rtcdp/destinations/azure-event-hubs-destination.md)Azure), criar um fluxo de dados para o seu novo destino criado e ativar os dados para o seu novo destino criado.
 
 Este tutorial usa o [!DNL Amazon Kinesis] destino em todos os exemplos, mas as etapas são idênticas para [!DNL Azure Event Hubs].
 
 ![Visão geral - as etapas para criar um destino de streaming e ativar segmentos](/help/rtcdp/destinations/assets/flow-prelim.png)
 
-Se você preferir usar a interface do usuário no CDP em tempo real da Adobe para se conectar a um destino e ativar dados, consulte o [Connect um destino](../../rtcdp/destinations/connect-destination.md) e [Ativar perfis e segmentos em tutoriais de destino](../../rtcdp/destinations/activate-destinations.md) .
+Se você preferir usar a interface do usuário no CDP em tempo real para conectar-se a um destino e ativar dados, consulte o [Connect como destino](../../rtcdp/destinations/connect-destination.md) e [Ativar perfis e segmentos em tutoriais de destino](../../rtcdp/destinations/activate-destinations.md) .
 
 ## Comece já
 
@@ -34,7 +34,7 @@ Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Ex
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados dentro do Experience Platform.
 * [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para ativar os dados para o streaming de destinos no Adobe Real-time CDP.
+As seções a seguir fornecem informações adicionais que você precisará saber para ativar os dados para os destinos de streaming na CDP em tempo real do Adobe.
 
 ### Reunir credenciais obrigatórias
 
@@ -68,13 +68,13 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ### Documentação do Swagger {#swagger-docs}
 
-Você pode encontrar a documentação de referência para todas as chamadas de API neste tutorial no Swagger. Consulte a documentação da API [do Serviço de Fluxo no Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Recomendamos que você use este tutorial e a página de documentação do Swagger em paralelo.
+Você pode encontrar a documentação de referência para todas as chamadas de API neste tutorial no Swagger. Consulte a documentação da API [do Serviço de Fluxo em Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Recomendamos que você use este tutorial e a página de documentação do Swagger em paralelo.
 
 ## Obtenha a lista dos destinos de streaming disponíveis {#get-the-list-of-available-streaming-destinations}
 
 ![Etapas de destino visão geral etapa 1](/help/rtcdp/destinations/assets/step1-create-streaming-destination-api.png)
 
-Como primeira etapa, você deve decidir para qual destino de fluxo deve ativar os dados. Para começar, execute uma chamada para solicitar uma lista de destinos disponíveis aos quais você possa se conectar e ativar segmentos. Execute a seguinte solicitação GET ao `connectionSpecs` ponto de extremidade para retornar uma lista de destinos disponíveis:
+Como primeira etapa, você deve decidir para qual destino de fluxo deve ativar os dados. Para começar, execute uma chamada para solicitar uma lista de destinos disponíveis aos quais você possa se conectar e ativar segmentos. Execute a seguinte solicitação de GET ao ponto de extremidade para retornar uma lista de destinos disponíveis: `connectionSpecs`
 
 **Formato da API**
 
@@ -262,11 +262,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão obtida na etapa [Obtenha a lista dos destinos](#get-the-list-of-available-destinations)disponíveis.
 * `{AUTHENTICATION_CREDENTIALS}`: preencha o nome do seu destino de streaming, por exemplo: `Amazon Kinesis authentication credentials` ou `Azure Event Hubs authentication credentials`.
 * `{ACCESS_ID}`: *Para[!DNL Amazon Kinesis]conexões.* Sua ID de acesso para a localização do armazenamento Amazon Kinesis.
-* `{SECRET_KEY}`: *Para[!DNL Amazon Kinesis]conexões.* Sua chave secreta para a localização do seu armazenamento Amazon Kinesis.
-* `{REGION}`: *Para[!DNL Amazon Kinesis]conexões.* A região em sua [!DNL Amazon Kinesis] conta na qual o Adobe Real-time CDP fará o stream de seus dados.
+* `{SECRET_KEY}`: *Para[!DNL Amazon Kinesis]conexões.* Sua chave secreta para a localização do armazenamento Amazon Kinesis.
+* `{REGION}`: *Para[!DNL Amazon Kinesis]conexões.* A região na sua [!DNL Amazon Kinesis] conta onde a CDP em tempo real do Adobe fará o stream dos seus dados.
 * `{SAS_KEY_NAME}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha o nome da chave SAS. Saiba mais sobre como autenticar [!DNL Azure Event Hubs] com chaves SAS na documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{SAS_KEY}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha sua chave SAS. Saiba mais sobre como autenticar [!DNL Azure Event Hubs] com chaves SAS na documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha a [!DNL Azure Event Hubs] namespace na qual a CDP em tempo real da Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar uma namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de Hubs de Evento na [!DNL Microsoft] documentação.
+* `{EVENT_HUB_NAMESPACE}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha a [!DNL Azure Event Hubs] namespace onde a CDP em tempo real do Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar uma namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de Hubs de Evento na [!DNL Microsoft] documentação.
 
 **Resposta**
 
@@ -317,9 +317,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Use a ID de conexão básica obtida na etapa acima.
 * `{CONNECTION_SPEC_ID}`: Use as especificações de conexão obtidas na etapa [Obtenha a lista dos destinos](#get-the-list-of-available-destinations)disponíveis.
-* `{NAME_OF_DATA_STREAM}`: *Para[!DNL Amazon Kinesis]conexões.* Forneça o nome do seu fluxo de dados existente na sua [!DNL Amazon Kinesis] conta. A CDP em tempo real da Adobe exportará dados para esse fluxo.
-* `{REGION}`: *Para[!DNL Amazon Kinesis]conexões.* A região em sua conta Amazon Kinesis na qual o Adobe Real-time CDP fará o stream dos seus dados.
-* `{EVENT_HUB_NAME}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha o [!DNL Azure Event Hub] nome no qual a CDP em tempo real da Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar um hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de eventos na [!DNL Microsoft] documentação.
+* `{NAME_OF_DATA_STREAM}`: *Para[!DNL Amazon Kinesis]conexões.* Forneça o nome do seu fluxo de dados existente na sua [!DNL Amazon Kinesis] conta. A CDP em tempo real do Adobe exportará dados para esse fluxo.
+* `{REGION}`: *Para[!DNL Amazon Kinesis]conexões.* A região na sua conta Amazon Kinesis onde a CDP em tempo real do Adobe fará o stream dos seus dados.
+* `{EVENT_HUB_NAME}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha o [!DNL Azure Event Hub] nome onde a CDP em tempo real do Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar um hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de eventos na [!DNL Microsoft] documentação.
 
 **Resposta**
 
@@ -337,9 +337,9 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 Usando as IDs obtidas nas etapas anteriores, agora é possível criar um fluxo de dados entre seus dados de Experience Platform e o destino para o qual você ativará os dados. Pense nessa etapa como construindo o pipeline, através do qual os dados fluirão posteriormente, entre o Experience Platform e o destino desejado.
 
-Para criar um fluxo de dados, execute uma solicitação POST, como mostrado abaixo, enquanto fornece os valores mencionados abaixo dentro da carga.
+Para criar um fluxo de dados, execute uma solicitação de POST, como mostrado abaixo, enquanto fornece os valores mencionados abaixo dentro da carga.
 
-Execute a seguinte solicitação POST para criar um fluxo de dados.
+Execute a seguinte solicitação de POST para criar um fluxo de dados.
 
 **Formato da API**
 
@@ -396,7 +396,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado e 
 
 Depois de criar todas as conexões e o fluxo de dados, agora você pode ativar os dados do perfil na plataforma de streaming. Nessa etapa, você seleciona quais segmentos e quais atributos de perfil está enviando para o destino e pode agendar e enviar dados para o destino.
 
-Para ativar segmentos no seu novo destino, é necessário executar uma operação PATCH JSON, semelhante ao exemplo abaixo. Você pode ativar vários segmentos e atributos de perfil em uma chamada. Para saber mais sobre o JSON PATCH, consulte a especificação [](https://tools.ietf.org/html/rfc6902)RFC.
+Para ativar segmentos no seu novo destino, é necessário executar uma operação JSON PATCH, semelhante ao exemplo abaixo. Você pode ativar vários segmentos e atributos de perfil em uma chamada. Para saber mais sobre o JSON PATCH, consulte a especificação [](https://tools.ietf.org/html/rfc6902)RFC.
 
 **Formato da API**
 
@@ -480,7 +480,7 @@ Procure uma resposta 202 OK. Nenhum corpo de resposta é retornado. Para validar
 
 Como etapa final do tutorial, você deve validar se os segmentos e os atributos do perfil foram corretamente mapeados para o fluxo de dados.
 
-Para validar isso, execute a seguinte solicitação GET:
+Para validar isso, execute a seguinte solicitação de GET:
 
 **Formato da API**
 

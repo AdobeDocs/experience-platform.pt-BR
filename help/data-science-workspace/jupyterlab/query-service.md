@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviço de Query em Jupyter notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -38,13 +38,13 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL Arquivo]** e selecione **[!UICONTROL Novo Iniciador]**.
+   >[!NOTE] Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL Arquivo]** e selecione **[!UICONTROL Novo Iniciador]**.
 
 2. Na guia Iniciador, clique no ícone **[!UICONTROL Em branco]** em um ambiente Python 3 para abrir um bloco de anotações vazio.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] O Python 3 é atualmente o único ambiente suportado para o Serviço de Query nos notebooks.
+   >[!NOTE] O Python 3 é atualmente o único ambiente suportado para o Serviço de Query nos notebooks.
 
 3. No painel de seleção esquerdo, clique no ícone **[!UICONTROL Dados]** e no duplo clique no diretório **[!UICONTROL Conjuntos]** de dados para lista de todos os conjuntos de dados.
 

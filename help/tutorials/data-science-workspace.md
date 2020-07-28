@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] tutoriais
 
-O Adobe Experience Platform [!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] ajuda a fazer previsões usando seu conteúdo e ativos de dados nas soluções da Adobe. Os cientistas de dados de todos os níveis de habilidades têm ferramentas sofisticadas e fáceis de usar que suportam o rápido desenvolvimento, treinamento e ajuste de fórmulas de aprendizado de máquina - todos os benefícios da tecnologia da IA, sem a complexidade.
+O Adobe Experience Platform [!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] ajuda você a fazer previsões usando seu conteúdo e seus ativos de dados nas soluções de Adobe. Os cientistas de dados de todos os níveis de habilidades têm ferramentas sofisticadas e fáceis de usar que suportam o rápido desenvolvimento, treinamento e ajuste de fórmulas de aprendizado de máquina - todos os benefícios da tecnologia da IA, sem a complexidade.
 
 Para saber mais, comece lendo a visão geral [](../data-science-workspace/home.md)da Data Science Workspace.
 
@@ -74,7 +74,7 @@ Para saber mais, siga o tutorial [de importação de uma](../data-science-worksp
 
 ## Comboio e avaliação de um modelo
 
-Na Adobe Experience Platform [!DNL Data Science Workspace], um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na Adobe Experience Platform [!DNL Data Science Workspace], um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 **Este tutorial o ajudará a:**
 - Criar um novo modelo.

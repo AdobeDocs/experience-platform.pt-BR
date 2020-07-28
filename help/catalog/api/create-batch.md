@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Criar um lote
 
-Para que um conjunto de dados ingira dados, ele deve ter um lote associado a ele. Usando o `id` valor de um conjunto de dados existente, é possível criar um lote, fazendo uma solicitação POST para o `/batches` endpoint na [!DNL Catalog] API.
+Para que um conjunto de dados ingira dados, ele deve ter um lote associado a ele. Usando o `id` valor de um conjunto de dados existente, é possível criar um lote, fazendo uma solicitação de POST para o `/batches` endpoint na [!DNL Catalog] API.
 
 **Formato da API**
 

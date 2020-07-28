@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Redefinir uma caixa de proteção
 
-As caixas de proteção de desenvolvimento têm um recurso de &quot;redefinição de fábrica&quot; que exclui todos os recursos não padrão de uma caixa de proteção. É possível redefinir uma caixa de proteção fazendo uma solicitação PUT que inclua a caixa de proteção `name` no caminho da solicitação.
+As caixas de proteção de desenvolvimento têm um recurso de &quot;redefinição de fábrica&quot; que exclui todos os recursos não padrão de uma caixa de proteção. É possível redefinir uma caixa de proteção fazendo uma solicitação de PUT que inclua a caixa de proteção `name` no caminho da solicitação.
 
 **Formato da API**
 

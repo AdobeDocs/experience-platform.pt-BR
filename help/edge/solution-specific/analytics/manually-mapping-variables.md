@@ -51,7 +51,7 @@ Para serem usados por [!DNL Analytics], os dados XDM são nivelados usando a not
 
 Todos os dados coletados pela rede de borda podem ser acessados pelas regras [de](https://docs.adobe.com/content/help/pt-BR/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)processamento. Em [!DNL Analytics], é possível usar regras de processamento para incorporar dados de contexto em [!DNL Analytics] variáveis.
 
-Por exemplo, na regra a seguir, o Analytics é definido para preencher termos de Pesquisa **interna (eVar2)** com os dados associados a **a.x_atag.search.term(Context Data)**.
+Por exemplo, na regra a seguir, o Analytics é definido para preencher os termos de Pesquisa **interna (eVar2)** com os dados associados a **a.x_atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 

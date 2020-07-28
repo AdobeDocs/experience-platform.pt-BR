@@ -26,7 +26,7 @@ Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience
 
 ## Recuperar uma lista de trabalhos de exportação {#retrieve-list}
 
-É possível recuperar uma lista de todos os trabalhos de exportação para a Organização IMS, fazendo uma solicitação GET para o `/export/jobs` endpoint.
+É possível recuperar uma lista de todos os trabalhos de exportação para a Organização IMS, fazendo uma solicitação de GET para o `/export/jobs` endpoint.
 
 **Formato da API**
 
@@ -210,7 +210,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de trabalhos de expo
 
 ## Criar um novo trabalho de exportação {#create}
 
-Você pode criar uma nova tarefa de exportação fazendo uma solicitação POST para o `/export/jobs` terminal.
+Você pode criar um novo trabalho de exportação, fazendo uma solicitação POST para o `/export/jobs` endpoint.
 
 **Formato da API**
 
@@ -379,7 +379,7 @@ Como alternativa, se `destination.segmentPerBatch` tivesse sido definido como `t
 
 ## Recuperar um trabalho de exportação específico {#get}
 
-Você pode recuperar informações detalhadas sobre um trabalho de exportação específico, fazendo uma solicitação GET para o `/export/jobs` terminal e fornecendo a ID do trabalho de exportação que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um trabalho de exportação específico, fazendo uma solicitação de GET para o ponto final e fornecendo a ID do trabalho de exportação que deseja recuperar no caminho da solicitação. `/export/jobs`
 
 **Formato da API**
 
@@ -475,7 +475,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Cancelar ou excluir um trabalho de exportação específico {#delete}
 
-Você pode solicitar a exclusão do trabalho de exportação especificado, fazendo uma solicitação DELETE ao ponto de extremidade `/export/jobs` e fornecendo a ID do trabalho de exportação que deseja excluir no caminho da solicitação.
+Você pode solicitar a exclusão do trabalho de exportação especificado, fazendo uma solicitação de DELETE para o `/export/jobs` ponto final e fornecendo a ID do trabalho de exportação que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 

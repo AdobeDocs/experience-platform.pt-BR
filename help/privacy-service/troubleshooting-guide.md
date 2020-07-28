@@ -66,7 +66,7 @@ Para obter mais informações sobre como fornecer informações de identidade do
 
 ## Posso usar [!DNL Privacy Service] para limpar dados que foram enviados acidentalmente para [!DNL Platform]?
 
-A Adobe não oferece suporte ao uso [!DNL Privacy Service] para a limpeza de dados que foram acidentalmente enviados a um produto. [!DNL Privacy Service] foi projetado para ajudá-lo a cumprir suas obrigações de acesso ou exclusão de solicitações da pessoa em causa (ou do consumidor). Essas solicitações são sensíveis ao tempo e são concluídas com relação à lei de privacidade aplicável. A apresentação de pedidos que não sejam de acesso a pessoas em causa/consumidores ou de pedidos de eliminação afeta todos os [!DNL Privacy Service] clientes e a capacidade de [!DNL Privacy Service] suportar os prazos legais adequados.
+O Adobe não suporta o uso [!DNL Privacy Service] para limpar dados que foram acidentalmente enviados a um produto. [!DNL Privacy Service] foi projetado para ajudá-lo a cumprir suas obrigações de acesso ou exclusão de solicitações da pessoa em causa (ou do consumidor). Essas solicitações são sensíveis ao tempo e são concluídas com relação à lei de privacidade aplicável. A apresentação de pedidos que não sejam de acesso a pessoas em causa/consumidores ou de pedidos de eliminação afeta todos os [!DNL Privacy Service] clientes e a capacidade de [!DNL Privacy Service] suportar os prazos legais adequados.
 
 Entre em contato com seu gerente de conta (CDM) para coordenar e fornecer um nível de esforço para remover quaisquer PII ou problemas de dados.
 

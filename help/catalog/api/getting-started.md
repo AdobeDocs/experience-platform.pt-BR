@@ -54,7 +54,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Práticas recomendadas para chamadas de [!DNL Catalog] API
 
-Ao executar solicitações GET para a [!DNL Catalog] API, a prática recomendada é incluir parâmetros de query em suas solicitações para retornar somente os objetos e propriedades de que você precisa. As solicitações não filtradas podem fazer com que as cargas de resposta atinjam mais de 3 GB, o que pode retardar o desempenho geral.
+Ao executar solicitações de GET para a [!DNL Catalog] API, a prática recomendada é incluir parâmetros de query em suas solicitações para retornar somente os objetos e propriedades de que você precisa. As solicitações não filtradas podem fazer com que as cargas de resposta atinjam mais de 3 GB, o que pode retardar o desempenho geral.
 
 Você pode visualização objetos específicos incluindo sua ID no caminho da solicitação ou usar parâmetros de query, como `properties` e `limit` para filtrar respostas. Os Filtros podem ser passados como cabeçalhos e como parâmetros de query, com aqueles passados como parâmetros de query tendo prioridade. Consulte o documento sobre como [filtrar dados](filter-data.md) do catálogo para obter mais informações.
 

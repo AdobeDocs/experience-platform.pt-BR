@@ -57,7 +57,7 @@ Os nós padrão baseiam-se em bibliotecas de dados de código aberto, como Panda
 
 ### ModelUpload
 
-O nó ModelUpload é um nó interno da Adobe que pega um model_path e carrega o modelo do caminho do modelo local para a loja de blob de aprendizado de máquina em tempo real.
+O nó ModelUpload é um nó Adobe interno que pega um model_path e carrega o modelo do caminho do modelo local para a loja de blob de aprendizado de máquina em tempo real.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-O ONNXNode é um nó interno da Adobe que utiliza uma ID de modelo para obter o modelo ONNX pré-treinado e o usa para pontuar nos dados recebidos.
+O ONNXNode é um nó Adobe interno que utiliza uma ID de modelo para obter o modelo ONNX pré-treinado e o usa para pontuar nos dados recebidos.
 
 >[!TIP]
 >Especifique as colunas na mesma ordem em que deseja que os dados sejam enviados para o modelo ONNX para pontuação.
@@ -128,7 +128,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | Modelos de hiperparâmetros, consulte a documentação da API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obter mais informações. |
 | node_instance.process(data_message_from_previous_node) | O método `process()` pega DataMsg do nó anterior e aplica a transformação. Isso depende do nó atual que está sendo usado. |
 
-### Split
+### Dividir
 
 Use o nó a seguir para dividir seu dataframe em um trem e teste, passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar os dados do trem e do teste usando o exemplo a seguir `msg5.data.xs(“train”)`.
 

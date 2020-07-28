@@ -16,7 +16,7 @@ ht-degree: 0%
 
 O conector de fluxo para Adobe Experience Platform é baseado em [!DNL Apache Kafka Connect]. Essa biblioteca pode ser usada para transmitir eventos JSON de [!DNL Kafka] tópicos em seu data center diretamente para [!DNL Experience Platform] em tempo real.
 
-O conector de fluxo é um conector de pia (unidirecional), que fornece dados de [!DNL Kafka] tópicos para um terminal registrado em [!DNL Experience Platform]. Para usar esse conector, você deve baixar a biblioteca, adicioná-la à sua [!DNL Kafka] implantação existente e configurar o(s) [!DNL Kafka] tópico(s) para o URL HTTP do Adobe Streaming. Código adicional **não** é necessário. O conector suporta os seguintes recursos:
+O conector de fluxo é um conector de pia (unidirecional), que fornece dados de [!DNL Kafka] tópicos para um terminal registrado em [!DNL Experience Platform]. Para usar esse conector, você deve baixar a biblioteca, adicioná-la à sua [!DNL Kafka] implantação existente e configurar o(s) [!DNL Kafka] tópico(s) no URL HTTP de transmissão de Adobe. Código adicional **não** é necessário. O conector suporta os seguintes recursos:
 
 - Coleta de dados autenticada
 - Colocação de mensagens em lote para reduzir chamadas de rede e aumentar a throughput

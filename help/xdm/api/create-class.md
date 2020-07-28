@@ -16,7 +16,7 @@ ht-degree: 0%
 
 O principal bloco de construção de um schema é uma classe. A classe contém o conjunto mínimo de campos que devem ser definidos para capturar os dados principais de um schema. Por exemplo, se você estivesse projetando um schema para carros e caminhões eles provavelmente usariam uma classe chamada Veículo que descrevia as propriedades comuns básicas de todos os veículos.
 
-Há várias classes padrão fornecidas pela Adobe e outros [!DNL Experience Platform] parceiros, mas você também pode definir suas próprias classes e salvá-las no [!DNL Schema Registry]. Em seguida, é possível compor um schema que implementa a classe criada e definir combinações compatíveis com a classe recém-definida.
+Há várias classes padrão fornecidas pelo Adobe e outros [!DNL Experience Platform] parceiros, mas você também pode definir suas próprias classes e salvá-las no [!DNL Schema Registry]. Em seguida, é possível compor um schema que implementa a classe criada e definir combinações compatíveis com a classe recém-definida.
 
 >[!NOTE]
 >
@@ -152,4 +152,4 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que con
 }
 ```
 
-A execução de uma solicitação GET para lista de todas as classes no container locatário agora inclui a classe Property. Você também pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização a nova classe diretamente. Certifique-se de incluir o `version` no cabeçalho Aceitar ao executar uma solicitação de pesquisa.
+A execução de uma solicitação de GET para lista de todas as classes no container locatário agora inclui a classe Property. Você também pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização a nova classe diretamente. Certifique-se de incluir o `version` no cabeçalho Aceitar ao executar uma solicitação de pesquisa.

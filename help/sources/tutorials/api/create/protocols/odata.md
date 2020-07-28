@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma [!DNL OData] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL OData] é `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`.
+Para criar uma [!DNL OData] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL OData] é `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`.
 
 ```shell
 curl -X POST \

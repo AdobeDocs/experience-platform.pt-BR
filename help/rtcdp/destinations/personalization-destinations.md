@@ -5,6 +5,9 @@ description: As plataformas de personalização coletam dados e insights de comp
 seo-description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 7%
 
 ---
 

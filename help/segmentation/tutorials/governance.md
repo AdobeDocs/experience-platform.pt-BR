@@ -126,7 +126,7 @@ Uma resposta bem-sucedida retorna os detalhes da definição do segmento.
 
 ## Localizar os conjuntos de dados de origem da política de mesclagem {#datasets}
 
-As políticas de mesclagem contêm informações sobre seus conjuntos de dados de origem, que por sua vez contêm rótulos de uso de dados. Você pode pesquisar os detalhes de uma política de mesclagem fornecendo a ID da política de mesclagem em uma solicitação GET para a [!DNL Profile] API. Para obter mais informações sobre as políticas de mesclagem, consulte o guia [de ponto de extremidade de políticas de](../../profile/api/merge-policies.md)mesclagem.
+As políticas de mesclagem contêm informações sobre seus conjuntos de dados de origem, que por sua vez contêm rótulos de uso de dados. Você pode pesquisar os detalhes de uma política de mesclagem fornecendo a ID da política de mesclagem em uma solicitação de GET para a [!DNL Profile] API. Para obter mais informações sobre as políticas de mesclagem, consulte o guia [de ponto de extremidade de políticas de](../../profile/api/merge-policies.md)mesclagem.
 
 **Formato da API**
 
@@ -189,7 +189,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 
 Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para avaliar esses conjuntos de dados em relação a ações de marketing específicas a fim de verificar violações da política de uso de dados.
 
-Para avaliar os conjuntos de dados, é necessário fornecer o nome da ação de marketing no caminho de uma solicitação POST, fornecendo as IDs do conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
+Para avaliar os conjuntos de dados, forneça o nome da ação de marketing no caminho de uma solicitação de POST, fornecendo as IDs do conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
@@ -200,7 +200,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo de a política ter sido definida pela Adobe ou pela sua organização, você deve usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados pela qual você está avaliando os conjuntos de dados. Dependendo de a política ter sido definida pelo Adobe ou pela sua organização, você deve usar `/marketingActions/core` ou `/marketingActions/custom`, respectivamente. |
 
 **Solicitação**
 

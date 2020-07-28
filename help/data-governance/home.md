@@ -54,7 +54,7 @@ Há três elementos chave na estrutura DULE: Etiquetas, políticas e aplicação
 
 ## Rótulos de uso de dados
 
-[!DNL Data Governance] permite que os gerentes de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para categorizar dados de acordo com o tipo de políticas aplicadas.
+[!DNL Data Governance] permite que os administradores de dados apliquem rótulos de uso no nível do conjunto de dados e do campo para categorizar dados de acordo com o tipo de políticas aplicadas.
 
 A estrutura DULE inclui rótulos de uso de dados predefinidos que podem ser usados para classificar dados de três formas:
 
@@ -82,13 +82,13 @@ Depois que os rótulos de uso de dados forem aplicados, os administradores de da
 
 >[!IMPORTANT]
 >
->Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente.
+>Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente.
 
 Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte a visão geral [das](./policies/overview.md)políticas.
 
 ## Próximas etapas
 
-Este documento proporcionou uma introdução de alto nível à estrutura DULE [!DNL Data Governance] e à estrutura DULE. Agora, você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
+Este documento proporcionou uma introdução de alto nível à estrutura DULE [!DNL Data Governance] e à estrutura DULE. Agora você pode continuar com o guia [do usuário dos rótulos de uso de](labels/user-guide.md) dados e adicionar os rótulos de uso aos dados da experiência.
 
 ## Apêndice
 

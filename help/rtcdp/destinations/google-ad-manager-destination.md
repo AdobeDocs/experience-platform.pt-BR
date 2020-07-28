@@ -24,11 +24,11 @@ Observe os seguintes detalhes específicos para [!DNL Google Ad Manager] os dest
 
 * Você pode enviar as seguintes [identidades](../../identity-service/namespaces.md) para [!DNL Google Ad Manager] destinos: **ID de cookie do Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
 * audiências ativadas são criadas de forma programática na [!DNL Google] plataforma.
-* A CDP em tempo real da Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
+* A CDP em tempo real do Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
 
 >[!IMPORTANT]
 >
->Se você estiver procurando criar seu primeiro destino com [!DNL Google Ad Manager] e não tiver ativado a funcionalidade [de sincronização de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID no Serviço de ID de Experience Cloud no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar sincronizações de ID. Se você tiver configurado anteriormente [!DNL Google] integrações no Audience Manager, a ID sincronizará a transferência para o Adobe Real-time CDP.
+>Se você estiver procurando criar seu primeiro destino com [!DNL Google Ad Manager] e não tiver ativado a funcionalidade [de sincronização de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID no Serviço de ID da Experience Cloud no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Consultoria da Adobe ou com o Atendimento ao cliente para ativar sincronizações de ID. Se você tiver configurado anteriormente [!DNL Google] integrações no Audience Manager, a ID sincronizará a transferência para o CDP em tempo real do Adobe.
 
 ## Pré-requisitos
 
@@ -38,10 +38,10 @@ Observe os seguintes detalhes específicos para [!DNL Google Ad Manager] os dest
 >
 >A lista de permissões é obrigatória antes de configurar seu primeiro [!DNL Google Ad Manager] destino no Adobe Real-time CDP. Verifique se o processo de lista de permissões descrito abaixo foi concluído [!DNL Google] antes de criar um destino.
 
-Antes de criar o [!DNL Google Ad Manager] destino no Adobe Real-time CDP, você deve entrar em contato [!DNL Google] para que a Adobe seja colocada na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Entre em contato [!DNL Google] e forneça as seguintes informações:
+Antes de criar o [!DNL Google Ad Manager] destino na CDP em tempo real do Adobe, você deve entrar em contato [!DNL Google] para que o Adobe seja colocado na lista dos provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Entre em contato [!DNL Google] e forneça as seguintes informações:
 
-* **ID** da conta: esta é a ID da conta da Adobe com [!DNL Google]. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para obter essa ID.
-* **ID** do cliente: esta é a ID da conta do cliente da Adobe com [!DNL Google]. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante da Adobe para obter essa ID.
+* **ID** da conta: esta é a ID da conta Adobe com [!DNL Google]. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante de Adobe para obter essa ID.
+* **ID** do cliente: esta é a ID da conta do cliente com [!DNL Google]. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante de Adobe para obter essa ID.
 * **ID** de rede: esta é a sua conta com [!DNL Google Ad Manager]
 * **ID** do link de Audiência: esta é a sua conta com [!DNL Google Ad Manager]
 * Seu tipo de conta. **DFP pelo Google** ou comprador **do** AdX.
@@ -60,11 +60,11 @@ Antes de criar o [!DNL Google Ad Manager] destino no Adobe Real-time CDP, você 
    * Usar `DFP by Google` para [!DNL DoubleClick] editores
    * Usar `AdX buyer` para [!DNL Google AdX]
 * **[!UICONTROL ID]** da conta: Preencha a ID da conta com [!DNL Google]. Essa pode ser sua ID de rede ou sua ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
-* **[!UICONTROL Caso]** de uso de marketing: Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar entre casos de uso de marketing definidos pela Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pela Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados.
+* **[!UICONTROL Caso]** de uso de marketing: Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pelo Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados.
 
 >[!NOTE]
 >
-> Ao configurar um [!DNL Google Ad Manager] destino, entre em contato com seu representante da Adobe [!DNL Google Account Manager] ou Adobe para saber que tipo de conta você possui.
+> Ao configurar um [!DNL Google Ad Manager] destino, entre em contato com seu representante [!DNL Google Account Manager] ou com seu representante de Adobe para entender que tipo de conta você possui.
 
 ## Ativar segmentos para [!DNL Google Ad Manager]
 

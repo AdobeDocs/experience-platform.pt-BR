@@ -25,7 +25,7 @@ O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile
 
 ## Visualização de solicitações de exclusão
 
-Uma solicitação de exclusão é um processo assíncrono de longa duração, o que significa que sua organização pode estar executando várias solicitações de exclusão ao mesmo tempo. Para visualização de todas as solicitações de exclusão que sua organização está executando no momento, é possível executar uma solicitação GET para o `/system/jobs` endpoint.
+Uma solicitação de exclusão é um processo assíncrono de longa duração, o que significa que sua organização pode estar executando várias solicitações de exclusão ao mesmo tempo. Para visualização de todas as solicitações de exclusão que sua organização está executando no momento, é possível executar uma solicitação de GET para o `/system/jobs` ponto de extremidade.
 
 Você também pode usar parâmetros de query opcionais para filtrar a lista de solicitações de exclusão retornadas na resposta. Para usar vários parâmetros, separe cada parâmetro usando um E comercial (&amp;).
 
@@ -99,11 +99,11 @@ A resposta inclui uma matriz &quot;filhos&quot; com um objeto para cada solicita
 
 ## Criar uma solicitação de exclusão {#create-a-delete-request}
 
-A inicialização de uma nova solicitação de exclusão é feita por meio de uma solicitação POST para o `/systems/jobs` ponto de extremidade, onde a ID do conjunto de dados ou lote a ser excluído é fornecida no corpo da solicitação.
+A inicialização de uma nova solicitação de exclusão é feita por meio de uma solicitação de POST para o `/systems/jobs` ponto de extremidade, onde a ID do conjunto de dados ou lote a ser excluído é fornecida no corpo da solicitação.
 
 ### Excluir um conjunto de dados
 
-Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. [!DNL Experience Platform] permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
+Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação de POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. [!DNL Experience Platform] permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
 
 >[!CAUTION]
 > Ao tentar excluir um conjunto de dados [!DNL Profile]habilitado usando a [!DNL Experience Platform] interface do usuário, o conjunto de dados é desabilitado para inclusão, mas não será excluído até que uma solicitação de exclusão seja criada usando a API. Para obter mais informações, consulte o [apêndice](#appendix) a este documento.
@@ -152,11 +152,11 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 | Propriedade | Descrição |
 |---|---|
 | `id` | A ID exclusiva gerada pelo sistema e somente leitura da solicitação de exclusão. |
-| `dataSetId` | A ID do conjunto de dados, conforme especificado na solicitação POST. |
+| `dataSetId` | A ID do conjunto de dados, conforme especificado na solicitação de POST. |
 
 ### Excluir um lote
 
-Para excluir um lote, a ID do lote deve ser incluída no corpo da solicitação POST. Lembre-se de que não é possível excluir lotes para conjuntos de dados com base em schemas de registro. Somente lotes para conjuntos de dados com base em schemas de séries de tempo podem ser excluídos.
+Para excluir um lote, a ID do lote deve ser incluída no corpo da solicitação de POST. Lembre-se de que não é possível excluir lotes para conjuntos de dados com base em schemas de registro. Somente lotes para conjuntos de dados com base em schemas de séries de tempo podem ser excluídos.
 
 >[!NOTE]
 > O motivo pelo qual você não pode excluir lotes de conjuntos de dados com base em schemas de registro é porque os lotes de conjuntos de dados de tipo de registro substituem registros anteriores e, portanto, não podem ser &quot;desfeitos&quot; ou excluídos. A única maneira de remover o impacto de lotes errados para conjuntos de dados baseados em schemas de registro é ingerir novamente o lote com os dados corretos para substituir os registros incorretos.
@@ -207,7 +207,7 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 | Propriedade | Descrição |
 |---|---|
 | `id` | A ID exclusiva gerada pelo sistema e somente leitura da solicitação de exclusão. |
-| `batchId` | A ID do lote, conforme especificado na solicitação POST. |
+| `batchId` | A ID do lote, conforme especificado na solicitação de POST. |
 
 Se você tentar iniciar uma solicitação de exclusão para um lote de conjuntos de dados de Registro, ocorrerá um erro de nível 400, semelhante ao seguinte:
 
@@ -277,7 +277,7 @@ Quando o status da solicitação de exclusão for `"COMPLETED"` você poderá co
 
 ## Remover uma solicitação de exclusão
 
-[!DNL Experience Platform] permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso no estágio de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação DELETE ao ponto de extremidade `/system/jobs` e incluir a ID da solicitação de exclusão que você deseja remover ao caminho da solicitação.
+[!DNL Experience Platform] permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso no estágio de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação de DELETE para o `/system/jobs` ponto de extremidade e incluir a ID da solicitação de exclusão que você deseja remover para o caminho da solicitação.
 
 **Formato da API**
 
@@ -302,7 +302,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um corpo de resposta vazio. Você pode confirmar que a solicitação foi excluída executando uma solicitação GET para visualização da solicitação de exclusão por sua ID. Isso deve retornar um Status HTTP 404 (Não encontrado), indicando que a solicitação de exclusão foi removida.
+Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um corpo de resposta vazio. Você pode confirmar que a solicitação foi excluída executando uma solicitação de GET para visualização da solicitação de exclusão por sua ID. Isso deve retornar um Status HTTP 404 (Não encontrado), indicando que a solicitação de exclusão foi removida.
 
 ## Próximas etapas
 

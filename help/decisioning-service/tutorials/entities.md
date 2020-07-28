@@ -58,7 +58,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Convenções da API do repositório
 
-[!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no Repositório de objetos de negócios. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, existem apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo do objeto quando essa descrição é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
+[!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no Repositório de objetos de negócios. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, há apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo de objeto quando essa indicação é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
 
 Além dos cabeçalhos listados acima, as APIs para criar, ler, atualizar, excluir e query objetos do repositório têm as seguintes convenções:
 
@@ -69,7 +69,7 @@ Os formatos de carga da API são negociados com um cabeçalho `Accept` ou `Conte
 | Variante FORMAT | Descrição da entidade de solicitação ou resposta |
 | --- | --- |
 | seguido<br>por um parâmetro `schema={schemaId}` | A mensagem contém uma instância descrita por um Schema JSON que é indicada pelo schema de parâmetro format. A instância está envolvida em uma propriedade JSON `_instance`. As outras propriedades de nível superior na carga da resposta especificam informações do repositório que estão disponíveis para todos os recursos.  As mensagens que estão em conformidade com o formato HAL têm uma `_links` propriedade que contém referências no formato HAL. |
-| `patch.hal` | A mensagem contém uma carga JSON PATCH com a presunção de que a instância a ser corrigida é compatível com HAL. Isso significa que não apenas as próprias propriedades de instância da instância, mas também os links HAL da instância podem ser corrigidos. Observe que existem restrições sobre quais propriedades podem ser atualizadas pelo cliente. |
+| `patch.hal` | A mensagem contém uma carga de PATCH JSON com o pressuposto de que a instância a ser corrigida é compatível com HAL. Isso significa que não apenas as próprias propriedades de instância da instância, mas também os links HAL da instância podem ser corrigidos. Observe que existem restrições sobre quais propriedades podem ser atualizadas pelo cliente. |
 | `home.hal` | A mensagem contém uma representação formatada JSON de um recurso de documento inicial para o repositório. |
 | xdm.receipt | A mensagem contém uma resposta formatada JSON para uma operação de criação, atualização (completa e correção) ou exclusão. Os recibos contêm dados de controle que indicam a revisão da instância na forma de um ETag. |
 
@@ -90,11 +90,11 @@ Para criar, atualizar e ler APIs do container, o schema de parâmetro format tem
 
 `ContainerId` é o primeiro parâmetro de caminho para as APIs de instância. Todas as entidades de negócios residem no que é chamado de container. Um container é um mecanismo de isolamento para manter diferentes preocupações separadas. O primeiro elemento de caminho para as APIs de instância do repositório após o terminal geral é o `containerId`. O identificador é obtido da lista de container acessíveis ao chamador. Por exemplo, a API para criar uma instância em um container é `POST https://platform.adobe.io/data/core/xcore/{containerId}/instances`.
 
-A lista de container acessíveis é obtida chamando o terminal raiz do repositório &quot;/&quot; com uma solicitação HTTP GET usando os cabeçalhos padrão.
+A lista de container acessíveis é obtida chamando o terminal raiz do repositório &quot;/&quot; com uma solicitação de GET HTTP usando os cabeçalhos padrão.
 
 ## Gerenciamento do acesso a container
 
-Um administrador pode agrupar principais, recursos e permissões de acesso semelhantes em perfis. Isso reduz a carga de gerenciamento e é compatível com a interface do usuário [Admin Console da](https://adminconsole.adobe.com)Adobe. Você deve ser um administrador de produtos para Adobe Experience Platform em sua organização para criar perfis e atribuir usuários a eles.
+Um administrador pode agrupar principais, recursos e permissões de acesso semelhantes em perfis. Isso reduz a carga de gerenciamento e é compatível com a interface do usuário [Admin Console do](https://adminconsole.adobe.com)Adobe. Você deve ser um administrador de produtos para Adobe Experience Platform em sua organização para criar perfis e atribuir usuários a eles.
 
 É suficiente criar perfis de produtos que correspondam a determinadas permissões em uma única etapa e simplesmente adicionar usuários a esses perfis. Os Perfis atuam como grupos aos quais foram concedidas permissões e cada usuário real ou técnico do grupo herda essas permissões.
 
@@ -218,7 +218,7 @@ Observe que esses URIs não são URLs e não fornecem uma maneira de recuperar d
 
 A resposta REST terá um cabeçalho Location que contém um componente de URL que pode ser usado para recuperar a instância recém-criada. Este componente é uma Referência de URI relativa e precisa ser aplicado ao URI básico do repositório. O URI de base é retornado no `Content-Base` cabeçalho.
 
-A `repo:etag` propriedade especifica a revisão da instância. Esse valor pode ser usado em operações de atualização para reforçar a consistência. O cabeçalho HTTP `If-Match` pode ser usado para adicionar uma condição a uma chamada de API PUT ou PATCH que garante que não haja outra alteração na instância que possa ser substituída acidentalmente. O `repo:etag` valor é retornado com cada chamada de criação, leitura, atualização, exclusão e query. O valor é usado como o valor no ` If-Match` cabeçalho, de acordo com a seção 3.1 [do](https://tools.ietf.org/html/rfc7232#section-3.1)RFC7232.
+A `repo:etag` propriedade especifica a revisão da instância. Esse valor pode ser usado em operações de atualização para reforçar a consistência. O cabeçalho HTTP `If-Match` pode ser usado para adicionar uma condição a uma chamada de API PUT ou PATCH que garanta que não houve outra alteração na instância que possa ser substituída acidentalmente. O `repo:etag` valor é retornado com cada chamada de criação, leitura, atualização, exclusão e query. O valor é usado como o valor no ` If-Match` cabeçalho, de acordo com a seção 3.1 [do](https://tools.ietf.org/html/rfc7232#section-3.1)RFC7232.
 
 As propriedades restantes indicam qual conta e chave de API foram usadas para criar e modificar a instância pela última vez. Como a instância foi criada por essa chamada, os respectivos valores são os da solicitação.
 
@@ -472,7 +472,7 @@ A pesquisa de texto completo é controlada pelos seguintes parâmetros:
 
 ### Atualização e correção de instâncias
 
-Para atualizar uma instância, um cliente pode substituir a lista completa das propriedades de uma vez ou usar uma solicitação PATCH JSON para manipular valores de propriedade individuais, incluindo listas.
+Para atualizar uma instância, um cliente pode substituir a lista completa das propriedades de uma vez ou usar uma solicitação de PATCH JSON para manipular valores de propriedade individuais, incluindo listas.
 
 Em ambos os casos, o URL da solicitação especifica o caminho para a instância física e, em ambos os casos, a resposta será uma carga de recebimento JSON como a retornada da operação [de](#create-instances)criação. De preferência, um cliente deve usar o `Location` cabeçalho ou um link HAL recebido de uma chamada de API anterior para esse objeto como o caminho de URL completo para essa API. Se isso não for possível, o cliente poderá criar o URL a partir do `containerId` e do `instanceId`.
 
@@ -513,7 +513,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-A solicitação PATCH aplica as instruções e valida a entidade resultante em relação ao schema e as mesmas regras de entidade e integridade referencial que a solicitação PUT.
+A solicitação de PATCH aplica as instruções e valida a entidade resultante em relação ao schema e as mesmas regras de entidade e integridade referencial que a solicitação de PUT.
 
 **Controle de edições de valor de propriedade**
 
@@ -612,7 +612,7 @@ Há um fluxo de transição de estado simples que todas as Opções seguirão. E
 
 - **`xdm:status`** - Essa propriedade é usada para o gerenciamento do ciclo de vida da instância. O valor representa um estado de fluxo de trabalho que é usado para indicar se a oferta ainda está em construção (valor = rascunho), pode ser considerado pelo tempo de execução (valor = aprovado) ou se não deve ser usada por mais tempo (valor = arquivado).
 
-Uma operação PATCH simples na instância é normalmente usada para manipular uma `xdm:status` propriedade:
+Uma operação simples de PATCH na instância é normalmente usada para manipular uma `xdm:status` propriedade:
 
 ```json
 [
@@ -686,7 +686,7 @@ Propriedades adicionais podem ser usadas pelos clientes para definir e avaliar a
 - Dentro de cada item na `xdm:components` matriz, o cliente da interface de usuário da biblioteca de Ofertas adiciona as seguintes propriedades. Essas propriedades não devem ser excluídas ou manipuladas sem compreender o impacto na interface do usuário:
    - **`offerui:previewThumbnail`** - Essa é uma propriedade opcional que a interface do usuário da biblioteca de Ofertas usa para exibir uma renderização do ativo. Essa representação não é igual ao próprio ativo. Por exemplo, o conteúdo pode ser HTML e a execução é uma imagem bitmap que mostra apenas uma aproximação dele. Essa representação (qualidade inferior) é exibida no bloco de representação da oferta.
 
-Um exemplo de operação PATCH em uma instância de oferta mostra como manipular as representações:
+Um exemplo de operação de PATCH em uma instância de oferta mostra como manipular as representações:
 
 ```json
 [
@@ -709,7 +709,7 @@ Um exemplo de operação PATCH em uma instância de oferta mostra como manipular
 
 Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
 
-A operação PATCH pode falhar quando `xdm:representations` ainda não houver propriedade. Nesse caso, a operação de adição acima pode ser precedida por outra operação de adição que cria a `xdm:representations` matriz ou a operação de adição única define a matriz diretamente.
+A operação PATCH pode falhar quando ainda não há propriedade `xdm:representations` . Nesse caso, a operação de adição acima pode ser precedida por outra operação de adição que cria a `xdm:representations` matriz ou a operação de adição única define a matriz diretamente.
 Os schemas e as propriedades descritas são usados para todos os tipos de oferta, ofertas de personalização e ofertas de fallback. As duas seções a seguir sobre restrições e regras de decisão explicam os aspectos das ofertas de personalização.
 
 ## Configuração de restrições de oferta
@@ -722,7 +722,7 @@ As opções de decisão em geral podem receber um start e data e hora de términ
 As opções de decisão que não atingiram a data e hora de start ainda não são consideradas elegíveis na decisão.
 - **`xdm:endDate`** - Essa propriedade indica a data e a hora de término. O valor é uma string formatada de acordo com as regras RFC 3339, ou seja, como este carimbo de data e hora: &quot;2019-07-13T11:00:00.000Z&quot;As opções de decisão que passaram na data e hora de término não são mais consideradas elegíveis no processo de decisão.
 
-A alteração de uma restrição de calendário pode ser realizada com a seguinte chamada PATCH:
+A alteração de uma restrição de calendário pode ser realizada com a seguinte chamada de PATCH:
 
 ```json
 [
@@ -746,7 +746,7 @@ Uma restrição de limite é um componente em uma opção de decisão que define
 - **`xdm:globalCap`** - Um limite máximo global é um limite para o número total de vezes que uma oferta pode ser proposta.
 - **`xdm:profileCap`** - Um limite máximo para o perfil é um limite para o número de vezes que uma oferta pode ser proposta a um determinado perfil.
 
-A configuração ou alteração da restrição de limite em uma oferta de personalização pode ser realizada com a seguinte chamada PATCH:
+A configuração ou alteração da restrição de limite em uma oferta de personalização pode ser realizada com a seguinte chamada de PATCH:
 
 ```json
 [
@@ -773,7 +773,7 @@ A referência à regra é incorporada na propriedade `xdm:selectionConstraint`:
 
 - **`xdm:eligibilityRule`** - Esta propriedade contém uma referência a uma regra de elegibilidade. O valor é a `@id` de uma instância de schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
 
-A adição e exclusão de uma regra também pode ser realizada com uma operação PATCH:
+A adição e exclusão de uma regra também pode ser realizada com uma operação de PATCH:
 
 ```
 [
@@ -787,7 +787,7 @@ A adição e exclusão de uma regra também pode ser realizada com uma operaçã
 
 Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer`. As ofertas de fallback não têm restrições.
 
-Observe que a regra de elegibilidade é incorporada na `xdm:selectionConstraint` propriedade juntamente com as restrições do calendário. As operações PATCH não devem tentar remover toda a `SelectionConstraint` propriedade.
+Observe que a regra de elegibilidade é incorporada na `xdm:selectionConstraint` propriedade juntamente com as restrições do calendário. As operações de PATCH não devem tentar remover toda a `SelectionConstraint` propriedade.
 
 ## Definição da prioridade de uma oferta
 
@@ -796,7 +796,7 @@ A prioridade básica é incorporada na propriedade `xdm:rank`:
 
 - **`xdm:priority`** - Essa propriedade representa a ordem padrão na qual uma oferta é selecionada sobre outra caso não haja nenhuma ordem de classificação específica do perfil conhecida. Se, após comparar o valor de prioridade, duas ou mais ofertas de personalização ainda estiverem ligadas, uma é escolhida aleatoriamente e usada na apresentação da oferta. O valor para essa propriedade deve ser um número inteiro maior ou igual a 0.
 
-O ajuste da prioridade básica pode ser feito com a seguinte chamada PATCH:
+O ajuste da prioridade básica pode ser feito com a seguinte chamada de PATCH:
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
@@ -861,7 +861,7 @@ As Ofertas podem ser organizadas em coleções nas quais cada coleção define a
 
 As tags são instâncias simples às quais as instâncias de oferta podem ser vinculadas. São instâncias próprias com um nome para exibi-las. O nome deve ser exclusivo entre instâncias para facilitar a exibição na interface do usuário.
 
-Os objetos de tag servem para estabelecer uma categorização entre as opções de decisão (oferta). Uma tag pode ser vinculada por muitas ofertas e uma oferta pode ter muitas referências de tag. Uma categoria de ofertas é estabelecida fazendo referência a todas as ofertas que estão relacionadas a um determinado conjunto de instâncias de tags.
+Os objetos de tag servem para estabelecer uma categorização entre as opções de decisão (oferta). Uma tag pode ser vinculada por muitas ofertas e uma oferta pode ter muitas referências de tag. Uma categoria de ofertas é estabelecida fazendo referência a todas as ofertas relacionadas a um determinado conjunto de instâncias de tags.
 
 As instâncias de tag são criadas com o identificador de schemahttps://ns.adobe.com/experience/offer-management/tag. A `_instance` propriedade para a chamada de criação ou atualização é semelhante:
 

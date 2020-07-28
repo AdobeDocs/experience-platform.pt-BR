@@ -11,13 +11,13 @@ ht-degree: 3%
 ---
 
 
-# Adobe Intelligent Services {#intelligent-services}
+# Serviços inteligentes Adobe {#intelligent-services}
 
 * [Visão geral dos serviços inteligentes](home.md)
 * [Preparar dados para uso no Intelligent Services](data-preparation.md)
-* Atribuição AI {#attribution-ai}
+* Attribution AI {#attribution-ai}
    * [Visão geral](attribution-ai/overview.md)
-   * [Introdução ao AI de atribuição](attribution-ai/getting-started.md)
+   * [Introdução ao Attribution AI](attribution-ai/getting-started.md)
    * [Guia da interface do usuário](attribution-ai/user-guide.md)
    * [Descobrindo insights](attribution-ai/discover-insights.md)
    * [Acessar pontuações](attribution-ai/download-scores.md)

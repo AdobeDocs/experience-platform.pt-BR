@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Produtos
 
-Se você tiver produtos em seu site, esse é um conjunto padrão de itens que você pode querer enviar para ativar a maioria dos recursos da Adobe. Embora esta seja uma sugestão, ela fornece um conjunto muito forte de dados diretamente do start.
+Se você tiver produtos em seu site, esse é um conjunto padrão de itens que você pode querer enviar para ativar a maioria dos recursos do Adobe. Embora esta seja uma sugestão, ela fornece um conjunto muito forte de dados diretamente do start.
 
 Este documento usa a combinação Detalhes [do Comércio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent. A `commerce` mistura é dividida em duas partes: o `commerce` objeto e a `productListItems` matriz. O `commerce` objeto permite indicar quais ações estão acontecendo na `productListItems` matriz.
 

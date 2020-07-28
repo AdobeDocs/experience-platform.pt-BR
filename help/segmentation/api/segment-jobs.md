@@ -24,7 +24,7 @@ Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience
 
 ## Recuperar uma lista de trabalhos de segmento {#retrieve-list}
 
-Você pode recuperar uma lista de todos os trabalhos de segmento para a Organização IMS, fazendo uma solicitação GET para o `/segment/jobs` endpoint.
+É possível recuperar uma lista de todos os trabalhos de segmento para a Organização IMS, fazendo uma solicitação de GET para o `/segment/jobs` endpoint.
 
 **Formato da API**
 
@@ -164,7 +164,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos d
 
 ## Criar um novo trabalho de segmento {#create}
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação POST ao ponto de `/segment/jobs` extremidade e incluindo no corpo a ID da definição de segmento a partir da qual você deseja criar uma nova audiência.
+Você pode criar um novo trabalho de segmento, fazendo uma solicitação de POST para o `/segment/jobs` endpoint e incluindo no corpo a ID da definição de segmento da qual você deseja criar uma nova audiência.
 
 **Formato da API**
 
@@ -258,7 +258,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do seu trabalho
 
 ## Recuperar um trabalho de segmento específico {#get}
 
-Você pode recuperar informações detalhadas sobre um trabalho de segmento específico, fazendo uma solicitação GET para o `/segment/jobs` terminal e fornecendo a ID do trabalho de segmento que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um trabalho de segmento específico, fazendo uma solicitação de GET para o `/segment/jobs` terminal e fornecendo a ID do trabalho de segmento que deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -355,7 +355,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Trabalhos de segmento de recuperação em massa {#bulk-get}
 
-Você pode recuperar informações detalhadas sobre vários trabalhos de segmento, fazendo uma solicitação POST ao ponto de extremidade `/segment/jobs/bulk-get` e fornecendo os `id` valores dos trabalhos de segmento no corpo da solicitação.
+Você pode recuperar informações detalhadas sobre vários trabalhos de segmento, fazendo uma solicitação de POST para o `/segment/jobs/bulk-get` ponto final e fornecendo os `id` valores dos trabalhos de segmento no corpo da solicitação.
 
 **Formato da API**
 
@@ -461,7 +461,7 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento
 
 ## Cancelar ou excluir um trabalho de segmento específico {#delete}
 
-Você pode excluir um trabalho de segmento específico, fazendo uma solicitação DELETE ao `/segment/jobs` ponto final e fornecendo a ID do trabalho de segmento que deseja excluir no caminho da solicitação.
+Você pode excluir um trabalho de segmento específico, fazendo uma solicitação de DELETE para o `/segment/jobs` ponto final e fornecendo a ID do trabalho de segmento que deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >

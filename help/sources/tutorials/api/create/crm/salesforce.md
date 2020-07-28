@@ -66,11 +66,11 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 Antes de se conectar [!DNL Platform] a uma [!DNL Salesforce] conta, verifique se as especificações de conexão existem para [!DNL Salesforce]. Se as especificações de conexão não existirem, não será possível estabelecer uma conexão.
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão [!DNL Salesforce] executando uma solicitação GET e usando parâmetros de query.
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão [!DNL Salesforce] executando uma solicitação de GET e usando parâmetros de query.
 
 **Formato da API**
 
-Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="salesforce"` para obter informações especificamente para [!DNL Salesforce].
+Enviar uma solicitação de GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=name=="salesforce"` para obter informações especificamente para [!DNL Salesforce].
 
 ```http
 GET /connectionSpecs
@@ -147,7 +147,7 @@ Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL Sal
 
 Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por [!DNL Salesforce] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
-Execute a seguinte solicitação POST para criar uma conexão básica.
+Execute a seguinte solicitação de POST para criar uma conexão básica.
 
 **Formato da API**
 

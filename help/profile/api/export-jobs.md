@@ -92,7 +92,7 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva, gerada pel
 
 ### Iniciar trabalho de exportação {#initiate}
 
-Depois que você tiver um conjunto de dados que persiste na união, poderá criar um trabalho de exportação para persistir os dados do Perfil no conjunto de dados, fazendo uma solicitação POST ao `/export/jobs` ponto final na API do Perfil do cliente em tempo real e fornecendo os detalhes dos dados que deseja exportar no corpo da solicitação.
+Depois que você tiver um conjunto de dados que persiste na união, poderá criar um trabalho de exportação para persistir os dados do Perfil no conjunto de dados, solicitando um POST para o `/export/jobs` endpoint na API do Perfil do cliente em tempo real e fornecendo os detalhes dos dados que deseja exportar no corpo da solicitação.
 
 **Formato da API**
 
@@ -185,7 +185,7 @@ Uma resposta bem-sucedida retorna um conjunto de dados preenchido com dados de P
 
 ## Lista de todos os trabalhos de exportação
 
-Você pode retornar uma lista de todos os trabalhos de exportação para uma Organização IMS específica, executando uma solicitação GET para o `export/jobs` endpoint. A solicitação também suporta os parâmetros de query `limit` e `offset`, como mostrado abaixo.
+É possível retornar uma lista de todos os trabalhos de exportação para uma Organização IMS específica, executando uma solicitação de GET para o `export/jobs` ponto de extremidade. A solicitação também suporta os parâmetros de query `limit` e `offset`, como mostrado abaixo.
 
 **Formato da API**
 
@@ -331,7 +331,7 @@ A resposta inclui um `records` objeto que contém os trabalhos de exportação c
 
 ## Monitorar progresso de exportação
 
-Para visualização dos detalhes de uma tarefa de exportação específica ou monitoramento de seu status enquanto é processada, é possível fazer uma solicitação GET ao `/export/jobs` endpoint e incluir o `id` da tarefa de exportação no caminho. A tarefa de exportação é concluída assim que o `status` campo retorna o valor &quot;SUCEDIDO&quot;.
+Para visualização dos detalhes de uma tarefa de exportação específica ou monitorar seu status conforme ele é processado, é possível fazer uma solicitação de GET para o `/export/jobs` endpoint e incluir o da tarefa `id` de exportação no caminho. A tarefa de exportação é concluída assim que o `status` campo retorna o valor &quot;SUCEDIDO&quot;.
 
 **Formato da API**
 
@@ -408,7 +408,7 @@ curl -X GET \
 
 ## Cancelar uma tarefa de exportação
 
-O Experience Platform permite cancelar um trabalho de exportação existente, o que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, você pode executar uma solicitação DELETE para o `/export/jobs` ponto de extremidade e incluir o trabalho `id` de exportação que deseja cancelar no caminho da solicitação.
+O Experience Platform permite cancelar um trabalho de exportação existente, o que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, é possível executar uma solicitação de DELETE para o `/export/jobs` ponto final e incluir a `id` do trabalho de exportação que você deseja cancelar ao caminho da solicitação.
 
 **Formato da API**
 

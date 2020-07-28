@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Criar um conector de origem do Adobe Analytics na interface do usuário
+title: Criar um conector de origem Adobe Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
@@ -12,9 +12,9 @@ ht-degree: 1%
 ---
 
 
-# Criar um conector de origem do Adobe Analytics na interface do usuário
+# Criar um conector de origem Adobe Analytics na interface do usuário
 
-Este tutorial fornece etapas para a criação de um conector de origem do Adobe Analytics na interface do usuário, a fim de trazer os dados do consumidor para o Adobe Experience Platform.
+Este tutorial fornece etapas para a criação de um conector de origem Adobe Analytics na interface do usuário, a fim de trazer os dados do consumidor para o Adobe Experience Platform.
 
 ## Introdução
 
@@ -30,7 +30,7 @@ Faça logon no <a href="https://platform.adobe.com" target="_blank">Adobe Experi
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria de aplicativos *da* Adobe, selecione **[!UICONTROL Adobe Analytics]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para visualização de contas existentes, selecione **[!UICONTROL Contas]**.
+Na categoria de aplicativos *de* Adobe, selecione **[!UICONTROL Adobe Analytics]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para visualização de contas existentes, selecione **[!UICONTROL Contas]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -104,7 +104,7 @@ Depois que a conexão é criada, um schema de público alvo e um fluxo de conjun
 * [Visão geral da Análise do espaço de trabalho da Data Science](../../../../../data-science-workspace/home.md)
 * [Visão geral do Serviço de Query](../../../../../query-service/home.md)
 
-O vídeo a seguir é destinado a oferecer suporte à sua compreensão da assimilação de dados usando o conector de origem Analytics da Adobe:
+O vídeo a seguir é destinado a suportar sua compreensão da assimilação de dados usando o conector Adobe Analytics Source:
 
 >[!WARNING]
 >

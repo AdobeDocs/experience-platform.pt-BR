@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Criação de uma conexão de streaming autenticada
 
-A coleta de dados autenticada permite que serviços de Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando tokens de acesso como parte da solicitação POST.
+A coleta de dados autenticada permite que serviços de Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando tokens de acesso como parte da solicitação de POST.
 
 ## Introdução
 

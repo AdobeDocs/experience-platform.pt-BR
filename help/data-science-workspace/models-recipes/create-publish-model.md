@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Fingir que você possui um site de varejo online. Quando seus clientes fazem compras em seu site de varejo, você deseja apresentar a eles recomendações personalizadas de produtos para expor uma variedade de outros produtos suas ofertas comerciais. Durante a existência de seu site, você coletou continuamente os dados do cliente e deseja, de alguma forma, usar esses dados para gerar recomendações personalizadas de produtos.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fornece os meios para atingir sua meta usando a Receita [de recomendações de](../pre-built-recipes/product-recommendations.md)produto pré-criada. Siga este tutorial para ver como você pode acessar e entender seus dados de varejo, criar e otimizar um Modelo de aprendizado da máquina e gerar insights no [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fornece os meios para atingir sua meta usando a Receita [Recommendations de](../pre-built-recipes/product-recommendations.md)produto pré-criada. Siga este tutorial para ver como você pode acessar e entender seus dados de varejo, criar e otimizar um Modelo de aprendizado da máquina e gerar insights no [!DNL Data Science Workspace].
 
 Este tutorial reflete o fluxo de trabalho de [!DNL Data Science Workspace]e aborda as seguintes etapas para criar um Modelo de aprendizado da máquina:
 
@@ -34,18 +34,18 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 * Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de prosseguir.
 
 * Ativar ativos. Entre em contato com seu representante de conta para obter os seguintes itens fornecidos para você.
-   * Receita de recomendações
-   * Conjunto de dados de entrada do Recommendations
-   * Schema de entrada do Recommendations
-   * Conjunto de dados de saída do Recommendations
-   * Schema de saída do Recommendations
+   * Receita do Recommendations
+   * Conjunto de dados de entrada da Recommendations
+   * Schema Recommendations Input
+   * Conjunto de dados de saída Recommendations
+   * Schema de saída Recommendations
    * PostValues do conjunto de dados dourados
    * Schema do conjunto de dados Golden
 
-* Baixe os três [!DNL Jupyter Notebook] arquivos necessários do repositório <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">público da [!DNL Git] Adobe, eles serão usados para demonstrar o</a>fluxo de trabalho em [!DNL JupyterLab] [!DNL Data Science Workspace].
+* Baixe os três [!DNL Jupyter Notebook] arquivos necessários do <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, eles serão usados para demonstrar o [!DNL JupyterLab] fluxo de trabalho no [!DNL Data Science Workspace].
 
 * Um entendimento prático dos seguintes conceitos-chave usados neste tutorial:
-   * [!DNL Experience Data Model](../../xdm/home.md): O esforço de padronização realizado pela Adobe para definir schemas padrão, como [!DNL Profile] e ExperienceEvent, para o Gerenciamento de experiência do cliente.
+   * [!DNL Experience Data Model](../../xdm/home.md): O esforço de padronização realizado pelo Adobe para definir schemas padrão, como [!DNL Profile] e ExperienceEvent, para o Gerenciamento de experiência do cliente.
    * Conjuntos de dados: Uma construção de armazenamento e gerenciamento para dados reais. Uma instância física instanciada de um Schema [](../../xdm/schema/field-dictionary.md)XDM.
    * Lotes: Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade.
    * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é uma interface baseada na Web de código aberto para o Project [!DNL Jupyter] e está totalmente integrada no [!DNL Experience Platform].
@@ -68,25 +68,25 @@ Os outros conjuntos de dados foram pré-preenchidos com lotes para fins de visua
 | Nome do conjunto de dados | Esquema | Descrição |
 | ----- | ----- | ----- |
 | PostValues do conjunto de dados dourados | schema do conjunto de dados Golden | [!DNL Analytics] dados de origem de seu site |
-| Conjunto de dados de entrada do Recommendations | Schema de entrada do Recommendations | Os [!DNL Analytics] dados são transformados em um conjunto de dados de treinamento usando um pipeline de recursos. Esses dados são usados para treinar o Modelo de aprendizado da máquina do Product Recommendations. `itemid` e `userid` correspondem a um produto comprado por esse cliente. |
-| Conjunto de dados de saída do Recommendations | Schema de saída do Recommendations | O conjunto de dados para o qual os resultados da pontuação são armazenados, conterá a lista de produtos recomendados para cada cliente. |
+| Conjunto de dados de entrada da Recommendations | Schema Recommendations Input | Os [!DNL Analytics] dados são transformados em um conjunto de dados de treinamento usando um pipeline de recursos. Esses dados são usados para treinar o Modelo de aprendizado da máquina Recommendations do Produto. `itemid` e `userid` correspondem a um produto comprado por esse cliente. |
+| Conjunto de dados de saída Recommendations | Schema de saída Recommendations | O conjunto de dados para o qual os resultados da pontuação são armazenados, conterá a lista de produtos recomendados para cada cliente. |
 
 ## Criar seu modelo {#author-your-model}
 
-O segundo componente do ciclo de vida [!DNL Data Science Workspace] envolve a criação de Fórmulas e Modelos. A Receita de recomendações de produto foi projetada para gerar recomendações de produto em escala utilizando dados de compra anteriores e aprendizado de máquina.
+O segundo componente do ciclo de vida [!DNL Data Science Workspace] envolve a criação de Fórmulas e Modelos. A Receita Recommendations do produto foi projetada para gerar recomendações de produto em escala utilizando dados de compra anteriores e aprendizado de máquina.
 
 As receitas são a base para um Modelo, pois contêm algoritmos de aprendizado de máquina e lógica projetada para resolver problemas específicos. O mais importante é que as Fórmulas permitem que você democratize o aprendizado de máquina em toda a sua organização, permitindo que outros usuários acessem um Modelo para casos de uso diferentes sem gravar nenhum código.
 
-### Explore a receita das recomendações do produto
+### Explore a receita da Recommendations do produto
 
 1. Em [!DNL Adobe Experience Platform], navegue até **[!UICONTROL Modelos]** na coluna de navegação esquerda e, em seguida, clique em **[!UICONTROL Receitas]** na parte superior para visualização de uma lista de Receitas disponíveis para sua organização.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Localize e abra a Receita **[!UICONTROL do]** Recommendations fornecida clicando em seu nome.
+2. Localize e abra a Receita **[!UICONTROL Recommendations]** fornecida clicando em seu nome.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. No painel direito, clique em Schema **[!UICONTROL de entrada do]** Recommendations para visualização no schema que alimenta a receita. Os campos de schema **[!UICONTROL itemId]** e **[!UICONTROL userId]** correspondem a um produto comprado (**[!UICONTROL integrationType]**) por esse cliente em um horário específico (**[!UICONTROL carimbo de data e hora]**). Siga as mesmas etapas para revisar os campos do Schema **[!UICONTROL de Saída do]**Recommendations.
+3. No painel direito, clique em **[!UICONTROL Recommendations Input Schema]** para visualização do schema que alimenta a receita. Os campos de schema **[!UICONTROL itemId]** e **[!UICONTROL userId]** correspondem a um produto comprado (**[!UICONTROL integrationType]**) por esse cliente em um horário específico (**[!UICONTROL carimbo de data e hora]**). Siga as mesmas etapas para revisar os campos do Schema **[!UICONTROL de saída do]**Recommendations.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
-Agora você revisou os schemas de entrada e saída exigidos pela Receita do Recommendations do Produto. Agora você pode continuar com a próxima seção para descobrir como criar, treinar e avaliar um Modelo de recomendações de produto.
+Agora você revisou os schemas de entrada e saída exigidos pela Receita Recommendations do Produto. Agora você pode continuar com a próxima seção para descobrir como criar, treinar e avaliar um Modelo Recommendations de produto.
 
 ## Treinar e avaliar seu modelo {#train-and-evaluate-your-model}
 
@@ -100,9 +100,9 @@ Um Modelo é uma instância de uma Receita, permitindo que você treine e classi
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Localize e abra a Receita **[!UICONTROL do]** Recommendations fornecida clicando em seu nome, inserindo a página de visão geral da Receita. Clique em **[!UICONTROL Criar um modelo]** no centro (se não houver Modelos existentes) ou no canto superior direito da página Visão geral da receita.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Uma lista de conjuntos de dados de entrada disponíveis para treinamento é mostrada, selecione Conjunto de dados **[!UICONTROL de entrada do]** Recommendations e clique em **[!UICONTROL Avançar]**.
+3. Uma lista de conjuntos de dados de entrada disponíveis para treinamento é mostrada, selecione **[!UICONTROL Recommendations Input Dataset]** e clique em **[!UICONTROL Next (Avançar)]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Forneça um nome para o Modelo, por exemplo, &quot;Modelo de recomendações do produto&quot;. As configurações disponíveis para o modelo são listadas, contendo as configurações para o treinamento padrão do Modelo e os comportamentos de pontuação. Nenhuma alteração é necessária, pois essas configurações são específicas da sua organização. Revise as configurações e clique em **[!UICONTROL Concluir]**.
+4. Forneça um nome para o Modelo, por exemplo &quot;Modelo Recommendations do produto&quot;. As configurações disponíveis para o modelo são listadas, contendo as configurações para o treinamento padrão do Modelo e os comportamentos de pontuação. Nenhuma alteração é necessária, pois essas configurações são específicas da sua organização. Revise as configurações e clique em **[!UICONTROL Concluir]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. O Modelo foi criado e a página *Visão geral* do Modelo é exibida em uma execução de treinamento recém-gerada. Uma execução de treinamento é gerada por padrão quando um Modelo é criado.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -141,7 +141,7 @@ A etapa final do fluxo de trabalho da Data Science é operacionalizar seu modelo
 
 1. Na página *Visão geral* do modelo de recomendações de produto, clique no nome da execução de treinamento com melhor desempenho, com os valores mais altos de recuperação e precisão.
 2. Na parte superior direita da página de detalhes da execução do treinamento, clique em **[!UICONTROL Pontuação]**.
-3. Selecione o Conjunto de Dados **[!UICONTROL de Entrada do]** Recommendations como o conjunto de dados de entrada de pontuação, que é o mesmo conjunto de dados usado ao criar o Modelo e executar suas execuções de treinamento. Then, click **[!UICONTROL Next]**.
+3. Selecione o **[!UICONTROL Recommendations Input Dataset]** como o conjunto de dados de entrada de pontuação, que é o mesmo conjunto de dados usado ao criar o Modelo e executar suas execuções de treinamento. Then, click **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
 4. Selecione o Conjunto de Dados **[!UICONTROL de Saída do]** Recommendations como o conjunto de dados de saída de pontuação. Os resultados da pontuação serão armazenados neste conjunto de dados como um lote.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)

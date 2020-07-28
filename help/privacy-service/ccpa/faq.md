@@ -6,7 +6,7 @@ topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Perguntas frequentes sobre CCPA
 
-Este documento fornece respostas para perguntas frequentes sobre a CCPA [!DNL California Consumer Protection Act] (CCPA) e sua implementação na Adobe Experience Cloud.
+Este documento fornece respostas para perguntas frequentes sobre o [!DNL California Consumer Protection Act] (CCPA) e sua implementação no Adobe Experience Cloud.
 
 ## O que é CCPA?
 
@@ -30,7 +30,7 @@ Embora a CCPA partilhe de alguns conceitos fornecidos ao abrigo do Regulamento G
 
 A informação pessoal é a informação que &quot;identifica, relaciona, descreve, é susceptível de ser associada a, ou pode razoavelmente estar ligada, direta ou indiretamente, a um consumidor ou a um agregado familiar&quot;.
 
-## Quais tipos de informações pessoais ou identificadores usados na Adobe Experience Cloud estão sujeitos a esses novos requisitos?
+## Que tipos de informações pessoais ou identificadores usados no Adobe Experience Cloud estão sujeitos a esses novos requisitos?
 
 Os seguintes identificadores são comumente usados em [!DNL Experience Cloud] aplicativos e podem estar sujeitos aos requisitos do CCPA:
 
@@ -48,30 +48,30 @@ As informações pessoais também podem incluir a Internet ou outras informaçõ
 - Histórico de pesquisa
 - Informações relacionadas à interação do consumidor com um site, aplicativo ou anúncio
 
-Embora o CCPA cubra um grande conjunto de informações pessoais, os termos padrão do contrato da Adobe determinam que informações pessoais confidenciais (como SSN, informações sobre a licença do motorista, informações sobre a conta financeira e dados biométricos) sejam geralmente proibidas de importar e usar em [!DNL Experience Cloud] aplicativos.
+Embora a CCPA abranja um vasto conjunto de informações pessoais, os termos padrão do contrato da Adobe determinam que as informações pessoais confidenciais (como SSN, informações sobre a licença do motorista, informações sobre a conta financeira e dados biométricos) sejam geralmente proibidas de importar e usar em [!DNL Experience Cloud] aplicativos.
 
 ## Como se aplicam as diferentes funções e responsabilidades da CCPA [!DNL Experience Cloud]?
 
-Conforme definido pelo CCPA, as seguintes funções se aplicam à Adobe e a seus clientes:
+Conforme definido pelo CCPA, as seguintes funções se aplicam ao Adobe e seus clientes:
 
-- Os clientes da Adobe (a parte que solicita a coleta e o uso de informações pessoais de residentes na Califórnia) seriam considerados uma **Empresa**.
-- A Adobe, na sua função de fornecer o serviço, seria considerada um **Provedor de serviço**.
+- Os clientes do Adobe (a parte que solicita a coleta e o uso de informações pessoais de residentes na Califórnia) seriam considerados uma **Empresa**.
+- A Adobe, na sua função de prestar o serviço, seria considerada um **Provedor de serviço**.
 
-Dado esse relacionamento e a linguagem de contrato da Adobe, as divulgações à Adobe provavelmente não seriam consideradas uma &quot;venda&quot; para a qual as empresas precisariam fornecer um aviso e oferta de uma opção de não participação.
+Tendo em conta esta relação e a linguagem do contrato de Adobe, as divulgações à Adobe provavelmente não seriam consideradas uma &quot;venda&quot; para a qual as empresas teriam de fornecer um aviso e oferta de uma opção de não participação.
 
-No entanto, os serviços da Adobe podem ser usados para permitir o compartilhamento de determinados dados e transferências para terceiros. Estas transferências de terceiros podem ser consideradas uma &quot;venda&quot; e exigem legalmente a divulgação e a não participação.  Os clientes devem trabalhar com seus consultores jurídicos para avaliar casos de uso específicos, a fim de avaliar os requisitos aplicáveis.
+No entanto, os serviços de Adobe podem ser utilizados para permitir o compartilhamento de determinados dados e transferências para terceiros. Estas transferências de terceiros podem ser consideradas uma &quot;venda&quot; e exigem legalmente a divulgação e a não participação.  Os clientes devem trabalhar com seus consultores jurídicos para avaliar casos de uso específicos, a fim de avaliar os requisitos aplicáveis.
 
 ## Quantos dias uma empresa tem que responder a uma solicitação do consumidor para acessar ou excluir informações pessoais?
 
 Supondo que a empresa tenha coletado informações pessoais e que possa autenticar ou verificar a identidade de um consumidor californiano específico, a CCPA permite que as solicitações do consumidor sejam atendidas dentro de 45 dias (com algumas exceções).
 
-## Qual é a função da Adobe no CCPA?
+## Qual é o papel do Adobe na CCPA?
 
-Como um Provedor de serviço, a Adobe coleta e processa informações pessoais em nome da Empresa e está contratualmente obrigada a usar essas informações apenas para os fins específicos estabelecidos no contrato.
+Como Provedor de serviço, a Adobe coleta e processa informações pessoais em nome da Empresa e está contratualmente obrigada a usá-las apenas para os fins específicos estabelecidos no acordo.
 
-Considerando esse relacionamento e a linguagem de contrato da Adobe, as divulgações à Adobe se enquadram nas disposições da lei para Provedores de serviço, e provavelmente não seriam consideradas uma &quot;venda&quot; para a qual as empresas precisariam fornecer aviso e oferta e uma opção de não participação.
+Tendo em conta esta relação e a linguagem do contrato de Adobe, as divulgações de informações sobre a Adobe são abrangidas pelas disposições da lei relativas aos Provedores de serviço, e provavelmente não seriam consideradas uma &quot;venda&quot; para a qual as empresas teriam de fornecer um aviso e uma oferta de não participação.
 
-Os serviços da Adobe podem ser usados para permitir o compartilhamento de determinados dados e transferências para terceiros. Estas transferências de terceiros podem ser consideradas uma &quot;venda&quot; e exigem legalmente a divulgação e a não participação.  Os clientes devem trabalhar com seus consultores jurídicos para avaliar casos de uso específicos, a fim de avaliar os requisitos aplicáveis.
+Os serviços de Adobe podem ser usados para permitir o compartilhamento de determinados dados e transferências para terceiros. Estas transferências de terceiros podem ser consideradas uma &quot;venda&quot; e exigem legalmente a divulgação e a não participação.  Os clientes devem trabalhar com seus consultores jurídicos para avaliar casos de uso específicos, a fim de avaliar os requisitos aplicáveis.
 
 ## Como posso suportar os requisitos de privacidade do consumidor na CCPA se eu mantiver certos tipos de dados que são cobertos pelos requisitos?
 
@@ -81,8 +81,8 @@ Depois que você tiver tomado as etapas necessárias para autenticar os consumid
 >
 >Ainda há outras orientações da autoridade reguladora da Califórnia sobre quais tipos de dados são elegíveis para solicitações de privacidade do consumidor.
 
-## A Adobe oferta outras ferramentas que podem ser úteis para atender aos requisitos de CCPA?
+## A Adobe oferta  outras ferramentas que podem ser úteis para atender aos requisitos do CCPA?
 
-Os aplicativos da Adobe Experience Cloud oferecem funções de gestão de dados e controle que podem ser úteis para as necessidades de privacidade da empresa. Entre essas ferramentas estão a rotulagem de uso de dados, controles de acesso baseados em funções, ofuscação de IP e recursos de hash.
+Os aplicativos Adobe Experience Cloud oferecem funções de gestão de dados e controle que podem ser úteis para as necessidades de privacidade das empresas. Entre essas ferramentas estão a rotulagem de uso de dados, controles de acesso baseados em funções, ofuscação de IP e recursos de hash.
 
 A Adobe recebeu várias certificações de suas práticas de privacidade e segurança, como uma certificação ISO 27001 e uma validação TrustArc GDPR.

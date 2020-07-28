@@ -59,9 +59,9 @@ A primeira etapa na criação de uma conexão base de conjunto de dados é recup
 
 **Formato da API**
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para uma conexão básica de conjunto de dados executando uma solicitação GET e usando parâmetros de query.
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para uma conexão básica de conjunto de dados executando uma solicitação de GET e usando parâmetros de query.
 
-Enviar uma solicitação GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obter informações sobre a conexão básica do conjunto de dados.
+Enviar uma solicitação de GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obter informações sobre a conexão básica do conjunto de dados.
 
 ```http
 GET /connectionSpecs

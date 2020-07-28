@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Ingressar dados em [!DNL Experience Platform]
 
-O Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A Adobe [!DNL Experience Platform Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso em downstream [!DNL Platform services]. [!DNL Data Ingestion] inclui a ingestão em lote, a ingestão em streaming e a ingestão por meio de conectores de origem. Para saber mais, leia a visão geral [da Ingestão de](../ingestion/home.md) dados ou vá diretamente para a documentação [](../sources/home.md)Fontes.
+O Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. O Adobe [!DNL Experience Platform Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso em downstream [!DNL Platform services]. [!DNL Data Ingestion] inclui a ingestão em lote, a ingestão em fluxo contínuo e a ingestão por meio de conectores de origem. Para saber mais, leia a visão geral [da Ingestão de](../ingestion/home.md) dados ou vá diretamente para a documentação [](../sources/home.md)Fontes.
 
 ## Criar um conector de origem na interface do usuário e na API
 

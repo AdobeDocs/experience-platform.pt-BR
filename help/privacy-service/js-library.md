@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Visão geral da Biblioteca JavaScript de privacidade da Adobe
+title: Visão geral da Biblioteca JavaScript de privacidade do Adobe
 topic: overview
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 
-# Visão geral da Biblioteca JavaScript de privacidade da Adobe
+# Visão geral da Biblioteca JavaScript de privacidade do Adobe
 
-Como um processador de dados, a Adobe processa dados pessoais de acordo com suas permissões e instruções de empresa. Como o controlador de dados, você determinará os dados pessoais que a Adobe processa e armazena em seu nome. Dependendo das informações que você escolher enviar pelas soluções da Adobe Experience Cloud, a Adobe pode armazenar informações privadas aplicáveis a regulamentos de privacidade, como o [!DNL General Data Protection Regulation] (RGPD) e [!DNL California Consumer Privacy Act] (CCPA). Consulte o documento sobre [privacidade na Adobe Experience Cloud](https://www.adobe.com/br/privacy/marketing-cloud.html) para obter mais informações sobre como as soluções do Experience Cloud coletam dados privados.
+Como processador de dados, o Adobe processa dados pessoais de acordo com as permissões e instruções da sua empresa. Como o controlador de dados, você determinará os dados pessoais que a Adobe processa e armazena em seu nome. Dependendo das informações que você escolher enviar através das soluções Adobe Experience Cloud, o Adobe pode armazenar informações privadas aplicáveis a regulamentos de privacidade, como o [!DNL General Data Protection Regulation] (RGPD) e [!DNL California Consumer Privacy Act] (CCPA). Consulte o documento sobre [privacidade na Adobe Experience Cloud](https://www.adobe.com/br/privacy/marketing-cloud.html) para obter mais informações sobre como as soluções Experience Cloud coletam dados privados.
 
-A Biblioteca **JavaScript de privacidade da** Adobe permite que os controladores de dados automatizem a recuperação de todas as identidades de pessoa de dados geradas pelas [!DNL Experience Cloud] soluções para um domínio específico. Usando a API fornecida pelo [Adobe Experience Platform Privacy Service](home.md), essas identidades podem ser usadas para criar solicitações de acesso e exclusão de dados privados pertencentes a essas pessoas de dados.
+A Biblioteca **JavaScript de privacidade do** Adobe permite que os controladores de dados automatizem a recuperação de todas as identidades de pessoa de dados geradas pelas [!DNL Experience Cloud] soluções para um domínio específico. Usando a API fornecida pelo [Adobe Experience Platform Privacy Service](home.md), essas identidades podem ser usadas para criar solicitações de acesso e exclusão de dados privados pertencentes a essas pessoas de dados.
 
 >[!NOTE]
 >
@@ -32,11 +32,11 @@ A tabela a seguir descreve as diferentes funções fornecidas pela biblioteca:
 | --- | --- |
 | `retrieveIdentities` | Retorna uma matriz de identidades correspondentes (`validIds`) que foram recuperadas [!DNL Privacy Service], bem como uma matriz de identidades que não foram encontradas (`failedIds`). |
 | `removeIdentities` | Remove cada identidade correspondente (válida) do navegador. Retorna uma matriz de identidades correspondentes (`validIds`), com cada identidade contendo um `isDeleteClientSide` booleano que indica se essa ID foi excluída. |
-| `retrieveThenRemoveIdentities` | Recupera uma matriz de identidades correspondentes (`validIds`) e remove essas identidades do navegador. Embora essa função seja semelhante a `removeIdentities`, é melhor usada quando a solução Adobe que você está usando requer uma solicitação de acesso antes que a exclusão seja possível (como quando um identificador exclusivo deve ser recuperado antes de ser fornecido em uma solicitação de exclusão). |
+| `retrieveThenRemoveIdentities` | Recupera uma matriz de identidades correspondentes (`validIds`) e remove essas identidades do navegador. Embora essa função seja semelhante a `removeIdentities`, ela é melhor usada quando a solução Adobe que você está usando requer uma solicitação de acesso antes da exclusão ser possível (como quando um identificador exclusivo deve ser recuperado antes de ser fornecido em uma solicitação de exclusão). |
 
 >[!NOTE]
 >
->`removeIdentities` e `retrieveThenRemoveIdentities` remover identidades somente do navegador para soluções específicas da Adobe que as suportam. Por exemplo, o Adobe Audience Manager não exclui as IDs demdex armazenadas em cookies de terceiros, enquanto o Adobe Target exclui todos os cookies que armazenam suas IDs.
+>`removeIdentities` e `retrieveThenRemoveIdentities` remover identidades somente do navegador para obter soluções de Adobe específicas que as suportem. Por exemplo, o Adobe Audience Manager não exclui as IDs demdex armazenadas em cookies de terceiros, enquanto o Adobe Target exclui todos os cookies que armazenam suas IDs.
 
 Como as três funções representam processos assíncronos, qualquer identidade recuperada deve ser tratada com retornos de chamada ou promessas.
 
@@ -46,12 +46,12 @@ Como as três funções representam processos assíncronos, qualquer identidade 
 Para start usando o [!DNL Privacy JS Library], você deve instalá-lo em sua máquina usando um dos seguintes métodos:
 
 * Instale usando npm executando o seguinte comando: `npm install @adobe/adobe-privacy`
-* Use a extensão do Adobe Launch com o nome `AdobePrivacy`
+* Use a Extensão Adobe Launch sob o nome `AdobePrivacy`
 * Download de [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instancie o [!DNL Privacy JS Library]
 
-Todos os aplicativos que utilizam o [!DNL Privacy JS Library] devem instanciar um novo `AdobePrivacy` objeto, que deve ser configurado para uma solução específica da Adobe. Por exemplo, uma instância do Adobe Analytics seria semelhante ao seguinte:
+Todos os aplicativos que utilizam o [!DNL Privacy JS Library] devem instanciar um novo `AdobePrivacy` objeto, que deve ser configurado para uma solução Adobe específica. Por exemplo, uma instanciação para o Adobe Analytics seria semelhante ao seguinte:
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -63,7 +63,7 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-Para obter uma lista completa dos parâmetros compatíveis com diferentes soluções da Adobe, consulte a seção de apêndice sobre os parâmetros [de configuração da solução](#adobe-solution-configuration-parameters)Adobe suportados.
+Para obter uma lista completa dos parâmetros suportados para diferentes soluções de Adobe, consulte a seção do apêndice sobre os parâmetros [de configuração da solução de](#adobe-solution-configuration-parameters)Adobe suportados.
 
 ## Amostras de código
 
@@ -179,14 +179,14 @@ Esta seção contém informações adicionais para o uso do [!DNL Privacy JS Lib
 
 ### Parâmetros de configuração da solução Adobe
 
-A seguir está uma lista dos parâmetros de configuração aceitos para as soluções da Adobe suportadas, usados ao [instanciar um objeto](#instantiate-the-privacy-js-library)Adobe Privacy.
+A seguir está uma lista dos parâmetros de configuração aceitos para as soluções de Adobe compatíveis, usados ao [instanciar um objeto](#instantiate-the-privacy-js-library)Adobe Privacy.
 
 **Adobe Analytics**
 
 | Parâmetro | Descrição |
 | --- | --- |
 | `cookieDomainPeriods` | O número de períodos em um domínio para o rastreamento de cookies (o padrão é 2). |
-| `dataCenter` | Centro de dados de coleta de dados da Adobe. Isso só deve ser incluído se for especificado no beacon da Web do JavaScript. Os valores potenciais são: <ul><li>&quot;d1&quot;: Data center de San Jose.</li><li>&quot;d2&quot;: Data center de Dallas.</li></ul> |
+| `dataCenter` | data center de coleta de dados do Adobe. Isso só deve ser incluído se for especificado no beacon da Web do JavaScript. Os valores potenciais são: <ul><li>&quot;d1&quot;: Data center de San Jose.</li><li>&quot;d2&quot;: Data center de Dallas.</li></ul> |
 | `reportSuite` | ID do conjunto de relatórios conforme especificado no beacon da Web JavaScript (por exemplo, &quot;s_code.js&quot; ou &quot;dtm&quot;). |
 | `trackingServer` | Domínio de coleta de dados (não SSL). Isso só deve ser incluído se for especificado no beacon da Web do JavaScript. |
 | `trackingServerSecure` | Domínio de coleta de dados (SSL). Isso só deve ser incluído se for especificado no beacon da Web do JavaScript. |

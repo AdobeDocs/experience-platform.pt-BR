@@ -31,7 +31,7 @@ ht-degree: 10%
    * Catálogo de destinos {#destinations-cat}
       * [Visão geral do catálogo de destinos](destinations/destinations-catalog.md)
       * Adobe destinations{#adobe-destinations}
-         * [Visão geral dos destinos da Adobe](destinations/adobe-destinations.md)
+         * [Visão geral dos destinos de Adobe](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Destinos de publicidade{#advertising-destinations}
          * [Visão geral de destinos de publicidade](destinations/advertising-destinations.md)
@@ -76,8 +76,8 @@ ht-degree: 10%
       * Destinos de armazenamentos na nuvem{#cloud-storage}
          * [Visão geral dos destinos de armazenamentos na nuvem](destinations/cloud-storage-destinations.md)
          * [Fluxo de trabalho para criar destinos de armazenamentos na nuvem](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
-         * [Destino da Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-         * [Destino do Amazon S3](destinations/amazon-s3-destination.md)
+         * [Destino Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+         * [Destino Amazon S3](destinations/amazon-s3-destination.md)
          * [Destino dos Hubs de Evento do Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destino SFTP](destinations/sftp-destination.md)
       * Destinos da Gestão de dados Platform {#dmp-destinations}
@@ -92,7 +92,7 @@ ht-degree: 10%
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [Extensão PebblePost](destinations/pebblepost-extension.md)
-         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
+         * [Marketing Cloud do Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Visão geral das extensões de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * Destinos de personalização {#personalization-destinations}
@@ -108,7 +108,7 @@ ht-degree: 10%
       * Destinos da rede social{#social-destinations}
          * [Visão geral dos destinos de rede social](/help/rtcdp/destinations/social-network-destinations.md)
          * [Fluxo de autenticação de destinos de rede social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
-         * [Extensão Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+         * [extensão Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Destino do Facebook](/help/rtcdp/destinations/facebook-destination.md)
       * Destinos da Pesquisa {#survey-destinations}
          * [Visão geral dos destinos de Pesquisa](/help/rtcdp/destinations/survey-destinations.md)
@@ -126,12 +126,12 @@ ht-degree: 10%
       * [Conectar-se a um destino](/help/rtcdp/destinations/connect-destination.md)
       * [Ativar perfis e segmentos em um destino](destinations/activate-destinations.md)
    * Tutoriais da API de destino {#api-tutorials}
-      * [Conecte-se aos destinos de streaming (AWS Kinesis e Hubs de Evento do Azure) e ative os dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Conecte-se aos destinos de streaming (Kinesis AWS e Hubs de Evento do Azure) e ative os dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Conectar-se aos destinos de marketing de email e ativar dados](/help/tutorials/destinations/email-marketing-api.md)
 * Privacidade e controle de dados {#privacy}
    * [Visão geral de privacidade](privacy/privacy-overview.md)
    * [Visão geral do controle de dados](privacy/data-governance-overview.md)
-* Profiles {#profile}
+* Perfis {#profile}
    * [Visão geral do Perfil](profile/profile-overview.md)
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
    * [Mesclar políticas](profile/merge-policies.md)

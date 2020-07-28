@@ -4,17 +4,42 @@ seo-title: Ajuda do Adobe Experience Platform Web SDK
 description: Saiba o que é o Adobe Experience Platform Web SDK e como ele pode ser usado.
 seo-description: permita que os clientes da Adobe Experience Cloud interajam com os vários serviços no Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 0%
+source-wordcount: '702'
+ht-degree: 2%
 
 ---
 
 
 # O que é o Adobe Experience Platform Web SDK
 
-O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes da Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] através da Adobe [!DNL Experience Platform Edge Network].
+O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes da Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] através da Adobe [!DNL Experience Platform Edge Network]. Além da biblioteca JavaScript, há uma extensão [](https://docs.adobe.com/content/help/pt-BR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Launch para ajudar nas configurações do SDK da Web.
+
+## Experience Edge
+
+[!DNL Adobe Experience Platform Web SDK] faz parte da coleção que compõe o Experience Edge. O Experience Edge consiste em três tecnologias:
+
+* **[!DNL Adobe Experience Platform Web SDK]:**Um SDK e uma extensão JavaScript para simplificar consideravelmente[!DNL Launch]as[!DNL Adobe]tecnologias de implantação
+* **Adobe Experience Platform Mobile SDK:** Uma extensão do SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
+* **[!DNL Adobe Experience Platform Edge Network]:**Uma rede global distribuída de servidores que permite uma nova metodologia de implantação de[!DNL Adobe]produtos
+
+A [!DNL Adobe Experience Edge] é uma nova estrutura para coleta de dados de baixa latência, computação conectável e ativação rápida de dados em todos os canais endereçáveis.
+
+[!DNL Adobe Experience Edge] fornece um único SDK consolidado para cada canal (JavaScript, Mobile, lado do servidor), que envia dados para um domínio Adobe comum (`adobedc.net`) e recebe uma única carga para delivery de dados e experiência.
+
+No lado do servidor, um gateway de borda unificada e uma estrutura de serviços de plataforma comum facilitam o plug-in e a implantação de novos recursos neste ambiente de computação em tempo real.  Essa arquitetura:
+
+* Diminui o tempo de implantação do cliente
+* Termina a necessidade de integrações &quot;point&quot;
+* Melhora o desempenho em relação às bibliotecas antigas
+* Diminui os custos
+* Aumenta a velocidade da inovação
+* Cria vantagens competitivas sustentadas para clientes Adobe
+
+Um único sistema de borda consolidado permite que os clientes gerenciem suas campanhas de publicidade, marketing ou personalização em todos os canais como uma experiência integrada.  Ele permite [!DNL Adobe] fornecer serviços com menor custo total de propriedade para os clientes.  Também ajuda a aumentar a velocidade da inovação do produto, tornando a borda em tempo real disponível e permitindo que [!DNL Adobe] e seus clientes adicionem mais rapidamente novos recursos e a lógica definida pelo cliente a esse sistema em tempo real.
+
+## Vídeo de visão geral
 
 O vídeo a seguir fornece uma visão geral do Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network].
 
@@ -37,14 +62,13 @@ O vídeo a seguir demonstra o Adobe Experience Platform [!DNL Web SDK] e [!DNL E
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-
 ## Introdução
 
 Recomendamos que você [confira nosso guia](getting-started/quick-start-with-launch.md) de introdução para obter um tutorial rápido sobre como começar a usar o Adobe Launch.
 
 Este produto está em constante evolução e crescendo para suportar cada vez mais casos de uso. Para acompanhar as últimas novidades, verifique nossa placa [de casos de uso](https://github.com/adobe/alloy/projects/5)suportados. Mantemos isso atualizado com os casos de uso que apoiamos atualmente e aqueles em que estamos trabalhando para permitir que você tome as melhores decisões possíveis.
 
-* __Casos de uso ainda não suportados__ - Esses são casos de uso que estão em nosso roteiro para serem suportados no futuro.
-* __Casos de uso em andamento__ - Estes são os casos de uso que a equipe está trabalhando atualmente para concluir o lançamento.
-* __Casos__ de uso suportados - Estes são os casos de uso suportados e que funcionam hoje.
-* __Casos de uso que não vamos suportar__ - Estes são os casos de uso que tomamos a decisão de não apoiar.
+* **Casos De Uso Ainda Não Suportados:** Estes são casos de uso que estão no nosso roteiro para serem apoiados no futuro.
+* **Casos De Uso Em Andamento:** Estes são os casos de uso que a equipe está trabalhando para concluir para lançamento.
+* **Casos de uso suportados:** Estes são os casos de uso suportados e que funcionam hoje.
+* **Casos de uso que não serão suportados:** Estes são os casos de utilização que tomámos a decisão de não apoiar.

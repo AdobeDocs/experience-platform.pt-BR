@@ -17,7 +17,7 @@ ht-degree: 5%
 Este guia o guia pelas diferentes maneiras de configurar o SDK da Web do Adobe Experience Platform no Launch. Para usar esse recurso, é necessário incluir uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
 - Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para Analytics, use esse. Testar no desenvolvimento funciona sem um CNAME, mas é necessário um antes de ir para a produção.
-- Tenha direito ao Adobe Experience Platform. Se você não tiver comprado a Platform, a Adobe fornecerá a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custo extra.
+- Tenha direito ao Adobe Experience Platform. Se você não tiver comprado a Platform, a Adobe fornecerá a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
 - Use a versão mais recente do serviço de ID de Visitante.
 
 ## Criar uma ID de configuração
@@ -51,7 +51,7 @@ Em Iniciar, crie um Elemento de dados que faça referência ao schema alterando 
 
 ## Enviar um evento
 
-Depois que a extensão é instalada, o start envia eventos adicionando uma `sendEvent` ação da extensão AEP Web SDK a uma regra. Adicione o elemento de dados que você acabou de criar ao evento como os dados XDM. A Adobe recomenda que você envie pelo menos um evento sempre que uma página for carregada.
+Depois que a extensão é instalada, o start envia eventos adicionando uma `sendEvent` ação da extensão AEP Web SDK a uma regra. Adicione o elemento de dados que você acabou de criar ao evento como os dados XDM. O Adobe recomenda que você envie pelo menos um evento sempre que uma página for carregada.
 
 Para obter mais detalhes sobre como rastrear eventos, consulte [Rastreamento de Eventos](../fundamentals/tracking-events.md).
 

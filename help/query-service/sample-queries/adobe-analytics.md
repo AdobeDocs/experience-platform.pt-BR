@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # query de amostra para dados do Adobe Analytics
 
-Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM [!DNL ExperienceEvents] e assimilados em Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] utiliza esses dados, e os query de amostra incluídos devem funcionar com seus conjuntos de dados da Adobe Analytics. Consulte a documentação [de mapeamento de campo da](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obter mais informações sobre o mapeamento para XDM [!DNL ExperienceEvents].
+Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM [!DNL ExperienceEvents] e assimilados em conjuntos de dados Adobe Experience Platform para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] utiliza esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados Adobe Analytics. Consulte a documentação [de mapeamento de campo da](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obter mais informações sobre o mapeamento para XDM [!DNL ExperienceEvents].
 
 ## Introdução
 
-Os exemplos SQL deste documento exigem que você edite o SQL e preencha os parâmetros esperados para seus query com base no conjunto de dados, eVar, evento ou período em que você está interessado na avaliação. Forneça parâmetros onde quer que você veja `{ }` os exemplos de SQL a seguir.
+Os exemplos SQL deste documento exigem que você edite o SQL e preencha os parâmetros esperados para seus query com base no conjunto de dados, no eVar, no evento ou no período em que você está interessado em avaliar. Forneça parâmetros onde quer que você veja `{ }` os exemplos de SQL a seguir.
 
 ## Exemplos SQL usados com frequência
 
@@ -129,7 +129,7 @@ ORDER BY Hour;
 
 ## Variáveis de comercialização (sintaxe de produto)
 
-No Adobe Analytics, dados personalizados em nível de produto podem ser coletados por meio de variáveis especialmente configuradas chamadas &quot;Variáveis de comercialização&quot;. Eles são baseados em um Evento personalizado ou eVar. A diferença entre essas variáveis e seu uso padrão é que elas representam um valor separado para cada produto encontrado na ocorrência, em vez de apenas um valor para a ocorrência. Essas variáveis são chamadas de Variáveis de comercialização de sintaxe de produto. Isso permite a coleta de informações como uma &quot;quantia de desconto&quot; por produto ou informações sobre a &quot;localização na página&quot; do produto nos resultados de pesquisa do cliente.
+No Adobe Analytics, dados personalizados de nível de produto podem ser coletados por meio de variáveis especialmente configuradas chamadas de &quot;Variáveis de comercialização&quot;. Eles são baseados em um eVar ou Evento personalizado. A diferença entre essas variáveis e seu uso padrão é que elas representam um valor separado para cada produto encontrado na ocorrência, em vez de apenas um valor para a ocorrência. Essas variáveis são chamadas de Variáveis de comercialização de sintaxe de produto. Isso permite a coleta de informações como uma &quot;quantia de desconto&quot; por produto ou informações sobre a &quot;localização na página&quot; do produto nos resultados de pesquisa do cliente.
 
 Estes são os campos XDM para acessar as variáveis de comercialização em seu [!DNL Analytics] conjunto de dados:
 
@@ -139,7 +139,7 @@ Estes são os campos XDM para acessar as variáveis de comercialização em seu 
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-Onde `[#]` é um índice de matriz e `evar#` é a variável eVar específica.
+Onde `[#]` é um índice de matriz e `evar#` é a variável de eVar específica.
 
 ### Eventos personalizados
 
@@ -151,7 +151,7 @@ Onde `[#]` é um índice de matriz e `event#` é a variável de evento personali
 
 ### query de amostra
 
-Este é um exemplo de query que retorna uma eVar de comercialização e um evento para o primeiro produto encontrado no `productListItems`.
+Este é um query de amostra que retorna um eVar e um evento de comercialização para o primeiro produto encontrado no `productListItems`.
 
 ```sql
 SELECT
@@ -165,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Esse próximo query &quot;explode&quot; o e retorna cada eVar de comercialização e cada evento por produto. `productListItems` O `_id` campo é incluído para mostrar a relação com a ocorrência original. O `_id` valor é uma chave primária exclusiva no [!DNL ExperienceEvent] conjunto de dados.
+Esse próximo query &quot;explode&quot; o e retorna cada eVar de comercialização e evento por produto. `productListItems` O `_id` campo é incluído para mostrar a relação com a ocorrência original. O `_id` valor é uma chave primária exclusiva no [!DNL ExperienceEvent] conjunto de dados.
 
 ```sql
 SELECT
@@ -195,21 +195,21 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## Variáveis de comercialização (sintaxe de conversão)
 
-Outro tipo de Variável de comercialização encontrada no Adobe Analytics é Sintaxe de conversão. Com a Sintaxe do produto, o valor é coletado ao mesmo tempo que o produto, mas isso requer que os dados estejam presentes na mesma página. Há cenários em que os dados ocorrem em uma página antes da conversão ou do evento de interesse relacionado ao produto. Por exemplo, considere o caso de uso do relatórios Método de descoberta de produto.
+Outro tipo de Variável de comercialização encontrado no Adobe Analytics é Sintaxe de conversão. Com a Sintaxe do produto, o valor é coletado ao mesmo tempo que o produto, mas isso requer que os dados estejam presentes na mesma página. Há cenários em que os dados ocorrem em uma página antes da conversão ou do evento de interesse relacionado ao produto. Por exemplo, considere o caso de uso do relatórios Método de descoberta de produto.
 
-1. Um usuário realiza uma pesquisa interna por &quot;chapéu de inverno&quot;, que define a eVar6 de comercialização ativada pela Sintaxe de conversão como &quot;pesquisa interna:chapéu de inverno&quot;
+1. Um usuário realiza uma pesquisa interna por &quot;chapéu de inverno&quot;, que define o eVar 6 de comercialização ativado pela Sintaxe de conversão como &quot;pesquisa interna:chapéu de inverno&quot;
 2. O usuário clica em &quot;waffle beanie&quot; e chega à página de detalhes do produto.\
    a. Aterrissando aqui dispara um `Product View` evento para o &quot;waffle beanie&quot; por $12,99.\
-   b. Como `Product View` está configurado como um evento de ligação, o produto &quot;waffle beanie&quot; agora está vinculado ao valor de eVar6 de &quot;pesquisa interna:chapéu de inverno&quot;. Sempre que o produto &quot;waffle beanie&quot; for coletado, ele será associado a &quot;pesquisa interna:chapéu de inverno&quot; até que (1) a configuração de expiração seja atingida ou (2) um novo valor de eVar6 seja definido e o evento de vinculação ocorra novamente com esse produto.
+   b. Como `Product View` está configurado como um evento de ligação, o produto &quot;waffle beanie&quot; agora está vinculado ao valor eVar6 de &quot;pesquisa interna:chapéu de inverno&quot;. Sempre que o produto &quot;waffle beanie&quot; for coletado, ele será associado a &quot;pesquisa interna:chapéu de inverno&quot; até que (1) a configuração de expiração seja atingida ou (2) um novo valor de eVar6 seja definido e o evento de vinculação ocorra novamente com esse produto.
 3. O usuário adiciona o produto ao carrinho, disparando o `Cart Add` evento.
-4. O usuário realiza outra pesquisa interna por &quot;camisa de verão&quot;, que define a eVar6 de comercialização habilitada pela Sintaxe de conversão como &quot;pesquisa interna:camisa de verão&quot;
+4. O usuário realiza outra pesquisa interna por &quot;camisa de verão&quot;, que define o eVar 6 de comercialização ativado pela Sintaxe de conversão como &quot;pesquisa interna:camisa de verão&quot;
 5. O usuário clica em &quot;t-shirt esportiva&quot; e chega à página de detalhes do produto.\
    a. Aterrissando aqui dispara um `Product View` evento de &quot;camiseta esportiva por $19,99.\
-   b. O `Product View` evento ainda é nosso evento de ligação, então agora o produto &quot;t-shirt esportiva&quot; está vinculado ao valor eVar6 de &quot;pesquisa interna:camisa de verão&quot; e o produto anterior &quot;waffle beanie&quot; ainda está vinculado a um valor eVar6 de &quot;pesquisa interna:waffle beanie&quot;.
+   b. O `Product View` evento ainda é nosso evento de ligação, então agora o produto &quot;camiseta esportiva&quot; está vinculado ao valor eVar6 de &quot;pesquisa interna:camisa de verão&quot; e o produto anterior &quot;waffle beanie&quot; ainda está vinculado a um valor eVar6 de &quot;pesquisa interna:waffle beanie&quot;.
 6. O usuário adiciona o produto ao carrinho, disparando o `Cart Add` evento.
 7. O usuário faz check-out com ambos os produtos.
 
-No relatórios, os pedidos, a receita, as visualizações de produtos e as adições ao carrinho serão relatáveis em relação à eVar6 e serão alinhados à atividade do produto vinculado.
+No relatórios, os pedidos, a receita, as visualizações de produtos e as adições ao carrinho serão relatáveis em relação ao eVar6 e serão alinhados à atividade do produto vinculado.
 
 | eVar6 (Método de descoberta do produto) | receita | ordens | visualizações de produtos | adição ao carrinho |
 |---|---|---|---|---|
@@ -224,7 +224,7 @@ Estes são os campos XDM para produzir a Sintaxe de conversão no seu [!DNL Anal
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-Onde `evar#` é a variável eVar específica.
+Onde `evar#` está a variável de eVar específica.
 
 ### Produto
 

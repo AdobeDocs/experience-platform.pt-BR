@@ -29,7 +29,7 @@ Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) de
 
 ## Criar uma classe ad-hoc
 
-O comportamento de dados de um schema XDM é determinado pela classe subjacente. A primeira etapa na criação de um schema ad-hoc é criar uma classe com base no `adhoc` comportamento. Isso é feito fazendo uma solicitação POST ao `/tenant/classes` terminal.
+O comportamento de dados de um schema XDM é determinado pela classe subjacente. A primeira etapa na criação de um schema ad-hoc é criar uma classe com base no `adhoc` comportamento. Isso é feito fazendo uma solicitação POST ao `/tenant/classes` endpoint.
 
 **Formato da API**
 
@@ -148,7 +148,7 @@ Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nom
 
 ## Criar um schema ad-hoc
 
-Depois de criar uma classe ad-hoc, você pode criar um novo schema que implemente essa classe, fazendo uma solicitação POST para o `/tenant/schemas` ponto de extremidade.
+Depois de criar uma classe ad-hoc, você pode criar um novo schema que implementa essa classe, fazendo uma solicitação POST para o `/tenant/schemas` endpoint.
 
 **Formato da API**
 
@@ -225,7 +225,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema recém-criado, incluindo
 >
 >Esta etapa é opcional. Se você não quiser inspecionar a estrutura de campo do seu schema ad-hoc, vá para a seção de [próximas etapas](#next-steps) no final deste tutorial.
 
-Depois que o schema ad-hoc for criado, você poderá fazer uma solicitação de pesquisa (GET) para visualização o schema em seu formulário expandido. Isso é feito usando o cabeçalho Accept apropriado na solicitação GET, como demonstrado abaixo.
+Depois que o schema ad-hoc for criado, você poderá fazer uma solicitação de pesquisa (GET) para visualização do schema em seu formulário expandido. Isso é feito usando o cabeçalho Aceitar apropriado na solicitação do GET, como demonstrado abaixo.
 
 **Formato da API**
 

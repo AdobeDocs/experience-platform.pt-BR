@@ -116,4 +116,4 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que con
 }
 ```
 
-A execução de uma solicitação GET para lista de todos os tipos de dados no container locatário agora inclui o tipo de dados Construção da propriedade. Você também pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização o novo tipo de dados diretamente. Certifique-se de incluir o `version` no cabeçalho Aceitar para uma solicitação de pesquisa.
+A execução de uma solicitação de GET para lista de todos os tipos de dados no container locatário agora inclui o tipo de dados Construção da propriedade. Você também pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização do novo tipo de dados diretamente. Certifique-se de incluir o `version` no cabeçalho Aceitar para uma solicitação de pesquisa.

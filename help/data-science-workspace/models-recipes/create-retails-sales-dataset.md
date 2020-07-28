@@ -26,7 +26,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client secret: `{CLIENT_SECRET}`
    - Certificado do cliente: `{PRIVATE_KEY}`
-- Dados de amostra e arquivos de origem para a Receita [de Vendas de](../pre-built-recipes/retail-sales.md)Varejo. Baixe os ativos necessários para este e outros [!DNL Data Science Workspace] tutoriais do repositório [do Git público da](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
+- Dados de amostra e arquivos de origem para a Receita [de Vendas de](../pre-built-recipes/retail-sales.md)Varejo. Baixe os ativos necessários para este e outros [!DNL Data Science Workspace] tutoriais do repositório [Git público do](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
 - [Python >= 2.7](https://www.python.org/downloads/) e as seguintes [!DNL Python] embalagens:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)

@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # query de amostra
 
-Os dados da solução Adobe Experience Cloud estão disponíveis originalmente em [!DNL Experience Platform]. Pela primeira vez, você pode query dados do Adobe Analytics, Adobe Target, Adobe Campaign e Adobe Audience Manager do mesmo armazenamento de dados sem precisar mover os dados. À medida que os dados são ingeridos das soluções no Adobe Experience Platform, eles são transformados em [!DNL Experience Event Experience Data Model] (Experience Evento XDM). Isso fornece uma camada de normalização do schema.
+Os dados da solução Adobe Experience Cloud estão disponíveis originalmente em [!DNL Experience Platform]. Pela primeira vez, você pode query dados Adobe Analytics, Adobe Target, Adobe Campaign e Adobe Audience Manager do mesmo armazenamento de dados sem precisar mover os dados. À medida que os dados são ingeridos das soluções no Adobe Experience Platform, eles são transformados em [!DNL Experience Event Experience Data Model] (Experience Evento XDM). Isso fornece uma camada de normalização do schema.
 
-Há vários query padrão que podem ser executados em relação aos dados da Adobe. Consulte os documentos abaixo para ver query de amostra para o Adobe Analytics e o Adobe Target. query de amostra para outros dados de solução serão adicionados no futuro.
+Há vários query padrão que podem ser executados em relação aos dados do Adobe. Consulte os documentos abaixo para ver query de amostra para Adobe Analytics e Adobe Target. query de amostra para outros dados de solução serão adicionados no futuro.
 
-- [query de exemplo do Adobe Analytics](adobe-analytics.md)
+- [query de exemplo da Adobe Analytics](adobe-analytics.md)
 - [query de amostra Adobe Target](adobe-target.md)

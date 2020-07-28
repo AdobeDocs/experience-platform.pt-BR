@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Criar um conector de origem do Azure Blob ou Amazon S3 na interface do usuário
+title: Criar um blob do Azure ou conector de origem do Amazon S3 na interface do usuário
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
@@ -62,7 +62,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria *[!UICONTROL Bancos]* de Dados, selecione **[!UICONTROL Azure Blob Armazenamento]** ou **[!UICONTROL Amazon S3]** , clique **no ícone + (+)** para criar um novo conector [!DNL Blob] ou S3.
+Na categoria *[!UICONTROL Bancos]* de Dados, selecione **[!UICONTROL Armazenamento]** Blob do Azure ou **[!UICONTROL Amazon S3]** clique **no ícone + (+)** para criar um novo conector [!DNL Blob] ou S3.
 
 ![catálogo](../../../../images/tutorials/create/blob/catalog.png)
 

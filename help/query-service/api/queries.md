@@ -20,7 +20,7 @@ As seções a seguir percorrem as chamadas que você pode fazer usando o `/queri
 
 ### Recuperar uma lista de query
 
-Você pode recuperar uma lista de todos os query para a sua Organização IMS fazendo uma solicitação GET ao `/queries` endpoint.
+Você pode recuperar uma lista de todos os query para a Organização IMS, fazendo uma solicitação de GET para o `/queries` endpoint.
 
 **Formato da API**
 
@@ -119,7 +119,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de query para 
 
 ### Criar um query
 
-Você pode criar um novo query fazendo uma solicitação POST no `/queries` ponto de extremidade.
+Você pode criar um novo query, fazendo uma solicitação de POST para o `/queries` terminal.
 
 **Formato da API**
 
@@ -202,7 +202,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 
 ### Recuperar um query por ID
 
-Você pode recuperar informações detalhadas sobre um query específico, fazendo uma solicitação GET para o `/queries` endpoint e fornecendo o `id` valor do query no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um query específico, fazendo uma solicitação de GET para o ponto final e fornecendo o `/queries` `id` valor do query no caminho da solicitação.
 
 **Formato da API**
 
@@ -273,7 +273,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ### Cancelar um query
 
-Você pode solicitar a exclusão de um query especificado, fazendo uma solicitação PATCH para o ponto de extremidade `/queries` e fornecendo o `id` valor do query no caminho da solicitação.
+Você pode solicitar a exclusão de um query especificado, fazendo uma solicitação de PATCH para o `/queries` endpoint e fornecendo o valor do query `id` no caminho da solicitação.
 
 **Formato da API**
 

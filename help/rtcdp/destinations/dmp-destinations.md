@@ -16,6 +16,6 @@ ht-degree: 0%
 
 [!DNL Data Management Platforms] (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
 
-Atualmente, a Adobe Real-time Customer Data Platform suporta os destinos de Platform de Gestão de dados (DMP) listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, a Adobe Real-time Customer Data Platform suporta os destinos Gestão de dados Platform (DMP) listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
 * [extensão Audience Manager DIL](/help/rtcdp/destinations/aam-dil-extension.md)

@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Pesquisar vários objetos
 
-Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] fornecer um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
+Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] fornecer um atalho simples para solicitar vários objetos do mesmo tipo. É possível usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista de IDs separada por vírgulas.
 
 >[!NOTE]
 >

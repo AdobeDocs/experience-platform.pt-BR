@@ -22,7 +22,7 @@ Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience
 
 ## Recuperar uma lista de programações {#retrieve-list}
 
-Você pode recuperar uma lista de todas as programações para sua Organização IMS, fazendo uma solicitação GET ao `/config/schedules` endpoint.
+Você pode recuperar uma lista de todas as programações para sua Organização IMS, fazendo uma solicitação de GET para o `/config/schedules` endpoint.
 
 **Formato da API**
 
@@ -103,7 +103,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamento
 
 ## Create a new schedule {#create}
 
-Você pode criar uma nova programação fazendo uma solicitação POST para o `/config/schedules` ponto de extremidade.
+Você pode criar uma nova programação fazendo uma solicitação POST para o `/config/schedules` endpoint.
 
 **Formato da API**
 
@@ -173,7 +173,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do agendamento 
 
 ## Recuperar uma programação específica {#get}
 
-Você pode recuperar informações detalhadas sobre uma programação específica fazendo uma solicitação GET ao ponto de `/config/schedules` extremidade e fornecendo a ID da programação que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um agendamento específico, fazendo uma solicitação de GET para o `/config/schedules` endpoint e fornecendo a ID do agendamento que deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -234,9 +234,9 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Atualizar detalhes de uma programação específica {#update}
 
-Você pode atualizar um agendamento específico, fazendo uma solicitação PATCH para o `/config/schedules` ponto de extremidade e fornecendo a ID do agendamento que você está tentando atualizar no caminho da solicitação.
+Você pode atualizar um agendamento específico, fazendo uma solicitação de PATCH para o `/config/schedules` endpoint e fornecendo a ID do agendamento que você está tentando atualizar no caminho da solicitação.
 
-A solicitação PATCH permite atualizar o [estado](#update-state) ou a programação [de](#update-schedule) cron para uma programação individual.
+A solicitação de PATCH permite atualizar o [estado](#update-state) ou a programação [de](#update-schedule) cron para uma programação individual.
 
 ### Atualizar estado do agendamento {#update-state}
 
@@ -322,7 +322,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo).
 
 ## Excluir uma programação específica
 
-Você pode solicitar a exclusão de uma programação específica, fazendo uma solicitação DELETE ao ponto de `/config/schedules` extremidade e fornecendo a ID da programação que deseja excluir no caminho da solicitação.
+Você pode solicitar a exclusão de uma programação específica, fazendo uma solicitação de DELETE para o `/config/schedules` ponto final e fornecendo a ID da programação que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 

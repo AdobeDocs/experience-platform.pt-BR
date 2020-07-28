@@ -5,13 +5,16 @@ title: Tipos de sandbox suportados pela Lista
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '47'
+ht-degree: 4%
 
 ---
 
 
 # Tipos de sandbox suportados pela Lista
 
-Você pode recuperar uma lista de tipos de sandbox suportados para sua organização, fazendo uma solicitação GET ao `/sandboxTypes` endpoint.
+Você pode recuperar uma lista de tipos de caixa de proteção suportados para sua organização, fazendo uma solicitação de GET para o `/sandboxTypes` ponto de extremidade.
 
 **Formato da API**
 

@@ -59,7 +59,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Explore seu armazenamento em nuvem
 
-Usando a conexão básica para seu armazenamento em nuvem, você pode explorar arquivos e diretórios executando solicitações GET. Ao executar solicitações GET para explorar seu armazenamento em nuvem, você deve incluir os parâmetros de query listados na tabela abaixo:
+Usando a conexão básica para seu armazenamento em nuvem, você pode explorar arquivos e diretórios executando solicitações de GET. Ao executar solicitações de GET para explorar seu armazenamento em nuvem, você deve incluir os parâmetros de query listados na tabela abaixo:
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
@@ -110,9 +110,9 @@ Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no
 ]
 ```
 
-## Inspecione a estrutura de um arquivo
+## Inspect a estrutura de um arquivo
 
-Para inspecionar a estrutura do arquivo de dados do seu armazenamento em nuvem, execute uma solicitação GET enquanto fornece o caminho do arquivo como um parâmetro de query.
+Para inspecionar a estrutura do arquivo de dados do seu armazenamento em nuvem, execute uma solicitação de GET enquanto fornece o caminho do arquivo como um parâmetro de query.
 
 **Formato da API**
 

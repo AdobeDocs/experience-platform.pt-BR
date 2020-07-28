@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >Diferentemente de outros pontos de extremidade fornecidos na API do Sandbox, esse ponto de extremidade está disponível para todos os usuários, incluindo aqueles sem permissões de acesso à Administração do Sandbox.
 
-Você pode lista as caixas de proteção que estão ativas para o usuário atual, fazendo uma solicitação GET para o ponto de extremidade raiz (`/`).
+Você pode lista as caixas de proteção que estão ativas para o usuário atual, fazendo uma solicitação de GET para o ponto de extremidade raiz (`/`).
 
 **Formato da API**
 

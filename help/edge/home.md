@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # O que é o Adobe Experience Platform Web SDK
 
-O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes da Adobe Experience Cloud interajam com os vários serviços do [!DNL Experience Cloud] por meio da Adobe [!DNL Experience Platform Edge Network].
+O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes da Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] através da Adobe [!DNL Experience Platform Edge Network].
 
 O vídeo a seguir fornece uma visão geral do Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network].
 
@@ -31,9 +31,9 @@ O Adobe Experience Platform Web SDK substitui os seguintes SDKs:
 
 Isto não é apenas um invólucro em torno das bibliotecas existentes. É uma reescrita completa. Seu objetivo é acabar com os desafios com tags que precisam ser acionadas na ordem correta, inconsistência com os desafios do controle de versão da biblioteca e gerenciamento de melhor dependência. Trata-se de uma nova forma de implementar o acervo comunitário [!DNL Experience Cloud] e é [open source](https://github.com/adobe/alloy).
 
-Além de uma nova biblioteca, há um novo terminal que simplifica as solicitações HTTP para as soluções da Adobe. Antes, o Visitante.js enviava uma chamada de bloqueio para o serviço de ID do visitante, depois o AT.js enviava uma chamada para o Adobe Target, o DIL.js enviava uma chamada para o Adobe Audience Manager e, por fim, o AppMeasurement.js enviava uma chamada para o Adobe Analytics. Essa nova biblioteca e terminal podem recuperar uma ID, buscar uma [!DNL Target] experiência, enviar dados para [!DNL Audience Manager]e passar os dados para o Adobe Experience Platform em uma única chamada.
+Além de uma nova biblioteca, há um novo terminal que simplifica as solicitações HTTP para as soluções de Adobe. Antes, o Visitante.js enviava uma chamada de bloqueio para o serviço de ID do visitante, depois o AT.js enviava uma chamada para o Adobe Target, o DIL.js enviava uma chamada para o Adobe Audience Manager e, por fim, o AppMeasurement.js enviava uma chamada para a Adobe Analytics. Essa nova biblioteca e terminal podem recuperar uma ID, buscar uma [!DNL Target] experiência, enviar dados para [!DNL Audience Manager]e passar os dados para o Adobe Experience Platform em uma única chamada.
 
-O vídeo a seguir demonstra o Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network] em ação. O exemplo de vídeo usa uma única chamada para a Adobe que envia dados para [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
+O vídeo a seguir demonstra o Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network] em ação. O exemplo de vídeo usa uma única chamada para Adobe, que envia dados para [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 

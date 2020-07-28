@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics
 solution: Experience Platform
-title: Acessar pontuações no AI de atribuição
+title: Acessar pontuações no Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,19 +12,19 @@ ht-degree: 2%
 ---
 
 
-# Download de pontuações no AI de atribuição
+# Download de pontuações no Attribution AI
 
-Este documento serve como guia para baixar pontuações para a Atribuição AI.
+Este documento serve como guia para o download das pontuações do Attribution AI.
 
 ## Introdução
 
-O AI de atribuição permite baixar pontuações no formato de arquivo de parâmetro. Este tutorial requer que você tenha lido e concluído o download da seção de Pontuações AI de atribuição no guia de [introdução](./getting-started.md) .
+O Attribution AI permite baixar pontuações no formato de arquivo de parquet. Este tutorial requer que você tenha lido e concluído o download da seção de pontuações do Attribution AI no guia de [introdução](./getting-started.md) .
 
-Além disso, para acessar as pontuações da Atribuição AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [do usuário da](./user-guide.md)Atribuição AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Além disso, para acessar as pontuações do Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
 
 ## Find your dataset ID {#dataset-id}
 
-Em sua instância de serviço para insights de AI de atribuição, clique na lista suspensa *Mais ações* na navegação superior direita e selecione Pontuações **[!UICONTROL de]** acesso.
+Na instância de serviço para obter insights de Attribution AI, clique na lista suspensa *Mais ações* na navegação superior direita e selecione Pontuações **[!UICONTROL de]** acesso.
 
 ![mais ações](./images/download-scores/more-actions.png)
 
@@ -112,7 +112,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto de ID de lote. Ne
 
 ## Recuperar a próxima chamada de API com sua ID de lote {#retrieve-the-next-api-call-with-your-batch-id}
 
-Depois de ter a ID do lote, você poderá fazer uma nova solicitação GET para `/batches`. A solicitação retorna um link usado como a próxima solicitação de API.
+Depois de ter a ID do lote, você poderá fazer uma nova solicitação de GET para `/batches`. A solicitação retorna um link usado como a próxima solicitação de API.
 
 **Formato da API**
 
@@ -166,7 +166,7 @@ Uma resposta bem-sucedida retorna uma carga que contém um `_links` objeto. Dent
 
 ## Recuperar seus arquivos {#retrieving-your-files}
 
-Usando o `href` valor obtido na etapa anterior como uma chamada de API, faça uma nova solicitação GET para recuperar seu diretório de arquivos.
+Usando o `href` valor obtido na etapa anterior como uma chamada de API, faça uma nova solicitação de GET para recuperar seu diretório de arquivos.
 
 **Formato da API**
 
@@ -214,14 +214,14 @@ A resposta contém uma matriz de dados que pode ter uma única entrada ou uma li
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `_links.self.href` | O URL de solicitação GET usado para baixar um arquivo em seu diretório. |
+| `_links.self.href` | O URL de solicitação de GET usado para baixar um arquivo em seu diretório. |
 
 
 Copie o `href` valor para qualquer objeto de arquivo na `data` matriz e prossiga para a próxima etapa.
 
 ## Baixar seus dados de arquivo
 
-Para baixar os dados do arquivo, faça uma solicitação GET para o `"href"` valor copiado na etapa anterior para [recuperar os arquivos](#retrieving-your-files).
+Para baixar os dados do arquivo, faça uma solicitação de GET para o `"href"` valor copiado na etapa anterior [que recupera os arquivos](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -251,7 +251,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação GET.
+>Verifique se você está no diretório ou pasta corretos na qual deseja salvar o arquivo antes de fazer a solicitação de GET.
 
 **Resposta**
 
@@ -261,19 +261,19 @@ A resposta baixa o arquivo solicitado no diretório atual. Neste exemplo, o nome
 
 ## Próximas etapas
 
-Este documento descreveu as etapas necessárias para baixar as pontuações da Atribuição AI. Agora você pode continuar navegando pelos outros serviços [e guias](../home.md) inteligentes oferecidos.
+Este documento descreveu as etapas necessárias para o download das pontuações dos Attribution AI. Agora você pode continuar navegando pelos outros serviços [e guias](../home.md) inteligentes oferecidos.
 
-## Acessar pontuações usando Floco de Neve
+## Acessar pontuações usando o Snowflake
 
 >[!IMPORTANT]
 >
->Entre em contato com attributionai-support@adobe.com para obter mais detalhes sobre como acessar as pontuações usando o SnowFlake.
+>Entre em contato com attributionai-support@adobe.com para obter mais detalhes sobre como acessar as pontuações usando o Snowflake.
 
-Você pode acessar as pontuações agregadas da Atribuição AI por meio do Floco de neve. Atualmente, você precisa enviar um email para o suporte da Adobe em attributionai-support@adobe.com para configurar e receber as credenciais da sua conta de leitor para o Floco de neve.
+Você pode acessar as pontuações de Attribution AI agregadas através do Snowflake. Atualmente, você precisa enviar o suporte para o Adobe por email em attributionai-support@adobe.com para configurar e receber as credenciais da sua conta de leitor para o Snowflake.
 
-Depois que o suporte da Adobe tiver processado sua solicitação, você receberá um URL para a conta do leitor para Snowflake e as credenciais correspondentes abaixo:
+Depois que o suporte ao Adobe tiver processado sua solicitação, você receberá um URL para a conta do leitor como Snowflake e as credenciais correspondentes abaixo:
 
-- URL do floco de neve
+- Snowflake URL
 - Nome do usuário
 - Password
 
@@ -283,9 +283,9 @@ Depois que o suporte da Adobe tiver processado sua solicitação, você receber�
 
 Depois de ter suas credenciais e URL, você pode query as tabelas de modelo, agregadas por data do ponto de contato ou data de conversão.
 
-### Encontrar seu schema em Floco de Neve
+### Encontrar seu schema no Snowflake
 
-Usando as credenciais fornecidas, faça logon no Floco de neve. Clique na guia **Planilhas** na navegação principal superior esquerda e navegue até o diretório do banco de dados no painel esquerdo.
+Usando as credenciais fornecidas, faça logon no Snowflake. Clique na guia **Planilhas** na navegação principal superior esquerda e navegue até o diretório do banco de dados no painel esquerdo.
 
 ![Planilhas e navegação](./images/download-scores/edited_snowflake_1.png)
 
@@ -293,12 +293,12 @@ Em seguida, clique em **Selecionar Schema** no canto superior direito da tela. N
 
 ![localizar um schema](./images/download-scores/edited_snowflake_2.png)
 
-## Conectando o Power BI ao Floco de neve (opcional)
+## Conectando o PowerBI ao Snowflake (opcional)
 
-Suas credenciais do Snowflake podem ser usadas para configurar uma conexão entre os bancos de dados Power BI Desktop e Snowflake.
+Suas credenciais de Snowflake podem ser usadas para configurar uma conexão entre os bancos de dados PowerBI Desktop e Snowflake.
 
-Primeiro, na caixa *Servidor* , digite o URL do floco de neve. Em seguida, em *Warehouse*, digite &quot;XSMALL&quot;. Em seguida, digite seu nome de usuário e senha.
+Primeiro, na caixa *Servidor* , digite o URL do Snowflake. Em seguida, em *Warehouse*, digite &quot;XSMALL&quot;. Em seguida, digite seu nome de usuário e senha.
 
 ![exemplo de POWERBI](./images/download-scores/powerbi-snowflake.png)
 
-Depois que a conexão for estabelecida, selecione seu banco de dados Snowflake e selecione o schema apropriado. Agora você pode carregar todas as tabelas.
+Depois que a conexão for estabelecida, selecione seu banco de dados de Snowflake e, em seguida, selecione o schema apropriado. Agora você pode carregar todas as tabelas.

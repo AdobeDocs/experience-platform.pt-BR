@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Access control] guia do desenvolvedor
 
-[!DNL Access control] for [!DNL Experience Platform] administrado por meio do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção. Consulte a visão geral [do](../home.md) controle de acesso para obter mais informações.
+[!DNL Access control] for [!DNL Experience Platform] administrado através do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção. Consulte a visão geral [do](../home.md) controle de acesso para obter mais informações.
 
 Este guia do desenvolvedor fornece informações sobre como formatar suas solicitações para o [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)e abrange as seguintes operações:
 

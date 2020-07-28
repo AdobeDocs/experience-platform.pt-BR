@@ -186,4 +186,4 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que con
 }
 ```
 
-A execução de uma solicitação GET para lista de todas as combinações no container locatário agora inclui a combinação Detalhes do veículo ou você pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização da nova mixina diretamente. Lembre-se de incluir o `version` no cabeçalho Aceitar para todas as solicitações de pesquisa.
+A execução de uma solicitação de GET para lista de todas as combinações no container locatário agora inclui a combinação Detalhes do veículo, ou você pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização direta da nova combinação. Lembre-se de incluir o `version` no cabeçalho Aceitar para todas as solicitações de pesquisa.

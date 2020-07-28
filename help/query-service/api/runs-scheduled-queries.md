@@ -20,7 +20,7 @@ Agora que você entende quais cabeçalhos devem ser usados, você está pronto p
 
 ### Recuperar uma lista de todas as execuções de um query agendado especificado
 
-Você pode recuperar uma lista de todas as execuções para um query programado específico, independentemente de elas estarem em execução ou já concluídas. Isso é feito fazendo uma solicitação GET para o `/schedules/{SCHEDULE_ID}/runs` terminal, onde `{SCHEDULE_ID}` é o `id` valor do query agendado cujas execuções você deseja recuperar.
+Você pode recuperar uma lista de todas as execuções para um query programado específico, independentemente de elas estarem em execução ou já concluídas. Isso é feito fazendo uma solicitação de GET para o ponto de extremidade, onde `/schedules/{SCHEDULE_ID}/runs` é o `{SCHEDULE_ID}` `id` valor do query agendado cujas execuções você deseja recuperar.
 
 **Formato da API**
 
@@ -153,7 +153,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 
 ### Acionar imediatamente uma execução para um query programado específico
 
-Você pode disparar imediatamente uma execução para um query programado especificado fazendo uma solicitação POST para o `/schedules/{SCHEDULE_ID}/runs` ponto final, onde `{SCHEDULE_ID}` é o `id` valor do query programado cuja execução você deseja acionar.
+Você pode disparar imediatamente uma execução para um query programado especificado fazendo uma solicitação de POST para o `/schedules/{SCHEDULE_ID}/runs` ponto final, onde `{SCHEDULE_ID}` é o `id` valor do query programado cuja execução você deseja acionar.
 
 **Formato da API**
 
@@ -184,7 +184,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Recuperar detalhes de uma execução para um query agendado específico
 
-Você pode recuperar detalhes sobre uma execução para um query programado específico, fazendo uma solicitação GET ao `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` terminal e fornecendo a ID do query programado e a execução no caminho da solicitação.
+Você pode recuperar detalhes sobre uma execução para um query programado específico, fazendo uma solicitação de GET para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` terminal e fornecendo a ID do query programado e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -245,7 +245,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da execução e
 
 ### Interromper imediatamente uma execução para um query programado específico
 
-Você pode interromper imediatamente uma execução de um query programado específico fazendo uma solicitação PATCH para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` ponto final e fornecendo a ID do query programado e a execução no caminho da solicitação.
+Você pode interromper imediatamente uma execução de um query programado específico, fazendo uma solicitação de PATCH para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` ponto final e fornecendo a ID do query programado e a execução no caminho da solicitação.
 
 **Formato da API**
 

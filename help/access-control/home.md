@@ -14,11 +14,11 @@ ht-degree: 3%
 
 # Visão geral do Controle de acesso
 
-O Controle de acesso for [!DNL Experience Platform] fornecido pela [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no, [!DNL Admin Console]que vinculam usuários com permissões e caixas de proteção.
+O Controle de acesso for [!DNL Experience Platform] é fornecido pelo [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no, [!DNL Admin Console]que vinculam usuários com permissões e caixas de proteção.
 
 ## Hierarquia de Controles de acesso e fluxo de trabalho
 
-Para configurar o controle de acesso para [!DNL Experience Platform], você deve ter privilégios de administrador para uma organização que tenha uma integração de [!DNL Experience Platform] produto. A função mínima que concede ou retira permissões é um administrador **[!UICONTROL de perfil de]** produto. Outras funções de administrador que podem gerenciar permissões são administradores **[!UICONTROL de]** produtos (podem gerenciar todos os perfis em um produto) e administradores **[!UICONTROL de]** sistema (sem restrições). Consulte o artigo da Central de ajuda da Adobe sobre funções [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obter mais informações.
+Para configurar o controle de acesso para [!DNL Experience Platform], você deve ter privilégios de administrador para uma organização que tenha uma integração de [!DNL Experience Platform] produto. A função mínima que concede ou retira permissões é um administrador **[!UICONTROL de perfil de]** produto. Outras funções de administrador que podem gerenciar permissões são administradores **[!UICONTROL de]** produtos (podem gerenciar todos os perfis em um produto) e administradores **[!UICONTROL de]** sistema (sem restrições). Consulte o artigo da Adobe Help Center sobre funções [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obter mais informações.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Todas as chamadas para [!DNL Experience Platform] APIs são validadas para obter
 
 ## Adobe Admin Console
 
-A Adobe Admin Console fornece um local central para gerenciar os direitos e o acesso dos produtos da Adobe para sua organização. Por meio do console, você pode conceder a grupos de usuários permissões de acesso para vários [!DNL Platform] recursos, como &quot;[!UICONTROL Gerenciar conjuntos]de dados&quot;, &quot;Conjuntos[!UICONTROL de dados de]Visualização&quot; ou &quot;[!UICONTROL Gerenciar Perfis]&quot;.
+A Adobe Admin Console fornece um local central para gerenciar os direitos e o acesso de produtos do Adobe para sua organização. Por meio do console, você pode conceder a grupos de usuários permissões de acesso para vários [!DNL Platform] recursos, como &quot;[!UICONTROL Gerenciar conjuntos]de dados&quot;, &quot;Conjuntos[!UICONTROL de dados de]Visualização&quot; ou &quot;[!UICONTROL Gerenciar Perfis]&quot;.
 
 ### perfis de produtos
 

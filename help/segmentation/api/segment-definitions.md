@@ -24,7 +24,7 @@ Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience
 
 ## Recuperar uma lista de definições de segmento {#list}
 
-É possível recuperar uma lista de todas as definições de segmento para a Organização IMS, fazendo uma solicitação GET para o `/segment/definitions` endpoint.
+É possível recuperar uma lista de todas as definições de segmento para a Organização IMS, fazendo uma solicitação de GET para o `/segment/definitions` endpoint.
 
 **Formato da API**
 
@@ -153,7 +153,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de definiçõe
 
 ## Criar uma nova definição de segmento {#create}
 
-Você pode criar uma nova definição de segmento, fazendo uma solicitação POST para o `/segment/definitions` ponto de extremidade.
+Você pode criar uma nova definição de segmento, fazendo uma solicitação POST para o `/segment/definitions` terminal.
 
 **Formato da API**
 
@@ -250,7 +250,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da definição 
 
 ## Recuperar uma definição de segmento específica {#get}
 
-Você pode recuperar informações detalhadas sobre uma definição de segmento específica, fazendo uma solicitação GET para o `/segment/definitions` endpoint e fornecendo a ID da definição de segmento que deseja recuperar no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma definição de segmento específica, fazendo uma solicitação de GET para o `/segment/definitions` ponto final e fornecendo a ID da definição de segmento que deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -332,7 +332,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Definições de segmento de recuperação em massa {#bulk-get}
 
-Você pode recuperar informações detalhadas sobre várias definições de segmento especificadas, fazendo uma solicitação POST ao `/segment/definitions/bulk-get` ponto final e fornecendo os `id` valores das definições de segmento no corpo da solicitação.
+Você pode recuperar informações detalhadas sobre várias definições de segmento especificadas, fazendo uma solicitação de POST ao `/segment/definitions/bulk-get` endpoint e fornecendo os `id` valores das definições de segmento no corpo da solicitação.
 
 **Formato da API**
 
@@ -465,7 +465,7 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com as definições de segme
 
 ## Excluir uma definição de segmento específica {#delete}
 
-Você pode solicitar a exclusão de uma definição de segmento específica, fazendo uma solicitação DELETE ao `/segment/definitions` ponto final e fornecendo a ID da definição de segmento que deseja excluir no caminho da solicitação.
+Você pode solicitar a exclusão de uma definição de segmento específica, fazendo uma solicitação de DELETE para o `/segment/definitions` endpoint e fornecendo a ID da definição de segmento que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -493,7 +493,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 sem nenhuma mensagem.
 
 ## Atualizar uma definição de segmento específica
 
-Você pode atualizar uma definição de segmento específica, fazendo uma solicitação PATCH para o `/segment/definitions` ponto final e fornecendo a ID da definição de segmento que deseja atualizar no caminho da solicitação.
+Você pode atualizar uma definição de segmento específica, fazendo uma solicitação de PATCH para o `/segment/definitions` endpoint e fornecendo a ID da definição de segmento que deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 

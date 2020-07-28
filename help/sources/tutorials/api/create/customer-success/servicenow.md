@@ -68,7 +68,7 @@ Para criar uma [!DNL ServiceNow] conexão, um conjunto de especificações de [!
 
 **Formato da API**
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você também pode incluir o query `property=name=="service-now"` para obter informações especificamente para [!DNL ServiceNow].
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação de GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você também pode incluir o query `property=name=="service-now"` para obter informações especificamente para [!DNL ServiceNow].
 
 ```http
 GET /connectionSpecs

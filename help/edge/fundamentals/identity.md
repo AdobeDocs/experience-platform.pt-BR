@@ -14,11 +14,11 @@ ht-degree: 10%
 
 # Identidade - Recuperando a ID do Experience Cloud
 
-O Adobe Experience Platform [!DNL Web SDK] aproveita o Serviço [de identidade da](../../identity-service/ecid.md)Adobe. Isso garante que cada dispositivo tenha um identificador exclusivo que seja persistente no dispositivo para que a atividade entre as páginas possa ser vinculada.
+O Adobe Experience Platform [!DNL Web SDK] aproveita o serviço [de identidade do](../../identity-service/ecid.md)Adobe. Isso garante que cada dispositivo tenha um identificador exclusivo que seja persistente no dispositivo para que a atividade entre as páginas possa ser vinculada.
 
 ## Identidade da primeira parte
 
-O [!DNL Identity Service] armazena a identidade em um cookie em um domínio próprio. As [!DNL Identity Service] tentativas de definir o cookie usando um cabeçalho HTTP no domínio. Se isso falhar, a configuração dos cookies [!DNL Identity Service] voltará para o Javascript. A Adobe recomenda que você configure um CNAME para garantir que seus cookies não sejam limitados pelas restrições ITP do lado do cliente.
+O [!DNL Identity Service] armazena a identidade em um cookie em um domínio próprio. As [!DNL Identity Service] tentativas de definir o cookie usando um cabeçalho HTTP no domínio. Se isso falhar, a configuração dos cookies [!DNL Identity Service] voltará para o Javascript. O Adobe recomenda que você configure um CNAME para garantir que seus cookies não sejam limitados pelas restrições ITP do lado do cliente.
 
 ## Identidade de terceiros
 

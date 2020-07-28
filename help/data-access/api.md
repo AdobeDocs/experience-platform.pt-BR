@@ -242,4 +242,4 @@ Para obter exemplos adicionais, consulte o tutorial [de acesso a](tutorials/data
 
 ## Assinar eventos de ingestão de dados
 
-[!DNL Platform] disponibiliza eventos específicos de alto valor para a subscrição por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por exemplo, você pode assinar eventos de ingestão de dados para receber notificações de possíveis atrasos e falhas. Consulte o tutorial sobre como [assinar notificações](../ingestion/quality/subscribe-events.md) de ingestão de dados para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para subscrição por meio do Console [do desenvolvedor do](https://www.adobe.com/go/devs_console_ui)Adobe. Por exemplo, você pode assinar eventos de ingestão de dados para receber notificações de possíveis atrasos e falhas. Consulte o tutorial sobre como [assinar notificações](../ingestion/quality/subscribe-events.md) de ingestão de dados para obter mais informações.

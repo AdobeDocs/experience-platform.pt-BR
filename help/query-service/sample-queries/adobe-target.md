@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # query de amostra para dados de Adobe Target
 
-Os dados do Adobe Target são transformados em schema XDM do Experience Evento e assimilados [!DNL Experience Platform] como conjuntos de dados para você. Há muitos casos de uso [!DNL Query Service] com esses dados, e os query de amostra a seguir devem funcionar com seus conjuntos de dados de Adobe Target.
+Os dados do Adobe Target são transformados em schema XDM do Experience Evento e assimilados [!DNL Experience Platform] como conjuntos de dados para você. Há muitos casos de uso para [!DNL Query Service] esses dados, e os query de amostra a seguir devem funcionar com seus conjuntos de dados de Adobe Target.
 
 >[!NOTE]
 >Nos exemplos a seguir, será necessário editar o SQL para preencher os parâmetros esperados para seus query com base no conjunto de dados, nas variáveis ou no período de tempo que você está interessado em avaliar. Forneça parâmetros onde quer que você veja `{ }` no SQL.

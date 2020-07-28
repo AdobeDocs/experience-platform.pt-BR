@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform Identity Service
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '74'
+ht-degree: 18%
 
 ---
 
@@ -24,4 +27,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 - [Visão geral da ECID](ecid.md)
 - [Guia de solução de problemas](troubleshooting-guide.md)
 - [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
-- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

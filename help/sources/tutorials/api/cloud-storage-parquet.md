@@ -265,7 +265,7 @@ Continue seguindo as etapas descritas no guia do desenvolvedor até que você te
 
 ## Criar um conjunto de dados de público alvo
 
-É possível criar um conjunto de dados de público alvo executando uma solicitação POST para a API [do serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, fornecendo a ID do schema do público alvo dentro da carga.
+É possível criar um conjunto de dados de público alvo executando uma solicitação de POST para a API [do serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, fornecendo a ID do schema de público alvo dentro da carga.
 
 **Formato da API**
 
@@ -374,7 +374,7 @@ A última etapa para assimilar dados de parquet de um armazenamento de nuvem de 
 - [ID da conexão de origem](#source)
 - [ID de conexão do Público alvo](#target)
 
-Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST enquanto fornece os valores mencionados anteriormente na carga.
+Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação de POST ao fornecer os valores mencionados anteriormente dentro da carga.
 
 **Formato da API**
 

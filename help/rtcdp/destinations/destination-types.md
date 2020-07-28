@@ -1,8 +1,8 @@
 ---
 title: Tipos de destinos e Categorias
 seo-title: Tipos de destinos e Categorias
-description: 'Na Platform de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
-seo-description: Na Platform de dados do cliente em tempo real da Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
+description: 'Na Adobe Real-time Customer Data Platform, os destinos de Exportação de Perfis/segmentos capturam dados de eventos, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
+seo-description: Na Adobe Real-time Customer Data Platform, os destinos de Exportação de Perfis/segmentos capturam dados de eventos, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Tipos e Categorias de destino
 
-Leia esta página para entender os diferentes tipos e categorias dos destinos da Platform de dados do cliente em tempo real da Adobe.
+Leia esta página para entender os diferentes tipos e categorias dos destinos do Adobe Real-time Customer Data Platform.
 
 ## Tipos de destino
 
-Na Adobe Real-time Customer Data Platform, distinguimos entre dois tipos de destino - conexões e extensões. Existem dois tipos de destinos de conexão, destinos de exportação de Perfil e destinos de exportação de segmento.
+No Adobe Real-time Customer Data Platform, distinguimos dois tipos de destino - conexões e extensões. Existem dois tipos de destinos de conexão, destinos de exportação de Perfil e destinos de exportação de segmento.
 
 ![Tipos de destinos](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,13 +26,13 @@ Na Adobe Real-time Customer Data Platform, distinguimos entre dois tipos de dest
 
 ### Conexões
 
-**[!UICONTROL Exportação]** de Perfis e exportação **[!UICONTROL de]** segmentos nos dados do cliente em tempo real da Adobe A Platform captura dados do evento, combina-os com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportação]** de Perfis e exportação **[!UICONTROL de]** segmentos em dados do cliente em tempo real Adobe A Platform captura dados do evento, combina-os com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar segmentação e exportar segmentos e perfis qualificados para destinos.
 
 <br> 
 
 #### Destinos de exportação do Perfil
 
-Os destinos de exportação de Perfil geram um arquivo que contém perfis e/ou atributos. Esses destinos usam dados brutos, geralmente com endereço de email como a chave primária. O destino [do armazenamento em nuvem do](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 é um exemplo de destino onde você pode depositar arquivos que contêm exportações de perfis.
+Os destinos de exportação de Perfil geram um arquivo que contém perfis e/ou atributos. Esses destinos usam dados brutos, geralmente com endereço de email como a chave primária. O destino [do armazenamento em nuvem](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 é um exemplo de destino onde você pode depositar arquivos que contêm exportações de perfis.
 
 #### Destinos de exportação do segmento
 
@@ -48,7 +48,7 @@ O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 ### Extensões
 
-A CDP em tempo real da Adobe aproveita o poder e a flexibilidade do Experience Platform Launch para incluir extensões de lançamento na interface CDP em tempo real da Adobe.
+A CDP em tempo real do Adobe aproveita a potência e a flexibilidade do Experience Platform Launch para incluir extensões de lançamento na interface CDP em tempo real do Adobe.
 
 >[!TIP]
 >

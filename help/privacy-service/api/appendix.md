@@ -36,7 +36,7 @@ A tabela a seguir descreve vários tipos de identidade pré-definidos comumente 
 >
 >Cada tipo de identidade também tem um valor `namespaceId` inteiro, que pode ser usado no lugar da `namespace` string ao definir a `type` propriedade da identidade como &quot;namespaceId&quot;. Consulte a seção sobre qualificadores [de](#namespace-qualifiers) namespace para obter mais informações.
 
-Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação GET para o `idnamespace/identities` endpoint na [!DNL Identity Service] API. Consulte o guia [do desenvolvedor do Serviço de](../../identity-service/api/getting-started.md) identidade para obter mais informações.
+Você pode recuperar uma lista de namespaces de identidade em uso pela sua organização, fazendo uma solicitação de GET para o `idnamespace/identities` endpoint na [!DNL Identity Service] API. Consulte o guia [do desenvolvedor do Serviço de](../../identity-service/api/getting-started.md) identidade para obter mais informações.
 
 ## Qualificadores de Namespace
 
@@ -54,7 +54,7 @@ Ao especificar um `namespace` valor na [!DNL Privacy Service] API, um qualificad
 
 ## Valores do produto aceitos
 
-A tabela a seguir descreve os valores aceitos para especificar um produto da Adobe no `include` atributo de uma solicitação de criação de trabalho.
+A tabela a seguir descreve os valores aceitos para especificar um Adobe no `include` atributo de uma solicitação de criação de cargo.
 
 | Produto | Valor para uso no `include` atributo |
 --- | ---
@@ -63,7 +63,7 @@ A tabela a seguir descreve os valores aceitos para especificar um produto da Ado
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
 | Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Autenticação do Adobe Primetime | &quot;primetimeAuthentication&quot; |
+| Autenticação Adobe Primetime | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
 | Serviço de Registro do Cliente | &quot;CRS&quot; |
 | Perfil do cliente em tempo real | &quot;ProfileService&quot; |

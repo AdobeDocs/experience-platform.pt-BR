@@ -62,7 +62,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 Na [!DNL Policy Service] API, todas as políticas e ações de marketing são referidas como `core` `custom` recursos.
 
-Os `core` recursos são definidos e mantidos pela Adobe, enquanto `custom` os recursos são criados e mantidos por clientes individuais e, portanto, são exclusivos e visíveis apenas para a organização IMS que os criou. Dessa forma, as operações de listagem e pesquisa (`GET`) são as únicas operações permitidas em `core` recursos, enquanto as operações de listagem, pesquisa e atualização (`POST`, `PUT`, `PATCH`e `DELETE`) estão disponíveis para `custom` recursos.
+Os `core` recursos são definidos e mantidos pela Adobe, enquanto `custom` os recursos são criados e mantidos por clientes individuais e, portanto, são únicos e visíveis apenas para a organização IMS que os criou. Dessa forma, as operações de listagem e pesquisa (`GET`) são as únicas operações permitidas em `core` recursos, enquanto as operações de listagem, pesquisa e atualização (`POST`, `PUT`, `PATCH`e `DELETE`) estão disponíveis para `custom` recursos.
 
 ## Status da política
 
@@ -74,7 +74,7 @@ As políticas &quot;RASCUNHO&quot; também podem ser consideradas na avaliação
 
 ## Nomes de ação de marketing {#marketing-actions}
 
-Nomes de ações de marketing são identificadores exclusivos para ações de marketing. Cada ação `core` de marketing tem um nome exclusivo que se aplica a todas as Organizações IMS. Esses nomes são definidos e mantidos pela Adobe. Enquanto isso, todas as ações de marketing definidas pelo cliente (`custom` recursos) são exclusivas em sua organização individual e não são visíveis nem compartilhadas com outras Organizações IMS.
+Nomes de ações de marketing são identificadores exclusivos para ações de marketing. Cada ação `core` de marketing tem um nome exclusivo que se aplica a todas as Organizações IMS. Esses nomes são definidos e mantidos por Adobe. Enquanto isso, todas as ações de marketing definidas pelo cliente (`custom` recursos) são exclusivas em sua organização individual e não são visíveis nem compartilhadas com outras Organizações IMS.
 
 As etapas para trabalhar com ações de marketing na [!DNL Policy Service] API são descritas na seção Ações [de](#marketing-actions) marketing posteriormente neste documento.
 

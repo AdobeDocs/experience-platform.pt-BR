@@ -18,7 +18,7 @@ Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada 
 
 ## Recuperar uma lista de modelos
 
-Você pode recuperar uma lista de detalhes do Modelo pertencentes a todos os Modelos, executando uma única solicitação GET para /models. Por padrão, essa lista solicitará a si mesma o modelo criado mais antigo e limitará os resultados a 25. Você pode optar por filtrar os resultados especificando alguns parâmetros de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+É possível recuperar uma lista de detalhes do Modelo pertencentes a todos os Modelos, executando uma única solicitação de GET para /models. Por padrão, essa lista solicitará a si mesma o modelo criado mais antigo e limitará os resultados a 25. Você pode optar por filtrar os resultados especificando alguns parâmetros de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 **Formato da API**
 
@@ -100,7 +100,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes de seus Modelos
 
 ## Recuperar um modelo específico
 
-É possível recuperar uma lista de detalhes do Modelo pertencentes a um modelo específico, executando uma única solicitação GET e fornecendo uma ID de modelo válida no caminho da solicitação. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+É possível recuperar uma lista de detalhes do Modelo pertencentes a um modelo específico, executando uma única solicitação de GET e fornecendo uma ID de modelo válida no caminho da solicitação. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 **Formato da API**
 
@@ -164,7 +164,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes de seu Modelo, 
 
 ## Registrar um modelo pré-gerado {#register-a-model}
 
-Você pode registrar um Modelo pré-gerado fazendo uma solicitação POST no `/models` ponto final. Para registrar seu Modelo, os valores de `modelArtifact` arquivo e `model` propriedade precisam ser incluídos no corpo da solicitação.
+Você pode registrar um Modelo pré-gerado fazendo uma solicitação POST para o `/models` endpoint. Para registrar seu Modelo, os valores de `modelArtifact` arquivo e `model` propriedade precisam ser incluídos no corpo da solicitação.
 
 **Formato da API**
 
@@ -218,11 +218,11 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes de seu Modelo, 
 
 ## Atualizar um modelo por ID
 
-Você pode atualizar um Modelo existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do Modelo de público alvo no caminho da solicitação e fornece uma carga JSON que contém propriedades atualizadas.
+Você pode atualizar um Modelo existente sobrescrevendo suas propriedades por meio de uma solicitação de PUT que inclua a ID do Modelo de público alvo no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
 >[!TIP]
 >
->Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para recuperar o Modelo por ID. Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>Para garantir o sucesso dessa solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para recuperar o Modelo por ID. Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 **Formato da API**
 
@@ -281,7 +281,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um modelo por ID
 
-É possível excluir um único Modelo executando uma solicitação DELETE que inclui a ID do Modelo de público alvo no caminho da solicitação.
+É possível excluir um único Modelo executando uma solicitação de DELETE que inclui a ID do Modelo de público alvo no caminho da solicitação.
 
 **Formato da API**
 
@@ -373,7 +373,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto JSON com as infor
 
 ## Recuperar uma lista de transcodificações para um modelo {#retrieve-transcoded-model-list}
 
-Você pode recuperar uma lista de transcodificações que foram executadas em um Modelo executando uma solicitação GET com sua `{MODEL_ID}`.
+Você pode recuperar uma lista de transcodificações que foram executadas em um Modelo executando uma solicitação de GET com seu `{MODEL_ID}`.
 
 **Formato da API**
 
@@ -433,7 +433,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto json com uma list
 
 ## Recuperar um modelo transcodificado específico {#retrieve-transcoded-model}
 
-Você pode recuperar um Modelo transcodificado específico executando uma solicitação GET com sua ID `{MODEL_ID}` e o ID de um modelo transcodificado.
+Você pode recuperar um Modelo transcodificado específico executando uma solicitação de GET com sua ID `{MODEL_ID}` e a ID de um modelo transcodificado.
 
 **Formato da API**
 

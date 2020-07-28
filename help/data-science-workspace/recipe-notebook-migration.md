@@ -54,7 +54,7 @@ Antes de criar a imagem do Docker, analise os exemplos para ler e gravar conjunt
 
 #### Ler um conjunto de dados
 
-Esta seção descreve as alterações necessárias para ler um conjunto de dados e usa o exemplo [helper.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) , fornecido pela Adobe.
+Esta seção descreve as alterações necessárias para ler um conjunto de dados e usa o exemplo [helper.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) , fornecido pelo Adobe.
 
 **Modo antigo de ler um conjunto de dados**
 
@@ -88,7 +88,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 
 #### Gravar em um conjunto de dados
 
-Esta seção descreve as alterações necessárias para gravar um conjunto de dados usando o exemplo [ScoringDataSaver.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) , fornecido pela Adobe.
+Esta seção descreve as alterações necessárias para gravar um conjunto de dados usando o exemplo [ScoringDataSaver.escala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) , fornecido pelo Adobe.
 
 **Modo antigo de escrever um conjunto de dados**
 
@@ -190,7 +190,7 @@ Antes de criar a imagem do Docker, analise os exemplos para ler e gravar conjunt
 
 #### Ler um conjunto de dados
 
-Esta seção descreve as alterações necessárias para ler um conjunto de dados usando o exemplo [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) , fornecido pela Adobe.
+Esta seção descreve as alterações necessárias para ler um conjunto de dados usando o exemplo [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) , fornecido pelo Adobe.
 
 **Modo antigo de ler um conjunto de dados**
 
@@ -225,7 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 
 #### Gravar em um conjunto de dados
 
-Esta seção descreve as alterações necessárias para gravar um conjunto de dados usando o exemplo [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) , fornecido pela Adobe.
+Esta seção descreve as alterações necessárias para gravar um conjunto de dados usando o exemplo [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) , fornecido pelo Adobe.
 
 **Modo antigo de escrever um conjunto de dados**
 

@@ -1,10 +1,13 @@
 ---
 title: título do Documento
-seo-title: Título do Documento na Adobe Experience Platform
+seo-title: Título do Documento no Adobe Experience Platform
 description: descrição
 seo-description: descrição da sequência
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '37'
+ht-degree: 5%
 
 ---
 
@@ -25,4 +28,4 @@ Extensões
 
 >[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Escolha Editar > [!UICONTROL Processing Rules] para fazer algo. Use   [!DNL Microsoft Visual Code].
+Escolha Editar > Regras [!UICONTROL de] processamento para fazer algo. Use [!DNL Microsoft Visual Code].

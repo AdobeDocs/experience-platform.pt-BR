@@ -87,7 +87,7 @@ As estimativas geralmente são executadas de 10 a 15 segundos, começando com um
 
 ### Criar um trabalho de pré-visualização
 
-Você pode criar um novo trabalho de pré-visualização fazendo uma solicitação POST para o `/preview` terminal.
+Você pode criar um novo trabalho de pré-visualização, fazendo uma solicitação de POST para o `/preview` terminal.
 
 Instruções detalhadas sobre a criação de um trabalho de pré-visualização podem ser encontradas no guia [de pontos de extremidade de](../api/previews-and-estimates.md#create-preview)pré-visualizações e estimativas.
 

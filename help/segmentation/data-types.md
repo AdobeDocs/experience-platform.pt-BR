@@ -58,7 +58,7 @@ Atualmente, apenas o Adobe Audience Manager é suportado como uma audiência ext
 
 ### Compartilhamento de segmentos
 
-Os segmentos criados no Platform podem ser usados em outros serviços [principais da](https://docs.adobe.com/content/help/pt-BR/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Para ativar este recurso, você precisará entrar em contato com o arquiteto da solução ou com seu consultor.
+Os segmentos criados no Platform podem ser usados em outros [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/pt-BR/core-services/interface/experience-cloud.html). Para ativar este recurso, você precisará entrar em contato com o arquiteto da solução ou com seu consultor.
 
 ## Outros tipos de dados
 

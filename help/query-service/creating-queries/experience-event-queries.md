@@ -185,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## Próximas etapas
 
-Para obter mais informações sobre query de amostra usando funções definidas pela Adobe (ADFs), leia o guia Funções definidas pela Adobe. Para obter orientações gerais sobre a execução de query, leia o [guia sobre a execução de query no Query Service](./writing-queries.md).
+Para obter mais informações sobre query de amostra usando funções definidas pelo Adobe (ADFs), leia o guia Funções definidas pelo Adobe. Para obter orientações gerais sobre a execução de query, leia o [guia sobre a execução de query no Query Service](./writing-queries.md).
 

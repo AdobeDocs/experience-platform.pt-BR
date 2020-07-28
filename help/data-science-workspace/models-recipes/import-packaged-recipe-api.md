@@ -43,7 +43,7 @@ Este tutorial requer que você tenha concluído o tutorial [Autenticação para 
 
 ## Criar um mecanismo
 
-Os mecanismos podem ser criados realizando uma solicitação POST para o terminal /mecanismos. O Mecanismo criado é configurado com base no formulário do arquivo de Receita empacotado que deve ser incluído como parte da solicitação de API.
+Os mecanismos podem ser criados fazendo uma solicitação POST para o terminal /mecanismos. O Mecanismo criado é configurado com base no formulário do arquivo de Receita empacotado que deve ser incluído como parte da solicitação de API.
 
 ### Criar um mecanismo com um URL de docking {#create-an-engine-with-a-docker-url}
 

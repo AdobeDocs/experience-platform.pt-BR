@@ -75,7 +75,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma [!DNL PayPal] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL PayPal] é `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+Para criar uma [!DNL PayPal] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL PayPal] é `221c7626-58f6-4eec-8ee2-042b0226f03b`.
 
 ```shell
 curl -X POST \

@@ -121,7 +121,7 @@ O DULE (Data Usage Labeling and Implantação) é o principal mecanismo de contr
 
 >[!NOTE]
 >
->Os conjuntos de dados criados e utilizados por aplicativos e serviços da Adobe (como o Adobe Analytics, Adobe Audience Manager ou [!DNL Decisioning Service]) não podem ser excluídos.
+>Os conjuntos de dados criados e utilizados por aplicativos e serviços Adobe (como Adobe Analytics, Adobe Audience Manager ou [!DNL Decisioning Service]) não podem ser excluídos.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 

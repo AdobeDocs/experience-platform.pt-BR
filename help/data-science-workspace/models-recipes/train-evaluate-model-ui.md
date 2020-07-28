@@ -36,7 +36,7 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Forneça um nome para o Modelo e reveja as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da Receita, a análise e a modificação dos valores de configuração clicando nos valores com o duplo. Para fornecer um novo conjunto de configurações, clique em **[!UICONTROL Carregar nova configuração]** e arraste um arquivo JSON que contém configurações de Modelo para a janela do navegador. Clique em **[!UICONTROL Concluir]** para criar o Modelo.
-   >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita de Recomendações de Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
+   >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita Recommendations do Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +55,7 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteram-as e modificam-nas de acordo, clicando nos valores com o duplo. Clique em **[!UICONTROL Concluir]** para criar e executar a execução do treinamento.
-   >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita de Recomendações de Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
+   >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita Recommendations do Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 

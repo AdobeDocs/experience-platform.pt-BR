@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Atualizar uma caixa de proteção
 
-Você pode atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação PATCH que inclui os da caixa de proteção `name` no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
+É possível atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua os campos `name` na caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
 
 >[!NOTE]
 >

@@ -20,7 +20,7 @@ Trabalhar com ações de marketing na API exige que você use o `/marketingActio
 
 ## Lista de todas as ações de marketing
 
-Para visualização de uma lista de todas as ações de marketing, é possível fazer uma solicitação GET para `/marketingActions/core` ou `/marketingActions/custom` que retorne todas as políticas para o container especificado.
+Para visualização de uma lista de todas as ações de marketing, é possível fazer uma solicitação de GET para `/marketingActions/core` ou `/marketingActions/custom` que retorne todas as políticas para o container especificado.
 
 **Formato da API**
 
@@ -142,7 +142,7 @@ O objeto response contém os detalhes da ação de marketing, incluindo o caminh
 
 ## Criar ou atualizar uma ação de marketing
 
-A [!DNL Policy Service] API permite que você defina suas próprias ações de marketing, bem como atualize as existentes. A criação e atualização são feitas usando uma operação PUT para o nome da ação de marketing.
+A [!DNL Policy Service] API permite que você defina suas próprias ações de marketing, bem como atualize as existentes. A criação e a atualização são feitas usando uma operação de PUT para o nome da ação de marketing.
 
 **Formato da API**
 
@@ -156,7 +156,7 @@ Na solicitação a seguir, observe que a carga `name` na solicitação é a mesm
 
 >[!NOTE]
 >
->A falha ao fornecer o `{marketingActionName}` na chamada resultará em um erro 405 (método não permitido), pois você não tem permissão para executar uma PUT diretamente no `/marketingActions/custom` terminal. Além disso, se a carga `name` não corresponder à `{marketingActionName}` no caminho, você receberá um erro 400 (solicitação incorreta).
+>A falha ao fornecer o `{marketingActionName}` na chamada resultará em um erro 405 (método não permitido), pois você não tem permissão para executar um PUT diretamente no `/marketingActions/custom` terminal. Além disso, se a carga `name` não corresponder à `{marketingActionName}` no caminho, você receberá um erro 400 (solicitação incorreta).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +197,7 @@ Se criado com êxito, você receberá um Status HTTP 201 (Criado) e o corpo da r
 
 ## Excluir uma ação de marketing
 
-É possível excluir ações de marketing enviando uma solicitação de DELETE para o site `{marketingActionName}` da ação de marketing que você deseja remover.
+É possível excluir ações de marketing enviando uma solicitação de DELETE para o da ação de marketing que você deseja remover. `{marketingActionName}`
 
 >[!NOTE]
 >

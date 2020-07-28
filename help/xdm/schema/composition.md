@@ -38,7 +38,7 @@ Os Schemas resolvem esse problema permitindo a integração de dados de várias 
 
 ### workflows baseados em Schemas em [!DNL Experience Platform]
 
-A normalização é um conceito fundamental subjacente [!DNL Experience Platform]. O XDM, impulsionado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas padrão para o gerenciamento da experiência do cliente.
+A normalização é um conceito fundamental subjacente [!DNL Experience Platform]. O XDM, impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas padrão para o gerenciamento da experiência do cliente.
 
 A infraestrutura na qual [!DNL Experience Platform] está construído, conhecida como [!DNL XDM System], facilita workflows baseados em schemas e inclui os padrões [!DNL Schema Registry], [!DNL Schema Editor], metadados de schemas e consumo de serviços. See the [XDM System overview](../home.md) for more information.
 
@@ -101,13 +101,13 @@ A composição de um schema começa com a atribuição de uma classe. As classes
 
 Uma classe também determina quais combinações serão elegíveis para uso no schema. Esta questão é discutida com mais detalhes na seção [de mistura](#mixin) que se segue.
 
-Há classes padrão fornecidas com cada integração de classes [!DNL Experience Platform], conhecidas como &quot;Setor&quot;. As classes do setor são geralmente aceitas como padrões do setor que se aplicam a um amplo conjunto de casos de uso. Exemplos de classes do setor incluem as classes [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent] fornecidas pela Adobe.
+Há classes padrão fornecidas com cada integração de classes [!DNL Experience Platform], conhecidas como &quot;Setor&quot;. As classes do setor são geralmente aceitas como padrões do setor que se aplicam a um amplo conjunto de casos de uso. Exemplos de classes Industry incluem as classes [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent] fornecidas pelo Adobe.
 
 [!DNL Experience Platform] permite também classes &quot;Fornecedor&quot;, que são classes definidas por [!DNL Experience Platform] parceiros e disponibilizadas a todos os clientes que usam o serviço ou aplicativo do fornecedor dentro [!DNL Platform].
 
 Há também classes usadas para descrever casos de uso mais específicos para organizações individuais dentro das classes [!DNL Platform], chamadas de &quot;Cliente&quot;. As classes Customer são definidas por uma organização quando não há classes Industry ou Vendor disponíveis para descrever um caso de uso exclusivo.
 
-Por exemplo, um schema que representa membros de um programa de Fidelidade descreve dados de registro sobre um indivíduo e, portanto, pode ser baseado na [!DNL XDM Individual Profile] classe, uma classe padrão do setor definida pela Adobe.
+Por exemplo, um schema que representa membros de um programa de Fidelidade descreve dados de registro sobre um indivíduo e, portanto, pode ser baseado na [!DNL XDM Individual Profile] classe, uma classe padrão do Setor definida pelo Adobe.
 
 ### Mistura {#mixin}
 
@@ -200,7 +200,7 @@ Todos os arquivos de dados que são assimilados [!DNL Experience Platform] devem
 
 Agora que você entende as noções básicas da composição do schema, você está pronto para começar a construir schemas usando o [!DNL Schema Registry].
 
-O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform e fornece uma interface de usuário e uma RESTful API da qual todos os recursos disponíveis da biblioteca estão acessíveis. O [!DNL Schema Library] contém recursos do setor definidos pela Adobe, recursos do fornecedor definidos por [!DNL Experience Platform] parceiros e classes, mixins, tipos de dados e schemas que foram compostos por membros de sua organização.
+O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform e fornece uma interface de usuário e uma RESTful API da qual todos os recursos disponíveis da biblioteca estão acessíveis. O [!DNL Schema Library] contém recursos do Setor definidos pelo Adobe, recursos do Fornecedor definidos pelos [!DNL Experience Platform] parceiros e classes, mixins, tipos de dados e schemas que foram compostos por membros da sua organização.
 
 Para começar a compor o schema usando a interface do usuário, siga o tutorial [do Editor de](../tutorials/create-schema-ui.md) Schemas para criar o schema &quot;Membros da fidelidade&quot; mencionado em todo o documento.
 

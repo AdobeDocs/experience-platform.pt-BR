@@ -18,7 +18,7 @@ Uma instância MLI é um emparelhamento de um [Mecanismo](./engines.md) existent
 
 ## Criar uma instância MLI {#create-an-mlinstance}
 
-Você pode criar uma instância MLI executando uma solicitação POST enquanto fornece uma carga de solicitação que consiste em uma ID de mecanismo (`{ENGINE_ID}`) válida e um conjunto apropriado de configurações padrão.
+Você pode criar uma instância MLI executando uma solicitação de POST ao fornecer uma carga de solicitação que consiste em uma ID de mecanismo (`{ENGINE_ID}`) válida e um conjunto apropriado de configurações padrão.
 
 Se a ID do mecanismo fizer referência a um PySpark ou Spark Engine, você terá a capacidade de configurar a quantidade de recursos de computação, como o número de núcleos ou a quantidade de memória. Se um Mecanismo Python for referenciado, você poderá escolher entre usar uma CPU ou uma GPU para fins de treinamento e pontuação. Consulte as seções do apêndice nas configurações [de recursos](./appendix.md#resource-config) PySpark e Spark e nas configurações [de CPU e GPU](./appendix.md#cpu-gpu-config) Python para obter mais informações.
 
@@ -130,7 +130,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLI recém-c
 
 ## Recuperar uma lista de MLInentons
 
-Você pode recuperar uma lista de MLInentons executando uma única solicitação GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de MLInentons executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 **Formato da API**
 
@@ -198,7 +198,7 @@ Uma resposta bem-sucedida retorna uma lista de MLInentons e seus detalhes.
 
 ## Recuperar uma instância MLI específica {#retrieve-specific}
 
-Você pode recuperar os detalhes de uma instância MLI específica executando uma solicitação GET que inclui a ID da instância MLI desejada no caminho da solicitação.
+Você pode recuperar os detalhes de uma instância MLI específica executando uma solicitação de GET que inclui a ID da instância MLI desejada no caminho da solicitação.
 
 **Formato da API**
 
@@ -271,11 +271,11 @@ Uma resposta bem-sucedida retorna os detalhes da instância MLI.
 
 ## Atualizar uma instância MLI
 
-Você pode atualizar uma instância MLI existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID da instância MLI do público alvo no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
+Você pode atualizar uma instância MLI existente substituindo suas propriedades por meio de uma solicitação de PUT que inclua a ID da instância MLI do público alvo no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
 >[!TIP]
 >
->Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>Para garantir o sucesso desta solicitação de PUT, recomenda-se que você execute primeiro uma solicitação de GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 A chamada de API de exemplo a seguir atualizará os parâmetros de treinamento e pontuação de uma MLInpresence ao ter essas propriedades inicialmente:
 
@@ -405,7 +405,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados da 
 
 ## Excluir MLInentons por ID do mecanismo
 
-É possível excluir todas as MLInentons que compartilham o mesmo Mecanismo, executando uma solicitação DELETE que inclui a ID do mecanismo como um parâmetro de query.
+É possível excluir todas as MLInentons que compartilham o mesmo Mecanismo, executando uma solicitação de DELETE que inclui a ID do mecanismo como um parâmetro de query.
 
 **Formato da API**
 
@@ -440,7 +440,7 @@ curl -X DELETE \
 
 ## Excluir uma instância MLI
 
-É possível excluir uma única instância MLI executando uma solicitação DELETE que inclui a ID da instância MLI do público alvo no caminho da solicitação.
+É possível excluir uma única instância MLI executando uma solicitação de DELETE que inclui a ID da instância MLI do público alvo no caminho da solicitação.
 
 **Formato da API**
 

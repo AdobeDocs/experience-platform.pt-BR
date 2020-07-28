@@ -40,7 +40,7 @@ Consulte o tutorial sobre como [criar segmentos usando APIs](../../segmentation/
 
 ## Ativar um schema para associação de união
 
-Para que um schema seja incluído na visualização de união mesclada, a tag &quot;união&quot; deve ser adicionada ao `meta:immutableTags` atributo do schema. Isso é feito por meio de uma solicitação PATCH para atualizar o schema e adicionar a `meta:immutableTags` matriz com um valor de &quot;união&quot;.
+Para que um schema seja incluído na visualização de união mesclada, a tag &quot;união&quot; deve ser adicionada ao `meta:immutableTags` atributo do schema. Isso é feito por meio de uma solicitação de PATCH para atualizar o schema e adicionar a `meta:immutableTags` matriz com um valor de &quot;união&quot;.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 Quando você define a tag &quot;união&quot; em um schema, o [!DNL Schema Registry] cria e mantém automaticamente uma união para a classe na qual o schema se baseia. A união `$id` é semelhante ao padrão `$id` de uma classe, sendo a única diferença que é anexada por dois sublinhados e a palavra &quot;união&quot; (`"__union"`).
 
-Para visualização de uma lista de uniões disponíveis, é possível executar uma solicitação GET para o `/unions` endpoint.
+Para visualização de uma lista de uniões disponíveis, é possível executar uma solicitação de GET para o `/unions` endpoint.
 
 **Formato da API**
 
@@ -164,7 +164,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma `results` matriz 
 
 ## Pesquisar uma união específica
 
-Você pode visualização uma união específica executando uma solicitação GET que inclui o cabeçalho `$id` e, dependendo do cabeçalho Aceitar, alguns ou todos os detalhes da união.
+Você pode visualização uma união específica executando uma solicitação de GET que inclui o cabeçalho `$id` e, dependendo do cabeçalho Aceitar, alguns ou todos os detalhes da união.
 
 >[!NOTE]
 >
@@ -249,7 +249,7 @@ O formato de resposta depende do cabeçalho Aceitar enviado na solicitação. Ex
 
 ## schemas de Lista em uma união
 
-Para ver quais schemas fazem parte de uma união específica, é possível executar uma solicitação GET usando parâmetros de query para filtrar os schemas dentro do container do locatário.
+Para ver quais schemas fazem parte de uma união específica, é possível executar uma solicitação de GET usando parâmetros de query para filtrar os schemas dentro do container do locatário.
 
 Usando o parâmetro `property` query, é possível configurar a resposta para apenas schemas que contenham um `meta:immutableTags` campo e um valor `meta:class` igual à classe cuja união você está acessando.
 

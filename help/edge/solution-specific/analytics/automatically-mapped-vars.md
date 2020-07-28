@@ -60,7 +60,7 @@ Abaixo está uma lista de variáveis nas quais o Adobe Experience Platform [!DNL
 | `environment.browserDetails.javaEnabled` | `v` | Parâmetro de query do AppMeasurement mapeamento JAVA_ENABLED com conversão BOOLEAN_TO_YN. |
 | `environment.browserDetails.viewportHeight` | `bh` | Mapeamento do parâmetro de query do AppMeasurement BROWSER_HEIGHT. |
 | `environment.browserDetails.viewportWidth` | `bw` | Mapeamento do parâmetro de query do AppMeasurement BROWSER_WIDTH. |
-| `environment.connectionType` | `ct` | Mapeamento CT_CONNECT_TYPE do parâmetro de query do AppMeasurement. |
+| `environment.connectionType` | `ct` | Mapeamento do parâmetro de query do AppMeasurement CT_CONNECT_TYPE. |
 | `device.colorDepth` | `c` | Mapeamento do parâmetro de query do AppMeasurement C_COLOR. |
 | `placeContext.geo.stateProvince` | `state` | Mapeamento STATE do parâmetro do query AppMeasurement. |
 | `placeContext.geo.postalCode` | `zip` | Mapeamento ZIP do parâmetro de query do AppMeasurement. |

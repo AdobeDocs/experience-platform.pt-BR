@@ -517,7 +517,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -821,7 +821,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Excluir um lote {#delete-a-batch}
 
-Um lote pode ser excluído executando a seguinte solicitação POST com o parâmetro de `action=REVERT` query para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o elegível para coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
+Um lote pode ser excluído executando a seguinte solicitação de POST com o parâmetro de `action=REVERT` query para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o elegível para coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
 
 **Formato da API**
 
@@ -929,7 +929,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carregar arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
 **Formato da API**
 

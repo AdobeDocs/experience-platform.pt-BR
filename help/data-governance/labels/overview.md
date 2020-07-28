@@ -26,7 +26,7 @@ Os rótulos de uso de dados aplicados no nível do conjunto de dados são propag
 
 [!DNL Platform] fornece várias etiquetas &quot;principais&quot; de uso de dados prontas para uso, que abrangem uma grande variedade de restrições comuns aplicáveis ao controle de dados. Para obter mais informações sobre esses rótulos e as políticas de uso que eles representam, consulte o guia sobre os rótulos [](reference.md)de uso de dados principais.
 
-Além das etiquetas fornecidas pela Adobe, você também pode definir suas próprias etiquetas personalizadas. Para obter etapas sobre como fazer isso na interface do usuário, consulte o guia [do usuário de etiquetas de uso de](./user-guide.md)dados. Para obter etapas sobre como executar isso usando chamadas de API, consulte o guia [da API de rótulos de uso de](./api.md)dados.
+Além das etiquetas fornecidas pelo Adobe, também é possível definir suas próprias etiquetas personalizadas. Para obter etapas sobre como fazer isso na interface do usuário, consulte o guia [do usuário de etiquetas de uso de](./user-guide.md)dados. Para obter etapas sobre como executar isso usando chamadas de API, consulte o guia [da API de rótulos de uso de](./api.md)dados.
 
 ## Herança de etiqueta para segmentos de audiência
 
@@ -34,7 +34,7 @@ Todos os segmentos de audiência criados pelo Serviço [de segmentação de](../
 
 Além de herdar rótulos de nível de conjunto de dados, os segmentos herdam todos os rótulos de nível de campo de seus conjuntos de dados associados por padrão. Dependendo de como seu aplicativo [!DNL Platform]baseado consome segmentos, você pode especificar potencialmente quais campos são usados, impedindo assim o segmento de herdar rótulos de campos excluídos.
 
-Para obter mais informações sobre como a aplicação automática funciona na CDP em tempo real, consulte a visão geral [da CDP em tempo real da](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
+Para obter mais informações sobre como a aplicação automática funciona na CDP em tempo real, consulte a visão geral [do CDP em tempo real do](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
 ### Herança dos controles de exportação de dados do Adobe Audience Manager
 

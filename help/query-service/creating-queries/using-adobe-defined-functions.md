@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Funções definidas pela Adobe
+title: funções definidas pelo Adobe
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -12,18 +12,18 @@ ht-degree: 6%
 ---
 
 
-# Uso de funções definidas pela Adobe
+# Uso de funções definidas pelo Adobe
 
-Um dos grandes diferenciais da Adobe é que eles entendem os dados de experiência e o que os clientes precisam para poder fazer com esses dados. Você pode usar essa compreensão para criar funções auxiliares que facilitem seu trabalho.
+Um dos grandes diferenciais de experiência é que eles entendem os dados de experiência e o que os clientes precisam ser capazes de fazer com esses dados. Você pode usar essa compreensão para criar funções auxiliares que facilitem seu trabalho.
 
-Este documento cobre funções definidas pela Adobe (ADFs) para suportar três [!DNL Analytics] atividades principais:
+Este documento cobre funções definidas por Adobe (ADFs) para suportar três [!DNL Analytics] atividades principais:
 - [Sessões](#sessionization)
 - [Atribuição](#attribution)
 - [Definição de caminho](#pathing)
 
 ## Sessões
 
-O `SESS_TIMEOUT()` reproduz os agrupamentos de visitas encontrados com o Adobe Analytics. Ele executa um agrupamento com base em tempo semelhante, mas com parâmetros personalizáveis.
+O `SESS_TIMEOUT()` reproduz os agrupamentos de visita encontrados com o Adobe Analytics. Ele executa um agrupamento com base em tempo semelhante, mas com parâmetros personalizáveis.
 
 **Sintaxe:**
 
@@ -93,7 +93,7 @@ No Adobe Analytics, as configurações de atribuição são configuradas usando 
 
 Os ADFs de Atribuição encontrados em [!DNL Query Service] permitem que essas alocações sejam definidas e geradas no momento do query.
 
-Este exemplo foca na atribuição de último toque, mas a Adobe também oferta a atribuição de primeiro toque.
+Este exemplo foca na atribuição de último toque, mas o Adobe também oferta a atribuição de primeiro toque.
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ LIMIT 50;
 
 ![Imagem](../images/queries/adobe-functions/row-level-attribution.png)
 
-### Criar um detalhamento de pedidos por Nível do último membro (eVar10)
+### Criar uma análise de pedidos por Nível do Último Membro (eVar10)
 
 ```sql
 SELECT
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Recursos adicionais
 
-O vídeo a seguir mostra como executar query na interface do Adobe Experience Platform e em um cliente PSQL. Além disso, o vídeo também usa exemplos envolvendo propriedades individuais em um objeto XDM, usando funções definidas pela Adobe e usando CREATE TABLE AS SELECT (CTAS).
+O vídeo a seguir mostra como executar query na interface do Adobe Experience Platform e em um cliente PSQL. Além disso, o vídeo também usa exemplos envolvendo propriedades individuais em um objeto XDM, usando funções definidas pelo Adobe e usando CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

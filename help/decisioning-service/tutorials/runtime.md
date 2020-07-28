@@ -59,7 +59,7 @@ Também é necessário para solicitações de tempo de execução:
 >
 >`UUID` é uma string no formato UUID que é globalmente exclusiva e não deve ser reutilizada para chamadas de API diferentes
 
-[!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no repositório de objetos de negócios, Repositório de objetos principais do XDM. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, existem apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo do objeto quando essa descrição é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
+[!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no repositório de objetos de negócios, Repositório de objetos principais do XDM. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, há apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo de objeto quando essa indicação é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
 
 Os caminhos de ponto de extremidade para todos os start de APIs do Repositório de objetos principais do XDM com `https://platform.adobe.io/data/core/ode/`.
 
@@ -181,7 +181,7 @@ Os aplicativos podem obter melhor desempenho, solicitando uma decisão de até 3
 
 É possível que duas atividades diferentes tenham a mesma opção que a &quot;melhor&quot;. Para evitar a repetição de uma experiência composta, por padrão, [!DNL Decisioning Service] as taxas de bits entre as atividades referenciadas na mesma solicitação. Arbitragem significa que, para cada uma das atividades, as suas opções de nível N são consideradas, mas nenhuma opção será proposta mais de uma vez entre essas atividades. Se duas atividades tiverem a mesma opção de primeira categoria, uma delas será selecionada para usar a segunda melhor opção ou a terceira melhor e assim por diante. Essas regras de eliminação de duplicação tentam evitar que qualquer uma das atividades use sua opção de fallback.
 
-O pedido de decisão contém os argumentos que fundamentam o pedido POST. O corpo é formatado como valor `Content-Type` de cabeçalho JSON `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
+O pedido de decisão contém os argumentos que fundamentam um pedido POST. O corpo é formatado como valor `Content-Type` de cabeçalho JSON `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
 O schema e a versão de solicitação suportados no momento são `https://ns.adobe.com/experience/offer-management/decision-request;version=0.9`. No futuro, schemas ou versões de solicitação adicionais serão fornecidos.
 

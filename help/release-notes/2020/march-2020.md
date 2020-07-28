@@ -52,7 +52,7 @@ Para obter mais informações sobre [!DNL Data Governance], consulte a visão ge
 
 ## Ingestão de dados {#ingestion}
 
-O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] fornece várias alternativas para a assimilação de dados, incluindo APIs em lote, APIs de transmissão, conectores nativos da Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
+O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] oferece várias alternativas para assimilar dados, incluindo APIs em lote, APIs de transmissão, conectores nativos de Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
 
 **Novos recursos**
 
@@ -69,7 +69,7 @@ Para saber mais sobre como ingerir dados no Platform, visite a documentação [d
 
 ## Destinos {#destinations}
 
-Na [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+No [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 
@@ -77,8 +77,8 @@ Novos destinos estão disponíveis onde você pode ativar seus dados de Adobe Ex
 
 | Destino | Descrição |
 |--- | ---|
-| Destinos de armazenamentos na nuvem | A CDP em tempo real da Adobe agora pode fornecer seus segmentos como arquivos de dados para os locais de armazenamento em nuvem [!DNL Amazon S3] ou SFTP. Isso permite que você envie audiências e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
-| Destinos de publicidade | A placa de [!DNL Google] destino agora é dividida em três placas de destino, para as três [!DNL Google] plataformas diferentes atualmente suportadas no Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Exibir e vídeo 360. |
+| Destinos de armazenamentos na nuvem | A CDP em tempo real do Adobe agora pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamento em nuvem [!DNL Amazon S3] ou SFTP. Isso permite que você envie audiências e seus atributos de perfil para seus sistemas internos, por meio de arquivos CSV ou delimitados por tabulação. |
+| Destinos de publicidade | A placa de [!DNL Google] destino agora é dividida em três placas de destino, para as três [!DNL Google] plataformas diferentes atualmente suportadas no CDP em tempo real do Adobe: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Exibir e vídeo 360. |
 
 Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/destinations-overview.md)
 
@@ -102,7 +102,7 @@ Para obter mais informações sobre [!DNL Identity Service], consulte a visão g
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 

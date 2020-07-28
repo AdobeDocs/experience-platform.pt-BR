@@ -20,7 +20,7 @@ Agora que você entende quais cabeçalhos devem ser usados, você está pronto p
 
 ### Recuperar uma lista de query agendados
 
-Você pode recuperar uma lista de todos os query agendados para sua Organização IMS, fazendo uma solicitação GET para o `/schedules` endpoint.
+Você pode recuperar uma lista de todos os query agendados para sua Organização IMS, fazendo uma solicitação de GET para o `/schedules` endpoint.
 
 **Formato da API**
 
@@ -124,7 +124,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de query progr
 
 ### Criar um novo query agendado
 
-Você pode criar um novo query agendado, fazendo uma solicitação POST para o `/schedules` ponto de extremidade.
+Você pode criar um novo query agendado fazendo uma solicitação de POST para o `/schedules` endpoint.
 
 **Formato da API**
 
@@ -223,7 +223,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 
 ### Solicitar detalhes de um query agendado especificado
 
-Você pode recuperar informações de um query programado específico, fazendo uma solicitação GET ao ponto de extremidade `/schedules` e fornecendo sua ID no caminho da solicitação.
+Você pode recuperar informações de um query programado específico, fazendo uma solicitação de GET para o ponto final e fornecendo sua ID no caminho da solicitação. `/schedules`
 
 **Formato da API**
 
@@ -306,7 +306,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do query progra
 
 ### Atualizar detalhes de um query programado especificado
 
-Você pode atualizar os detalhes de um query programado especificado, fazendo uma solicitação PATCH para o `/schedules` ponto final e fornecendo sua ID no caminho da solicitação.
+Você pode atualizar os detalhes de um query programado especificado, fazendo uma solicitação de PATCH para o `/schedules` terminal e fornecendo sua ID no caminho da solicitação.
 
 A solicitação PATCH suporta dois caminhos diferentes: `/state` e `/schedule/schedule`.
 
@@ -415,7 +415,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Excluir um query programado especificado
 
-Você pode excluir um query programado especificado, fazendo uma solicitação DELETE ao ponto de extremidade `/schedules` e fornecendo a ID do query programado que deseja excluir no caminho da solicitação.
+Você pode excluir um query especificado, fazendo uma solicitação de DELETE para o ponto de extremidade `/schedules` e fornecendo a ID do query agendado que deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >

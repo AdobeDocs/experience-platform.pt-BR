@@ -22,7 +22,7 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Adobe Exp
 
 ## O que são [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API em E/S da Adobe.
+[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API em E/S de Adobe.
 
 ## Como formatar uma solicitação de API? {#how-do-i-format-an-api-request}
 
@@ -88,7 +88,7 @@ Para obter mais informações sobre endpoints específicos nas APIs da Platform,
 
 ## Qual é a minha organização IMS? {#what-is-my-ims-organization}
 
-Uma organização IMS é uma representação da Adobe de um cliente. Todas as soluções licenciadas da Adobe são integradas a essa organização de clientes. Quando uma organização IMS tem direito a [!DNL Experience Platform], ela pode atribuir acesso a desenvolvedores. A ID de organização IMS (`x-gw-ims-org-id`) representa a organização para a qual uma chamada de API deve ser executada e, portanto, é necessária como um cabeçalho em todas as solicitações de API. Essa ID pode ser encontrada no [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): na guia **Integrações** , navegue até a seção **Visão geral** de qualquer integração específica para localizar a ID em Credenciais **do** cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](../tutorials/authentication.md)autenticação.
+Uma organização IMS é uma representação Adobe de um cliente. Todas as soluções licenciadas de Adobe são integradas a esta organização de clientes. Quando uma organização IMS tem direito a [!DNL Experience Platform], ela pode atribuir acesso a desenvolvedores. A ID de organização IMS (`x-gw-ims-org-id`) representa a organização para a qual uma chamada de API deve ser executada e, portanto, é necessária como um cabeçalho em todas as solicitações de API. Essa ID pode ser encontrada no [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): na guia **Integrações** , navegue até a seção **Visão geral** de qualquer integração específica para localizar a ID em Credenciais **do** cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](../tutorials/authentication.md)autenticação.
 
 ## Onde posso encontrar minha chave de API? {#where-can-i-find-my-api-key}
 
@@ -112,9 +112,9 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 Para obter informações detalhadas sobre quais parâmetros de query estão disponíveis para um serviço ou terminal específico, consulte a documentação específica do serviço.
 
-## Como indicar um campo JSON para atualizar em uma solicitação PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## Como indicar um campo JSON para atualizar em uma solicitação de PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-Muitas operações PATCH em [!DNL Platform] APIs usam strings de ponteiro [JSON](https://tools.ietf.org/html/rfc6901) para indicar propriedades JSON a serem atualizadas. Normalmente, eles são incluídos nas cargas de solicitação usando o formato Patch [](https://tools.ietf.org/html/rfc6902) JSON. Consulte o guia [de fundamentos da](api-fundamentals.md) API para obter informações detalhadas sobre a sintaxe necessária para essas tecnologias.
+Muitas operações de PATCH em [!DNL Platform] APIs usam strings de ponteiro [JSON](https://tools.ietf.org/html/rfc6901) para indicar propriedades JSON a serem atualizadas. Normalmente, eles são incluídos nas cargas de solicitação usando o formato Patch [](https://tools.ietf.org/html/rfc6902) JSON. Consulte o guia [de fundamentos da](api-fundamentals.md) API para obter informações detalhadas sobre a sintaxe necessária para essas tecnologias.
 
 ## Posso usar o Postman para fazer chamadas para [!DNL Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
@@ -172,7 +172,7 @@ Esta mensagem de erro é exibida quando um `Authorization` cabeçalho está ause
 }
 ```
 
-Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho não é válido. `Authorization` Verifique se o token foi inserido corretamente ou [gere um novo token](../tutorials/authentication.md) no Console de E/S da Adobe.
+Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho não é válido. `Authorization` Verifique se o token foi inserido corretamente ou [gere um novo token](../tutorials/authentication.md) no Console de E/S do Adobe.
 
 ### A chave da API é obrigatória
 
@@ -194,7 +194,7 @@ Esta mensagem de erro é exibida quando um cabeçalho de chave da API (`x-api-ke
 }
 ```
 
-Esta mensagem de erro é exibida quando o valor do cabeçalho da chave da API (`x-api-key`) fornecido é inválido. Verifique se você inseriu a chave corretamente antes de tentar novamente. Se você não souber sua chave de API, poderá encontrá-la no Console [de E/S da](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a chave da API em Credenciais **do** cliente.
+Esta mensagem de erro é exibida quando o valor do cabeçalho da chave da API (`x-api-key`) fornecido é inválido. Verifique se você inseriu a chave corretamente antes de tentar novamente. Se você não souber sua chave de API, poderá encontrá-la no Console [de E/S do](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a chave da API em Credenciais **do** cliente.
 
 
 ### Cabeçalho ausente
@@ -217,7 +217,7 @@ Esta mensagem de erro é exibida quando um cabeçalho organizacional IMS (`x-gw-
 }
 ```
 
-Essa mensagem de erro é exibida quando a integração de E/S do usuário ou Adobe (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no cabeçalho `Authorization` ) não tem direito a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no `x-gw-ims-org-id` cabeçalho. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no Console [de E/S da](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a ID em Credenciais **do** cliente.
+Esta mensagem de erro é exibida quando a integração de E/S do usuário ou Adobe (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no `Authorization` cabeçalho) não tem direito a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no `x-gw-ims-org-id` cabeçalho. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no Console [de E/S do](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a ID em Credenciais **do** cliente.
 
 ### Tipo de conteúdo válido não especificado
 
@@ -230,7 +230,7 @@ Essa mensagem de erro é exibida quando a integração de E/S do usuário ou Ado
 }
 ```
 
-Esta mensagem de erro é exibida quando uma solicitação POST, PUT ou PATCH tem um cabeçalho inválido ou ausente `Content-Type` . Certifique-se de que o cabeçalho esteja incluído na solicitação e que seu valor esteja `application/json`.
+Esta mensagem de erro é exibida quando uma solicitação de POST, PUT ou PATCH tem um cabeçalho inválido ou ausente `Content-Type` . Certifique-se de que o cabeçalho esteja incluído na solicitação e que seu valor esteja `application/json`.
 
 
 ## Diretório de solução de problemas de serviço {#service-troubleshooting-directory}

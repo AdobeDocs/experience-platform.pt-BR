@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Recursos de Lista
 
-Você pode visualização uma lista de todos os [!DNL Schema Registry] recursos de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação GET.
+Você pode visualização uma lista de todos os [!DNL Schema Registry] recursos de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação de GET.
 
 >[!NOTE]
 >

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [A Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida por [!DNL Oracle] ela, que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 
-Para enviar dados de segmento para [!DNL Oracle Eloqua], é necessário primeiro [conectar o destino](#connect-destination) na Platform de dados do cliente em tempo real da Adobe e [configurar uma importação](#import-data-into-eloqua) de dados do local do armazenamento para [!DNL Oracle Eloqua].
+Para enviar dados de segmento para [!DNL Oracle Eloqua], é necessário primeiro [conectar o destino](#connect-destination) na Adobe Real-time Customer Data Platform e [configurar uma importação](#import-data-into-eloqua) de dados do local do armazenamento para [!DNL Oracle Eloqua].
 
 ## Conectar ao destino {#connect-destination}
 

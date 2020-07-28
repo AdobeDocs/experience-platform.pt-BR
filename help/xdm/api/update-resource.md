@@ -14,17 +14,17 @@ ht-degree: 2%
 
 # Atualizar um recurso
 
-Você pode modificar ou atualizar recursos no container locatário usando uma solicitação PATCH. O [!DNL Schema Registry] oferece suporte a todas as operações padrão de Patch JSON, incluindo adicionar, remover e substituir.
+Você pode modificar ou atualizar recursos no container locatário usando uma solicitação de PATCH. O [!DNL Schema Registry] oferece suporte a todas as operações padrão de Patch JSON, incluindo adicionar, remover e substituir.
 
 Para obter mais informações sobre o Patch JSON, incluindo operações disponíveis, consulte a documentação [oficial do Patch](http://jsonpatch.com/)JSON.
 
 >[!NOTE]
 >
->Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte o documento sobre a [substituição de um recurso usando uma operação](replace-resource.md)PUT.
+>Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte o documento sobre a [substituição de um recurso usando uma operação](replace-resource.md)de PUT.
 
 ## Adicionar misturas a um schema
 
-Uma das operações PATCH mais comuns envolve a adição de misturas previamente definidas a um schema XDM, como demonstrado pelo exemplo abaixo.
+Uma das operações de PATCH mais comuns envolve a adição de misturas previamente definidas a um schema XDM, como demonstrado pelo exemplo abaixo.
 
 **Formato da API**
 
@@ -39,7 +39,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Solicitação**
 
-Usando uma operação PATCH, você pode atualizar um schema para incluir campos definidos em uma combinação criada anteriormente. Para fazer isso, você deve executar uma solicitação PATCH para o schema usando sua `meta:altId` ou a `$id` URL codificada.
+Usando uma operação de PATCH, você pode atualizar um schema para incluir campos definidos em uma combinação criada anteriormente. Para fazer isso, você deve executar uma solicitação de PATCH ao schema usando sua `meta:altId` ou a `$id` URL codificada.
 
 O corpo da solicitação inclui a operação (`op`) que você deseja executar, onde (`path`) você gostaria de executar a operação e que informações (`value`) você gostaria de incluir na operação. Neste exemplo, o `$id` valor do mixin está sendo adicionado aos campos `meta:extends` e `allOf` do schema do público alvo.
 
@@ -100,7 +100,7 @@ A resposta mostra que ambas as operações foram executadas com êxito. A mistur
 
 ## Atualizar campos individuais para um recurso
 
-Você também pode enviar solicitações PATCH que fazem várias alterações em campos individuais dentro de um recurso de Registro de Schemas.
+Também é possível enviar solicitações de PATCH que façam várias alterações em campos individuais dentro de um recurso de Registro de Schemas.
 
 **Formato da API**
 

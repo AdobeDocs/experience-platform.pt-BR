@@ -63,5 +63,5 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Amazo
 
 ## Conectar-se [!DNL Amazon Kinesis] à [!DNL Platform] interface do usuário
 
-- [Criar um conector de origem do Amazon Kinesis na interface do usuário](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Criar um conector de origem Amazon Kinesis na interface do usuário](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configurar um fluxo de dados para um conector de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage.md)

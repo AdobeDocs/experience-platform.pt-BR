@@ -57,7 +57,7 @@ Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinati
    ![ID de fidelidade como identidade](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selecione `Email_LC_SHA256` como identidade do público alvo se você tiver hash de endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [!DNL Facebook] de hash do [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email. <br> Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real da Adobe executará hash nos endereços de email para atender aos [!DNL Facebook] requisitos.
+   Selecione `Email_LC_SHA256` como identidade do público alvo se você tiver hash de endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [!DNL Facebook] de hash do [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email. <br> Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real do Adobe hash os endereços de email para atender aos [!DNL Facebook] requisitos.
 
    ![mapeamento de identidade após preencher campos](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -94,7 +94,7 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes na CDP em t
 
 ### Destinos de marketing por email e destinos de armazenamentos na nuvem
 
-Para destinos de marketing por email e destinos de armazenamentos na nuvem, o Adobe Real-time CDP cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The file format is:
+Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Real-time CDP cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Os arquivos que você receberia em três dias consecutivos podem ter a seguinte aparência:
@@ -117,7 +117,7 @@ Por exemplo, [!DNL Facebook]uma ativação bem-sucedida significa que uma audiê
 
 >[!TIP]
 >
->A integração entre o Adobe Real-time CDP e [!DNL Facebook] suporta preenchimentos retroativos históricos de audiência. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
+>A integração entre a CDP em tempo real do Adobe e [!DNL Facebook] suporta preenchimentos retroativos históricos de audiência. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
 
 ## Desativar ativação {#disable-activation}
 

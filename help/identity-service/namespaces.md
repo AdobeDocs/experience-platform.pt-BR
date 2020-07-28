@@ -52,7 +52,7 @@ Os seguintes tipos de identidade estão disponíveis em [!DNL Platform]:
 
 O Adobe Experience Platform fornece várias namespaces de identidade que estão disponíveis para todas as organizações. Elas são conhecidas como namespaces padrão e são visíveis usando a [!DNL Identity Service] API ou por meio da [!DNL Platform] interface do usuário.
 
-Para visualização de namespaces padrão na interface do usuário, clique em **[!UICONTROL Identidades]** no painel esquerdo e clique na guia *[!UICONTROL Procurar]* . Todas as namespaces de identidade acessíveis à sua organização serão exibidas, no entanto, aquelas com &quot;[!UICONTROL Padrão]&quot; como &quot;[!UICONTROL Proprietário]&quot; são as namespaces padrão fornecidas pela Adobe.
+Para visualização de namespaces padrão na interface do usuário, clique em **[!UICONTROL Identidades]** no painel esquerdo e clique na guia *[!UICONTROL Procurar]* . Todas as namespaces de identidade acessíveis à sua organização serão exibidas, no entanto, aquelas com &quot;[!UICONTROL Padrão]&quot; como &quot;[!UICONTROL Proprietário]&quot; são as namespaces padrão fornecidas pelo Adobe.
 
 Você pode clicar em uma das namespaces listadas para obter detalhes sobre a visualização.
 

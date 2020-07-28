@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Descobrindo insights com a IA do cliente
 
-A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar o Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
+A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
 
 Este documento serve como um guia para interagir com as informações da instância do serviço na interface do usuário da API do cliente do Intelligent Services.
 
@@ -130,7 +130,7 @@ Para visualização do novo segmento na interface do usuário do Platform, cliqu
 
 ## Próximas etapas
 
-Este documento descreveu os insights fornecidos por uma instância de serviço de IA do cliente. Agora você pode continuar com o tutorial sobre como [baixar pontuações no AI](./download-scores.md) do cliente ou navegar pelos outros guias [do Adobe Intelligent Services](../../home.md) oferecidos.
+Este documento descreveu os insights fornecidos por uma instância de serviço de IA do cliente. Agora você pode continuar com o tutorial sobre como [baixar pontuações no AI](./download-scores.md) do cliente ou navegar pelos outros guias de Serviços [inteligentes do](../../home.md) Adobe que são oferecidos.
 
 ## Recursos adicionais
 

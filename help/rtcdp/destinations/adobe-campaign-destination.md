@@ -18,7 +18,7 @@ ht-degree: 1%
 
 O Adobe Campaign é um conjunto de soluções que o ajudam a personalizar e fornecer campanhas em todos os canais online e offline. Consulte [Sobre o Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obter mais informações.
 
-Para enviar dados de segmento para o Adobe Campaign, é necessário primeiro [conectar o destino](#connect-destination) na Adobe Real-time Customer Data Platform e [configurar uma importação](#import-data-into-campaign) de dados do local do armazenamento para o Adobe Campaign.
+Para enviar dados de segmento para o Adobe Campaign, é necessário primeiro [conectar o destino](#connect-destination) no Adobe Real-time Customer Data Platform e [configurar uma importação](#import-data-into-campaign) de dados do local do armazenamento para o Adobe Campaign.
 
 ## Destino do Connect {#connect-destination}
 
@@ -30,7 +30,7 @@ Para enviar dados de segmento para o Adobe Campaign, é necessário primeiro [co
 
    ![Configurar o assistente de Campanhas](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Para conexões **[!UICONTROL Amazon S3]** , você deve fornecer sua ID da chave de acesso e chave de acesso secreta.
+   Para conexões com o **[!UICONTROL Amazon S3]** , é necessário fornecer a ID da chave de acesso e a chave de acesso secreta.
 Para **[!UICONTROL SFTP com conexões de senha]** , você deve fornecer Domínio, Porta, Nome de usuário e Senha.
 Para **[!UICONTROL SFTP com conexões de chave]** SSH, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH.
 

@@ -40,7 +40,7 @@ A primeira etapa na criação de uma política DULE é determinar que ação de 
 
 ### Pesquisar uma ação de marketing existente {#look-up}
 
-Você pode pesquisar ações de marketing existentes a serem avaliadas pela sua política de DULE, fazendo uma solicitação GET para um dos `/marketingActions` pontos finais.
+Você pode procurar ações de marketing existentes para serem avaliadas pela sua política de DULE, fazendo uma solicitação de GET para um dos `/marketingActions` pontos de extremidade.
 
 **Formato da API**
 
@@ -125,7 +125,7 @@ Quando você encontrar a ação de marketing que deseja usar, registre o valor d
 
 ### Criar uma nova ação de marketing {#create-new}
 
-Você pode criar uma nova ação de marketing fazendo uma solicitação PUT ao ponto de `/marketingActions/custom/` extremidade e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
+Você pode criar uma nova ação de marketing, fazendo uma solicitação de PUT ao `/marketingActions/custom/` endpoint e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
 
 **Formato da API**
 
@@ -221,7 +221,7 @@ Essa expressão é chamada de expressão **de** política e é um objeto que con
 >
 >Somente operadores OR e AND são suportados.
 
-Depois de configurar sua expressão de política, você pode criar uma nova política de DULE, fazendo uma solicitação POST para o `/policies/custom` ponto de extremidade.
+Depois de configurar sua expressão de política, você pode criar uma nova política de DULE, solicitando um POST para o `/policies/custom` endpoint.
 
 **Formato da API**
 
@@ -328,7 +328,7 @@ Registre a ID de URI da política DULE recém-criada, como ela é usada na próx
 >
 >Embora esta etapa seja opcional se você deseja deixar sua política DULE em `DRAFT` status, observe que por padrão uma política deve ter seu status definido como `ENABLED` para participar da avaliação. Consulte o tutorial sobre como [aplicar políticas](../enforcement/api-enforcement.md) DULE para obter informações sobre como fazer exceções para políticas em `DRAFT` status.
 
-Por padrão, as políticas DULE que têm sua `status` propriedade definida para `DRAFT` não participam da avaliação. Você pode habilitar sua política para avaliação fazendo uma solicitação PATCH para o `/policies/custom/` ponto de extremidade e fornecendo o identificador exclusivo da política no final do caminho da solicitação.
+Por padrão, as políticas DULE que têm sua `status` propriedade definida para `DRAFT` não participam da avaliação. Você pode habilitar sua política para avaliação, fazendo uma solicitação de PATCH ao `/policies/custom/` endpoint e fornecendo o identificador exclusivo da política no final do caminho da solicitação.
 
 **Formato da API**
 
@@ -363,7 +363,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `op` | O tipo de operação PATCH a ser executada. Esta solicitação executa uma operação de &quot;substituição&quot;. |
+| `op` | O tipo de operação de PATCH a ser executada. Esta solicitação executa uma operação de &quot;substituição&quot;. |
 | `path` | O caminho para o campo a ser atualizado. Ao ativar uma política, o valor deve ser definido como &quot;/status&quot;. |
 | `value` | O novo valor a ser atribuído à propriedade especificada em `path`. Esta solicitação define a propriedade da política como &quot; `status` ATIVADO&quot;. |
 

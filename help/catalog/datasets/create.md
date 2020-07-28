@@ -469,7 +469,7 @@ As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encont
 
 ## Atualizar o schema de conjunto de dados
 
-Você pode adicionar campos e assimilar dados adicionais em conjuntos de dados criados. Para fazer isso, primeiro é necessário atualizar o schema adicionando propriedades adicionais que definem os novos dados. Isso pode ser feito usando as operações PATCH e/ou PUT para atualizar o schema existente.
+Você pode adicionar campos e assimilar dados adicionais em conjuntos de dados criados. Para fazer isso, primeiro é necessário atualizar o schema adicionando propriedades adicionais que definem os novos dados. Isso pode ser feito usando operações de PATCH e/ou PUT para atualizar o schema existente.
 
 Para obter mais informações sobre a atualização de schemas, consulte o Guia [do desenvolvedor da API do Registro de](../../xdm/api/getting-started.md)Schemas.
 

@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda dos conectores de origem da plataforma Adobe Experience
+user-guide-title: Ajuda dos conectores de origem de Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 - [Visão geral dos conectores de origem](home.md)
 - Conectores de origem disponíveis {#connectors}
-   - Aplicativos da Adobe {#adobe-applications}
-      - [Conector de dados do Analytics](connectors/adobe-applications/analytics.md)
-      - [Conector do Gerenciador de Audiências](connectors/adobe-applications/audience-manager.md)
+   - aplicativos Adobe {#adobe-applications}
+      - [Conector de dados Analytics](connectors/adobe-applications/analytics.md)
+      - [conector Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - Mapeamento de campos do aplicativo Adobe {#mapping}
          - [Campos de mapeamento do Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [Campos de mapeamento do Gerenciador de Audiências](connectors/adobe-applications/mapping/audience-manager.md)
+         - [campos de mapeamento de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Campos de Target mapping](connectors/adobe-applications/mapping/target.md)
    - Publicidade {#advertising}
       - [Conector Google AdWords](connectors/advertising/ads.md)
@@ -29,7 +29,7 @@ ht-degree: 0%
       - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector HDFS Apache](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
-      - [Conector Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Blob do Azure e conector Amazon S3](connectors/cloud-storage/blob-s3.md)
       - [Conector Hubs de Evento do Azure](connectors/cloud-storage/eventhub.md)
       - [Conector do Armazenamento de Arquivo do Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
@@ -44,8 +44,8 @@ ht-degree: 0%
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
-      - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
-      - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Conector de Data Explorer do Azure](connectors/databases/data-explorer.md)
+      - [Conector Analytics do Azure Synapse](connectors/databases/synapse-analytics.md)
       - [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
       - [Conector Couchbase](connectors/databases/couchbase.md)
       - [Conector Google BigQuery](connectors/databases/bigquery.md)
@@ -89,8 +89,8 @@ ht-degree: 0%
          - [Conector Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive no conector Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Conector do Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Conector do Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Conector de Data Explorer do Azure](tutorials/api/create/databases/data-explorer.md)
+         - [Conector Analytics do Azure Synapse](tutorials/api/create/databases/synapse-analytics.md)
          - [Conector de Armazenamento de Tabela do Azure](tutorials/api/create/databases/ats.md)
          - [Conector Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Conector Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -131,9 +131,9 @@ ht-degree: 0%
    - [Criar uma conexão básica de conjunto de dados usando a API de Serviço de Fluxo](tutorials/api/create-dataset-base-connection.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar um conector de origem {#create}
-      - Aplicativos da Adobe {#adobe-applications}
-         - [Conector do Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Conector do Adobe Audiência Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - aplicativos Adobe {#adobe-applications}
+         - [Conector Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
+         - [conector Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Conector de atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicidade {#create}
          - [Conector Google AdWords](tutorials/ui/create/advertising/ads.md)
@@ -141,7 +141,7 @@ ht-degree: 0%
          - [Conector Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Conector HDFS Apache](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Conector Azure Blob e Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Blob do Azure e conector Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Conector Hubs de Evento do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Conector do Armazenamento de Arquivo do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Conector FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
@@ -156,8 +156,8 @@ ht-degree: 0%
          - [Conector Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive no conector Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Conector do Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Conector do Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Conector de Data Explorer do Azure](tutorials/ui/create/databases/data-explorer.md)
+         - [Conector Analytics do Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
          - [Conector de Armazenamento de Tabela do Azure](tutorials/ui/create/databases/ats.md)
          - [Conector Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Conector do Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -188,4 +188,4 @@ ht-degree: 0%
       - [Configurar um fluxo de dados para um conector de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Ativar dados de entrada para preencher perfis do cliente](tutorials/ui/profile.md)
    - [Monitorar os fluxos de contas e de conjunto de dados](tutorials/ui/monitor.md)
-- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

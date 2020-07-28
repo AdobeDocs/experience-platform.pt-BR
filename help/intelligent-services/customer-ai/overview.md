@@ -45,7 +45,7 @@ O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA 
 
 ## Como funciona?
 
-A IA do cliente trabalha analisando os dados existentes do Evento da Experiência do consumidor para prever as pontuações de taxa de variação ou propensão de conversão. A Adobe percebe que a definição de conversão e taxa não é uniforme em todos os casos de uso e, por isso, você pode definir metas de público alvo personalizadas como um conjunto de condições. Você pode configurar a meta prevista, desde que o evento de interesse esteja presente nos dados de entrada do Evento de experiência do consumidor.
+A IA do cliente trabalha analisando os dados existentes do Evento da Experiência do consumidor para prever as pontuações de taxa de variação ou propensão de conversão. A Adobe percebe que a definição de conversão e de taxa não é uniforme em todos os casos de uso e, por isso, você tem a capacidade de definir metas de público alvo personalizadas como um conjunto de condições. Você pode configurar a meta prevista, desde que o evento de interesse esteja presente nos dados de entrada do Evento de experiência do consumidor.
 
 ## Próximas etapas
 

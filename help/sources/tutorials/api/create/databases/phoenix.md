@@ -78,7 +78,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma [!DNL Phoenix] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL Phoenix] é `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
+Para criar uma [!DNL Phoenix] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL Phoenix] é `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
 
 ```shell
 curl -X POST \

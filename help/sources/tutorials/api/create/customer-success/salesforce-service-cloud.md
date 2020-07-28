@@ -68,7 +68,7 @@ Para criar uma conexão SSC, um conjunto de especificações de conexão SSC dev
 
 **Formato da API**
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você também pode incluir o query `property=name=="salesforce-service-cloud"` para obter informações especificamente para o SSC.
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. O envio de uma solicitação de GET para o ponto de extremidade `/connectionSpecs` retornará as especificações de conexão para todas as fontes disponíveis. Você também pode incluir o query `property=name=="salesforce-service-cloud"` para obter informações especificamente para o SSC.
 
 ```http
 GET /connectionSpecs

@@ -58,7 +58,7 @@ O algoritmo ou função que produz a lista das opções de K superior varia com 
 
 ## Trabalhar com [!DNL Decisioning Service]
 
-A [!DNL Decisioning Service], como outros [!DNL Platform] serviços, adota uma filosofia da API em primeiro lugar. Isso significa que a API é a interface principal na qual todas as funções, incluindo funções administrativas, são disponibilizadas por meio de APIs. Isso também significa que outros [!DNL Platform] serviços, soluções da Adobe e integrações de terceiros usam as mesmas APIs.
+A [!DNL Decisioning Service], como outros [!DNL Platform] serviços, adota uma filosofia da API em primeiro lugar. Isso significa que a API é a interface principal na qual todas as funções, incluindo funções administrativas, são disponibilizadas por meio de APIs. Isso também significa que outros [!DNL Platform] serviços, soluções de Adobe e integrações de terceiros usam as mesmas APIs.
 
 Você pode usar [!DNL Decisioning Service] em um modo de interação de solicitação-resposta síncrono facilitado por uma API REST HTTP simples. A chamada da API retorna a melhor opção atual para um único perfil. A seleção da &quot;opção melhor no momento&quot; será alterada com base nas regras e restrições aplicadas a todas as opções que estão sendo consideradas por uma determinada atividade. A REST API permite obter a próxima melhor opção para várias atividades ao mesmo tempo. Isso permite a arbitragem de opções entre canais. Quando respostas para várias atividades são obtidas juntas, regras adicionais podem ser aplicadas.
 

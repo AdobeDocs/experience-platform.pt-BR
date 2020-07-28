@@ -40,7 +40,7 @@ As relações de Schema são representadas por um schema **de** origem com um ca
 
 >[!IMPORTANT] Para estabelecer uma relação, ambos os schemas devem ter identidades primárias definidas e estar habilitados para [!DNL Real-time Customer Profile]. Consulte a seção sobre como [ativar um schema para uso no Perfil](./create-schema-api.md#profile) no tutorial de criação do schema se precisar de orientação sobre como configurar seus schemas de acordo.
 
-Para definir uma relação entre dois schemas, primeiro você deve adquirir os `$id` valores para ambos os schemas. Se você souber os nomes para exibição (`title`) dos schemas, poderá encontrar seus `$id` valores fazendo uma solicitação GET para o `/tenant/schemas` endpoint na [!DNL Schema Registry] API.
+Para definir uma relação entre dois schemas, primeiro você deve adquirir os `$id` valores para ambos os schemas. Se você souber os nomes para exibição (`title`) dos schemas, poderá encontrar seus `$id` valores fazendo uma solicitação de GET para o `/tenant/schemas` endpoint na [!DNL Schema Registry] API.
 
 **Formato da API**
 
@@ -120,7 +120,7 @@ Neste tutorial, o schema de destino &quot;[!DNL Hotels]&quot; contém um `email`
 
 ### Criar uma nova mistura
 
-Para adicionar um novo campo a um schema, ele deve primeiro ser definido em uma mistura. Você pode criar um novo mixin, fazendo uma solicitação POST para o `/tenant/mixins` terminal.
+Para adicionar um novo campo a um schema, ele deve primeiro ser definido em uma mistura. Você pode criar um novo mixin, fazendo uma solicitação de POST para o `/tenant/mixins` terminal.
 
 **Formato da API**
 
@@ -230,7 +230,7 @@ Registre o `$id` URI da mistura, a ser usado na próxima etapa da adição do mi
 
 ### Adicionar a mistura ao schema de origem
 
-Depois de criar um mixin, você pode adicioná-lo ao schema de origem, fazendo uma solicitação PATCH ao `/tenant/schemas/{SCHEMA_ID}` endpoint.
+Depois de criar um mixin, você pode adicioná-lo ao schema de origem, fazendo uma solicitação de PATCH para o `/tenant/schemas/{SCHEMA_ID}` endpoint.
 
 **Formato da API**
 
@@ -267,7 +267,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `op` | A operação PATCH a ser executada. Esta solicitação usa a `add` operação. |
+| `op` | A operação de PATCH a ser executada. Esta solicitação usa a `add` operação. |
 | `path` | O caminho para o campo schema no qual o novo recurso será adicionado. Ao adicionar misturas a schemas, o valor deve ser &quot;/allOf/-&quot;. |
 | `value.$ref` | A `$id` mistura a ser adicionada. |
 
@@ -336,7 +336,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 Os campos de Schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `email` campo em &quot;[!DNL Hotels]&quot;, `email` deve ser fornecido um descritor de identidade de referência.
 
-Crie um descritor de referência para o schema de destino, fazendo uma solicitação POST para o `/tenant/descriptors` ponto final.
+Crie um descritor de referência para o schema de destino, fazendo uma solicitação de POST para o `/tenant/descriptors` ponto final.
 
 **Formato da API**
 
@@ -391,7 +391,7 @@ Uma resposta bem-sucedida retorna os detalhes do descritor de referência recém
 
 ## Criar um descritor de relação {#create-descriptor}
 
-Os descritores de relacionamento estabelecem uma relação um para um entre um schema de origem e um schema de destino. Depois de definir um descritor de referência para o schema de destino, você pode criar um novo descritor de relação, enviando uma solicitação POST para o `/tenant/descriptors` ponto de extremidade.
+Os descritores de relacionamento estabelecem uma relação um para um entre um schema de origem e um schema de destino. Depois de definir um descritor de referência para o schema de destino, você pode criar um novo descritor de relação, solicitando POST para o `/tenant/descriptors` ponto final.
 
 **Formato da API**
 

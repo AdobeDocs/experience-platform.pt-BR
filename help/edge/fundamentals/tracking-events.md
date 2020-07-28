@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Para enviar dados do evento para a Adobe Experience Cloud, use o `sendEvent` comando. O `sendEvent` comando é a principal maneira de enviar dados para o [!DNL Experience Cloud]e recuperar conteúdo personalizado, identidades e destinos de audiência.
 
-Os dados enviados para a Adobe Experience Cloud são divididos em duas categorias:
+Os dados enviados à Adobe Experience Cloud são divididos em duas categorias:
 
 * Dados XDM
 * Dados não XDM (atualmente não suportados)

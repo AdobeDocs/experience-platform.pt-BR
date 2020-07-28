@@ -342,7 +342,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo streami
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | A ID da conexão de streaming criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerou o lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
+| `xactionId` | Um identificador exclusivo gerou o lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro em vários sistemas e na depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 | `synchronousValidation.status` | Como o parâmetro query `synchronousValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
 
@@ -370,7 +370,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Solicitação**
 
-Você pode revisar os dados de registro ingeridos anteriormente com a seguinte solicitação GET.
+Você pode revisar os dados de registro ingeridos anteriormente com a seguinte solicitação de GET.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\

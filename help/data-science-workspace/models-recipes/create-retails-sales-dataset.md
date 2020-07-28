@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar o schema de vendas de varejo e o conjunto de dados
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -98,7 +98,7 @@ O schema de vendas de varejo e os conjuntos de dados são criados automaticament
    python bootstrap.py
    ```
 
-   > [!NOTE] O script pode levar vários minutos para ser concluído.
+   >[!NOTE] O script pode levar vários minutos para ser concluído.
 
 ## Próximas etapas
 

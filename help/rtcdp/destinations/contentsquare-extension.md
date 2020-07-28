@@ -18,7 +18,7 @@ ht-degree: 4%
 
 Visualize comportamentos na página, consulte POR QUE os clientes abandonam e COMO você pode melhorar. Atribua receita ao UX e aos elementos de conteúdo para cada segmento e teste de Público alvo do Analytics. Instale a [!DNL Contentsquare] tag, configure variáveis e eventos personalizados. Start coletando dados para sua análise UX em alguns cliques.
 
-[!DNL Contentsquare] é uma extensão de análise na Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
+[!DNL Contentsquare] é uma extensão de análise no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 
 Este destino é uma extensão de Experience Platform Launch. Para obter mais informações sobre como as extensões do Launch funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
@@ -27,15 +27,15 @@ Este destino é uma extensão de Experience Platform Launch. Para obter mais inf
 
 ## Pré-requisitos {#prerequisites}
 
-Essa extensão está disponível no [!DNL Destinations] catálogo para todos os clientes que compraram a Adobe Real-time CDP.
+Esta extensão está disponível no [!DNL Destinations] catálogo para todos os clientes que compraram o Adobe Real-time CDP.
 
-Para usar essa extensão, você precisa acessar o Experience Platform Launch. O Experience Platform Launch é oferecido aos clientes da Adobe Experience Cloud como um recurso incluído que agrega valor. Entre em contato com o administrador da organização para obter acesso ao Launch e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar o Experience Platform Launch. O Experience Platform Launch é oferecido aos clientes da Adobe Experience Cloud como um recurso incluído, de valor agregado. Entre em contato com o administrador da organização para obter acesso ao Launch e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
 Para instalar a [!DNL Contentsquare] extensão:
 
-1. Na interface [CDP em tempo real da](http://platform.adobe.com/)Adobe, vá para **[!UICONTROL Destinos > Catálogo]**.
+1. Na interface [CDP em tempo real do](http://platform.adobe.com/)Adobe, vá para **[!UICONTROL Destinos > Catálogo]**.
 2. Selecione a extensão do catálogo ou use a barra de pesquisa.
 3. Clique no destino para realçá-lo e selecione **[!UICONTROL Instalar extensão]** no painel direito. Se o controle **[!UICONTROL Instalar extensão]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]** . Consulte [Pré-requisitos](#prerequisites).
 4. Na janela **[!UICONTROL Selecionar propriedade]** de inicialização disponível, selecione a propriedade Iniciar na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [da página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propriedades da documentação do Launch.
@@ -58,7 +58,7 @@ Você pode configurar, atualizar e excluir extensões na interface do Launch.
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário do Adobe Real-time CDP ainda exibirá **[!UICONTROL Instalar]** para a extensão. Exclua o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para acessar Iniciar e configurar ou excluir sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário CDP em tempo real do Adobe ainda exibirá **[!UICONTROL Instalar]** para a extensão. Exclua o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para acessar Iniciar e configurar ou excluir sua extensão.
 
 Para atualizar sua extensão, consulte Atualização [da](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) extensão na documentação do Launch.
 

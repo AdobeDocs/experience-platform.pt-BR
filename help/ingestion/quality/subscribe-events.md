@@ -43,11 +43,11 @@ O schema de evento de notificação de ingestão de dados é um schema [!DNL Exp
 
 ## Assinar notificações de status de ingestão de dados
 
-Por meio de Eventos [de E/S da](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, você pode assinar vários tipos de notificação usando webhooks. As seções abaixo descrevem as etapas para assinar [!DNL Platform] notificações de eventos de ingestão de dados usando o Adobe Developer Console.
+Por meio de Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, você pode assinar vários tipos de notificação usando webhooks. As seções abaixo descrevem as etapas para a inscrição em [!DNL Platform] notificações de eventos de ingestão de dados usando o Console do desenvolvedor do Adobe.
 
-### Criar um novo projeto no Adobe Developer Console
+### Criar um novo projeto no Console do desenvolvedor do Adobe
 
-Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Adobe Developer Console.
+Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Console do desenvolvedor do Adobe.
 
 ### Adicionar [!DNL Experience Platform] eventos ao projeto
 
@@ -79,7 +79,7 @@ Na tela seguinte, forneça um nome e uma descrição para o registro do evento. 
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-Mais adiante na mesma tela, você pode configurar opcionalmente como receber eventos. **[!UICONTROL O Webhook]** permite que você forneça um endereço de webhook personalizado para receber eventos, enquanto a ação **** Runtime permite que você faça o mesmo usando o [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Mais adiante na mesma tela, você pode configurar opcionalmente como receber eventos. **[!UICONTROL O Webhook]** permite que você forneça um endereço de webhook personalizado para receber eventos, enquanto a ação **[!UICONTROL do]** Runtime permite que você faça o mesmo usando o [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
 Este tutorial ignora esta etapa de configuração opcional. Quando terminar, clique em **[!UICONTROL Salvar eventos]** configurados para concluir o registro do evento.
 
@@ -91,4 +91,4 @@ A página de detalhes do registro de eventos recém-criado é exibida, onde voc�
 
 ## Próximas etapas
 
-Depois de registrar [!DNL Platform] notificações para o seu projeto, você poderá visualização eventos recebidos do painel do projeto. Consulte o guia de Eventos [de E/S da Adobe para](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) rastreamento para obter instruções detalhadas sobre como rastrear seus eventos.
+Depois de registrar [!DNL Platform] notificações para o seu projeto, você poderá visualização eventos recebidos do painel do projeto. Consulte o guia de Eventos [de E/S do](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) Tracing Adobe para obter instruções detalhadas sobre como rastrear seus eventos.

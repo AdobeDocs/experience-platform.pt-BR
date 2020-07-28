@@ -398,7 +398,7 @@ curl -X GET \
 
 **Resposta**
 
-A chamada GET fornecerá o status no `state` parâmetro, como mostrado abaixo:
+A chamada do GET fornecerá o status no `state` parâmetro, como mostrado abaixo:
 
 ```JSON
 {
@@ -490,7 +490,7 @@ A resposta representa o Modelo treinado que foi criado.
 
 ### Parar e excluir um Experimento programado
 
-Se você quiser interromper a execução de um Experimento programado antes de seu teste, isso pode ser feito consultando uma solicitação DELETE ao `endTime``{EXPERIMENT_ID}`
+Se você quiser interromper a execução de um Experimento programado antes de seu teste, `endTime`isso pode ser feito consultando uma solicitação de DELETE ao `{EXPERIMENT_ID}`
 
 **Solicitação**
 

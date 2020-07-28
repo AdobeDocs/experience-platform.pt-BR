@@ -98,13 +98,13 @@ O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICO
 
 [Ambientes](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) no Adobe Target ajudam você a gerenciar sua implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
 
-A Adobe recomenda configurar isso de forma diferente para cada um dos seus ambientes de configuração de `dev`borda, `stage`e `prod` para manter as coisas simples. No entanto, se você já tiver ambientes  Adobe Target definidos, poderá usá-los.
+O Adobe recomenda configurar isso de forma diferente para cada um dos ambientes de configuração `dev`, `stage`e `prod` borda para manter as coisas simples. No entanto, se você já tiver ambientes  Adobe Target definidos, poderá usá-los.
 
 #### Adobe Audience Manager
 
 Tudo o que é necessário para enviar dados ao Adobe Audience Manager é ativar esta seção. As outras configurações são opcionais, mas são recomendadas.
 
-![Bloco de configurações do Adobe Audiência Manage](../../assets/edge_configuration_aam.png)
+![Bloco de configurações de gerenciamento de Audiência Adobe](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Destinos de cookies ativados]
 
@@ -116,10 +116,10 @@ Permite que o SDK compartilhe informações do segmento por meio de Destinos [de
 
 #### Adobe Analytics
 
-Controla se os dados são enviados para o Adobe Analytics. Detalhes adicionais estão na Visão geral [do](../solution-specific/analytics/analytics-overview.md)Analytics.
+Controla se os dados são enviados para a Adobe Analytics. Detalhes adicionais estão na Visão geral [do](../solution-specific/analytics/analytics-overview.md)Analytics.
 
 ![Bloco de configurações do Adobe Analytics](../../assets/edge_configuration_aa.png)
 
 ##### [!UICONTROL ID de conjunto de relatórios]
 
-O conjunto de relatórios pode ser encontrado na seção Adobe Analytics Admin em [!UICONTROL Admin > ReportSuites]. Se vários conjuntos de relatórios forem especificados, os dados serão copiados para cada conjunto de relatórios.
+O conjunto de relatórios pode ser encontrado na seção Admin da Adobe Analytics em [!UICONTROL Admin > ReportSuites]. Se vários conjuntos de relatórios forem especificados, os dados serão copiados para cada conjunto de relatórios.

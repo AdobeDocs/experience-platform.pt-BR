@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Consentimento de suporte
 
-Para respeitar a privacidade do usuário, você pode solicitar o consentimento do usuário antes de permitir que o SDK use dados específicos do usuário para determinados fins. Atualmente, o SDK permite que os usuários opt in ou saiam de todas as finalidades, mas no futuro a Adobe espera fornecer um controle mais detalhado sobre finalidades específicas.
+Para respeitar a privacidade do usuário, você pode solicitar o consentimento do usuário antes de permitir que o SDK use dados específicos do usuário para determinados fins. Atualmente, o SDK permite que os usuários opt in ou saiam de todos os fins, mas no futuro a Adobe espera fornecer um controle mais granular sobre fins específicos.
 
 Se o usuário opt in para todos os fins, o SDK poderá executar as seguintes tarefas:
 
-* Envie dados de e para os servidores da Adobe.
+* Envie dados de e para servidores Adobe.
 * Ler e gravar cookies ou itens de armazenamento da Web (exceto por persistir nas preferências de aceitação do usuário).
 
 Se o usuário opt out de todas as finalidades, o SDK não executará nenhuma dessas tarefas.
@@ -79,7 +79,7 @@ Como o usuário optou por opt out, as promessas que foram retornadas de comandos
 
 >[!NOTE]
 >
->Atualmente, o SDK suporta apenas a `general` finalidade. Embora planejemos criar um conjunto mais robusto de propósitos ou categorias que corresponderão aos diferentes recursos e ofertas de produtos da Adobe, a implementação atual é uma abordagem de aceitação total ou parcial.  Isso se aplica somente ao Adobe Experience Platform [!DNL Web SDK] e NÃO a outras bibliotecas do Adobe JavaScript.
+>Atualmente, o SDK suporta apenas a `general` finalidade. Embora planejemos criar um conjunto mais robusto de propósitos ou categorias que corresponderão aos diferentes recursos de Adobe e ofertas de produtos, a implementação atual é uma abordagem de aceitação total ou parcial.  Isso se aplica somente ao Adobe Experience Platform [!DNL Web SDK] e NÃO a outras bibliotecas do Adobe JavaScript.
 
 ## Persistência das preferências de consentimento
 

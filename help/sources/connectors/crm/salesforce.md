@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Salesforce] conector
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um sistema CRM de terceiros. O suporte para provedores CRM inclui [!DNL Salesforce].
 

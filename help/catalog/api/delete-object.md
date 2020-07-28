@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz que contém a ID do conjunto de dados excluído. Essa ID deve corresponder àquela enviada na solicitação de DELETE. A execução de uma solicitação GET no objeto excluído retorna o status HTTP 404 (Não encontrado), confirmando que o conjunto de dados foi excluído com êxito.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz que contém a ID do conjunto de dados excluído. Essa ID deve corresponder àquela enviada na solicitação de DELETE. A execução de uma solicitação de GET no objeto excluído retorna o status HTTP 404 (Não encontrado), confirmando que o conjunto de dados foi excluído com êxito.
 
 ```json
 [

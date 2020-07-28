@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Pesquisar um objeto
 
-Se você souber o identificador exclusivo de um [!DNL Catalog] objeto específico, poderá executar uma solicitação GET para visualização dos detalhes desse objeto.
+Se você souber o identificador exclusivo de um [!DNL Catalog] objeto específico, poderá executar uma solicitação de GET para visualização dos detalhes desse objeto.
 
 >[!NOTE]
 >

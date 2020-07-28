@@ -28,7 +28,7 @@ Para fazer chamadas para os [!DNL Dataset Service] pontos de extremidade contorn
 
 ## Lista de todas as etiquetas {#list-labels}
 
-Usando a [!DNL Policy Service] API, você pode lista todos os rótulos `core` ou `custom` rótulos fazendo uma solicitação GET para `/labels/core` ou `/labels/custom`, respectivamente.
+Usando a [!DNL Policy Service] API, você pode lista todos os rótulos `core` ou `custom` rótulos, fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
 
 **Formato da API**
 
@@ -110,7 +110,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 
 ## Procurar uma etiqueta {#look-up-label}
 
-Você pode procurar um rótulo específico incluindo a propriedade desse rótulo no caminho de uma solicitação GET para a `name` [!DNL Policy Service] API.
+Você pode procurar um rótulo específico incluindo a propriedade desse rótulo no caminho de uma solicitação de GET para a `name` [!DNL Policy Service] API.
 
 **Formato da API**
 
@@ -230,7 +230,7 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o c�
 
 ## Procurar rótulos para um conjunto de dados {#look-up-dataset-labels}
 
-Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente, fazendo uma solicitação GET para a [!DNL Dataset Service] API.
+Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente, fazendo uma solicitação de GET para a [!DNL Dataset Service] API.
 
 **Formato da API**
 
@@ -283,7 +283,7 @@ Uma resposta bem-sucedida retorna os rótulos de uso de dados que foram aplicado
 
 ## Aplicar rótulos a um conjunto de dados {#apply-dataset-labels}
 
-Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-os na carga de uma solicitação POST ou PUT para a [!DNL Dataset Service] API. O uso de qualquer um desses métodos substitui quaisquer rótulos existentes e os substitui pelos fornecidos na carga.
+Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-os na carga de uma solicitação de POST ou PUT para a [!DNL Dataset Service] API. O uso de qualquer um desses métodos substitui quaisquer rótulos existentes e os substitui pelos fornecidos na carga.
 
 **Formato da API**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitação**
 
-A solicitação POST a seguir adiciona uma série de rótulos ao conjunto de dados, bem como um campo específico nesse conjunto de dados. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação PUT.
+A solicitação de POST a seguir adiciona uma série de rótulos ao conjunto de dados, bem como um campo específico nesse conjunto de dados. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação de PUT.
 
 ```shell
 curl -X POST \
@@ -350,7 +350,7 @@ Uma resposta bem-sucedida retorna os rótulos que foram adicionados ao conjunto 
 
 ## Remover rótulos de um conjunto de dados {#remove-dataset-labels}
 
-Você pode remover os rótulos aplicados a um conjunto de dados, fazendo uma solicitação DELETE à [!DNL Dataset Service] API.
+Você pode remover os rótulos aplicados a um conjunto de dados, fazendo uma solicitação de DELETE para a [!DNL Dataset Service] API.
 
 **Formato da API**
 

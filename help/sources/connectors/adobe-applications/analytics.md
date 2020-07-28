@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # Conector de dados Analytics
 
-Adobe Experience Platform permite que você ingira dados do Adobe Analytics por meio do Analytics Data Connector (ADC). O ADC transmite os dados coletados pelo Adobe Analytics para o Platform em tempo real, convertendo dados Analytics formatados pelo SCDS em campos do Modelo de Dados de Experiência (XDM) para consumo pela Platform.
+O Adobe Experience Platform permite que você ingira dados do Adobe Analytics por meio do Analytics Data Connector (ADC). O ADC transmite os dados coletados pela Adobe Analytics para a Platform em tempo real, convertendo dados Analytics formatados pelo SCDS em campos do Modelo de dados de experiência (XDM) para consumo pela Platform.
 
 Este documento fornece uma visão geral do Adobe Analytics e descreve os casos de uso para dados do Analytics.
 
-## Dados da Adobe Analytics e Analytics
+## Dados Adobe Analytics e Analytics
 
-A Adobe Analytics é um mecanismo poderoso para ajudá-lo a saber mais sobre seus clientes, como eles interagem com suas propriedades da Web, onde seus gastos com marketing digital são efetivos e identificam áreas de aprimoramento. A Adobe Analytics lida com trilhões de transações da Web por ano e o ADC permite que você se aprofunde com facilidade nesses dados comportamentais avançados e aprimore o Perfil de clientes em tempo real em questão de minutos.
+A Adobe Analytics é um mecanismo poderoso para ajudá-lo a saber mais sobre seus clientes, como eles interagem com suas propriedades da Web, onde seus gastos com marketing digital são efetivos e identificam áreas de aprimoramento. A Adobe Analytics lida com trilhões de transações da Web por ano e o ADC permite que você se aprofunde com facilidade nesses ricos dados comportamentais e aprimore o Perfil do cliente em tempo real em questão de minutos.
 
 ![](./images/analytics-data-experience-platform.png)
 

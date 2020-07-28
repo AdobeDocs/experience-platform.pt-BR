@@ -108,7 +108,7 @@ A seguir está a resposta após a criação do Experimento programado.
 
 ### Criar uma execução de experimento para pontuação
 
-Agora com o modelo treinado, podemos criar uma Execução de Experimento para pontuação. O valor do `modelId` parâmetro é o `id` parâmetro retornado na solicitação GET Model acima.
+Agora com o modelo treinado, podemos criar uma Execução de Experimento para pontuação. O valor do `modelId` parâmetro é o `id` parâmetro retornado na solicitação do Modelo de GET acima.
 
 **Solicitação**
 
@@ -217,7 +217,7 @@ Como há várias Execuções de Experimento para um Experimento específico, a r
 
 ### Parar e excluir um Experimento programado
 
-Se você quiser interromper a execução de um Experimento programado antes de seu teste, isso pode ser feito consultando uma solicitação DELETE ao `endTime``{EXPERIMENT_ID}`
+Se você quiser interromper a execução de um Experimento programado antes de seu teste, `endTime`isso pode ser feito consultando uma solicitação de DELETE ao `{EXPERIMENT_ID}`
 
 **Solicitação**
 

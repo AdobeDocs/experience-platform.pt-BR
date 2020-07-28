@@ -53,7 +53,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Explore suas tabelas de dados
 
-Usando a ID de conexão para seu sistema de pagamentos, você pode explorar suas tabelas de dados executando solicitações GET. Use a chamada a seguir para localizar o caminho da tabela na qual você deseja inspecionar ou assimilar [!DNL Platform].
+Usando a ID de conexão para seu sistema de pagamentos, você pode explorar suas tabelas de dados realizando solicitações de GET. Use a chamada a seguir para localizar o caminho da tabela na qual você deseja inspecionar ou assimilar [!DNL Platform].
 
 **Formato da API**
 
@@ -113,9 +113,9 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas do seu sistema de pagame
 ]
 ```
 
-## Inspecione a estrutura de uma tabela
+## Inspect a estrutura de uma tabela
 
-Para inspecionar a estrutura de uma tabela do seu sistema de pagamentos, execute uma solicitação GET enquanto especifica o caminho de uma tabela como parâmetro de query.
+Para inspecionar a estrutura de uma tabela do seu sistema de pagamentos, execute uma solicitação de GET enquanto especifica o caminho de uma tabela como um parâmetro de query.
 
 **Formato da API**
 

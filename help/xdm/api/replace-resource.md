@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Substituir um recurso
 
-O [!DNL Schema Registry] permite que você substitua um recurso inteiro por meio de uma operação PUT. Essa operação basicamente regrava o recurso, portanto, o corpo da solicitação deve incluir todos os campos que seriam necessários ao criar um novo recurso usando uma solicitação POST.
+O [!DNL Schema Registry] permite que você substitua um recurso inteiro por uma operação PUT. Essa operação basicamente regrava o recurso, portanto, o corpo da solicitação deve incluir todos os campos que seriam necessários ao criar um novo recurso usando uma solicitação de POST.
 
 Esse método é especialmente útil se você deseja atualizar várias informações no recurso de uma só vez.
 
@@ -24,7 +24,7 @@ Esse método é especialmente útil se você deseja atualizar várias informaç�
 
 **Formato da API**
 
-Uma solicitação PUT só pode ser executada em relação aos recursos definidos no container do locatário.
+Uma solicitação de PUT só pode ser executada em relação aos recursos definidos no container do locatário.
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -37,7 +37,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Solicitação**
 
-Essa solicitação de amostra substitui o tipo de dados Construção de propriedade criado em um exemplo anterior. O corpo da solicitação é semelhante à solicitação POST usada para criar o tipo de dados, exceto que agora contém um conjunto atualizado de campos com novos valores que substituem o que foi definido anteriormente.
+Essa solicitação de amostra substitui o tipo de dados Construção de propriedade criado em um exemplo anterior. O corpo da solicitação é semelhante à solicitação de POST usada para criar o tipo de dados, exceto que agora contém um conjunto atualizado de campos com novos valores que substituem o que foi definido anteriormente.
 
 ```SHELL
 curl -X PUT \

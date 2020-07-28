@@ -32,7 +32,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 ## Recuperar métricas de observabilidade
 
-Você pode recuperar métricas de observabilidade fazendo uma solicitação GET para o `/metrics` terminal na API do Observability Insights.
+Você pode recuperar métricas de observabilidade fazendo uma solicitação de GET para o `/metrics` terminal na API do Observability Insights.
 
 **Formato da API**
 

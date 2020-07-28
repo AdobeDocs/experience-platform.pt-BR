@@ -18,7 +18,7 @@ Há alguns casos em que você pode interagir com duas propriedades diferentes na
 
 * Empresas adquiridas e que estão trabalhando na integração de seus sites
 * Relações de compartilhamento de dados entre várias empresas
-* Clientes que estão testando novas soluções da Adobe e não querem interromper a implementação existente
+* Clientes que estão testando novas soluções de Adobe e não querem interromper sua implementação atual
 
 O SDK permite que você crie uma instância separada para cada propriedade adicionando outro nome à matriz no código base. No exemplo a seguir, fornecemos dois nomes, `mycustomname1` e `mycustomname2`.
 

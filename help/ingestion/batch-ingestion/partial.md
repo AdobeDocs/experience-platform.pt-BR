@@ -121,7 +121,7 @@ Para usar o fluxo &quot;[!UICONTROL Mapear CSV para o schema]XDM&quot;, siga as 
 
 A alternância de ingestão ** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a *[!UICONTROL alternância de ingestão]* parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico ** Error só é exibida quando a alternância de ingestão ** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão ** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
@@ -133,7 +133,7 @@ Se os lotes contiverem falhas, será necessário recuperar informações de erro
 
 ### Verificar status {#check-status}
 
-Para verificar o status do lote ingerido, forneça a ID do lote no caminho de uma solicitação GET.
+Para verificar o status do lote ingerido, forneça a ID do lote no caminho de uma solicitação de GET.
 
 **Formato da API**
 

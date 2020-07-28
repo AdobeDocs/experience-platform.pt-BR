@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Criar um conector de origem do Azure Data Explorer na interface do usuário
+title: Criar um conector de origem de Data Explorer do Azure na interface do usuário
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
@@ -39,10 +39,10 @@ Para acessar sua [!DNL Data Explorer] conta em [!DNL Platform], forneça os segu
 | `endpoint` | O terminal do [!DNL Data Explorer] servidor. |
 | `database` | O nome do [!DNL Data Explorer] banco de dados. |
 | `tenant` | A ID de locatário exclusiva usada para conectar-se ao [!DNL Data Explorer] banco de dados. |
-| `servicePrincipalId` | A ID de principal de serviço exclusiva usada para conectar-se ao banco de dados do Data Explorer. |
-| `servicePrincipalKey` | A chave principal de serviço exclusiva usada para conectar-se ao banco de dados do Data Explorer. |
+| `servicePrincipalId` | A ID exclusiva do principal de serviço usada para conectar-se ao banco de dados da Data Explorer. |
+| `servicePrincipalKey` | A chave principal de serviço exclusiva usada para conectar-se ao banco de dados de Datas Explorer. |
 
-Para obter mais informações sobre como começar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)do Data Explorer.
+Para obter mais informações sobre como começar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)de Data Explorer.
 
 ## Conectar sua [!DNL Azure Data Explorer] conta
 
@@ -52,7 +52,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria *[!UICONTROL Bancos]* de Dados, selecione **[!UICONTROL Azure Data Explorer]** e clique **no ícone + (+)** para criar um novo conector do Data Explorer.
+Na categoria *[!UICONTROL Bancos]* de Dados, selecione Data Explorer **[!UICONTROL do]** Azure e clique **no ícone + (+)** para criar um novo conector de Data Explorer.
 
 ![catálogo](../../../../images/tutorials/create/data-explorer/catalog.png)
 

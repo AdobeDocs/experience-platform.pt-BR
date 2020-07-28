@@ -39,7 +39,7 @@ Este documento contém informações sobre novos recursos para o Adobe Experienc
 | [!DNL Privacy Service] nova marca | A antiga chamada &quot;GDPR Service&quot; foi substituída por [!DNL Privacy Service] que o serviço cresceu para suportar outras regulamentações além do RGPD. |
 | Novos pontos de extremidade de API | O caminho básico da [!DNL Privacy Service] API foi atualizado de `/data/privacy/gdpr` para `/data/core/privacy/jobs` |
 | Nova propriedade `regulation` obrigatória | Ao criar novos trabalhos na [!DNL Privacy Service] API, uma `regulation` propriedade deve ser fornecida na carga da solicitação para indicar em qual regulamento rastrear o trabalho. Os valores aceitos são `gdpr` e `ccpa`. Consulte o documento sobre trabalhos [de](api/privacy-jobs.md) privacidade no guia do [!DNL Privacy Service] desenvolvedor para obter mais informações. |
-| Suporte para autenticação do Adobe Primetime | [!DNL Privacy Service] agora aceita solicitações de acesso/exclusão da Autenticação do Adobe Primetime, usando `primetimeAuthentication` como valor do produto. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| Suporte para autenticação Adobe Primetime | [!DNL Privacy Service] agora aceita solicitações de acesso/exclusão da Autenticação Adobe Primetime, usando `primetimeAuthentication` como valor do produto. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### Melhorias
 
@@ -55,7 +55,7 @@ Este documento contém informações sobre novos recursos para o Adobe Experienc
 | --- | --- |
 | Painel de métricas de solicitação | O novo painel de métricas na [!DNL Privacy Service] interface do usuário fornece visibilidade sobre solicitações de RGPD enviadas, erradas e concluídas. |
 | Construtor de solicitações | Para atender organizações com usuários técnicos e não técnicos que enviam solicitações de RGPD, uma funcionalidade &quot;Criar solicitação&quot; foi adicionada à interface do usuário. O recurso de envio de arquivos JSON ainda está disponível na [!DNL Privacy Service] interface do usuário para as organizações que preferirem continuar usando-o. |
-| Notificações de Evento de Trabalho do GDPR | As notificações de Eventos sobre status de trabalhos do RGPD são um elemento crítico para muitos workflows. Embora as notificações tenham sido enviadas por meio de avisos de email individuais, as notificações de evento do RGPD são mensagens que aproveitam eventos de E/S da Adobe, que são enviadas para um webhook configurado que facilita a automação de solicitações de trabalhos. [!DNL Privacy Service] Os usuários da interface do usuário podem assinar eventos do RGPD de E/S da Adobe para receber atualizações quando um produto ou o trabalho do RGPD for concluído. |
+| Notificações de Evento de Trabalho do GDPR | As notificações de Eventos sobre status de trabalhos do RGPD são um elemento crítico para muitos workflows. Embora as notificações tenham sido enviadas por meio de avisos de email individuais, as notificações de evento do RGPD são mensagens que aproveitam eventos de E/S de Adobe, que são enviadas para um webhook configurado, facilitando a automação de solicitações de trabalho. [!DNL Privacy Service] Os usuários da interface do usuário podem assinar eventos RGPD de E/S de Adobe para receber atualizações quando um produto ou o trabalho RGPD for concluído. |
 
 ## 18 de abril de 2019
 
@@ -80,14 +80,14 @@ Este documento contém informações sobre novos recursos para o Adobe Experienc
 
 ### Melhorias
 
-* Atualizadas todas as chamadas da API de pesquisa (GET) para um intervalo de pesquisa de 30 dias
+* Atualizadas todas as chamadas da API de pesquisa (GET) para o padrão em um intervalo de pesquisa de 30 dias
 * Uso restrito da API para ter um intervalo de pesquisa máximo de 45 dias
 
 ## 14 de fevereiro de 2019
 
 ### Melhorias
 
-* Imponha o `include` campo em cada submissão POST.
+* Imponha o `include` campo em cada submissão de POST.
 * Imponha o `include` campo ao fazer upload do JSON.
 
 ### Correções de erros

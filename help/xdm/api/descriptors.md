@@ -28,7 +28,7 @@ Este documento fornece exemplos de chamadas de API para descritores, bem como um
 
 ## Descritores de Lista
 
-Uma única solicitação GET pode ser usada para retornar uma lista de todos os descritores que foram definidos pela sua organização.
+Uma única solicitação de GET pode ser usada para retornar uma lista de todos os descritores que foram definidos pela sua organização.
 
 **Formato da API**
 
@@ -133,7 +133,7 @@ Uma resposta bem-sucedida retorna os detalhes do descritor, incluindo seus `@typ
 
 ## Criar descritor
 
-O [!DNL Schema Registry] permite definir vários tipos diferentes de descritor. Cada tipo de descritor requer que seus próprios campos específicos sejam enviados na solicitação POST. Uma lista completa de descritores e os campos necessários para defini-los estão disponíveis na seção do apêndice sobre a [definição de descritores](#defining-descriptors).
+O [!DNL Schema Registry] permite definir vários tipos diferentes de descritor. Cada tipo de descritor requer que seus próprios campos específicos sejam enviados na solicitação de POST. Uma lista completa de descritores e os campos necessários para defini-los estão disponíveis na seção do apêndice sobre a [definição de descritores](#defining-descriptors).
 
 **Formato da API**
 
@@ -185,7 +185,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do de
 
 ## Descritor de atualização
 
-Você pode atualizar um descritor fazendo uma solicitação PUT que faz referência ao `@id` descritor que deseja atualizar no caminho da solicitação.
+Você pode atualizar um descritor fazendo uma solicitação de PUT que faça referência ao `@id` descritor que deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 
@@ -234,7 +234,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e o `@id` do descri
 }
 ```
 
-A execução de uma solicitação de pesquisa (GET) para visualização do descritor mostrará que os campos foram atualizados para refletir as alterações enviadas na solicitação PUT.
+A execução de uma solicitação de pesquisa (GET) para visualização do descritor mostrará que os campos foram atualizados para refletir as alterações enviadas na solicitação de PUT.
 
 ## Excluir descritor
 
@@ -336,7 +336,7 @@ Descritores de nome amigáveis permitem que um usuário modifique os valores `ti
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | O novo título que você deseja exibir para este campo, escrito em Caixa alta/baixa. |
 | `xdm:description` | Uma descrição opcional pode ser adicionada junto com o título. |
-| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na [!DNL Experience Platform] interface do usuário. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado apenas para os principais campos XDM definidos pela Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, você deve editar a propriedade do campo `meta:enum` diretamente por meio de uma solicitação [](./update-resource.md)PATCH. |
+| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na [!DNL Experience Platform] interface do usuário. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado somente para os campos principais XDM definidos pelo Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, edite a propriedade do campo `meta:enum` diretamente por meio de uma solicitação [de](./update-resource.md)PATCH. |
 
 #### Descritor de relação
 

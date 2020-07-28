@@ -42,7 +42,7 @@ ht-degree: 3%
 * Criação de modelos {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
-   * [Guia do SDK da plataforma (Python)](authoring/platform-sdk.md)
+   * [Guia do SDK do Platform (Python)](authoring/platform-sdk.md)
 * Tutoriais de modelo e fórmula {#models-recipes}
    * [Criar e publicar uma apresentação de modelo de aprendizado de máquina](models-recipes/create-publish-model.md)
    * [Criar o schema de vendas de varejo e o conjunto de dados](models-recipes/create-retails-sales-dataset.md)
@@ -62,4 +62,4 @@ ht-degree: 3%
 * [Guias de migração de receitas e notebooks](recipe-notebook-migration.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

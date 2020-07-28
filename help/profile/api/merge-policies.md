@@ -26,7 +26,7 @@ As políticas de mesclagem são privadas para sua Organização IMS, permitindo 
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
+O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
 
 **Objeto de política de mesclagem**
 
@@ -177,7 +177,7 @@ Usando a [!DNL Real-time Customer Profile] API, o `/config/mergePolicies` termin
 
 ### Acessar uma única política de mesclagem por ID
 
-Você pode acessar uma única política de mesclagem por meio de sua ID, realizando uma solicitação GET para o `/config/mergePolicies` ponto final e incluindo o `mergePolicyId` no caminho da solicitação.
+Você pode acessar uma única política de mesclagem por meio de sua ID, fazendo uma solicitação de GET para o `/config/mergePolicies` ponto final e incluindo o `mergePolicyId` no caminho da solicitação.
 
 **Formato da API**
 
@@ -227,7 +227,7 @@ Consulte a seção [componentes das políticas](#components-of-merge-policies) d
 
 ### Recuperar várias políticas de mesclagem por suas IDs
 
-Você pode recuperar várias políticas de mesclagem, fazendo uma solicitação POST ao ponto de `/config/mergePolicies/bulk-get` extremidade e incluindo as IDs das políticas de mesclagem que deseja recuperar no corpo da solicitação.
+Você pode recuperar várias políticas de mesclagem, fazendo uma solicitação POST para o `/config/mergePolicies/bulk-get` ponto final e incluindo as IDs das políticas de mesclagem que deseja recuperar no corpo da solicitação.
 
 **Formato da API**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 207 (Multi-Status) e os detalhes das políticas de mesclagem cujas IDs foram fornecidas na solicitação POST.
+Uma resposta bem-sucedida retorna o Status HTTP 207 (Multi-Status) e os detalhes das políticas de mesclagem cujas IDs foram fornecidas na solicitação de POST.
 
 ```json
 { 
@@ -324,7 +324,7 @@ Consulte a seção [componentes das políticas](#components-of-merge-policies) d
 
 ### Lista de várias políticas de mesclagem por critérios
 
-É possível lista de várias políticas de mesclagem na Organização IMS emitindo uma solicitação GET para o `/config/mergePolicies` ponto de extremidade e usando parâmetros opcionais de query para filtrar, solicitar e paginar a resposta. Vários parâmetros podem ser incluídos, separados por E comercial (&amp;). Efetuar uma chamada para este terminal sem parâmetros recuperará todas as políticas de mesclagem disponíveis para a sua organização.
+É possível lista de várias políticas de mesclagem na Organização IMS emitindo uma solicitação de GET para o `/config/mergePolicies` ponto de extremidade e usando parâmetros de query opcionais para filtrar, solicitar e paginar a resposta. Vários parâmetros podem ser incluídos, separados por E comercial (&amp;). Efetuar uma chamada para este terminal sem parâmetros recuperará todas as políticas de mesclagem disponíveis para a sua organização.
 
 **Formato da API**
 
@@ -435,7 +435,7 @@ Uma resposta bem-sucedida retorna uma lista paginada de políticas de mesclagem 
 
 ## Criar uma política de mesclagem
 
-Você pode criar uma nova política de mesclagem para a sua organização, fazendo uma solicitação POST ao `/config/mergePolicies` endpoint.
+Você pode criar uma nova política de mesclagem para a sua organização, fazendo uma solicitação POST para o `/config/mergePolicies` endpoint.
 
 **Formato da API**
 
@@ -524,7 +524,7 @@ Consulte a seção [componentes das políticas](#components-of-merge-policies) d
 
 ### Editar campos de política de mesclagem individuais
 
-É possível editar campos individuais para uma política de mesclagem, fazendo uma solicitação PATCH para o `/config/mergePolicies/{mergePolicyId}` endpoint:
+É possível editar campos individuais para uma política de mesclagem, fazendo uma solicitação de PATCH para o `/config/mergePolicies/{mergePolicyId}` endpoint:
 
 **Formato da API**
 
@@ -557,7 +557,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 |---|---|
-| `op` | Especifica a operação a ser realizada. Exemplos de outras operações PATCH podem ser encontrados na documentação [JSON Patch](http://jsonpatch.com) |
+| `op` | Especifica a operação a ser realizada. Exemplos de outras operações de PATCH podem ser encontrados na documentação do Patch [JSON](http://jsonpatch.com) |
 | `path` | O caminho do campo a ser atualizado. Os valores aceitos são: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
 | `value` | O valor para definir o campo especificado como. |
 
@@ -693,7 +693,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem atualiza
 
 ## Excluir uma política de mesclagem
 
-Uma política de mesclagem pode ser excluída ao fazer uma solicitação DELETE ao `/config/mergePolicies` ponto final e incluir a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
+Uma política de mesclagem pode ser excluída fazendo uma solicitação de DELETE para o `/config/mergePolicies` ponto de extremidade e incluindo a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -720,7 +720,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um corpo de resposta vazio. Para confirmar se a exclusão foi bem-sucedida, é possível executar uma solicitação GET para visualização da política de mesclagem por sua ID. Se a política de mesclagem tiver sido excluída, você receberá um erro HTTP Status 404 (Não encontrado).
+Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um corpo de resposta vazio. Para confirmar se a exclusão foi bem-sucedida, é possível executar uma solicitação de GET para visualização da política de mesclagem por sua ID. Se a política de mesclagem tiver sido excluída, você receberá um erro HTTP Status 404 (Não encontrado).
 
 ## Próximas etapas
 

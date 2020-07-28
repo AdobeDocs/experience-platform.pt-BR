@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma [!DNL Synapse] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL Synapse] é `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`.
+Para criar uma [!DNL Synapse] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL Synapse] é `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`.
 
 ```shell
 curl -X POST \

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Crie um schema usando a variável [!DNL Schema Editor]
 
-O [!DNL Schema Registry] fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos no Adobe Experience Platform [!DNL Schema Library]. O [!DNL Schema Library] contém recursos disponibilizados pela Adobe, parceiros de Experience Platform e fornecedores cujos aplicativos você usa, bem como recursos que você define e salva no [!DNL Schema Registry].
+O [!DNL Schema Registry] fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos no Adobe Experience Platform [!DNL Schema Library]. O [!DNL Schema Library] contém recursos disponibilizados para você por Adobe, parceiros de Experience Platform e fornecedores cujos aplicativos você usa, bem como recursos que você define e salva no [!DNL Schema Registry].
 
 Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas em [!DNL Experience Platform]. Se você preferir compor um schema usando a API do Registro do Schema, comece lendo o guia [do desenvolvedor do Registro do](../api/getting-started.md) Schema antes de tentar que o tutorial [crie um schema usando a API](create-schema-api.md).
 
@@ -70,7 +70,7 @@ Agora que o schema tem um nome, é hora de atribuir a classe que o schema implem
 
 ![](../images/tutorials/create-schema/assign_class_button.png)
 
-A caixa de diálogo *[!UICONTROL Atribuir classe]* é exibida. Esta janela exibe uma lista de todas as classes disponíveis, incluindo qualquer classe definida por sua organização (o proprietário sendo &quot;Cliente&quot;), bem como as classes padrão definidas pela Adobe.
+A caixa de diálogo *[!UICONTROL Atribuir classe]* é exibida. Esta janela exibe uma lista de todas as classes disponíveis, incluindo qualquer classe definida pela sua organização (o proprietário sendo &quot;Cliente&quot;), bem como as classes padrão definidas pelo Adobe.
 
 Clique no nome da classe para exibir a descrição da classe. Você também pode optar por **[!UICONTROL Pré-visualização da estrutura]** de classe para ver os campos e os metadados associados à classe.
 

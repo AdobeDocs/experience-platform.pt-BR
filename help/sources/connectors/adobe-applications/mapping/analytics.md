@@ -14,7 +14,7 @@ ht-degree: 11%
 
 # Campos de mapeamento do Analytics
 
-Adobe Experience Platform permite que você ingira dados do Adobe Analytics por meio do Analytics Data Connector (ADC). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
+O Adobe Experience Platform permite que você ingira dados do Adobe Analytics por meio do Analytics Data Connector (ADC). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -135,7 +135,7 @@ Esses campos têm uma única fonte, mas mapeiam para **várias** localizações 
 
 ## Campos de mapeamento gerados
 
-Para serem gerados no XDM, é necessário transformar campos selecionados provenientes do ADC, exigindo lógica além de uma cópia direta do Adobe Analytics.
+Para serem gerados no XDM, é necessário transformar campos selecionados provenientes do ADC, exigindo lógica além de uma cópia direta da Adobe Analytics.
 
 A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
@@ -193,9 +193,9 @@ A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo **
 
 ## Campos de mapeamento avançados
 
-Os campos selecionados (conhecidos como &quot;pós-valores&quot;) exigem transformações mais avançadas antes de serem mapeados com êxito dos campos do Adobe Analytics para o Experience Data Model (XDM). A execução dessas transformações avançadas envolve o uso do Adobe Experience Platfrom Query Service e funções pré-criadas (chamadas de funções definidas pela Adobe) para sessões, atribuições e desduplicação-duplicadas.
+Os campos selecionados (conhecidos como &quot;pós-valores&quot;) exigem transformações mais avançadas antes de serem mapeados com êxito dos campos Adobe Analytics para o Experience Data Model (XDM). A execução dessas transformações avançadas envolve o uso do Serviço de Query do Adobe Experience Platfrom e funções pré-criadas (chamadas funções definidas pelo Adobe) para sessões, atribuições e desduplicação-duplicadas.
 
-Para saber mais sobre como executar essas transformações usando o Serviço de Query, visite a documentação de funções [definidas pela](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
+Para saber mais sobre como executar essas transformações usando o Serviço de Query, visite a documentação de funções [definidas pelo](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
 
 A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 

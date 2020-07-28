@@ -71,14 +71,14 @@ A entrada em tempo real é possível por meio de um processo chamado de ingestã
 
 ### Configurações e destinos de projeção de borda
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos da Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Para saber mais e começar a trabalhar com projeções usando a [!DNL Real-time Customer Profile] API, consulte o guia [de pontos finais de projeção de](api/edge-projections.md)borda.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos de Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Para saber mais e começar a trabalhar com projeções usando a [!DNL Real-time Customer Profile] API, consulte o guia [de pontos finais de projeção de](api/edge-projections.md)borda.
 
 ## Adicionar dados a [!DNL Real-time Customer Profile]
 
 [!DNL Platform] pode ser configurado para enviar seus dados de registro e de série de tempo para [!DNL Profile], com suporte à ingestão de streaming em tempo real e à ingestão em lote. Para obter mais informações, consulte o tutorial que descreve como [adicionar dados ao Perfil](tutorials/add-profile-data.md)do cliente em tempo real.
 
 >[!NObservação]
->Os dados coletados por meio das soluções da Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud]e [!DNL Advertising Cloud], fluem [!DNL Experience Platform] e são assimilados [!DNL Profile].
+>Os dados coletados por meio de soluções de Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud]e [!DNL Advertising Cloud], fluem [!DNL Experience Platform] e são assimilados [!DNL Profile].
 
 ### [!DNL Profile] métricas de ingestão
 

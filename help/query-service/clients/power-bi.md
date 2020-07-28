@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Conectar-se com o Power BI
+title: Conectar-se ao Power BI
 topic: connect
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -24,7 +24,7 @@ Depois de [!DNL Power BI] instalar, é necessário configurar os componentes nec
 
 - Selecione v4.0.10 (as versões mais recentes resultam em um erro).
 
-- Em &quot;Npgsql GAC Installation&quot; (Instalação GAC Npgsql) na tela Custom Setup (Configuração personalizada), selecione **[!UICONTROL Will be installed (Será instalado no disco rígido]** local). Se o GAC não for instalado, o Power BI falhará mais tarde.
+- Em &quot;Npgsql GAC Installation&quot; (Instalação GAC Npgsql) na tela Custom Setup (Configuração personalizada), selecione **[!UICONTROL Will be installed (Será instalado no disco rígido]** local). A não instalação do GAC causará falha de Power BI posteriormente.
 
 - Reinicie o Windows.
 

@@ -18,7 +18,7 @@ O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, on
 
 ## Criar um experimento {#create-an-experiment}
 
-Você pode criar um Experimento executando uma solicitação POST ao fornecer um nome e uma ID de instância MLI válida na carga da solicitação.
+Você pode criar um Experimento executando uma solicitação de POST ao fornecer um nome e uma ID de instância MLI válida na carga da solicitação.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 
 ## Criar e executar um treinamento ou uma execução de pontuação {#experiment-training-scoring}
 
-Você pode criar execuções de treinamento ou pontuação executando uma solicitação POST e fornecendo uma ID de Experimento válida e especificando a tarefa de execução. As execuções de pontuação podem ser criadas somente se o Experimento tiver uma execução de treinamento existente e bem-sucedida. A criação bem-sucedida de uma execução de treinamento inicializará o procedimento de treinamento do modelo e sua conclusão bem-sucedida gerará um modelo treinado. A geração de modelos treinados substituirá os modelos existentes anteriormente, de modo que um Experimento só possa utilizar um único modelo treinado a qualquer momento.
+Você pode criar execuções de treinamento ou pontuação executando uma solicitação de POST e fornecendo uma ID de Experimento válida e especificando a tarefa de execução. As execuções de pontuação podem ser criadas somente se o Experimento tiver uma execução de treinamento existente e bem-sucedida. A criação bem-sucedida de uma execução de treinamento inicializará o procedimento de treinamento do modelo e sua conclusão bem-sucedida gerará um modelo treinado. A geração de modelos treinados substituirá os modelos existentes anteriormente, de modo que um Experimento só possa utilizar um único modelo treinado a qualquer momento.
 
 **Formato da API**
 
@@ -133,7 +133,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução r
 
 ## Recuperar uma lista de experiências
 
-Você pode recuperar uma lista de Experimentos pertencentes a uma determinada MLIntent, executando uma única solicitação GET e fornecendo uma ID de instância MLI válida como parâmetro de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de Experimentos pertencentes a uma determinada MLInposition, executando uma única solicitação de GET e fornecendo uma ID de instância MLI válida como parâmetro de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 
 **Formato da API**
@@ -199,7 +199,7 @@ Uma resposta bem-sucedida retorna uma lista de Experimentos compartilhando a mes
 
 ## Recuperar um experimento específico {#retrieve-specific}
 
-Você pode recuperar os detalhes de um Experimento específico executando uma solicitação GET que inclui a ID do Experimento desejada no caminho da solicitação.
+Você pode recuperar os detalhes de um Experimento específico executando uma solicitação de GET que inclui a ID do Experimento desejada no caminho da solicitação.
 
 **Formato da API**
 
@@ -242,7 +242,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 
 ## Recuperar uma lista de execuções de Experimento
 
-Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um Experimento específico executando uma única solicitação GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um determinado Experimento, executando uma única solicitação de GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 >[!NOTE]
 >
@@ -303,11 +303,11 @@ Uma resposta bem-sucedida retorna uma carga contendo uma lista de execuções e 
 
 ## Atualizar um experimento
 
-Você pode atualizar um Experimento existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do Experimento do público alvo no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
+Você pode atualizar um Experimento existente substituindo suas propriedades por meio de uma solicitação de PUT que inclua a ID do Experimento do público alvo no caminho da solicitação e forneça uma carga JSON contendo propriedades atualizadas.
 
 >[!TIP]
 >
->Para garantir o sucesso desta solicitação PUT, recomenda-se que você primeiro execute uma solicitação GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>Para garantir o sucesso dessa solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 A amostra de chamada de API a seguir atualiza o nome de um Experimento ao ter essas propriedades inicialmente:
 
@@ -374,7 +374,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um experimento
 
-Você pode excluir um único Experimento executando uma solicitação DELETE que inclui a ID do Experimento do público alvo no caminho da solicitação.
+Você pode excluir um único Experimento executando uma solicitação de DELETE que inclui a ID do Experimento do público alvo no caminho da solicitação.
 
 **Formato da API**
 
@@ -409,7 +409,7 @@ curl -X DELETE \
 
 ## Excluir experiências por ID de instância MLI
 
-Você pode excluir todos os Experimentos que pertencem a uma determinada instância MLI executando uma solicitação DELETE que inclui a ID da instância MLI como um parâmetro de query.
+Você pode excluir todos os Experimentos que pertencem a uma determinada instância MLI executando uma solicitação de DELETE que inclui a ID da instância MLI como um parâmetro de query.
 
 **Formato da API**
 

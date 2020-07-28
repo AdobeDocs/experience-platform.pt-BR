@@ -18,7 +18,7 @@ O Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usu�
 
 >[!IMPORTANT]
 >
->Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente. Consulte a seção sobre como [ativar políticas](#enable) para obter etapas sobre como fazer isso na interface do usuário.
+>Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente. Consulte a seção sobre como [ativar políticas](#enable) para obter etapas sobre como fazer isso na interface do usuário.
 
 ## Pré-requisitos
 
@@ -69,7 +69,7 @@ A guia *[!UICONTROL Procurar]* reaparece, que agora lista a política recém-cri
 
 ## Ativar ou desativar uma política de uso de dados {#enable}
 
-Todas as políticas de uso de dados (incluindo as principais políticas fornecidas pela Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
+Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
 
 Você pode ativar ou desativar as políticas na guia *[!UICONTROL Procurar]* na área de trabalho *[!UICONTROL Políticas]* . Selecione uma política personalizada na lista para exibir seus detalhes à direita. Em *[!UICONTROL Status]*, selecione o botão de alternância para ativar ou desativar a política.
 
@@ -77,7 +77,7 @@ Você pode ativar ou desativar as políticas na guia *[!UICONTROL Procurar]* na 
 
 ## Ações de marketing de Visualização {#view-marketing-actions}
 
-Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pela Adobe e sua própria organização.
+Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -99,9 +99,9 @@ A ação recém-criada é exibida na guia Ações *[!UICONTROL de]* marketing. A
 
 >[!NOTE]
 >
->Somente as ações de marketing personalizadas definidas pela sua organização podem ser editadas. As ações de marketing definidas pela Adobe não podem ser alteradas nem excluídas.
+>Somente as ações de marketing personalizadas definidas pela sua organização podem ser editadas. As ações de marketing definidas pelo Adobe não podem ser alteradas ou excluídas.
 
-Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pela Adobe e sua própria organização. Selecione uma ação de marketing personalizada na lista e, em seguida, use os campos fornecidos na seção à direita para editar os detalhes da ação de marketing.
+Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização. Selecione uma ação de marketing personalizada na lista e, em seguida, use os campos fornecidos na seção à direita para editar os detalhes da ação de marketing.
 
 ![](../images/policies/edit-marketing-action.png)
 

@@ -18,7 +18,7 @@ Este tutorial percorrerá duas seções principais. Primeiro, você criará um m
 
 ## Conceitos introduzidos:
 
-- **Receitas:** Uma fórmula é o termo da Adobe para uma especificação de modelo e é um container de nível superior que representa um aprendizado de máquina específico, algoritmo AI ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo treinado e, portanto, ajudar a resolver problemas específicos de negócios.
+- **Receitas:** Uma receita é um termo para uma especificação de modelo e um container de nível superior que representa um aprendizado de máquina específico, algoritmo AI ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo e, portanto, ajudar a resolver problemas específicos de negócios.
 - **Modelo:** Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada usando dados históricos e configurações para solucionar um caso de uso comercial.
 - **Treinamento:** Treinamento é o processo de aprendizado de padrões e insights de dados rotulados.
 - **Pontuação:** A pontuação é o processo de gerar insights a partir de dados usando um modelo treinado.

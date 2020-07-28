@@ -18,7 +18,7 @@ Este documento fornece informações complementares relacionadas ao trabalho com
 
 ## Modo de compatibilidade
 
-[!DNL Experience Data Model] (XDM) é uma especificação documentada publicamente, impulsionada pela Adobe para melhorar a interoperabilidade, a expressividade e a potência das experiências digitais. A Adobe mantém o código-fonte e as definições formais de XDM em um projeto de código-fonte [aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas na notação XDM Standard, usando a notação JSON-LD (JavaScript Object Notation for Linked Data) e o Schema JSON como a gramática para definir schemas XDM.
+[!DNL Experience Data Model] (XDM) é uma especificação publicamente documentada, impulsionada pela Adobe para melhorar a interoperabilidade, a expressividade e o poder das experiências digitais. O Adobe mantém o código fonte e as definições XDM formais em um projeto de código [aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas na notação XDM Standard, usando a notação JSON-LD (JavaScript Object Notation for Linked Data) e o Schema JSON como a gramática para definir schemas XDM.
 
 Ao analisar as definições formais de XDM no repositório público, você pode ver que o XDM padrão é diferente do que você vê no Adobe Experience Platform. O que você está vendo no modo de compatibilidade [!DNL Experience Platform] é chamado de Modo de compatibilidade, e ele fornece um mapeamento simples entre o XDM padrão e a forma como ele é usado no [!DNL Platform].
 
@@ -26,7 +26,7 @@ Ao analisar as definições formais de XDM no repositório público, você pode 
 
 O Modo de compatibilidade permite que o modelo XDM JSON-LD funcione com a infraestrutura de dados existente, alterando valores dentro do XDM padrão e mantendo a semântica igual. Ele usa uma estrutura JSON aninhada, exibindo schemas em um formato semelhante a uma árvore.
 
-A principal diferença que você observará entre o XDM padrão e o Modo de compatibilidade é a remoção do prefixo &quot;xdm:&quot; para nomes de campos.
+A principal diferença que você notará entre o XDM padrão e o Modo de compatibilidade é a remoção do prefixo &quot;xdm:&quot; para nomes de campos.
 
 A seguir está uma comparação lado a lado mostrando campos relacionados ao aniversário (com atributos de &quot;descrição&quot; removidos) no XDM padrão e no Modo de compatibilidade. Observe que os campos Modo de compatibilidade incluem uma referência ao campo XDM e seu tipo de dados nos atributos &quot;meta:xdmField&quot; e &quot;meta:xdmType&quot;.
 

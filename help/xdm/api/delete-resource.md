@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Excluir um recurso
 
-Ocasionalmente, pode ser necessário remover (DELETE) um recurso do [!DNL Schema Registry]. Somente os recursos criados no container locatário podem ser excluídos. Isso é feito executando-se uma solicitação DELETE usando o `$id` do recurso que você deseja excluir.
+Ocasionalmente, pode ser necessário remover (DELETE) um recurso do [!DNL Schema Registry]. Somente os recursos criados no container locatário podem ser excluídos. Isso é feito executando uma solicitação de DELETE usando o `$id` do recurso que você deseja excluir.
 
 **Formato da API**
 
@@ -29,7 +29,7 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Solicitação**
 
-DELETE solicitações não exigem cabeçalhos de Aceitação.
+DELETE solicitações de não exigem cabeçalhos Aceitar.
 
 ```SHELL
 curl -X DELETE \

@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma conexão MySQL, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`.
+Para criar uma conexão MySQL, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`.
 
 ```shell
 curl -X POST \

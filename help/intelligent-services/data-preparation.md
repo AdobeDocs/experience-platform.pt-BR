@@ -28,7 +28,7 @@ Se seus dados forem armazenados fora do [!DNL Experience Platform], siga as etap
 
 1. Entre em contato com os Serviços de consultoria da Adobe para solicitar credenciais de acesso para um container dedicado do Armazenamento Blob do Azure.
 1. Usando suas credenciais de acesso, carregue seus dados no container Blob.
-1. Trabalhe com os Serviços de consultoria da Adobe para obter seus dados mapeados para o schema [ExperienceEvent do](#cee-schema) consumidor e assimilados aos Serviços inteligentes.
+1. Trabalhe com os Serviços de consultoria de Adobe para obter seus dados mapeados para o schema [ExperienceEvent do](#cee-schema) consumidor e assimilados aos Serviços inteligentes.
 
 ### [!DNL Experience Platform] preparação de dados
 
@@ -61,7 +61,7 @@ Embora a utilização de todos os campos principais seja altamente recomendada, 
 
 * [Um campo de identidade primário](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:canal](#channel) (obrigatório apenas para a Atribuição AI)
+* [xdm:canal](#channel) (obrigatório somente para Attribution AI)
 
 #### Identidade primária {#identity}
 
@@ -74,7 +74,7 @@ Você deve determinar o melhor campo a ser usado como uma identidade primária c
 * &quot;mcid&quot; (para IDs de Adobe Audience Manager)
 * &quot;aaid&quot; (para Adobe Analytics IDs)
 
-Se não tiver certeza de qual campo você deve usar como identidade primária, entre em contato com os Serviços de consultoria da Adobe para determinar a melhor solução.
+Se não tiver certeza de qual campo você deve usar como identidade primária, entre em contato com os Serviços de consultoria do Adobe para determinar a melhor solução.
 
 #### xdm:timestamp {#timestamp}
 
@@ -84,7 +84,7 @@ Esse campo representa a data e hora em que o evento ocorreu. Esse valor deve ser
 
 >[!NOTE]
 >
->Este campo é obrigatório somente ao usar a Atribuição AI.
+>Esse campo é obrigatório somente ao usar o Attribution AI.
 
 Este campo representa o canal de marketing relacionado ao ExperienceEvent. O campo inclui informações sobre o tipo de canal, o tipo de mídia e o tipo de local.
 
@@ -281,7 +281,7 @@ Após a criação do conjunto de dados, é possível encontrá-lo na interface d
 >
 >As versões futuras dos Serviços inteligentes integrarão o Serviço [de identificação de](../identity-service/home.md) Adobe Experience Platform nos recursos de identificação do cliente. Assim, as etapas descritas abaixo estão sujeitas a alterações.
 
-Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação PATCH para a API do serviço de catálogo.
+Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação de PATCH para a API do serviço de catálogo.
 
 Se você estiver assimilando dados de um arquivo CSV local, poderá pular para a próxima seção sobre [mapeamento e assimilação de dados](#ingest).
 
@@ -343,7 +343,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder àquela enviada na solicitação PATCH.
+Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder àquela enviada na solicitação de PATCH.
 
 ```json
 [
@@ -363,5 +363,5 @@ Este documento fornece orientação geral sobre como preparar seus dados para us
 
 Depois de preencher com êxito um conjunto de dados com os dados de experiência do cliente, você pode usar os Serviços inteligentes para gerar insights. Consulte os seguintes documentos para começar:
 
-* [Visão geral do AI de atribuição](./attribution-ai/overview.md)
+* [Visão geral do Attribution AI](./attribution-ai/overview.md)
 * [Visão geral da IA do cliente](./customer-ai/overview.md)

@@ -29,7 +29,7 @@ Este tutorial também exige que você tenha concluído o tutorial [Autenticaçã
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 
-Todas as solicitações POST exigem um cabeçalho adicional:
+Todas as solicitações de POST exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 

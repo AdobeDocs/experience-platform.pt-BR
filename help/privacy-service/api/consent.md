@@ -20,7 +20,7 @@ Antes de usar este guia, consulte a seção [Introdução](./getting-started.md)
 
 ## Processar uma solicitação de consentimento do cliente
 
-As solicitações de consentimento são processadas fazendo uma solicitação POST para o `/consent` ponto de extremidade.
+As solicitações de consentimento são processadas por meio de uma solicitação POST para o `/consent` ponto final.
 
 **Formato da API**
 

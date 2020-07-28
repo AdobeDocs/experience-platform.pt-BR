@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Criar um conector de origem do Amazon Kinesis na interface do usuário
+title: Criar um conector de origem Amazon Kinesis na interface do usuário
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
@@ -48,7 +48,7 @@ Depois de reunir as credenciais necessárias, siga as etapas abaixo para vincula
 
 Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *Fontes* . A guia *Catálogo* exibe várias fontes às quais é possível se conectar [!DNL Platform]. Cada fonte mostra o número de contas existentes associadas a elas.
 
-Na categoria do Armazenamento *[!UICONTROL da]* nuvem, selecione **[!UICONTROL Amazon Kinesis]** e clique **no ícone + (+)** para criar um novo [!DNL Kinesis] conector.
+Na categoria do Armazenamento *[!UICONTROL da]* Cloud, selecione **[!UICONTROL Amazon Kinesis]** e clique **no ícone + (+)** para criar um novo [!DNL Kinesis] conector.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 

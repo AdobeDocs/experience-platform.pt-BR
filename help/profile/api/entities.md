@@ -22,7 +22,7 @@ O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile
 
 ## Acessar dados do perfil por identidade
 
-Você pode acessar uma [!DNL Profile] entidade fazendo uma solicitação GET ao ponto de `/access/entities` extremidade e fornecendo a identidade da entidade como uma série de parâmetros de query. Essa identidade consiste em um valor de ID (`entityId`) e a namespace de identidade (`entityIdNS`).
+Você pode acessar uma [!DNL Profile] entidade fazendo uma solicitação de GET para o `/access/entities` terminal e fornecendo a identidade da entidade como uma série de parâmetros de query. Essa identidade consiste em um valor de ID (`entityId`) e a namespace de identidade (`entityIdNS`).
 
 Os parâmetros de Query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 ## Acessar dados do perfil por lista de identidades
 
-Você pode acessar várias entidades de perfil por suas identidades, fazendo uma solicitação POST ao `/access/entities` ponto final e fornecendo as identidades na carga. Essas identidades consistem em um valor de ID (`entityId`) e uma namespace de identidade (`entityIdNS`).
+Você pode acessar várias entidades de perfil por suas identidades, fazendo uma solicitação de POST para o `/access/entities` ponto final e fornecendo as identidades na carga. Essas identidades consistem em um valor de ID (`entityId`) e uma namespace de identidade (`entityIdNS`).
 
 **Formato da API**
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## eventos de série de tempo de acesso para um perfil por identidade
 
-Você pode acessar eventos de séries de tempo pela identidade da entidade associada ao perfil, fazendo uma solicitação GET ao `/access/entities` endpoint. Essa identidade consiste em um valor de ID (`entityId`) e uma namespace de identidade (`entityIdNS`).
+Você pode acessar eventos de séries de tempo pela identidade de sua entidade associada ao perfil, fazendo uma solicitação de GET para o `/access/entities` endpoint. Essa identidade consiste em um valor de ID (`entityId`) e uma namespace de identidade (`entityIdNS`).
 
 Os parâmetros de Query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
@@ -411,7 +411,7 @@ Uma resposta bem-sucedida retorna uma lista paginada de eventos de séries de te
 
 ### Acessar uma página subsequente de resultados
 
-Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver páginas subsequentes de resultados, a `_page.next` propriedade conterá uma ID. Além disso, a `_links.next.href` propriedade fornece um URI de solicitação para recuperar a próxima página. Para recuperar os resultados, faça outra solicitação GET para o `/access/entities` ponto de extremidade, no entanto, é necessário substituir `/entities` pelo valor do URI fornecido.
+Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver páginas subsequentes de resultados, a `_page.next` propriedade conterá uma ID. Além disso, a `_links.next.href` propriedade fornece um URI de solicitação para recuperar a próxima página. Para recuperar os resultados, faça outra solicitação de GET para o `/access/entities` ponto de extremidade, no entanto, é necessário substituir `/entities` pelo valor do URI fornecido.
 
 >[!NOTE]
 >Certifique-se de não repetir acidentalmente `/entities/` no caminho da solicitação. Só deve aparecer uma vez como, `/access/entities?start=...`
@@ -492,7 +492,7 @@ Uma resposta bem-sucedida retorna a próxima página de resultados. Essa respost
 
 ## eventos de série de tempo de acesso para vários perfis por identidades
 
-Você pode acessar eventos de séries de tempo de vários perfis associados, fazendo uma solicitação POST ao `/access/entities` endpoint e fornecendo as identidades do perfil na carga. Essas identidades consistem em um valor (`entityId`) de ID e uma namespace de identidade (`entityIdNS`).
+Você pode acessar eventos de séries de tempo de vários perfis associados, fazendo uma solicitação de POST para o `/access/entities` endpoint e fornecendo as identidades do perfil na carga. Essas identidades consistem em um valor (`entityId`) de ID e uma namespace de identidade (`entityIdNS`).
 
 **Formato da API**
 
@@ -770,7 +770,7 @@ Neste exemplo de resposta, o primeiro perfil listado (&quot;GkouAW-yD9aoRCPhRYRO
 
 Ao recuperar eventos de séries de tempo, pode haver muitos resultados sendo retornados, portanto, os resultados são paginados com frequência. Se houver páginas subsequentes de resultados para um determinado perfil, o `_links.next.payload` valor desse perfil conterá um objeto payload.
 
-Usando essa carga no corpo da solicitação, você pode executar uma solicitação POST adicional ao `access/entities` ponto final para recuperar a página subsequente dos dados da série de tempo desse perfil.
+Usando essa carga no corpo da solicitação, é possível executar uma solicitação de POST adicional ao `access/entities` ponto final para recuperar a página subsequente dos dados da série de tempo desse perfil.
 
 ## eventos de série de tempo de acesso em várias entidades do schema
 
@@ -880,7 +880,7 @@ Uma resposta bem-sucedida retorna uma lista paginada de eventos de séries de te
 
 ### Acessar uma página subsequente de resultados
 
-Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver páginas subsequentes de resultados, a `_page.next` propriedade conterá uma ID. Além disso, a `_links.next.href` propriedade fornece um URI de solicitação para recuperar a página subsequente, fazendo solicitações GET adicionais para o `access/entities` terminal.
+Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver páginas subsequentes de resultados, a `_page.next` propriedade conterá uma ID. Além disso, a `_links.next.href` propriedade fornece um URI de solicitação para recuperar a página subsequente, fazendo solicitações de GET adicionais ao `access/entities` endpoint.
 
 ## Próximas etapas
 
@@ -892,7 +892,7 @@ A seção a seguir fornece informações complementares sobre como acessar [!DNL
 
 ### Query parameters {#query-parameters}
 
-Os parâmetros a seguir são usados no caminho para solicitações GET para o ponto de extremidade `/access/entities` . Eles servem para identificar a entidade do perfil que você deseja acessar e filtrar os dados retornados na resposta. Os parâmetros obrigatórios são rotulados, enquanto os demais são opcionais.
+Os parâmetros a seguir são usados no caminho para solicitações de GET para o `/access/entities` ponto final. Eles servem para identificar a entidade do perfil que você deseja acessar e filtrar os dados retornados na resposta. Os parâmetros obrigatórios são rotulados, enquanto os demais são opcionais.
 
 | Parâmetro | Descrição | Exemplo |
 |---|---|---|

@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Criar um conjunto de dados
 
-Para criar um conjunto de dados usando a [!DNL Catalog] API, é necessário saber o `$id` valor do schema [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do schema, você pode criar um conjunto de dados, fazendo uma solicitação POST para o `/datasets` ponto final na [!DNL Catalog] API.
+Para criar um conjunto de dados usando a [!DNL Catalog] API, é necessário saber o `$id` valor do schema [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do schema, você pode criar um conjunto de dados, solicitando um POST para o `/datasets` endpoint na [!DNL Catalog] API.
 
 >[!NOTE]
 >

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
-title: Guia do usuário do AI de atribuição
+title: Guia do usuário do Attribution AI
 topic: User guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 0%
 ---
 
 
-# Guia do usuário do AI de atribuição
+# Guia do usuário do Attribution AI
 
-A Atribuição AI, como parte dos Serviços inteligentes, é um serviço de atribuição algorítmico e com vários canais que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com a Atribuição AI, os profissionais de marketing podem medir e otimizar o gasto de marketing e publicidade ao compreender o impacto de cada interação individual do cliente em cada fase das viagens do cliente.
+Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais, algorítmico, que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual do cliente em cada fase das viagens do cliente.
 
-Este documento serve como um guia para interagir com a Atribuição AI na interface do usuário do Intelligent Services.
+Este documento serve como um guia para interagir com o Attribution AI na interface do usuário do Intelligent Services.
 
 ## Criar uma instância
 
-Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os serviços inteligentes da Adobe disponíveis. No container para Atribuição AI, clique em **Abrir**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **Abrir**.
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
-A página do serviço AI de atribuição é exibida. Esta página lista as instâncias de serviço da Atribuição AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique em **Criar instância** para começar.
+A página de serviço do Attribution AI é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique em **Criar instância** para começar.
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
-Em seguida, é exibida a página de configuração para a Atribuição AI, onde você pode fornecer informações básicas e especificar um conjunto de dados para a instância.
+Em seguida, a página de configuração do Attribution AI é exibida, onde você pode fornecer informações básicas e especificar um conjunto de dados para a instância.
 
 ![página de configuração](./images/user-guide/setup_attribution.png)
 
@@ -40,7 +40,7 @@ Em Informações ** básicas, forneça um nome e uma descrição opcional para a
 
 ### Selecionar um conjunto de dados
 
-Depois de preencher as informações básicas, clique na lista suspensa **Selecionar conjunto de dados** para selecionar seu conjunto de dados. O conjunto de dados é usado para treinar o modelo e pontuar os dados subsequentes que ele produz. Ao selecionar um conjunto de dados no seletor suspenso, somente os que são compatíveis com a Atribuição AI e estão em conformidade com o schema do Modelo de Dados de Experiência (XDM) são listados. Depois que um conjunto de dados for escolhido, clique em **Avançar** no canto superior direito para prosseguir para a página de definição de eventos.
+Depois de preencher as informações básicas, clique na lista suspensa **Selecionar conjunto de dados** para selecionar seu conjunto de dados. O conjunto de dados é usado para treinar o modelo e pontuar os dados subsequentes que ele produz. Ao selecionar um conjunto de dados no seletor suspenso, somente os que são compatíveis com o Attribution AI e estão em conformidade com o schema do Experience Data Model (XDM) são listados. Depois que um conjunto de dados for escolhido, clique em **Avançar** no canto superior direito para prosseguir para a página de definição de eventos.
 
 ![página de configuração](./images/user-guide/initial_creation_attribution.png)
 
@@ -132,7 +132,7 @@ Quando terminar de definir todos os pontos de contato necessários, role para ci
 
 ## Configuração avançada de treinamento e pontuação
 
-A página final na Atribuição AI é a página *Avançado* usada para configurar treinamento e pontuação.
+A página final no Attribution AI é a página *Avançado* usada para configurar treinamento e pontuação.
 
 ![nova página avançada](./images/user-guide/advanced_settings.png)
 
@@ -188,10 +188,10 @@ Depois de selecionar sua janela de treinamento, clique em **Concluir** no canto 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma instância de serviço na Atribuição AI. Depois que a instância terminar de marcar (aguarde até 24 horas), você estará pronto para [descobrir insights](./discover-insights.md)da Atribuição AI. Além disso, se desejar baixar os resultados da pontuação, visite a documentação de [download das pontuações](./download-scores.md) brutas.
+Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de marcar (aguarde até 24 horas), você estará pronto para [descobrir insights](./discover-insights.md)do Attribution AI. Além disso, se desejar baixar os resultados da pontuação, visite a documentação de [download das pontuações](./download-scores.md) brutas.
 
 ## Recursos adicionais
 
-O vídeo a seguir descreve um fluxo de trabalho completo para a criação de uma nova instância no AI de atribuição.
+O vídeo a seguir descreve um fluxo de trabalho completo para a criação de uma nova instância no Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

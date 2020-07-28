@@ -66,7 +66,7 @@ Indica se a depuração deve ser ativada. Configurar essa configuração para `t
 | -------- | ------------ | ------------------ |
 | String | Não | `beta.adobedc.net` |
 
-O domínio usado para interagir com os serviços da Adobe. Isso só será usado se você tiver um domínio próprio (CNAME) que faça proxy das solicitações para a infraestrutura de borda da Adobe.
+O domínio usado para interagir com os serviços de Adobe. Isso só será usado se você tiver um domínio próprio (CNAME) que faça proxy das solicitações para a infraestrutura de borda do Adobe.
 
 ### `orgId`
 
@@ -160,7 +160,7 @@ A ID do container que especifica quais sincronizações de ID são acionadas. Es
 | -------- | ------------ | ----------------- |
 | Booleano | Não | `true` |
 
-Habilita o recurso de sincronização de ID, que permite acionar URLs para sincronizar a ID de usuário exclusiva da Adobe com a ID de usuário exclusiva de uma fonte de dados de terceiros.
+Habilita o recurso de sincronização de ID, que permite acionar URLs para sincronizar a ID de usuário exclusiva do Adobe com a ID de usuário exclusiva de uma fonte de dados de terceiros.
 
 ### `thirdPartyCookiesEnabled`
 
@@ -168,4 +168,4 @@ Habilita o recurso de sincronização de ID, que permite acionar URLs para sincr
 | -------- | ------------ | ----------------- |
 | Booleano | Não | true |
 
-Ativa a configuração de cookies de terceiros da Adobe. O SDK tem a capacidade de persistir a ID do visitante em um contexto de terceiros para permitir que a mesma ID do visitante seja usada em sites. Isso é útil se você tem vários sites ou deseja compartilhar dados com parceiros; no entanto, às vezes isso não é desejado por motivos de privacidade.
+Ativa a configuração de cookies de terceiros Adobe. O SDK tem a capacidade de persistir a ID do visitante em um contexto de terceiros para permitir que a mesma ID do visitante seja usada em sites. Isso é útil se você tem vários sites ou deseja compartilhar dados com parceiros; no entanto, às vezes isso não é desejado por motivos de privacidade.

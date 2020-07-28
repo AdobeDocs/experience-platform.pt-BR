@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Políticas eficazes de Visualização
 
-Para visualização de políticas eficazes para o usuário atual, faça uma solicitação POST para o `/acl/effective-policies` ponto final na [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação na forma de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
+Para visualização de políticas eficazes para o usuário atual, faça uma solicitação de POST para o `/acl/effective-policies` endpoint na [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação na forma de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
 
 **Formato da API**
 
@@ -73,7 +73,7 @@ Esta seção fornece informações adicionais para o uso da [!DNL Access Control
 
 ### Permissões aceitas e tipos de recursos
 
-A seguir está uma lista de permissões e tipos de recursos que podem ser incluídos na carga de uma solicitação POST para o `/acl/active-permissions` ponto de extremidade.
+A seguir está uma lista de permissões e tipos de recursos que podem ser incluídos na carga de uma solicitação de POST para o `/acl/active-permissions` ponto de extremidade.
 
 **Permissões**
 

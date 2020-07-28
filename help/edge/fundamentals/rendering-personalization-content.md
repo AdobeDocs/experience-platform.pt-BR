@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral das opções de personalização
 
-O Adobe Experience Platform [!DNL Web SDK] suporta a consulta das soluções de personalização na Adobe, incluindo o Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
+O Adobe Experience Platform [!DNL Web SDK] suporta a consulta das soluções de personalização no Adobe, incluindo o Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
 
 ## Renderização automática de conteúdo
 

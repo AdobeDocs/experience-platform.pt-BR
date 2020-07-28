@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma conexão HP [!DNL Vertica] , sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para HP [!DNL Vertica] é `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
+Para criar uma conexão HP [!DNL Vertica] , sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para HP [!DNL Vertica] é `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
 
 ```shell
 curl -X POST \

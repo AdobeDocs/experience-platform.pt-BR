@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Destinos de publicidade {#advertising-destinations}
 
-Conecte seu site [!DNL Real-time Customer Data Platform] a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
+Conecte seu site [!DNL Real-time Customer Data Platform] a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas para essas plataformas.
 
 Ao se conectar a um destino de publicidade, suas audiências são enviadas como IDs para a plataforma de destino, onde são mapeadas para uma ID conhecida pela plataforma de destino.
 

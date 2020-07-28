@@ -5,13 +5,16 @@ title: Lista de todas as caixas de proteção
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 2%
 
 ---
 
 
 # Lista de todas as caixas de proteção
 
-Para lista de todas as caixas de proteção pertencentes à sua Organização IMS (ativa ou não), faça uma solicitação GET ao ponto de `/sandboxes` extremidade.
+Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o `/sandboxes` ponto de extremidade.
 
 **Formato da API**
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics
 solution: Experience Platform
-title: Descobrindo insights no AI de Atribuição
+title: Descobrindo insights no Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 1%
 ---
 
 
-# Descobrindo insights no AI de Atribuição
+# Descobrindo insights no Attribution AI
 
-As instâncias do serviço de IA de atribuição fornecem informações que podem ser usadas para auxiliar na tomada e medição de decisões de marketing relacionadas ao desempenho de marketing e retorno sobre o investimento. A seleção de uma instância de serviço fornece visualizações e filtros para ajudá-lo a entender o impacto de cada interação do cliente em cada fase da jornada do cliente.
+As instâncias de serviço de Attribution AI fornecem informações que podem ser usadas para auxiliar na tomada e medição de decisões de marketing relacionadas ao desempenho de marketing e retorno sobre o investimento. A seleção de uma instância de serviço fornece visualizações e filtros para ajudá-lo a entender o impacto de cada interação do cliente em cada fase da jornada do cliente.
 
-Este documento serve como um guia para interagir com insights de instância de serviço na interface do usuário do Adobe Intelligent Services.
+Este documento serve como um guia para interagir com informações da instância do serviço na interface do usuário do Adobe Intelligent Services.
 
 ## Introdução
 
-Para utilizar insights para a Atribuição AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância do serviço, visite o guia [da interface do usuário da](./user-guide.md)Atribuição AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Para utilizar insights para o Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [da interface do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
 
 ## Visão geral dos insights da instância de serviço
 
-Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços inteligentes da Adobe disponíveis. No container para Atribuição AI, clique em **Abrir**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **Abrir**.
 
 ![Acessar sua instância](./images/insights/open_Attribution_ai.png)
 
-A página do serviço AI de atribuição é exibida. Esta página lista as instâncias de serviço da Atribuição AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique no nome de uma instância de serviço para começar.
+A página de serviço do Attribution AI é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique no nome de uma instância de serviço para começar.
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Para visualização de detalhes adicionais para uma instância de serviço, cliq
 
 ![mostrar mais](./images/insights/show-more.png)
 
-Uma lista detalhada é exibida. Para obter mais informações sobre qualquer uma das propriedades listadas, visite o guia [do usuário da](./user-guide.md)Atribuição AI.
+Uma lista detalhada é exibida. Para obter mais informações sobre qualquer uma das propriedades listadas, visite o guia [do usuário do](./user-guide.md)Attribution AI.
 
 ![mostrar detalhes](./images/insights/advanced-details.png)
 
@@ -65,14 +65,14 @@ O botão *Mais ações* está localizado na navegação superior direita ao lado
 
 - **Excluir**: Exclui a instância.
 - **Baixar dados** de resumo: Faz o download de um arquivo CSV que contém os dados de resumo.
-- **Pontuações** de acesso: Clicar em Pontuações *de* acesso o redireciona para as Pontuações de [acesso do tutorial](./download-scores.md)AI de atribuição.
+- **Pontuações** de acesso: Clicar em *Acessar pontuações* o redireciona para as pontuações de [acesso do tutorial](./download-scores.md).
 - **Histórico** de execução da Visualização: Um provedor que contém uma lista de todas as execuções de pontuação associadas à instância do serviço é exibido.
 
 ![mais ações](./images/insights/more-actions.png)
 
 ## Filtrar seus dados
 
-Os insights da AI de atribuição permitem filtrar seus dados e atualizar automaticamente os visuais da interface com base nos filtros selecionados.
+Os insights do Attribution AI permitem filtrar seus dados e atualizar automaticamente os visuais da interface com base nos filtros selecionados.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Os insights da AI de atribuição permitem filtrar seus dados e atualizar automa
 
 ### evento de conversão
 
-Quando você cria uma nova instância na Atribuição AI, um dos campos obrigatórios é &quot;eventos de conversão&quot;. Os eventos de conversão são objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
+Quando você cria uma nova instância no Attribution AI, um dos campos obrigatórios é &quot;eventos de conversão&quot;. Os eventos de conversão são objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
 
 Na instância, a lista suspensa eventos *de* conversão permite selecionar qualquer um dos eventos definidos para sua instância para filtrar seus dados. A seleção de eventos específicos altera as visualizações da interface para preencher somente as conversões pertencentes a esses eventos.
 
@@ -88,7 +88,7 @@ Na instância, a lista suspensa eventos *de* conversão permite selecionar qualq
 
 ### Modelo de atribuição
 
-Clicar no modelo *de* Atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do AI [de](./overview.md) atribuição que contém uma tabela com informações sobre cada modelo.
+Clicar no modelo *de* Atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do [Attribution AI](./overview.md) que contém uma tabela com informações sobre cada modelo.
 
 ![modelo de atribuição](./images/insights/attribution-model.png)
 
@@ -110,7 +110,7 @@ O filtro *Geografia* preenche códigos de países com base em modelos baseados e
 
 >[!NOTE]
 >
->Esse filtro só estará presente se você tiver realizado a modelagem [opcional baseada na](./user-guide.md#region-based-modeling-optional) região da etapa no guia da interface do usuário do AI de atribuição ao criar a instância do serviço.
+>Esse filtro só estará presente se você tiver realizado a modelagem [opcional baseada na](./user-guide.md#region-based-modeling-optional) região da etapa no guia da interface do usuário do Attribution AI ao criar a instância do serviço.
 
 Esse filtro permite que você selecione quaisquer regiões configuradas no processo de criação de instâncias.
 
@@ -162,10 +162,10 @@ A placa *Top campanha* exibe uma visão geral das campanhas e o desempenho da ca
 
 ## Próximas etapas
 
-Depois que você terminar de filtrar os dados e puder exibir as informações apropriadas, terá a opção de acessar as pontuações. Para obter um guia detalhado sobre como acessar suas pontuações, visite as pontuações de [acesso no tutorial do AI](./download-scores.md) de atribuição. Além disso, você também pode baixar seus dados de resumo conforme indicado em [mais ações](#more-actions). Selecionar &quot;Baixar dados de resumo&quot; faz o download dos dados de resumo agregados por datas.
+Depois que você terminar de filtrar os dados e puder exibir as informações apropriadas, terá a opção de acessar as pontuações. Para obter um guia detalhado sobre como acessar suas pontuações, visite as pontuações de [acesso no tutorial sobre o Attribution AI](./download-scores.md) . Além disso, você também pode baixar seus dados de resumo conforme indicado em [mais ações](#more-actions). Selecionar &quot;Baixar dados de resumo&quot; faz o download dos dados de resumo agregados por datas.
 
 ## Recursos adicionais
 
-O vídeo a seguir foi criado para ajudar a aprender como usar a página de insights da Atribuição AI para entender o ROI de canais e campanhas de marketing.
+O vídeo a seguir foi criado para ajudar a aprender como usar a página de insights do Attribution AI para entender o ROI de canais e campanhas de marketing.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)

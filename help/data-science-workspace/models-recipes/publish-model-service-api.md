@@ -28,7 +28,7 @@ Por fim, antes de iniciar este tutorial, reveja a seção [Introdução](../api/
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
+Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
@@ -48,7 +48,7 @@ A tabela a seguir descreve alguns termos comuns usados neste tutorial:
 
 ## Criar um Serviço ML com uma Execução de Experiência de treinamento existente e pontuação programada
 
-Ao publicar uma Execução de Experiência de treinamento como um Serviço ML, você pode agendar a pontuação fornecendo detalhes para a pontuação Experimento Executar a carga de uma solicitação POST. Isso resulta na criação de uma entidade de Experimento programada para pontuação.
+Ao publicar uma Execução de Experiência de treinamento como um Serviço ML, você pode agendar a pontuação fornecendo detalhes para a pontuação Experimento Executar a carga de uma solicitação de POST. Isso resulta na criação de uma entidade de Experimento programada para pontuação.
 
 **Formato da API**
 

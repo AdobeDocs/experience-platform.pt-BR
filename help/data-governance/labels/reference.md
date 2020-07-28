@@ -26,7 +26,7 @@ As etiquetas &quot;C&quot; do contrato são usadas para categorizar dados que t�
 |---|---|
 | **C1** | Os dados só podem ser exportados da Adobe Experience Cloud em um formulário agregado sem incluir identificadores individuais ou de dispositivos. [Mais informações...](#c1) |
 | **C2** | Os dados não podem ser exportados para terceiros. [Mais informações...](#c2) |
-| **C3** | Os dados não podem ser combinados ou usados de outra forma com informações diretamente identificáveis. [Mais informações...](#c3) |
+| **C3** | Os dados não podem ser combinados ou usados com informações diretamente identificáveis. [Mais informações...](#c3) |
 | **C4** | Os dados não podem ser usados para direcionar qualquer anúncio ou conteúdo, seja no site ou entre sites. [Mais informações...](#c4) |
 | **C5** | Os dados não podem ser usados para direcionamento de conteúdo ou anúncios entre sites com base em interesses. [Mais informações...](#c5) |
 | **C6** | Os dados não podem ser usados para direcionamento de anúncios no site. [Mais informações...](#c6) |

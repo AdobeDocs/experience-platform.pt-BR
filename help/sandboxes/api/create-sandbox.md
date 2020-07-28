@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Criar uma caixa de proteção
 
-Você pode criar uma nova caixa de proteção, fazendo uma solicitação POST para o `/sandboxes` ponto de extremidade.
+Você pode criar uma nova caixa de proteção, fazendo uma solicitação de POST para o `/sandboxes` endpoint.
 
 **Formato da API**
 

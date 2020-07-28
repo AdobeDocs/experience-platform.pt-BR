@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Governance] e [!DNL Privacy] tutoriais
+# [!DNL Data Governance] e [!DNL Privacy] Tutorials
 
 [!DNL Data Usage Labeling and Enforcement] (DULE) é o mecanismo principal do Adobe Experience Platform [!DNL Data Governanc]e. Os recursos DULE permitem aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Antes de começar a usar as etiquetas, consulte a visão geral [do](../data-governance/home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE dentro [!DNL Platform].
 
@@ -36,4 +36,4 @@ Os segmentos que estão habilitados para uso em [!DNL Real-time Customer Profile
 
 ## Get started with [!DNL Privacy Service]
 
-[!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem gerenciar os dados pessoais de seus participantes (clientes) nos aplicativos da Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem [!DNL Experience Cloud] aplicativos. Para obter instruções sobre como criar e monitorar [!DNL Privacy Service] trabalhos, siga as etapas fornecidas no guia [do desenvolvedor do](../privacy-service/api/getting-started.md) Privacy Service ou no guia [do usuário do](../privacy-service/ui/overview.md)Privacy Service.
+[!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem gerenciar os dados pessoais de seus participantes de dados (clientes) em aplicativos Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem [!DNL Experience Cloud] aplicativos. Para obter instruções sobre como criar e monitorar [!DNL Privacy Service] trabalhos, siga as etapas fornecidas no guia [do desenvolvedor do](../privacy-service/api/getting-started.md) Privacy Service ou no guia [do usuário do](../privacy-service/ui/overview.md)Privacy Service.

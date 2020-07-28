@@ -24,7 +24,7 @@ Novos recursos no Adobe Experience Platform:
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] aproveita perfis de produtos [do Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos do Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
+[!DNL Experience Platform] aproveita perfis de produtos [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos do Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
 
 **Principais recursos**
 

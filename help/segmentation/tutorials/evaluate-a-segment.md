@@ -41,7 +41,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 >
 >Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
-Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
+Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
@@ -63,19 +63,19 @@ Por meio da avaliação programada, sua Organização IMS pode criar uma program
 
 ### Criar um agendamento
 
-Ao fazer uma solicitação POST para o `/config/schedules` ponto de extremidade, você pode criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
+Ao fazer uma solicitação de POST para o `/config/schedules` endpoint, você pode criar uma programação e incluir o horário específico em que a programação deve ser acionada.
 
 Informações mais detalhadas sobre o uso desse terminal podem ser encontradas no guia de ponto de extremidade de [agendamentos](../api/schedules.md#create)
 
 ### Ativar um agendamento
 
-Por padrão, uma programação fica inativa quando criada, a menos que a `state` propriedade esteja definida como `active` no corpo da solicitação de criação (POST). Você pode ativar uma programação (definir como `state` ) fazendo uma solicitação PATCH para o `active``/config/schedules` ponto final e incluindo a ID da programação no caminho.
+Por padrão, uma programação fica inativa quando criada, a menos que a `state` propriedade esteja definida como `active` no corpo da solicitação create (POST). Você pode ativar uma programação (definir `state` como `active`), realizando uma solicitação de PATCH para o `/config/schedules` endpoint e incluindo a ID da programação no caminho.
 
 Informações mais detalhadas sobre o uso desse terminal podem ser encontradas no guia de ponto de extremidade de [agendamentos](../api/schedules.md#update-state)
 
 ### Atualizar a hora agendada
 
-O cronograma pode ser atualizado fazendo uma solicitação PATCH para o `/config/schedules` endpoint e incluindo a ID da programação no caminho.
+O cronograma pode ser atualizado fazendo uma solicitação de PATCH para o `/config/schedules` endpoint e incluindo a ID da programação no caminho.
 
 Informações mais detalhadas sobre o uso desse terminal podem ser encontradas no guia de ponto de extremidade de [agendamentos](../api/schedules.md#update-schedule)
 
@@ -216,13 +216,13 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva somente lei
 
 ### Gerar perfis para membros da audiência {#generate-profiles}
 
-Depois de ter um conjunto de dados que persiste na união, você pode criar um trabalho de exportação para persistir os membros da audiência no conjunto de dados, fazendo uma solicitação POST para o `/export/jobs` ponto final na [!DNL Real-time Customer Profile] API e fornecendo a ID do conjunto de dados e as informações do segmento para os segmentos que você deseja exportar.
+Depois que você tiver um conjunto de dados que persiste na união, poderá criar um trabalho de exportação para persistir os membros da audiência no conjunto de dados, solicitando um POST para o `/export/jobs` ponto final na [!DNL Real-time Customer Profile] API e fornecendo a ID do conjunto de dados e as informações do segmento para os segmentos que deseja exportar.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no guia de endpoint [de jobs de exportação](../api/export-jobs.md#create)
 
 ### Monitorar progresso de exportação
 
-Como um trabalho de exportação processa, você pode monitorar seu status fazendo uma solicitação GET para o ponto de extremidade `/export/jobs` e incluindo o da tarefa `id` de exportação no caminho. A tarefa de exportação é concluída assim que o `status` campo retorna o valor &quot;SUCEDIDO&quot;.
+Como um trabalho de exportação é processado, você pode monitorar seu status, fazendo uma solicitação de GET para o ponto de extremidade e incluindo o `/export/jobs` `id` da tarefa de exportação no caminho. A tarefa de exportação é concluída assim que o `status` campo retorna o valor &quot;SUCEDIDO&quot;.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no guia de endpoint [de jobs de exportação](../api/export-jobs.md#get)
 

@@ -92,7 +92,7 @@ Além disso, algumas diretrizes se aplicam ao fazer a segmentação de streaming
 
 ## Recuperar todos os segmentos habilitados para a segmentação em streaming
 
-Você pode recuperar uma lista de todos os seus segmentos que estão habilitados para a segmentação de streaming dentro da organização IMS, fazendo uma solicitação GET para o `/segment/definitions` endpoint.
+Você pode recuperar uma lista de todos os seus segmentos que estão habilitados para a segmentação em streaming na organização IMS, fazendo uma solicitação de GET para o `/segment/definitions` endpoint.
 
 **Formato da API**
 
@@ -294,7 +294,7 @@ Depois que a avaliação de streaming estiver ativada, uma linha de base deverá
 
 ### Criar um agendamento
 
-Ao fazer uma solicitação POST para o `/config/schedules` ponto de extremidade, você pode criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
+Ao fazer uma solicitação de POST para o `/config/schedules` endpoint, você pode criar uma programação e incluir o horário específico em que a programação deve ser acionada.
 
 **Formato da API**
 
@@ -364,7 +364,7 @@ Uma resposta bem-sucedida retorna os detalhes da programação recém-criada.
 
 ### Ativar um agendamento
 
-Por padrão, uma programação fica inativa quando criada, a menos que a `state` propriedade esteja definida como `active` no corpo da solicitação de criação (POST). Você pode ativar uma programação (definir como `state` ) fazendo uma solicitação PATCH para o `active``/config/schedules` ponto final e incluindo a ID da programação no caminho.
+Por padrão, uma programação fica inativa quando criada, a menos que a `state` propriedade esteja definida como `active` no corpo da solicitação create (POST). Você pode ativar uma programação (definir `state` como `active`), realizando uma solicitação de PATCH para o `/config/schedules` endpoint e incluindo a ID da programação no caminho.
 
 **Formato da API**
 

@@ -20,7 +20,7 @@ Agora que você entende quais cabeçalhos devem ser usados, você está pronto p
 
 ### Recuperar uma lista de modelos de query
 
-Você pode recuperar uma lista de todos os modelos de query para a organização IMS, fazendo uma solicitação GET ao `/query-templates` endpoint.
+Você pode recuperar uma lista de todos os modelos de query para a organização IMS, fazendo uma solicitação de GET para o `/query-templates` endpoint.
 
 **Formato da API**
 
@@ -111,7 +111,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
 
 ### Criar um modelo de query
 
-Você pode criar um modelo de query fazendo uma solicitação POST ao ponto de extremidade `/query-templates` .
+Você pode criar um modelo de query, fazendo uma solicitação de POST para o `/query-templates` terminal.
 
 **Formato da API**
 
@@ -174,7 +174,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do mod
 
 ### Recuperar um modelo de query especificado
 
-Você pode recuperar um modelo de query específico, fazendo uma solicitação GET para o `/query-templates/{TEMPLATE_ID}` terminal e fornecendo a ID do modelo de query no caminho da solicitação.
+Você pode recuperar um modelo de query específico, fazendo uma solicitação de GET para o `/query-templates/{TEMPLATE_ID}` terminal e fornecendo a ID do modelo de query no caminho da solicitação.
 
 **Formato da API**
 
@@ -232,7 +232,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de qu
 
 ### Atualizar um modelo de query especificado
 
-Você pode atualizar um modelo de query específico, fazendo uma solicitação PUT para o `/query-templates/{TEMPLATE_ID}` ponto de extremidade e fornecendo a ID do modelo de query no caminho da solicitação.
+Você pode atualizar um modelo de query específico, fazendo uma solicitação de PUT para o `/query-templates/{TEMPLATE_ID}` terminal e fornecendo a ID do modelo de query no caminho da solicitação.
 
 **Formato da API**
 
@@ -248,7 +248,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->A solicitação PUT exige que o sql e o campo de nome sejam preenchidos e **substituirá** o conteúdo atual desse modelo de query.
+>A solicitação de PUT requer que o sql e o campo de nome sejam preenchidos e **substituirá** o conteúdo atual desse modelo de query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -304,7 +304,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com as informaçõe
 
 ### Excluir um modelo de query especificado
 
-É possível excluir um modelo de query específico, solicitando DELETE ao e fornecendo a ID do modelo de query no caminho da solicitação. `/query-templates/{TEMPLATE_ID}`
+Você pode excluir um modelo de query específico, solicitando DELETE ao e fornecendo a ID do modelo de query no caminho da solicitação. `/query-templates/{TEMPLATE_ID}`
 
 **Formato da API**
 

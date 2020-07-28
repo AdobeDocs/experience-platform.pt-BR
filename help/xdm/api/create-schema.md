@@ -89,4 +89,4 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que con
 }
 ```
 
-A execução de uma solicitação GET para lista de todos os schemas no container locatário agora inclui o schema Informações de propriedade ou você pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização direta do novo schema. Lembre-se de incluir o `version` no cabeçalho Aceitar para todas as solicitações de pesquisa.
+A execução de uma solicitação de GET para lista de todos os schemas no container locatário agora inclui o schema Informações de propriedade ou você pode executar uma solicitação de pesquisa (GET) usando o `$id` URI codificado por URL para visualização direta do novo schema. Lembre-se de incluir o `version` no cabeçalho Aceitar para todas as solicitações de pesquisa.

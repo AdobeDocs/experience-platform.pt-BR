@@ -36,7 +36,7 @@ Consulte a visão geral [da ingestão de](./streaming-ingestion/overview.md) str
 
 [!DNL Experience Platform] permite configurar conexões de origem para vários provedores de dados. Essas conexões permitem que você se autentique em suas fontes de dados externas, defina horários para execuções de ingestão e gerencie o throughput de ingestão.
 
-Conexões de origem podem ser configuradas para coletar dados de outros aplicativos da Adobe (como o Adobe Analytics e o Adobe Audience Manager), fontes de armazenamentos em nuvem de terceiros (como [!DNL Azure Blob]S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Amazon] e [!DNL Microsoft Dynamics] [!DNL Salesforce]).
+Conexões de origem podem ser configuradas para coletar dados de outros aplicativos de Adobe (como Adobe Analytics e Adobe Audience Manager), fontes de armazenamento em nuvem de terceiros (como [!DNL Azure Blob]S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Amazon] e [!DNL Microsoft Dynamics] [!DNL Salesforce]).
 
 Consulte a visão geral [das](../sources/home.md) Fontes para obter mais informações.
 

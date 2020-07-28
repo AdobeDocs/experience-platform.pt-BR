@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda sobre o controle de dados da plataforma Adobe Experience
+user-guide-title: Ajuda para controle de dados do Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 5%
 
 ---
 
@@ -29,4 +32,4 @@ source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
    * [Ações de marketing](api/marketing-actions.md)
    * [Avaliação](api/evaluation.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

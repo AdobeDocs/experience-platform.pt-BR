@@ -20,7 +20,7 @@ As programações de treinamento e pontuação automatizadas são definidas com 
 
 ## Criar um MLService {#create-an-mlservice}
 
-Você pode criar um MLService executando uma solicitação POST e uma carga que fornece um nome para o serviço e uma ID de instância MLI válida. A instância MLI usada para criar um MLService não é necessária para ter Experimentos de treinamento existentes, mas você pode optar por criar o MLService com um modelo treinado existente fornecendo a ID de experiência e a ID de execução de treinamento correspondentes.
+Você pode criar um MLService executando uma solicitação de POST e uma carga que fornece um nome para o serviço e uma ID de instância MLI válida. A instância MLI usada para criar um MLService não é necessária para ter Experimentos de treinamento existentes, mas você pode optar por criar o MLService com um modelo treinado existente fornecendo a ID de experiência e a ID de execução de treinamento correspondentes.
 
 **Formato da API**
 
@@ -108,7 +108,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService re
 
 ## Recuperar uma lista de MLServices {#retrieve-a-list-of-mlservices}
 
-Você pode recuperar uma lista de MLServices executando uma única solicitação GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de MLServices executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
 
 **Formato da API**
 
@@ -167,7 +167,7 @@ Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, inclu
 
 ## Recuperar um MLService específico {#retrieve-a-specific-mlservice}
 
-Você pode recuperar os detalhes de um Experimento específico executando uma solicitação GET que inclui a ID do MLService desejada no caminho da solicitação.
+Você pode recuperar os detalhes de um Experimento específico executando uma solicitação de GET que inclui a ID do MLService desejada no caminho da solicitação.
 
 **Formato da API**
 
@@ -211,11 +211,11 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService so
 
 ## Atualizar um MLService {#update-an-mlservice}
 
-Você pode atualizar um MLService existente substituindo suas propriedades por meio de uma solicitação PUT que inclui a ID do público alvo MLService no caminho da solicitação e fornece uma carga JSON contendo propriedades atualizadas.
+Você pode atualizar um MLService existente sobrescrevendo suas propriedades por meio de uma solicitação de PUT que inclua a ID do público alvo MLService no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
 >[!TIP]
 >
->Para garantir o sucesso desta solicitação PUT, recomenda-se que primeiro você execute uma solicitação GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação PUT.
+>Para garantir o sucesso dessa solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 **Formato da API**
 
@@ -288,7 +288,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um MLService
 
-Você pode excluir um único MLService executando uma solicitação DELETE que inclui a ID do público alvo MLService no caminho da solicitação.
+É possível excluir um único MLService executando uma solicitação de DELETE que inclui a ID do MLService do público alvo no caminho da solicitação.
 
 **Formato da API**
 
@@ -323,7 +323,7 @@ curl -X DELETE \
 
 ## Excluir MLServices por ID de instância MLI
 
-Você pode excluir todos os MLServices pertencentes a uma determinada MLInposition executando uma solicitação DELETE que especifica uma ID de instância MLI como parâmetro de query.
+Você pode excluir todos os MLServices pertencentes a uma determinada instância MLI, executando uma solicitação de DELETE que especifica uma ID de instância MLI como parâmetro de query.
 
 **Formato da API**
 

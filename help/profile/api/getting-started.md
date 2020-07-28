@@ -44,7 +44,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
-Todas as solicitações com uma carga no corpo da solicitação (como chamadas POST, PUT e PATCH) devem incluir um `Content-Type` cabeçalho. Valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada.
+Todas as solicitações com uma carga no corpo da solicitação (como chamadas de POST, PUT e PATCH) devem incluir um `Content-Type` cabeçalho. Valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada.
 
 ## Próximas etapas
 

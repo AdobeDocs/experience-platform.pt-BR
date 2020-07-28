@@ -40,7 +40,7 @@ O tamanho da amostra da verificação depende do número geral de entidades na l
 
 ## Create a new preview {#create-preview}
 
-Você pode criar uma nova pré-visualização fazendo uma solicitação POST para o `/preview` ponto de extremidade.
+Você pode criar uma nova pré-visualização, enviando uma solicitação de POST para o `/preview` terminal.
 
 >[!NOTE] Uma tarefa de estimativa é criada automaticamente quando uma tarefa de pré-visualização é criada. Esses dois trabalhos compartilharão a mesma ID.
 
@@ -94,7 +94,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) com detalhes da sua
 
 ## Recuperar os resultados de uma pré-visualização específica {#get-preview}
 
-Você pode recuperar informações detalhadas sobre uma pré-visualização específica fazendo uma solicitação GET ao ponto de extremidade `/preview` e fornecendo a ID da pré-visualização no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma pré-visualização específica, fazendo uma solicitação de GET para o `/preview` terminal e fornecendo a ID da pré-visualização no caminho da solicitação.
 
 **Formato da API**
 
@@ -171,7 +171,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Recuperar os resultados de uma ordem de produção de estimativa específica {#get-estimate}
 
-Depois de criar um trabalho de pré-visualização, você pode usá-lo `previewId` no caminho de uma solicitação GET para o `/estimate` terminal para obter informações estatísticas visualizações sobre a definição do segmento, incluindo o tamanho de audiência projetado, o intervalo de confiança e o desvio padrão do erro.
+Depois de criar um trabalho de pré-visualização, você pode usá-lo `previewId` no caminho de uma solicitação de GET para o `/estimate` terminal para visualização de informações estatísticas sobre a definição do segmento, incluindo o tamanho de audiência projetado, o intervalo de confiança e o desvio padrão do erro.
 
 **Formato da API**
 

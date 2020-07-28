@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o poder da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de especialização em ciência de dados. Além disso, os profissionais de marketing podem ativar previsões em aplicativos [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform]e de terceiros.
 
-O vídeo a seguir foi projetado para oferecer suporte à sua compreensão dos Serviços inteligentes. Usando exemplos de casos de uso comercial, este vídeo explica um fluxo de trabalho de alto nível e descreve os recursos da IA de atribuição e da IA do cliente.
+O vídeo a seguir foi projetado para oferecer suporte à sua compreensão dos Serviços inteligentes. Usando exemplos de casos de uso comercial, este vídeo explica um fluxo de trabalho de alto nível e descreve os recursos da IA do cliente e do Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
@@ -26,7 +26,7 @@ Os Serviços inteligentes, baseados em [!DNL Adobe Experience Platform], fornece
 
 ### Velocidade de redução de custos no mercado
 
-A Adobe tem experiência em IA/ML combinada com uma experiência profunda em CXM, e os Serviços Inteligentes foram projetados especificamente para profissionais de marketing para tirar a IA/ML do mercado imediatamente para casos comuns de uso de marketing sem a necessidade de contratar cientistas de dados escassos e caros, acelerando a velocidade de comercialização e a acionabilidade.
+A Adobe tem experiência em IA/ML combinada com uma experiência profunda em CXM, e os Serviços Inteligentes foram projetados especificamente para profissionais de marketing para que a IA/ML possa ser removida imediatamente para casos comuns de uso de marketing sem a necessidade de contratar cientistas de dados escassos e caros, acelerando a velocidade de comercialização e a acionabilidade.
 
 ### Maior precisão em insights preditivos
 
@@ -48,7 +48,7 @@ O analista de marketing configura as previsões desejadas especificando regras d
 
 ### Predição
 
-Depois que os modelos terminarem o treinamento e a pontuação, as pontuações serão gravadas de volta na Plataforma.
+Depois que os modelos terminarem o treinamento e a pontuação, as pontuações serão gravadas de volta no Platform.
 
 ### Agir
 
@@ -56,4 +56,4 @@ Por fim, você pode decidir quais ações tomar com as previsões, como consumir
 
 ## Próximas etapas
 
-Atualmente, a IA de Atribuição de oferta de Serviços Inteligentes e a IA do cliente. O AI de atribuição permite que os profissionais de marketing orientem de forma inteligente a eficácia do marketing em canais e campanhas. Para saber mais sobre a Atribuição AI, visite a visão geral [da](./attribution-ai/overview.md)Atribuição AI. A IA do cliente permite que os profissionais de marketing hiper-personalizem as experiências do cliente. Para saber mais sobre a IA do cliente, visite a visão geral [da IA do](./customer-ai/overview.md)cliente.
+Atualmente, a oferta de Serviços inteligentes e a IA do cliente. O Attribution AI permite que os profissionais de marketing orientem de forma inteligente a eficácia do marketing em canais e campanhas. Para saber mais sobre Attribution AI, visite a visão geral [do](./attribution-ai/overview.md)Attribution AI. A IA do cliente permite que os profissionais de marketing hiper-personalizem as experiências do cliente. Para saber mais sobre a IA do cliente, visite a visão geral [da IA do](./customer-ai/overview.md)cliente.

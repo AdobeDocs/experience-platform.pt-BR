@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configurações de projeção de borda e pontos finais de destino
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos da Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a [!DNL Real-time Customer Profile] API para trabalhar com projeções de borda, incluindo destinos e configurações.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos de Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a [!DNL Real-time Customer Profile] API para trabalhar com projeções de borda, incluindo destinos e configurações.
 
 ## Introdução
 
@@ -29,7 +29,7 @@ Uma projeção pode ser roteada para uma ou mais bordas especificando os locais 
 
 ### Lista de todos os destinos
 
-Você pode lista os destinos de borda que já foram criados para sua organização, fazendo uma solicitação GET para o `/config/destinations` endpoint.
+Você pode lista os destinos de borda que já foram criados para sua organização, fazendo uma solicitação de GET para o `/config/destinations` endpoint.
 
 **Formato da API**
 
@@ -102,14 +102,14 @@ A resposta inclui uma `projectionDestinations` matriz com os detalhes de cada de
 
 | Propriedade | Descrição |
 |---|---|
-| `_links.self.href` | No nível superior, corresponde ao caminho usado para fazer a solicitação GET. Em cada objeto de destino individual, esse caminho pode ser usado em uma solicitação GET para pesquisar os detalhes de um destino específico diretamente. |
+| `_links.self.href` | No nível superior, corresponde ao caminho usado para fazer a solicitação de GET. Em cada objeto de destino individual, esse caminho pode ser usado em uma solicitação de GET para pesquisar os detalhes de um destino específico diretamente. |
 | `id` | Em cada objeto de destino, o `"id"` mostra a ID exclusiva gerada pelo sistema e somente leitura para o destino. Essa ID é usada ao fazer referência a um destino específico e ao criar configurações de projeção. |
 
 Para obter mais informações sobre os atributos de um destino individual, consulte a seção sobre como [criar um destino](#create-a-destination) a seguir.
 
 ### Create a destination {#create-a-destination}
 
-Se o destino desejado ainda não existir, você poderá criar um novo destino de projeção, fazendo uma solicitação POST ao `/config/destinations` ponto final.
+Se o destino desejado ainda não existir, você poderá criar um novo destino de projeção, fazendo uma solicitação de POST ao `/config/destinations` endpoint.
 
 **Formato da API**
 
@@ -122,7 +122,7 @@ POST /config/destinations
 A solicitação a seguir cria um novo destino de borda.
 
 >[!NOTE]
->A solicitação POST para criar um destino requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
+>A solicitação de POST para criar um destino requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
 
 ```shell
 curl -X POST \
@@ -177,7 +177,7 @@ Uma resposta bem-sucedida retorna os detalhes do destino de borda recém-criado,
 
 ### Visualização de um destino
 
-Se você souber a ID exclusiva de um destino de projeção, poderá executar uma solicitação de pesquisa para visualização de seus detalhes. Isso é feito fazendo uma solicitação GET ao ponto de `/config/destinations` extremidade e incluindo a ID do destino no caminho da solicitação.
+Se você souber a ID exclusiva de um destino de projeção, poderá executar uma solicitação de pesquisa para visualização de seus detalhes. Isso é feito ao fazer uma solicitação de GET para o ponto de extremidade e incluir a ID do destino no caminho da solicitação. `/config/destinations`
 
 **Formato da API**
 
@@ -224,7 +224,7 @@ O objeto response mostra os detalhes do destino da projeção. O `id` atributo d
 
 ### Atualizar um destino
 
-Um destino existente pode ser atualizado fazendo uma solicitação PUT para o `/config/destinations` ponto de extremidade e incluindo a ID do destino a ser atualizado no caminho da solicitação. Essa operação é essencialmente a _regravação_ do destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação como são fornecidos ao criar um novo destino.
+Um destino existente pode ser atualizado fazendo uma solicitação de PUT para o ponto de extremidade e incluindo a ID do destino a ser atualizada no caminho da solicitação. `/config/destinations` Essa operação é essencialmente a _regravação_ do destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação como são fornecidos ao criar um novo destino.
 
 >[!CAUTION]
 >A resposta da API à solicitação de atualização é imediata, no entanto, as alterações nas projeções são aplicadas de forma assíncrona. Em outras palavras, há uma diferença de tempo entre quando a atualização da definição de destino é feita e quando é aplicada.
@@ -244,7 +244,7 @@ PUT /config/destinations/{DESTINATION_ID}
 A solicitação a seguir atualiza o destino existente para incluir um segundo local (`dataCenters`).
 
 >[!IMPORTANT]
->A solicitação PUT requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
+>A solicitação de PUT requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
 
 ```shell
 curl -X PUT \
@@ -292,7 +292,7 @@ A resposta inclui os detalhes atualizados para o destino, incluindo sua ID e a n
 
 ### Excluir um destino
 
-Se sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação DELETE ao ponto de extremidade e incluindo a ID do destino que você deseja excluir no caminho da solicitação. `/config/destinations`
+Se sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação de DELETE para o `/config/destinations` ponto final e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
 
 >[!CAUTION]
 >A resposta da API à solicitação de exclusão é imediata, no entanto, as alterações reais nos dados nas bordas ocorrem de forma assíncrona. Em outras palavras, os dados do perfil serão removidos de todas as bordas (o `dataCenters` especificado no destino da projeção), mas o processo levará tempo para ser concluído.
@@ -329,7 +329,7 @@ As configurações de projeção fornecem informações sobre quais dados devem 
 
 ### Lista de todas as configurações de projeção
 
-Você pode lista todas as configurações de projeção que foram criadas para sua organização, fazendo uma solicitação GET ao `/config/projections` endpoint. Você também pode adicionar parâmetros opcionais ao caminho de solicitação para acessar configurações de projeção para um schema específico ou pesquisar uma projeção individual pelo nome.
+Você pode lista todas as configurações de projeção que foram criadas para sua organização, fazendo uma solicitação de GET para o `/config/projections` endpoint. Você também pode adicionar parâmetros opcionais ao caminho de solicitação para acessar configurações de projeção para um schema específico ou pesquisar uma projeção individual pelo nome.
 
 **Formato da API**
 
@@ -429,7 +429,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Solicitação**
 
 >[!NOTE]
->A solicitação POST para criar uma configuração requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
+>A solicitação de POST para criar uma configuração requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
 
 ```shell
 curl -X POST \

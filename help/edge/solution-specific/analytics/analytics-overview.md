@@ -1,8 +1,8 @@
 ---
-title: Envio de dados para o Adobe Analytics
+title: Envio de dados para a Adobe Analytics
 seo-title: Envio de dados para o Adobe Analytics com o Adobe Experience Platform Web SDK
-description: Saiba como enviar dados para o Adobe Analytics com o Experience Platform Web SDK
-seo-description: Saiba como enviar dados para o Adobe Analytics com o Experience Platform Web SDK
+description: Saiba como enviar dados para a Adobe Analytics com o Experience Platform Web SDK
+seo-description: Saiba como enviar dados para a Adobe Analytics com o Experience Platform Web SDK
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -12,13 +12,13 @@ ht-degree: 0%
 ---
 
 
-# Envio de dados para o Adobe Analytics
+# Envio de dados para a Adobe Analytics
 
 O Adobe Experience Platform [!DNL Web SDK] pode enviar dados para a Adobe Analytics. Isso funciona se traduzindo `xdm` em um formato que o Adobe Analytics pode usar.
 
 ## Configuração
 
-O Adobe Analytics coleta automaticamente os dados que você está enviando se você tiver um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
+A Adobe Analytics coleta automaticamente os dados que você está enviando se você tiver um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
 
 ## Dados mapeados automaticamente
 

@@ -83,7 +83,7 @@ A documentação do Adobe Experience Platform está disponível em vários idiom
 
 >[!NOTE]
 >
->A partir de maio de 2020, a Adobe está lançando atualizações no domínio e na barra de cabeçalho para unificar e melhorar sua experiência em todos os aplicativos do Experience Cloud. Isso inclui um novo menu Ajuda. O novo menu Ajuda inclui o seguinte:
+>A partir de maio de 2020, o Adobe está lançando atualizações no domínio e na barra de cabeçalho para unificar e melhorar sua experiência em todos os aplicativos do Experience Cloud. Isso inclui um novo menu Ajuda. O novo menu Ajuda inclui o seguinte:
 >
 >* Links para artigos em destaque
 >* Recomendações de documentação relevantes ao contexto
@@ -118,7 +118,7 @@ Para um rápido tour pela interface do [!DNL Experience Platform's] usuário, as
 
 * [**Fundamentos da API **](api-fundamentals.md)<br/>Aprenda as noções básicas de como trabalhar com[!DNL Platform]APIs.
 
-* [**Referência **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>API API[!DNL Experience Platform]do Discover, incluindo cabeçalhos, parâmetros, solicitações de amostra e respostas.*Esses documentos são hospedados em E/S da Adobe.*
+* [**Referência **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>API API[!DNL Experience Platform]do Discover, incluindo cabeçalhos, parâmetros, solicitações de amostra e respostas.*Esses documentos são hospedados em E/S de Adobe.*
 
 ## Recursos de vídeo de integração de Adobe Experience Platform
 
@@ -126,7 +126,7 @@ Para um rápido tour pela interface do [!DNL Experience Platform's] usuário, as
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Um dos principais benefícios oferecidos pelo Adobe Experience Platform é sua capacidade de integração com outros serviços existentes da Adobe. O vídeo a seguir fornece uma visão geral de como [!DNL Experience Platform] os serviços se integram com [!DNL Experience Cloud] aplicativos e recursos, como o Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library]e [!DNL Experience Platform Launch].
+Um dos principais benefícios oferecidos pelo Adobe Experience Platform é a sua capacidade de integração com outros serviços de Adobe. O vídeo a seguir fornece uma visão geral de como [!DNL Experience Platform] os serviços se integram com [!DNL Experience Cloud] aplicativos e recursos, como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library]e [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 

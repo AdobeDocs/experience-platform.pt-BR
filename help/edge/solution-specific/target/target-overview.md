@@ -61,7 +61,7 @@ alloy
 
 ## Uso do Criador baseado em forma
 
-O Criador de experiências baseado em forma é uma interface não visual que é útil para configurar Testes A/B, Personalização automatizada [!DNL Experience Targeting]e atividades do Recommendations com diferentes tipos de resposta, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada pelo Adobe Target, sua lógica comercial central pode ser executada. Para recuperar decisões para suas atividades do Compositor baseado em forma, envie um evento com todos os &quot;escopos de decisão&quot; para os quais deseja recuperar uma decisão.
+O Criador de experiências baseado em forma é uma interface não visual útil para configurar Testes A/B, [!DNL Experience Targeting]Automated Personalization e Recommendations atividade com diferentes tipos de resposta, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada pelo Adobe Target, sua lógica comercial central pode ser executada. Para recuperar decisões para suas atividades do Compositor baseado em forma, envie um evento com todos os &quot;escopos de decisão&quot; para os quais deseja recuperar uma decisão.
 
 ```javascript
 alloy

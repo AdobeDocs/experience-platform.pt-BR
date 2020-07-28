@@ -204,7 +204,7 @@ Há algumas limitações a serem consideradas ao usar tags:
 
 * Os únicos objetos de Catálogo que atualmente suportam tags são conjuntos de dados, lotes e conexões.
 * Os nomes das tags são exclusivos à sua organização IMS.
-* Os processos da Adobe podem aproveitar as tags para determinados comportamentos. Os nomes dessas tags recebem o prefixo &quot;adobe&quot; como padrão. Portanto, você deve evitar essa convenção ao declarar nomes de tags.
+* Os processos de Adobe podem aproveitar as tags para determinados comportamentos. Os nomes dessas tags recebem o prefixo &quot;adobe&quot; como padrão. Portanto, você deve evitar essa convenção ao declarar nomes de tags.
 * Os seguintes nomes de tags são reservados para uso em toda a empresa [!DNL Experience Platform], pelo que não podem ser declarados como um nome de tag para sua organização:
    * `unifiedProfile`: Esse nome de tag é reservado para que conjuntos de dados sejam assimilados [!DNL Real-time Customer Profile](../../profile/home.md).
    * `unifiedIdentity`: Esse nome de tag é reservado para que conjuntos de dados sejam assimilados [!DNL Identity Service](../../identity-service/home.md).

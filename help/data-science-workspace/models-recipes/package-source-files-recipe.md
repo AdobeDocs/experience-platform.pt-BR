@@ -18,7 +18,7 @@ Este tutorial fornece instruções sobre como você pode disponibilizar os arqui
 
 Conceitos para entender:
 
-- **Receitas**: Uma fórmula é o termo da Adobe para uma especificação de Modelo e é um container de nível superior que representa um aprendizado de máquina específico, algoritmo de inteligência artificial ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo treinado e, portanto, ajudar a resolver problemas específicos da empresa.
+- **Receitas**: Uma receita é um termo para uma especificação de modelo e um container de nível superior representando um aprendizado de máquina específico, algoritmo de inteligência artificial ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo e, portanto, ajudar a resolver problemas específicos da empresa.
 - **Arquivos** de origem: Arquivos individuais em seu projeto que contêm a lógica de uma fórmula.
 
 ## Pré-requisitos

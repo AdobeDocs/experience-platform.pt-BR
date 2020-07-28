@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Pesquisar um recurso
 
-Você pode pesquisar recursos específicos fazendo uma solicitação GET que inclua o recurso `$id` (URI codificado por URL) no caminho da solicitação.
+Você pode pesquisar recursos específicos fazendo uma solicitação de GET que inclui o recurso `$id` (URI codificado por URL) no caminho da solicitação.
 
 **Formato da API**
 

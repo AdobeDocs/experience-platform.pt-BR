@@ -22,14 +22,14 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 É recomendável que você tenha uma compreensão funcional dos seguintes [!DNL Experience Platform] serviços antes de ler este guia:
 
-* [!DNL Privacy Service](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais nos aplicativos da Adobe Experience Cloud.
+* [!DNL Privacy Service](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais em aplicativos Adobe Experience Cloud.
 * [!DNL Catalog Service](home.md): O sistema de registro para localização e linhagem de dados no [!DNL Experience Platform]. Fornece uma API que pode ser usada para atualizar metadados do conjunto de dados.
 * [!DNL Experience Data Model (XDM) System](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [!DNL Identity Service](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 
-O Adobe Experience Platform [!DNL Identity Service] faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. [!DNL Identity Service] usa namespaces **[!UICONTROL de]** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma ID da Advertising Cloud da Adobe (&quot;AdCloud&quot;) ou uma ID da Adobe Target (&quot;TNTID&quot;).
+O Adobe Experience Platform [!DNL Identity Service] faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. [!DNL Identity Service] usa namespaces **[!UICONTROL de]** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma ID da Adobe Advertising Cloud (&quot;AdCloud&quot;) ou uma ID da Adobe Target (&quot;TNTID&quot;).
 
 [!DNL Identity Service] mantém um armazenamento de namespaces de identidade definidas globalmente (padrão) e definidas pelo usuário (personalizadas). namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizadas para atender às suas necessidades específicas.
 
@@ -68,7 +68,7 @@ Depois de definir os campos apropriados dentro do schema como campos de identida
 >
 > Esta seção inclui chamadas para a API do Registro do Schema. Para obter informações importantes relacionadas ao uso da API, incluindo o conhecimento de sua identidade `{TENANT_ID}` e do conceito de container, consulte a seção [Introdução](../xdm/api/getting-started.md) do guia do desenvolvedor.
 
-Você pode adicionar um descritor de identidade ao schema XDM de um conjunto de dados, fazendo uma solicitação POST ao `/descriptors` endpoint na [!DNL Schema Registry] API.
+Você pode adicionar um descritor de identidade ao schema XDM de um conjunto de dados, fazendo uma solicitação de POST para o `/descriptors` endpoint na [!DNL Schema Registry] API.
 
 **Formato da API**
 

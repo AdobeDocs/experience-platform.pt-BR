@@ -37,7 +37,7 @@ O diagrama de fluxo de trabalho a seguir fornece uma visão geral de alto nível
 
 Há vários componentes de Experience Platform envolvidos nas integrações do conector ETL. A lista a seguir descreve vários componentes e funcionalidades principais:
 
-- **Adobe Identity Management System (IMS)** - fornece uma estrutura para autenticação aos serviços da Adobe.
+- **Adobe Identity Management System (IMS)** - fornece estrutura para autenticação para serviços Adobe.
 - **Organização** IMS - uma entidade corporativa que pode ser proprietária ou licenciar produtos e serviços e permitir o acesso a seus membros.
 - **Usuário** IMS - Membros de uma organização IMS. A relação Organização-usuário é de muitas para muitas.
 - **[!DNL Sandbox]** - Uma partição virtual como uma única [!DNL Platform] instância, para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
@@ -198,7 +198,7 @@ O formato de resposta depende do tipo de cabeçalho Accept enviado na solicitaç
 
 | Aceitar | Descrição |
 | ------ | ----------- |
-| `application/vnd.adobe.xed-id+json` | Solicitações, títulos, ids e versões de Lista (GET) |
+| `application/vnd.adobe.xed-id+json` | Solicitações, títulos, IDs e versões de Lista (GET) |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs e allOf resolvidos, tem títulos e descrições |
 | `application/vnd.adobe.xed+json; version={major version}` | Bruto com $ref e allOf, tem títulos e descrições |
 | `application/vnd.adobe.xed-notext+json; version={major version}` | Bruto com $ref e allOf, sem títulos ou descrições |
@@ -217,7 +217,7 @@ Junto com esta tabela, o Guia do [!DNL Schema Registry] desenvolvedor contém ex
 
 ### Propriedade &quot;schema&quot; do conjunto de dados (DEPRECATED - EOL 2019-05-30)
 
-Os conjuntos de dados podem conter uma propriedade &quot;schema&quot; que agora está obsoleta e permanece disponível temporariamente para compatibilidade com versões anteriores. Por exemplo, uma solicitação de listagem (GET) semelhante à feita anteriormente, onde &quot;schema&quot; foi substituído por &quot;schemaRef&quot; no parâmetro `properties` query, pode retornar o seguinte:
+Os conjuntos de dados podem conter uma propriedade &quot;schema&quot; que agora está obsoleta e permanece disponível temporariamente para compatibilidade com versões anteriores. Por exemplo, uma solicitação de listagem (GET) semelhante à feita anteriormente, onde &quot;schema&quot; foi substituído por &quot;schemaRef&quot; no parâmetro do `properties` query, pode retornar o seguinte:
 
 ```json
 {
@@ -326,7 +326,7 @@ A resposta incluirá um conjunto de dados (`limit=1`) mostrando a propriedade &q
 
 ### Lista de arquivos de conjunto de dados usando o atributo &quot;files&quot;
 
-Você também pode usar uma solicitação GET para buscar detalhes do arquivo usando o atributo &quot;files&quot;.
+Você também pode usar uma solicitação de GET para buscar detalhes do arquivo usando o atributo &quot;files&quot;.
 
 **Formato da API**
 
@@ -392,7 +392,7 @@ A resposta inclui a ID do Arquivo do Conjunto de Dados como a propriedade de ní
 
 ### Buscar detalhes do arquivo
 
-As IDs de arquivo do conjunto de dados retornadas na resposta anterior podem ser usadas em uma solicitação GET para buscar mais detalhes do arquivo por meio da [!DNL Data Access] API.
+As IDs de arquivo do conjunto de dados retornadas na resposta anterior podem ser usadas em uma solicitação de GET para buscar mais detalhes do arquivo por meio da [!DNL Data Access] API.
 
 A visão geral [do acesso aos](../data-access/home.md) dados contém detalhes sobre como usar a [!DNL Data Access] API.
 
@@ -552,7 +552,7 @@ A resposta pode apontar para um único arquivo ou diretório. Detalhes de cada u
 
 ### Acessar conteúdo do arquivo
 
-O [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) pode ser usado para acessar o conteúdo de um arquivo específico. Para obter o conteúdo, uma solicitação GET é feita usando o valor retornado para `_links.self.href` acessar um arquivo usando a ID do arquivo.
+O [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) pode ser usado para acessar o conteúdo de um arquivo específico. Para obter o conteúdo, uma solicitação de GET é feita usando o valor retornado para `_links.self.href` acessar um arquivo usando a ID do arquivo.
 
 **Solicitação**
 
@@ -674,7 +674,7 @@ As novas tarefas podem ser programadas se o valor do &quot;status&quot; do lote 
 
 ### Obter o status do último lote por ID
 
-Um status de lote individual pode ser recuperado por meio do [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) emissor de uma solicitação GET usando o `{BATCH_ID}`. A ID `{BATCH_ID}` usada seria a mesma retornada quando o lote era criado.
+Um status de lote individual pode ser recuperado por meio do [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) emissor de uma solicitação de GET usando o `{BATCH_ID}`. A ID `{BATCH_ID}` usada seria a mesma retornada quando o lote era criado.
 
 **Solicitação**
 
@@ -775,7 +775,7 @@ Por exemplo, se o cliente persistir em um armazenamento de persistência atualiz
 
 Em outros casos, os dados fora de ordem podem ser processados por aplicativos/processos de downstream que classificam internamente usando um carimbo de data e hora especificado. Nesses casos, as transformações paralelas de ETL podem ser viáveis para melhorar o tempo de processamento.
 
-Para lotes de origem, ele dependerá novamente da preferência do cliente e da restrição do consumidor. Se os dados de origem puderem ser coletados em paralelo, independentemente da regularidade/ordem de uma linha, o processo de transformação poderá criar lotes de processos com um grau mais alto de paralelismo (otimização baseada no processamento fora de ordem). Mas se a transformação tiver que cumprir carimbos de data e hora ou alterar a ordem de precedência, o scheduler/invocação da API de acesso aos dados ou da ferramenta ETL terá que garantir que os lotes não sejam processados fora da ordem, sempre que possível.
+Para lotes de origem, ele dependerá novamente da preferência do cliente e da restrição do consumidor. Se os dados de origem puderem ser coletados em paralelo, independentemente da regularidade/ordem de uma linha, o processo de transformação poderá criar lotes de processos com um grau mais alto de paralelismo (otimização baseada no processamento fora de ordem). Mas se a transformação tiver que respeitar carimbos de data e hora ou alterar a ordem de precedência, o scheduler/invocação da API de acesso aos dados ou da ferramenta ETL terá que garantir que os lotes não sejam processados fora da ordem, sempre que possível.
 
 ## Adiamento
 

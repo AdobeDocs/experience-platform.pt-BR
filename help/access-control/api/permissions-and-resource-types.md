@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Nomes de Listas de permissões e tipos de recursos
 
-Você pode lista os nomes de todas as permissões e tipos de recursos fazendo uma solicitação GET para o `/acl/reference` endpoint. Esses nomes podem ser usados em chamadas de API para [visualização de políticas](./effective-policies.md) eficazes para o usuário atual.
+Você pode lista os nomes de todas as permissões e tipos de recursos, fazendo uma solicitação de GET para o `/acl/reference` endpoint. Esses nomes podem ser usados em chamadas de API para [visualização de políticas](./effective-policies.md) eficazes para o usuário atual.
 
 Uma **permissão** é uma política gerenciada pelo Adobe Admin Console e mapeia para zero ou mais políticas de tipo de recurso. Um tipo **de** recurso é uma política que permite os recursos de leitura, gravação e/ou exclusão para um tipo específico de [!DNL Platform] recurso (como conjuntos de dados ou schemas).
 

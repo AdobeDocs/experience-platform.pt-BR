@@ -69,7 +69,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma [!DNL GreenPlum] conexão, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL GreenPlum] é `37b6bf40-d318-4655-90be-5cd6f65d334b`.
+Para criar uma [!DNL GreenPlum] conexão, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL GreenPlum] é `37b6bf40-d318-4655-90be-5cd6f65d334b`.
 
 ```shell
 curl -X POST \

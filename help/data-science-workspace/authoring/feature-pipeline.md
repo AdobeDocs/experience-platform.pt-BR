@@ -39,7 +39,7 @@ Para executar uma fórmula em qualquer organização, é necessário o seguinte:
 - Um schema transformado e um conjunto de dados vazio com base nesse schema.
 - Um schema de saída e um conjunto de dados vazio com base nesse schema.
 
-Todos os conjuntos de dados acima precisam ser carregados na [!DNL Platform] interface do usuário. Para configurar isso, use o script [de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)inicialização fornecido pela Adobe.
+Todos os conjuntos de dados acima precisam ser carregados na [!DNL Platform] interface do usuário. Para configurar isso, use o script [de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)inicialização fornecido pelo Adobe.
 
 ## Classes de pipeline de recurso
 
@@ -398,11 +398,11 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Criar um mecanismo de pipeline de recursos {#create-engine-api}
 
-Depois que você tiver o local da imagem do Docker, poderá [criar um mecanismo](../api/engines.md#feature-pipeline-docker) de pipeline de recursos usando a [!DNL Sensei Machine Learning] API executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
+Depois de ter a localização da imagem do Docker, você pode [criar um mecanismo](../api/engines.md#feature-pipeline-docker) de pipeline de recursos usando a [!DNL Sensei Machine Learning] API executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
 
 ### Criar uma instância MLI {#create-mlinstance}
 
-Usando a sua criação recém-criada `engineID`, é necessário [criar uma posição](../api/mlinstances.md#create-an-mlinstance) MLI fazendo uma solicitação POST para o `/mlInstance` endpoint. Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
+Usando a sua criação recém-criada `engineID`, é necessário [criar uma postura](../api/mlinstances.md#create-an-mlinstance) MLI fazendo uma solicitação POST para o `/mlInstance` endpoint. Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
 
 ### Criar um experimento {#create-experiment}
 
@@ -410,24 +410,24 @@ Em seguida, é necessário [criar um Experimento](../api/experiments.md#create-a
 
 ### Especificar a tarefa do pipeline do recurso de execução de Experimento {#specify-feature-pipeline-task}
 
-Depois de criar um Experimento, é necessário alterar o modo do Experimento para `featurePipeline`. Para alterar o modo, faça com que um POST adicional seja enviado [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) com o seu `EXPERIMENT_ID` e no corpo `{ "mode":"featurePipeline"}` para especificar uma execução de teste do pipeline de recursos.
+Depois de criar um Experimento, é necessário alterar o modo do Experimento para `featurePipeline`. Para alterar o modo, faça com que um POST adicional seja enviado [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) com seu `EXPERIMENT_ID` `{ "mode":"featurePipeline"}` e no corpo para especificar uma execução de teste de pipeline de recursos.
 
-Depois de concluído, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` recuperar [o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
+Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` recuperar o status [](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
 
 ### Especificar a tarefa de treinamento de execução de Experimento {#training}
 
-Em seguida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução do treinamento. Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o modo como `train` e envie uma matriz de tarefas que contenha seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento solicitado.
+Em seguida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução do treinamento. Faça uma POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o modo como `train` e envie uma matriz de tarefas que contenha seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento solicitado.
 
-Depois de concluído, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` recuperar [o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
+Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` recuperar o status [](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
 
 ### Especificar a tarefa de pontuação da execução do Experimento {#scoring}
 
 >[!NOTE]
 > Para concluir esta etapa, é necessário ter pelo menos uma execução de treinamento bem-sucedida associada ao seu Experimento.
 
-Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução da pontuação. Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o `mode` atributo como &quot;pontuação&quot;. Isso start a execução do seu Experimento de pontuação.
+Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução da pontuação. Faça uma POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o `mode` atributo como &quot;pontuação&quot;. Isso start a execução do seu Experimento de pontuação.
 
-Depois de concluído, faça uma solicitação GET para `/experiments/{EXPERIMENT_ID}` recuperar [o status](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
+Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` recuperar o status [](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
 
 Quando a pontuação for concluída, o pipeline do recurso deverá estar operacional.
 

@@ -5,6 +5,9 @@ title: Fórmula de vendas de varejo
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +33,7 @@ A receita de Previsão de Vendas de Varejo usa o aprendizado da máquina para pr
 
 Você pode começar seguindo este [tutorial](../jupyterlab/create-a-recipe.md).
 
-Este tutorial vai além da criação da receita de Vendas de varejo em um notebook de Júpiter e do uso do notebook para obter o fluxo de trabalho da receita para criar a receita na Adobe Experience Platform.
+Este tutorial vai além da criação da receita de vendas de varejo em um notebook de Júpiter e do fluxo de trabalho do notebook para a receita para criar a receita no Adobe Experience Platform.
 
 ## schema de dados
 

@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '109'
+ht-degree: 7%
 
 ---
 
@@ -37,4 +40,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [Criar um schema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

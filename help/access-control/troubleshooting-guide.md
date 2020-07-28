@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Este documento fornece respostas para perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para questões e solução de problemas relacionados a outros [!DNL Platform] serviços, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
 
-[!DNL Experience Platform] aproveita perfis de produtos no [Adobe Admin Console](http://adminconsole.adobe.com) para fornecer **controle de acesso** baseado em funções, vinculando usuários com permissões e caixas de proteção.  Consulte a visão geral [do](home.md) controle de acesso para obter mais informações.
+[!DNL Experience Platform] aproveita perfis de produtos no [Adobe Admin Console](http://adminconsole.adobe.com) para fornecer **controles de acesso** baseados em funções, vinculando usuários com permissões e caixas de proteção.  Consulte a visão geral [do](home.md) controle de acesso para obter mais informações.
 
 ## Onde posso encontrar minhas permissões de acesso atuais?
 
-Se você for administrador do sistema, administrador do produto ou administrador do perfil do produto para a organização IMS, poderá visualização o perfil do produto atribuído e as permissões que ele fornece no Admin Console da Adobe. Consulte o guia [do usuário do](./ui/overview.md) controle de acesso para obter instruções sobre como navegar até [!DNL Admin Console] a visualização das permissões de um perfil do produto.
+Se você for um administrador do sistema, administrador do produto ou administrador do perfil do produto para a organização IMS, poderá visualização o perfil do produto atribuído e as permissões que ele fornece no Adobe Admin Console. Consulte o guia [do usuário do](./ui/overview.md) controle de acesso para obter instruções sobre como navegar até [!DNL Admin Console] a visualização das permissões de um perfil do produto.
 
 Se você não for um administrador, ainda será possível visualização das permissões de acesso atuais enviando uma solicitação para o ponto de extremidade `/acl/effective-policies` na API do Controle de acesso. Consulte a seção &quot;Políticas eficazes para a Visualização&quot; no guia [do desenvolvedor do](./api/effective-policies.md) controle de acesso para obter mais informações.
 

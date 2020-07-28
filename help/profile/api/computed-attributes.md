@@ -48,9 +48,9 @@ Casos de uso para atributos calculados podem variar de cálculos simples a refer
 Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Esse campo pode ser criado usando uma combinação para adicionar o campo a um schema existente ou selecionando um campo que você já definiu dentro de um schema.
 
 >[!NOTE]
->Atributos calculados não podem ser adicionados a campos em combinações definidas pela Adobe. O campo deve estar dentro da `tenant` namespace, o que significa que deve ser um campo definido e adicionado a um schema.
+>Atributos calculados não podem ser adicionados a campos em combinações definidas por Adobe. O campo deve estar dentro da `tenant` namespace, o que significa que deve ser um campo definido e adicionado a um schema.
 
-Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de uniões. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
+Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de união. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
 
 O fluxo de trabalho neste tutorial usa um schema [!DNL Profile]habilitado e segue as etapas para definir uma nova combinação que contém o campo de atributo calculado e garante que seja a namespace correta. Se você já tiver um campo que esteja na namespace correta dentro de um schema habilitado para Perfis, poderá prosseguir diretamente para a etapa de [criação de um atributo](#create-a-computed-attribute)calculado.
 
@@ -110,7 +110,7 @@ Agora você pode clicar em **[!UICONTROL Salvar]** para salvar o schema atualiza
 
 Com o campo de atributo calculado identificado e a confirmação de que o schema está ativado para [!DNL Profile], agora é possível configurar um atributo calculado.
 
-Comece fazendo uma solicitação POST para o `/config/computedAttributes` ponto de extremidade com um corpo de solicitação contendo os detalhes do atributo calculado que você deseja criar.
+Comece fazendo uma solicitação de POST para o `/config/computedAttributes` ponto de extremidade com um corpo de solicitação contendo os detalhes do atributo calculado que você deseja criar.
 
 **Formato da API**
 
@@ -223,7 +223,7 @@ As etapas para listar todos os atributos calculados e visualizar um atributo cal
 
 ### Lista de atributos calculados {#list-computed-attributes}
 
-Sua Organização IMS pode criar vários atributos calculados e a execução de uma solicitação GET ao `/config/computedAttributes` endpoint permite que você lista todos os atributos calculados existentes para sua organização.
+Sua Organização IMS pode criar vários atributos calculados e executar uma solicitação de GET para o `/config/computedAttributes` endpoint permite que você lista todos os atributos calculados existentes para sua organização.
 
 **Formato da API**
 
@@ -357,11 +357,11 @@ A resposta também inclui uma `children` matriz composta de um ou mais objetos, 
 | `_page.pageSize` | O número de atributos calculados retornados nesta página de resultados. Se `pageSize` for igual a `totalCount`, isso significa que há apenas uma página de resultados e todos os atributos calculados foram retornados. Se não forem iguais, há páginas adicionais de resultados que podem ser acessadas. See `_links.next` for details. |
 | `children` | Uma matriz composta de um ou mais objetos, cada um contendo os detalhes de um único atributo calculado. Se nenhum atributo calculado tiver sido definido, a `children` matriz ficará vazia. |
 | `id` | Um valor exclusivo, somente leitura, gerado pelo sistema, atribuído automaticamente a um atributo calculado quando ele é criado. Para obter mais informações sobre os componentes de um objeto de atributo calculado, consulte a seção sobre como [criar um atributo](#create-a-computed-attribute) calculado anteriormente neste tutorial. |
-| `_links.next` | Se uma única página de atributos calculados for retornada, `_links.next` será um objeto vazio, como mostra a resposta de amostra acima. Se sua organização tiver muitos atributos calculados, eles serão retornados em várias páginas que você pode acessar, fazendo uma solicitação GET para o `_links.next` valor. |
+| `_links.next` | Se uma única página de atributos calculados for retornada, `_links.next` será um objeto vazio, como mostra a resposta de amostra acima. Se sua organização tiver muitos atributos calculados, eles serão retornados em várias páginas que você pode acessar, fazendo uma solicitação de GET para o `_links.next` valor. |
 
 ### Visualização de um atributo calculado {#view-a-computed-attribute}
 
-Você também pode visualização um atributo calculado específico fazendo uma solicitação GET ao ponto de extremidade `/config/computedAttributes` e incluindo a ID do atributo computada no caminho da solicitação.
+Você também pode visualização um atributo calculado específico fazendo uma solicitação de GET ao ponto de extremidade `/config/computedAttributes` e incluindo a ID de atributo calculada no caminho da solicitação.
 
 **Formato da API**
 
@@ -432,7 +432,7 @@ curl -X GET \
 
 ## Atualizar um atributo calculado
 
-Se você achar que precisa atualizar um atributo calculado existente, isso pode ser feito realizando uma solicitação PATCH para o `/config/computedAttributes` endpoint e incluindo a ID do atributo calculado que você deseja atualizar no caminho da solicitação.
+Se você achar que precisa atualizar um atributo calculado existente, isso pode ser feito fazendo uma solicitação PATCH ao `/config/computedAttributes` endpoint e incluindo a ID do atributo calculado atribuído que você deseja atualizar no caminho da solicitação.
 
 **Formato da API**
 
@@ -476,11 +476,11 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um corpo de resposta vazio. Se desejar confirmar que a atualização foi bem-sucedida, você pode executar uma solicitação GET para visualização do atributo calculado pela ID.
+Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um corpo de resposta vazio. Se você quiser confirmar que a atualização foi bem-sucedida, poderá executar uma solicitação de GET para visualização do atributo calculado por sua ID.
 
 ## Excluir um atributo calculado
 
-Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação DELETE ao ponto de extremidade e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação. `/config/computedAttributes`
+Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação de DELETE ao `/config/computedAttributes` endpoint e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação.
 
 >[!NObservação]
 >
@@ -510,7 +510,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um corpo de resposta vazio. Para confirmar se a exclusão foi bem-sucedida, é possível executar uma solicitação GET para pesquisar o atributo calculado pela ID. Se o atributo foi excluído, você receberá um erro HTTP Status 404 (Não encontrado).
+Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um corpo de resposta vazio. Para confirmar se a exclusão foi bem-sucedida, é possível executar uma solicitação de GET para pesquisar o atributo calculado pela ID. Se o atributo foi excluído, você receberá um erro HTTP Status 404 (Não encontrado).
 
 ## Próximas etapas
 

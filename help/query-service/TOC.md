@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda do serviço de Query da plataforma Adobe Experience
+user-guide-title: Ajuda do serviço de Query Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 8%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Visão geral da interface do usuário](ui/overview.md)
    - [Guia do usuário do Editor de Query](ui/user-guide.md)
 - Criação de query {#creating-queries}
-   - [Funções definidas pela Adobe](creating-queries/using-adobe-defined-functions.md)
+   - [funções definidas pelo Adobe](creating-queries/using-adobe-defined-functions.md)
    - [Visão geral da criação de query](creating-queries/creating-queries.md)
    - [Conjuntos de dados vs tabelas e schemas](creating-queries/datasets-and-tables.md)
    - [Orientações gerais para a execução de query](creating-queries/writing-queries.md)
@@ -34,7 +37,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 - Referência SQL {#sql}
    - [Visão geral do SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)
-   - [Funções definidas pela Adobe](sql/adobe-defined-functions.md)
+   - [funções definidas pelo Adobe](sql/adobe-defined-functions.md)
    - [Funções SQL Spark](sql/spark-sql-functions.md)
    - [Comandos de metadados](sql/metadata.md)
    - [Declarações preparadas](sql/prepared-statements.md)
@@ -53,4 +56,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Tableau](clients/tableau.md)
 - [Guia de solução de problemas](troubleshooting-guide.md)
 - [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)

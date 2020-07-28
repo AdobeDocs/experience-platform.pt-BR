@@ -75,7 +75,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma [!DNL Hive] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL Hive] é `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
+Para criar uma [!DNL Hive] conexão, sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL Hive] é `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
 
 ```shell
 curl -X POST \

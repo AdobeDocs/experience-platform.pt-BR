@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem PayPal na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Criar um conector [!DNL PayPal] de origem na interface do usuário
 
-> [!NOTE]
+>[!NOTE]
 > O [!DNL PayPal] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
 Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de [!DNL PayPal] origem usando a interface do [!DNL Platform] usuário.

@@ -56,7 +56,7 @@ Campos como CEP e endereços IP não devem ser rotulados como identidades para i
 
 ## Por que meus campos de identidade não estão vinculando da maneira que eu espero?
 
-Usando o [`/cluster/members` endpoint](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível visualização das identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre como [fornecer dados XDM ao serviço](./home.md) de identidade na visão geral do serviço de identidade para obter mais informações.
+Usando o [`/cluster/members` endpoint](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível visualização das identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre como [fornecer dados XDM ao Serviço](./home.md) de identidade na visão geral do Serviço de identidade para obter mais informações.
 
 ## O que é uma namespace de identidade?
 
@@ -91,11 +91,11 @@ As seguintes namespaces padrão são fornecidas para uso por todas as organizaç
 
 ## Onde posso encontrar a lista de namespaces de identidade disponível para minha organização?
 
-Usando a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identidade, você pode lista todas as namespaces de identidade disponíveis para sua organização, fazendo uma solicitação GET ao `/idnamespace/identities` endpoint. Consulte a seção sobre como [listar namespaces](./api/list-namespaces.md) disponíveis na visão geral da API do Serviço de identidade para obter mais informações.
+Usando a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identidade, você pode lista todas as namespaces de identidade disponíveis para sua organização, fazendo uma solicitação de GET para o `/idnamespace/identities` endpoint. Consulte a seção sobre como [listar namespaces](./api/list-namespaces.md) disponíveis na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## Como faço para criar uma namespace personalizada para minha organização?
 
-Usando a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identidade, é possível criar uma namespace de identidade personalizada para sua organização, fazendo uma solicitação POST ao `/idnamespace/identities` endpoint. Consulte a seção sobre como [criar uma namespace](./api/create-custom-namespace.md) personalizada na visão geral da API do Serviço de identidade para obter mais informações.
+Usando a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identidade, você pode criar uma namespace de identidade personalizada para sua organização, solicitando um POST para o `/idnamespace/identities` endpoint. Consulte a seção sobre como [criar uma namespace](./api/create-custom-namespace.md) personalizada na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## O que são identidades compostas e XIDs?
 

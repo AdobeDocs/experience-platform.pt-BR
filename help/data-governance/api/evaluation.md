@@ -112,7 +112,7 @@ O objeto response inclui uma `duleLabels` matriz que deve corresponder aos rótu
 
 ## Avaliar políticas usando conjuntos de dados e uma ação de marketing
 
-Você também pode avaliar violações de política especificando a ID de um ou mais conjuntos de dados a partir dos quais os rótulos de uso de dados podem ser coletados. Isso é feito executando uma solicitação POST no terminal principal ou personalizado para uma ação de marketing e especificando IDs de conjunto de dados no corpo da solicitação, conforme mostrado abaixo. `/constraints`
+Você também pode avaliar violações de política especificando a ID de um ou mais conjuntos de dados a partir dos quais os rótulos de uso de dados podem ser coletados. Isso é feito executando uma solicitação de POST para o terminal principal ou personalizado para uma ação de marketing e especificando IDs de conjunto de dados no corpo da solicitação, como mostrado abaixo. `/constraints`
 
 **Formato da API**
 
@@ -328,7 +328,7 @@ Se a ação de marketing especificada violar uma política que envolve o `duleLa
 
 ## Avaliar políticas usando conjuntos de dados, campos e uma ação de marketing
 
-Além de fornecer uma ou mais IDs de conjunto de dados, um subconjunto de campos de cada conjunto de dados também pode ser especificado, indicando que apenas os rótulos de uso de dados nesses campos devem ser avaliados. Semelhante à solicitação POST que envolve apenas conjuntos de dados, essa solicitação adiciona campos específicos para cada conjunto de dados ao corpo da solicitação.
+Além de fornecer uma ou mais IDs de conjunto de dados, um subconjunto de campos de cada conjunto de dados também pode ser especificado, indicando que apenas os rótulos de uso de dados nesses campos devem ser avaliados. Semelhante à solicitação de POST que envolve apenas conjuntos de dados, essa solicitação adiciona campos específicos para cada conjunto de dados ao corpo da solicitação.
 
 Ao avaliar políticas usando campos de conjunto de dados, lembre-se do seguinte:
 
@@ -344,7 +344,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **Solicitação**
 
-O corpo da solicitação contém uma matriz com um objeto para cada ID de conjunto de dados e o subconjunto de campos nesse conjunto de dados que devem ser usados para avaliação. Como você está enviando um corpo de solicitação, o campo &quot;Tipo de conteúdo: &quot;application/json&quot; é obrigatório, como mostra o exemplo a seguir.
+O corpo da solicitação contém uma matriz com um objeto para cada ID de conjunto de dados e o subconjunto de campos dentro desse conjunto de dados que devem ser usados para avaliação. Como você está enviando um corpo de solicitação, o campo &quot;Tipo de conteúdo: &quot;application/json&quot; é obrigatório, como mostra o exemplo a seguir.
 
 ```SHELL
 curl -X POST \

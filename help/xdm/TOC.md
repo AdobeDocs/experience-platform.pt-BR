@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 translation-type: tm+mt
-source-git-commit: d4ed33ea4684049e8604ce214cb351d0cb949ed4
+source-git-commit: ef11e3c4f0a3be42e17080f8b2deb464ae6fcd2a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 * schemas XDM {#schema}
    * [Noções básicas da composição do schema](schema/composition.md)
    * [Dicionário de campos XDM](schema/field-dictionary.md)
-   * Casos de uso do Schema
+   * Casos de uso do Schema {#use-cases}
       * [Mistura de consentimento de privacidade](schema/privacy-consent.md)
 * API de registro do Schema {#api}
    * [Introdução](api/getting-started.md)

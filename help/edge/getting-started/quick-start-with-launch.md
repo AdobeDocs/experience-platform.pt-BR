@@ -4,7 +4,7 @@ seo-title: start rápido do Adobe Experience Platform Web SDK com o Launch
 description: Guia de start rápido para usar a extensão do SDK Experience Platform Web para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK Experience Platform Web para coletar dados
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -20,14 +20,6 @@ Este guia o guia pelas diferentes maneiras de configurar o SDK da Web do Adobe E
 - Tenha direito ao Adobe Experience Platform. Se você não tiver comprado a Platform, a Adobe fornecerá a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
 - Use a versão mais recente do serviço de ID de Visitante.
 
-## Criar uma ID de configuração
-
-Você pode criar uma ID de configuração usando a ferramenta [de configuração de](../fundamentals/edge-configuration.md) borda no Launch. Isso permite habilitar a Edge Network para enviar dados para as várias soluções. Detalhes sobre como localizar cada opção são encontrados na Página da Ferramenta [de Configuração de](../fundamentals/edge-configuration.md) Borda.
-
->[!NOTE]
->
->Sua organização deve estar na lista de permissões para este recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
-
 ## Preparar um Schema
 
 A Experience Platform Edge Network utiliza dados como XDM. O XDM é um formato de dados que permite definir schemas. O schema define como o Edge Network espera que os dados sejam formatados. Para enviar dados, você deve definir seu schema.
@@ -42,6 +34,14 @@ Efetue login em Iniciar e instale a `AEP Web SDK` extensão. Ao instalar o SDK, 
 
 
 Para obter mais detalhes sobre diferentes opções de configuração, consulte [Configuração do SDK](../fundamentals/configuring-the-sdk.md).
+
+## Criar uma ID de configuração
+
+Você pode criar uma ID de configuração usando a ferramenta [de configuração de](../fundamentals/edge-configuration.md) borda no Launch. Isso permite habilitar a Edge Network para enviar dados para as várias soluções. Detalhes sobre como localizar cada opção são encontrados na Página da Ferramenta [de Configuração de](../fundamentals/edge-configuration.md) Borda.
+
+>[!NOTE]
+>
+>Sua organização deve estar na lista de permissões para este recurso. Entre em contato com o seu CSM para ser colocado na lista para uma eventual lista de permissões.
 
 ## Criar um elemento de dados com base no seu Schema
 

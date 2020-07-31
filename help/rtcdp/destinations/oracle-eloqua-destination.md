@@ -4,9 +4,9 @@ seo-title: Destino Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e geração de leads de vendas.
 seo-description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e geração de leads de vendas.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,33 @@ Para **[!UICONTROL SFTP com conexões de chave]** SSH, você deve fornecer Domí
 
 4. Clique em **[!UICONTROL Criar destino]** após preencher os campos acima. Seu destino agora é criado e você pode [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) no destino.
 
-## Atributos de destino
+## Ativar segmentos {#activate-segments}
+
+Consulte [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/activate-destinations.md) para obter informações sobre o fluxo de trabalho da ativação de segmentos.
+
+## Atributos de destino {#destination-attributes}
 
 Ao [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) para o [!DNL Oracle Eloqua] destino, recomendamos que você selecione um identificador exclusivo do seu schema [de](../../profile/home.md#profile-fragments-and-union-schemas)união. Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecionar quais campos de schema usar como atributos de destino em seus arquivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados em Destinos de marketing de email.
+
+## Dados exportados {#exported-data}
+
+Para [!DNL Oracle Eloqua] destinos, o CDP Adobe em tempo real cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte Destinos de marketing de [email e destinos](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) de armazenamentos da Cloud no tutorial de ativação de segmentos.
+
+<!--
+
+Expect a new file to be created in your storage location every day. The file format is:
+
+`Oracle_Eloqua_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+
+```
+Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```
+
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+
+-->
 
 ## Configurar importação de dados em [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 

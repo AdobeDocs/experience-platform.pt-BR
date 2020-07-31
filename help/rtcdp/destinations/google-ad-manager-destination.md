@@ -4,9 +4,9 @@ seo-title: Destino do Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 seo-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -69,3 +69,7 @@ Antes de criar o [!DNL Google Ad Manager] destino na CDP em tempo real do Adobe,
 ## Ativar segmentos para [!DNL Google Ad Manager]
 
 Para obter instruções sobre como ativar segmentos para [!DNL Google Ad Manager], consulte [Ativar dados para destinos](/help/rtcdp/destinations/activate-destinations.md).
+
+## Dados exportados
+
+Para verificar se os dados foram exportados com êxito para o [!DNL Google Ad Manager] destino, verifique sua [!DNL Google Ad Manager] conta. Se a ativação tiver sido bem-sucedida, as audiências serão preenchidas em sua conta.

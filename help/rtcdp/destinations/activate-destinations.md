@@ -4,9 +4,9 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -92,20 +92,20 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes na CDP em t
 
 ## Verificar se a ativação de segmentos foi bem-sucedida {#verify-activation}
 
-### Destinos de marketing por email e destinos de armazenamentos na nuvem
+### Destinos de marketing por email e destinos de armazenamentos na nuvem {#esp-and-cloud-storage}
 
 Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Real-time CDP cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The file format is:
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Os arquivos que você receberia em três dias consecutivos podem ter a seguinte aparência:
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-A presença desses arquivos no local do seu armazenamento é a confirmação da ativação bem-sucedida.
+A presença desses arquivos no local do seu armazenamento é a confirmação da ativação bem-sucedida. Para entender como os arquivos exportados são estruturados, é possível [baixar um arquivo](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv).csv de amostra. Esse arquivo de amostra inclui os atributos do perfil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`e `personalEmail.address`.
 
 ### Destinos de publicidade
 

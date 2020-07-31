@@ -4,9 +4,9 @@ seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -93,3 +93,11 @@ Para se conectar ao [!DNL Facebook] destino, consulte Fluxo de trabalho [de aute
 ## Ativar segmentos para [!DNL Facebook] {#activate-segments}
 
 Para obter instruções sobre como ativar segmentos para [!DNL Facebook], consulte [Ativar dados para destinos](/help/rtcdp/destinations/activate-destinations.md).
+
+## Dados exportados {#exported-data}
+
+Para [!DNL Facebook], uma ativação bem-sucedida significa que uma audiência [!DNL Facebook] personalizada seria criada programaticamente no [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento na audiência seria adicionada e removida, pois os usuários são qualificados ou desqualificados para os segmentos ativados.
+
+>[!TIP]
+>
+>A integração entre a CDP em tempo real do Adobe e [!DNL Facebook] suporta preenchimentos retroativos históricos de audiência. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.

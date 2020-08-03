@@ -4,7 +4,7 @@ seo-title: Destinos de marketing de email
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 1%
@@ -24,7 +24,7 @@ No fluxo de destino de conexão, descrito na seção abaixo, conecte-se ao Amazo
 
 ## Etapa 1 - Conectar ao destino {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione o destino de marketing de email ao qual você deseja se conectar e selecione o destino **[!UICONTROL do]** Connect.
 
    ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 

@@ -4,7 +4,7 @@ seo-title: Destino do Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel.
 seo-description: 'O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel. '
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Antes de criar o [!DNL Google Display & Video 360] destino na CDP em tempo real 
 
 ## Criar destino
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione [!DNL Google Display & Video 360]e selecione **[!UICONTROL Criar destino]**.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Display & Video 360]e selecione **[!UICONTROL Criar destino]**.
    ![Destino do Connect Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. Na etapa **Configuração** do fluxo de trabalho de criação de destino, preencha as Informações  básicas para o destino, bem como os casos de uso de marketing que devem se aplicar a esse destino. <br>

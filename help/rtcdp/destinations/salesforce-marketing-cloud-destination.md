@@ -4,7 +4,7 @@ seo-title: Marketing Cloud do Salesforce
 description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
 seo-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para enviar dados de segmento para [!DNL Salesforce Marketing Cloud], é necess�
 
 ## Destino do Connect {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione [!DNL Salesforce Marketing Cloud]e, em seguida, selecione destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Salesforce Marketing Cloud]e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
 
    ![Conectar-se ao Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
@@ -73,4 +73,4 @@ The presence of these files in your storage location is confirmation of successf
 
 ## Configurar importação de dados em [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, você deve configurar a importação de dados do local do armazenamento para [!DNL Salesforce Marketing Cloud]. Para saber como fazer isso, consulte [Importar assinantes para o Marketing Cloud a partir de um arquivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) no [!DNL Salesforce Help Center].
+Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, você deve configurar a importação de dados do local do armazenamento para [!DNL Salesforce Marketing Cloud]. Para saber como fazer isso, consulte [Importando assinantes para o Marketing Cloud a partir de um arquivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) no [!DNL Salesforce Help Center].

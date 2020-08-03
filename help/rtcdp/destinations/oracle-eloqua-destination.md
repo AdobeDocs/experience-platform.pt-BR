@@ -4,7 +4,7 @@ seo-title: Destino Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e geração de leads de vendas.
 seo-description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e geração de leads de vendas.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para enviar dados de segmento para [!DNL Oracle Eloqua], é necessário primeiro
 
 ## Conectar ao destino {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione [!DNL Oracle Eloqua]e, em seguida, selecione destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Oracle Eloqua]e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
 
    ![Ligar à Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 

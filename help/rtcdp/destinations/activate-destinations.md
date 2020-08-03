@@ -4,9 +4,9 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -94,8 +94,8 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes na CDP em t
 
 ### Destinos de marketing por email e destinos de armazenamentos na nuvem {#esp-and-cloud-storage}
 
-Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Real-time CDP cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The file format is:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Real-time CDP cria um arquivo delimitado por tabulação `.csv` ou `.txt` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The file format is:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Os arquivos que você receberia em três dias consecutivos podem ter a seguinte aparência:
 
@@ -109,11 +109,11 @@ A presença desses arquivos no local do seu armazenamento é a confirmação da 
 
 ### Destinos de publicidade
 
-Verifique o destino de anúncio respectivo para o qual você está ativando seus dados. Se a ativação tiver sido bem-sucedida, as audiências serão preenchidas em sua plataforma de publicidade.
+Verifique sua conta no respectivo destino de anúncio para o qual você está ativando seus dados. Se a ativação tiver sido bem-sucedida, as audiências serão preenchidas em sua plataforma de publicidade.
 
 ### Destinos da rede social
 
-Por exemplo, [!DNL Facebook]uma ativação bem-sucedida significa que uma audiência [!DNL Facebook] personalizada seria criada programaticamente no Gerenciador [de anúncios do](https://www.facebook.com/adsmanager/manage/)Facebook. A associação de segmento na audiência seria adicionada e removida, pois os usuários são qualificados ou desqualificados para os segmentos ativados.
+Por exemplo, [!DNL Facebook]uma ativação bem-sucedida significa que uma audiência [!DNL Facebook] personalizada seria criada programaticamente no Gerenciador [[!UICONTROL de anúncios do]](https://www.facebook.com/adsmanager/manage/)Facebook. A associação de segmento na audiência seria adicionada e removida, pois os usuários são qualificados ou desqualificados para os segmentos ativados.
 
 >[!TIP]
 >

@@ -4,7 +4,7 @@ seo-title: Extensão de pixel do Facebook
 description: A extensão de Pixel do Facebook é um destino publicitário no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 ## Visão geral {#overview}
 
-A [!DNL Facebook Pixel] é uma ferramenta de análise que permite medir a eficácia de sua publicidade ao compreender as ações que as pessoas executam em seu site.
+The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
 
 [!DNL Facebook Pixel] é uma extensão de anúncio no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [do](https://developers.facebook.com/docs/facebook-pixel/)Facebook Pixel.
 
@@ -34,7 +34,7 @@ Para usar essa extensão, você precisa acessar o Experience Platform Launch. O 
 
 Para instalar a [!DNL Facebook Pixel] extensão:
 
-1. Na interface [CDP em tempo real do](http://platform.adobe.com/)Adobe, vá para **[!UICONTROL Destinos > Catálogo]**.
+1. Na interface [CDP em tempo real do](http://platform.adobe.com/)Adobe, vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Selecione a extensão do catálogo ou use a barra de pesquisa.
 3. Clique no destino para realçá-lo e selecione **[!UICONTROL Instalar extensão]** no painel direito. Se o controle **[!UICONTROL Instalar extensão]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]** . Consulte [Pré-requisitos](#prerequisites).
 4. Na janela **[!UICONTROL Selecionar propriedade]** de inicialização disponível, selecione a propriedade Iniciar na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [da página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propriedades da documentação do Launch.

@@ -4,7 +4,7 @@ seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Esta página explica como você pode se conectar aos locais do armazenamento em nuvem no Adobe Real-time Customer Data Platform.
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione o destino preferencial do armazenamento na nuvem e selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione o destino preferencial do armazenamento na nuvem e selecione o destino **[!UICONTROL do]** Connect.
 
    ![Conectar-se ao destino do armazenamento na nuvem](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 

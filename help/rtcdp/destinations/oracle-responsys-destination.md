@@ -4,7 +4,7 @@ seo-title: Destino do Oracle Responsys
 description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
 seo-description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para enviar dados de segmento para [!DNL Oracle Responsys], é necessário prime
 
 ## Destino do Connect {#connect-destination}
 
-1. Em **[!UICONTROL Conexões > Destinos]**, selecione [!DNL Oracle Responsys]e, em seguida, selecione destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Oracle Responsys]e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
 
    ![Conectar-se ao Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 

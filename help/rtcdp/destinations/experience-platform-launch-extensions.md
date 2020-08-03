@@ -4,7 +4,7 @@ seo-title: Extensões Experience Platform Launch
 description: O Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 seo-description: O Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 21%
@@ -22,7 +22,7 @@ Para obter uma introdução aos recursos do Experience Platform Launch, consulte
 
 ## Como encontrar as extensões de lançamento na interface CDP em tempo real do Adobe {#how-to-find-extensions-in-interface}
 
-Para localizar as extensões de inicialização na interface CDP em tempo real do Adobe, navegue até **[!UICONTROL Destinos > Catálogo]** e selecione **[!UICONTROL Extensões]** no filtro **[!UICONTROL Tipos]** .
+Para localizar as extensões de inicialização na interface CDP em tempo real do Adobe, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** e selecione **[!UICONTROL Extensões]** no filtro **[!UICONTROL Tipos]** .
 
 ![Filtro de extensões na interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 

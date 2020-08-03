@@ -4,7 +4,7 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Adobe Real-time Customer Data Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para ativar os dados para destinos, você deve ter [conectado com êxito um dest
 
 ## Ativar dados {#activate-data}
 
-1. Em **[!UICONTROL Destinos > Procurar]**, selecione o destino onde deseja ativar seus segmentos.
+1. Em **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]**, selecione o destino onde deseja ativar seus segmentos.
 2. Clique no nome do destino. Isso leva você ao fluxo Ativar.
    ![ativar-fluxo](/help/rtcdp/destinations/assets/activate-flow.png)Observe que se já existir um fluxo de ativação para um destino, você pode ver os segmentos que estão sendo enviados para o destino. Selecione **[!UICONTROL Editar ativação]** no painel direito e siga as etapas abaixo para modificar os detalhes da ativação.
 3. Selecione **[!UICONTROL Ativar]**;

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Visão geral dos rótulos de uso de dados
 
-O DULE (Data Usage Labeling and Implementation, Rotulação e Aplicação de Uso de Dados) é o mecanismo principal do Adobe Experience Platform [!DNL Data Governance]. Os recursos DULE permitem aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas.
+O Adobe Experience Platform [!DNL Data Governance] permite que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas.
 
-Este documento fornece uma visão geral dos rótulos de uso de dados (também conhecidos como rótulos DULE) no [!DNL Experience Platform]. Antes de ler este guia, consulte a visão geral [do](../home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE.
+Este documento fornece uma visão geral dos rótulos de uso de dados em [!DNL Experience Platform]. Antes de ler este guia, consulte a visão geral [do](../home.md) Data Governance para obter uma introdução mais robusta à estrutura do Data Governance.
 
 ## Noções básicas sobre rótulos de uso de dados
 
@@ -26,7 +26,7 @@ Os rótulos de uso de dados aplicados no nível do conjunto de dados são propag
 
 [!DNL Platform] fornece várias etiquetas &quot;principais&quot; de uso de dados prontas para uso, que abrangem uma grande variedade de restrições comuns aplicáveis ao controle de dados. Para obter mais informações sobre esses rótulos e as políticas de uso que eles representam, consulte o guia sobre os rótulos [](reference.md)de uso de dados principais.
 
-Além das etiquetas fornecidas pelo Adobe, também é possível definir suas próprias etiquetas personalizadas. Para obter etapas sobre como fazer isso na interface do usuário, consulte o guia [do usuário de etiquetas de uso de](./user-guide.md)dados. Para obter etapas sobre como executar isso usando chamadas de API, consulte o guia [da API de rótulos de uso de](./api.md)dados.
+Além das etiquetas fornecidas pelo Adobe, você também pode definir suas próprias etiquetas personalizadas para sua organização. Consulte a seção sobre como [gerenciar rótulos](#manage-labels) para obter mais informações.
 
 ## Herança de etiqueta para segmentos de audiência
 
@@ -34,7 +34,7 @@ Todos os segmentos de audiência criados pelo Serviço [de segmentação de](../
 
 Além de herdar rótulos de nível de conjunto de dados, os segmentos herdam todos os rótulos de nível de campo de seus conjuntos de dados associados por padrão. Dependendo de como seu aplicativo [!DNL Platform]baseado consome segmentos, você pode especificar potencialmente quais campos são usados, impedindo assim o segmento de herdar rótulos de campos excluídos.
 
-Para obter mais informações sobre como a aplicação automática funciona na CDP em tempo real, consulte a visão geral [do CDP em tempo real do](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
+Para obter mais informações sobre como a aplicação automática funciona na CDP em tempo real, consulte a visão geral sobre o controle de [dados na CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)em tempo real.
 
 ### Herança dos controles de exportação de dados do Adobe Audience Manager
 
@@ -42,7 +42,20 @@ Para obter mais informações sobre como a aplicação automática funciona na C
 
 Para obter uma referência sobre como os controles de exportação de dados específicos mapeiam para rótulos de uso de dados em [!DNL Platform], consulte a documentação [do](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
+## Gerenciamento de rótulos de uso de dados em [!DNL Experience Platform] {#manage-labels}
+
+Você pode gerenciar rótulos de uso de dados usando [!DNL Experience Platform] APIs ou a interface do usuário. Consulte as subseções abaixo para obter detalhes sobre cada uma.
+
+### Uso da interface
+
+A área de trabalho **[!UICONTROL Políticas]** na [!DNL Experience Platform] interface do usuário permite que você visualização e gerencie rótulos principais e personalizados para sua organização. A **[!DNL Datasets]** área de trabalho permite aplicar rótulos a conjuntos de dados e campos. For more information, refer to the [labels user guide](user-guide.md).
+
+### Uso de APIs
+
+O `/labels` endpoint na API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Política permite gerenciar programaticamente os rótulos de uso de dados, incluindo a criação de rótulos personalizados. Consulte o guia [de pontos de extremidade de](../api/labels.md) etiquetas para obter mais informações.
+
+A API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) Conjunto de Dados é usada para gerenciar rótulos para conjuntos de dados e campos. Consulte o guia sobre como [gerenciar rótulos](./dataset-api.md) de conjuntos de dados para obter mais informações.
 
 ## Próximas etapas
 
-Agora que você foi introduzido nos rótulos de uso de dados, pode continuar a ler o guia [do](user-guide.md) usuário para saber como gerenciar os rótulos na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar rótulos usando APIs, consulte o guia [da API de etiquetas de](./api.md)uso.
+Este documento forneceu uma introdução aos rótulos de uso de dados e sua função dentro da estrutura de controle de dados. Consulte a documentação vinculada em todo este guia para saber mais sobre como gerenciar as etiquetas no [!DNL Experience Platform].

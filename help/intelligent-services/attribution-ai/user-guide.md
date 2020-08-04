@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário do Attribution AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Se você precisar de mais de uma conversão, clique em **Adicionar conversão** 
 
 ![adicionar conversão](./images/user-guide/add_conversion.png)
 
-### Definir janela de pesquisa
+### Definir janela de pesquisa {#lookback-window}
 
 Depois de terminar de definir a conversão, é necessário confirmar a janela de pesquisa. Usando as teclas de seta ou clicando no valor padrão (56), especifique quantos dias antes do evento de conversão você deseja incluir pontos de contato. Os pontos de contato são definidos na próxima etapa.
 
@@ -172,9 +172,9 @@ Por fim, digite o código do país na lista suspensa *Inserir valor* do campo.
 
 ![região](./images/user-guide/region-based.png)
 
-### Janela de treinamento
+### Janela de treinamento {#training-window}
 
-Para garantir que você obtenha o modelo mais preciso possível, é importante treinar seu modelo com dados históricos que representem sua empresa. Por padrão, o modelo é treinado com 2 trimestres (6 meses) de dados. Selecione a lista suspensa para alterar o padrão. Você pode optar por treinar com um a quatro trimestres de dados (de 3 a 12 meses).
+Para garantir que você obtenha o modelo mais preciso possível, é importante treinar seu modelo com dados históricos que representem sua empresa. Por padrão, o modelo é treinado usando 2 trimestres (6 meses) de dados de eventos de conversão. Selecione a lista suspensa para alterar o padrão. Você pode optar por treinar com um a quatro trimestres de dados (de 3 a 12 meses).
 
 >[!NOTE]
 >

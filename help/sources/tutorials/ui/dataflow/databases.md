@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd0ce5b5c45133b570970b1d1d7e2f484b89c2e9
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1225'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 
-Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector básico do banco de dados.
+Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de banco de dados.
 
 ## Introdução
 
@@ -25,11 +25,11 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
    - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Além disso, este tutorial requer que você já tenha criado um conector de banco de dados. Uma lista de tutoriais para criar diferentes conectores de banco de dados na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../../home.md)origem.
+Além disso, este tutorial requer que você já tenha criado uma conta de banco de dados. Uma lista de tutoriais para criar diferentes conectores de banco de dados na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../../home.md)origem.
 
 ## Selecionar dados
 
-Depois de criar o conector do banco de dados, a etapa *[!UICONTROL Selecionar dados]* é exibida, fornecendo uma interface interativa para que você explore a hierarquia do banco de dados.
+Depois de criar sua conta de banco de dados, a etapa *[!UICONTROL Selecionar dados]* é exibida, fornecendo uma interface interativa para que você explore sua hierarquia de banco de dados.
 
 - A metade esquerda da interface é um navegador, exibindo a lista de bancos de dados de sua conta.
 - A metade direita da interface permite que você pré-visualização até 100 linhas de dados.
@@ -58,11 +58,11 @@ A caixa de diálogo *[!UICONTROL Selecionar conjunto de dados]* é exibida. Enco
 
 Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
 
-Você pode anexar um campo de schema digitando um nome de schema na barra de pesquisa **[!UICONTROL Selecionar schema]** . Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar Pesquisa **** avançada para uma tela de schemas existentes, incluindo seus respectivos detalhes.
+É possível anexar um campo de schema inserindo um nome de schema na barra de pesquisa **[!UICONTROL Selecionar schema]** . Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar Pesquisa **** avançada para acessar a tela de schemas existentes, incluindo seus respectivos detalhes.
 
-![](../../../images/tutorials/dataflow/databases/new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-A caixa de diálogo *[!UICONTROL Selecionar schema] é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
+A caixa de diálogo *[!UICONTROL Selecionar schema]* é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -70,7 +70,7 @@ Com base em suas necessidades, você pode optar por mapear os campos diretamente
 
 Depois que os dados de origem forem mapeados, clique em **[!UICONTROL Avançar]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Execuções de ingestão agendada
 
@@ -78,10 +78,10 @@ A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um
 
 | Campo | Descrição |
 | --- | --- |
-| Frequência | As frequências selecionáveis incluem Uma vez, Minuto, Hora, Dia e Semana. |
+| Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer |
-| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *preenchimento retroativo* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *do* Start serão assimilados. Os arquivos carregados antes da hora *do* Start não serão ingeridos. |
+| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer. |
+| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *[!UICONTROL preenchimento retroativo]* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *[!UICONTROL do]* Start serão assimilados. Os arquivos carregados antes da hora *[!UICONTROL do]* Start não serão ingeridos. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
 Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
@@ -98,13 +98,18 @@ Para configurar a ingestão única, selecione a seta suspensa de frequência e s
 
 >[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 
-## Dê um nome ao seu fluxo de dados
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-A etapa de detalhes *[!UICONTROL do]* dataflow é exibida, onde você deve fornecer um nome e uma descrição opcional para o dataflow. Selecione **[!UICONTROL Próximo]** ao terminar.
+## Fornecer detalhes do fluxo de dados
+
+A etapa de detalhes *[!UICONTROL do]* Dataflow é exibida, permitindo que você nomeie e forneça uma breve descrição sobre seu novo dataflow.
+
+Durante esse processo, você também pode ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro. Habilitar a ingestão *[!UICONTROL parcial]* fornece a capacidade de assimilar dados que contenham erros até um certo limite. Quando a ingestão ** parcial estiver ativada, arraste a discagem do limite de *[!UICONTROL Erro %]* para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
+Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
+
+Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
@@ -112,9 +117,9 @@ A etapa de detalhes *[!UICONTROL do]* dataflow é exibida, onde você deve forne
 
 A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-- *Conexão*: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
-- *Atribuir campos* do conjunto de dados e mapear: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
-- *Agendamento*: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
+- *[!UICONTROL Conexão]*: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
+- *[!UICONTROL Atribuir campos]* do conjunto de dados e mapear: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
+- *[!UICONTROL Agendamento]*: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
 
 Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
 

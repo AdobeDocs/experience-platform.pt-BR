@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 2%
 
 ---
 
 
 # Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 
-O [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados Adobe Experience Platform, mas é separada da [!DNL Catalog Service] API que gerencia os metadados do conjunto de dados.
+O [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da [!DNL Catalog Service] API que gerencia os metadados do conjunto de dados.
 
 Este documento aborda como gerenciar rótulos para conjuntos de dados e campos usando o [!DNL Dataset Service API]. Para obter etapas sobre como gerenciar os próprios rótulos de uso de dados usando chamadas de API, consulte o guia [de ponto de extremidade de](../api/labels.md) rótulos do [!DNL Policy Service API].
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitação**
 
-A solicitação de POST a seguir adiciona uma série de rótulos ao conjunto de dados, bem como um campo específico nesse conjunto de dados. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação de PUT.
+A solicitação de PUT a seguir atualiza os rótulos existentes para um conjunto de dados, bem como um campo específico nesse conjunto de dados. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação de POST.
+
+>[!IMPORTANT]
+>
+>Um cabeçalho `If-Match` válido deve ser fornecido ao fazer solicitações de PUT ao ponto de `/datasets/{DATASET_ID}/labels` extremidade. Consulte a seção [do](#if-match) apêndice para obter mais informações sobre como usar o cabeçalho necessário.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -146,7 +151,7 @@ Uma resposta bem-sucedida retorna os rótulos que foram adicionados ao conjunto 
 
 ## Remover rótulos de um conjunto de dados {#remove}
 
-Você pode remover os rótulos aplicados a um conjunto de dados, fazendo uma solicitação de DELETE para a [!DNL Dataset Service] API.
+Você pode remover os rótulos aplicados a um conjunto de dados, fazendo uma solicitação DELETE para a [!DNL Dataset Service] API.
 
 **Formato da API**
 
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **Solicitação**
 
+A solicitação a seguir remove os rótulos do conjunto de dados especificado no caminho.
+
+>[!IMPORTANT]
+>
+>Um cabeçalho `If-Match` válido deve ser fornecido ao fazer solicitações de DELETE ao ponto de `/datasets/{DATASET_ID}/labels` extremidade. Consulte a seção [do](#if-match) apêndice para obter mais informações sobre como usar o cabeçalho necessário.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **Resposta**
@@ -182,3 +194,17 @@ Depois de adicionar rótulos de uso de dados no nível do conjunto de dados e do
 Agora você também pode definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte a visão geral [das políticas de uso de](../policies/overview.md)dados.
 
 Para obter mais informações sobre como gerenciar conjuntos de dados em [!DNL Experience Platform], consulte a visão geral [](../../catalog/datasets/overview.md)dos conjuntos de dados.
+
+## Apêndice {#appendix}
+
+A seção a seguir contém informações adicionais sobre como trabalhar com rótulos usando a API de Serviço de Conjunto de Dados.
+
+### [!DNL If-Match] header {#if-match}
+
+Ao fazer chamadas de API que atualizam os rótulos existentes de um conjunto de dados (PUT e DELETE), um `If-Match` cabeçalho que indica a versão atual da entidade dataset-label no Serviço de conjunto de dados deve ser incluído. Para evitar colisões de dados, o serviço só atualizará a entidade do conjunto de dados se a string incluída corresponder à tag da versão mais recente gerada pelo sistema para esse conjunto de dados. `If-Match`
+
+>[!NOTE]
+>
+>Se não houver etiquetas para o conjunto de dados em questão, as novas etiquetas só poderão ser adicionadas por meio de uma solicitação POST, o que não requer um `If-Match` cabeçalho. Depois que os rótulos forem adicionados a um conjunto de dados, um `etag` valor será atribuído e poderá ser usado para atualizar ou remover os rótulos posteriormente.
+
+Para recuperar a versão mais recente da entidade de rótulo do conjunto de dados, faça uma solicitação [de](#look-up) GET para o `/datasets/{DATASET_ID}/labels` ponto de extremidade. O valor atual é retornado na resposta em um `etag` cabeçalho. Ao atualizar rótulos de conjunto de dados existentes, a prática recomendada é executar primeiro uma solicitação de pesquisa para o conjunto de dados para obter o `etag` valor mais recente antes de usar esse valor no cabeçalho `If-Match` da solicitação PUT ou DELETE subsequente.

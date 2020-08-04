@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Acessar pontuações no Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1028'
 ht-degree: 2%
 
 ---
@@ -259,9 +259,11 @@ A resposta baixa o arquivo solicitado no diretório atual. Neste exemplo, o nome
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
+As pontuações baixadas estarão no formato parquet e precisarão de um leitor de [!DNL Spark]shell ou parquet para visualização das pontuações. Para a exibição de pontuação bruta, você pode usar ferramentas [de parquet](https://github.com/apache/parquet-mr/tree/master/parquet-tools). As ferramentas de parâmetro podem analisar os dados com [!DNL Spark].
+
 ## Próximas etapas
 
-Este documento descreveu as etapas necessárias para o download das pontuações dos Attribution AI. Agora você pode continuar navegando pelos outros serviços [e guias](../home.md) inteligentes oferecidos.
+Este documento descreveu as etapas necessárias para o download das pontuações dos Attribution AI. Para obter mais informações sobre os resultados da pontuação, visite a documentação de entrada e saída [do](./input-output.md) atributo AI.
 
 ## Acessar pontuações usando o Snowflake
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conjuntos de dados
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Os rótulos de uso de dados podem ser aplicados a conjuntos de dados inteiros ou
 Consulte a visão geral [do](../../data-governance/home.md) Data Governance para obter mais informações sobre o serviço. Para obter as etapas sobre como trabalhar com rótulos de uso em [!DNL Platform], consulte os seguintes guias:
 
 * [Gerenciar rótulos na interface do usuário](../../data-governance/labels/user-guide.md)
-* [Gerenciar rótulos na API](../../data-governance/labels/api.md)
+* [Gerenciar rótulos de conjunto de dados na API](../../data-governance/labels/dataset-api.md)
 
 ## Conjuntos de dados em [!DNL Platform] serviços a jusante
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de automação de marketing na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a1ecca49809a6ebbc94bbbef93eef56c8faf118
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -58,11 +58,9 @@ A caixa de diálogo _Selecionar conjunto de dados_ é exibida. Encontre o conjun
 
 Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Criar novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
 
-Durante esse processo, você também pode ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro. Habilitar a ingestão *[!UICONTROL parcial]* fornece a capacidade de assimilar dados que contêm erros, até um certo limite que você pode definir. Ativar o diagnóstico de erro fornece detalhes sobre quaisquer dados incorretos que sejam armazenados em lote separadamente. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
+É possível anexar um campo de schema inserindo um nome de schema na barra de pesquisa **[!UICONTROL Selecionar schema]** . Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar Pesquisa **** avançada para acessar a tela de schemas existentes, incluindo seus respectivos detalhes.
 
-Quando terminar, clique no ícone schema.
-
-![use-new-dataset](../../../images/tutorials/dataflow/marketing-automation/use-new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
 A caixa de diálogo *[!UICONTROL Selecionar schema]* é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
 
@@ -72,7 +70,7 @@ Com base em suas necessidades, você pode optar por mapear os campos diretamente
 
 Depois que os dados de origem forem mapeados, clique em **[!UICONTROL Avançar]**.
 
-![](../../../images/tutorials/dataflow/marketing-automation/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Execuções de ingestão agendada
 
@@ -80,10 +78,10 @@ A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um
 
 | Campo | Descrição |
 | --- | --- |
-| Frequência | As frequências selecionáveis incluem Uma vez, Minuto, Hora, Dia e Semana. |
+| Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer |
-| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *preenchimento retroativo* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *do* Start serão assimilados. Os arquivos carregados antes da hora *do* Start não serão ingeridos. |
+| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer. |
+| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *[!UICONTROL preenchimento retroativo]* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *[!UICONTROL do]* Start serão assimilados. Os arquivos carregados antes da hora *[!UICONTROL do]* Start não serão ingeridos. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
 Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
@@ -100,9 +98,19 @@ Para configurar a ingestão única, selecione a seta suspensa de frequência e s
 
 >[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
 
+Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
+
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
+## Fornecer detalhes do fluxo de dados
+
+A etapa de detalhes *[!UICONTROL do]* Dataflow é exibida, permitindo que você nomeie e forneça uma breve descrição sobre seu novo dataflow.
+
+Durante esse processo, você também pode ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro. Habilitar a ingestão *[!UICONTROL parcial]* fornece a capacidade de assimilar dados que contenham erros até um certo limite. Quando a ingestão ** parcial estiver ativada, arraste a discagem do limite de *[!UICONTROL Erro %]* para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
+
+Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
+
+![detalhes do fluxo de dados](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Revisar seu fluxo de dados
 

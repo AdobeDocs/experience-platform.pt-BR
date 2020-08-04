@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do Attribution AI
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 1%
+source-wordcount: '407'
+ht-degree: 0%
 
 ---
 
@@ -29,24 +29,6 @@ O Attribution AI suporta duas categorias de pontuações, algorítmicas e basead
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
-
-## Pontuações algorítmicas do Attribution AI
-
-O Attribution AI suporta duas categorias de pontuações de atribuição, pontuações algorítmicas e baseadas em regras.
-
-O Attribution AI produz dois tipos diferentes de pontuações algorítmicas, incrementais e influenciadas. Uma pontuação influenciada é a fração da conversão pela qual cada ponto de contato de marketing é responsável. Uma pontuação incremental é a quantidade de impacto marginal causado diretamente pelo ponto de contato de marketing. A principal diferença entre a pontuação incremental e a pontuação influenciada é que a pontuação incremental leva o efeito da linha de base em consideração. Não presume que a conversão seja causada apenas pelos pontos de contato de marketing anteriores.
-
-Consulte a tabela abaixo para obter mais detalhes sobre cada uma dessas pontuações de atribuição:
-
-| Pontuações de atribuição | Descrição |
-| ----- | ----------- |
-| Primeiro contato | A pontuação de atribuição baseada em regras que atribui todos os créditos ao ponto de contato inicial em um caminho de conversão. |
-| Último contato | A pontuação de atribuição baseada em regras que atribui todo o crédito ao ponto de contato mais próximo da conversão. |
-| Linear | A pontuação de atribuição baseada em regras que atribui crédito igual a cada ponto de contato em um caminho de conversão. |
-| Forma de U | Pontuação de atribuição baseada em regras que atribui 40% do crédito ao primeiro ponto de contato e 40% do crédito ao último ponto de contato, com os outros pontos de contato dividindo os restantes 20% igualmente. |
-| Declínio de tempo | A pontuação de atribuição baseada em regras na qual os pontos de contato mais próximos da conversão recebem mais crédito do que os pontos de contato mais distantes no tempo da conversão. |
-| Influenciado (algorítmico) | A pontuação influenciada é a fração da conversão pela qual cada ponto de contato de marketing é responsável. |
-| Incremental (algorítmico) | A pontuação incremental é a quantidade de impacto marginal causado diretamente por um ponto de contato de marketing. |
 
 ## Exemplos de casos de uso comercial
 

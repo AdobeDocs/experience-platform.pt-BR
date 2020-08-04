@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Rótulos de uso de dados suportados
+title: Rótulos principais de uso de dados
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1869'
 ht-degree: 2%
 
 ---
 
 
-# Rótulos de uso de dados suportados
+# Rótulos principais de uso de dados
 
-O Adobe Experience Platform inclui a infraestrutura para o controle de dados com a DULE (Data Usage Labeling and Implantação) no seu núcleo.  Os recursos DULE permitem a aplicação de rótulos de uso de dados a conjuntos de dados e campos para categorizar dados de acordo com o tipo de políticas de uso que se aplicam a esses dados.
+Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. O Gerenciamento de dados do Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que podem ser usados para classificar seus dados por start.
 
-Este documento descreve todos os rótulos de uso de dados suportados atualmente por [!DNL Experience Platform]. Para obter mais informações sobre [!DNL Data Governance] e DULE, consulte a visão geral [do](../home.md)Data Governance.
+Este documento descreve as principais etiquetas de uso de dados fornecidas atualmente por [!DNL Experience Platform]. Para obter mais informações sobre [!DNL Data Governance] o, consulte a visão geral [do](../home.md)Data Governance.
 
 ## Rótulos do contrato
 
@@ -81,7 +81,7 @@ O C4 é o rótulo mais restritivo - inclui os rótulos [C5](#c5), [C6](#c6)e [C7
 
 #### C5 {#c5}
 
-A definição de metas ou personalização baseada em interesses ocorre se as três condições a seguir forem atendidas: Os dados coletados no site são (1) usados para fazer inferências sobre os interesses dos usuários, (2) são usados em outro contexto, como em outro site ou aplicativo (fora do site) e (3) são usados para selecionar qual conteúdo ou anúncios são fornecidos com base nessas inferências.
+A definição de metas ou personalização baseada em interesses ocorre se as três condições a seguir forem atendidas: Os dados coletados no site são (1) usados para fazer inferências sobre os interesses dos usuários, (2) são usados em outro contexto, como em outro site ou aplicativo (fora do site) E (3) são usados para selecionar qual conteúdo ou anúncios são fornecidos com base nessas inferências.
 
 A combinação de dados de vários sites, incluindo uma combinação de dados no local e dados fora do local ou uma combinação de dados de várias fontes fora do local, é chamada de dados entre sites. Sites diferentes representam contextos diferentes, de modo que o uso de dados entre sites em qualquer contexto é diferente do original. Os dados entre sites são normalmente coletados e processados para fazer inferências sobre os interesses dos usuários. Como resultado, o uso de dados entre sites para direcionar anúncios ou conteúdo normalmente se qualifica como direcionamento baseado em interesses, independentemente de o anúncio ou conteúdo aparecer no site ou fora dele. Por exemplo, se os dados no site fossem usados em combinação com dados fora do site para selecionar qual anúncio mostrar a um usuário no site de uma organização, esse uso seria qualificado como direcionamento baseado em juros. Como outro exemplo, o redirecionamento de anúncios para usuários fora do site também se qualificaria como direcionamento com base em juros.
 
@@ -91,7 +91,7 @@ No entanto, a definição de metas para conteúdo ou anúncios que usam apenas d
 
 Em última análise, a interpretação do rótulo e como o uso de dados com esse rótulo é aplicado depende de você. Para referência, os quadros IAB e DAA são fornecidos a seguir:
 
-IAB: Personalização. A coleta e o processamento de informações sobre o uso desse serviço para personalizar subsequentemente a publicidade e/ou o conteúdo para você em outros contextos, como em outros sites ou aplicativos, ao longo do tempo. Normalmente, o conteúdo do site ou aplicativo é usado para fazer inferências sobre seus interesses que informam a seleção futura de publicidade e/ou conteúdo.
+IAB: Personalização. A coleta e o processamento de informações sobre o uso deste serviço para personalizar subsequentemente a publicidade e/ou o conteúdo para você em outros contextos, como em outros sites ou aplicativos, ao longo do tempo. Normalmente, o conteúdo do site ou aplicativo é usado para fazer inferências sobre seus interesses que informam a seleção futura de publicidade e/ou conteúdo.
 
 DAA: Anúncio comportamental online. Coleta de dados de um computador ou dispositivo específico com relação a comportamentos de visualização na Web ao longo do tempo e em sites não afiliados com o objetivo de usar esses dados para prever preferências de usuário ou interesses em fornecer publicidade a esse computador ou dispositivo com base em preferências ou interesses inferidos desses comportamentos de visualização na Web.
 

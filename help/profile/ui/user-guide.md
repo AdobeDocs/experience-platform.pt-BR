@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros.
 
-Esse documento serve como guia para interagir com [!DNL Real-time Customer Profile] a interface do usuário do Adobe Experience Platform.
+Este documento serve como guia para interagir com [!DNL Real-time Customer Profile] a interface do usuário do Adobe Experience Platform.
 
 ## Introdução
 
@@ -52,7 +52,7 @@ Além dessas métricas, a seção de métricas de perfil também fornece uma dat
 
 A contagem de perfis exibe o número total de perfis que sua organização tem dentro [!DNL Experience Platform], depois que a política de mesclagem padrão da sua organização unir fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em canais diferentes, mas esses fragmentos seriam unidos (de acordo com a política de mesclagem padrão) e retornariam uma contagem de perfis &quot;1&quot;, pois estão todos relacionados ao mesmo indivíduo.
 
-A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de séries cronológicas (eventos), como perfis Adobe Analytics. A contagem de perfis é atualizada regularmente para fornecer um número total atualizado de perfis no Platform.
+A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de séries cronológicas (eventos), como perfis Adobe Analytics. A contagem de perfis é atualizada regularmente para fornecer um número total atualizado de perfis na Plataforma.
 
 Quando a ingestão de registros na contagem [!DNL Profile Store] aumenta ou diminui a contagem em mais de 5%, uma tarefa é acionada para atualizar a contagem. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se o tiver feito, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no Perfil Store, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem de perfis.
 
@@ -88,7 +88,7 @@ Depois que um valor for inserido, selecione **[!UICONTROL Mostrar perfil]** e um
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Detalhes do Perfil
+### Detalhes do Perfil {#profile-detail}
 
 Ao selecionar a ID **[!UICONTROL do]** Perfil, a guia _[!UICONTROL Detalhe]_é aberta. Esta página exibe informações sobre o perfil selecionado, incluindo atributos básicos, identidades vinculadas e canais de contato disponíveis. As informações de perfil exibidas foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual.
 

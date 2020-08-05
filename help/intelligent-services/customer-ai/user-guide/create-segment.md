@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar segmentos de clientes com pontuações previstas
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Criar segmentos de clientes com pontuações previstas
 
-Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](../../../segmentation/ui/overview.md)segmentos.
+Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos. Para obter um tutorial mais robusto sobre a criação de segmentos, consulte o guia [do usuário do Construtor de](../../../segmentation/ui/segment-builder.md)segmentos.
 
 >[!IMPORTANT]
 >
 >Para utilizar esse método, o Perfil do cliente em tempo real precisa estar habilitado para o conjunto de dados.
 
-Na interface do usuário do Platform, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo e clique em **[!UICONTROL Criar segmento]**.
+Na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo e clique em **[!UICONTROL Criar segmento]**.
 
 ![](../images/user-guide/segments.png)
 

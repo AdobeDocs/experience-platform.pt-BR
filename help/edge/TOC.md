@@ -3,15 +3,15 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
+source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 14%
+source-wordcount: '96'
+ht-degree: 16%
 
 ---
 
 
-# SDK da Web Adobe Experience Platform {#edge}
+# Adobe Experience Platform Web SDK {#edge}
 
 * [Visão geral do SDK da Web](home.md)
 * Introdução {#get-started}
@@ -44,4 +44,5 @@ ht-degree: 14%
 * Referência {#ref}
    * [Informações Coletadas Automaticamente](reference/automatic-information.md)
    * [Recuperando informações da biblioteca](reference/retrieving-library-information.md)
-* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão](release-notes.md)
+* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário do Serviço de segmentação
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ O método de avaliação pode ser streaming ou lote. Segmentos de transmissão s
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-Na parte superior da página estão as opções para **[!UICONTROL Adicionar todos os segmentos para agendar]** e **[!UICONTROL Criar segmentos]**.
+Na parte superior da página estão as opções para adicionar todos os segmentos a uma programação e para criar um novo segmento.
 
 Alternar **[!UICONTROL Adicionar todos os segmentos para agendar]** permitirá a segmentação programada. Mais informações sobre a segmentação programada podem ser encontradas na seção de segmentação [programada deste guia](#scheduled-segmentation)do usuário.
 
@@ -73,7 +73,7 @@ A página de detalhes do segmento é exibida. Na parte superior, há um resumo d
 
 ### Resumo do segmento
 
-A seção de resumo *[!UICONTROL do]* segmento fornece informações como ID, nome, descrição e detalhes dos atributos.
+A seção de resumo **[!UICONTROL do]** segmento fornece informações como ID, nome, descrição e detalhes dos atributos.
 
 Além disso, você tem a opção de editar o segmento. Selecionar **[!UICONTROL Editar segmento]** o levará ao [!DNL Segment Builder]. Para obter informações mais detalhadas sobre como usar a [!DNL Segment Builder] área de trabalho, leia o guia [[!DNL Segment Builder] do](./segment-builder.md)usuário.
 

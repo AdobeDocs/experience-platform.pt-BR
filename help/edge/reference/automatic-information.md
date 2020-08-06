@@ -4,9 +4,9 @@ seo-title: Informações coletadas automaticamente pelo Adobe Experience Platfor
 description: Descrição de cada informação que o Adobe Experience Cloud SDK coleta automaticamente
 seo-description: Descrição de cada informação que o Adobe Experience Cloud SDK coleta automaticamente
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 8%
 
 ---
@@ -56,7 +56,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-O tipo de ambiente pelo qual a experiência foi revelada. O SDK Adobe Experience Platform para JavaScript sempre define `browser`.
+O tipo de ambiente pelo qual a experiência foi revelada. O Adobe Experience Platform SDK para JavaScript sempre define `browser`.
 
 ### Altura do visor
 
@@ -91,6 +91,13 @@ O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um 
 | **Caminho na carga:** | **Exemplo:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### Ambiente
+
+| **Caminho na carga:** | **Exemplo:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## Inserir contexto (`placeContext`)
 

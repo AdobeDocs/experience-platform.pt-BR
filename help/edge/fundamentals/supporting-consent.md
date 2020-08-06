@@ -1,12 +1,12 @@
 ---
 title: Consentimento de suporte
-seo-title: Preferência de consentimento do SDK da Web para Adobe Experience Platform
+seo-title: Preferência de consentimento do Adobe Experience Platform Web SDK
 description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
 seo-description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -39,17 +39,17 @@ Quando o consentimento padrão para a finalidade geral está definido como pende
 
 Nesse ponto, talvez você prefira pedir ao usuário para opt in em algum lugar na interface do usuário. Após a coleta das preferências do usuário, comunique-as ao SDK.
 
-## Comunicar preferências de consentimento
+## Comunicar preferências de consentimento via Adobe Standard
 
 Se o usuário opt in, execute o `setConsent` comando com a `general` opção definida como `in` :
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "in" 
+      value: {
+        general: "in"
       }
     }]
 });
@@ -61,11 +61,11 @@ Se o usuário optar por opt out, execute o `setConsent` comando com a `general` 
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "out" 
+      value: {
+        general: "out"
       }
     }]
 });
@@ -81,6 +81,49 @@ Como o usuário optou por opt out, as promessas que foram retornadas de comandos
 >
 >Atualmente, o SDK suporta apenas a `general` finalidade. Embora planejemos criar um conjunto mais robusto de propósitos ou categorias que corresponderão aos diferentes recursos de Adobe e ofertas de produtos, a implementação atual é uma abordagem de aceitação total ou parcial.  Isso se aplica somente ao Adobe Experience Platform [!DNL Web SDK] e NÃO a outras bibliotecas do Adobe JavaScript.
 
+## Comunicar preferências de consentimento via IAB TCF Standard
+
+O SDK suporta o registro de preferências de consentimento do usuário fornecidas por meio do padrão de Transparência e Estrutura de Consentimento (TCF) do Interative Advertising Bureau Europe (IAB). A cadeia de caracteres de consentimento pode ser definida pelo mesmo comando setConsent da seguinte maneira:
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+Quando o consentimento é definido dessa forma, o Perfil Unificado é atualizado com as informações de consentimento. Para que isso funcione, o schema XDM do perfil precisa conter a Mixin [de privacidade do](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)Perfil. Ao enviar eventos, as informações de consentimento IAB precisam ser adicionadas manualmente ao objeto xdm do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento nos eventos, o [Experience Evento Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) precisa ser adicionado ao schema do evento da experiência.
+
+## Envio de ambos os padrões em uma solicitação
+
+O SDK também suporta o envio de mais de um objeto de consentimento em uma solicitação.
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "1.0",
+      value: {
+        general: "in"
+      }
+    },{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
 ## Persistência das preferências de consentimento
 
-Depois de comunicar as preferências do usuário ao SDK usando o `setConsent` comando, o SDK persiste as preferências do usuário para um cookie. Na próxima vez que o usuário carregar seu site no navegador, o SDK recuperará e usará essas preferências persistentes. Não há necessidade de executar o `setConsent` comando novamente, exceto para comunicar uma alteração nas preferências do usuário, que pode ser feita a qualquer momento.
+Depois de comunicar as preferências do usuário ao SDK usando o `setConsent` comando, o SDK persiste as preferências do usuário para um cookie. Na próxima vez que o usuário carregar seu site no navegador, o SDK recuperará e usará essas preferências persistentes para determinar se os eventos podem ou não ser enviados para o Adobe. Não há necessidade de executar o `setConsent` comando novamente, exceto para comunicar uma alteração nas preferências do usuário, que pode ser feita a qualquer momento.
+
+## Sincronizar identidades ao definir o consentimento
+
+Quando o consentimento padrão está pendente, &quot;setConsent&quot; pode ser a primeira solicitação que sai e estabelece a identidade. Por isso, pode ser importante sincronizar identidades na primeira solicitação. O mapa de identidade pode ser adicionado ao comando &quot;setConsent&quot; da mesma forma que no comando &quot;sendEvent&quot;. Consulte [Recuperando ID de Experience Cloud](./identity.md)
+

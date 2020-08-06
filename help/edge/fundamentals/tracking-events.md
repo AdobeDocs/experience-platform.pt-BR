@@ -1,12 +1,12 @@
 ---
 title: Rastreamento de eventos
-seo-title: Rastreamento de eventos SDK da Web Adobe Experience Platform
+seo-title: Rastreamento de eventos SDK da Adobe Experience Platform Web
 description: Saiba como rastrear eventos SDK da Web do Experience Platform
 seo-description: Saiba como rastrear eventos SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Os dados enviados à Adobe Experience Cloud são divididos em duas categorias:
 
 ## Envio de dados XDM
 
-Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um schema que você criou no Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
+Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um schema criado no Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Todos os dados XDM que você deseja que façam parte de suas análises, personalização, audiências ou destinos devem ser enviados usando a `xdm` opção.
 
@@ -80,9 +80,27 @@ alloy("sendEvent", {
 });
 ```
 
+### Substituição da ID do conjunto de dados
+
+Em alguns casos de uso, talvez você queira enviar um evento para um conjunto de dados diferente daquele configurado na interface do usuário de configuração. Para isso, é necessário definir a opção `datasetId` no `sendEvent` comando:
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Adicionar informações de identidade
+
+As informações de identidade personalizadas também podem ser adicionadas ao evento. Consulte [Recuperando ID de Experience Cloud](./identity.md)
+
 ## Uso da API sendBeacon
 
-Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para informar o Adobe Experience Platform [!DNL Web SDK] a usar `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando evento.  Exemplo:
+Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para solicitar que a Adobe Experience Platform [!DNL Web SDK] use `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando evento.  Exemplo:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +118,7 @@ alloy("sendEvent", {
 });
 ```
 
-Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` uma só vez. Em muitos navegadores, o limite é de 64K. Se o navegador rejeitar o evento porque a carga é muito grande, o Adobe Experience Platform [!DNL Web SDK] voltará a usar seu método de transporte normal (por exemplo, busca).
+Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` uma só vez. Em muitos navegadores, o limite é de 64K. Se o navegador rejeita o evento porque a carga é muito grande, a Adobe Experience Platform [!DNL Web SDK] volta a usar seu método de transporte normal (por exemplo, busca).
 
 ## Tratamento de respostas de eventos
 

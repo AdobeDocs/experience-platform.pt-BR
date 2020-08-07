@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Criar destinos de marketing por email
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: accc94ae8f19ca3a1575b4408f85155a17741335
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
 
 
-# Criar destinos de email e ativar dados no Adobe Marketing [!DNL Real-time Customer Data Platform]
+# Crie destinos de email e ative dados no Adobe Marketing [!DNL Real-time Customer Data Platform]
 
-Este tutorial demonstra como usar chamadas de API para se conectar aos dados do seu Adobe Experience Platform, criar um destino [de marketing por](../../rtcdp/destinations/email-marketing-destinations.md)email, criar um fluxo de dados para o novo destino criado e ativar os dados para o novo destino criado.
+Este tutorial demonstra como usar chamadas de API para se conectar aos dados da Adobe Experience Platform, criar um destino [de marketing por](../../rtcdp/destinations/email-marketing-destinations.md)email, criar um fluxo de dados para o novo destino criado e ativar os dados para o novo destino criado.
 
-Este tutorial usa o destino de Adobe Campaign em todos os exemplos, mas as etapas são idênticas para todos os destinos de marketing de email.
+Este tutorial usa o destino Adobe Campaign em todos os exemplos, mas as etapas são idênticas para todos os destinos de marketing de email.
 
 ![Visão geral - as etapas para criar um destino e ativar segmentos](../images/destinations/flow-api-destinations-steps-overview.png)
 
@@ -24,7 +24,7 @@ Se você preferir usar a interface do usuário no CDP em tempo real do Adobe par
 
 ## Comece já
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados no [!DNL Experience Platform].
@@ -55,7 +55,8 @@ Os recursos em [!DNL Experience Platform] podem ser isolados para caixas de prot
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NObservação]
+>[!NOTE]
+>
 >Para obter mais informações sobre caixas de proteção em [!DNL Experience Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
@@ -123,7 +124,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Resposta**
 
-Uma resposta bem-sucedida contém uma lista de destinos disponíveis e seus identificadores exclusivos (`id`). Armazene o valor do destino que você planeja usar, pois ele será necessário em outras etapas. Por exemplo, se você deseja conectar e fornecer segmentos ao Adobe Campaign, procure o seguinte trecho na resposta:
+Uma resposta bem-sucedida contém uma lista de destinos disponíveis e seus identificadores exclusivos (`id`). Armazene o valor do destino que você planeja usar, pois ele será necessário em outras etapas. Por exemplo, se você deseja conectar e fornecer segmentos à Adobe Campaign, procure o seguinte trecho na resposta:
 
 ```json
 {

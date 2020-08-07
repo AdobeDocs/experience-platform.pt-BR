@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 
-Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de banco de dados.
+Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de banco de dados.
 
 ## Introdução
 
@@ -40,7 +40,7 @@ Selecione o banco de dados que deseja usar e clique em **[!UICONTROL Avançar]**
 
 ## Mapear campos de dados para um schema XDM
 
-A etapa *Mapeamento* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um conjunto de dados Platform.
+A etapa *Mapeamento* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um conjunto de dados da Plataforma.
 
 Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
 
@@ -96,7 +96,9 @@ Selecione **[!UICONTROL Carregar dados incrementais por]** para atribuir a colun
 
 Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**.
 
->[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
+>[!TIP]
+>
+>**[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
 
 Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 
@@ -131,7 +133,7 @@ Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um banco de dados externo e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados pelos serviços da Platform de downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um banco de dados externo e obteve informações sobre o monitoramento de conjuntos de dados. Os dados recebidos agora podem ser usados pelos serviços de plataforma downstream, como o Perfil do cliente em tempo real e a Área de trabalho de análise de dados. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 - [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)

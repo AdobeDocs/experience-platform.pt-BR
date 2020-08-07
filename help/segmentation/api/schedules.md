@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Programações
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 3%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamentos para a organização IMS especificada como JSON.
 
->[!NOTE] A resposta a seguir foi truncada para espaço e mostra somente a primeira programação retornada.
+>[!NOTE]
+>
+>A resposta a seguir foi truncada para espaço e mostra somente a primeira programação retornada.
 
 ```json
 {

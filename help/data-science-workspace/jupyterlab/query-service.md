@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Serviço de Query em Jupyter notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -38,13 +38,17 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   >[!NOTE] Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL Arquivo]** e selecione **[!UICONTROL Novo Iniciador]**.
+   >[!NOTE]
+   >
+   >Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL Arquivo]** e selecione **[!UICONTROL Novo Iniciador]**.
 
 2. Na guia Iniciador, clique no ícone **[!UICONTROL Em branco]** em um ambiente Python 3 para abrir um bloco de anotações vazio.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   >[!NOTE] O Python 3 é atualmente o único ambiente suportado para o Serviço de Query nos notebooks.
+   >[!NOTE]
+   >
+   >O Python 3 é atualmente o único ambiente suportado para o Serviço de Query nos notebooks.
 
 3. No painel de seleção esquerdo, clique no ícone **[!UICONTROL Dados]** e no duplo clique no diretório **[!UICONTROL Conjuntos]** de dados para lista de todos os conjuntos de dados.
 
@@ -86,7 +90,9 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    - `target_month` : Mês específico do qual o público alvo é originário.
    - `target_day` : Dia específico do qual os dados do público alvo são originários.
 
-   >[!NOTE] É possível alterar esses valores a qualquer momento. Ao fazer isso, certifique-se de executar a célula de variáveis para que as alterações sejam aplicadas.
+   >[!NOTE]
+   >
+   >É possível alterar esses valores a qualquer momento. Ao fazer isso, certifique-se de executar a célula de variáveis para que as alterações sejam aplicadas.
 
 ## Query de seus dados {#query-your-data}
 
@@ -102,7 +108,7 @@ O kernel do notebook será redefinido, mas as células permanecerão, execute no
 
 O query a seguir retorna a contagem de visitantes por hora para uma data especificada:
 
-#### Consulta
+#### Query
 
 ```sql
 %%read_sql hourly_visitor -c QS_CONNECTION
@@ -143,7 +149,7 @@ iplot(fig)
 
 O query a seguir retorna a contagem de ações por hora para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql hourly_actions -d -c QS_CONNECTION
@@ -168,7 +174,7 @@ hourly_actions.head()
 
 O query acima pode ser modificado para retornar a contagem de ações por hora para um intervalo de datas especificado usando operadores lógicos na cláusula **WHERE** :
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql hourly_actions_date_range -d -c QS_CONNECTION
@@ -194,7 +200,7 @@ hourly_actions_date_rage.head()
 
 O query a seguir retorna o número de eventos por sessão de visitante para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql events_per_session -c QS_CONNECTION
@@ -229,7 +235,7 @@ iplot(fig)
 
 O query a seguir retorna as dez páginas mais populares para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql popular_pages -c QS_CONNECTION
@@ -248,7 +254,7 @@ LIMIT  10;
 
 O query a seguir retorna os dez usuários mais ativos para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql active_users -c QS_CONNECTION
@@ -267,7 +273,7 @@ LIMIT  10;
 
 O query a seguir retorna as dez cidades que estão gerando a maioria das atividades do usuário para uma data especificada:
 
-#### Consulta <!-- omit in toc -->
+#### Query <!-- omit in toc -->
 
 ```sql
 %%read_sql active_cities -c QS_CONNECTION

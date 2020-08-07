@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Selecionar uma pasta listada permite que você transfira a hierarquia de pastas 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Quando a janela pré-visualização for preenchida, você poderá selecionar **[!UICONTROL Próximo]** para carregar todos os arquivos dentro da pasta selecionada. Se você quiser fazer upload para um arquivo específico, selecione-o na lista antes de selecionar **[!UICONTROL Próximo]**.
+Quando a janela pré-visualização for preenchida, você poderá selecionar **[!UICONTROL Próximo]** para fazer upload de todos os arquivos dentro da pasta selecionada. Se você quiser fazer upload para um arquivo específico, selecione esse arquivo na lista antes de selecionar **[!UICONTROL Próximo]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
 
@@ -115,7 +115,9 @@ Forneça valores para o agendamento e selecione **[!UICONTROL Próximo]**.
 
 Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**. Você pode continuar fazendo edições em um conjunto de fluxo de dados para uma ingestão de frequência única, desde que o tempo de start permaneça no futuro. Depois que a hora do start passar, o valor de frequência única não poderá mais ser editado.
 
->[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
+>[!TIP]
+>
+>**[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
 
 Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 

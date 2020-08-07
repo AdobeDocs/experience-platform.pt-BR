@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Exportar trabalhos - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Este documento fornece instruções passo a passo para criar e gerenciar trabalh
 
 >[!NOTE]
 >
->Este guia cobre o uso de trabalhos de exportação no [!DNL Profile API]. Para obter informações sobre como gerenciar trabalhos de exportação para o Serviço de segmentação de Adobe Experience Platform, consulte o guia sobre trabalhos de [exportação na API](../../profile/api/export-jobs.md)de segmentação.
+>Este guia cobre o uso de trabalhos de exportação no [!DNL Profile API]. Para obter informações sobre como gerenciar trabalhos de exportação para o Adobe Experience Platform Segmentation Service, consulte o guia sobre trabalhos de [exportação na API](../../profile/api/export-jobs.md)de segmentação.
 
 Além de criar um trabalho de exportação, você também pode acessar [!DNL Profile] os dados usando o `/entities` endpoint, também conhecido como &quot;[!DNL Profile Access]&quot;. Consulte o guia [de ponto de extremidade de](./entities.md) entidades para obter mais informações. Para obter etapas sobre como acessar [!DNL Profile] dados usando a interface do usuário, consulte o guia [do](../ui/user-guide.md)usuário.
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(Obrigatório)** Informações de destino para os dados exportados:<ul><li>`destination.datasetId`: **(Obrigatório)** A ID do conjunto de dados no qual os dados devem ser exportados.</li><li>`destination.segmentPerBatch`: *(Opcional)* Um valor booliano que, se não fornecido, assumirá o padrão `false`. Um valor de `false` exporta todas as IDs de segmento para uma única ID de lote. Um valor de `true` exporta uma ID de segmento para uma ID de lote. Observe que a configuração do valor a ser `true` pode afetar o desempenho da exportação em lote.</li></ul> |
 | `schema.name` | **(Obrigatório)** O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
 
->[!NOTE] Para exportar apenas dados de Perfil e não incluir dados de série de tempo relacionados, remova o objeto &quot;additionalFields&quot; da solicitação.
+>[!NOTE]
+>
+>Para exportar apenas dados de Perfil e não incluir dados de série de tempo relacionados, remova o objeto &quot;additionalFields&quot; da solicitação.
 
 **Resposta**
 
@@ -408,7 +410,7 @@ curl -X GET \
 
 ## Cancelar uma tarefa de exportação
 
-O Experience Platform permite cancelar um trabalho de exportação existente, o que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, é possível executar uma solicitação de DELETE para o `/export/jobs` ponto final e incluir a `id` do trabalho de exportação que você deseja cancelar ao caminho da solicitação.
+O Experience Platform permite cancelar um trabalho de exportação existente, o que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, você pode executar uma solicitação de DELETE para o `/export/jobs` ponto final e incluir o trabalho `id` de exportação que deseja cancelar ao caminho da solicitação.
 
 **Formato da API**
 
@@ -441,7 +443,7 @@ Quando a exportação for concluída com êxito, seus dados estarão disponívei
 
 Para obter instruções passo a passo sobre como usar a API de acesso a dados para acessar e baixar arquivos em lote, siga o tutorial [de acesso a](../../data-access/tutorials/dataset-data.md)dados.
 
-Você também pode acessar os dados exportados com êxito do Perfil do cliente em tempo real usando o Serviço de Query do Adobe Experience Platform. Usando a interface do usuário ou RESTful API, o Serviço de Query permite que você grave, valide e execute query em dados dentro do Data Lake.
+Você também pode acessar os dados exportados com êxito do Perfil do cliente em tempo real usando o Adobe Experience Platform Query Service. Usando a interface do usuário ou RESTful API, o Serviço de Query permite que você grave, valide e execute query em dados dentro do Data Lake.
 
 Para obter mais informações sobre como query dados de audiência, consulte a documentação [do serviço de](../../query-service/home.md)Query.
 

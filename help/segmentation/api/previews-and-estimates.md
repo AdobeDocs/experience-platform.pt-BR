@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Pré-visualizações e endpoints de estimativas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -36,13 +36,17 @@ O tamanho da amostra da verificação depende do número geral de entidades na l
 | 1 a 20 milhões | 1 milhão |
 | Mais de 20 milhões | 5% do total |
 
->[!NOTE] As estimativas geralmente levam de 10 a 15 segundos para serem executadas, começando com uma estimativa aproximada e refinando à medida que mais registros são lidos.
+>[!NOTE]
+>
+>As estimativas geralmente levam de 10 a 15 segundos para serem executadas, começando com uma estimativa aproximada e refinando à medida que mais registros são lidos.
 
 ## Create a new preview {#create-preview}
 
 Você pode criar uma nova pré-visualização, enviando uma solicitação de POST para o `/preview` terminal.
 
->[!NOTE] Uma tarefa de estimativa é criada automaticamente quando uma tarefa de pré-visualização é criada. Esses dois trabalhos compartilharão a mesma ID.
+>[!NOTE]
+>
+>Uma tarefa de estimativa é criada automaticamente quando uma tarefa de pré-visualização é criada. Esses dois trabalhos compartilharão a mesma ID.
 
 **Formato da API**
 

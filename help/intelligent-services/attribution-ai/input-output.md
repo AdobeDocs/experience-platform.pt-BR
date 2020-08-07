@@ -5,7 +5,7 @@ title: Entrada e saída de Attribution AI
 topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 3%
@@ -147,7 +147,7 @@ A tabela a seguir descreve os campos de schema na saída de exemplo de pontuaç�
 
 ### Exibição de caminhos de pontuação brutos (IU) {#raw-score-path}
 
-Você pode visualização o caminho para suas pontuações brutas na interface do usuário. Start selecionando **[!UICONTROL Schemas]** na interface do usuário do Platform e, em seguida, procure e selecione o schema de pontuações AI de sua atribuição na guia *[!UICONTROL Procurar]* .
+Você pode visualização o caminho para suas pontuações brutas na interface do usuário. Start selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e, em seguida, procure e selecione o schema de pontuações AI de sua atribuição na guia *[!UICONTROL Procurar]* .
 
 ![Escolha seu schema](./images/input-output/schemas_browse.png)
 
@@ -158,13 +158,13 @@ Em seguida, selecione um campo na janela *[!UICONTROL Estrutura]* da interface d
 
 ### Pontuações de atribuição agregadas {#aggregated-attribution-scores}
 
-As pontuações agregadas podem ser baixadas no formato CSV da interface do usuário do Platform se o intervalo de datas for inferior a 30 dias.
+As pontuações agregadas podem ser baixadas no formato CSV da interface do usuário da plataforma se o intervalo de datas for inferior a 30 dias.
 
 O Attribution AI suporta duas categorias de pontuações de atribuição, pontuações algorítmicas e baseadas em regras.
 
 O Attribution AI produz dois tipos diferentes de pontuações algorítmicas, incrementais e influenciadas. Uma pontuação influenciada é a fração da conversão pela qual cada ponto de contato de marketing é responsável. Uma pontuação incremental é a quantidade de impacto marginal causado diretamente pelo ponto de contato de marketing. A principal diferença entre a pontuação incremental e a pontuação influenciada é que a pontuação incremental leva o efeito da linha de base em consideração. Não presume que a conversão seja causada apenas pelos pontos de contato de marketing anteriores.
 
-Veja um exemplo rápido de saída de schema da interface do Adobe Experience Platform:
+Veja um exemplo rápido de saída de schema da interface do usuário do Adobe Experience Platform:
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -196,7 +196,7 @@ A tabela abaixo mapeia as pontuações de atribuição para as pontuações brut
 
 ### Pontuações agregadas {#aggregated-scores}
 
-As pontuações agregadas podem ser baixadas no formato CSV da interface do usuário do Platform se o intervalo de datas for inferior a 30 dias. Consulte a tabela abaixo para obter mais detalhes sobre cada uma dessas colunas de agregação.
+As pontuações agregadas podem ser baixadas no formato CSV da interface do usuário da plataforma se o intervalo de datas for inferior a 30 dias. Consulte a tabela abaixo para obter mais detalhes sobre cada uma dessas colunas de agregação.
 
 | Nome da coluna | Restrição | Nulo | Descrição |
 | --- | --- | --- | --- |

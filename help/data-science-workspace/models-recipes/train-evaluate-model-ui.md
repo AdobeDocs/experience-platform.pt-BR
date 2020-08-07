@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Treinar e avaliar um modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Treinar e avaliar um modelo (IU)
 
-Na área de trabalho da Adobe Experience Platform Data Science, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+Na Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional, ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 Este tutorial percorre as etapas para criar, treinar e avaliar um Modelo.
 
@@ -36,7 +36,10 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Forneça um nome para o Modelo e reveja as configurações padrão do Modelo. As configurações padrão foram aplicadas durante a criação da Receita, a análise e a modificação dos valores de configuração clicando nos valores com o duplo. Para fornecer um novo conjunto de configurações, clique em **[!UICONTROL Carregar nova configuração]** e arraste um arquivo JSON que contém configurações de Modelo para a janela do navegador. Clique em **[!UICONTROL Concluir]** para criar o Modelo.
-   >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita Recommendations do Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
+
+   >[!NOTE]
+   >
+   >As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita Recommendations do Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +58,10 @@ Este tutorial requer uma Receita existente. Se você não tiver uma Receita, sig
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. As configurações padrão fornecidas durante a criação do Modelo são mostradas, alteram-as e modificam-nas de acordo, clicando nos valores com o duplo. Clique em **[!UICONTROL Concluir]** para criar e executar a execução do treinamento.
-   >[!NOTE]As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita Recommendations do Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
+
+   >[!NOTE]
+   >
+   >As configurações são exclusivas e específicas para a Receita pretendida, o que significa que as configurações para a Receita de Vendas de Varejo não funcionarão para a Receita Recommendations do Produto. Consulte a seção de [referência](#reference) para obter uma lista das configurações de Receita de vendas de varejo.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 

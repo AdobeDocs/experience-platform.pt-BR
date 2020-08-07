@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de protocolo na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Selecione o diretório que deseja usar e clique em **[!UICONTROL Avançar]**.
 
 ## Mapear campos de dados para um schema XDM
 
-A etapa *[!UICONTROL Mapeamento]* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um conjunto de dados [!UICONTROL Platform] .
+A etapa *[!UICONTROL Mapeamento]* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um conjunto de dados da [!UICONTROL Plataforma] .
 
 Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
 
@@ -96,7 +96,9 @@ Selecione **[!UICONTROL Carregar dados incrementais por]** para atribuir a colun
 
 Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**.
 
->[!TIP] **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
+>[!TIP]
+>
+>**[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
 
 Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 

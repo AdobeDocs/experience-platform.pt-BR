@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK instalando o SDK
 description: Saiba como instalar o SDK da Web do Experience Platform
 seo-description: Saiba como instalar o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
@@ -14,10 +14,16 @@ ht-degree: 1%
 
 # Instalação do SDK {#installing-the-sdk}
 
-O Adobe Experience Platform [!DNL Web SDK] está disponível em uma rede de delivery de conteúdo (CDN) para você usar. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
+A maneira preferida de usar o Adobe Experience Platform Web SDK é através do [Launch](http://launch.adobe.com/). Procure pelo `AEP Web SDK` no catálogo de extensões, instale e configure a extensão.
 
-* Versão reduzida: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Versão não modificada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+O SDK da Web AEP também está disponível em um CDN para você usar. Você pode fazer referência a esse arquivo ou baixá-lo e hospedá-lo em sua própria infraestrutura. Ele está disponível em uma versão minified e não-minified. A versão não minified é útil para fins de depuração.
+
+Estrutura do URL: https://cdn1.adoberesources.net/alloy/[VERSÃO]/alloy.min.js OU liga.js para a versão não minified.
+
+Por exemplo:
+
+* Miniado: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Não minified: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Adicionar o código {#adding-the-code}
 

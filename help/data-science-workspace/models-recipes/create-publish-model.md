@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar e publicar uma apresentação de modelo de aprendizado de máquina
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -117,7 +117,9 @@ Você pode optar por aguardar a conclusão da execução do treinamento ou conti
 
    Hiperparâmetros não podem ser aprendidos, portanto, eles devem ser atribuídos antes que as execuções de treinamento ocorram. Ajustar hiperparâmetros pode alterar a precisão do modelo treinado. Como a otimização de um modelo é um processo iterativo, podem ser necessárias várias execuções de treinamento antes de se obter uma avaliação satisfatória.
 
-   >[!TIP] Defina **[!UICONTROL num_Recomendações]** como 10.
+   >[!TIP]
+   >
+   >Defina **[!UICONTROL num_Recomendações]** como 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Um ponto de dados adicional aparecerá no gráfico de avaliação de Modelo quando a nova execução de treinamento for concluída, isso pode levar vários minutos.

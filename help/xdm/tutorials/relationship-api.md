@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir uma relação entre dois schemas usando a API do Registro de Schemas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Definir uma relação entre dois schemas usando a [!DNL Schema Registry] API
 
 
-A capacidade de entender os relacionamentos entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante do Adobe Experience Platform. A definição desses relacionamentos dentro da estrutura dos schemas [!DNL Experience Data Model] (XDM) permite obter insights complexos sobre os dados do cliente.
+A capacidade de entender as relações entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante da Adobe Experience Platform. A definição desses relacionamentos dentro da estrutura dos schemas [!DNL Experience Data Model] (XDM) permite obter insights complexos sobre os dados do cliente.
 
 Embora as relações com os schemas possam ser inferidas com o uso do schema da união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo **de** relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
 
@@ -38,7 +38,9 @@ Espera-se que você já tenha criado os dois schemas que serão definidos no rel
 
 As relações de Schema são representadas por um schema **de** origem com um campo que se refere a outro campo dentro de um schema **de** destino. Nas etapas a seguir, &quot;[!DNL Loyalty Members]&quot; será o schema de origem, enquanto &quot;[!DNL Hotels]&quot; atuará como o schema de destino.
 
->[!IMPORTANT] Para estabelecer uma relação, ambos os schemas devem ter identidades primárias definidas e estar habilitados para [!DNL Real-time Customer Profile]. Consulte a seção sobre como [ativar um schema para uso no Perfil](./create-schema-api.md#profile) no tutorial de criação do schema se precisar de orientação sobre como configurar seus schemas de acordo.
+>[!IMPORTANT]
+>
+>Para estabelecer uma relação, ambos os schemas devem ter identidades primárias definidas e estar habilitados para [!DNL Real-time Customer Profile]. Consulte a seção sobre como [ativar um schema para uso no Perfil](./create-schema-api.md#profile) no tutorial de criação do schema se precisar de orientação sobre como configurar seus schemas de acordo.
 
 Para definir uma relação entre dois schemas, primeiro você deve adquirir os `$id` valores para ambos os schemas. Se você souber os nomes para exibição (`title`) dos schemas, poderá encontrar seus `$id` valores fazendo uma solicitação de GET para o `/tenant/schemas` endpoint na [!DNL Schema Registry] API.
 
@@ -116,7 +118,9 @@ Dentro do [!DNL Schema Registry], os descritores de relacionamento funcionam de 
 
 Neste tutorial, o schema de destino &quot;[!DNL Hotels]&quot; contém um `email` campo que serve como a identidade principal do schema e, portanto, também atuará como seu campo de referência. No entanto, o schema de origem &quot;[!DNL Loyalty Members]&quot; não tem um campo dedicado para ser usado como referência e deve receber uma nova combinação que adicione um novo campo ao schema: `favoriteHotel`.
 
->[!NOTE] Se o seu schema de origem já tiver um campo dedicado que você planeja usar como campo de referência, você pode pular para a etapa de [criação de um descritor](#reference-identity)de referência.
+>[!NOTE]
+>
+>Se o seu schema de origem já tiver um campo dedicado que você planeja usar como campo de referência, você pode pular para a etapa de [criação de um descritor](#reference-identity)de referência.
 
 ### Criar uma nova mistura
 

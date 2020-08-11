@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem HDFS Apache na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do [!D
 
 - [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Se você já tiver uma conexão HDFS, poderá ignorar o restante deste documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
@@ -46,7 +46,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria do armazenamento ** Cloud, selecione **[!UICONTROL Apache HDFS]** clique **no ícone + (+)** para criar um novo conector HDFS.
+Na categoria do armazenamento ** Cloud, selecione **[!UICONTROL Apache HDFS]** seguido por **[!UICONTROL Adicionar dados]** para criar um novo conector HDFS.
 
 ![catálogo](../../../../images/tutorials/create/hdfs/catalog.png)
 
@@ -66,4 +66,4 @@ Para ligar uma conta existente, selecione a conta HDFS com a qual pretende ligar
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta HDFS. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Platform](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta HDFS. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Plataforma](../../dataflow/batch/cloud-storage.md).

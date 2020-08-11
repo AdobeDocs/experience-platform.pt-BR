@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem FTP ou SFTP na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >Os conectores FTP e SFTP estão em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de origem FTP ou SFTP usando a interface do [!DNL Platform] usuário.
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de origem FTP ou SFTP usando a interface do [!DNL Platform] usuário.
 
 ## Introdução
 
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 * [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 * [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Se você já tiver uma conexão FTP ou SFTP válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
@@ -50,7 +50,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria *[!UICONTROL Bancos]* de dados, selecione clique em **[!UICONTROL SFTP]** **no ícone + (+)** para criar um novo conector FTP ou SFTP.
+Na categoria *[!UICONTROL Bancos]* de dados, selecione **[!UICONTROL SFTP]** seguido por **[!UICONTROL Adicionar dados]** para criar um novo conector FTP ou SFTP.
 
 ![catálogo](../../../../images/tutorials/create/sftp/catalog.png)
 
@@ -70,4 +70,4 @@ Para conectar uma conta existente, selecione a conta FTP ou SFTP com a qual voc�
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta FTP ou SFTP. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Platform](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta FTP ou SFTP. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Plataforma](../../dataflow/batch/cloud-storage.md).

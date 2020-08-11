@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Google AdWords na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >O [!DNL Google AdWords] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de [!DNL Google AdWords] origem usando a interface do [!DNL Platform] usuário.
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de [!DNL Google AdWords] origem usando a interface do [!DNL Platform] usuário.
 
 ## Introdução
 
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 * [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 * [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Se você já tiver uma [!DNL Google AdWords] conexão, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/payments.md)
@@ -50,7 +50,7 @@ Depois de reunir as credenciais necessárias, siga as etapas abaixo para criar u
 
 Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes com as quais você pode criar conexões base de entrada e cada fonte mostra o número de conexões base existentes associadas a elas.
 
-Na categoria *[!UICONTROL Publicidade]* , selecione **[!UICONTROL Google AdWords]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão básica de entrada, selecione Origem **[!UICONTROL do]** Connect.
+Na categoria *[!UICONTROL Publicidade]* , selecione **[!UICONTROL Google AdWords]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para criar uma nova conexão de base de entrada, selecione **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/ads/catalog.png)
 
@@ -70,4 +70,4 @@ Para conectar uma conta existente, selecione a [!DNL Google AdWords] conta à qu
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão básica com sua [!DNL Google AdWords] conta. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados de publicidade para o Platform](../../dataflow/advertising.md).
+Ao seguir este tutorial, você estabeleceu uma conexão básica com sua [!DNL Google AdWords] conta. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer dados de publicidade para a Plataforma](../../dataflow/advertising.md).

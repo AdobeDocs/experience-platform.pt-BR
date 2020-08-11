@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1534'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 * [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 * [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Além disso, este tutorial requer uma conta de armazenamento em nuvem estabelecida. Uma lista de tutoriais para criar diferentes contas de armazenamento na nuvem na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../../../home.md)origem.
@@ -46,7 +46,7 @@ Selecionar uma pasta listada permite que você transfira a hierarquia de pastas 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Quando a janela pré-visualização for preenchida, você poderá selecionar **[!UICONTROL Próximo]** para fazer upload de todos os arquivos dentro da pasta selecionada. Se você quiser fazer upload para um arquivo específico, selecione esse arquivo na lista antes de selecionar **[!UICONTROL Próximo]**.
+Quando a janela pré-visualização for preenchida, você poderá selecionar **[!UICONTROL Próximo]** para fazer upload de todos os arquivos dentro da pasta selecionada. Se você quiser fazer upload para um arquivo específico, selecione-o na lista antes de selecionar **[!UICONTROL Próximo]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
 
@@ -100,12 +100,12 @@ A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um
 | --- | --- |
 | Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
-| hora do Start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer. |
+| hora do start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer. |
 | Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *[!UICONTROL preenchimento retroativo]* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *[!UICONTROL do]* Start serão assimilados. Os arquivos carregados antes da hora *[!UICONTROL do]* Start não serão ingeridos. |
 
 Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
 
-Para definir a hora de ingestão do start, ajuste a data e a hora exibidas na caixa da hora do start. Como alternativa, você pode selecionar o ícone de calendário para editar o valor de hora do start. O tempo de Start deve ser maior ou igual ao tempo atual em UTC.
+Para definir a hora de ingestão do start, ajuste a data e a hora exibidas na caixa da hora do start. Como alternativa, você pode selecionar o ícone de calendário para editar o valor de hora do start. O tempo de start deve ser maior ou igual ao tempo atual em UTC.
 
 Forneça valores para o agendamento e selecione **[!UICONTROL Próximo]**.
 
@@ -145,9 +145,13 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Monitore e exclua seu fluxo de dados
+## Monitore seu fluxo de dados
 
-Depois que seu fluxo de dados de armazenamento em nuvem for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Para obter mais informações sobre monitoramento e exclusão de fluxos de dados, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../../../ingestion/quality/monitor-data-flows.md).
+Depois que seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele para ver informações sobre taxas de ingestão, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, consulte o tutorial sobre contas de [monitoramento e fluxos de dados na interface do usuário](../../monitor.md).
+
+## Excluir seu fluxo de dados
+
+Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função *[!UICONTROL Excluir]* disponível na área de trabalho *[!UICONTROL Fluxos de dados]* . Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre como [excluir fluxos de dados na interface do usuário](../../delete.md).
 
 ## Próximas etapas
 

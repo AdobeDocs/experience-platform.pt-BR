@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empacotar arquivos de origem em uma fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Empacotar arquivos de origem em uma fórmula
 
-Este tutorial fornece instruções sobre como você pode disponibilizar os arquivos de origem de amostra de Vendas de varejo fornecidos em um arquivo de arquivamento, que pode ser usado para criar uma fórmula no Adobe Experience Platform, seguindo o fluxo de trabalho de importação de receita na interface do usuário ou usando a API. [!DNL Data Science Workspace]
+Este tutorial fornece instruções sobre como você pode disponibilizar os arquivos de origem de amostra de Vendas de varejo fornecidos em um arquivo de arquivamento, que pode ser usado para criar uma receita no Adobe Experience Platform seguindo o fluxo de trabalho de importação de receita na interface do usuário ou usando a API. [!DNL Data Science Workspace]
 
 Conceitos para entender:
 
@@ -38,7 +38,7 @@ Uma imagem do Docker permite que um desenvolvedor empacote um aplicativo com tod
 
 A imagem do Docker criada é enviada para o Registro de Container do Azure usando as credenciais fornecidas a você durante o fluxo de trabalho de criação da receita.
 
-Para obter suas credenciais do Registro de Container do Azure, faça logon no <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Na coluna de navegação esquerda, navegue até **[!UICONTROL Workflows]**. Selecione **[!UICONTROL Importar receita]** seguida de selecionar **[!UICONTROL Iniciar]**. Consulte a captura de tela abaixo para obter referência.
+Para obter suas credenciais do Registro de Container do Azure, faça logon no [Adobe Experience Platform](https://platform.adobe.com). Na coluna de navegação esquerda, navegue até **[!UICONTROL Workflows]**. Selecione **[!UICONTROL Importar receita]** seguida de selecionar **[!UICONTROL Iniciar]**. Consulte a captura de tela abaixo para obter referência.
 
 ![](../images/models-recipes/package-source-files/import.png)
 

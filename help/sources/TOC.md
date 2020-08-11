@@ -1,11 +1,11 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda dos conectores de origem de Adobe Experience Platform
+user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 0%
 - [Visão geral dos conectores de origem](home.md)
 - Conectores de origem disponíveis {#connectors}
    - aplicativos Adobe {#adobe-applications}
-      - [Conector de dados Analytics](connectors/adobe-applications/analytics.md)
+      - [Conector de dados do Analytics](connectors/adobe-applications/analytics.md)
       - [conector Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - Mapeamento de campos do aplicativo Adobe {#mapping}
          - [Campos de mapeamento do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [campos de mapeamento de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Campos de Target mapping](connectors/adobe-applications/mapping/target.md)
+         - [Campos de target mapping](connectors/adobe-applications/mapping/target.md)
    - Publicidade {#advertising}
       - [Conector Google AdWords](connectors/advertising/ads.md)
-   - armazenamento em nuvem {#cloud-storage}
+   - Armazenamento em nuvem {#cloud-storage}
       - [Conector Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector HDFS Apache](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
@@ -45,7 +45,7 @@ ht-degree: 0%
       - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
       - [Conector de Data Explorer do Azure](connectors/databases/data-explorer.md)
-      - [Conector Analytics do Azure Synapse](connectors/databases/synapse-analytics.md)
+      - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
       - [Conector Couchbase](connectors/databases/couchbase.md)
       - [Conector Google BigQuery](connectors/databases/bigquery.md)
@@ -68,7 +68,7 @@ ht-degree: 0%
    - Criar um conector de origem {#create}
       - Publicidade {#advertising}
          - [Conector Google AdWords](tutorials/api/create/advertising/ads.md)
-      - armazenamento em nuvem {#cloud-storage}
+      - Armazenamento em nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Conector HDFS Apache](tutorials/api/create/cloud-storage/hdfs.md)
@@ -90,7 +90,7 @@ ht-degree: 0%
          - [Apache Hive no conector Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Conector de Data Explorer do Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Conector Analytics do Azure Synapse](tutorials/api/create/databases/synapse-analytics.md)
+         - [Conector do Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Conector de Armazenamento de Tabela do Azure](tutorials/api/create/databases/ats.md)
          - [Conector Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Conector Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -133,11 +133,11 @@ ht-degree: 0%
    - Criar um conector de origem {#create}
       - aplicativos Adobe {#adobe-applications}
          - [Conector Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
-         - [conector Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Conector Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Conector de atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicidade {#create}
          - [Conector Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - armazenamento em nuvem {#cloud-storage}
+      - Armazenamento em nuvem {#cloud-storage}
          - [Conector Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Conector HDFS Apache](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)
@@ -157,7 +157,7 @@ ht-degree: 0%
          - [Apache Hive no conector Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark no conector Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Conector de Data Explorer do Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Conector Analytics do Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Conector do Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Conector de Armazenamento de Tabela do Azure](tutorials/ui/create/databases/ats.md)
          - [Conector Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Conector do Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -187,5 +187,6 @@ ht-degree: 0%
       - [Configurar um fluxo de dados para um conector de pagamento](tutorials/ui/dataflow/payments.md)
       - [Configurar um fluxo de dados para um conector de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Ativar dados de entrada para preencher perfis do cliente](tutorials/ui/profile.md)
-   - [Monitorar os fluxos de contas e de conjunto de dados](tutorials/ui/monitor.md)
-- [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)
+   - [Monitorar contas e fluxos de dados](tutorials/ui/monitor.md)
+   - [Excluir fluxos de dados](tutorials/ui/delete.md)
+- [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

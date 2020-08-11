@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+description: Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho Fontes.
 solution: Experience Platform
-title: Monitorar e excluir fluxos de dados
+title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
+source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 
-# Monitorar e excluir fluxos de dados
+# Monitorar contas e fluxos de dados na interface do usuário
 
-Os conectores de origem no Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho *[!UICONTROL Fontes]* . Este tutorial também fornece etapas para excluir fluxos de dados da área de trabalho *[!UICONTROL Fontes]* .
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho *[!UICONTROL Fontes]* .
 
 ## Introdução
 
@@ -22,7 +23,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 - [Sistema](../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+   - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [Perfil](../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Monitorar contas
@@ -31,7 +32,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Selecione *[!UICONTROL Contas]* no cabeçalho superior para visualização contas existentes.
 
-![catálogo](../../images/tutorials/monitor/catalog.png)
+![catálogo](../../images/tutorials/monitor/catalog-accounts.png)
 
 As páginas *[!UICONTROL Contas]* são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
 
@@ -43,13 +44,9 @@ O painel de classificação permite acessar contas de uma fonte específica. Sel
 
 ![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
 
-Na página *[!UICONTROL Contas]* , é possível visualização de uma lista de fluxos de dados existentes associados à conta acessada. Selecione o fluxo de dados que deseja visualização.
+Na página *[!UICONTROL Contas]* , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada.
 
-![página de contas](../../images/tutorials/monitor/dataflows.png)
-
-A tela *[!UICONTROL atividade]* Dataflow é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
-
-![dataset-flow-atividade](../../images/tutorials/monitor/dataflow-activity.png)
+![fluxo de dados](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitorar fluxos de dados
 
@@ -65,37 +62,53 @@ O painel de classificação é exibido. Selecione a fonte que deseja acessar no 
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-A tela *[!UICONTROL atividade]* Dataflow é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico.
+A página de atividade *[!UICONTROL do]* Dataflow contém detalhes sobre o número de registros ingeridos e os registros falharam, bem como informações sobre o status e o tempo de processamento do dataflow. Selecione o ícone de calendário acima do fluxo de dados para ajustar o intervalo de tempo dos registros de ingestão.
 
-![dataset-flow-atividade](../../images/tutorials/monitor/dataflow-activity.png)
+![atividade de fluxo de dados](../../images/tutorials/monitor/dataflow-activity.png)
+
+O calendário permite que você visualização os diferentes intervalos de tempo para registros ingeridos. Você pode selecionar uma das duas opções predefinidas *[!UICONTROL Últimos 7 dias]* ou *[!UICONTROL Últimos 30 dias]*. Como alternativa, você pode definir um período de tempo personalizado usando o calendário. Selecione seu período de tempo de escolha e selecione **[!UICONTROL Aplicar]** para continuar.
+
+![calendário de fluxo](../../images/tutorials/monitor/flow-calendar.png)
+
+Por padrão, a atividade ** Dataflow exibe o painel *[!UICONTROL Propriedades]* associado ao fluxo de dados. Selecione a execução de fluxo da lista para ver seus metadados associados, incluindo informações sobre sua ID de execução exclusiva.
+
+Selecione start **[!UICONTROL de execução do]** Dataflow para acessar a visão geral *[!UICONTROL de execução do]* Dataflow.
+
+![run](../../images/tutorials/monitor/run-metadata.png)
+
+A visão geral *[!UICONTROL da execução do]* Fluxo de dados exibe informações sobre o fluxo de dados, incluindo seus metadados, o status da ingestão *[!UICONTROL parcial e o limite]* de ** Erro atribuído. O cabeçalho superior também inclui um resumo *[!UICONTROL de]* Erro. O resumo *[!UICONTROL de]* Erro contém o erro de nível superior específico que mostra em qual etapa o processo de ingestão encontrou um erro.
+
+![visão geral da execução do dataflow](../../images/tutorials/monitor/dataflow-run-overview.png)
+
+Consulte a tabela a seguir para obter os códigos de erro que podem ser vistos no resumo ** Erro.
+
+| Código de erro | Mensagem de erro |
+| ---------- | ----------- |
+| `CONNECTOR-1001-500` | &quot;Ocorreu um problema com a atividade de cópia.&quot; |
+| `CONNECTOR-2001-500` | &quot;Ocorreu um problema ao copiar da fonte Experience Platform para o conjunto de dados.&quot; |
+| `CONNECTOR-3001-500` | &quot;Ocorreu um problema com o provedor de fluxo ao criar o lote usando a API de assimilação em massa.&quot; |
+
+A metade inferior da tela contém informações sobre erros *[!UICONTROL de execução do]* Dataflow. Daqui, você também pode visualização os arquivos assimilados, pré-visualização e fazer download do diagnóstico de erros ou fazer download do manifesto do arquivo.
+
+A seção *[!UICONTROL Dataflow run errors]* exibe o código *[!UICONTROL de]* erro, o número de registros que falharam e as informações que descrevem o erro.
+
+Selecione Diagnóstico **[!UICONTROL de erro de]** Pré-visualização para ver mais informações sobre o erro de ingestão.
+
+![Erros de execução de fluxo de dados](../../images/tutorials/monitor/dataflow-run-errors.png)
+
+O painel pré-visualização *[!UICONTROL do diagnóstico]* Error (Erro) é exibido. Essa tela exibe informações específicas sobre a falha de ingestão, incluindo o nome *[!UICONTROL do]* arquivo, o código *[!UICONTROL de]* erro, o nome da coluna na qual o erro ocorreu e uma descrição do erro.
+
+Esta seção também inclui uma pré-visualização da coluna que contém o erro.
+
+> [!IMPORTANT] Para ativar a pré-visualização *[!UICONTROL de diagnóstico de]* erro, é necessário ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro ao configurar um fluxo de dados. Isso permitirá que o sistema verifique todos os registros ingeridos durante a execução do fluxo.
+
+![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/preview-error-diagnostics.png)
+
+Depois de visualizar os erros, você pode selecionar **[!UICONTROL Download]** de dentro do fluxo de dados *[UICONTROL para executar o painel de visão geral]* para acessar o diagnóstico completo de erros e baixar o manifesto do arquivo. Consulte os documentos sobre diagnósticos [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erros e o [download de metadados](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obter mais informações.
+
+![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/download.png)
 
 Para obter mais informações sobre monitoramento de fluxos de dados e ingestão, consulte o tutorial sobre [monitoramento de fluxos de dados](../../../ingestion/quality/monitor-data-flows.md)de fluxo contínuo.
-
-## Excluir um fluxo de dados
-
-Você pode excluir os fluxos de dados que foram criados incorretamente ou que não são mais necessários acessando a tela de fluxos de dados. Localize o fluxo de dados que deseja excluir usando o ícone de funil de classificação e selecione o fluxo de dados para abrir o painel **[!UICONTROL Propriedades]** .
-
-Para excluir um fluxo de dados, selecione **[!UICONTROL Excluir]** das propriedades na parte superior direita.
-
-![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
-
-Uma mensagem de confirmação final é exibida. Selecione **[!UICONTROL Excluir]** para confirmar.
-
-![confirmar-excluir](../../images/tutorials/monitor/confirm-delete.png)
-
-Após alguns instantes, uma caixa de confirmação verde é exibida na parte inferior da tela para confirmar a exclusão bem-sucedida.
-
-![delete- bem-sucedido](../../images/tutorials/monitor/deletion-confirmed.png)
-
-Como alternativa, você pode excluir um fluxo de dados da tela *[!UICONTROL Contas]* . Localize a conta que deseja acessar usando o ícone de funil de classificação e selecione a conta na lista.
-
-![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
-
-A página *[!UICONTROL Contas]* é exibida. Selecione o fluxo de dados que deseja excluir e selecione **[!UICONTROL Excluir]** no painel de propriedades para concluir o processo.
-
-![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
-
-Siga as etapas de confirmação descritas acima para concluir o processo.
 
 ## Próximas etapas
 

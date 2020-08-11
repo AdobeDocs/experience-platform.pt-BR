@@ -1,12 +1,12 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: Ajuda da Platform sobre dados do cliente em tempo real
+user-guide-title: Ajuda da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
+source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 10%
+source-wordcount: '443'
+ht-degree: 11%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 10%
    * [Visão geral de administração](administration/admin-overview.md)
 * Conjuntos de dados {#datasets}
    * [Conjuntos de dados](datasets/dataset.md)
-   * [Qualidade de dados no Platform](datasets/data-quality.md)
+   * [Qualidade dos dados na plataforma](datasets/data-quality.md)
 * Destinos {#destinations}
    * [Visão geral dos destinos](destinations/destinations-overview.md)
    * [Tipos de destino e categorias](/help/rtcdp/destinations/destination-types.md)
@@ -47,13 +47,14 @@ ht-degree: 10%
          * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
          * [Extensão do Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Correspondência de cliente do Google](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Extensão do Google gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extensão da tag do LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
          * [Extensão de rastreamento de conversão do Pinterest](destinations/pinterest-extension.md)
          * [Extensão de tag do Twitter Universal Website](destinations/twitter-uwt-extension.md)
-      * Destinos Analytics {#analytics-destinations}
-         * [Visão geral dos destinos Analytics](destinations/analytics-destinations.md)
+      * Destinos do Analytics {#analytics-destinations}
+         * [Visão geral dos destinos do Analytics](destinations/analytics-destinations.md)
          * [Adicionar extensão de rastreamento de site](/help/rtcdp/destinations/adform-extension.md)
          * [Extensão do Adobe Analytics](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Extensão Adobe Media Analytics for Audio and Video](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
@@ -68,7 +69,7 @@ ht-degree: 10%
          * [extensão Nielsen BSDK](destinations/nielsen-bsdk-extension.md)
          * [extensão Nielsen IMA Handler](destinations/nielsen-ima-extension.md)
          * [Extensão do manipulador Nielsen VideoJS Player](destinations/nielsen-videojs-extension.md)
-         * [Extensão Parse.ly Analytics](destinations/parsely-extension.md)
+         * [Extensão do Parse.ly Analytics](destinations/parsely-extension.md)
          * [Extensão da métrica quântica](destinations/quantum-metric-extension.md)
          * [Extensão SessionCam](destinations/sessioncam-extension.md)
          * [Extensão TMMData](destinations/tmmdata-extension.md)
@@ -80,13 +81,13 @@ ht-degree: 10%
          * [Destino Amazon S3](destinations/amazon-s3-destination.md)
          * [Destino dos Hubs de Evento do Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destino SFTP](destinations/sftp-destination.md)
-      * Destinos da Gestão de dados Platform {#dmp-destinations}
-         * [Visão geral dos destinos Gestão de dados Platform](destinations/dmp-destinations.md)
+      * Destinos da plataforma de gestão de dados {#dmp-destinations}
+         * [Visão geral dos destinos da plataforma de gestão de dados](destinations/dmp-destinations.md)
          * [extensão Audience Manager DIL](/help/rtcdp/destinations/aam-dil-extension.md)
       * Destinos de marketing de email{#email-destinations}
          * [Visão geral dos destinos de marketing por email](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-         * [Extensão Bizível do Analytics](/help/rtcdp/destinations/bizible-extension.md)
+         * [Extensão Bizible Analytics](/help/rtcdp/destinations/bizible-extension.md)
          * [Extensão de marketing](destinations/marketo-extension.md)
          * [Extensão do Marketo Munchkin](destinations/marketo-munchkin-extension.md)
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
@@ -110,8 +111,8 @@ ht-degree: 10%
          * [Fluxo de autenticação de destinos de rede social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [extensão Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Destino do Facebook](/help/rtcdp/destinations/facebook-destination.md)
-      * Destinos da Pesquisa {#survey-destinations}
-         * [Visão geral dos destinos de Pesquisa](/help/rtcdp/destinations/survey-destinations.md)
+      * Destinos da pesquisa {#survey-destinations}
+         * [Visão geral dos destinos de pesquisa](/help/rtcdp/destinations/survey-destinations.md)
          * [Extensão prevista](/help/rtcdp/destinations/foresee-extension.md)
          * [Extensão InMoment](/help/rtcdp/destinations/inmoment-extension.md)
          * [Extensão de Comentários do Site Qualtrics](destinations/qualtrics-extension.md)
@@ -132,10 +133,10 @@ ht-degree: 10%
    * [Visão geral de privacidade](privacy/privacy-overview.md)
    * [Visão geral do controle de dados](privacy/data-governance-overview.md)
 * Perfis {#profile}
-   * [Visão geral do Perfil](profile/profile-overview.md)
+   * [Visão geral do perfil](profile/profile-overview.md)
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
    * [Mesclar políticas](profile/merge-policies.md)
-   * [Visualizador de Perfis](profile/profile-viewer.md)
+   * [Visualizador de perfis](profile/profile-viewer.md)
 * Segmentos {#segmentation}
    * [Visão geral da segmentação](segmentation/segmentation-overview.md)
    * [Guia do construtor de segmentos](segmentation/segment-builder-guide.md)

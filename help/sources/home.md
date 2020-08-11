@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Visão geral dos conectores de origem de Adobe Experience Platform
+title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral dos conectores de origem
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de ingestão e gerenciar o throughput de ingestão de dados.
 
@@ -26,10 +26,10 @@ As fontes em [!DNL Experience Platform] são agrupadas nas seguintes categorias:
 
 ### aplicativos Adobe
 
-[!DNL Experience Platform] permite que os dados sejam assimilados de outros aplicativos de Adobe, incluindo Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
+[!DNL Experience Platform] permite que os dados sejam assimilados de outros aplicativos Adobe, incluindo Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Criar um conector de fonte de Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Criar um conector de origem Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Visão geral do conector de dados Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Criar um conector de origem Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Criar um conector de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -45,8 +45,9 @@ As fontes em [!DNL Experience Platform] são agrupadas nas seguintes categorias:
 As fontes de armazenamentos na nuvem podem inserir seus próprios dados [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) conector
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) conector
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) conector
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) conector
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) conector
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) conector
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) conector
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) conector
@@ -115,9 +116,9 @@ A tabela a seguir descreve como a interface se comporta com base em diferentes c
 
 | Nível de permissão | Descrição |
 | ---- | ----|
-| **[!UICONTROL Fontes]** de Visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia *Catálogo* , bem como nas guias *Procurar*, *Contas* e *DataFlow* . |
+| **[!UICONTROL Fontes]** de visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia *Catálogo* , bem como nas guias *Procurar*, *Contas* e *DataFlow* . |
 | **[!UICONTROL Gerenciar fontes]** em | Além das funções incluídas nas Fontes **[!UICONTROL de]** Visualização, concede acesso à opção Fonte *[!UICONTROL do]* Connect no *[!UICONTROL Catálogo]* e à opção *[!UICONTROL Selecionar dados]* na *[!UICONTROL Navegação]*. **[!UICONTROL Gerenciar fontes]** também permite ativar ou desativar *[!UICONTROL DataFlows]* e editar seus agendamentos. |
-| **[!UICONTROL Fontes]** de Visualização desativadas e **[!UICONTROL gerenciamento de fontes]** desativadas | Revogar todo o acesso às fontes. |
+| **[!UICONTROL Fontes]** de visualização desativadas e **[!UICONTROL gerenciamento de fontes]** desativadas | Revogar todo o acesso às fontes. |
 
 Para obter mais informações sobre as permissões disponíveis concedidas através do Admin Console, incluindo essas quatro fontes, consulte a visão geral [do](../access-control/home.md)controle de acesso.
 

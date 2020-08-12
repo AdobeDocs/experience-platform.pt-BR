@@ -1,12 +1,12 @@
 ---
 title: Destinos de publicidade
 seo-title: Destinos de publicidade
-description: Conecte seu Platform de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimo nessas plataformas.
-seo-description: Conecte seu Platform de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimo nessas plataformas.
+description: Conecte sua Plataforma de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimo nessas plataformas.
+seo-description: Conecte sua Plataforma de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimo nessas plataformas.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ Atualmente, a CDP em tempo real suporta os destinos de publicidade listados abai
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Extensão do Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Correspondência de cliente do Google](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Extensão do Google gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [Extensão da tag do LinkedIn Insight](linkedin-extension.md)
 * [Extensão de rastreamento de conversão do Pinterest](pinterest-extension.md)

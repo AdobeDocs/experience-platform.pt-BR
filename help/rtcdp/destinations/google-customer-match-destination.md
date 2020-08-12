@@ -4,9 +4,9 @@ seo-title: Destino de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 seo-description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,9 @@ Se você optar por hash nos endereços de email, certifique-se de seguir os requ
 
    >[!IMPORTANT]
    >
-   > Para [!DNL Google Customer Match] destinos. **[!UICONTROL A ID]** da conta é a ID do cliente com o Google. O formato da ID é xxx-xxx-xxxx.
+   > * O caso de uso de **[!UICONTROL Combinar com PII]** é selecionado por padrão para o [!DNL Google Customer Match] destino e não pode ser removido.
+   > * Para [!DNL Google Customer Match] destinos. **[!UICONTROL A ID]** da conta é a ID do cliente com o Google. O formato da ID é xxx-xxx-xxxx.
+
 
    ![Correspondência de cliente do Connect Google - etapa de autenticação](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -170,3 +172,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## Verificar se a ativação de segmentos foi bem-sucedida {#verify-activation}
 
 Após concluir o fluxo de ativação, alterne para sua conta do **[!UICONTROL Google Ads]** . Os segmentos ativados serão exibidos em sua conta do Google como listas do cliente. Observe que, dependendo do tamanho do seu segmento, algumas audiências não serão preenchidas a menos que haja mais de 100 usuários ativos para servir.
+
+## Recursos adicionais {#additional-resources}
+
+* [Integração da correspondência de clientes do Google - tutorial em vídeo](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)

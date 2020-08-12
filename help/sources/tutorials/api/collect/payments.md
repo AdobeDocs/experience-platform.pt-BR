@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Coletar dados de pagamento por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1696'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial também exige que você tenha uma compreensão funcional dos segui
 
 * [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
+   * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
 * [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
 * [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
 * [Caixas de proteção](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
@@ -132,7 +132,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 }
 ```
 
-## Criar um schema XDM de público alvo {#target}
+## Criar um schema XDM de público alvo {#target-schema}
 
 Em etapas anteriores, um schema XDM ad-hoc foi criado para estruturar os dados de origem. Para que os dados de origem sejam usados em [!DNL Platform], um schema de público alvo também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um [!DNL Platform] conjunto de dados no qual os dados de origem estão contidos. Esse schema XDM do público alvo também estende a classe XDM. [!DNL Individual Profile]
 
@@ -290,7 +290,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 ]
 ```
 
-## Criar uma conexão de público alvo
+## Criar uma conexão de público alvo {#target-connection}
 
 Uma conexão de público alvo representa a conexão com o destino onde os dados ingeridos chegam. Para criar uma conexão de público alvo, é necessário fornecer a ID de especificação de conexão fixa associada ao registro de dados. Esta ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -578,7 +578,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dad
 A última etapa para coletar dados é criar um fluxo de dados. Neste ponto, você deve ter os seguintes valores obrigatórios preparados:
 
 * [ID da conexão de origem](#source)
-* [ID de conexão do Público alvo](#target)
+* [ID de conexão do público alvo](#target)
 * [ID de mapeamento](#mapping)
 * [ID de especificação do fluxo de dados](#specs)
 
@@ -642,13 +642,15 @@ curl -X POST \
 ```
 
 | Propriedade | Descrição |
-| --- | --- |
-| `flowSpec.id` | A ID de especificação de fluxo recuperada na etapa anterior. |
-| `sourceConnectionIds` | A ID da conexão de origem recuperada em uma etapa anterior. |
-| `targetConnectionIds` | A ID de conexão do público alvo recuperada em uma etapa anterior. |
-| `transformations.params.mappingId` | A ID de mapeamento recuperada em uma etapa anterior. |
-| `scheduleParams.startTime` | O tempo de start do fluxo de dados em tempo de época, em segundos. |
-| `scheduleParams.frequency` | Os valores de frequência selecionáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
+| -------- | ----------- |
+| `flowSpec.id` | A ID [de especificação de](#specs) fluxo recuperada na etapa anterior. |
+| `sourceConnectionIds` | A ID [de conexão](#source) de origem recuperada em uma etapa anterior. |
+| `targetConnectionIds` | A ID [de conexão do](#target-connection) público alvo recuperada em uma etapa anterior. |
+| `transformations.params.mappingId` | A ID [de](#mapping) mapeamento recuperada em uma etapa anterior. |
+| `transformations.params.deltaColum` | A coluna designada usada para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
+| `transformations.params.mappingId` | A ID de mapeamento associada ao banco de dados. |
+| `scheduleParams.startTime` | A hora de start do fluxo de dados em cada época. |
+| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções consecutivas de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero. O intervalo não é necessário quando a frequência é definida como `once` e deve ser maior ou igual a `15` outros valores de frequência. |
 
 **Resposta**
@@ -661,6 +663,11 @@ Uma resposta bem-sucedida retorna a ID `id` do fluxo de dados recém-criado.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Monitore seu fluxo de dados
+
+Depois que seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre como [monitorar fluxos de dados na API ](../monitor.md)
+
 
 ## Próximas etapas
 

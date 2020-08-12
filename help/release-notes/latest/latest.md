@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 7%
+source-wordcount: '480'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!Fontes DNL]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,6 +34,25 @@ Atualizações dos recursos existentes no Adobe Experience Platform:
 | Melhorias na VM em [!DNL JupyterLab] | Aprimorada a estabilidade de máquinas virtuais de longa duração. [!DNL JupyterLab notebook] |
 
 Para obter mais informações sobre [!DNL JupyterLab], consulte o guia [[!DNL JupyterLab] do usuário](../../data-science-workspace/jupyterlab/overview.md).
+
+## Destinos {#destinations}
+
+Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+
+**Novos destinos**
+
+Novos destinos estão disponíveis onde você pode ativar seus dados do Adobe Experience Platform. Consulte abaixo para obter detalhes:
+
+| Destino | Descrição |
+|--- | ---|
+| [!DNL Google Customer Match] | A Correspondência de clientes do Google permite que você use seus dados online e offline para alcançar e reinteragir com seus clientes em todas as propriedades operadas e pertencentes ao Google, como: [!DNL Search], [!DNL Shopping], Gmail e YouTube. Visite a [!DNL Google Customer Match] página [](/help/rtcdp/destinations/google-customer-match-destination.md) no catálogo de destinos para obter mais informações sobre o destino e como configurá-lo no Adobe Real-time CDP. |
+
+**Novos recursos**
+
+| Recurso | Descrição |
+|------- | -----------|
+| Editor personalizado de nomes de arquivos | Atualize para o fluxo de trabalho da ativação de dados para destinos de marketing por email e destinos de armazenamento na nuvem que permitem editar o nome dos arquivos exportados. Para obter mais informações, consulte a etapa [](/help/rtcdp/destinations/activate-destinations.md#configure) Configurar no fluxo de trabalho da ativação. |
+| Atributos recomendados | Atualize para o fluxo de trabalho da ativação de dados para destinos de marketing por email e destinos de armazenamento na nuvem que exibem os atributos recomendados para que você adicione aos arquivos exportados. Para obter mais informações, consulte a etapa [](/help/rtcdp/destinations/activate-destinations.md#select-attributes) Selecionar atributos no fluxo de trabalho da ativação. |
 
 ## Fontes {#sources}
 

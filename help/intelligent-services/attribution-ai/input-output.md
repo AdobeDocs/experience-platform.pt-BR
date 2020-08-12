@@ -5,9 +5,9 @@ title: Entrada e saída de Attribution AI
 topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2075'
 ht-degree: 3%
 
 ---
@@ -82,18 +82,6 @@ O Attribution AI gera o seguinte:
 - [Pontuações granulares brutas](#raw-granular-scores)
 - [Pontuações agregadas](#aggregated-attribution-scores)
 
-Nos exemplos abaixo, uma saída CSV de amostra foi usada para fins ilustrativos. Estas são algumas das características do arquivo de amostra.
-
-- O arquivo não tinha nenhum evento token.
-- O arquivo não tinha nenhum evento somente de conversão (não continha linhas de pontuação com 0 como pontuação marginal).
-- Características dos dados:
-   - Total de 368 linhas de amostra.
-   - Pelo menos 8 conversões com 3 canais diferentes cada.
-   - 151 conversões do tipo de conversão `“Digital_Product_Purchase”`.
-   - 10 pontos de contato distintos, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER, LANDINGPAGE, SOCIAL_FB, ADS_BING, IMPRESSÃO.
-   - As conversões e os pontos de contato variam entre 8 e 9 meses, respectivamente.
-   - As linhas são ordenadas por `id`, `conversion_timestamp` e `touchpoint_timestamp`.
-
 **Exemplo de schema de saída:**
 
 ![](./images/input-output/schema_output.gif)
@@ -139,7 +127,7 @@ A tabela a seguir descreve os campos de schema na saída de exemplo de pontuaç�
 | customerProfile (Object) | Falso | Detalhes de identificação do usuário usado para criar o modelo. |
 | identity (Object) | Falso | Contém os detalhes do usuário usado para criar o modelo, como `id` e `namespace`. |
 | id (String) | Verdadeiro | ID de identificação do usuário, como ID de cookie ou AAID ou MCID etc. <br> **Exemplo:** 17348762725408656344688320891369597404 |
-| namespace (string) | Verdadeiro | namespace de identidade usada para criar os caminhos e, consequentemente, o modelo. <br> **Exemplo:** auxílio |
+| namespace (string) | Verdadeiro | Namespace de identidade usada para criar os caminhos e, consequentemente, o modelo. <br> **Exemplo:** auxílio |
 | touchpointsDetail (Object Array) | Verdadeiro | A lista dos detalhes do ponto de contato que levam à conversão ordenada pela ocorrência do ponto de contato ou pelo carimbo de data e hora. |
 | touchpointName (String) | Verdadeiro | Nome do ponto de contato configurado durante a configuração. <br> **Exemplo:** PAID_SEARCH_CLICK |
 | pontuações (Objeto) | Verdadeiro | Contribuição do ponto de contato para essa conversão como pontuação. Para obter mais informações sobre as pontuações produzidas dentro desse objeto, consulte a seção Pontuações [de atribuição](#aggregated-attribution-scores) agregadas. |

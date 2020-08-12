@@ -1,71 +1,42 @@
 ---
 title: 'Notas de versão do Adobe Experience Platform '
-description: As notas de versão mais recentes do Experience Platform
+description: Notas de versão de Experience Platform 10 de agosto de 2020
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 5%
+source-wordcount: '296'
+ht-degree: 7%
 
 ---
 
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 15 de julho de 2020**
+**Data de lançamento: 12 de agosto de 2020**
 
-Atualizações dos recursos existentes no Adobe Experience Platform:
+As notas de versão mais recentes do Experience Platform
 
-- [Governança de dados](#governance)
-- [Perfil do cliente em tempo real](#profile)
-- [Serviço de segmentação](#segmentation)
-- [Fontes](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!Fontes DNL]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-O Adobe Experience Platform Data Governance é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
-
-**Novos recursos**
-
-| Recurso | Descrição |
-| -----------| ---------- |
-| Aplicação automática de política em [!DNL Real-time Customer Data Platform] | As políticas de uso de dados agora são aplicadas automaticamente [!DNL Real-time CDP] quando ocorrem violações de ações, incluindo a ativação de segmentos para destinos. Quando uma violação de política é acionada, os usuários obtêm visibilidade em tempo real das restrições de uso no fluxo de trabalho da ativação, indicando quais dados não podem usar e por quê.<br><br>Consulte a seção sobre como [impor a conformidade](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) de uso de dados na visão geral [!DNL Data Governance] em [!DNL Real-time CDP] para obter mais informações. |
-| integração Adobe Audience Manager | Quaisquer segmentos compartilhados com [!DNL Audience Manager] de [!DNL Platform] herdam quaisquer rótulos de uso de dados aplicados como [!DNL Data Export Controls], e vice-versa. Consulte a [!DNL Audience Manager] documentação para obter [mapeamentos específicos entre rótulos de uso e Controles](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)de exportação de dados. |
-| Rótulos de uso de dados personalizados | Agora você pode criar rótulos personalizados de uso de dados usando a API do Serviço de Política ou na interface do usuário. Consulte a visão geral [das](../../data-governance/labels/overview.md) etiquetas para obter mais informações. |
-
-Consulte a visão geral [do](../../data-governance/home.md) Data Governance para obter mais informações sobre o serviço.
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-O Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+[!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para liberar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] ajuda você a fazer previsões usando seu conteúdo e seus ativos de dados nas soluções de Adobe.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Aplicação da política de utilização de dados | Em [!DNL Real-time Customer Data Platform]geral, as violações da política de uso de dados são exibidas automaticamente quando uma ação violadora no espaço de trabalho do [!UICONTROL Perfil] é tentada. Consulte as notas de [versão do Data Governance](#governance) para obter mais informações sobre a aplicação automática de políticas. |
+| Melhorias na VM em [!DNL JupyterLab] | Aprimorada a estabilidade de máquinas virtuais de longa duração. [!DNL JupyterLab notebook] |
 
-## [!DNL Segmentation Service] {#segmentation}
-
-O Serviço de segmentação de Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform], tornando-os facilmente acessíveis por qualquer aplicativo Adobe.
-
-[!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo comercializável de pessoas dentro da sua base de clientes. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
-
-**Novos recursos**
-
-| Recurso | Descrição |
-| ------- | ----------- |
-| Segmentação em streaming | A segmentação de fluxo agora pode se qualificar como um usuário em um segmento à medida que os dados chegam, [!DNL Platform]reduzindo drasticamente o tempo de qualificação do segmento. A segmentação de fluxo também reduz a necessidade de executar tarefas de segmentação manualmente. |
-| Aplicação da política de utilização de dados | Em [!DNL Real-time Customer Data Platform]geral, as violações da política de uso de dados são exibidas automaticamente quando uma ação violadora no espaço de trabalho [!UICONTROL Segmentos] é tentada. Consulte as notas de [versão do Data Governance](#governance) para obter mais informações sobre a aplicação automática de políticas. |
-
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [Segmentação](../../segmentation/home.md)
+Para obter mais informações sobre [!DNL JupyterLab], consulte o guia [[!DNL JupyterLab] do usuário](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
@@ -73,7 +44,9 @@ O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte de interface para exclusão de fluxos de dados | Os fluxos de dados que foram feitos com erros ou se tornaram desnecessários agora podem ser excluídos por meio da interface do usuário. |
-| Suporte a API e interface para ingestão única | A ingestão única para fluxos de dados, onde somente a data do start é fornecida e nenhuma ingestão futura está programada, agora pode ser executada por meio de APIs ou por meio da interface do usuário. |
+| Monitoramento de execução de fluxo | Os usuários podem monitorar todas as execuções de fluxo e ver uma visualização detalhada de cada execução, incluindo status de conclusão, duração da execução, lista de arquivos processados, erros e métricas. Consulte o documento de [monitoramento de fluxos de dados](../../sources/tutorials/ui/monitor.md) para obter mais informações. |
+| Atualização da conta | Os usuários podem atualizar as credenciais, o nome e a descrição de qualquer conta existente para fornecer informações mais significativas e corrigir quaisquer erros que possam ter sido criados. |
+| Notificações de execução de fluxo | Os usuários podem se inscrever em eventos e registrar webhooks para receber notificações em tempo real sobre o status, as métricas e os erros relacionados às execuções de fluxo. |
+| Melhorias no catálogo da interface | Atualizações na tela de catálogo de fontes para facilitar o acesso às ações primárias de objetos selecionados. |
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.

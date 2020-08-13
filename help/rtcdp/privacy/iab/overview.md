@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suporte ao IAB TCF 2.0 na Plataforma de dados do cliente em tempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 67c598000cec36a170e7324877d4d9f2db9453a4
+source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%
@@ -150,7 +150,7 @@ O `setConsent` comando espera dois argumentos: (1) uma string que indica o tipo 
 ```js
 alloy("setConsent", {
   consent: [{
-    standard: "IAB",
+    standard: "IAB TCF",
     version: "2.0",
     value: "CLcVDxRMWfGmWAVAHCENAXCkAKDAADnAABRgA5mdfCKZuYJez-NQm0TBMYA4oCAAGQYIAAAAAAEAIAEgAA.argAC0gAAAAAAAAAAAA",
     gdprApplies: "true"

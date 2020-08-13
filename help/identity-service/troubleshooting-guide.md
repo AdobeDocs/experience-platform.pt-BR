@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guia de solução de problemas do Serviço de identificação do Adobe Experience Platform
+title: Guia de solução de problemas do Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Guia de solução de problemas do Serviço de identidade
 
-Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Em caso de dúvidas e solução de problemas relacionados às [!DNL Platform] APIs em geral, consulte o guia [de solução de problemas da API de](../landing/troubleshooting.md)Adobe Experience Platform.
+Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Em caso de dúvidas e solução de problemas relacionados às [!DNL Platform] APIs em geral, consulte o guia [de solução de problemas da API](../landing/troubleshooting.md)Adobe Experience Platform.
 
 Os dados que identificam um único cliente são frequentemente fragmentados em vários dispositivos e sistemas que ele usa para se relacionar com sua marca. [!DNL Identity Service] reúne essas identidades fragmentadas, facilitando uma compreensão completa do comportamento do cliente para que você possa oferecer experiências digitais de impacto em tempo real. Para obter mais informações, consulte a visão geral [do Serviço de](./home.md)identidade.
 
@@ -50,19 +50,19 @@ Para obter etapas sobre como rotular um campo XDM como um campo de identidade us
 
 ## Há contextos em que alguns campos não devem ser rotulados como identidades?
 
-Os campos de identidade devem ser reservados para valores exclusivos para cada indivíduo. Por exemplo, considere um conjunto de dados para um programa de fidelidade do cliente. O campo de &quot;nível de fidelidade&quot; (ouro, prata, bronze) não seria um campo de identidade útil, ao passo que a ID de fidelidade — um valor único — seria.
+Os campos de identidade devem ser reservados para valores exclusivos para cada indivíduo. Por exemplo, considere um conjunto de dados para um programa de fidelidade do cliente. O campo de &quot;nível de fidelidade&quot; (ouro, prata, bronze) não seria um campo de identidade útil, ao passo que a ID de fidelidade — um valor exclusivo — seria.
 
 Campos como CEP e endereços IP não devem ser rotulados como identidades para indivíduos, pois esses valores podem se aplicar a mais de uma pessoa individual. Estes tipos de campos só devem ser rotulados como identidades para as estratégias de comercialização a nível do agregado familiar.
 
 ## Por que meus campos de identidade não estão vinculando da maneira que eu espero?
 
-Usando o [`/cluster/members` endpoint](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível visualização das identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre como [fornecer dados XDM ao Serviço](./home.md) de identidade na visão geral do Serviço de identidade para obter mais informações.
+Usando o [`/cluster/members` endpoint](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível visualização das identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre como [fornecer dados XDM ao serviço](./home.md) de identidade na visão geral do serviço de identidade para obter mais informações.
 
 ## O que é uma namespace de identidade?
 
 Uma namespace de identidade fornece contexto sobre como os campos de identidade se relacionam à identidade de um cliente. Por exemplo, os campos de identidade na namespace &quot;Email&quot; devem estar em conformidade com um formato do email padrão (nome<span>@emailprovider.com), enquanto os campos que usam a namespace &quot;Telefone&quot; devem estar em conformidade com um número de telefone padrão (como 987-555-1234 na América do Norte).
 
-As Namespaces distinguem valores de identidade similares entre sistemas CRM diferentes. Por exemplo, considere um perfil que contenha uma ID de Fidelidade numérica associada ao programa redirecionado do empresa. Uma namespace de &quot;Fidelidade&quot; separaria esse valor de uma ID numérica semelhante para seu sistema de comércio eletrônico que também aparece no mesmo perfil.
+As namespaces distinguem valores de identidade similares entre sistemas CRM diferentes. Por exemplo, considere um perfil que contenha uma ID de Fidelidade numérica associada ao programa redirecionado do empresa. Uma namespace de &quot;Fidelidade&quot; separaria esse valor de uma ID numérica semelhante para seu sistema de comércio eletrônico que também aparece no mesmo perfil.
 
 Consulte a visão geral [da namespace de](./home.md) identidade para obter mais informações.
 
@@ -72,7 +72,7 @@ Os campos de identidade devem ser associados a uma namespace de identidade exist
 
 Para obter instruções passo a passo sobre como definir uma namespace ao criar um descritor de identidade usando a API, consulte a seção sobre como [criar um descritor](../xdm/tutorials/create-schema-ui.md) no guia do desenvolvedor do Registro de Schemas. Para marcar um campo de schema como uma identidade na interface do usuário, siga as etapas no tutorial [do Editor de](../xdm/tutorials/create-schema-api.md)Schemas.
 
-## Quais são as namespaces de identidade padrão fornecidas pela Experience Platform?
+## Quais são as namespaces de identidade padrão fornecidas pela Experience Platform? {#standard-namespaces}
 
 As seguintes namespaces padrão são fornecidas para uso por todas as organizações dentro do Experience Platform:
 
@@ -81,11 +81,11 @@ As seguintes namespaces padrão são fornecidas para uso por todas as organizaç
 | CORE | 0 | CORE | nome do legado: &quot;Adobe AudienceManager&quot; |
 | ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
 | Email | 6 | Email |  |
-| Email (SHA256, em minúsculas) | 11 | Emails | namespace padrão para email pré-hash. Os valores fornecidos nesta namespace são convertidos em minúsculas antes de hash com SHA-256. |
+| Email (SHA256, em minúsculas) | 11 | Emails | Namespace padrão para email pré-hash. Os valores fornecidos nesta namespace são convertidos em minúsculas antes de hash com SHA-256. |
 | Telefone | 7 | Telefone |  |
 | Windows AID | 8 | WAID |  |
 | AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | ID do Público alvo |
+| Adobe Target | 9 | TNTID | ID do público alvo |
 | ID do Google Ad | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | ID para anunciantes |
 
@@ -105,9 +105,9 @@ As identidades são referenciadas em chamadas de API pela identidade composta ou
 
 O Serviço de identidade cria um hash criptográfico de PII forte e unidirecional antes dos valores persistentes. Os dados de identidade nas namespaces &quot;Telefone&quot; e &quot;Email&quot; são automaticamente hash usando SHA-256, com valores de &quot;Email&quot; automaticamente convertidos em minúsculas antes de hash.
 
-## Devo criptografar todas as PII antes de enviar para a Platform?
+## Devo criptografar todas as PII antes de enviar para a Plataforma?
 
-Não é necessário criptografar manualmente os dados de PII antes de ingressá-los no Platform. Ao aplicar o rótulo de uso de `I1` dados a todos os campos de dados aplicáveis, a Platform converte esses campos automaticamente em valores de ID com hash após a ingestão.
+Não é necessário criptografar manualmente os dados de PII antes de assimilá-los na Plataforma. Ao aplicar o rótulo de uso de `I1` dados a todos os campos de dados aplicáveis, a Plataforma converte esses campos automaticamente em valores de ID com hash após a ingestão.
 
 Para obter etapas sobre como aplicar e gerenciar rótulos de uso de dados, consulte o tutorial [de rótulos de uso de](../data-governance/labels/user-guide.md)dados.
 
@@ -232,7 +232,7 @@ Esta mensagem de erro é exibida quando a Organização IMS não foi provisionad
 }
 ```
 
-No caso deste erro, o token de acesso é inválido. Os Tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
+No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token do serviço de autorização não é válido
 
@@ -244,7 +244,7 @@ No caso deste erro, o token de acesso é inválido. Os Tokens de acesso expiram 
 }
 ```
 
-No caso deste erro, o token de acesso é inválido. Os Tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
+No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token de usuário não tem um contexto de produto válido
 
@@ -300,7 +300,7 @@ Este erro é exibido quando ocorre uma exceção inesperada na execução de uma
 
 A seguir está uma lista de mensagens de erro relacionadas a [!DNL Identity Service] você pode encontrar ao usar a API [de ingestão de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)dados.
 
-### schema XDM desconhecido
+### Schema XDM desconhecido
 
 ```json
 {
@@ -336,7 +336,7 @@ Esse erro é exibido quando as primeiras 100 linhas de um lote não apresentam i
 
 [!DNL Identity Service] somente vincula identidades quando registros únicos apresentam dois ou mais valores de identidade. Esta mensagem de erro ocorre uma vez para cada lote ingerido e exibe o número de registros em que apenas uma identidade foi encontrada e não resultou em nenhuma alteração no gráfico de identidade.
 
-### O Código de Namespace não está registrado para esta Organização IMS
+### O Código de namespace não está registrado para esta Organização IMS
 
 ```json
 {

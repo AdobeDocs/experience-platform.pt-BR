@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7237'
+source-wordcount: '7245'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 **Adobe Experience Platform Launch:** [!DNL Launch] é um ecossistema de gerenciamento de tags e SDK, integrado com [!DNL Experience Platform] e [!DNL Experience Cloud] aplicativos. [!DNL Launch] fornece ferramentas para implantar, unificar e gerenciar as integrações de análises, marketing e publicidade necessárias para potencializar as experiências relevantes do cliente em todos os dispositivos do cliente.
 
-**Extensões do Adobe Experience Platform Launch:** [!DNL Experience Platform Launch] as extensões permitem o delivery de dados brutos do evento diretamente para [!DNL Real-time Customer Data Platform] destinos. A instalação de [!DNL Launch] extensões requer acesso às [!DNL Launch] propriedades.
+**Extensões do Adobe Experience Platform Launch:** [!DNL Experience Platform Launch] extensões permitem o delivery de dados brutos do evento diretamente para [!DNL Real-time Customer Data Platform] destinos. A instalação de [!DNL Launch] extensões requer acesso às [!DNL Launch] propriedades.
 
 **Serviço** de Query Adobe Experience Platform Permite o uso de SQL padrão para dados de query no Experience Platform, unindo quaisquer conjuntos de dados no Data Lake e capturando os resultados do query como um novo conjunto de dados para uso no relatórios, na Data Science Workspace ou no Perfil de cliente em tempo real.
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 **Estratégia de gravação Delta:** `Delta save strategy` é uma opção para assimilar dados de terceiros por meio de uma conexão. A opção permite que o usuário especifique se linhas novas ou alteradas de dados de origem são assimiladas [!DNL Experience Platform]. Novas linhas são adicionadas ao final do conjunto de dados e as linhas alteradas são atualizadas no conjunto de dados em [!DNL Experience Platform].
 
-**Destino:** Em [!DNL Real-time Customer Data Platform] um destino é um termo geral para qualquer sistema, como um aplicativo Adobe, servidor de anúncios ou rede de anúncios em que uma audiência é ativada e entregue.
+**Destino:** Em [!DNL Real-time Customer Data Platform] um destino é um termo geral para qualquer terminal, como um aplicativo de Adobe, plataforma de publicidade, serviço de armazenamento em nuvem ou serviço de marketing, onde uma audiência é ativada e fornecida.
 
 **Categoria de destino:** Uma categoria de destino é um agrupamento de [!DNL Real-time Customer Data Platform] destinos com características semelhantes.
 
@@ -326,9 +326,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]:**Uma interface baseada na Web de código aberto para o Project[!DNL Jupyter]e é totalmente integrada ao[!DNL Experience Platform].
+**[!DNL JupyterLab]:** Uma interface baseada na Web de código aberto para o Project [!DNL Jupyter] e é totalmente integrada ao [!DNL Experience Platform].
 
-**[!DNL Jupyter Notebook]:**Um aplicativo da Web de código aberto que permite que os usuários criem e compartilhem documentos que contêm código ativo, equações, visualizações e texto narrativo.
+**[!DNL Jupyter Notebook]:** Um aplicativo da Web de código aberto que permite que os usuários criem e compartilhem documentos que contêm código ativo, equações, visualizações e texto narrativo.
 
 ## K
 
@@ -366,7 +366,7 @@ ht-degree: 0%
 
 **Caixa de proteção de não produção:** As caixas de proteção de não produção são uma forma de virtualização de dados que permite isolar dados de outras caixas de proteção e são normalmente usadas para experimentos de desenvolvimento, testes ou testes. As caixas de proteção de não produção podem ser redefinidas e excluídas.
 
-**[!DNL Notebooks]:**[!DNL Notebooks]são criados usando *[!DNL Jupyter Notebook]*e contêm descrição de análise, resultados e podem ser executados para executar a análise de dados.
+**[!DNL Notebooks]:** [!DNL Notebooks] são criados usando *[!DNL Jupyter Notebook]* e contêm descrição de análise, resultados e podem ser executados para executar a análise de dados.
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 
@@ -418,7 +418,7 @@ ht-degree: 0%
 
 **Exportação de perfil:** [!DNL Profile] a exportação é um dos dois tipos de destinos em [!DNL Real-time Customer Data Platform]. [!DNL Profile] o Export gera um arquivo contendo perfis e atributos, e usa dados PII brutos com e-mail e é usado para integração com plataformas de marketing e automação de e-mail.
 
-**Fragmento do perfil FProfile:** Um fragmento de perfil são as informações do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico.
+**Fragmento do perfil:** Um fragmento de perfil são as informações do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico.
 
 **ID do perfil:** Uma ID de perfil é um identificador gerado automaticamente associado a um tipo de identidade e representa um perfil.
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
 **Método de avaliação de segmento:** A avaliação programada do segmento permite uma programação recorrente para executar uma tarefa de exportação em um horário específico, enquanto a avaliação sob demanda envolve a criação de uma tarefa de segmento para criar a audiência imediatamente.
 
-**Exportação de segmento:** A exportação do segmento é um dos dois tipos de destinos e envia os perfis que se qualificam e foram mapeados para o destino. Usa IDs de segmento e usuário e dados pseudônimos e geralmente se integra às redes sociais e outras plataformas de público alvo de mídia digital.
+**Exportação de segmento:** A exportação de segmentos é um dos dois tipos de destinos em [!DNL Real-time Customer Data Platform]. Com a exportação de segmentos, você pode enviar os perfis que se qualificam e que foram mapeados para o destino. Usa IDs de segmento e usuário e dados pseudônimos e geralmente se integra às redes sociais e outras plataformas de público alvo de mídia digital.
 
 **ID do segmento:** A ID do segmento é um identificador gerado automaticamente associado a um segmento.
 

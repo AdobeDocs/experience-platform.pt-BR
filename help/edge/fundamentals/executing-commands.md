@@ -1,10 +1,10 @@
 ---
 title: Execução de comandos
-seo-title: Execução de comandos Adobe Experience Platform Web SDK
+seo-title: Execução de comandos do Adobe Experience Platform Web SDK
 description: Saiba como executar comandos do SDK da Web do Experience Platform
 seo-description: Saiba como executar comandos do SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
@@ -28,7 +28,7 @@ O `commandName` informa ao SDK o que fazer, embora `options` sejam os parâmetro
 
 [As promessas](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) são fundamentais para como o SDK se comunica com o código na sua página da Web. Uma promessa é uma estrutura de programação comum e não é específica para esse SDK ou mesmo para JavaScript. Uma promessa atua como um proxy para um valor que não é conhecido quando a promessa é criada. Quando o valor é conhecido, a promessa é &quot;resolvida&quot; com o valor. As funções de manipulador podem ser associadas a uma promessa, para que você possa ser notificado quando a promessa tiver sido resolvida ou quando um erro tiver ocorrido no processo de resolução da promessa. Para saber mais sobre as promessas, leia [este tutorial](https://javascript.info/promise-basics) ou qualquer outro recurso na web.
 
-## Lidar com sucesso ou falha
+## Lidar com sucesso ou falha {#handling-success-or-failure}
 
 Cada vez que um comando é executado, uma promessa é retornada. A promessa representa a conclusão final do comando. No exemplo abaixo, você pode usar `then` e `catch` métodos para determinar quando o comando foi bem-sucedido ou falhou.
 

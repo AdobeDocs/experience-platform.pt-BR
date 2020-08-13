@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ajuda da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
+source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '469'
 ht-degree: 10%
 
 ---
@@ -128,13 +128,13 @@ ht-degree: 10%
       * [Ativar perfis e segmentos em um destino](destinations/activate-destinations.md)
    * Tutoriais da API de destino {#api-tutorials}
       * [Conecte-se aos destinos de streaming (Kinesis AWS e Hubs de Evento do Azure) e ative os dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Conectar-se aos destinos de marketing de email e ativar dados](/help/tutorials/destinations/email-marketing-api.md)
+      * [Conectar-se aos destinos de marketing de email e ativar dados](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
 * Privacidade e controle de dados {#privacy}
    * [Visão geral de privacidade](privacy/privacy-overview.md)
    * [Visão geral do controle de dados](privacy/data-governance-overview.md)
    * Suporte a IAB TCF 2.0 {#iab}
-      * [Suporte IAB TCF 2.0 em CDP em tempo real](./privacy/iab/overview.md)
-      * [Criar conjuntos de dados para capturar dados de consentimento do IAB TCF 2.0](./privacy/iab/dataset-preparation.md)
+      * [Suporte IAB TCF 2.0 em CDP em tempo real](privacy/iab/overview.md)
+      * [Criar conjuntos de dados para capturar dados de consentimento do IAB TCF 2.0](privacy/iab/dataset-preparation.md)
 * Perfis {#profile}
    * [Visão geral do perfil](profile/profile-overview.md)
    * [Identidades e namespaces de identidade](profile/identities-overview.md)

@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ajuda da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
+source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 11%
+source-wordcount: '460'
+ht-degree: 10%
 
 ---
 
@@ -132,6 +132,9 @@ ht-degree: 11%
 * Privacidade e controle de dados {#privacy}
    * [Visão geral de privacidade](privacy/privacy-overview.md)
    * [Visão geral do controle de dados](privacy/data-governance-overview.md)
+   * Suporte a IAB TCF 2.0 {#iab}
+      * [Suporte IAB TCF 2.0 em CDP em tempo real](./privacy/iab/overview.md)
+      * [Criar conjuntos de dados para capturar dados de consentimento do IAB TCF 2.0](./privacy/iab/dataset-preparation.md)
 * Perfis {#profile}
    * [Visão geral do perfil](profile/profile-overview.md)
    * [Identidades e namespaces de identidade](profile/identities-overview.md)

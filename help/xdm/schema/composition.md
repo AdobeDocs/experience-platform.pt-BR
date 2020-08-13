@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do schema
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2782'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Um schema é um conjunto de regras que representam e validam a estrutura e o for
 
 Além de descrever a estrutura dos dados, os schemas aplicam restrições e expectativas aos dados para que eles possam ser validados conforme se movem entre os sistemas. Essas definições padrão permitem que os dados sejam interpretados de forma consistente, independentemente da origem, e removem a necessidade de tradução entre aplicativos.
 
-[!DNL Experience Platform] mantém essa normalização semântica com o uso de schemas. Os Schemas são a forma padrão de descrever os dados no, permitindo que todos os dados que estão em conformidade com os schemas sejam reutilizáveis sem conflitos em uma organização e até mesmo compartilháveis entre várias organizações. [!DNL Experience Platform]
+[!DNL Experience Platform] mantém essa normalização semântica com o uso de schemas. Os schemas são a forma padrão de descrever os dados no, permitindo que todos os dados que estão em conformidade com os schemas sejam reutilizáveis sem conflitos em uma organização e até mesmo compartilháveis entre várias organizações. [!DNL Experience Platform]
 
 ### Tabelas relacionais versus objetos incorporados
 
@@ -34,9 +34,9 @@ Por meio do uso de objetos incorporados, os schemas XDM podem representar direta
 
 Os sistemas digitais modernos geram grandes quantidades de sinais comportamentais (dados de transação, registros web, internet de coisas, exibição e assim por diante). Esses grandes dados ofertas oportunidades extraordinárias para otimizar experiências, mas são desafiadores para usar devido à escala e variedade dos dados. A fim de obter valor dos dados, a sua estrutura, formato e definições devem ser padronizados de modo a que possam ser processados de forma consistente e eficiente.
 
-Os Schemas resolvem esse problema permitindo a integração de dados de várias fontes, padronização por meio de estruturas e definições comuns e compartilhamento entre soluções. Isso permite que processos e serviços subsequentes respondam a qualquer tipo de pergunta que esteja sendo feita sobre os dados, afastando-se da abordagem tradicional à modelagem de dados, onde todas as perguntas que serão feitas sobre os dados são conhecidas antecipadamente e os dados são modelados para atender a essas expectativas.
+Os schemas resolvem esse problema permitindo a integração de dados de várias fontes, padronização por meio de estruturas e definições comuns e compartilhamento entre soluções. Isso permite que processos e serviços subsequentes respondam a qualquer tipo de pergunta que esteja sendo feita sobre os dados, afastando-se da abordagem tradicional à modelagem de dados, onde todas as perguntas que serão feitas sobre os dados são conhecidas antecipadamente e os dados são modelados para atender a essas expectativas.
 
-### workflows baseados em Schemas em [!DNL Experience Platform]
+### Workflows baseados em schemas em [!DNL Experience Platform]
 
 A normalização é um conceito fundamental subjacente [!DNL Experience Platform]. O XDM, impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas padrão para o gerenciamento da experiência do cliente.
 
@@ -59,15 +59,54 @@ Os schemas de registro e de série de tempo contêm um mapa de identidades (`xdm
 
 ### [!UICONTROL Identidade]
 
-Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante, ao pensar em schemas, pensar em &quot;[!UICONTROL Identidade]&quot; e quais campos podem ser usados para identificar um indivíduo, independentemente de onde os dados venham.
+Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante que, ao pensar nos schemas, se pense nas identidades dos clientes e nos campos que podem ser usados para identificar um assunto, independentemente de onde os dados venham.
 
-Para ajudar nesse processo, os campos principais podem ser marcados como &quot;[!UICONTROL Identidade]&quot;. Após a ingestão dos dados, os dados nesses campos serão inseridos no &quot;Gráfico[!UICONTROL de]identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [!DNL Real-time Customer Profile](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
+Para ajudar nesse processo, os campos principais dentro dos schemas podem ser marcados como identidades. Após a ingestão dos dados, os dados nesses campos são inseridos no &quot;Gráfico[!UICONTROL de]identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [!DNL Real-time Customer Profile](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
 
 Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
 
-É importante pensar nas identidades dos clientes durante a fase de planejamento do schema, a fim de ajudar a garantir que os dados estejam sendo reunidos para construir o perfil mais robusto possível. Consulte a visão geral [do Serviço de](../../identity-service/home.md) identidade para saber mais sobre como as informações de identidade podem ajudá-lo a fornecer experiências digitais aos seus clientes.
+É importante pensar nas identidades dos clientes durante a fase de planejamento do schema, a fim de ajudar a garantir que os dados estejam sendo reunidos para construir o perfil mais robusto possível. Consulte a visão geral do Serviço [de identidade da](../../identity-service/home.md) Adobe Experience Platform para saber mais sobre como as informações de identidade podem ajudá-lo a fornecer experiências digitais aos seus clientes.
 
-### Princípios de evolução do Schema {#evolution}
+#### xdm:identityMap
+
+`xdm:identityMap` é um campo tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com suas namespaces associadas. Esse campo pode ser usado para fornecer informações de identidade para seus schemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
+
+Um exemplo de um mapa de identidade simples seria semelhante ao seguinte:
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+Como mostra o exemplo acima, cada chave no `identityMap` objeto representa uma namespace de identidade. O valor de cada chave é uma matriz de objetos, representando os valores de identidade (`id`) da respectiva namespace. Consulte a [!DNL Identity Service] documentação para obter uma [lista de namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) de identidade padrão reconhecidas pelos aplicativos Adobe.
+
+>[!NOTE]
+>
+>Um valor booliano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. Só é necessário definir identidades primárias para schemas destinados a serem utilizados em [!DNL Real-time Customer Profile]. Consulte a seção sobre schemas [de](#union) união para obter mais informações.
+
+### Princípios de evolução do schema {#evolution}
 
 À medida que a natureza das experiências digitais continua a evoluir, também os schemas devem ser utilizados para as representar. Um schema bem projetado pode, portanto, se adaptar e evoluir conforme necessário, sem causar alterações destrutivas em versões anteriores do schema.
 
@@ -83,13 +122,13 @@ Uma vez que a manutenção da compatibilidade com versões anteriores é crucial
 
 ### Schemas e ingestão de dados
 
-Para ingerir dados no [!DNL Experience Platform], um conjunto de dados deve ser criado primeiro. Os conjuntos de dados são os elementos básicos para a transformação e o rastreamento de dados para [!DNL Catalog Service](../../catalog/home.md)e geralmente representam tabelas ou arquivos que contêm dados assimilados. Todos os conjuntos de dados são baseados em schemas XDM existentes, que fornecem restrições para o que os dados ingeridos devem conter e como devem ser estruturados. Consulte a visão geral sobre a assimilação [de dados de](../../ingestion/home.md) Adobe Experience Platform para obter mais informações.
+Para ingerir dados no [!DNL Experience Platform], um conjunto de dados deve ser criado primeiro. Os conjuntos de dados são os elementos básicos para a transformação e o rastreamento de dados para [!DNL Catalog Service](../../catalog/home.md)e geralmente representam tabelas ou arquivos que contêm dados assimilados. Todos os conjuntos de dados são baseados em schemas XDM existentes, que fornecem restrições para o que os dados ingeridos devem conter e como devem ser estruturados. Consulte a visão geral da [Adobe Experience Platform Data Ingsion](../../ingestion/home.md) para obter mais informações.
 
 ## Elementos básicos de um schema
 
 [!DNL Experience Platform] usa uma abordagem de composição na qual os blocos componentes padrão são combinados para criar schemas. Essa abordagem promove a reutilização dos componentes existentes e orienta a padronização em todo o setor para suportar os schemas e componentes do fornecedor no [!DNL Platform].
 
-Os Schemas são compostos usando a seguinte fórmula:
+Os schemas são compostos usando a seguinte fórmula:
 
 **Classe + Mixin&amp;ast; = Schema XDM**
 
@@ -172,7 +211,7 @@ Consulte o dicionário [de campos](field-dictionary.md) XDM para obter uma lista
 
 ## Exemplo de composição
 
-Os Schemas representam o formato e a estrutura dos dados que serão assimilados [!DNL Platform]e são criados usando um modelo de composição. Como mencionado anteriormente, esses schemas são compostos de uma classe e zero ou mais combinações compatíveis com essa classe.
+Os schemas representam o formato e a estrutura dos dados que serão assimilados [!DNL Platform]e são criados usando um modelo de composição. Como mencionado anteriormente, esses schemas são compostos de uma classe e zero ou mais combinações compatíveis com essa classe.
 
 Por exemplo, um schema que descreve compras feitas em uma loja de varejo pode ser chamado de &quot;Transações[!UICONTROL de]loja&quot;. O schema implementa a [!DNL XDM ExperienceEvent] classe combinada com a combinação padrão de [!UICONTROL Comércio] e uma combinação de informações [!UICONTROL do] produto definida pelo usuário.
 
@@ -200,7 +239,7 @@ Todos os arquivos de dados que são assimilados [!DNL Experience Platform] devem
 
 Agora que você entende as noções básicas da composição do schema, você está pronto para começar a construir schemas usando o [!DNL Schema Registry].
 
-O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform e fornece uma interface de usuário e uma RESTful API da qual todos os recursos disponíveis da biblioteca estão acessíveis. O [!DNL Schema Library] contém recursos do Setor definidos pelo Adobe, recursos do Fornecedor definidos pelos [!DNL Experience Platform] parceiros e classes, mixins, tipos de dados e schemas que foram compostos por membros da sua organização.
+O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform e fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis. O [!DNL Schema Library] contém recursos do Setor definidos pelo Adobe, recursos do Fornecedor definidos pelos [!DNL Experience Platform] parceiros e classes, mixins, tipos de dados e schemas que foram compostos por membros da sua organização.
 
 Para começar a compor o schema usando a interface do usuário, siga o tutorial [do Editor de](../tutorials/create-schema-ui.md) Schemas para criar o schema &quot;Membros da fidelidade&quot; mencionado em todo o documento.
 

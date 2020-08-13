@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Trabalhos do sistema do Perfil - API do Perfil do cliente em tempo real
+title: Trabalhos do sistema do perfil - API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -12,9 +12,9 @@ ht-degree: 2%
 ---
 
 
-# Ponto final de trabalhos do sistema de Perfil (Excluir solicitações)
+# Ponto final de trabalhos do sistema de perfil (Excluir solicitações)
 
-O Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos [!DNL Platform] são armazenados no armazenamento [!DNL Data Lake] e no [!DNL Real-time Customer Profile] armazenamento de dados. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da [!DNL Real-time Customer Profile] API para criar um trabalho do [!DNL Profile] sistema, também conhecido como &quot;[!DNL delete request]&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
+A Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos [!DNL Platform] são armazenados no armazenamento [!DNL Data Lake] e no [!DNL Real-time Customer Profile] armazenamento de dados. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da [!DNL Real-time Customer Profile] API para criar um trabalho do [!DNL Profile] sistema, também conhecido como &quot;[!DNL delete request]&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
 
 >[!NOTE]
 >Se você estiver tentando excluir conjuntos de dados ou lotes do [!DNL Data Lake], visite a visão geral [do Serviço de](../../catalog/home.md) catálogo para obter instruções.
@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **Solicitação**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -277,7 +277,7 @@ Quando o status da solicitação de exclusão for `"COMPLETED"` você poderá co
 
 ## Remover uma solicitação de exclusão
 
-[!DNL Experience Platform] permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso no estágio de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação de DELETE para o `/system/jobs` ponto de extremidade e incluir a ID da solicitação de exclusão que você deseja remover para o caminho da solicitação.
+[!DNL Experience Platform] permite que você exclua uma solicitação anterior, que pode ser útil por vários motivos, incluindo se o trabalho de exclusão não foi concluído ou ficou preso no estágio de processamento. Para remover uma solicitação de exclusão, é possível executar uma solicitação de DELETE para o ponto de extremidade `/system/jobs` e incluir a ID da solicitação de exclusão que você deseja remover para o caminho da solicitação.
 
 **Formato da API**
 

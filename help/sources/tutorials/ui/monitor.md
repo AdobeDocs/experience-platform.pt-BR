@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
@@ -100,7 +100,9 @@ O painel pré-visualização *[!UICONTROL do diagnóstico]* Error (Erro) é exib
 
 Esta seção também inclui uma pré-visualização da coluna que contém o erro.
 
-> [!IMPORTANT] Para ativar a pré-visualização *[!UICONTROL de diagnóstico de]* erro, é necessário ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro ao configurar um fluxo de dados. Isso permitirá que o sistema verifique todos os registros ingeridos durante a execução do fluxo.
+>[!IMPORTANT]
+>
+>Para ativar a pré-visualização *[!UICONTROL de diagnóstico de]* erro, é necessário ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro ao configurar um fluxo de dados. Isso permitirá que o sistema verifique todos os registros ingeridos durante a execução do fluxo.
 
 ![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/preview-error-diagnostics.png)
 

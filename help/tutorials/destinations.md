@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um destino e ativar dados usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: cd593e67578f6c6831f02c3b9dcb9a0db4def48a
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 11%
@@ -16,10 +16,10 @@ ht-degree: 11%
 
 Saiba como criar diferentes tipos de destinos e ativar dados. Esta funcionalidade está disponível para usuários da Plataforma de dados do cliente em tempo real [Adobe](https://docs.adobe.com/content/help/pt-BR/experience-platform/rtcdp/overview.html).
 
-## Destinos de marketing de email
+## Destinos de marketing de email {#email-destinations}
 
 * [Criar um destino de marketing por email e ativar dados](/help/rtcdp/destinations/email-marketing-api.md)
 
-## Destinos de streaming de armazenamentos na nuvem
+## Destinos de streaming de armazenamentos na nuvem {#streaming-destinations}
 
 * [Conectar-se a destinos de streaming e ativar dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)

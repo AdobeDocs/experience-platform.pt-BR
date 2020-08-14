@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Suporte ao IAB TCF 2.0 na Plataforma de dados do cliente em tempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
+source-git-commit: 28106d5db179e71f47b7e071b359ffe4934a3bbe
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2388'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,7 @@ Este guia também requer uma compreensão prática dos seguintes serviços da Ad
 * [Serviço](../../../identity-service/home.md)de identidade Adobe Experience Platform: Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
 * [Perfil](../../../profile/home.md)do cliente em tempo real: Aproveita [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-time Customer Profile] extrai dados do Data Lake e persiste em perfis do cliente em seu próprio armazenamento de dados separado.
 * [Adobe Experience Platform Web SDK](../../../edge/home.md): Uma biblioteca JavaScript do lado do cliente que permite integrar vários [!DNL Platform] serviços ao seu site voltado para o cliente.
+   * [Comandos](../../../edge/fundamentals/supporting-consent.md)de consentimento do SDK: Uma visão geral de caso de uso dos comandos SDK relacionados ao consentimento mostrados neste guia.
 * [Serviço](../../../segmentation/home.md)de segmentação do Adobe Experience Platform: Permite dividir [!DNL Real-time Customer Profile] dados em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 
 Além dos [!DNL Platform] serviços listados acima, você também deve estar familiarizado com os [destinos](../../destinations/destinations-overview.md) e seu uso em [!DNL Real-time CDP].

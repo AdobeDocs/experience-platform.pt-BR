@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Visão geral do serviço de catálogo
 topic: overview
+description: O serviço de catálogo é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. Enquanto todos os dados ingeridos no Experience Platform são armazenados no Data Lake como arquivos e diretórios, o Catálogo armazena os metadados e a descrição desses arquivos e diretórios para fins de pesquisa e monitoramento.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 6%
+source-wordcount: '783'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Catalog Service]visão geral
 
-[!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados dentro do Adobe Experience Platform. Embora todos os dados inseridos [!DNL Experience Platform] sejam armazenados no [!DNL Data Lake] como arquivos e diretórios, [!DNL Catalog] os metadados e a descrição desses arquivos e diretórios são mantidos para fins de pesquisa e monitoramento.
+[!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. Embora todos os dados inseridos [!DNL Experience Platform] sejam armazenados no [!DNL Data Lake] como arquivos e diretórios, [!DNL Catalog] os metadados e a descrição desses arquivos e diretórios são mantidos para fins de pesquisa e monitoramento.
 
 Simplificando, [!DNL Catalog] atua como um repositório de metadados ou &quot;[!UICONTROL catálogo]&quot; onde você pode encontrar informações sobre seus dados dentro [!DNL Experience Platform]. Você pode usar [!DNL Catalog] para responder as seguintes perguntas:
 

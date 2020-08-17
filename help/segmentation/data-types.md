@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
-title: Tipos de dados do Serviço de segmentação de Adobe Experience Platform
+title: Tipos de dados do Serviço de segmentação do Adobe Experience Platform
 topic: overview
+description: Todos os tipos de dados XDM são suportados no Serviço de segmentação. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 3%
 
 ---
 
 
-# Tipos de dados suportados pelo Adobe Experience Platform [!DNL Segmentation Service]
+# Tipos de dados suportados pela Adobe Experience Platform [!DNL Segmentation Service]
 
 Todos os tipos de dados XDM são suportados dentro [!DNL Segmentation Service]. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 
@@ -39,7 +40,7 @@ Os dados de data permitem que você atribua contexto baseado em tempo às defini
 
 ## Eventos de experiência
 
-Como um schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registre interações explícitas e implícitas do cliente com aplicativos [!DNL Platform]integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
+Como um schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registre interações explícitas e implícitas com aplicativos [!DNL Platform]integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
 
 Conforme visto na tabela abaixo, os dados do evento são renderizados usando palavras-chave que ajudam a refinar o comportamento do evento e a especificar atributos do evento.
 
@@ -52,13 +53,13 @@ Conforme visto na tabela abaixo, os dados do evento são renderizados usando pal
 
 ### Compartilhamento de público
 
-audiências externas também podem ser usadas como componentes de uma nova definição de segmento, adicionando suas regras de atributo ao novo segmento.
+Audiências externas também podem ser usadas como componentes de uma nova definição de segmento, adicionando suas regras de atributo ao novo segmento.
 
-Atualmente, apenas o Adobe Audience Manager é suportado como uma audiência externa, com fontes adicionais sendo ativadas no futuro. Para obter mais informações sobre como usar o Adobe Audience Manager audiência com o Platform, consulte o guia de compartilhamento de [audiências na documentação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)do Adobe Audience Manager.
+Atualmente, somente o Adobe Audience Manager é suportado como uma audiência externa, com fontes adicionais sendo ativadas no futuro. Para obter mais informações sobre o uso do Adobe Audience Manager audiência com plataforma, consulte o guia de compartilhamento de [audiências na documentação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)do Adobe Audience Manager.
 
 ### Compartilhamento de segmentos
 
-Os segmentos criados no Platform podem ser usados em outros [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/pt-BR/core-services/interface/experience-cloud.html). Para ativar este recurso, você precisará entrar em contato com o arquiteto da solução ou com seu consultor.
+Os segmentos criados na plataforma podem ser usados em outros [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/pt-BR/core-services/interface/experience-cloud.html). Para ativar este recurso, você precisará entrar em contato com o arquiteto da solução ou com seu consultor.
 
 ## Outros tipos de dados
 

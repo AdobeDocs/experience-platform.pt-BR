@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
 solution: Experience Platform
 title: Guia do usuário do Construtor de segmentos do serviço de segmentação
 topic: ui guide
+description: 'O Construtor de segmentos fornece uma área de trabalho avançada que permite interagir com elementos de dados do Perfil. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados. '
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ A guia **[!UICONTROL Atributos]** permite navegar pelos [!DNL Profile] atributos
 
 A guia **[!UICONTROL Eventos]** permite criar uma audiência com base em eventos ou ações realizadas usando elementos [!DNL XDM ExperienceEvent] de dados. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Eventos]** , que são uma coleção de eventos usados com frequência para permitir que você crie seus segmentos mais rapidamente.
 
-Além de poder procurar [!DNL ExperienceEvent] elementos, também é possível procurar Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação [!DNL ExperienceEvents], sem exigir que você pesquise pela [!DNL XDM ExperienceEvent] classe procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmentos.
+Além de poder procurar [!DNL ExperienceEvent] elementos, também é possível procurar Tipos de evento. Os tipos de evento usam a mesma lógica de codificação [!DNL ExperienceEvents], sem exigir que você pesquise pela [!DNL XDM ExperienceEvent] classe procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmentos.
 
 Qualquer tipo de componente pode ser pesquisado digitando seu nome na barra de pesquisa, que usa a sintaxe [de pesquisa de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Os resultados da pesquisa começam a ser preenchidos à medida que palavras inteiras são inseridas. Por exemplo, para criar uma regra baseada no campo XDM `ExperienceEvent.commerce.productViews`, digite &quot;visualizações de produto&quot; no start de pesquisa. Depois que a palavra &quot;produto&quot; é digitada, os resultados da pesquisa começam a ser exibidos. Cada resultado inclui a hierarquia de objetos à qual pertence.
 
@@ -86,7 +87,7 @@ Para [!DNL Platform] audiências criadas usando [!DNL Segment Builder], você re
 
 Se surgirem conflitos ao converter audiências em regras, [!DNL Segment Builder] tentará preservar ao máximo as opções existentes.
 
-### visualização de código
+### Visualização de código
 
 Como alternativa, você pode visualização uma versão baseada em código de uma regra criada no [!DNL Segment Builder]. Depois de criar sua regra na tela do construtor de regras, você pode selecionar visualização **[!UICONTROL de]** código para ver seu segmento como PQL.
 
@@ -98,7 +99,7 @@ A visualização de código fornece um botão que permite copiar o valor do segm
 
 ## Contêineres
 
-As regras de segmento são avaliadas na ordem em que são listadas. Os Container permitem o controle da ordem de execução por meio do uso de query aninhados.
+As regras de segmento são avaliadas na ordem em que são listadas. Os container permitem o controle da ordem de execução por meio do uso de query aninhados.
 
 Depois de adicionar pelo menos um bloco à tela do construtor de regras, você pode começar a adicionar container. Para criar um novo container, selecione as elipses (...) no canto superior direito do bloco e selecione **[!UICONTROL Adicionar container]**.
 
@@ -140,7 +141,7 @@ A seção Propriedades **[!UICONTROL do]** segmento também é onde você pode e
 
 >[!NOTE]
 >
->As estimativas de Audiência são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em sua loja de perfis, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmentos podem ser encontradas na seção [de geração de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimativas do tutorial de criação de segmentos.
+>As estimativas de audiência são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em sua loja de perfis, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmentos podem ser encontradas na seção [de geração de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimativas do tutorial de criação de segmentos.
 
 ## Próximos passos e recursos adicionais {#next-steps}
 
@@ -148,9 +149,9 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 
 - Crie definições de segmento usando uma combinação de atributos, eventos e audiências existentes como blocos de construção.
 - Use a tela e os container do construtor de regras para controlar a ordem na qual as regras de segmento são executadas.
-- Estimativas de Visualização de sua audiência potencial, permitindo que você ajuste suas definições de segmento conforme necessário.
+- Estimativas de visualização de sua audiência potencial, permitindo que você ajuste suas definições de segmento conforme necessário.
 - Ative todas as definições de segmento para segmentação programada.
-- Ative definições de segmento especificadas para a segmentação de streaming.
+- Habilitar definições de segmento especificadas para a segmentação de streaming.
 
 Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente sua aprendizagem assistindo aos vídeos abaixo. Para saber mais sobre as outras partes da [!DNL Segmentation Service] interface do usuário, leia o guia [[!DNL Segmentation Service] do usuário](./overview.md)
 

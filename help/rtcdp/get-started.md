@@ -1,10 +1,11 @@
 ---
-title: Introdução ao Adobe Real-time Customer Data Platform
-seo-title: Introdução ao Adobe Real-time Customer Data Platform
-description: Exemplo de cenário para Adobe Real-time Customer Data Platform
-seo-description: Exemplo de cenário para Adobe Real-time Customer Data Platform
+keywords: RTCDP;rtcdp
+title: Introdução à Plataforma de dados do cliente em tempo real Adobe
+seo-title: Introdução à Plataforma de dados do cliente em tempo real Adobe
+description: Exemplo de cenário para a Plataforma de dados do cliente em tempo real do Adobe
+seo-description: Exemplo de cenário para a Plataforma de dados do cliente em tempo real do Adobe
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -12,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Introdução ao Adobe Real-time Customer Data Platform
+# Introdução à Plataforma de dados do cliente em tempo real Adobe
 
-Este guia de introdução o orienta por uma implementação de amostra da Adobe Real-time Customer Data Platform (Real-time CDP). Você pode usá-la como exemplo ao configurar sua própria implementação. Embora este guia mostre exemplos específicos, ele vincula a informações adicionais que podem ser usadas ao criar sua configuração.
+Este guia de introdução o orienta por uma implementação de amostra da Plataforma de dados do cliente em tempo real (CDP em tempo real) do Adobe. Você pode usá-la como exemplo ao configurar sua própria implementação. Embora este guia mostre exemplos específicos, ele vincula a informações adicionais que podem ser usadas ao criar sua configuração.
 
-Este exemplo mostra o poder do Adobe Real-time Customer Data Platform, acionado por Adobe Experience Platform, para:
+Este exemplo mostra o poder do Adobe Real-time Customer Data Platform, capacitado pela Adobe Experience Platform, de:
 
 * Obter dados de várias fontes
 * Mesclar em um único [!DNL real-time customer profile]
@@ -61,13 +62,13 @@ Este tutorial inclui as seguintes etapas:
 1. [Encaixe o perfil nos dispositivos](#cross-device-identity-stitching).
 1. [Analise o perfil](#analyzing-the-profile).
 
-## perfil do cliente
+## Perfil do cliente
 
 Quando os clientes visitam site pela primeira vez, você não sabe nada sobre eles.
 
 ![imagem](assets/luma-site.png)
 
-À medida que navegam, os dados são capturados em tempo real e enviados não apenas para um conjunto de relatórios no Adobe Analytics, mas também diretamente para o Adobe Experience Platform. À medida que os dados são coletados, você começa a formar uma única visualização do consumidor, com base nos dados comportamentais em [!DNL Experience Platform's real-time customer profile].
+À medida que navegam, os dados são capturados em tempo real e enviados não apenas para um conjunto de relatórios no Adobe Analytics, mas também diretamente para a Adobe Experience Platform. À medida que os dados são coletados, você começa a formar uma única visualização do consumidor, com base nos dados comportamentais em [!DNL Experience Platform's real-time customer profile].
 
 Muitos visitantes ao website são provavelmente clientes recorrentes que já compraram anteriormente da Luma.  É importante que o Luma personalize as mensagens e ofertas para tratar de visitantes novos e repetidos, bem como clientes conhecidos.
 
@@ -108,9 +109,9 @@ Ela clica no home page para procurar mais um pouco.
 
 ![imagem](assets/luma-personal.png)
 
-Sarah recebe uma experiência personalizada de home page que é dinamicamente entregue, baseada em ela [!DNL Real-time Customer Profile] em Adobe Experience Platform.
+Sarah recebe uma experiência personalizada de home page que é dinamicamente entregue, com base nela [!DNL Real-time Customer Profile] no Adobe Experience Platform.
 
-Ela vê conteúdo relevante, graças à personalização da Adobe Target, capacitada pela Adobe Sensei, que leva em conta suas compras passadas e afinidade para a corrida de roupas e equipamentos. Luma também adapta o conteúdo do catálogo masculino em direção ao equipamento de corrida para homens, com base em sua navegação mais recente.
+Ela vê conteúdo relevante, graças à personalização da Adobe Sensei na Adobe Target, que leva em conta suas compras passadas e afinidade para roupas e equipamentos. Luma também adapta o conteúdo do catálogo masculino em direção ao equipamento de corrida para homens, com base em sua navegação mais recente.
 
 Mais adiante, Sarah é mostrada como produtos em destaque, bem como uma nova bandeja de recomendações com base em seus itens visualizados mais recentemente.
 
@@ -118,9 +119,9 @@ Este conteúdo personalizado ajuda a Sarah a encontrar rapidamente itens relevan
 
 ### Devolvendo o cliente
 
-Sarah se distrai e deixa o site, terminando sua sessão. Luma pode usar seus dados no Adobe Experience Platform para ajudá-la a voltar ao local.
+Sarah se distrai e deixa o site, terminando sua sessão. Luma pode usar seus dados no Adobe Experience Platform para ajudar a trazê-la de volta ao site.
 
-O Adobe Real-time Customer Data Platform, desenvolvido pela Adobe Experience Platform, foi desenvolvido para o gerenciamento da experiência do cliente. Ela permite que as organizações:
+A Plataforma de dados do cliente em tempo real Adobe, capacitada pela Adobe Experience Platform, foi criada para o gerenciamento da experiência do cliente. Ela permite que as organizações:
 
 * Simplificar a integração e a ativação de dados
 * Governar o uso de dados conhecidos e desconhecidos
@@ -176,7 +177,7 @@ Está feito. Você acabou de adicionar [!DNL Microsoft CRM] como uma fonte de da
 
 ### Rotular dados ingeridos para políticas de uso
 
-O Luma tem muitas políticas internas que restringem o uso de certos tipos de informações coletadas e também devem estar em conformidade com as preocupações legais e de privacidade relacionadas ao uso de dados. Usando o Adobe Experience Platform [!DNL Data Governance], os rótulos de uso de dados predefinidos podem ser aplicados a conjuntos de dados (e campos específicos nesses conjuntos de dados), permitindo que o Luma categorize seus dados de acordo com restrições específicas de uso.
+O Luma tem muitas políticas internas que restringem o uso de certos tipos de informações coletadas e também devem estar em conformidade com as preocupações legais e de privacidade relacionadas ao uso de dados. Usando o Adobe Experience Platform [!DNL Data Governance], rótulos de uso de dados predefinidos podem ser aplicados a conjuntos de dados (e campos específicos nesses conjuntos de dados), permitindo que o Luma categorize seus dados de acordo com restrições específicas de uso.
 
 ![](assets/governance-labels.png)
 
@@ -192,7 +193,7 @@ Todas as informações do perfil que Luma tem sobre a Sarah. Isso inclui suas in
 
 | Categoria | Descrição |
 |---|---|
-| Identidades | Mostra as identidades que foram unidas nas interações [!DNL Platform] de Sarah com Luma através de canais e dispositivos. Seu ECID do site é exibido. Sua identidade também inclui a ECID de seu aplicativo móvel, sua ID de email, uma ID CRM do conjunto de dados recém-adicionado e uma ID de fidelidade transmitida para o Adobe Experience Platform do sistema de fidelidade Luma. [!DNL Microsoft Dynamics] |
+| Identidades | Mostra as identidades que foram unidas nas interações [!DNL Platform] de Sarah com Luma através de canais e dispositivos. Seu ECID do site é exibido. Sua identidade também inclui a ECID de seu aplicativo móvel, sua ID de email, uma ID CRM do conjunto de dados recém-adicionado e uma ID de fidelidade passada para a Adobe Experience Platform pelo sistema de fidelidade Luma. [!DNL Microsoft Dynamics] |
 | Eventos | Mostra todos os dados de interação da Sarah com a marca Luma. Isto inclui o item que ela acabou de ver, qualquer coisa que ela tenha visto no passado, os emails que ela recebeu, suas interações com a central de atendimento, e o canal e o dispositivo em que cada uma dessas interações aconteceram. |
 
 O perfil CDP em tempo real reduz o fluxo de trabalho da equipe de marketing da Luma de semanas para minutos e desbloqueia possibilidades de personalização com base nessa visualização de 360 graus do cliente. A perfil combina os dados comportamentais de quando ela navegou no site antes de entrar, com seu perfil de cliente existente, criando uma visualização abrangente da Sarah.
@@ -201,7 +202,7 @@ A equipe de marketing pode usar isso aprimorado, [!DNL Real-time Customer Profil
 
 ## Segmentos
 
-Os recursos avançados de segmentação de Adobe Experience Platform permitem que os profissionais de marketing combinem atributos, eventos e segmentos existentes, com base nos dados capturados no [!DNL Real-time Customer Profile].
+Os poderosos recursos de segmentação do Adobe Experience Platform permitem que os profissionais de marketing combinem atributos, eventos e segmentos existentes, com base nos dados capturados no [!DNL Real-time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -267,7 +268,7 @@ Isso economiza centenas de milhares de dólares para o diretor da equipe de míd
 
 ### Impondo políticas de uso de dados para destinos
 
-O Adobe Experience Platform inclui controles de privacidade e segurança para determinar se um segmento está disponível para ser ativado para um destino específico. A Ativação é ativada ou restrita com base na(s) finalidade(ões) de marketing atribuída(s) ao destino quando foi criada, bem como nas políticas de uso de dados definidas pela organização.
+A Adobe Experience Platform inclui controles de privacidade e segurança para determinar se um segmento está disponível para ser ativado para um destino específico. A ativação é ativada ou restrita com base na(s) finalidade(ões) de marketing atribuída(s) ao destino quando foi criada, bem como nas políticas de uso de dados definidas pela organização.
 
 Se sua atividade violar a política, um aviso será exibido. Este aviso contém informações de linhagem de dados que podem ajudá-lo a identificar por que a política foi violada e o que você pode fazer para resolver a violação.
 
@@ -285,7 +286,7 @@ Sarah navega em um site de mídia social em seu dispositivo móvel, e ela vê um
 
 Mais tarde, ela abre seu e-mail e vê os e-mails redirecionados. Ela clica em um link para a Luma por e-mail.
 
-O link leva Sarah à página inicial do Luma móvel, onde ela vê uma experiência altamente personalizada capacitada pela Adobe Target.
+O link leva Sarah à página inicial do Luma móvel, onde ela vê uma experiência altamente personalizada da Adobe Target.
 
 * Ela é bem-vinda como membro do Bronze.
 * Ela vê a mensagem do &quot;Presente&quot;.
@@ -298,7 +299,7 @@ Graças às capacidades de supressão de audiências, Sarah não será alvejada 
 
 ## Analisando o perfil
 
-Os comerciantes de luma usam o Adobe Experience Platform para observar o segmento de presentes no Painel CDP em tempo real. Eles visualizações os resultados dessa iniciativa ao longo do tempo e veem que ela está crescendo. Os clientes estão respondendo às ofertas e gastando mais dinheiro.
+Os profissionais de marketing luma usam a Adobe Experience Platform para observar o segmento de fornecedores de presentes no Painel CDP em tempo real. Eles visualizações os resultados dessa iniciativa ao longo do tempo e veem que ela está crescendo. Os clientes estão respondendo às ofertas e gastando mais dinheiro.
 
 Esses insights permitem que os profissionais de marketing ajam nesse sinal, que foi alimentado por ter esses dados disponíveis no CDP e ter clientes como Sarah conectados ao segmento.
 

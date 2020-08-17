@@ -1,10 +1,11 @@
 ---
+keywords: Launch;launch
 title: Tutorial Implementar tags de site com Adobe Launch
 seo-title: Implementar tags de site com o Adobe Launch
 description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 seo-description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
@@ -14,31 +15,31 @@ ht-degree: 9%
 
 # Tutorial: Implementar tags de site com o Adobe Launch
 
-Este tutorial explica como implementar as tags de seu site para enviar dados para o Adobe Experience Platform usando o Adobe Launch.
+Este tutorial explica como implementar as tags de seu site para enviar dados para a Adobe Experience Platform usando o Adobe Launch.
 
 ## Pré-requisitos
 
 * O schema e o conjunto de dados necessários são criados em [!DNL Platform].
 * A configuração necessária foi implantada no Experience Edge e possui a ID de configuração e o domínio de borda correspondentes.
-* O CMS da empresa já foi configurado para fornecer um objeto JavaScript em cada página com os dados necessários para enviar à Platform.
+* O CMS da empresa já foi configurado para fornecer um objeto JavaScript em cada página com os dados necessários para enviar à plataforma.
 
 ## Etapas
 
 Este tutorial contém as seguintes etapas:
 
-1. Instale a extensão Adobe Experience Platform [!DNL Web SDK] .
+1. Instale a [!DNL Web SDK] extensão Adobe Experience Platform.
 1. Crie uma regra para informar [!DNL Launch] quais dados serão enviados.
 1. Compacte a extensão e a regra em uma biblioteca.
 
-## Instale a extensão Adobe Experience Platform [!DNL Web SDK]
+## Instale a [!DNL Web SDK] extensão Adobe Experience Platform
 
-Primeiro, instale a extensão Adobe Experience Platform [!DNL Web SDK] .
+Primeiro, instale a [!DNL Web SDK] extensão Adobe Experience Platform.
 
 1. Em [!DNL Launch], abra a guia **[!UICONTROL Extensões]** .
 
    ![imagem](assets/launch-overview.png)
 
-1. Selecione a extensão do SDK da Web do Adobe Experience Platform no Catálogo de extensão de inicializaçãoA tela de configuração é aberta.
+1. Selecione a extensão do Adobe Experience Platform Web SDK no Catálogo de extensões de inicializaçãoA tela de configuração é aberta.
 
    ![imagem](assets/launch-extension-install.png)
 
@@ -55,7 +56,7 @@ Primeiro, instale a extensão Adobe Experience Platform [!DNL Web SDK] .
 
 ## Criar uma regra para informar [!DNL Launch] quais dados serão enviados
 
-Em seguida, crie uma regra para [!DNL Launch] saber quais dados você deseja enviar ao Adobe Experience Platform e quando deseja enviá-los.
+Em seguida, crie uma regra para [!DNL Launch] saber quais dados você deseja enviar à Adobe Experience Platform e quando deseja enviá-los.
 
 1. Na guia **[!UICONTROL Regras]** , configure um evento que será acionado em cada nova página do site quando a [!DNL Launch] biblioteca for carregada.
 

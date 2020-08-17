@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 
 Para oferecer melhores experiências aos clientes, é necessário coletar e armazenar os dados pessoais dos clientes. Ao usar esses dados, é importante entender e respeitar a privacidade dos clientes. As novas regulamentações legais e organizacionais estão dando aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação.
 
-O Adobe Experience Platform [!DNL Privacy Service] foi desenvolvido em resposta a uma mudança fundamental na forma como as empresas são obrigadas a gerir os dados pessoais dos seus clientes. O objetivo central do é automatizar [!DNL Privacy Service] a conformidade com os regulamentos de privacidade de dados que, quando violados, podem resultar em multas importantes e interromper as operações de dados para sua empresa.
+A Adobe Experience Platform [!DNL Privacy Service] foi desenvolvida em resposta a uma mudança fundamental na forma como as empresas são obrigadas a gerenciar os dados pessoais de seus clientes. O objetivo central do é automatizar [!DNL Privacy Service] a conformidade com os regulamentos de privacidade de dados que, quando violados, podem resultar em multas importantes e interromper as operações de dados para sua empresa.
 
 [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar solicitações de dados do cliente. Com [!DNL Privacy Service], você pode enviar solicitações para acessar e excluir dados pessoais de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
 
 ## Getting started with [!DNL Privacy Service] {#getting-started}
 
-Para fazer uso do [!DNL Privacy Service], várias decisões importantes precisam ser tomadas em termos de requisitos de privacidade da sua organização, os tipos de dados de identidade coletados de seus clientes e a melhor maneira de interagir com o sistema CRM com o serviço.
+Para fazer uso do [!DNL Privacy Service], várias decisões importantes precisam ser tomadas em termos de requisitos de privacidade da sua organização, os tipos de dados de identidade coletados de seus clientes e a melhor forma de interagir com o sistema CRM com o serviço.
 
 Estas decisões podem ser resumidas através das seguintes questões:
 
@@ -61,7 +61,7 @@ Dependendo dos [!DNL Experience Cloud] aplicativos usados, você deve rotular os
 
 Para [!DNL Privacy Service] processar uma solicitação de privacidade de um cliente, pelo menos um valor de identidade exclusivo para esse cliente deve ser fornecido na própria solicitação. Um valor de identidade exclusivo é qualquer informação que pode ser usada para identificar uma pessoa individual e seus dados pessoais armazenados em seus armazenamentos de [!DNL Experience Cloud] dados. [!DNL Privacy Service] usa essas informações de identidade para localizar e processar os dados pessoais do cliente de acordo com a natureza da solicitação (acesso, exclusão ou recusa).
 
-Dependendo dos [!DNL Experience Cloud] aplicativos que seu sistema CRM utiliza, o tipo e o número de valores de identidade que você deve fornecer para cada cliente variam. Alguns aplicativos utilizam seus próprios valores internos de ID do cliente (como IDs de Adobe Target), enquanto outras soluções dependem de identificadores globais da Adobe [!DNL Experience Cloud Identity Service] (ECID) que rastreiam a atividade do cliente em todos os [!DNL Experience Cloud] aplicativos. Além disso, informações pessoais genéricas, como um endereço de email ou número de telefone, também podem servir como dados de identidade válidos.
+Dependendo dos [!DNL Experience Cloud] aplicativos que seu sistema CRM utiliza, o tipo e o número de valores de identidade que você deve fornecer para cada cliente variam. Alguns aplicativos utilizam seus próprios valores internos de ID do cliente (como Adobe Target IDs), enquanto outras soluções dependem de identificadores globais da Adobe [!DNL Experience Cloud Identity Service] (ECID) que rastreiam a atividade do cliente em todos os [!DNL Experience Cloud] aplicativos. Além disso, informações pessoais genéricas, como um endereço de email ou número de telefone, também podem servir como dados de identidade válidos.
 
 O documento sobre dados de [identidade para solicitações](./identity-data.md) de privacidade fornece informações mais detalhadas sobre os tipos de informações de identidade aceitas para [!DNL Privacy Service]. O documento também fornece orientação sobre como aproveitar as tecnologias de Adobe para recuperar efetivamente as informações de identidade apropriadas de seus clientes à medida que interagem com seu site, e enviar esses dados para [!DNL Privacy Service] solicitações de API.
 

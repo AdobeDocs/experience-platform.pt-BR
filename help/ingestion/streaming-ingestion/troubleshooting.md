@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Solução de problemas de ingestão de streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Este documento fornece respostas para perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform. Para questões e solução de problemas relacionados a outros [!DNL Platform] serviços, incluindo aqueles encontrados em todas as [!DNL Platform] APIs, consulte o guia [de solução de problemas do](../../landing/troubleshooting.md)Experience Platform.
 
-O Adobe Experience Platform [!DNL Data Ingestion] fornece APIs RESTful que podem ser usadas para assimilar dados [!DNL Experience Platform]. Os dados ingeridos são usados para atualizar perfis individuais do cliente em tempo quase real, permitindo que você forneça experiências personalizadas e relevantes em vários canais. Leia a visão geral [da Ingestão de](../home.md) dados para obter mais informações sobre o serviço e os diferentes métodos de ingestão. Para obter etapas sobre como usar APIs de ingestão de streaming, leia a visão geral [de ingestão de](../streaming-ingestion/overview.md)streaming.
+A Adobe Experience Platform [!DNL Data Ingestion] fornece APIs RESTful que você pode usar para assimilar dados em [!DNL Experience Platform]. Os dados ingeridos são usados para atualizar perfis individuais do cliente em tempo quase real, permitindo que você forneça experiências personalizadas e relevantes em vários canais. Leia a visão geral [da Ingestão de](../home.md) dados para obter mais informações sobre o serviço e os diferentes métodos de ingestão. Para obter etapas sobre como usar APIs de ingestão de streaming, leia a visão geral [de ingestão de](../streaming-ingestion/overview.md)streaming.
 
 ## Perguntas frequentes
 
@@ -48,7 +48,7 @@ Quando a validação síncrona não é compatível com o local solicitado, uma r
 
 ### Para qual é a latência do streaming de dados [!DNL Real-time Customer Profile]?
 
-eventos com transmissão contínua geralmente são refletidos em menos [!DNL Real-time Customer Profile] de 60 segundos. As latências reais podem variar devido a limitações de volume de dados, tamanho da mensagem e largura de banda.
+Eventos com transmissão contínua geralmente são refletidos em menos [!DNL Real-time Customer Profile] de 60 segundos. As latências reais podem variar devido a limitações de volume de dados, tamanho da mensagem e largura de banda.
 
 ### É possível incluir várias mensagens na mesma solicitação de API?
 

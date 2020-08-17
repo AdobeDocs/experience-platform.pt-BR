@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Criar destinos de marketing por email
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
 
 
-# Criar destinos de email e ativar dados no Adobe Marketing [!DNL Real-time Customer Data Platform]
+# Crie destinos de email e ative dados no Adobe Marketing [!DNL Real-time Customer Data Platform]
 
 Este tutorial demonstra como usar chamadas de API para se conectar aos dados da Adobe Experience Platform, criar um destino [de marketing por](../../rtcdp/destinations/email-marketing-destinations.md)email, criar um fluxo de dados para o novo destino criado e ativar os dados para o novo destino criado.
 
@@ -55,7 +55,8 @@ Os recursos em [!DNL Experience Platform] podem ser isolados para caixas de prot
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NObservação]
+>[!NOTE]
+>
 >Para obter mais informações sobre caixas de proteção em [!DNL Experience Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:

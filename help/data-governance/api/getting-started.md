@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Introdução à API do Serviço de Política
 topic: developer guide
+description: A API do Serviço de Política permite que você crie e gerencie vários recursos relacionados ao Adobe Experience Platform Data Governance. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API de serviço de política.
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---

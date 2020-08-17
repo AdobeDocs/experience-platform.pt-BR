@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Criar um schema usando a API de registro do Schema
 topic: tutorials
+description: Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão.
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # Criar um schema usando a [!DNL Schema Registry] API
 
-O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] dentro do Adobe Experience Platform. O [!DNL Schema Library] contém recursos disponibilizados para você pelo Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. O Registro fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
+O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] Adobe Experience Platform. O [!DNL Schema Library] contém recursos disponibilizados para você pelo Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. O Registro fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
 
 Este tutorial usa a [!DNL Schema Registry] API para guiá-lo pelas etapas para compor um schema usando uma classe padrão. Se você preferir usar a interface do usuário no [!DNL Experience Platform], o Tutorial [do Editor de](create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no editor de schemas.
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
@@ -1101,7 +1102,7 @@ A resposta mostra que a operação foi executada com êxito, e o schema agora co
 }
 ```
 
-### schemas de Lista em uma união
+### Schemas de lista em uma união
 
 Agora você adicionou com êxito seu schema à [!DNL XDM Individual Profile] união. Para ver uma lista de todos os schemas que fazem parte da mesma união, é possível executar uma solicitação de GET usando parâmetros de query para filtrar a resposta.
 
@@ -1173,13 +1174,13 @@ Ao seguir este tutorial, você compôs com êxito um schema usando misturas padr
 
 O schema Membros de Fidelidade completa, conforme criado neste tutorial, está disponível no apêndice a seguir. Ao observar o schema, você pode ver como as combinações contribuem para a estrutura geral e quais campos estão disponíveis para a ingestão de dados.
 
-Depois de criar mais de um schema, você pode definir relacionamentos entre eles por meio do uso de descritores de relacionamento. Consulte o tutorial para [definir uma relação entre dois schemas](relationship-api.md) para obter mais informações. Para obter exemplos detalhados de como executar todas as operações (GET, POST, PUT, PATCH e DELETE) no registro, consulte o guia [do desenvolvedor do Registro de](../api/getting-started.md) Schemas enquanto trabalha com a API.
+Depois de criar mais de um schema, você pode definir relacionamentos entre eles por meio do uso de descritores de relacionamento. Consulte o tutorial para [definir uma relação entre dois schemas](relationship-api.md) para obter mais informações. Para obter exemplos detalhados de como executar todas as operações (GET, POST, PUT, PATCH e DELETE no registro), consulte o guia [do desenvolvedor do Registro de](../api/getting-started.md) Schemas enquanto trabalha com a API.
 
 ## Apêndice {#appendix}
 
 As informações a seguir complementam o tutorial da API.
 
-## schema de Membros da Fidelidade Completa {#complete-schema}
+## Schema de Membros da Fidelidade Completa {#complete-schema}
 
 Neste tutorial, um schema é composto para descrever os membros de um programa de fidelidade de varejo.
 

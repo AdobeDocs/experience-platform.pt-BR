@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: Terminologia do GDPR
 topic: troubleshooting
+description: A seguir, apresenta-se uma lista de definições para termos - chave relacionados com o Regulamento Geral sobre a Proteção de Dados (RGPD).
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---

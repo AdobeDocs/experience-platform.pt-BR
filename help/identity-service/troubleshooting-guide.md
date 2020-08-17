@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Guia de solução de problemas do Adobe Experience Platform Identity Service
 topic: troubleshooting
+description: Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 translation-type: tm+mt
-source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2225'
+source-wordcount: '2248'
 ht-degree: 1%
 
 ---
@@ -50,7 +51,7 @@ Para obter etapas sobre como rotular um campo XDM como um campo de identidade us
 
 ## Há contextos em que alguns campos não devem ser rotulados como identidades?
 
-Os campos de identidade devem ser reservados para valores exclusivos para cada indivíduo. Por exemplo, considere um conjunto de dados para um programa de fidelidade do cliente. O campo de &quot;nível de fidelidade&quot; (ouro, prata, bronze) não seria um campo de identidade útil, ao passo que a ID de fidelidade — um valor exclusivo — seria.
+Os campos de identidade devem ser reservados para valores exclusivos para cada indivíduo. Por exemplo, considere um conjunto de dados para um programa de fidelidade do cliente. O campo de &quot;nível de fidelidade&quot; (ouro, prata, bronze) não seria um campo de identidade útil, ao passo que a ID de fidelidade — um valor único — seria.
 
 Campos como CEP e endereços IP não devem ser rotulados como identidades para indivíduos, pois esses valores podem se aplicar a mais de uma pessoa individual. Estes tipos de campos só devem ser rotulados como identidades para as estratégias de comercialização a nível do agregado familiar.
 
@@ -232,7 +233,7 @@ Esta mensagem de erro é exibida quando a Organização IMS não foi provisionad
 }
 ```
 
-No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
+No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token do serviço de autorização não é válido
 

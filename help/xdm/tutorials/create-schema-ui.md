@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
+description: Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 0%
 
 ---
@@ -22,9 +23,9 @@ Este tutorial também inclui etapas para [definir uma nova classe](#create-new-c
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários aspectos do Adobe Experience Platform envolvido no uso do Editor de Schemas. Antes de iniciar este tutorial, reveja a documentação para obter os seguintes conceitos:
+Este tutorial requer uma compreensão funcional dos vários aspectos da Adobe Experience Platform envolvidos no uso do Editor de Schemas. Antes de iniciar este tutorial, reveja a documentação para obter os seguintes conceitos:
 
-* [!DNL Experience Data Model (XDM)](../home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+* [!DNL Experience Data Model (XDM)](../home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 * [Noções básicas da composição](../schema/composition.md)do schema: Uma visão geral dos schemas XDM e seus blocos de construção, incluindo classes, misturas, tipos de dados e campos.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
@@ -48,16 +49,16 @@ Para começar a compor um schema, clique em **[!UICONTROL Criar Schema]** no can
 
 O Editor *de Schemas* é exibido. Esta é a tela sobre a qual você irá compor seu schema. Quando você chega ao editor, um &quot;Schema sem título&quot; na seção *Estrutura* da tela é automaticamente criado para que você comece a personalizar.
 
-![Editor de Schemas](../images/tutorials/create-schema/schema_editor.png)
+![Editor de schemas](../images/tutorials/create-schema/schema_editor.png)
 
 No lado direito do editor estão Propriedades *do* Schema, onde é possível fornecer um nome para o schema (usando o campo Nome **[!UICONTROL de]** exibição). Depois que um nome é inserido, a tela é atualizada para refletir o novo nome do schema.
 
-![Tela do Schema](../images/tutorials/create-schema/name_schema.png)
+![Tela do schema](../images/tutorials/create-schema/name_schema.png)
 
 Há várias considerações importantes a serem feitas ao decidir um nome para o seu schema:
 
-* Os nomes de Schemas devem ser curtos e descritivos para que o schema possa ser facilmente encontrado na biblioteca posteriormente.
-* Os nomes dos Schemas devem ser exclusivos, o que significa que também devem ser específicos o suficiente para que não sejam reutilizados no futuro. Por exemplo, se sua organização tivesse programas de fidelidade separados para diferentes marcas, seria aconselhável nomear seu schema como &quot;Membros de fidelidade da Marca A&quot; para facilitar a distinção entre outros schemas relacionados à fidelidade que você possa definir posteriormente.
+* Os nomes de schemas devem ser curtos e descritivos para que o schema possa ser facilmente encontrado na biblioteca posteriormente.
+* Os nomes dos schemas devem ser exclusivos, o que significa que também devem ser específicos o suficiente para que não sejam reutilizados no futuro. Por exemplo, se sua organização tivesse programas de fidelidade separados para diferentes marcas, seria aconselhável nomear seu schema como &quot;Membros de fidelidade da Marca A&quot; para facilitar a distinção entre outros schemas relacionados à fidelidade que você possa definir posteriormente.
 * Como opção, você pode fornecer informações adicionais sobre o schema usando o campo **[!UICONTROL Descrição]** .
 
 Este tutorial compõe um schema para assimilar dados relacionados aos membros de um programa de fidelidade, portanto, o schema é denominado &quot;Membros de fidelidade&quot;.
@@ -162,7 +163,7 @@ Dentro desse nó com namespaces há um &quot;[!UICONTROL Novo campo]&quot;. Este
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Usando Propriedades *[!UICONTROL de]* campo no lado direito do editor, crie um campo de &quot;[!UICONTROL fidelidade]&quot; com o tipo &quot;[!UICONTROL Objeto]&quot; que será usado para manter seus campos relacionados à fidelidade. Quando terminar, clique em **[!UICONTROL Aplicar]**.
+Usando Propriedades *[!UICONTROL de]* campo no lado direito do editor, crie um campo de &quot;[!UICONTROL fidelidade]&quot; com o tipo &quot;[!UICONTROL Objeto]&quot; que será usado para manter seus campos relacionados à fidelidade. When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -172,10 +173,10 @@ As alterações são aplicadas e o objeto recém-criado &quot;[!UICONTROL fideli
 
 Cada campo requer as seguintes informações:
 
-* **[!UICONTROL Nome]do campo:**O nome do campo, escrito em caso de camelo. Exemplo: leyaltyLevel
-* **[!UICONTROL Nome]de exibição:**O nome do campo, escrito em caso de título. Exemplo: Nível de Fidelidade
-* **[!UICONTROL Tipo]:**O tipo de dados do campo. Isso inclui tipos escalares básicos e quaisquer tipos de dados definidos no[!DNL Schema Registry]. Exemplos: string, integer, booleano, Pessoa, Endereço, Número de telefone etc.
-* **[!UICONTROL Descrição]:**Uma descrição opcional do campo deve ser incluída, escrita em caso de sentença. (máximo de 200 caracteres)
+* **[!UICONTROL Nome]do campo:** O nome do campo, escrito em caso de camelo. Exemplo: leyaltyLevel
+* **[!UICONTROL Nome]de exibição:** O nome do campo, escrito em caso de título. Exemplo: Nível de Fidelidade
+* **[!UICONTROL Tipo]:** O tipo de dados do campo. Isso inclui tipos escalares básicos e quaisquer tipos de dados definidos no [!DNL Schema Registry]. Exemplos: string, integer, booleano, Pessoa, Endereço, Número de telefone etc.
+* **[!UICONTROL Descrição]:** Uma descrição opcional do campo deve ser incluída, escrita em caso de sentença. (máximo de 200 caracteres)
 
 O primeiro campo para o objeto Loyalty será uma string chamada &quot;[!UICONTROL loyaltyId]&quot;. Ao definir o tipo do novo campo como &quot;[!UICONTROL String]&quot;, a janela Propriedades *[!UICONTROL do]* campo é preenchida com várias opções para aplicar restrições, incluindo Valor **** padrão, **[!UICONTROL Formato]** e Comprimento **** máximo.
 
@@ -214,10 +215,10 @@ Depois de concluir todas as propriedades do campo, clique em **[!UICONTROL Aplic
 
 Mais informações sobre restrições adicionais disponíveis:
 
-* **[!UICONTROL Obrigatório]:**Indica que o campo é obrigatório para a ingestão de dados. Todos os dados carregados em um conjunto de dados com base nesse schema que não contém esse campo falharão após a ingestão.
-* **[!UICONTROL Matriz]:**Indica que o campo contém uma matriz de valores, cada um com o tipo de dados especificado. Por exemplo, selecionar um tipo de dados de &quot;String&quot; e marcar a caixa de seleção &quot;Array&quot; significa que o campo conterá uma matriz de strings.
-* **[!UICONTROL Enum]:**Indica que esse campo deve conter um dos valores de uma lista enumerada de valores possíveis.
-* **[!UICONTROL Identidade]:**Indica que este campo é um campo de identidade. Mais informações sobre campos de identidade são fornecidas[posteriormente neste tutorial](#identity-field).
+* **[!UICONTROL Obrigatório]:** Indica que o campo é obrigatório para a ingestão de dados. Todos os dados carregados em um conjunto de dados com base nesse schema que não contém esse campo falharão após a ingestão.
+* **[!UICONTROL Matriz]:** Indica que o campo contém uma matriz de valores, cada um com o tipo de dados especificado. Por exemplo, selecionar um tipo de dados de &quot;String&quot; e marcar a caixa de seleção &quot;Array&quot; significa que o campo conterá uma matriz de strings.
+* **[!UICONTROL Enum]:** Indica que esse campo deve conter um dos valores de uma lista enumerada de valores possíveis.
+* **[!UICONTROL Identidade]:** Indica que este campo é um campo de identidade. Mais informações sobre campos de identidade são fornecidas [posteriormente neste tutorial](#identity-field).
 
 ## Converter um objeto de vários campos em um tipo de dados {#datatype}
 
@@ -317,7 +318,7 @@ As informações a seguir são complementares ao Tutorial do Editor de Schemas.
 
 [!DNL Experience Platform] fornece a flexibilidade para definir um schema com base em uma classe exclusiva de sua organização.
 
-Abra a caixa de diálogo *[!UICONTROL Atribuir classe]* clicando em **[!UICONTROL Atribuir]** na seção *[!UICONTROL Classe]* do Editor de Schemas. Na caixa de diálogo, selecione **[!UICONTROL Criar nova classe ]**.
+Abra a caixa de diálogo *[!UICONTROL Atribuir classe]* clicando em **[!UICONTROL Atribuir]** na seção *[!UICONTROL Classe]* do Editor de Schemas. Na caixa de diálogo, selecione **[!UICONTROL Criar nova classe]**.
 
 Em seguida, você pode atribuir a sua nova classe um Nome **[!UICONTROL de]** exibição (um nome curto, descritivo, exclusivo e fácil de usar para a classe), uma **[!UICONTROL Descrição]** e um **[!UICONTROL Comportamento]** (&quot;[!UICONTROL Registro]&quot; ou &quot;SérieTemporal&quot;) para os dados que o schema definirá.
 

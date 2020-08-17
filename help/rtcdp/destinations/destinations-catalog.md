@@ -1,10 +1,11 @@
 ---
+keywords: Catalog;catalog
 title: Catálogo de destinos
 seo-title: Catálogo de destinos
 description: O Catálogo de destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 seo-description: O Catálogo de destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -18,15 +19,15 @@ O **[!DNL Destinations Catalog]** oferece uma lista de plataformas de destino di
 
 Navegue pelo catálogo para determinar quais plataformas de destino são as melhores para seus casos de uso de publicidade e personalização e configure os fluxos para ativar seus segmentos para destinos.
 
-## categorias de destino
+## Categorias de destino
 
-Você pode ativar seus dados para diferentes categorias de destino na Platform de dados do cliente em tempo real. Os links abaixo fornecem mais informações sobre cada categoria de destino:
+Você pode ativar seus dados para diferentes categorias de destino na Plataforma de dados do cliente em tempo real. Os links abaixo fornecem mais informações sobre cada categoria de destino:
 
 * [soluções Adobe](/help/rtcdp/destinations/adobe-destinations.md)
 * [Destinos de publicidade](/help/rtcdp/destinations/advertising-destinations.md)
-* [Destinos Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [Destinos do Analytics](/help/rtcdp/destinations/analytics-destinations.md)
 * [Destinos de armazenamentos na nuvem](/help/rtcdp/destinations/cloud-storage-destinations.md)
-* [Gestão de dados Platform](/help/rtcdp/destinations/dmp-destinations.md)
+* [Plataforma gestão de dados](/help/rtcdp/destinations/dmp-destinations.md)
 * [Marketing por email](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalização](/help/rtcdp/destinations/personalization-destinations.md)
 * [Destinos sociais](/help/rtcdp/destinations/social-network-destinations.md)

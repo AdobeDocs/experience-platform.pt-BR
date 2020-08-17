@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity
 solution: Experience Platform
-title: Mapeamentos de identidade de Lista
+title: Mapeamentos de identidade de lista
 topic: API guide
+description: Um mapeamento é uma coleção de todas as identidades em um cluster, para uma namespace especificada.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '263'
+ht-degree: 1%
 
 ---
 
 
-# Mapeamentos de identidade de Lista
+# Mapeamentos de identidade de lista
 
 Um mapeamento é uma coleção de todas as identidades em um cluster, para uma namespace especificada.
 

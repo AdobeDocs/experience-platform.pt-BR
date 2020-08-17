@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Real-time Customer Profile]visão geral
 
-O Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente. Esta visão geral o ajudará a entender a função e o uso do [!DNL Real-time Customer Profile] em [!DNL Experience Platform].
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente. Esta visão geral o ajudará a entender a função e o uso do [!DNL Real-time Customer Profile] em [!DNL Experience Platform].
 
 ## Noções básicas [!DNL Real-time Customer Profile]
 
@@ -32,9 +32,9 @@ A relação entre [!DNL Real-time Customer Profile] e outros serviços dentro [!
 
 ### Perfis e dados de registro
 
-Um perfil é uma representação de um sujeito, de uma organização ou de um indivíduo, também conhecido como dados de registro. Por exemplo, o perfil de um produto pode incluir um SKU e uma descrição, enquanto o perfil de uma pessoa contém informações como nome, sobrenome e endereço de e-mail. Usando [!DNL Experience Platform], você pode personalizar perfis para usar tipos de dados relevantes para sua empresa. A classe padrão [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] é a classe preferida na qual construir um schema ao descrever dados de registro do cliente e fornece dados integrantes a muitas interações entre os serviços da Platform. Para obter mais informações sobre como trabalhar com schemas no, [!DNL Experience Platform]comece lendo a visão geral [do Sistema](../xdm/home.md)XDM.
+Um perfil é uma representação de um sujeito, de uma organização ou de um indivíduo, também conhecido como dados de registro. Por exemplo, o perfil de um produto pode incluir um SKU e uma descrição, enquanto o perfil de uma pessoa contém informações como nome, sobrenome e endereço de e-mail. Usando [!DNL Experience Platform], você pode personalizar perfis para usar tipos de dados relevantes para sua empresa. A classe padrão [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] é a classe preferida na qual construir um schema ao descrever dados de registro do cliente e fornece dados integrantes a muitas interações entre os serviços da plataforma. Para obter mais informações sobre como trabalhar com schemas no, [!DNL Experience Platform]comece lendo a visão geral [do Sistema](../xdm/home.md)XDM.
 
-### eventos da série cronológica
+### Eventos da série cronológica
 
 Os dados das séries cronológicas fornecem um instantâneo do sistema no momento em que uma ação foi tomada, direta ou indiretamente, por uma pessoa, bem como dados que detalham o próprio evento. Representados pela classe de schema padrão XDM ExperienceEvent, os dados da série de tempo podem descrever eventos como itens adicionados a um carrinho, links que estão sendo clicados e vídeos exibidos. Os dados das séries de tempo podem ser usados para basear as regras de segmentação em, e os eventos podem ser acessados individualmente no contexto de um perfil.
 
@@ -44,9 +44,9 @@ Toda empresa quer se comunicar com seus clientes de uma forma que se sinta pesso
 
 ### Segmentação
 
-O Adobe Experience Platform [!DNL Segmentation Service] produz as audiências necessárias para potencializar as experiências de seus clientes individuais. Quando um segmento de audiência é criado, a ID desse segmento é adicionada à lista de associações de segmento para todos os perfis qualificados. As regras de segmento são criadas e aplicadas aos [!DNL Real-time Customer Profile] dados usando RESTful APIs e a interface do usuário do Construtor de segmentos. Para saber mais sobre a segmentação, comece lendo a visão geral [do Serviço de](../segmentation/home.md)segmentação.
+A Adobe Experience Platform [!DNL Segmentation Service] produz as audiências necessárias para potencializar as experiências de seus clientes individuais. Quando um segmento de audiência é criado, a ID desse segmento é adicionada à lista de associações de segmento para todos os perfis qualificados. As regras de segmento são criadas e aplicadas aos [!DNL Real-time Customer Profile] dados usando RESTful APIs e a interface do usuário do Construtor de segmentos. Para saber mais sobre a segmentação, comece lendo a visão geral [do Serviço de](../segmentation/home.md)segmentação.
 
-### Fragmentos de Perfil e schemas de união {#profile-fragments-and-union-schemas}
+### Fragmentos de perfil e schemas de união {#profile-fragments-and-union-schemas}
 
 Um dos principais recursos do é [!DNL Real-time Customer Profile] a capacidade de unificar dados de vários canais. Quando [!DNL Real-time Customer Profile] é usado para acessar uma entidade, ela pode fornecer uma visualização unida de todos os fragmentos de perfil para essa entidade em conjuntos de dados, chamada de visualização de união e tornada possível por meio do que é conhecido como schema de união. [!DNL Real-time Customer Profile] os dados são unidos entre fontes quando uma entidade ou perfil é acessado por sua ID ou exportado como um segmento. Para saber mais sobre como acessar perfis e visualizações de união usando a [!DNL Real-time Customer Profile] API, visite o guia [de ponto de extremidade de](api/entities.md)entidades.
 
@@ -71,13 +71,14 @@ A entrada em tempo real é possível por meio de um processo chamado de ingestã
 
 ### Configurações e destinos de projeção de borda
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos de Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Para saber mais e começar a trabalhar com projeções usando a [!DNL Real-time Customer Profile] API, consulte o guia [de pontos finais de projeção de](api/edge-projections.md)borda.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. A Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, aplicativos de Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Para saber mais e começar a trabalhar com projeções usando a [!DNL Real-time Customer Profile] API, consulte o guia [de pontos finais de projeção de](api/edge-projections.md)borda.
 
 ## Adicionar dados a [!DNL Real-time Customer Profile]
 
 [!DNL Platform] pode ser configurado para enviar seus dados de registro e de série de tempo para [!DNL Profile], com suporte à ingestão de streaming em tempo real e à ingestão em lote. Para obter mais informações, consulte o tutorial que descreve como [adicionar dados ao Perfil](tutorials/add-profile-data.md)do cliente em tempo real.
 
->[!NObservação]
+>[!NOTE]
+>
 >Os dados coletados por meio de soluções de Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud]e [!DNL Advertising Cloud], fluem [!DNL Experience Platform] e são assimilados [!DNL Profile].
 
 ### [!DNL Profile] métricas de ingestão
@@ -110,7 +111,7 @@ Como está relacionado ao acesso aos dados, o controle de dados desempenha um pa
 | Profundidade JSON para associação de várias entidades | A profundidade máxima do JSON é **4**. |
 | Dados das séries cronológicas | Os dados de séries de tempo **não** são permitidos em [!DNL Profile] entidades que não sejam de pessoas. |
 | Relações de schema não-pessoas | Relações de schema de não pessoas **não** são permitidas. |
-| fragmento do Perfil | O tamanho máximo recomendado de um fragmento de perfil é de **10 kB**.<br><br> O tamanho máximo absoluto de um fragmento de perfil é de **1 MB**. |
+| fragmento do perfil | O tamanho máximo recomendado de um fragmento de perfil é de **10 kB**.<br><br> O tamanho máximo absoluto de um fragmento de perfil é de **1 MB**. |
 | Entidade não-pessoa | O tamanho total máximo para uma única entidade que não seja uma pessoa é de **200 MB**. |
 | Conjuntos de dados por entidade não-pessoa | Um máximo de **1** conjunto de dados pode ser associado a uma entidade que não seja uma pessoa. |
 

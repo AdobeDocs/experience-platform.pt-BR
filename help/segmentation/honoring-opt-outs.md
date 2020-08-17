@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: Aceitar opções
 topic: overview
+description: 'O Experience Platform permite que seus clientes enviem solicitações de não participação relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de cancelamento fazem parte da California Consumer Privacy Act (CCPA), que dá aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais foram vendidos ou divulgados (e a quem). '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -24,19 +25,19 @@ O cumprimento dos pedidos de opção de não participação exige uma compreens�
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
 - [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 - [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Ajuda as organizações a automatizar a conformidade com as regulamentações de privacidade de dados que envolvem dados de clientes dentro [!DNL Platform].
 
 ## Misturas de não participação
 
 Para atender às solicitações de recusa do CCPA, um dos schemas que faz parte do schema da união deve conter os campos de opção [!DNL Experience Data Model] (XDM) necessários. Há duas combinações que podem ser usadas para adicionar campos de opção de não participação a um schema, cada uma é abordada com mais detalhes nas seções a seguir:
 
-- [Privacidade](#profile-privacy)do Perfil: Usado para capturar tipos diferentes de opção de não participação (geral ou vendas/compartilhamento).
-- [Detalhes](#profile-preferences-details)das preferências do Perfil: Usado para capturar solicitações de recusa para canais XDM específicos.
+- [Privacidade](#profile-privacy)do perfil: Usado para capturar tipos diferentes de opção de não participação (geral ou vendas/compartilhamento).
+- [Detalhes](#profile-preferences-details)das preferências do perfil: Usado para capturar solicitações de recusa para canais XDM específicos.
 
 Para obter instruções passo a passo sobre como adicionar uma mistura a um schema, consulte a seção &quot;Adicionar uma mistura&quot; na seguinte documentação XDM:
-- [Tutorial](../xdm/api/getting-started.md)da API do Registro do Schema.: Criação de um schema usando a API de registro do Schema.
-- [Tutorial](../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Criação de um schema usando a interface do usuário do Platform.
+- [Tutorial](../xdm/api/getting-started.md)da API do Registro do schema.: Criação de um schema usando a API de registro do Schema.
+- [Tutorial](../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Criação de um schema usando a interface do usuário da Plataforma.
 
 Esta é uma imagem de exemplo mostrando as combinações de opção de não participação adicionadas a um schema na interface do usuário:
 
@@ -66,7 +67,7 @@ The [!DNL Profile Privacy] mixin contains the following fields:
    - Inclusão (`in`): O cliente aceitou.
 - Carimbo de data e hora de recusa (`timestamp`): Carimbo de data e hora do sinal de não participação recebido.
 
-Para visualização da estrutura completa da [!DNL Profile Privacy] mistura, consulte o repositório [público GitHub do](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM ou pré-visualização a mistura usando a interface do usuário do Platform.
+Para visualização da estrutura completa da [!DNL Profile Privacy] mistura, consulte o repositório [público GitHub do](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM ou pré-visualização a mistura usando a interface do usuário da plataforma.
 
 ### [!DNL Profile Preferences Details]
 

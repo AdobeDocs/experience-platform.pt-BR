@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guia do usuário de políticas de mesclagem
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guia do usuário de políticas de mesclagem
 
-O Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada.
+A Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada.
 
 Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece instruções passo a passo para trabalhar com políticas de mesclagem usando a interface do usuário do Adobe Experience Platform.
 
@@ -28,11 +28,11 @@ Este guia exige uma compreensão funcional dos diversos [!DNL Experience Platfor
 * [!DNL Identity Service](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de fontes de dados diferentes em [!DNL Platform]que estão sendo ingeridas.
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
-## políticas de mesclagem de Visualização
+## políticas de mesclagem de visualização
 
 Na interface do [!DNL Experience Platform] usuário, você pode começar a trabalhar com políticas de mesclagem e ver uma lista das políticas de mesclagem existentes de sua organização clicando em **[!UICONTROL Perfil]** no painel esquerdo e selecionando a guia **[!UICONTROL Mesclar políticas]** .
 
-![landing page de políticas de mesclagem](../images/merge-policies/landing.png)
+![Landing page de políticas de mesclagem](../images/merge-policies/landing.png)
 
 Os detalhes de cada política de mesclagem disponível para sua organização estão visíveis na landing page, incluindo o Nome *[!UICONTROL da]* política, a Política *[!UICONTROL de mesclagem]* padrão e o *[!UICONTROL Schema]*.
 
@@ -44,7 +44,7 @@ Para selecionar quais detalhes estão visíveis ou para adicionar outras colunas
 
 Para criar uma nova política de mesclagem, clique em **[!UICONTROL Criar política]** de mesclagem perto da parte superior direita da guia **[!UICONTROL Mesclar políticas]** .
 
-![landing page de políticas de mesclagem](../images/merge-policies/create-new.png)
+![Landing page de políticas de mesclagem](../images/merge-policies/create-new.png)
 
 A tela **[!UICONTROL Criar política]** de mesclagem é exibida, permitindo que você forneça informações importantes para sua nova política de mesclagem.
 
@@ -76,11 +76,12 @@ Após terminar de criar a política de mesclagem, clique em **[!UICONTROL Salvar
 
 Você pode modificar uma política de mesclagem existente por meio da guia *[!UICONTROL Mesclar políticas]* clicando em Nome *[!UICONTROL da]* política para a política de mesclagem que deseja editar.
 
-![landing page de políticas de mesclagem](../images/merge-policies/select-edit.png)
+![Landing page de políticas de mesclagem](../images/merge-policies/select-edit.png)
 
 Quando a tela *[!UICONTROL Editar política]* de mesclagem for exibida, você poderá fazer alterações no *[!UICONTROL Nome]*, no *[!UICONTROL Schema]*, no tipo de agrupamento *[!UICONTROL de]* ID e no tipo de mesclagem ** ** Atributo, bem como selecionar se essa política será ou não a política de mesclagem Padrão para a sua organização.
 
->[!NObservação]
+>[!NOTE]
+>
 >Não é possível editar a ID da política de mesclagem, exibida na parte superior da tela de edição. Esta é uma ID gerada pelo sistema e somente leitura que não pode ser alterada.
 
 ![](../images/merge-policies/edit-screen.png)
@@ -91,7 +92,7 @@ Depois de fazer as alterações necessárias, clique em **[!UICONTROL Salvar]** 
 
 ## Violações da política de gestão de dados
 
-Ao criar ou atualizar uma política de mesclagem, é realizada uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte do Adobe Experience Platform [!DNL Data Governance] e são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados específicos [!DNL Platform] . Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tiver uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberá uma notificação &quot;Violação de política de controle de dados detectada&quot; ao tentar salvar sua política de mesclagem.
+Ao criar ou atualizar uma política de mesclagem, é realizada uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte do Adobe Experience Platform [!DNL Data Governance] e são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para realizar em [!DNL Platform] dados específicos. Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tiver uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberá uma notificação &quot;Violação de política de controle de dados detectada&quot; ao tentar salvar sua política de mesclagem.
 
 Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite que você visualização os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia de linhagem ** Dados fornece o *Motivo da violação* e as ativações ** Afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
 

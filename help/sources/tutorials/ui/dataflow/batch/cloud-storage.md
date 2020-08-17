@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
 topic: overview
+description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1566'
 ht-degree: 0%
 
 ---
@@ -78,7 +79,7 @@ A caixa de diálogo *[!UICONTROL Selecionar conjunto de dados]* é exibida. Enco
 
 **Usar um novo conjunto de dados**
 
-Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos. Para adicionar um schema, você pode inserir um nome de schema existente na caixa de diálogo *[!UICONTROL Selecionar schema]* . Como alternativa, você pode selecionar a pesquisa **[!UICONTROL avançada do]** Schema para procurar um schema apropriado.
+Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto]** de dados e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos. Para adicionar um schema, você pode inserir um nome de schema existente na caixa de diálogo *[!UICONTROL Selecionar schema]* . Como alternativa, você pode selecionar a pesquisa **[!UICONTROL avançada do]** Schema para procurar um schema apropriado.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
 

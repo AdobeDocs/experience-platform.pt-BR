@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK Renderização de conteúdo persona
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Visão geral das opções de personalização
 
-O Adobe Experience Platform [!DNL Web SDK] suporta a consulta das soluções de personalização no Adobe, incluindo o Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
+A Adobe Experience Platform [!DNL Web SDK] oferece suporte para consultar as soluções de personalização no Adobe, incluindo a Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../../edge/solution-specific/target/flicker-management.md).
 
 ## Renderização automática de conteúdo
 
@@ -40,15 +40,15 @@ A renderização de conteúdo personalizado é assíncrona, portanto, não deve 
 
 ## Renderização manual do conteúdo
 
-Você pode solicitar que a lista de decisões seja retornada como uma promessa no `event` comando usando `scopes`. Um escopo é uma string que permite que a solução de personalização saiba qual decisão você deseja.
+Você pode solicitar que a lista de decisões seja retornada como uma promessa no `sendEvent` comando, especificando a `decisionScopes` opção. Um escopo é uma string que permite que a solução de personalização saiba qual decisão você deseja.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ Isso retornará uma lista de decisões como um objeto JSON para cada decisão.
 
 >[!TIP]
 >
-> Se você usar [!DNL Target] escopos que se tornam mBoxes no servidor, somente eles são solicitações ao mesmo tempo, em vez de individualmente. A mbox global é sempre enviada.
+> Se você usar [!DNL Target], os escopos se tornarão mBoxes no servidor, somente eles serão solicitados de uma vez em vez de individualmente. A mbox global é sempre enviada.
 
 ### Recuperar conteúdo automático
 
-Se desejar que `result.decisions` as decisões de renderização automática sejam incluídas, é possível definir `renderDecisions` como falso e incluir o escopo especial `__view__`.
+Se você quiser que `result.decisions` as decisões de renderização automática sejam incluídas e NÃO tiver a opção Permitir a renderização automática, você poderá definir `renderDecisions` como `false`e incluir o escopo especial `__view__`.

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: query templates
+description: Este guia do desenvolvedor fornece etapas para executar várias operações na API de serviço do Query Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '369'
 ht-degree: 1%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 1%
 
 # [!DNL Query Service] guia do desenvolvedor
 
-Este guia do desenvolvedor fornece etapas para executar várias operações na API do Adobe Experience Platform [!DNL Query Service] .
+Este guia do desenvolvedor fornece etapas para executar várias operações na Adobe Experience Platform [!DNL Query Service] API.
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos no uso [!DNL Query Service].
+Este guia exige uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos com o uso [!DNL Query Service].
 
 - [!DNL Query Service](../home.md): Fornece a capacidade de query de conjuntos de dados e captura os query resultantes como novos conjuntos de dados em [!DNL Experience Platform].
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
@@ -52,9 +53,9 @@ Agora que você entende quais cabeçalhos devem ser usados, você está pronto p
 
 - [Queries](queries.md)
 - [Parâmetros de conexão](connection-parameters.md)
-- [query agendados](scheduled-queries.md)
+- [Query agendados](scheduled-queries.md)
 - [É executado para query agendados](runs-scheduled-queries.md)
-- [Modelos de Query](query-templates.md)
+- [Modelos de query](query-templates.md)
 
 ## Próximas etapas
 

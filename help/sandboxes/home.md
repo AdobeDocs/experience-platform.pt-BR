@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox;Sandbox
 solution: Experience Platform
 title: Visão geral das caixas de proteção
 topic: overview
+description: As caixas de proteção são partições virtuais em uma única instância do Experience Platform, que permitem uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital.
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -14,15 +15,15 @@ ht-degree: 0%
 
 # Visão geral das caixas de proteção
 
-O Adobe Experience Platform foi desenvolvido para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional.
+A Adobe Experience Platform foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional.
 
-Para atender a essa necessidade, o Experience Platform fornece **caixas de proteção** que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Este documento fornece uma visão geral de alto nível das caixas de proteção no Experience Platform.
 
 ## Como entender as caixas de proteção
 
-As caixas de proteção são partições virtuais em uma única instância do Experience Platform, que permitem uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Uma instância do Experience Platform suporta uma caixa de proteção de produção e várias caixas de proteção de não produção, com cada caixa de proteção mantendo sua própria biblioteca independente de recursos do Platform (incluindo schemas, conjuntos de dados, perfis etc.).  Todo o conteúdo e as ações realizadas em uma caixa de proteção estão confinados apenas a essa caixa de proteção e não afetam nenhuma outra caixa de proteção.
+As caixas de proteção são partições virtuais em uma única instância do Experience Platform, que permitem uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Uma instância do Experience Platform suporta uma caixa de proteção de produção e várias caixas de proteção de não produção, com cada caixa de proteção mantendo sua própria biblioteca independente de recursos da plataforma (incluindo schemas, conjuntos de dados, perfis etc.).  Todo o conteúdo e as ações realizadas em uma caixa de proteção estão confinados apenas a essa caixa de proteção e não afetam nenhuma outra caixa de proteção.
 
 As caixas de proteção de não-produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar sua caixa de proteção de produção. Além disso, as caixas de proteção de não produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da caixa de proteção. As caixas de proteção de não produção não podem ser convertidas em caixas de proteção de produção.
 
@@ -71,4 +72,4 @@ A API Sandbox permite gerenciar caixas de proteção usando operações RESTful 
 
 Ao ler este documento, o senhor foi apresentado aos conceitos essenciais sobre caixas de areia em Experience Platform. Para obter etapas detalhadas sobre como gerenciar caixas de proteção, consulte o guia [do](ui/overview.md) usuário para a interface do usuário ou o guia [do](./api/getting-started.md) desenvolvedor para a API.
 
-Embora as caixas de proteção sirvam como uma ferramenta valiosa para isolar ambientes Platform para sua equipe de desenvolvimento, você também pode gerenciar controles de acesso mais detalhados usando o Adobe Admin Console. Consulte a visão geral [do](../access-control/home.md) controle de acesso para obter mais informações.
+Embora as caixas de proteção sirvam como uma ferramenta valiosa para isolar ambientes da plataforma para sua equipe de desenvolvimento, você também pode gerenciar controles de acesso mais detalhados usando o Adobe Admin Console. Consulte a visão geral [do](../access-control/home.md) controle de acesso para obter mais informações.

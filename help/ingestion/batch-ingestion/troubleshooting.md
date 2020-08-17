@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ingested data
 solution: Experience Platform
-title: Guia de solução de problemas de ingestão em lote de Adobe Experience Platform
+title: Guia de solução de problemas de ingestão em lote Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Guia de solução de problemas de ingestão em lote
 
-Essa documentação ajudará a responder a perguntas frequentes sobre as APIs de Adobe Experience Platform [!DNL Batch Data Ingestion] .
+Esta documentação ajudará a responder a perguntas frequentes sobre [!DNL Batch Data Ingestion] APIs da Adobe Experience Platform.
 
 ## Chamadas de API em lote
 
@@ -28,7 +28,7 @@ Sim - é seguro repetir a chamada da API. Apesar do fracasso, é possível que a
 
 ### Quando a API de Upload de Arquivo Grande deve ser usada?
 
-O tamanho de arquivo recomendado para usar a API de Upload de Arquivo Grande é de 256 MB ou maior. Mais informações sobre como usar a API de carregamento de arquivo grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
+O tamanho de arquivo recomendado para usar a API de Upload de Arquivo Grande é de 256 MB ou maior. Mais informações sobre como usar a API de Carregamento de Arquivo Grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
 
 ### Por que a chamada API Large File Complete está falhando?
 

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
 solution: Experience Platform
 title: Monitoramento da ingestão de dados
 topic: overview
+description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer um Adobe ID e acesso ao Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # Monitoramento da ingestão de dados
 
-A ingestão de dados permite assimilar seus dados ao Adobe Experience Platform. Você pode usar a ingestão em lote, o que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite assimilar seus dados para [!DNL Platform] usar pontos de extremidade de streaming em tempo real.
+A ingestão de dados permite que você ingira seus dados para a Adobe Experience Platform. Você pode usar a ingestão em lote, o que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite assimilar seus dados para [!DNL Platform] usar pontos de extremidade de streaming em tempo real.
 
-Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia exige que você tenha um Adobe ID e acesso ao Adobe Experience Platform.
+Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer um Adobe ID e acesso ao Adobe Experience Platform.
 
 ## Monitorar a assimilação de dados de streaming end-to-end
 

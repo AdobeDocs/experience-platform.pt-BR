@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: 'Os namespaces de identidade são um componente do Serviço de identidade da   que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name<span>@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 1%
+source-wordcount: '761'
+ht-degree: 4%
 
 ---
 
 
 # Visão geral da namespace de identidade
 
-As namespaces de identidade são um componente de [!DNL Identity Service](./home.md) que servem como indicadores do contexto a que uma identidade se refere. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID CRM numérica.
+Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID CRM numérica.
 
 ## Introdução
 
-Trabalhar com namespaces de identidade requer uma compreensão dos vários serviços de Adobe Experience Platform. Antes de começar a trabalhar com o namespace, consulte a documentação dos seguintes serviços:
+Trabalhar com namespaces de identidade requer uma compreensão dos vários serviços da Adobe Experience Platform envolvidos. Antes de começar a trabalhar com o namespace, consulte a documentação dos seguintes serviços:
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
 - [!DNL Identity Service](./home.md): Obtenha uma melhor visualização de clientes individuais e de seu comportamento ao unir identidades entre dispositivos e sistemas.
@@ -28,7 +29,7 @@ Trabalhar com namespaces de identidade requer uma compreensão dos vários servi
 
 Uma identidade totalmente qualificada inclui um valor de ID e uma namespace. Ao corresponder dados de registro em fragmentos de perfil, como quando [!DNL Real-time Customer Profile] mescla dados de perfil, o valor de identidade e a namespace devem corresponder.
 
-Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para a namespace &quot;Email&quot;, portanto a Platform pode ver que esses fragmentos são na verdade o mesmo indivíduo e unir os dados no gráfico de identidade do indivíduo.
+Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, mas compartilham o mesmo valor para a namespace &quot;Email&quot;. Portanto, a Platform pode ver que esses fragmentos são na verdade o mesmo indivíduo e unir os dados no gráfico de identidade do indivíduo.
 
 ![](images/identity-service-stitching.png)
 
@@ -48,9 +49,9 @@ Os seguintes tipos de identidade estão disponíveis em [!DNL Platform]:
 | Não pessoas | Usado para armazenar identificadores que precisam de namespaces, mas não estão vinculados a um cluster de pessoas. Esses identificadores são filtrados a partir do gráfico de identidade. Casos de uso possíveis incluem dados relacionados a produtos, organizações, lojas, etc. (Por exemplo, um SKU de produto.) |
 | Telefone | Identidades desse tipo incluem PII. Esta é uma indicação para [!DNL Identity Service] tratar o valor com sensibilidade. |
 
-### namespaces padrão
+### Namespaces padrão
 
-O Adobe Experience Platform fornece várias namespaces de identidade que estão disponíveis para todas as organizações. Elas são conhecidas como namespaces padrão e são visíveis usando a [!DNL Identity Service] API ou por meio da [!DNL Platform] interface do usuário.
+A Adobe Experience Platform fornece várias namespaces de identidade que estão disponíveis para todas as organizações. Elas são conhecidas como namespaces padrão e são visíveis usando a [!DNL Identity Service] API ou por meio da [!DNL Platform] interface do usuário.
 
 Para visualização de namespaces padrão na interface do usuário, clique em **[!UICONTROL Identidades]** no painel esquerdo e clique na guia *[!UICONTROL Procurar]* . Todas as namespaces de identidade acessíveis à sua organização serão exibidas, no entanto, aquelas com &quot;[!UICONTROL Padrão]&quot; como &quot;[!UICONTROL Proprietário]&quot; são as namespaces padrão fornecidas pelo Adobe.
 
@@ -62,11 +63,11 @@ Você pode clicar em uma das namespaces listadas para obter detalhes sobre a vis
 
 Dependendo dos dados organizacionais e dos casos de uso, você pode precisar de namespaces personalizadas.
 
-Elas são visíveis na interface do usuário como aquelas namespaces com &quot;[!UICONTROL Personalizado]&quot; como &quot;[!UICONTROL Proprietário]&quot;. namespaces personalizadas podem ser criadas usando a [!DNL Identity Service] API ou pela interface do usuário.
+Elas são visíveis na interface do usuário como aquelas namespaces com &quot;[!UICONTROL Personalizado]&quot; como &quot;[!UICONTROL Proprietário]&quot;. Namespaces personalizadas podem ser criadas usando a [!DNL Identity Service] API ou pela interface do usuário.
 
 Para criar uma namespace personalizada usando a interface do usuário, clique em **[!UICONTROL Criar namespace]** de identidade e, em seguida, preencha a caixa de diálogo e clique em **[!UICONTROL Criar]**.
 
-As Namespaces que você definir são privadas para sua organização e exigem um &quot;Símbolo[!UICONTROL de]identidade&quot; exclusivo (ou &quot;código&quot; se você estiver usando a API) para serem criadas com êxito.
+As namespaces que você definir são privadas para sua organização e exigem um &quot;Símbolo[!UICONTROL de]identidade&quot; exclusivo (ou &quot;código&quot; se você estiver usando a API) para serem criadas com êxito.
 
 ![](./images/create-identity-namespace.png)
 

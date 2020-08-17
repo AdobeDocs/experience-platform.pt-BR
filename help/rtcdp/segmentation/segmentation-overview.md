@@ -1,10 +1,11 @@
 ---
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Visão geral do serviço de segmentação
-seo-title: Serviço de segmentação no Adobe Real-time Customer Data Platform
+seo-title: Serviço de segmentação na plataforma de dados do cliente em tempo real Adobe
 description: Uma visão geral descrevendo o serviço de segmentação.
-seo-description: Uma visão geral descrevendo o serviço de segmentação e os segmentos no Adobe Real-time Customer Data Platform.
+seo-description: Uma visão geral descrevendo o serviço de segmentação e os segmentos na Plataforma de dados do cliente em tempo real do Adobe.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 1%
@@ -14,9 +15,9 @@ ht-degree: 1%
 
 # [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (CDP em tempo real) permite trazer dados de várias fontes para gerar uma experiência coordenada e consistente para seus clientes. É possível obter campanhas de marketing personalizadas relevantes usando a parte [!DNL Segmentation Service]do Adobe Experience Platform.
+[!DNL Real-time Customer Data Platform] (CDP em tempo real) permite trazer dados de várias fontes para gerar uma experiência coordenada e consistente para seus clientes. É possível obter campanhas de marketing personalizadas relevantes usando a parte [!DNL Segmentation Service]da Adobe Experience Platform.
 
-A CDP em tempo real foi desenvolvida sobre o Adobe Experience Platform e utiliza muitos dos [!DNL Experience Platform] serviços e funcionalidades. Usando o [!DNL Segmentation Service], você pode fornecer marketing feito sob medida dividindo seus clientes em grupos menores com características semelhantes.
+A CDP em tempo real foi desenvolvida sobre a Adobe Experience Platform e utiliza muitos dos [!DNL Experience Platform] serviços e funcionalidades. Usando o [!DNL Segmentation Service], você pode fornecer marketing feito sob medida dividindo seus clientes em grupos menores com características semelhantes.
 
 ## Segmentação
 

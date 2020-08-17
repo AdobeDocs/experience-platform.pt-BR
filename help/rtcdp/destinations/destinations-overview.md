@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Visão geral dos destinos
 seo-title: Visão geral dos destinos
-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Platform de dados do cliente em tempo real. Você pode usar Destinos na Adobe Real-time Customer Data Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
-seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Platform de dados do cliente em tempo real. Você pode usar Destinos na Adobe Real-time Customer Data Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
+description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real do Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
+seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real do Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ![Banner de visão geral de destinos](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**[!DNL Destinations]** são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Platform de dados do cliente em tempo real. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+**[!DNL Destinations]** são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 
 ## Destinos e fontes {#destinations-and-sources}
 
@@ -44,7 +45,7 @@ Para obter informações detalhadas, consulte os tipos de [destino e a visão ge
 
 ## Destinos e Controles de acesso {#access-controls}
 
-A funcionalidade de destinos no CDP em tempo real funciona com permissões de controle de acesso de Adobe Experience Platform. Dependendo do nível de permissão do usuário, você pode visualização, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte [Controle de acesso no Adobe Experience Platform](../../access-control/home.md) e role até a parte inferior da página.
+A funcionalidade de destinos em CDP em tempo real funciona com permissões de controle de acesso Adobe Experience Platform. Dependendo do nível de permissão do usuário, você pode visualização, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, consulte [Controle de acesso no Adobe Experience Platform](../../access-control/home.md) e role até a parte inferior da página.
 
 Para obter mais informações sobre controles de acesso, consulte o guia [do usuário do](../../access-control/ui/overview.md)Controle de acesso.
 

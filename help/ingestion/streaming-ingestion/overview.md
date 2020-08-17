@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
 solution: Experience Platform
-title: Visão geral de ingestão de transmissão de Adobe Experience Platform
+title: Visão geral da ingestão de streaming do Adobe Experience Platform
 topic: overview
+description: A ingestão de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para o Experience Platform em tempo real.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '272'
 ht-degree: 3%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 3%
 
 # Visão geral da assimilação de transmissão
 
-A ingestão de transmissão para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para [!DNL Experience Platform] em tempo real.
+A ingestão de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para [!DNL Experience Platform] em tempo real.
 
 ## O que você pode fazer com a ingestão de streaming?
 
-O Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes, gerando um [!DNL Real-time Customer Profile] para cada um de seus clientes individuais. A inclusão de streaming desempenha um papel fundamental na criação desses perfis, permitindo que você forneça [!DNL Profile] dados para o [!DNL Data Lake] com o mínimo de latência possível.
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes, gerando um [!DNL Real-time Customer Profile] para cada um de seus clientes individuais. A inclusão de streaming desempenha um papel fundamental na criação desses perfis, permitindo que você forneça [!DNL Profile] dados para o [!DNL Data Lake] com o mínimo de latência possível.
 
 O vídeo a seguir foi criado para ajudar a compreender a ingestão de streaming e descreve os conceitos acima.
 

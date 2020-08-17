@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filtrar dados do catálogo usando parâmetros de query
 topic: developer guide
+description: A API do serviço de catálogo permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de query de solicitação. Parte das práticas recomendadas para o Catálogo é usar filtros em todas as chamadas de API, já que elas reduzem a carga na API e ajudam a melhorar o desempenho geral.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2078'
 ht-degree: 1%
 
 ---
@@ -250,7 +251,7 @@ Abaixo está um exemplo de um conjunto de dados que contém uma `tags` proprieda
 
 Os valores do `tags` parâmetro assumem a forma de pares de valores chave, usando o formato `{TAG_NAME}:{TAG_VALUE}`. Vários pares de valores chave podem ser fornecidos na forma de uma lista separada por vírgulas. Quando várias tags são fornecidas, uma relação E é assumida.
 
-O parâmetro suporta caracteres curinga (`*`) para valores de tag. Por exemplo, uma string de pesquisa de `test*` retorna qualquer objeto em que o valor da tag começa com &quot;test&quot;. Uma string de pesquisa que consiste apenas em um caractere curinga pode ser usada para filtrar objetos com base em se eles contêm ou não uma tag específica, independentemente do seu valor.
+O parâmetro suporta caracteres curinga (`*`) para valores de tag. Por exemplo, uma string de pesquisa de `test*` retorna qualquer objeto em que o valor da tag começa com &quot;test&quot;. Uma string de pesquisa que consiste apenas em um caractere curinga pode ser usada para filtrar objetos com base em se eles contêm ou não uma tag específica, independentemente de seu valor.
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -479,7 +480,7 @@ Uma resposta bem-sucedida contém uma lista de [!DNL Catalog] objetos que são c
 
 ### Uso de filtros simples {#using-simple-filters}
 
-filtros simples permitem filtrar respostas com base em valores de propriedade específicos. Um filtro simples assume a forma de `{PROPERTY_NAME}={VALUE}`.
+Filtros simples permitem filtrar respostas com base em valores de propriedade específicos. Um filtro simples assume a forma de `{PROPERTY_NAME}={VALUE}`.
 
 Por exemplo, o query `name=exampleName` retorna somente objetos cuja `name` propriedade contenha um valor de &quot;exampleName&quot;. Por outro lado, o query `name=!exampleName` retorna somente objetos cuja `name` propriedade **não** é &quot;exampleName&quot;.
 

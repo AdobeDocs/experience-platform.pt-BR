@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Serviço de tomada de decisão
 topic: overview
+description: O Serviço de tomada de decisão oferece a capacidade de criar experiências personalizadas, otimizadas e orquestradas em aplicativos executados no Adobe Experience Platform. Usando o Serviço de tomada de decisão, você pode determinar a melhor opção a partir de um conjunto de opções disponíveis. Essas opções, também chamadas de alternativas, podem ser ofertas, recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Outros termos utilizados por produtos e serviços destinados a servir casos de u
 - Marketing e personalização de canais Omni
 - Decisão em tempo real
 
-## Como [!DNL Decisioning Service] funciona?
+## How does [!DNL Decisioning Service] work?
 
 As experiências podem ser personalizadas usando-se [!DNL Decisioning Service] em tempo real, à medida que seu cliente se envolve com sua marca por meio de um canal de entrada, como seu site ou aplicativo móvel. A decisão também pode ser usada para personalizar mensagens por canal externo, como uma notificação por email ou push.
 
@@ -56,7 +57,7 @@ O algoritmo ou função que produz a lista das opções de K superior varia com 
 
 ![otimização de decisão](./images/decisioning-optimization.png)
 
-## Trabalhar com [!DNL Decisioning Service]
+## Working with [!DNL Decisioning Service]
 
 A [!DNL Decisioning Service], como outros [!DNL Platform] serviços, adota uma filosofia da API em primeiro lugar. Isso significa que a API é a interface principal na qual todas as funções, incluindo funções administrativas, são disponibilizadas por meio de APIs. Isso também significa que outros [!DNL Platform] serviços, soluções de Adobe e integrações de terceiros usam as mesmas APIs.
 

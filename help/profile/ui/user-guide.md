@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
+description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Selecione a guia *[!UICONTROL Procurar]* para procurar perfis por identidade.
 
 ![](../images/user-guide/profiles-browse.png)
 
-### Métricas de Perfil {#profile-metrics}
+### Métricas de perfil {#profile-metrics}
 
 No lado direito da guia *[!UICONTROL Procurar]* estão várias métricas importantes relacionadas aos dados do seu perfil, incluindo a contagem [total de](#profile-count) perfis, bem como uma lista de [perfis por namespace](#profiles-by-namespace).
 
@@ -48,7 +49,7 @@ Além dessas métricas, a seção de métricas de perfil também fornece uma dat
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
-### contagem de Perfis {#profile-count}
+### contagem de perfis {#profile-count}
 
 A contagem de perfis exibe o número total de perfis que sua organização tem dentro [!DNL Experience Platform], depois que a política de mesclagem padrão da sua organização unir fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em canais diferentes, mas esses fragmentos seriam unidos (de acordo com a política de mesclagem padrão) e retornariam uma contagem de perfis &quot;1&quot;, pois estão todos relacionados ao mesmo indivíduo.
 
@@ -68,7 +69,7 @@ O seletor de política **[!UICONTROL de]** mesclagem seleciona automaticamente a
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
-### namespace de identidade
+### Namespace de identidade
 
 O seletor de namespace **[!UICONTROL de]** identidade abre uma caixa de diálogo onde você pode escolher a namespace de identidade pela qual deseja pesquisar, e você pode personalizar os atributos exibidos em sua pesquisa selecionando o ícone de filtro e escolhendo quais atributos você gostaria de adicionar ou remover.
 
@@ -88,7 +89,7 @@ Depois que um valor for inserido, selecione **[!UICONTROL Mostrar perfil]** e um
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Detalhes do Perfil {#profile-detail}
+### Detalhes do perfil {#profile-detail}
 
 Ao selecionar a ID **[!UICONTROL do]** Perfil, a guia _[!UICONTROL Detalhe]_é aberta. Esta página exibe informações sobre o perfil selecionado, incluindo atributos básicos, identidades vinculadas e canais de contato disponíveis. As informações de perfil exibidas foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual.
 
@@ -106,7 +107,7 @@ Para obter mais informações sobre políticas de mesclagem, consulte o guia [do
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
-## schema União
+## Schema união
 
 Selecione a guia Schema *da* União para visualização dos schemas da união [!DNL Profile Store]. Um schema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos schemas foram habilitados para uso em [!DNL Real-time Customer Profile]. Selecione uma classe na lista esquerda para visualização da estrutura de sua schema de união na tela.
 

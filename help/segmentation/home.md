@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
-title: Serviço de segmentação de Adobe Experience Platform
+title: Serviço de segmentação do Adobe Experience Platform
 topic: overview
+description: Este documento fornece uma visão geral do Serviço de segmentação e o papel que ele desempenha no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
 
-O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform]e são prontamente acessíveis por qualquer solução de Adobe.
+A Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform]e são prontamente acessíveis por qualquer solução de Adobe.
 
 Este documento fornece uma visão geral sobre [!DNL Segmentation Service] e o papel que desempenha no Adobe Experience Platform.
 
@@ -102,7 +103,7 @@ Esses recursos avançados são discutidos com mais detalhes nas seções a segui
 
 ## Segmentação sequencial {#sequential}
 
-Uma jornada padrão do usuário é sequencial por natureza. O Adobe Experience Platform permite que você defina uma série ordenada de segmentos para refletir essa jornada, capturando assim sequências de eventos à medida que ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no [!DNL Segment Builder].
+Uma jornada padrão do usuário é sequencial por natureza. A Adobe Experience Platform permite que você defina uma série ordenada de segmentos para refletir essa jornada, capturando assim sequências de eventos à medida que ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no [!DNL Segment Builder].
 
 Um exemplo de uma jornada do cliente que exigiria segmentação sequencial seria visualização do produto > adição do produto > finalização > Nenhuma compra.
 
@@ -215,7 +216,7 @@ Outro desafio tradicional para os comerciantes tem sido criar anúncios para red
 - Objeto
 - Mapa
 - Eventos
-- audiências externas
+- Audiências externas
 - Segmentos
 
 Informações mais detalhadas sobre esses tipos de dados suportados podem ser encontradas no documento [de tipos de dados](./data-types.md)suportados.

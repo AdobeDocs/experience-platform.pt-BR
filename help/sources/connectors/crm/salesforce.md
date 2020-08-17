@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
 solution: Experience Platform
 title: Conector Salesforce
 topic: overview
+description: O Experience Platform oferece suporte para assimilar dados de um sistema CRM de terceiros. O suporte para provedores CRM inclui o Salesforce.
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # [!DNL Salesforce] conector
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um sistema CRM de terceiros. O suporte para provedores CRM inclui [!DNL Salesforce].
 
-## lista de permissões de endereço IP
+## LISTA DE PERMISSÕES de endereço IP
 
 Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes.
 

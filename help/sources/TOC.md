@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 0%
    - [Ativar dados de entrada para preencher perfis do cliente](tutorials/ui/profile.md)
    - [Monitorar contas e fluxos de dados](tutorials/ui/monitor.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
+- [Notificações de execução de fluxo](notifications.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

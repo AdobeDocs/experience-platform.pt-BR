@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Área de trabalho Destinos
 seo-title: Área de trabalho Destinos
 description: Na Plataforma de dados do cliente em tempo real do Adobe, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%

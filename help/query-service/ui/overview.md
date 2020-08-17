@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: Guia da interface do usuário do serviço do Query Adobe Experience Platform
+title: Guia da interface do usuário do serviço de Query Adobe Experience Platform
 topic: guide
+description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar query, visualização query executados anteriormente e acessar query salvos por usuários na Organização IMS.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 2%
+source-wordcount: '617'
+ht-degree: 3%
 
 ---
 
 
 # [!DNL Query Service] guia
 
-O Adobe Experience Platform [!DNL Query Service] fornece uma interface de usuário que pode ser usada para gravar e executar query, visualização query executados anteriormente e acessar query salvos pelos usuários na Organização IMS. Para acessar a interface do usuário no [Adobe Experience Platform][platform-ui], selecione **[!UICONTROL Query]** na navegação à esquerda.
+A Adobe Experience Platform [!DNL Query Service] fornece uma interface de usuário que pode ser usada para gravar e executar query, visualização query executados anteriormente e acessar query salvos pelos usuários na Organização IMS. Para acessar a interface do usuário no [Adobe Experience Platform][platform-ui], selecione **[!UICONTROL Query]** na navegação à esquerda.
 
 ## [!DNL Query Editor]
 

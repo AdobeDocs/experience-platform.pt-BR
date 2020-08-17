@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Modelo de domínio de decisão de experiência
 topic: overview
+description: Nesta seção, os componentes do Serviço de tomada de decisão são explicados e as formas como esses componentes interagem são detalhados. Os conceitos e seus relacionamentos formam o *Domínio* do problema de decisão. Esses componentes fundamentais são acionados independentemente de como você usa o Serviço de tomada de decisão].
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -18,9 +19,9 @@ Nesta seção, os componentes de [!DNL Decisioning Service] são explicados e a 
 
 ## Opções de decisão
 
-Uma opção *de* decisão de experiência é uma experiência potencial que pode ser apresentada a um cliente específico. Uma opção também é referida como uma escolha ou alternativa. Ao decidir a próxima melhor opção para um cliente, [!DNL Decisioning Service] considera as opções ***d<sub>1</sub>***para***<sub>dN</sub>*** entre um conjunto finito de opções **`D`**.
+Uma opção *de* decisão de experiência é uma experiência potencial que pode ser apresentada a um cliente específico. Uma opção também é referida como uma escolha ou alternativa. Ao decidir a próxima melhor opção para um cliente, [!DNL Decisioning Service] considera as opções ***d<sub>1</sub>*** para ***<sub>dN</sub>*** entre um conjunto finito de opções **`D`**.
 
-As decisões são tomadas identificando a melhor opção entre um conjunto de opções disponíveis. Uma abordagem é eliminar sucessivamente as opções *de* decisão ***<sub>di</sub>***do conjunto*** D ***até que apenas uma seja deixada e, em seguida, escolher um &quot;vencedor&quot; aleatoriamente do conjunto restante. Outra forma de tomada de decisão consiste em classificar as restantes opções (elegíveis) de acordo com os resultados esperados.
+As decisões são tomadas identificando a melhor opção entre um conjunto de opções disponíveis. Uma abordagem é eliminar sucessivamente as opções *de* decisão ***<sub>di</sub>*** do conjunto ***D*** até que apenas uma seja deixada e, em seguida, escolher um &quot;vencedor&quot; aleatoriamente do conjunto restante. Outra forma de tomada de decisão consiste em classificar as restantes opções (elegíveis) de acordo com os resultados esperados.
 
 ### Conjunto finito de opções de decisão
 
@@ -64,7 +65,7 @@ Até o momento, apenas a *lógica* empresarial que afeta a decisão foi descrita
 
 Os dados de contexto de decisão podem ser divididos em dados relacionados ao perfil do usuário, dados comerciais e dados coletados internamente.
 
-- *As entidades* do Perfil são usadas para representar dados do usuário final, mas nem todas as entidades do perfil representam um indivíduo. Pode ser um lar, um grupo social, ou qualquer outro assunto. Os eventos de experiência são registros de dados da série cronológica ligados a um perfil. Se houver experiência, esses dados serão *sujeitos* a essa experiência.
+- *As entidades* do perfil são usadas para representar dados do usuário final, mas nem todas as entidades do perfil representam um indivíduo. Pode ser um lar, um grupo social, ou qualquer outro assunto. Os eventos de experiência são registros de dados da série cronológica ligados a um perfil. Se houver experiência, esses dados serão *sujeitos* a essa experiência.
 - Por outro lado, há as entidades *empresariais*. Podem ser considerados como os *objetos* das interações. Essas entidades são frequentemente referenciadas nos eventos de experiência de entidades perfis. Exemplos de entidades de negócios são sites e páginas, lojas, detalhes do produto, conteúdo digital, dados de inventário do produto e assim por diante.
 - A última categoria de dados no contexto de decisão são os dados criados durante a operação do [!DNL Decisioning Service]. Cada evento de decisão se encaixa nessa categoria, junto com as respostas dos clientes, os dados da proposta formam um conjunto de dados interno chamado histórico ** proposition-response.
 

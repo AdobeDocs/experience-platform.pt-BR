@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Atributos calculados - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 1%
 
 ---
@@ -29,19 +29,19 @@ O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tem
 
 ## Noções básicas sobre atributos calculados
 
-O Adobe Experience Platform permite importar e unir facilmente dados de várias fontes para gerar [!DNL Real-time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
+A Adobe Experience Platform permite importar e unir dados de várias fontes com facilidade para gerar [!DNL Real-time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
 
 Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão desses dados rapidamente, [!DNL Platform] permite criar atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
-Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As Expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de evento e perfil recebidos ou evento recebido, dados de perfil e eventos históricos.
+Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de evento e perfil recebidos ou evento recebido, dados de perfil e eventos históricos.
 
 ### Casos de uso
 
 Casos de uso para atributos calculados podem variar de cálculos simples a referências muito complexas. Estes são alguns exemplos de casos de uso para atributos calculados:
 
-1. **[!UICONTROL Porcentagens]:**Um atributo calculado simples pode incluir a captura de dois campos numéricos em um registro e a divisão deles para criar uma porcentagem. Por exemplo, você pode pegar o número total de emails enviados para um indivíduo e dividi-lo pelo número de emails que o indivíduo abre. Olhar para o campo de atributo calculado resultante mostraria rapidamente a porcentagem do total de emails abertos pelo indivíduo.
-1. **[!UICONTROL Uso]do aplicativo:**Outro exemplo inclui a capacidade de agregação do número de vezes que um usuário abre seu aplicativo. Rastreando o número total de aberturas do aplicativo, com base em eventos individuais abertos, você pode fornecer ofertas ou mensagens especiais aos usuários em seus 100 anos abertos, encorajando um envolvimento mais profundo com a sua marca.
-1. **[!UICONTROL Valores]de duração:**A coleta de totais em execução, como um valor de compra vitalício para um cliente, pode ser muito difícil. Isso requer a atualização do total histórico sempre que ocorrer um novo evento de compra. Um atributo calculado permite que você faça isso com muito mais facilidade, mantendo o valor do tempo de vida em um único campo que é atualizado automaticamente após cada evento de compra bem-sucedido relacionado ao cliente.
+1. **[!UICONTROL Porcentagens]:** Um atributo calculado simples pode incluir a captura de dois campos numéricos em um registro e a divisão deles para criar uma porcentagem. Por exemplo, você pode pegar o número total de emails enviados para um indivíduo e dividi-lo pelo número de emails que o indivíduo abre. Olhar para o campo de atributo calculado resultante mostraria rapidamente a porcentagem do total de emails abertos pelo indivíduo.
+1. **[!UICONTROL Uso]do aplicativo:** Outro exemplo inclui a capacidade de agregação do número de vezes que um usuário abre seu aplicativo. Rastreando o número total de aberturas do aplicativo, com base em eventos individuais abertos, você pode fornecer ofertas ou mensagens especiais aos usuários em seus 100 anos abertos, encorajando um envolvimento mais profundo com a sua marca.
+1. **[!UICONTROL Valores]de duração:** A coleta de totais em execução, como um valor de compra vitalício para um cliente, pode ser muito difícil. Isso requer a atualização do total histórico sempre que ocorrer um novo evento de compra. Um atributo calculado permite que você faça isso com muito mais facilidade, mantendo o valor do tempo de vida em um único campo que é atualizado automaticamente após cada evento de compra bem-sucedido relacionado ao cliente.
 
 ## Configurar um atributo calculado
 
@@ -50,7 +50,7 @@ Para configurar um atributo calculado, primeiro é necessário identificar o cam
 >[!NOTE]
 >Atributos calculados não podem ser adicionados a campos em combinações definidas por Adobe. O campo deve estar dentro da `tenant` namespace, o que significa que deve ser um campo definido e adicionado a um schema.
 
-Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de união. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
+Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de uniões. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
 
 O fluxo de trabalho neste tutorial usa um schema [!DNL Profile]habilitado e segue as etapas para definir uma nova combinação que contém o campo de atributo calculado e garante que seja a namespace correta. Se você já tiver um campo que esteja na namespace correta dentro de um schema habilitado para Perfis, poderá prosseguir diretamente para a etapa de [criação de um atributo](#create-a-computed-attribute)calculado.
 
@@ -68,7 +68,7 @@ Depois de localizar o schema, clique em seu nome para abrir o local [!DNL Schema
 
 ### Criar uma mistura
 
-Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de *Misturas* na seção *[!UICONTROL Composição]* no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova combinação]** para definir sua nova combinação.
+Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de *Misturas* na seção *[!UICONTROL Composição]* no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova mistura]** para definir sua nova combinação.
 
 Dê um nome e uma descrição ao mixin e clique em **[!UICONTROL Adicionar mixin]** quando concluído.
 
@@ -480,10 +480,9 @@ Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um co
 
 ## Excluir um atributo calculado
 
-Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação de DELETE ao `/config/computedAttributes` endpoint e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação.
+Também é possível excluir um atributo calculado usando a API. Isso é feito fazendo uma solicitação de DELETE para o `/config/computedAttributes` endpoint e incluindo a ID do atributo calculado que você deseja excluir no caminho da solicitação.
 
->[!NObservação]
->
+>[!NOTE]
 >
 >Tenha cuidado ao excluir um atributo calculado, pois ele pode estar em uso em mais de um schema e a operação DELETE não pode ser desfeita.
 

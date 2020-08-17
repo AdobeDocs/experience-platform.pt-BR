@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
 solution: Experience Platform
-title: Visão geral da ingestão em lote de Adobe Experience Platform
+title: Visão geral da ingestão em lote do Adobe Experience Platform
 topic: overview
+description: A API de ingestão em lote permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # [!DNL Batch Ingestion]visão geral
 
-A [!DNL Batch Ingestion] API permite que você ingira dados em arquivos Adobe Experience Platform como lote. Os dados que estão sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estão em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
+A [!DNL Batch Ingestion] API permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados que estão sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estão em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
 
 A referência [da API de ingestão de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) dados fornece informações adicionais sobre essas chamadas de API.
 

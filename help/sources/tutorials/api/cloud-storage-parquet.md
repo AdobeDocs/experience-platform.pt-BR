@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros usando a API de Serviço de Fluxo
 topic: overview
+description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para assimilar dados de busca de um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1092'
 ht-degree: 2%
 
 ---
@@ -20,7 +21,7 @@ Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para assi
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 - [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 - [Caixas de proteção](../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
@@ -372,7 +373,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conex
 A última etapa para assimilar dados de parquet de um armazenamento de nuvem de terceiros é criar um fluxo de dados. Agora, você tem os seguintes valores obrigatórios preparados:
 
 - [ID da conexão de origem](#source)
-- [ID de conexão do Público alvo](#target)
+- [ID de conexão do público alvo](#target)
 
 Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação de POST ao fornecer os valores mencionados anteriormente dentro da carga.
 

@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 solution: Adobe Experience Platform
 title: Configurar um conjunto de dados para Perfil e serviço de identidade usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 1%
@@ -25,14 +25,14 @@ Este tutorial aborda o processo de ativação de um conjunto de dados para uso e
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários serviços de Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados [!DNL Profile]habilitados. Antes de iniciar este tutorial, reveja a documentação dos seguintes [!DNL Platform] serviços relacionados:
+Este tutorial requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados [!DNL Profile]habilitados. Antes de iniciar este tutorial, reveja a documentação dos seguintes [!DNL Platform] serviços relacionados:
 
 - [!DNL Real-time Customer Profile](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 - [!DNL Identity Service](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de fontes de dados diferentes em [!DNL Platform]que estão sendo ingeridas.
 - [!DNL Catalog Service](../../catalog/home.md): Uma API RESTful que permite criar conjuntos de dados e configurá-los para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
 
 ### Lendo chamadas de exemplo da API
 

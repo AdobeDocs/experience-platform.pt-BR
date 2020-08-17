@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: Guia do usuário do JupyterLab
 topic: Overview
+description: O JupyterLab é uma interface de usuário baseada na Web para o Project Júpitter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
-ht-degree: 12%
+source-wordcount: '3684'
+ht-degree: 11%
 
 ---
 
 
 # [!DNL JupyterLab] guia do usuário
 
-[!DNL JupyterLab] é uma interface de usuário baseada na Web para o <a href="https://jupyter.org/" target="_blank">Project Júpitter</a> e está totalmente integrada ao [!DNL Adobe Experience Platform]. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
+[!DNL JupyterLab] é uma interface de usuário baseada na Web para o [Project Júpitter](https://jupyter.org/) e está totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
 
 Este documento fornece uma visão geral de [!DNL JupyterLab] e seus recursos, bem como instruções para executar ações comuns.
 
@@ -22,14 +23,14 @@ Este documento fornece uma visão geral de [!DNL JupyterLab] e seus recursos, be
 
 A integração com o JByterLab é acompanhada de mudanças arquitetônicas, considerações de design, extensões de notebook personalizadas, bibliotecas pré-instaladas e um tema de Adobe.
 
-A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab no Platform:
+A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab na plataforma:
 
 | Recurso | Descrição |
 | --- | --- |
 | **Kernels** | Os kernels fornecem o notebook e outros [!DNL JupyterLab] front-ends com a capacidade de executar e inserir código em diferentes linguagens de programação. [!DNL Experience Platform] fornece kernels adicionais para suportar o desenvolvimento em [!DNL Python]R, PySpark e [!DNL Spark]. Consulte a seção [kernels](#kernels) para obter mais detalhes. |
 | **Acesso aos dados** | Acesse conjuntos de dados existentes diretamente de dentro [!DNL JupyterLab] com suporte total para recursos de leitura e gravação. |
-| **[!DNL Platform]integração de serviços ** | As integrações incorporadas permitem que você utilize outros [!DNL Platform] serviços diretamente de dentro [!DNL JupyterLab]. Uma lista completa de integrações compatíveis é fornecida na seção [Integração com outros serviços](#service-integration)da Platform. |
-| **Autenticação** | Além do modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de segurança integrado do</a>JupyterLab, todas as interações entre seu aplicativo e o Experience Platform, incluindo a comunicação serviço a serviço da Platform, são criptografadas e autenticadas pelo <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **[!DNL Platform]integração de serviços** | As integrações incorporadas permitem que você utilize outros [!DNL Platform] serviços diretamente de dentro [!DNL JupyterLab]. Uma lista completa de integrações compatíveis é fornecida na seção [Integração com outros serviços](#service-integration)da plataforma. |
+| **Autenticação** | Além do modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de segurança integrado do</a>JupyterLab, todas as interações entre seu aplicativo e o Experience Platform, incluindo a comunicação serviço a serviço da plataforma, são criptografadas e autenticadas pelo <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliotecas de desenvolvimento** | No [!DNL Experience Platform], [!DNL JupyterLab] fornece bibliotecas pré-instaladas para [!DNL Python], R e PySpark. Consulte o [apêndice](#supported-libraries) para obter uma lista completa das bibliotecas suportadas. |
 | **Controladora de biblioteca** | Quando as bibliotecas pré-instaladas não atendem às suas necessidades, bibliotecas adicionais podem ser instaladas para Python e R, e são temporariamente armazenadas em container isolados para manter a integridade dos dados [!DNL Platform] e mantê-los seguros. Consulte a seção [kernels](#kernels) para obter mais detalhes. |
 
@@ -41,10 +42,10 @@ A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab no Platfo
 
 A normalização e a interoperabilidade são conceitos fundamentais subjacentes [!DNL Experience Platform]. A integração do [!DNL JupyterLab] on como um IDE incorporado permite que ele interaja com outros [!DNL Platform] serviços, permitindo que você utilize todo o seu potencial [!DNL Platform] [!DNL Platform] . Os seguintes [!DNL Platform] serviços estão disponíveis em [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]:**Acesse e explore conjuntos de dados com funcionalidades de leitura e gravação.
-* **[!DNL Query Service]:**Acesse e explore conjuntos de dados usando SQL, fornecendo custos indiretos de acesso a dados mais baixos ao lidar com grandes quantidades de dados.
-* **[!DNL Sensei ML Framework]:**Desenvolvimento de modelo com a capacidade de treinar e pontuar dados, bem como criação de receita com um único clique.
-* **[!DNL Experience Data Model (XDM)]:**A normalização e a interoperabilidade são conceitos-chave por detrás da Adobe Experience Platform.[O Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
+* **[!DNL Catalog Service]:** Acesse e explore conjuntos de dados com funcionalidades de leitura e gravação.
+* **[!DNL Query Service]:** Acesse e explore conjuntos de dados usando SQL, fornecendo custos indiretos de acesso a dados mais baixos ao lidar com grandes quantidades de dados.
+* **[!DNL Sensei ML Framework]:** Desenvolvimento de modelo com a capacidade de treinar e pontuar dados, bem como criação de receita com um único clique.
+* **[!DNL Experience Data Model (XDM)]:** A normalização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. [O Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
 >[!NOTE]
 >
@@ -74,7 +75,7 @@ A [!DNL JupyterLab] interface consiste em uma barra de menus, uma barra lateral 
 
 **Barra de menus**
 
-A barra de menus na parte superior da interface tem menus de nível superior que expõem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
+A barra de menus na parte superior da interface tem menus de nível superior que exibem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
 
 * **Arquivo:** Ações relacionadas a arquivos e diretórios
 * **Editar:** Ações relacionadas à edição de documentos e outras atividades
@@ -136,7 +137,7 @@ Determinados recursos e funcionalidades estão limitados a kernels específicos,
 
 ### Sessões do kernel {#kernel-sessions}
 
-Cada notebook ativo ou atividade ativa em [!DNL JupyterLab] utiliza uma sessão de kernel. Todas as sessões ativas podem ser encontradas ao expandir a guia Terminais **em execução e kernels** na barra lateral esquerda. O tipo e o estado do kernel de um notebook podem ser identificados observando a parte superior direita da interface do notebook. No diagrama abaixo, o kernel associado ao notebook é **[!DNL Python]3 **e seu estado atual é representado por um círculo cinza à direita. Um círculo oco implica um kernel ocioso e um círculo sólido implica um kernel ocupado.
+Cada notebook ativo ou atividade ativa em [!DNL JupyterLab] utiliza uma sessão de kernel. Todas as sessões ativas podem ser encontradas ao expandir a guia Terminais **em execução e kernels** na barra lateral esquerda. O tipo e o estado do kernel de um notebook podem ser identificados observando a parte superior direita da interface do notebook. No diagrama abaixo, o kernel associado ao notebook é **[!DNL Python]3** e seu estado atual é representado por um círculo cinza à direita. Um círculo oco implica um kernel ocioso e um círculo sólido implica um kernel ocupado.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -254,7 +255,7 @@ Os dados do schema ad-hoc foram pré-processados usando [!DNL Query Service] Cri
 
 #### [!DNL Python] limites de dados do notebook
 
-**schema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 2 milhões de linhas (~6,1 GB de dados em disco) de dados XDM em menos de 22 minutos. A adição de linhas adicionais pode resultar em erros.
+**Schema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 2 milhões de linhas (~6,1 GB de dados em disco) de dados XDM em menos de 22 minutos. A adição de linhas adicionais pode resultar em erros.
 
 | Número de linhas | 1K | 10K | 100K | 1M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
@@ -270,7 +271,7 @@ Os dados do schema ad-hoc foram pré-processados usando [!DNL Query Service] Cri
 
 #### Limites de dados do notebook R
 
-**schema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 1 milhão de linhas de dados XDM (dados de 3 GB no disco) em menos de 13 minutos.
+**Schema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 1 milhão de linhas de dados XDM (dados de 3 GB no disco) em menos de 13 minutos.
 
 | Número de linhas | 1K | 10K | 100K | 1M |
 | ----------------------- | ------ | ------ | ----- | ----- |
@@ -286,7 +287,7 @@ Os dados do schema ad-hoc foram pré-processados usando [!DNL Query Service] Cri
 
 #### Limites de dados do notebook PySpark (kernel[!DNL Python] ):
 
-**schema XDM ExperienceEvent:** No modo Interativo, você deve ser capaz de ler no máximo 5 milhões de linhas (~13,42 GB de dados no disco) de dados XDM em cerca de 20 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se desejar ler conjuntos de dados maiores, sugerimos que você alterne para o modo Lote. No modo Lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (~1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
+**Schema XDM ExperienceEvent:** No modo Interativo, você deve ser capaz de ler no máximo 5 milhões de linhas (~13,42 GB de dados no disco) de dados XDM em cerca de 20 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se desejar ler conjuntos de dados maiores, sugerimos que você alterne para o modo Lote. No modo Lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (~1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
 
 | Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
@@ -304,7 +305,7 @@ Os dados do schema ad-hoc foram pré-processados usando [!DNL Query Service] Cri
 
 #### [!DNL Spark] Limites de dados do notebook (kernel Scala):
 
-**schema XDM ExperienceEvent:** No modo Interativo, você deve ser capaz de ler no máximo 5 milhões de linhas (~13,42 GB de dados no disco) de dados XDM em cerca de 18 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se desejar ler conjuntos de dados maiores, sugerimos que você alterne para o modo Lote. No modo Lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (~1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
+**Schema XDM ExperienceEvent:** No modo Interativo, você deve ser capaz de ler no máximo 5 milhões de linhas (~13,42 GB de dados no disco) de dados XDM em cerca de 18 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se desejar ler conjuntos de dados maiores, sugerimos que você alterne para o modo Lote. No modo Lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (~1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
 
 | Número de linhas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
@@ -450,9 +451,9 @@ Um comando mágico personalizado [!DNL Data Science Workspace] para ler ou escre
 * **Exemplo** de leitura: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 * **Exemplo** de gravação: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
-### dados do Query usando [!DNL Query Service] em [!DNL Python]
+### dados do query usando [!DNL Query Service] em [!DNL Python]
 
-[!DNL JupyterLab] on [!DNL Platform] permite que você use o SQL em um [!DNL Python] notebook para acessar os dados pelo Serviço <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Query</a>Adobe Experience Platform. O acesso aos dados por meio [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos tempos de execução superiores. Observe que consultar dados usando [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
+[!DNL JupyterLab] on [!DNL Platform] permite que você use o SQL em um [!DNL Python] notebook para acessar dados pelo <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. O acesso aos dados por meio [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos tempos de execução superiores. Observe que consultar dados usando [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
 
 Antes de usar [!DNL Query Service] em [!DNL JupyterLab], certifique-se de que você tenha uma compreensão funcional da sintaxe <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] do</a>SQL.
 

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: O Adobe Experience Platform Identity Service ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Identity Service]visão geral
 
-Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;. O Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização do seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;. A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 
 ## Noções básicas [!DNL Identity Service]
 
@@ -36,13 +37,13 @@ Os relacionamentos de identidade que [!DNL Identity Service] definem e mantêm s
 
 Uma identidade são dados exclusivos de uma entidade, geralmente uma pessoa individual. Uma identidade como ID de login, ECID ou ID de fidelidade é chamada de identidade **** conhecida.
 
-As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder as múltiplas identidades de um cliente nos sistemas.
+As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder às múltiplas identidades de um cliente nos sistemas.
 
 **Identidades** desconhecidas ou anônimas identificam um dispositivo sem identificar a pessoa real que o utiliza. Esta categoria inclui informações como o endereço IP do visitante e a ID do cookie. Embora os dados comportamentais possam ser coletados de um dispositivo usando identidades desconhecidas, a associação dessas identidades em dispositivos ou mídias é limitada até que o cliente forneça PII durante sua jornada.
 
 Como mostrado na imagem abaixo, identidades conhecidas e anônimas são componentes importantes dos gráficos [de](#identity-graphs)identidade, que são discutidos posteriormente neste documento.
 
-![Ajuste de identidade no Platform](./images/identity-service-stitching.png)
+![Ajuste de identidade na plataforma](./images/identity-service-stitching.png)
 
 Exemplos de [!DNL Identity Service] implementações incluem:
 
@@ -55,13 +56,13 @@ Exemplos de [!DNL Identity Service] implementações incluem:
 
 Se você perguntasse a uma pessoa &quot;Qual é a sua identificação?&quot; sem qualquer outro contexto, seria difícil para eles dar uma resposta útil. Pela mesma lógica, um valor de string que representa um valor de identidade, seja ele uma ID gerada pelo sistema ou um endereço de email, só é concluído quando fornecido com um qualificador que fornece o contexto do valor da string: a namespace de identidade.
 
-## namespaces de identidade e gráficos de identidade
+## Namespaces de identidade e gráficos de identidade
 
 Os clientes podem interagir com a sua marca através de uma combinação de canais online e offline, resultando no desafio de como reconciliar essas interações fragmentadas em uma única identidade de cliente.
 
 [!DNL Experience Platform] soluciona esse desafio através de dois conceitos: [namespaces](#identity-namespaces) de identidade e gráficos [de](#identity-graphs)identidade.
 
-O vídeo a seguir é destinado a suportar a compreensão de identidades e gráficos de identidade. O vídeo a seguir aborda os três recursos da coleção de identidade, gráficos de identidade e as APIs. Ele também descreve como os algoritmos determinísticos e probabilísticos são usados para construir gráficos de identidade privados e discute a função dos gráficos de identidade privados, do Gráfico de Cooperativa do Serviço de Identidade do Adobe Experience Platform e de terceiros.
+O vídeo a seguir é destinado a suportar a compreensão de identidades e gráficos de identidade. O vídeo a seguir aborda os três recursos da coleção de identidade, gráficos de identidade e as APIs. Ele também descreve como os algoritmos determinísticos e probabilísticos são usados para construir gráficos de identidade privados e discute a função dos gráficos de identidade privados, do Gráfico de Cooperativa do Adobe Experience Platform Identity Service e de gráficos de terceiros.
 
 >[!IMPORTANT]
 >
@@ -69,11 +70,11 @@ O vídeo a seguir é destinado a suportar a compreensão de identidades e gráfi
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-### namespaces de identidade
+### Namespaces de identidade
 
 Quando seu cliente interage com sua marca em vários canais, incluindo Web, aplicativos móveis, call center ou uma loja, pode ser difícil entendê-los e servi-los caso você não consiga observar e rastrear a atividade nos canais.
 
-Entendendo seu cliente em vários dispositivos e start, reconhecendo-os em cada canal. Adobe Experience Platform consegue isso usando namespaces de identidade.
+Entendendo seu cliente em vários dispositivos e start, reconhecendo-os em cada canal. A Adobe Experience Platform consegue isso usando namespaces de identidade.
 Uma namespace de identidade é um identificador, como ID de dispositivo ou ID de email, usado para fornecer o contexto de onde os dados se originam. As namespaces de identidade são usadas para procurar ou vincular identidades individuais e fornecem contexto para valores de identidade para evitar colisões de dados. Por exemplo, a ID &quot;123456&quot; pode se referir a uma pessoa em seu sistema de comércio eletrônico e a outra pessoa em seu sistema de suporte técnico. Para obter mais informações, consulte a visão geral [da namespace de](./namespaces.md)identidade.
 
 ### Gráficos de identidade
@@ -88,11 +89,11 @@ Como exemplo dos possíveis tipos de fatores a serem considerados ao fornecer e 
 
 ## Fornecimento de dados de identidade para [!DNL Identity Service]
 
-Esta seção aborda como os dados fornecidos ao Adobe Experience Platform são processados antes de serem usados [!DNL Identity Service] para criar um gráfico de identidade para cada cliente.
+Esta seção aborda como os dados fornecidos à Adobe Experience Platform são processados antes de serem usados [!DNL Identity Service] para criar um gráfico de identidade para cada cliente.
 
 ### Decidir sobre campos de identidade
 
-Dependendo da sua estratégia de coleta de dados corporativos, os campos de dados rotulados como identidades determinam quais dados são incluídos no mapa de identidade. Para obter o máximo benefício do Adobe Experience Platform e as identidades mais abrangentes possíveis do cliente, faça upload de dados online e offline.
+Dependendo da sua estratégia de coleta de dados corporativos, os campos de dados rotulados como identidades determinam quais dados são incluídos no mapa de identidade. Para obter o máximo benefício da Adobe Experience Platform e as identidades de clientes mais abrangentes possíveis, faça upload de dados online e offline.
 
 - Dados online são dados que descrevem a presença e o comportamento online, como nomes de usuário e endereços de email.
 
@@ -104,7 +105,7 @@ Ao [!DNL Experience Platform] oferta uma variedade de namespaces padrão, talvez
 
 >[!NOTE]
 >
->namespaces de identidade são qualificadores de identidades. Como resultado, uma vez que uma namespace é criada, ela não pode ser excluída.
+>Namespaces de identidade são qualificadores de identidades. Como resultado, uma vez que uma namespace é criada, ela não pode ser excluída.
 
 ### Incluir dados de identidade em [!DNL Experience Data Model] (XDM)
 
@@ -131,7 +132,7 @@ Durante o processo de ingestão em streaming, extrai [!DNL Identity Service ]aut
 
 [!DNL Identity Service] consome dados em conformidade com XDM enviados para [!DNL Experience Platform] a ingestão [em](../ingestion/batch-ingestion/overview.md) lote ou a ingestão [em](../ingestion/streaming-ingestion/overview.md)streaming.
 
-O vídeo a seguir é destinado a suportar sua compreensão do Serviço de identidade. Este vídeo mostra como rotular os campos de dados como identidades, assimilar dados de identidade e, em seguida, verificar se os dados foram enviados para o Gráfico privado do Adobe Experience Platform Identity Service.
+O vídeo a seguir é destinado a suportar sua compreensão do Serviço de identidade. Este vídeo mostra como rotular campos de dados como identidades, assimilar dados de identidade e, em seguida, verificar se os dados foram enviados para o Gráfico Privado do Adobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
@@ -141,7 +142,7 @@ O vídeo a seguir é destinado a suportar sua compreensão do Serviço de identi
 
 ## Governação de dados
 
-O Adobe Experience Platform foi criado pensando na privacidade e inclui uma estrutura de controle de dados para proteger os dados de PII do cliente. Os dados de identidade na namespace &quot;email&quot; ou &quot;telefone&quot; são criptografados por padrão, mas para garantir que os dados confidenciais sejam criptografados antes de serem persistentes, os rótulos de uso de dados podem ser aplicados aos dados à medida que são ingeridos ou quando chegam [!DNL Platform]. Para obter mais informações, leia a visão geral [do](../data-governance/home.md)Data Governance.
+A Adobe Experience Platform foi criada pensando na privacidade e inclui uma estrutura de controle de dados para proteger seus dados de PII do cliente. Os dados de identidade na namespace &quot;email&quot; ou &quot;telefone&quot; são criptografados por padrão, mas para garantir que os dados confidenciais sejam criptografados antes de serem persistentes, os rótulos de uso de dados podem ser aplicados aos dados à medida que são ingeridos ou quando chegam [!DNL Platform]. Para obter mais informações, leia a visão geral [do](../data-governance/home.md)Data Governance.
 
 ## Próximas etapas
 

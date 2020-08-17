@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
 title: Criar uma caixa de proteção
 topic: developer guide
+description: Você pode criar uma nova caixa de proteção fazendo uma solicitação de POST para o ponto de extremidade '/sandboxes'.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '151'
 ht-degree: 2%
 
 ---
@@ -44,7 +45,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O identificador que será usado para acessar a caixa de proteção em solicitações futuras. Esse valor deve ser exclusivo e a prática recomendada é torná-lo o mais descritivo possível. Não pode conter espaços nem letras maiúsculas. |
-| `title` | Um nome legível para humanos usado para fins de exibição na interface do usuário do Platform. |
+| `title` | Um nome legível para humanos usado para fins de exibição na interface do usuário da plataforma. |
 | `type` | O tipo de caixa de proteção a ser criada. Atualmente, somente as caixas de proteção do tipo &quot;desenvolvimento&quot; podem ser criadas por uma organização. |
 
 **Resposta**

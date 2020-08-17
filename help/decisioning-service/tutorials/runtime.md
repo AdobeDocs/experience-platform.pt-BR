@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Trabalhar com tempo de execução do serviço de decisão usando APIs
 topic: tutorial
+description: 'Este documento fornece um tutorial para trabalhar com os serviços de tempo de execução do serviço de decisão usando APIs da Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
@@ -14,14 +15,14 @@ ht-degree: 0%
 
 # Trabalhar com tempo de execução do serviço de decisão usando APIs
 
-Este documento fornece um tutorial para trabalhar com os serviços de tempo de execução do [!DNL Decisioning Service] uso de APIs de Adobe Experience Platform.
+Este documento fornece um tutorial para trabalhar com os serviços de tempo de execução do [!DNL Decisioning Service] uso de APIs da Adobe Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão do trabalho dos [!DNL Experience Platform] serviços envolvidos na tomada de decisões e na determinação da próxima melhor oferta a ser apresentada durante as experiências do cliente. Antes de iniciar este tutorial, reveja a documentação do seguinte:
 
 - [!DNL Decisioning Service](./../home.md): Fornece a estrutura para adicionar e remover ofertas e criar algoritmos para escolher o melhor para apresentar durante a experiência do cliente.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 - [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): O PQL é usado para definir regras e filtros.
 - [Gerencie objetos e regras de decisão usando APIs](./entities.md): Antes de usar o tempo de execução dos Serviços de tomada de decisão, será necessário configurar as entidades relacionadas.
 
@@ -59,7 +60,7 @@ Também é necessário para solicitações de tempo de execução:
 >
 >`UUID` é uma string no formato UUID que é globalmente exclusiva e não deve ser reutilizada para chamadas de API diferentes
 
-[!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no repositório de objetos de negócios, Repositório de objetos principais do XDM. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, há apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo de objeto quando essa indicação é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
+[!DNL Decisioning Service] é controlada por vários objetos de negócios relacionados entre si. Todos os objetos de negócios são armazenados no repositório de objetos de negócios, Repositório de objetos principais do XDM. [!DNL Platform’s] Um recurso importante desse repositório é que as APIs são ortogonais em relação ao tipo de objeto de negócios. Em vez de usar uma API POST, GET, PUT, PATCH ou DELETE que indica o tipo de recurso em seu endpoint de API, existem apenas 6 endpoints genéricos, mas eles aceitam ou retornam um parâmetro que indica o tipo de objeto quando essa indicação é necessária. O schema deve ser registrado no repositório, mas além disso o repositório pode ser usado para um conjunto ilimitado de tipos de objetos.
 
 Os caminhos de ponto de extremidade para todos os start de APIs do Repositório de objetos principais do XDM com `https://platform.adobe.io/data/core/ode/`.
 
@@ -71,7 +72,7 @@ A ativação das entidades de lógica comercial acontece automática e continuam
 
 ### Efeitos de disposições, filtros e estados do ciclo de vida
 
-As Ofertas são criadas continuamente, as alterações ocorrem em seu status de ciclo de vida ou podem ter novas representações de conteúdo. O filtro de oferta de uma atividade pode mudar ou corresponder ou filtrar ofertas cujos conjuntos de tags foram atualizados. Este processo pode estar bastante envolvido e as aplicações e os serviços precisam de saber qual será o conjunto de candidatos resultante de uma atividade. O tempo de execução de decisão fornece uma API de atividade para oferta que filtros ofertas que não foram aprovadas, não correspondem ao filtro de oferta ou não têm uma representação para a disposição referenciada pela atividade.
+As ofertas são criadas continuamente, as alterações ocorrem em seu status de ciclo de vida ou podem ter novas representações de conteúdo. O filtro de oferta de uma atividade pode mudar ou corresponder ou filtrar ofertas cujos conjuntos de tags foram atualizados. Este processo pode estar bastante envolvido e as aplicações e os serviços precisam de saber qual será o conjunto de candidatos resultante de uma atividade. O tempo de execução de decisão fornece uma API de atividade para oferta que filtros ofertas que não foram aprovadas, não correspondem ao filtro de oferta ou não têm uma representação para a disposição referenciada pela atividade.
 
 **Solicitação**
 

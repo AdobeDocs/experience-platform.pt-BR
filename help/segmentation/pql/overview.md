@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
-title: Visão geral do Linguagem do Query do Perfil (PQL)
+title: Visão geral do Linguagem do Query do perfil (PQL)
 topic: developer guide
+description: Este guia fornece uma visão geral do PQL, abrangendo diretrizes de formatação e fornecendo expressões de exemplo do PQL.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '686'
 ht-degree: 2%
 
 ---

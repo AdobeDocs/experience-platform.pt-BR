@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: Perguntas frequentes sobre o RGPD
 topic: troubleshooting
+description: Este documento fornece respostas a perguntas frequentes sobre o Regulamento Geral de Proteção de Dados (RGPD) e sua implementação no Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Um responsável pelo tratamento **de** dados é a entidade que determina os obje
 
 ## Qual é a diferença entre o consentimento explícito e inequívoco da pessoa em causa?
 
-O RGPD reforça as condições para o consentimento válido da pessoa em causa. As Empresas não podem continuar a oferta de termos e condições difíceis de compreender, uma vez que o pedido de consentimento deve ser apresentado de forma inteligível e facilmente acessível. A finalidade do tratamento de dados deve ser claramente indicada no pedido de consentimento da pessoa em causa.
+O RGPD reforça as condições para o consentimento válido da pessoa em causa. As empresas não podem continuar a oferta de termos e condições difíceis de compreender, uma vez que o pedido de consentimento deve ser apresentado de forma inteligível e facilmente acessível. A finalidade do tratamento de dados deve ser claramente indicada no pedido de consentimento da pessoa em causa.
 
 **O consentimento** explícito deve ser claro e distinguível de outras matérias, fornecido de forma inteligível e facilmente acessível, utilizando uma linguagem simples. Além disso, deve ser tão fácil retirar o consentimento quanto o dar. &#x200B; O consentimento explícito é necessário apenas para o tratamento de dados pessoais sensíveis, em que nada menos do que &quot;opt in&quot; será suficiente. No entanto, para dados não sensíveis, é aceitável um consentimento **** inequívoco.
 

@@ -4,7 +4,7 @@ seo-title: Rastreamento de links para Adobe Analytics com Adobe Experience Platf
 description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
 seo-description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%

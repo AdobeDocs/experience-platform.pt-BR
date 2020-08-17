@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: Criar um tipo de dados
 topic: developer guide
+description: 'Quando existem estruturas de dados comuns que sua organização deseja usar de várias formas, você pode definir um tipo de dados. Os tipos de dados permitem o uso consistente de estruturas de vários campos, com mais flexibilidade do que combinações, pois podem ser incluídos em qualquer lugar de um schema adicionando-os como o "tipo" de um campo. '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 1%
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 

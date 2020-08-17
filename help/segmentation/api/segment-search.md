@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: Ponto de extremidade de pesquisa de segmento
 topic: guide
+description: A Pesquisa de segmento é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real. Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmentos e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -242,7 +243,7 @@ A tabela a seguir lista os campos que podem ser pesquisados dentro do parâmetro
 | segmentName | O segmento corresponde ao nome do segmento da pesquisa especificada. |
 | segmentDescription | O segmento corresponde à descrição do segmento de sua pesquisa especificada. |
 
-### expressão de pesquisa {#search-expression}
+### Expressão de pesquisa {#search-expression}
 
 A tabela a seguir lista os detalhes de como os query de pesquisa funcionam ao usar a API de pesquisa de segmento.
 

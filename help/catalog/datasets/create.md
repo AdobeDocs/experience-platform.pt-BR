@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
 solution: Experience Platform
 title: Criar um conjunto de dados usando APIs
 topic: datasets
+description: Este documento fornece etapas gerais para a criação de um conjunto de dados usando APIs Adobe Experience Platform e preenchendo o conjunto de dados usando um arquivo.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1251'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ Este documento fornece etapas gerais para a criação de um conjunto de dados us
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: [!DNL Experience Platform] permite que você ingira dados como arquivos em lote.
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
@@ -34,9 +35,9 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
-* Autorização: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
@@ -475,4 +476,4 @@ Para obter mais informações sobre a atualização de schemas, consulte o Guia 
 
 Depois de atualizar o schema, você poderá seguir novamente as etapas neste tutorial para assimilar novos dados que estejam em conformidade com o schema revisado.
 
-É importante lembrar que a evolução do schema é meramente aditiva, o que significa que você não pode introduzir uma alteração de quebra em um schema depois que ela for salva no registro e usada para a ingestão de dados. Para saber mais sobre as práticas recomendadas para a composição de schema, consulte o guia sobre as [noções básicas da composição](../../xdm/schema/composition.md)do schema.
+É importante lembrar que a evolução do schema é meramente aditiva, o que significa que você não pode introduzir uma alteração de quebra em um schema depois que ela for salva no registro e usada para a ingestão de dados. Para saber mais sobre as práticas recomendadas para a composição de schemas para uso com a Adobe Experience Platform, consulte o guia sobre as [noções básicas de composição](../../xdm/schema/composition.md)de schemas.

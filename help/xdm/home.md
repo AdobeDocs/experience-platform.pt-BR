@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
 solution: Experience Platform
 title: Sistema do Experience Data Model (XDM)
 topic: overview
+description: 'A normalização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. O Experience Data Model (XDM), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente. '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Visão geral do sistema XDM
 
-A normalização e a interoperabilidade são conceitos-chave por detrás da Adobe Experience Platform. [!DNL Experience Data Model] (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
+A normalização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. [!DNL Experience Data Model] (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
 A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo a ser usado para se comunicar com [!DNL Platform] serviços. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum que pode fornecer insights de uma forma mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir audiências do cliente por meio de segmentos e expressar atributos do cliente para fins de personalização.
 
@@ -22,7 +23,7 @@ O XDM é a estrutura fundamental que permite à Adobe Experience Cloud, capacita
 
 Este documento fornece uma visão geral da função do Sistema XDM no [!DNL Experience Platform].
 
-## schemas XDM
+## Schemas XDM
 
 [!DNL Experience Platform] usa schemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, torna-se mais fácil manter o significado e, portanto, obter valor dos dados.
 
@@ -51,7 +52,7 @@ Embora seja possível definir suas próprias classes dentro do [!DNL Schema Regi
 
 [!DNL XDM Individual Profile] é uma classe baseada em registros que forma uma representação singular dos atributos de indivíduos identificados e parcialmente identificados. Perfis altamente identificados podem ser usados para comunicações pessoais ou envolvimentos direcionados e podem conter informações pessoais detalhadas, como nome, gênero, data de nascimento, local e informações de contato, incluindo números de telefone e endereços de email.
 
-perfis menos identificados podem consistir apenas em sinais comportamentais anônimos, como cookies de navegador. Nesse caso, os dados de perfil esparsos são usados para criar uma base de informações na qual os interesses e preferências do perfil anônimo são coletados e armazenados. Esses identificadores podem se tornar mais detalhados ao longo do tempo, à medida que o assunto se inscreve para receber notificações, subscrições, compras e assim por diante. Este aumento nos atributos do perfil pode eventualmente resultar em um assunto identificado e permitir um maior grau de envolvimento direcionado.
+Perfis menos identificados podem consistir apenas em sinais comportamentais anônimos, como cookies de navegador. Nesse caso, os dados de perfil esparsos são usados para criar uma base de informações na qual os interesses e preferências do perfil anônimo são coletados e armazenados. Esses identificadores podem se tornar mais detalhados ao longo do tempo, à medida que o assunto se inscreve para receber notificações, subscrições, compras e assim por diante. Este aumento nos atributos do perfil pode eventualmente resultar em um assunto identificado e permitir um maior grau de envolvimento direcionado.
 
 À medida que o perfil do consumidor continua crescendo, ele se torna um repositório robusto de informações pessoais, informações de identificação, detalhes de contato e preferências de comunicação de um indivíduo.
 
@@ -59,13 +60,13 @@ perfis menos identificados podem consistir apenas em sinais comportamentais anô
 
 O XDM ExperienceEvent é uma classe baseada em série de tempo usada para capturar o estado do sistema quando um evento (ou conjunto de eventos) ocorreu, incluindo o ponto no tempo e a identidade do assunto envolvido. Os Eventos de experiência são registros de fato do que ocorreu, portanto eles são imutáveis e representam o que aconteceu sem agregação ou interpretação. Eles são essenciais para análises de domínio de tempo, pois podem ser usados para analisar alterações que ocorrem em uma determinada janela de tempo e para comparar entre várias janelas de tempo para rastrear tendências.
 
-Os Eventos de experiência podem ser explícitos ou implícitos. eventos explícitos são ações humanas diretamente observáveis que ocorrem durante um ponto de uma jornada. eventos implícitos são eventos que são criados sem uma ação humana direta, mas que ainda se relacionam com um indivíduo. Exemplos de eventos implícitos podem incluir o envio agendado de boletins informativos por email ou voltagem da bateria atingindo um determinado limite.
+Os Eventos de experiência podem ser explícitos ou implícitos. Eventos explícitos são ações humanas diretamente observáveis que ocorrem durante um ponto de uma jornada. Eventos implícitos são eventos que são criados sem uma ação humana direta, mas que ainda se relacionam com um indivíduo. Exemplos de eventos implícitos podem incluir o envio agendado de boletins informativos por email ou voltagem da bateria atingindo um determinado limite.
 
 Embora nem todos os eventos sejam facilmente categorizados em todas as fontes de dados, é extremamente importante harmonizar eventos semelhantes em tipos semelhantes, sempre que possível, para processamento.
 
 ![Jornada do cliente ExperienceEvent](images/overview/experience-event-journey.png)
 
-## schemas e [!DNL Experience Platform] serviços XDM
+## Schemas e [!DNL Experience Platform] serviços XDM
 
 [!DNL Experience Platform] é agnóstico do schema, o que significa que qualquer schema que esteja em conformidade com o padrão XDM está disponível para uso pelos [!DNL Platform] serviços. As formas como diferentes [!DNL Platform] serviços usam schemas são descritas abaixo com mais detalhes.
 
@@ -77,11 +78,11 @@ Embora nem todos os eventos sejam facilmente categorizados em todas as fontes de
 
 Para começar a assimilar dados no [!DNL Experience Platform], um conjunto de dados é criado usando [!DNL Catalog Service]. O conjunto de dados faz referência a um schema XDM que descreve a estrutura dos dados a serem assimilados. Se um conjunto de dados for criado sem um schema, [!DNL Experience Platform] será derivado de um &quot;schema observado&quot; inspecionando o tipo e o conteúdo dos campos de dados assimilados. Os conjuntos de dados são então rastreados [!DNL Catalog] e armazenados no [!DNL Data Lake] lado dos schemas e dos schemas observados nos quais eles se baseiam.
 
-Para obter mais informações sobre [!DNL Catalog], consulte a visão geral [do Serviço de](../catalog/home.md)catálogo. Para obter mais informações sobre a ingestão de dados de Adobe Experience Platform, consulte a visão geral [da ingestão de](../ingestion/home.md)dados.
+Para obter mais informações sobre [!DNL Catalog], consulte a visão geral [do Serviço de](../catalog/home.md)catálogo. Para obter mais informações sobre a ingestão de dados da Adobe Experience Platform, consulte a visão geral [da ingestão de](../ingestion/home.md)dados.
 
 ### [!DNL Query Service]
 
-O Adobe Experience Platform [!DNL Query Service] permite usar SQL padrão para dados de query [!DNL Experience Platform] para suportar muitos casos de uso diferentes.
+A Adobe Experience Platform [!DNL Query Service] permite usar SQL padrão para dados de query [!DNL Experience Platform] para suportar muitos casos de uso diferentes.
 
 Após a composição de um schema e a criação de um conjunto de dados que faz referência a esse schema, os dados são assimilados e armazenados no [!DNL Data Lake]. Usando [!DNL Query Service], você pode ingressar em qualquer conjunto de dados no [!DNL Data Lake] e capturar os resultados do query como um novo conjunto de dados para uso em relatórios, aprendizado de máquina ou para ingestão no [!DNL Real-time Customer Profile].
 
@@ -103,15 +104,15 @@ Consulte a visão geral [do Perfil do cliente em tempo](../profile/home.md) real
 
 ### [!DNL Data Science Workspace]
 
-O Adobe Experience Platform [!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para obter insights dos dados armazenados no [!DNL Experience Platform]. [!DNL Data Science Workspace] permite que os cientistas de dados construam receitas com base no XDM Individual [!DNL Profile] e [!DNL XDM ExperienceEvent] dados sobre clientes e suas atividades, facilitando previsões como a propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
+A Adobe Experience Platform [!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para obter insights dos dados armazenados no [!DNL Experience Platform]. [!DNL Data Science Workspace] permite que os cientistas de dados construam receitas com base no XDM Individual [!DNL Profile] e [!DNL XDM ExperienceEvent] dados sobre clientes e suas atividades, facilitando previsões como a propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará.
 
-Com [!DNL Data Science Workspace]isso, os cientistas de dados podem criar facilmente APIs de serviços inteligentes, capacitadas pelo aprendizado de máquinas. Esses serviços funcionam com outras soluções de Adobe, inclusive o Adobe Target e o Adobe Analytics Cloud, para ajudar você a automatizar experiências digitais personalizadas e direcionadas.
+Com [!DNL Data Science Workspace]isso, os cientistas de dados podem criar facilmente APIs de serviços inteligentes, capacitadas pelo aprendizado de máquinas. Esses serviços funcionam com outras soluções de Adobe, incluindo Adobe Target e Adobe Analytics Cloud, para ajudar a automatizar experiências digitais personalizadas e direcionadas.
 
 Para obter mais informações sobre como usar [!DNL Experience Platform] dados para fornecer insights, consulte a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
 
 ### [!DNL Decisioning Service]
 
-[!DNL Decisioning Service] fornece a capacidade de configurar decisões personalizadas de oferta em aplicativos [!DNL Platform]integrados. As Ofertas podem ser recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas.
+[!DNL Decisioning Service] fornece a capacidade de configurar decisões personalizadas de oferta em aplicativos [!DNL Platform]integrados. As ofertas podem ser recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas.
 
 [!DNL Decisioning Service] aproveita [!DNL Real-time Customer Profile] os dados e, portanto, só é compatível com conjuntos de dados baseados em schemas que implementam a [!DNL XDM Individual Profile] classe ou [!DNL XDM ExperienceEvent] .
 

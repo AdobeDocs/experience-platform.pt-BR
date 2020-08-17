@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Guia do usuário de conjuntos de dados
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -18,16 +18,16 @@ Este guia do usuário fornece instruções sobre como executar ações comuns ao
 
 ## Introdução
 
-Este guia do usuário requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia do usuário requer uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Conjuntos de dados](overview.md): A construção de armazenamento e gerenciamento para a persistência de dados no [!DNL Experience Platform].
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Editor](../../xdm/tutorials/create-schema-ui.md)de Schemas: Saiba como criar seus próprios schemas XDM personalizados usando o [!DNL Schema Editor] na interface do [!DNL Platform] usuário.
+   * [Editor](../../xdm/tutorials/create-schema-ui.md)de schemas: Saiba como criar seus próprios schemas XDM personalizados usando o [!DNL Schema Editor] na interface do [!DNL Platform] usuário.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [!DNL Data Governance](../../data-governance/home.md): Garanta a conformidade com regulamentos, restrições e políticas referentes ao uso de dados do cliente.
 
-## Conjuntos de dados de Visualização
+## Conjuntos de dados de visualização
 
 Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para abrir o painel *[!UICONTROL de Conjuntos de dados]* . O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o schema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 
@@ -50,7 +50,7 @@ Na janela pré-visualização, a visualização hierárquica do schema para o co
 
 Para métodos mais robustos de acesso aos seus dados, [!DNL Experience Platform] fornece serviços de downstream, como [!DNL Query Service] e [!DNL JupyterLab] para explorar e analisar dados. Consulte os seguintes documentos para obter mais informações:
 
-* [Visão geral do Serviço de Query](../../query-service/home.md)
+* [Visão geral do Serviço de query](../../query-service/home.md)
 * [Guia do usuário do JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Criar um conjunto de dados {#create}
@@ -152,5 +152,5 @@ Se desejar excluir o lote, clique em **[!UICONTROL Excluir lote]** localizado pr
 Este guia do usuário fornece instruções para executar ações comuns ao trabalhar com conjuntos de dados na interface do [!DNL Experience Platform] usuário. Para obter etapas sobre como executar [!DNL Platform] workflows comuns envolvendo conjuntos de dados, consulte os seguintes tutoriais:
 
 * [Criar um conjunto de dados usando APIs](create.md)
-* [Dados do conjunto de dados do Query usando a API de acesso a dados](../../data-access/home.md)
+* [Dados do conjunto de dados do query usando a API de acesso a dados](../../data-access/home.md)
 * [Configurar um conjunto de dados para o Perfil do cliente em tempo real e o serviço de identidade usando APIs](../../profile/tutorials/dataset-configuration.md)

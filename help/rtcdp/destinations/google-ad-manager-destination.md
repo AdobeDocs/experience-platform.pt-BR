@@ -4,9 +4,9 @@ seo-title: Destino do Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 seo-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 Observe os seguintes detalhes específicos para [!DNL Google Ad Manager] os destinos:
 
 * Você pode enviar as seguintes [identidades](../../identity-service/namespaces.md) para [!DNL Google Ad Manager] destinos: **ID de cookie do Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
-* audiências ativadas são criadas de forma programática na [!DNL Google] plataforma.
+* Audiências ativadas são criadas de forma programática na [!DNL Google] plataforma.
 * A CDP em tempo real do Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
 
 >[!IMPORTANT]
@@ -43,13 +43,17 @@ Antes de criar o [!DNL Google Ad Manager] destino na CDP em tempo real do Adobe,
 * **ID** da conta: esta é a ID da conta Adobe com [!DNL Google]. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante de Adobe para obter essa ID.
 * **ID** do cliente: esta é a ID da conta do cliente com [!DNL Google]. Entre em contato com o Atendimento ao cliente da Adobe ou com seu representante de Adobe para obter essa ID.
 * **ID** de rede: esta é a sua conta com [!DNL Google Ad Manager]
-* **ID** do link de Audiência: esta é a sua conta com [!DNL Google Ad Manager]
+* **ID** do link de audiência: esta é a sua conta com [!DNL Google Ad Manager]
 * Seu tipo de conta. **DFP pelo Google** ou comprador **do** AdX.
 
-## Criar destino
+## Configurar destino
 
-1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Ad Manager]e selecione **[!UICONTROL Criar destino]**.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Ad Manager]e selecione **[!UICONTROL Configurar]**.
    ![Destino do Google Ad Manager do Connect](/help/rtcdp/destinations/assets/google-1-destination.png)
+
+   >[!NOTE]
+   >
+   >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
 
 2. Na etapa **Configuração** do fluxo de trabalho de criação de destino, preencha as Informações  básicas para o destino. <br>
 
@@ -59,7 +63,7 @@ Antes de criar o [!DNL Google Ad Manager] destino na CDP em tempo real do Adobe,
 * **[!UICONTROL Tipo]** de conta: Selecione uma opção, dependendo da sua conta no Google:
    * Usar `DFP by Google` para [!DNL DoubleClick] editores
    * Usar `AdX buyer` para [!DNL Google AdX]
-* **[!UICONTROL ID]** da conta: Preencha a ID da conta com [!DNL Google]. Essa pode ser sua ID de rede ou sua ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
+* **[!UICONTROL ID]** da conta: Preencha a ID da conta com [!DNL Google]. Essa pode ser a sua ID de rede ou a ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
 * **[!UICONTROL Caso]** de uso de marketing: Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pelo Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados.
 
 >[!NOTE]

@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector CRM na interface do usuári
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fo
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-* [Perfil](../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Perfil do cliente em tempo real]](../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Além disso, este tutorial requer que você já tenha criado uma conta CRM. Uma lista de tutoriais para criar conectores CRM diferentes na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../../home.md)origem.
 
@@ -156,7 +156,7 @@ As seções a seguir fornecem informações adicionais para trabalhar com conect
 
 Quando um fluxo de dados é criado, ele imediatamente se torna ativo e ingere dados de acordo com o agendamento que foi fornecido. Você pode desativar um fluxo de dados ativo a qualquer momento seguindo as instruções abaixo.
 
-Na tela de *[!UICONTROL autenticação]* , selecione o nome da conexão básica associada ao fluxo de dados que você deseja desativar.
+Na tela de *[!UICONTROL autenticação]* , selecione o nome da conexão associada ao fluxo de dados que você deseja desativar.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 

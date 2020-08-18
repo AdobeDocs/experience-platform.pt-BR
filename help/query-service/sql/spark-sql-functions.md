@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções SQL Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
+source-wordcount: '4996'
 ht-degree: 5%
 
 ---
@@ -24,17 +24,18 @@ Referência: [Documentação da função SQL Spark](https://spark.apache.org/doc
 
 ## Categorias
 
-- [Operadores e funções de matemática e estatística](#math-and-statistical-operators-and-functions)
+- [Operadores e funções de matemática e estatística](#math)
 - [Operadores lógicos](#logical-operators)
-- [Funções de data/hora](#date/time-functions)
-- [funções de Agregação](#aggregate-functions)
+- [Funções de data/hora](#datetime-functions)
+- [funções de agregação](#aggregate-functions)
 - [Matrizes](#arrays)
-- [Funções de difusão de tipo de dados](#datatype-casting-functions)
-- [Funções de conversão e formatação](#conversion-and-formatting-functions)
+- [Funções de difusão de tipo de dados](#datatype-casting)
+- [Funções de conversão e formatação](#conversion)
 - [Avaliação dos dados](#data-evaluation)
 - [Informações atuais](#current-information)
+- [Funções de ordem mais altas](#higher-order)
 
-### Operadores e funções de matemática e estatística
+### Operadores e funções de matemática e estatística {#math}
 
 #### Módulo
 
@@ -744,7 +745,7 @@ Exemplo:
 
 `variance(expr)`: Retorna a variação de amostra calculada a partir dos valores de um grupo.
 
-### Operadores lógicos
+### Operadores lógicos {#logical-operators}
 
 #### Lógico não
 
@@ -1007,7 +1008,7 @@ Exemplo:
  true
 ```
 
-### Funções de data/hora
+### Funções de data/hora {#datetime-functions}
 
 #### add_months
 
@@ -1425,13 +1426,13 @@ Exemplo:
 
 Desde: 1.5.0
 
-### funções de Agregação
+### funções de agregação {#aggregate-functions}
 
 #### aprox_count_different
 
 `approx_count_distinct(expr[, relativeSD])`: Retorna a cardinalidade estimada por HyperLogLog++. `relativeSD` define o erro máximo de estimativa permitido.
 
-### Matrizes
+### Matrizes {#arrays}
 
 #### matriz
 
@@ -1809,7 +1810,7 @@ Exemplos:
 
 Desde: 2.4.0
 
-### Funções de difusão de tipo de dados
+### Funções de difusão de tipo de dados {#datatype-casting}
 
 #### bigint
 
@@ -1894,7 +1895,7 @@ Exemplos:
 
 `tinyint(expr)`: Faz a projeção do valor `expr` para o tipo de dados do público alvo `tinyint`.
 
-### Funções de conversão e formatação
+### Funções de conversão e formatação {#conversion}
 
 #### ascii
 
@@ -2403,7 +2404,7 @@ Exemplo:
 >
 >A função é não-determinística.
 
-### Avaliação dos dados
+### Avaliação dos dados {#data-evaluation}
 
 #### coalescência
 
@@ -2996,7 +2997,7 @@ Exemplo:
  cc
 ```
 
-### Informações atuais
+### Informações atuais {#current-information}
 
 #### current_database
 
@@ -3026,3 +3027,65 @@ Desde: 1.5.0
 `now()`: Retorna o carimbo de data e hora atual no start da avaliação do query.
 
 Desde: 1.5.0
+
+### Funções de ordem mais altas {#higher-order}
+
+#### transformação
+
+`transform(array, lambdaExpression): array`
+
+Transforme elementos em uma matriz usando a função.
+
+Se houver dois argumentos para a função lambda, o segundo argumento significa o índice do elemento.
+
+Exemplo:
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### existe
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Teste se um predicado se mantém para um ou mais elementos na matriz.
+
+Exemplo:
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filtro
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filtre a matriz de entrada usando o predicado especificado.
+
+Exemplo:
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### agregação
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Aplique um operador binário a um estado inicial e a todos os elementos no storage e reduza isso a um único estado. O estado final é convertido no resultado final aplicando uma função de finalização.
+
+Exemplo:
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```

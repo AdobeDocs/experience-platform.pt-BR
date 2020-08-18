@@ -4,9 +4,9 @@ seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,15 @@ ht-degree: 0%
 
 ## Visão geral
 
-Esta página explica como você pode se conectar aos locais do armazenamento em nuvem no Adobe Real-time Customer Data Platform.
+Esta página explica como você pode se conectar aos locais do armazenamento em nuvem na Plataforma de dados do cliente em tempo real do Adobe.
 
-1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione o destino preferencial do armazenamento na nuvem e selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione o destino preferencial do armazenamento na nuvem e, em seguida, selecione **[!UICONTROL Configurar]**.
 
    ![Conectar-se ao destino do armazenamento na nuvem](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+
+   >[!NOTE]
+   >
+   >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
 
 2. Na etapa **[!UICONTROL Autenticação]** , se você tiver configurado anteriormente uma conexão com o destino do armazenamento na nuvem, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com o destino do armazenamento na nuvem. Preencha as credenciais de autenticação de sua conta e selecione **[!UICONTROL Conectar ao destino]**. <br> Consulte destino [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) destino, [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) destino e destino [SFTP](/help/rtcdp/destinations/sftp-destination.md) para obter detalhes específicos sobre as credenciais inseridas na etapa **Autenticação** .
 

@@ -4,9 +4,9 @@ seo-title: Fluxo de trabalho de destinos de rede social
 description: Instruções para conectar-se à sua rede social e contas
 seo-description: Instruções para conectar-se à sua rede social e contas
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,15 @@ ht-degree: 0%
 
 ## Fluxo de trabalho para criar destinos de rede social
 
-Este tutorial usa [!DNL Facebook] como exemplo, mas o fluxo de trabalho no Adobe Real-time Customer Data Platform será o mesmo para todos os destinos da rede social, uma vez mais adicionado ao produto.
+Este tutorial usa [!DNL Facebook] como exemplo, mas o fluxo de trabalho na Plataforma de dados do cliente em tempo real do Adobe será o mesmo para todos os destinos da rede social, uma vez mais, adicionado ao produto.
 
-1. Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, role até a categoria **[!UICONTROL Social]** . Selecione o destino de sua rede social preferida e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
+1. Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, role até a categoria **[!UICONTROL Social]** . Selecione o destino de sua rede social preferida e, em seguida, selecione **[!UICONTROL Configurar]**.
 
-   ![Connect to social network destination](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+   ![Conectar-se ao destino da rede social](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+
+   >[!NOTE]
+   >
+   >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
 
 2. Na etapa **Autenticação** , se você já tiver configurado uma conexão com o destino da rede social, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com o destino da sua rede social. Selecione **[!UICONTROL Conectar ao destino]** e isso o levará ao destino da rede social selecionada para fazer logon e conectar o Adobe Experience Cloud à sua conta de anúncio de rede social.
 
@@ -38,14 +42,14 @@ Este tutorial usa [!DNL Facebook] como exemplo, mas o fluxo de trabalho no Adobe
 
    >[!IMPORTANT]
    >
-   > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed.
-   > * For [!DNL Facebook] destinations. **[!UICONTROL A ID]** da conta é sua [!DNL Facebook Ad Account ID]. Você pode encontrar essa ID no [!DNL Facebook Ads Manager]. Prefixe a ID como `act_` mostrado abaixo:
+   > * O caso de uso de marketing da Personalização ** de identidade única é selecionado por padrão para destinos de rede social e não pode ser removido.
+   > * Para [!DNL Facebook] destinos. **[!UICONTROL A ID]** da conta é sua [!DNL Facebook Ad Account ID]. Você pode encontrar essa ID no [!DNL Facebook Ads Manager]. Prefixe a ID como `act_` mostrado abaixo:
 
 
    ![Conectar ao destino da rede social - etapa de configuração](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
 5. Seu destino agora é criado. Você pode selecionar **[!UICONTROL Salvar e sair]** se quiser ativar segmentos posteriormente ou selecionar **[!UICONTROL Próximo]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos em redes](#activate-segments)sociais, para o restante do fluxo de trabalho.
 
-## Activate segments to social networks {#activate-segments}
+## Ativar segmentos em redes sociais {#activate-segments}
 
 Para obter instruções sobre como ativar segmentos em redes sociais, consulte [Ativar dados para destinos](/help/rtcdp/destinations/activate-destinations.md).

@@ -4,9 +4,9 @@ seo-title: Destino de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 seo-description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,10 @@ Se você optar por hash nos endereços de email, certifique-se de seguir os requ
 1. Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, navegue até a categoria **[!UICONTROL Publicidade]** . Selecione [!DNL Google Customer Match], em seguida, **[!UICONTROL Configurar]**.
 
    ![Conectar-se ao destino de Correspondência de clientes do Google](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+
+   >[!NOTE]
+   >
+   >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
 
 2. Na etapa **Conta** , se você já tiver configurado uma conexão com seu [!DNL Google Customer Match] destino, selecione Conta **** existente e selecione sua conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com [!DNL Google Customer Match]. Selecione **[!UICONTROL Conectar-se ao destino]** para fazer logon e conectar o Adobe Experience Cloud à sua [!DNL Google Ad] conta.
 

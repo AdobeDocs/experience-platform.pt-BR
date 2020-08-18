@@ -5,9 +5,9 @@ title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,6 @@ Os sistemas CRM fornecem dados que podem ajudar a construir relações com os cl
 - [!DNL GreenPlum](connectors/databases/greenplum.md) conector
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) conector
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) conector
-- [!DNL MariaDB](connectors/databases/mariadb.md) conector
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) conector
 - [!DNL MySQL](connectors/databases/mysql.md) conector
 - [!DNL Oracle](connectors/databases/oracle.md) conector

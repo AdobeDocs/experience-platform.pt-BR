@@ -5,7 +5,7 @@ seo-title: Área de trabalho Destinos
 description: Na Plataforma de dados do cliente em tempo real do Adobe, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%
@@ -41,7 +41,7 @@ As placas de destino contêm um controle **[!UICONTROL Configure]** ou **[!UICON
 | [!UICONTROL Configurar ] | Permite criar uma conexão com o destino. |
 | [!UICONTROL Ativar] | Depois de estabelecer uma conexão com o destino, é possível ativar os segmentos. |
 | [!UICONTROL conta de visualização] | Visualização as contas que você conectou para um destino. |
-| [!UICONTROL Fluxos de dados de visualização] | Visualização dos fluxos de ativação de dados existentes para um destino |
+| [!UICONTROL Fluxos de dados de visualização] | Visualização dos fluxos de ativação de dados que existem para um destino. |
 | [!UICONTROL Documentação de visualização] | Abre um link para a página de documentação referente ao destino específico, para obter mais informações e para ajudá-lo a configurá-lo. |
 
 ![Controles no cartão de destinos](/help/rtcdp/destinations/assets/destination-card-options.png)

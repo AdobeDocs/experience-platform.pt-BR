@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de publicidade na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fo
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-- [Perfil](../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [[!DNL Perfil do cliente em tempo real]](../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Além disso, este tutorial requer que você já tenha criado uma conta de publicidade. Uma lista de tutoriais para criar diferentes conectores de pagamento na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../../home.md)origem.
 
@@ -106,20 +106,20 @@ Depois de fornecer os valores apropriados para a programação, selecione **[!UI
 
 ## Fornecer detalhes do fluxo de dados
 
-A etapa de detalhes *[!UICONTROL do]* Dataflow é exibida, permitindo que você nomeie e forneça uma breve descrição sobre seu novo dataflow.
+A etapa de detalhes **[!UICONTROL do]** Dataflow é exibida, permitindo que você nomeie e forneça uma breve descrição sobre seu novo dataflow.
 
-Durante esse processo, você também pode ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro. Habilitar a ingestão *[!UICONTROL parcial]* fornece a capacidade de assimilar dados que contenham erros até um certo limite. Quando a ingestão ** parcial estiver ativada, arraste a discagem do limite de *[!UICONTROL Erro %]* para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
+Durante esse processo, você também pode ativar a assimilação **[!UICONTROL parcial]** e o diagnóstico **[!UICONTROL de]** erro. Habilitar a ingestão **[!UICONTROL parcial]** fornece a capacidade de assimilar dados que contenham erros até um certo limite. Quando a ingestão **** parcial estiver ativada, arraste a discagem do limite de **[!UICONTROL Erro %]** para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
 Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
 
 ![detalhes do fluxo de dados](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Revisar seu fluxo de dados
 
-A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-- *[!UICONTROL Conexão]*: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
-- *[!UICONTROL Atribuir campos]* do conjunto de dados e mapear: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
-- *[!UICONTROL Agendamento]*: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
+- **[!UICONTROL Conexão]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
+- **[!UICONTROL Atribuir campos]** do conjunto de dados e mapear: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
+- **[!UICONTROL Agendamento]**: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
 
 Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
@@ -131,7 +131,7 @@ Depois que seu fluxo de dados for criado, você poderá monitorar os dados que e
 
 ## Excluir seu fluxo de dados
 
-Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função *[!UICONTROL Excluir]* disponível na área de trabalho *[!UICONTROL Fluxos de dados]* . Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre como [excluir fluxos de dados na interface do usuário](../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Excluir]** disponível na área de trabalho **[!UICONTROL Fluxos de dados]** . Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre como [excluir fluxos de dados na interface do usuário](../delete.md).
 
 ## Próximas etapas
 
@@ -148,11 +148,11 @@ As seções a seguir fornecem informações adicionais para trabalhar com conect
 
 Quando um fluxo de dados é criado, ele imediatamente se torna ativo e ingere dados de acordo com o agendamento que foi fornecido. Você pode desativar um fluxo de dados ativo a qualquer momento seguindo as instruções abaixo.
 
-Na tela *[!UICONTROL Fluxos de dados]* , selecione o nome do fluxo de dados que deseja desativar.
+Na tela **[!UICONTROL Fluxos de dados]** , selecione o nome do fluxo de dados que deseja desativar.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
-A coluna *[!UICONTROL Propriedades]* é exibida no lado direito da tela. Este painel contém um botão de alternância **[!UICONTROL Ativado]** . Clique na alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
+A coluna **[!UICONTROL Propriedades]** é exibida no lado direito da tela. Este painel contém um botão de alternância **[!UICONTROL Ativado]** . Clique na alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
 
 ![disable](../../../images/tutorials/dataflow/advertising/disable.png)
 

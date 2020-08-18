@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um conector de origem Adobe Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -30,13 +30,13 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria de aplicativos *de* Adobe, selecione **[!UICONTROL Adobe Analytics]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para visualização de contas existentes, selecione **[!UICONTROL Contas]**.
+Na categoria de aplicativos **[!UICONTROL de]** Adobe, selecione **[!UICONTROL Adobe Analytics]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para visualização de contas existentes, selecione **[!UICONTROL Contas]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Selecionar dados
 
-A etapa *Adobe Analytics* é exibida. Os fluxos de conjunto de dados estabelecidos anteriormente para o Analytics são listados nesta tela. Você pode criar um novo fluxo de conjunto de dados clicando em **[!UICONTROL Selecionar dados]**.
+A etapa **[!UICONTROL Adobe Analytics]** é exibida. Os fluxos de conjunto de dados estabelecidos anteriormente para o Analytics são listados nesta tela. Você pode criar um novo fluxo de conjunto de dados clicando em **[!UICONTROL Selecionar dados]**.
 
 >[!NOTE]
 >
@@ -52,22 +52,22 @@ Na lista dos conjuntos de relatórios disponíveis, selecione o que deseja traze
 
 ### Nomear o fluxo do conjunto de dados
 
-A etapa de detalhes *do fluxo do conjunto de* dados é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Selecione **[UICONTROL! Próximo]** quando terminar.
+A etapa de detalhes **[!UICONTROL do fluxo do conjunto de]** dados é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Selecione **[!UICONTROL Próximo]** ao terminar.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Revisar o fluxo do conjunto de dados
 
-A etapa *Revisar* é exibida, permitindo que você reveja seu novo fluxo de conjunto de dados vinculado do Analytics antes de ele ser criado. Os detalhes da conexão são agrupados por categorias, incluindo:
+A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você reveja seu novo fluxo de conjunto de dados vinculado do Analytics antes de ele ser criado. Os detalhes da conexão são agrupados por categorias, incluindo:
 
-* *Conexão*: Mostra o tipo da conexão de origem e o conjunto de relatórios selecionado.
-* *Atribuir campos* do conjunto de dados e mapear: Ao criar outros conectores de origem, esse container mostra em qual conjunto de dados os dados de origem estão assimilando, incluindo o schema ao qual o conjunto de dados está aderindo. O schema de saída e o conjunto de dados são configurados automaticamente para os fluxos do conjunto de dados do Analytics.
+* **[!UICONTROL Conexão]**: Mostra o tipo da conexão de origem e o conjunto de relatórios selecionado.
+* **[!UICONTROL Atribuir campos]** do conjunto de dados e mapear: Ao criar outros conectores de origem, esse container mostra em qual conjunto de dados os dados de origem estão assimilando, incluindo o schema ao qual o conjunto de dados está aderindo. O schema de saída e o conjunto de dados são configurados automaticamente para os fluxos do conjunto de dados do Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Monitorar o fluxo do conjunto de dados
 
-Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Na tela *Catálogo* , selecione Fluxos *de* conjunto de dados para visualização de uma lista de fluxos estabelecidos associados à sua conta do Analytics.
+Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Na tela **[!UICONTROL Catálogo]** , selecione Fluxos **[!UICONTROL de]** conjunto de dados para visualização de uma lista de fluxos estabelecidos associados à sua conta do Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 

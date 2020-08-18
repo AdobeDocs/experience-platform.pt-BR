@@ -4,9 +4,9 @@ seo-title: Destino de anúncios do Google
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem propaganda por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 seo-description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem propaganda por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 Observe os seguintes detalhes específicos para [!DNL Google Ads] os destinos:
 
 * Você pode enviar as seguintes [identidades](../../identity-service/namespaces.md) para [!DNL Google Ads] destinos: **ID de cookie do Google, IDFA, GAID, IDs do Roku, IDs da Microsoft, IDs** da Amazon Fire TV.
-* audiências ativadas são criadas de forma programática na [!DNL Google] plataforma.
+* Audiências ativadas são criadas de forma programática na [!DNL Google] plataforma.
 * A CDP em tempo real do Adobe não inclui atualmente uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de audiências no Google para validar a integração e entender o tamanho da definição de metas de audiência.
 
 >[!IMPORTANT]
@@ -49,10 +49,14 @@ Antes de criar o [!DNL Google Ads] destino na CDP em tempo real do Adobe, você 
 * Seu tipo de conta: **AdWords**
 * **ID** do Google AdWords: Esta é a sua ID com [!DNL Google]. Normalmente, o formato da ID é 123-456-7890.
 
-## Criar destino
+## Configurar destino
 
-1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Ads]e selecione **[!UICONTROL Criar destino]**.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Ads]e selecione **[!UICONTROL Configurar]**.
    ![Destino do Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
+
+   >[!NOTE]
+   >
+   >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
 
 2. Na etapa **Configuração** do fluxo de trabalho de criação de destino, preencha as Informações  básicas para o destino. <br>
 

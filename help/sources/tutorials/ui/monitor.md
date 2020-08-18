@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -15,26 +15,26 @@ ht-degree: 0%
 
 # Monitorar contas e fluxos de dados na interface do usuário
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho *[!UICONTROL Fontes]* .
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho [!UICONTROL Fontes] .
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-- [Perfil](../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [[!DNL Perfil do cliente em tempo real]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Monitorar contas
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho *[!UICONTROL Fontes]* . A tela *[!UICONTROL Catálogo]* exibe várias fontes com as quais você pode criar contas e fluxos de dados. Cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
+Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]** . A tela **[!UICONTROL Catálogo]** exibe várias fontes com as quais você pode criar contas e fluxos de dados. Cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
 
-Selecione *[!UICONTROL Contas]* no cabeçalho superior para visualização contas existentes.
+Selecione **[!UICONTROL Contas]** no cabeçalho superior para visualização contas existentes.
 
 ![catálogo](../../images/tutorials/monitor/catalog-accounts.png)
 
-As páginas *[!UICONTROL Contas]* são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
+As páginas **[!UICONTROL Contas]** são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
 
 Selecione o ícone de funil na parte superior esquerda para abrir a janela de classificação.
 
@@ -44,13 +44,13 @@ O painel de classificação permite acessar contas de uma fonte específica. Sel
 
 ![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
 
-Na página *[!UICONTROL Contas]* , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada.
+Na página **[!UICONTROL Contas]** , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada.
 
 ![fluxo de dados](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitorar fluxos de dados
 
-Os fluxos de dados podem ser acessados diretamente da página *[!UICONTROL Catálogo]* sem exibir *[!UICONTROL Contas]*. Selecione *[!UICONTROL Fluxos de dados]* no cabeçalho superior para visualização de uma lista de fluxos de dados existentes.
+Os fluxos de dados podem ser acessados diretamente da página **[!UICONTROL Catálogo]** sem exibir **[!UICONTROL Contas]**. Selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior para visualização de uma lista de fluxos de dados existentes.
 
 ![catálogo-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -62,25 +62,25 @@ O painel de classificação é exibido. Selecione a fonte que deseja acessar no 
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-A página de atividade *[!UICONTROL do]* Dataflow contém detalhes sobre o número de registros ingeridos e os registros falharam, bem como informações sobre o status e o tempo de processamento do dataflow. Selecione o ícone de calendário acima do fluxo de dados para ajustar o intervalo de tempo dos registros de ingestão.
+A página de atividade **[!UICONTROL do]** Dataflow contém detalhes sobre o número de registros ingeridos e os registros falharam, bem como informações sobre o status e o tempo de processamento do dataflow. Selecione o ícone de calendário acima do fluxo de dados para ajustar o intervalo de tempo dos registros de ingestão.
 
 ![atividade de fluxo de dados](../../images/tutorials/monitor/dataflow-activity.png)
 
-O calendário permite que você visualização os diferentes intervalos de tempo para registros ingeridos. Você pode selecionar uma das duas opções predefinidas *[!UICONTROL Últimos 7 dias]* ou *[!UICONTROL Últimos 30 dias]*. Como alternativa, você pode definir um período de tempo personalizado usando o calendário. Selecione seu período de tempo de escolha e selecione **[!UICONTROL Aplicar]** para continuar.
+O calendário permite que você visualização os diferentes intervalos de tempo para registros ingeridos. Você pode selecionar uma das duas opções predefinidas **[!UICONTROL Últimos 7 dias]** ou **[!UICONTROL Últimos 30 dias]**. Como alternativa, você pode definir um período de tempo personalizado usando o calendário. Selecione seu período de tempo de escolha e selecione **[!UICONTROL Aplicar]** para continuar.
 
 ![calendário de fluxo](../../images/tutorials/monitor/flow-calendar.png)
 
-Por padrão, a atividade ** Dataflow exibe o painel *[!UICONTROL Propriedades]* associado ao fluxo de dados. Selecione a execução de fluxo da lista para ver seus metadados associados, incluindo informações sobre sua ID de execução exclusiva.
+Por padrão, a atividade **** Dataflow exibe o painel **[!UICONTROL Propriedades]** associado ao fluxo de dados. Selecione a execução de fluxo da lista para ver seus metadados associados, incluindo informações sobre sua ID de execução exclusiva.
 
-Selecione start **[!UICONTROL de execução do]** Dataflow para acessar a visão geral *[!UICONTROL de execução do]* Dataflow.
+Selecione start **[!UICONTROL de execução do]** Dataflow para acessar a visão geral **[!UICONTROL de execução do]** Dataflow.
 
 ![run](../../images/tutorials/monitor/run-metadata.png)
 
-A visão geral *[!UICONTROL da execução do]* Fluxo de dados exibe informações sobre o fluxo de dados, incluindo seus metadados, o status da ingestão *[!UICONTROL parcial e o limite]* de ** Erro atribuído. O cabeçalho superior também inclui um resumo *[!UICONTROL de]* Erro. O resumo *[!UICONTROL de]* Erro contém o erro de nível superior específico que mostra em qual etapa o processo de ingestão encontrou um erro.
+A visão geral **[!UICONTROL da execução do]** Fluxo de dados exibe informações sobre o fluxo de dados, incluindo seus metadados, o status da ingestão **[!UICONTROL parcial e o limite]** de **** Erro atribuído. O cabeçalho superior também inclui um resumo **[!UICONTROL de]** Erro. O resumo **[!UICONTROL de]** Erro contém o erro de nível superior específico que mostra em qual etapa o processo de ingestão encontrou um erro.
 
 ![visão geral da execução do dataflow](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-Consulte a tabela a seguir para obter os códigos de erro que podem ser vistos no resumo ** Erro.
+Consulte a tabela a seguir para obter os códigos de erro que podem ser vistos no resumo **** Erro.
 
 | Código de erro | Mensagem de erro |
 | ---------- | ----------- |
@@ -88,25 +88,25 @@ Consulte a tabela a seguir para obter os códigos de erro que podem ser vistos n
 | `CONNECTOR-2001-500` | &quot;Ocorreu um problema ao copiar da fonte Experience Platform para o conjunto de dados.&quot; |
 | `CONNECTOR-3001-500` | &quot;Ocorreu um problema com o provedor de fluxo ao criar o lote usando a API de assimilação em massa.&quot; |
 
-A metade inferior da tela contém informações sobre erros *[!UICONTROL de execução do]* Dataflow. Daqui, você também pode visualização os arquivos assimilados, pré-visualização e fazer download do diagnóstico de erros ou fazer download do manifesto do arquivo.
+A metade inferior da tela contém informações sobre erros **[!UICONTROL de execução do]** Dataflow. Daqui, você também pode visualização os arquivos assimilados, pré-visualização e fazer download do diagnóstico de erros ou fazer download do manifesto do arquivo.
 
-A seção *[!UICONTROL Dataflow run errors]* exibe o código *[!UICONTROL de]* erro, o número de registros que falharam e as informações que descrevem o erro.
+A seção **[!UICONTROL Dataflow run errors]** exibe o código **[!UICONTROL de]** erro, o número de registros que falharam e as informações que descrevem o erro.
 
 Selecione Diagnóstico **[!UICONTROL de erro de]** Pré-visualização para ver mais informações sobre o erro de ingestão.
 
 ![Erros de execução de fluxo de dados](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-O painel pré-visualização *[!UICONTROL do diagnóstico]* Error (Erro) é exibido. Essa tela exibe informações específicas sobre a falha de ingestão, incluindo o nome *[!UICONTROL do]* arquivo, o código *[!UICONTROL de]* erro, o nome da coluna na qual o erro ocorreu e uma descrição do erro.
+O painel pré-visualização **[!UICONTROL do diagnóstico]** Error (Erro) é exibido. Essa tela exibe informações específicas sobre a falha de ingestão, incluindo o nome **[!UICONTROL do]** arquivo, o código **[!UICONTROL de]** erro, o nome da coluna na qual o erro ocorreu e uma descrição do erro.
 
 Esta seção também inclui uma pré-visualização da coluna que contém o erro.
 
 >[!IMPORTANT]
 >
->Para ativar a pré-visualização *[!UICONTROL de diagnóstico de]* erro, é necessário ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro ao configurar um fluxo de dados. Isso permitirá que o sistema verifique todos os registros ingeridos durante a execução do fluxo.
+>Para ativar a pré-visualização **[!UICONTROL de diagnóstico de]** erro, é necessário ativar a assimilação **[!UICONTROL parcial]** e o diagnóstico **[!UICONTROL de]** erro ao configurar um fluxo de dados. Isso permitirá que o sistema verifique todos os registros ingeridos durante a execução do fluxo.
 
 ![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Depois de visualizar os erros, você pode selecionar **[!UICONTROL Download]** de dentro do fluxo de dados *[UICONTROL para executar o painel de visão geral]* para acessar o diagnóstico completo de erros e baixar o manifesto do arquivo. Consulte os documentos sobre diagnósticos [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erros e o [download de metadados](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obter mais informações.
+Depois de visualizar os erros, você pode selecionar **[!UICONTROL Download]** de dentro do fluxo de dados **[UICONTROL para executar o painel de visão geral]** para acessar o diagnóstico completo de erros e baixar o manifesto do arquivo. Consulte os documentos sobre diagnósticos [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erros e o [download de metadados](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obter mais informações.
 
 ![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/download.png)
 
@@ -114,7 +114,7 @@ Para obter mais informações sobre monitoramento de fluxos de dados e ingestão
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você acessou com êxito contas e fluxos de dados existentes na área de trabalho *[!UICONTROL Fontes]* . Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você acessou com êxito contas e fluxos de dados existentes na área de trabalho **[!UICONTROL Fontes]** . Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../profile/home.md)
 - [Visão geral da Análise do espaço de trabalho da Data Science](../../../data-science-workspace/home.md)

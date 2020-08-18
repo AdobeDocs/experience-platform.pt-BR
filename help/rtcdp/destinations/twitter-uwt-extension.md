@@ -1,12 +1,12 @@
 ---
 title: Extensão de tag do Twitter Universal Website
 seo-title: Extensão de tag do Twitter Universal Website
-description: A extensão de tag do site universal do Twitter é um destino de publicidade no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão da tag do site universal do Twitter é um destino publicitário no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão de tag do site universal do Twitter é um destino de publicidade na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão da tag do site universal do Twitter é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '527'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 [!DNL Twitter Universal Website Tag] fornece ações para enviar beacons para a Tag UWT do Twitter.
 
-[!DNL Twitter Universal Website Tag] é uma extensão de anúncio no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte Rastreamento [de conversão](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)avançado.
+[!DNL Twitter Universal Website Tag] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte Rastreamento [de conversão](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)avançado.
 
 Este destino é uma extensão de Experience Platform Launch. Para obter mais informações sobre como as extensões do Launch funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
@@ -36,7 +36,7 @@ Para instalar a [!DNL Twitter Universal Website Tag] extensão:
 
 1. Na interface [CDP em tempo real do](http://platform.adobe.com/)Adobe, vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Selecione a extensão do catálogo ou use a barra de pesquisa.
-3. Clique no destino para realçá-lo e selecione **[!UICONTROL Instalar extensão]** no painel direito. Se o controle **[!UICONTROL Instalar extensão]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]** . Consulte [Pré-requisitos](#prerequisites).
+3. Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configurar]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]** . Consulte [Pré-requisitos](#prerequisites).
 4. Na janela **[!UICONTROL Selecionar propriedade]** de inicialização disponível, selecione a propriedade Iniciar na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [da página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propriedades da documentação do Launch.
 5. O fluxo de trabalho leva você ao Launch para concluir a instalação.
 

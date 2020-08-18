@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da ingestão parcial de lote Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ Para criar uma nova conexão de origem, siga as etapas listadas na visão geral 
 
 A alternância de ingestão **** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a *[!UICONTROL alternância de ingestão]* parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão ** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -129,7 +129,7 @@ O limite **[!UICONTROL de]** Erro permite que você defina a porcentagem de erro
 
 A Adobe Experience Platform permite que os usuários baixem os metadados dos arquivos de entrada. Os metadados serão retidos dentro [!DNL Platform] de até 30 dias.
 
-### arquivos de entrada de Lista {#list-files}
+### arquivos de entrada de lista {#list-files}
 
 A solicitação a seguir permitirá que você visualização uma lista de todos os arquivos fornecidos em um lote finalizado.
 
@@ -360,20 +360,20 @@ Este tutorial aborda como criar ou modificar um conjunto de dados para permitir 
 A ingestão parcial em lote tem três tipos de erro diferentes ao assimilar dados.
 
 - [Arquivos ilegíveis](#unreadable)
-- [schemas ou cabeçalhos inválidos](#schemas-headers)
+- [Schemas ou cabeçalhos inválidos](#schemas-headers)
 - [Linhas não analisáveis](#unparsable)
 
 ### Arquivos ilegíveis {#unreadable}
 
 Se o lote ingerido tiver arquivos ilegíveis, os erros do lote serão anexados ao próprio lote. Mais informações sobre como recuperar o lote com falha podem ser encontradas no guia [](../quality/retrieve-failed-batches.md)recuperar lotes com falha.
 
-### schemas ou cabeçalhos inválidos {#schemas-headers}
+### Schemas ou cabeçalhos inválidos {#schemas-headers}
 
 Se o lote ingerido tiver um schema inválido ou cabeçalhos inválidos, os erros do lote serão anexados ao próprio lote. Mais informações sobre como recuperar o lote com falha podem ser encontradas no guia [](../quality/retrieve-failed-batches.md)recuperar lotes com falha.
 
 ### Linhas não analisáveis {#unparsable}
 
-Se o lote ingerido tiver linhas não analisáveis, os erros do lote serão armazenados em um arquivo que pode ser acessado usando o ponto de extremidade descrito abaixo.
+Se o lote que você ingeriu tiver linhas não analisáveis, você poderá usar o terminal a seguir para visualização de uma lista de arquivos que contêm erros.
 
 **Formato da API**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das linhas não analisáveis.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista dos arquivos que possuem erros.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+Em seguida, você pode recuperar informações detalhadas sobre os erros usando o terminal [de recuperação de](#retrieve-metadata)metadados.
+
+Uma amostra de resposta da recuperação do arquivo de erro pode ser vista abaixo:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```

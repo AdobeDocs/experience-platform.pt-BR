@@ -1,13 +1,13 @@
 ---
 title: Extensão UET (Rastreamento Universal de Eventos) do Bing Ads
 seo-title: Extensão UET (Rastreamento Universal de Eventos) do Bing Ads
-description: A extensão do Bing Ads Universal Evento Tracking (UET) é um destino publicitário no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão do Bing Ads Universal Evento Tracking (UET) é um destino publicitário na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 4%
+source-wordcount: '548'
+ht-degree: 6%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 4%
 
 [!DNL Bing Ads Universal Event Tracking] (UET) for [!DNL Experience Platform Launch] é uma maneira útil de rastrear o que acontece depois que alguém clica em seu anúncio de pesquisa. Ao usar uma única tag UET para registrar o que os clientes fazem em seu site, você pode aproveitar esses dados, permitindo que você rastreie conversões ou audiências de públicos alvos usando listas de remarketing.
 
-[!DNL Bing Ads Universal Event Tracking] (UET) é uma extensão de anúncio no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
+[!DNL Bing Ads Universal Event Tracking] (UET) é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
 Este destino é uma [!DNL Experience Platform Launch] extensão. Para obter mais informações sobre como [!DNL Launch] as extensões funcionam no CDP em tempo real do Adobe, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
-![Extensão do Bing Ads](assets/bing-extension.png)
+![Extensão do Bing Ads](assets/bing-ads-extension.png)
 
 
 ## Pré-requisitos {#prerequisites}
@@ -37,7 +37,7 @@ Para instalar a extensão [!DNL Bing Ads Universal Event Tracking] (UET):
 
 1. Na interface [CDP em tempo real do](http://platform.adobe.com/)Adobe, vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Selecione a extensão do catálogo ou use a barra de pesquisa.
-3. Clique no destino para realçá-lo e selecione **[!UICONTROL Instalar extensão]** no painel direito. Se o controle **[!UICONTROL Instalar extensão]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]** . Consulte [Pré-requisitos](#prerequisites).
+3. Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configurar]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]** . Consulte [Pré-requisitos](#prerequisites).
 4. Na janela **[!UICONTROL Selecionar propriedade]** de inicialização disponível, selecione a [!DNL Launch] propriedade na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade em [!DNL Launch]. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [da página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propriedades da [!DNL Launch] documentação.
 5. O fluxo de trabalho leva você [!DNL Launch] a concluir a instalação.
 

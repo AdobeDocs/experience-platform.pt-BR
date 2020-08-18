@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar um conector de origem de atributos do cliente na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 7%
+source-wordcount: '352'
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ A tela atividade *de origem lista todas as conexões estabelecidas anteriormente
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-Na lista dos conjuntos de dados de perfil de atributos do cliente disponíveis, selecione aquele que deseja trazer para a Plataforma e clique em **Avançar**.
+Na lista de conjuntos de dados de perfil de atributos do cliente disponíveis, selecione aquele que deseja trazer [!DNL Platform] e clique em **Avançar**.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ A etapa *Revisar* é exibida, permitindo que você revise sua nova conexão de e
 
 ## Próximas etapas
 
-Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a ingestão inicial for concluída, os dados do perfil dos atributos do cliente poderão ser usados pelos serviços da plataforma downstream, como o Perfil do cliente em tempo real e o Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a ingestão inicial for concluída, os dados de perfil dos atributos do cliente poderão ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Visão geral do Perfil do cliente em tempo real](../../../../../profile/home.md)
-* [Visão geral do Serviço de segmentação](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] visão geral](../../../../../segmentation/home.md)

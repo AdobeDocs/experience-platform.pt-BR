@@ -1,10 +1,11 @@
 ---
+keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmar extensão de Comentários Digitais
 seo-title: Confirmar extensão de Comentários Digitais
 description: A extensão Confirmar feedback digital é uma voz do destino do cliente na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 4%

@@ -1,24 +1,23 @@
 ---
-title: Identidades e namespaces de identidade
-seo-title: Adobe Experience Platform Identity Service
-description: descrição
-seo-description: descrição da sequência
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: Identidades na CDP em tempo real
+description: O Adobe Experience Platform Identity Service ajuda você a obter uma melhor visualização de seus clientes e de seu comportamento ao unir identidades entre dispositivos e sistemas.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
 
 # Identidades na CDP em tempo real
 
-O Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seus clientes e de seu comportamento ao unir identidades entre dispositivos e sistemas. Geralmente, seus clientes interagem com sua marca em vários canais, isso pode incluir a navegação online em seu site, a compra na loja, a entrada em seu programa de fidelidade ou a ligação para um suporte técnico, para nomear alguns. Nesses vários sistemas, existe uma identidade criada para esse cliente e [!DNL Identity Service] permite reunir essas identidades para ver a imagem completa.
+A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seus clientes e de seu comportamento ao unir identidades entre dispositivos e sistemas. Geralmente, seus clientes interagem com sua marca em vários canais, isso pode incluir a navegação online em seu site, a compra na loja, a entrada em seu programa de fidelidade ou a ligação para um suporte técnico, para nomear alguns. Nesses vários sistemas, existe uma identidade criada para esse cliente e [!DNL Identity Service] permite reunir essas identidades para ver a imagem completa.
 
 Agora, em vez de cinco clientes separados interagindo com sua marca em cinco canais diferentes, você pode ver que esse é o mesmo cliente, e você pode garantir que eles recebam uma experiência consistente, personalizada e relevante em cada interação. À medida que mais informações se tornam conhecidas sobre seu cliente (por exemplo, um navegador anônimo do seu site decide se inscrever para obter uma conta e fazer login), essas informações são agrupadas e a imagem do seu cliente se torna cada vez mais clara.
 
-## namespaces de identidade
+## Namespaces de identidade
 
 As namespaces de identidade são um componente do [!DNL Identity Service] e servem como indicadores que fornecem contexto adicional às identidades do cliente. Um exemplo de uma namespace de ID comumente usada seria o &quot;Email&quot;, onde o uso do mesmo endereço de email em vários sites permite que você junte várias identidades diferentes, cada uma com uma ID de cliente exclusiva, como pertencente ao mesmo cliente. [!DNL Experience Platform] permite usar namespaces de ID para pesquisar perfis individuais na interface do usuário. Para obter mais informações sobre como visualizar perfis, consulte a visão geral [do visualizador do](/help/rtcdp/profile/profile-viewer.md)perfil. Para saber mais sobre namespaces de identidade, consulte a visão geral [da namespace de](../../identity-service/namespaces.md)identidade.
 

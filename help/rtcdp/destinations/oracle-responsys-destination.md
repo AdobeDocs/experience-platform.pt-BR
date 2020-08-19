@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;oracle responsys destination
 title: Destino do Oracle Responsys
 seo-title: Destino do Oracle Responsys
 description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
 seo-description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 [A Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) é uma ferramenta de marketing por email empresarial para campanhas de marketing entre canais, oferecida pela [!DNL Oracle] para personalizar interações entre email, dispositivos móveis, vídeos e redes sociais.
 
-Para enviar dados de segmento para [!DNL Oracle Responsys], é necessário primeiro [conectar-se ao destino](#connect-destination) no Adobe Real-time Customer Data Platform e, em seguida, [configurar uma importação](#import-data-into-responsys) de dados do local do armazenamento para [!DNL Oracle Responsys].
+Para enviar dados de segmento para [!DNL Oracle Responsys], é necessário primeiro [conectar-se ao destino](#connect-destination) na Plataforma de dados do cliente em tempo real do Adobe e [configurar uma importação](#import-data-into-responsys) de dados do local do armazenamento para [!DNL Oracle Responsys].
 
 ## Destino do Connect {#connect-destination}
 

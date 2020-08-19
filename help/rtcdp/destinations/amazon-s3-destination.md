@@ -1,10 +1,11 @@
 ---
+keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Destino Amazon S3
 seo-title: Destino Amazon S3
-description: Crie uma conexão de saída ao vivo com seu armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios compartimentos S3.
-seo-description: Crie uma conexão de saída ao vivo com seu armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios compartimentos S3.
+description: Crie uma conexão de saída ao vivo com seu armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV da Adobe Experience Platform para seus próprios compartimentos S3.
+seo-description: Crie uma conexão de saída ao vivo com seu armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV da Adobe Experience Platform para seus próprios compartimentos S3.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ## Visão geral
 
-Crie uma conexão de saída ao vivo com seu armazenamento [!DNL Amazon Web Services] (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios compartimentos S3.
+Crie uma conexão de saída ao vivo com seu armazenamento [!DNL Amazon Web Services] (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV da Adobe Experience Platform para seus próprios compartimentos S3.
 
 ## Destino do Connect {#connect-destination}
 
@@ -24,7 +25,7 @@ Consulte Fluxo de trabalho de destinos do armazenamento [Cloud ](/help/rtcdp/des
 
 Para [!DNL Amazon S3] destinos, insira as seguintes informações no fluxo de trabalho de criação de destino:
 
-* **[!DNL Amazon S3]chave de acesso e chave[!DNL Amazon S3]secreta **: Em[!DNL Amazon S3], gere uma chave de acesso - par de chaves de acesso secreto para conceder acesso CDP Adobe em tempo real à sua[!DNL Amazon S3]conta.
+* **[!DNL Amazon S3]chave de acesso e chave[!DNL Amazon S3]secreta**: Em [!DNL Amazon S3], gere uma chave de acesso - par de chaves de acesso secreto para conceder acesso CDP Adobe em tempo real à sua [!DNL Amazon S3] conta.
 
 >[!IMPORTANT]
 >

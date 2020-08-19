@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: Destinos de armazenamentos na nuvem
 seo-title: Destinos de armazenamentos na nuvem
 description: A CDP em tempo real do Adobe pode fornecer seus segmentos como arquivos de dados para seus armazenamentos em nuvem Amazon S3, AWS Kinesis, Azure Evento Hubs ou SFTP.
 seo-description: A CDP em tempo real do Adobe pode fornecer seus segmentos como arquivos de dados para seus armazenamentos em nuvem Amazon S3, AWS Kinesis, Azure Evento Hubs ou SFTP.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
@@ -22,7 +23,7 @@ Para obter informações sobre como se conectar aos destinos de armazenamentos n
 
 ## Tipo de exportação de dados
 
-**Exportação** baseada em Perfis - você está exportando detalhes sobre os indivíduos na audiência. Esses detalhes são necessários para personalização e podem incluir atributos, eventos, associações de segmentos etc.
+**Exportação** baseada em perfis - você está exportando detalhes sobre os indivíduos na audiência. Esses detalhes são necessários para personalização e podem incluir atributos, eventos, associações de segmentos etc.
 
 ## Destinos de armazenamentos disponíveis na nuvem
 

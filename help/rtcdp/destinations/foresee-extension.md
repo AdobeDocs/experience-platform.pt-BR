@@ -1,10 +1,11 @@
 ---
+keywords: foresee;foresee extension;foresee destination
 title: Extensão prevista
 seo-title: Extensão prevista
 description: A extensão Foresee é um destino pesquisa na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 7%

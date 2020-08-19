@@ -1,13 +1,14 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: Página Detalhes de Destinos
 seo-title: Página Detalhes de Destinos
 description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -39,7 +40,7 @@ Esta seção exibe quais segmentos estão mapeados no momento para o destino, be
 ---------|----------|
 | Nome do segmento | O nome do seu segmento. |
 | Descrição do segmento | A descrição do seu segmento. |
-| Data do Start | A data em que esses segmentos estão sendo ativados para o destino. |
+| Data do start | A data em que esses segmentos estão sendo ativados para o destino. |
 | Data final | A data em que esses segmentos pararão de ser ativados para o destino. |
 | ID de mapeamento | *Não disponível para destinos* de marketing por email. Indica a ID pela qual o segmento é conhecido na plataforma de destino. |
 

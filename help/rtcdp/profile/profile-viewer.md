@@ -1,12 +1,13 @@
 ---
-title: Visualizador de Perfis
-seo-title: Dados do Perfil do cliente em tempo real em Visualização no Platform de dados do cliente em tempo real
-description: Dados do Perfil do cliente em tempo real em Visualização no Platform de dados do cliente em tempo real
-seo-description: Dados do Perfil do cliente em tempo real em Visualização no Platform de dados do cliente em tempo real
+keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
+title: Exibição de perfis em CDP em tempo real
+seo-title: Dados do Perfil do cliente em tempo real em visualização na plataforma de dados do cliente em tempo real
+description: Dados do Perfil do cliente em tempo real em visualização na plataforma de dados do cliente em tempo real
+seo-description: Dados do Perfil do cliente em tempo real em visualização na plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -18,4 +19,4 @@ ht-degree: 0%
 
 Na interface do usuário, você pode visualização esses perfis somente leitura e ver informações importantes sobre o cliente individual, como preferências, eventos e interações passados e segmentos aos quais o indivíduo pertence.
 
-Como [!DNL Real-time Customer Data Platform] é construído sobre o Adobe Experience Platform, a CDP em tempo real é capaz de usar os recursos de visualização do perfil que fazem parte do [!DNL Experience Platform]. Para obter um guia detalhado sobre como visualizar os perfis do cliente na interface do [!DNL Platform] usuário, consulte o guia [do usuário do Perfil do cliente em tempo](../../profile/ui/user-guide.md)real.
+Como [!DNL Real-time Customer Data Platform] é construído sobre o Adobe Experience Platform, a CDP em tempo real é capaz de usar os recursos de visualização de perfil que fazem parte do [!DNL Experience Platform]. Para obter um guia detalhado sobre como visualizar os perfis do cliente na interface do [!DNL Platform] usuário, consulte o guia [do usuário do Perfil do cliente em tempo](../../profile/ui/user-guide.md)real.

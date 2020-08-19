@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations
 title: Destinos de marketing de email
 seo-title: Destinos de marketing de email
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 1%

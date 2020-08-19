@@ -4,7 +4,7 @@ seo-title: Configuração de borda para o SDK da Web Experience Platform
 description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configuração do Edge
 
-A configuração do Adobe Experience Platform [!DNL Web SDK] é dividida entre dois locais. O comando [configure](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente, como o `edgeDomain`. A configuração da borda lida com todas as outras configurações do SDK. Quando uma solicitação é enviada para o Adobe Experience Platform [!DNL Edge Network], o `edgeConfigId` é usado para fazer referência à configuração do lado do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
+A configuração do Adobe Experience Platform [!DNL Web SDK] é dividida entre dois locais. O comando [configure](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente, como o `edgeDomain`. A configuração da borda lida com todas as outras configurações do SDK. Quando uma solicitação é enviada para a Adobe Experience Platform [!DNL Edge Network], o `edgeConfigId` é usado para fazer referência à configuração do lado do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
 
 ## Criando uma ID de configuração de borda
 
@@ -23,8 +23,6 @@ As IDs de configuração de borda podem ser criadas no Adobe [!DNL Launch] usand
 ![navegação da ferramenta de configuração de borda](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >A ferramenta de configuração de borda está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Launch] como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento em [!DNL Launch]. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na [!DNL Launch] documentação para obter mais detalhes.
 
@@ -36,7 +34,7 @@ Essas configurações padrão são usadas para criar os três primeiros ambiente
 
 A ID usada no SDK como `edgeConfigId` é uma ID composta que especifica a configuração e o ambiente. Se nenhum ambiente estiver presente, o ambiente de produção será usado.
 
-### Configurações do Ambiente
+### Configurações do ambiente
 
 Abaixo estão cada uma das configurações disponíveis para um ambiente. A maioria das seções pode ser ativada ou desativada. Quando desativadas, suas configurações são salvas, mas não estão ativas.
 
@@ -56,9 +54,9 @@ As sincronizações de ID podem ser agrupadas em container para permitir que sin
 
 #### Adobe Experience Platform
 
-As configurações listadas aqui permitem que você envie dados para o Adobe Experience Platform. Você só deverá ativar esta seção se tiver comprado o Adobe Experience Platform.
+As configurações listadas aqui permitem que você envie dados para a Adobe Experience Platform. Você só deverá ativar esta seção se tiver comprado a Adobe Experience Platform.
 
-![bloco de configurações Adobe Experience Platform](../../assets/edge_configuration_aep.png)
+![Bloqueio de configurações do Adobe Experience Platform](../../assets/edge_configuration_aep.png)
 
 ##### [!UICONTROL Sandbox]
 
@@ -68,7 +66,7 @@ As caixas de proteção são locais no Adobe Experience Platform que permitem qu
 
 Uma entrada de fluxo contínuo é uma fonte HTTP no Adobe Experience Platform. Eles são criados na guia [!UICONTROL Fontes] no Adobe Experience Platform como uma API HTTP.
 
-##### [!UICONTROL Conjunto de dados do Evento]
+##### [!UICONTROL Conjunto de dados do evento]
 
 As configurações de borda suportam o envio de dados para conjuntos de dados com um schema de  de classe do [!UICONTROL Experience Evento].
 
@@ -76,17 +74,15 @@ As configurações de borda suportam o envio de dados para conjuntos de dados co
 
 Para configurar o Adobe Target, você deve fornecer um código de cliente. Os outros campos são opcionais.
 
-![bloco de configurações Adobe Target](../../assets/edge_configuration_target.png)
+![Bloqueio de configurações do Adobe Target](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
->
->
 >
 >A Organização associada ao código do cliente deve corresponder à organização em que a ID de configuração é criada.
 
 ##### [!UICONTROL Código do cliente]
 
-A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode navegar até [!UICONTROL Adobe Target] > [!UICONTROL Configuração]> [!UICONTROL Implementação] > [!UICONTROL editar configurações] ao lado do botão [!UICONTROL de download]  [!UICONTROL para o arquivo at.js ou o arquivo mbox.js]
+A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode navegar até [!UICONTROL Adobe Target] > [!UICONTROL Configuração]> [!UICONTROL Implementação] > [!UICONTROL editar configurações] ao lado do botão de [!UICONTROL download]  [!UICONTROL para o at.js ou o mbox.js]
 
 ##### [!UICONTROL Token de propriedade]
 
@@ -94,15 +90,15 @@ A ID exclusiva de uma conta de público alvo. Para encontrar isso, você pode na
 
 O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL configuração] > [!UICONTROL Propriedades]
 
-##### [!UICONTROL ID do Ambiente do Público alvo]
+##### [!UICONTROL ID do Ambiente do público alvo]
 
-[Ambientes](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) no Adobe Target ajudam você a gerenciar sua implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
+[Os ambientes](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) no Adobe Target ajudam você a gerenciar sua implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
 
 O Adobe recomenda configurar isso de forma diferente para cada um dos ambientes de configuração `dev`, `stage`e `prod` borda para manter as coisas simples. No entanto, se você já tiver ambientes  Adobe Target definidos, poderá usá-los.
 
 #### Adobe Audience Manager
 
-Tudo o que é necessário para enviar dados ao Adobe Audience Manager é ativar esta seção. As outras configurações são opcionais, mas são recomendadas.
+Tudo o que é necessário para enviar dados para a Adobe Audience Manager é ativar esta seção. As outras configurações são opcionais, mas são recomendadas.
 
 ![Bloco de configurações de gerenciamento de Audiência Adobe](../../assets/edge_configuration_aam.png)
 

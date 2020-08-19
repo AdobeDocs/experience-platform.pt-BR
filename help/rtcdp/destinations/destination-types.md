@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destination types
 title: Tipos de destinos e Categorias
 seo-title: Tipos de destinos e Categorias
-description: 'Na Adobe Real-time Customer Data Platform, os destinos de Exportação de Perfis/segmentos capturam dados de eventos, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
-seo-description: Na Adobe Real-time Customer Data Platform, os destinos de Exportação de Perfis/segmentos capturam dados de eventos, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
+description: 'Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
+seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # Tipos e Categorias de destino
 
-Leia esta página para entender os diferentes tipos e categorias dos destinos do Adobe Real-time Customer Data Platform.
+Leia esta página para entender os diferentes tipos e categorias dos destinos da Plataforma de dados do cliente em tempo real do Adobe.
 
 ## Tipos de destino
 
-No Adobe Real-time Customer Data Platform, distinguimos dois tipos de destino - conexões e extensões. Existem dois tipos de destinos de conexão, destinos de exportação de Perfil e destinos de exportação de segmento.
+Na Plataforma de dados do cliente em tempo real do Adobe, distinguimos dois tipos de destino - conexões e extensões. Existem dois tipos de destinos de conexão, destinos de exportação de Perfil e destinos de exportação de segmento.
 
 ![Tipos de destinos](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,19 +27,19 @@ No Adobe Real-time Customer Data Platform, distinguimos dois tipos de destino - 
 
 ### Conexões
 
-**[!UICONTROL Exportação]** de Perfis e exportação **[!UICONTROL de]** segmentos em dados do cliente em tempo real Adobe A Platform captura dados do evento, combina-os com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportação]** de perfis e exportação **[!UICONTROL de]** segmentos em dados de eventos de captura da plataforma de dados do cliente em tempo real do Adobe, combiná-los com outras fontes de dados para formar o perfil [do cliente em tempo](/help/profile/home.md)real, aplicar a segmentação e exportar segmentos e perfis qualificados para destinos.
 
 <br> 
 
-#### Destinos de exportação do Perfil
+#### Destinos de exportação do perfil
 
-Os destinos de exportação de Perfil geram um arquivo que contém perfis e/ou atributos. Esses destinos usam dados brutos, geralmente com endereço de email como a chave primária. O destino [do armazenamento em nuvem](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 é um exemplo de destino onde você pode depositar arquivos que contêm exportações de perfis.
+Os destinos de exportação de perfil geram um arquivo que contém perfis e/ou atributos. Esses destinos usam dados brutos, geralmente com endereço de email como a chave primária. O destino [do armazenamento em nuvem](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 é um exemplo de destino onde você pode depositar arquivos que contêm exportações de perfis.
 
 #### Destinos de exportação do segmento
 
 Os destinos de exportação do segmento enviam os perfis e os segmentos para os quais eles se qualificaram para plataformas de destino. Esses destinos usam IDs de segmento ou IDs de usuário. Destinos de publicidade como [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) ou [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) são exemplos desses tipos de destinos.
 
-#### Destinos de exportação de Perfis e segmentos - visão geral do vídeo
+#### Destinos de exportação de perfis e segmentos - visão geral do vídeo
 
 O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
@@ -70,9 +71,9 @@ As extensões são úteis quando os dados do evento são usados para acionar uma
 
 <br> 
 
-## categorias de destino
+## Categorias de destino
 
 As conexões e extensões no catálogo [de](https://platform.adobe.com/destination/catalog) destinos são agrupadas por categoria de destino (**Publicidade**, armazenamento **** Cloud, plataformas **de** Pesquisa, marketing **por** email etc.), dependendo do caso de uso de marketing que eles ajudam a atingir. Para obter mais informações sobre cada uma das categorias, bem como sobre os destinos incluídos em cada categoria, consulte a documentação [do catálogo de](/help/rtcdp/destinations/destinations-catalog.md)Destinos.
 
-![categorias de destino](/help/rtcdp/destinations/assets/destination-categories-menu.png)
+![Categorias de destino](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 

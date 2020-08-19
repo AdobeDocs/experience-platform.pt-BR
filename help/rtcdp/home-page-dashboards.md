@@ -1,20 +1,21 @@
 ---
-title: Home page e Painéis Platform de dados do cliente em tempo real
-seo-title: Home page e Painéis Platform de dados do cliente em tempo real
-description: Painéis, Home page e experiência de usuário iniciante do Adobe Experience Platform
-seo-description: Painéis, Home page e experiência de usuário iniciante do Adobe Experience Platform
+keywords: metrics overview; rtcdp metrics overview
+title: Home page e Painéis da plataforma de dados do cliente em tempo real
+seo-title: Home page e Painéis da plataforma de dados do cliente em tempo real
+description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
+seo-description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # [!DNL Real-time Customer Data Platform] visão geral das métricas
 
-O home page Adobe Real-time Customer Data Platform (Real-time CDP), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
+O home page Adobe Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
 
 O home page é apenas um dos locais onde os cartões de métrica aparecem. A CDP em tempo real fornece cartões de métricas em toda a sua experiência. Essas métricas informam sobre as audiências de dados, perfis e segmentos no sistema.
 
@@ -22,7 +23,7 @@ O home page é apenas um dos locais onde os cartões de métrica aparecem. A CDP
 
 Se não houver dados no sistema quando você fizer logon na CDP em tempo real, o painel no home page não será exibido. Nesse caso, o home page fornece material de aprendizado para uma primeira experiência do usuário. À medida que os dados são coletados — em outras palavras, à medida que <!--sources-->os conjuntos de dados, perfis, segmentos e destinos são criados e os dados fluem para o sistema — o painel é atualizado automaticamente para exibir informações sobre esses dados<!-- in metric cards-->.
 
-## visualização painel Home page
+## Visualização painel home page
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
@@ -39,7 +40,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![imagem](assets/home-recent.jpg)
 
-Métricas adicionais — por exemplo, para perfis e segmentos — estão disponíveis em outras partes da Platform de dados do cliente em tempo real.
+Métricas adicionais — por exemplo, para perfis e segmentos — estão disponíveis em outras partes da Plataforma de dados do cliente em tempo real.
 
 ### Conjuntos de dados
 

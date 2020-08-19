@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Visão geral dos destinos
 seo-title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real do Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real do Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%

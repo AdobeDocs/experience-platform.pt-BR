@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Destino do Facebook
 seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -22,7 +23,7 @@ Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, pers
 
 ## Casos de uso
 
-Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois exemplos de casos de uso que os clientes da Adobe Real-time Customer Data Platform podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois exemplos de casos de uso que os clientes da Plataforma de dados do cliente em tempo real podem resolver usando esse recurso.
 
 
 ### Caso de uso nº 1
@@ -38,7 +39,7 @@ Uma companhia aérea tem níveis de clientes diferentes (Bronze, Prata e Ouro) e
 
 Para público alvo-los nas mídias sociais, eles podem integrar os dados do cliente de seu CRM para o CDP em tempo real do Adobe, usando os endereços de email como identificadores.
 
-Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente, para criar novos segmentos de audiência que possam público alvo até o [!DNL Facebook] destino.
+Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente, para criar novos segmentos de audiência que podem público alvo até o [!DNL Facebook] destino.
 
 ## Especificações de destino {#destination-specs}
 
@@ -48,7 +49,7 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 >
 >Os dados enviados para [!DNL Facebook] não devem incluir identidades agrupadas. Você é responsável por cumprir essa obrigação e pode fazê-lo garantindo que os segmentos selecionados para ativação não usem uma opção de agrupamento em sua política de mesclagem. Saiba mais sobre as políticas [de](/help/profile/ui/merge-policies.md)mesclagem.
 
-### Tipo de Ativação {#activation-type}
+### Tipo de ativação {#activation-type}
 
 **Exportação** de segmento - você está exportando todos os membros de um segmento (audiência) com os identificadores (nome, número de telefone etc.) usado no destino do Facebook.
 
@@ -64,7 +65,7 @@ Antes de enviar os segmentos de audiência para [!DNL Facebook], verifique se vo
 
 ### Requisitos de hash de email {#email-hashing-requirements}
 
-[!DNL Facebook] requer que nenhuma informação pessoal identificável (PII) seja enviada de forma clara. Portanto, as audiências ativadas para [!DNL Facebook] devem ser desconectadas de endereços de email *com hash* . Você pode optar por hash de endereços de email antes de ingressá-los no Adobe Experience Platform, ou pode optar por trabalhar com endereços de email claramente no Experience Platform e fazer com que nosso algoritmo os coloque em hash na ativação.
+[!DNL Facebook] requer que nenhuma informação pessoal identificável (PII) seja enviada de forma clara. Portanto, as audiências ativadas para [!DNL Facebook] devem ser desconectadas de endereços de email *com hash* . Você pode optar por hash de endereços de email antes de ingressá-los no Adobe Experience Platform ou pode optar por trabalhar com endereços de email claramente no Experience Platform e fazer com que nosso algoritmo os coloque em hash na ativação.
 
 Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte a visão geral [da ingestão em](/help/ingestion/batch-ingestion/overview.md) lote e a visão geral [da](/help/ingestion/streaming-ingestion/overview.md)ingestão em vapor.
 

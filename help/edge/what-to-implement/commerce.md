@@ -1,13 +1,13 @@
 ---
 title: Produtos
-seo-title: Suporte a produtos com SDK Adobe Experience Platform Web
+seo-title: Suporte a produtos com Adobe Experience Platform Web SDK
 description: Saiba como adicionar dados se você tiver produtos ou um carrinho de compras com o Experience Platform Web SDK
 seo-description: Saiba como adicionar dados se você tiver produtos ou um carrinho de compras com o Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -28,7 +28,6 @@ Este documento usa a combinação Detalhes [do Comércio de](https://github.com/
 Abaixo está uma lista de `measures` disponível no `commerce` objeto.
 
 >[!Tip]
->
 >
 >Uma medida tem dois campos: `id` e `value`. Na maioria das vezes, você usará apenas o `value` campo (por exemplo, `'value':1`). O `id` campo permite definir um identificador exclusivo que você pode usar para rastrear quando a medida foi enviada. Consulte a documentação XDM para [Medir](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 

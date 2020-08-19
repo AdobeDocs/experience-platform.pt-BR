@@ -1,12 +1,13 @@
 ---
-title: Guia do Construtor de segmentos
+keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
+title: Guia do Construtor de segmentos para a plataforma de dados do cliente em tempo real
 seo-title: Uso do Construtor de segmentos do serviço de segmentação na Plataforma de dados do cliente em tempo real
 description: Um guia que descreve como usar o Construtor de segmentos.
 seo-description: Um guia do usuário que descreve como usar o Construtor de segmentos do serviço de segmentação na Plataforma de dados do cliente em tempo real.
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---

@@ -1,11 +1,11 @@
 ---
-keywords: Launch;launch
+keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
 title: Tutorial Implementar tags de site com Adobe Launch
 seo-title: Implementar tags de site com o Adobe Launch
 description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 seo-description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%

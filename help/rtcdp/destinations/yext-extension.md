@@ -1,10 +1,11 @@
 ---
+keywords: Yext Conversion Trackin;Yext;yext;yext conversion tracking
 title: Extensão de rastreamento de conversão de texto
 seo-title: Extensão de rastreamento de conversão de texto
 description: A extensão de Rastreamento de conversão de saída é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 seo-description: A extensão de rastreamento de conversão do Yext é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 5%

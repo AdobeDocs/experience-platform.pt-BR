@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign
 seo-title: Adobe Campaign
-description: O Adobe Campaign é um conjunto de soluções que o ajudam a personalizar e fornecer campanhas em todos os canais online e offline.
-seo-description: O Adobe Campaign é um conjunto de soluções que o ajudam a personalizar e fornecer campanhas em todos os canais online e offline.
+description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
+seo-description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -16,9 +17,9 @@ ht-degree: 1%
 
 ## Visão geral
 
-O Adobe Campaign é um conjunto de soluções que o ajudam a personalizar e fornecer campanhas em todos os canais online e offline. Consulte [Sobre o Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obter mais informações.
+A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline. Consulte [Sobre o Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obter mais informações.
 
-Para enviar dados de segmento para o Adobe Campaign, é necessário primeiro [conectar o destino](#connect-destination) no Adobe Real-time Customer Data Platform e [configurar uma importação](#import-data-into-campaign) de dados do local do armazenamento para o Adobe Campaign.
+Para enviar dados de segmento para a Adobe Campaign, é necessário primeiro [conectar o destino](#connect-destination) na Plataforma de dados do cliente em tempo real do Adobe e [configurar uma importação](#import-data-into-campaign) de dados do local do armazenamento para a Adobe Campaign.
 
 ## Destino do Connect {#connect-destination}
 
@@ -26,7 +27,7 @@ Para enviar dados de segmento para o Adobe Campaign, é necessário primeiro [co
 
    ![Conectar-se à adobe campanha](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. No fluxo de trabalho de destino do Connect, selecione o tipo **[!UICONTROL de]** conexão para o local do armazenamento. Para o Adobe Campaign, você pode selecionar entre **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP com senha]** e **[!UICONTROL SFTP com chave]** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
+1. No fluxo de trabalho de destino do Connect, selecione o tipo **[!UICONTROL de]** conexão para o local do armazenamento. Para Adobe Campaign, você pode selecionar entre **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP com senha]** e **[!UICONTROL SFTP com chave]** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
 
    ![Configurar o assistente de Campanhas](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
@@ -43,7 +44,7 @@ Para **[!UICONTROL SFTP com conexões de chave]** SSH, você deve fornecer Domí
    * **[!UICONTROL Caminho]** da pasta: Forneça o caminho no local do armazenamento onde a CDP em tempo real depositará seus dados de exportação como CSV ou arquivos delimitados por tabulação.
    * **[!UICONTROL Formato]** de arquivo: **CSV** ou **TAB_DELIMITED**. Selecione o formato de arquivo a ser exportado para o local do armazenamento.
 
-   ![Informações básicas sobre Campanhas](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
+   ![Informações básicas sobre campanhas](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
 1. Clique em **[!UICONTROL Criar]** após preencher os campos acima. Seu destino agora está conectado e você pode [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) no destino.
 
@@ -53,7 +54,7 @@ Consulte [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/acti
 
 ## Atributos de destino {#destination-attributes}
 
-Ao [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) no destino do Adobe Campaign, recomendamos que você selecione um identificador exclusivo no schema [da](../../profile/home.md#profile-fragments-and-union-schemas)união. Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecionar quais campos de schema usar como atributos de destino em seus arquivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados em Destinos de marketing de email.
+Ao [ativar segmentos](/help/rtcdp/destinations/activate-destinations.md) no destino Adobe Campaign, recomendamos que você selecione um identificador exclusivo do schema [da](../../profile/home.md#profile-fragments-and-union-schemas)união. Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecionar quais campos de schema usar como atributos de destino em seus arquivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados em Destinos de marketing de email.
 
 ## Dados exportados {#exported-data}
 
@@ -77,4 +78,4 @@ The presence of these files in your storage location is confirmation of successf
 
 ## Configurar importação de dados para o Adobe Campaign {#import-data-into-campaign}
 
-Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, é necessário configurar a importação de dados do local do armazenamento para o Adobe Campaign. Para saber como fazer isso, consulte [Importação de dados](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) na documentação Ajuda do Adobe Campaign.
+Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, você deve configurar a importação de dados do local do armazenamento para o Adobe Campaign. Para saber como fazer isso, consulte [Importação de dados](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) na documentação da Ajuda da Adobe Campaign.

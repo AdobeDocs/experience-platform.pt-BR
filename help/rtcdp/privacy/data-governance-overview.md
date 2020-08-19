@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: Visão geral do controle de dados
-seo-title: Controle de dados na Platform de dados do cliente em tempo real
+seo-title: Controle de dados na plataforma de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] (CDP em tempo real) reúne dados de vários sistemas corporativos, permitindo que os profissionais de marketing identifiquem, entendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que a CDP em tempo real esteja em conformidade com as políticas de uso ao manipular seus dados.
 
-O Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental na CDP em tempo real, permitindo que você defina políticas de uso, classifique seus dados com base nessas políticas e verifique violações de políticas ao executar determinadas ações de marketing.
+A Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental na CDP em tempo real, permitindo que você defina políticas de uso, classifique seus dados com base nessas políticas e verifique violações de políticas ao executar determinadas ações de marketing.
 
-A CDP em tempo real foi criada sobre o Adobe Experience Platform e, portanto, a maioria dos [!DNL Data Governance] recursos são abordados na [!DNL Experience Platform] documentação. Este documento é destinado a complementar a visão geral [do](../../data-governance/home.md) Data Governance para [!DNL Experience Platform]e descreve os recursos de controle disponíveis na CDP em tempo real. Os seguintes tópicos são abordados:
+A CDP em tempo real foi desenvolvida sobre a Adobe Experience Platform e, portanto, a maioria dos [!DNL Data Governance] recursos são abordados na [!DNL Experience Platform] documentação. Este documento é destinado a complementar a visão geral [do](../../data-governance/home.md) Data Governance para [!DNL Experience Platform]e descreve os recursos de controle disponíveis na CDP em tempo real. Os seguintes tópicos são abordados:
 
 * [Aplicar rótulos de uso aos seus dados](#labels)
 * [Gerenciar políticas de uso de dados](#policies)
@@ -47,7 +48,7 @@ Os casos de uso de marketing só podem ser selecionados ao configurar um destino
 
 Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser definidas e ativadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro da CDP em tempo real. Consulte a seção &quot;Políticas de uso de dados&quot; na visão geral [!DNL Experience Platform] do [](../../data-governance/home.md) Data Governance para obter mais informações.
 
-O Adobe Experience Platform fornece várias políticas **** principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser exibidas na interface do usuário navegando até a área de trabalho **[!UICONTROL Políticas]** e selecionando a guia **[!UICONTROL Procurar]** . Consulte o guia [de usuário de](../../data-governance/policies/user-guide.md) [!DNL Experience Platform] políticas na documentação para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
+A Adobe Experience Platform fornece várias políticas **** principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser exibidas na interface do usuário navegando até a área de trabalho **[!UICONTROL Políticas]** e selecionando a guia **[!UICONTROL Procurar]** . Consulte o guia [de usuário de](../../data-governance/policies/user-guide.md) [!DNL Experience Platform] políticas na documentação para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
 
 ## Impor conformidade de uso de dados {#enforce-data-usage-compliance}
 
@@ -96,7 +97,7 @@ Se qualquer uma das ações acima acionar uma violação, essa ação será impe
 
 ## Próximas etapas
 
-Agora que você foi apresentado aos principais [!DNL Data Governance] recursos da CDP em tempo real e como [!DNL Experience Platform] os habilita, continue com a [documentação para o Data Governance no Adobe Experience Platform](../../data-governance/home.md). A documentação fornece visões gerais de [!DNL Data Governance] conceitos essenciais, bem como workflows passo a passo para gerenciar rótulos e políticas de uso de dados.
+Agora que você foi apresentado aos principais [!DNL Data Governance] recursos da CDP em tempo real e como [!DNL Experience Platform] os habilita, continue com a [documentação do Data Governance no Adobe Experience Platform](../../data-governance/home.md). A documentação fornece visões gerais de [!DNL Data Governance] conceitos essenciais, bem como workflows passo a passo para gerenciar rótulos e políticas de uso de dados.
 
 O vídeo a seguir fornece uma visão geral da CDP em tempo real, incluindo o uso de casos de uso de marketing em destinos e workflows de exemplo para diferentes cenários: [!DNL Data Governance]
 

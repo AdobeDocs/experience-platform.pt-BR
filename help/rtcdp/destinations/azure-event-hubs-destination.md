@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Destino dos Hubs de Eventos do Azure
 seo-title: (Beta) Destino dos Hubs de Eventos do Azure
 description: Crie uma conexão de saída em tempo real com seu armazenamento de Hubs de Evento do Azure para transmitir dados do Experience Platform.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento de Hubs de Evento do Azure para transmitir dados do Experience Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
@@ -22,7 +23,7 @@ ht-degree: 2%
 
 [!DNL Azure Event Hubs] é uma grande plataforma de transmissão de dados e um serviço de ingestão de eventos. Pode receber e processar milhões de eventos por segundo. Os dados enviados para um hub de evento podem ser transformados e armazenados usando qualquer provedor de análise em tempo real ou adaptadores de agrupamento/armazenamento.
 
-Você pode criar uma conexão de saída em tempo real com seu [!DNL Azure Event Hubs] armazenamento para transmitir dados do Adobe Experience Platform.
+Você pode criar uma conexão de saída em tempo real com seu [!DNL Azure Event Hubs] armazenamento para transmitir dados da Adobe Experience Platform.
 
 * Para obter mais informações sobre [!DNL Azure Event Hubs], consulte a documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Para conectar-se a [!DNL Azure Event Hubs] chamadas de API, consulte o tutorial [da API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)transmissão contínua.

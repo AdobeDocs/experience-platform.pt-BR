@@ -1,10 +1,11 @@
 ---
+keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
 title: Destino do Google Ad Manager
 seo-title: Destino do Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 seo-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 0%
@@ -63,7 +64,7 @@ Antes de criar o [!DNL Google Ad Manager] destino na CDP em tempo real do Adobe,
 * **[!UICONTROL Tipo]** de conta: Selecione uma opção, dependendo da sua conta no Google:
    * Usar `DFP by Google` para [!DNL DoubleClick] editores
    * Usar `AdX buyer` para [!DNL Google AdX]
-* **[!UICONTROL ID]** da conta: Preencha a ID da conta com [!DNL Google]. Essa pode ser a sua ID de rede ou a ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
+* **[!UICONTROL ID]** da conta: Preencha a ID da conta com [!DNL Google]. Essa pode ser sua ID de rede ou sua ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
 * **[!UICONTROL Caso]** de uso de marketing: Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pelo Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados.
 
 >[!NOTE]

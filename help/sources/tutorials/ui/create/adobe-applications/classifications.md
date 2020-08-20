@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Criar um conector de dados de classificações da Adobe Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial fornece etapas para a criação de um conector de dados de classif
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema do [!DNL Experience Data Model (XDM)](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [[!DNL Perfil do cliente em tempo real]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
@@ -57,7 +57,7 @@ Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e agua
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Monitore e exclua seu fluxo de dados de classificações
+## Monitore seu fluxo de dados de classificações
 
 Depois que o seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Na tela **[!UICONTROL Catálogo]** , selecione **[!UICONTROL Fluxos de dados]** para visualização de uma lista de fluxos estabelecidos associados à sua [!DNL Classifications] conta.
 
@@ -69,13 +69,13 @@ Selecione o conjunto de dados **[!UICONTROL de]** Públicos alvos que deseja ace
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-A página atividade **** do conjunto de dados exibe informações sobre o conjunto de dados do público alvo selecionado, incluindo detalhes sobre o status do lote, a ID do conjunto de dados e o schema. Selecione **[!UICONTROL Excluir conjunto de dados]** para excluir.
+A página atividade **** do conjunto de dados exibe informações sobre o conjunto de dados do público alvo selecionado, incluindo detalhes sobre o status do lote, a ID do conjunto de dados e o schema.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>Embora a exclusão de conjuntos de dados seja possível para outros conectores de origem, no momento não é compatível com o conector de dados de classificações do Analytics. Se você excluir um conjunto de dados por engano, entre em contato com o Atendimento ao cliente da Adobe.
 
-Uma caixa de diálogo é exibida confirmando a exclusão. Selecione **[!UICONTROL Excluir]** para concluir.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Próximas etapas
 

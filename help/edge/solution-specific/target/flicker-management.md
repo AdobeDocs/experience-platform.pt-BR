@@ -3,8 +3,9 @@ title: Gerenciando o Flicker para experiências personalizadas
 seo-title: Adobe Experience Platform Web SDK gerenciando o flicker
 description: Saiba como gerenciar oscilações nas experiências do usuário
 seo-description: Saiba como gerenciar oscilações com as propriedades do SDK da Web do Experience Platform
+keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%

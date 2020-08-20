@@ -3,8 +3,9 @@ title: Mapeamento manual de variáveis no Analytics
 seo-title: Mapeamento manual de variáveis no Analytics com o SDK da Web
 description: Como mapear manualmente variáveis no Analytics usando regras de processamento
 seo-description: mapeie manualmente variáveis no Analytics usando regras de processamento com o SDK da Web
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 47%

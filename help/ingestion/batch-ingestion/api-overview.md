@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guia do desenvolvedor de ingestão em lote de Adobe Experience Platform
+title: Guia do desenvolvedor de ingestão em lote Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 6%
+source-wordcount: '2670'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,11 @@ A ingestão de dados fornece uma RESTful API através da qual você pode executa
 
 As seções a seguir fornecem informações adicionais que você precisará conhecer ou ter em mãos para fazer chamadas com êxito para a API de ingestão em lote.
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [Ingestão](./overview.md)em lote: Permite assimilar dados em Adobe Experience Platform como arquivos em lote.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Ingestão](./overview.md)em lote: Permite que você ingira dados no Adobe Experience Platform como arquivos em lote.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Lendo chamadas de exemplo da API
 
@@ -38,22 +38,19 @@ Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas
 
 Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
-- Autorização: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
-As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um `Content-Type` cabeçalho adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada. Os seguintes tipos de conteúdo são usados neste guia:
-
-- Tipo de conteúdo: application/json
-- Tipo de conteúdo: application/octet-stream
+As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um `Content-Type` cabeçalho adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada.
 
 ## Tipos
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. Esse caminho de arquivo é o local onde o arquivo será salvo no Adobe. |
 
 **Solicitação**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 **Resposta**
 
@@ -238,7 +235,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 >[!NOTE]
 >
->As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
 
 ### Criar lote
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. Esse caminho de arquivo é o local onde o arquivo será salvo no Adobe. |
 
 **Solicitação**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 **Resposta**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. Esse caminho de arquivo é o local onde o arquivo será salvo no Adobe. |
 
 **Solicitação**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | Em números inteiros, o início e o fim do intervalo solicitado. |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 
 **Resposta**
@@ -517,7 +514,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Arquivo grande completo
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
 **Formato da API**
 
@@ -718,7 +715,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carregar arquivos
 
-Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. Você pode carregar vários arquivos no lote.
+Agora que você criou um lote, é possível usar o `batchId` de antes para fazer upload de arquivos para o lote. É possível carregar vários arquivos no lote.
 
 >[!NOTE]
 >
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. Esse caminho de arquivo é o local onde o arquivo será salvo no Adobe. |
 
 **Solicitação**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 
 **Resposta**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | A ID do lote para o qual você deseja fazer upload. |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência do lote. |
-| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. |
+| `{FILE_NAME}` | O nome do arquivo que você deseja carregar. Esse caminho de arquivo é o local onde o arquivo será salvo no Adobe. |
 
 **Solicitação**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. |
+| `{FILE_PATH_AND_NAME}` | O caminho completo e o nome do arquivo que você está tentando carregar. Esse caminho de arquivo é o caminho de arquivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 **Resposta**
 

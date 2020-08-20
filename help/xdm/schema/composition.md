@@ -5,7 +5,7 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
 workflow-type: tm+mt
 source-wordcount: '2811'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: e
 
 É importante pensar nas identidades dos clientes durante a fase de planejamento do schema, a fim de ajudar a garantir que os dados estejam sendo reunidos para construir o perfil mais robusto possível. Consulte a visão geral do Serviço [de identidade da](../../identity-service/home.md) Adobe Experience Platform para saber mais sobre como as informações de identidade podem ajudá-lo a fornecer experiências digitais aos seus clientes.
 
-#### xdm:identityMap
+#### xdm:identityMap {#identityMap}
 
 `xdm:identityMap` é um campo tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com suas namespaces associadas. Esse campo pode ser usado para fornecer informações de identidade para seus schemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
 

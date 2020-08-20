@@ -1,10 +1,11 @@
 ---
-title: 'Adobe Target e o SDK da Web Adobe Experience Platform. '
-seo-title: Adobe Experience Platform Web SDK e usando Adobe Target
+title: 'Adobe Target e o Adobe Experience Platform Web SDK. '
+seo-title: Adobe Experience Platform Web SDK e uso do Adobe Target
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # [!DNL Target] Visão geral
 
-O Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar experiências personalizadas gerenciadas no Adobe Target para o canal da Web. Você pode usar um editor WYSIWYG, chamado [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), ou uma interface não visual, o Criador [de experiências baseado em](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)formulário, para criar, ativar e fornecer suas atividades e experiências de personalização.
+A Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar experiências personalizadas gerenciadas no Adobe Target para o canal da Web. Você pode usar um editor WYSIWYG, chamado [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), ou uma interface não visual, o Criador [de experiências baseado em](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)formulário, para criar, ativar e fornecer suas atividades e experiências de personalização.
 
 ## Ativação do Adobe Target
 
@@ -38,7 +39,7 @@ Com o SDK, você pode usar o VEC normalmente com uma exceção: você precisa da
 
 ## Atividades VEC de renderização automática
 
-O SDK da Web AEP tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC do Adobe Target na Web para seus usuários. Para indicar ao AEP Web SDK para renderizar automaticamente atividades VEC, envie um evento com `renderDecisions = true`:
+O SDK da Web AEP tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC da Adobe Target na Web para seus usuários. Para indicar ao AEP Web SDK para renderizar automaticamente atividades VEC, envie um evento com `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -61,7 +62,7 @@ alloy
 
 ## Uso do Criador baseado em forma
 
-O Criador de experiências baseado em forma é uma interface não visual útil para configurar Testes A/B, [!DNL Experience Targeting]Automated Personalization e Recommendations atividade com diferentes tipos de resposta, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada pelo Adobe Target, sua lógica comercial central pode ser executada. Para recuperar decisões para suas atividades do Compositor baseado em forma, envie um evento com todos os &quot;escopos de decisão&quot; para os quais deseja recuperar uma decisão.
+O Criador de experiências baseado em forma é uma interface não visual útil para configurar Testes A/B, [!DNL Experience Targeting]Automated Personalization e Recommendations atividade com diferentes tipos de resposta, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada pela Adobe Target, sua lógica comercial central pode ser executada. Para recuperar decisões para suas atividades do Compositor baseado em forma, envie um evento com todos os &quot;escopos de decisão&quot; para os quais deseja recuperar uma decisão.
 
 ```javascript
 alloy

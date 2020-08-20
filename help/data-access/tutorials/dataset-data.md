@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do acesso aos dados
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 3%
@@ -12,15 +12,15 @@ ht-degree: 3%
 ---
 
 
-# Dados do conjunto de dados do Query usando [!DNL Data Access] API
+# Dados do conjunto de dados do query usando [!DNL Data Access] API
 
-Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API [!DNL Data Access] no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da [!DNL Data Access] API, como paginação e downloads parciais.
+Este documento fornece um tutorial passo a passo que aborda como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a [!DNL Data Access] API no Adobe Experience Platform. Você também será apresentado a alguns dos recursos exclusivos da [!DNL Data Access] API, como paginação e downloads parciais.
 
 ## Introdução
 
 Este tutorial sobre como criar e preencher um conjunto de dados. Consulte o tutorial [de criação de](../../catalog/datasets/create.md) conjunto de dados para obter mais informações.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da Platform.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs de plataforma.
 
 ### Lendo chamadas de exemplo da API
 
@@ -107,7 +107,7 @@ A resposta inclui um objeto que lista de todos os lotes relacionados à Organiza
 
 ### Filtrar a lista dos lotes
 
-Muitas vezes, os Filtros precisam localizar um determinado lote para recuperar dados relevantes para um caso de uso específico. Parâmetros podem ser adicionados a uma `GET /batches` solicitação para filtrar a resposta retornada. A solicitação abaixo retornará todos os lotes criados após um tempo especificado, dentro de um conjunto de dados específico, classificados por quando foram criados.
+Muitas vezes, os filtros precisam localizar um determinado lote para recuperar dados relevantes para um caso de uso específico. Parâmetros podem ser adicionados a uma `GET /batches` solicitação para filtrar a resposta retornada. A solicitação abaixo retornará todos os lotes criados após um tempo especificado, dentro de um conjunto de dados específico, classificados por quando foram criados.
 
 **Formato da API**
 
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{FILE_ID}` | O identificador do arquivo. |
-| `{FILE_NAME`} | O nome do arquivo (por exemplo, perfis.parquet) |
+| `{FILE_NAME}` | O nome do arquivo (por exemplo, perfis.parquet) |
 
 **Solicitação**
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{FILE_ID}` | O identificador do arquivo. |
-| `{FILE_NAME`} | O nome do arquivo (por exemplo, perfis.parquet). |
+| `{FILE_NAME}` | O nome do arquivo (por exemplo, perfis.parquet). |
 
 **Solicitação**
 

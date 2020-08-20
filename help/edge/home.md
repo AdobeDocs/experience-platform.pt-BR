@@ -1,11 +1,11 @@
 ---
-keywords: web sdk;SDK;web SDK;Launch;launch
 title: Ajuda do Adobe Experience Platform Web SDK
 seo-title: Ajuda do Adobe Experience Platform Web SDK
 description: Saiba o que é o Adobe Experience Platform Web SDK e como ele pode ser usado.
 seo-description: permita que os clientes da Adobe Experience Cloud interajam com os vários serviços no Experience Cloud.
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 2%

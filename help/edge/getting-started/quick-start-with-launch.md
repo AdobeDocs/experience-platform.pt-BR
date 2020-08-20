@@ -1,10 +1,11 @@
 ---
-title: start rápido com o Launch
+title: Start rápido com o Launch
 seo-title: start rápido do Adobe Experience Platform Web SDK com o Launch
 description: Guia de start rápido para usar a extensão do SDK Experience Platform Web para coletar dados
 seo-description: Guia de start rápido para usar a extensão do SDK Experience Platform Web para coletar dados
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -16,8 +17,8 @@ ht-degree: 5%
 
 Este guia o guia pelas diferentes maneiras de configurar o SDK da Web do Adobe Experience Platform no Launch. Para usar esse recurso, é necessário incluir uma lista de permissões. Se você quiser entrar na lista de espera, entre em contato com seu CSM.
 
-- Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para Analytics, use esse. Testar no desenvolvimento funciona sem um CNAME, mas é necessário um antes de ir para a produção.
-- Tenha direito ao Adobe Experience Platform. Se você não tiver comprado a Platform, a Adobe fornecerá a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
+- Ter um domínio [próprio (CNAME)](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html) habilitado. Se você já tiver um CNAME para o Analytics, use esse. Testar no desenvolvimento funciona sem um CNAME, mas é necessário um antes de ir para a produção.
+- Esteja qualificado para a Adobe Experience Platform. Se você não tiver comprado a Plataforma, o Adobe fornecerá a Experience Platform Data Services Foundation para uso limitado com o SDK, sem custos adicionais.
 - Use a versão mais recente do serviço de ID de Visitante.
 
 ## Preparar um Schema

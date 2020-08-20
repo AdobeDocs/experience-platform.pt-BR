@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Os namespaces de identidade são um componente do Serviço de identidade da   que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name<span>@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 4%
@@ -49,7 +49,7 @@ Os seguintes tipos de identidade estão disponíveis em [!DNL Platform]:
 | Não pessoas | Usado para armazenar identificadores que precisam de namespaces, mas não estão vinculados a um cluster de pessoas. Esses identificadores são filtrados a partir do gráfico de identidade. Casos de uso possíveis incluem dados relacionados a produtos, organizações, lojas, etc. (Por exemplo, um SKU de produto.) |
 | Telefone | Identidades desse tipo incluem PII. Esta é uma indicação para [!DNL Identity Service] tratar o valor com sensibilidade. |
 
-### Namespaces padrão
+### Namespaces padrão {#standard}
 
 A Adobe Experience Platform fornece várias namespaces de identidade que estão disponíveis para todas as organizações. Elas são conhecidas como namespaces padrão e são visíveis usando a [!DNL Identity Service] API ou por meio da [!DNL Platform] interface do usuário.
 

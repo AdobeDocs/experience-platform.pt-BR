@@ -3,8 +3,9 @@ title: Recuperando ID de Experience Cloud
 seo-title: ID de Experience Cloud de recuperação do SDK da Web do Adobe Experience Platform
 description: Saiba como obter a Adobe Experience Cloud Id.
 seo-description: Saiba como obter a Adobe Experience Cloud Id.
+keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 5%
@@ -30,7 +31,7 @@ Ao migrar da API do Visitante, você também pode migrar os cookies AMCV existen
 
 * Quando algumas páginas de um domínio estiverem usando a API de Visitante e outras páginas estiverem usando esse SDK. Para suportar esse caso, o SDK lê os cookies AMCV existentes e grava um novo cookie com o ECID existente. Além disso, o SDK grava cookies AMCV para que, se o ECID for obtido primeiro em uma página instrumentada com o SDK da Web do AEP, as páginas subsequentes instrumentadas com a API do Visitante tenham a mesma ECID.
 * Quando o AEP Web SDK é configurado em uma página que também tem a API do Visitante. Para suportar esse caso, se o cookie AMCV não estiver definido, o SDK procura a API do Visitante na página e a chama para obter a ECID.
-* Quando todo o site estiver usando o SDK da Web AEP e não tiver a API do Visitante, é útil migrar as ECIDs para que as informações do visitante de retorno sejam mantidas. Depois que o SDK é implantado com `idMigrationEnabled` por um período de tempo para que a maioria dos cookies do visitante seja migrada, a configuração pode ser desativada.
+* Quando todo o site estiver usando o SDK da Web AEP e não tiver a API do Visitante, é útil migrar as ECIDs para que as informações do visitante de retorno sejam retidas. Depois que o SDK é implantado com `idMigrationEnabled` por um período de tempo para que a maioria dos cookies do visitante seja migrada, a configuração pode ser desativada.
 
 ## Recuperando a ID do Visitante
 

@@ -3,8 +3,9 @@ title: Variáveis mapeadas automaticamente no Analytics
 seo-title: Variáveis mapeadas automaticamente no Analytics com o Adobe Experience Platform Web SDK
 description: Saiba quais variáveis são mapeadas automaticamente no Analytics com o Experience Platform Web SDK
 seo-description: Saiba quais variáveis são mapeadas automaticamente no Analytics com o Experience Platform Web SDK
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 2%

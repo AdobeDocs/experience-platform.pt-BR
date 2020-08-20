@@ -5,7 +5,7 @@ title: Segmentação de várias entidades
 topic: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais baseados em produtos, lojas ou outras classes que não sejam perfis. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos para o schema do Perfil.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 A segmentação de várias entidades é a capacidade de estender [!DNL Profile] dados com dados adicionais baseados em produtos, lojas ou outras classes que não sejam de perfil. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos para o [!DNL Profile] schema.
 
-Para saber mais sobre a segmentação de várias entidades, continue lendo a documentação e complete seu aprendizado assistindo ao vídeo abaixo ou explorando a visão geral [da](./home.md)segmentação.]
+Para saber mais sobre a segmentação de várias entidades, continue lendo a documentação e complete seu aprendizado assistindo ao vídeo abaixo ou explorando a visão geral [da](./home.md)segmentação.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 

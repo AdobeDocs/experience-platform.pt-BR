@@ -3,8 +3,9 @@ title: Execução de comandos
 seo-title: Execução de comandos do Adobe Experience Platform Web SDK
 description: Saiba como executar comandos do SDK da Web do Experience Platform
 seo-description: Saiba como executar comandos do SDK da Web do Experience Platform
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%

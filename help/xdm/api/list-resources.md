@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Recursos de Lista
+title: Recursos de lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 ---
 
 
-# Recursos de Lista
+# Recursos de lista
 
 Você pode visualização uma lista de todos os [!DNL Schema Registry] recursos de um determinado tipo (classes, mixins, schemas, tipos de dados ou descritores) em um container executando uma única solicitação de GET.
 
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | O container no qual os recursos estão localizados (&quot;global&quot; ou &quot;locatário&quot;). |
 | `{RESOURCE_TYPE}` | O tipo de recurso a ser recuperado do [!DNL Schema Library]. Os tipos válidos são `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
-| `{QUERY_PARAMS`} | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
+| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
 
 **Solicitação**
 

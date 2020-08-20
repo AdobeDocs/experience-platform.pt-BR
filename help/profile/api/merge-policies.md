@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Mesclar políticas - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2381'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Mesclar ponto final de políticas
 
-O Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia mostra as etapas para trabalhar com políticas de mesclagem usando a API. Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
+A Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia mostra as etapas para trabalhar com políticas de mesclagem usando a API. Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
 
 ## Introdução
 
@@ -55,8 +55,8 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
 | `id` | O identificador exclusivo gerado pelo sistema atribuído no momento da criação |
 | `name` | Nome amigável pelo qual a política de mesclagem pode ser identificada nas visualizações de lista. |
 | `imsOrgId` | ID da organização à qual esta política de mesclagem pertence |
-| `identityGraph` | [Objeto de gráfico](#identity-graph) de identidade que indica o gráfico de identidade a partir do qual as identidades relacionadas serão obtidas. Os fragmentos de Perfil encontrados para todas as identidades relacionadas serão mesclados. |
-| `attributeMerge` | [Objeto de mesclagem](#attribute-merge) de atributo que indica a maneira pela qual a política de mesclagem priorizará os valores de atributos do perfil em caso de conflitos de dados. |
+| `identityGraph` | [Objeto de gráfico](#identity-graph) de identidade que indica o gráfico de identidade a partir do qual as identidades relacionadas serão obtidas. Os fragmentos de perfil encontrados para todas as identidades relacionadas serão mesclados. |
+| `attributeMerge` | [Objeto de mesclagem](#attribute-merge) de atributo que indica a maneira pela qual a política de mesclagem priorizará os atributos do perfil em caso de conflitos de dados. |
 | `schema` | O objeto [schema](#schema) no qual a política de mesclagem pode ser usada. |
 | `default` | Valor booliano que indica se essa política de mesclagem é o padrão para o schema especificado. |
 | `version` | [!DNL Platform] versão mantida da política de mesclagem. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
@@ -86,7 +86,7 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
 
 ### Gráfico de identidade {#identity-graph}
 
-[O Serviço](../../identity-service/home.md) de identidade do Adobe Experience Platform gerencia os gráficos de identidade usados globalmente e para cada organização em [!DNL Experience Platform]. O `identityGraph` atributo da política de mesclagem define como determinar as identidades relacionadas para um usuário.
+[O Adobe Experience Platform Identity Service](../../identity-service/home.md) gerencia os gráficos de identidade usados globalmente e para cada organização em [!DNL Experience Platform]. O `identityGraph` atributo da política de mesclagem define como determinar as identidades relacionadas para um usuário.
 
 **objeto identityGraph**
 
@@ -111,7 +111,7 @@ Quando `{IDENTITY_GRAPH_TYPE}` for uma das seguintes opções:
 
 ### Mesclagem de atributo {#attribute-merge}
 
-Um fragmento de perfil são as informações do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há um potencial para valores conflitantes para propriedades do perfil e a prioridade deve ser especificada. Usando `attributeMerge`, você pode especificar quais valores de perfil de conjunto de dados priorizar no evento de um conflito de mesclagem.
+Um fragmento de perfil são as informações do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há um potencial para atributos de perfil conflitantes e a prioridade deve ser especificada. Usando `attributeMerge`, você pode especificar quais atributos de perfil priorizar no evento de um conflito de mesclagem entre conjuntos de dados do tipo Valor-chave (dados de registro).
 
 **objeto attributeMerge**
 
@@ -123,11 +123,11 @@ Um fragmento de perfil são as informações do perfil para apenas uma identidad
 
 Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
 
-* **&quot;timestampOrdered&quot;**: (padrão) Atribua prioridade ao perfil que foi atualizado por último em caso de conflito. Usando esse tipo de mesclagem, o `data` atributo não é obrigatório.
-* **&quot;dataSetPrecedence&quot;** : Atribua prioridade aos fragmentos do perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em vez de dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o `order` atributo é obrigatório, pois lista os conjuntos de dados na ordem de prioridade.
-   * **&quot;Ordem&quot;**: Quando &quot;dataSetPrecedence&quot; é usado, uma `order` matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será unido. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A `order` matriz lista as IDs dos conjuntos de dados em ordem de prioridade.
+* **`timestampOrdered`**: (padrão) Atribua prioridade ao perfil que foi atualizado por último em caso de conflito. Usando esse tipo de mesclagem, o `data` atributo não é obrigatório. `timestampOrdered` também suporta carimbos de data e hora personalizados que terão prioridade ao mesclar fragmentos de perfil dentro ou entre conjuntos de dados. Para saber mais, consulte a seção Apêndice sobre como [usar carimbos de data e hora](#custom-timestamps)personalizados.
+* **`dataSetPrecedence`** : Atribua prioridade aos fragmentos do perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em vez de dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o `order` atributo é obrigatório, pois lista os conjuntos de dados na ordem de prioridade.
+   * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, uma `order` matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será unido. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A `order` matriz lista as IDs dos conjuntos de dados em ordem de prioridade.
 
-**Exemplo de objeto attributeMerge usando o tipo dataSetPrecedence**
+**Exemplo de objeto attributeMerge usando`dataSetPrecedence`tipo**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
     }
 ```
 
-**Exemplo de objeto attributeMerge usando tipo timestampOrdered**
+**Exemplo de objeto attributeMerge usando`timestampOrdered`tipo**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
 
 ### Esquema {#schema}
 
-O objeto schema especifica o schema XDM para o qual essa política de mesclagem é criada.
+O objeto schema especifica o schema do Modelo de Dados de Experiência (XDM) para o qual essa política de mesclagem é criada.
 
-**`schema`objeto **
+**`schema`objeto**
 
 ```json
     "schema": {
@@ -170,6 +170,8 @@ Onde o valor de `name` é o nome da classe XDM na qual o schema associado à pol
         "name": "_xdm.context.profile"
     }
 ```
+
+Para saber mais sobre o XDM e trabalhar com schemas no Experience Platform, comece lendo a visão geral [do sistema](../../xdm/home.md)XDM.
 
 ## Acessar políticas de mesclagem {#access-merge-policies}
 
@@ -339,7 +341,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `orderBy` | Especifica o campo pelo qual ordenar os resultados como em `orderBy=name` ou `orderBy=+name` para classificar por nome em ordem crescente, ou `orderBy=-name`, para classificar em ordem decrescente. A omissão desse valor resulta na classificação padrão de `name` em ordem crescente. |
 | `schema.name` | Nome do schema para o qual recuperar as políticas de mesclagem disponíveis. |
 | `identityGraph.type` | Filtros resulta pelo tipo de gráfico de identidade. Os valores possíveis incluem &quot;none&quot; e &quot;pdg&quot; (Gráfico privado). |
-| `attributeMerge.type` | Resultados de Filtros pelo tipo de mesclagem de atributo usado. Os valores possíveis incluem &quot;timestampOrdered&quot; e &quot;dataSetPrecedence&quot;. |
+| `attributeMerge.type` | Resultados de filtros pelo tipo de mesclagem de atributo usado. Os valores possíveis incluem &quot;timestampOrdered&quot; e &quot;dataSetPrecedence&quot;. |
 | `start` | Deslocamento da página - especifique a ID inicial dos dados a serem recuperados. Valor padrão: 0 |
 | `version` | Especifique essa opção se você estiver procurando usar uma versão específica da política de mesclagem. Por padrão, a versão mais recente será usada. |
 
@@ -693,7 +695,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem atualiza
 
 ## Excluir uma política de mesclagem
 
-Uma política de mesclagem pode ser excluída fazendo uma solicitação de DELETE para o `/config/mergePolicies` ponto de extremidade e incluindo a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
+Uma política de mesclagem pode ser excluída fazendo uma solicitação de DELETE para o `/config/mergePolicies` ponto final e incluindo a ID da política de mesclagem que você deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -724,7 +726,42 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua Organização IMS, pode usá-las para criar segmentos de audiência a partir de seus [!DNL Real-time Customer Profile] dados. Consulte a documentação [do Serviço de segmentação de](../../segmentation/home.md) Adobe Experience Platform para começar a definir e trabalhar com segmentos.
+Agora que você sabe como criar e configurar políticas de mesclagem para sua Organização IMS, pode usá-las para criar segmentos de audiência a partir de seus [!DNL Real-time Customer Profile] dados. Consulte a documentação [do Serviço de segmentação da](../../segmentation/home.md) Adobe Experience Platform para começar a definir e trabalhar com segmentos.
+
+## Apêndice
+
+### Uso de carimbos de data e hora personalizados {#custom-timestamps}
+
+Como os registros de Perfis são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando `timestampOrdered` for selecionado como o tipo `attributeMerge` de uma política de mesclagem, os perfis serão mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
+
+Ocasionalmente, pode haver casos de uso, como preenchimento retroativo de dados ou garantia da ordem correta dos eventos, se os registros forem ingeridos fora de ordem, quando for necessário fornecer um carimbo de data e hora personalizado e a política de mesclagem respeitar o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema.
+
+Para usar um carimbo de data e hora personalizado, a Mixin [de Detalhes de Auditoria do Sistema de Origem](#mixin-details) Externa deve ser adicionada ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `xdm:lastUpdatedDate` campo. Quando um registro é ingerido com o `xdm:lastUpdatedDate` campo preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se não `xdm:lastUpdatedDate` estiver presente ou não estiver preenchida, a Plataforma continuará a usar o carimbo de data e hora do sistema.
+
+>[!NOTE]
+>
+>É necessário garantir que o `xdm:lastUpdatedDate` carimbo de data e hora seja preenchido ao enviar um PATCH no mesmo registro.
+
+Para obter instruções passo a passo sobre como trabalhar com schemas usando a API do Registro do schema, incluindo como adicionar mixins a schemas, visite o [tutorial para criar um schema usando a API](../../xdm/tutorials/create-schema-api.md).
+
+Para trabalhar com carimbos de data e hora personalizados usando a interface do usuário, consulte a seção sobre como [usar carimbos de data e hora](../ui/merge-policies.md#custom-timestamps) personalizados no guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
+
+#### Detalhes da auditoria do sistema de origem externa Detalhes da combinação {#mixin-details}
+
+O exemplo a seguir mostra os campos preenchidos corretamente na Mixin de Detalhes de Auditoria do Sistema de Origem Externa. A combinação completa do JSON também pode ser visualizada na reunião [pública do Modelo de Dados de Experiência (XDM) no GitHub](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) .
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 

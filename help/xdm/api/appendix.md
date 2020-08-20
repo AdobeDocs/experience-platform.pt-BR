@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Apêndice do desenvolvedor do Registro do Schema
+title: Apêndice do desenvolvedor do Registro do schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 4%
@@ -26,7 +26,7 @@ Ao analisar as definições formais de XDM no repositório público, você pode 
 
 O Modo de compatibilidade permite que o modelo XDM JSON-LD funcione com a infraestrutura de dados existente, alterando valores dentro do XDM padrão e mantendo a semântica igual. Ele usa uma estrutura JSON aninhada, exibindo schemas em um formato semelhante a uma árvore.
 
-A principal diferença que você notará entre o XDM padrão e o Modo de compatibilidade é a remoção do prefixo &quot;xdm:&quot; para nomes de campos.
+A principal diferença que você observará entre o XDM padrão e o Modo de compatibilidade é a remoção do prefixo &quot;xdm:&quot; para nomes de campos.
 
 A seguir está uma comparação lado a lado mostrando campos relacionados ao aniversário (com atributos de &quot;descrição&quot; removidos) no XDM padrão e no Modo de compatibilidade. Observe que os campos Modo de compatibilidade incluem uma referência ao campo XDM e seu tipo de dados nos atributos &quot;meta:xdmField&quot; e &quot;meta:xdmType&quot;.
 
@@ -37,7 +37,7 @@ A seguir está uma comparação lado a lado mostrando campos relacionados ao ani
   <td>
   <pre class="JSON language-JSON hljs">
         { "xdm:bornDate": { "title": "Data de nascimento", "tipo": "string", "format": "date", }, "xdm:bornDayAndMonth": { "title": "Data de nascimento", "tipo": "string", "pattern": "[0-1][0-9]-[0-9][0-9]", }, "xdm:bornYear": { "title": "Ano de nascimento", "tipo": "número inteiro", "mínimo": 1, "máximo": 32767 }
-      </pre>
+  </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
@@ -49,7 +49,7 @@ A seguir está uma comparação lado a lado mostrando campos relacionados ao ani
 
 ### Por que o Modo de compatibilidade é necessário?
 
-O Adobe Experience Platform foi projetado para trabalhar com várias soluções e serviços, cada um com seus próprios desafios e limitações técnicas (por exemplo, como determinadas tecnologias lidam com caracteres especiais). A fim de ultrapassar estas limitações, foi desenvolvido o Modo de Compatibilidade.
+A Adobe Experience Platform foi projetada para trabalhar com várias soluções e serviços, cada um com seus próprios desafios e limitações técnicas (por exemplo, como determinadas tecnologias lidam com caracteres especiais). A fim de ultrapassar estas limitações, foi desenvolvido o Modo de Compatibilidade.
 
 A maioria dos [!DNL Experience Platform] serviços inclui [!DNL Catalog], [!DNL Data Lake]e [!DNL Real-time Customer Profile] uso [!DNL Compatibility Mode] no lugar do XDM padrão. A [!DNL Schema Registry] API também usa [!DNL Compatibility Mode]e os exemplos nesse documento são mostrados usando [!DNL Compatibility Mode].
 
@@ -171,7 +171,7 @@ Para começar, localize o tipo de campo desejado e use o código de amostra forn
     </td>
   </tr>
   <tr>
-    <td>date</td>
+    <td>data</td>
     <td>tipo: formato<br/>de string: date</td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -252,6 +252,6 @@ A tabela abaixo descreve o mapeamento entre &quot;meta:xdmType&quot; e outros fo
 | short | type:<br>integermaximum:2^15<br>mínimo:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Curto | System.Int16 | Número | int | Número inteiro | int32 |
 | byte | type:<br>integermaximum:2^7<br>mínimo:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Número | int | Número inteiro | int32 |
 | booleano | tipo:booleano | BOOLEANO | BooleanType | java.lang.Boolean | Booleano | System.Boolean | Booleano | bool | Número inteiro | Número inteiro | bool |
-| date | type:<br>stringformat:date<br>(RFC 3339, seção 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | String | date | Inteiro<br>(unix millis) | int64<br>(unix millis) |
+| data | type:<br>stringformat:date<br>(RFC 3339, seção 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | String | data | Inteiro<br>(unix millis) | int64<br>(unix millis) |
 | data e hora | type:<br>stringformat:date-time<br>(RFC 3339, seção 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | String | carimbo de data e hora | Inteiro<br>(unix millis) | int64<br>(unix millis) |
 | mapa | objeto | O grupo<br><br>anotado MAP&lt;<span>key_type</span>> DEVE ser STRING<br><br>&lt;<span>value_type</span>> do tipo de valores de mapa | MapType<br><br>&quot;keyType&quot; DEVE ser StringType<br><br>&quot;valueType&quot; é o tipo de valores de mapa. | java.util.Map | Mapa | --- | objeto | objeto | mapa | map&lt;<span>key_type, value_type</span>> |

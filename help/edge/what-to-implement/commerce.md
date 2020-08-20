@@ -3,10 +3,11 @@ title: Produtos
 seo-title: Suporte a produtos com Adobe Experience Platform Web SDK
 description: Saiba como adicionar dados se você tiver produtos ou um carrinho de compras com o Experience Platform Web SDK
 seo-description: Saiba como adicionar dados se você tiver produtos ou um carrinho de compras com o Experience Platform Web SDK
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 6%
 
 ---
@@ -18,8 +19,7 @@ Se você tiver produtos em seu site, esse é um conjunto padrão de itens que vo
 
 Este documento usa a combinação Detalhes [do Comércio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent. A `commerce` mistura é dividida em duas partes: o `commerce` objeto e a `productListItems` matriz. O `commerce` objeto permite indicar quais ações estão acontecendo na `productListItems` matriz.
 
->[!Tip]
->
+>[!TIP]
 >
 >Se você estiver familiarizado com o Adobe Analytics, o The `commerce` está mais relacionado à `events` variável. O `productListItems` está mais relacionado à `products` variável.
 
@@ -27,9 +27,9 @@ Este documento usa a combinação Detalhes [do Comércio de](https://github.com/
 
 Abaixo está uma lista de `measures` disponível no `commerce` objeto.
 
->[!Tip]
+>[!TIP]
 >
->Uma medida tem dois campos: `id` e `value`. Na maioria das vezes, você usará apenas o `value` campo (por exemplo, `'value':1`). O `id` campo permite definir um identificador exclusivo que você pode usar para rastrear quando a medida foi enviada. Consulte a documentação XDM para [Medir](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
+>Uma medida tem dois campos: `id` e `value`. Na maioria das vezes, você usará somente o `value` campo (por exemplo, `'value':1`). O `id` campo permite definir um identificador exclusivo que você pode usar para rastrear quando a medida foi enviada. Consulte a documentação XDM para [Medir](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **Medição** | **Recomendação** | **Descrição** |
 |---|---|---|

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas de ingestão em lote Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Sim - é seguro repetir a chamada da API. Apesar do fracasso, é possível que a
 
 ### Quando a API de Upload de Arquivo Grande deve ser usada?
 
-O tamanho de arquivo recomendado para usar a API de Upload de Arquivo Grande é de 256 MB ou maior. Mais informações sobre como usar a API de Carregamento de Arquivo Grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
+O tamanho de arquivo recomendado para usar a API de Upload de Arquivo Grande é de 256 MB ou maior. Mais informações sobre como usar a API de carregamento de arquivo grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
 
 ### Por que a chamada API Large File Complete está falhando?
 
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### Por que os dados carregados não aparecem no conjunto de dados?
+
+Para que os dados sejam exibidos no conjunto de dados, o lote deve ser marcado como concluído. Todos os arquivos que você deseja assimilar devem ser carregados antes de marcar o lote como concluído. Um exemplo de marcação de um lote como concluído pode ser visto abaixo:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### Como o JSON de várias linhas é ingerido?

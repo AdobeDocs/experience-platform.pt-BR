@@ -22,7 +22,7 @@ A [!DNL Policy Service] API permite que você crie e gerencie vários recursos r
 O uso do guia do desenvolvedor requer uma compreensão trabalhada dos vários [!DNL Experience Platform] serviços envolvidos no trabalho com os recursos de controle de dados. Antes de começar a trabalhar com o [!DNL Policy Service API], consulte a documentação dos seguintes serviços:
 
 * [[!DNL Data Governance]](../home.md): A estrutura pela qual [!DNL Experience Platform] aplica a conformidade de uso de dados.
-* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 

@@ -5,9 +5,9 @@ description: Saiba como enviar dados de link para a Adobe Analytics com o Experi
 seo-description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: ef01c258cb9ac72f0912d17dcd113c1baa2a5b5e
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Embora o Analytics registre tecnicamente uma visualização de página mesmo se 
 
 ## Rastreamento de links
 
-É possível definir links adicionando os detalhes abaixo da parte `web.webInteraction` do schema. Há três variáveis obrigatórias: `web.webInteraction.name`, `web.webInteraction.type` e `web.webInteraction.linkClicks.value`.
+Os links podem ser definidos manualmente ou acompanhados [automaticamente](#automaticLinkTracking). O rastreamento manual é feito adicionando os detalhes sob a `web.webInteraction` parte do schema. Há três variáveis obrigatórias: `web.webInteraction.name`, `web.webInteraction.type` e `web.webInteraction.linkClicks.value`.
 
 ```javascript
 alloy("sendEvent", {
@@ -59,11 +59,31 @@ alloy("sendEvent", {
 O tipo de link pode ser um dos três valores:
 
 * **`other`:** Um link personalizado
-* **`download`:** Um link de download (pode ser rastreado automaticamente pela biblioteca)
+* **`download`:** Um link de download
 * **`exit`:** Um link de saída
 
-### Rastreamento automático de link
+### Rastreamento automático de link {#automaticLinkTracking}
 
-O SDK da Web pode rastrear automaticamente todos os cliques em links ativando [clickCollection](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled).
+Por padrão, o SDK da Web captura, [rotula](#labelingLinks)e [registra](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) cliques em tags de link [qualificadas](#qualifyingLinks) . Os cliques são capturados com um ouvinte de evento de [captura](https://www.w3.org/TR/uievents/#capture-phase) que é anexado ao documento.
 
-Os links de download são detectados automaticamente com base em tipos de arquivos populares. A lógica de como os downloads são classificados é configurável.
+A desativação do rastreamento automático de links pode ser feita pela [configuração](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) do SDK da Web.
+
+```javascript
+clickCollectionEnabled: false
+```
+
+#### Quais tags se qualificam para o rastreamento de links?{#qualifyingLinks}
+
+O rastreamento automático de link é feito para âncora `A` e `AREA` tags. No entanto, essas tags não são consideradas para rastreamento de link se tiverem um manipulador anexado `onclick` .
+
+#### Como os links são rotulados?{#labelingLinks}
+
+Os links são rotulados como um link de download se a tag da âncora incluir um atributo de download ou se o link terminar com uma extensão de arquivo popular. O qualificador do link de download pode ser [configurado](../../fundamentals/configuring-the-sdk.md) com uma expressão regular:
+
+```javascript
+downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
+```
+
+Os links são rotulados como um link de saída se o domínio do público alvo do link for diferente do atual `window.location.hostname`.
+
+Os links que não se qualificam como link de download ou saída são rotulados como &quot;outros&quot;.

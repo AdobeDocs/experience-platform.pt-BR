@@ -5,9 +5,9 @@ title: Segmentação em streaming
 topic: ui guide
 description: A segmentação contínua no Adobe Experience Platform permite que você faça a segmentação em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam à Plataforma, o que diminui a necessidade de programar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,9 @@ Depois de criar um segmento habilitado para streaming, você pode visualização
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Especificamente, os detalhes sobre o tamanho **** total da audiência qualificada são mostrados. Se um trabalho tiver sido executado nas últimas 24 horas, o tamanho **[!UICONTROL de audiência qualificado]** total do trabalho será mostrado, além de um gráfico de linha para a audiência adicionada. Caso contrário, o tamanho **[!UICONTROL de audiência estimado]** total será mostrado, além de uma linha de tendência de visualização.
+Especificamente, os detalhes sobre o tamanho **** total da audiência qualificada são mostrados. O tamanho **** total da audiência qualificada mostra o número total de audiências qualificadas da última execução de tarefa de segmento concluída. Se um trabalho de segmento não tiver sido concluído nas últimas 24 horas, o número de audiências será obtido de uma estimativa.
+
+Embaixo está um gráfico de linhas que mostra o número de segmentos que foram qualificados e desqualificados nas últimas 24 horas. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, a semana passada ou os últimos 30 dias.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

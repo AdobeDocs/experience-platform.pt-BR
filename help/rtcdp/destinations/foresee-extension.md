@@ -3,12 +3,12 @@ keywords: foresee;foresee extension;foresee destination
 title: Extensão prevista
 seo-title: Extensão prevista
 description: A extensão Foresee é um destino pesquisa na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: null
+seo-description: A extensão Foresee é um destino pesquisa na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 7%
+source-wordcount: '529'
+ht-degree: 6%
 
 ---
 
@@ -41,7 +41,7 @@ Para instalar a [!DNL Foresee] extensão:
 4. Na janela **[!UICONTROL Selecionar propriedade]** de inicialização disponível, selecione a propriedade Iniciar na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [da página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propriedades da documentação do Launch.
 5. O fluxo de trabalho leva você ao Launch para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão, consulte a página [de extensão](https://exchange.adobe.com/experiencecloud.details.100164.html) Previsse no Adobe Exchange.
+Para obter informações sobre as opções de configuração de extensão, consulte a página [de extensão](https://exchange.adobe.com/experiencecloud.details.100164.html) Previsee no Adobe Exchange.
 
 Você também pode instalar a extensão diretamente na interface [do](https://launch.adobe.com/)Experience Platform Launch. Consulte [Adicionar uma nova extensão](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) na documentação do Launch.
 

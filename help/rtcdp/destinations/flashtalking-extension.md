@@ -3,11 +3,11 @@ keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalk
 title: Extensão Flashspeak OneTag
 seo-title: Extensão Flashspeak OneTag
 description: A extensão Flashspeak OneTag é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: null
+seo-description: A extensão Flashspeak OneTag é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '557'
 ht-degree: 5%
 
 ---

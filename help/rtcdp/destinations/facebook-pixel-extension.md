@@ -3,11 +3,11 @@ keywords: facebook pixel extensions;facebook pixel extension;facebook pixel dest
 title: Extensão de pixel do Facebook
 seo-title: Extensão de pixel do Facebook
 description: A extensão do Facebook Pixel é um destino publicitário na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: null
+seo-description: A extensão do Facebook Pixel é um destino publicitário na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '530'
 ht-degree: 5%
 
 ---

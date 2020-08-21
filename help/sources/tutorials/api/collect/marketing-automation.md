@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Coletar dados de automação de marketing por meio de conectores de origem e APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1664'
 ht-degree: 1%
 
 ---
@@ -600,7 +600,11 @@ curl -X POST \
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {
@@ -625,7 +629,7 @@ curl -X POST \
 | `sourceConnectionIds` | A ID [de conexão](#source) de origem recuperada em uma etapa anterior. |
 | `targetConnectionIds` | A ID [de conexão do](#target-connection) público alvo recuperada em uma etapa anterior. |
 | `transformations.params.mappingId` | A ID [de](#mapping) mapeamento recuperada em uma etapa anterior. |
-| `transformations.params.deltaColum` | A coluna designada usada para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
+| `transformations.params.deltaColum` | A coluna designada usada para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. O formato de data suportado para `deltaColumn` é `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | A ID de mapeamento associada ao banco de dados. |
 | `scheduleParams.startTime` | A hora de start do fluxo de dados em cada época. |
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day`ou `week`. |

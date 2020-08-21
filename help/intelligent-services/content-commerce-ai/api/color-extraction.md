@@ -5,9 +5,9 @@ title: Extração de cores
 topic: Developer guide
 description: O serviço de extração de cores, quando recebe uma imagem, pode calcular o histograma das cores dos pixels e classificá-las por cores dominantes em compartimentos.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Este método usa um extrator de primeiro plano baseado em aprendizado profundo p
 
 A imagem a seguir foi usada no exemplo mostrado neste documento:
 
-![imagem de teste](../images/test_image.jpeg)
+![imagem de teste](../images/QQAsset1.jpg)
 
 **Formato da API**
 
@@ -47,7 +47,7 @@ A solicitação a seguir extrai cores de uma imagem com base nos parâmetros de 
 
 >[!CAUTION]
 >
->`analyzer_id` determina qual [!DNL Sensei Content Framework] é usado. Verifique se você tem o direito `analyzer_id` antes de fazer sua solicitação.
+>`analyzer_id` determina qual [!DNL Sensei Content Framework] é usado. Verifique se você tem o direito `analyzer_id` antes de fazer sua solicitação. Para o serviço de extração de cores, a `analyzer_id` ID é: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -86,7 +86,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriedade | Descrição | Obrigatório |
 | --- | --- | --- |
-| `analyzer_id` | A ID de [!DNL Sensei] serviço em que sua solicitação é implantada. Essa ID determina qual dos [!DNL Sensei Content Frameworks] é usada. | Sim |
+| `analyzer_id` | A ID de [!DNL Sensei] serviço em que sua solicitação é implantada. Essa ID determina qual dos [!DNL Sensei Content Frameworks] é usada. Para serviços personalizados, entre em contato com a equipe do AI de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
 | `data` | Uma matriz que contém objetos JSON. Cada objeto na matriz representa uma imagem. Todos os parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída de dentro `data`. | Sim |
 | `content-id` | A ID exclusiva do elemento de dados retornado na resposta. Se isso não for passado, uma ID gerada automaticamente será atribuída. | Não |
@@ -106,7 +106,7 @@ Uma resposta bem-sucedida retorna os detalhes das cores extraídas. Cada cor é 
 - A porcentagem que essa cor aparece em relação à imagem
 - O valor RGB da cor
 
-No primeiro objeto de exemplo abaixo, a cor `feature_value` de `White,0.82,239,239,239` fundo significa que a cor encontrada é branca, branca é encontrada em 82% da imagem e tem um valor RGB de 239.239.239.
+No primeiro objeto de exemplo abaixo, a cor `feature_value` de `White,0.59,251,251,243` fundo significa que a cor encontrada é branca, branca é encontrada em 59% da imagem e tem um valor RGB de 251.251.243.
 
 ```json
 {
@@ -124,15 +124,19 @@ No primeiro objeto de exemplo abaixo, a cor `feature_value` de `White,0.82,239,2
             "feature_value": [
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.82,239,239,239"
+                "feature_value": "White,0.59,251,251,243"
               },
               {
-                "feature_value": "Dark_Blue,0.11,41,60,86",
+                "feature_value": "Orange,0.30,248,169,48",
                 "feature_name": "color_name_and_rgb"
               },
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "Royal_Blue,0.08,63,91,123"
+                "feature_value": "Mustard,0.08,251,199,77"
+              },
+              {
+                "feature_name": "color_name_and_rgb",
+                "feature_value": "Gold,0.02,250,191,55"
               }
             ],
             "feature_name": "color"

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de dados do Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -51,7 +51,9 @@ Para obter informações detalhadas sobre o mapeamento de campos que ocorre entr
 | Novos dados para Data Lake | &lt; 45 minutos |
 | Dados de preenchimento retroativo (13 meses de dados ou 10 bilhões de eventos, o que for menor) | &lt; 4 semanas |
 
->[!NOTE] A latência varia dependendo da configuração do cliente, dos volumes de dados e dos aplicativos do consumidor. Por exemplo, se a implementação do Analytics estiver configurada com `A4T` a latência para Pipeline, ela aumentará para 5 a 10 minutos.
+>[!NOTE]
+>
+>A latência varia dependendo da configuração do cliente, dos volumes de dados e dos aplicativos do consumidor. Por exemplo, se a implementação do Analytics estiver configurada com `A4T` a latência para Pipeline, ela aumentará para 5 a 10 minutos.
 
 ## Identificadores principais nos dados do Analytics
 

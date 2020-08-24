@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exportar ponto de extremidade de trabalhos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -201,7 +201,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de trabalhos de expo
 | `destination` | Informações de destino para os dados exportados:<ul><li>`datasetId`: A ID do conjunto de dados no qual os dados foram exportados.</li><li>`segmentPerBatch`: Um valor booliano que mostra se as IDs de segmento estão ou não consolidadas. Um valor de &quot;false&quot; significa que todas as IDs de segmento são exportadas para uma única ID de lote. Um valor &quot;true&quot; significa que uma ID de segmento é exportada para uma ID de lote. **Observação:** Definir o valor como true pode afetar o desempenho da exportação em lote.</li></ul> |
 | `fields` | Uma lista dos campos exportados, separada por vírgulas. |
 | `schema.name` | O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
-| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: A ID de segmento para a qual os perfis serão exportados.</li><li>`segmentNs`: namespace do segmento para o determinado `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;.</li></ul> |
+| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: A ID de segmento para a qual os perfis serão exportados.</li><li>`segmentNs`: Namespace do segmento para o determinado `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;.</li></ul> |
 | `mergePolicy` | Mesclar informações de política para os dados exportados. |
 | `metrics.totalTime` | Um campo que indica o tempo total que o trabalho de exportação levou para ser executado. |
 | `metrics.profileExportTime` | Um campo que indica o tempo que os perfis levaram para exportar. |
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -277,7 +280,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | Uma lista dos campos exportados, separada por vírgulas. Se deixado em branco, todos os campos serão exportados. |
 | `mergePolicy` | Especifica a política de mesclagem para reger os dados exportados. Inclua esse parâmetro quando houver vários segmentos sendo exportados. Se não fornecido, a exportação adotará a mesma política de mesclagem que o segmento especificado. |
 | `filter` | Um objeto que especifica os segmentos que serão incluídos na tarefa de exportação por ID, tempo de qualificação ou tempo de assimilação, dependendo das subpropriedades listadas abaixo. Se deixados em branco, todos os dados serão exportados. |
-| `filter.segments` | Especifica os segmentos a serem exportados. A omissão desse valor resultará na exportação de todos os dados de todos os perfis. Aceita uma matriz de objetos de segmento, cada um contendo os seguintes campos:<ul><li>`segmentId`: **(Obrigatório se estiver usando`segments`)** a ID do segmento para perfis a serem exportados.</li><li>`segmentNs` *(Opcional)* namespace de segmento para o determinado `segmentID`.</li><li>`status` *(Opcional)* Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: `"realized"`, `"existing"`e `"exited"`.</li></ul> |
+| `filter.segments` | Especifica os segmentos a serem exportados. A omissão desse valor resultará na exportação de todos os dados de todos os perfis. Aceita uma matriz de objetos de segmento, cada um contendo os seguintes campos:<ul><li>`segmentId`: **(Obrigatório se estiver usando`segments`)** a ID do segmento para perfis a serem exportados.</li><li>`segmentNs` *(Opcional)* namespace de segmento para o determinado `segmentID`.</li><li>`status` *(Opcional)* Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Possible values include: `"realized"`, `"existing"`, and `"exited"`.</li></ul> |
 | `filter.segmentQualificationTime` | Filtrar com base no tempo de qualificação do segmento. A hora e/ou a hora de término do start podem ser fornecidas. |
 | `filter.segmentQualificationTime.startTime` | Hora do start de qualificação de segmento para uma ID de segmento para um determinado status. Não fornecido, não haverá filtro na hora do start para uma qualificação de ID de segmento. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
 | `filter.segmentQualificationTime.endTime` | Hora de término da qualificação de segmento para uma ID de segmento para um determinado status. Não fornecido, não haverá filtro na hora de término para uma qualificação de ID de segmento. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
@@ -286,6 +289,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `additionalFields.eventList` | Controla os campos de evento da série de tempo exportados para objetos filhos ou associados, fornecendo uma ou mais das seguintes configurações:<ul><li>`fields`: Controle os campos a serem exportados.</li><li>`filter`: Especifica critérios que limitam os resultados incluídos dos objetos associados. Espera um valor mínimo necessário para exportação, geralmente uma data.</li><li>`filter.fromIngestTimestamp`: Filtros eventos de séries de tempo para os que foram ingeridos após o carimbo de data e hora fornecido. Não é o tempo de evento em si, mas o tempo de ingestão dos eventos.</li><li>`filter.toIngestTimestamp`: Filtros o carimbo de data e hora para aqueles que foram ingeridos antes do carimbo de data e hora fornecido. Não é o tempo de evento em si, mas o tempo de ingestão dos eventos.</li></ul> |
 | `destination` | **(Obrigatório)** Informações sobre os dados exportados:<ul><li>`datasetId`: **(Obrigatório)** A ID do conjunto de dados no qual os dados devem ser exportados.</li><li>`segmentPerBatch`: *(Opcional)* Um valor booliano que, se não fornecido, assume como padrão &quot;false&quot;. Um valor de &quot;false&quot; exporta todas as IDs de segmento para uma única ID de lote. Um valor &quot;true&quot; exporta uma ID de segmento para uma ID de lote. Observe que definir o valor como &quot;true&quot; pode afetar o desempenho de exportação em lote.</li></ul> |
 | `schema.name` | **(Obrigatório)** O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
+| `evaluationInfo.segmentation` | *(Opcional)* Um valor booliano que, se não fornecido, assumirá o padrão `false`. Um valor de `true` indica que a segmentação precisa ser feita no trabalho de exportação. |
 
 **Resposta**
 
@@ -467,7 +471,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | `destination` | Informações de destino para os dados exportados:<ul><li>`datasetId`: A ID do conjunto de dados no qual os dados foram exportados.</li><li>`segmentPerBatch`: Um valor booliano que mostra se as IDs de segmento estão ou não consolidadas. Um valor de `false` significa que todas as IDs de segmento estavam em uma única ID de lote. Um valor de `true` significa que uma ID de segmento é exportada para uma ID de lote.</li></ul> |
 | `fields` | Uma lista dos campos exportados, separada por vírgulas. |
 | `schema.name` | O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
-| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: ID do segmento para perfis a serem exportados.</li><li>`segmentNs`: namespace do segmento para o determinado `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;.</li></ul> |
+| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: ID do segmento para perfis a serem exportados.</li><li>`segmentNs`: Namespace do segmento para o determinado `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;.</li></ul> |
 | `mergePolicy` | Mesclar informações de política para os dados exportados. |
 | `metrics.totalTime` | Um campo que indica o tempo total que o trabalho de exportação levou para ser executado. |
 | `metrics.profileExportTime` | Um campo que indica o tempo que os perfis levaram para exportar. |

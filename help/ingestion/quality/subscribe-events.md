@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Assinar eventos de ingestão de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Notificações de ingestão de dados
 
-O processo de assimilação de dados em Adobe Experience Platform é composto de várias etapas. Depois que você identificar os arquivos de dados que precisam ser ingeridos, o processo de ingestão será iniciado e cada etapa ocorrerá consecutivamente até que os dados sejam ingeridos com êxito ou falhem. [!DNL Platform] O processo de ingestão pode ser iniciado usando a API [de ingestão de dados do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform ou a interface do [!DNL Experience Platform] usuário.
+O processo de assimilação de dados no Adobe Experience Platform é composto de várias etapas. Depois que você identificar os arquivos de dados que precisam ser ingeridos, o processo de ingestão será iniciado e cada etapa ocorrerá consecutivamente até que os dados sejam ingeridos com êxito ou falhem. [!DNL Platform] O processo de ingestão pode ser iniciado usando a API [de ingestão de dados da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform ou a interface do [!DNL Experience Platform] usuário.
 
 Os dados carregados em [!DNL Platform] devem passar por várias etapas para chegar ao destino, ao local [!DNL Data Lake] ou ao [!DNL Real-time Customer Profile] armazenamento de dados. Cada etapa envolve o processamento dos dados, a validação dos dados e o armazenamento dos dados antes de passá-los para a próxima etapa. Dependendo da quantidade de dados que está sendo ingerida, isso pode se tornar um processo demorado e sempre há uma chance de o processo falhar devido a erros de validação, semântica ou processamento. No evento de uma falha, os problemas de dados precisam ser corrigidos e todo o processo de ingestão deve ser reiniciado usando os arquivos de dados corrigidos.
 
 Para auxiliar no monitoramento do processo de ingestão, [!DNL Experience Platform] torna possível assinar um conjunto de eventos publicados em cada etapa do processo, notificando o status dos dados ingeridos e de possíveis falhas.
 
-## eventos de notificação de status disponíveis
+## Eventos de notificação de status disponíveis
 
 Abaixo está uma lista de notificações de status de ingestão de dados disponíveis que podem ser assinadas.
 
@@ -28,18 +28,18 @@ Abaixo está uma lista de notificações de status de ingestão de dados dispon�
 >
 >Há apenas um tópico de evento fornecido para todas as notificações de ingestão de dados. Para distinguir entre diferentes status, é possível usar o código do evento.
 
-| Serviço Platform | Status | Descrição do Evento | Código do Evento |
+| Serviço de plataforma | Status | Descrição do Evento | Código do evento |
 | ---------------- | ------ | ----------------- | ---------- |
 | Aterrissagem de dados | success | Ingestão - lote bem-sucedido | ing_load_success |
 | Aterrissagem de dados | falha | Ingestão - Falha no lote | ing_load_failure |
-| Perfil do cliente em tempo real | success | Serviço de Perfil - Lote de carregamento de dados bem-sucedido | ps_load_success |
-| Perfil do cliente em tempo real | falha | Serviço de Perfil - Falha no lote de carregamento de dados | ps_load_failure |
+| Perfil do cliente em tempo real | success | Serviço de perfil - Lote de carregamento de dados bem-sucedido | ps_load_success |
+| Perfil do cliente em tempo real | falha | Serviço de perfil - Falha no lote de carregamento de dados | ps_load_failure |
 | Gráfico de identidade | success | Gráfico de identidade - lote de carregamento de dados bem-sucedido | ig_load_success |
 | Gráfico de identidade | falha | Gráfico de identidade - Falha no lote de carregamento de dados | ig_load_failure |
 
-## schema de carga de notificação
+## Schema de carga de notificação
 
-O schema de evento de notificação de ingestão de dados é um schema [!DNL Experience Data Model] (XDM) que contém campos e valores que fornecem detalhes sobre o status dos dados que estão sendo assimilados. Visite o [!DNL GitHub] acordo público XDM para visualização do schema [de carga de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notificação mais recente.
+O schema de evento de notificação de ingestão de dados é um schema [!DNL Experience Data Model] (XDM) que contém campos e valores que fornecem detalhes sobre o status dos dados que estão sendo assimilados. Visite o [!DNL GitHub] acordo público XDM para visualização do schema [de carga de](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)notificação mais recente.
 
 ## Assinar notificações de status de ingestão de dados
 
@@ -55,7 +55,7 @@ Depois de criar um novo projeto, navegue até a tela de visão geral do projeto.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-A caixa de diálogo _[!UICONTROL Adicionar eventos]_é exibida. Clique em**[!UICONTROL  Experience Platform ]**para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações****Platform antes de clicar em**[!UICONTROL  Avançar ]**.
+A caixa de diálogo _[!UICONTROL Adicionar eventos]_ é exibida. Clique em **[!UICONTROL Experience Platform]** para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações **[!UICONTROL de]** plataforma antes de clicar em **[!UICONTROL Avançar]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 

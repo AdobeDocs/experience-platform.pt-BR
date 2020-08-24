@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Mesclar políticas - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
+source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2392'
 ht-degree: 1%
 
 ---
@@ -729,6 +729,8 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 Agora que você sabe como criar e configurar políticas de mesclagem para sua Organização IMS, pode usá-las para criar segmentos de audiência a partir de seus [!DNL Real-time Customer Profile] dados. Consulte a documentação [do Serviço de segmentação da](../../segmentation/home.md) Adobe Experience Platform para começar a definir e trabalhar com segmentos.
 
 ## Apêndice
+
+Esta seção fornece informações complementares relacionadas ao trabalho com políticas de mesclagem.
 
 ### Uso de carimbos de data e hora personalizados {#custom-timestamps}
 

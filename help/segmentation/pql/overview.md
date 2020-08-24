@@ -5,9 +5,9 @@ title: Visão geral do Linguagem do Query do perfil (PQL)
 topic: developer guide
 description: Este guia fornece uma visão geral do PQL, abrangendo diretrizes de formatação e fornecendo expressões de exemplo do PQL.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -81,6 +81,7 @@ A tabela a seguir descreve as diferentes categorias das funções PQL suportadas
 | Matriz, lista e definido | Usado para interagir com arrays, listas e conjuntos. Mais informações sobre essas funções podem ser encontradas no documento [de funções](./array-functions.md)array, lista e set. |
 | Mapa | Costumava interagir com mapas. Mais informações sobre essas funções podem ser encontradas no documento [de funções do](./map-functions.md)mapa. |
 | String | Costumava interagir com cordas. Mais informações sobre essas funções podem ser encontradas no documento [de funções de](./string-functions.md)string. |
+| Objeto | Usado para interagir com objetos. Mais informações sobre essas funções podem ser encontradas no documento [de funções do](./object-functions.md)objeto. |
 | Aritmética | Usado para executar aritmética básica em elementos PQL. Mais informações sobre essas funções podem ser encontradas no documento de funções [aritméticas](./arithmetic-functions.md) |
 | Agregação | Usado para combinar os resultados de uma matriz em um resultado singular. Mais informações sobre as funções de agregação podem ser encontradas no documento [das funções de](./aggregation-functions.md)agregação. |
 | Data e hora | Usado em conjunto com objetos date, time e datetime. Mais informações sobre essas funções podem ser encontradas no documento [de funções de](./datetime-functions.md)data/hora. |

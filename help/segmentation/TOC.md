@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda do Serviço de Segmentação do Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 9%
 
 ---
@@ -31,13 +31,14 @@ ht-degree: 9%
    - [Segmentação em streaming](ui/streaming-segmentation.md)
 - [Aceitar opções](honoring-opt-outs.md)
 - [Segmentação de várias entidades](multi-entity-segmentation.md)
-- Idioma do Query do Perfil {#pql}
+- Idioma do Query do perfil {#pql}
    - [Visão geral](pql/overview.md)
    - [Funções booleanas](pql/boolean-functions.md)
    - [Funções de comparação](pql/comparison-functions.md)
    - [Funções de storage, lista e definição](pql/array-functions.md)
    - [Funções de mapa](pql/map-functions.md)
    - [Funções de string](pql/string-functions.md)
+   - [Funções do objeto](pql/object-functions.md)
    - [Funções aritméticas](pql/arithmetic-functions.md)
    - [Funções de agregação](pql/aggregation-functions.md)
    - [Funções de data e hora](pql/datetime-functions.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções do objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '108'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funções do objeto
 
-[!DNL Profile Query Language] (PQL) oferta funções para tornar a interação com objetos mais simples. Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
+[!DNL Profile Query Language] (PQL) oferta funções para tornar a interação com objetos mais simples. Para obter mais informações sobre outras funções PQL, consulte a [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## É nulo
 

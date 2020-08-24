@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Esta seção também inclui uma pré-visualização da coluna que contém o erro
 
 ![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Depois de visualizar os erros, você pode selecionar **[!UICONTROL Download]** de dentro do fluxo de dados **[UICONTROL para executar o painel de visão geral]** para acessar o diagnóstico completo de erros e baixar o manifesto do arquivo. Consulte os documentos sobre diagnósticos [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erros e o [download de metadados](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obter mais informações.
+Depois de visualizar os erros, você pode selecionar **[!UICONTROL Download]** no painel de visão geral **[!UICONTROL do]** fluxo de dados para acessar o diagnóstico completo de erros e baixar o manifesto do arquivo. Consulte os documentos sobre diagnósticos [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erros e o [download de metadados](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obter mais informações.
 
 ![diagnóstico de erro de pré-visualização](../../images/tutorials/monitor/download.png)
 

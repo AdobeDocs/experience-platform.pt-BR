@@ -5,9 +5,9 @@ title: Criar um segmento
 topic: tutorial
 description: Este documento fornece um tutorial para desenvolver, testar, visualizar e salvar uma definição de segmento usando a Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Criar um segmento
 
-Este documento fornece um tutorial para desenvolver, testar, visualizar e salvar uma definição de segmento usando a API [do serviço de segmentação da Adobe Experience Platform](../api/getting-started.md)DNL.
+Este documento fornece um tutorial para desenvolver, testar, visualizar e salvar uma definição de segmento usando o [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
 
 Para obter informações sobre como criar segmentos usando a interface do usuário, consulte o guia [do Construtor de](../ui/overview.md)segmentos.
 

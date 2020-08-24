@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funções de storage, lista e definição
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '734'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funções de storage, lista e definição
 
-[!DNL Profile Query Language] (PQL) O oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte a visão geral [do idioma do Query do](./overview.md)Perfil.
+[!DNL Profile Query Language] (PQL) O oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte a [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## Em
 
@@ -74,7 +74,7 @@ O query PQL a seguir define as pessoas cujas cores favoritas incluem pelo menos 
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Interseção
+## Intersecção
 
 A `intersection` função é usada para determinar os membros comuns de duas matrizes ou listas.
 
@@ -228,7 +228,7 @@ O query PQL a seguir cria uma nova matriz de números e quadra o valor dos núme
 numbers.map(square)
 ```
 
-## Primeiro `n` no array
+## Primeiro `n` no array {#first-n}
 
 A `topN` função é usada para retornar os primeiros `N` itens em uma matriz, quando classificada em ordem crescente com base na expressão numérica fornecida.
 
@@ -288,7 +288,7 @@ A `head` função é usada para retornar o primeiro item na matriz ou na lista.
 
 **Exemplo**
 
-O seguinte query PQL retorna o primeiro dos cinco pedidos principais com o preço mais alto. Mais informações sobre a `topN` função podem ser encontradas na [primeira `n` seção da matriz](#first-n-in-array) .
+O seguinte query PQL retorna o primeiro dos cinco pedidos principais com o preço mais alto. Mais informações sobre a `topN` função podem ser encontradas na [primeira `n` seção da matriz](#first-n) .
 
 ```sql
 orders.topN(price, 5).head()

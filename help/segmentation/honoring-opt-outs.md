@@ -5,7 +5,7 @@ title: Aceitar opções
 topic: overview
 description: 'O Experience Platform permite que seus clientes enviem solicitações de não participação relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de cancelamento fazem parte da California Consumer Privacy Act (CCPA), que dá aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais foram vendidos ou divulgados (e a quem). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 [!DNL Experience Platform] permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no [!DNL Real-time Customer Profile]. Essas solicitações de cancelamento fazem parte da CCPA [!DNL California Consumer Privacy Act] (California), que concede aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais foram vendidos ou divulgados (e a quem).
 
-Depois que um cliente tiver optado, é importante que sua organização cumpra essas opções ao gerar audiências para atividades de marketing. Este documento descreve detalhes importantes relacionados ao cumprimento de solicitações de não participação.
+Depois que um cliente optar por não participar, é importante que sua organização cumpra essas opções ao gerar audiências para atividades de marketing. Este documento descreve detalhes importantes relacionados ao cumprimento de solicitações de não participação.
 
 ## Introdução
 
@@ -45,7 +45,7 @@ Esta é uma imagem de exemplo mostrando as combinações de opção de não part
 
 A estrutura de cada mistura, bem como uma descrição dos campos que contribuem para o schema, são descritos com mais detalhes nas seções a seguir.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 A [!DNL Profile Privacy] combinação permite capturar dois tipos de solicitações de cancelamento CCPA dos clientes:
 
@@ -69,7 +69,7 @@ The [!DNL Profile Privacy] mixin contains the following fields:
 
 Para visualização da estrutura completa da [!DNL Profile Privacy] mistura, consulte o repositório [público GitHub do](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM ou pré-visualização a mistura usando a interface do usuário da plataforma.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 A [!DNL Profile Preferences Details] combinação fornece vários campos que representam preferências para perfis do cliente (como formato do email, idioma preferencial e fuso horário). Um dos campos incluídos nessa combinação, OptInOut (`optInOut`), permite que valores de opção de não participação sejam definidos para canais individuais.
 
@@ -120,7 +120,7 @@ Isso pode ser feito usando a interface do usuário, adicionando atributos de op�
 
 ### Opção de não participação de vendas/compartilhamento
 
-Se um usuário tiver um sinalizador de recusa de vendas/compartilhamento definido em seu perfil, esse perfil não deverá mais ser usado para nenhuma criação de segmento ou atividades de marketing. Para garantir que esse sinalizador seja respeitado, o &quot;Tipo[!UICONTROL de]opção de não participação&quot; deve ser igual a &quot;[!UICONTROL Opção de não participação]no compartilhamento de vendas&quot; e o &quot;Valor[!UICONTROL de]opção de não participação&quot; deve ser igual a &quot;[!UICONTROL Aceitação]&quot;.
+Se um usuário tiver um sinalizador de recusa de vendas/compartilhamento definido em seu perfil, esse perfil não deverá mais ser usado para nenhuma criação de segmento ou atividades de marketing. Para garantir que esse sinalizador seja respeitado, o &quot;Tipo[!UICONTROL de]opção de não participação&quot; deve ser igual a &quot;Opção de não participação[!UICONTROL no compartilhamento de]vendas&quot; e o &quot;Valor[!UICONTROL de]opção de não participação&quot; deve ser igual a &quot;[!UICONTROL Aceitação]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 

@@ -1,11 +1,11 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Introdução à Plataforma de dados do cliente em tempo real Adobe
-seo-title: Introdução à Plataforma de dados do cliente em tempo real Adobe
+title: Introdução à plataforma de dados do cliente em tempo real Adobe
+seo-title: Introdução à plataforma de dados do cliente em tempo real Adobe
 description: Exemplo de cenário para a Plataforma de dados do cliente em tempo real do Adobe
 seo-description: Exemplo de cenário para a Plataforma de dados do cliente em tempo real do Adobe
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Introdução à Plataforma de dados do cliente em tempo real Adobe
+# Introdução à plataforma de dados do cliente em tempo real Adobe
 
 Este guia de introdução o orienta por uma implementação de amostra da Plataforma de dados do cliente em tempo real (CDP em tempo real) do Adobe. Você pode usá-la como exemplo ao configurar sua própria implementação. Embora este guia mostre exemplos específicos, ele vincula a informações adicionais que podem ser usadas ao criar sua configuração.
 
@@ -129,7 +129,7 @@ A Plataforma de dados do cliente em tempo real Adobe, capacitada pela Adobe Expe
 
 ## Uso de várias fontes de dados
 
-A equipe da Luma tem todos os dados comportamentais e do cliente em um único lugar.
+A equipe da Luma tem todos os seus dados comportamentais e de clientes em um único lugar.
 
 ![imagem](assets/luma-dash.png)
 
@@ -216,7 +216,7 @@ A equipe da Luma de Ciência dos Dados criou modelos em torno da propensão a co
 
 Modifique ou crie um segmento que represente os abandonadores de carrinho que parecem estar no processo de comprar um presente:
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 

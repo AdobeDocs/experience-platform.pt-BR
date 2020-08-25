@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Projeções do Edge - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configurações de projeção de borda e pontos finais de destino
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. O Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, os aplicativos de Adobe, como Adobe Target e Adobe Campaign, usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a [!DNL Real-time Customer Profile] API para trabalhar com projeções de borda, incluindo destinos e configurações.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. A Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, aplicativos de Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Este guia fornece instruções detalhadas sobre como usar a [!DNL Real-time Customer Profile] API para trabalhar com projeções de borda, incluindo destinos e configurações.
 
 ## Introdução
 
@@ -224,14 +224,14 @@ O objeto response mostra os detalhes do destino da projeção. O `id` atributo d
 
 ### Atualizar um destino
 
-Um destino existente pode ser atualizado fazendo uma solicitação de PUT para o ponto de extremidade e incluindo a ID do destino a ser atualizada no caminho da solicitação. `/config/destinations` Essa operação é essencialmente a _regravação_ do destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação como são fornecidos ao criar um novo destino.
+Um destino existente pode ser atualizado fazendo uma solicitação de PUT para o ponto de extremidade e incluindo a ID do destino a ser atualizada no caminho da solicitação. `/config/destinations` Essa operação é essencialmente _reescrever_ o destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação, como são fornecidos ao criar um novo destino.
 
 >[!CAUTION]
 >A resposta da API à solicitação de atualização é imediata, no entanto, as alterações nas projeções são aplicadas de forma assíncrona. Em outras palavras, há uma diferença de tempo entre quando a atualização da definição de destino é feita e quando é aplicada.
 
 **Formato da API**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -292,14 +292,14 @@ A resposta inclui os detalhes atualizados para o destino, incluindo sua ID e a n
 
 ### Excluir um destino
 
-Se sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação de DELETE para o `/config/destinations` ponto final e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
+Se a sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação de DELETE ao `/config/destinations` ponto final e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
 
 >[!CAUTION]
 >A resposta da API à solicitação de exclusão é imediata, no entanto, as alterações reais nos dados nas bordas ocorrem de forma assíncrona. Em outras palavras, os dados do perfil serão removidos de todas as bordas (o `dataCenters` especificado no destino da projeção), mas o processo levará tempo para ser concluído.
 
 **Formato da API**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 

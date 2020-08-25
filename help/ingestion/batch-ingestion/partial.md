@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da ingestão parcial de lote Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Para usar um conjunto de dados existente, selecione um start selecionando um con
 
 A alternância de ingestão **** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a **[!UICONTROL alternância de ingestão]** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão **** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -119,7 +119,7 @@ Para usar o fluxo &quot;[!UICONTROL Mapear CSV para o schema]XDM&quot;, siga as 
 
 A alternância de ingestão **** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a **[!UICONTROL alternância de ingestão]** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão **** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
@@ -341,6 +341,7 @@ Se o lote tiver um ou mais erros e o diagnóstico de erros estiver ativado, o st
 >[!NOTE]
 >
 >Se o diagnóstico de erro não estiver disponível, a seguinte mensagem de erro será exibida:
+>
 > 
 ```json
 > {

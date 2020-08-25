@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Otimizar um modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -95,7 +95,7 @@ O avaliador personalizado pode ser fornecido estendendo a interface do `MLEvalua
 
 Uma vez definido na fórmula, a próxima etapa é ativá-la nas receitas. Isso é feito no arquivo [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) na `resources` pasta do projeto. Aqui, a classe `evaluation.class` é definida para a `Evaluator` classe definida em `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 

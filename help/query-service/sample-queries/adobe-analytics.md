@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: query de amostra
+title: Query de amostra
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 1%
@@ -12,9 +12,9 @@ ht-degree: 1%
 ---
 
 
-# query de amostra para dados do Adobe Analytics
+# Query de amostra para dados do Adobe Analytics
 
-Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM [!DNL ExperienceEvents] e assimilados em conjuntos de dados Adobe Experience Platform para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform [!DNL Query Service] utiliza esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados Adobe Analytics. Consulte a documentação [de mapeamento de campo da](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obter mais informações sobre o mapeamento para XDM [!DNL ExperienceEvents].
+Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM [!DNL ExperienceEvents] e ingeridos no Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que a Adobe Experience Platform [!DNL Query Service] usa esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados Adobe Analytics. Consulte a documentação [de mapeamento de campo do](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obter mais informações sobre o mapeamento para XDM [!DNL ExperienceEvents].
 
 ## Introdução
 
@@ -112,7 +112,7 @@ ORDER BY total_order_revenue DESC
 LIMIT  10;
 ```
 
-### Contagens de Eventos por dia
+### Contagens de eventos por dia
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
@@ -135,7 +135,7 @@ Estes são os campos XDM para acessar as variáveis de comercialização em seu 
 
 ### eVars
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,13 +143,13 @@ Onde `[#]` é um índice de matriz e `evar#` é a variável de eVar específica.
 
 ### Eventos personalizados
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
 Onde `[#]` é um índice de matriz e `event#` é a variável de evento personalizada específica.
 
-### query de amostra
+### Query de amostra
 
 Este é um query de amostra que retorna um eVar e um evento de comercialização para o primeiro produto encontrado no `productListItems`.
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 O erro &quot;Nenhum campo struct&quot; é encontrado quando você tenta recuperar um campo que não existe no conjunto de dados atual. Avalie o motivo retornado na mensagem de erro para identificar um campo disponível, atualize seu query e execute-o novamente.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -220,7 +220,7 @@ Estes são os campos XDM para produzir a Sintaxe de conversão no seu [!DNL Anal
 
 ### eVars
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,13 +228,13 @@ Onde `evar#` está a variável de eVar específica.
 
 ### Produto
 
-```
+```console
 productListItems[#].sku
 ```
 
 Onde `[#]` está um índice de matriz.
 
-### query de amostra
+### Query de amostra
 
 Este é um exemplo de query que vincula o valor ao produto específico e ao par de eventos, neste caso o evento da visualização do produto.
 

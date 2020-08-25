@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conjuntos de dados vs tabelas e schemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Para visualização das tabelas disponíveis com [!DNL Platform] SQL, você pode
 
 `\d` exibe a visualização PostgreSQL padrão
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -46,7 +46,7 @@ Para visualização das tabelas disponíveis com [!DNL Platform] SQL, você pode
 
 `SHOW TABLES;` é um comando personalizado que fornece uma visualização mais detalhada e apresenta a tabela, bem como o nome do conjunto de dados encontrado na [!DNL Platform] interface do usuário.
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -62,7 +62,7 @@ Para visualização do schema raiz de uma tabela, use o `\d table_name` comando.
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -87,7 +87,7 @@ Para ir mais longe no schema, use sublinhados (`_`) para declarar a coluna na ta
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -527,7 +527,7 @@ As imagens a seguir destacam as principais diferenças para a criação de um da
 
 **Criar dados locais PySpark 2.4**
 
-Com o PySpark 3 ([!DNL Spark] 2.4), o `%%sql` Sparkmágico não é mais suportado e foi substituído pelo seguinte:
+Com o PySpark 3 ([!DNL Spark] 2.4), não há mais suporte para o `%%sql` Sparkmágico e este foi substituído pelo seguinte:
 
 ![datafame 2](./images/migration/pyspark-migration/2.4-dataframe.png)
 
@@ -647,7 +647,7 @@ Usar [!DNL Spark] 2.4 com o kernel Scala requer que você defina `val spark` e i
 
 ![importação e definição de faísca](./images/migration/spark-scala/start-session.png)
 
-## dados do Query
+## dados do query
 
 Com Scala ([!DNL Spark] 2.4), não há mais suporte para `%%` faísca. As seguintes operações não podem mais ser utilizadas:
 
@@ -717,7 +717,7 @@ O kernel Scala não suporta mais `%%sql` magia cintilante. É necessário conver
 
 ## Ler um conjunto de dados {#notebook-read-dataset-spark}
 
-Em [!DNL Spark] 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para a leitura de um conjunto de dados.
+Em [!DNL Spark] 2.3, você precisava definir variáveis para `option` valores usados para ler dados ou usar os valores brutos na célula de código. No Scala, é possível usar `sys.env("PYDASDK_IMS_USER_TOKEN")` para declarar e retornar um valor, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala (Spark 2.4) abaixo, `sys.env` é usado para definir e retornar todos os valores necessários para ler um conjunto de dados.
 
 **Usando[!DNL Spark]([!DNL Spark]2.3 - obsoleto) -[!DNL Spark]Kernel**
 
@@ -769,6 +769,7 @@ O notebook Scala ([!DNL Spark] 2.4) usa o kernel Scala, que requer mais valores 
 >[!TIP]
 >
 >No Scala, é possível usar `sys.env()` para declarar e retornar um valor de dentro `option`. Isso elimina a necessidade de definir variáveis se você sabe que elas só serão usadas uma única vez. O exemplo a seguir toma `val userToken` o exemplo acima e o declara em linha dentro de `option`:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))

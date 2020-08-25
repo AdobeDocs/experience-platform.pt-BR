@@ -5,7 +5,7 @@ title: Guia do usuário do JupyterLab
 topic: Overview
 description: O JupyterLab é uma interface de usuário baseada na Web para o Project Júpitter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 11%
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 # [!DNL JupyterLab] guia do usuário
 
-[!DNL JupyterLab] é uma interface de usuário baseada na Web para o [Project Júpitter](https://jupyter.org/) e está totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
+[!DNL JupyterLab] é uma interface de usuário baseada na Web para o [Project Júpiter](https://jupyter.org/) e está totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
 
 Este documento fornece uma visão geral de [!DNL JupyterLab] e seus recursos, bem como instruções para executar ações comuns.
 
@@ -387,7 +387,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: A identidade exclusiva do conjunto de dados a ser acessado
 
-### Leitura de um conjunto de dados em PySpark/[!DNL Spark]/Scala
+### Leitura de um conjunto de dados no PySpark/[!DNL Spark]/Scala
 
 Com um notebook PySpark ou Scala ativo aberto, expanda a guia **Data Explorer** da barra lateral esquerda e clique em **Conjuntos** de dados para visualização de uma lista de conjuntos de dados disponíveis. Clique com o botão direito do mouse na lista de conjuntos de dados que deseja acessar e clique em **Explorar dados no notebook**. As seguintes células de código são geradas:
 
@@ -606,6 +606,7 @@ timedf.show()
 >
 >
 >No Scala, é possível usar `sys.env()` para declarar e retornar um valor de dentro `option`. Isso elimina a necessidade de definir variáveis se você sabe que elas só serão usadas uma única vez. O exemplo a seguir retira `val userToken` do exemplo acima e o declara em linha dentro `option` como uma alternativa:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -702,7 +703,7 @@ timedf.show()
 | pílula | 0.3.3 |
 | fonts-anacond | 1.0 |
 | psycopg2 | 2.8.3 |
-| nariz | 1.3.7 |
+| azar | 1.3.7 |
 | autovizwidget | 0.12.9 |
 | altair | 3.1.0 |
 | vega_datasets | 0.7.0 |

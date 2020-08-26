@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Atributos calculados - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # (Alfa) Ponto de extremidade de atributos computados
 
 >[!IMPORTANT]
+>
 >A funcionalidade de atributo calculado descrita neste documento está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Os atributos calculados permitem calcular automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil, o que significa que você pode agregação valores em todos os registros e eventos.
@@ -33,7 +34,7 @@ A Adobe Experience Platform permite importar e unir dados de várias fontes com 
 
 Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão desses dados rapidamente, [!DNL Platform] permite criar atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
-Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de evento e perfil recebidos ou evento recebido, dados de perfil e eventos históricos.
+Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de eventos e perfis recebidos ou eventos recebidos, dados de perfis e eventos históricos.
 
 ### Casos de uso
 
@@ -48,9 +49,10 @@ Casos de uso para atributos calculados podem variar de cálculos simples a refer
 Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Esse campo pode ser criado usando uma combinação para adicionar o campo a um schema existente ou selecionando um campo que você já definiu dentro de um schema.
 
 >[!NOTE]
+>
 >Atributos calculados não podem ser adicionados a campos em combinações definidas por Adobe. O campo deve estar dentro da `tenant` namespace, o que significa que deve ser um campo definido e adicionado a um schema.
 
-Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de uniões. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
+Para definir com êxito um campo de atributo calculado, o schema deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe na qual o schema se baseia. Para obter mais informações sobre schemas e uniões [!DNL Profile]habilitados, consulte a seção do guia do [!DNL Schema Registry] desenvolvedor sobre como [habilitar um schema para Perfis e exibir schemas](../../xdm/api/getting-started.md)de união. Também é recomendável revisar a [seção sobre união](../../xdm/schema/composition.md) na documentação básica da composição do schema.
 
 O fluxo de trabalho neste tutorial usa um schema [!DNL Profile]habilitado e segue as etapas para definir uma nova combinação que contém o campo de atributo calculado e garante que seja a namespace correta. Se você já tiver um campo que esteja na namespace correta dentro de um schema habilitado para Perfis, poderá prosseguir diretamente para a etapa de [criação de um atributo](#create-a-computed-attribute)calculado.
 
@@ -89,6 +91,7 @@ Depois de clicar em **[!UICONTROL Adicionar campo]** , um novo objeto é aberto,
 Usando a seção Propriedades *[!UICONTROL de]* campo no lado direito do editor, forneça as informações necessárias para o novo campo, incluindo seu nome, nome de exibição e tipo.
 
 >[!NOTE]
+>
 >O tipo do campo deve ser do mesmo tipo que o valor do atributo calculado. Por exemplo, se o valor do atributo calculado for uma string, o campo que está sendo definido no schema deverá ser uma string.
 
 Quando terminar, clique em **[!UICONTROL Aplicar]** e o nome do campo, bem como seu tipo, aparecerão na seção *[!UICONTROL Estrutura]* do editor.
@@ -100,6 +103,7 @@ Quando terminar, clique em **[!UICONTROL Aplicar]** e o nome do campo, bem como 
 Antes de continuar, verifique se o schema foi ativado para [!DNL Profile]. Clique no nome do schema na seção *[!UICONTROL Estrutura]* do editor para que a guia Propriedades *[!UICONTROL do]* Schema seja exibida. Se o controle deslizante do **[!UICONTROL Perfil]** estiver azul, o schema foi ativado para [!DNL Profile].
 
 >[!NOTE]
+>
 >A ativação de um schema para [!DNL Profile] não pode ser desfeita, portanto, se você clicar no controle deslizante depois que ele for ativado, não será necessário arriscar desabilitá-lo.
 
 ![](../images/computed-attributes/Profile.png)
@@ -446,7 +450,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Solicitação**
 
-Esta solicitação usa a formatação [de Patch](http://jsonpatch.com/) JSON para atualizar o &quot;valor&quot; do campo &quot;expressão&quot;.
+Esta solicitação usa a formatação [Patch](http://jsonpatch.com/) JSON para atualizar o &quot;valor&quot; do campo &quot;expressão&quot;.
 
 ```shell
 curl -X PATCH \
@@ -476,7 +480,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um corpo de resposta vazio. Se você quiser confirmar que a atualização foi bem-sucedida, poderá executar uma solicitação de GET para visualização do atributo calculado por sua ID.
+Uma atualização bem-sucedida retorna o Status HTTP 204 (Sem conteúdo) e um corpo de resposta vazio. Se você quiser confirmar que a atualização foi bem-sucedida, poderá executar uma solicitação de GET para visualização do atributo calculado pela ID.
 
 ## Excluir um atributo calculado
 

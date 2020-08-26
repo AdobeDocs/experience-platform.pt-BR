@@ -5,7 +5,7 @@ title: Guia do usuário do JupyterLab
 topic: Overview
 description: O JupyterLab é uma interface de usuário baseada na Web para o Project Júpitter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 11%
@@ -237,6 +237,7 @@ Para abrir um novo *Iniciador*, clique em **Arquivo > Novo Iniciador**. Como alt
 No canto superior direito, [!DNL JupyterLab] selecione o ícone de engrenagem para abrir a configuração *do servidor* Notebook. Você pode ativar a GPU e alocar a quantidade de memória necessária usando o controle deslizante. A quantidade de memória que você pode alocar depende de quanto a sua organização provisionou. Selecione **[!UICONTROL Atualizar configurações]** para salvar.
 
 >[!NOTE]
+>
 >Somente uma GPU é provisionada por organização para notebooks. Se a GPU estiver em uso, é necessário aguardar o usuário que reservou a GPU para liberá-la. Isso pode ser feito fazendo logout ou deixando a GPU em estado ocioso por quatro ou mais horas.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >No Scala, é possível usar `sys.env()` para declarar e retornar um valor de dentro `option`.
 
 ### Usando mágica de %dataset em notebooks PySpark 3 ([!DNL Spark] 2.4) {#magic}
@@ -604,9 +606,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >No Scala, é possível usar `sys.env()` para declarar e retornar um valor de dentro `option`. Isso elimina a necessidade de definir variáveis se você sabe que elas só serão usadas uma única vez. O exemplo a seguir retira `val userToken` do exemplo acima e o declara em linha dentro `option` como uma alternativa:
->
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))

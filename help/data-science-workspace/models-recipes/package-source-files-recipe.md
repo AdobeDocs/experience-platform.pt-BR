@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empacotar arquivos de origem em uma fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -49,9 +49,11 @@ A página *Configurar* é aberta. Forneça um Nome *de* Receita apropriado, por 
 Selecione o *Tempo* de execução apropriado e escolha uma **[!UICONTROL Classificação]** para *Tipo*. Suas credenciais do Registro de Container do Azure são geradas uma vez concluídas.
 
 >[!NOTE]
->*Tipo *é a classe de problema de aprendizado de máquina para a qual a receita foi projetada e é usada após o treinamento para ajudar a avaliar a execução do treinamento.
+>
+>*Tipo* é a classe de problema de aprendizado de máquina para a qual a receita foi projetada e é usada após o treinamento para ajudar a avaliar a execução do treinamento.
 
 >[!TIP]
+>
 >- Para obter [!DNL Python] receitas, selecione o tempo de execução **[!UICONTROL Python]** .
 >- Para receitas R, selecione o tempo de execução **[!UICONTROL R]** .
 >- Para fórmulas PySpark, selecione o tempo de execução **[!UICONTROL PySpark]** . Um tipo de artefato preenche automaticamente.
@@ -63,6 +65,7 @@ Selecione o *Tempo* de execução apropriado e escolha uma **[!UICONTROL Classif
 Observe os valores para Host *do* Docker, *Nome* de usuário e *Senha*. Eles são usados para criar e empurrar sua [!DNL Docker] imagem nos workflows descritos abaixo.
 
 >[!NOTE]
+>
 >O URL de origem é fornecido após concluir as etapas descritas abaixo. O arquivo de configuração é explicado em tutoriais subsequentes encontrados nas [próximas etapas](#next-steps).
 
 ### Empacotar os arquivos de origem
@@ -180,6 +183,7 @@ Em seguida, navegue até o diretório `experience-platform-dsw-reference/recipes
 ```
 
 >[!TIP]
+>
 >Se você estiver recebendo um erro de permissão ao tentar fazer login no Docker usando o `login.sh` script, tente usar o comando `bash login.sh`.
 
 Ao executar o script de login, é necessário fornecer o host do Docker, o nome de usuário e a senha. Ao criar, é necessário fornecer o host do Docker e uma tag de versão para a compilação.

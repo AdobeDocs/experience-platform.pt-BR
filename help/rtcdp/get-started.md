@@ -5,7 +5,7 @@ seo-title: Introdução à plataforma de dados do cliente em tempo real Adobe
 description: Exemplo de cenário para a Plataforma de dados do cliente em tempo real do Adobe
 seo-description: Exemplo de cenário para a Plataforma de dados do cliente em tempo real do Adobe
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -258,6 +258,7 @@ Nesse cenário, a Luma deseja redirecionar essa audiência com personalização 
 Você também pode programar o segmento para start ou término em um horário específico. O segmento será publicado e atualizado automaticamente nas plataformas configuradas nas datas programadas.
 
 >[!NOTE]
+>
 >Como opção, se você clicar no campo de data, ele automaticamente será programado por 90 dias.
 
 Clique em **[!UICONTROL Salvar]** para ir para a próxima página.

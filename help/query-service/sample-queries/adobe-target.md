@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: query de amostra
+title: Query de amostra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 2%
@@ -12,16 +12,17 @@ ht-degree: 2%
 ---
 
 
-# query de amostra para dados de Adobe Target
+# Query de amostra para dados do Adobe Target
 
-Os dados do Adobe Target são transformados em schema XDM do Experience Evento e assimilados [!DNL Experience Platform] como conjuntos de dados para você. Há muitos casos de uso para [!DNL Query Service] esses dados, e os query de amostra a seguir devem funcionar com seus conjuntos de dados de Adobe Target.
+Os dados da Adobe Target são transformados em schema XDM do Experience Evento e assimilados [!DNL Experience Platform] como conjuntos de dados para você. Há muitos casos de uso [!DNL Query Service] com esses dados, e os query de amostra a seguir devem funcionar com seus conjuntos de dados Adobe Target.
 
 >[!NOTE]
+>
 >Nos exemplos a seguir, será necessário editar o SQL para preencher os parâmetros esperados para seus query com base no conjunto de dados, nas variáveis ou no período de tempo que você está interessado em avaliar. Forneça parâmetros onde quer que você veja `{ }` no SQL.
 
 ## Nome padrão do conjunto de dados para a fonte de dados do Público alvo em [!DNL Platform]:
 
-Eventos de experiência do Adobe Target (nome amigável) <br>`adobe_target_experience_events` (nome a ser usado no query)
+eventos do Adobe Target Experience (nome amigável) <br>`adobe_target_experience_events` (nome a ser usado no query)
 
 ## Mapeamento de campo XDM parcial de alto nível
 
@@ -33,7 +34,7 @@ O uso de `[ ]` denota uma matriz
 | ID da atividade | `_experience.target.activities.activityID` |  |
 | ID da experiência | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | ID do segmento | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
-| Escopo do Evento | `_experience.target.activities[].activityEvents[].eventScope` | Rastreia novos Visitantes e visitas |
+| Escopo do evento | `_experience.target.activities[].activityEvents[].eventScope` | Rastreia novos Visitantes e visitas |
 | ID da etapa | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | ID de etapa personalizada para Campanha |
 | Preço Total | `commerce.order.priceTotal` |  |
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Este documento serve como um guia para interagir com as informações da instân
 
 ## Introdução
 
-Para utilizar insights para a IA do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configuração de uma instância](./configure.md)do AI do cliente. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Para utilizar insights para a IA do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configuração de uma instância](./configure.md)do AI do cliente. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
 
 ## Visão geral da instância do serviço
 
@@ -81,7 +81,7 @@ O botão **[!UICONTROL Mais ações]** está localizado na navegação superior 
 
 - **[!UICONTROL Excluir]**: Exclui a instância.
 - **[!UICONTROL Pontuações]** de acesso: Clicar nas pontuações *de* acesso abre uma caixa de diálogo que fornece um link para as pontuações de [download do tutorial de IA](./download-scores.md) do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
-- **[!UICONTROL Histórico]** de execução da Visualização: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
+- **[!UICONTROL Histórico]** de execução da visualização: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
 
 ![mais ações](../images/insights/more-actions.png)
 
@@ -112,6 +112,7 @@ Para cada grupo de pontuação, é gerado um cartão que mostra os 10 fatores in
 Clicar no botão **[!UICONTROL Criar segmento]** em qualquer um dos compartimentos para propensão Baixa, Média e Alta redireciona você para o construtor de segmentos.
 
 >[!NOTE]
+>
 >O botão **[!UICONTROL Criar segmento]** só estará disponível se o Perfil do cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite a visão geral [do Perfil do cliente em tempo](../../../rtcdp/overview.md)real.
 
 ![Clique em criar segmento](../images/insights/influential-factors-create-segment.png)
@@ -124,7 +125,7 @@ O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!U
 
 ![Preenchimento do segmento em](../images/insights/segment-saving.png)
 
-Para visualização do novo segmento na interface do usuário do Platform, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
+Para visualização do novo segmento na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 

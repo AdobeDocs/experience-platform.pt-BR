@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem Couchbase na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9995a1d7daae3860783d2b4e4e0d2f1314eaa643
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Criar um conector [!DNL Couchbase] de origem na interface do usuário
 
 >[!NOTE]
+>
 > O [!DNL Couchbase] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
 Os conectores de origem fornecem [!DNL Adobe Experience Platform] a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de [!DNL Couchbase] origem usando a interface do [!DNL Platform] usuário.

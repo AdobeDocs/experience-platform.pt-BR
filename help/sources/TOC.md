@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
+user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -110,7 +111,7 @@ ht-degree: 0%
          - [Conector PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
-   - Explorar dados {#explore}
+   - Pagamentos {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento em nuvem](tutorials/api/explore/cloud-storage.md)
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)

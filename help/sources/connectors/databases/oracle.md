@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector Oracle
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -15,13 +15,14 @@ ht-degree: 0%
 # Conector (Beta) [!DNL Oracle]
 
 >[!NOTE]
+>
 >O [!DNL Oracle] conector está em beta. Consulte a visão geral [das](../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como [!DNL Microsoft], MySQL e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
+A Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como [!DNL Microsoft], MySQL e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 
-Diferentes tipos de bancos de dados de terceiros são suportados, incluindo relacional, NoSQL ou data warehouse. O suporte para provedores de banco de dados inclui [!DNL Oracle].
+Diferentes tipos de bancos de dados de terceiros são suportados, incluindo depósitos relacionais, NoSQL ou de dados. O suporte para provedores de banco de dados inclui [!DNL Oracle].
 
-## lista de permissões de endereço IP
+## LISTA DE PERMISSÕES de endereço IP
 
 Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes.
 

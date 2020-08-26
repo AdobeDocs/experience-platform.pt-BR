@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do notebook Aprendizagem de máquina em tempo real
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Guia do usuário do notebook Aprendizagem de máquina em tempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
 
 O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real. Usando o modelo de notebook em tempo **[!UICONTROL real ML]** Python fornecido pelo Adobe, este guia aborda o treinamento de um modelo, a criação de um DSL, a publicação de DSL no Edge e a pontuação da solicitação. À medida que você avança pela implementação do modelo de aprendizado de máquina em tempo real, espera-se que você modifique o modelo para atender às necessidades do seu conjunto de dados.
@@ -34,6 +35,7 @@ O [!DNL JupyterLab] iniciador é exibido. Role para baixo até *Real-Time Machin
 importando todos os pacotes necessários para o seu modelo. Certifique-se de que qualquer pacote que você planeja usar para a criação de nós seja importado.
 
 >[!NOTE]
+>
 >Sua lista de importações pode ser diferente com base no modelo que você deseja fazer. Essa lista mudará à medida que novos nós forem adicionados ao longo do tempo. Consulte o guia [de referência do](./node-reference.md) nó para obter uma lista completa dos nós disponíveis.
 
 ```python
@@ -80,11 +82,12 @@ Usando uma das opções a seguir, você gravará o [!DNL Python] código para le
 Start carregando seus dados de treinamento.
 
 >[!NOTE]
+>
 >No modelo ML **em tempo** real, o conjunto de dados [CSV de seguro de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) automóveis é obtido [!DNL Github].
 
 ![Carregar dados de treinamento](../images/rtml/load_training.png)
 
-Se desejar usar um conjunto de dados de dentro do Adobe Experience Platform, exclua o comentário da célula abaixo. Em seguida, é necessário substituir `DATASET_ID` pelo valor apropriado.
+Se desejar usar um conjunto de dados do Adobe Experience Platform, exclua o comentário da célula abaixo. Em seguida, é necessário substituir `DATASET_ID` pelo valor apropriado.
 
 ![conjunto de dados rtml](../images/rtml/rtml-dataset.png)
 
@@ -116,7 +119,8 @@ Usando o modelo ML *[!UICONTROL em tempo]* real, você precisa analisar, pré-pr
 A célula Modelos ML *[!UICONTROL em tempo]* real de Transformações *de* dados precisa ser modificada para funcionar com seu próprio conjunto de dados. Normalmente, isso envolve renomear colunas, acúmulo de dados e preparação de dados/engenharia de recursos.
 
 >[!NOTE]
->O exemplo a seguir foi condensado para fins de leitura usando `[ ... ]`. visualização e expanda a seção Transformações de dados de modelos ML *em tempo* real para a célula de código completa.
+>
+>O exemplo a seguir foi condensado para fins de leitura usando `[ ... ]`. Visualização e expanda a seção Transformações de dados de modelos ML *em tempo* real para a célula de código completa.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -199,7 +203,7 @@ Execute a célula fornecida para ver um exemplo de resultado. A tabela de saída
 
 Em seguida, você precisa criar o pipeline de treinamento. Isso será semelhante a qualquer outro arquivo de pipeline de treinamento, exceto que você precisa converter e gerar um arquivo ONNX.
 
-Usando as transformações de dados definidas na célula anterior, modifique o modelo. O código a seguir destacado abaixo é usado para gerar um arquivo ONNX no pipeline de recursos. visualização o modelo ML *em tempo* real para obter a célula completa do código do pipeline.
+Usando as transformações de dados definidas na célula anterior, modifique o modelo. O código a seguir destacado abaixo é usado para gerar um arquivo ONNX no pipeline de recursos. Visualização o modelo ML *em tempo* real para obter a célula completa do código do pipeline.
 
 ```python
 #for generating onnx
@@ -240,6 +244,7 @@ model.generate_onnx_resources()
 ```
 
 >[!NOTE]
+>
 >Altere o valor da `model_path` string (`model.onnx`) para alterar o nome do modelo.
 
 ```python
@@ -247,6 +252,7 @@ model_path = "model.onnx"
 ```
 
 >[!NOTE]
+>
 >A célula a seguir não é editável ou pode ser excluída e é necessária para que seu aplicativo de aprendizado de máquina em tempo real funcione.
 
 ```python
@@ -275,13 +281,13 @@ Esta seção descreve como criar um DSL. Você criará os nós que incluem qualq
 
 >[!IMPORTANT]
 >
->
 >O uso do nó ONNX é obrigatório. Sem o nó ONNX, o aplicativo não terá êxito.
 
 ### Criação de nó
 
 >[!NOTE]
-> É provável que você tenha vários nós com base no tipo de dados que está sendo usado. O exemplo a seguir descreve apenas um único nó no modelo ML *em tempo* real. visualização a seção Modelos ML *em tempo* real Criação *de* nó para a célula de código completa.
+>
+> É provável que você tenha vários nós com base no tipo de dados que está sendo usado. O exemplo a seguir descreve apenas um único nó no modelo ML *em tempo* real. Visualização a seção Modelos ML *em tempo* real Criação *de* nó para a célula de código completa.
 
 O nó Paindas abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguido de inserir os parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base em se deseja aplicar a transformação no local ou não. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo, `leasing` é especificado. Para obter mais informações sobre os nós disponíveis e como usá-los, visite o guia [de referência do](./node-reference.md)nó.
 
@@ -326,6 +332,7 @@ nodes = [json_df_node,
 Em seguida, conecte os nós com as bordas. Cada tupla é uma [!DNL Edge] conexão.
 
 >[!TIP]
+>
 > Como os nós são linearmente dependentes uns dos outros (cada nó depende da saída do nó anterior), você pode criar links usando uma simples compreensão de lista Python. Adicione suas próprias conexões se um nó depender de várias entradas.
 
 ```python
@@ -346,11 +353,13 @@ Após a conclusão, um `edge` objeto é retornado contendo cada um dos nós e os
 ## Publicar no Edge (Hub)
 
 >[!NOTE]
+>
 >O aprendizado de máquina em tempo real é temporariamente implantado e gerenciado pelo Adobe Experience Platform Hub. Para obter mais detalhes, visite a seção de visão geral sobre a arquitetura [de aprendizado de máquina em tempo](./home.md#architecture)real.
 
 Agora que você criou um gráfico DSL, pode implantar seu gráfico no [!DNL Edge].
 
 >[!IMPORTANT]
+>
 >Não publicar em [!DNL Edge] com frequência, isso pode sobrecarregar os [!DNL Edge] nós. Não é recomendado publicar o mesmo modelo várias vezes.
 
 ```python
@@ -365,6 +374,7 @@ print(f'Service ID: {service_id}')
 Se não precisar atualizar seu DSL, você pode pular para a [pontuação](#scoring).
 
 >[!NOTE]
+>
 >As células a seguir só são necessárias se você quiser atualizar um DSL existente que tenha sido publicado no Edge.
 
 Seus modelos provavelmente continuarão a se desenvolver. Em vez de criar um serviço totalmente novo, é possível atualizar um serviço existente com seu novo modelo. Você pode definir um nó que deseja atualizar, atribuí-lo uma nova ID e fazer upload do novo DSL para o [!DNL Edge].
@@ -402,6 +412,7 @@ Você retornará o DSL atualizado.
 Após a publicação para [!DNL Edge], a pontuação é feita por uma solicitação de POST de um cliente. Normalmente, isso pode ser feito a partir de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso do Postman. O modelo ML *[!UICONTROL em tempo]* real usa o EdgeUtils para demonstrar esse processo.
 
 >[!NOTE]
+>
 >É necessário um pequeno tempo de processamento antes da pontuação dos start.
 
 ```python
@@ -410,7 +421,7 @@ import time
 time.sleep(20)
 ```
 
-Usando o mesmo schema usado no treinamento, são gerados dados de pontuação de amostra. Esses dados são usados para criar um dataframe de pontuação e depois convertidos em um dicionário de pontuação. visualização o modelo ML *em tempo* real para obter a célula de código completa.
+Usando o mesmo schema usado no treinamento, são gerados dados de pontuação de amostra. Esses dados são usados para criar um dataframe de pontuação e depois convertidos em um dicionário de pontuação. Visualização o modelo ML *em tempo* real para obter a célula de código completa.
 
 ![Dados de pontuação](../images/rtml/generate-score-data.png)
 
@@ -448,6 +459,7 @@ A resposta retornada é uma matriz dos serviços implantados.
 ## Excluir um aplicativo implantado ou uma ID de serviço do [!DNL Edge] (opcional)
 
 >[!CAUTION]
+>
 >Esta célula é usada para excluir seu aplicativo Edge implantado. Não use a seguinte célula, a menos que seja necessário excluir um [!DNL Edge] aplicativo implantado.
 
 ```python

@@ -5,7 +5,7 @@ seo-title: Visão geral da administração de CDP em tempo real
 description: 'Este documento fornece uma visão geral dos recursos de administração da Plataforma de dados do cliente em tempo real, capacitada pela Adobe Experience Platform. '
 seo-description: descrição da sequência
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -28,6 +28,7 @@ O controle de acesso é administrado através do [Adobe Admin Console](http://ad
 Para saber mais sobre o controle de acesso, consulte a visão geral [do](../../access-control/home.md) controle de acesso na [!DNL Experience Platform] documentação.
 
 >[!IMPORTANT]
+>
 >Para obter um guia detalhado sobre como conceder acesso aos recursos de CDP em tempo real, incluindo a ativação da visibilidade na interface do usuário, siga as etapas fornecidas no guia [do usuário do](../../access-control/ui/overview.md)controle de acesso, especificamente aquelas para gerenciar detalhes e serviços adicionais para um perfil de produto.
 
 ## Sandboxes

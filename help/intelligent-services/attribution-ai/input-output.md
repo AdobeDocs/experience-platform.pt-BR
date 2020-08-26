@@ -5,7 +5,7 @@ title: Entrada e saída de Attribution AI
 topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -37,7 +37,7 @@ Nem todas as colunas no schema [!DNL Consumer Experience Event] (CEE) são obrig
 | Marketing.trackingCode | Ponto de contato |
 | Marketing.campaignname | Ponto de contato |
 | Marketing.campaigngroup | Ponto de contato |
-| Comércio | Conversão |
+| Comércio | Conversão  |
 
 Normalmente, a atribuição é executada em colunas de conversão, como ordem, compras e finalizações em &quot;comércio&quot;. As colunas &quot;canal&quot; e &quot;marketing&quot; são altamente recomendadas para definir pontos de contato para obter bons insights. No entanto, é possível incluir qualquer outra coluna adicional junto com as colunas acima para configurar como uma conversão ou definição de ponto de contato.
 
@@ -69,6 +69,7 @@ Por padrão, o Attribution AI define a janela de treinamento como os 2 trimestre
 Comprimento mínimo dos dados necessários = janela de treinamento + janela de pesquisa
 
 >[!TIP]
+>
 > O comprimento mínimo de dados necessário para um aplicativo com configurações padrão é: 2 trimestres (180 dias) + 56 dias = 236 dias.
 
 Exemplo :

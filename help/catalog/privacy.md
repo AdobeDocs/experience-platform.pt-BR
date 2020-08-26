@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Processamento de solicitação de privacidade na [!DNL Data Lake]
 
-O Adobe Experience Platform [!DNL Privacy Service] processa solicitações do cliente para acessar, opt out da venda ou excluir seus dados pessoais, conforme delineado pelas regulamentações legais e organizacionais de privacidade.
+A Adobe Experience Platform [!DNL Privacy Service] processa solicitações do cliente para acessar, opt out da venda ou excluir seus dados pessoais, conforme delineado pelas regulamentações legais e organizacionais de privacidade.
 
 Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados de clientes armazenados no [!DNL Data Lake].
 
@@ -29,9 +29,9 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 
-O Adobe Experience Platform [!DNL Identity Service] faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. [!DNL Identity Service] usa namespaces **[!UICONTROL de]** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma ID da Adobe Advertising Cloud (&quot;AdCloud&quot;) ou uma ID da Adobe Target (&quot;TNTID&quot;).
+A Adobe Experience Platform [!DNL Identity Service] faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. [!DNL Identity Service] usa namespaces **[!UICONTROL de]** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
 
-[!DNL Identity Service] mantém um armazenamento de namespaces de identidade definidas globalmente (padrão) e definidas pelo usuário (personalizadas). namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizadas para atender às suas necessidades específicas.
+[!DNL Identity Service] mantém um armazenamento de namespaces de identidade definidas globalmente (padrão) e definidas pelo usuário (personalizadas). Namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizadas para atender às suas necessidades específicas.
 
 Para obter mais informações sobre namespaces de identidade em [!DNL Experience Platform], consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
 
@@ -56,7 +56,7 @@ Há dois métodos de adicionar um descritor de identidade a um schema de conjunt
 
 ### Uso da interface {#identity-ui}
 
-Na interface do [!DNL Experience Platform ]usuário, a área de trabalho de _[!UICONTROL Schemas]_permite que você edite seus schemas XDM existentes. Para adicionar um descritor de identidade a um schema, selecione-o na lista e siga as etapas para[definir um campo de schema como um campo](../xdm/tutorials/create-schema-ui.md#identity-field)de identidade no[!DNL Schema Editor]tutorial.
+Na interface do [!DNL Experience Platform ]usuário, a área de trabalho de _[!UICONTROL Schemas]_ permite que você edite seus schemas XDM existentes. Para adicionar um descritor de identidade a um schema, selecione-o na lista e siga as etapas para [definir um campo de schema como um campo](../xdm/tutorials/create-schema-ui.md#identity-field) de identidade no [!DNL Schema Editor] tutorial.
 
 Depois de definir os campos apropriados dentro do schema como campos de identidade, você pode ir para a próxima seção sobre [envio de solicitações](#submit)de privacidade.
 
@@ -108,7 +108,7 @@ curl -X POST \
 | `xdm:sourceProperty` | O caminho para o campo de schema ao qual o descritor está sendo aplicado. |
 | `xdm:namespace` | Uma das namespaces [de identidade](../privacy-service/api/appendix.md#standard-namespaces) padrão reconhecidas pela [!DNL Privacy Service]ou uma namespace personalizada definida pela sua organização. |
 | `xdm:property` | &quot;xdm:id&quot; ou &quot;xdm:code&quot;, dependendo da namespace em `xdm:namespace`. |
-| `xdm:isPrimary` | Um valor booliano opcional. Quando verdadeiro, isso indica que o campo é uma identidade primária. Os Schemas podem conter apenas uma identidade primária. O padrão é false se não estiver incluído. |
+| `xdm:isPrimary` | Um valor booliano opcional. Quando verdadeiro, isso indica que o campo é uma identidade primária. Os schemas podem conter apenas uma identidade primária. O padrão é false se não estiver incluído. |
 
 **Resposta**
 
@@ -132,13 +132,13 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do de
 
 >[!NOTE]
 >
->Esta seção aborda como formatar solicitações de privacidade para o [!DNL Data Lake]. É altamente recomendável que você reveja a documentação [!DNL Privacy Service UI](../privacy-service/ui/overview.md) ou [!DNL Privacy Service API](../privacy-service/api/getting-started.md) para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
+>Esta seção aborda como formatar solicitações de privacidade para o [!DNL Data Lake]. É altamente recomendável que você reveja a documentação da [[!DNL Privacy Service] IU](../privacy-service/ui/overview.md) ou da [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
 A seção a seguir descreve como fazer solicitações de privacidade para o [!DNL Data Lake] usando a [!DNL Privacy Service] interface do usuário ou a API.
 
 ### Uso da interface
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** em _[!UICONTROL Products]_para processar jobs para dados armazenados no[!DNL Data Lake]ou[!DNL Real-time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** em _[!UICONTROL Products]_ para processar jobs para dados armazenados no [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 

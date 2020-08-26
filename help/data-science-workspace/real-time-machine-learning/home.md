@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral de aprendizado de máquina em tempo real
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Visão geral de aprendizado de máquina em tempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
 
 O aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do conteúdo de sua experiência digital para seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no [!DNL Experience Edge].
@@ -35,7 +36,7 @@ O fluxo de trabalho a seguir descreve as etapas e os resultados típicos envolvi
 
 ### Inclusão de dados e preparações
 
-Os dados são ingeridos e transformados com o [!DNL Experience Data Model] (XDM) no Adobe Experience Platform. Esses dados são usados para treinamento de modelo. Para saber mais sobre o XDM, visite a visão geral [do](../../xdm/home.md)XDM.
+Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) no Adobe Experience Platform. Esses dados são usados para treinamento de modelo. Para saber mais sobre o XDM, visite a visão geral [do](../../xdm/home.md)XDM.
 
 ### Criação  
 
@@ -51,13 +52,14 @@ Use o endpoint da API REST de previsão para gerar insights de aprendizado da m�
 
 ### Delivery
 
-Os profissionais de marketing podem então definir segmentos e regras que mapeiam as pontuações de aprendizado de máquina em tempo real para experiências usando o Adobe Target. Isso permite que visitantes do site de sua marca sejam mostrados como uma experiência hiper-personalizada da mesma página ou da próxima em tempo real.
+Os profissionais de marketing podem definir segmentos e regras que mapeiam as pontuações de aprendizado de máquina em tempo real para experiências usando o Adobe Target. Isso permite que visitantes do site de sua marca sejam mostrados como uma experiência hiper-personalizada da mesma página ou da próxima em tempo real.
 
 ## Funcionalidade atual
 
 O aprendizado de máquina em tempo real está atualmente em alfa. A funcionalidade descrita abaixo está sujeita a alterações à medida que mais recursos e nós são disponibilizados.
 
 >[!NOTE]
+>
 > Limitações de alfa:
 > - Atualmente, somente modelos baseados em ONNX são suportados.
 > - As funções usadas em nós não podem ser serializadas. Por exemplo, uma função lambda usada em um nó Pandas.

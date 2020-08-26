@@ -5,7 +5,7 @@ title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico que reúne dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 translation-type: tm+mt
-source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente. Esta visão geral o ajudará a entender a função e o uso do [!DNL Real-time Customer Profile] em [!DNL Experience Platform].
 
-## Noções básicas [!DNL Real-time Customer Profile]
+## Noções básicas do [!DNL Real-time Customer Profile]
 
 [!DNL Real-time Customer Profile] é um repositório de entidade de pesquisa genérico que une dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 
@@ -58,6 +58,7 @@ Ao reunir dados de várias fontes e combiná-los para ver uma visualização com
 ### (Alfa) Configurar atributos calculados
 
 >[!IMPORTANT]
+>
 >A funcionalidade de atributo calculada descrita neste documento está em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Os atributos calculados permitem calcular automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil, o que significa que você pode agregação valores em todos os registros e eventos. Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil ou em um evento. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Para obter mais informações sobre atributos calculados e instruções passo a passo para trabalhar com eles usando a [!DNL Real-time Customer Profile] API, consulte o guia [de ponto de extremidade de atributos](api/computed-attributes.md)computados. Este guia o ajudará a entender melhor a função dos atributos calculados no Adobe Experience Platform e inclui exemplos de chamadas de API para executar operações CRUD básicas.
@@ -84,7 +85,7 @@ Para direcionar experiências coordenadas, consistentes e personalizadas para se
 
 ### [!DNL Profile] métricas de ingestão
 
-Insights de Observabilidade permitem que você exponha métricas principais no Adobe Experience Platform. Além das estatísticas de [!DNL Platform] uso e dos indicadores de desempenho para várias [!DNL Platform] funcionalidades, há métricas [!DNL Profile]relacionadas especificamente que permitem obter informações sobre as taxas de solicitação recebidas, taxas de ingestão bem-sucedidas, tamanhos de registro ingeridos e muito mais. Para saber mais, comece lendo a visão geral [do](../observability/home.md)Observability Insights e para obter uma lista completa das [!DNL Profile] métricas, consulte a documentação sobre as métricas [](../observability/metrics.md)disponíveis.
+Insights de Observabilidade permitem que você exponha as métricas principais no Adobe Experience Platform. Além das estatísticas de [!DNL Platform] uso e dos indicadores de desempenho para várias [!DNL Platform] funcionalidades, há métricas [!DNL Profile]relacionadas especificamente que permitem obter informações sobre as taxas de solicitação recebidas, taxas de ingestão bem-sucedidas, tamanhos de registro ingeridos e muito mais. Para saber mais, comece lendo a visão geral [do](../observability/home.md)Observability Insights e para obter uma lista completa das [!DNL Profile] métricas, consulte a documentação sobre as métricas [](../observability/metrics.md)disponíveis.
 
 ## [!DNL Data governance] e [!DNL Privacy]
 
@@ -132,7 +133,6 @@ Como está relacionado ao acesso aos dados, o controle de dados desempenha um pa
 
 >[!NOTE]
 >
->
 >Uma entidade que não seja uma pessoa se refere a qualquer classe XDM da qual **não** faz parte [!DNL Profile].
 
 ## Próximos passos e recursos adicionais
@@ -140,6 +140,7 @@ Como está relacionado ao acesso aos dados, o controle de dados desempenha um pa
 Para saber mais sobre [!DNL Real-time Customer Profile], continue lendo a documentação e complemente seu aprendizado assistindo ao vídeo abaixo ou explorando outros tutoriais [em vídeo sobre o](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)Experience Platform.
 
 >[!WARNING]
+>
 >A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte o guia [de usuário do Perfil do cliente em tempo](ui/user-guide.md) real para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)

@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 seo-description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: e5a3539c8be8b7424f4965c7ab43d4260e39b380
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -78,4 +78,11 @@ The presence of these files in your storage location is confirmation of successf
 
 ## Configurar importação de dados para o Adobe Campaign {#import-data-into-campaign}
 
-Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, você deve configurar a importação de dados do local do armazenamento para o Adobe Campaign. Para saber como fazer isso, consulte [Importação de dados](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) na documentação da Ajuda da Adobe Campaign.
+>[!IMPORTANT]
+>
+>* Lembre-se dos limites do armazenamento SFTP, dos limites do armazenamento do banco de dados e dos limites ativos do perfil conforme o contrato da Adobe Campaign ao executar essa integração.
+>* Você precisa agendar, importar e mapear seus segmentos exportados no Adobe Campaign usando [!DNL Campaign] workflows. Consulte [Configuração de uma importação](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#setting-up-a-recurring-import) recorrente na documentação do Adobe Campaign.
+
+
+
+Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, você deve configurar a importação de dados do local do armazenamento para o Adobe Campaign. Para saber como fazer isso, consulte [Importação de dados](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) na documentação da Adobe Campaign.

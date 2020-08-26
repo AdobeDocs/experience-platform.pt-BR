@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importar uma receita empacotada (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -115,7 +115,7 @@ Abaixo está um exemplo de arquivo de configuração mostrando os comportamentos
 | `tenantId` | String | Essa ID garante que os recursos criados sejam devidamente nomeados e estejam contidos em sua Organização IMS. [Siga as etapas aqui](../../xdm/api/getting-started.md#know-your-tenant_id) para localizar sua ID de locatário. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | String | O schema de entrada usado para treinar um Modelo. Deixe isso vazio ao importar na interface do usuário, substitua por SchemaID de treinamento ao importar usando a API. |
 | `evaluation.labelColumn` | String | Rótulo de coluna para visualizações de avaliação. |
-| `evaluation.metrics` | String | lista separada por vírgulas de métricas de avaliação a serem usadas para avaliar um Modelo. |
+| `evaluation.metrics` | String | Lista separada por vírgulas de métricas de avaliação a serem usadas para avaliar um Modelo. |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | String | O schema de saída usado para marcar um Modelo. Deixe isso vazio ao importar na interface do usuário, substitua por SchemaID de pontuação ao importar usando a API. |
 
 Para a finalidade deste tutorial, você pode deixar os arquivos de configuração padrão para a receita de Vendas de varejo na [!DNL Data Science Workspace] Referência da forma como eles são.
@@ -131,12 +131,14 @@ A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibid
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Encapsulamento de arquivos de origem em um tutorial de Recipe), um URL de Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem Python.
 
 Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando arquivos [!DNL Python] de origem no campo URL **[!UICONTROL de]** origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Selecione **[!UICONTROL Python]** na lista suspensa *Tempo de execução* e **[!UICONTROL Classificação]** na lista suspensa *Tipo* . Depois que tudo estiver preenchido, clique em **[!UICONTROL Avançar]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **[!UICONTROL Classificação]**e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+>
+> *O tipo* suporta **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -163,12 +165,14 @@ A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibid
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Arquivos de origem do pacote), um URL do Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem R.
 
 Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem R no campo URL **[!UICONTROL de]** origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Selecione **[!UICONTROL R]** no menu suspenso *Tempo de execução* e **[!UICONTROL Classificação]** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique em **[!UICONTROL Avançar]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **[!UICONTROL Classificação]**e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+>
+> *O tipo* suporta **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -195,12 +199,14 @@ A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibid
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Arquivos de origem do pacote), um URL de Docker foi fornecido no final da criação da receita de vendas de varejo usando arquivos de origem PySpark.
 
 Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem do PySpark no campo URL **[!UICONTROL de]** origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Selecione **[!UICONTROL PySpark]** no menu suspenso *Runtime* . Depois que o tempo de execução PySpark é selecionado, o artefato padrão é preenchido automaticamente para o **[!UICONTROL Docker]**. Em seguida, selecione **[!UICONTROL Classificação]** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique em **[!UICONTROL Avançar]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **[!UICONTROL Classificação]**e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+>
+> *O tipo* suporta **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -227,12 +233,14 @@ A página *Configurar* para o fluxo de trabalho da fórmula *Importar* é exibid
 ![configurar fluxo de trabalho](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > No [Package source files to a Recipe](./package-source-files-recipe.md) tutorial (Encapsulamento de arquivos de origem em um tutorial de Receita), um URL de Docker foi fornecido no final da criação da receita de Vendas de Varejo usando arquivos de origem Scala ([!DNL Spark]).
 
 Quando estiver na página *Selecionar origem* , cole o URL do Docker correspondente à fórmula empacotada criada usando os arquivos de origem do Scala no campo URL *de* origem. Em seguida, importe o arquivo de configuração fornecido arrastando e soltando ou use o **navegador** do sistema de arquivos. O arquivo de configuração fornecido pode ser encontrado em `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Selecione **[!UICONTROL Spark]** no menu suspenso *Runtime* . Depois que o tempo de execução é selecionado, o artefato padrão é preenchido automaticamente para o [!DNL Spark] Docker ****. Em seguida, selecione **[!UICONTROL Regressão]** no menu suspenso *Tipo* . Depois que tudo estiver preenchido, clique em **[!UICONTROL Avançar]** no canto superior direito para prosseguir para *Gerenciar schemas*.
 
 >[!NOTE]
-> *O tipo *suporta **[!UICONTROL Classificação]**e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
+>
+> *O tipo* suporta **[!UICONTROL Classificação]** e **[!UICONTROL Regressão]**. Se o modelo não se enquadrar em um desses tipos, selecione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 

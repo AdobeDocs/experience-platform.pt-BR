@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tutoriais da Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] tutoriais
 
-O Adobe Experience Platform [!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] ajuda você a fazer previsões usando seu conteúdo e seus ativos de dados nas soluções de Adobe. Os cientistas de dados de todos os níveis de habilidades têm ferramentas sofisticadas e fáceis de usar que suportam o rápido desenvolvimento, treinamento e ajuste de fórmulas de aprendizado de máquina - todos os benefícios da tecnologia da IA, sem a complexidade.
+A Adobe Experience Platform [!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] ajuda você a fazer previsões usando seu conteúdo e seus ativos de dados nas soluções de Adobe. Os cientistas de dados de todos os níveis de habilidades têm ferramentas sofisticadas e fáceis de usar que suportam o rápido desenvolvimento, treinamento e ajuste de fórmulas de aprendizado de máquina - todos os benefícios da tecnologia da IA, sem a complexidade.
 
 Para saber mais, comece lendo a visão geral [](../data-science-workspace/home.md)da Data Science Workspace.
 
@@ -61,7 +61,6 @@ Para saber mais, siga os arquivos de origem do [pacote em um tutorial](../data-s
 
 >[!NOTE]
 >
->
 >Este tutorial requer que você tenha um URL de arquivo [!DNL Docker] de origem. Visite os arquivos de origem do [pacote em um tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) de fórmula se você não tiver um URL de arquivo de [!DNL Docker] origem.
 
 Os tutoriais de importação de fórmula fornecem insights sobre como configurar e importar uma receita empacotada. Ao final deste tutorial, você pode criar, treinar e avaliar um Modelo no Adobe Experience Platform [!DNL Data Science Workspace].
@@ -74,7 +73,7 @@ Para saber mais, siga o tutorial [de importação de uma](../data-science-worksp
 
 ## Comboio e avaliação de um modelo
 
-Na Adobe Experience Platform [!DNL Data Science Workspace], um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
+No Adobe Experience Platform [!DNL Data Science Workspace], um Modelo de aprendizado de máquina é criado pela incorporação de uma Receita existente adequada à intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficiência operacional ajustando seus hiperparâmetros associados. As receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados para fins específicos com uma única Receita.
 
 **Este tutorial o ajudará a:**
 - Criar um novo modelo.
@@ -85,7 +84,7 @@ Para começar, siga o treinamento e avalie um tutorial [da](../data-science-work
 
 ## Otimizar um modelo usando a estrutura do Model Insights
 
-A Framework Model Insights fornece ao cientista de dados ferramentas no Adobe Experience Platform [!DNL Data Science Workspace] para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos. A estrutura melhorará a velocidade e a eficácia do fluxo de trabalho de aprendizado de máquina, bem como a facilidade de uso para cientistas de dados. Isso é feito fornecendo um modelo padrão para cada tipo de algoritmo de aprendizado da máquina para auxiliar no ajuste do modelo. O resultado final permite que cientistas de dados e cientistas de dados cidadãos tomem decisões de otimização de modelos melhores para seus clientes finais.
+O Model Insights Framework fornece ao cientista de dados ferramentas no Adobe Experience Platform [!DNL Data Science Workspace] para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos. A estrutura melhorará a velocidade e a eficácia do fluxo de trabalho de aprendizado de máquina, bem como a facilidade de uso para cientistas de dados. Isso é feito fornecendo um modelo padrão para cada tipo de algoritmo de aprendizado da máquina para auxiliar no ajuste do modelo. O resultado final permite que cientistas de dados e cientistas de dados cidadãos tomem decisões de otimização de modelos melhores para seus clientes finais.
 
 **Este tutorial o ajudará a:**
 - Configure o código da fórmula.
@@ -96,7 +95,7 @@ Para começar, siga o tutorial sobre como [otimizar um modelo](../data-science-w
 
 ## Pontuar um modelo
 
-A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote.
+A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser alcançada com a alimentação de dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote.
 
 **Este tutorial o ajudará a:**
 - Criar uma nova execução de pontuação.
@@ -106,7 +105,7 @@ Para começar, siga a pontuação de um tutorial [da](../data-science-workspace/
 
 ## Publicar um modelo como um serviço
 
-O Adobe Experience Platform [!DNL Data Science Workspace] permite que você publique seu Modelo como um serviço, permitindo que os usuários na organização IMS pontuem dados sem a necessidade de criar seus próprios Modelos. Isso pode ser feito usando a interface do [!DNL Platform] usuário ou a [!DNL Sensei Machine Learning] API.
+A Adobe Experience Platform [!DNL Data Science Workspace] permite que você publique seu Modelo como um serviço, permitindo que os usuários na organização IMS pontuem dados sem a necessidade de criar seus próprios Modelos. Isso pode ser feito usando a interface do [!DNL Platform] usuário ou a [!DNL Sensei Machine Learning] API.
 
 **Este tutorial o ajudará a:**
 - Publicar um modelo como um serviço.
@@ -116,7 +115,7 @@ Para começar, siga o tutorial [de publicação de um modelo como uma](../data-s
 
 ## Agendar treinamento e pontuação para um Modelo
 
-O Adobe Experience Platform [!DNL Data Science Workspace] permite que você configure a pontuação programada e as execuções de treinamento em um serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
+A Adobe Experience Platform [!DNL Data Science Workspace] permite que você configure execuções programadas de pontuação e treinamento em um serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 
 **Este tutorial o ajudará a:**
 - Configurar pontuação programada
@@ -127,9 +126,10 @@ Para começar, siga o [cronograma de um tutorial](../data-science-workspace/mode
 ## Criar um pipeline de recursos
 
 >[!NOTE]
+>
 >Atualmente, os pipelines de recursos estão disponíveis somente por meio da API.
 
-O Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala pelo [!DNL Sensei Machine Learning Framework Runtime].
+A Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala pelo [!DNL Sensei Machine Learning Framework Runtime].
 
 **Este guia o ajudará a:**
 - Implementar classes de pipeline de recursos.

@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Ajuda da Adobe Experience Platform Data Science Workspace
+user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -18,7 +19,7 @@ ht-degree: 3%
 * Notebooks JupyterLab {#jupyterlab}
    * [Guia do usuário do JupyterLab](jupyterlab/overview.md)
    * [Analise seus dados usando notebooks](jupyterlab/analyze-your-data.md)
-   * [Serviço de Query em Jupyter notebook](jupyterlab/query-service.md)
+   * [Serviço de query em Jupyter notebook](jupyterlab/query-service.md)
    * [Crie uma receita usando notebooks em Júpiter](jupyterlab/create-a-recipe.md)
    * [Colaborar no JupyterLab usando Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizado de máquina do Sensei {#api}
@@ -42,11 +43,11 @@ ht-degree: 3%
 * Criação de modelos {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
-   * [Guia do SDK do Platform (Python)](authoring/platform-sdk.md)
+   * [Guia do SDK da plataforma (Python)](authoring/platform-sdk.md)
 * Tutoriais de modelo e fórmula {#models-recipes}
    * [Criar e publicar uma apresentação de modelo de aprendizado de máquina](models-recipes/create-publish-model.md)
    * [Criar o schema de vendas de varejo e o conjunto de dados](models-recipes/create-retails-sales-dataset.md)
-   * [schemas de Pré-visualização e conjuntos de dados](models-recipes/preview-schema-data.md)
+   * [Schemas de pré-visualização e conjuntos de dados](models-recipes/preview-schema-data.md)
    * [Empacotar arquivos de origem em uma fórmula](models-recipes/package-source-files-recipe.md)
    * [Importar uma receita empacotada (IU)](models-recipes/import-packaged-recipe-ui.md)
    * [Importar uma fórmula empacotada (API)](models-recipes/import-packaged-recipe-api.md)
@@ -62,4 +63,4 @@ ht-degree: 3%
 * [Guias de migração de receitas e notebooks](recipe-notebook-migration.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

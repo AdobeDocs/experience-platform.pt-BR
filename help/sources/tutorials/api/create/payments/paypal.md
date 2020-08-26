@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector PayPal usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 2%
@@ -15,6 +15,7 @@ ht-degree: 2%
 # Criar um [!DNL PayPal] conector usando a [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >O [!DNL PayPal] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
@@ -23,10 +24,10 @@ Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se c
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL PayPal] usando a [!DNL Flow Service] API.
 
@@ -36,7 +37,7 @@ Para [!DNL Flow Service] se conectar com [!DNL PayPal], é necessário fornecer 
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| Host | O URL da [!DNL PayPal] instância. (padrão: api.sandbox.paypal.com). |
+| Host | The URL of the [!DNL PayPal] instance. (padrão: api.sandbox.paypal.com). |
 | ID do cliente | A ID do cliente associada ao seu [!DNL PayPal] aplicativo. |
 | Segredo do cliente | O segredo do cliente associado ao seu [!DNL PayPal] aplicativo. |
 | ID da especificação da conexão | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL PayPal] é: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
@@ -105,7 +106,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.host` | O URL da [!DNL PayPal] instância. |
+| `auth.params.host` | The URL of the [!DNL PayPal] instance. |
 | `auth.params.clientId` | A ID do cliente associada à sua [!DNL PayPal] instância. |
 | `auth.params.clientSecret` | O segredo do cliente associado à sua [!DNL PayPal] instância. |
 | `connectionSpec.id` | A ID da especificação da [!DNL PayPal] conexão: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |

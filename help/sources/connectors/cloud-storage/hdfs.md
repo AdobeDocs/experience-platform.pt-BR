@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector HDFS
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # Conector HDFS (Beta) [!DNL Apache]
 
 >[!NOTE]
+>
 >O conector HDFS Apache está em beta. Consulte a visão geral [das](../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você traga seus dados desses sistemas. Os dados ingeridos podem ser formatados como JSON, parquet ou delimitados. O suporte para provedores de armazenamentos em nuvem inclui o [!DNL Apache] HDFS.
+A Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você traga seus dados desses sistemas. Os dados ingeridos podem ser formatados como JSON, parquet ou delimitados. O suporte para provedores de armazenamentos em nuvem inclui o [!DNL Apache] HDFS.
 
-## lista de permissões de endereço IP
+## LISTA DE PERMISSÕES de endereço IP
 
 Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes.
 

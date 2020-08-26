@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,7 +30,6 @@ Criar uma receita do zero pode ser feito dentro [!DNL Data Science Workspace]. P
 O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma receita para ser usada no [!DNL Data Science Workspace] uso do notebook para obter a funcionalidade integrada ao notebook Construtor de receita.
 
 >[!NOTE]
->
 >
 >O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >As bibliotecas ou versões específicas que você adicionar podem ser incompatíveis com as bibliotecas acima.
 
 ### Arquivos de configuração {#configuration-files}
@@ -96,7 +94,7 @@ Para localizar o conjunto de dados e as IDs de schema, vá para a guia Dados den
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-As mesmas informações podem ser encontradas no [Adobe Experience Platform](https://platform.adobe.com/) nas guias **[Schema](https://platform.adobe.com/schema)**e**[Conjuntos de dados](https://platform.adobe.com/dataset/overview)** .
+As mesmas informações podem ser encontradas no [Adobe Experience Platform](https://platform.adobe.com/) nas guias **[Schema](https://platform.adobe.com/schema)** e **[Conjuntos de dados](https://platform.adobe.com/dataset/overview)** .
 
 Por padrão, os seguintes parâmetros de configuração são definidos para você ao acessar os dados:
 
@@ -122,12 +120,11 @@ Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/ge
 
 >[!NOTE]
 >
->
 >No notebook do Recipe Builder, os dados são carregados pelo carregador de `platform_sdk` dados.
 
 ### [!DNL Platform] SDK {#platform-sdk}
 
-Para obter um tutorial detalhado sobre como usar o carregador de `platform_sdk` dados, visite o guia [do SDK da](../authoring/platform-sdk.md)Platform. Este tutorial fornece informações sobre autenticação de compilação, leitura básica de dados e escrita básica de dados.
+Para obter um tutorial detalhado sobre como usar o carregador de `platform_sdk` dados, visite o guia [do SDK da](../authoring/platform-sdk.md)plataforma. Este tutorial fornece informações sobre autenticação de compilação, leitura básica de dados e escrita básica de dados.
 
 ### Fontes externas {#external-sources}
 
@@ -153,8 +150,7 @@ Agora seus dados estão no objeto dataframe e podem ser analisados e manipulados
 
 >[!CAUTION]
 >
->
-> `data_access_sdk_python` não é mais recomendado, consulte [Converter código de acesso a dados para Platform SDK](../authoring/platform-sdk.md) para obter um guia sobre como usar o carregador de `platform_sdk` dados.
+> `data_access_sdk_python` não é mais recomendado, consulte [Converter código de acesso a dados para SDK](../authoring/platform-sdk.md) da plataforma para obter um guia sobre como usar o carregador de `platform_sdk` dados.
 
 Os usuários podem carregar dados usando o SDK de acesso a dados. A biblioteca pode ser importada na parte superior da página, incluindo a linha:
 
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >Conforme mencionado na seção [Arquivo de](#configuration-files)configuração, os seguintes parâmetros de configuração são definidos para você ao acessar os dados de [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,7 +299,6 @@ O `pipeline.py` arquivo inclui lógica para treinamento e pontuação.
 O objetivo do treinamento é criar um modelo usando recursos e etiquetas no conjunto de dados de treinamento.
 
 >[!NOTE]
->
 > 
 >_Os recursos_ se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os _rótulos_.
 
@@ -424,7 +418,7 @@ Observe que a função retorna um `metric` objeto que contém uma matriz de mét
 
 O `datasaver.py` arquivo contém a `save()` função de salvar sua previsão ao testar a pontuação. A `save()` função usará sua previsão e [!DNL Experience Platform Catalog] as APIs, gravará os dados no `scoringResultsDataSetId` que você especificou no seu `scoring.conf` arquivo.
 
-O exemplo usado na receita de amostra de vendas para venda a varejo é visto aqui. Observe o uso da `DataSetWriter` biblioteca para gravar dados na Platform:
+O exemplo usado na receita de amostra de vendas para venda a varejo é visto aqui. Observe o uso da `DataSetWriter` biblioteca para gravar dados na Plataforma:
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter

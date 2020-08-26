@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da ingestão parcial de lote Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -341,7 +341,6 @@ Se o lote tiver um ou mais erros e o diagnóstico de erros estiver ativado, o st
 >[!NOTE]
 >
 >Se o diagnóstico de erro não estiver disponível, a seguinte mensagem de erro será exibida:
->
 > 
 ```json
 > {

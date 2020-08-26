@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem da Salesforce Service Cloud na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Criar um conector [!DNL Salesforce Service Cloud] de origem na interface do usuário
 
 >[!NOTE]
+>
 >O [!DNL Salesforce Service Cloud] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
 Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Salesforce Service Cloud] (a seguir denominado &quot;SSC&quot;) usando a interface do [!DNL Platform] usuário.

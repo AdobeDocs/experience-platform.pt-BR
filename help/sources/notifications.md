@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Notificações de execução de fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 1%
@@ -27,9 +27,9 @@ Este documento fornece etapas sobre como assinar eventos, registrar webhooks e r
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema do [!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [[!DNL ingestão de dados Adobe Experience Platform]](../ingestion/home.md): [!DNL Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são mantidos dentro do [!DNL Data Lake] para uso pelos [!DNL Platform] serviços de downstream.
+* [[!ingestão de dados Adobe Experience Platform DNL]](../ingestion/home.md): [!DNL Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são mantidos dentro do [!DNL Data Lake] para uso pelos [!DNL Platform] serviços de downstream.
 
 Este documento também requer um entendimento prático dos webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [documentação](https://requestbin.com/blog/working-with-webhooks/) a seguir para obter mais informações sobre webhooks.
 
@@ -44,6 +44,7 @@ Para receber notificações sobre o status de sua execução de fluxo, você dev
 Depois de adquirir um URL exclusivo do webhook, vá para Eventos [de E/S do](https://www.adobe.io/apis/experienceplatform/events.html) Adobe e siga as etapas descritas no documento de notificações [de ingestão de](../ingestion/quality/subscribe-events.md) dados para inscrição em eventos.
 
 >[!IMPORTANT]
+>
 >Durante o processo de subscrição, selecione [!DNL Platform] as notificações como provedor de eventos e selecione as seguintes subscrições de eventos:
 >
 >* **[!UICONTROL Execução de Fluxo da Fonte de Experience Platform com Êxito]**
@@ -60,6 +61,7 @@ Com o webhook conectado e a subscrição do evento concluída, você pode start 
 Uma notificação retorna informações como o número de trabalhos de ingestão executados, o tamanho do arquivo e os erros. Uma notificação também retorna uma carga associada à execução do fluxo no formato JSON. A carga de resposta pode ser classificada como `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
+>
 >Se a ingestão parcial estiver ativada durante o processo de criação de fluxo, um fluxo que contenha as ingestões bem-sucedidas e com falha será marcado como `sources_flow_run_success` somente se o número de erros estiver abaixo da porcentagem limite de erro definida durante o processo de criação de fluxo. Se uma execução de fluxo bem-sucedida contiver erros, esses erros ainda serão incluídos como parte da carga de retorno.
 
 ### Sucesso
@@ -322,6 +324,7 @@ A resposta a seguir é um exemplo de falha na execução do fluxo, com um erro o
 | `fileInfo` | Um URL que leva a uma visão geral dos arquivos que foram assimilados com êxito e sem êxito. |
 
 >[!NOTE]
+>
 >Consulte o [apêndice](#errors) para obter mais informações sobre mensagens de erro.
 
 ## Próximas etapas

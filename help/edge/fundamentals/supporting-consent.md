@@ -5,7 +5,7 @@ description: Saiba como suportar preferências de consentimento com o SDK da Web
 seo-description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -26,13 +26,13 @@ Se o usuário opt out de todas as finalidades, o SDK não executará nenhuma des
 
 ## Configurando o consentimento
 
-Por padrão, o usuário é opt in para todos os fins. Para impedir que o SDK execute as tarefas acima até que o usuário opt in, passe `"defaultConsent": { "general": "pending" }` durante a configuração do SDK da seguinte maneira:
+Por padrão, o usuário é opt in para todos os fins. Para impedir que o SDK execute as tarefas acima até que o usuário opt in, passe `"defaultConsent": "pending"` durante a configuração do SDK da seguinte maneira:
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 

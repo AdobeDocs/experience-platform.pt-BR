@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmissão de dados de séries temporais
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1126'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Transmitir dados de séries de tempo para o Adobe Experience Platform
 
-Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs de Adobe Experience Platform [!DNL Data Ingestion Service] .
+Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das [!DNL Data Ingestion Service] APIs do Adobe Experience Platform.
 
 ## Introdução
 
-Este tutorial requer um conhecimento prático de vários serviços de Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
-- [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do Schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
+- [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
 
 Além disso, este tutorial requer que você já tenha criado uma conexão de streaming. Para obter mais informações sobre como criar uma conexão de streaming, leia o tutorial [](./create-streaming-connection.md)Criar uma conexão de streaming.
 
@@ -54,7 +54,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Compor um schema com base na classe XDM ExperienceEvent
 
-Para criar um conjunto de dados, primeiro será necessário criar um novo schema que implemente a [!DNL XDM ExperienceEvent] classe. Para obter mais informações sobre como criar schemas, leia o guia [do desenvolvedor da API de Registro de](../../xdm/api/getting-started.md)Schemas.
+Para criar um conjunto de dados, primeiro será necessário criar um novo schema que implemente a [!DNL XDM ExperienceEvent] classe. Para obter mais informações sobre como criar schemas, leia o guia [do desenvolvedor da API do Registro do](../../xdm/api/getting-started.md)Schema.
 
 **Formato da API**
 
@@ -405,7 +405,7 @@ Para validar os registros ingeridos anteriormente, você pode usar o para recupe
 
 >[!NOTE]
 >
->Se a ID da política de mesclagem não estiver definida e o schema.</span>name ou relatedSchema</span>.name for `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** as identidades relacionadas.
+>Se a ID da política de mesclagem não estiver definida e o `schema.name` ou `relatedSchema.name` for `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** as identidades relacionadas.
 
 **Formato da API**
 

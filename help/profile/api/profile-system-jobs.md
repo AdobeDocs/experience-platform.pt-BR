@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Trabalhos do sistema do perfil - API do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 A Adobe Experience Platform permite que você ingira dados de várias fontes e crie perfis robustos para clientes individuais. Os dados ingeridos [!DNL Platform] são armazenados no armazenamento [!DNL Data Lake] e no [!DNL Real-time Customer Profile] armazenamento de dados. Ocasionalmente, pode ser necessário excluir um conjunto de dados ou lote do Perfil Store para remover dados que não são mais necessários ou que foram adicionados por erro. Isso requer o uso da [!DNL Real-time Customer Profile] API para criar um trabalho do [!DNL Profile] sistema, também conhecido como &quot;[!DNL delete request]&quot;, que também pode ser modificado, monitorado ou removido, se necessário.
 
 >[!NOTE]
+>
 >Se você estiver tentando excluir conjuntos de dados ou lotes do [!DNL Data Lake], visite a visão geral [do Serviço de](../../catalog/home.md) catálogo para obter instruções.
 
 ## Introdução
@@ -106,6 +107,7 @@ A inicialização de uma nova solicitação de exclusão é feita por meio de um
 Para excluir um conjunto de dados, a ID do conjunto de dados deve ser incluída no corpo da solicitação de POST. Esta ação excluirá TODOS os dados de um dado conjunto de dados. [!DNL Experience Platform] permite que você exclua conjuntos de dados com base em schemas de registro e de série de tempo.
 
 >[!CAUTION]
+>
 > Ao tentar excluir um conjunto de dados [!DNL Profile]habilitado usando a [!DNL Experience Platform] interface do usuário, o conjunto de dados é desabilitado para inclusão, mas não será excluído até que uma solicitação de exclusão seja criada usando a API. Para obter mais informações, consulte o [apêndice](#appendix) a este documento.
 
 **Formato da API**
@@ -159,6 +161,7 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação de exclusão rec�
 Para excluir um lote, a ID do lote deve ser incluída no corpo da solicitação de POST. Lembre-se de que não é possível excluir lotes para conjuntos de dados com base em schemas de registro. Somente lotes para conjuntos de dados com base em schemas de séries de tempo podem ser excluídos.
 
 >[!NOTE]
+>
 > O motivo pelo qual você não pode excluir lotes de conjuntos de dados com base em schemas de registro é porque os lotes de conjuntos de dados de tipo de registro substituem registros anteriores e, portanto, não podem ser &quot;desfeitos&quot; ou excluídos. A única maneira de remover o impacto de lotes errados para conjuntos de dados baseados em schemas de registro é ingerir novamente o lote com os dados corretos para substituir os registros incorretos.
 
 Para obter mais informações sobre o comportamento de registro e série de tempo, consulte a [seção sobre comportamentos](../../xdm/home.md#data-behaviors) de dados XDM na [!DNL XDM System] visão geral.

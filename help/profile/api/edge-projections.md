@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Projeções do Edge - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -21,6 +21,7 @@ Para direcionar experiências coordenadas, consistentes e personalizadas para se
 O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 >[!NOTE]
+>
 >As solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um `Content-Type` cabeçalho. Mais de um `Content-Type` é usado neste documento. Preste especial atenção aos cabeçalhos nas chamadas de amostra para garantir que você esteja usando a solicitação correta `Content-Type` para cada solicitação.
 
 ## Destinos de projeção
@@ -53,6 +54,7 @@ curl -X GET \
 A resposta inclui uma `projectionDestinations` matriz com os detalhes de cada destino mostrados como um objeto individual dentro da matriz. Se nenhuma projeção tiver sido configurada, o `projectionDestinations` storage retornará vazio.
 
 >[!NOTE]
+>
 >Essa resposta foi encurtada por espaço e mostra apenas dois destinos.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 A solicitação a seguir cria um novo destino de borda.
 
 >[!NOTE]
+>
 >A solicitação de POST para criar um destino requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
 
 ```shell
@@ -227,6 +230,7 @@ O objeto response mostra os detalhes do destino da projeção. O `id` atributo d
 Um destino existente pode ser atualizado fazendo uma solicitação de PUT para o ponto de extremidade e incluindo a ID do destino a ser atualizada no caminho da solicitação. `/config/destinations` Essa operação é essencialmente _reescrever_ o destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação, como são fornecidos ao criar um novo destino.
 
 >[!CAUTION]
+>
 >A resposta da API à solicitação de atualização é imediata, no entanto, as alterações nas projeções são aplicadas de forma assíncrona. Em outras palavras, há uma diferença de tempo entre quando a atualização da definição de destino é feita e quando é aplicada.
 
 **Formato da API**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 A solicitação a seguir atualiza o destino existente para incluir um segundo local (`dataCenters`).
 
 >[!IMPORTANT]
+>
 >A solicitação de PUT requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
 
 ```shell
@@ -295,6 +300,7 @@ A resposta inclui os detalhes atualizados para o destino, incluindo sua ID e a n
 Se a sua organização não exigir mais um destino de projeção, ela poderá ser excluída fazendo uma solicitação de DELETE ao `/config/destinations` ponto final e incluindo a ID do destino que você deseja excluir no caminho da solicitação.
 
 >[!CAUTION]
+>
 >A resposta da API à solicitação de exclusão é imediata, no entanto, as alterações reais nos dados nas bordas ocorrem de forma assíncrona. Em outras palavras, os dados do perfil serão removidos de todas as bordas (o `dataCenters` especificado no destino da projeção), mas o processo levará tempo para ser concluído.
 
 **Formato da API**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | O nome da configuração de projeção que você deseja acessar. |
 
 >[!NOTE]
+>
 >`schemaName` é necessário ao usar o `name` parâmetro, já que o nome da configuração de projeção é único somente no contexto de uma classe de schema.
 
 **Solicitação**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Solicitação**
 
 >[!NOTE]
+>
 >A solicitação de POST para criar uma configuração requer um `Content-Type` cabeçalho específico, como mostrado abaixo. O uso de um `Content-Type` cabeçalho incorreto resulta em um erro HTTP Status 415 (Tipo de mídia não suportado).
 
 ```shell
@@ -506,6 +514,7 @@ Um seletor é uma lista separada por vírgulas de nomes de campos XDM. Numa conf
    * O exemplo acima equivale a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >A notação de pontos e a notação entre parênteses são suportadas para fazer referência a subcampos. No entanto, a prática recomendada é usar a notação de pontos porque é mais concisa e fornece uma melhor ilustração da hierarquia de campos.
 
 * Cada campo em um seletor é especificado em relação à raiz da resposta.
@@ -610,6 +619,7 @@ Retorna somente o campo cidade para todos os elementos na matriz de endereços.
 ```
 
 >[!NOTE]
+>
 >Sempre que um campo aninhado é retornado, a projeção inclui os objetos pai circundantes. Os campos pai não incluem quaisquer outros campos filho, a menos que também sejam selecionados explicitamente.
 
 **endereços(tipo,cidade)**

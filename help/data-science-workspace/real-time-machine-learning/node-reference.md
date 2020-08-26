@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia de referência dos nós de aprendizado de máquina em tempo real
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Guia de referência dos nós de aprendizado de máquina em tempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
 
 Um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 O ONNXNode é um nó Adobe interno que utiliza uma ID de modelo para obter o modelo ONNX pré-treinado e o usa para pontuar nos dados recebidos.
 
 >[!TIP]
+>
 >Especifique as colunas na mesma ordem em que deseja que os dados sejam enviados para o modelo ONNX para pontuação.
 
 ```python
@@ -121,7 +123,7 @@ msg6 = model_train.process(msg5)
 | Valor | Descrição |
 | --- | --- |
 | feições | Recursos de entrada no modelo (lista de strings). <br> Por exemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nome da coluna do Público alvo (string). |
+| label | Nome da coluna do público alvo (string). |
 | modo | Comboio/ensaio (corda). |
 | model_path | Caminho para o modelo salvo localmente no formato onnx. |
 | params.model | Caminho de importação absoluto para o modelo (string), por exemplo: `sklearn.linear_model.LogisticRegression`. |

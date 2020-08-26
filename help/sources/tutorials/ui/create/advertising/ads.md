@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem do Google AdWords na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Criar um conector [!DNL Google AdWords] de origem na interface do usuário
 
 >[!NOTE]
+>
 >O [!DNL Google AdWords] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
 Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de [!DNL Google AdWords] origem usando a interface do [!DNL Platform] usuário.

@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Criar um pipeline de recursos
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,16 +15,17 @@ ht-degree: 0%
 # Criar um pipeline de recursos
 
 >[!IMPORTANT]
+>
 > No momento, os Pipelines de recursos estão disponíveis somente por meio da API.
 
-O Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime (a seguir denominado &quot;Runtime&quot;).
+A Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de Execução da Sensei Machine Learning Framework (a seguir denominado &quot;Tempo de execução&quot;).
 
 Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizado usando o SDK [de criação de](./sdk.md) modelo no PySpark.
 
 O fluxo de trabalho a seguir ocorre quando um pipeline de recursos é executado:
 
 1. A fórmula carrega o conjunto de dados em um pipeline.
-2. A transformação do recurso é feita no conjunto de dados e gravada de volta no Adobe Experience Platform.
+2. A transformação de recursos é feita no conjunto de dados e gravada de volta na Adobe Experience Platform.
 3. Os dados transformados são carregados para treinamento.
 4. O pipeline do recurso define os estágios com o Gradient Boosting Regressor como o modelo escolhido.
 5. O pipeline é usado para ajustar os dados de treinamento e o modelo treinado é criado.
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 Agora que você criou seu pipeline de recursos, é necessário criar uma imagem Docker para fazer uma chamada para os pontos finais do pipeline de recursos na [!DNL Sensei Machine Learning] API. Você precisa de um URL de imagem do Docker para fazer uma chamada para os pontos finais do pipeline de recursos.
 
 >[!TIP]
+>
 >Se você não tiver um URL do Docker, visite os arquivos de origem do [pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma explicação passo a passo sobre como criar um URL de host do Docker.
 
 Opcionalmente, você também pode usar a seguinte coleção Postman para ajudar a concluir o fluxo de trabalho da API do pipeline de recursos:
@@ -423,6 +425,7 @@ Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIM
 ### Especificar a tarefa de pontuação da execução do Experimento {#scoring}
 
 >[!NOTE]
+>
 > Para concluir esta etapa, é necessário ter pelo menos uma execução de treinamento bem-sucedida associada ao seu Experimento.
 
 Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução da pontuação. Faça uma POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o `mode` atributo como &quot;pontuação&quot;. Isso start a execução do seu Experimento de pontuação.

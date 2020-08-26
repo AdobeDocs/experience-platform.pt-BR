@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entidades - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Ponto de extremidade Entidades (acesso ao Perfil)
 
-O Adobe Experience Platform permite acessar [!DNL Real-time Customer Profile] dados usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário, consulte o guia [!DNL Platform] do usuário do [](../ui/user-guide.md)Perfil.
+A Adobe Experience Platform permite acessar [!DNL Real-time Customer Profile] dados usando RESTful APIs ou a interface do usuário. Este guia descreve como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário, consulte o guia [!DNL Platform] do usuário do [](../ui/user-guide.md)Perfil.
 
 ## Introdução
 
@@ -24,7 +24,7 @@ O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile
 
 Você pode acessar uma [!DNL Profile] entidade fazendo uma solicitação de GET para o `/access/entities` terminal e fornecendo a identidade da entidade como uma série de parâmetros de query. Essa identidade consiste em um valor de ID (`entityId`) e a namespace de identidade (`entityIdNS`).
 
-Os parâmetros de Query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
+Os parâmetros de query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
 **Formato da API**
 
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >Se um gráfico relacionado vincular mais de 50 identidades, esse serviço retornará o status HTTP 422 e a mensagem &quot;Muitas identidades relacionadas&quot;. Se você receber esse erro, considere adicionar mais parâmetros de query para restringir sua pesquisa.
 
 ## Acessar dados do perfil por lista de identidades
@@ -185,7 +186,7 @@ curl -X POST \
 | `identities` | ***(Obrigatório)*** Uma matriz contendo uma lista de identidades para as entidades que você deseja acessar. |
 | `identities.entityId` | A ID de uma entidade que você deseja acessar. |
 | `identities.entityIdNS.code` | A namespace de uma ID de entidade que você deseja acessar. |
-| `timeFilter.startTime` | Tempo de Start do filtro de intervalo de tempo, incluído. Deve estar em milissegundos de granularidade. O padrão, se não for especificado, é o início do tempo disponível. |
+| `timeFilter.startTime` | Tempo de start do filtro de intervalo de tempo, incluído. Deve estar em milissegundos de granularidade. O padrão, se não for especificado, é o início do tempo disponível. |
 | `timeFilter.endTime` | Fim do filtro de intervalo de tempo, excluído. Deve estar em milissegundos de granularidade. O padrão, se não for especificado, é o fim do tempo disponível. |
 | `limit` | Número de registros a serem retornados. Aplica-se somente ao número de eventos de experiência retornados. Padrão: 1.000. |
 | `orderby` | A ordem de classificação dos eventos de experiência recuperados por carimbo de data e hora, gravado como `(+/-)timestamp` o padrão sendo `+timestamp`. |
@@ -330,11 +331,11 @@ curl -X POST \
 }
 ```
 
-## eventos de série de tempo de acesso para um perfil por identidade
+## Eventos de série de tempo de acesso para um perfil por identidade
 
 Você pode acessar eventos de séries de tempo pela identidade de sua entidade associada ao perfil, fazendo uma solicitação de GET para o `/access/entities` endpoint. Essa identidade consiste em um valor de ID (`entityId`) e uma namespace de identidade (`entityIdNS`).
 
-Os parâmetros de Query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
+Os parâmetros de query fornecidos no caminho da solicitação especificam quais dados devem ser acessados. É possível incluir vários parâmetros, separados por E comercial (&amp;). É fornecida uma lista completa de parâmetros válidos na seção Parâmetros [do](#query-parameters) query do apêndice.
 
 **Formato da API**
 
@@ -360,6 +361,7 @@ curl -X GET \
 Uma resposta bem-sucedida retorna uma lista paginada de eventos de séries de tempo e campos associados que foram especificados nos parâmetros de query da solicitação.
 
 >[!NOTE]
+>
 >A solicitação especificou um limite de um (`limit=1`), portanto, a resposta `count` abaixo é 1 e apenas uma entidade é retornada.
 
 ```json
@@ -414,6 +416,7 @@ Uma resposta bem-sucedida retorna uma lista paginada de eventos de séries de te
 Os resultados são paginados ao recuperar eventos de séries de tempo. Se houver páginas subsequentes de resultados, a `_page.next` propriedade conterá uma ID. Além disso, a `_links.next.href` propriedade fornece um URI de solicitação para recuperar a próxima página. Para recuperar os resultados, faça outra solicitação de GET para o `/access/entities` ponto de extremidade, no entanto, é necessário substituir `/entities` pelo valor do URI fornecido.
 
 >[!NOTE]
+>
 >Certifique-se de não repetir acidentalmente `/entities/` no caminho da solicitação. Só deve aparecer uma vez como, `/access/entities?start=...`
 
 **Formato da API**
@@ -490,7 +493,7 @@ Uma resposta bem-sucedida retorna a próxima página de resultados. Essa respost
 }
 ```
 
-## eventos de série de tempo de acesso para vários perfis por identidades
+## Eventos de série de tempo de acesso para vários perfis por identidades
 
 Você pode acessar eventos de séries de tempo de vários perfis associados, fazendo uma solicitação de POST para o `/access/entities` endpoint e fornecendo as identidades do perfil na carga. Essas identidades consistem em um valor (`entityId`) de ID e uma namespace de identidade (`entityIdNS`).
 
@@ -772,7 +775,7 @@ Ao recuperar eventos de séries de tempo, pode haver muitos resultados sendo ret
 
 Usando essa carga no corpo da solicitação, é possível executar uma solicitação de POST adicional ao `access/entities` ponto final para recuperar a página subsequente dos dados da série de tempo desse perfil.
 
-## eventos de série de tempo de acesso em várias entidades do schema
+## Eventos de série de tempo de acesso em várias entidades do schema
 
 Você pode acessar várias entidades conectadas por meio de um descritor de relacionamento. A chamada de API de exemplo a seguir supõe que uma relação já tenha sido definida entre dois schemas. Para obter mais informações sobre descritores de relacionamento, leia o guia do desenvolvedor da [!DNL Schema Registry] API [descritores do endpoint guide](../../xdm/api/descriptors.md).
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem HubSpot na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Criar um conector [!DNL HubSpot] de origem na interface do usuário
 
 >[!NOTE]
+>
 > O [!DNL HubSpot] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
 Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um conector de [!DNL HubSpot] origem usando a interface do [!DNL Platform] usuário.
@@ -71,4 +72,4 @@ Para conectar uma conta existente, selecione a [!DNL HubSpot] conta à qual dese
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua [!DNL HubSpot] conta. Agora, você pode continuar com o próximo tutorial e [configurar um fluxo de dados para inserir [!DNL Platform]](../../dataflow/marketing-automation.md)os dados do sistema de automação de marketing.
+Ao seguir este tutorial, você estabeleceu uma conexão com sua [!DNL HubSpot] conta. Agora você pode continuar com o próximo tutorial e [configurar um fluxo de dados para trazer [!DNL Platform]](../../dataflow/marketing-automation.md)os dados do sistema de automação de marketing.

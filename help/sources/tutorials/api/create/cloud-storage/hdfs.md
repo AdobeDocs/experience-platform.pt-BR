@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector Apache HDFS usando a API de Serviço de Fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 2%
@@ -15,15 +15,16 @@ ht-degree: 2%
 # Crie um conector [!DNL Apache] HDFS usando a [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >O conector HDFS Apache está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes para inserir o Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes para serem trazidas para o Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
 Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para conectar um Apache Hadoop Distributed File System (a seguir denominado &quot;HDFS&quot;) ao [!DNL Experience Platform].
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 * [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.

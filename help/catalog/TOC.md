@@ -2,11 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Ajuda de Catálogo e Conjuntos de Dados
+user-guide-description: Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the Data Lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
 translation-type: tm+mt
-source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 4%
 * API de Serviço de Catálogo {#api}
    * [Introdução](api/getting-started.md)
    * [Filtrar dados do catálogo usando parâmetros de query](api/filter-data.md)
-   * [objetos de Lista](api/list-objects.md)
+   * [objetos de lista](api/list-objects.md)
    * [Pesquisar um objeto](api/look-up-object.md)
    * [Pesquisar vários objetos](api/look-up-multiple-objects.md)
    * [Atualizar um objeto](api/update-object.md)
@@ -34,4 +35,4 @@ ht-degree: 4%
 * [Processamento de solicitação de privacidade no Data Lake](privacy.md)
 * [Proteção de dados no Experience Platform](data-protection.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [Notas de versão do Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

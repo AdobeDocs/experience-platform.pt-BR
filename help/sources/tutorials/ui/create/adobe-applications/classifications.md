@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Criar um conector de dados de classificações da Adobe Analytics na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -72,6 +72,7 @@ Selecione o conjunto de dados **[!UICONTROL de]** Públicos alvos que deseja ace
 A página atividade **** do conjunto de dados exibe informações sobre o conjunto de dados do público alvo selecionado, incluindo detalhes sobre o status do lote, a ID do conjunto de dados e o schema.
 
 >[!IMPORTANT]
+>
 >Embora a exclusão de conjuntos de dados seja possível para outros conectores de origem, no momento não é compatível com o conector de dados de classificações do Analytics. Se você excluir um conjunto de dados por engano, entre em contato com o Atendimento ao cliente da Adobe.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)

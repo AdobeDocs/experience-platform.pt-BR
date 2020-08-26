@@ -5,7 +5,7 @@ description: Saiba como configurar o SDK da Web do Experience Platform
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -107,9 +107,9 @@ Configure isso para configurar um retorno de chamada chamado para cada evento an
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
-| Objeto | Não | `{"general": "in"}` |
+| Objeto | Não | `"in"` |
 
-Define o consentimento padrão do usuário. Isso é usado quando não há preferência de consentimento já salva para o usuário. O outro valor válido é `{"general": "pending"}`. Quando definido, o trabalho será enfileirado até que o usuário forneça as preferências de consentimento. Depois que as preferências do usuário forem fornecidas, o trabalho continuará ou será abortado com base nas preferências do usuário. Consulte [Suporte ao consentimento](supporting-consent.md) para obter mais informações.
+Define o consentimento padrão do usuário. Isso é usado quando não há preferência de consentimento já salva para o usuário. O outro valor válido é `"pending"`. Quando definido, o trabalho será enfileirado até que o usuário forneça as preferências de consentimento. Depois que as preferências do usuário forem fornecidas, o trabalho continuará ou será abortado com base nas preferências do usuário. Consulte [Suporte ao consentimento](supporting-consent.md) para obter mais informações.
 
 ## Opções de personalização
 

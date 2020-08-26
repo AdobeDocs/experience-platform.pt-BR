@@ -5,9 +5,9 @@ seo-title: Destino Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da Adobe Experience Platform.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '437'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Para [!DNL Amazon Kinesis] destinos, insira as seguintes informações no fluxo 
 
 ### Na etapa Autenticação {#authentication-step}
 
-* **[!DNL Amazon Web Services]chave de acesso e chave** secreta: Em [!DNL Amazon Web Services], gere uma chave de acesso - par de chaves de acesso secreto para conceder acesso CDP Adobe em tempo real à sua [!DNL Amazon Kinesis] conta. Saiba mais na documentação [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
+* **[!DNL Amazon Web Services]chave de acesso e chave** secreta: Em [!DNL Amazon Web Services], gere um `access key - secret access key` par para conceder acesso CDP Adobe em tempo real à sua [!DNL Amazon Kinesis] conta. Saiba mais na documentação [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 * **região**: Indica em qual [!DNL Amazon Web Services] região os dados serão transmitidos.
 
 ![Campos de entrada na etapa da conta](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -76,7 +76,7 @@ Consulte [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/acti
 
 Seus [!DNL Experience Platform] dados exportados chegam [!DNL Amazon Kinesis] no formato JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de uma audiência que se qualificou para um determinado segmento e saiu de outro. As identidades para este prospecto são ECID e email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"

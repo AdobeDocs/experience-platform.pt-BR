@@ -21,7 +21,7 @@ Atualizações dos recursos existentes no Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [!DNL Destinations](#destinations)
-- [[!Fontes DNL]](#sources)
+- [[!DNL Fontes]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 

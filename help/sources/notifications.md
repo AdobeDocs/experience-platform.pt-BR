@@ -29,7 +29,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 
 * [Sistema do [!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [[!ingestão de dados Adobe Experience Platform DNL]](../ingestion/home.md): [!DNL Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são mantidos dentro do [!DNL Data Lake] para uso pelos [!DNL Platform] serviços de downstream.
+* [[!DNL ingestão de dados Adobe Experience Platform]](../ingestion/home.md): [!DNL Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são mantidos dentro do [!DNL Data Lake] para uso pelos [!DNL Platform] serviços de downstream.
 
 Este documento também requer um entendimento prático dos webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [documentação](https://requestbin.com/blog/working-with-webhooks/) a seguir para obter mais informações sobre webhooks.
 

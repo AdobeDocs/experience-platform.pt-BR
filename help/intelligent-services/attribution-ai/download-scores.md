@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Acessar pontuações no Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Este documento serve como guia para o download das pontuações do Attribution A
 
 O Attribution AI permite baixar pontuações no formato de arquivo de parquet. Este tutorial requer que você tenha lido e concluído o download da seção de pontuações do Attribution AI no guia de [introdução](./getting-started.md) .
 
-Além disso, para acessar as pontuações do Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Além disso, para acessar as pontuações do Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
 
 ## Find your dataset ID {#dataset-id}
 
@@ -61,6 +61,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 Uma resposta bem-sucedida retorna uma carga contendo um objeto de ID de lote. Neste exemplo, o valor Chave para o objeto retornado é a ID do lote `01E5QSWCAASFQ054FNBKYV6TIQ`. Copie a ID do lote para usar na próxima chamada da API.
 
 >[!NOTE]
+>
 > A resposta a seguir fez com que o `tags` objeto fosse reformado para leitura.
 
 ```json
@@ -281,7 +282,7 @@ Depois que o suporte ao Adobe tiver processado sua solicitação, você receber�
 
 >[!NOTE]
 >
->A conta do leitor é para consultar os dados usando clientes sql, planilhas e soluções BI que suportam o conector JDBC.
+>A conta do leitor é para consultar os dados usando clientes sql, planilha e soluções BI que suportam o conector JDBC.
 
 Depois de ter suas credenciais e URL, você pode query as tabelas de modelo, agregadas por data do ponto de contato ou data de conversão.
 

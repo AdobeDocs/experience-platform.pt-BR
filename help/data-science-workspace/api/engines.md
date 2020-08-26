@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Uma resposta bem-sucedida retorna uma carga contendo os detalhes do registro do Docker, incluindo o URL do Docker (`host`), nome de usuário (`username`) e senha (`password`).
 
 >[!NOTE]
->
 >
 >Sua senha do Docker muda sempre que `{ACCESS_TOKEN}` é atualizada.
 
@@ -143,7 +142,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um Mecanismo Python. Todas as respostas do mecanismo seguem este formato:
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo recém-criado, incluindo seu identificador exclusivo (`id`). A seguinte resposta de exemplo é para um Mecanismo Python. Todas as respostas do mecanismo seguem este formato:
 
 ```json
 {

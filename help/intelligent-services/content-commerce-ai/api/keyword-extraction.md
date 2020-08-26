@@ -5,7 +5,7 @@ title: Extração de cores
 topic: Developer guide
 description: O serviço de extração de palavra-chave, quando recebe um documento de texto, extrai automaticamente palavras-chave ou frases-chave que melhor descrevem o assunto do documento. Para extrair palavras-chave, é usada uma combinação de algoritmos de reconhecimento de entidade nomeada (NER) e de extração de palavra-chave não supervisionada.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
@@ -84,7 +84,8 @@ Consulte a tabela abaixo do exemplo de carga para obter mais informações sobre
 
 >[!CAUTION]
 >
->`analyzer_id` determina qual [!DNL Sensei Content Framework] é usado. Verifique se você tem o direito `analyzer_id` antes de fazer sua solicitação. Para o serviço de extração de palavra-chave, a `analyzer_id` ID é: `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
+>`analyzer_id` determina qual [!DNL Sensei Content Framework] é usado. Verifique se você tem o direito `analyzer_id` antes de fazer sua solicitação. Para o serviço de extração de palavra-chave, a `analyzer_id` ID é:
+>`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \

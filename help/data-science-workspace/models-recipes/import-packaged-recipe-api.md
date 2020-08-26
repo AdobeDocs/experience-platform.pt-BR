@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importar uma fórmula empacotada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Este tutorial usa o para [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) criar um [Mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
 
-Antes de começar, é importante observar que o Adobe Experience Platform [!DNL Data Science Workspace] usa termos diferentes para fazer referência a elementos semelhantes dentro da API e da interface do usuário. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correspondentes:
+Antes de começar, é importante observar que a Adobe Experience Platform [!DNL Data Science Workspace] usa termos diferentes para fazer referência a elementos semelhantes dentro da API e da interface do usuário. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correspondentes:
 
 | Termo da interface do usuário | Termo da API |
 | ---- | ---- |
@@ -31,15 +31,15 @@ Um Mecanismo contém algoritmos e lógica de aprendizado de máquina para resolv
 
 ## Introdução
 
-Este tutorial requer um arquivo de Receita empacotado no formato de um URL do Docker. Siga os arquivos de origem do [pacote em um tutorial de Receita](./package-source-files-recipe.md) para criar um arquivo de Receita empacotado ou fornecer seu próprio.
+Este tutorial requer um arquivo de Receita empacotado na forma de um URL do Docker. Siga os arquivos de origem do [pacote em um tutorial de Receita](./package-source-files-recipe.md) para criar um arquivo de Receita empacotado ou fornecer seu próprio.
 
 - `{DOCKER_URL}`: Um endereço de URL para uma imagem do Docker de um serviço inteligente.
 
-Este tutorial requer que você tenha concluído o tutorial [Autenticação para Adobe Experience Platform](../../tutorials/authentication.md) para fazer chamadas para [!DNL Platform] APIs com êxito. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Este tutorial requer que você tenha concluído o tutorial [](../../tutorials/authentication.md) Autenticação para Adobe Experience Platform para fazer chamadas com êxito para [!DNL Platform] APIs. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
 - `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.
-- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração de Adobe Experience Platform exclusiva.
-- `{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração de Adobe Experience Platform exclusivo.
+- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.
+- `{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.
 
 ## Criar um mecanismo
 
@@ -50,6 +50,7 @@ Os mecanismos podem ser criados fazendo uma solicitação POST para o terminal /
 Para criar um Mecanismo com um arquivo de Receita empacotado armazenado em um container Docker, é necessário fornecer o URL do Docker ao arquivo de Receita empacotado.
 
 >[!CAUTION]
+>
 > Se você estiver usando [!DNL Python] ou usando R, use a solicitação abaixo. Se você estiver usando PySpark ou Scala, use o exemplo de solicitação PySpark/Scala localizado abaixo do exemplo Python/R.
 
 **Formato da API**

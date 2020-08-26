@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entrada e saída de IA do cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -33,6 +33,7 @@ Os exemplos a seguir fornecidos usam uma fórmula simples para ajudar a determin
 Comprimento mínimo dos dados necessários = população elegível + janela do resultado
 
 >[!NOTE]
+>
 > 30 é o número mínimo de dias necessário para a população elegível. Se isso não for fornecido, o padrão será 120 dias.
 
 Exemplos :
@@ -50,6 +51,7 @@ Além dos dados mínimos necessários, a IA do cliente também funciona melhor c
 A IA do cliente gera vários atributos para perfis individuais considerados elegíveis. Há duas maneiras de consumir a pontuação com base no que você forneceu. Se o Perfil do cliente em tempo real estiver ativado para o seu conjunto de dados, você poderá consumi-lo por meio do Perfil do cliente em tempo real. Se você não tiver um Perfil de cliente em tempo real, é possível baixar o conjunto de dados de saída AI do cliente disponível no lago de dados.
 
 >[!NOTE]
+>
 >Os valores de saída são consumidos pelo Perfil de cliente em tempo real, que pode ser usado para criar e definir segmentos.
 
 A tabela abaixo descreve os vários atributos encontrados na saída da IA do cliente:

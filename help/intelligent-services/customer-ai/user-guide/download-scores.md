@@ -3,10 +3,11 @@ keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
 title: Download de pontuações na IA do cliente
 topic: Downloading scores
+description: A IA do cliente permite baixar pontuações no formato de arquivo de parâmetro.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '945'
 ht-degree: 2%
 
 ---
@@ -20,7 +21,7 @@ Este documento serve como um guia para o download das pontuações para a IA do 
 
 A IA do cliente permite baixar pontuações no formato de arquivo de parâmetro. Este tutorial requer que você tenha lido e concluído o download da seção de pontuações da AI do cliente no guia de [introdução](../getting-started.md) .
 
-Além disso, para acessar as pontuações da API do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configuração de uma instância](./configure.md)do AI do cliente. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Além disso, para acessar as pontuações da API do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configuração de uma instância](./configure.md)do AI do cliente. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
 
 Atualmente, existem duas maneiras de baixar as pontuações do AI do cliente:
 

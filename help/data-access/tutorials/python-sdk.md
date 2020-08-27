@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;data access api
 solution: Experience Platform
 title: SDK seguro de acesso a dados Python
 topic: tutorial
+description: O Secure Python Data Access SDK é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
@@ -31,7 +32,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
 
-## configuração do Ambiente
+## configuração do ambiente
 
 Por padrão, os pontos finais do serviço são definidos como pontos finais do ambiente de integração. Como resultado, para apontar para a produção, defina as seguintes variáveis de ambiente para os seguintes valores:
 

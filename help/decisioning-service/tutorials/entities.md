@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gerenciar entidades do serviço de decisão usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '7207'
+source-wordcount: '7220'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gerenciar objetos e regras de decisão usando APIs
 
-Este documento fornece um tutorial para trabalhar com as entidades de negócios do [!DNL Decisioning Service] uso de APIs de Adobe Experience Platform.
+Este documento fornece um tutorial para trabalhar com as entidades de negócios do [!DNL Decisioning Service] uso de APIs da Adobe Experience Platform.
 
 O tutorial tem duas partes:
 
@@ -26,9 +26,9 @@ O tutorial tem duas partes:
 
 Este tutorial requer uma compreensão funcional dos [!DNL Experience Platform] serviços e das convenções da API. O [!DNL Platform] repositório é um serviço usado por vários outros [!DNL Platform] serviços para armazenar objetos de negócios e vários tipos de metadados. Ele oferece uma maneira segura e flexível de gerenciar e query desses objetos para uso por vários serviços de tempo de execução. O [!DNL Decisioning Service] é um desses. Antes de iniciar este tutorial, reveja a documentação do seguinte:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
-- [!DNL Decisioning Service](./../home.md): Explica os conceitos e componentes utilizados para a Decisão de Experiência em geral e para a decisão Oferta em particular. Ilustra as estratégias usadas para escolher a melhor opção para apresentar durante a experiência de um cliente.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): O PQL é um idioma avançado para gravar expressões em instâncias do XDM. O PQL é usado para definir regras de decisão.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+- [[!Serviço de Decisão DNL]](./../home.md): Explica os conceitos e componentes utilizados para a Decisão de Experiência em geral e para a decisão Oferta em particular. Ilustra as estratégias usadas para escolher a melhor opção para apresentar durante a experiência de um cliente.
+- [[!Linguagem de Query de Perfil DNL (PQL)](../../segmentation/pql/overview.md): O PQL é um idioma avançado para gravar expressões em instâncias do XDM. O PQL é usado para definir regras de decisão.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.
 
@@ -94,11 +94,11 @@ A lista de container acessíveis é obtida chamando o terminal raiz do repositó
 
 ## Gerenciamento do acesso a container
 
-Um administrador pode agrupar principais, recursos e permissões de acesso semelhantes em perfis. Isso reduz a carga de gerenciamento e é compatível com a interface do usuário [Admin Console do](https://adminconsole.adobe.com)Adobe. Você deve ser um administrador de produtos para Adobe Experience Platform em sua organização para criar perfis e atribuir usuários a eles.
+Um administrador pode agrupar principais, recursos e permissões de acesso semelhantes em perfis. Isso reduz a carga de gerenciamento e é compatível com a interface do usuário [Admin Console do](https://adminconsole.adobe.com)Adobe. Você deve ser um administrador de produto da Adobe Experience Platform em sua organização para criar perfis e atribuir usuários a eles.
 
-É suficiente criar perfis de produtos que correspondam a determinadas permissões em uma única etapa e simplesmente adicionar usuários a esses perfis. Os Perfis atuam como grupos aos quais foram concedidas permissões e cada usuário real ou técnico do grupo herda essas permissões.
+É suficiente criar perfis de produtos que correspondam a determinadas permissões em uma única etapa e simplesmente adicionar usuários a esses perfis. Os perfis atuam como grupos aos quais foram concedidas permissões e cada usuário real ou técnico do grupo herda essas permissões.
 
-### container de Lista acessíveis aos usuários e integrações
+### Container de lista acessíveis aos usuários e integrações
 
 Quando o administrador conceder acesso a container para usuários regulares ou integrações, esses container aparecerão na lista chamada &quot;Início&quot; do repositório. A lista pode ser diferente para usuários ou integrações diferentes, pois é um subconjunto de todos os container acessíveis ao chamador. A lista de container pode ser filtrada pela associação a contextos de produtos. O parâmetro de filtro é chamado `product` e pode ser repetido. Se mais de um filtro de contexto do produto for fornecido, a união dos container que têm associações com qualquer um dos contextos do produto será retornada. Observe que um único container pode ser associado a vários contextos de produtos.
 
@@ -292,7 +292,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 
 A API do repositório responderá com um status 304 Not Momodified (Não modificado) quando a última revisão da instância for aquela com a tag fornecida.
 
-### Instâncias de Lista para um schema - Classificação e paginação
+### Instâncias de lista para um schema - Classificação e paginação
 
 Os clientes não poderão rastrear as instâncias que estão criando e, portanto, acessá-las por meio de sua instanceId física. O uso da API de instância de leitura será a exceção. Os clientes também não sabem quais instâncias outros clientes criaram.
 
@@ -352,7 +352,7 @@ A paginação é controlada pelos seguintes parâmetros:
 
 ### Filtrar listas
 
-A filtragem dos resultados da lista é possível e acontece independentemente do mecanismo de paginação. Os Filtros simplesmente ignoram as instâncias na ordem do lista ou solicitam explicitamente que incluam apenas as instâncias que satisfazem uma determinada condição. Um cliente pode solicitar que a expressão de propriedade seja usada como filtro ou pode especificar uma lista de URIs a serem usados como valores da chave primária das instâncias.
+A filtragem dos resultados da lista é possível e acontece independentemente do mecanismo de paginação. Os filtros simplesmente ignoram as instâncias na ordem do lista ou solicitam explicitamente que incluam apenas as instâncias que satisfazem uma determinada condição. Um cliente pode solicitar que a expressão de propriedade seja usada como filtro ou pode especificar uma lista de URIs a serem usados como valores da chave primária das instâncias.
 
 - **`property`**: Contém um caminho de nome de propriedade seguido por um operador de comparação seguido por um valor. <br/>
 A lista de instâncias retornadas contém aquelas para as quais a expressão é avaliada como true. Por exemplo, supondo que a instância tenha uma propriedade payload 
@@ -528,7 +528,7 @@ Há condições nas quais vários clientes tentam atualizar uma instância simul
 
 ### Excluindo instâncias
 
-As instâncias podem ser excluídas com uma chamada DELETE. De preferência, um cliente deve usar o `Location` cabeçalho ou um link HAL recebido de uma chamada de API anterior para isso como o caminho de URL completo. Se isso não for possível, o cliente poderá criar o URL a partir do `containerId` e do físico `instanceId`.
+As instâncias podem ser excluídas com uma chamada de DELETE. De preferência, um cliente deve usar o `Location` cabeçalho ou um link HAL recebido de uma chamada de API anterior para isso como o caminho de URL completo. Se isso não for possível, o cliente poderá criar o URL a partir do `containerId` e do físico `instanceId`.
 
 **Solicitação**
 
@@ -602,9 +602,9 @@ O Oferta é um tipo de opção de decisão e o schema JSON do oferta herda as pr
 
 Consulte [Atualização e correção de instâncias](#updating-and-patching-instances) para obter a sintaxe completa de cURL. O `schemaId` parâmetro deve ser `https://ns.adobe.com/experience/offer-management/personalized-offer` ou `https://ns.adobe.com/experience/offer-management/fallback-offer` se a oferta for uma oferta de fallback.
 
-Cada instância de oferta pode ter um conjunto opcional de propriedades que são características apenas para essa instância. ofertas diferentes podem ter chaves diferentes para essas propriedades, mas os valores devem ser strings. Essas propriedades podem ser usadas em regras de decisão e segmentação. Eles também estão acessíveis para reunir a experiência decidida para personalizar ainda mais as mensagens.
+Cada instância de oferta pode ter um conjunto opcional de propriedades que são características apenas para essa instância. Ofertas diferentes podem ter chaves diferentes para essas propriedades, mas os valores devem ser strings. Essas propriedades podem ser usadas em regras de decisão e segmentação. Eles também estão acessíveis para reunir a experiência decidida para personalizar ainda mais as mensagens.
 
-### Ciclo de vida da Oferta
+### Ciclo de vida da oferta
 
 Há um fluxo de transição de estado simples que todas as Opções seguirão. Eles start em um estado de rascunho e quando estiverem prontos seu estado será definido para aprovação. Quando a data final for ultrapassada, eles poderão ser movidos para o estado arquivado. Nesse estado, podem ser eliminados ou reutilizados, transferindo-os para o estado de redação.
 
@@ -775,7 +775,7 @@ A referência à regra é incorporada na propriedade `xdm:selectionConstraint`:
 
 A adição e exclusão de uma regra também pode ser realizada com uma operação de PATCH:
 
-```
+```json
 [
   {
     "op":   "replace",
@@ -819,7 +819,7 @@ Consulte [Atualização e correção de instâncias](#updating-and-patching-inst
 
 ## Gerenciar regras de decisão
 
-As Regras de elegibilidade mantêm as condições que são avaliadas para determinar se uma determinada opção de decisão é qualificada para um determinado perfil. Anexar uma regra a uma ou mais opções de decisão define implicitamente que para essa opção a regra deve ser avaliada como true para que a opção seja considerada para esse usuário. A regra pode conter testes em atributos de perfil, pode avaliar expressões envolvendo eventos de experiência para esse perfil e pode incluir dados de contexto que foram passados para a solicitação de decisão. Por exemplo, uma condição pode ser descrita como:
+As regras de elegibilidade mantêm as condições que são avaliadas para determinar se uma determinada opção de decisão é qualificada para um determinado perfil. Anexar uma regra a uma ou mais opções de decisão define implicitamente que para essa opção a regra deve ser avaliada como true para que a opção seja considerada para esse usuário. A regra pode conter testes em atributos de perfil, pode avaliar expressões envolvendo eventos de experiência para esse perfil e pode incluir dados de contexto que foram passados para a solicitação de decisão. Por exemplo, uma condição pode ser descrita como:
 
 > &quot;Incluir indivíduos que tenham status de elite e tenham voado em um voo três vezes nos últimos seis meses que tenha o número de voo do voo atual.&quot;
 
@@ -852,7 +852,7 @@ As regras são alinhadas naturalmente com os segmentos no [!DNL Experience Platf
 
 ### Criação de tags e ofertas de marcação
 
-As Ofertas podem ser organizadas em coleções nas quais cada coleção define a condição do filtro que deve ser aplicada. Atualmente, a expressão de filtro em uma coleção pode ter um de dois formulários:
+As ofertas podem ser organizadas em coleções nas quais cada coleção define a condição do filtro que deve ser aplicada. Atualmente, a expressão de filtro em uma coleção pode ter um de dois formulários:
 
 1. O `@id` parâmetro da oferta deve corresponder a um em uma lista de identificadores para que a oferta esteja na coleção. Esse filtro é simplesmente uma lista discriminada dos URIs das ofertas na coleção.
 2. Uma oferta pode ter uma lista de referências de tags e o filtro da coleção consiste em uma lista de tags. A oferta está na coleção quando:\

@@ -3,10 +3,11 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Apresentação da Data Science Workspace
 topic: Walkthrough
+description: Este documento fornece uma apresentação para a Adobe Experience Platform Data Science Workspace. Especificamente o fluxo de trabalho geral que um cientista de dados passaria para resolver um problema usando o aprendizado de máquina.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -14,12 +15,12 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] passagem
 
-Este documento fornece uma passagem para o Adobe Experience Platform [!DNL Data Science Workspace]. Especificamente vamos passar pelo fluxo de trabalho geral que um cientista de dados passaria para resolver um problema usando o aprendizado de máquina.
+Este documento fornece uma apresentação para o Adobe Experience Platform [!DNL Data Science Workspace]. Especificamente vamos passar pelo fluxo de trabalho geral que um cientista de dados passaria para resolver um problema usando o aprendizado de máquina.
 
 ## Pré-requisitos
 
-- Uma conta de Adobe ID registrada
-   - A conta Adobe ID deve ter sido adicionada a uma organização com acesso ao Adobe Experience Platform e ao [!DNL Data Science Workspace]
+- Uma conta Adobe ID registrada
+   - A conta da Adobe ID deve ter sido adicionada a uma organização com acesso ao Adobe Experience Platform e ao [!DNL Data Science Workspace]
 
 ## Motivação do cientista da informação
 
@@ -29,7 +30,7 @@ Um varejista enfrenta muitos desafios para se manter competitivo no mercado atua
 
 A solução de um cientista de dados é aproveitar a riqueza de dados históricos a que um varejista tem acesso, prever tendências futuras e otimizar as decisões de preços. Usaremos dados de vendas passadas para treinar nosso modelo de aprendizado de máquina e usar o modelo para prever tendências futuras de venda. Com isso, o varejista poderá ter insights para ajudá-lo a fazer mudanças nos preços.
 
-Nesta visão geral, vamos passar pelos passos que um cientista de dados passaria para pegar um conjunto de dados e criar um modelo para prever vendas semanais. Iremos para as seguintes seções no Notebook Sample Retail Sales no Adobe Experience Platform [!DNL Data Science Workspace]:
+Nesta visão geral, vamos passar pelos passos que um cientista de dados passaria para pegar um conjunto de dados e criar um modelo para prever vendas semanais. Iremos para as seguintes seções no Notebook de amostra de vendas de varejo no Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configuração](#setup)
 - [Como explorar dados](#exploring-data)
@@ -208,7 +209,7 @@ Para a pontuação, estamos pegando a diferença percentual média entre os valo
 
 #### Visualizar previsões
 
-Finalmente, visualizaremos nosso modelo de previsão com os valores de vendas semanais reais. A linha azul representa os números reais, enquanto o verde representa nossa previsão usando o Gradient Boosting. O código a seguir gera 6 lotes que representam 6 dos 45 armazenamentos em nosso conjunto de dados. Somente `Store 1` é mostrado aqui:
+Finalmente, visualizaremos nosso modelo de previsão com os valores reais de vendas semanais. A linha azul representa os números reais, enquanto o verde representa nossa previsão usando o Gradient Boosting. O código a seguir gera 6 lotes que representam 6 dos 45 armazenamentos em nosso conjunto de dados. Somente `Store 1` é mostrado aqui:
 
 ![](./images/walkthrough/visualize_prediction.png)
 

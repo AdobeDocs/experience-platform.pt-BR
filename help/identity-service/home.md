@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: O Adobe Experience Platform Identity Service ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;. A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 
-## Noções básicas [!DNL Identity Service]
+## Noções básicas do [!DNL Identity Service]
 
 A cada dia, os clientes interagem com a sua empresa e estabelecem um relacionamento cada vez maior com a sua marca. Um cliente típico pode estar ativo em qualquer número de sistemas dentro da infraestrutura de dados de sua organização, como seu eCommerce, fidelidade e sistemas de suporte técnico. Esse mesmo cliente também pode se envolver anonimamente em qualquer número de dispositivos. [!DNL Identity Service] permite que você reúna uma imagem completa do seu cliente, agregando dados relacionados que podem ser colocados em sistemas diferentes.
 
@@ -37,7 +37,7 @@ Os relacionamentos de identidade que [!DNL Identity Service] definem e mantêm s
 
 Uma identidade são dados exclusivos de uma entidade, geralmente uma pessoa individual. Uma identidade como ID de login, ECID ou ID de fidelidade é chamada de identidade **** conhecida.
 
-As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder às múltiplas identidades de um cliente nos sistemas.
+As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder as múltiplas identidades de um cliente nos sistemas.
 
 **Identidades** desconhecidas ou anônimas identificam um dispositivo sem identificar a pessoa real que o utiliza. Esta categoria inclui informações como o endereço IP do visitante e a ID do cookie. Embora os dados comportamentais possam ser coletados de um dispositivo usando identidades desconhecidas, a associação dessas identidades em dispositivos ou mídias é limitada até que o cliente forneça PII durante sua jornada.
 
@@ -146,4 +146,4 @@ A Adobe Experience Platform foi criada pensando na privacidade e inclui uma estr
 
 ## Próximas etapas
 
-Agora que você entende os conceitos-chave de [!DNL Identity Service] e seu papel dentro [!DNL Experience Platform], você pode começar a aprender como trabalhar com seu gráfico de identidade usando o [!DNL Identity Service API](./api/getting-started.md).
+Agora que você entende os conceitos principais de [!DNL Identity Service] e sua função dentro de [!DNL Experience Platform], você pode começar a aprender como trabalhar com seu gráfico de identidade usando a API [[!DNL Identity Service]](./api/getting-started.md).

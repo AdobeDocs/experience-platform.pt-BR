@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1502'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ A Adobe Experience Platform [!DNL Privacy Service] foi desenvolvida em resposta 
 
 ## Getting started with [!DNL Privacy Service] {#getting-started}
 
-Para fazer uso do [!DNL Privacy Service], várias decisões importantes precisam ser tomadas em termos de requisitos de privacidade da sua organização, os tipos de dados de identidade coletados de seus clientes e a melhor forma de interagir com o sistema CRM com o serviço.
+Para fazer uso do [!DNL Privacy Service], várias decisões importantes precisam ser tomadas em termos de requisitos de privacidade da sua organização, os tipos de dados de identidade coletados de seus clientes e a melhor maneira de interagir com o sistema CRM com o serviço.
 
 Estas decisões podem ser resumidas através das seguintes questões:
 
@@ -77,7 +77,7 @@ Depois de determinar as necessidades de privacidade de sua empresa e decidir par
 
 #### Uso da API
 
-O [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornece vários endpoints para criar e gerenciar trabalhos de privacidade usando chamadas RESTful API, permitindo que você adote uma abordagem programática da conformidade com a regulamentação de privacidade para seus [!DNL Experience Cloud] aplicativos. Para obter etapas detalhadas sobre como usar a API, consulte o guia [do desenvolvedor da API de](api/getting-started.md)Privacy Service.
+A [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornece vários pontos de extremidade para criar e gerenciar trabalhos de privacidade usando chamadas RESTful API, permitindo que você adote uma abordagem programática da conformidade com a regulamentação de privacidade para seus [!DNL Experience Cloud] aplicativos. Para obter etapas detalhadas sobre como usar a API, consulte o guia [do desenvolvedor da API de](api/getting-started.md)Privacy Service.
 
 #### Uso da interface
 
@@ -95,7 +95,7 @@ Depois de realizar trabalhos de privacidade, você tem várias opções para mon
 | --- | --- |
 | [!DNL Privacy Service] Interface | A [!DNL Privacy Service] interface do usuário fornece um painel de monitoramento que permite que você visualização uma representação visual do status de todas as solicitações ativas. Consulte o guia [do usuário do](ui/overview.md) Privacy Service para obter mais informações. |
 | [!DNL Privacy Service] API | Você pode monitorar programaticamente o status dos trabalhos de Privacidade usando os pontos de extremidade de pesquisa fornecidos pela [!DNL Privacy Service] API. Consulte o guia [do desenvolvedor do](./api/getting-started.md) Privacy Service para obter as etapas detalhadas sobre como usar a API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] aproveite Eventos de E/S de Adobe enviados para um webhook configurado, a fim de facilitar a automação eficiente das solicitações de trabalho. Eles reduzem ou eliminam a necessidade de pesquisar a [!DNL Privacy Service] API para verificar se um trabalho foi concluído ou se um determinado marco em um fluxo de trabalho foi atingido. Consulte o tutorial sobre como [assinar Eventos](./privacy-events.md) de privacidade para obter mais informações. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] aproveite Eventos de E/S de Adobe enviados para um webhook configurado para facilitar a automação eficiente de solicitações de trabalho. Eles reduzem ou eliminam a necessidade de pesquisar a [!DNL Privacy Service] API para verificar se um trabalho foi concluído ou se um determinado marco em um fluxo de trabalho foi atingido. Consulte o tutorial sobre como [assinar Eventos](./privacy-events.md) de privacidade para obter mais informações. |
 
 ## Próximas etapas
 

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Pontuação de um modelo (IU)
 topic: Tutorial
+description: 'A pontuação na Adobe Experience Platform Data Science Workspace pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote. '
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Pontuação de um modelo (IU)
 
-A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote.
+A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser alcançada com a alimentação de dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote.
 
 Este tutorial demonstra as etapas necessárias para marcar um Modelo na interface do [!DNL Data Science Workspace] usuário.
 
@@ -46,7 +47,7 @@ Revise e confirme as configurações de pontuação e clique em **[!UICONTROL Co
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Uma execução de pontuação exibirá um dos quatro status a seguir: Pendente, Concluído, Falha ou Em Execução e são atualizados automaticamente. Vá para a próxima etapa se o status for &quot;Concluído&quot; ou &quot;Falha&quot;.
 
-## Resultados da pontuação da Visualização
+## Resultados da pontuação da visualização
 
 1. Encontre a execução de treinamento que foi usada para a execução de pontuação e clique no nome para visualização na página **[!UICONTROL Avaliação]** .
 

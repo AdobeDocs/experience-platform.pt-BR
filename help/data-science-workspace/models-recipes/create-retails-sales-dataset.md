@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
 title: Criar o schema de vendas de varejo e o conjunto de dados
 topic: Tutorial
+description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais da Adobe Experience Platform Data Science Workspace. Após a conclusão, o schema de vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros da organização IMS no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---

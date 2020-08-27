@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics
+keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: Agendar um modelo (UI)
 topic: Tutorial
+description: A Adobe Experience Platform Data Science Workspace permite que você configure execuções programadas de pontuação e treinamento em um serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Agendar um modelo (UI)
 
-O Adobe Experience Platform [!DNL Data Science Workspace] permite que você configure a pontuação programada e as execuções de treinamento em um serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
+A Adobe Experience Platform [!DNL Data Science Workspace] permite que você configure execuções programadas de pontuação e treinamento em um Serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 
 Este tutorial percorre as etapas para configurar os agendamentos de treinamento e pontuação em um Serviço existente por meio da Galeria *[!UICONTROL de]* serviços. Ele é dividido nas seguintes seções principais:
 

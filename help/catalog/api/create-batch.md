@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: Criar um conjunto de dados
 topic: developer guide
+description: Para que um conjunto de dados ingira dados, ele deve ter um lote associado a ele. Usando o valor de id de um conjunto de dados existente, é possível criar um lote, fazendo uma solicitação de POST para o ponto de extremidade /lotes na API de catálogo.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 4%
+source-wordcount: '128'
+ht-degree: 3%
 
 ---
 

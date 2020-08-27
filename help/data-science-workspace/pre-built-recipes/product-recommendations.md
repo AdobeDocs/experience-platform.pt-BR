@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Fórmula de recomendação de produto
 topic: overview
+description: A fórmula do Recommendations Product permite fornecer recomendações personalizadas de produtos, adaptadas às necessidades e interesses do cliente. Com um modelo de previsão preciso, o histórico de compras de um cliente pode fornecer a você informações sobre quais produtos eles podem estar interessados.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 3%
+source-wordcount: '463'
+ht-degree: 2%
 
 ---
 
@@ -31,11 +32,11 @@ Para começar, siga o tutorial do Adobe Experience Platform Lab (consulte o link
 * [Laboratório: Preveja o futuro com a área de trabalho da Data Science](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos do laboratório](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
-## schema de dados
+## Schema de dados
 
 Esta fórmula usa schemas [](../../xdm/schema/field-dictionary.md) XDM personalizados para modelar os dados de entrada e saída:
 
-### schema de dados de entrada
+### Schema de dados de entrada
 
 | Nome do campo | Tipo |
 --- | ---
@@ -44,7 +45,7 @@ Esta fórmula usa schemas [](../../xdm/schema/field-dictionary.md) XDM personali
 | carimbo de data e hora | String |
 | userId | String |
 
-### schema de dados de saída
+### Schema de dados de saída
 
 | Nome do campo | Tipo |
 --- | ---

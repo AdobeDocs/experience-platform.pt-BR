@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 6%
+source-wordcount: '894'
+ht-degree: 5%
 
 ---
 
@@ -19,16 +19,16 @@ ht-degree: 6%
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [Sistema do [!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!Fontes DNL]](#sources)
+* [[!Destinos DNL]](#destinations)
 
 ## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
 A normalização e a interoperabilidade são conceitos fundamentais subjacentes [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
-A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo que se comunique com os serviços no Adobe Experience Platform. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de forma mais rápida e integrada. Você pode obter informações importantes das ações do cliente, definir audiências do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo que se comunique com os serviços da Adobe Experience Platform. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de forma mais rápida e integrada. Você pode obter informações importantes das ações do cliente, definir audiências do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
 
 **Novos recursos**
 
@@ -45,7 +45,7 @@ Para saber mais sobre como trabalhar com o XDM usando a [!DNL Schema Registry] A
 
 ## [!DNL Privacy Service] {#privacy}
 
-As novas regulamentações legais e organizacionais estão dando aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação. O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com [!DNL Privacy Service]o, você pode enviar solicitações para acessar e excluir dados pessoais ou particulares de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
+As novas regulamentações legais e organizacionais estão dando aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação. A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com [!DNL Privacy Service]o, você pode enviar solicitações para acessar e excluir dados pessoais ou particulares de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
 
 **Novos recursos**
 
@@ -65,7 +65,7 @@ Para obter mais informações sobre [!DNL Privacy Service], leia a visão geral 
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
@@ -75,14 +75,14 @@ O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 |--- | ---|
 | Suporte para dados de atributos do cliente | Suporte à interface do usuário e à API para criar conectores de transmissão para assimilar dados de atributos do cliente. |
 | Suporte adicional ao formato de arquivo para armazenamentos em nuvem | A ingestão de arquivos de armazenamentos em nuvem agora oferece suporte aos formatos de arquivo em conformidade com XDM Parquet e JSON. |
-| Suporte para permissões de controle de acesso | A estrutura de controle de acesso no Adobe Experience Platform fornece as permissões necessárias para conceder acesso às fontes na ingestão de dados. Dependendo do nível de permissão, um usuário pode visualização de fontes, gerenciar fontes ou ter acesso negado totalmente. |
+| Suporte para permissões de controle de acesso | A estrutura do controle de acesso no Adobe Experience Platform fornece as permissões necessárias para conceder acesso a fontes na ingestão de dados. Dependendo do nível de permissão, um usuário pode visualização de fontes, gerenciar fontes ou ter acesso negado totalmente. |
 
-**Permissões do Controle de acesso**
+**Permissões do controle de acesso**
 
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
 | Ingestão de dados | Gerenciar fontes | Acesso para ler, criar, editar e desativar fontes. |
-| Ingestão de dados | Fontes de Visualização | Acesso somente leitura a fontes disponíveis na guia *[!UICONTROL Catálogo]* e fontes autenticadas na guia *[!UICONTROL Procurar]* . |
+| Ingestão de dados | Fontes de visualização | Acesso somente leitura a fontes disponíveis na guia *[!UICONTROL Catálogo]* e fontes autenticadas na guia *[!UICONTROL Procurar]* . |
 
 **Problemas conhecidos**
 
@@ -98,14 +98,14 @@ No [Adobe Real-time CDP](../../rtcdp/overview.md), os destinos são integraçõe
 
 | Recurso | Descrição |
 |--- | ---|
-| Suporte para permissões de controle de acesso | A funcionalidade Destinos no CDP em tempo real funciona com permissões de controle de acesso de Adobe Experience Platform. Dependendo do nível de permissão do usuário, você pode visualização, gerenciar e ativar destinos. |
+| Suporte para permissões de controle de acesso | A funcionalidade Destinos no CDP em tempo real funciona com permissões de controle de acesso Adobe Experience Platform. Dependendo do nível de permissão do usuário, você pode visualização, gerenciar e ativar destinos. |
 
-**Permissões do Controle de acesso**
+**Permissões do controle de acesso**
 
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
 | Destinos | Gerenciar destinos | Acesso para ler, criar, editar e desativar destinos. |
-| Destinos | Destinos da Visualização | Acesso somente leitura a destinos disponíveis na guia [!UICONTROL _Catálogo _]e destinos autenticados na guia_ Procurar _. |
+| Destinos | Destinos da visualização | Acesso somente leitura a destinos disponíveis na guia [!UICONTROL _Catálogo_] e destinos autenticados na guia _Procurar_ . |
 | Destinos | Ativar destinos | Capacidade de ativar dados para destinos. Essa permissão requer que &quot;Gerenciar destinos&quot; ou &quot;Destinos de Visualização&quot; sejam adicionados ao perfil do produto. |
 
 **Problemas conhecidos**

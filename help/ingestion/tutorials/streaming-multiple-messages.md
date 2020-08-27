@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmissão de várias mensagens em uma única solicitação HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1466'
 ht-degree: 1%
 
 ---
@@ -20,10 +20,10 @@ Este documento fornece um tutorial para enviar várias mensagens para [!DNL Expe
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional da Adobe Experience Platform [!DNL Data Ingestion]. Antes de iniciar este tutorial, reveja a seguinte documentação:
+Este tutorial requer um entendimento prático do Adobe Experience Platform [!DNL Data Ingestion]. Antes de iniciar este tutorial, reveja a seguinte documentação:
 
 - [Visão geral](../home.md)da ingestão de dados: Abrange os conceitos principais de [!DNL Experience Platform Data Ingestion], incluindo métodos de ingestão e conectores de dados.
-- [Visão geral](../streaming-ingestion/overview.md)da assimilação de transmissão: O fluxo de trabalho e os blocos componentes da assimilação de streaming, como conexões de streaming, conjuntos de dados [!DNL XDM Individual Profile]e [!DNL XDM ExperienceEvent].
+- [Visão geral](../streaming-ingestion/overview.md)de ingestão de transmissão: O fluxo de trabalho e os blocos componentes da assimilação de streaming, como conexões de streaming, conjuntos de dados [!DNL XDM Individual Profile]e [!DNL XDM ExperienceEvent].
 
 Este tutorial também exige que você tenha concluído o tutorial [Autenticação para Adobe Experience Platform](../../tutorials/authentication.md) para fazer chamadas com êxito para [!DNL Platform] APIs. A conclusão do tutorial de autenticação fornece o valor para o cabeçalho de Autorização necessário para todas as chamadas de API neste tutorial. O cabeçalho é mostrado nas chamadas de amostra da seguinte maneira:
 
@@ -37,7 +37,7 @@ Todas as solicitações de POST exigem um cabeçalho adicional:
 
 Primeiro, você deve criar uma conexão de streaming antes de poder start os dados de streaming. [!DNL Experience Platform] Leia o guia [Criar uma conexão](./create-streaming-connection.md) de streaming para saber como criar uma conexão de streaming.
 
-Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Platform.
+Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Plataforma.
 
 ## Fluxo para um conjunto de dados
 
@@ -508,9 +508,9 @@ A segunda mensagem falhou porque faltou um corpo de mensagem. A solicitação de
     },
 ```
 
-A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual ID de organização IMS corresponde à conexão de streaming que você está usando, é possível executar uma `GET inlet` solicitação usando o [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [recuperação de uma conexão](./create-streaming-connection.md#get-data-collection-url) de streaming para obter um exemplo de como recuperar conexões de streaming criadas anteriormente.
+A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual ID de organização IMS corresponde à conexão de streaming que você está usando, é possível executar uma `GET inlet` solicitação usando a [[!DNL Data Ingsion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [recuperação de uma conexão](./create-streaming-connection.md#get-data-collection-url) de streaming para obter um exemplo de como recuperar conexões de streaming criadas anteriormente.
 
-A quarta mensagem falhou porque não seguiu o schema XDM esperado. Os itens `xdmSchema` incluídos no cabeçalho e no corpo da solicitação não correspondem ao schema XDM da `{DATASET_ID}`. A correção do schema no cabeçalho e no corpo da mensagem permite que ele passe pela validação do DCCS e seja enviado com êxito para [!DNL Platform]. O corpo da mensagem também deve ser atualizado para corresponder ao schema XDM do para `{DATASET_ID}` que ele passe a validação de streaming [!DNL Platform]. Para obter mais informações sobre o que acontece com as mensagens que fluem com êxito para o Platform, consulte a seção [confirmar mensagens assimiladas](#confirm-messages-ingested) deste tutorial.
+A quarta mensagem falhou porque não seguiu o schema XDM esperado. Os itens `xdmSchema` incluídos no cabeçalho e no corpo da solicitação não correspondem ao schema XDM da `{DATASET_ID}`. A correção do schema no cabeçalho e no corpo da mensagem permite que ele passe pela validação do DCCS e seja enviado com êxito para [!DNL Platform]. O corpo da mensagem também deve ser atualizado para corresponder ao schema XDM do para `{DATASET_ID}` que ele passe a validação de streaming [!DNL Platform]. Para obter mais informações sobre o que acontece com as mensagens que fluem com êxito para a Plataforma, consulte a seção [confirmar mensagens assimiladas](#confirm-messages-ingested) deste tutorial.
 
 ### Recuperar mensagens com falha de [!DNL Platform]
 
@@ -529,7 +529,7 @@ As mensagens em lote que passam pela validação do streaming [!DNL Platform] s�
 
 ## Próximas etapas
 
-Agora que você sabe como enviar várias mensagens em uma única solicitação e verificar quando as mensagens são ingeridas com êxito no conjunto de dados do público alvo, é possível fazer o start do streaming dos seus próprios dados para [!DNL Platform]. Para obter uma visão geral de como query e recuperar dados ingeridos de [!DNL Platform], consulte o [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guia.
+Agora que você sabe como enviar várias mensagens em uma única solicitação e verificar quando as mensagens são ingeridas com êxito no conjunto de dados do público alvo, é possível fazer o start do streaming dos seus próprios dados para [!DNL Platform]. Para obter uma visão geral de como query e recuperar dados ingeridos de [!DNL Platform], consulte o guia [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) .
 
 ## Apêndice
 

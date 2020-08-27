@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentação em streaming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->O documento a seguir explica como usar a segmentação de fluxo contínuo usando a API. Para obter informações sobre como usar a segmentação de streaming usando a interface do usuário, leia o guia [da interface de segmentação de](../ui/streaming-segmentation.md)streaming.
+>O documento a seguir indica como usar a segmentação de fluxo contínuo usando a API. Para obter informações sobre como usar a segmentação de streaming usando a interface do usuário, leia o guia [da interface de segmentação de](../ui/streaming-segmentation.md)streaming.
 
 A segmentação contínua permite [!DNL Adobe Experience Platform] que os clientes façam a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam, o que diminui a necessidade de programar e executar tarefas de segmentação. [!DNL Platform] Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 
@@ -26,9 +26,9 @@ A segmentação contínua permite [!DNL Adobe Experience Platform] que os client
 
 Este guia do desenvolvedor requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de streaming. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
-- [!DNL Segmentation](../home.md): Fornece a capacidade de criar segmentos e audiências a partir de seus [!DNL Real-time Customer Profile] dados.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!Segmentação DNL]](../home.md): Fornece a capacidade de criar segmentos e audiências a partir de seus [!DNL Real-time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para [!DNL Platform] APIs.
 

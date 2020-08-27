@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do desenvolvedor da API do Serviço de Política
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ A Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cl
 
 A [!DNL Policy Service] API fornece vários endpoints que permitem gerenciar programaticamente rótulos e políticas de uso de dados, bem como avaliar ações de marketing para violações de políticas. Esses pontos finais são descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte o guia [de](./getting-started.md) introdução para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de amostra e muito mais.
 
-Para visualização de todos os pontos de extremidade e operações CRUD disponíveis, visite o swagger [da API do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)Política.
+Para visualização de todos os pontos de extremidade e operações CRUD disponíveis, visite o swagger [[!DNL Policy Service] da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)API.
 
 ## Rótulos
 

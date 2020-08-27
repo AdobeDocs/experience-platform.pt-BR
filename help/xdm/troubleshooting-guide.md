@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema do Experience Data Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!DNL Experience Data Model] (XDM) Guia de solução de problemas do sistema
 
-Este documento fornece respostas para perguntas frequentes sobre o sistema [!DNL Experience Data Model] (XDM), bem como um guia de solução de problemas para erros comuns. Para questões e solução de problemas relacionados a outros serviços no Adobe Experience Platform, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
+Este documento fornece respostas para perguntas frequentes sobre o sistema [!DNL Experience Data Model] (XDM), bem como um guia de solução de problemas para erros comuns. Para questões e solução de problemas relacionados a outros serviços da Adobe Experience Platform, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
 
-**[!DNL Experience Data Model](XDM)**é uma especificação de código aberto que define schemas padronizados para o gerenciamento da experiência do cliente. A metodologia na qual[!DNL Experience Platform]está construído, o Sistema****XDM, opera[!DNL Experience Data Model]schemas para uso pelos[!DNL Platform]serviços. O **[!DNL Schema Registry]**fornece uma interface de usuário e uma RESTful API para acessar o **[!DNL Schema Library]**dentro[!DNL Experience Platform]. See the[XDM documentation](home.md)for more information.
+**[!DNL Experience Data Model](XDM)** é uma especificação de código aberto que define schemas padronizados para o gerenciamento da experiência do cliente. A metodologia na qual [!DNL Experience Platform] está construído, o Sistema **** XDM, opera [!DNL Experience Data Model] schemas para uso pelos [!DNL Platform] serviços. O **[!DNL Schema Registry]** fornece uma interface de usuário e uma RESTful API para acessar o **[!DNL Schema Library]** dentro [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## Perguntas frequentes
 
@@ -24,7 +24,7 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o sistema X
 
 ### Como faço para adicionar campos a um schema?
 
-É possível adicionar campos a um schema usando uma combinação. Cada mistura é compatível com uma ou mais classes, permitindo que a mistura seja usada em qualquer schema que implemente uma dessas classes compatíveis. Embora o Adobe Experience Platform forneça várias combinações do setor com seus próprios campos predefinidos, você pode adicionar seus próprios campos a um schema criando novas combinações usando a API ou a interface do usuário.
+É possível adicionar campos a um schema usando uma combinação. Cada mistura é compatível com uma ou mais classes, permitindo que a mistura seja usada em qualquer schema que implemente uma dessas classes compatíveis. Enquanto a Adobe Experience Platform fornece várias combinações do setor com seus próprios campos predefinidos, você pode adicionar seus próprios campos a um schema criando novas combinações usando a API ou a interface do usuário.
 
 Para obter detalhes sobre como criar novas combinações na API, consulte [criar um documento de combinação](api/create-mixin.md) no guia do desenvolvedor da [!DNL Schema Registry] API. Se você estiver usando a interface do usuário, consulte o tutorial [do Editor de](./tutorials/create-schema-ui.md)Schemas.
 
@@ -42,7 +42,7 @@ Para obter mais informações, consulte a seção Identificação [do](api/getti
 
 ### Quando um start de schema impede a quebra de alterações?
 
-Alterações de quebra podem ser feitas em um schema, desde que nunca tenham sido usadas na criação de um conjunto de dados ou estejam habilitadas para uso em [!DNL Real-time Customer Profile](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-time Customer Profile], as regras da Evolução [do](schema/composition.md#evolution) Schema se tornam rigorosamente aplicadas pelo sistema.
+É possível fazer alterações de quebra em um schema, desde que ele nunca tenha sido usado na criação de um conjunto de dados ou esteja habilitado para uso no [[!DNL Real-time Customer Perfil]](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-time Customer Profile], as regras da Evolução [do](schema/composition.md#evolution) Schema se tornam rigorosamente aplicadas pelo sistema.
 
 ### Qual é o tamanho máximo de um tipo de campo longo?
 
@@ -52,7 +52,7 @@ Para obter mais informações sobre tipos de campos, consulte a seção [Defini�
 
 ### Como definir identidades para o meu schema?
 
-Em [!DNL Experience Platform]geral, as identidades são usadas para identificar um indivíduo (normalmente uma pessoa individual) independentemente das fontes de dados que estão sendo interpretadas. São definidos em schemas marcando os campos de chave como &quot;Identidade&quot;. Os campos usados frequentemente para identificação incluem endereço de email, número de telefone, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID de CRM e outros campos de ID exclusivos.
+Em [!DNL Experience Platform]geral, as identidades são usadas para identificar um indivíduo (normalmente uma pessoa individual) independentemente das fontes de dados que estão sendo interpretadas. São definidos em schemas marcando os campos de chave como &quot;Identidade&quot;. Os campos usados frequentemente para identificação incluem endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), ID do CRM e outros campos de ID exclusivos.
 
 Os campos podem ser marcados como identidades usando a API ou a interface do usuário.
 
@@ -76,7 +76,7 @@ As identidades primárias são opcionais, já que os schemas podem ter 0 ou 1 de
 
 ### Como ativar um schema para uso em [!DNL Real-time Customer Profile]?
 
-Os Schemas são ativados para uso [!DNL Real-time Customer Profile](../profile/home.md) por meio da adição de uma tag &quot;união&quot;, localizada no `meta:immutableTags` atributo do schema. A habilitação de um schema para uso com [!DNL Profile] pode ser feita usando a API ou a interface do usuário.
+Os schemas estão habilitados para uso no [[!DNL Real-time Customer Perfil]](../profile/home.md) por meio da adição de uma tag &quot;união&quot;, localizada no `meta:immutableTags` atributo do schema. A habilitação de um schema para uso com [!DNL Profile] pode ser feita usando a API ou a interface do usuário.
 
 #### Habilitar um schema existente para [!DNL Profile] usar a API
 
@@ -93,7 +93,7 @@ Para obter mais informações, consulte a seção sobre [uso em Perfil](./tutori
 
 ### Posso editar uma schema de união diretamente?
 
-schemas de União são somente leitura e são gerados automaticamente pelo sistema. Eles não podem ser editados diretamente. schemas de União são criados para uma classe específica quando uma tag &quot;união&quot; é adicionada ao schema que implementa essa classe.
+Schemas de união são somente leitura e são gerados automaticamente pelo sistema. Eles não podem ser editados diretamente. Schemas de união são criados para uma classe específica quando uma tag &quot;união&quot; é adicionada ao schema que implementa essa classe.
 
 Para obter mais informações sobre o união no XDM, consulte a seção [união](./api/unions.md) no guia do desenvolvedor da [!DNL Schema Registry] API.
 

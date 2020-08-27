@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Criar um pipeline de recursos
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
@@ -438,4 +438,4 @@ Quando a pontuação for concluída, o pipeline do recurso deverá estar operaci
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a [!DNL Sensei Machine Learning] API. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando o [!DNL Sensei Machine Learning API](../api/getting-started.md).
+Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a [!DNL Sensei Machine Learning] API. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando a [[!DNL Sensei Machine Learning API]](../api/getting-started.md).

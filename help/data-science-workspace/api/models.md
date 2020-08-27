@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
 title: Modelos
 topic: Developer guide
+description: Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada usando dados históricos e configurações para solucionar um caso de uso comercial.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '846'
 ht-degree: 4%
 
 ---
@@ -281,7 +282,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um modelo por ID
 
-É possível excluir um único Modelo executando uma solicitação de DELETE que inclui a ID do Modelo de público alvo no caminho da solicitação.
+É possível excluir um único Modelo executando uma solicitação de DELETE que inclua a ID do Modelo de público alvo no caminho da solicitação.
 
 **Formato da API**
 

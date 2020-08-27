@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
 title: Fluxo de trabalho ETL
 topic: overview
+description: Várias ferramentas de extração, transformação e carregamento (ETL) podem diferir no formato, mas a maioria expõe funcionalidades semelhantes para auxiliar na combinação de várias fontes de dados.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Os diagramas a seguir fornecem modelos de ações ETL comuns e uma experiência 
 
 As ações ilustradas abaixo são descritas nas etapas descritas no Guia [de Integração](home.md)ETL. Algumas etapas fazem referência a &quot;figuras&quot; específicas, outras descrevem ações semelhantes ao fluxo de trabalho mostrado aqui.
 
-### Figura 1: Configurar o novo conector de Adobe Experience Platform:
+### Figura 1: Configurar o novo conector Adobe Experience Platform:
 
 ![](images/image2.png)
 

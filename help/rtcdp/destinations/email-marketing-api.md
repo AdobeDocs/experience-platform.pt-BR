@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar destinos de marketing por email
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1621'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ Se você preferir usar a interface do usuário no CDP em tempo real do Adobe par
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados no [!DNL Experience Platform].
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados no [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para ativar os dados para destinos de marketing por email no CDP em tempo real do Adobe.
 

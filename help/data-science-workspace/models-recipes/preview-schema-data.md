@@ -1,20 +1,21 @@
 ---
 keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
 solution: Experience Platform
-title: schemas de Pré-visualização e conjuntos de dados
+title: Schemas de pré-visualização e conjuntos de dados
 topic: Tutorial
+description: O documento a seguir descreve a visualização de schemas e conjuntos de dados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
 
-# schemas de Pré-visualização e conjuntos de dados
+# Schemas de pré-visualização e conjuntos de dados
 
-Após a conclusão com êxito do script de inicialização no tutorial [Criar o schema de vendas de varejo e o conjunto de dados](./create-retails-sales-dataset.md) . schemas de saída e conjuntos de dados podem ser exibidos em [!DNL Experience Platform]. Para visualização dos schemas e conjuntos de dados, siga as etapas abaixo:
+Após a conclusão com êxito do script de inicialização no tutorial [Criar o schema de vendas de varejo e o conjunto de dados](./create-retails-sales-dataset.md) . Schemas de saída e conjuntos de dados podem ser exibidos em [!DNL Experience Platform]. Para visualização dos schemas e conjuntos de dados, siga as etapas abaixo:
 
 1. Clique no link **[!UICONTROL Schemas]** localizado na coluna de navegação esquerda e localize o schema de entrada criado pelo script de inicialização. O nome do schema corresponderá ao que foi definido na etapa anterior. `config.yaml` Visualização os detalhes do schema e sua composição clicando nele.
 

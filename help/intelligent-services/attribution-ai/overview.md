@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: Visão geral do Attribution AI
 topic: Attribution AI
+description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Isso pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em viagens de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 translation-type: tm+mt
-source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -34,9 +35,9 @@ O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do Att
 
 O Attribution AI pode ser usado para auxiliar nos seguintes casos de uso de exemplo:
 
-- **relatórios** executivo: Permita que os executivos compreendam o verdadeiro impacto incremental do marketing, tanto por canal, região, SKU etc.
+- **Relatórios** executivo: Permita que os executivos compreendam o verdadeiro impacto incremental do marketing, tanto por canal, região, SKU etc.
 - **Dotação** orçamental: Informe as decisões de alocação de orçamento no canal de marketing.
-- **Otimização** da Campanha: Dentro de cada canal, entenda quais campanhas, criações e palavras-chave estão funcionando melhor para quais SKUs ou Geos. Isso permite que você veja cada canal para que a equipe de marketing possa otimizar suas táticas.
+- **Otimização** da campanha: Dentro de cada canal, entenda quais campanhas, criações e palavras-chave estão funcionando melhor para quais SKUs ou Geos. Isso permite que você veja cada canal para que a equipe de marketing possa otimizar suas táticas.
 - **Atribuição** de funil completo: Entenda o impacto do marketing em toda a jornada do cliente. Por exemplo, assinatura de conta gratuita para conversão paga e além.
 - **Avaliações** do parceiro: Avaliar a eficácia das agências e dos parceiros, com base nos resultados da atribuição.
 

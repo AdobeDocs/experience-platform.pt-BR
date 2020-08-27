@@ -5,9 +5,9 @@ seo-title: Tipos de destinos e Categorias
 description: 'Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
 seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Os destinos de exportação de perfil geram um arquivo que contém perfis e/ou a
 
 #### Destinos de exportação do segmento
 
-Os destinos de exportação do segmento enviam os perfis e os segmentos para os quais eles se qualificaram para plataformas de destino. Esses destinos usam IDs de segmento ou IDs de usuário. Destinos de publicidade como [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) ou [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) são exemplos desses tipos de destinos.
+Os destinos de exportação do segmento enviam os perfis e os segmentos para os quais eles se qualificaram para plataformas de destino. Esses destinos usam IDs de segmento ou IDs de usuário. Os destinos de publicidade como [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) ou [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) são exemplos desses tipos de destinos.
 
 #### Destinos de exportação de perfis e segmentos - visão geral do vídeo
 

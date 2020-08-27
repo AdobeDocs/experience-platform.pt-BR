@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
 title: Guia do usuário do Attribution AI
 topic: User guide
+description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Depois de preencher as informações básicas, clique na lista suspensa **Seleci
 
 Há três tipos diferentes de dados de entrada usados para definir eventos:
 
-- **eventos de conversão:** Objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
+- **Eventos de conversão:** Objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
 - **Janela de pesquisa:** Fornece um período que indica quantos dias antes dos pontos de contato do evento de conversão devem ser incluídos.
 - **Pontos de contato:** eventos de marketing com nível de recipient, indivíduo ou cookie usados para avaliar o impacto numérico ou baseado em receita das conversões.
 

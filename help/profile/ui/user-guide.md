@@ -5,9 +5,9 @@ title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Este documento serve como guia para interagir com [!DNL Real-time Customer Profi
 
 Este guia do usuário requer uma compreensão dos vários [!DNL Experience Platform] serviços envolvidos no gerenciamento [!DNL Real-time Customer Profiles]. Antes de ler este guia do usuário, consulte a documentação dos seguintes serviços:
 
-* [!DNL Real-time Customer Profile](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [!DNL Identity Service](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a ponte de identidades de fontes de dados diferentes à medida que são assimiladas [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Perfil do cliente em tempo real]](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a ponte de identidades de fontes de dados diferentes à medida que são assimiladas [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 ## Visão geral
 
-Na guia [!DNL Experience Platform UI](http://platform.adobe.com), clique em **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia _[!UICONTROL Visão geral]_. Esta guia fornece links para a documentação e vídeos para ajudá-lo a entender e começar a trabalhar com perfis.
+Na [[!DNL Experience Platform UI]](http://platform.adobe.com), clique em **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia _[!UICONTROL Visão geral]_ . Esta guia fornece links para a documentação e vídeos para ajudá-lo a entender e começar a trabalhar com perfis.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -91,7 +91,7 @@ Depois que um valor for inserido, selecione **[!UICONTROL Mostrar perfil]** e um
 
 ### Detalhes do perfil {#profile-detail}
 
-Ao selecionar a ID **[!UICONTROL do]** Perfil, a guia _[!UICONTROL Detalhe]_é aberta. Esta página exibe informações sobre o perfil selecionado, incluindo atributos básicos, identidades vinculadas e canais de contato disponíveis. As informações de perfil exibidas foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual.
+Ao selecionar a ID **[!UICONTROL do]** Perfil, a guia _[!UICONTROL Detalhe]_ é aberta. Esta página exibe informações sobre o perfil selecionado, incluindo atributos básicos, identidades vinculadas e canais de contato disponíveis. As informações de perfil exibidas foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 

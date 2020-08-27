@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Apêndice
 topic: Developer guide
+description: As seções a seguir fornecem informações de referência para vários recursos da API Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '313'
 ht-degree: 4%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 4%
 
 As seções a seguir fornecem informações de referência para vários recursos da [!DNL Sensei Machine Learning] API.
 
-## Parâmetros de Query para recuperação de ativos {#query}
+## Parâmetros de query para recuperação de ativos {#query}
 
 A [!DNL Sensei Machine Learning] API fornece suporte para parâmetros de query com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos estão descritos na tabela a seguir:
 

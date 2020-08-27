@@ -5,9 +5,9 @@ title: Visão geral das caixas de proteção
 topic: overview
 description: As caixas de proteção são partições virtuais em uma única instância do Experience Platform, que permitem uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Na interface [do usuário do](https://platform.adobe.com)Experience Platform, os
 
 ## Caixas de proteção em APIs de Experience Platform
 
-Ao fazer chamadas para APIs de Experience Platform, um nome de caixa de proteção deve ser fornecido no cabeçalho `x-sandbox-name`. Por exemplo, ao fazer uma chamada para o [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para visualização de todos os conjuntos de dados na caixa de proteção Produção, o nome da caixa de proteção (&quot;prod&quot;) é fornecido como um cabeçalho na solicitação da API:
+Ao fazer chamadas para APIs de Experience Platform, um nome de caixa de proteção deve ser fornecido no cabeçalho `x-sandbox-name`. Por exemplo, ao fazer uma chamada para a [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para visualização de todos os conjuntos de dados na caixa de proteção Produção, o nome da caixa de proteção (&quot;prod&quot;) é fornecido como um cabeçalho na solicitação da API:
 
 ```shell
 curl -X GET \
@@ -72,4 +72,4 @@ A API Sandbox permite gerenciar caixas de proteção usando operações RESTful 
 
 Ao ler este documento, o senhor foi apresentado aos conceitos essenciais sobre caixas de areia em Experience Platform. Para obter etapas detalhadas sobre como gerenciar caixas de proteção, consulte o guia [do](ui/overview.md) usuário para a interface do usuário ou o guia [do](./api/getting-started.md) desenvolvedor para a API.
 
-Embora as caixas de proteção sirvam como uma ferramenta valiosa para isolar ambientes da plataforma para sua equipe de desenvolvimento, você também pode gerenciar controles de acesso mais detalhados usando o Adobe Admin Console. Consulte a visão geral [do](../access-control/home.md) controle de acesso para obter mais informações.
+Embora as caixas de proteção sirvam como uma ferramenta valiosa para isolar ambientes da plataforma para sua equipe de desenvolvimento, você também pode gerenciar controles de acesso mais granulares usando o Adobe Admin Console. Consulte a visão geral [do](../access-control/home.md) controle de acesso para obter mais informações.

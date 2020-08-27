@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform
 title: Configuração de uma instância do AI do cliente
 topic: Instance creation
+description: Os Serviços inteligentes fornecem IA do cliente como um serviço Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância da API do cliente.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Os Serviços inteligentes fornecem IA do cliente como um serviço Adobe Sensei s
 
 ## Configurar sua instância {#set-up-your-instance}
 
-Na interface do usuário do Platform, clique em **[!UICONTROL Serviços]** no painel de navegação esquerdo. O navegador **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No container para API do cliente, clique em **[!UICONTROL Abrir]**.
+Na interface do usuário da plataforma, clique em **[!UICONTROL Serviços]** no painel de navegação esquerdo. O navegador **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No container para API do cliente, clique em **[!UICONTROL Abrir]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -48,7 +49,7 @@ Forneça os valores necessários e clique em **[!UICONTROL Avançar]**.
 
 A etapa *Definir meta* é exibida e fornece um ambiente interativo para que você defina visualmente uma meta. Uma meta é composta de um ou mais eventos, nos quais cada ocorrência de evento é baseada na condição que contém. O objetivo de uma instância da API do cliente é determinar a probabilidade de atingir sua meta dentro de um determinado intervalo de tempo.
 
-Clique em **[!UICONTROL Inserir nome]** do campo e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor do público alvo para concluir o evento. eventos adicionais podem ser configurados clicando em **[!UICONTROL Adicionar evento]**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **[!UICONTROL Avançar]**.
+Clique em **[!UICONTROL Inserir nome]** do campo e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor do público alvo para concluir o evento. Eventos adicionais podem ser configurados clicando em **[!UICONTROL Adicionar evento]**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **[!UICONTROL Avançar]**.
 
 ![](../images/user-guide/goal.png)
 
@@ -84,7 +85,7 @@ Ao seguir este tutorial, você configurou com êxito uma instância da IA do cli
 
 ## Recursos adicionais
 
-O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do fluxo de trabalho de configuração para a IA do cliente. Além disso, as práticas recomendadas e exemplos de casos de uso são fornecidos.
+O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do fluxo de trabalho de configuração para a API do cliente. Além disso, as práticas recomendadas e exemplos de casos de uso são fornecidos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 

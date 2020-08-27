@@ -5,9 +5,9 @@ title: Visão geral da ingestão em lote do Adobe Experience Platform
 topic: overview
 description: A API de ingestão em lote permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ A [!DNL Data Ingestion] API permite que você ingira dados como lotes (uma unida
 ### [!DNL Data Ingestion] pré-requisitos
 
 - Os dados a serem carregados devem estar nos formatos Parquet ou JSON.
-- Um conjunto de dados criado no [!DNL Catalog services](../../catalog/home.md).
+- Um conjunto de dados criado no [[!DNL Catalog services]](../../catalog/home.md).
 - O conteúdo do arquivo parquet deve corresponder a um subconjunto do schema do conjunto de dados para o qual está sendo feito upload.
 - Tenha seu Token de acesso exclusivo após a autenticação.
 

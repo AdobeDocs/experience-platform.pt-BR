@@ -5,9 +5,9 @@ title: Filtrar dados do catálogo usando parâmetros de query
 topic: developer guide
 description: A API do serviço de catálogo permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de query de solicitação. Parte das práticas recomendadas para o Catálogo é usar filtros em todas as chamadas de API, já que elas reduzem a carga na API e ajudam a melhorar o desempenho geral.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2084'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 A [!DNL Catalog Service] API permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de query de solicitação. Parte das práticas recomendadas para [!DNL Catalog] o é usar filtros em todas as chamadas de API, já que elas reduzem a carga na API e ajudam a melhorar o desempenho geral.
 
-Esse documento descreve os métodos mais comuns para filtrar [!DNL Catalog] objetos na API. É recomendável consultar esse documento ao ler o guia [do desenvolvedor do](getting-started.md) Catálogo para saber mais sobre como interagir com a [!DNL Catalog] API. Para obter informações mais gerais sobre [!DNL Catalog Service], consulte a visão geral [do](../home.md)catálogo.
+Esse documento descreve os métodos mais comuns para filtrar [!DNL Catalog] objetos na API. É recomendável consultar esse documento ao ler o guia [do desenvolvedor do](getting-started.md) Catálogo para saber mais sobre como interagir com a [!DNL Catalog] API. Para obter informações mais gerais sobre [!DNL Catalog Service], consulte a [[!DNL Catalog] visão geral](../home.md).
 
 ## Limitar objetos retornados
 

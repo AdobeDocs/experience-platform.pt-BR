@@ -5,9 +5,9 @@ title: Criar um schema usando a API de registro do Schema
 topic: tutorials
 description: Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2368'
 ht-degree: 1%
 
 ---
@@ -23,10 +23,10 @@ Este tutorial usa a [!DNL Schema Registry] API para guiá-lo pelas etapas para c
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas à [!DNL Schema Registry] API com êxito. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
 
@@ -347,7 +347,7 @@ As [!DNL Schema Registry] contas para isso permitem que você defina suas própr
 
 Para criar (POST) uma nova combinação, sua solicitação deve incluir um `meta:intendedToExtend` campo que contenha o campo `$id` para as classes base com as quais a combinação é compatível, juntamente com as propriedades que a mistura incluirá.
 
-Todas as propriedades personalizadas devem ser aninhadas sob sua conta `TENANT_ID` para evitar colisões com outras combinações ou campos.
+Todas as propriedades personalizadas devem ser aninhadas em suas contas `TENANT_ID` para evitar colisões com outras combinações ou campos.
 
 **Formato da API**
 
@@ -955,9 +955,9 @@ Executar uma solicitação de GET para pesquisar o schema agora mostra a referê
 
 ### Definir um descritor de identidade
 
-Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados são usados em vários serviços para criar uma visualização única e unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a ingestão de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [!DNL Real-time Customer Profile](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
+Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados são usados em vários serviços para criar uma visualização única e unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a ingestão de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Perfil]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID do CRM ou outros campos de ID exclusivos.
+Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), ID CRM ou outros campos de ID exclusivos.
 
 Considere todos os identificadores exclusivos específicos da sua organização, pois também podem ser bons campos de identidade.
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Você pode lista valores &quot;xdm:namespace&quot; disponíveis ou criar novos valores usando o [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). O valor para &quot;xdm:property&quot; pode ser &quot;xdm:code&quot; ou &quot;xdm:id&quot;, dependendo da &quot;xdm:namespace&quot; usada.
+>Você pode lista valores &quot;xdm:namespace&quot; disponíveis ou criar novos valores usando a [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). O valor para &quot;xdm:property&quot; pode ser &quot;xdm:code&quot; ou &quot;xdm:id&quot;, dependendo da &quot;xdm:namespace&quot; usada.
 
 **Resposta**
 
@@ -1172,7 +1172,7 @@ A resposta é uma lista filtrada de schemas, contendo apenas aqueles que atendem
 
 Ao seguir este tutorial, você compôs com êxito um schema usando misturas padrão e uma mistura definida por você. Agora você pode usar esse schema para criar um conjunto de dados e assimilar dados de registro no Adobe Experience Platform.
 
-O schema Membros de Fidelidade completa, conforme criado neste tutorial, está disponível no apêndice a seguir. Ao observar o schema, você pode ver como as combinações contribuem para a estrutura geral e quais campos estão disponíveis para a ingestão de dados.
+O schema Membros de Fidelidade completa, conforme criado neste tutorial, está disponível no apêndice a seguir. Ao observar o schema, é possível ver como as combinações contribuem para a estrutura geral e quais campos estão disponíveis para a ingestão de dados.
 
 Depois de criar mais de um schema, você pode definir relacionamentos entre eles por meio do uso de descritores de relacionamento. Consulte o tutorial para [definir uma relação entre dois schemas](relationship-api.md) para obter mais informações. Para obter exemplos detalhados de como executar todas as operações (GET, POST, PUT, PATCH e DELETE no registro), consulte o guia [do desenvolvedor do Registro de](../api/getting-started.md) Schemas enquanto trabalha com a API.
 
@@ -1184,7 +1184,7 @@ As informações a seguir complementam o tutorial da API.
 
 Neste tutorial, um schema é composto para descrever os membros de um programa de fidelidade de varejo.
 
-O schema implementa a [!DNL XDM Individual Profile] classe e combina várias misturas; trazendo informações sobre os membros da fidelidade usando as combinações padrão &quot;Detalhes da pessoa&quot; e &quot;Detalhes pessoais&quot;, bem como através de uma combinação &quot;Detalhes da fidelidade&quot; definida durante o tutorial.
+O schema implementa a [!DNL XDM Individual Profile] classe e combina várias misturas; trazendo informações sobre os membros da fidelidade usando as combinações padrão &quot;Detalhes da pessoa&quot; e &quot;Detalhes pessoais&quot;, bem como por meio de uma combinação &quot;Detalhes da fidelidade&quot; definida durante o tutorial.
 
 A seguir, é mostrado o schema de Membros de Fidelidade concluído no formato JSON:
 

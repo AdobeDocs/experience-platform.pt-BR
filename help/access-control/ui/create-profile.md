@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Criar um novo perfil de produto
 topic: user guide
+description: Este documento cobre as etapas necessárias para criar um novo perfil de produto no Adobe Admin Console. Para que o start crie um novo perfil, navegue até a guia Perfis do produto e clique em Novo Perfil.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
@@ -18,13 +19,13 @@ Para que o start crie um novo perfil, navegue até a guia Perfis *[!UICONTROL de
 
 ![botão novo perfil](../images/new-profile-button.png)
 
-A caixa de diálogo _[!UICONTROL Criar novo Perfil]_é exibida, solicitando que você insira um Nome**[!UICONTROL  de ]**Perfil e uma**[!UICONTROL  Descrição ]**para o novo perfil. Se desejar que o nome para exibição do perfil seja diferente, desmarque**[!UICONTROL  Igual ao Nome ]**do Perfil e insira o nome para exibição na caixa de texto exibida. Em Notificações*[!UICONTROL  de ]*usuário, é possível alternar se os usuários serão notificados por email quando forem adicionados ou removidos do perfil.
+A caixa de diálogo _[!UICONTROL Criar novo Perfil]_ é exibida, solicitando que você insira um Nome **[!UICONTROL de]** Perfil e uma **[!UICONTROL Descrição]** para o novo perfil. Se desejar que o nome para exibição do perfil seja diferente, desmarque **[!UICONTROL Igual ao Nome]** do Perfil e insira o nome para exibição na caixa de texto exibida. Em Notificações *[!UICONTROL de]* usuário, é possível alternar se os usuários serão notificados por email quando forem adicionados ou removidos do perfil.
 
-Quando terminar, clique em **[!UICONTROL Avançar]**.
+When finished, click **[!UICONTROL Next]**.
 
 ![detalhes do novo perfil](../images/new-profile-details.png)
 
-A tela seguinte solicita que você escolha quais [!DNL Platform] serviços incluir no perfil. Clique no botão de alternância ao lado de um serviço para desativá-lo. Se um serviço estiver desativado, todas as funções associadas a esse serviço não estarão disponíveis para os usuários atribuídos a esse perfil de produto. Quando terminar, clique em **[!UICONTROL Concluído]**.
+A tela seguinte solicita que você escolha quais [!DNL Platform] serviços incluir no perfil. Clique no botão de alternância ao lado de um serviço para desativá-lo. Se um serviço estiver desativado, todas as funções associadas a esse serviço não estarão disponíveis para os usuários atribuídos a esse perfil de produto. When finished, click **[!UICONTROL Done]**.
 
 ![novos serviços de perfil](../images/new-profile-services.png)
 

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '307'
 ht-degree: 6%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 6%
 
 Novos recursos no Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL Controle de acesso]](#access-control)
+- [[!DNL Sandboxes]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Novos recursos no Adobe Experience Platform:
 | Recurso | Descrição |
 |--- | ---|
 | Permissões | Na guia [!DNL Admin Console], dentro de um perfil de [!DNL Platform] produto, você pode personalizar quais [!DNL Platform] recursos estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: [!UICONTROL Modelagem]De Dados, [!UICONTROL Gestão de dados], Gerenciamento [!UICONTROL De]Perfis, [!UICONTROL Identidades], Monitoramento [!UICONTROL De]Dados, Administração Sandbox, Destinos, Fontes. |
-| Acesso a caixas de proteção | A guia [!UICONTROL _Permissões _]em um perfil de[!DNL Platform]produto pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre[caixas de proteção](#sandboxes)abaixo para obter mais informações. |
+| Acesso a caixas de proteção | A guia [!UICONTROL _Permissões_] em um perfil de [!DNL Platform] produto pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre [caixas de proteção](#sandboxes) abaixo para obter mais informações. |
 
 Para obter mais informações, consulte a visão geral [do](../../access-control/home.md)controle de acesso.
 

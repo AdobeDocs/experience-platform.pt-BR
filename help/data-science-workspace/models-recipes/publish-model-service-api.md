@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Publicar um modelo como um serviço (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1483'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Publicar um modelo como um serviço (API)
 
-Este tutorial aborda o processo de publicação de um modelo como um serviço usando o [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Este tutorial aborda o processo de publicação de um modelo como um serviço usando a [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Introdução
 
-Este tutorial requer uma compreensão do Adobe Experience Platform Data Science Workspace. Antes de iniciar este tutorial, reveja a visão geral [da](../home.md) Data Science Workspace para obter uma introdução de alto nível ao serviço.
+Este tutorial requer um entendimento prático da Adobe Experience Platform Data Science Workspace. Antes de iniciar este tutorial, reveja a visão geral [da](../home.md) Data Science Workspace para obter uma introdução de alto nível ao serviço.
 
 Para acompanhar este tutorial, você deve ter um Mecanismo ML, uma Instância ML e um Experimento existentes. Para obter etapas sobre como criá-las na API, consulte o tutorial sobre como [importar uma receita](./import-packaged-recipe-api.md)empacotada.
 
@@ -41,7 +41,7 @@ A tabela a seguir descreve alguns termos comuns usados neste tutorial:
 | **Instância de aprendizado de máquina (Instância ML)** | Uma instância de um [!DNL Sensei] Mecanismo para um locatário específico, contendo dados, parâmetros e [!DNL Sensei] código específicos. |
 | **Experimento** | Uma entidade de guarda-chuva para executar execuções de experimento de treinamento, marcar execuções de experimento ou ambos. |
 | **Experiência agendada** | Um termo para descrever a automação do treinamento ou a pontuação de Execuções de Experimento, regido por um agendamento definido pelo usuário. |
-| **Execução do experimento** | Uma instância específica de treinamento ou experiência de pontuação. Execuções de vários experimentos de um determinado experimento podem diferir nos valores do conjunto de dados usados para treinamento ou pontuação. |
+| **Execução do experimento** | Uma instância específica de treinamento ou pontuação de Experimentos. Execuções de vários experimentos de um determinado experimento podem diferir nos valores do conjunto de dados usados para treinamento ou pontuação. |
 | **Modelo treinado** | Um modelo de aprendizado de máquina criado pelo processo de experimentação e engenharia de recursos antes de chegar a um modelo validado, avaliado e finalizado. |
 | **Modelo publicado** | Um modelo finalizado e com versão chegou após treinamento, validação e avaliação. |
 | **Serviço de aprendizado de máquina (Serviço ML)** | Uma Instância ML implantada como um Serviço para suportar solicitações sob demanda para treinamento e pontuação usando um terminal de API. Um Serviço ML também pode ser criado usando Execuções de Experimento treinadas existentes. |
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Não tente modificar o `startTime` em treinamentos agendados existentes e trabalhos de pontuação. Se for `startTime` necessário modificar, considere publicar o mesmo Modelo e reprogramar o treinamento e a pontuação de trabalhos.
+>Não tente modificar o `startTime` em treinamentos agendados existentes e trabalhos de pontuação. Se for `startTime` necessário modificar, considere publicar o mesmo Modelo e reagendar o treinamento e a pontuação de trabalhos.
 
 **Resposta**
 

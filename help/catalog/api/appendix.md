@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: Apêndice do guia do desenvolvedor do serviço de catálogo
 topic: developer guide
+description: Este documento contém informações adicionais para ajudá-lo a trabalhar com a API de catálogo no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -106,7 +107,7 @@ POST /
 
 A solicitação a seguir cria um novo conjunto de dados e, em seguida, cria visualizações relacionadas para esse conjunto de dados. Este exemplo demonstra o uso de linguagem de modelo para acessar valores retornados em chamadas anteriores para uso em chamadas subsequentes.
 
-Por exemplo, se você deseja fazer referência a um valor que foi retornado de uma subsolicitação anterior, é possível criar uma referência no formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, conforme demonstrado abaixo). É possível fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de subsolicitação anterior usando esses modelos.
+Por exemplo, se você deseja fazer referência a um valor que foi retornado de uma subsolicitação anterior, é possível criar uma referência no formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, como demonstrado abaixo). É possível fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de subsolicitação anterior usando esses modelos.
 
 >[!NOTE]
 >
@@ -147,7 +148,7 @@ curl -X POST \
 | `id` | ID fornecida pelo usuário que está anexada ao objeto de resposta para que você possa corresponder solicitações a respostas. [!DNL Catalog] não armazena esse valor e simplesmente o retorna na resposta para fins de referência. |
 | `resource` | O caminho do recurso relativo à raiz da [!DNL Catalog] API. O protocolo e o domínio não devem fazer parte deste valor e devem receber o prefixo &quot;/&quot;. <br/><br/> Ao usar PATCH ou DELETE como a ID da subsolicitação `method`, inclua a ID do objeto no caminho do recurso. Para não ser confundido com o fornecido pelo usuário, `id`o caminho do recurso usa a ID do próprio [!DNL Catalog] objeto (por exemplo, `resource: "/dataSets/1234567890"`). |
 | `method` | O nome do método (GET, PUT, POST, PATCH ou DELETE) relacionado à ação realizada na solicitação. |
-| `body` | O documento JSON que normalmente seria transmitido como carga em uma solicitação POST, PUT ou PATCH. Essa propriedade não é necessária para solicitações de GET ou. |
+| `body` | O documento JSON que normalmente seria transmitido como carga em uma solicitação POST, PUT ou PATCH. Essa propriedade não é necessária para solicitações de GET ou DELETE. |
 
 **Resposta**
 

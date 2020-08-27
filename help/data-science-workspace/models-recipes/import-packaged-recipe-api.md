@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importar uma fórmula empacotada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Importar uma fórmula empacotada (API)
 
-Este tutorial usa o para [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) criar um [Mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
+Este tutorial usa a [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para criar um [Mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
 
 Antes de começar, é importante observar que a Adobe Experience Platform [!DNL Data Science Workspace] usa termos diferentes para fazer referência a elementos semelhantes dentro da API e da interface do usuário. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correspondentes:
 

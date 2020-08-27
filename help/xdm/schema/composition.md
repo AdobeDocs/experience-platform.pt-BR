@@ -5,9 +5,9 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2811'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Os schemas de registro e de série de tempo contêm um mapa de identidades (`xdm
 
 Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante que, ao pensar nos schemas, se pense nas identidades dos clientes e nos campos que podem ser usados para identificar um assunto, independentemente de onde os dados venham.
 
-Para ajudar nesse processo, os campos principais dentro dos schemas podem ser marcados como identidades. Após a ingestão dos dados, os dados nesses campos são inseridos no &quot;Gráfico[!UICONTROL de]identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [!DNL Real-time Customer Profile](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
+Para ajudar nesse processo, os campos principais dentro dos schemas podem ser marcados como identidades. Após a ingestão dos dados, os dados nesses campos são inseridos no &quot;Gráfico[!UICONTROL de]identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Perfil]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
+Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), ID CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
 
 É importante pensar nas identidades dos clientes durante a fase de planejamento do schema, a fim de ajudar a garantir que os dados estejam sendo reunidos para construir o perfil mais robusto possível. Consulte a visão geral do Serviço [de identidade da](../../identity-service/home.md) Adobe Experience Platform para saber mais sobre como as informações de identidade podem ajudá-lo a fornecer experiências digitais aos seus clientes.
 
@@ -123,7 +123,7 @@ Uma vez que a manutenção da compatibilidade com versões anteriores é crucial
 
 ### Schemas e ingestão de dados
 
-Para ingerir dados no [!DNL Experience Platform], um conjunto de dados deve ser criado primeiro. Os conjuntos de dados são os elementos básicos para a transformação e o rastreamento de dados para [!DNL Catalog Service](../../catalog/home.md)e geralmente representam tabelas ou arquivos que contêm dados assimilados. Todos os conjuntos de dados são baseados em schemas XDM existentes, que fornecem restrições para o que os dados ingeridos devem conter e como devem ser estruturados. Consulte a visão geral da [Adobe Experience Platform Data Ingsion](../../ingestion/home.md) para obter mais informações.
+Para ingerir dados no [!DNL Experience Platform], um conjunto de dados deve ser criado primeiro. Os conjuntos de dados são os elementos básicos para a transformação e o rastreamento de dados para [[!DNL Catalog Service]](../../catalog/home.md)e geralmente representam tabelas ou arquivos que contêm dados assimilados. Todos os conjuntos de dados são baseados em schemas XDM existentes, que fornecem restrições para o que os dados ingeridos devem conter e como devem ser estruturados. Consulte a visão geral da [Adobe Experience Platform Data Ingsion](../../ingestion/home.md) para obter mais informações.
 
 ## Elementos básicos de um schema
 
@@ -194,11 +194,11 @@ Os intervalos válidos desses tipos escalares podem ser restringidos ainda mais 
 
 Algumas operações de dados usadas por serviços e aplicativos de downstream impõem restrições em tipos de campo específicos. Os serviços afetados incluem, entre outros:
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
+* [[!Segmentação DNL]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 Antes de criar um schema para uso em serviços downstream, reveja a documentação apropriada para esses serviços, a fim de entender melhor os requisitos de campo e as restrições para as operações de dados para as quais o schema se destina.
 

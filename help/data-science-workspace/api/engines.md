@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
 solution: Experience Platform
 title: Motores
 topic: Developer guide
+description: Os mecanismos são a base para Modelos de aprendizado de máquina na Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos, ou ambos.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1147'
 ht-degree: 3%
 
 ---
@@ -103,7 +104,7 @@ curl -X POST \
 
 **Solicitar PySpark/Scala**
 
-Ao fazer uma solicitação de receitas do PySpark, o e `executionType` é `type` &quot;PySpark&quot;. Ao solicitar receitas Scala, o e `executionType` `type` é &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
+Ao fazer uma solicitação de receitas do PySpark, o e `executionType` é `type` &quot;PySpark&quot;. Ao fazer um pedido para receitas Scala, o e `executionType` é `type` &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
 
 ```shell
 curl -X POST \

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina
 topic: Tutorial
+description: Este documento fornece um tutorial passo a passo para aprimorar o Perfil do cliente em tempo real com insights de aprendizado da máquina, as etapas são divididas nas seções a seguir, cria um schema de saída/conjunto de dados, configura um schema de saída/conjunto de dados e cria segmentos usando o Construtor de segmentos.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1230'
 ht-degree: 0%
 
 ---

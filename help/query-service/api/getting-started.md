@@ -5,9 +5,9 @@ title: Guia do desenvolvedor do Query Service
 topic: query templates
 description: Este guia do desenvolvedor fornece etapas para executar várias operações na API de serviço do Query Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '380'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ Este guia do desenvolvedor fornece etapas para executar várias operações na A
 
 Este guia exige uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos com o uso [!DNL Query Service].
 
-- [!DNL Query Service](../home.md): Fornece a capacidade de query de conjuntos de dados e captura os query resultantes como novos conjuntos de dados em [!DNL Experience Platform].
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [[!Serviço de Query DNL]](../home.md): Fornece a capacidade de query de conjuntos de dados e captura os query resultantes como novos conjuntos de dados em [!DNL Experience Platform].
+- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para usar com êxito [!DNL Query Service] a API.
 

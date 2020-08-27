@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Recuperar lotes com falha
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
 
 # Recuperando lotes com falha usando a API
 
-O Adobe Experience Platform fornece dois métodos para fazer upload e ingestão de dados. Você pode usar a ingestão em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite inserir seus dados para [!DNL Platform] usar pontos de extremidade de streaming em tempo real.
+A Adobe Experience Platform fornece dois métodos para fazer upload e ingestão de dados. Você pode usar a ingestão em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite inserir seus dados para [!DNL Platform] usar pontos de extremidade de streaming em tempo real.
 
 Este tutorial aborda as etapas para recuperar informações sobre um lote com falha usando [!DNL Data Ingestion] APIs.
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [!DNL Data Ingestion](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
+- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!Ingestão de Dados DNL]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API
 
@@ -209,7 +209,7 @@ Esse erro é exibido se a ID de organização IMS estiver ausente na carga for i
 }
 ```
 
-### schema XDM ausente
+### Schema XDM ausente
 
 Esse erro será exibido se o `schemaRef` para o `xdmMeta` estiver ausente.
 

@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
-title: Guia de solução de problemas do Controle de acesso
+title: Guia de solução de problemas do controle de acesso
 topic: troubleshooting guide
+description: Este documento fornece respostas para perguntas frequentes sobre o controle de acesso no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
 
-# Guia de solução de problemas do Controle de acesso
+# Guia de solução de problemas do controle de acesso
 
 Este documento fornece respostas para perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para questões e solução de problemas relacionados a outros [!DNL Platform] serviços, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
 

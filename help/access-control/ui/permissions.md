@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: Gerenciar permissões de um perfil de produto
 topic: user guide
+description: O controle de acesso no Adobe Experience Platform permite gerenciar funções e permissões para vários recursos da plataforma usando o Adobe Admin Console. Este documento serve como um guia para gerenciar permissões de um perfil de produto para Plataforma.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 2%
+source-wordcount: '319'
+ht-degree: 1%
 
 ---
 

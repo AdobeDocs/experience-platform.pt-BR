@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Procurar a área de trabalho do controle de acesso
 topic: user guide
+description: Este documento cobre as etapas necessárias para navegar pela área de trabalho do controle de acesso. Para configurar o controle de acesso para o Experience Platform pelo Adobe Admin Console, você deve ser um administrador de uma organização IMS que tenha subscrição para o Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6f599c0c6d8b349ebfb8cc0523543904fd628f8d
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 5%
+source-wordcount: '301'
+ht-degree: 4%
 
 ---
 

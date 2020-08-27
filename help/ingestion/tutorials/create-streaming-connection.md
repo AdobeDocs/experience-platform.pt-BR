@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar uma conexão de streaming usando a API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '642'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # Criação de uma conexão de streaming usando a API
 
-Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das [!DNL Ingestion Service] APIs de dados do Adobe Experience Platform.
+Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das [!DNL Ingestion Service] APIs de dados da Adobe Experience Platform.
 
 ## Introdução
 
-O registro da conexão de transmissão contínua é necessário para que os dados de transmissão de start sejam enviados para o Adobe Experience Platform. Ao registrar uma conexão de streaming, é necessário fornecer alguns detalhes principais, como a fonte de dados de streaming.
+O registro de conexão de transmissão contínua é necessário para que os dados de transmissão de start para a Adobe Experience Platform sejam transmitidos. Ao registrar uma conexão de streaming, é necessário fornecer alguns detalhes principais, como a fonte de dados de streaming.
 
-Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Platform.
+Depois de registrar uma conexão de streaming, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para a Plataforma.
 
-Este tutorial também exige um conhecimento prático de vários serviços de Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial também requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
+- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de ingestão de streaming.
 
@@ -184,6 +184,6 @@ Esta seção fornece informações complementares sobre a criação de conexões
 
 ### Conexões de streaming autenticadas
 
-A coleta de dados autenticada permite que serviços de Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando Tokens de acesso IMS como parte da solicitação de POST - se o token IMS for válido, os registros serão marcados como coletados de fontes confiáveis.
+A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando Tokens de acesso IMS como parte da solicitação de POST - se o token IMS for válido, os registros serão marcados como coletados de fontes confiáveis.
 
 Para obter mais informações sobre como criar uma conexão de streaming autenticada, consulte o tutorial [](create-authenticated-streaming-connection.md)Criar uma conexão de streaming autenticada.

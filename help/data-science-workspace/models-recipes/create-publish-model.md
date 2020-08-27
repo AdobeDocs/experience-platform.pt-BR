@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e publicar uma apresentação de modelo de aprendizado de máquina
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ![](../images/models-recipes/model-walkthrough/objective.png)
 
-Fingir que você possui um site de varejo online. Quando seus clientes fazem compras em seu site de varejo, você deseja apresentar a eles recomendações personalizadas de produtos para expor uma variedade de outros produtos suas ofertas comerciais. Durante a existência de seu site, você coletou continuamente os dados do cliente e deseja, de alguma forma, usar esses dados para gerar recomendações personalizadas de produtos.
+Fingir que você possui um site de varejo online. Quando seus clientes fazem compras em seu site de varejo, você deseja apresentar a eles recomendações personalizadas de produtos para expor uma variedade de outros produtos suas ofertas comerciais. Ao longo da existência de seu site, você coletou continuamente os dados do cliente e deseja, de alguma forma, usar esses dados para gerar recomendações personalizadas de produtos.
 
 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fornece os meios para atingir sua meta usando a Receita [Recommendations de](../pre-built-recipes/product-recommendations.md)produto pré-criada. Siga este tutorial para ver como você pode acessar e entender seus dados de varejo, criar e otimizar um Modelo de aprendizado da máquina e gerar insights no [!DNL Data Science Workspace].
 
@@ -45,10 +45,10 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 * Baixe os três [!DNL Jupyter Notebook] arquivos necessários do <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, eles serão usados para demonstrar o [!DNL JupyterLab] fluxo de trabalho no [!DNL Data Science Workspace].
 
 * Um entendimento prático dos seguintes conceitos-chave usados neste tutorial:
-   * [!DNL Experience Data Model](../../xdm/home.md): O esforço de padronização realizado pelo Adobe para definir schemas padrão, como [!DNL Profile] e ExperienceEvent, para o Gerenciamento de experiência do cliente.
+   * [[!DNL Experience Data Model]](../../xdm/home.md): O esforço de padronização realizado pelo Adobe para definir schemas padrão, como [!DNL Profile] e ExperienceEvent, para o Gerenciamento de experiência do cliente.
    * Conjuntos de dados: Uma construção de armazenamento e gerenciamento para dados reais. Uma instância física instanciada de um Schema [](../../xdm/schema/field-dictionary.md)XDM.
    * Lotes: Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade.
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é uma interface baseada na Web de código aberto para o Project [!DNL Jupyter] e está totalmente integrada no [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é uma interface baseada na Web de código aberto para o Project [!DNL Jupyter] e está totalmente integrada ao [!DNL Experience Platform].
 
 ## Preparar seus dados {#prepare-your-data}
 
@@ -67,7 +67,7 @@ Os outros conjuntos de dados foram pré-preenchidos com lotes para fins de visua
 
 | Nome do conjunto de dados | Esquema | Descrição |
 | ----- | ----- | ----- |
-| PostValues do conjunto de dados dourados | schema do conjunto de dados Golden | [!DNL Analytics] dados de origem de seu site |
+| PostValues do conjunto de dados dourados | Schema do conjunto de dados Golden | [!DNL Analytics] dados de origem de seu site |
 | Conjunto de dados de entrada da Recommendations | Schema Recommendations Input | Os [!DNL Analytics] dados são transformados em um conjunto de dados de treinamento usando um pipeline de recursos. Esses dados são usados para treinar o Modelo de aprendizado da máquina Recommendations do Produto. `itemid` e `userid` correspondem a um produto comprado por esse cliente. |
 | Conjunto de dados de saída Recommendations | Schema de saída Recommendations | O conjunto de dados para o qual os resultados da pontuação são armazenados, conterá a lista de produtos recomendados para cada cliente. |
 
@@ -151,7 +151,7 @@ A etapa final do fluxo de trabalho da Data Science é operacionalizar seu modelo
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
-### insights pontuados pela Visualização
+### insights pontuados pela visualização
 
 Depois que a execução da pontuação for concluída com êxito, você poderá pré-visualização os resultados e visualização os insights gerados.
 

@@ -5,7 +5,7 @@ title: Guia do usuário do JupyterLab
 topic: Overview
 description: O JupyterLab é uma interface de usuário baseada na Web para o Project Júpitter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com notebooks, códigos e dados de Júpiter. Este documento fornece uma visão geral do JupyterLab e seus recursos, bem como instruções para executar ações comuns.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 11%
@@ -75,7 +75,7 @@ A [!DNL JupyterLab] interface consiste em uma barra de menus, uma barra lateral 
 
 **Barra de menus**
 
-A barra de menus na parte superior da interface tem menus de nível superior que exibem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
+A barra de menus na parte superior da interface tem menus de nível superior que expõem ações disponíveis em [!DNL JupyterLab] seus atalhos de teclado:
 
 * **Arquivo:** Ações relacionadas a arquivos e diretórios
 * **Editar:** Ações relacionadas à edição de documentos e outras atividades
@@ -155,8 +155,8 @@ O *Launcher* personalizado fornece modelos de notebook úteis para seus kernels 
 | --- | --- |
 | Em branco | Um arquivo de bloco de anotações vazio. |
 | Início | Um notebook pré-preenchido demonstrando a exploração de dados usando dados de amostra. |
-| Vendas a varejo | Um notebook pré-preenchido com a Receita <a href="https://adobe.ly/2wOgO3L" target="_blank">de vendas de</a> varejo usando dados de amostra. |
-| Construtor de receita | Um modelo de bloco de anotações para criar uma receita em [!DNL JupyterLab]. Ele é pré-preenchido com código e comentário que demonstra e descreve o processo de criação da receita. Consulte o tutorial <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">do</a> notebook para obter uma apresentação detalhada. |
+| Vendas a varejo | Um notebook pré-preenchido com a receita [de vendas de](https://adobe.ly/2wOgO3L) varejo usando dados de amostra. |
+| Construtor de receita | Um modelo de bloco de anotações para criar uma receita em [!DNL JupyterLab]. Ele é pré-preenchido com código e comentário que demonstra e descreve o processo de criação da receita. Consulte o tutorial [do](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) notebook para obter uma apresentação detalhada. |
 | [!DNL Query Service] | Um notebook pré-preenchido demonstrando o uso de [!DNL Query Service] diretamente em [!DNL JupyterLab] workflows de amostra fornecidos que analisam dados em escala. |
 | Eventos XDM | Um notebook pré-preenchido demonstrando a exploração de dados nos dados do Evento da experiência de pós-valor, com foco nos recursos comuns em toda a estrutura de dados. |
 | Query XDM | Um notebook pré-preenchido demonstrando query comerciais de amostra sobre os dados do Evento Experience. |
@@ -455,9 +455,9 @@ Um comando mágico personalizado [!DNL Data Science Workspace] para ler ou escre
 
 ### dados do query usando [!DNL Query Service] em [!DNL Python]
 
-[!DNL JupyterLab] on [!DNL Platform] permite que você use o SQL em um [!DNL Python] notebook para acessar dados pelo <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. O acesso aos dados por meio [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos tempos de execução superiores. Observe que consultar dados usando [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
+[!DNL JupyterLab] on [!DNL Platform] permite que você use o SQL em um [!DNL Python] notebook para acessar dados pelo [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). O acesso aos dados por meio [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos tempos de execução superiores. Observe que consultar dados usando [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
 
-Antes de usar [!DNL Query Service] em [!DNL JupyterLab], certifique-se de que você tenha uma compreensão funcional da sintaxe <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] do</a>SQL.
+Antes de usar [!DNL Query Service] em [!DNL JupyterLab], certifique-se de ter uma compreensão funcional da sintaxe [[!DNL Query Service] ](https://www.adobe.com/go/query-service-sql-syntax-en)SQL.
 
 A consulta de dados usando [!DNL Query Service] requer que você forneça o nome do conjunto de dados do público alvo. Você pode gerar as células de código necessárias localizando o conjunto de dados desejado usando o **Data Explorer**. Clique com o botão direito do mouse na listagem do conjunto de dados e clique em Dados do **Query no Bloco de notas** para gerar as duas células de código a seguir no seu bloco de notas:
 

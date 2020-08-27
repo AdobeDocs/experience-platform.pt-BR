@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Impor políticas de uso de dados usando a API do Serviço de Política
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Impor políticas de uso de dados usando a [!DNL Policy Service] API
 
-Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar o [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
+Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 
 >[!NOTE]
 >

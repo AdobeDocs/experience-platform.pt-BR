@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
 solution: Experience Platform
 title: Pesquisar vários objetos
 topic: developer guide
+description: Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornecerá um atalho simples para solicitar vários objetos do mesmo tipo. É possível usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista de IDs separada por vírgulas.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 1%
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 

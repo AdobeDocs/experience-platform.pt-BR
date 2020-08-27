@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1908'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 2%
 **Data de lançamento: 18 de novembro de 2019**
 
 Novos recursos no Adobe Experience Platform:
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!Destinos DNL]](#destinations)
+* [[!Fontes DNL]](#sources)
 
 Atualizações dos recursos existentes:
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile)
-* [!DNL Segmentation Service](#segmentation)
+* [[!DNL Data Science Workspace]](#dsw)
+* [Sistema do [!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Perfil do cliente em tempo real]](#profile)
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
@@ -112,7 +112,7 @@ A Adobe Experience Platform [!DNL Data Science Workspace] permite que os cientis
 | Recurso | Descrição |
 | -----------| ---------- |
 | Acesso aos dados usando o [!DNL Platform] SDK | As receitas pré-criadas e os notebooks de iniciação [!DNL Python] agora usam o [!DNL Platform] SDK para acessar dados. |
-| Suporte para caixas de proteção | Suporte para a futura funcionalidade da caixa de proteção (atualmente em beta), incluindo a capacidade de isolar notebooks e Fórmulas em caixas de proteção de desenvolvimento ou produção. Consulte a visão geral [das](../../sandboxes/home.md) caixas de proteção para obter mais informações. |
+| Suporte para caixas de proteção | Suporte para a funcionalidade da caixa de proteção futura (atualmente em beta), incluindo a capacidade de isolar notebooks e Fórmulas em caixas de proteção de desenvolvimento ou produção. Consulte a visão geral [das](../../sandboxes/home.md) caixas de proteção para obter mais informações. |
 
 Para obter mais informações, consulte a visão geral [da](../../data-science-workspace/home.md)Data Science Workspace.
 

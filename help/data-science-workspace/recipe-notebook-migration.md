@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: Guias de migração de receitas e notebooks
 topic: Tutorial
+description: Os guias a seguir descrevem as etapas e informações necessárias para migrar receitas e notebooks existentes na Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3330'
 ht-degree: 0%
 
 ---

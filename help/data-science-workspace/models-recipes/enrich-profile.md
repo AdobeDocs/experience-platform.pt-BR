@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -26,14 +26,14 @@ Este documento fornece um tutorial passo a passo para enriquecer [!DNL Real-time
 
 Este tutorial requer uma compreensão funcional dos vários aspectos de [!DNL Adobe Experience Platform] envolvimento na assimilação de [!DNL Profile] dados e na criação de segmentos. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [!DNL Identity Service](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de fontes de dados diferentes no Platform.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+* [[!DNL Perfil do cliente em tempo real]](../../rtcdp/overview.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de diferentes fontes de dados na Plataforma.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 
 Além dos documentos mencionados acima, é altamente recomendável que você também reveja os seguintes guias sobre schemas e o Editor de Schemas:
 
 * [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Descreve schemas XDM, blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados em [!DNL Experience Platform].
-* [Tutorial](../../xdm/tutorials/create-schema-ui.md)do Editor de Schemas: Fornece instruções detalhadas para a criação de schemas usando o Editor de Schemas em [!DNL Experience Platform].
+* [Tutorial](../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Fornece instruções detalhadas para a criação de schemas usando o Editor de Schemas em [!DNL Experience Platform].
 
 ## Criar um schema de saída e um conjunto de dados {#create-an-output-schema-and-dataset}
 

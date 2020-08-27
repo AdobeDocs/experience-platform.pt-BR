@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do desenvolvedor do Serviço de segmentação
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}
 
-O Adobe Experience Platform [!DNL Segmentation Service] permite que você crie segmentos e gere audiências no Adobe Experience Platform a partir de seus [!DNL Real-time Customer Profile] dados.
+A Adobe Experience Platform [!DNL Segmentation Service] permite que você crie segmentos e gere audiências no Adobe Experience Platform a partir de seus [!DNL Real-time Customer Profile] dados.
 
 O guia do desenvolvedor requer uma compreensão funcional dos diversos [!DNL Experience Platform] serviços envolvidos no uso [!DNL Segmentation Service].
 
-- [!DNL Segmentation](../home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [[!Segmentação DNL]](../home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
+- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 - [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para trabalhar com a [!DNL Segmentation] API.

@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science W
 solution: Experience Platform
 title: Guia do desenvolvedor do SDK
 topic: Overview
+description: O SDK de criação de modelo permite desenvolver Fórmulas de aprendizado e Pipelines de Recursos personalizados de máquina que podem ser usados no Adobe Experience Platform Data Science Workspace, fornecendo modelos implementáveis no PySpark e no Spark (Scala).
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '964'
 ht-degree: 1%
 
 ---
@@ -37,7 +38,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe PySpark Data Load
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Carregar e retornar dados do Platform como um DataFrame dos Paindas</p>
+                <p>Carregar e retornar dados da plataforma como um DataFrame dos painéis</p>
             </td>
             <td>
                 <ul>
@@ -65,7 +66,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe de [!DNL Spark] C
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Carregar e retornar dados do Platform como um DataFrame</p>
+                <p>Carregar e retornar dados da plataforma como um DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -211,7 +212,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe do [!DNL PySpark]
         <tr>
             <td>
                 <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
-                <p>Receber dados de saída como um DataFrame e armazená-los em um conjunto de dados Platform</p>
+                <p>Receber dados de saída como um DataFrame e armazená-los em um conjunto de dados da plataforma</p>
             </td>
             <td>
                 <ul>
@@ -239,7 +240,7 @@ A tabela a seguir descreve os métodos abstratos de uma classe do [!DNL Spark] D
         <tr>
             <td>
                 <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
-                <p>Receber dados de saída como um DataFrame e armazená-los em um conjunto de dados Platform</p>
+                <p>Receber dados de saída como um DataFrame e armazená-los em um conjunto de dados da plataforma</p>
             </td>
             <td>
                 <ul>

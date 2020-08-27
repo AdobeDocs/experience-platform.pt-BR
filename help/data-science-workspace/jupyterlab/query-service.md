@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Serviço de Query em Jupyter notebook
+title: Serviço de query em Jupyter notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
 
 
-# Serviço de Query em Jupyter notebook
+# Serviço de query em Jupyter notebook
 
 [!DNL Adobe Experience Platform] permite usar a Linguagem de Query Estruturada (SQL) em [!DNL Data Science Workspace] integrando-se [!DNL Query Service] em [!DNL JupyterLab] um recurso padrão.
 
@@ -27,14 +27,14 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 - Um [!DNL Adobe Analytics] conjunto de dados
 
 - Um entendimento prático dos seguintes conceitos-chave usados neste tutorial:
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) e Sistema XDM]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service Sintaxe SQL]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Acesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Em [!DNL Experience Platform](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** na coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
+1. Em [[!DNL Experience Platform]](https://platform.adobe.com), navegue até **[!UICONTROL Notebooks]** na coluna de navegação esquerda. Aguarde um momento para o JupyterLab carregar.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -126,7 +126,7 @@ ORDER  BY Hour;
 
 No query acima, o público alvo `_acp_year` na cláusula `WHERE` é definido como o valor de `target_year`. Inclua variáveis em query SQL, contendo-as entre chaves (`{}`).
 
-A primeira linha do query contém a variável opcional `hourly_visitor`. Os resultados do Query serão armazenados nessa variável como um dataframe de Pandas. Armazenar resultados em um dataframe permite visualizar posteriormente os resultados do query usando um [!DNL Python] pacote desejado. Execute o seguinte [!DNL Python] código em uma nova célula para gerar um gráfico de barras:
+A primeira linha do query contém a variável opcional `hourly_visitor`. Os resultados do query serão armazenados nessa variável como um dataframe de Pandas. Armazenar resultados em um dataframe permite visualizar posteriormente os resultados do query usando um [!DNL Python] pacote desejado. Execute o seguinte [!DNL Python] código em uma nova célula para gerar um gráfico de barras:
 
 ```python
 trace = go.Bar(

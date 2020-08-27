@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
 title: Serviços
 topic: Developer guide
+description: Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso essencial do MLServices é a capacidade de automatizar o treinamento e a pontuação de acordo com o agendamento. As execuções de treinamento programadas podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '872'
 ht-degree: 2%
 
 ---
@@ -73,7 +74,7 @@ curl -X POST \
 | `scoringSchedule` | Um agendamento para execuções de pontuação automatizadas. Se essa propriedade for definida, o MLService executará automaticamente execuções de pontuação de acordo com uma programação. |
 | `scoringSchedule.startTime` | Um carimbo de data e hora para o qual as execuções de pontuação programadas começarão. |
 | `scoringSchedule.endTime` | Um carimbo de data e hora para o qual as execuções de pontuação programadas terminarão. |
-| `scoringSchedule.cron` | Uma expressão cron que define a frequência das execuções de pontuação automatizada. |
+| `scoringSchedule.cron` | Uma expressão cron que define a frequência de execuções de pontuação automatizadas. |
 
 **Resposta**
 
@@ -288,7 +289,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um MLService
 
-É possível excluir um único MLService executando uma solicitação de DELETE que inclui a ID do MLService do público alvo no caminho da solicitação.
+Você pode excluir um único MLService executando uma solicitação de DELETE que inclui a ID do público alvo MLService no caminho da solicitação.
 
 **Formato da API**
 
@@ -323,7 +324,7 @@ curl -X DELETE \
 
 ## Excluir MLServices por ID de instância MLI
 
-Você pode excluir todos os MLServices pertencentes a uma determinada instância MLI, executando uma solicitação de DELETE que especifica uma ID de instância MLI como parâmetro de query.
+Você pode excluir todos os MLServices pertencentes a uma determinada MLInposition executando uma solicitação de DELETE que especifica uma ID de instância MLI como parâmetro de query.
 
 **Formato da API**
 

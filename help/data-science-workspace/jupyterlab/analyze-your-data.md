@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analise seus dados usando notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ Este tutorial foca em como usar notebooks Júpiter, criados na Data Science Work
 
 São introduzidos os seguintes conceitos:
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)é a interface baseada na Web da próxima geração para o Project Júpiter, e é totalmente integrada ao projeto[!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface baseada na Web da próxima geração do Project Júpitter e está totalmente integrado ao Project [!DNL Adobe Experience Platform].
 - **Lotes:** Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. Novos lotes são criados quando os dados são adicionados a um conjunto de dados.
-- **SDK de acesso a dados (obsoleto):** O SDK de acesso a dados agora está obsoleto. Use o [!DNL Platform SDK](../authoring/platform-sdk.md) guia, por favor.
+- **SDK de acesso a dados (obsoleto):** O SDK de acesso a dados agora está obsoleto. Use o guia [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
 
 ## Explore notebooks na Data Science Workspace
 
@@ -32,7 +32,7 @@ A Data Science Workspace permite que os usuários criem [!DNL Jupyter Notebooks]
 
 Ao inicializar [!DNL JupyterLab], nos é apresentada uma interface baseada na Web para notebooks Júpiter. Dependendo do tipo de notebook escolhido, um kernel correspondente será iniciado.
 
-Ao comparar qual ambiente usar, devemos considerar as limitações de cada serviço. Por exemplo, se estivermos usando a biblioteca de [pandas](https://pandas.pydata.org/) com [!DNL Python], como usuário comum, o limite de RAM é de 2 GB. Mesmo como um usuário avançado, estaríamos limitados a 20 GB de RAM. Ao lidar com computação de maior porte, faria sentido usar [!DNL Spark] quais ofertas de 1,5 TB são compartilhadas com todas as instâncias de notebook.
+Ao comparar qual ambiente usar, devemos considerar as limitações de cada serviço. Por exemplo, se estivermos usando a biblioteca de [pandas](https://pandas.pydata.org/) com [!DNL Python], como usuário comum, o limite de RAM é de 2 GB. Mesmo como um usuário avançado, estaríamos limitados a 20 GB de RAM. Se você estiver lidando com computadores maiores, faria sentido usar [!DNL Spark] quais ofertas de 1,5 TB são compartilhadas com todas as instâncias de notebook.
 
 Por padrão, a fórmula do Tensorflow funciona em um cluster de GPU e o Python é executado em um cluster de CPU.
 
@@ -52,7 +52,7 @@ A receita de vendas de varejo é um exemplo independente que usa o mesmo conjunt
 
 >[!NOTE]
 >
->O `data_access_sdk_python` está obsoleto e não é mais recomendado. Consulte o tutorial de [conversão do SDK de acesso a dados para o SDK](../authoring/platform-sdk.md) do Platform para converter seu código. As mesmas etapas abaixo ainda se aplicam a este tutorial.
+>O `data_access_sdk_python` está obsoleto e não é mais recomendado. Consulte o tutorial de [conversão do SDK de acesso aos dados para SDK](../authoring/platform-sdk.md) da plataforma para converter seu código. As mesmas etapas abaixo ainda se aplicam a este tutorial.
 
 Nós iremos acessar dados internamente de [!DNL Adobe Experience Platform] e dados externamente. Usaremos a `data_access_sdk_python` biblioteca para acessar dados internos, como conjuntos de dados e schemas XDM. Para dados externos, usaremos a biblioteca de [!DNL Python] pandas.
 
@@ -70,7 +70,7 @@ Finalmente, podemos dar uma olhada em como são os nossos dados. Podemos usar `d
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### [!DNL Experience Platform] data
+#### [!DNL Experience Platform] dados
 
 Agora, vamos voltar a acessar [!DNL Experience Platform] os dados.
 
@@ -90,7 +90,7 @@ Agora, podemos clicar com o botão direito do mouse no `Retail-Training-<your-al
 
 >[!TIP]
 >
->consulte o [!DNL Platform SDK](../authoring/platform-sdk.md) guia para converter seu código.
+>consulte o guia [[!DNL Platform SDK]](../authoring/platform-sdk.md) para converter seu código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

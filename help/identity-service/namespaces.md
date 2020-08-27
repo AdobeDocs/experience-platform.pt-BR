@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Os namespaces de identidade são um componente do Serviço de identidade da   que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name<span>@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
-source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '774'
 ht-degree: 4%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 4%
 
 # Visão geral da namespace de identidade
 
-Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID CRM numérica.
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. Por exemplo, eles distinguem um valor de &quot;name<span>@email.com&quot; como um endereço de email ou &quot;443522&quot; como uma ID CRM numérica.
 
 ## Introdução
 
 Trabalhar com namespaces de identidade requer uma compreensão dos vários serviços da Adobe Experience Platform envolvidos. Antes de começar a trabalhar com o namespace, consulte a documentação dos seguintes serviços:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
-- [!DNL Identity Service](./home.md): Obtenha uma melhor visualização de clientes individuais e de seu comportamento ao unir identidades entre dispositivos e sistemas.
-- [!DNL Privacy Service](../privacy-service/home.md): As namespaces de identidade são usadas para cumprir o Regulamento Geral de Proteção de Dados (RGPD), onde os pedidos RGPD podem ser feitos em relação a uma namespace.
+- [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
+- [[!DNL Identity Service]](./home.md): Obtenha uma melhor visualização de clientes individuais e de seu comportamento ao unir identidades entre dispositivos e sistemas.
+- [[!DNL Privacy Service]](../privacy-service/home.md): As namespaces de identidade são usadas para cumprir o Regulamento Geral de Proteção de Dados (RGPD), onde os pedidos RGPD podem ser feitos em relação a uma namespace.
 
 ## Noções básicas sobre namespaces de identidade
 

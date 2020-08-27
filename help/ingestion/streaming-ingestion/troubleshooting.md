@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Solução de problemas de ingestão de streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -100,4 +100,4 @@ Se [!DNL Real-time Customer Profile] rejeitar uma mensagem, provavelmente ela se
 
 Existem dois tipos de namespaces de identidade: padrão e personalizado. Ao usar namespaces personalizadas, verifique se a namespace foi registrada dentro [!DNL Identity Service]. Consulte a visão geral [da namespace de](../../identity-service/namespaces.md) identidade para obter mais informações sobre o uso de namespaces padrão e personalizadas.
 
-Você pode usar o para obter mais informações sobre [!DNL Experience Platform UI](https://platform.adobe.com) o motivo pelo qual uma mensagem falhou na ingestão. Clique em **[!UICONTROL Monitoramento]** na navegação à esquerda e, em seguida, visualização a guia _[!UICONTROL Streaming end-to-end]_para ver os lotes de mensagens transmitidos durante um período selecionado.
+Você pode usar a [[!DNL Experience Platform UI]](https://platform.adobe.com) para ver mais informações sobre por que uma mensagem falhou na ingestão. Clique em **[!UICONTROL Monitoramento]** na navegação à esquerda e, em seguida, visualização a guia _[!UICONTROL Streaming end-to-end]_ para ver os lotes de mensagens transmitidos durante um período selecionado.

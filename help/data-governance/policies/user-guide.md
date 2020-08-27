@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário das políticas de uso de dados
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guia do usuário das políticas de uso de dados
 
-O Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho _Políticas_ na interface do [!DNL Experience Platform] usuário.
+A Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho _Políticas_ na interface do [!DNL Experience Platform] usuário.
 
 >[!IMPORTANT]
 >
@@ -24,10 +24,10 @@ O Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usu�
 
 Este guia exige um entendimento prático dos seguintes [!DNL Experience Platform] conceitos:
 
-- [!DNL Data Governance](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [Políticas de uso de dados](./overview.md)
 
-## Políticas de uso de dados de Visualização {#view-policies}
+## Políticas de uso de dados de visualização {#view-policies}
 
 Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Políticas]** para abrir a área de trabalho *[!UICONTROL Políticas]* . Na guia **[!UICONTROL Procurar]** , é possível visualizar uma lista de políticas disponíveis, incluindo seus rótulos, ações de marketing e status associados.
 
@@ -75,7 +75,7 @@ Você pode ativar ou desativar as políticas na guia *[!UICONTROL Procurar]* na 
 
 ![](../images/policies/enable-policy.png)
 
-## Ações de marketing de Visualização {#view-marketing-actions}
+## Ações de marketing de visualização {#view-marketing-actions}
 
 Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização.
 

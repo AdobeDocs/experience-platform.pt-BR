@@ -5,9 +5,9 @@ title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -41,74 +41,74 @@ As fontes em [!DNL Experience Platform] são agrupadas nas seguintes categorias:
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [!DNL Google AdWords](connectors/advertising/ads.md) conector
+- [Conector [!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Armazenamento em nuvem
 
 As fontes de armazenamentos na nuvem podem inserir seus próprios dados [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) conector
-- [!DNL Azure Blob](connectors/cloud-storage/blob.md) conector
-- [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) conector
-- [!DNL Amazon S3](connectors/cloud-storage/s3.md) conector
-- [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) conector
-- [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) conector
-- [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) conector
-- [!DNL FTP and SFTP](connectors/cloud-storage/ftp-sftp.md) conector
-- [!DNL Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md) conector
+- [Conector [!DNL Azure Data Lake Armazenamento Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [Conector [!DNL Azure Blob]](connectors/cloud-storage/blob.md)
+- [Conector [!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
+- [Conector [!DNL Amazon S3]](connectors/cloud-storage/s3.md)
+- [Conector [!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
+- [Conector [!DNL Azure Evento Hubs]](connectors/cloud-storage/eventhub.md)
+- [Conector [!DNL Azure File Armazenamento]](connectors/cloud-storage/azure-file-storage.md)
+- [Conector [!DNL FTP e SFTP]](connectors/cloud-storage/ftp-sftp.md)
+- [Conector [!DNL Armazenamento do Google Cloud]](connectors/cloud-storage/google-cloud-storage.md)
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM)
 
 Os sistemas CRM fornecem dados que podem ajudar a construir relações com os clientes, o que, por sua vez, cria fidelidade e impulsiona a retenção dos clientes. [!DNL Experience Platform] fornece suporte para assimilar dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) conector
-- [!DNL Salesforce](connectors/crm/salesforce.md) conector
+- [Conector [!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
+- [Conector [!DNL Salesforce]](connectors/crm/salesforce.md)
 
 ### Sucesso do cliente
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um aplicativo de cliente bem-sucedido de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) conector
-- [!DNL ServiceNow](connectors/customer-success/servicenow.md) conector
+- [Conector [!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
+- [Conector [!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 
 ### Banco de dados
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um banco de dados de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [!DNL Amazon Redshift](connectors/databases/redshift.md) conector
-- [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) conector
-- [!DNL Apache Spark on Azure HDInsights](connectors/databases/spark.md) conector
-- [!DNL Azure Data Explorer](connectors/databases/data-explorer.md) conector
-- [!DNL Azure Synapse Analytics](connectors/databases/synapse-analytics.md) conector
-- [!DNL Azure Table Storage](connectors/databases/ats.md) conector
-- [!DNL Couchbase](connectors/databases/couchbase.md) conector
-- [!DNL Google BigQuery](connectors/databases/bigquery.md) conector
-- [!DNL GreenPlum](connectors/databases/greenplum.md) conector
-- [!DNL HP Vertica](connectors/databases/hp-vertica.md) conector
-- [!DNL IBM DB2](connectors/databases/ibm-db2.md) conector
-- [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) conector
-- [!DNL MySQL](connectors/databases/mysql.md) conector
-- [!DNL Oracle](connectors/databases/oracle.md) conector
-- [!DNL Phoenix](connectors/databases/phoenix.md) conector
-- [!DNL PostgreSQL](connectors/databases/postgres.md) conector
+- [Conector [!DNL Amazon Redshift]](connectors/databases/redshift.md)
+- [Conector [!DNL Apache Hive no Azure HDInsights]](connectors/databases/hive.md)
+- [Conector [!DNL Apache Spark no Azure HDInsights]](connectors/databases/spark.md)
+- [Conector [!DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
+- [Conector [!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [Conector [!DNL Azure Table Armazenamento]](connectors/databases/ats.md)
+- [Conector [!DNL Couchbase]](connectors/databases/couchbase.md)
+- [Conector [!DNL Google BigQuery]](connectors/databases/bigquery.md)
+- [Conector [!DNL GreenPlum]](connectors/databases/greenplum.md)
+- [Conector [!DNL HP Vertica]](connectors/databases/hp-vertica.md)
+- [Conector [!DNL IBM DB2]](connectors/databases/ibm-db2.md)
+- [Conector [!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
+- [Conector [!DNL MySQL]](connectors/databases/mysql.md)
+- [Conector [!DNL Oracle]](connectors/databases/oracle.md)
+- [Conector [!DNL Phoenix]](connectors/databases/phoenix.md)
+- [Conector [!DNL PostgreSQL]](connectors/databases/postgres.md)
 
 ### Automação de marketing
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de automação de marketing de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [!DNL HubSpot](connectors/marketing-automation/hubspot.md) conector
+- [Conector [!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 
 ### Pagamentos
 
 [!DNL Experience Platform] fornece suporte para a assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [!DNL PayPal](connectors/payments/paypal.md) conector
+- [Conector [!DNL PayPal]](connectors/payments/paypal.md)
 
 ### Protocolos
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [!DNL Generic OData](connectors/protocols/odata.md) conector
+- [Conector [!DNL Generic OData]](connectors/protocols/odata.md)
 
 ## Controle de acesso para fontes na ingestão de dados
 
@@ -128,7 +128,7 @@ Para obter mais informações sobre as permissões disponíveis concedidas atrav
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), Você reconhece pela presente que o Beta é fornecido ***&quot;no estado em que se encontra&quot; sem garantia de qualquer tipo***.
 
-O Adobe não tem a obrigação de manter, corrigir, atualizar, alterar, modificar ou suportar o Beta. Recomenda-se que tenha cuidado e que não se baseie de forma alguma no funcionamento ou desempenho corretos destes materiais Beta e/ou associados. O Beta é considerado Informações Confidenciais do Adobe.
+O Adobe não tem a obrigação de manter, corrigir, atualizar, alterar, modificar ou suportar o Beta. Recomenda-se que tenha cuidado e que não se baseie de forma alguma no funcionamento ou desempenho corretos desses materiais Beta e/ou associados. O Beta é considerado Informações Confidenciais do Adobe.
 
 Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante a utilização do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
 

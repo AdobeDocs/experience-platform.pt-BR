@@ -5,9 +5,9 @@ title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 description: Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3528'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Se você preferir compor um schema usando a [!DNL Schema Registry] API, leia o g
 
 Este tutorial requer um entendimento prático dos vários aspectos do Adobe Experience Platform envolvidos na criação de schemas. Antes de iniciar este tutorial, reveja a documentação para obter os seguintes conceitos:
 
-* [!DNL Experience Data Model (XDM)](../home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Uma visão geral dos schemas XDM e seus blocos de construção, incluindo classes, misturas, tipos de dados e campos.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Procurar schemas existentes na área de trabalho de [!UICONTROL Schemas] {#browse}
 
@@ -245,11 +245,11 @@ Agora, todos os dados ingeridos no campo &quot;[!DNL loyaltyId]&quot; serão usa
 >
 >Depois que um campo de schema for definido como a identidade primária, você receberá uma mensagem de erro se tentar definir outro campo no schema como principal. Cada schema pode conter apenas um campo de identidade principal.
 
-Para saber mais sobre como trabalhar com identidades no, consulte a [!DNL Experience Platform][!DNL Identity Service](../../identity-service/home.md) documentação.
+Para saber mais sobre como trabalhar com identidades no, consulte a documentação do [!DNL Experience Platform][!DNL Identity Service] [](../../identity-service/home.md) .
 
 ## Ative o schema para uso em [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) aproveita os dados de identidade para [!DNL Experience Platform] fornecer uma visualização holística de cada cliente individual. O serviço cria perfis robustos de 360° de atributos do cliente, bem como contas com carimbos de data e hora de cada interação que os clientes tiveram em qualquer sistema integrado com [!DNL Experience Platform].
+[O [!DNL Real-time Customer Perfil]](../../profile/home.md) aproveita os dados de identidade [!DNL Experience Platform] para fornecer uma visualização holística de cada cliente individual. O serviço cria perfis robustos, 360°, de atributos do cliente, bem como contas com carimbos de data e hora de cada interação que os clientes tiveram em qualquer sistema integrado com [!DNL Experience Platform].
 
 Para que um schema seja habilitado para uso com [!DNL Real-time Customer Profile], ele deve ter uma identidade primária definida. Você receberá uma mensagem de erro se tentar ativar um schema sem primeiro definir uma identidade primária.
 
@@ -307,7 +307,7 @@ Na área de trabalho **[!UICONTROL Schemas]** , selecione **[!UICONTROL Criar sc
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-Uma caixa de diálogo é exibida permitindo que você selecione uma lista de classes disponíveis. Na parte superior da caixa de diálogo, selecione **[!UICONTROL Criar nova classe]**. Em seguida, você pode atribuir a sua nova classe um Nome **[!UICONTROL de]** exibição (um nome curto, descritivo, exclusivo e fácil de usar para a classe), uma **[!UICONTROL Descrição]** e um **[!UICONTROL Comportamento]** (&quot;[!UICONTROL Registro]&quot; ou &quot;SérieTemporal&quot;) para os dados que o schema definirá.
+Uma caixa de diálogo é exibida permitindo que você selecione uma lista de classes disponíveis. Na parte superior da caixa de diálogo, selecione **[!UICONTROL Criar nova classe]**. Em seguida, você pode atribuir a sua nova classe um Nome **[!UICONTROL de]** exibição (um nome curto, descritivo, exclusivo e fácil de usar para a classe), uma **[!UICONTROL Descrição]** e um **[!UICONTROL Comportamento]** (&quot;[!UICONTROL Registro]&quot; ou &quot;Sériecronológica&quot;) para os dados que o schema definirá.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 

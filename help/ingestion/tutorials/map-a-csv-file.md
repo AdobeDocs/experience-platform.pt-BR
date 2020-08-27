@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mapear um arquivo CSV para um schema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1371'
 ht-degree: 2%
 
 ---
@@ -22,14 +22,14 @@ Além disso, o apêndice deste tutorial fornece mais informações sobre o uso d
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): O método pelo qual [!DNL Platform] ingere dados de arquivos de dados fornecidos pelo usuário.
+- [[!DNL Experience Data Model (Sistema XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+- [[!DNL ingestão em lote]](../batch-ingestion/overview.md): O método pelo qual [!DNL Platform] ingere dados de arquivos de dados fornecidos pelo usuário.
 
 Este tutorial também requer que você já tenha criado um conjunto de dados para assimilar seus dados CSV. Para obter etapas sobre como criar um conjunto de dados na interface do usuário, consulte o tutorial [de assimilação de](./ingest-batch-data.md)dados.
 
 ## Escolher um destino
 
-Faça logon [!DNL Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Workflows]** na barra de navegação esquerda para acessar a área de trabalho dos *[!UICONTROL Workflows]* .
+Faça logon em [[!DNL Adobe Experience Platform]](https://platform.adobe.com) e selecione **[!UICONTROL Workflows]** na barra de navegação esquerda para acessar a área de trabalho de *[!UICONTROL Workflows]* .
 
 Na tela **[!UICONTROL Workflows]** , selecione **[!UICONTROL Mapear o schema]** CSV para XDM na seção de ingestão **[!UICONTROL de]** dados e selecione **[!UICONTROL Iniciar]**.
 
@@ -117,7 +117,7 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você mapeou com êxito um arquivo CSV simples para um schema XDM e o assimilou [!DNL Platform]. Esses dados agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile]. Consulte a visão geral [!DNL Real-time Customer Profile](../../profile/home.md) para obter mais informações.
+Ao seguir este tutorial, você mapeou com êxito um arquivo CSV simples para um schema XDM e o assimilou [!DNL Platform]. Esses dados agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile]. Consulte a visão geral do [[!DNL Real-time Customer Perfil]](../../profile/home.md) para obter mais informações.
 
 ## Apêndice
 
@@ -133,7 +133,7 @@ Por exemplo, para concatenar campos CSV de **cidade** e **país** e atribuí-los
 
 A tabela a seguir lista todas as funções de mapeamento suportadas, incluindo expressões de amostra e suas saídas resultantes.
 
-| Função | Descrição | expressão de amostra | Exemplo de saída |
+| Função | Descrição | Expressão de amostra | Exemplo de saída |
 | -------- | ----------- | ----------------- | ------------- |
 | concat | Concatena determinadas cordas. | concat(&quot;Oi, &quot;, &quot;lá&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explosão | Divide a string com base em um regex e retorna uma matriz de partes. | explode(&quot;Oi, aqui!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
@@ -156,8 +156,8 @@ A tabela a seguir lista todas as funções de mapeamento suportadas, incluindo e
 | carimbo de data e hora | Recupera o tempo Unix atual. | carimbo de data e hora() | 1571850624571 |
 | format | Formata a data de entrada de acordo com um formato especificado. | format({DATE}, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | dformat | Converte um carimbo de data e hora em uma string de data de acordo com um formato especificado. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-out-2019 11:24&quot; |
-| date | Converte uma string de data em um objeto ZondedDateTime (formato ISO 8601). | date(&quot;23-out-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | Recupera as partes da data. Os seguintes valores de componente são suportados: <br><br>&quot;ano&quot;<br>&quot;aaaa&quot;<br>&quot;yy&quot;<br><br>&quot;trimestre&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;dia&quot;&quot;dia&quot;&quot;dia&quot;&quot;&quot;d&quot;&quot;semana&quot;wvw&quot;tv&quot;semana&quot;dia da semana&quot;&quot;dw&quot;&quot;hormlh&quot;&quot;&quot;&quot; h&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;ms&quot;&quot; h&quot;&quot;h24&quot;&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
+| data | Converte uma string de data em um objeto ZondedDateTime (formato ISO 8601). | date(&quot;23-out-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
+| date_part | Recupera as partes da data. Os seguintes valores de componente são suportados: <br><br>&quot;ano&quot;<br>&quot;aaaa&quot;<br>&quot;yy&quot;<br><br>&quot;trimestre&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;dia&quot;&quot;dia&quot;&quot;dia&quot;&quot;dia&quot;&quot;d&quot;&quot;semana&quot;&quot;wvw&quot;tv&quot;semana&quot;dia da semana&quot;&quot;dw&quot;hvw&quot;hormlvlvr&quot;bresskr&quot;brlhr h&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;ms&quot;&quot; h&quot;&quot;h24&quot;&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
 | set_date_part | Substitui um componente em uma determinada data. Os seguintes componentes são aceitos: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;d&quot;<br>&quot;hora&quot;<br><br><br><br><br><br><br><br>&quot;hh&quot;&quot;minuto&quot;&quot;&quot;in&quot;&quot;second&quot;&quot;&quot;&quot;s&quot;&quot;s&quot;&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | Cria uma data de partes. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;América/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | Retorna o carimbo de data e hora atual. | current_timestamp() | 1571850624571 |

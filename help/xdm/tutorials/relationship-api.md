@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir uma relação entre dois schemas usando a API do Registro de Schemas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1282'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ A capacidade de entender as relações entre seus clientes e suas interações c
 
 Embora as relações com os schemas possam ser inferidas com o uso do schema da união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo **de** relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
 
-Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando o [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando a [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Introdução
 
@@ -27,7 +27,7 @@ Este tutorial requer uma compreensão de trabalho do [!DNL Experience Data Model
 
 * [Sistema XDM no Experience Platform](../home.md): Uma visão geral do XDM e sua implementação em [!DNL Experience Platform].
    * [Noções básicas da composição](../schema/composition.md)do schema: Uma introdução dos blocos de construção dos schemas XDM.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas à [!DNL Schema Registry] API com êxito. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho [!DNL Accept] e seus possíveis valores).
@@ -36,7 +36,7 @@ Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) de
 
 Espera-se que você já tenha criado os dois schemas que serão definidos no relacionamento. Este tutorial cria uma relação entre os membros do programa de fidelidade atual de uma organização (definido em um &quot;[!DNL Loyalty Members]&quot; schema) e seus hotéis favoritos (definido em um schema &quot;[!DNL Hotels]&quot;).
 
-As relações de Schema são representadas por um schema **de** origem com um campo que se refere a outro campo dentro de um schema **de** destino. Nas etapas a seguir, &quot;[!DNL Loyalty Members]&quot; será o schema de origem, enquanto &quot;[!DNL Hotels]&quot; atuará como o schema de destino.
+As relações de schema são representadas por um schema **de** origem com um campo que se refere a outro campo dentro de um schema **de** destino. Nas etapas a seguir, &quot;[!DNL Loyalty Members]&quot; será o schema de origem, enquanto &quot;[!DNL Hotels]&quot; atuará como o schema de destino.
 
 >[!IMPORTANT]
 >
@@ -338,7 +338,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 ## Criar um descritor de identidade de referência {#reference-identity}
 
-Os campos de Schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `email` campo em &quot;[!DNL Hotels]&quot;, `email` deve ser fornecido um descritor de identidade de referência.
+Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `email` campo em &quot;[!DNL Hotels]&quot;, `email` deve ser fornecido um descritor de identidade de referência.
 
 Crie um descritor de referência para o schema de destino, fazendo uma solicitação de POST para o `/tenant/descriptors` ponto final.
 

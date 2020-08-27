@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Fórmula de vendas de varejo
 topic: overview
+description: A receita de Vendas de Varejo permite prever a previsão de vendas para todas as lojas semeadas por um determinado período. Com um modelo preciso de previsão, o varejista poderia encontrar a relação entre as políticas de demanda e de preços e tomar decisões otimizadas de preços para maximizar as vendas e a receita.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -33,15 +34,15 @@ A receita de Previsão de Vendas de Varejo usa o aprendizado da máquina para pr
 
 Você pode começar seguindo este [tutorial](../jupyterlab/create-a-recipe.md).
 
-Este tutorial vai além da criação da receita de vendas de varejo em um notebook de Júpiter e do fluxo de trabalho do notebook para a receita para criar a receita no Adobe Experience Platform.
+Este tutorial vai além da criação da receita de Vendas de varejo em um notebook de Júpiter e do uso do notebook para obter o fluxo de trabalho da receita para criar a receita no Adobe Experience Platform.
 
-## schema de dados
+## Schema de dados
 
 Essa fórmula usa schemas [](../../xdm/schema/field-dictionary.md) XDM para modelar os dados. O schema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 --- | ---
-| date | String |
+| data | String |
 | loja | Número inteiro |
 | storeType | String |
 | weekSales | Número |

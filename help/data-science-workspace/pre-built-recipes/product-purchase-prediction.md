@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Fórmula de compra do produto
 topic: overview
+description: A fórmula Predição de compra de produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 8%
+source-wordcount: '382'
+ht-degree: 7%
 
 ---
 
@@ -32,7 +33,7 @@ Sua marca busca impulsionar as vendas trimestrais para sua linha de produtos atr
 
 A fórmula Predição de compra de produto utiliza o aprendizado da máquina para prever o comportamento de compra do cliente. Isso é feito aplicando um classificador de floresta aleatório personalizado e um XDM (Modelo de Dados de Experiência em Duas camadas) para prever a probabilidade de um evento de compra. O modelo utiliza dados de entrada que incorporam informações de perfil do cliente e histórico de compras passadas, além de padrões para parâmetros de configuração predeterminados determinados determinados pelos nossos Cientistas de Dados para aprimorar a precisão preditiva.
 
-## schema de dados
+## Schema de dados
 
 Essa fórmula usa schemas [](../../xdm/home.md) XDM para modelar os dados. O schema usado para esta fórmula é mostrado abaixo:
 
@@ -45,7 +46,7 @@ Essa fórmula usa schemas [](../../xdm/home.md) XDM para modelar os dados. O sch
 | optinEmail | Booleano |
 | optinMobile | Booleano |
 | optinAddress | Booleano |
-| created | Número inteiro |
+| criado | Número inteiro |
 | totalOrder | Número |
 | totalItems | Número |
 | orderDate1 | Número |

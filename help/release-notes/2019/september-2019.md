@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '542'
 ht-degree: 5%
 
 ---
@@ -19,25 +19,25 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Query Service](#query)
+* [[!Ingestão de Dados DNL]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] oferece várias alternativas para assimilar dados, incluindo APIs em lote, APIs de transmissão, conectores nativos de Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
+A Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. A Adobe Experience Platform [!DNL Data Ingestion] oferece várias alternativas para assimilar dados, incluindo APIs em lote, APIs de transmissão, conectores nativos de Adobe, parceiros de integração de dados ou a interface do usuário Adobe Experience Platform.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ----------- | ---------- |
-| Novo domínio para ingestão de streaming | O `dcs.data.adobe.net` domínio foi movido para o novo domínio comum de coleta de dados `dcs.adobedc.net`. Os usuários devem atualizar suas implementações de acordo com a documentação de ingestão de streaming de Adobe Experience Platform revista. Toda a documentação relacionada à ingestão de streaming de Adobe Experience Platform foi atualizada para usar o novo domínio. |
+| Novo domínio para ingestão de streaming | O `dcs.data.adobe.net` domínio foi movido para o novo domínio comum de coleta de dados `dcs.adobedc.net`. Os usuários devem atualizar suas implementações de acordo com a documentação de ingestão de streaming do Adobe Experience Platform revisada. Toda a documentação relacionada à assimilação de streaming do Adobe Experience Platform foi atualizada para usar o novo domínio. |
 
 Para obter mais informações, visite a documentação [de ingestão de](../../ingestion/home.md)dados.
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-O Adobe Experience Platform [!DNL Data Science Workspace] é um serviço totalmente gerenciado dentro do [!DNL Experience Platform] qual os cientistas de dados podem gerar insights de dados e conteúdo através de soluções de Adobe e sistemas de terceiros, criando e operacionalizando Modelos de Aprendizagem de Máquinas. [!DNL Data Science Workspace] é totalmente integrada com [!DNL Platform] e potencializa o ciclo de vida completo da ciência de dados, incluindo a exploração e preparação de dados XDM, seguido pelo desenvolvimento e operacionalização de Modelos para enriquecer automaticamente [!DNL Real-time Customer Profile] com os Insights de Aprendizagem de Máquinas.
+A Adobe Experience Platform [!DNL Data Science Workspace] é um serviço totalmente gerenciado dentro [!DNL Experience Platform] que permite que os cientistas de dados gerem informações de dados e conteúdo nas soluções de Adobe e sistemas de terceiros, criando e operacionalizando Modelos de Aprendizagem de Máquinas. [!DNL Data Science Workspace] é totalmente integrada com [!DNL Platform] e potencializa o ciclo de vida completo da ciência de dados, incluindo a exploração e preparação de dados XDM, seguido pelo desenvolvimento e operacionalização de Modelos para enriquecer automaticamente [!DNL Real-time Customer Profile] com os Insights de Aprendizagem de Máquinas.
 
 **Novos recursos**
 

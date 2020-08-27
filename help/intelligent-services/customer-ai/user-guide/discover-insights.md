@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
+description: A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---

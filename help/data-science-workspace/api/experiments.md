@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
 solution: Experience Platform
 title: Experimentos
 topic: Developer guide
+description: O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, onde um Experimento consiste em uma instância MLI, execuções de treinamento e execuções de pontuação.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '765'
 ht-degree: 4%
 
 ---
@@ -374,7 +375,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um experimento
 
-Você pode excluir um único Experimento executando uma solicitação de DELETE que inclui a ID do Experimento do público alvo no caminho da solicitação.
+É possível excluir um único Experimento executando uma solicitação de DELETE que inclua a ID do Experimento do público alvo no caminho da solicitação.
 
 **Formato da API**
 
@@ -409,7 +410,7 @@ curl -X DELETE \
 
 ## Excluir experiências por ID de instância MLI
 
-Você pode excluir todos os Experimentos que pertencem a uma determinada instância MLI executando uma solicitação de DELETE que inclui a ID da instância MLI como um parâmetro de query.
+Você pode excluir todos os Experimentos que pertencem a uma determinada MLInpresence executando uma solicitação de DELETE que inclui a ID da instância MLI como um parâmetro de query.
 
 **Formato da API**
 

@@ -3,10 +3,11 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Guia de solução de problemas da Data Science Workspace
 topic: Troubleshooting
+description: Este documento fornece respostas para perguntas frequentes sobre a Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] guia de solução de problemas
 
-Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform [!DNL Data Science Workspace]. Em caso de dúvidas e solução de problemas relacionados às [!DNL Platform] APIs em geral, consulte o guia [de solução de problemas da API de](../landing/troubleshooting.md)Adobe Experience Platform.
+Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform [!DNL Data Science Workspace]. Em caso de dúvidas e solução de problemas relacionados às [!DNL Platform] APIs em geral, consulte o guia [de solução de problemas da API](../landing/troubleshooting.md)Adobe Experience Platform.
 
 ## [!DNL JupyterLab] O ambiente não está sendo carregado em [!DNL Google Chrome]
 
@@ -52,7 +53,7 @@ Após a Etapa 2, você será solicitado a reiniciar o navegador. Depois de reini
 
 ## Por que não consigo acessar [!DNL JupyterLab] o Safari?
 
-O Safari desativa cookies de terceiros por padrão no Safari &lt; 12. Como a instância da máquina [!DNL Jupyter] virtual reside em um domínio diferente do quadro pai, o Adobe Experience Platform exige atualmente que os cookies de terceiros sejam ativados. Ative cookies de terceiros ou mude para um navegador diferente, como [!DNL Google Chrome].
+O Safari desativa cookies de terceiros por padrão no Safari &lt; 12. Como a instância da máquina [!DNL Jupyter] virtual reside em um domínio diferente do quadro pai, a Adobe Experience Platform exige atualmente que os cookies de terceiros sejam ativados. Ative cookies de terceiros ou mude para um navegador diferente, como [!DNL Google Chrome].
 
 Para o Safari 12, é necessário alternar o Agente de Usuário para &#39;[!DNL Chrome]&#39; ou &#39;[!DNL Firefox]&#39;. Para alterar o Agente de usuário, abra o menu *Safari* e selecione **Preferências**. A janela de preferências é exibida.
 

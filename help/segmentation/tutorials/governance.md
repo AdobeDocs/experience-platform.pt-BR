@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -20,10 +20,10 @@ Este tutorial aborda as etapas para impor a conformidade de uso de dados para se
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados [!DNL Experience Data Model] (XDM) no [!DNL Platform]. O Perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
+- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): [!DNL Real-time Customer Profile] é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados [!DNL Experience Data Model] (XDM) no [!DNL Platform]. O perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
    - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas para [!DNL Real-time Customer Profile] determinar quais dados podem ser mesclados em uma visualização unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para [!DNL Data Governance] fins.
-- [!DNL Segmentation](../home.md): Como [!DNL Real-time Customer Profile] divide um grande grupo de indivíduos contidos na loja de perfis em grupos menores que compartilham características semelhantes e respondem de forma semelhante às estratégias de marketing.
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] fornece a infraestrutura para a identificação e aplicação da utilização de dados (DULE), usando os seguintes componentes:
+- [[!Segmentação DNL]](../home.md): Como [!DNL Real-time Customer Profile] divide um grande grupo de indivíduos contidos na loja de perfis em grupos menores que compartilham características semelhantes e respondem de forma semelhante às estratégias de marketing.
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fornece a infraestrutura para a identificação e aplicação da utilização de dados (DULE), usando os seguintes componentes:
    - [Rótulos](../../data-governance/labels/user-guide.md)de uso de dados: Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.
    - [Políticas](../../data-governance/policies/overview.md)de uso de dados: Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos de uso de dados específicos.
    - [Aplicação](../../data-governance/enforcement/overview.md)de políticas: Permite que você aplique políticas de uso de dados e previna operações de dados que constituem violações de política.
@@ -383,4 +383,4 @@ Consulte a seção sobre como [exportar um segmento](./evaluate-a-segment.md#exp
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de audiência e os testou em busca de violações de política contra ações de marketing específicas. Para obter mais informações sobre [!DNL Data Governance] em [!DNL Experience Platform], leia a visão geral para [!DNL Data Governance](../../data-governance/home.md).
+Ao seguir este tutorial, você pesquisou os rótulos de uso de dados associados a um segmento de audiência e os testou em busca de violações de política contra ações de marketing específicas. Para obter mais informações sobre [!DNL Data Governance] o [!DNL Experience Platform], leia a visão geral de [[!DNL Data Governance]](../../data-governance/home.md).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criação de integrações de ETL
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
-source-wordcount: '4158'
+source-wordcount: '4153'
 ht-degree: 0%
 
 ---
@@ -522,7 +522,7 @@ Detalhes sobre a filtragem de lotes podem ser encontrados no tutorial [Acesso a]
 
 ### Obter arquivos de um lote
 
-Depois que você tiver a ID do lote que está procurando (`{BATCH_ID}`), é possível recuperar uma lista de arquivos pertencentes a um lote específico por meio da [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Os detalhes para fazer isso estão disponíveis no tutorial [de Acesso a](../data-access/tutorials/dataset-data.md)dados.
+Depois que você tiver a ID do lote que está procurando (`{BATCH_ID}`), é possível recuperar uma lista de arquivos pertencentes a um lote específico por meio da [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Os detalhes para fazer isso estão disponíveis no [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
 
 **Solicitação**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-A resposta pode apontar para um único arquivo ou diretório. Detalhes de cada um podem ser encontrados no tutorial [de Acesso a](../data-access/tutorials/dataset-data.md)dados.
+A resposta pode apontar para um único arquivo ou diretório. Detalhes de cada um podem ser encontrados no [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
 
 ### Acessar conteúdo do arquivo
 
@@ -568,7 +568,7 @@ A resposta a esta solicitação contém o conteúdo do arquivo. Para obter mais 
 
 ### Validar registros para conformidade com o schema
 
-Quando os dados são gravados, os usuários podem optar por validar os dados de acordo com as regras de validação definidas no schema XDM. Para obter mais informações sobre a validação do schema, consulte o Código de Referência para Integração de Ecossistemas [ETL no GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+Quando os dados são gravados, os usuários podem optar por validar os dados de acordo com as regras de validação definidas no schema XDM. Para obter mais informações sobre a validação do schema, consulte o Código de Referência sobre [Integração de Ecossistemas [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)ETL em.
 
 Se você estiver usando a implementação de referência encontrada em [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), poderá ativar a validação de schema nesta implementação usando a propriedade do sistema `-DenableSchemaValidation=true`.
 

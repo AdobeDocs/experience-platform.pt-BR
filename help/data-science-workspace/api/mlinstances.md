@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: MLInentons
 topic: Developer guide
+description: Uma instância MLI é um emparelhamento de um Mecanismo existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '601'
 ht-degree: 4%
 
 ---
@@ -440,7 +441,7 @@ curl -X DELETE \
 
 ## Excluir uma instância MLI
 
-É possível excluir uma única instância MLI executando uma solicitação de DELETE que inclui a ID da instância MLI do público alvo no caminho da solicitação.
+É possível excluir uma única instância MLI executando uma solicitação de DELETE que inclua a ID da instância MLI do público alvo no caminho da solicitação.
 
 **Formato da API**
 

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Políticas
 topic: developer guide
+description: As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro do Experience Platform. O terminal /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de uso de dados.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---

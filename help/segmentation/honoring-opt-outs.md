@@ -5,9 +5,9 @@ title: Aceitar opções
 topic: overview
 description: 'O Experience Platform permite que seus clientes enviem solicitações de não participação relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de cancelamento fazem parte da California Consumer Privacy Act (CCPA), que dá aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais foram vendidos ou divulgados (e a quem). '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Depois que um cliente optar por não participar, é importante que sua organiza�
 
 O cumprimento dos pedidos de opção de não participação exige uma compreensão dos vários [!DNL Adobe Experience Platform] serviços envolvidos. Antes de trabalhar com solicitações de recusa, consulte a documentação dos seguintes serviços:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Ajuda as organizações a automatizar a conformidade com as regulamentações de privacidade de dados que envolvem dados de clientes dentro [!DNL Platform].
+- [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Ajuda as organizações a automatizar a conformidade com as regulamentações de privacidade de dados que envolvem dados de clientes dentro [!DNL Platform].
 
 ## Misturas de não participação
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Para obter mais informações sobre segmentação, inclusive trabalhar com definições de segmentos e audiências por meio da API e da interface do usuário, comece lendo a visão geral [da](./home.md)segmentação.
 
-Para saber mais sobre a privacidade de dados no [!DNL Platform], incluindo como [!DNL Privacy Service] facilitar a conformidade automatizada com as regulamentações legais e organizacionais de privacidade, consulte a documentação sobre [!DNL Privacy Service](../privacy-service/home.md).
+Para saber mais sobre a privacidade de dados no [!DNL Platform], incluindo como [!DNL Privacy Service] facilitar a conformidade automatizada com as regulamentações legais e organizacionais de privacidade, consulte a documentação em [[!DNL Privacy Service]](../privacy-service/home.md).

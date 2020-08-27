@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '861'
 ht-degree: 5%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-* [!DNL Data Governance](#governance)
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Destinations](#destinations)
-* [!DNL Identity Service](#identity)
-* [!DNL Sources](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!Ingestão de Dados DNL]](#ingestion)
+* [[!Destinos DNL]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!Fontes DNL]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
 [!DNL Experience Platform] permite que as empresas reúnam dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, entendam e envolvam clientes. [!DNL Experience Platform] inclui uma infraestrutura completa de controle de dados, incluindo a DULE (Data Usage Labeling and Implementation), para garantir o uso correto dos dados dentro [!DNL Platform] e quando compartilhados entre sistemas.
 
-O Adobe Experience Platform [!DNL Data Governance] é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
+A Adobe Experience Platform [!DNL Data Governance] é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
 
 **Novos recursos**
 
@@ -52,28 +52,28 @@ Para obter mais informações sobre [!DNL Data Governance], consulte a visão ge
 
 ## Ingestão de dados {#ingestion}
 
-O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] oferece várias alternativas para assimilar dados, incluindo APIs em lote, APIs de transmissão, conectores nativos de Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
+A Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. A Adobe Experience Platform [!DNL Data Ingestion] oferece várias alternativas para assimilar dados, incluindo APIs em lote, APIs de transmissão, conectores nativos de Adobe, parceiros de integração de dados ou a interface do usuário Adobe Experience Platform.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 |------- | -----------|
-| Ingestão parcial em lote | A ingestão parcial em lote é a capacidade de assimilar dados que contenham erros, até um certo limite. Com esse recurso, os usuários podem assimilar com êxito todos os seus dados corretos em Adobe Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente. Os detalhes são adicionados aos lotes com falha para explicar por que eles não passaram na validação. Para mais informações sobre a ingestão parcial do lote, consultar a documentação [relativa à ingestão](../../ingestion/batch-ingestion/partial.md)parcial do lote. |
+| Ingestão parcial em lote | A ingestão parcial em lote é a capacidade de assimilar dados que contenham erros, até um certo limite. Com esse recurso, os usuários podem assimilar com êxito todos os dados corretos no Adobe Experience Platform enquanto todos os dados incorretos são armazenados em lote separadamente. Os detalhes são adicionados aos lotes com falha para explicar por que eles não passaram na validação. Para mais informações sobre a ingestão parcial do lote, consultar a documentação [relativa à ingestão](../../ingestion/batch-ingestion/partial.md)parcial do lote. |
 
 **Problemas conhecidos**
 
 * None
 
-Para saber mais sobre como ingerir dados no Platform, visite a documentação [de ingestão de](../../ingestion/home.md)dados.
+Para saber mais sobre como ingerir dados na Plataforma, visite a documentação [de ingestão de](../../ingestion/home.md)dados.
 
 
 ## Destinos {#destinations}
 
-No [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 
-Novos destinos estão disponíveis onde você pode ativar seus dados de Adobe Experience Platform. Consulte abaixo para obter detalhes:
+Novos destinos estão disponíveis onde você pode ativar seus dados do Adobe Experience Platform. Consulte abaixo para obter detalhes:
 
 | Destino | Descrição |
 |--- | ---|
@@ -86,7 +86,7 @@ Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/de
 
 Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;.
 
-O Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização do seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
+A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 
 **Novos recursos**
 
@@ -102,7 +102,7 @@ Para obter mais informações sobre [!DNL Identity Service], consulte a visão g
 
 ## Fontes {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 

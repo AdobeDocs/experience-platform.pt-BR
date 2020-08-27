@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Uniões
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Uniões
 
-Uniões (ou visualizações uniões) são schemas somente leitura gerados pelo sistema que agregação os campos de todos os schemas que compartilham a mesma classe ([!DNL XDM ExperienceEvent] ou [!DNL XDM Individual Profile]) e estão habilitados para [!DNL Real-time Customer Profile](../../profile/home.md).
+O União (ou o união visualização) são schemas somente leitura gerados pelo sistema que agregação os campos de todos os schemas que compartilham a mesma classe ([!DNL XDM ExperienceEvent] ou [!DNL XDM Individual Profile]) e estão habilitados para [[!DNL Real-time Customer Perfil]](../../profile/home.md).
 
 Este documento aborda conceitos essenciais para trabalhar com o união na API do Registro do Schema, incluindo chamadas de amostra para várias operações. Para obter informações mais gerais sobre uniões no XDM, consulte a seção sobre uniões nas [noções básicas da composição](../schema/composition.md#union)do schema.
 
-## Misturas de União
+## Misturas de união
 
 O [!DNL Schema Registry] inclui automaticamente três combinações dentro do schema da união: `identityMap`, `timeSeriesEvents`e `segmentMembership`.
 
@@ -28,13 +28,13 @@ Um schema união `identityMap` é uma representação das identidades conhecidas
 
 See the [Identity Service documentation](../../identity-service/home.md) for more information.
 
-### eventos série cronológica
+### Eventos série cronológica
 
-A `timeSeriesEvents` matriz é uma lista de eventos da série de tempo relacionados aos schemas de registro associados à união. Quando [!DNL Profile] os dados são exportados para conjuntos de dados, essa matriz é incluída para cada registro. Isso é útil para vários casos de uso, como aprendizado de máquina em que os modelos precisam de todo o histórico de comportamento do perfil, além de seus atributos de registro.
+A `timeSeriesEvents` matriz é uma lista de eventos da série de tempo que se relacionam aos schemas de registro associados à união. Quando [!DNL Profile] os dados são exportados para conjuntos de dados, essa matriz é incluída para cada registro. Isso é útil para vários casos de uso, como aprendizado de máquina em que os modelos precisam de todo o histórico de comportamento do perfil, além de seus atributos de registro.
 
 ### Mapa de associação de segmento
 
-O `segmentMembership` mapa armazena os resultados das avaliações de segmentos. Quando os trabalhos de segmento são executados com êxito usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, o mapa é atualizado. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que sejam ingeridos no Platform, permitindo a integração com outras soluções, como o Adobe Audience Manager.
+O `segmentMembership` mapa armazena os resultados das avaliações de segmentos. Quando os trabalhos de segmento são executados com êxito usando a API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentação, o mapa é atualizado. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que sejam ingeridos na Plataforma, permitindo a integração com outras soluções como a Adobe Audience Manager.
 
 Consulte o tutorial sobre como [criar segmentos usando APIs](../../segmentation/tutorials/create-a-segment.md) para obter mais informações.
 
@@ -115,7 +115,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 }
 ```
 
-## uniões Listas
+## Uniões listas
 
 Quando você define a tag &quot;união&quot; em um schema, o [!DNL Schema Registry] cria e mantém automaticamente uma união para a classe na qual o schema se baseia. A união `$id` é semelhante ao padrão `$id` de uma classe, sendo a única diferença que é anexada por dois sublinhados e a palavra &quot;união&quot; (`"__union"`).
 
@@ -168,7 +168,7 @@ Você pode visualização uma união específica executando uma solicitação de
 
 >[!NOTE]
 >
->Pesquisas de União estão disponíveis usando os pontos de extremidade `/unions` e `/schemas` para permitir o uso em [!DNL Profile] exportações para um conjunto de dados.
+>Pesquisas de união estão disponíveis usando os pontos de extremidade `/unions` e `/schemas` para permitir o uso em [!DNL Profile] exportações para um conjunto de dados.
 
 **Formato da API**
 
@@ -193,7 +193,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-As solicitações de pesquisa de União exigem que `version` sejam incluídas no cabeçalho Aceitar.
+As solicitações de pesquisa de união exigem que `version` sejam incluídas no cabeçalho Aceitar.
 
 Os cabeçalhos Accept (Aceitar) a seguir estão disponíveis para pesquisas com schemas de união:
 
@@ -247,7 +247,7 @@ O formato de resposta depende do cabeçalho Aceitar enviado na solicitação. Ex
 }
 ```
 
-## schemas de Lista em uma união
+## Schemas de lista em uma união
 
 Para ver quais schemas fazem parte de uma união específica, é possível executar uma solicitação de GET usando parâmetros de query para filtrar os schemas dentro do container do locatário.
 

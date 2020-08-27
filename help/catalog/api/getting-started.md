@@ -5,9 +5,9 @@ title: Guia do desenvolvedor do serviço de catálogo
 topic: developer guide
 description: Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a API de catálogo. O guia então fornece exemplos de chamadas de API para executar operações principais usando o Catálogo.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a [!DNL 
 
 [!DNL Catalog] rastreia metadados para vários tipos de recursos e operações dentro [!DNL Experience Platform]. Este guia do desenvolvedor requer um entendimento prático dos vários [!DNL Experience Platform] serviços envolvidos na criação e gerenciamento desses recursos:
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 * [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: Como [!DNL Experience Platform] ingere e armazena dados de arquivos de dados, como CSV e Parquet.
 * [Inclusão](../../ingestion/streaming-ingestion/overview.md)de transmissão: Como [!DNL Experience Platform] ingere e armazena dados de dispositivos do cliente e do servidor em tempo real.
 

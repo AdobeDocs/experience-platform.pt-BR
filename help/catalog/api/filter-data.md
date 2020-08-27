@@ -5,9 +5,9 @@ title: Filtrar dados do catálogo usando parâmetros de query
 topic: developer guide
 description: A API do serviço de catálogo permite que os dados de resposta sejam filtrados por meio do uso de parâmetros de query de solicitação. Parte das práticas recomendadas para o Catálogo é usar filtros em todas as chamadas de API, já que elas reduzem a carga na API e ajudam a melhorar o desempenho geral.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2085'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ Há algumas limitações a serem consideradas ao usar tags:
 * Os nomes das tags são exclusivos à sua organização IMS.
 * Os processos de Adobe podem aproveitar as tags para determinados comportamentos. Os nomes dessas tags recebem o prefixo &quot;adobe&quot; como padrão. Portanto, você deve evitar essa convenção ao declarar nomes de tags.
 * Os seguintes nomes de tags são reservados para uso em toda a empresa [!DNL Experience Platform], pelo que não podem ser declarados como um nome de tag para sua organização:
-   * `unifiedProfile`: Esse nome de tag é reservado para que conjuntos de dados sejam assimilados [!DNL Real-time Customer Profile](../../profile/home.md).
-   * `unifiedIdentity`: Esse nome de tag é reservado para que conjuntos de dados sejam assimilados [!DNL Identity Service](../../identity-service/home.md).
+   * `unifiedProfile`: Este nome de tag está reservado para conjuntos de dados a serem assimilados por [[!DNL Real-time Customer Perfil]](../../profile/home.md).
+   * `unifiedIdentity`: Este nome de tag está reservado para conjuntos de dados a serem assimilados por [[!DNL Identity Service]](../../identity-service/home.md).
 
 Abaixo está um exemplo de um conjunto de dados que contém uma `tags` propriedade. As tags dentro dessa propriedade assumem a forma de pares de valores chave, com cada valor de tag exibido como uma matriz contendo uma única string:
 
@@ -251,7 +251,7 @@ Abaixo está um exemplo de um conjunto de dados que contém uma `tags` proprieda
 
 Os valores do `tags` parâmetro assumem a forma de pares de valores chave, usando o formato `{TAG_NAME}:{TAG_VALUE}`. Vários pares de valores chave podem ser fornecidos na forma de uma lista separada por vírgulas. Quando várias tags são fornecidas, uma relação E é assumida.
 
-O parâmetro suporta caracteres curinga (`*`) para valores de tag. Por exemplo, uma string de pesquisa de `test*` retorna qualquer objeto em que o valor da tag começa com &quot;test&quot;. Uma string de pesquisa que consiste apenas em um caractere curinga pode ser usada para filtrar objetos com base em se eles contêm ou não uma tag específica, independentemente de seu valor.
+O parâmetro suporta caracteres curinga (`*`) para valores de tag. Por exemplo, uma string de pesquisa de `test*` retorna qualquer objeto em que o valor da tag começa com &quot;test&quot;. Uma string de pesquisa que consiste apenas em um caractere curinga pode ser usada para filtrar objetos com base em se eles contêm ou não uma tag específica, independentemente do seu valor.
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -397,7 +397,7 @@ O parâmetro de `orderBy` query permite que você classifique (ordene) os dados 
 
 Várias propriedades de classificação podem ser fornecidas em uma lista separada por vírgulas. Se a primeira propriedade de classificação produzir vários objetos que contenham o mesmo valor para essa propriedade, a segunda propriedade de classificação será usada para classificar ainda mais esses objetos correspondentes.
 
-Por exemplo, considere o seguinte query: `orderBy=name,desc:created`. Os resultados são classificados em ordem crescente com base na primeira propriedade de classificação, `name`. Nos casos em que vários registros compartilham a mesma `name` propriedade, esses registros correspondentes são classificados pela segunda propriedade de classificação, `created`. Se nenhum registro retornado compartilhar o mesmo `name`, a `created` propriedade não terá influência na classificação.
+For example, consider the following query: `orderBy=name,desc:created`. Os resultados são classificados em ordem crescente com base na primeira propriedade de classificação, `name`. Nos casos em que vários registros compartilham a mesma `name` propriedade, esses registros correspondentes são classificados pela segunda propriedade de classificação, `created`. Se nenhum registro retornado compartilhar o mesmo `name`, a `created` propriedade não terá influência na classificação.
 
 
 **Formato da API**

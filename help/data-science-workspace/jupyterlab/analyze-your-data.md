@@ -5,7 +5,7 @@ title: Analise seus dados usando notebooks
 topic: Tutorial
 description: Este tutorial foca em como usar notebooks Júpiter, criados na Data Science Workspace, para acessar, explorar e visualizar seus dados.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Agora, podemos clicar com o botão direito do mouse no `Retail-Training-<your-al
 
 >[!TIP]
 >
->consulte o guia [[!DNL Platform SDK]](../authoring/platform-sdk.md) para converter seu código.
+>Consulte o guia [[!DNL Platform SDK]](../authoring/platform-sdk.md) para converter seu código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

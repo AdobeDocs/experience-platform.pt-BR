@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Mesclar políticas - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ A Adobe Experience Platform permite que você reúna dados de várias fontes e o
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O terminal da API usado neste guia faz parte da [[!DNL Real-time Customer Perfil API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Componentes das políticas de mesclagem {#components-of-merge-policies}
 

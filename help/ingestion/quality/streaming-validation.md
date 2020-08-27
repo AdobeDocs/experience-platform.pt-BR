@@ -5,9 +5,9 @@ title: Validação de ingestão de fluxo
 topic: overview
 description: A ingestão de streaming permite carregar seus dados para a Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '852'
 ht-degree: 3%
 
 ---
@@ -21,8 +21,8 @@ A ingestão de streaming permite carregar seus dados para a Adobe Experience Pla
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
+- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!Ingestão de Streaming DNL]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API
 

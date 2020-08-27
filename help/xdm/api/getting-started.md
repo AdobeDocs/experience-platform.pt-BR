@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do desenvolvedor da API de Registro do schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -167,9 +167,21 @@ As chamadas à [!DNL Schema Registry] API exigem o uso de uma `CONTAINER_ID`. H�
 
 O container global contém todas as classes padrão fornecidas por Adobe e [!DNL Experience Platform] parceiros, combinações, tipos de dados e schemas. Você só pode executar solicitações de lista e pesquisa (GET) em relação ao container global.
 
+Um exemplo de uma chamada que usa o container global seria semelhante ao seguinte:
+
+```http
+GET /global/classes
+```
+
 ### Container de inquilino
 
 Para não ser confundido com o seu exclusivo `TENANT_ID`, o container locatário armazena todas as classes, misturas, tipos de dados, schemas e descritores definidos por uma Organização IMS. Elas são exclusivas de cada organização, o que significa que não são visíveis ou gerenciáveis por outras Organizações IMS. Você pode executar todas as operações CRUD (GET, POST, PUT, PATCH, DELETE) em relação aos recursos criados no container do locatário.
+
+Um exemplo de uma chamada que usa o container de locatário seria semelhante ao seguinte:
+
+```http
+POST /tenant/mixins
+```
 
 Quando você cria uma classe, combinação, schema ou tipo de dados no container do locatário, ela é salva no e recebe um [!DNL Schema Registry] URI que inclui seu `$id` `TENANT_ID`. Isso `$id` é usado em toda a API para fazer referência a recursos específicos. Exemplos de `$id` valores são fornecidos na próxima seção.
 

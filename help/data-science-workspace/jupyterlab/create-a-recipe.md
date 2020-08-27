@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2295'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ As duas seções a seguir abordarão o carregamento de dados e a preparação de
 
 Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos no [!DNL Adobe Experience Platform] SDK ( [!DNL Platform] SDK) ou de fontes externas usando as funções dos pandas`platform_sdk`ou `read_csv()` `read_json()` .
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [Fontes externas](#external-sources)
 
 >[!NOTE]

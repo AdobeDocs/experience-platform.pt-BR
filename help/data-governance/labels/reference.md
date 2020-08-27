@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: Rótulos principais de uso de dados
 topic: labels
+description: Este documento descreve todas as etiquetas de uso de dados atualmente suportadas pela Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1882'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Rótulos principais de uso de dados
 
-Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. O Gerenciamento de dados do Adobe Experience Platform fornece vários rótulos de uso de dados principais prontos para uso que podem ser usados para classificar seus dados por start.
+Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. O Adobe Experience Platform Data Governance fornece vários rótulos principais de uso de dados prontos para uso que você pode usar para classificar seus dados por start.
 
 Este documento descreve as principais etiquetas de uso de dados fornecidas atualmente por [!DNL Experience Platform]. Para obter mais informações sobre [!DNL Data Governance] o, consulte a visão geral [do](../home.md)Data Governance.
 
@@ -81,7 +82,7 @@ O C4 é o rótulo mais restritivo - inclui os rótulos [C5](#c5), [C6](#c6)e [C7
 
 #### C5 {#c5}
 
-A definição de metas ou personalização baseada em interesses ocorre se as três condições a seguir forem atendidas: Os dados coletados no site são (1) usados para fazer inferências sobre os interesses dos usuários, (2) são usados em outro contexto, como em outro site ou aplicativo (fora do site) E (3) são usados para selecionar qual conteúdo ou anúncios são fornecidos com base nessas inferências.
+A definição de metas ou personalização baseada em interesses ocorre se as três condições a seguir forem atendidas: Os dados coletados no site são (1) usados para fazer inferências sobre os interesses dos usuários, (2) são usados em outro contexto, como em outro site ou aplicativo (fora do site) E (3) são usados para selecionar qual conteúdo ou anúncios são veiculados com base nessas inferências.
 
 A combinação de dados de vários sites, incluindo uma combinação de dados no local e dados fora do local ou uma combinação de dados de várias fontes fora do local, é chamada de dados entre sites. Sites diferentes representam contextos diferentes, de modo que o uso de dados entre sites em qualquer contexto é diferente do original. Os dados entre sites são normalmente coletados e processados para fazer inferências sobre os interesses dos usuários. Como resultado, o uso de dados entre sites para direcionar anúncios ou conteúdo normalmente se qualifica como direcionamento baseado em interesses, independentemente de o anúncio ou conteúdo aparecer no site ou fora dele. Por exemplo, se os dados no site fossem usados em combinação com dados fora do site para selecionar qual anúncio mostrar a um usuário no site de uma organização, esse uso seria qualificado como direcionamento baseado em juros. Como outro exemplo, o redirecionamento de anúncios para usuários fora do site também se qualificaria como direcionamento com base em juros.
 

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 5%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!Serviço de Decisão DNL]](#decisioning)
+* [[!Fontes DNL]](#sources)
+* [Sistema do [!DNL Experience Data Model (XDM)]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-O Serviço de segmentação de Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform], tornando-os facilmente acessíveis por qualquer aplicativo Adobe.
+O Adobe Experience Platform Segmentation Service fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform], tornando-os facilmente acessíveis por qualquer aplicativo Adobe.
 
 [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo comercializável de pessoas dentro da sua base de clientes. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -34,8 +34,8 @@ O Serviço de segmentação de Adobe Experience Platform fornece uma interface d
 
 | Recurso | Descrição |
 |--- | ---|
-| Guia Audiências mescladas em [!DNL Segment Builder] | As guias [!UICONTROL _Segmentos _]e[!UICONTROL _Audiências_] no [!DNL Segment Builder] foram combinadas em uma única guia [!UICONTROL _Audiência _]. Essa guia permite que você procure e procure audiências existentes, que podem ser arrastadas e soltas na tela do construtor de regras para criar uma nova definição de segmento. A referência a uma audiência pode adicionar um dos seguintes conjuntos de lógica de regra à nova definição de segmento: associação de Audiência como uma regra, o conjunto completo de lógicas de regra que definiram a audiência referenciada. |
-| Novo local para o seletor de política de mesclagem | O local do seletor de política de mesclagem no [!DNL Segment Builder] foi alterado. Para selecionar uma política de mesclagem para uma definição de segmento, clique no ícone de engrenagem na guia [!UICONTROL _Campos _]e use o menu suspenso Política_[!UICONTROL  de]_ mesclagem para selecionar a política de mesclagem que deseja usar. |
+| Guia Audiências mescladas em [!DNL Segment Builder] | As guias [!UICONTROL _Segmentos_] e [!UICONTROL _Audiências_] no [!DNL Segment Builder] foram combinadas em uma única guia [!UICONTROL _Audiência_] . Essa guia permite que você procure e procure audiências existentes, que podem ser arrastadas e soltas na tela do construtor de regras para criar uma nova definição de segmento. A referência a uma audiência pode adicionar um dos seguintes conjuntos de lógica de regra à nova definição de segmento: associação de audiência como uma regra, o conjunto completo de lógicas de regra que definiram a audiência referenciada. |
+| Novo local para o seletor de política de mesclagem | O local do seletor de política de mesclagem no [!DNL Segment Builder] foi alterado. Para selecionar uma política de mesclagem para uma definição de segmento, clique no ícone de engrenagem na guia [!UICONTROL _Campos_] e use o menu suspenso Política _[!UICONTROL de]_ mesclagem para selecionar a política de mesclagem que deseja usar. |
 
 **Problemas conhecidos**
 
@@ -45,7 +45,7 @@ Para obter mais informações, consulte a visão geral [do Serviço de](../../se
 
 ## [!DNL Decisioning Service] {#decisioning}
 
-O Adobe Experience Platform [!DNL Decisioning Service] oferece a capacidade de selecionar de forma programática e inteligente a &quot;Próxima melhor experiência&quot; a partir de um conjunto de opções disponíveis para um determinado indivíduo, entregá-las a qualquer canal ou aplicativo e executar relatórios e análise.
+A Adobe Experience Platform [!DNL Decisioning Service] oferece a capacidade de selecionar de forma programática e inteligente a &quot;Próxima melhor experiência&quot; a partir de um conjunto de opções disponíveis para um determinado indivíduo, entregá-las a qualquer canal ou aplicativo e executar relatórios e análise.
 
 **Novos recursos**
 
@@ -61,7 +61,7 @@ Consulte a visão geral [do serviço de](../../decisioning-service/home.md) deci
 
 ## [!DNL Sources] {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como Adobe Solutions, armazenamento baseado em nuvem, software de terceiros e sistema CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como Adobe Solutions, armazenamento baseado em nuvem, software de terceiros e sistema CRM.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique em seus sistemas de armazenamentos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
@@ -82,7 +82,7 @@ Para obter mais informações sobre fontes, consulte a visão geral [das](../../
 
 A normalização e a interoperabilidade são conceitos fundamentais subjacentes [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
-A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo que se comunique com os serviços no Adobe Experience Platform. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de forma mais rápida e integrada. Você pode obter informações importantes das ações do cliente, definir audiências do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+A XDM é uma especificação publicamente documentada projetada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo que se comunique com os serviços da Adobe Experience Platform. Ao aderir aos padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de forma mais rápida e integrada. Você pode obter informações importantes das ações do cliente, definir audiências do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
 
 **Novos recursos**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmissão de dados de registro
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1072'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte
 
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
+- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 - [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
 
 Além disso, este tutorial requer que você já tenha criado uma conexão de streaming. Para obter mais informações sobre como criar uma conexão de streaming, leia o tutorial [](./create-streaming-connection.md)Criar uma conexão de streaming.
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | O nome que você deseja usar para o seu schema. Esse nome deve ser exclusivo. |
 | `description` | Uma descrição significativa do schema que você está criando. |
-| `meta:immutableTags` | Neste exemplo, a `union` tag é usada para persistir nos dados [!DNL Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | Neste exemplo, a `union` tag é usada para persistir seus dados em [[!DNL Real-time Customer Perfil]](../../profile/home.md). |
 
 **Resposta**
 
@@ -348,7 +348,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo streami
 
 ## Recuperar os dados de registro recém-ingeridos
 
-Para validar os registros ingeridos anteriormente, você pode usar o para recuperar os dados [!DNL Profile Access API](../../profile/api/entities.md) do registro.
+Para validar os registros ingeridos anteriormente, você pode usar a [[!DNL Perfil Access API]](../../profile/api/entities.md) para recuperar os dados do registro.
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descritores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Descritores
 
-Os Schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. O Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores.
+Os schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. A Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores.
 
-Os descritores de Schema são metadados de nível de locatário, o que significa que são exclusivos à sua organização IMS e que todas as operações do descritor ocorrem no container do locatário.
+Os descritores de schema são metadados de nível de locatário, o que significa que são exclusivos à sua organização IMS e que todas as operações do descritor ocorrem no container do locatário.
 
 Cada schema pode ter uma ou mais entidades de descritor de schema aplicadas a ele. Cada entidade do descritor de schema inclui um descritor `@type` e o `sourceSchema` qual ele se aplica. Depois de aplicados, esses descritores serão aplicados a todos os conjuntos de dados criados usando o schema.
 
@@ -26,7 +26,7 @@ Este documento fornece exemplos de chamadas de API para descritores, bem como um
 >
 >Os descritores exigem cabeçalhos Accept exclusivos que substituem `xed` por `xdm`, mas que, de outra forma, pareçam muito semelhantes aos cabeçalhos Accept usados em outros locais do [!DNL Schema Registry]. Os cabeçalhos de Aceitação corretos foram incluídos nas chamadas de amostra abaixo, mas tenha cuidado extra para garantir que os cabeçalhos corretos estejam sendo usados.
 
-## Descritores de Lista
+## Descritores de lista
 
 Uma única solicitação de GET pode ser usada para retornar uma lista de todos os descritores que foram definidos pela sua organização.
 
@@ -238,7 +238,7 @@ A execução de uma solicitação de pesquisa (GET) para visualização do descr
 
 ## Excluir descritor
 
-Ocasionalmente, talvez seja necessário remover um descritor definido do [!DNL Schema Registry]. Isso é feito fazendo uma solicitação DELETE referenciando o nome `@id` do descritor que você deseja remover.
+Ocasionalmente, talvez seja necessário remover um descritor definido do [!DNL Schema Registry]. Isso é feito fazendo uma solicitação de DELETE que faz referência ao `@id` descritor que você deseja remover.
 
 **Formato da API**
 
@@ -279,7 +279,7 @@ As seções a seguir fornecem uma visão geral dos tipos de descritor disponíve
 
 #### Descritor de identidade
 
-Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; é um [!DNL Identity] campo como descrito pelo Serviço [de identidade do](../../identity-service/home.md)Adobe Experience Platform.
+Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; é um [!DNL Identity] campo conforme descrito pelo Serviço [de identidade da](../../identity-service/home.md)Adobe Experience Platform.
 
 ```json
 {
@@ -300,9 +300,9 @@ Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | O `$id` URI do schema no qual o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | O `id` valor ou `code` da namespace de identidade. Uma lista de namespaces pode ser encontrada usando o [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | O `id` valor ou `code` da namespace de identidade. Uma lista do namespace pode ser encontrada usando a [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | Ou `xdm:id` ou `xdm:code`, dependendo do `xdm:namespace` usado. |
-| `xdm:isPrimary` | Um valor booliano opcional. Quando verdadeiro, indica o campo como a identidade primária. Os Schemas podem conter apenas uma identidade primária. |
+| `xdm:isPrimary` | Um valor booliano opcional. Quando verdadeiro, indica o campo como a identidade primária. Os schemas podem conter apenas uma identidade primária. |
 
 #### Descritor de nome amigável
 

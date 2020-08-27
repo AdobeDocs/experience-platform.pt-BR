@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights;attribution ai;popular topics
+keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 solution: Experience Platform
 title: Descobrindo insights no Attribution AI
 topic: Attribution AI insights
+description: Este documento serve como um guia para interagir com informações da instância do serviço na interface do usuário do Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -20,7 +21,7 @@ Este documento serve como um guia para interagir com informações da instância
 
 ## Introdução
 
-Para utilizar insights para o Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [da interface do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para terminar a execução.
+Para utilizar insights para o Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [da interface do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
 
 ## Visão geral dos insights da instância de serviço
 
@@ -66,7 +67,7 @@ O botão *Mais ações* está localizado na navegação superior direita ao lado
 - **Excluir**: Exclui a instância.
 - **Baixar dados** de resumo: Faz o download de um arquivo CSV que contém os dados de resumo.
 - **Pontuações** de acesso: Clicar em *Acessar pontuações* o redireciona para as pontuações de [acesso do tutorial](./download-scores.md).
-- **Histórico** de execução da Visualização: Um provedor que contém uma lista de todas as execuções de pontuação associadas à instância do serviço é exibido.
+- **Histórico** de execução da visualização: Um provedor que contém uma lista de todas as execuções de pontuação associadas à instância do serviço é exibido.
 
 ![mais ações](./images/insights/more-actions.png)
 
@@ -78,7 +79,7 @@ Os insights do Attribution AI permitem filtrar seus dados e atualizar automatica
 >
 >Por padrão, cada filtro é definido como &quot;Todos&quot;, exceto o filtro do modelo *de* Atribuição, que é definido como &quot;Conversões atribuídas incrementais e influenciadas&quot;.
 
-### evento de conversão
+### Evento de conversão
 
 Quando você cria uma nova instância no Attribution AI, um dos campos obrigatórios é &quot;eventos de conversão&quot;. Os eventos de conversão são objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
 

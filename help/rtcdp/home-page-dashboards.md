@@ -5,7 +5,7 @@ seo-title: Home page e Painéis da plataforma de dados do cliente em tempo real
 description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
 seo-description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
@@ -19,7 +19,7 @@ O home page Adobe Real-time Customer Data Platform (CDP em tempo real), que incl
 
 O home page é apenas um dos locais onde os cartões de métrica aparecem. A CDP em tempo real fornece cartões de métricas em toda a sua experiência. Essas métricas informam sobre as audiências de dados, perfis e segmentos no sistema.
 
-![imagem](assets/home2.jpg)
+![imagem](assets/home.png)
 
 Se não houver dados no sistema quando você fizer logon na CDP em tempo real, o painel no home page não será exibido. Nesse caso, o home page fornece material de aprendizado para uma primeira experiência do usuário. À medida que os dados são coletados — em outras palavras, à medida que <!--sources-->os conjuntos de dados, perfis, segmentos e destinos são criados e os dados fluem para o sistema — o painel é atualizado automaticamente para exibir informações sobre esses dados<!-- in metric cards-->.
 
@@ -31,14 +31,14 @@ O painel é dividido em<!-- two areas.-->:
 
 * **O quadro de líderes** fica na parte superior do painel. O quadro de líderes mostra o número de conjuntos de dados, perfis, segmentos e destinos no sistema.
 
-   ![imagem](assets/home-leaderboard2.jpg)
+   ![imagem](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **Itens** recentes listas os cinco conjuntos de dados, fontes, segmentos e destinos mais recentes adicionados ao sistema.
 
-   ![imagem](assets/home-recent.jpg)
+   ![imagem](assets/recent.png)
 
 Métricas adicionais — por exemplo, para perfis e segmentos — estão disponíveis em outras partes da Plataforma de dados do cliente em tempo real.
 

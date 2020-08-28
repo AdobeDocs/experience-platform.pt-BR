@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de origem de Hubs de Evento do Azure na interface do usuário
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
    - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [[!DNL Perfil do cliente em tempo real]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Se você já tiver uma [!DNL Event Hubs] conexão válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/streaming/cloud-storage.md).
+Se você já tiver uma [!DNL Event Hubs] conexão válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Reunir credenciais obrigatórias
 
@@ -71,4 +71,4 @@ Para conectar uma conta existente, selecione a [!DNL Event Hubs] conta à qual d
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você conectou sua [!DNL Event Hubs] conta a [!DNL Platform]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para [!DNL Platform]](../../dataflow/streaming/cloud-storage.md)dentro.
+Ao seguir este tutorial, você conectou sua [!DNL Event Hubs] conta a [!DNL Platform]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md)dentro.

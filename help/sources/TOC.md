@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - Automação de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
-   - Pagamentos {#payments}
+   - oud {#payments}
       - [Conector PayPal](connectors/payments/paypal.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
@@ -111,7 +111,7 @@ ht-degree: 0%
          - [Conector PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
-   - Pagamentos {#explore}
+   - Explorar dados {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento em nuvem](tutorials/api/explore/cloud-storage.md)
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)
@@ -184,7 +184,7 @@ ht-degree: 0%
    - Configurar um fluxo de dados {#dataflow}
       - [Configurar um fluxo de dados para um conector de publicidade](tutorials/ui/dataflow/advertising.md)
       - [Configurar um fluxo de dados para um conector de armazenamento de nuvem em lote](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configurar um fluxo de dados para um conector de armazenamento de nuvem de streaming](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [Configurar um fluxo de dados para um conector de armazenamento de nuvem de streaming](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Configurar um fluxo de dados para um conector de banco de dados](tutorials/ui/dataflow/databases.md)
       - [Configurar um fluxo de dados para um conector CRM](tutorials/ui/dataflow/crm.md)
       - [Configurar um fluxo de dados para um conector bem-sucedido do cliente](tutorials/ui/dataflow/customer-success.md)

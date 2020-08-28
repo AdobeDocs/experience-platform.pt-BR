@@ -5,10 +5,10 @@ title: Pesquisar vários objetos
 topic: developer guide
 description: Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornecerá um atalho simples para solicitar vários objetos do mesmo tipo. É possível usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista de IDs separada por vírgulas.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '225'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,9 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a recuperar. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| Parâmetro | Descrição |
+| -------- | ----------- |
+| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Um identificador para um dos objetos específicos que você deseja recuperar. |
 
 **Solicitação**

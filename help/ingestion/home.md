@@ -5,7 +5,7 @@ title: Visão geral da ingestão de dados Adobe Experience Platform
 topic: overview
 description: Este documento apresenta as três principais formas de assimilação dos dados na Plataforma, com links para a respectiva documentação de visão geral para obter informações mais detalhadas.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 9%
@@ -47,6 +47,6 @@ Este documento apresentou uma breve introdução aos diferentes aspectos do [!DN
 
 >[!WARNING]
 >
-> O termo &quot;Perfil unificado&quot; usado no vídeo a seguir está desatualizado. Os termos [!DNL "Profile"] ou [!DNL "Real-time Customer Profile"] são os termos corretos usados na [!DNL Experience Platform] documentação. Consulte a documentação para obter a funcionalidade mais recente.
+>O termo &quot;Perfil unificado&quot; usado no vídeo a seguir está desatualizado. Os termos [!DNL "Profile"] ou [!DNL "Real-time Customer Profile"] são os termos corretos usados na [!DNL Experience Platform] documentação. Consulte a documentação para obter a funcionalidade mais recente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

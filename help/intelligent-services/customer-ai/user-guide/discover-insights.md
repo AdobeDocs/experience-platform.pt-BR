@@ -5,7 +5,7 @@ title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 description: A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -122,7 +122,9 @@ Clicar no botão **[!UICONTROL Criar segmento]** em qualquer um dos compartiment
 
 O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights, a API do cliente adiciona automaticamente as informações dos buckets selecionados ao segmento. Para concluir a criação do segmento, basta preencher os container *Nome* e *Descrição* localizados no painel direito da interface do usuário do construtor de segmentos. Depois de fornecer um nome e uma descrição ao segmento, clique em **[!UICONTROL Salvar]** no canto superior direito.
 
->!![NOTE] Como as pontuações de propensão são gravadas no perfil individual, elas estão disponíveis no Construtor de segmentos, como qualquer outro atributo do perfil. Ao navegar até o construtor de segmentos para criar novos segmentos, você pode ver todas as várias pontuações de propensão em sua IA do cliente de namespace.
+>[!NOTE]
+>
+>Como as pontuações de propensão são gravadas no perfil individual, elas estão disponíveis no Construtor de segmentos, como qualquer outro atributo do perfil. Ao navegar até o construtor de segmentos para criar novos segmentos, você pode ver todas as várias pontuações de propensão em sua IA do cliente de namespace.
 
 ![Preenchimento do segmento em](../images/insights/segment-saving.png)
 

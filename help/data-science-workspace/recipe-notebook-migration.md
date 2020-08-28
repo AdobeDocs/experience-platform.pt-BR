@@ -5,7 +5,7 @@ title: Guias de migração de receitas e notebooks
 topic: Tutorial
 description: Os guias a seguir descrevem as etapas e informações necessárias para migrar receitas e notebooks existentes na Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # Guias de migração de receitas e notebooks
 
 >[!NOTE]
+>
 >Os notebooks e fórmulas que usam [!DNL Python]/R não são afetados. A migração se aplica somente às receitas e notebooks PySpark/[!DNL Spark] (2.3).
 
 Os guias a seguir descrevem as etapas e informações necessárias para migrar receitas e notebooks existentes.
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > O modo interativo expira se os query estiverem em execução por mais de 10 minutos. Se você estiver ingerindo mais de alguns gigabytes de dados, é recomendável alternar para o modo &quot;lote&quot;. O modo de lote demora mais para ser start, mas pode lidar com conjuntos maiores de dados.
 
 #### Gravar em um conjunto de dados
@@ -138,6 +140,7 @@ A fórmula Scala está localizada no diretório a seguir `experience-platform-ds
 É necessário um novo arquivo na pasta de fórmula para usar o fluxo de trabalho baseado no docker. Copie e cole o arquivo Dockerfile da pasta de receitas localizada em `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Opcionalmente, você também pode copiar e colar o código abaixo em um novo arquivo chamado `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > O arquivo jar de exemplo mostrado abaixo `ml-retail-sample-spark-*-jar-with-dependencies.jar` deve ser substituído pelo nome do arquivo jar de sua receita.
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > O modo interativo expira se os query estiverem em execução por mais de 10 minutos. Se você estiver ingerindo mais de alguns gigabytes de dados, é recomendável alternar para o modo &quot;lote&quot;. O modo de lote demora mais para ser start, mas pode lidar com conjuntos maiores de dados.
 
 #### Gravar em um conjunto de dados
@@ -275,6 +279,7 @@ A receita do PySpark está localizada no diretório a seguir `experience-platfor
 É necessário um novo arquivo na pasta de fórmula para usar o fluxo de trabalho baseado no docker. Copie e cole o arquivo Dockerfile da pasta de receitas localizada em `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Opcionalmente, você também pode copiar e colar o código abaixo e criar um novo arquivo chamado `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > O arquivo de exemplo de ovo mostrado abaixo `pysparkretailapp-*.egg` deve ser substituído pelo nome do arquivo de ovos da sua receita.
 
 ```scala

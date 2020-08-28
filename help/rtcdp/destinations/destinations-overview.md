@@ -5,9 +5,9 @@ seo-title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real do Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Plataforma de dados do cliente em tempo real. Você pode usar Destinos na Plataforma de dados do cliente em tempo real do Adobe para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -67,4 +67,4 @@ Para obter mais informações sobre a seleção de casos de uso de marketing no 
 * [Destinos de marketing de email](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Destinos da rede social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-Para obter mais informações sobre violações da política de dados no fluxo de trabalho da ativação de segmentos, consulte a etapa 7 em [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/activate-destinations.md).
+Para obter mais informações sobre violações da política de dados no fluxo de trabalho da ativação de segmentos, consulte a etapa Revisar em [Ativar perfis e segmentos em um destino](/help/rtcdp/destinations/activate-destinations.md#review).

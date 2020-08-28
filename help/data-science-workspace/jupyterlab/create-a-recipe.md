@@ -5,7 +5,7 @@ title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 description: Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo no Notebook JupyterLab. Em seguida, você exercerá o fluxo de trabalho do notebook para receber receitas dentro do JupyterLab para criar uma receita dentro da Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 0%
@@ -475,6 +475,7 @@ Quando o processo estiver concluído, a receita ficará parecida com isso:
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Não excluir nenhuma das células de arquivo
 > - Não edite a `%%writefile` linha na parte superior das células do arquivo
 > - Não crie receitas em diferentes blocos de anotações ao mesmo tempo

@@ -5,9 +5,9 @@ title: Segmentação em streaming
 topic: ui guide
 description: A segmentação contínua no Adobe Experience Platform permite que você faça a segmentação em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam à Plataforma, o que diminui a necessidade de programar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 translation-type: tm+mt
-source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,11 @@ ht-degree: 0%
 >
 >O documento a seguir indica como usar a segmentação de fluxo contínuo usando a interface do usuário. Para obter informações sobre como usar a segmentação de streaming usando a API, leia o guia [da API de segmentação de](../api/streaming-segmentation.md)streaming.
 
-A segmentação contínua permite [!DNL Adobe Experience Platform] que os clientes façam a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam, o que diminui a necessidade de programar e executar tarefas de segmentação. [!DNL Platform] Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
+A segmentação contínua permite [!DNL Adobe Experience Platform] que os clientes façam a segmentação em tempo quase real, concentrando-se na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos agora acontece à medida que os dados de streaming chegam, o que diminui a necessidade de programar e executar tarefas de segmentação. [!DNL Platform] Com esse recurso, a maioria das regras de segmento agora pode ser avaliada à medida que os dados são passados para [!DNL Platform], o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
+
+>[!NOTE]
+>
+>A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e exigirão que a avaliação em lote seja acionada.
 
 ## Tipos de query de segmentação de transmissão
 

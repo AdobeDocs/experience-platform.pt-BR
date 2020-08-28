@@ -5,7 +5,7 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real do Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real do Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -51,9 +51,9 @@ Na página **[!UICONTROL Ativar fluxo de trabalho de destino]** , na página **[
 
 ### **[!UICONTROL Etapa de mapeamento]** de identidade {#identity-mapping}
 
-![Etapa de mapeamento de identidade](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 Aplica-se a: destinos sociais e destino publicitário da Correspondência de clientes do Google
+
+![Etapa de mapeamento de identidade](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 Para destinos ** sociais, na etapa de mapeamento **** Identidade, você pode selecionar atributos de origem para mapear como identidades de público alvo no destino. Essa etapa é opcional ou obrigatória, dependendo da identidade primária usada no schema. <br> 
 

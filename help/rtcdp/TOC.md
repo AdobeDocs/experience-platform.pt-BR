@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Ajuda da plataforma de dados do cliente em tempo real
 user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 10%
@@ -127,7 +127,7 @@ ht-degree: 10%
    * Tutoriais da interface do usuário de destinos {#dest-tutorials}
       * [Conectar-se a um destino](/help/rtcdp/destinations/connect-destination.md)
       * [Ativar perfis e segmentos em um destino](destinations/activate-destinations.md)
-   * Tutoriais da API de destino {#api-tutorials}
+   * Tutoriais da API de destinos {#api-tutorials}
       * [Conecte-se aos destinos de streaming (Kinesis AWS e Hubs de Evento do Azure) e ative os dados](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Conectar-se aos destinos de marketing de email e ativar dados](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacidade e controle de dados {#privacy}

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do Sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário do Adobe Experience Platform.
 
-## Caixas de proteção de Visualização
+## Caixas de proteção de visualização
 
-Na interface do usuário do Experience Platform, clique em **[!UICONTROL Caixas]** de proteção na navegação esquerda para abrir o painel _[!UICONTROL Caixas de proteção]_. O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
+Na interface do usuário do Experience Platform, clique em **[!UICONTROL Caixas]** de proteção na navegação esquerda para abrir o painel _[!UICONTROL Caixas de proteção]_ . O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,9 +46,9 @@ Para criar uma nova caixa de proteção na interface do usuário, clique em **[!
 
 ![](../images/ui/create-sandbox-button.png)
 
-A caixa de diálogo _[!UICONTROL Criar caixa de proteção]_é exibida, solicitando que você forneça um título de exibição e um nome para a caixa de proteção. O título **de**exibição deve ser legível por humanos e deve ser suficientemente descritivo para ser facilmente identificável. O**[!UICONTROL  Nome ]**da caixa de proteção é um identificador em letras minúsculas para uso em chamadas de API e, portanto, deve ser exclusivo e conciso.
+A caixa de diálogo _[!UICONTROL Criar caixa de proteção]_ é exibida, solicitando que você forneça um título de exibição e um nome para a caixa de proteção. O título **de** exibição deve ser legível por humanos e deve ser suficientemente descritivo para ser facilmente identificável. O **[!UICONTROL Nome]** da caixa de proteção é um identificador em letras minúsculas para uso em chamadas de API e, portanto, deve ser exclusivo e conciso.
 
-Quando terminar, clique em **[!UICONTROL Criar]**.
+When finished, click **[!UICONTROL Create]**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
@@ -56,7 +56,7 @@ Quando terminar, clique em **[!UICONTROL Criar]**.
 >
 >Como você está restrito à criação de tipos de caixa de proteção que não sejam de produção, a opção de **[!UICONTROL tipo]** está bloqueada em &quot;Não-produção&quot; e não pode ser manipulada.
 
-Quando terminar de criar a caixa de proteção, atualize a página e a nova caixa de proteção será exibida no painel _[!UICONTROL Sandboxes]_com um status de &quot;[!UICONTROL Criação]&quot;. As novas caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seu status muda para &quot;[!UICONTROL Ativo]&quot;.
+Quando terminar de criar a caixa de proteção, atualize a página e a nova caixa de proteção será exibida no painel _[!UICONTROL Sandboxes]_ com um status de &quot;[!UICONTROL Criação]&quot;. As novas caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seu status muda para &quot;[!UICONTROL Ativo]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Cli
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Uma mensagem de confirmação é exibida e a caixa de proteção é removida da área de trabalho _[!UICONTROL Caixas de proteção]_.
+Uma mensagem de confirmação é exibida e a caixa de proteção é removida da área de trabalho _[!UICONTROL Caixas de proteção]_ .
 
 ## Próximas etapas
 

@@ -5,9 +5,9 @@ topic: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso para Adobe Experience Platform é fornecido através do Adobe Admin Console. Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1162'
 ht-degree: 3%
 
 ---
@@ -57,7 +57,7 @@ No [!DNL Admin Console], as permissões são atribuídas aos usuários por meio 
 
 ## Caixas de proteção e permissões
 
-[!DNL Experience Platform] fornece acesso a uma caixa de proteção Produção e permite criar **caixas de proteção** Não-Produção. As caixas de proteção de não-produção são uma forma de virtualização de dados que permite isolar dados de outras caixas de proteção e geralmente são usadas para experimentos de desenvolvimento, testes ou testes. As **[!UICONTROL permissões]** [!DNL Platform] de um perfil de produto concedem aos usuários do perfil acesso aos recursos dentro dos ambientes da caixa de proteção aos quais eles receberam acesso.
+As caixas de proteção de não-produção são uma forma de virtualização de dados que permite isolar dados de outras caixas de proteção e geralmente são usadas para experimentos de desenvolvimento, testes ou testes. As **[!UICONTROL permissões]** [!DNL Platform] de um perfil de produto concedem aos usuários do perfil acesso aos recursos dentro dos ambientes da caixa de proteção aos quais eles receberam acesso. Uma licença padrão de Experience Platform concede cinco caixas de proteção (uma produção e quatro não-produção). Você pode adicionar pacotes de dez caixas de proteção de não produção até um máximo de 75 caixas de proteção no total. Entre em contato com seu administrador de organização IMS ou seu representante de vendas de Adobe para obter mais detalhes.
 
 Para obter mais informações sobre caixas de proteção em [!DNL Experience Platform], consulte a visão geral [das](../sandboxes/home.md)caixas de proteção.
 

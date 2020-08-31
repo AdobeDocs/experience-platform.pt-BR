@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; payment; paypal
 solution: Experience Platform
 title: Coletar dados de pagamento por meio de conectores de origem e APIs
 topic: overview
+description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamento de terceiros e assimilá-los na Plataforma por meio de conectores de origem e da API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1747'
 ht-degree: 2%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los [!DNL Platform] por meio de conectores de origem e APIs.
+Este tutorial aborda as etapas para recuperar dados de um sistema de pagamento de terceiros e assimilá-los [!DNL Platform] por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
 
 ## Introdução
 
@@ -24,11 +25,11 @@ Este tutorial requer que você tenha acesso a um sistema de pagamento por meio d
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-* [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
-* [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
+* [[!DNL ingestão em lote]](../../../../ingestion/batch-ingestion/overview.md): A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
 * [Caixas de proteção](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um aplicativo de pagamentos usando a [!DNL Flow Service] API.

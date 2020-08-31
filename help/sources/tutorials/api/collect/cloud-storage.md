@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; cloud storage
 solution: Experience Platform
 title: Coletar dados de armazenamento em nuvem por meio de conectores de origem e APIs
 topic: overview
+description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e inseri-los na Plataforma por meio de conectores de origem e da API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -16,21 +17,20 @@ ht-degree: 1%
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para dentro [!DNL Platform] por meio de conectores de origem e APIs.
+Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
-Este tutorial requer que você tenha acesso a um armazenamento em nuvem de terceiros por meio de uma conexão válida e informações sobre o arquivo que deseja inserir [!DNL Platform], incluindo o caminho e a estrutura do arquivo. Se você não tiver essas informações, consulte o tutorial sobre como [explorar um armazenamento em nuvem de terceiros usando a API](../explore/cloud-storage.md) do Serviço de Fluxo antes de tentar este tutorial.
+Este tutorial requer que você tenha acesso a um armazenamento em nuvem de terceiros por meio de uma conexão válida e informações sobre o arquivo que deseja trazer para a plataforma DNL, incluindo o caminho e a estrutura do arquivo. Se você não tiver essas informações, consulte o tutorial sobre como [explorar um armazenamento em nuvem de terceiros usando [!DNL Flow Service] a API](../explore/cloud-storage.md) antes de tentar este tutorial.
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+- [Sistema do [!DNL Experience Data Model (XDM)](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-- [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
-- [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
+- [[!DNL ingestão em lote]](../../../../ingestion/batch-ingestion/overview.md): A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
 - [Caixas de proteção](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
-
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um armazenamento em nuvem usando a [!DNL Flow Service] API.
 
 ### Lendo chamadas de exemplo da API
@@ -41,29 +41,21 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
-- Autorização: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
-- Tipo de conteúdo: `application/json`
-
-## Criar uma classe e um schema XDM ad hoc
-
-Para trazer dados externos para dentro [!DNL Platform] por meio de conectores de origem, uma classe e um schema XDM ad-hoc devem ser criados para os dados de fonte bruta.
-
-Para criar uma classe e um schema ad-hoc, siga as etapas descritas no tutorial [do schema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Ao criar uma classe ad-hoc, todos os campos encontrados nos dados de origem devem ser descritos no corpo da solicitação.
-
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado um schema ad-hoc. O identificador exclusivo (`$id`) do schema ad-hoc é necessário para prosseguir para a próxima etapa deste tutorial.
+- `Content-Type: application/json`
 
 ## Criar uma conexão de origem {#source}
 
-Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+Você pode criar uma conexão de origem, fazendo uma solicitação POST para a [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
 
 Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
 
@@ -94,22 +86,18 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test source connection for a Cloud Storage connector",
-        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
-        "description": "Test source connection for a Cloud Storage connector",
+        "name": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
+            "format": "delimited"
         },
         "params": {
-            "path": "/backfil/data8.csv",
+            "path": "/demo/data7.csv",
             "recursive": "true"
         },
-        "connectionSpec": {
-            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
     }'
@@ -118,7 +106,6 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `baseConnectionId` | A ID exclusiva de conexão do sistema de armazenamento em nuvem de terceiros que você está acessando. |
-| `data.schema.id` | A ID do schema XDM ad-hoc. |
 | `params.path` | O caminho do arquivo de origem que você está acessando. |
 | `connectionSpec.id` | A ID de especificação de conexão associada ao sistema de armazenamento em nuvem de terceiros específico. Consulte o [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
 
@@ -128,14 +115,14 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ```json
 {
-    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
-    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
 ```
 
 ## Criar um schema XDM de público alvo {#target-schema}
 
-Em etapas anteriores, um schema XDM ad-hoc foi criado para estruturar os dados de origem. Para que os dados de origem sejam usados em [!DNL Platform], um schema de público alvo também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um [!DNL Platform] conjunto de dados no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados em [!DNL Platform], um schema de público alvo deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um [!DNL Platform] conjunto de dados no qual os dados de origem estão contidos.
 
 É possível criar um schema XDM de público alvo, executando uma solicitação POST para a API [do Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schemas.
 
@@ -190,13 +177,13 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
-    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
+    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for a Cloud Storage connector",
+    "title": "Target schema cloud storage",
     "type": "object",
-    "description": "Target schema for Cloud Storage",
+    "description": "Target schema for cloud storage",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,11 +192,6 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -236,18 +218,18 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1589398474190,
-        "repo:lastModifiedDate": 1589398474190,
+        "repo:createdDate": 1597783248870,
+        "repo:lastModifiedDate": 1597783248870,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
-        "meta:globalLibVersion": "1.10.1.1"
+        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
+        "meta:globalLibVersion": "1.13.3"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "{TENANT_ID}"
 }
 ```
 
@@ -272,9 +254,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a Cloud Storage connector",
+        "name": "Target dataset for cloud storage",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -290,7 +272,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 
 ```json
 [
-    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
+    "@/dataSets/5f3c3cedb2805c194ff0b69a"
 ]
 ```
 
@@ -321,12 +303,12 @@ curl -X POST \
         "description": "Target Connection for a Cloud Storage connector",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
+            "dataSetId": "5f3c3cedb2805c194ff0b69a"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -347,8 +329,8 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da nova conex
 
 ```json
 {
-    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
-    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
@@ -374,13 +356,21 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "first_name",
+                "sourceAttribute": "FirstName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -388,23 +378,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "last_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "id",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "sourceAttribute": "LastName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -424,10 +398,10 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ```json
 {
-    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "id": "bf5286a9c1ad4266baca76ba3adc9366",
     "version": 0,
-    "createdDate": 1589398562232,
-    "modifiedDate": 1589398562232,
+    "createdDate": 1597784069368,
+    "modifiedDate": 1597784069368,
     "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
     "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
@@ -611,29 +585,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to AEP",
-        "description": "Cloud Storage flow to AEP",
+        "name": "Cloud Storage flow to Platform",
+        "description": "Cloud Storage flow to Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "8bae595c-8548-4716-ae59-5c85480716e9"
+            "26b53912-1005-49f0-b539-12100559f0e2"
         ],
         "targetConnectionIds": [
-            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
+            "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
         ],
         "transformations": [
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1589398646",
+            "startTime": "1597784298",
             "frequency":"minute",
             "interval":"30"
         }
@@ -656,14 +630,14 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
 ## Monitore seu fluxo de dados
 
-Depois que seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre como [monitorar fluxos de dados na API ](../monitor.md)
+Depois que seu fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele para ver informações sobre execuções de fluxo, status de conclusão e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre como [monitorar fluxos de dados na API](../monitor.md)
 
 ## Próximas etapas
 

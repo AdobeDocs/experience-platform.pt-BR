@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Este documento fornece etapas para criar e gerenciar solicitações de privacida
 
 O painel para a [!DNL Privacy Service] interface do usuário fornece dois widgets que permitem que você visualização o status de seus trabalhos de privacidade: **[!UICONTROL Relatório]** de Status e Solicitações **** de Job. O painel também exibe a regra selecionada atual para as tarefas exibidas.
 
-![painel da interface](../images/user-guide/dashboard.png)
+![Painel da interface](../images/user-guide/dashboard.png)
 
 ### Tipo de regulamento
 
@@ -36,7 +36,7 @@ Os trabalhos para cada tipo de regulamento são rastreados separadamente. Para a
 
 Ao alterar o tipo de regulamento, o painel é atualizado para mostrar todos os diálogos de operações, filtros, widgets e criação de empregos que se aplicam ao regulamento selecionado.
 
-![painel atualizado](../images/user-guide/dashboard-update.png)
+![Painel atualizado](../images/user-guide/dashboard-update.png)
 
 ### Relatório de status
 
@@ -121,7 +121,7 @@ Ao usar o tipo de namespace _personalizado_ , você deve digitar manualmente na 
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Quando terminar, clique em **[!UICONTROL Criar]**.
+When finished, click **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -147,7 +147,7 @@ Se você não tiver um arquivo JSON para carregar, clique em **[!UICONTROL Baixa
 
 Localize o arquivo JSON no computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo será exibido na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando-os e soltando-os na caixa de diálogo.
 
-Quando terminar, clique em **[!UICONTROL Criar]**. A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações _de_ trabalho junto com seu status de processamento atual.
+When finished, click **[!UICONTROL Create]**. A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações _de_ trabalho junto com seu status de processamento atual.
 
 ### Próximas etapas
 

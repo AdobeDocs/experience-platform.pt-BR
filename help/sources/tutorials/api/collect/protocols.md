@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
 solution: Experience Platform
 title: Coletar dados de protocolo por meio de conectores de origem e APIs
 topic: overview
+description: Este tutorial aborda as etapas para recuperar dados de um provedor de protocolo de terceiros e assimilá-los à Plataforma por meio de conectores de origem e da API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -16,17 +17,17 @@ ht-degree: 1%
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los [!DNL Platform] por meio de conectores de origem e APIs.
+Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolo de terceiros e assimilá-los [!DNL Platform] por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
 
 ## Introdução
 
 Este tutorial requer que você tenha acesso a um sistema de protocolo por meio de uma conexão básica válida e informações sobre o arquivo que deseja trazer [!DNL Platform], incluindo o caminho e a estrutura da tabela. Se você não tiver essas informações, consulte o tutorial sobre como [explorar sistemas de protocolo usando a API](../explore/protocols.md) de Serviço de Fluxo antes de tentar este tutorial.
 
-* [Sistema](../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-* [Serviço](../../../../catalog/home.md)de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
-* [Ingestão](../../../../ingestion/batch-ingestion/overview.md)em lote: A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].
+* [[!DNL ingestão em lote]](../../../../ingestion/batch-ingestion/overview.md): A API de ingestão em lote permite que você ingira dados [!DNL Experience Platform] como arquivos em lote.
 * [Caixas de proteção](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um aplicativo de protocolos usando a [!DNL Flow Service] API.
@@ -39,29 +40,21 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
-* Autorização: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
-* Tipo de conteúdo: `application/json`
-
-## Criar uma classe e um schema XDM ad hoc
-
-Para trazer dados externos para dentro [!DNL Platform] por meio de conectores de origem, uma classe e um schema XDM ad-hoc devem ser criados para os dados de fonte bruta.
-
-Para criar uma classe e um schema ad-hoc, siga as etapas descritas no tutorial [do schema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Ao criar uma classe ad-hoc, todos os campos encontrados nos dados de origem devem ser descritos no corpo da solicitação.
-
-Continue seguindo as etapas descritas no guia do desenvolvedor até que você tenha criado um schema ad-hoc. Obtenha e armazene o identificador exclusivo (`$id`) do schema ad-hoc e prossiga para a próxima etapa deste tutorial.
+* `Content-Type: application/json`
 
 ## Criar uma conexão de origem {#source}
 
-Com um schema XDM ad-hoc criado, uma conexão de origem agora pode ser criada usando uma solicitação POST para a [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um arquivo de dados de origem e uma referência ao schema que descreve os dados de origem.
+Você pode criar uma conexão de origem, fazendo uma solicitação POST para a [!DNL Flow Service] API. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
 
 Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
 
@@ -97,10 +90,6 @@ curl -X POST \
         "description": "Protocols source connection to ingest Orders",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "Orders"
@@ -115,7 +104,6 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `baseConnectionId` | A ID de conexão do aplicativo de protocolos |
-| `data.schema.id` | A `$id` do schema XDM ad-hoc. |
 | `params.path` | O caminho do arquivo de origem. |
 | `connectionSpec.id` | A ID de especificação de conexão do aplicativo de protocolos. |
 

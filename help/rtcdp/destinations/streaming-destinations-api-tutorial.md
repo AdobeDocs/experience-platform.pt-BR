@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Conectar-se a destinos de streaming e ativar dados
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
 
 
-# Conecte-se aos destinos de streaming e ative os dados na Plataforma de dados do cliente em tempo real usando APIs em tempo real
+# Conectar-se a destinos de streaming ativam dados usando chamadas de API na Plataforma de Dados de Clientes em Tempo Real do Adobe
 
 >[!NOTE]
 >

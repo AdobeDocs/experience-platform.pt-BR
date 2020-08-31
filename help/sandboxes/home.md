@@ -5,9 +5,9 @@ title: Visão geral das caixas de proteção
 topic: overview
 description: As caixas de proteção são partições virtuais em uma única instância do Experience Platform, que permitem uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este documento fornece uma visão geral de alto nível das caixas de proteção 
 
 As caixas de proteção são partições virtuais em uma única instância do Experience Platform, que permitem uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Uma instância do Experience Platform suporta uma caixa de proteção de produção e várias caixas de proteção de não produção, com cada caixa de proteção mantendo sua própria biblioteca independente de recursos da plataforma (incluindo schemas, conjuntos de dados, perfis etc.).  Todo o conteúdo e as ações realizadas em uma caixa de proteção estão confinados apenas a essa caixa de proteção e não afetam nenhuma outra caixa de proteção.
 
-As caixas de proteção de não-produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar sua caixa de proteção de produção. Além disso, as caixas de proteção de não produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da caixa de proteção. As caixas de proteção de não produção não podem ser convertidas em caixas de proteção de produção.
+As caixas de proteção de não-produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar sua caixa de proteção de produção. Além disso, as caixas de proteção de não produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da caixa de proteção. As caixas de proteção de não produção não podem ser convertidas em caixas de proteção de produção. Uma licença padrão de Experience Platform concede cinco caixas de proteção (uma produção e quatro não-produção). Você pode adicionar pacotes de dez caixas de proteção de não produção até um máximo de 75 caixas de proteção no total. Entre em contato com seu administrador de organização IMS ou seu representante de vendas de Adobe para obter mais detalhes.
 
 >[!NOTE]
 >

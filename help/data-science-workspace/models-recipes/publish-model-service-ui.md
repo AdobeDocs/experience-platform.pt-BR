@@ -5,7 +5,7 @@ title: Publicar um modelo como um serviço (UI)
 topic: Tutorial
 description: A Adobe Experience Platform Data Science Workspace permite que você publique seu Modelo treinado e avaliado como um Serviço, permitindo que os usuários na organização IMS pontuem dados sem a necessidade de criar seus próprios Modelos.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Se preferir publicar um Modelo usando APIs de aprendizado de máquina, consulte 
 
 ## Pontuação usando um serviço {#access-a-service}
 
-1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a *[!UICONTROL Service Gallery]*. Localize o Serviço que deseja usar e clique em **[!UICONTROL Pontuação]**.
+1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a **[!UICONTROL Service Gallery]**. Localize o Serviço que deseja usar e clique em **[!UICONTROL Pontuação]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Selecione um conjunto de dados de entrada apropriado para a execução de pontuação e clique em **[!UICONTROL Avançar]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -53,4 +53,4 @@ Se preferir publicar um Modelo usando APIs de aprendizado de máquina, consulte 
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da *[!UICONTROL Service Gallery]*. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).
+Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da **[!UICONTROL Service Gallery]**. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).

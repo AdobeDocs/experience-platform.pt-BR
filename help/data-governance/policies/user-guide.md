@@ -5,9 +5,9 @@ title: Guia do usuário das políticas de uso de dados
 topic: policies
 description: O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho Políticas na interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Se a ação de marketing não estiver sendo usada por nenhuma política de uso e
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral de como gerenciar políticas de uso de dados na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar políticas usando a DULE Policy API, consulte o guia [do](../api/getting-started.md)desenvolvedor. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.
+Este documento forneceu uma visão geral de como gerenciar políticas de uso de dados na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar políticas usando o [!DNL Policy Service API], consulte o guia [do](../api/getting-started.md)desenvolvedor. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.
 
 O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na [!DNL Experience Platform] interface do usuário:
 

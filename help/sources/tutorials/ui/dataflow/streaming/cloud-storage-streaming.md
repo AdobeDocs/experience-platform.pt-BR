@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage connector;cloud storage
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de transmissão de armazenamentos em nuvem na interface do usuário
 topic: overview
+description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando o conector base do armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---

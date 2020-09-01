@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: Criar um conector de origem de Armazenamento do Google Cloud na interface do usuário
+title: Conector de origem do Armazenamento do Google Cloud (UI)
 topic: overview
+description: Este tutorial fornece etapas para a criação de um conector de origem do Armazenamento do Google Cloud (a seguir denominado "GCS") usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---

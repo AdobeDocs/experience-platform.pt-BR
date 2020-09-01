@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;reset sandbox
 solution: Experience Platform
 title: Redefinir uma caixa de proteção
 topic: developer guide
+description: As caixas de proteção de desenvolvimento têm um recurso de "redefinição de fábrica" que exclui todos os recursos não padrão de uma caixa de proteção. É possível redefinir uma caixa de proteção fazendo uma solicitação de PUT que inclua o nome da caixa de proteção no caminho da solicitação.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 3%
 
 ---
 

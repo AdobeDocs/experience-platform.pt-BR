@@ -5,7 +5,7 @@ title: Entrada e saída de Attribution AI
 topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -136,11 +136,11 @@ A tabela a seguir descreve os campos de schema na saída de exemplo de pontuaç�
 
 ### Exibição de caminhos de pontuação brutos (IU) {#raw-score-path}
 
-Você pode visualização o caminho para suas pontuações brutas na interface do usuário. Start selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e, em seguida, procure e selecione o schema de pontuações AI de sua atribuição na guia *[!UICONTROL Procurar]* .
+Você pode visualização o caminho para suas pontuações brutas na interface do usuário. Start selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e, em seguida, procure e selecione o schema de pontuações AI de sua atribuição na guia **[!UICONTROL Procurar]** .
 
 ![Escolha seu schema](./images/input-output/schemas_browse.png)
 
-Em seguida, selecione um campo na janela *[!UICONTROL Estrutura]* da interface do usuário, a guia Propriedades *[!UICONTROL de]* campo será aberta. Dentro das propriedades ** de campo é o campo *[!UICONTROL Caminho]* que mapeia para suas pontuações brutas.
+Em seguida, selecione um campo na janela **[!UICONTROL Estrutura]** da interface do usuário, a guia Propriedades **[!UICONTROL de]** campo será aberta. Dentro das propriedades **** de campo é o campo **[!UICONTROL Caminho]** que mapeia para suas pontuações brutas.
 
 ![Escolha um Schema](./images/input-output/field_properties.png)
 

@@ -5,7 +5,7 @@ title: Conectar com o PSQL
 topic: connect
 description: 'O PSQL é uma interface de linha de comando que aparece quando você instala os Postgres em sua máquina. Você pode instalá-lo seguindo estas instruções. '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL e [!DNL Query Service]
 
-Retorne à [!DNL Platform] interface do usuário na página Ferramentas *[!UICONTROL do]* Connect BI.
+Retorne à [!DNL Platform] interface do usuário na página Ferramentas **[!UICONTROL do]** Connect BI.
 
-Clique em **[!UICONTROL copiar]** para Comando ** PSQL.
+Clique em **[!UICONTROL copiar]** para Comando **** PSQL.
 
 ![Imagem](../images/clients/psql/connect-bi.png)
 

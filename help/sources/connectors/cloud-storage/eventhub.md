@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
 solution: Experience Platform
 title: Conector Hubs de Evento do Azure
 topic: overview
+description: A documentação abaixo fornece informações sobre como conectar os Hubs de Evento do Azure à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---

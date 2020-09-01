@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário do Serviço de segmentação
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -155,13 +155,13 @@ Mais informações sobre a segmentação de streaming podem ser encontradas no g
 >
 >Para que a segmentação de fluxo funcione, será necessário ativar a segmentação programada para a organização. Para obter detalhes sobre como ativar a segmentação programada, consulte [a seção de segmentação de streaming neste guia](#scheduled-segmentation)do usuário.
 
-## Violações da política DULE
+## Violações políticas
 
 >[!NOTE]
 >
->As violações da política DULE só se aplicam se você estiver criando um segmento que foi atribuído a um destino.
+>As violações de política se aplicam somente se você estiver criando um segmento que foi atribuído a um destino.
 
-Depois que você terminar de criar seu segmento, ele será analisado [!DNL Data Governance] para garantir que não haja violações de política dentro do segmento. Para obter detalhes sobre DULE e violações de política, consulte a visão geral [do rótulo de uso de](../../data-governance/labels/overview.md)dados.
+Quando terminar de criar seu segmento, ele será analisado pelo Adobe Experience Platform Data Governance para garantir que não haja violações de política no segmento. Consulte a [[!DNL Data Governance] visão geral](../../data-governance/home.md) para obter mais informações.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

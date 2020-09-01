@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
 solution: Experience Platform
 title: Descritores
+description: 'Os schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. A Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---

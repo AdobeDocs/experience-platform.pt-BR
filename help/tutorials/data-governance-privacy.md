@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriais sobre controle de dados e privacidade
 topic: tutorial
+description: A DULE (Data Usage Labeling and Implementation) é o mecanismo principal do Adobe Experience Platform Data Governance. Os recursos DULE permitem que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # [!DNL Data Governance] e [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) é o mecanismo principal do Adobe Experience Platform [!DNL Data Governanc]e. Os recursos DULE permitem aplicar rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Antes de começar a usar as etiquetas, consulte a visão geral [do](../data-governance/home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE dentro [!DNL Platform].
+[!DNL Data Usage Labeling and Enforcement] (DULE) é o mecanismo principal da Adobe Experience Platform [!DNL Data Governance]. Os recursos DULE permitem que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Antes de começar a usar as etiquetas, consulte a visão geral [do](../data-governance/home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE dentro [!DNL Platform].
 
-O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem coordenar solicitações de privacidade e conformidade em várias soluções. Para saber mais, comece lendo a visão geral [do](../privacy-service/home.md)Privacy Service.
+A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem coordenar solicitações de privacidade e conformidade em várias soluções. Para saber mais, comece lendo a visão geral [do](../privacy-service/home.md)Privacy Service.
 
 ## Adicionar rótulos de uso de dados
 

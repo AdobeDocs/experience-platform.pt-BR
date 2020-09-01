@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Adobe Analytics Classifications Data Connector
 solution: Experience Platform
 title: Conector de dados de classificações Adobe Analytics
 topic: overview
+description: A documentação abaixo fornece informações sobre como conectar as Classificações do Analytics à Plataforma usando a interface do usuário
 translation-type: tm+mt
-source-git-commit: b6e3024ab42f3fe0e0d0fd39247742e257fe45b3
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---

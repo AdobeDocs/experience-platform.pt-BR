@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de banco de dados na interface do usuário
 topic: overview
+description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de banco de dados.
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -56,7 +57,7 @@ A caixa de diálogo **[!UICONTROL Selecionar conjunto de dados]** é exibida. En
 
 ### Usar um novo conjunto de dados
 
-Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto]** de dados e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
+Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
 
 É possível anexar um campo de schema inserindo um nome de schema na barra de pesquisa **[!UICONTROL Selecionar schema]** . Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar Pesquisa **** avançada para acessar a tela de schemas existentes, incluindo seus respectivos detalhes.
 

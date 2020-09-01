@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
 title: Gerar conjuntos de dados a partir dos resultados do query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ O verdadeiro poder do [!DNL Query Service] é revelado quando os query são usad
 1. Grave seu query usando um cliente conectado e valide a saída.
 2. Faça logon na [!DNL Platform] interface do usuário e vá para Query.
 3. Encontre seu query na lista e passe o mouse sobre a linha.
-4. Clique em **[!UICONTROL Criar conjunto de dados]**. ![Imagem](../images/queries/create-datasets/click-create-dataset.png)
+4. Click **[!UICONTROL Create Dataset]**. ![Imagem](../images/queries/create-datasets/click-create-dataset.png)
 5. Insira um nome de conjunto de dados, anexado à sua ID LDAP (não precisa ser exclusivo ou seguro para SQL); o sistema gera um &quot;nome de tabela&quot; com base no nome fornecido aqui).
 6. Insira uma descrição do conjunto de dados e clique em **[!UICONTROL Executar Query]**.![Imagem](../images/queries/create-datasets/run-query.png)
 7. Observe o query ser concluído e vá para a página de lista do conjunto de dados para ver o conjunto de dados que você acabou de criar.

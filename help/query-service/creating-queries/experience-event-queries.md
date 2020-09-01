@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;ExperienceEvent query;
 solution: Experience Platform
-title: query ExperienceEvent
+title: Query ExperienceEvent
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL ExperienceEvent] query
 
-Além dos query SQL padrão, o Adobe Experience Platform [!DNL Query Service] oferece suporte à gravação de query usando [!DNL ExperienceEvents]. Um [!DNL ExperienceEvent] é uma classe [!DNL Experience Data Model] (XDM) que representa um instantâneo não agregado imutável do sistema quando um usuário interage com um site ou serviço e, portanto, pode ser usado para análise de domínio de tempo. Mais informações sobre o XDM e [!DNL Experience Events] podem ser encontradas na [!DNL XDM System] visão geral. Ao combinar [!DNL Query Service] com [!DNL ExperienceEvents], você pode efetivamente rastrear tendências comportamentais entre seus usuários. O documento a seguir fornece exemplos de query que envolvem [!DNL ExperienceEvents].
+Além dos query SQL padrão, a Adobe Experience Platform [!DNL Query Service] suporta gravar query usando [!DNL ExperienceEvents]. Um [!DNL ExperienceEvent] é uma classe [!DNL Experience Data Model] (XDM) que representa um instantâneo não agregado imutável do sistema quando um usuário interage com um site ou serviço e, portanto, pode ser usado para análise de domínio de tempo. Mais informações sobre o XDM e [!DNL Experience Events] podem ser encontradas na [!DNL XDM System] visão geral. Ao combinar [!DNL Query Service] com [!DNL ExperienceEvents], você pode efetivamente rastrear tendências comportamentais entre seus usuários. O documento a seguir fornece exemplos de query que envolvem [!DNL ExperienceEvents].
 
 ## Criação de um relatório de tendências de eventos por dia em um intervalo de datas específico
 

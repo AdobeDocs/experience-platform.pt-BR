@@ -5,7 +5,7 @@ title: Guia do usuário do Construtor de segmentos do serviço de segmentação
 topic: ui guide
 description: 'O Construtor de segmentos fornece uma área de trabalho avançada que permite interagir com elementos de dados do Perfil. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -131,7 +131,7 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 
 ## Propriedades do segmento
 
-Ao criar uma definição de segmento, a seção Propriedades *[!UICONTROL do]* segmento no lado direito do espaço de trabalho exibe uma estimativa do tamanho do segmento resultante, permitindo que você ajuste sua definição de segmento conforme necessário antes de criar a própria audiência.
+Ao criar uma definição de segmento, a seção Propriedades **[!UICONTROL do]** segmento no lado direito do espaço de trabalho exibe uma estimativa do tamanho do segmento resultante, permitindo que você ajuste sua definição de segmento conforme necessário antes de criar a própria audiência.
 
 A seção Propriedades **[!UICONTROL do]** segmento também é onde você pode especificar informações importantes sobre a definição do segmento, incluindo o **[!UICONTROL Nome]** e a **[!UICONTROL Descrição]**. Os nomes de definição de segmento são usados para identificar seu segmento entre aqueles definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
 
@@ -151,7 +151,7 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Use a tela e os container do construtor de regras para controlar a ordem na qual as regras de segmento são executadas.
 - Estimativas de visualização de sua audiência potencial, permitindo que você ajuste suas definições de segmento conforme necessário.
 - Ative todas as definições de segmento para segmentação programada.
-- Habilitar definições de segmento especificadas para a segmentação de streaming.
+- Ative definições de segmento especificadas para a segmentação de streaming.
 
 Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente sua aprendizagem assistindo aos vídeos abaixo. Para saber mais sobre as outras partes da [!DNL Segmentation Service] interface do usuário, leia o guia [[!DNL Segmentation Service] do usuário](./overview.md)
 

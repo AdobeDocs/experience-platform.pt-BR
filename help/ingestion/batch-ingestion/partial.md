@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da ingestão parcial de lote Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Para criar uma nova conexão de origem, siga as etapas listadas na visão geral 
 
 A alternância de ingestão **** parcial permite ativar ou desativar o uso da ingestão em lote parcial.
 
-A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão ** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A alternância do diagnóstico **** Error só é exibida quando a alternância de ingestão **** parcial está desativada. Esse recurso permite [!DNL Platform] gerar mensagens de erro detalhadas sobre os lotes ingeridos. Se a alternância de ingestão **** parcial estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 

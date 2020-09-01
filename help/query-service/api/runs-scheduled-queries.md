@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 2%
@@ -34,7 +34,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 | `{SCHEDULE_ID}` | O `id` valor do query programado que você deseja recuperar. |
 | `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
-**Parâmetros do Query**
+**Parâmetros do query**
 
 A seguir está uma lista de parâmetros de query disponíveis para listar execuções de um query programado especificado. Todos esses parâmetros são opcionais. Efetuar uma chamada para este terminal sem parâmetros recuperará todas as execuções disponíveis para o query agendado especificado.
 

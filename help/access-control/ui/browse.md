@@ -5,7 +5,7 @@ title: Procurar a área de trabalho do controle de acesso
 topic: user guide
 description: Este documento cobre as etapas necessárias para navegar pela área de trabalho do controle de acesso. Para configurar o controle de acesso para o Experience Platform pelo Adobe Admin Console, você deve ser um administrador de uma organização IMS que tenha subscrição para o Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 4%
@@ -19,11 +19,11 @@ Para configurar o controle de acesso para [!DNL Experience Platform] o pela Adob
 
 Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema para obter acesso.
 
-Depois de ter privilégios de administrador, vá para a [Adobe Admin Console](https://adminconsole.adobe.com) e faça logon usando suas credenciais do Adobe. Depois de conectado, a página *[!UICONTROL Visão geral]* é exibida para a Organização IMS para a qual você tem privilégios de administrador. Esta página mostra os produtos aos quais sua Organização IMS está inscrita, juntamente com outros controles para adicionar usuários e administradores à Organização IMS como um todo. Clique em **[!UICONTROL Adobe Experience Platform]** para abrir a área de trabalho do controle de acesso para sua [!DNL Platform] integração.
+Depois de ter privilégios de administrador, vá para a [Adobe Admin Console](https://adminconsole.adobe.com) e faça logon usando suas credenciais do Adobe. Depois de conectado, a página **[!UICONTROL Visão geral]** é exibida para a Organização IMS para a qual você tem privilégios de administrador. Esta página mostra os produtos aos quais sua Organização IMS está inscrita, juntamente com outros controles para adicionar usuários e administradores à Organização IMS como um todo. Clique em **[!UICONTROL Adobe Experience Platform]** para abrir a área de trabalho do controle de acesso para sua [!DNL Platform] integração.
 
 ![página de visão geral](../images/overview-page.png)
 
-A área de trabalho do controle de acesso para Adobe Experience Platform é exibida, abrindo na guia Perfis ** do produto. Esta guia permite que você visualização todos os perfis de produtos e gerencie várias configurações conforme descrito neste documento.
+A área de trabalho do controle de acesso para Adobe Experience Platform é exibida, abrindo na guia Perfis **** do produto. Esta guia permite que você visualização todos os perfis de produtos e gerencie várias configurações conforme descrito neste documento.
 
 ![controle de acesso à plataforma](../images/platform-access-control.png)
 

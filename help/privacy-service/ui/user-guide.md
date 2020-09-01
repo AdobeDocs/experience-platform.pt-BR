@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo 
 
 ![Opções de pesquisa de solicitação de trabalho](../images/user-guide/job-search.png)
 
-Para visualização dos detalhes de uma solicitação de trabalho específica, clique na ID de trabalho da solicitação na lista para abrir a página Detalhes *[!UICONTROL da]* tarefa.
+Para visualização dos detalhes de uma solicitação de trabalho específica, clique na ID de trabalho da solicitação na lista para abrir a página Detalhes **[!UICONTROL da]** tarefa.
 
 ![Detalhes do Trabalho de IU do RGPD](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ Para start usando o Construtor de solicitações, clique em **[!UICONTROL Criar 
 
 ![Clique em Criar solicitação](../images/user-guide/create-request.png)
 
-A caixa de diálogo *[!UICONTROL Criar solicitação]* é aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento atualmente selecionado.
+A caixa de diálogo **[!UICONTROL Criar solicitação]** é aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento atualmente selecionado.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ Selecione o Tipo **[!UICONTROL de]** trabalho da solicitação (&quot;Excluir&qu
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Em Tipo *[!UICONTROL de]* Namespace, selecione o tipo de namespace apropriado para as IDs do cliente para as quais estão sendo enviadas [!DNL Privacy Service].
+Em Tipo **[!UICONTROL de]** Namespace, selecione o tipo de namespace apropriado para as IDs do cliente para as quais estão sendo enviadas [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ Clique na seta ao lado de **[!UICONTROL Criar solicitação]**, abaixo do widget
 
 ![Opções de criação de solicitações](../images/user-guide/create-options.png)
 
-A caixa de diálogo *[!UICONTROL Carregar JSON]* é exibida, fornecendo uma janela para que você arraste e solte seu arquivo JSON.
+A caixa de diálogo **[!UICONTROL Carregar JSON]** é exibida, fornecendo uma janela para que você arraste e solte seu arquivo JSON.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 

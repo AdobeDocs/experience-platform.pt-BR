@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Criar um conector de origem do Salesforce na interface do usuário
 topic: overview
+description: Este tutorial fornece etapas para a criação de um conector de origem do Salesforce usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '452'
 ht-degree: 1%
 
 ---

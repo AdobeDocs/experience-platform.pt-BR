@@ -5,7 +5,7 @@ title: Visão geral da Análise do espaço de trabalho da Data Science
 topic: overview
 description: Este guia fornece uma visão geral dos principais conceitos relacionados à Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 0%
@@ -62,7 +62,7 @@ O gráfico a seguir descreve a relação hierárquica entre Recebimentos, Modelo
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-## Noções básicas [!DNL Data Science Workspace]
+## Noções básicas do [!DNL Data Science Workspace]
 
 Com [!DNL Data Science Workspace]eles, seus cientistas de dados podem simplificar o complicado processo de descobrir insights em grandes conjuntos de dados. Criado com base em uma estrutura comum de aprendizado de máquina e tempo de execução, [!DNL Data Science Workspace] oferece gerenciamento avançado de fluxo de trabalho, gerenciamento de modelos e escalabilidade. Os serviços inteligentes suportam a reutilização de fórmulas de aprendizado de máquina para potencializar uma variedade de aplicativos criados com produtos e soluções de Adobe.
 
@@ -82,7 +82,7 @@ Se preferir, você pode adaptar uma receita pré-criada às suas necessidades, i
 
 ### Fluxo de trabalho focado no cientista de dados
 
-Qualquer que seja o seu nível de conhecimento em ciência de dados, [!DNL Data Science Workspace] ajuda a simplificar e acelerar o processo de encontrar insights nos dados e aplicá-los a experiências digitais.
+Qualquer que seja o seu nível de experiência em ciência de dados, [!DNL Data Science Workspace] ajuda a simplificar e acelerar o processo de encontrar insights nos dados e aplicá-los a experiências digitais.
 
 ### Exploração de dados
 
@@ -132,7 +132,7 @@ A tabela a seguir descreve os efeitos da ativação ou desativação dessa permi
 
 | Permissão | Ativado | Desativado |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Fornece acesso a todos os serviços em [!DNL Data Science Workspace]. | O acesso à API e à interface do usuário para todos os serviços dentro [!DNL Data Science Workspace] está desativado. Enquanto estiver desativado, o roteamento para as páginas [!DNL Data Science Workspace] Modelos *[!UICONTROL e]* Serviços ** será impedido. |
+| [!DNL Manage Data Science Workspace] | Fornece acesso a todos os serviços em [!DNL Data Science Workspace]. | O acesso à API e à interface do usuário para todos os serviços dentro [!DNL Data Science Workspace] está desativado. Enquanto estiver desativado, o roteamento para as páginas [!DNL Data Science Workspace] Modelos **[!UICONTROL e]** Serviços **** será impedido. |
 
 ### Segurança e paz de espírito
 

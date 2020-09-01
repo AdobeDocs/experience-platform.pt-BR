@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Criar uma classe
+description: O principal bloco de construção de um schema é uma classe. A classe contém o conjunto mínimo de campos que devem ser definidos para capturar os dados principais de um schema. Por exemplo, se você estivesse projetando um schema para carros e caminhões eles provavelmente usariam uma classe chamada Veículo que descrevia as propriedades comuns básicas de todos os veículos.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---

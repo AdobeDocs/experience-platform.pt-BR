@@ -5,7 +5,7 @@ title: Pontuação de um modelo (IU)
 topic: Tutorial
 description: 'A pontuação na Adobe Experience Platform Data Science Workspace pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote. '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Uma execução de pontuação é criada usando configurações otimizadas de uma
 5. A etapa final do fluxo de trabalho solicita que você configure sua execução de pontuação. Essas configurações são usadas pelo Modelo para a execução de pontuação.
 Observe que não será possível remover parâmetros herdados que foram definidos durante a criação do Modelo. Você pode editar ou reverter parâmetros não herdados clicando no duplo ou clicando no ícone reverter ao passar o mouse sobre a entrada.
    ![](../images/models-recipes/score/configuration.png)
-Revise e confirme as configurações de pontuação e clique em **[!UICONTROL Concluir]** para criar e executar a execução da pontuação. Você será direcionado para a guia Execuções de *Pontuação* e a nova execução de pontuação mostrará um status.
+Revise e confirme as configurações de pontuação e clique em **[!UICONTROL Concluir]** para criar e executar a execução da pontuação. Você será direcionado para a guia Execuções de **[!UICONTROL Pontuação]** e a nova execução de pontuação mostrará um status.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Uma execução de pontuação exibirá um dos quatro status a seguir: Pendente, Concluído, Falha ou Em Execução e são atualizados automaticamente. Vá para a próxima etapa se o status for &quot;Concluído&quot; ou &quot;Falha&quot;.
 

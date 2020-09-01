@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Solução de problemas de ingestão de streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Eventos com transmissão contínua geralmente são refletidos em menos [!DNL Rea
 
 Todos os dados enviados para [!DNL Platform] (com êxito ou de outra forma) são armazenados como arquivos em lote antes de serem persistentes em conjuntos de dados. O status de processamento dos lotes é exibido no conjunto de dados para o qual foram enviados.
 
-Você pode verificar se os dados foram ingeridos com êxito verificando a atividade do conjunto de dados usando a interface [do usuário do](https://platform.adobe.com)Experience Platform. Clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para exibir uma lista de conjuntos de dados. Selecione o conjunto de dados para o qual você está fazendo streaming na lista exibida para abrir a página de atividade *[!UICONTROL do Conjunto de]* Dados, mostrando todos os lotes enviados durante um período selecionado. Para obter mais informações sobre como usar [!DNL Experience Platform] para monitorar fluxos de dados, consulte o guia sobre como [monitorar fluxos](../quality/monitor-data-flows.md)de dados de transmissão.
+Você pode verificar se os dados foram ingeridos com êxito verificando a atividade do conjunto de dados usando a interface [do usuário do](https://platform.adobe.com)Experience Platform. Clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para exibir uma lista de conjuntos de dados. Selecione o conjunto de dados para o qual você está fazendo streaming na lista exibida para abrir a página de atividade **[!UICONTROL do Conjunto de]** Dados, mostrando todos os lotes enviados durante um período selecionado. Para obter mais informações sobre como usar [!DNL Experience Platform] para monitorar fluxos de dados, consulte o guia sobre como [monitorar fluxos](../quality/monitor-data-flows.md)de dados de transmissão.
 
 Se os seus dados não foram assimilados e você deseja recuperá-los, [!DNL Platform]é possível recuperar os lotes com falha enviando suas IDs para o [!DNL Data Access API]. Consulte o guia sobre como [recuperar lotes](../quality/retrieve-failed-batches.md) com falha para obter mais informações.
 
@@ -100,4 +100,4 @@ Se [!DNL Real-time Customer Profile] rejeitar uma mensagem, provavelmente ela se
 
 Existem dois tipos de namespaces de identidade: padrão e personalizado. Ao usar namespaces personalizadas, verifique se a namespace foi registrada dentro [!DNL Identity Service]. Consulte a visão geral [da namespace de](../../identity-service/namespaces.md) identidade para obter mais informações sobre o uso de namespaces padrão e personalizadas.
 
-Você pode usar a [[!DNL Experience Platform UI]](https://platform.adobe.com) para ver mais informações sobre por que uma mensagem falhou na ingestão. Clique em **[!UICONTROL Monitoramento]** na navegação à esquerda e, em seguida, visualização a guia _[!UICONTROL Streaming end-to-end]_ para ver os lotes de mensagens transmitidos durante um período selecionado.
+Você pode usar a [[!DNL Experience Platform UI]](https://platform.adobe.com) para ver mais informações sobre por que uma mensagem falhou na ingestão. Clique em **[!UICONTROL Monitoramento]** na navegação à esquerda e, em seguida, visualização a guia **[!UICONTROL Streaming end-to-end]** para ver os lotes de mensagens transmitidos durante um período selecionado.

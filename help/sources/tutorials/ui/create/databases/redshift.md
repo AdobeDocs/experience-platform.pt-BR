@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
 title: Criar um conector de origem do Amazon Redshift na interface do usuário
 topic: overview
+description: Este tutorial fornece etapas para a criação de um conector de origem do Amazon Redshift (a seguir, "Redshift") usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---

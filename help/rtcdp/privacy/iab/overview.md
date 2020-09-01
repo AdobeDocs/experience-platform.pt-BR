@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suporte ao IAB TCF 2.0 na Plataforma de dados do cliente em tempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -74,7 +74,7 @@ Depois que os dados de consentimento do IAB forem assimilados com êxito, os seg
 
 O restante das seções deste documento fornecem orientações sobre como configurar [!DNL Real-time CDP] e suas operações de dados para atender aos requisitos de coleta e aplicação descritos acima.
 
-## Determine como gerar dados de consentimento do cliente no CMP {#consent-data}
+## Determine como gerar dados de consentimento do cliente em seu CMP {#consent-data}
 
 Como cada sistema CMP é único, você deve determinar a melhor maneira de permitir que seus clientes forneçam consentimento à medida que interagem com seu serviço. Uma maneira comum de conseguir isso é usando uma caixa de diálogo de consentimento de cookie, semelhante ao exemplo a seguir:
 
@@ -121,12 +121,12 @@ Depois de configurar seu CMP para gerar strings de consentimento, você deve int
 
 Para que o SDK envie dados para [!DNL Experience Platform], é necessário primeiro criar uma nova configuração de borda para [!DNL Platform] o [!DNL Adobe Experience Platform Launch]. Etapas específicas para criar uma nova configuração são fornecidas na documentação [do](../../../edge/fundamentals/edge-configuration.md)SDK.
 
-Depois de fornecer um nome exclusivo para a configuração, selecione o botão de alternância ao lado do *[!UICONTROL Adobe Experience Platform]*. Em seguida, use os seguintes valores para preencher o restante do formulário:
+Depois de fornecer um nome exclusivo para a configuração, selecione o botão de alternância ao lado do **[!UICONTROL Adobe Experience Platform]**. Em seguida, use os seguintes valores para preencher o restante do formulário:
 
 | Campo de configuração do Edge | Valor |
 | --- | --- |
 | [!UICONTROL Sandbox] | O nome da [!DNL Platform] caixa de proteção [](../../../sandboxes/home.md) que contém a conexão de streaming e os conjuntos de dados necessários para configurar a configuração de borda. |
-| [!UICONTROL Entrada de fluxo] | Uma conexão de transmissão válida para [!DNL Experience Platform]. Consulte o tutorial sobre como [criar uma conexão](../../../ingestion/tutorials/create-streaming-connection-ui.md) de streaming se você não tiver uma entrada de streaming existente. |
+| [!UICONTROL Entrada de fluxo] | Uma conexão de streaming válida para [!DNL Experience Platform]. Consulte o tutorial sobre como [criar uma conexão](../../../ingestion/tutorials/create-streaming-connection-ui.md) de streaming se você não tiver uma entrada de streaming existente. |
 | [!UICONTROL Conjunto de dados do evento] | Selecione o [!DNL XDM ExperienceEvent] conjunto de dados criado na etapa [](#datasets)anterior. |
 | [!UICONTROL Conjunto de dados do perfil] | Selecione o [!DNL XDM Individual Profile] conjunto de dados criado na etapa [](#datasets)anterior. |
 

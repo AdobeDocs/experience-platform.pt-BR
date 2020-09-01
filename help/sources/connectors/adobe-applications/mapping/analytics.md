@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Campos de mapeamento do Analytics
 topic: overview
+description: A Adobe Experience Platform permite que você ingira dados da Adobe Analytics por meio do ADC (Analytics Data Connector). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos do Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3378'
 ht-degree: 11%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 11%
 
 # Campos de mapeamento do Analytics
 
-O Adobe Experience Platform permite que você ingira dados do Adobe Analytics por meio do Analytics Data Connector (ADC). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
+A Adobe Experience Platform permite que você ingira dados da Adobe Analytics por meio do ADC (Analytics Data Connector). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos do Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -22,13 +23,13 @@ O Adobe Experience Platform permite que você ingira dados do Adobe Analytics po
 
 Os campos selecionados são mapeados diretamente do Adobe Analytics para o Experience Data Model (XDM).
 
-A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
 >Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
-| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
 | m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Uma variável personalizada, que pode variar de 1 a 250. Cada organização usará essas eVars personalizadas de forma diferente. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Variáveis de tráfego personalizadas, que podem variar de 1 a 75. |
@@ -127,7 +128,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo **
 
 Esses campos têm uma única fonte, mas mapeiam para **várias** localizações XDM.
 
-| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
 | s_resolution | device.screenWidth, device.screenHeight | integer | ID numérica que representa a resolução do monitor. |
 | mobileosversion | ambiente.operatingSystem, ambiente.operatingSystemVersion | string | Versão do sistema operacional móvel. |
@@ -137,21 +138,21 @@ Esses campos têm uma única fonte, mas mapeiam para **várias** localizações 
 
 Para serem gerados no XDM, é necessário transformar campos selecionados provenientes do ADC, exigindo lógica além de uma cópia direta da Adobe Analytics.
 
-A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
 >Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
-| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ----------- |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variáveis de tráfego personalizadas, que variam de 1 a 75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hieries.hier1 - _experience.analytics.customDimensions.hierarquias.hier5 | Objeto | Usada pelas variáveis de hierarquia. Contém um | lista de valores delimitada. | {values (array), delimitador (string)} |
 | m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lista.lista1.lista[] - _experience.analytics.customDimensions.lista.lista3.lista[] | matriz | Lista de valores variáveis. Contém uma lista delimitada de valores personalizados, dependendo da implementação | {value (string), key (string)} |
 | m_color | device.colorDepth | integer | A ID de profundidade de cor, que é baseada no valor da coluna c_color. |
 | m_cookies | environment.browserDetails.cookiesEnabled | booleano | Uma variável usada na dimensão Suporte a cookies. |
-| m_evento_lista | commerce.purch,, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemoments, commerce.productListViews | Objeto | eventos de comércio padrão acionados na ocorrência. | {id (cadeia), valor (número)} |
-| m_evento_lista | _experience.analytics.evento1to100.evento1 - _experience.analytics.evento1to100.evento100, _experience.analytics.evento101to200.evento101 - _experience.analytics.evento101to20 0.evento200, _experience.analytics.evento201to300.evento201 - _experience.analytics.evento201to300.evento300, _experience.analytics.evento301to400.evento3 01 - _experience.analytics.evento301to400.evento400, _experience.analytics.evento401to500.evento401 - _experience.analytics.evento401to500.500, _experience .analytics.evento501to600.evento501 - _experience.analytics.evento501to600.evento600, _experience.analytics.evento601to700.evento601 - _experience.analytics.analytics.processors 601to700.evento700, _experience.analytics.evento701to800.evento701 - _experience.analytics.evento701to800.evento800, _experience.analytics.evento801to 900.evento801 - _experience.analytics.evento801 a900.evento900, _experience.analytics.evento901a1000.evento901 - _experience.analytics.evento901a100 10.evento | Objeto | eventos personalizados acionados na ocorrência. | {id (Objeto), valor (Objeto)} |
+| m_evento_lista | commerce.purch,, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemoments, commerce.productListViews | Objeto | Eventos de comércio padrão acionados na ocorrência. | {id (cadeia), valor (número)} |
+| m_evento_lista | _experience.analytics.evento1to100.evento1 - _experience.analytics.evento1to100.evento100, _experience.analytics.evento101to200.evento101 - _experience.analytics.evento101to20 0.evento200, _experience.analytics.evento201to300.evento201 - _experience.analytics.evento201to300.evento300, _experience.analytics.evento301to400.evento3 01 - _experience.analytics.evento301to400.evento400, _experience.analytics.evento401to500.evento401 - _experience.analytics.evento401to500.500, _experience .analytics.evento501to600.evento501 - _experience.analytics.evento501to600.evento600, _experience.analytics.evento601to700.evento601 - _experience.analytics.analytics.processors 601to700.evento700, _experience.analytics.evento701to800.evento701 - _experience.analytics.evento701to800.evento800, _experience.analytics.evento801to 900.evento801 - _experience.analytics.evento801 a900.evento900, _experience.analytics.evento901a1000.evento901 - _experience.analytics.evento901a100 10.evento | Objeto | Eventos personalizados acionados na ocorrência. | {id (Objeto), valor (Objeto)} |
 | m_geo_country | placeContext.geo.countryCode | string | Abreviação do país de onde veio a ocorrência, que é baseada fora do IP. |
 | m_geo_latitude | placeContext.geo._schema.latitude | número | <!-- MISSING --> |
 | m_geo_longitude | placeContext.geo._schema.longitude | número | <!-- MISSING --> |
@@ -197,13 +198,13 @@ Os campos selecionados (conhecidos como &quot;pós-valores&quot;) exigem transfo
 
 Para saber mais sobre como executar essas transformações usando o Serviço de Query, visite a documentação de funções [definidas pelo](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
 
-A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo ** Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
 >Role para a esquerda/direita para visualização do conteúdo completo da tabela.
 
-| Campo Analytics | Campo XDM | Tipo XDM | Descrição |
+| Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
 | post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Uma variável personalizada, que pode variar de 1 a 250. Cada organização usará essas eVars personalizadas de forma diferente. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Variáveis de tráfego personalizadas, que podem variar de 1 a 75. |
@@ -230,7 +231,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo **
 | geo_region | placeContext.geo.stateProvince | string | O nome do estado ou região da ocorrência. Isso se baseia no endereço IP da ocorrência. |
 | geo_zip | placeContext.geo.postalCode | string | O código ZIP da ocorrência. Isso se baseia no endereço IP da ocorrência. |
 | os | _experience.analytics.ambiente.operatingSystemID | integer | A ID numérica que representa o sistema operacional do visitante. Isso se baseia na coluna user_agent. |
-| search_page_num | search.pageDepth | integer | Essa variável é usada pela dimensão Toda classificação da página de pesquisa e indica qual página de pesquisa resulta no site | apareceu antes do usuário clicar no site. |
+| search_page_num | search.pageDepth | integer | Essa variável é usada pela dimensão Toda classificação da página de pesquisa e indica qual página de pesquisa resulta em seu site | apareceu antes do usuário clicar no site. |
 | visit_keywords | _experience.analytics.session.search.keywords | string | Uma variável usada na dimensão Palavras-chave de pesquisa. |
 | visit_num | _experience.analytics.session.num | integer | Uma variável usada na dimensão Número da visita. Isso start em 1 e aumenta cada vez que um novo start de visita (por usuário). |
 | visit_page_num | _experience.analytics.session.deep | integer | Uma variável usada na dimensão Profundidade de ocorrência. Esse valor aumenta em 1 para cada ocorrência gerada pelo usuário e redefine após cada visita. |
@@ -240,8 +241,8 @@ A tabela a seguir inclui colunas que mostram o nome do campo Analytics (campo **
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hieries.hier1 - _experience.analytics.customDimensions.hierarquias.hier5 | Objeto | Usada pelas variáveis de hierarquia e contém uma lista de valores delimitada. | {values (array), delimitador (string)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lista.lista1.lista[] - _experience.analytics.customDimensions.lista.lista3.lista[] | matriz | Uma lista de valores variáveis. Contém uma lista delimitada de valores personalizados, dependendo da implementação. | {value (string), key (string)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | booleano | Variável usada na dimensão Suporte a cookies. |
-| post_evento_lista | commerce.purch,, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemoments, commerce.productListViews | Objeto | eventos de comércio padrão acionados na ocorrência. | {id (cadeia), valor (número)} |
-| post_evento_lista | _experience.analytics.evento1to100.evento1 - _experience.analytics.evento1to100.evento100, _experience.analytics.evento101to200.evento101 - _experience.analytics.evento101to20 0.evento200, _experience.analytics.evento201to300.evento201 - _experience.analytics.evento201to300.evento300, _experience.analytics.evento301to400.evento3 01 - _experience.analytics.evento301to400.evento400, _experience.analytics.evento401to500.evento401 - _experience.analytics.evento401to500.500, _experience .analytics.evento501to600.evento501 - _experience.analytics.evento501to600.evento600, _experience.analytics.evento601to700.evento601 - _experience.analytics.analytics.processors 601to700.evento700, _experience.analytics.evento701to800.evento701 - _experience.analytics.evento701to800.evento800, _experience.analytics.evento801to 900.evento801 - _experience.analytics.evento801 a900.evento900, _experience.analytics.evento901a1000.evento901 - _experience.analytics.evento901a100 10.evento | Objeto | eventos personalizados acionados na ocorrência. | {id (Objeto), valor (Objeto)} |
+| post_evento_lista | commerce.purch,, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemoments, commerce.productListViews | Objeto | Eventos de comércio padrão acionados na ocorrência. | {id (cadeia), valor (número)} |
+| post_evento_lista | _experience.analytics.evento1to100.evento1 - _experience.analytics.evento1to100.evento100, _experience.analytics.evento101to200.evento101 - _experience.analytics.evento101to20 0.evento200, _experience.analytics.evento201to300.evento201 - _experience.analytics.evento201to300.evento300, _experience.analytics.evento301to400.evento3 01 - _experience.analytics.evento301to400.evento400, _experience.analytics.evento401to500.evento401 - _experience.analytics.evento401to500.500, _experience .analytics.evento501to600.evento501 - _experience.analytics.evento501to600.evento600, _experience.analytics.evento601to700.evento601 - _experience.analytics.analytics.processors 601to700.evento700, _experience.analytics.evento701to800.evento701 - _experience.analytics.evento701to800.evento800, _experience.analytics.evento801to 900.evento801 - _experience.analytics.evento801 a900.evento900, _experience.analytics.evento901a1000.evento901 - _experience.analytics.evento901a100 10.evento | Objeto | Eventos personalizados acionados na ocorrência. | {id (Objeto), valor (Objeto)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | booleano | Um sinalizador que indica se o Java está ativado. |
 | post_latitude | placeContext.geo._schema.latitude | número | <!-- MISSING --> |
 | post_longitude | placeContext.geo._schema.longitude | número | <!-- MISSING --> |

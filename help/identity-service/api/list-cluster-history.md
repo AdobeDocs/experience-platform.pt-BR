@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identities;cluster history
 solution: Experience Platform
 title: Obter histórico de cluster de uma identidade
 topic: API guide
+description: As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. O Serviço de identidade fornece visibilidade para as associações de cluster de uma determinada identidade ao longo do tempo.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '329'
 ht-degree: 1%
 
 ---

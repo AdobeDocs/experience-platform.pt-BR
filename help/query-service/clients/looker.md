@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
 title: Conectar com o Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Conectar-se com [!DNL Looker]
 
-Para conectar-se [!DNL Looker] com [!DNL Query Service] no Adobe Experience Platform, siga as etapas abaixo:
+Para conectar-se [!DNL Looker] com [!DNL Query Service] o Adobe Experience Platform, siga as etapas abaixo:
 
 Depois de fazer logon [!DNL Looker], clique em **[!UICONTROL Admin]**, seguido por **[!UICONTROL Conexões]**.
 
@@ -36,7 +36,7 @@ Aqui, você pode preencher os detalhes das Configurações de conexão.
 
 >[!NOTE]
 >
->Para obter mais informações sobre como localizar seu host e porta, nome do banco de dados e credenciais de logon, visite a página de [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon [!DNL Platform], clique em **[!UICONTROL Query]** e, em seguida, clique em **[!UICONTROL Credenciais]**.
+>Para obter mais informações sobre como localizar seu host e porta, nome do banco de dados e credenciais de logon, visite a página de [credenciais na Plataforma](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon [!DNL Platform], clique em **[!UICONTROL Query]** e, em seguida, clique em **[!UICONTROL Credenciais]**.
 
 Depois de inserir os detalhes da conexão, clique em **[!UICONTROL Testar essas configurações]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem informando que você pode se conectar será exibida abaixo. Se a conexão for realmente bem-sucedida, clique em **[!UICONTROL Adicionar conexão]** para criar a conexão.
 

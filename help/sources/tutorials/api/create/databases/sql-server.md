@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
 title: Criar um conector SQL Server usando a API de Serviço de Fluxo
 topic: overview
+description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a um Microsoft SQL Server (a seguir denominado "SQL Server").
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 

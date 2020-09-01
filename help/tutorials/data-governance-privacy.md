@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriais sobre controle de dados e privacidade
 topic: tutorial
-description: A DULE (Data Usage Labeling and Implementation) é o mecanismo principal do Adobe Experience Platform Data Governance. Os recursos DULE permitem que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas.
+description: Este documento fornece uma visão geral dos diferentes tutoriais disponíveis relacionados ao Adobe Experience Platform Data Governance e ao Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] e [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) é o mecanismo principal da Adobe Experience Platform [!DNL Data Governance]. Os recursos DULE permitem que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Antes de começar a usar as etiquetas, consulte a visão geral [do](../data-governance/home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE dentro [!DNL Platform].
+O Adobe Experience Platform Data Governance permite que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas e avaliando violações de política quando determinadas ações são executadas nesses conjuntos de dados e/ou campos. Antes de começar a usar os tutoriais listados neste documento, consulte a [[!DNL Data Governance] visão geral](../data-governance/home.md) para obter uma introdução mais robusta à estrutura.
 
 A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem coordenar solicitações de privacidade e conformidade em várias soluções. Para saber mais, comece lendo a visão geral [do](../privacy-service/home.md)Privacy Service.
 
@@ -25,11 +25,11 @@ Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de aco
 
 ## Criar políticas de uso de dados
 
-A API DULE [!DNL Policy Service] permite criar e gerenciar políticas DULE para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos DULE. Para começar, leia a visão geral [das políticas de uso de](../data-governance/policies/overview.md)dados.
+A [!DNL Policy Service] API permite que você crie e gerencie políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso. Para começar, leia a visão geral [das políticas de uso de](../data-governance/policies/overview.md)dados.
 
 ## Impor políticas de uso de dados
 
-Depois que você tiver criado rótulos DULE (Data Usage Labeling and Implementation) para seus dados e tiver criado políticas DULE para ações de marketing contra esses rótulos, poderá usar a [!DNL Policy Service] API DULE para avaliar se uma ação de marketing executada em um conjunto de dados, ou um grupo arbitrário de rótulos DULE, constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API. Para começar, visite a visão geral [da aplicação de](../data-governance/enforcement/overview.md)políticas.
+Depois de adicionar rótulos de uso para seus dados e criar políticas para ações de marketing contra esses rótulos, você pode usar o [!DNL Policy Service API] para avaliar se uma ação de marketing constitui uma violação de política quando executada em um conjunto de dados ou em um grupo arbitrário de rótulos de uso. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API. Para começar, visite a visão geral [da aplicação de](../data-governance/enforcement/overview.md)políticas.
 
 ## Impor conformidade de uso de dados para um segmento de audiência
 

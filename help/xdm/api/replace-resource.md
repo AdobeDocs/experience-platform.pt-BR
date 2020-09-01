@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;replace;Replace;put;PUT
 solution: Experience Platform
 title: Substituir um recurso
+description: O Registro de Schema permite que você substitua um recurso inteiro por meio de uma operação de PUT. Essa operação basicamente regrava o recurso, portanto, o corpo da solicitação deve incluir todos os campos que seriam necessários ao criar um novo recurso usando uma solicitação de POST.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '246'
 ht-degree: 1%
 
 ---

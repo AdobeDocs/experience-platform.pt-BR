@@ -5,7 +5,7 @@ seo-title: Controle de dados na plataforma de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] em CDP em tempo real
 
-[!DNL Real-time Customer Data Platform] (CDP em tempo real) reúne dados de vários sistemas corporativos, permitindo que os profissionais de marketing identifiquem, entendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos a restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que a CDP em tempo real esteja em conformidade com as políticas de uso ao manipular seus dados.
+[!DNL Real-time Customer Data Platform] (CDP em tempo real) reúne dados de vários sistemas corporativos, permitindo que os profissionais de marketing identifiquem, entendam e envolvam melhor seus clientes. Esses dados podem estar sujeitos às restrições de uso definidas pela sua organização ou por regulamentos legais. Portanto, é importante garantir que a CDP em tempo real esteja em conformidade com as políticas de uso ao manipular seus dados.
 
 A Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental na CDP em tempo real, permitindo que você defina políticas de uso, classifique seus dados com base nessas políticas e verifique violações de políticas ao executar determinadas ações de marketing.
 
@@ -76,7 +76,7 @@ Se ocorrer uma violação de política ao tentar ativar um segmento (ou [fazer e
 
 ![](assets/violation-popover.png)
 
-A guia *[!UICONTROL Detalhes]* do fornecedor indica a ação que acionou a violação o motivo da violação e fornece sugestões para como resolver o problema.
+A guia **[!UICONTROL Detalhes]** do fornecedor indica a ação que acionou a violação o motivo da violação e fornece sugestões para como resolver o problema.
 
 Clique em Linhagem **[!UICONTROL de]** dados para rastrear os destinos, segmentos, políticas de mesclagem ou conjuntos de dados cujos rótulos de dados acionaram a violação.
 

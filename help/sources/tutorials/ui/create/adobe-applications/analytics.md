@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
 title: Criar um conector de origem Adobe Analytics na interface do usuário
 topic: overview
+description: Este tutorial fornece etapas para a criação de um conector de origem Adobe Analytics na interface do usuário para trazer dados de consumidor para o Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -81,7 +82,7 @@ Selecione o fluxo do conjunto de dados que deseja visualização na lista.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-A página atividade *do Conjunto* de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico. Selecione *Controle* de dados no cabeçalho superior para acessar os campos de rotulagem.
+A página atividade *do* Conjunto de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico. Selecione *Controle* de dados no cabeçalho superior para acessar os campos de rotulagem.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 

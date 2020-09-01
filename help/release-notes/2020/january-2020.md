@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 5%
@@ -82,7 +82,7 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
 | Ingestão de dados | Gerenciar fontes | Acesso para ler, criar, editar e desativar fontes. |
-| Ingestão de dados | Fontes de visualização | Acesso somente leitura a fontes disponíveis na guia *[!UICONTROL Catálogo]* e fontes autenticadas na guia *[!UICONTROL Procurar]* . |
+| Ingestão de dados | Fontes de visualização | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]** . |
 
 **Problemas conhecidos**
 

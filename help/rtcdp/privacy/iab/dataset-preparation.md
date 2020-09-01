@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suporte ao IAB TCF 2.0 na Plataforma de dados do cliente em tempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 0%
@@ -79,11 +79,11 @@ Na interface do usuário da plataforma, clique em **[!UICONTROL Schemas]** no pa
 
 ### Criar um schema de consentimento baseado em registros {#profile-schema}
 
-Na guia **[!UICONTROL Procurar]** na área de trabalho *[!UICONTROL Schemas], crie um novo schema com base na *classe**[!DNL XDM Individual Profile]**. Depois que o schema for aberto no Editor de Schemas, clique em **[!UICONTROL Adicionar]**na seção *[!UICONTROL Misturas]*no lado esquerdo da tela.
+Na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Schemas], crie um novo schema com base na** classe **[!DNL XDM Individual Profile]**. Depois que o schema for aberto no Editor de Schemas, clique em **[!UICONTROL Adicionar]** na seção **[!UICONTROL Misturas]** no lado esquerdo da tela.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-A caixa de diálogo *[!UICONTROL Adicionar mistura]* é exibida. Aqui, selecione privacidade **[!UICONTROL do]** Perfil na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que a mistura for selecionada, clique em **[!UICONTROL Adicionar mistura]**.
+A caixa de diálogo **[!UICONTROL Adicionar mistura]** é exibida. Aqui, selecione privacidade **[!UICONTROL do]** Perfil na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que a mistura for selecionada, clique em **[!UICONTROL Adicionar mistura]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,7 +112,7 @@ Para associar [!DNL Real-time CDP] os dados de consentimento que recebe a perfis
 >
 >As etapas sobre como definir um campo de identidade principal para um schema podem ser encontradas no tutorial [de criação do](../../../xdm/tutorials/create-schema-ui.md#identity-field)schema.
 
-Para ativar o schema para [!DNL Profile], clique no nome do schema no painel esquerdo para abrir a caixa de diálogo de propriedades *[!UICONTROL do]* Schema no painel direito. Aqui, clique no botão de alternância de **[!UICONTROL Perfil]** .
+Para ativar o schema para [!DNL Profile], clique no nome do schema no painel esquerdo para abrir a caixa de diálogo de propriedades **[!UICONTROL do]** Schema no painel direito. Aqui, clique no botão de alternância de **[!UICONTROL Perfil]** .
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ Por fim, clique em **[!UICONTROL Salvar]** para confirmar as alterações.
 
 ### Criar um schema de consentimento baseado em séries de tempo {#event-schema}
 
-Na guia **[!UICONTROL Procurar]** na área de trabalho *[!UICONTROL Schemas], crie um novo schema com base na *classe**[!DNL XDM ExperienceEvent]**. Depois que o schema for aberto no Editor de Schemas, clique em **[!UICONTROL Adicionar]**na seção *[!UICONTROL Misturas]*no lado esquerdo da tela.
+Na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Schemas], crie um novo schema com base na** classe **[!DNL XDM ExperienceEvent]**. Depois que o schema for aberto no Editor de Schemas, clique em **[!UICONTROL Adicionar]** na seção **[!UICONTROL Misturas]** no lado esquerdo da tela.
 
 ![](../assets/iab/add-mixin-event.png)
 
-A caixa de diálogo *[!UICONTROL Adicionar mistura]* é exibida. Aqui, selecione a combinação **[!UICONTROL de privacidade do]** Experience evento na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que a mistura for selecionada, clique em **[!UICONTROL Adicionar mistura]**.
+A caixa de diálogo **[!UICONTROL Adicionar mistura]** é exibida. Aqui, selecione a combinação **[!UICONTROL de privacidade do]** Experience evento na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que a mistura for selecionada, clique em **[!UICONTROL Adicionar mistura]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -151,7 +151,7 @@ Depois que as mixagens forem adicionadas, conclua clicando em **[!UICONTROL Salv
 
 ## Criar conjuntos de dados com base em seus schemas de consentimento {#datasets}
 
-Para cada um dos schemas obrigatórios descritos acima, você deve criar um conjunto de dados que acabará assimilando os dados de consentimento dos clientes. O conjunto de dados baseado no [!DNL XDM Individual Profile] schema deve ser habilitado para [!DNL Real-time Customer Profile], enquanto o conjunto de dados baseado no [!DNL XDM ExperienceEvent] schema não deve ser [!DNL Profile]habilitado.
+Para cada um dos schemas obrigatórios descritos acima, você deve criar um conjunto de dados que acabará assimilando os dados de consentimento dos clientes. O conjunto de dados baseado no [!DNL XDM Individual Profile] schema deve ser habilitado para [!DNL Real-time Customer Profile], enquanto o conjunto de dados baseado no [!DNL XDM ExperienceEvent] schema não deve ser [!DNL Profile]-ativado.
 
 Para começar, selecione **[!UICONTROL Conjuntos]** de dados na navegação à esquerda e clique em **[!UICONTROL Criar conjunto]** de dados no canto superior direito.
 
@@ -161,11 +161,11 @@ Na próxima página, selecione **[!UICONTROL Criar conjunto de dados a partir do
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-O fluxo de trabalho _[!UICONTROL Criar conjunto de dados a partir do schema]_é exibido, começando na etapa_[!UICONTROL  Selecionar schema]_ . Na lista fornecida, localize um dos schemas de consentimento criados anteriormente. Como opção, você pode usar a pesquisa para restringir os resultados e localizar seu schema mais facilmente. Clique no botão de opção ao lado do schema para selecioná-lo e clique em **[!UICONTROL Avançar]** para continuar.
+O fluxo de trabalho **[!UICONTROL Criar conjunto de dados a partir do schema]** é exibido, começando na etapa **[!UICONTROL Selecionar schema]** . Na lista fornecida, localize um dos schemas de consentimento criados anteriormente. Como opção, você pode usar a pesquisa para restringir os resultados e localizar seu schema mais facilmente. Clique no botão de opção ao lado do schema para selecioná-lo e clique em **[!UICONTROL Avançar]** para continuar.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-A etapa _[!UICONTROL Configurar conjunto de dados]_é exibida. Forneça um nome e uma descrição exclusivos e facilmente identificáveis para o conjunto de dados antes de clicar em**[!UICONTROL  Concluir ]**.
+A etapa **[!UICONTROL Configurar conjunto de dados]** é exibida. Forneça um nome e uma descrição exclusivos e facilmente identificáveis para o conjunto de dados antes de clicar em **[!UICONTROL Concluir]**.
 
 ![](../assets/iab/dataset-configure.png)
 

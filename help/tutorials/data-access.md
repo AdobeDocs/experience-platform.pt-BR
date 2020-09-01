@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Tutoriais de acesso a dados
 topic: tutorial
+description: A Adobe Experience Platform permite que os usuários descubram e acessem conjuntos de dados ingeridos no Experience Platform usando a API de acesso a dados.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Dados de Experience Platform de acesso
 
-O Adobe Experience Platform permite que os usuários descubram e acessem conjuntos de dados ingeridos dentro da API de acesso a dados [!DNL Experience Platform] .
+A Adobe Experience Platform permite que os usuários descubram e acessem conjuntos de dados ingeridos com [!DNL Experience Platform] a API de acesso a dados.
 
 ## Acessar dados usando APIs
 

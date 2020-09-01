@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
 solution: Experience Platform
 title: Criar um schema ad-hoc
+description: Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema "ad-hoc". Schemas ad-hoc são usados em vários workflows de ingestão de dados para o Experience Platform, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '782'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Criar um schema ad-hoc
 
-Em circunstâncias específicas, pode ser necessário criar um schema [!DNL Experience Data Model] (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. schemas ad-hoc são usados em vários workflows de ingestão de dados para [!DNL Experience Platform]o, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
+Em circunstâncias específicas, pode ser necessário criar um schema [!DNL Experience Data Model] (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. Schemas ad-hoc são usados em vários workflows de ingestão de dados para [!DNL Experience Platform]o, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
 
 Este documento fornece etapas gerais para a criação de um schema ad-hoc usando a API [do Registro do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema. Ela deve ser usada em conjunto com outros [!DNL Experience Platform] tutoriais que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um schema ad-hoc para seu caso de uso específico.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do [!D
 - [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): [!DNL Real-time Customer Profile] é um repositório de entidade de pesquisa genérico e é usado para gerenciar dados [!DNL Experience Data Model] (XDM) no [!DNL Platform]. O perfil mescla dados em vários ativos de dados corporativos e fornece acesso a esses dados em uma apresentação unificada.
    - [Mesclar políticas](../../profile/api/merge-policies.md): Regras usadas para [!DNL Real-time Customer Profile] determinar quais dados podem ser mesclados em uma visualização unificada sob determinadas condições. As políticas de mesclagem podem ser configuradas para [!DNL Data Governance] fins.
 - [[!Segmentação DNL]](../home.md): Como [!DNL Real-time Customer Profile] divide um grande grupo de indivíduos contidos na loja de perfis em grupos menores que compartilham características semelhantes e respondem de forma semelhante às estratégias de marketing.
-- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fornece a infraestrutura para a identificação e aplicação da utilização de dados (DULE), usando os seguintes componentes:
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fornece a infraestrutura para a rotulagem e aplicação da utilização de dados, usando os seguintes componentes:
    - [Rótulos](../../data-governance/labels/user-guide.md)de uso de dados: Rótulos utilizados para descrever conjuntos de dados e campos em termos do nível de sensibilidade com que lidam com os respectivos dados.
    - [Políticas](../../data-governance/policies/overview.md)de uso de dados: Configurações que indicam quais ações de marketing são permitidas em dados categorizados por rótulos de uso de dados específicos.
    - [Aplicação](../../data-governance/enforcement/overview.md)de políticas: Permite que você aplique políticas de uso de dados e previna operações de dados que constituem violações de política.
@@ -187,7 +187,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem.
 >
 > Esta etapa supõe que você tenha pelo menos uma política de uso de dados ativa que impeça a execução de ações de marketing específicas em dados que contenham determinados rótulos. Se você não tiver políticas de uso aplicáveis para os conjuntos de dados que estão sendo avaliados, siga o tutorial [de criação de](../../data-governance/policies/create.md) política para criar um antes de continuar com esta etapa.
 
-Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para avaliar esses conjuntos de dados em relação a ações de marketing específicas a fim de verificar violações da política de uso de dados.
+Depois de obter as IDs dos conjuntos de dados de origem da política de mesclagem, você pode usar a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Política para avaliar esses conjuntos de dados em relação a ações de marketing específicas a fim de verificar violações da política de uso de dados.
 
 Para avaliar os conjuntos de dados, forneça o nome da ação de marketing no caminho de uma solicitação de POST, fornecendo as IDs do conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
 

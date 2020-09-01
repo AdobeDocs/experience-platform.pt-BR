@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: Definir uma relação entre dois schemas usando o Editor de Schemas de Schemas
+description: Este documento fornece um tutorial para definir uma relação entre dois schemas usando o Editor de Schemas na interface do usuário do Experience Platform.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Para fins de referência, as seções a seguir descrevem a estrutura de cada sch
 
 ### [!UICONTROL Schema de Membros] de Fidelidade
 
-O schema de origem &quot;Membros[!UICONTROL de]fidelidade&quot; é baseado na classe XDM [!DNL Individual Profile] e é o schema que foi construído no tutorial para [criar um schema na interface do usuário](create-schema-ui.md). Ele inclui um objeto &quot;[!UICONTROL fidelidade]&quot; na namespace &quot;\_locatárioId&quot;, que inclui vários campos específicos de fidelidade. Um desses campos, &quot;loyaltyId&quot;, serve como a principal identidade para o schema sob a namespace &quot;[!UICONTROL Email]&quot;. Conforme visto em Propriedades _[!UICONTROL do]_Schema, este schema foi habilitado para uso em[!DNL Real-time Customer Profile].
+O schema de origem &quot;Membros[!UICONTROL de]fidelidade&quot; é baseado na classe XDM [!DNL Individual Profile] e é o schema que foi construído no tutorial para [criar um schema na interface do usuário](create-schema-ui.md). Ele inclui um objeto &quot;[!UICONTROL fidelidade]&quot; na namespace &quot;\_locatárioId&quot;, que inclui vários campos específicos de fidelidade. Um desses campos, &quot;loyaltyId&quot;, serve como a principal identidade para o schema sob a namespace &quot;[!UICONTROL Email]&quot;. Conforme visto em Propriedades _[!UICONTROL do]_ Schema, este schema foi habilitado para uso em [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -60,19 +61,19 @@ O schema de destino &quot;[!UICONTROL Hotéis]&quot; é baseado em uma classe pe
 
 Para definir uma relação entre dois schemas, o schema de origem deve ter um campo dedicado para ser usado como referência ao schema de destino. É possível adicionar esse campo ao schema de origem criando uma nova combinação.
 
-Start clicando em **[!UICONTROL Adicionar]** na seção _[!UICONTROL Misturas]_.
+Start clicando em **[!UICONTROL Adicionar]** na seção _[!UICONTROL Misturas]_ .
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-A caixa de diálogo _[!UICONTROL Adicionar mistura]_é exibida. Aqui, clique em**[!UICONTROL  Criar nova mistura ]**. Nos campos de texto exibidos, insira um nome de exibição e uma descrição para a nova combinação. Clique em**[!UICONTROL  Adicionar mistura ]**quando terminar.
+A caixa de diálogo _[!UICONTROL Adicionar mistura]_ é exibida. Aqui, clique em **[!UICONTROL Criar nova mistura]**. Nos campos de texto exibidos, insira um nome de exibição e uma descrição para a nova combinação. Clique em **[!UICONTROL Adicionar mistura]** quando terminar.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-A tela reaparece com &quot;Relacionamento de[!UICONTROL fidelidade]&quot; na seção _[!UICONTROL Misturas]_. Clique no nome da combinação e, em seguida, clique em**[!UICONTROL  Adicionar campo ]**ao lado do campo de nível raiz &quot;Membros[!UICONTROL de]fidelidade&quot;.
+A tela reaparece com &quot;Relacionamento de[!UICONTROL fidelidade]&quot; na seção _[!UICONTROL Misturas]_ . Clique no nome da combinação e, em seguida, clique em **[!UICONTROL Adicionar campo]** ao lado do campo de nível raiz &quot;Membros[!UICONTROL de]fidelidade&quot;.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Um novo campo é exibido na tela sob a namespace &quot;\_locatárioId&quot;. Em Propriedades _[!UICONTROL do]_campo, forneça um nome de campo e de exibição para o campo e defina seu tipo como &quot;[!UICONTROL String]&quot;.
+Um novo campo é exibido na tela sob a namespace &quot;\_locatárioId&quot;. Em Propriedades _[!UICONTROL do]_ campo, forneça um nome de campo e de exibição para o campo e defina seu tipo como &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -88,7 +89,7 @@ O campo atualizado &quot;[!UICONTROL favoriteHotel]&quot; aparece na tela. Cliqu
 
 Depois que o schema de origem tiver um campo de referência dedicado definido, você poderá designá-lo como um campo de relacionamento.
 
-Selecione o campo de referência na tela e role para baixo em Propriedades _[!UICONTROL do]_campo até que a caixa de seleção**[!UICONTROL  Relacionamento ]**seja exibida. Marque a caixa de seleção para revelar os parâmetros necessários para configurar um campo de relação.
+Selecione o campo de referência na tela e role para baixo em Propriedades _[!UICONTROL do]_ campo até que a caixa de seleção **[!UICONTROL Relacionamento]** seja exibida. Marque a caixa de seleção para revelar os parâmetros necessários para configurar um campo de relação.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 

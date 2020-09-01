@@ -5,7 +5,7 @@ title: Monitoramento da ingestão de dados
 topic: overview
 description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer um Adobe ID e acesso ao Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Na interface do usuário [do](https://platform.adobe.com)Experience Platform, cl
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-A página *[!UICONTROL Streaming end-to-end]* de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito pelo [[!DNL Real-time Customer Perfil]](../../profile/home.md), bem como uma lista detalhada dos dados recebidos.
+A página **[!UICONTROL Streaming end-to-end]** de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito pelo [[!DNL Real-time Customer Perfil]](../../profile/home.md), bem como uma lista detalhada dos dados recebidos.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

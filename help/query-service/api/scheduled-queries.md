@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 ---
 
 
-# query agendados
+# Query agendados
 
 ## Chamadas de API de exemplo
 
@@ -33,7 +33,7 @@ GET /schedules?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
-**Parâmetros do Query**
+**Parâmetros do query**
 
 A seguir está uma lista de parâmetros de query disponíveis para listar query programados. Todos esses parâmetros são opcionais. Efetuar uma chamada para este terminal sem parâmetros recuperará todos os query programados disponíveis para a sua organização.
 
@@ -415,7 +415,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Excluir um query programado especificado
 
-Você pode excluir um query especificado, fazendo uma solicitação de DELETE para o ponto de extremidade `/schedules` e fornecendo a ID do query agendado que deseja excluir no caminho da solicitação.
+Você pode excluir um query especificado, fazendo uma solicitação de DELETE para o `/schedules` ponto de extremidade e fornecendo a ID do query programado que deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >

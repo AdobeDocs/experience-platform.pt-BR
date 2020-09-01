@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 18ea9482b9c6691c6326d91b2d0d3da9a8dc7195
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '7187'
+source-wordcount: '7145'
 ht-degree: 0%
 
 ---
@@ -217,8 +217,6 @@ ht-degree: 0%
 **Regras de chamada direta:** no [!DNL Experience Platform Launch], você pode configurar uma [!UICONTROL regra] de chamada  direta que é executada quando é chamada diretamente da página. Se o carregamento de sua página ou a ação no site for muito simples, ou se for exclusiva e puder executar um conjunto específico de instruções toda vez (definido [!DNL eVar4] como X e acionado [!DNL event2] toda vez), você poderá usar uma [!UICONTROL regra] de chamada direta. Consulte [!DNL Launch] a documentação referente à criação de [!UICONTROL regras] de chamada direta.
 
 **Nome de exibição:** O nome de exibição é um nome amigável para o usuário de um campo que é mostrado na interface do usuário.
-
-**MÓDULO:** DULE é um acrônimo para Rotulagem e Aplicação do Uso de *Dados*. DULE é uma parte essencial do gerenciamento de dados e uma coleção de recursos principais que permite a rotulagem de uso de dados e a aplicação de políticas de acesso a dados para necessidades de governança em uma organização.
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 

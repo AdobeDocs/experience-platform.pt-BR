@@ -5,7 +5,7 @@ title: Gerenciar usuários de um perfil de produto
 topic: user guide
 description: Este documento mostra como gerenciar usuários de um perfil de produto na interface do usuário para Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 1%
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 # Gerenciar usuários de um perfil de produto
 
-Para atribuir ou remover usuários de um perfil de produto, abra a página de detalhes do perfil e navegue até a guia *[!UICONTROL Usuários]* . Aqui, clique em **[!UICONTROL Adicionar usuário]**.
+Para atribuir ou remover usuários de um perfil de produto, abra a página de detalhes do perfil e navegue até a guia **[!UICONTROL Usuários]** . Aqui, clique em **[!UICONTROL Adicionar usuário]**.
 
 ![add-users-button](../images/add-users-button.png)
 
-A caixa de diálogo *[!UICONTROL Adicionar usuário]* é exibida. Usando o campo de pesquisa, você pode pesquisar usuários para adicionar por nome ou por email. À medida que você digita, os usuários correspondentes aparecerão em uma janela de preenchimento automático abaixo da caixa de texto.
+A caixa de diálogo **[!UICONTROL Adicionar usuário]** é exibida. Usando o campo de pesquisa, você pode pesquisar usuários para adicionar por nome ou por email. À medida que você digita, os usuários correspondentes aparecerão em uma janela de preenchimento automático abaixo da caixa de texto.
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -31,7 +31,7 @@ Depois de selecionar um usuário, clique em **[!UICONTROL Salvar]** para adicion
 
 ![add-user-save](../images/add-user-save.png)
 
-A guia *[!UICONTROL Usuários]* do perfil do produto é exibida novamente, onde o usuário adicionado agora é listado.
+A guia **[!UICONTROL Usuários]** do perfil do produto é exibida novamente, onde o usuário adicionado agora é listado.
 
 ![adicionado pelo usuário](../images/user-added.png)
 

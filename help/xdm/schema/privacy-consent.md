@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: Visão geral da combinação de privacidade
+description: A combinação Preferências de privacidade/marketing (Consent) é uma combinação do Experience Data Model (XDM) destinada a suportar a coleta de permissões e preferências do usuário geradas por CMPs e outras fontes dos clientes. Este documento cobre a estrutura e a utilização prevista dos diversos campos fornecidos pela mistura.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -23,7 +24,7 @@ Este documento requer um entendimento funcional do [!DNL Experience Data Model] 
 * [Visão geral do sistema XDM](http://www.adobe.com/go/xdm-home-en)
 * [Noções básicas da composição do schema](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
-## exemplo de Schema {#schema}
+## exemplo de schema {#schema}
 
 >[!NOTE]
 >
@@ -266,7 +267,7 @@ A tabela a seguir descreve os valores aceitos para `xdm:basisOfProcessing`:
 
 | Valor | Descrição |
 | --- | --- |
-| `consent` **(Padrão)** | A coleta de dados para a finalidade especificada é permitida, dado que o indivíduo forneceu permissão explícita. Esse é o valor padrão de `xdm:basisOfProcessing` se nenhum outro valor for fornecido. <br><br>**IMPORTANTE **: Os valores para`xdm:choice`e`xdm:optOutValue`só são respeitados quando`xdm:basisOfProcessing`está definido como`consent`. Se qualquer um dos outros valores descritos nesta tabela forem usados para`xdm:basisOfProcessing`, as opções de consentimento do indivíduo serão ignoradas. |
+| `consent` **(Padrão)** | A coleta de dados para a finalidade especificada é permitida, dado que o indivíduo forneceu permissão explícita. Esse é o valor padrão de `xdm:basisOfProcessing` se nenhum outro valor for fornecido. <br><br>**IMPORTANTE**: Os valores para `xdm:choice` e `xdm:optOutValue` só são respeitados quando `xdm:basisOfProcessing` está definido como `consent`. Se qualquer um dos outros valores descritos nesta tabela forem usados para `xdm:basisOfProcessing` , as opções de consentimento do indivíduo serão ignoradas. |
 | `compliance` | A recolha de dados para a finalidade especificada é necessária para cumprir as obrigações legais da empresa. |
 | `contract` | A recolha de dados para a finalidade especificada é necessária para cumprir as obrigações contratuais com a pessoa singular. |
 | `legitimate_interest` | O interesse comercial legítimo em recolher e processar esses dados para a finalidade especificada supera os possíveis danos que isso representa para o indivíduo. |
@@ -301,7 +302,7 @@ A tabela a seguir descreve os valores aceitos para `xdm:type`:
 | `in_home` | Mensagens internas. |
 | `in_store` | Mensagens na loja. |
 | `in_vehicle` | Mensagens no veículo. |
-| `offers` | ofertas especiais. |
+| `offers` | Ofertas especiais. |
 | `phone_calls` | Dados relacionados às interações de chamadas telefônicas. |
 | `push_notifications` | Notificações por push. |
 | `sms` | Mensagens SMS. |
@@ -310,7 +311,7 @@ A tabela a seguir descreve os valores aceitos para `xdm:type`:
 | `third_party_content` | Conteúdo ou artigos exibidos em seu site que são fornecidos por uma entidade independente. |
 | `third_party_offers` | Ofertas ou anúncios exibidos em seus serviços de publicidade do site de uma entidade não relacionada. |
 
-### schema [!DNL Privacy Consent] completo {#full-schema}
+### Schema [!DNL Privacy Consent] completo {#full-schema}
 
 O seguinte JSON representa o [!DNL Privacy Consent] schema completo como aparece no Registro do Schema:
 

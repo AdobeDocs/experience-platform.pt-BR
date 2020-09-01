@@ -5,7 +5,7 @@ title: Guia do usuário do notebook Aprendizagem de máquina em tempo real
 topic: Training and scoring a ML model
 description: O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real no Adobe Experience Platform JúpiterLab.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Se desejar usar um conjunto de dados do Adobe Experience Platform, exclua o come
 
 ![conjunto de dados rtml](../images/rtml/rtml-dataset.png)
 
-Para acessar um conjunto de dados no seu [!DNL JupyterLab] notebook, selecione a guia **Dados** na navegação à esquerda de [!DNL JupyterLab]. Os diretórios *[!UICONTROL Conjuntos]* de dados e *[!UICONTROL Schemas]* são exibidos. Selecione **[!UICONTROL Conjuntos de dados]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explorar dados no notebook]** no menu suspenso no conjunto de dados que deseja usar. Uma entrada de código executável é exibida na parte inferior do notebook. Esta célula tem o seu `dataset_id`.
+Para acessar um conjunto de dados no seu [!DNL JupyterLab] notebook, selecione a guia **Dados** na navegação à esquerda de [!DNL JupyterLab]. Os diretórios **[!UICONTROL Conjuntos]** de dados e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de dados]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explorar dados no notebook]** no menu suspenso no conjunto de dados que deseja usar. Uma entrada de código executável é exibida na parte inferior do notebook. Esta célula tem o seu `dataset_id`.
 
 ![acesso ao conjunto de dados](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### Prepare seu modelo
 
-Usando o modelo ML *[!UICONTROL em tempo]* real, você precisa analisar, pré-processar, treinar e avaliar seu modelo ML. Isso é feito aplicando transformações de dados e construindo um pipeline de treinamento.
+Usando o modelo ML **[!UICONTROL em tempo]** real, você precisa analisar, pré-processar, treinar e avaliar seu modelo ML. Isso é feito aplicando transformações de dados e construindo um pipeline de treinamento.
 
 **Transformações de dados**
 
-A célula Modelos ML *[!UICONTROL em tempo]* real de Transformações *de* dados precisa ser modificada para funcionar com seu próprio conjunto de dados. Normalmente, isso envolve renomear colunas, acúmulo de dados e preparação de dados/engenharia de recursos.
+A célula Modelos ML **[!UICONTROL em tempo]** real de Transformações *de* dados precisa ser modificada para funcionar com seu próprio conjunto de dados. Normalmente, isso envolve renomear colunas, acúmulo de dados e preparação de dados/engenharia de recursos.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ Você retornará o DSL atualizado.
 
 ## Pontuação {#scoring}
 
-Após a publicação para [!DNL Edge], a pontuação é feita por uma solicitação de POST de um cliente. Normalmente, isso pode ser feito a partir de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso do Postman. O modelo ML *[!UICONTROL em tempo]* real usa o EdgeUtils para demonstrar esse processo.
+Após a publicação para [!DNL Edge], a pontuação é feita por uma solicitação de POST de um cliente. Normalmente, isso pode ser feito a partir de um aplicativo cliente que precisa de pontuações ML. Você também pode fazer isso do Postman. O modelo ML **[!UICONTROL em tempo]** real usa o EdgeUtils para demonstrar esse processo.
 
 >[!NOTE]
 >

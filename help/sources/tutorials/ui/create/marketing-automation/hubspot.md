@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Criar um conector de origem HubSpot na interface do usuário
 topic: overview
+description: Este tutorial fornece etapas para a criação de um conector de origem HubSpot usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---

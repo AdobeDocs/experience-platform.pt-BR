@@ -5,7 +5,7 @@ title: Guia da interface do usuário do serviço de Query Adobe Experience Platf
 topic: guide
 description: O Adobe Experience Platform Query Service fornece uma interface de usuário que pode ser usada para gravar e executar query, visualização query executados anteriormente e acessar query salvos por usuários na Organização IMS.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 3%
@@ -19,17 +19,17 @@ A Adobe Experience Platform [!DNL Query Service] fornece uma interface de usuár
 
 ## [!DNL Query Editor]
 
-O [!DNL Query Editor] permite que você grave e execute query sem usar um cliente externo. Clique em **[!UICONTROL Criar Query]** para abrir [!DNL Query Editor] e criar um novo query. Você também pode acessar o query selecionando-o nas guias [!DNL Query Editor] Log *[!UICONTROL ou]* Procurar ** . Selecionar um query executado ou salvo anteriormente abrirá o  [!DNL Query Editor] e exibirá o SQL do query selecionado.
+O [!DNL Query Editor] permite que você grave e execute query sem usar um cliente externo. Clique em **[!UICONTROL Criar Query]** para abrir [!DNL Query Editor] e criar um novo query. Você também pode acessar o query selecionando-o nas guias [!DNL Query Editor] Log **[!UICONTROL ou]** Procurar **** . Selecionar um query executado ou salvo anteriormente abrirá o  [!DNL Query Editor] e exibirá o SQL do query selecionado.
 
 ![Imagem](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] fornece espaço de edição onde você pode começar a digitar um query. À medida que você digita, o editor preenche automaticamente palavras, tabelas e nomes de campos reservados do SQL dentro de tabelas. Quando terminar de gravar seu query, clique no botão **Reproduzir** para executar o query. A guia *[!UICONTROL Console]* abaixo do editor mostra o que [!DNL Query Service] está fazendo no momento, indicando quando um query foi retornado. A guia *[!UICONTROL Resultado]* , ao lado do Console, exibe os resultados do query. Consulte o guia [do Editor de][query-editor] Query para obter mais informações sobre como usar o [!DNL Query Editor].
+[!DNL Query Editor] fornece espaço de edição onde você pode começar a digitar um query. À medida que você digita, o editor preenche automaticamente palavras, tabelas e nomes de campos reservados do SQL dentro de tabelas. Quando terminar de gravar seu query, clique no botão **Reproduzir** para executar o query. A guia **[!UICONTROL Console]** abaixo do editor mostra o que [!DNL Query Service] está fazendo no momento, indicando quando um query foi retornado. A guia **[!UICONTROL Resultado]** , ao lado do Console, exibe os resultados do query. Consulte o guia [do Editor de][query-editor] Query para obter mais informações sobre como usar o [!DNL Query Editor].
 
 ![Imagem](../images/queries/ui-overview/query-editor.png)
 
 ## Procurar
 
-A guia *[!UICONTROL Procurar]* mostra query salvos pelos usuários em sua organização. É útil pensar neles como projetos de query, já que query salvos aqui podem ainda estar em construção. Query exibidos na guia *[!UICONTROL Procurar]* também são exibidos como query executados na guia *[!UICONTROL Log]* se tiverem sido executados anteriormente por [!DNL Query Service].
+A guia **[!UICONTROL Procurar]** mostra query salvos pelos usuários em sua organização. É útil pensar neles como projetos de query, já que query salvos aqui podem ainda estar em construção. Query exibidos na guia **[!UICONTROL Procurar]** também são exibidos como query executados na guia **[!UICONTROL Log]** se tiverem sido executados anteriormente por [!DNL Query Service].
 
 ![Imagem](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ A guia *[!UICONTROL Procurar]* mostra query salvos pelos usuários em sua organi
 
 ## Log
 
-A guia *[!UICONTROL Log]* fornece uma lista de query que foram executados anteriormente. Por padrão, o log lista os query em uma cronologia reversa.
+A guia **[!UICONTROL Log]** fornece uma lista de query que foram executados anteriormente. Por padrão, o log lista os query em uma cronologia reversa.
 
 ![Imagem](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ A guia *[!UICONTROL Log]* fornece uma lista de query que foram executados anteri
 
 ## Credenciais
 
-A guia *[!UICONTROL Credenciais]* exibe suas [!DNL Postgres] credenciais. Clique no ícone **[!UICONTROL Copiar]** ao lado de qualquer campo para armazenar seu conteúdo no buffer do teclado. Para obter mais informações sobre como usar essas credenciais para se conectar com clientes externos, leia o guia [][connect-clients]Conectar-se com clientes.
+A guia **[!UICONTROL Credenciais]** exibe suas [!DNL Postgres] credenciais. Clique no ícone **[!UICONTROL Copiar]** ao lado de qualquer campo para armazenar seu conteúdo no buffer do teclado. Para obter mais informações sobre como usar essas credenciais para se conectar com clientes externos, leia o guia [][connect-clients]Conectar-se com clientes.
 
 ![Imagem](../images/queries/ui-overview/credentials.png)
 

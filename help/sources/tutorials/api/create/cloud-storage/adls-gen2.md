@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
 title: Criar um conector Gen2 do Armazenamento Azure Data Lake usando a API de Serviço de Fluxo
 topic: overview
+description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Armazenamento Gen2 do Azure Data Lake (a seguir denominado "ADLS Gen2").
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '570'
 ht-degree: 2%
 
 ---
@@ -20,10 +21,10 @@ Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se c
 
 ## Introdução
 
-Este guia exige uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única instância do Platform em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito um conector de origem ADLS Gen2 usando a [!DNL Flow Service] API.
 

@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Conector Analytics do Azure Synapse
+title: Conector do Azure Synapse Analytics
 topic: overview
+description: A documentação abaixo fornece informações sobre como conectar o Azure Synapse Analytics à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # Conector (Beta) [!DNL Azure Synapse Analytics]
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
-[!DNL Experience Platform] fornece suporte para assimilar dados de um banco de dados de terceiros. [!DNL Platform] pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou datas warehouses. O suporte para provedores de banco de dados inclui [!DNL Azure Synapse Analytics].
+[!DNL Experience Platform] fornece suporte para assimilar dados de um banco de dados de terceiros. [!DNL Platform] pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Azure Synapse Analytics].
 
-## lista de permissões de endereço IP
+## LISTA DE PERMISSÕES de endereço IP
 
 Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes.
 
@@ -54,11 +55,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Azure
 
 ## Conectar-se [!DNL Azure Synapse Analytics] a [!DNL Platform] APIs
 
-- [Criar um conector Analytics do Azure Synapse usando a API de Serviço de Fluxo](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Criar um conector do Azure Synapse Analytics usando a API de Serviço de Fluxo](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Explore um sistema de banco de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
 - [Coletar dados de um banco de dados usando a API de Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar-se [!DNL Azure Synapse Analytics] à [!DNL Platform] interface do usuário
 
-- [Criar um conector de origem do Analytics do Azure Synapse na interface do usuário](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Criar um conector de origem do Azure Synapse Analytics na interface do usuário](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [Configurar um fluxo de dados para um conector de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

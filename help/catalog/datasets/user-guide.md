@@ -5,9 +5,9 @@ title: Guia do usuário de conjuntos de dados
 topic: datasets
 description: Este guia do usuário de conjuntos de dados fornece instruções sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Este guia do usuário requer uma compreensão prática dos seguintes componentes
    * [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)de schemas: Saiba como criar seus próprios schemas XDM personalizados usando o [!DNL Schema Editor] na interface do [!DNL Platform] usuário.
 * [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [[!DNL Data Governance]](../../data-governance/home.md): Garanta a conformidade com regulamentos, restrições e políticas referentes ao uso de dados do cliente.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Garanta a conformidade com regulamentos, restrições e políticas referentes ao uso de dados do cliente.
 
 ## Conjuntos de dados de visualização
 
@@ -114,7 +114,7 @@ Se um conjunto de dados já contiver dados e estiver ativado para [!DNL Profile]
 
 ## Gerenciar e aplicar o controle de dados em um conjunto de dados
 
-O DULE (Data Usage Labeling and Implantação) é o principal mecanismo de controle de dados para [!DNL Experience Platform]. Rótulos DULE permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Consulte a visão geral [do](../../data-governance/home.md) Data Governance para saber mais sobre rótulos, ou consulte o guia [do usuário sobre rótulos de uso de](../../data-governance/labels/overview.md) dados para obter instruções sobre como aplicar rótulos a conjuntos de dados.
+Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Consulte a visão geral [do](../../data-governance/home.md) Data Governance para saber mais sobre rótulos, ou consulte o guia [do usuário sobre rótulos de uso de](../../data-governance/labels/overview.md) dados para obter instruções sobre como aplicar rótulos a conjuntos de dados.
 
 ## Excluir um conjunto de dados
 

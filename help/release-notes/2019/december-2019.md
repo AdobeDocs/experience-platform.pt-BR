@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 5%
@@ -35,7 +35,7 @@ O Adobe Experience Platform Segmentation Service fornece uma interface de usuár
 | Recurso | Descrição |
 |--- | ---|
 | Guia Audiências mescladas em [!DNL Segment Builder] | As guias [!UICONTROL _Segmentos_] e [!UICONTROL _Audiências_] no [!DNL Segment Builder] foram combinadas em uma única guia [!UICONTROL _Audiência_] . Essa guia permite que você procure e procure audiências existentes, que podem ser arrastadas e soltas na tela do construtor de regras para criar uma nova definição de segmento. A referência a uma audiência pode adicionar um dos seguintes conjuntos de lógica de regra à nova definição de segmento: associação de audiência como uma regra, o conjunto completo de lógicas de regra que definiram a audiência referenciada. |
-| Novo local para o seletor de política de mesclagem | O local do seletor de política de mesclagem no [!DNL Segment Builder] foi alterado. Para selecionar uma política de mesclagem para uma definição de segmento, clique no ícone de engrenagem na guia [!UICONTROL _Campos_] e use o menu suspenso Política _[!UICONTROL de]_ mesclagem para selecionar a política de mesclagem que deseja usar. |
+| Novo local para o seletor de política de mesclagem | O local do seletor de política de mesclagem no [!DNL Segment Builder] foi alterado. Para selecionar uma política de mesclagem para uma definição de segmento, clique no ícone de engrenagem na guia **[!UICONTROL Campos]** e use o menu suspenso Política **[!UICONTROL de]** mesclagem para selecionar a política de mesclagem que deseja usar. |
 
 **Problemas conhecidos**
 

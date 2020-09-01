@@ -5,7 +5,7 @@ title: Agendar um modelo (UI)
 topic: Tutorial
 description: A Adobe Experience Platform Data Science Workspace permite que você configure execuções programadas de pontuação e treinamento em um serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 A Adobe Experience Platform [!DNL Data Science Workspace] permite que você configure execuções programadas de pontuação e treinamento em um Serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 
-Este tutorial percorre as etapas para configurar os agendamentos de treinamento e pontuação em um Serviço existente por meio da Galeria *[!UICONTROL de]* serviços. Ele é dividido nas seguintes seções principais:
+Este tutorial percorre as etapas para configurar os agendamentos de treinamento e pontuação em um Serviço existente por meio da Galeria **[!UICONTROL de]** serviços. Ele é dividido nas seguintes seções principais:
 
 - [Configurar pontuação programada](#configure-scheduled-scoring)
 - [Configurar treinamento agendado](#configure-scheduled-training)
@@ -51,7 +51,7 @@ A configuração de execuções de treinamento programado em um Serviço garante
 
 Depois que um Serviço é criado, você pode seguir as etapas abaixo para configurar e aplicar um agendamento de treinamento:
 
-1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a *[!UICONTROL Service Gallery]*. Localize o Serviço no qual você deseja programar a execução do treinamento e clique em **[!UICONTROL Abrir]** para visualização na página *Visão geral* .
+1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a **[!UICONTROL Service Gallery]**. Localize o Serviço no qual você deseja programar a execução do treinamento e clique em **[!UICONTROL Abrir]** para visualização na página *Visão geral* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. A página Visão geral exibe as informações de treinamento do Serviço. Clique no link **[!UICONTROL Atualizar agendamento]** para configurar um agendamento de treinamento.

@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: Impor políticas de uso de dados usando a API do Serviço de Política
 topic: enforcement
-description: Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a DULE Policy Service API para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
+description: Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a API de serviço de política para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '936'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Impor políticas de uso de dados usando a [!DNL Policy Service] API
 
-Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
+Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 
 >[!NOTE]
 >
@@ -25,18 +25,18 @@ Este documento fornece etapas sobre como usar a [!DNL Policy Service] API para v
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes conceitos chave envolvidos na aplicação das políticas DULE:
+Este tutorial requer um entendimento prático dos seguintes conceitos chave envolvidos na aplicação das políticas de uso de dados:
 
 * [Controle](../home.md)de dados: A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
    * [Rótulos](../labels/overview.md)de uso de dados: Os rótulos de uso de dados são aplicados a conjuntos de dados (e/ou campos individuais nesses conjuntos de dados), especificando restrições para como esses dados podem ser usados.
-   * [Políticas](../policies/overview.md)de uso de dados: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que são permitidas ou restritas para determinados conjuntos de rótulos DULE.
+   * [Políticas](../policies/overview.md)de uso de dados: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que são permitidas ou restritas para determinados conjuntos de rótulos de uso de dados.
 * [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) [!DNL Policy Service] desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API DULE, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a [!DNL Policy Service] API, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
-## Avaliar usando rótulos DULE e uma ação de marketing
+## Avaliar usando rótulos e uma ação de marketing
 
-É possível avaliar uma política testando uma ação de marketing em relação a um conjunto de rótulos DULE que estariam presentes em um conjunto de dados. Isso é feito por meio do uso do parâmetro do `duleLabels` query, onde os rótulos DULE são fornecidos como uma lista de valores separada por vírgulas, como mostrado no exemplo abaixo.
+É possível avaliar uma política testando uma ação de marketing em relação a um conjunto de rótulos de uso de dados que estariam presentes em um conjunto de dados. Isso é feito por meio do uso do parâmetro do `duleLabels` query, onde os rótulos são fornecidos como uma lista de valores separada por vírgulas, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
@@ -47,7 +47,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política DULE que você está avaliando. |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política de uso de dados que você está avaliando. |
 | `{LABEL_1}` | Um rótulo de uso de dados para testar a ação de marketing. Pelo menos um rótulo deve ser fornecido. Ao fornecer vários rótulos, eles devem ser separados por vírgulas. |
 
 **Solicitação**
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos DULE com os quais foi testada e uma lista de quaisquer políticas DULE que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou a violação de política esperada.
+Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de uso com os quais foi testada e uma lista de quaisquer políticas que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou a violação de política esperada.
 
 ```json
 {
@@ -129,11 +129,11 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos DULE
 
 | Propriedade | Descrição |
 | --- | --- |
-| `violatedPolicies` | Um storage que lista quaisquer políticas DULE que foram violadas ao testar a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
+| `violatedPolicies` | Um array que lista quaisquer políticas que foram violadas testando a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
 
 ## Avaliar usando conjuntos de dados
 
-É possível avaliar uma política DULE testando uma ação de marketing em relação a um ou mais conjuntos de dados dos quais os rótulos DULE podem ser coletados. Isso é feito fazendo uma solicitação POST para `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornecendo IDs de conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
+É possível avaliar uma política de uso de dados testando uma ação de marketing em relação a um ou mais conjuntos de dados dos quais os rótulos podem ser coletados. Isso é feito fazendo uma solicitação POST para `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornecendo IDs de conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
@@ -144,7 +144,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política DULE que você está avaliando. |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing associada à política que você está avaliando. |
 
 **Solicitação**
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos DULE que foram coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas DULE que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou a violação de política esperada.
+Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de uso que foram coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou a violação de política esperada.
 
 ```json
 {
@@ -362,12 +362,12 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos DULE
 
 | Propriedade | Descrição |
 | --- | --- |
-| `duleLabels` | Uma lista de rótulos DULE que foram extraídos dos conjuntos de dados fornecidos na carga da solicitação. |
-| `discoveredLabels` | Uma lista dos conjuntos de dados fornecidos na carga da solicitação, exibindo os rótulos DULE de nível de conjunto de dados e de campo que foram encontrados em cada um deles. |
-| `violatedPolicies` | Um storage que lista quaisquer políticas DULE que foram violadas ao testar a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
+| `duleLabels` | Uma lista de rótulos de uso de dados que foram extraídos dos conjuntos de dados fornecidos na carga da solicitação. |
+| `discoveredLabels` | Uma lista dos conjuntos de dados que foram fornecidos na carga da solicitação, exibindo os rótulos no nível do conjunto de dados e no nível do campo que foram encontrados em cada um. |
+| `violatedPolicies` | Um array que lista quaisquer políticas que foram violadas testando a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
 
 ## Próximas etapas
 
-Ao ler esse documento, você verificou com êxito violações de política ao executar uma ação de marketing em um conjunto de dados ou em um conjunto de rótulos DULE. Usando os dados retornados nas respostas da API, você pode configurar protocolos em seu aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrem.
+Ao ler esse documento, você verificou com êxito violações de política ao executar uma ação de marketing em um conjunto de dados ou em um conjunto de rótulos de uso de dados. Usando os dados retornados nas respostas da API, você pode configurar protocolos em seu aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrem.
 
 Para obter etapas sobre como aplicar políticas de uso de dados para segmentos de audiência em [!DNL Real-time Customer Profile], consulte o seguinte [tutorial](../../segmentation/tutorials/governance.md).

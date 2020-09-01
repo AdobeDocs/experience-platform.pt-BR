@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
 solution: Experience Platform
 title: Conector de Armazenamento do Google Cloud
 topic: overview
+description: A documentação abaixo fornece informações sobre como conectar o Armazenamento do Google Cloud à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---

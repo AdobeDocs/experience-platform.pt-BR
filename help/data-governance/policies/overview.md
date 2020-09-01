@@ -5,9 +5,9 @@ title: Visão geral das políticas de uso de dados
 topic: policies
 description: Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Um exemplo de uma ação de marketing pode ser o desejo de exportar um conjunto 
 >
 >As ações de marketing por si só não restringem o uso de dados. Eles devem ser incluídos nas políticas de uso de dados habilitadas para que essas ações sejam avaliadas em caso de violação de política.
 
-Quando o uso de dados ocorre no serviço de sua organização, as ações de marketing relevantes devem ser indicadas para que qualquer violação de política possa ser identificada. Em seguida, você pode usar a API [do serviço de política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para verificar violações de política na sua integração.
+Quando o uso de dados ocorre no serviço de sua organização, as ações de marketing relevantes devem ser indicadas para que qualquer violação de política possa ser identificada. Em seguida, você pode usar a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Política para verificar violações de política na sua integração.
 
 >[!NOTE]
 >
 >Se estiver usando [!DNL Real-time Customer Data Platform], você pode configurar casos de uso de marketing em destinos para automatizar a aplicação de políticas. Consulte o documento sobre o controle de [dados na CDP](../../rtcdp/privacy/data-governance-overview.md) em tempo real para obter mais informações.
 
-Consulte o apêndice deste documento para obter uma lista de ações [](#core-actions)de marketing definidas por Adobe. Você também pode definir suas próprias ações de marketing personalizadas usando a DULE [!DNL Policy Service] API ou a interface [!DNL Experience Platform ]do usuário. Mais informações sobre como trabalhar com ações e políticas de marketing são fornecidas na próxima seção.
+Consulte o apêndice deste documento para obter uma lista de ações [](#core-actions)de marketing definidas por Adobe. Você também pode definir suas próprias ações de marketing personalizadas usando a [!DNL Policy Service] API ou a interface [!DNL Experience Platform ]do usuário. Mais informações sobre como trabalhar com ações e políticas de marketing são fornecidas na próxima seção.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -50,7 +50,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Gerenciamento de políticas de uso de dados {#manage}
 
-Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão usar a API DULE [!DNL Policy Service] ou a [!DNL Experience Platform] interface do usuário para gerenciar e avaliar as políticas relacionadas às ações de marketing que estão sendo executadas nos dados que contêm os rótulos de uso de dados. Você pode criar e atualizar políticas, determinar o status de uma política e trabalhar com ações de marketing para avaliar se uma ação específica viola uma política de uso de dados.
+Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão usar a [!DNL Policy Service] API ou a [!DNL Experience Platform] interface do usuário para gerenciar e avaliar as políticas relacionadas às ações de marketing que estão sendo executadas nos dados que contêm os rótulos de uso de dados. Você pode criar e atualizar políticas, determinar o status de uma política e trabalhar com ações de marketing para avaliar se uma ação específica viola uma política de uso de dados.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Para obter informações sobre como trabalhar com ações e políticas de market
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução às políticas de uso de dados na estrutura DULE. Agora você pode continuar a ler a documentação do processo vinculada ao longo deste guia para saber mais sobre como trabalhar com políticas na API e na interface do usuário.
+Este documento forneceu uma introdução às políticas de uso de dados dentro da [!DNL Data Governance] estrutura. Agora você pode continuar a ler a documentação do processo vinculada ao longo deste guia para saber mais sobre como trabalhar com políticas na API e na interface do usuário.
 
 ## Apêndice
 

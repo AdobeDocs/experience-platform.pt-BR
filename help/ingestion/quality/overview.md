@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Qualidade de ingestão de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 6%
@@ -12,9 +12,9 @@ ht-degree: 6%
 ---
 
 
-# Qualidade dos dados no Adobe Experience Platform
+# Qualidade de dados no Adobe Experience Platform
 
-O Adobe Experience Platform oferece garantias bem definidas de integridade, precisão e consistência para todos os dados carregados por meio de ingestão em lote ou streaming. O documento a seguir fornece um resumo das verificações e comportamentos de validação suportados para a ingestão em lote e streaming em [!DNL Experience Platform].
+A Adobe Experience Platform oferece garantias bem definidas de integridade, precisão e consistência para todos os dados carregados por meio de ingestão em lote ou streaming. O documento a seguir fornece um resumo das verificações e comportamentos de validação suportados para a ingestão em lote e streaming em [!DNL Experience Platform].
 
 ## Controlos suportados
 
@@ -53,6 +53,6 @@ As validações a seguir são feitas para a ingestão de streaming:
 | Organização IMS | Certifique-se de que a Organização IMS listada é uma organização válida. |
 | Nome da fonte | Garante que o nome da fonte de dados seja especificado. |
 | Conjunto de dados | Garante que o conjunto de dados seja especificado, ativado e não tenha sido removido. |
-| Cabeçalho | Garante que o cabeçalho seja especificado e seja válido. |
+| Header | Garante que o cabeçalho seja especificado e seja válido. |
 
 Mais informações sobre como [!DNL Platform] monitores e validações de dados podem ser encontradas na documentação [de fluxos de dados de](./monitor-data-flows.md)monitoramento.

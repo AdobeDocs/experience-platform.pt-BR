@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
 solution: Experience Platform
 title: Tipos de dados do Serviço de segmentação do Adobe Experience Platform
 topic: overview
 description: Todos os tipos de dados XDM são suportados no Serviço de segmentação. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 3%

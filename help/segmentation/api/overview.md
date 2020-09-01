@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
-title: Guia do desenvolvedor do serviço de segmentação de Adobe Experience Platform
+title: Guia do desenvolvedor do Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: 467
 ht-degree: 0%
 
 ---
 
 
-# Guia do desenvolvedor da API Adobe Experience Platform [!DNL Segmentation Service]
+# Guia do desenvolvedor da Adobe Experience Platform [!DNL Segmentation Service] API
 
 [!DNL Adobe Experience Platform Segmentation Service] permite que você crie segmentos e gere audiências a partir [!DNL Adobe Experience Platform] de seus [!DNL Real-time Customer Profile] dados.
 
@@ -28,7 +28,7 @@ Para obter mais informações sobre como usar esse terminal, leia o guia [de pon
 
 ## Pré-visualizações e estimativas
 
-As Pré-visualizações fornecem uma lista paginada de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado. Você pode usar o `/preview` endpoint para criar um novo trabalho de pré-visualização ou procurar os resultados de um trabalho de pré-visualização específico.
+As pré-visualizações fornecem uma lista paginada de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado. Você pode usar o `/preview` endpoint para criar um novo trabalho de pré-visualização ou procurar os resultados de um trabalho de pré-visualização específico.
 
 As estimativas fornecem informações estatísticas para definições de segmentos, como tamanho de audiência projetado, intervalo de confiança e desvio padrão de erro. Você pode usar o `/estimate` endpoint para visualização de uma estimativa de uma definição de segmento.
 

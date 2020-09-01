@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Criar um schema
+description: 'Um schema pode ser considerado como o modelo para os dados que você deseja assimilar no Experience Platform. Cada schema é composto de uma classe e zero ou mais combinações. Em outras palavras, você não precisa adicionar uma mixin para definir um schema, mas na maioria dos casos, pelo menos uma mixin será usada. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '294'
 ht-degree: 1%
 
 ---

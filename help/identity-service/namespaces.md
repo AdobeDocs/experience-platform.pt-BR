@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Os namespaces de identidade são um componente do Serviço de identidade da   que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name<span>@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 4%
@@ -53,7 +53,7 @@ Os seguintes tipos de identidade estão disponíveis em [!DNL Platform]:
 
 A Adobe Experience Platform fornece várias namespaces de identidade que estão disponíveis para todas as organizações. Elas são conhecidas como namespaces padrão e são visíveis usando a [!DNL Identity Service] API ou por meio da [!DNL Platform] interface do usuário.
 
-Para visualização de namespaces padrão na interface do usuário, clique em **[!UICONTROL Identidades]** no painel esquerdo e clique na guia *[!UICONTROL Procurar]* . Todas as namespaces de identidade acessíveis à sua organização serão exibidas, no entanto, aquelas com &quot;[!UICONTROL Padrão]&quot; como &quot;[!UICONTROL Proprietário]&quot; são as namespaces padrão fornecidas pelo Adobe.
+Para visualização de namespaces padrão na interface do usuário, clique em **[!UICONTROL Identidades]** no painel esquerdo e clique na guia **[!UICONTROL Procurar]** . Todas as namespaces de identidade acessíveis à sua organização serão exibidas, no entanto, aquelas com &quot;[!UICONTROL Padrão]&quot; como &quot;[!UICONTROL Proprietário]&quot; são as namespaces padrão fornecidas pelo Adobe.
 
 Você pode clicar em uma das namespaces listadas para obter detalhes sobre a visualização.
 
@@ -71,7 +71,7 @@ As namespaces que você definir são privadas para sua organização e exigem um
 
 ![](./images/create-identity-namespace.png)
 
-Semelhante às namespaces padrão, você pode clicar em uma namespace personalizada na guia *[!UICONTROL Procurar]* para visualização de seus detalhes. Entretanto, com uma namespace personalizada, você também pode editar seu Nome de exibição e Descrição na área de detalhes.
+Semelhante às namespaces padrão, você pode clicar em uma namespace personalizada na guia **[!UICONTROL Procurar]** para visualização de seus detalhes. Entretanto, com uma namespace personalizada, você também pode editar seu Nome de exibição e Descrição na área de detalhes.
 
 >[!NOTE]
 >

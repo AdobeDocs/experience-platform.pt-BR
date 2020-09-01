@@ -5,7 +5,7 @@ title: Guia do usuário de conjuntos de dados
 topic: datasets
 description: Este guia do usuário de conjuntos de dados fornece instruções sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 0%
@@ -30,18 +30,18 @@ Este guia do usuário requer uma compreensão prática dos seguintes componentes
 
 ## Conjuntos de dados de visualização
 
-Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para abrir o painel *[!UICONTROL de Conjuntos de dados]* . O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o schema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
+Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para abrir o painel **[!UICONTROL de Conjuntos de dados]** . O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o schema ao qual o conjunto de dados adere e o status da execução de ingestão mais recente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-Clique no nome de um conjunto de dados para acessar a tela de atividade ** do conjunto de dados e ver os detalhes do conjunto de dados selecionado. A guia atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
+Clique no nome de um conjunto de dados para acessar a tela de atividade **** do conjunto de dados e ver os detalhes do conjunto de dados selecionado. A guia atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## Pré-visualização de um conjunto de dados
 
-Na tela atividade *[!UICONTROL do conjunto de]* dados, clique em Conjunto de dados de **[!UICONTROL Pré-visualização]** próximo ao canto superior direito da tela para pré-visualização de até 100 linhas de dados. Se o conjunto de dados estiver vazio, o link pré-visualização será desativado e, em vez disso, dirá que a **[!UICONTROL Pré-visualização não está disponível]**.
+Na tela atividade **[!UICONTROL do conjunto de]** dados, clique em Conjunto de dados de **[!UICONTROL Pré-visualização]** próximo ao canto superior direito da tela para pré-visualização de até 100 linhas de dados. Se o conjunto de dados estiver vazio, o link pré-visualização será desativado e, em vez disso, dirá que a **[!UICONTROL Pré-visualização não está disponível]**.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
@@ -56,7 +56,7 @@ Para métodos mais robustos de acesso aos seus dados, [!DNL Experience Platform]
 
 ## Criar um conjunto de dados {#create}
 
-Para criar um novo conjunto de dados, clique em **[!UICONTROL Criar conjunto de dados]** no painel *[!UICONTROL de conjuntos]* de dados.
+Para criar um novo conjunto de dados, clique em **[!UICONTROL Criar conjunto de dados]** no painel **[!UICONTROL de conjuntos]** de dados.
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
@@ -67,29 +67,29 @@ Na tela seguinte, você verá as duas opções a seguir para criar um novo conju
 
 ### Criar um conjunto de dados com um schema existente
 
-Na tela *[!UICONTROL Criar conjunto de dados]* , clique em **[!UICONTROL Criar conjunto de dados a partir do schema]** para criar um novo conjunto de dados vazio.
+Na tela **[!UICONTROL Criar conjunto de dados]** , clique em **[!UICONTROL Criar conjunto de dados a partir do schema]** para criar um novo conjunto de dados vazio.
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-A etapa *[!UICONTROL Selecionar schema]* é exibida. Navegue na lista de schemas e selecione o schema ao qual o conjunto de dados irá aderir antes de clicar em **[!UICONTROL Avançar]**.
+A etapa **[!UICONTROL Selecionar schema]** é exibida. Navegue na lista de schemas e selecione o schema ao qual o conjunto de dados irá aderir antes de clicar em **[!UICONTROL Avançar]**.
 
 ![](../images/datasets/user-guide/select_schema.png)
 
-A etapa *[!UICONTROL Configurar conjunto de dados]* é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e clique em **[!UICONTROL Concluir]** para criar o conjunto de dados.
+A etapa **[!UICONTROL Configurar conjunto de dados]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e clique em **[!UICONTROL Concluir]** para criar o conjunto de dados.
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
 ### Criar um conjunto de dados com um arquivo CSV
 
-Quando um conjunto de dados é criado usando um arquivo CSV, um schema ad hoc é criado para fornecer ao conjunto de dados uma estrutura que corresponda ao arquivo CSV fornecido. Na tela *[!UICONTROL Criar conjunto de dados]* , clique na caixa que diz **[!UICONTROL Criar conjunto de dados a partir do arquivo]** CSV.
+Quando um conjunto de dados é criado usando um arquivo CSV, um schema ad hoc é criado para fornecer ao conjunto de dados uma estrutura que corresponda ao arquivo CSV fornecido. Na tela **[!UICONTROL Criar conjunto de dados]** , clique na caixa que diz **[!UICONTROL Criar conjunto de dados a partir do arquivo]** CSV.
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-A etapa *[!UICONTROL Configurar]* é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e clique em **[!UICONTROL Avançar]**.
+A etapa **[!UICONTROL Configurar]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e clique em **[!UICONTROL Avançar]**.
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-A etapa *[!UICONTROL Adicionar dados]* é exibida. Carregue o arquivo CSV arrastando-o e soltando-o no centro da tela ou clique em **[!UICONTROL Procurar]** para explorar o diretório de arquivos. O tamanho do arquivo pode ser de até dez gigabytes. Depois que o arquivo CSV for carregado, clique em **[!UICONTROL Salvar]** para criar o conjunto de dados.
+A etapa **[!UICONTROL Adicionar dados]** é exibida. Carregue o arquivo CSV arrastando-o e soltando-o no centro da tela ou clique em **[!UICONTROL Procurar]** para explorar o diretório de arquivos. O tamanho do arquivo pode ser de até dez gigabytes. Depois que o arquivo CSV for carregado, clique em **[!UICONTROL Salvar]** para criar o conjunto de dados.
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Cada conjunto de dados tem a capacidade de enriquecer os perfis do cliente com s
 
 Para obter mais informações sobre como ativar um schema para [!DNL Profile], consulte o guia [do usuário do Editor de](../../xdm/tutorials/create-schema-ui.md)Schemas.
 
-Para ativar um conjunto de dados para o Perfil, acesse a tela de atividade *[!UICONTROL do]* Conjunto de Dados e clique no botão de alternância do **[!UICONTROL Perfil]** na coluna *[!UICONTROL Propriedades]* . Depois de habilitados, os dados ingeridos no conjunto de dados também serão usados para preencher os perfis do cliente.
+Para ativar um conjunto de dados para o Perfil, acesse a tela de atividade **[!UICONTROL do]** Conjunto de Dados e clique no botão de alternância do **[!UICONTROL Perfil]** na coluna **[!UICONTROL Propriedades]** . Depois de habilitados, os dados ingeridos no conjunto de dados também serão usados para preencher os perfis do cliente.
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
@@ -118,7 +118,7 @@ O DULE (Data Usage Labeling and Implantação) é o principal mecanismo de contr
 
 ## Excluir um conjunto de dados
 
-É possível excluir um conjunto de dados acessando primeiro a tela de atividade *[!UICONTROL do Conjunto]* de Dados. Em seguida, clique em **[!UICONTROL Excluir conjunto de dados]** para excluí-lo.
+É possível excluir um conjunto de dados acessando primeiro a tela de atividade **[!UICONTROL do Conjunto]** de Dados. Em seguida, clique em **[!UICONTROL Excluir conjunto de dados]** para excluí-lo.
 
 >[!NOTE]
 >
@@ -136,11 +136,11 @@ Se um conjunto de dados estiver ativado para [!DNL Profile], excluí-lo pela int
 
 ## Monitorar ingestão de dados
 
-Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Monitoramento]** na navegação à esquerda. O painel *[!UICONTROL de monitoramento]* permite que você visualização os status dos dados de entrada da ingestão em lote ou em streaming. Para visualização dos status de lotes individuais, clique em *[!UICONTROL Lote de ponta a ponta]* ou *[!UICONTROL Streaming de ponta a ponta]*. Os painéis listas executam todas as execuções de lote ou de streaming, incluindo aquelas que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada listagem fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados do público alvo e o número de registros ingeridos. Se o conjunto de dados do público alvo estiver habilitado para [!DNL Profile], o número de registros de identidade e perfil assimilados também será exibido.
+Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Monitoramento]** na navegação à esquerda. O painel **[!UICONTROL de monitoramento]** permite que você visualização os status dos dados de entrada da ingestão em lote ou em streaming. Para visualização dos status de lotes individuais, clique em **[!UICONTROL Lote de ponta a ponta]** ou **[!UICONTROL Streaming de ponta a ponta]**. Os painéis listas executam todas as execuções de lote ou de streaming, incluindo aquelas que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada listagem fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados do público alvo e o número de registros ingeridos. Se o conjunto de dados do público alvo estiver habilitado para [!DNL Profile], o número de registros de identidade e perfil assimilados também será exibido.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-Você pode clicar em uma ID **[!UICONTROL de]** lote individual para acessar o painel de visão geral *[!UICONTROL do]* lote e ver os detalhes do lote, incluindo registros de erros caso o lote não seja assimilado.
+Você pode clicar em uma ID **[!UICONTROL de]** lote individual para acessar o painel de visão geral **[!UICONTROL do]** lote e ver os detalhes do lote, incluindo registros de erros caso o lote não seja assimilado.
 
 ![](../images/datasets/user-guide/batch_overview.png)
 

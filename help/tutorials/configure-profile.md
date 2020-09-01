@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: Tutoriais em tempo real do Perfil do cliente
 topic: tutorial
+description: Este documento descreve as etapas envolvidas e fornece links para tutoriais para a conclusão de cada fluxo de trabalho individual.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Para configurar [!DNL Real-time Customer Profile] para a sua organização, é n
 
 ## Ativar schema para [!DNL Profile] e [!DNL Identity]
 
-Antes que os dados possam ser ingeridos no Adobe Experience Platform e usados na criação do [!DNL Real-time Customer Profiles], um schema deve ser criado para fornecer a estrutura dos dados que serão ingeridos e esse schema deve ser habilitado para uso em [!DNL Profile] e Adobe Experience Platform [!DNL Identity Service]. Para obter instruções passo a passo sobre como criar um schema que esteja ativado tanto para [!DNL Profile] quanto para [!DNL Identity Service], consulte os tutoriais para [criar um schema usando a API](../xdm/tutorials/create-schema-api.md) de Registro do Schema ou para [criar um schema usando a interface do usuário](../xdm/tutorials/create-schema-ui.md)do Construtor de Schemas.
+Antes que os dados possam ser ingeridos no Adobe Experience Platform e usados na criação do [!DNL Real-time Customer Profiles], um schema deve ser criado para fornecer a estrutura dos dados que serão ingeridos e esse schema deve ser habilitado para uso no [!DNL Profile] Adobe Experience Platform [!DNL Identity Service]. Para obter instruções passo a passo sobre como criar um schema que esteja ativado tanto para [!DNL Profile] quanto para [!DNL Identity Service], consulte os tutoriais para [criar um schema usando a API](../xdm/tutorials/create-schema-api.md) de Registro do Schema ou para [criar um schema usando a interface do usuário](../xdm/tutorials/create-schema-ui.md)do Construtor de Schemas.
 
 ## Configurar um conjunto de dados para [!DNL Profile] e [!DNL Identity]
 
@@ -26,7 +27,7 @@ Para começar a assimilar dados no [!DNL Profile], é necessário ter um conjunt
 
 ## Configurar políticas de mesclagem
 
-O Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para trabalhar com políticas de mesclagem na [!DNL Platform] interface do usuário, visite o guia [do usuário das políticas de](../profile/ui/merge-policies.md)mesclagem. Para trabalhar com políticas de mesclagem usando a API Perfil do cliente em tempo real, consulte o guia [do desenvolvedor de políticas de](../profile/api/merge-policies.md)mesclagem.
+A Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para trabalhar com políticas de mesclagem na [!DNL Platform] interface do usuário, visite o guia [do usuário das políticas de](../profile/ui/merge-policies.md)mesclagem. Para trabalhar com políticas de mesclagem usando a API Perfil do cliente em tempo real, consulte o guia [do desenvolvedor de políticas de](../profile/api/merge-policies.md)mesclagem.
 
 ## Configurar projeções de borda
 

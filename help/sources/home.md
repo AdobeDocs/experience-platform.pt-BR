@@ -5,7 +5,7 @@ title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -112,14 +112,14 @@ Os sistemas CRM fornecem dados que podem ajudar a construir relações com os cl
 
 ## Controle de acesso para fontes na ingestão de dados
 
-As permissões para fontes na ingestão de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia *[!UICONTROL Permissões]* em um perfil de produto específico. No painel **[!UICONTROL Editar permissões]** , é possível acessar as permissões pertencentes às fontes por meio da entrada do menu de ingestão *[!UICONTROL de]* dados. A permissão Fontes **[!UICONTROL de]** Visualização concede acesso somente leitura a fontes disponíveis na guia *[!UICONTROL Catálogo]* e a fontes autenticadas na guia *[!UICONTROL Procurar]* , enquanto a permissão **[!UICONTROL Gerenciar fontes]** concede acesso total a fontes de leitura, criação, edição e desativação.
+As permissões para fontes na ingestão de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissões]** em um perfil de produto específico. No painel **[!UICONTROL Editar permissões]** , é possível acessar as permissões pertencentes às fontes por meio da entrada do menu de ingestão **[!UICONTROL de]** dados. A permissão Fontes **[!UICONTROL de]** Visualização concede acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e a fontes autenticadas na guia **[!UICONTROL Procurar]** , enquanto a permissão **[!UICONTROL Gerenciar fontes]** concede acesso total a fontes de leitura, criação, edição e desativação.
 
 A tabela a seguir descreve como a interface se comporta com base em diferentes combinações dessas permissões:
 
 | Nível de permissão | Descrição |
 | ---- | ----|
 | **[!UICONTROL Fontes]** de visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia *Catálogo* , bem como nas guias *Procurar*, *Contas* e *DataFlow* . |
-| **[!UICONTROL Gerenciar fontes]** em | Além das funções incluídas nas Fontes **[!UICONTROL de]** Visualização, concede acesso à opção Fonte *[!UICONTROL do]* Connect no *[!UICONTROL Catálogo]* e à opção *[!UICONTROL Selecionar dados]* na *[!UICONTROL Navegação]*. **[!UICONTROL Gerenciar fontes]** também permite ativar ou desativar *[!UICONTROL DataFlows]* e editar seus agendamentos. |
+| **[!UICONTROL Gerenciar fontes]** em | Além das funções incluídas nas Fontes **[!UICONTROL de]** Visualização, concede acesso à opção Fonte **[!UICONTROL do]** Connect no **[!UICONTROL Catálogo]** e à opção **[!UICONTROL Selecionar dados]** na **[!UICONTROL Navegação]**. **[!UICONTROL Gerenciar fontes]** também permite ativar ou desativar **[!UICONTROL DataFlows]** e editar seus agendamentos. |
 | **[!UICONTROL Fontes]** de visualização desativadas e **[!UICONTROL gerenciamento de fontes]** desativadas | Revogar todo o acesso às fontes. |
 
 Para obter mais informações sobre as permissões disponíveis concedidas através do Admin Console, incluindo essas quatro fontes, consulte a visão geral [do](../access-control/home.md)controle de acesso.

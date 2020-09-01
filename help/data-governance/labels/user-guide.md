@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Guia do usuário de etiquetas de uso de dados
 topic: labels
-description: Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados (também conhecidos como rótulos DULE) na interface do usuário do Adobe Experience Platform.
+description: Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Guia do usuário de etiquetas de uso de dados
 
-Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados (também conhecidos como rótulos DULE) na interface do [!DNL Experience Platform] usuário. Antes de usar o guia, consulte a visão geral [do](../home.md) Data Governance para obter uma introdução mais robusta à estrutura DULE.
+Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na interface do [!DNL Experience Platform] usuário. Antes de utilizar o guia, consulte a [[!DNL Data Governance] visão geral](../home.md) para uma introdução mais robusta ao [!DNL Data Governance] quadro.
 
 ## Gerenciamento de rótulos de uso de dados no nível do conjunto de dados
 

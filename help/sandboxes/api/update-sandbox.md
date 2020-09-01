@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Atualizar uma caixa de proteção
 topic: developer guide
+description: É possível atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua o nome da caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 

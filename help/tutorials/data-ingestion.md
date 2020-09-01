@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriais de ingestão de dados
 topic: tutorial
+description: A ingestão de dados inclui a ingestão em lote, a ingestão em streaming e a ingestão usando conectores de origem.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
 
-# Ingressar dados em [!DNL Experience Platform]
+# Ingest data into [!DNL Experience Platform]
 
-O Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. O Adobe [!DNL Experience Platform Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso em downstream [!DNL Platform services]. [!DNL Data Ingestion] inclui a ingestão em lote, a ingestão em fluxo contínuo e a ingestão por meio de conectores de origem. Para saber mais, leia a visão geral [da Ingestão de](../ingestion/home.md) dados ou vá diretamente para a documentação [](../sources/home.md)Fontes.
+A Adobe Experience Platform reúne dados de várias fontes para ajudar os comerciantes a entender melhor o comportamento de seus clientes. O Adobe [!DNL Experience Platform Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso em downstream [!DNL Platform services]. [!DNL Data Ingestion] inclui a ingestão em lote, a ingestão em fluxo contínuo e a ingestão por meio de conectores de origem. Para saber mais, leia a visão geral [da Ingestão de](../ingestion/home.md) dados ou vá diretamente para a documentação [](../sources/home.md)Fontes.
 
 ## Criar um conector de origem na interface do usuário e na API
 
@@ -22,7 +23,7 @@ Os conectores de origem permitem que você ingira dados de várias fontes, onde 
 
 ## Dados do lote de assimilação
 
-O Adobe Experience Platform permite importar facilmente dados para [!DNL Platform] como arquivos em lote. Exemplos de dados a serem ingeridos podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido [!DNL Experience Data Model] (XDM) no Registro do Schema. Para começar, visite os dados de [ingestão no tutorial](../ingestion/tutorials/ingest-batch-data.md)da Platform.
+A Adobe Experience Platform permite importar dados facilmente para [!DNL Platform] como arquivos em lote. Exemplos de dados a serem ingeridos podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido [!DNL Experience Data Model] (XDM) no Registro do Schema. Para começar, visite os dados de [ingestão no tutorial](../ingestion/tutorials/ingest-batch-data.md)da plataforma.
 
 ## Mapear um arquivo CSV para um Schema XDM
 
@@ -34,11 +35,11 @@ Para que os dados de streaming de start sejam enviados para [!DNL Experience Pla
 
 ## Criar uma conexão de streaming autenticada
 
-A coleta de dados autenticada permite que serviços de Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Para começar, siga o tutorial para [criar uma conexão](../ingestion/tutorials/create-authenticated-streaming-connection.md)de streaming autenticada.
+A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Para começar, siga o tutorial para [criar uma conexão](../ingestion/tutorials/create-authenticated-streaming-connection.md)de streaming autenticada.
 
 ## Dados de registro de fluxo e de série cronológica
 
-Com um conjunto de dados e conexões em vapor instaladas, é possível transmitir dados de registro ou de série de tempo para [!DNL Platform]. Para começar a streaming de dados de registro, siga os dados de registro de [fluxo no tutorial](../ingestion/tutorials/streaming-record-data.md)do Platform. Para começar a transmitir dados de séries de tempo, siga os dados de séries de tempo de [fluxo para o Platform](../ingestion/tutorials/streaming-time-series-data.md).
+Com um conjunto de dados e conexões em vapor instaladas, é possível transmitir dados de registro ou de série de tempo para [!DNL Platform]. Para começar a streaming de dados de registro, siga os dados de registro de [fluxo no tutorial](../ingestion/tutorials/streaming-record-data.md)da plataforma. Para começar a transmitir dados de séries de tempo, siga os dados de séries de tempo de [fluxo para a Plataforma](../ingestion/tutorials/streaming-time-series-data.md).
 
 ## Transmitir várias mensagens em uma única solicitação HTTP
 

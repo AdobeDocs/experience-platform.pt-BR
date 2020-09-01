@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de Armazenamento do Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Conector de Armazenamento do Google Cloud
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
+A Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform]e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
 As fontes de armazenamentos na nuvem podem inserir seus próprios dados [!DNL Platform] sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de Fontes. [!DNL Platform] permite trazer dados de [!DNL Google Cloud Storage] lotes.
 
-## lista de permissões de endereço IP
+## LISTA DE PERMISSÕES de endereço IP
 
 Os seguintes endereços IP devem ser adicionados a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes.
 
@@ -60,7 +60,7 @@ A página **[!UICONTROL Configurações]** é exibida. Aqui, você pode ver info
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-A página **[!UICONTROL Interoperabilidade]** contém informações sobre autenticação, chaves de acesso e o projeto padrão associado à sua conta de usuário. Se você ainda não tiver estabelecido um projeto padrão para acesso interoperável, poderá configurar um projeto a partir do projeto *[!UICONTROL Padrão para a seção de acesso]* interoperável. Se um projeto padrão já tiver sido estabelecido, a seção mostrará uma confirmação de que um projeto foi definido como padrão.
+A página **[!UICONTROL Interoperabilidade]** contém informações sobre autenticação, chaves de acesso e o projeto padrão associado à sua conta de usuário. Se você ainda não tiver estabelecido um projeto padrão para acesso interoperável, poderá configurar um projeto a partir do projeto **[!UICONTROL Padrão para a seção de acesso]** interoperável. Se um projeto padrão já tiver sido estabelecido, a seção mostrará uma confirmação de que um projeto foi definido como padrão.
 
 Para gerar uma nova ID de chave de acesso e uma chave de acesso secreta para sua conta de usuário, selecione **[!UICONTROL Criar uma chave]**.
 

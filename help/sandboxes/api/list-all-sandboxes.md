@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
 title: Lista de todas as caixas de proteção
 topic: developer guide
+description: Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o ponto de extremidade /sandboxes.
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 2%
+source-wordcount: '205'
+ht-degree: 1%
 
 ---
 

@@ -5,7 +5,7 @@ title: Guia do usuário das políticas de uso de dados
 topic: policies
 description: O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho Políticas na interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Este guia exige um entendimento prático dos seguintes [!DNL Experience Platform
 
 ## Políticas de uso de dados de visualização {#view-policies}
 
-Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Políticas]** para abrir a área de trabalho *[!UICONTROL Políticas]* . Na guia **[!UICONTROL Procurar]** , é possível visualizar uma lista de políticas disponíveis, incluindo seus rótulos, ações de marketing e status associados.
+Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Políticas]** para abrir a área de trabalho **[!UICONTROL Políticas]** . Na guia **[!UICONTROL Procurar]** , é possível visualizar uma lista de políticas disponíveis, incluindo seus rótulos, ações de marketing e status associados.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Clique em uma política listada para visualização sua descrição e tipo. Se u
 
 ## Criar uma política de uso de dados personalizada {#create-policy}
 
-Para criar uma nova política de uso de dados personalizada, clique em **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho *[!UICONTROL Políticas]* .
+Para criar uma nova política de uso de dados personalizada, clique em **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]** .
 
 ![](../images/policies/create-policy-button.png)
 
-O fluxo de trabalho *[!UICONTROL Criar política]* é exibido. Start fornecendo um nome e uma descrição para a nova política.
+O fluxo de trabalho **[!UICONTROL Criar política]** é exibido. Start fornecendo um nome e uma descrição para a nova política.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ Em seguida, selecione os rótulos de uso de dados nos quais a política será ba
 
 ![](../images/policies/add-labels.png)
 
-A etapa *[!UICONTROL Selecionar ações]* de marketing é exibida. Escolha as ações de marketing apropriadas na lista fornecida e clique em **[!UICONTROL Avançar]** para continuar.
+A etapa **[!UICONTROL Selecionar ações]** de marketing é exibida. Escolha as ações de marketing apropriadas na lista fornecida e clique em **[!UICONTROL Avançar]** para continuar.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ A etapa *[!UICONTROL Selecionar ações]* de marketing é exibida. Escolha as a�
 
 ![](../images/policies/add-marketing-actions.png)
 
-A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você analise os detalhes da nova política antes de criá-la. Quando estiver satisfeito, clique em **[!UICONTROL Concluir]** para criar a política.
+A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você analise os detalhes da nova política antes de criá-la. Quando estiver satisfeito, clique em **[!UICONTROL Concluir]** para criar a política.
 
 ![](../images/policies/policy-review.png)
 
-A guia *[!UICONTROL Procurar]* reaparece, que agora lista a política recém-criada no status &quot;Rascunho&quot;. Para ativar a política, consulte a próxima seção.
+A guia **[!UICONTROL Procurar]** reaparece, que agora lista a política recém-criada no status &quot;Rascunho&quot;. Para ativar a política, consulte a próxima seção.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ A guia *[!UICONTROL Procurar]* reaparece, que agora lista a política recém-cri
 
 Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
 
-Você pode ativar ou desativar as políticas na guia *[!UICONTROL Procurar]* na área de trabalho *[!UICONTROL Políticas]* . Selecione uma política personalizada na lista para exibir seus detalhes à direita. Em *[!UICONTROL Status]*, selecione o botão de alternância para ativar ou desativar a política.
+Você pode ativar ou desativar as políticas na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]** . Selecione uma política personalizada na lista para exibir seus detalhes à direita. Em **[!UICONTROL Status]**, selecione o botão de alternância para ativar ou desativar a política.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!
 
 ## Criar uma ação de marketing {#create-marketing-action}
 
-Para criar uma nova ação de marketing personalizada, clique em **[!UICONTROL Criar ação]** de marketing no canto superior direito da guia Ações **[!UICONTROL de]** marketing na área de trabalho *[!UICONTROL Políticas]* .
+Para criar uma nova ação de marketing personalizada, clique em **[!UICONTROL Criar ação]** de marketing no canto superior direito da guia Ações **[!UICONTROL de]** marketing na área de trabalho **[!UICONTROL Políticas]** .
 
 ![](../images/policies/create-marketing-action.png)
 
-A caixa de diálogo *[!UICONTROL Criar ação]* de marketing é exibida. Insira um nome e uma descrição para a ação de marketing e clique em **[!UICONTROL Criar]**.
+A caixa de diálogo **[!UICONTROL Criar ação]** de marketing é exibida. Insira um nome e uma descrição para a ação de marketing e clique em **[!UICONTROL Criar]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-A ação recém-criada é exibida na guia Ações *[!UICONTROL de]* marketing. Agora você pode usar a ação de marketing ao [criar novas políticas](#create-policy)de uso de dados.
+A ação recém-criada é exibida na guia Ações **[!UICONTROL de]** marketing. Agora você pode usar a ação de marketing ao [criar novas políticas](#create-policy)de uso de dados.
 
 ![](../images/policies/created-marketing-action.png)
 

@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Atributos calculados - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -60,7 +60,7 @@ O fluxo de trabalho neste tutorial usa um schema [!DNL Profile]habilitado e segu
 
 As etapas a seguir usam a interface do usuário do Adobe Experience Platform para localizar um schema, adicionar uma combinação e definir um campo. Se você preferir usar a [!DNL Schema Registry] API, consulte o guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md) Schemas para obter as etapas sobre como criar uma combinação, adicionar uma mistura a um schema e habilitar um schema para uso com [!DNL Real-time Customer Profile].
 
-Na interface do usuário, clique em **[!UICONTROL Schemas]** no painel esquerdo e use a barra de pesquisa na guia *[!UICONTROL Procurar]* para encontrar rapidamente o schema que deseja atualizar.
+Na interface do usuário, clique em **[!UICONTROL Schemas]** no painel esquerdo e use a barra de pesquisa na guia **[!UICONTROL Procurar]** para encontrar rapidamente o schema que deseja atualizar.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -70,7 +70,7 @@ Depois de localizar o schema, clique em seu nome para abrir o local [!DNL Schema
 
 ### Criar uma mistura
 
-Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de *Misturas* na seção *[!UICONTROL Composição]* no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova mistura]** para definir sua nova combinação.
+Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de *Misturas* na seção **[!UICONTROL Composição]** no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova mistura]** para definir sua nova combinação.
 
 Dê um nome e uma descrição ao mixin e clique em **[!UICONTROL Adicionar mixin]** quando concluído.
 
@@ -78,29 +78,29 @@ Dê um nome e uma descrição ao mixin e clique em **[!UICONTROL Adicionar mixin
 
 ### Adicionar um campo de atributo calculado ao schema
 
-A sua nova mistura deve aparecer agora na seção *[!UICONTROL Misturas]* em *[!UICONTROL Composição]*. Clique no nome do mixin e vários botões de campo **** Adicionar aparecerão na seção *[!UICONTROL Estrutura]* do editor.
+A sua nova mistura deve aparecer agora na seção **[!UICONTROL Misturas]** em **[!UICONTROL Composição]**. Clique no nome do mixin e vários botões de campo **** Adicionar aparecerão na seção *[!UICONTROL Structure]** do editor.
 
 Selecione **[!UICONTROL Adicionar campo]** ao lado do nome do schema para adicionar um campo de nível superior ou selecione para adicionar o campo em qualquer lugar no schema que você preferir.
 
-Depois de clicar em **[!UICONTROL Adicionar campo]** , um novo objeto é aberto, nomeado para sua ID de locatário, mostrando que o campo está na namespace correta. Dentro desse objeto, um campo *[!UICONTROL Novo]* é exibido. Isso se o campo no qual você definirá o atributo calculado.
+Depois de clicar em **[!UICONTROL Adicionar campo]** , um novo objeto é aberto, nomeado para sua ID de locatário, mostrando que o campo está na namespace correta. Dentro desse objeto, um campo **[!UICONTROL Novo]** é exibido. Isso se o campo no qual você definirá o atributo calculado.
 
 ![](../images/computed-attributes/New-field.png)
 
 ### Configurar o campo
 
-Usando a seção Propriedades *[!UICONTROL de]* campo no lado direito do editor, forneça as informações necessárias para o novo campo, incluindo seu nome, nome de exibição e tipo.
+Usando a seção Propriedades **[!UICONTROL de]** campo no lado direito do editor, forneça as informações necessárias para o novo campo, incluindo seu nome, nome de exibição e tipo.
 
 >[!NOTE]
 >
 >O tipo do campo deve ser do mesmo tipo que o valor do atributo calculado. Por exemplo, se o valor do atributo calculado for uma string, o campo que está sendo definido no schema deverá ser uma string.
 
-Quando terminar, clique em **[!UICONTROL Aplicar]** e o nome do campo, bem como seu tipo, aparecerão na seção *[!UICONTROL Estrutura]* do editor.
+Quando terminar, clique em **[!UICONTROL Aplicar]** e o nome do campo, bem como seu tipo, aparecerão na seção **[!UICONTROL Estrutura]** do editor.
 
 ![](../images/computed-attributes/Apply.png)
 
 ### Ativar schema para [!DNL Profile]
 
-Antes de continuar, verifique se o schema foi ativado para [!DNL Profile]. Clique no nome do schema na seção *[!UICONTROL Estrutura]* do editor para que a guia Propriedades *[!UICONTROL do]* Schema seja exibida. Se o controle deslizante do **[!UICONTROL Perfil]** estiver azul, o schema foi ativado para [!DNL Profile].
+Antes de continuar, verifique se o schema foi ativado para [!DNL Profile]. Clique no nome do schema na seção **[!UICONTROL Estrutura]** do editor para que a guia Propriedades **[!UICONTROL do]** Schema seja exibida. Se o controle deslizante do **[!UICONTROL Perfil]** estiver azul, o schema foi ativado para [!DNL Profile].
 
 >[!NOTE]
 >

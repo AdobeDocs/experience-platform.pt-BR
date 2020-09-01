@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Guia do usuário do Serviço de segmentação
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -77,7 +77,7 @@ A seção de resumo **[!UICONTROL do]** segmento fornece informações como ID, 
 
 Além disso, você tem a opção de editar o segmento. Selecionar **[!UICONTROL Editar segmento]** o levará ao [!DNL Segment Builder]. Para obter informações mais detalhadas sobre como usar a [!DNL Segment Builder] área de trabalho, leia o guia [[!DNL Segment Builder] do](./segment-builder.md)usuário.
 
-### audiência total no segmento
+### Audiência total no segmento
 
 A audiência **[!UICONTROL total na seção do segmento]** mostra o número total de perfis que se qualificam para o segmento.
 
@@ -91,7 +91,7 @@ A seção Destinos **** ativados mostra os destinos para os quais esse segmento 
 >
 > Os destinos são um recurso disponível com [!DNL Real-time Customer Data Platform]e permitem exportar dados para plataformas externas. Para obter mais informações sobre os destinos, leia a visão geral [dos](../../rtcdp/destinations/destinations-overview.md)destinos. Para saber como ativar um segmento em um destino, leia o [guia sobre como ativar segmentos em um destino](../../rtcdp/destinations/activate-destinations.md).
 
-### Amostras de Perfil
+### Amostras de perfil
 
 Abaixo está uma amostra de perfis que se qualificam para o segmento, detalhando as informações, incluindo a [!DNL Profile] ID, o nome, o sobrenome e o email pessoal.
 

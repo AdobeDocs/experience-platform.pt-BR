@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Event hub
 solution: Experience Platform
 title: Criar um conector Hubs de Evento do Azure usando a API de Serviço de Fluxo
 topic: overview
+description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a uma conta de Hubs de Evento do Azure.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '559'
 ht-degree: 2%
 
 ---

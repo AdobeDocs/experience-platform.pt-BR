@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Assinar eventos de ingestão de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 2%
@@ -55,7 +55,7 @@ Depois de criar um novo projeto, navegue até a tela de visão geral do projeto.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-A caixa de diálogo _[!UICONTROL Adicionar eventos]_ é exibida. Clique em **[!UICONTROL Experience Platform]** para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações **[!UICONTROL de]** plataforma antes de clicar em **[!UICONTROL Avançar]**.
+A caixa de diálogo **[!UICONTROL Adicionar eventos]** é exibida. Clique em **[!UICONTROL Experience Platform]** para filtrar a lista de opções disponíveis e, em seguida, clique em Notificações **[!UICONTROL de]** plataforma antes de clicar em **[!UICONTROL Avançar]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 

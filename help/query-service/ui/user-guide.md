@@ -5,7 +5,7 @@ title: Guia do usuário do Editor de query
 topic: query editor
 description: O Editor de query é uma ferramenta interativa fornecida pelo Adobe Experience Platform Query Service, que permite que você grave, valide e execute query para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de query oferece suporte ao desenvolvimento de query para a exploração de análises e dados e permite que você execute query interativos para fins de desenvolvimento, bem como query não interativos para preencher conjuntos de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%
@@ -77,19 +77,19 @@ Quando os erros são detectados, é possível visualização as mensagens de err
 
 ### Detalhes do query
 
-Enquanto você estiver visualizando um query no [!DNL Query Editor], o painel Detalhes *[!UICONTROL do]* Query fornece ferramentas para gerenciar o query selecionado.
+Enquanto você estiver visualizando um query no [!DNL Query Editor], o painel Detalhes **[!UICONTROL do]** Query fornece ferramentas para gerenciar o query selecionado.
 
 ![Imagem](../images/queries/query-editor-overview/query-details.png)
 
-Esse painel permite gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear o query exibido e visualização o código SQL em um formato fácil de copiar na guia Query ** SQL. Esse painel também mostra metadados úteis, como a última vez que o query foi modificado e quem o modificou, se aplicável. Para gerar um conjunto de dados, clique em Conjunto de Dados **[!UICONTROL de Saída]**. A caixa de diálogo *[!UICONTROL Saída de Conjunto de Dados]* é exibida. Digite um nome e uma descrição e clique em **[!UICONTROL Executar Query]**. O novo conjunto de dados é exibido na guia *[!UICONTROL Conjuntos]* de dados na interface do [!DNL Query Service] usuário em [!DNL Platform].
+Esse painel permite gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear o query exibido e visualização o código SQL em um formato fácil de copiar na guia Query **** SQL. Esse painel também mostra metadados úteis, como a última vez que o query foi modificado e quem o modificou, se aplicável. Para gerar um conjunto de dados, clique em Conjunto de Dados **[!UICONTROL de Saída]**. A caixa de diálogo **[!UICONTROL Saída de Conjunto de Dados]** é exibida. Digite um nome e uma descrição e clique em **[!UICONTROL Executar Query]**. O novo conjunto de dados é exibido na guia **[!UICONTROL Conjuntos]** de dados na interface do [!DNL Query Service] usuário em [!DNL Platform].
 
 ### Salvando query
 
-[!DNL Query Editor] fornece uma função de gravação que permite salvar um query e trabalhar nele posteriormente. Para salvar um query, clique em **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Para que um query possa ser salvo, um nome deve ser fornecido para o query usando o painel Detalhes *[!UICONTROL do]* Query.
+[!DNL Query Editor] fornece uma função de gravação que permite salvar um query e trabalhar nele posteriormente. Para salvar um query, clique em **[!UICONTROL Salvar]** no canto superior direito de [!DNL Query Editor]. Para que um query possa ser salvo, um nome deve ser fornecido para o query usando o painel Detalhes **[!UICONTROL do]** Query.
 
 ### Como encontrar query anteriores
 
-Todos os query executados de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa na guia *[!UICONTROL Log]* para localizar execuções de query. Query salvos são listados na guia *[!UICONTROL Procurar]* .
+Todos os query executados de [!DNL Query Editor] são capturados na tabela Log. Você pode usar a funcionalidade de pesquisa na guia **[!UICONTROL Log]** para localizar execuções de query. Query salvos são listados na guia **[!UICONTROL Procurar]** .
 
 Consulte a visão geral [da interface do usuário do serviço de][query-service-ui] Query para obter mais informações.
 
@@ -99,7 +99,7 @@ Consulte a visão geral [da interface do usuário do serviço de][query-service-
 
 ## Execução de query usando o Editor de Query
 
-Para executar um query no, insira o SQL no editor ou carregue um query anterior na guia [!DNL Query Editor]Log *ou* Procurar *[!UICONTROL e clique em]* Reproduzir ****. O status da execução do query é exibido na guia *[!UICONTROL Console]* abaixo e os dados de saída são mostrados na guia *[!UICONTROL Resultados]* .
+Para executar um query no, insira o SQL no editor ou carregue um query anterior na guia [!DNL Query Editor]Log *ou* Procurar **[!UICONTROL e clique em]** Reproduzir ****. O status da execução do query é exibido na guia **[!UICONTROL Console]** abaixo e os dados de saída são mostrados na guia **[!UICONTROL Resultados]** .
 
 ### Console
 
@@ -113,7 +113,7 @@ O console fornece informações sobre o status e a operação do [!DNL Query Ser
 
 ### Resultados do query
 
-Depois que um query é concluído, os resultados são exibidos na guia *[!UICONTROL Resultados]* , ao lado da guia *[!UICONTROL Console]* . Esta visualização mostra a saída tabular do seu query, exibindo até 100 linhas. Essa visualização permite verificar se o query produz a saída esperada. Para gerar um conjunto de dados com seu query, remova os limites das linhas retornadas e execute o query com `CREATE TABLE tablename AS SELECT` o para gerar um conjunto de dados com a saída. Consulte o tutorial [de datasets de][query-service-create-datasets] geração para obter instruções sobre como gerar um conjunto de dados a partir dos resultados do query [!DNL Query Editor].
+Depois que um query é concluído, os resultados são exibidos na guia **[!UICONTROL Resultados]** , ao lado da guia **[!UICONTROL Console]** . Esta visualização mostra a saída tabular do seu query, exibindo até 100 linhas. Essa visualização permite verificar se o query produz a saída esperada. Para gerar um conjunto de dados com seu query, remova os limites das linhas retornadas e execute o query com `CREATE TABLE tablename AS SELECT` o para gerar um conjunto de dados com a saída. Consulte o tutorial [de datasets de][query-service-create-datasets] geração para obter instruções sobre como gerar um conjunto de dados a partir dos resultados do query [!DNL Query Editor].
 
 ![Imagem](../images/queries/query-editor-overview/query-results.png)
 

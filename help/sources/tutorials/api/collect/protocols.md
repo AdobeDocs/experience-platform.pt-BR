@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
+keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
 title: Coletar dados de protocolo por meio de conectores de origem e APIs
 topic: overview
-description: Este tutorial aborda as etapas para recuperar dados de um provedor de protocolo de terceiros e assimilá-los à Plataforma por meio de conectores de origem e da API de Serviço de Fluxo.
+description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1587'
 ht-degree: 1%
 
 ---

@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: Gravando query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 1%
@@ -18,19 +18,19 @@ Este documento detalha detalhes importantes a serem conhecidos ao escrever query
 
 Para obter informações detalhadas sobre a sintaxe SQL usada em [!DNL Query Service], leia a documentação [da sintaxe](../sql/syntax.md)SQL.
 
-## Modelos de execução de Query
+## Modelos de execução de query
 
-Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
+A Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
 
 ### Execução interativa de query
 
-Os Query podem ser executados interativamente enviando-os por meio da [!DNL Query Service] interface do usuário ou [por meio de um cliente](../clients/overview.md)conectado. Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até o query enviado retornar ou expirar.
+Os query podem ser executados interativamente enviando-os por meio da [!DNL Query Service] interface do usuário ou [por meio de um cliente](../clients/overview.md)conectado. Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até o query enviado retornar ou expirar.
 
 A execução de query interativos tem as seguintes limitações:
 
 | Parâmetro | Limitação |
 | --------- | ---------- |
-| Tempo limite do Query | 10 minutos |
+| Tempo limite do query | 10 minutos |
 | Máximo de linhas retornadas | 50,000 |
 | Máximo de query simultâneos | 5 |
 
@@ -42,7 +42,7 @@ Por padrão, os resultados de query interativos são retornados ao cliente e **n
 
 ### Execução de query não interativos
 
-Query enviados por meio da [!DNL Query Service] API são executados de forma não interativa. Execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa o query na ordem em que é recebido. query não interativos sempre resultam na geração de um novo conjunto de dados para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente. [!DNL Experience Platform]
+Query enviados por meio da [!DNL Query Service] API são executados de forma não interativa. Execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa o query na ordem em que é recebido. Query não interativos sempre resultam na geração de um novo conjunto de dados para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente. [!DNL Experience Platform]
 
 ## Acessar um campo específico em um objeto
 
@@ -137,7 +137,7 @@ WHERE web.webPageDetails.name = 'homepage'
 LIMIT 10
 ```
 
-### citações de Duplo
+### citações de duplo
 
 A citação do duplo (`"`) é usada para declarar um identificador com espaços.
 
@@ -156,7 +156,7 @@ FROM
 
 >[!NOTE]
 >
->As aspas de Duplo **não podem** ser usadas com acesso ao campo de notação de pontos.
+>As aspas de duplo **não podem** ser usadas com acesso ao campo de notação de ponto.
 
 ### Aspas anteriores
 

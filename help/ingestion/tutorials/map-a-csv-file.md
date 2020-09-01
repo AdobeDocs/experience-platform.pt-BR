@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mapear um arquivo CSV para um schema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 2%
@@ -29,13 +29,13 @@ Este tutorial também requer que você já tenha criado um conjunto de dados par
 
 ## Escolher um destino
 
-Faça logon em [[!DNL Adobe Experience Platform]](https://platform.adobe.com) e selecione **[!UICONTROL Workflows]** na barra de navegação esquerda para acessar a área de trabalho de *[!UICONTROL Workflows]* .
+Faça logon em [[!DNL Adobe Experience Platform]](https://platform.adobe.com) e selecione **[!UICONTROL Workflows]** na barra de navegação esquerda para acessar a área de trabalho de **[!UICONTROL Workflows]** .
 
 Na tela **[!UICONTROL Workflows]** , selecione **[!UICONTROL Mapear o schema]** CSV para XDM na seção de ingestão **[!UICONTROL de]** dados e selecione **[!UICONTROL Iniciar]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-O fluxo de trabalho *[!UICONTROL Mapear CSV para schema]* XDM é exibido, começando na etapa *[!UICONTROL Destino]* . Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo.
+O fluxo de trabalho **[!UICONTROL Mapear CSV para schema]** XDM é exibido, começando na etapa **[!UICONTROL Destino]** . Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo.
 
 **Usar um conjunto de dados existente**
 
@@ -49,27 +49,27 @@ Para assimilar seus dados CSV em um novo conjunto de dados, selecione **[!UICONT
 
 ## Adicionar dados
 
-A etapa *[!UICONTROL Adicionar dados]* é exibida. Arraste e solte o arquivo CSV no espaço fornecido ou selecione **[!UICONTROL Escolher arquivos]** para inserir manualmente o arquivo CSV.
+A etapa **[!UICONTROL Adicionar dados]** é exibida. Arraste e solte o arquivo CSV no espaço fornecido ou selecione **[!UICONTROL Escolher arquivos]** para inserir manualmente o arquivo CSV.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-A seção Dados *[!UICONTROL de]* amostra é exibida assim que o arquivo é carregado, mostrando as primeiras dez linhas de dados. Depois de confirmar que os dados foram carregados como esperado, selecione **[!UICONTROL Avançar]**.
+A seção Dados **[!UICONTROL de]** amostra é exibida assim que o arquivo é carregado, mostrando as primeiras dez linhas de dados. Depois de confirmar que os dados foram carregados como esperado, selecione **[!UICONTROL Avançar]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Mapear campos CSV para campos de schema XDM
 
-A etapa *[!UICONTROL Mapeamento]* é exibida. As colunas do arquivo CSV são listadas em Campo *[!UICONTROL de]* origem, com seus campos de schema XDM correspondentes listados em Campo *[!UICONTROL de]* Público alvo. Os campos de público alvo não selecionados são contornados em vermelho. Você pode usar a opção de filtrar campos para restringir a lista dos campos de origem disponíveis.
+A etapa **[!UICONTROL Mapeamento]** é exibida. As colunas do arquivo CSV são listadas em Campo **[!UICONTROL de]** origem, com seus campos de schema XDM correspondentes listados em Campo **[!UICONTROL de]** Público alvo. Os campos de público alvo não selecionados são contornados em vermelho. Você pode usar a opção de filtrar campos para restringir a lista dos campos de origem disponíveis.
 
 Para mapear uma coluna CSV para um campo XDM, selecione o ícone de schema ao lado do campo de público alvo correspondente da coluna.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-A janela *[!UICONTROL Selecionar campo]* schema é exibida. Aqui, você pode navegar pela estrutura do schema XDM e localizar o campo para o qual deseja mapear a coluna CSV. Clique em um campo XDM para selecioná-lo e, em seguida, clique em **[!UICONTROL Selecionar]**.
+A janela **[!UICONTROL Selecionar campo]** schema é exibida. Aqui, você pode navegar pela estrutura do schema XDM e localizar o campo para o qual deseja mapear a coluna CSV. Clique em um campo XDM para selecioná-lo e, em seguida, clique em **[!UICONTROL Selecionar]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-A tela *[!UICONTROL Mapeamento]* é exibida novamente, com o campo XDM selecionado aparecendo agora em Campo *[!UICONTROL de]* Público alvo.
+A tela **[!UICONTROL Mapeamento]** é exibida novamente, com o campo XDM selecionado aparecendo agora em Campo **[!UICONTROL de]** Público alvo.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ Se você não desejar mapear uma coluna CSV específica, é possível remover o 
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-Se desejar adicionar um novo mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]** na parte superior da lista de campo *[!UICONTROL de]* origem.
+Se desejar adicionar um novo mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]** na parte superior da lista de campo **[!UICONTROL de]** origem.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ A seção a seguir fornece informações adicionais para mapear colunas CSV para
 
 ### Funções de mapeamento
 
-Determinadas funções de mapeamento podem ser usadas para calcular e calcular valores com base no que é inserido nos campos de origem. Para usar uma função, digite-a em Campo *[!UICONTROL de]* origem com a sintaxe e as entradas apropriadas.
+Determinadas funções de mapeamento podem ser usadas para calcular e calcular valores com base no que é inserido nos campos de origem. Para usar uma função, digite-a em Campo **[!UICONTROL de]** origem com a sintaxe e as entradas apropriadas.
 
 Por exemplo, para concatenar campos CSV de **cidade** e **país** e atribuí-los ao campo XDM de **cidade** , defina o campo de origem como `concat(city, ", ", county)`.
 

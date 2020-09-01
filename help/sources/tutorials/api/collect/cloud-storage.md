@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; cloud storage
+keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Coletar dados de armazenamento em nuvem por meio de conectores de origem e APIs
 topic: overview
-description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e inseri-los na Plataforma por meio de conectores de origem e da API de Serviço de Fluxo.
+description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---

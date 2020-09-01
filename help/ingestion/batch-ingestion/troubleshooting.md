@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data
+keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
 title: Guia de solução de problemas de ingestão em lote Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 1%
@@ -20,7 +20,7 @@ Esta documentação ajudará a responder a perguntas frequentes sobre [!DNL Batc
 
 ### Os lotes estão imediatamente ativos após receber um HTTP 200 OK da API CompleteBatch?
 
-A `200 OK` resposta da API significa que o lote foi aceito para processamento - não está ativo até que ele seja transição para seu estado final, como Ativo ou Falha.
+A `200 OK` resposta da API significa que o lote foi aceito para processamento - ele não está ativo até que seja transição para seu estado final, como Ativo ou Falha.
 
 ### É seguro repetir a chamada CompleteBatch da API depois que ela falhar?
 

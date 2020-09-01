@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
 solution: Experience Platform
 title: Declarações preparadas
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 8%
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 # Declarações preparadas
 
-No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. O Adobe Experience Platform [!DNL Query Service] suporta declarações preparadas usando um query parametrizado. Isso pode ser usado para otimizar o desempenho, pois não será mais necessário analisar novamente um query várias vezes.
+No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. A Adobe Experience Platform [!DNL Query Service] suporta declarações preparadas usando um query parametrizado. Isso pode ser usado para otimizar o desempenho, pois não será mais necessário analisar novamente um query várias vezes.
 
 ## Uso de declarações preparadas
 
@@ -108,8 +108,8 @@ Quando for chamado, você verá exatamente os mesmos resultados de antes:
 | id | nome | sobrenome | data de nascimento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
+| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | Canadá |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | rios | Japão |
 | 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
 | 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |

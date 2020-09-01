@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure File Storage;Azure File Storage connector
 solution: Experience Platform
 title: Criar um conector de origem do Armazenamento de Arquivo do Azure na interface do usuário
 topic: overview
+description: Este tutorial fornece etapas para autenticação de um conector de origem do Armazenamento de Arquivo do Azure usando a interface do usuário da Plataforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---

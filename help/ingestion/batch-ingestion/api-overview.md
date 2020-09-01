@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
 title: Guia do desenvolvedor de ingestão em lote Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 5%
@@ -235,7 +235,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 >[!NOTE]
 >
->As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
 
 ### Criar lote
 
@@ -581,7 +581,7 @@ Para assimilar arquivos CSV, é necessário criar uma classe, um schema e um con
 
 >[!NOTE]
 >
->As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para o carregamento de arquivo grande.
+>As etapas a seguir são aplicáveis a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, precisará alternar para upload de arquivo grande.
 
 ### Criar conjunto de dados
 

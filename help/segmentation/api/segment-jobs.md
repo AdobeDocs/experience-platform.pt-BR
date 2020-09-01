@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
 title: Trabalhos de segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 3%
@@ -35,7 +35,7 @@ GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**Parâmetros do Query**
+**Parâmetros do query**
 
 | Parâmetro | Descrição | Exemplo |
 | --------- | ----------- | ------- |
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `limit` | Especifica o número de trabalhos de segmento retornados por página. | `limit=20` |
 | `status` | Filtros os resultados com base no status. Os valores suportados são NOVO, EM FILA, PROCESSAMENTO, BEM-SUCEDIDO, FALHA, CANCELAMENTO, CANCELADO | `status=NEW` |
 | `sort` | Ordena os trabalhos do segmento retornados. É escrito no formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
-| `property` | Os Filtros segmentam trabalhos e obtêm correspondências exatas para o filtro fornecido. Ele pode ser escrito em qualquer um dos seguintes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtragem na chave do objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtragem dentro do storage</li></ul> | `property=segments~segmentId==workInUS` |
+| `property` | Os filtros segmentam trabalhos e obtêm correspondências exatas para o filtro fornecido. Ele pode ser escrito em qualquer um dos seguintes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtragem na chave do objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtragem dentro do storage</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Solicitação**
 
@@ -461,7 +461,7 @@ Uma resposta bem-sucedida retorna o status HTTP 207 com os trabalhos de segmento
 
 ## Cancelar ou excluir um trabalho de segmento específico {#delete}
 
-Você pode excluir um trabalho de segmento específico, fazendo uma solicitação de DELETE para o `/segment/jobs` ponto final e fornecendo a ID do trabalho de segmento que deseja excluir no caminho da solicitação.
+Você pode excluir um trabalho de segmento específico, fazendo uma solicitação de DELETE ao `/segment/jobs` ponto final e fornecendo a ID do trabalho de segmento que deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >

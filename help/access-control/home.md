@@ -5,7 +5,7 @@ topic: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso para Adobe Experience Platform é fornecido através do Adobe Admin Console. Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Um fluxo de trabalho de alto nível para obter e atribuir permissões de acesso 
 - O administrador pode visualização os perfis [de](#product-profiles) produtos padrão ou criar novos perfis de produtos do cliente, conforme necessário.
 - O administrador pode editar as permissões e os usuários de qualquer perfil de produto existente.
 - Ao criar ou editar um perfil de produto, o administrador adiciona usuários ao perfil usando a guia **[!UICONTROL usuários]** e concede permissões a esses usuários (como &quot;[!UICONTROL Ler conjuntos]de dados&quot; ou &quot;[!UICONTROL Gerenciar Schemas]&quot;) acessando a guia **[!UICONTROL permissões]** . Da mesma forma, o administrador pode atribuir acesso a caixas de proteção usando a mesma guia de permissões.
-- Quando os usuários fazem logon na interface do [!DNL Experience Platform] [!DNL Platform] usuário, seu acesso aos recursos é determinado pelas permissões que lhes foram concedidas na Etapa 2. Por exemplo, se um usuário não tiver a permissão &quot;[!UICONTROL Visualização Datasets]&quot;, a guia *[!UICONTROL Datasets]* no menu lateral não estará visível para esse usuário.
+- Quando os usuários fazem logon na interface do [!DNL Experience Platform] [!DNL Platform] usuário, seu acesso aos recursos é determinado pelas permissões que lhes foram concedidas na Etapa 2. Por exemplo, se um usuário não tiver a permissão &quot;[!UICONTROL Visualização Datasets]&quot;, a guia **[!UICONTROL Datasets]** no menu lateral não estará visível para esse usuário.
 
 Para obter etapas mais detalhadas sobre como gerenciar o controle de acesso em [!DNL Experience Platform], consulte o guia [do usuário do](./ui/overview.md)controle de acesso.
 
@@ -95,10 +95,10 @@ A tabela a seguir descreve as permissões disponíveis [!DNL Experience Platform
 | [!DNL Sandbox Administration] | [!UICONTROL Visualizar sandboxes] | Acesso somente leitura para caixas de proteção pertencentes à sua organização. |
 | [!DNL Sandbox Administration] | [!UICONTROL Redefinir uma caixa de proteção] | Capacidade de reiniciar uma caixa de proteção. |
 | [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar, editar e desativar destinos.* |
-| [!DNL Destinations] | [!UICONTROL Destinos da visualização] | Acesso somente leitura para destinos disponíveis na guia *[!UICONTROL Catálogo]* e destinos autenticados na guia *[!UICONTROL Procurar]* .* |
+| [!DNL Destinations] | [!UICONTROL Destinos da visualização] | Acesso somente leitura para destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **[!UICONTROL Procurar]** .* |
 | [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Esta permissão requer que &quot;Destinos de Visualização&quot; ou &quot;Gerenciar [!UICONTROL destinos&quot;] sejam concedidos ao usuário que ativará os destinos.* |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
-| [!DNL Data Ingestion] | [!UICONTROL Fontes de visualização] | Acesso somente leitura a fontes disponíveis na guia *[!UICONTROL Catálogo]* e fontes autenticadas na guia *[!UICONTROL Procurar]* . |
+| [!DNL Data Ingestion] | [!UICONTROL Fontes de visualização] | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]** . |
 | [!DNL Data Science Workspace] | [!UICONTROL Gerenciar a área de trabalho da análise de dados] | Acesso para ler, criar, editar e excluir em [!DNL Data Science Workspace]. |
 
 _(*) Esta permissão exige disposições para[!DNL Real-time Customer Data Platform]. Para obter mais informações sobre a CDP em tempo real, comece lendo a visão geral[da CDP em tempo](https://docs.adobe.com/content/help/pt-BR/experience-platform/rtcdp/overview.html)real._

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Inscrever-se em Eventos de privacidade
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Inscrever-se em [!DNL Privacy Events]
 
-[!DNL Privacy Events] são mensagens fornecidas pelo Adobe Experience Platform [!DNL Privacy Service], que aproveitam Eventos de E/S Adobe enviados para um webhook configurado para facilitar a automação eficiente da solicitação de trabalho. Eles reduzem ou eliminam a necessidade de pesquisar a [!DNL Privacy Service] API para verificar se um trabalho foi concluído ou se um determinado marco em um fluxo de trabalho foi atingido.
+[!DNL Privacy Events] são mensagens fornecidas pela Adobe Experience Platform [!DNL Privacy Service], que aproveitam Eventos de E/S Adobe enviados para um webhook configurado para facilitar a automação eficiente da solicitação de trabalho. Eles reduzem ou eliminam a necessidade de pesquisar a [!DNL Privacy Service] API para verificar se um trabalho foi concluído ou se um determinado marco em um fluxo de trabalho foi atingido.
 
 Existem atualmente quatro tipos de notificações relacionadas ao ciclo de vida da solicitação de trabalho de privacidade:
 
@@ -86,7 +86,7 @@ A caixa de diálogo _Adicionar eventos_ é exibida. Selecione **[!UICONTROL Expe
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-A caixa de diálogo _Configurar registro_ de eventos é exibida. Selecione os eventos que deseja receber marcando as caixas de seleção correspondentes. Os Eventos selecionados são exibidos em Eventos _[!UICONTROL Assinados]_na coluna esquerda. Quando terminar, clique em**[!UICONTROL  Avançar ]**.
+A caixa de diálogo _Configurar registro_ de eventos é exibida. Selecione os eventos que deseja receber marcando as caixas de seleção correspondentes. Os eventos selecionados são exibidos em Eventos **[!UICONTROL Assinados]** na coluna esquerda. When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,13 +106,13 @@ Na tela seguinte, forneça um nome e uma descrição para o registro do evento. 
 
 ![](./images/privacy-events/event-details.png)
 
-Mais adiante na mesma tela, você recebe duas opções para configurar como receber eventos. Selecione **[!UICONTROL Webhook]** e forneça o `Forwarding` URL do webhook do grupo criado anteriormente em URL _[!UICONTROL do]_Webhook. Em seguida, selecione o estilo de delivery preferido (único ou lote) antes de clicar em**[!UICONTROL  Salvar eventos ]**configurados para concluir o registro do evento.
+Mais adiante na mesma tela, você recebe duas opções para configurar como receber eventos. Selecione **[!UICONTROL Webhook]** e forneça o `Forwarding` URL do webhook do grupo criado anteriormente em URL **[!UICONTROL do]** Webhook. Em seguida, selecione o estilo de delivery preferido (único ou lote) antes de clicar em **[!UICONTROL Salvar eventos]** configurados para concluir o registro do evento.
 
 ![](./images/privacy-events/webhook-details.png)
 
-A página de detalhes do seu projeto é exibida novamente, com [!DNL Privacy Events] Eventos _[!UICONTROL aparecendo em]_na navegação à esquerda.
+A página de detalhes do seu projeto é exibida novamente, com [!DNL Privacy Events] Eventos **[!UICONTROL aparecendo em]** na navegação à esquerda.
 
-## Dados do evento Visualização
+## Dados do evento visualização
 
 Depois de se registrar [!DNL Privacy Events] no projeto e os trabalhos de privacidade terem sido processados, você poderá visualização as notificações recebidas para esse registro. Na guia **[!UICONTROL Projetos]** no Developer Console, selecione seu projeto na lista para abrir a página de visão geral _do_ produto. Aqui, selecione Eventos **[!UICONTROL de]** privacidade no painel de navegação esquerdo.
 
@@ -126,7 +126,7 @@ Clique na guia Rastreamento de **[!UICONTROL depuração]** para visualização 
 
 ![](images/privacy-events/debug-tracing.png)
 
-A seção _[!UICONTROL Carga]_fornece detalhes sobre o evento selecionado, incluindo seu tipo de evento (`com.adobe.platform.gdpr.productcomplete`), como destacado no exemplo acima.
+A seção **[!UICONTROL Carga]** fornece detalhes sobre o evento selecionado, incluindo seu tipo de evento (`com.adobe.platform.gdpr.productcomplete`), como destacado no exemplo acima.
 
 ## Próximas etapas
 

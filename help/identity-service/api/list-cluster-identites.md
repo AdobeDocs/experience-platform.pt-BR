@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list identities;list cluster
 solution: Experience Platform
-title: Identidades de cluster de Lista
+title: Identidades de cluster de lista
 topic: API guide
+description: As identidades que estão relacionadas em um gráfico de identidade, independentemente da namespace, são consideradas parte do mesmo "cluster" nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '347'
 ht-degree: 1%
 
 ---

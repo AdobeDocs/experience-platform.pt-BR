@@ -5,7 +5,7 @@ title: Configurar um fluxo de dados para um conector CRM na interface do usuári
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1353'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Selecione o diretório que deseja usar e clique em **[!UICONTROL Avançar]**.
 
 ## Mapear campos de dados para um schema XDM
 
-A etapa *[!UICONTROL Mapeamento]* é exibida, fornecendo uma interface interativa para mapear os dados de origem para um [!DNL Platform] conjunto de dados.
+A etapa **[!UICONTROL Mapeamento]** é exibida, fornecendo uma interface interativa para mapear os dados de origem para um [!DNL Platform] conjunto de dados.
 
 Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
 
@@ -51,7 +51,7 @@ Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL 
 
 ![use-exist-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
 
-A caixa de diálogo *[!UICONTROL Selecionar conjunto de dados]* é exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **[!UICONTROL Continuar]**.
+A caixa de diálogo **[!UICONTROL Selecionar conjunto de dados]** é exibida. Encontre o conjunto de dados que deseja usar, selecione-o e clique em **[!UICONTROL Continuar]**.
 
 ![select-exists-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
 
@@ -63,7 +63,7 @@ Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Criar
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-A caixa de diálogo *[!UICONTROL Selecionar schema]* é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
+A caixa de diálogo **[!UICONTROL Selecionar schema]** é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!UICONTROL Concluído]**.
 
 ![select-schema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
@@ -75,14 +75,14 @@ Depois que os dados de origem forem mapeados, clique em **[!UICONTROL Avançar]*
 
 ## Execuções de ingestão agendada
 
-A etapa *[!UICONTROL Agendamento]* é exibida, permitindo que você configure um agendamento de ingestão para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. A tabela a seguir descreve os diferentes campos configuráveis para programação:
+A etapa **[!UICONTROL Agendamento]** é exibida, permitindo que você configure um agendamento de ingestão para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. A tabela a seguir descreve os diferentes campos configuráveis para programação:
 
 | Campo | Descrição |
 | --- | --- |
 | Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
 | hora do start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer. |
-| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o *[!UICONTROL preenchimento retroativo]* estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o *preenchimento retroativo* estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora *[!UICONTROL do]* Start serão assimilados. Os arquivos carregados antes da hora *[!UICONTROL do]* Start não serão ingeridos. |
+| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o **[!UICONTROL preenchimento retroativo ]*estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o*preenchimento retroativo *estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora*[!UICONTROL do ]*Start serão assimilados. Os arquivos carregados antes da hora*[!UICONTROL do]** Start não serão ingeridos. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
 Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.
@@ -107,9 +107,9 @@ Depois de fornecer os valores apropriados para a programação, selecione **[!UI
 
 ## Fornecer detalhes do fluxo de dados
 
-A etapa de detalhes *[!UICONTROL do]* Dataflow é exibida, permitindo que você nomeie e forneça uma breve descrição sobre seu novo dataflow.
+A etapa de detalhes **[!UICONTROL do]** Dataflow é exibida, permitindo que você nomeie e forneça uma breve descrição sobre seu novo dataflow.
 
-Durante esse processo, você também pode ativar a assimilação *[!UICONTROL parcial]* e o diagnóstico *[!UICONTROL de]* erro. Habilitar a ingestão *[!UICONTROL parcial]* fornece a capacidade de assimilar dados que contenham erros até um certo limite. Quando a ingestão ** parcial estiver ativada, arraste a discagem do limite de *[!UICONTROL Erro %]* para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
+Durante esse processo, você também pode ativar a assimilação **[!UICONTROL parcial]** e o diagnóstico **[!UICONTROL de]** erro. Habilitar a ingestão **[!UICONTROL parcial]** fornece a capacidade de assimilar dados que contenham erros até um certo limite. Quando a ingestão **** parcial estiver ativada, arraste a discagem do limite de **[!UICONTROL Erro %]** para ajustar o limite de erro do lote. Como alternativa, você pode ajustar manualmente o limite selecionando a caixa de entrada. Para obter mais informações, consulte a visão geral [](../../../../ingestion/batch-ingestion/partial.md)da ingestão em lote parcial.
 
 Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
 
@@ -119,9 +119,9 @@ Forneça valores para o fluxo de dados e selecione **[!UICONTROL Próximo]**.
 
 A etapa *Revisar* é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-* *[!UICONTROL Detalhes]* da conexão: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
-* *[!UICONTROL Detalhes]* do mapeamento: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
-* *[!UICONTROL Detalhes]* da programação: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
+* **[!UICONTROL Detalhes]** da conexão: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
+* **[!UICONTROL Detalhes]** do mapeamento: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o schema ao qual o conjunto de dados adere.
+* **[!UICONTROL Detalhes]** da programação: Mostra o período ativo, a frequência e o intervalo do agendamento da ingestão.
 
 Depois de revisar seu fluxo de dados, clique em **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
@@ -133,7 +133,7 @@ Depois que seu fluxo de dados for criado, você poderá monitorar os dados que e
 
 ## Excluir seu fluxo de dados
 
-Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função *[!UICONTROL Excluir]* disponível na área de trabalho *[!UICONTROL Fluxos de dados]* . Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre como [excluir fluxos de dados na interface do usuário](../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Excluir]** disponível na área de trabalho **[!UICONTROL Fluxos de dados]** . Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre como [excluir fluxos de dados na interface do usuário](../delete.md).
 
 ## Próximas etapas
 
@@ -156,11 +156,11 @@ As seções a seguir fornecem informações adicionais para trabalhar com conect
 
 Quando um fluxo de dados é criado, ele imediatamente se torna ativo e ingere dados de acordo com o agendamento que foi fornecido. Você pode desativar um fluxo de dados ativo a qualquer momento seguindo as instruções abaixo.
 
-Na tela de *[!UICONTROL autenticação]* , selecione o nome da conexão associada ao fluxo de dados que você deseja desativar.
+Na tela de **[!UICONTROL autenticação]** , selecione o nome da conexão associada ao fluxo de dados que você deseja desativar.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
-A página _atividade_ de origem é exibida. Selecione o fluxo de dados ativo na lista para abrir sua coluna *[!UICONTROL Propriedades]* no lado direito da tela, que contém um botão de alternância **[!UICONTROL Ativado]** . Clique na alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
+A página **atividade** de origem é exibida. Selecione o fluxo de dados ativo na lista para abrir sua coluna **[!UICONTROL Propriedades]** no lado direito da tela, que contém um botão de alternância **[!UICONTROL Ativado]** . Clique na alternância para desativar o fluxo de dados. A mesma alternância pode ser usada para reativar um fluxo de dados depois que ele for desativado.
 
 ![disable](../../../images/tutorials/dataflow/crm/disable.png)
 

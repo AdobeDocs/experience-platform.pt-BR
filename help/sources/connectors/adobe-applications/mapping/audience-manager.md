@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
 solution: Experience Platform
 title: campo de mapeamento Audience Manager
 topic: overview
+description: As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (Dados em tempo real, Onboard e Perfil) e seus campos XDM correspondentes.
 translation-type: tm+mt
-source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---

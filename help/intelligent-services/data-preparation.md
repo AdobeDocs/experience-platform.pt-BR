@@ -5,7 +5,7 @@ title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 description: 'Para que os Serviços inteligentes detectem insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes aproveitam os schemas do Experience Data Model (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados nos Serviços inteligentes] devem estar em conformidade com o schema XDM da Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 1%
@@ -272,7 +272,7 @@ Depois de criar e salvar o schema, você pode criar um novo conjunto de dados co
 * [Criar um conjunto de dados na interface do usuário](../catalog/datasets/user-guide.md#create) (Siga o fluxo de trabalho para usar um schema existente)
 * [Criar um conjunto de dados na API](../catalog/datasets/create.md)
 
-Após a criação do conjunto de dados, é possível encontrá-lo na interface do usuário da plataforma na área de trabalho *[!UICONTROL Conjuntos]* de dados.
+Após a criação do conjunto de dados, é possível encontrá-lo na interface do usuário da plataforma na área de trabalho **[!UICONTROL Conjuntos]** de dados.
 
 ![](images/data-preparation/dataset-location.png)
 

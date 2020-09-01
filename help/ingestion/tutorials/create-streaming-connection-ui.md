@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar uma conexão de streaming usando a interface do usuário
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -22,34 +22,34 @@ Para start de dados de transmissão, é necessário criar primeiro uma conexão 
 
 Depois de registrar uma conexão de streaming, você terá um URL exclusivo para o qual pode ser usado para transmitir dados [!DNL Platform].
 
-Observe que para concluir este guia, você precisará acessar o Adobe Experience Platform. Se você não tiver acesso a [!DNL Platform], entre em contato com o administrador do sistema antes de continuar.
+Observe que para concluir este guia, você precisará acessar a Adobe Experience Platform. Se você não tiver acesso a [!DNL Platform], entre em contato com o administrador do sistema antes de continuar.
 
 ## Criar uma conexão de streaming
 
-Depois de fazer logon na interface do usuário, clique em [!DNL Experience Platform] Fontes **[!UICONTROL para abrir a guia]** Catálogo ** . Esta página exibe os tipos de origem disponíveis como cartões individuais, com cada cartão contendo uma bolha que exibe o número de fluxos de dados que foram criados de conexões de fluxo contínuo para conjuntos de dados.
+Depois de fazer logon na interface do usuário, clique em [!DNL Experience Platform] Fontes **[!UICONTROL para abrir a guia]** Catálogo **** . Esta página exibe os tipos de origem disponíveis como cartões individuais, com cada cartão contendo uma bolha que exibe o número de fluxos de dados que foram criados de conexões de fluxo contínuo para conjuntos de dados.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-Na página *[!UICONTROL Fontes]* , clique em API **** HTTP e, em seguida, em Origem **[!UICONTROL do]** Connect.
+Na página **[!UICONTROL Fontes]** , clique em API **** HTTP e, em seguida, em Origem **[!UICONTROL do]** Connect.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-A tela *[!UICONTROL Conectar-se a HTTP]* é exibida. Em Detalhes *[!UICONTROL do]* serviço, forneça o **[!UICONTROL nome]** e uma **[!UICONTROL descrição]** para sua nova conexão de streaming.
+A tela **[!UICONTROL Conectar-se a HTTP]** é exibida. Em Detalhes **[!UICONTROL do]** serviço, forneça o **[!UICONTROL nome]** e uma **[!UICONTROL descrição]** para sua nova conexão de streaming.
 
-Em Autenticação *[!UICONTROL de]* conta, selecione as seguintes propriedades de configuração para sua conexão de streaming:
+Em Autenticação **[!UICONTROL de]** conta, selecione as seguintes propriedades de configuração para sua conexão de streaming:
 
-- **[!UICONTROL Autenticação]:**Se a conexão de streaming requer autenticação ou não. A autenticação garante que os dados sejam coletados de fontes confiáveis. É recomendável que isso seja ativado ao lidar com informações pessoais identificáveis (PII).
-- **[!UICONTROL Compatibilidade]do Schema XDM:**Se essa conexão de streaming enviará ou não eventos compatíveis com schemas XDM. Por padrão, essa propriedade é ativada****.
+- **[!UICONTROL Autenticação]:** Se a conexão de streaming requer autenticação ou não. A autenticação garante que os dados sejam coletados de fontes confiáveis. É recomendável que isso seja ativado ao lidar com informações pessoais identificáveis (PII).
+- **[!UICONTROL Compatibilidade]do Schema XDM:** Se essa conexão de streaming enviará ou não eventos compatíveis com schemas XDM. Por padrão, essa propriedade é ativada ****.
 
-Depois de concluir a seleção das propriedades de configuração, clique em **[!UICONTROL Connect (Conectar]**). Sua conexão HTTP de streaming agora é criada e agora pode ser visualizada na guia *[!UICONTROL Procurar]* na área de trabalho *[!UICONTROL Fontes]* .
+Depois de concluir a seleção das propriedades de configuração, clique em **[!UICONTROL Connect (Conectar]**). Sua conexão HTTP de streaming agora é criada e agora pode ser visualizada na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Fontes]** .
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-Na guia *[!UICONTROL Procurar]* , você pode clicar em sua conexão HTTP de fluxo recém-criada e visualização os detalhes dessa conexão.
+Na guia **[!UICONTROL Procurar]** , você pode clicar em sua conexão HTTP de fluxo recém-criada e visualização os detalhes dessa conexão.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-Ao clicar no hiperlink do nome da conexão, você pode selecionar os dados a serem exibidos ao configurar qual conjunto de dados está conectado, clicando em *[!UICONTROL Selecionar dados]*.
+Ao clicar no hiperlink do nome da conexão, você pode selecionar os dados a serem exibidos configurando qual conjunto de dados está conectado, clicando em **[!UICONTROL Selecionar dados]**.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 

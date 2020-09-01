@@ -5,9 +5,9 @@ title: Visão geral dos conjuntos de dados
 topic: datasets
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Consulte a visão geral [da ingestão de](../../ingestion/home.md) dados para ob
 
 ## Aplicar rótulos de uso a conjuntos de dados
 
-A Adobe Experience Platform [!DNL Data Governance] permite que você gerencie dados do cliente para garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Usar a Rotulagem e a Imposição de Uso de Dados (DULE) como sua estrutura principal [!DNL Data Governance] permite aplicar rótulos de uso para classificar dados de acordo com as políticas de uso que se aplicam a esses dados.
+A Adobe Experience Platform [!DNL Data Governance] permite que você gerencie dados do cliente para garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. A [!DNL Data Governance] estrutura permite aplicar rótulos de uso para categorizar dados de acordo com as políticas de uso que se aplicam a esses dados.
 
 Os rótulos de uso de dados podem ser aplicados a conjuntos de dados inteiros ou a campos de conjuntos de dados individuais. Os rótulos adicionados no nível do conjunto de dados são herdados por todos os campos dentro desse conjunto de dados.
 

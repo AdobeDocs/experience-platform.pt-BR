@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ativar dados de origem de entrada para preencher perfis de clientes
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -47,7 +47,7 @@ A tela atividade **[!UICONTROL do Conjunto]** de Dados é exibida. A coluna **[!
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-O Editor **[!UICONTROL de]** Schemas é exibido, mostrando a estrutura do schema na tela central. Na tela de desenho, selecione o campo a ser definido como a identidade primária. Na guia Propriedades *[!UICONTROL do]* campo que é exibida, marque a caixa de seleção **[!UICONTROL Identidade]** e, em seguida, a identidade **** Principal. Por fim, selecione uma namespace **[!UICONTROL de]** identidade apropriada e clique em **[!UICONTROL Aplicar]**.
+O Editor **[!UICONTROL de]** Schemas é exibido, mostrando a estrutura do schema na tela central. Na tela de desenho, selecione o campo a ser definido como a identidade primária. Na guia Propriedades **[!UICONTROL do]** campo que é exibida, marque a caixa de seleção **[!UICONTROL Identidade]** e, em seguida, a identidade **** Principal. Por fim, selecione uma namespace **[!UICONTROL de]** identidade apropriada e clique em **[!UICONTROL Aplicar]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 

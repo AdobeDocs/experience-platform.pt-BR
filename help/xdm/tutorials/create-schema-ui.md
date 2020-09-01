@@ -5,7 +5,7 @@ title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 description: Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Semelhante ao campo &quot;[!UICONTROL name]&quot;, os campos que você acabou de
 
 O schema &quot;Membros[!UICONTROL de]fidelidade&quot; destina-se a capturar dados relacionados aos membros de um programa de fidelidade, para que sejam necessários alguns campos específicos relacionados à fidelidade. Não há combinações padrão disponíveis que contenham os campos necessários, portanto, será necessário definir uma nova mistura.
 
-Desta vez, ao abrir a caixa de diálogo *[!UICONTROL Adicionar mistura]* , selecione **[!UICONTROL Criar nova mistura]**. Você será solicitado a fornecer um Nome **[!UICONTROL de]** exibição e uma **[!UICONTROL Descrição]** para sua combinação.
+Desta vez, ao abrir a caixa de diálogo **[!UICONTROL Adicionar mistura]** , selecione **[!UICONTROL Criar nova mistura]**. Você será solicitado a fornecer um Nome **[!UICONTROL de]** exibição e uma **[!UICONTROL Descrição]** para sua combinação.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 

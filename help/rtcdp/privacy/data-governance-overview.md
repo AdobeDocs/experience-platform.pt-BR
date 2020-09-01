@@ -5,9 +5,9 @@ seo-title: Controle de dados na plataforma de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ O diagrama a seguir ilustra como a aplicação de políticas é integrada ao flu
 
 ![](assets/enforcement-flow.png)
 
-Quando um segmento é ativado pela primeira vez, o DULE [!DNL Policy Service] verifica violações de política com base nos seguintes fatores:
+Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica se há violações de política com base nos seguintes fatores:
 
 * Os rótulos de uso de dados aplicados a campos e conjuntos de dados dentro do segmento a ser ativado.
 * A finalidade de comercialização do destino.

@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - Automação de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
-   - oud {#payments}
+   - Pagamentos {#payments}
       - [Conector PayPal](connectors/payments/paypal.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
@@ -107,7 +107,7 @@ ht-degree: 0%
          - [Conector do SQL Server](tutorials/api/create/databases/sql-server.md)
       - Automação de marketing {#marketing-automation}
          - [Conector HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
-      - Pagamentos {#payments}
+      - oud {#payments}
          - [Conector PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
@@ -132,6 +132,7 @@ ht-degree: 0%
    - [Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
    - [Criar uma conexão básica de conjunto de dados usando a API de Serviço de Fluxo](tutorials/api/create-dataset-base-connection.md)
    - [Monitorar fluxos de dados usando a API de Serviço de Fluxo](tutorials/api/monitor.md)
+   - [Atualizar informações de conexão usando a API de Serviço de Fluxo](tutorials/api/update.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar um conector de origem {#create}
       - aplicativos Adobe {#adobe-applications}

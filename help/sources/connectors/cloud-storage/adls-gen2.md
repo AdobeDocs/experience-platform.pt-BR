@@ -5,9 +5,9 @@ title: Conector Gen2 do Armazenamento Azure Data Lake
 topic: overview
 description: A documentação abaixo fornece informações sobre como conectar o Armazenamento Gen2 do Azure Data Lake à Plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,17 @@ Os seguintes endereços IP devem ser adicionados a uma lista de permissões ante
 - `20.37.198.224/29`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+
+## Restrições de nomenclatura para arquivos e diretórios
+
+A seguir, há uma lista de restrições que você deve levar em conta ao nomear seu arquivo ou diretório de armazenamento na nuvem.
+
+- Nomes de diretório e de componente de arquivo não podem exceder 255 caracteres.
+- Os nomes de diretório e arquivo não podem terminar com uma barra (`/`). Se fornecido, ele será removido automaticamente.
+- Os seguintes caracteres de URL reservados devem ser escapados corretamente: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Os seguintes caracteres não são permitidos: `" \ / : | < > * ?`.
+- Caracteres de caminho de URL ilegais não permitidos. Pontos de código como `\uE000`, embora válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para obter as regras que regem strings Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras](https://www.ietf.org/rfc/rfc2616.txt) básicas e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (..) e dois caracteres de ponto (.).
 
 ## Conectar-se [!DNL Azure Data Lake Storage Gen2] a [!DNL Platform]
 

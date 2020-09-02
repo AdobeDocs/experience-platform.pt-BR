@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Mesclar políticas - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2382'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ Um fragmento de perfil são as informações do perfil para apenas uma identidad
 
 Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
 
-* **`timestampOrdered`**: (padrão) Atribua prioridade ao perfil que foi atualizado por último em caso de conflito. Usando esse tipo de mesclagem, o `data` atributo não é obrigatório. `timestampOrdered` também suporta carimbos de data e hora personalizados que terão prioridade ao mesclar fragmentos de perfil dentro ou entre conjuntos de dados. Para saber mais, consulte a seção Apêndice sobre como [usar carimbos de data e hora](#custom-timestamps)personalizados.
+* **`timestampOrdered`**: (padrão) Dê prioridade ao perfil que foi atualizado por último. Usando esse tipo de mesclagem, o `data` atributo não é obrigatório. `timestampOrdered` também suporta carimbos de data e hora personalizados que terão prioridade ao mesclar fragmentos de perfil dentro ou entre conjuntos de dados. Para saber mais, consulte a seção Apêndice sobre como [usar carimbos de data e hora](#custom-timestamps)personalizados.
 * **`dataSetPrecedence`** : Atribua prioridade aos fragmentos do perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em vez de dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o `order` atributo é obrigatório, pois lista os conjuntos de dados na ordem de prioridade.
    * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, uma `order` matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será unido. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A `order` matriz lista as IDs dos conjuntos de dados em ordem de prioridade.
 
@@ -734,23 +734,23 @@ Esta seção fornece informações complementares relacionadas ao trabalho com p
 
 ### Uso de carimbos de data e hora personalizados {#custom-timestamps}
 
-Como os registros de Perfis são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando `timestampOrdered` for selecionado como o tipo `attributeMerge` de uma política de mesclagem, os perfis serão mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
+À medida que os registros são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando `timestampOrdered` for selecionado como o tipo `attributeMerge` de uma política de mesclagem, os perfis serão mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
 
 Ocasionalmente, pode haver casos de uso, como preenchimento retroativo de dados ou garantia da ordem correta dos eventos, se os registros forem ingeridos fora de ordem, quando for necessário fornecer um carimbo de data e hora personalizado e a política de mesclagem respeitar o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema.
 
-Para usar um carimbo de data e hora personalizado, a Mixin [de Detalhes de Auditoria do Sistema de Origem](#mixin-details) Externa deve ser adicionada ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `xdm:lastUpdatedDate` campo. Quando um registro é ingerido com o `xdm:lastUpdatedDate` campo preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se não `xdm:lastUpdatedDate` estiver presente ou não estiver preenchida, a Plataforma continuará a usar o carimbo de data e hora do sistema.
+Para usar um carimbo de data e hora personalizado, o [[!DNL External Source System Audit Details Mixin]](#mixin-details) deve ser adicionado ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `xdm:lastUpdatedDate` campo. Quando um registro é ingerido com o `xdm:lastUpdatedDate` campo preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se não `xdm:lastUpdatedDate` estiver presente ou não estiver preenchida, a Plataforma continuará a usar o carimbo de data e hora do sistema.
 
 >[!NOTE]
 >
 >É necessário garantir que o `xdm:lastUpdatedDate` carimbo de data e hora seja preenchido ao enviar um PATCH no mesmo registro.
 
-Para obter instruções passo a passo sobre como trabalhar com schemas usando a API do Registro do schema, incluindo como adicionar mixins a schemas, visite o [tutorial para criar um schema usando a API](../../xdm/tutorials/create-schema-api.md).
+Para obter instruções passo a passo sobre como trabalhar com schemas usando a API do Registro de Schemas, incluindo como adicionar mixins a schemas, visite o [tutorial para criar um schema usando a API](../../xdm/tutorials/create-schema-api.md).
 
 Para trabalhar com carimbos de data e hora personalizados usando a interface do usuário, consulte a seção sobre como [usar carimbos de data e hora](../ui/merge-policies.md#custom-timestamps) personalizados no guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
 
-#### Detalhes da auditoria do sistema de origem externa Detalhes da combinação {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] detalhes {#mixin-details}
 
-O exemplo a seguir mostra os campos preenchidos corretamente na Mixin de Detalhes de Auditoria do Sistema de Origem Externa. A combinação completa do JSON também pode ser visualizada na reunião [pública do Modelo de Dados de Experiência (XDM) no GitHub](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) .
+O exemplo a seguir mostra os campos preenchidos corretamente no [!DNL External Source System Audit Details Mixin]. A combinação completa do JSON também pode ser visualizada na reunião [pública do Modelo de Dados de Experiência (XDM) no GitHub](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) .
 
 ```json
 {

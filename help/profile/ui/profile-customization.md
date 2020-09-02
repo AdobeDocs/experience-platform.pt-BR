@@ -5,9 +5,9 @@ title: Personalização de detalhes do perfil
 description: 'Este guia fornece instruções passo a passo para personalizar a forma como os dados do Perfil do cliente em tempo real são exibidos na interface do usuário do Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: c3076b37d2242fce4fa62e747adeb8b0534e995d
+source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Depois de salvar, você retornará à guia [!UICONTROL Detalhe] , onde seu novo 
 
 ## Restaurar cartões padrão
 
-Se você decidir remover as edições e retornar à visualização padrão a qualquer momento, poderá restaurar rápida e facilmente todos os cartões e atributos padrão. Para fazer isso, selecione **[UICONTROL Modify painel]** e, em seguida, selecione **[UICONTROL Restore default cards]**. Isso removerá todas as personalizações (incluindo o redimensionamento) feitas. Para continuar, selecione **[UICONTROL Salvar]** para salvar as alterações ou, se você tiver selecionado restaurar por engano, selecione **[UICONTROL Cancelar]** para evitar salvar as alterações e manter as edições feitas.
+Se você decidir remover as edições e retornar à visualização padrão a qualquer momento, poderá restaurar rápida e facilmente todos os cartões e atributos padrão. Para fazer isso, selecione **[!UICONTROL Modificar painel]** e, em seguida, selecione **[!UICONTROL Restaurar cartões]** padrão. Isso removerá todas as personalizações (incluindo o redimensionamento) feitas. Você pode selecionar **[!UICONTROL Salvar]** para salvar as alterações ou, se não quiser restaurar o padrão, selecione **[!UICONTROL Cancelar]** para manter as edições feitas.
 
 >[!NOTE]
 >

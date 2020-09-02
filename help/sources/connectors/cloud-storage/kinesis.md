@@ -5,9 +5,9 @@ title: Conector Amazon Kinesis
 topic: overview
 description: A documentação abaixo fornece informações sobre como conectar o Amazon Kinesis à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Os seguintes endereços IP devem ser adicionados a uma lista de permissões ante
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Conectar-se [!DNL Amazon Kinesis] a [!DNL Platform]
+
 A documentação abaixo fornece informações sobre como se conectar [!DNL Amazon Kinesis] a [!DNL Platform] APIs ou à interface do usuário:
 
-## Conectar-se [!DNL Amazon Kinesis] a [!DNL Platform] APIs
+### Uso de APIs
 
 - [Criar um conector Amazon Kinesis usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Explore um sistema de armazenamento em nuvem usando a API de Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
 - [Coletar dados de armazenamento na nuvem usando a API de Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
 
-## Conectar-se [!DNL Amazon Kinesis] à [!DNL Platform] interface do usuário
+### Uso da interface
 
 - [Criar um conector de origem Amazon Kinesis na interface do usuário](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configurar um fluxo de dados para um conector de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

@@ -5,9 +5,9 @@ title: Conector Google AdWords
 topic: overview
 description: A documentação abaixo fornece informações sobre como conectar o Google AdWords à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Os seguintes endereços IP devem ser adicionados a uma lista de permissões ante
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Conectar-se [!DNL Google AdWords] a [!DNL Platform]
+
 A documentação abaixo fornece informações sobre como se conectar [!DNL Google AdWords] a [!DNL Platform] APIs ou à interface do usuário:
 
-## Conectar-se [!DNL Google AdWords] a [!DNL Platform] APIs
+### Uso de APIs
 
 - [Criar um conector Google AdWords usando a API de Serviço de Fluxo](../../tutorials/api/create/advertising/ads.md)
 - [Explore um sistema de publicidade usando a API de Serviço de Fluxo](../../tutorials/api/explore/advertising.md)
 - [Coletar dados de publicidade usando a API de Serviço de Fluxo](../../tutorials/api/collect/advertising.md)
 
-## Conectar-se [!DNL Google AdWords] à [!DNL Platform] interface do usuário
+### Uso da interface
 
 - [Criar um conector de origem do Google AdWords na interface do usuário](../../tutorials/ui/create/advertising/ads.md)
 - [Configurar um fluxo de dados para um conector de publicidade na interface do usuário](../../tutorials/ui/dataflow/advertising.md)

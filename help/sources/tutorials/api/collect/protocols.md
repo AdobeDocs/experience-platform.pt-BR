@@ -23,7 +23,7 @@ Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocol
 
 Este tutorial requer que você tenha acesso a um sistema de protocolo por meio de uma conexão básica válida e informações sobre o arquivo que deseja trazer [!DNL Platform], incluindo o caminho e a estrutura da tabela. Se você não tiver essas informações, consulte o tutorial sobre como [explorar sistemas de protocolo usando a API](../explore/protocols.md) de Serviço de Fluxo antes de tentar este tutorial.
 
-* [Sistema do [!DNL Experience Data Model (XDM)](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Guia](../../../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados dentro [!DNL Experience Platform].

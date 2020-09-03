@@ -19,7 +19,7 @@ A Adobe Experience Platform [!DNL Segmentation Service] permite que você crie s
 O guia do desenvolvedor requer uma compreensão funcional dos diversos [!DNL Experience Platform] serviços envolvidos no uso [!DNL Segmentation Service].
 
 - [[!Segmentação DNL]](../home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
-- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 - [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 

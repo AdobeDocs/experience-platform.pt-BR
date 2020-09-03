@@ -28,8 +28,8 @@ O tutorial tem duas partes:
 Este tutorial requer uma compreensão funcional dos [!DNL Experience Platform] serviços e das convenções da API. O [!DNL Platform] repositório é um serviço usado por vários outros [!DNL Platform] serviços para armazenar objetos de negócios e vários tipos de metadados. Ele oferece uma maneira segura e flexível de gerenciar e query desses objetos para uso por vários serviços de tempo de execução. O [!DNL Decisioning Service] é um desses. Antes de iniciar este tutorial, reveja a documentação do seguinte:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [[!Serviço de Decisão DNL]](./../home.md): Explica os conceitos e componentes utilizados para a Decisão de Experiência em geral e para a decisão Oferta em particular. Ilustra as estratégias usadas para escolher a melhor opção para apresentar durante a experiência de um cliente.
-- [[!Linguagem de Query de Perfil DNL (PQL)](../../segmentation/pql/overview.md): O PQL é um idioma avançado para gravar expressões em instâncias do XDM. O PQL é usado para definir regras de decisão.
+- [[!DNL Decisioning Service]](./../home.md): Explica os conceitos e componentes utilizados para a Decisão de Experiência em geral e para a decisão Oferta em particular. Ilustra as estratégias usadas para escolher a melhor opção para apresentar durante a experiência de um cliente.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): O PQL é um idioma avançado para gravar expressões em instâncias do XDM. O PQL é usado para definir regras de decisão.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.
 

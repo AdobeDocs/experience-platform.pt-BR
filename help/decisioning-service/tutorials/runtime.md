@@ -21,9 +21,9 @@ Este documento fornece um tutorial para trabalhar com os serviços de tempo de e
 
 Este tutorial requer uma compreensão do trabalho dos [!DNL Experience Platform] serviços envolvidos na tomada de decisões e na determinação da próxima melhor oferta a ser apresentada durante as experiências do cliente. Antes de iniciar este tutorial, reveja a documentação do seguinte:
 
-- [[!Serviço de Decisão DNL]](./../home.md): Fornece a estrutura para adicionar e remover ofertas e criar algoritmos para escolher o melhor para apresentar durante a experiência do cliente.
+- [[!DNL Decisioning Service]](./../home.md): Fornece a estrutura para adicionar e remover ofertas e criar algoritmos para escolher o melhor para apresentar durante a experiência do cliente.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [[!Linguagem de Query de Perfil DNL (PQL)](../../segmentation/pql/overview.md): O PQL é usado para definir regras e filtros.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): O PQL é usado para definir regras e filtros.
 - [Gerencie objetos e regras de decisão usando APIs](./entities.md): Antes de usar o tempo de execução dos Serviços de tomada de decisão, será necessário configurar as entidades relacionadas.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.

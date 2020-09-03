@@ -25,7 +25,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais em aplicativos Adobe Experience Cloud.
 * [[!DNL Catalog Service]](home.md): O sistema de registro para localização e linhagem de dados no [!DNL Experience Platform]. Fornece uma API que pode ser usada para atualizar metadados do conjunto de dados.
-* [Sistema do [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}

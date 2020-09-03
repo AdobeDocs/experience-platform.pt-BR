@@ -22,7 +22,7 @@ Este documento fornece etapas gerais para a criação de um conjunto de dados us
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: [!DNL Experience Platform] permite que você ingira dados como arquivos em lote.
-* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.

@@ -20,7 +20,7 @@ ht-degree: 19%
    * [Introdução](api/getting-started.md)
    * [(Alfa) Atributos calculados](api/computed-attributes.md)
    * [Projeções de borda](api/edge-projections.md)
-   * [Entidades (acesso ao Perfil [!DNL])](api/entities.md)
+   * [Entidades (acesso ao [!DNL Profile])](api/entities.md)
    * [Exportar trabalhos ([!DNL Perfil] exportação)](api/export-jobs.md)
    * [Mesclar políticas](api/merge-policies.md)
    * [Status de amostra da pré-visualização ([!DNL Perfil] pré-visualização)](api/preview-sample-status.md)

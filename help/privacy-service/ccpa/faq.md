@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: Perguntas frequentes sobre CCPA
 topic: troubleshooting
+description: Este documento fornece respostas para perguntas frequentes sobre o California Consumer Protection Act (CCPA) e sua implementação no Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -75,7 +76,7 @@ Os serviços de Adobe podem ser usados para permitir o compartilhamento de deter
 
 ## Como posso suportar os requisitos de privacidade do consumidor na CCPA se eu mantiver certos tipos de dados que são cobertos pelos requisitos?
 
-Depois que você tiver tomado as etapas necessárias para autenticar os consumidores da CA, o Adobe Experience Platform [!DNL Privacy Service] permitirá que você envie solicitações de privacidade do consumidor para [!DNL Experience Cloud] aplicativos compatíveis. Consulte a visão geral [do](../home.md) Privacy Service para obter mais informações. Para obter informações sobre como seus aplicativos específicos podem atender às solicitações de privacidade, consulte o guia sobre aplicativos [!DNL Experience Cloud] Privacy Service e Experience Cloud [](../experience-cloud-apps.md).
+Depois que você tiver tomado as etapas necessárias para autenticar os clientes da CA, a Adobe Experience Platform [!DNL Privacy Service] permitirá que você envie solicitações de privacidade do consumidor para [!DNL Experience Cloud] aplicativos compatíveis. Consulte a visão geral [do](../home.md) Privacy Service para obter mais informações. Para obter informações sobre como seus aplicativos específicos podem atender às solicitações de privacidade, consulte o guia sobre aplicativos [!DNL Experience Cloud] Privacy Service e Experience Cloud [](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

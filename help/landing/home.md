@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Visão geral do Adobe Experience Platform
 topic: getting started
 description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para a construção e gerenciamento de soluções completas que impulsionam a experiência do cliente. O Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo do cliente de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar drasticamente o design e o delivery de experiências ricas e personalizadas.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 3%
+source-wordcount: '936'
+ht-degree: 5%
 
 ---
 
@@ -82,6 +82,13 @@ A documentação da Adobe Experience Platform está disponível em vários idiom
 
 [!DNL Experience Platform] a documentação é fornecida em vários formatos para uma variedade de recursos e serviços. Para saber mais sobre os tipos de documentação disponíveis, bem como para ler breves descrições de cada um dos [!DNL Platform] serviços, visite a visão geral [da documentação do](documentation/overview.md)Experience Platform. Ou, para começar a aprender mais sobre um [!DNL Platform] serviço específico imediatamente, selecione um guia na lista alfabética na navegação à esquerda.
 
+### Documentação para serviços de aplicativos criados em cima de [!DNL Experience Platform]
+
+Além dos serviços na navegação à esquerda, o Adobe criou outros serviços de aplicativos na parte superior do Experience Platform. Você pode encontrar a documentação desses serviços em seus próprios repositórios de documentação, vinculados abaixo:
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/pt-BR/analytics-platform/using/cja-landing.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/pt-BR/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >A partir de maio de 2020, o Adobe está lançando atualizações no domínio e na barra de cabeçalho para unificar e melhorar sua experiência em todos os aplicativos do Experience Cloud. Isso inclui um novo menu Ajuda. O novo menu Ajuda inclui o seguinte:
@@ -146,11 +153,6 @@ Os vídeos a seguir descrevem os principais recursos e casos de uso para [!DNL E
 **Casos de uso:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 

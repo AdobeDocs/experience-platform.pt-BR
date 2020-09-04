@@ -5,9 +5,9 @@ title: Pré-visualização do perfil - API do Perfil do cliente em tempo real
 description: A Adobe Experience Platform permite que você ingira dados do cliente de várias fontes para criar perfis unificados robustos para clientes individuais. Como os dados habilitados para o Perfil de cliente em tempo real são ingeridos na Plataforma, eles são armazenados no armazenamento de dados do Perfil. À medida que o número de registros no repositório de Perfis aumenta ou diminui, uma tarefa de amostra é executada que inclui informações sobre quantos fragmentos de perfil e perfis mesclados estão no repositório de dados. Usando a API de Perfil, você pode pré-visualização a amostra mais recente bem-sucedida, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,10 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 | Propriedade | Descrição |
 |---|---|
 | `numRowsToRead` | O número total de perfis unidos na amostra. |
+| `sampleJobRunning` | Um valor booliano que retorna `true` quando um trabalho de amostra está em andamento. Fornece transparência na latência que ocorre quando um arquivo em lote é carregado para quando ele é realmente adicionado à loja de Perfis. |
 | `cosmosDocCount` | Contagem total de documentos no Cosmos. |
 | `totalFragmentCount` | O número total de fragmentos de perfil no repositório de Perfis. |
 | `lastSuccessfulBatchTimestamp` | Carimbo de data e hora da última ingestão em lote bem-sucedida. |
@@ -169,7 +174,7 @@ A resposta inclui uma `data` matriz que contém uma lista de objetos de conjunto
 | Propriedade | Descrição |
 |---|---|
 | `sampleCount` | O número total de perfis unidos de amostra com essa ID de conjunto de dados. |
-| `samplePercentage` | A `sampleCount` porcentagem do número total de perfis unidos amostrados (o `numRowsToRead` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
+| `samplePercentage` | A `sampleCount` porcentagem do número total de perfis unidos de amostra (o `numRowsToRead` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
 | `fullIDsCount` | O número total de perfis unidos com essa ID de conjunto de dados. |
 | `fullIDsPercentage` | A `fullIDsCount` porcentagem do número total de perfis unidos (o `totalRows` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
 | `name` | O nome do conjunto de dados, conforme fornecido durante a criação do conjunto de dados. |
@@ -206,7 +211,7 @@ A solicitação a seguir não especifica um `date` parâmetro e, portanto, retor
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \

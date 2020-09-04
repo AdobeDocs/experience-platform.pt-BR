@@ -5,9 +5,9 @@ title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico que reúne dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1649'
 ht-degree: 1%
 
 ---
@@ -17,21 +17,26 @@ ht-degree: 1%
 
 A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente. Esta visão geral o ajudará a entender a função e o uso do [!DNL Real-time Customer Profile] em [!DNL Experience Platform].
 
-## Noções básicas do [!DNL Real-time Customer Profile]
+
+## [!DNL Profile] in Experience Platform
+
+A relação entre o Perfil do cliente em tempo real e outros serviços no Experience Platform é destacada no diagrama a seguir:
+
+![Serviços Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
+
+## dados do perfil
 
 [!DNL Real-time Customer Profile] é um repositório de entidade de pesquisa genérico que une dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 
-### [!DNL Profile] armazenamento de dados
+### Perfil
+
+O Experience Platform oferece uma série de garantias para ajudar você a evitar a criação de schemas [do Modelo de Dados de](../xdm/home.md) Experiência (XDM) que o Perfil do Cliente em tempo real não suporta. Isso inclui limites suaves que resultarão na degradação do desempenho, além de limites rígidos que resultarão em erros e quebras do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação do [Perfil guardrails](guardrails.md) .
+
+### loja de perfis
 
 Embora [!DNL Real-time Customer Profile] processe dados ingeridos e use o Adobe Experience Platform [!DNL Identity Service] para unir dados relacionados por meio do mapeamento de identidade, ele mantém seus próprios dados na [!DNL Profile] loja. Em outras palavras, o [!DNL Profile] armazenamento é separado dos [!DNL Catalog] dados ([!DNL Data Lake]) e [!DNL Identity Service] dos dados (gráfico de identidade).
 
-### [!DNL Profile] e [!DNL Platform] serviços
-
-A relação entre [!DNL Real-time Customer Profile] e outros serviços dentro [!DNL Experience Platform] é destacada no diagrama a seguir:
-
-![A relação entre o Perfil e outros serviços de Experience Platform.](images/profile-overview/profile-in-platform.png)
-
-### Perfis e dados de registro
+### Registrar dados
 
 Um perfil é uma representação de um sujeito, de uma organização ou de um indivíduo, também conhecido como dados de registro. Por exemplo, o perfil de um produto pode incluir um SKU e uma descrição, enquanto o perfil de uma pessoa contém informações como nome, sobrenome e endereço de e-mail. Usando [!DNL Experience Platform], você pode personalizar perfis para usar tipos de dados relevantes para sua empresa. A classe padrão [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] é a classe preferida na qual construir um schema ao descrever dados de registro do cliente e fornece dados integrantes a muitas interações entre os serviços da plataforma. Para obter mais informações sobre como trabalhar com schemas no, [!DNL Experience Platform]comece lendo a visão geral [do Sistema](../xdm/home.md)XDM.
 
@@ -59,7 +64,7 @@ Ao reunir dados de várias fontes e combiná-los para ver uma visualização com
 
 >[!IMPORTANT]
 >
->A funcionalidade de atributo calculada descrita neste documento está em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
+>A funcionalidade do atributo calculado está em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Os atributos calculados permitem calcular automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil, o que significa que você pode agregação valores em todos os registros e eventos. Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil ou em um evento. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Para obter mais informações sobre atributos calculados e instruções passo a passo para trabalhar com eles usando a [!DNL Real-time Customer Profile] API, consulte o guia [de ponto de extremidade de atributos](api/computed-attributes.md)computados. Este guia o ajudará a entender melhor a função dos atributos calculados no Adobe Experience Platform e inclui exemplos de chamadas de API para executar operações CRUD básicas.
 
@@ -75,7 +80,7 @@ A entrada em tempo real é possível por meio de um processo chamado de ingestã
 
 Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente à medida que as mudanças acontecem. A Adobe Experience Platform permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como bordas. Uma borda é um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis aos aplicativos. Por exemplo, aplicativos de Adobe como Adobe Target e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo a informação específica que será disponibilizada na borda. Para saber mais e começar a trabalhar com projeções usando a [!DNL Real-time Customer Profile] API, consulte o guia [de pontos finais de projeção de](api/edge-projections.md)borda.
 
-## Adicionar dados a [!DNL Real-time Customer Profile]
+## Ingest data into [!DNL Profile]
 
 [!DNL Platform] pode ser configurado para enviar seus dados de registro e de série de tempo para [!DNL Profile], com suporte à ingestão de streaming em tempo real e à ingestão em lote. Para obter mais informações, consulte o tutorial que descreve como [adicionar dados ao Perfil](tutorials/add-profile-data.md)do cliente em tempo real.
 
@@ -101,39 +106,6 @@ Como está relacionado ao acesso aos dados, o controle de dados desempenha um pa
 ### Tratamento de solicitações de não participação e privacidade de dados
 
 [!DNL Experience Platform] permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no [!DNL Real-time Customer Profile]. Para obter mais informações sobre como as solicitações de não participação são tratadas, consulte a documentação sobre como [atender às solicitações](../segmentation/honoring-opt-outs.md)de não participação.
-
-## [!DNL Profile] orientações
-
-[!DNL Experience Platform] tem uma série de orientações a seguir para uma utilização eficaz [!DNL Profile].
-
-| Seção | Limite |
-| ------- | -------- |
-| [!DNL Profile] schema união | Um máximo de **20** conjuntos de dados pode contribuir para o schema da [!DNL Profile] união. |
-| Relações de várias entidades | É possível criar um máximo de **5** relações de várias entidades. |
-| Profundidade JSON para associação de várias entidades | A profundidade máxima do JSON é **4**. |
-| Dados das séries cronológicas | Os dados de séries de tempo **não** são permitidos em [!DNL Profile] entidades que não sejam de pessoas. |
-| Relações de schema não-pessoas | Relações de schema de não pessoas **não** são permitidas. |
-| fragmento do perfil | O tamanho máximo recomendado de um fragmento de perfil é de **10 kB**.<br><br> O tamanho máximo absoluto de um fragmento de perfil é de **1 MB**. |
-| Entidade não-pessoa | O tamanho total máximo para uma única entidade que não seja uma pessoa é de **200 MB**. |
-| Conjuntos de dados por entidade não-pessoa | Um máximo de **1** conjunto de dados pode ser associado a uma entidade que não seja uma pessoa. |
-
-<!--
-| Section | Boundary | Enforcement |
-| ------- | -------- | ----------- |
-| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
-| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
-| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
-| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
-| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
-| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
-| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
-| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
-
---->
-
->[!NOTE]
->
->Uma entidade que não seja uma pessoa se refere a qualquer classe XDM da qual **não** faz parte [!DNL Profile].
 
 ## Próximos passos e recursos adicionais
 

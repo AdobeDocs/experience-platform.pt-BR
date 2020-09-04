@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Documentação do Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 3%
+source-wordcount: '1045'
+ht-degree: 4%
 
 ---
 
@@ -57,3 +57,10 @@ A documentação está disponível atualmente para os serviços e recursos da Ad
 * **[!DNL Segmentation]:** Crie segmentos com base nos dados de Perfil do cliente em tempo real para gerar audiências e experiências de consumo de energia.
 * **[!DNL Sources](Conexões):** {#sources} Traga dados para o Adobe Experience Platform de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muito mais.
 * **XDM (Modelo de dados de experiência)**: Orientado pelo Adobe, o XDM é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente. Schemas XDM para suportar a interoperabilidade de dados entre [!DNL Experience Platform] componentes.
+
+## Serviços de aplicativos criados [!DNL Experience Platform]
+
+Além dos serviços na navegação à esquerda, o Adobe criou outros serviços de aplicativos na parte superior do Experience Platform. Você pode encontrar a documentação desses serviços em seus próprios repositórios de documentação, vinculados abaixo:
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/pt-BR/analytics-platform/using/cja-landing.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/pt-BR/journeys/using/journey-orchestration-home.html)

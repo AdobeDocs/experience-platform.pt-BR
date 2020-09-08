@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector CRM na interface do usuári
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,15 @@ Depois de criar sua conta CRM, a etapa *Selecionar dados* é exibida, fornecendo
 * A metade esquerda da interface é um navegador de diretório que exibe os arquivos e diretórios do servidor.
 * A metade direita da interface permite que você pré-visualização até 100 linhas de dados de um arquivo compatível.
 
-Selecione o diretório que deseja usar e clique em **[!UICONTROL Avançar]**.
+Você pode usar a opção **[!UICONTROL Pesquisar]** na parte superior da página para identificar rapidamente os dados de origem que pretende usar.
 
-![select-data](../../../images/tutorials/dataflow/crm/select-data.png)
+>[!NOTE]
+>
+>A opção de dados da fonte de pesquisa está disponível para todos os conectores de origem baseados em tabela, excluindo os conectores Analytics, Classificações, Hubs de Evento e Kinesis.
+
+Depois de encontrar os dados de origem, selecione o diretório e clique em **[!UICONTROL Avançar]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Mapear campos de dados para um schema XDM
 

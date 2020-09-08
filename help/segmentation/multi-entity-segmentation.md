@@ -5,9 +5,9 @@ title: Segmentação de várias entidades
 topic: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais baseados em produtos, lojas ou outras classes que não sejam perfis. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos para o schema do Perfil.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ A segmentação de várias entidades é um recurso avançado disponível como pa
 
 A segmentação de várias entidades requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos na segmentação. Antes de continuar com este guia, reveja a seguinte documentação:
 
-* [!DNL Real-time Customer Profile](../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
+* [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
    * [Perfis](../profile/guardrails.md): Práticas recomendadas para a criação de modelos de dados compatíveis com [!DNL Profile].
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permite que você crie segmentos a partir de [!DNL Real-time Customer Profile] dados.
-* [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite que você crie segmentos a partir de [!DNL Real-time Customer Profile] dados.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../xdm/schema/composition.md#union)do schema: Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform.
 
 ## Casos de uso

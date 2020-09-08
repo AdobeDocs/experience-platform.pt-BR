@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Notificações de execução de fluxo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '787'
 ht-degree: 1%
 
 ---
@@ -25,34 +25,23 @@ Este documento fornece etapas sobre como assinar eventos, registrar webhooks e r
 
 ## Introdução
 
-Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial presume que você já criou pelo menos uma conexão de origem cujo fluxo é executado e que você deseja monitorar. Se você ainda não tiver configurado uma conexão de origem, start visitando a visão geral [das](./home.md) fontes para configurar a fonte de sua escolha antes de retornar a este guia.
 
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [[!ingestão de dados Adobe Experience Platform DNL]](../ingestion/home.md): [!DNL Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são mantidos dentro do [!DNL Data Lake] para uso pelos [!DNL Platform] serviços de downstream.
+Este documento também requer um entendimento prático dos webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [[!DNL I/O Events] documentação](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obter uma introdução aos webhooks.
 
-Este documento também requer um entendimento prático dos webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [documentação](https://requestbin.com/blog/working-with-webhooks/) a seguir para obter mais informações sobre webhooks.
+## Registrar um webhook para notificações de execução de fluxo
 
-## Registrar seu webhook
+Para receber notificações de execução de fluxo, você deve usar o Console do desenvolvedor do Adobe para registrar um webhook em sua [!DNL Experience Platform] integração.
 
-Para receber notificações sobre o status de sua execução de fluxo, você deve registrar um webhook especificando um URL exclusivo do webhook como parte dos detalhes de registro do evento. Para conectar um webhook à sua [!DNL I/O Events] subscrição, visite o serviço [de](https://webhook.site/) webhook e copie o URL exclusivo fornecido.
-
-![webhook](./images/notifications/webhook-url.png)
-
-## Inscrever-se em eventos
-
-Depois de adquirir um URL exclusivo do webhook, vá para Eventos [de E/S do](https://www.adobe.io/apis/experienceplatform/events.html) Adobe e siga as etapas descritas no documento de notificações [de ingestão de](../ingestion/quality/subscribe-events.md) dados para inscrição em eventos.
+Siga o tutorial sobre como [assinar [!DNL I/O Event] as notificações](../observability/notifications/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
->Durante o processo de subscrição, selecione [!DNL Platform] as notificações como provedor de eventos e selecione as seguintes subscrições de eventos:
+>Durante o processo de subscrição, selecione Notificações **[!UICONTROL da]** plataforma como o provedor do evento e selecione as seguintes subscrições do evento:
 >
 >* **[!UICONTROL Execução de Fluxo da Fonte de Experience Platform com Êxito]**
 >* **[!UICONTROL Falha na Execução de Fluxo da Fonte de Experience Platform]**
 
->
->
-Quando solicitado a fornecer um endereço de webhook, use o URL de webhook adquirido anteriormente.
 
 ## Receber notificações de execução de fluxo
 

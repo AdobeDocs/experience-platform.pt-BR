@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ O painel para a [!DNL Privacy Service] interface do usuário fornece dois widget
 
 ### Tipo de regulamento
 
-[!DNL Privacy Service] apoia pedidos de emprego para três tipos de regulamentos:
+[!DNL Privacy Service] suporta pedidos de emprego para quatro tipos de regulamento:
 
-* A União Europeia [!DNL General Data Protection Regulation] (RGPD)
-* A [!DNL California Consumer Privacy Act] (CCPA)
-* Tailândia [!DNL Personal Data Protection Act] (PDPA_THA)
+* A União Europeia [!DNL General Data Protection Regulation] ([!UICONTROL RGPD])
+* The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brasil [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Tailândia [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 Os trabalhos para cada tipo de regulamento são rastreados separadamente. Para alternar entre tipos de regulamento, clique no menu suspenso Tipo **[!UICONTROL de]** regulamento e selecione a regra desejada na lista.
 
@@ -56,7 +57,7 @@ Para visualização de mais detalhes sobre um dado ponto de dados, clique no pon
 
 >[!NOTE]
 >
->Quando um filtro é aplicado ao widget Solicitações de trabalho, você pode remover o filtro clicando no **[!UICONTROL X]** no pílula de filtro. Solicitações de trabalho, em seguida, retornam à lista de rastreamento padrão.
+>Quando um filtro é aplicado ao widget Solicitações de trabalho, você pode remover o filtro clicando no **X** no pílula de filtro. Solicitações de trabalho, em seguida, retornam à lista de rastreamento padrão.
 
 ### Solicitações de trabalho
 

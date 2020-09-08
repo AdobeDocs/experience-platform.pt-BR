@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5898da7d25a708f3431b251f1cfa620b943e9a5
+source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -42,15 +42,25 @@ Selecione o ícone de funil na parte superior esquerda para abrir a janela de cl
 
 O painel de classificação permite acessar contas de uma fonte específica. Selecione a fonte com a qual deseja trabalhar e selecione a conta na lista à direita.
 
+>[!TIP]
+>
+> Use o botão de controle ![de](../../images/tutorials/monitor/spectrum-control.png) espectro na coluna **[!UICONTROL Nome]** para criar um novo fluxo de dados de origem para a conta selecionada.
+
 ![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
 
-Na página **[!UICONTROL Contas]** , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada.
+Na página **[!UICONTROL Contas]** , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada. Selecione o botão de elipses (`...`) para exibir mais opções disponíveis para o seu fluxo de dados selecionado. Essas opções são descritas a seguir:
+
+| Controle | Descrição |
+| ------- | ----------- |
+| [!UICONTROL Editar agendamento] | Permite editar o agendamento de ingestão do fluxo de dados. |
+| [!UICONTROL Desativar o fluxo de dados] | Permite desativar a ingestão de dados para o fluxo de dados selecionado. |
+| [!UICONTROL Excluir] | Permite que você exclua o fluxo de dados selecionado. |
 
 ![fluxo de dados](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitorar fluxos de dados
 
-Os fluxos de dados podem ser acessados diretamente da página **[!UICONTROL Catálogo]** sem exibir **[!UICONTROL Contas]**. Selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior para visualização de uma lista de fluxos de dados existentes.
+Os fluxos de dados podem ser acessados diretamente da página **[!UICONTROL Catálogo]** sem exibir **[!UICONTROL Contas]**. Selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior para visualização de uma lista de fluxos de dados.
 
 ![catálogo-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Uma lista de fluxos de dados existentes é exibida. Nesta página há uma lista 
 
 ![lista de dados](../../images/tutorials/monitor/dataflows-list.png)
 
-O painel de classificação é exibido. Selecione a fonte que deseja acessar no menu de rolagem e selecione o fluxo de dados na lista à direita.
+O painel de classificação é exibido. Selecione a fonte que deseja acessar no menu de rolagem e selecione o fluxo de dados na lista à direita. Você também pode selecionar o botão de elipses (`...`) para exibir mais opções disponíveis para o seu fluxo de dados selecionado.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -80,13 +90,12 @@ A visão geral **[!UICONTROL da execução do]** Fluxo de dados exibe informaç�
 
 ![visão geral da execução do dataflow](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-Consulte a tabela a seguir para obter os códigos de erro que podem ser vistos no resumo **** Erro.
+Consulte a tabela a seguir para obter os erros que podem ser vistos no resumo **** Erro.
 
-| Código de erro | Mensagem de erro |
+| Erro | Descrição |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;Ocorreu um problema com a atividade de cópia.&quot; |
-| `CONNECTOR-2001-500` | &quot;Ocorreu um problema ao copiar da fonte Experience Platform para o conjunto de dados.&quot; |
-| `CONNECTOR-3001-500` | &quot;Ocorreu um problema com o provedor de fluxo ao criar o lote usando a API de assimilação em massa.&quot; |
+| `CONNECTOR-1001-500` | Erro ao copiar dados de uma fonte. |
+| `CONNECTOR-2001-500` | Ocorreu um erro ao processar os dados copiados para [!DNL Platform]. Esse erro pode ser relacionado à análise, validação ou transformação. |
 
 A metade inferior da tela contém informações sobre erros **[!UICONTROL de execução do]** Dataflow. Daqui, você também pode visualização os arquivos assimilados, pré-visualização e fazer download do diagnóstico de erros ou fazer download do manifesto do arquivo.
 

@@ -5,9 +5,9 @@ title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico que reúne dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Esta seção apresenta os componentes que permitem atualizar e monitorar dados d
 
 ### Segmentação de fluxo e ingestão
 
-A entrada em tempo real é possível por meio de um processo chamado de ingestão de streaming. À medida que os dados do perfil e da série cronológica são ingeridos, [!DNL Real-time Customer Profile] decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado de segmentação de fluxo, antes de mesclá-los com os dados existentes e atualizar a visualização da união. Como resultado, você pode executar instantaneamente computações e tomar decisões para oferecer experiências aprimoradas e individualizadas aos clientes à medida que eles interagem com sua marca. Enquanto são ingeridos, os dados também passam pela validação para garantir que sejam ingeridos corretamente e estejam em conformidade com o schema no qual o conjunto de dados se baseia. Para obter mais informações sobre o que a validação é feita durante a ingestão, comece lendo a visão geral [da qualidade da ingestão de](../ingestion/quality/overview.md)dados.
+A entrada em tempo real é possível por meio de um processo chamado de ingestão de streaming. À medida que os dados do perfil e da série cronológica são ingeridos, [!DNL Real-time Customer Profile] decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado de segmentação de streaming, antes de mesclá-los aos dados existentes e atualizar a visualização da união. Como resultado, você pode executar instantaneamente computações e tomar decisões para oferecer experiências aprimoradas e individualizadas aos clientes à medida que eles interagem com sua marca. Enquanto são ingeridos, os dados também passam pela validação para garantir que sejam ingeridos corretamente e estejam em conformidade com o schema no qual o conjunto de dados se baseia. Para obter mais informações sobre o que a validação é feita durante a ingestão, comece lendo a visão geral [da qualidade da ingestão de](../ingestion/quality/overview.md)dados.
 
 ### Configurações e destinos de projeção de borda
 
@@ -90,7 +90,7 @@ Para direcionar experiências coordenadas, consistentes e personalizadas para se
 
 ### [!DNL Profile] métricas de ingestão
 
-Insights de Observabilidade permitem que você exponha as métricas principais no Adobe Experience Platform. Além das estatísticas de [!DNL Platform] uso e dos indicadores de desempenho para várias [!DNL Platform] funcionalidades, há métricas [!DNL Profile]relacionadas especificamente que permitem obter informações sobre as taxas de solicitação recebidas, taxas de ingestão bem-sucedidas, tamanhos de registro ingeridos e muito mais. Para saber mais, comece lendo a visão geral [do](../observability/home.md)Observability Insights e para obter uma lista completa das [!DNL Profile] métricas, consulte a documentação sobre as métricas [](../observability/metrics.md)disponíveis.
+Insights de Observabilidade permitem que você exponha as métricas principais no Adobe Experience Platform. Além das estatísticas de [!DNL Platform] uso e dos indicadores de desempenho para várias [!DNL Platform] funcionalidades, há métricas [!DNL Profile]relacionadas especificamente que permitem obter informações sobre as taxas de solicitação recebidas, taxas de ingestão bem-sucedidas, tamanhos de registro ingeridos e muito mais. Para saber mais, comece lendo a visão geral [da API](../observability/api/overview.md)Observability Insights e para obter uma lista completa das [!DNL Profile] métricas, consulte a documentação sobre as métricas [](../observability/api/metrics.md#available-metrics)disponíveis.
 
 ## [!DNL Data governance] e [!DNL Privacy]
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tarefas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1782'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser query. Os valores aceitos são `gdpr`, `ccpa`e `pdpa_tha`. |
+| `{REGULATION}` | O tipo de regulamento a ser query. Os valores aceitos são `gdpr`, `ccpa`, `lgpd_bra`e `pdpa_tha`. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `1` e o máximo é `100`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento das IDs nos aplicativos (atualmente apenas compatível com [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | Uma propriedade opcional usada pela Adobe Analytics que define a prioridade para o processamento de solicitações. Os valores aceitos são `normal` e `low`. Se `priority` for omitido, o comportamento padrão será `normal`. |
 | `analyticsDeleteMethod` | Uma propriedade opcional que especifica como a Adobe Analytics deve lidar com os dados pessoais. Dois valores possíveis são aceitos para este atributo: <ul><li>`anonymize`: Todos os dados referenciados pela coleção específica de IDs de usuário são tornados anônimos. Se `analyticsDeleteMethod` for omitido, esse é o comportamento padrão.</li><li>`purge`: Todos os dados são completamente removidos.</li></ul> |
-| `regulation` **(Obrigatório)** | O regulamento do pedido. Deve ser um dos três valores a seguir: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Obrigatório)** | O regulamento do pedido. Deve ser um dos quatro valores a seguir: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Resposta**
 
@@ -286,7 +286,7 @@ curl -X POST \
 | `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento das IDs nos aplicativos (atualmente apenas compatível com [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | Uma propriedade opcional usada pela Adobe Analytics que define a prioridade para o processamento de solicitações. Os valores aceitos são `normal` e `low`. Se `priority` for omitido, o comportamento padrão será `normal`. |
 | `analyticsDeleteMethod` | Uma propriedade opcional que especifica como a Adobe Analytics deve lidar com os dados pessoais. Dois valores possíveis são aceitos para este atributo: <ul><li>`anonymize`: Todos os dados referenciados pela coleção específica de IDs de usuário são tornados anônimos. Se `analyticsDeleteMethod` for omitido, esse é o comportamento padrão.</li><li>`purge`: Todos os dados são completamente removidos.</li></ul> |
-| `regulation` **(Obrigatório)** | O regulamento do pedido. Deve ser um dos três valores a seguir: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Obrigatório)** | O regulamento do pedido. Deve ser um dos quatro valores a seguir: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Resposta**
 
@@ -443,20 +443,20 @@ Uma resposta bem-sucedida retorna os detalhes da tarefa especificada.
 | `productStatusResponse.results` | Para determinados status, alguns produtos podem retornar um `results` objeto que fornece informações adicionais não cobertas por `responseMsgDetail`. |
 | `downloadURL` | Se o status do trabalho for `complete`, este atributo fornecerá um URL para baixar os resultados do trabalho como um arquivo ZIP. Este arquivo está disponível para download por 60 dias após a conclusão do trabalho. |
 
-### categorias de status do trabalho {#status-categories}
+### Categorias de status do trabalho {#status-categories}
 
 A tabela a seguir lista as diferentes categorias de status possíveis da tarefa e seu significado correspondente:
 
-| categoria de status | Significado |
+| Categoria de status | Significado |
 | -------------- | -------- |
-| Concluído | O trabalho está concluído e (se necessário) os arquivos são carregados de cada aplicativo. |
-| Processamento | Os aplicativos reconheceram o trabalho e estão sendo processados no momento. |
-| Enviada | O trabalho é submetido a cada solicitação aplicável. |
-| Erro | Ocorreu uma falha no processamento da tarefa - informações mais específicas podem ser obtidas através da recuperação de detalhes da tarefa individual. |
+| `complete` | O trabalho está concluído e (se necessário) os arquivos são carregados de cada aplicativo. |
+| `processing` | Os aplicativos reconheceram o trabalho e estão sendo processados no momento. |
+| `submitted` | O trabalho é submetido a cada solicitação aplicável. |
+| `error` | Ocorreu uma falha no processamento da tarefa - informações mais específicas podem ser obtidas através da recuperação de detalhes da tarefa individual. |
 
 >[!NOTE]
 >
->Um trabalho enviado pode permanecer em um estado de processamento se ele tiver um trabalho filho dependente que ainda esteja em processamento.
+>Um trabalho enviado pode permanecer em um `processing` estado se ele tiver um trabalho filho dependente que ainda esteja em processamento.
 
 ## Próximas etapas
 

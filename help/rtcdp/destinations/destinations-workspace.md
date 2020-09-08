@@ -5,9 +5,9 @@ seo-title: Área de trabalho Destinos
 description: A área de trabalho Destinos consiste em quatro seções, Catálogo, Procurar, Contas e Visualização do sistema, descritas nas seções abaixo.
 seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -52,9 +52,31 @@ Selecione um cartão de destino no catálogo para abrir o painel direito.  Aqui,
 
 Para obter mais informações sobre categorias de destino e informações sobre cada destino, consulte o Catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) destino e Tipos de [destino e Categorias](/help/rtcdp/destinations/destination-types.md).
 
+## [!UICONTROL Contas] {#accounts}
+
+Na guia **[!UICONTROL Contas]** , você pode saber mais sobre as conexões estabelecidas com vários destinos. Consulte a tabela abaixo para obter todas as informações que você pode obter em cada destino:
+
+>[!TIP]
+>
+>Use o botão ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Adicionar dados na coluna **[!UICONTROL Plataforma]** para criar uma nova conexão de destino para essa conta.
+
+![Guia Contas](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| Elemento | Descrição |
+---------|----------
+| [!UICONTROL Plataforma] | O destino para o qual você configurou a conexão. |
+| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com o seu bucket ou destino de armazenamentos. <ul><li>Para destinos de marketing por email: Pode ser S3 ou FTP.</li><li>Para destinos de publicidade em tempo real: Servidor para servidor</li><li>Para destinos de armazenamentos em nuvem Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li></ul> |
+| [!UICONTROL Nome do usuário] | O nome de usuário selecionado no assistente [de destino da](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)conexão. |
+| [!UICONTROL Destinos] | Representa o número de fluxos de destino exclusivos e bem-sucedidos ligados a informações básicas criadas para um destino. |
+| [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
+
 ## [!UICONTROL Procurar] {#browse}
 
-A guia **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Os destinos com a alternância **[!UICONTROL ativada]** ativada definem o destino como ativo e vice-versa. Você também pode visualização os destinos onde os dados fluem selecionando **[!UICONTROL Segmentos]** > **[!UICONTROL Navegar]** e selecionando um segmento para inspecionar. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia Procurar:
+A guia **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Os destinos com a opção **[!UICONTROL Ativado]** ativada definem o destino como ativo e vice-versa. Você também pode visualização os destinos onde os dados fluem selecionando **[!UICONTROL Segmentos]** > **[!UICONTROL Navegar]** e selecionando um segmento para inspecionar. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia Procurar:
+
+>[!TIP]
+>
+>Use o botão ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Adicionar dados na coluna **[!UICONTROL Nome]** para ativar segmentos adicionais para esse destino.
 
 ![Guia Procurar](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ Clique em uma linha de destino para exibir mais informações sobre o destino no
 ![Clique na linha de destino](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 Selecione o nome de destino para ver informações sobre os segmentos ativados para este destino. Clique em **[!UICONTROL Editar ativação]** para modificar ou adicionar aos segmentos que estão sendo enviados para esse destino.
-
-## [!UICONTROL Contas] {#accounts}
-
-Na guia **[!UICONTROL Contas]** , você pode saber mais sobre as conexões estabelecidas com vários destinos. Consulte a tabela abaixo para obter todas as informações que você pode obter em cada destino:
-
-![Guia Contas](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| Elemento | Descrição |
----------|----------
-| [!UICONTROL Plataforma] | O destino para o qual você configurou a conexão. |
-| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com o seu bucket ou destino de armazenamentos. <ul><li>Para destinos de marketing por email: Pode ser S3 ou FTP.</li><li>Para destinos de publicidade em tempo real: Servidor para servidor</li><li>Para destinos de armazenamentos em nuvem Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li></ul> |
-| [!UICONTROL Nome do usuário] | O nome de usuário selecionado no assistente [de destino da](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)conexão. |
-| [!UICONTROL Fluxos de dados] | Representa o número de fluxos de destino exclusivos e bem-sucedidos ligados a informações básicas criadas para um destino. |
-| [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
-| [!UICONTROL Status] | `Active` ou `Inactive`. Indica se os dados estão sendo ativados no momento para esse destino. Para editar o status, consulte [Desativar ativação](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 ## [!UICONTROL Visualização do sistema] {#system-view}
 

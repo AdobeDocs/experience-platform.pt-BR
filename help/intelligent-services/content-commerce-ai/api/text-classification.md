@@ -5,9 +5,9 @@ title: Ponto final da API de classificação de texto
 topic: Developer guide
 description: O serviço de classificação de texto, quando recebe um fragmento de texto, pode classificá-lo em um ou mais rótulos. A classificação pode ser de rótulo único, de vários rótulos ou hierárquica.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '431'
 ht-degree: 4%
 
 ---
@@ -20,8 +20,6 @@ ht-degree: 4%
 >A API de conteúdo e comércio está em beta. A documentação está sujeita a alterações.
 
 O serviço de classificação de texto, quando recebe um fragmento de texto, pode classificá-lo em um ou mais rótulos. A classificação pode ser de rótulo único, de vários rótulos ou hierárquica.
-
-A classificação de texto usa um modelo baseado em [FastText](https://fasttext.cc/) que foi treinado com o uso de dados personalizados.
 
 **Formato da API**
 

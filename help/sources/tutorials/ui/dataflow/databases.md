@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector de banco de dados na interf
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de banco de dados.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,16 @@ Depois de criar sua conta de banco de dados, a etapa **[!UICONTROL Selecionar da
 - A metade esquerda da interface é um navegador, exibindo a lista de bancos de dados de sua conta.
 - A metade direita da interface permite que você pré-visualização até 100 linhas de dados.
 
-Selecione o banco de dados que deseja usar e clique em **[!UICONTROL Avançar]**.
+Você pode usar a opção **[!UICONTROL Pesquisar]** na parte superior da página para identificar rapidamente os dados de origem que pretende usar.
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>A opção de dados da fonte de pesquisa está disponível para todos os conectores de origem baseados em tabela, excluindo os conectores Analytics, Classificações, Hubs de Evento e Kinesis.
+
+Depois de encontrar os dados de origem, selecione o diretório e clique em **[!UICONTROL Avançar]**.
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## Mapear campos de dados para um schema XDM
 

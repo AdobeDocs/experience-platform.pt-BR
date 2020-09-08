@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector de protocolo na interface d
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Adobe Experience Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de protocolos.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,15 @@ Depois de criar sua conta de protocolos, a etapa **[!UICONTROL Selecionar dados]
 - A metade esquerda da interface é um navegador de diretório que exibe os arquivos e diretórios do servidor.
 - A metade direita da interface permite que você pré-visualização até 100 linhas de dados de um arquivo compatível.
 
-Selecione o diretório que deseja usar e clique em **[!UICONTROL Avançar]**.
+Você pode usar a opção **[!UICONTROL Pesquisar]** na parte superior da página para identificar rapidamente os dados de origem que pretende usar.
 
-![add-data](../../../images/tutorials/dataflow/protocols/add-data.png)
+>[!NOTE]
+>
+>A opção de dados da fonte de pesquisa está disponível para todos os conectores de origem baseados em tabela, excluindo os conectores Analytics, Classificações, Hubs de Evento e Kinesis.
+
+Depois de encontrar os dados de origem, selecione o diretório e clique em **[!UICONTROL Avançar]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Mapear campos de dados para um schema XDM
 

@@ -3,12 +3,12 @@ title: 'Notas de versão do Adobe Experience Platform '
 description: Notas de versão de Experience Platform 9 de setembro de 2020
 doc-type: release notes
 last-update: September 8, 2020
-author: crhoades, ens28527
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
+source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 5%
+source-wordcount: '805'
+ht-degree: 4%
 
 ---
 
@@ -19,10 +19,12 @@ ht-degree: 5%
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-* [[!DNL Data Governance]](#governance)
-* [[!Destinos DNL]](#destinations)
-* [[!DNL Privacy Service]](#privacy)
-* [[!Fontes DNL]](#sources)
+- [[!DNL Data Governance]](#governance)
+- [[!Destinos DNL]](#destinations)
+- [[!DNL Privacy Service]](#privacy)
+- [[!DNL Perfil do cliente em tempo real]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
+- [[!Fontes DNL]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -31,7 +33,7 @@ O Adobe Experience Platform Data Governance é uma série de estratégias e tecn
 **Novos recursos**
 
 | Recurso | Descrição |
-| --- | --- |
+| ------- | ----------- |
 | Aprimoramentos da interface de identificação do conjunto de dados | Vários novos controles de classificação e filtragem foram adicionados à interface do usuário de etiquetagem do conjunto de dados para facilitar o trabalho com schemas grandes: <ul><li>Classifique os campos por ordem alfabética com base no caminho completo do schema.</li><li>Execute pesquisas parciais em nomes de caminho de campo.</li><li>Filtre campos sem rótulos, um rótulo selecionado ou uma categoria de rótulo.</li></ul> |
 
 Consulte a visão geral [do](../../data-governance/home.md) Data Governance para obter mais informações sobre o serviço.
@@ -48,6 +50,31 @@ Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Ado
 
 Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/destinations-overview.md)
 
+## Perfil do cliente em tempo real {#profile}
+
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Visualizador de perfis | O visualizador de perfis, na interface do usuário da plataforma, foi atualizado para ser um painel com personalização total. O usuário agora tem a opção de fazer as seguintes tarefas: <ul><li>Atualize os atributos padrão e personalizados selecionados no widget de informações básicas.</li><li>Criar, editar e remover widgets personalizados</li><li>Redimensionar e reorganizar widgets</li></ul> |
+
+Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com [!DNL Profile] dados, leia a visão geral [do Perfil do cliente em tempo](../../profile/home.md)real.
+
+## Serviço de segmentação {#segmentation}
+
+O Adobe Experience Platform Segmentation Service fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform], tornando-os facilmente acessíveis por qualquer aplicativo Adobe.
+
+[!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo comercializável de pessoas dentro da sua base de clientes. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Exportar trabalhos | Um sinalizador foi adicionado para permitir que os segmentos sejam avaliados como parte de um trabalho de exportação. Como resultado, os usuários podem executar a segmentação e as exportações em uma única tarefa. |
+| Mesclar políticas | Várias políticas de mesclagem podem ser incluídas em um único trabalho de segmentação em lote. |
+
+Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [segmentação](../../segmentation/home.md)
+
 ## [!DNL Privacy Service] {#privacy}
 
 Várias regulamentações legais e organizacionais conferem aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação. A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com [!DNL Privacy Service]o, você pode enviar solicitações para acessar e excluir dados pessoais ou particulares de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
@@ -55,7 +82,7 @@ Várias regulamentações legais e organizacionais conferem aos usuários o dire
 **Novos recursos**
 
 | Recurso | Descrição |
-| --- | --- |
+| ------- | ----------- |
 | Suporte para LGPD (Brasil) | Trabalhos de privacidade agora podem ser criados sob a regulamentação do Brasil [!DNL Lei Geral de Proteção de Dados] (LGPD). Estes postos de trabalho são rastreados ao abrigo do código regulamentar `lgpd_bra`. |
 
 Consulte a visão geral [do](../../privacy-service/home.md) Privacy Service para obter mais informações sobre o serviço.

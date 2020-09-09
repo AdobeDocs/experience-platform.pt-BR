@@ -1,71 +1,104 @@
 ---
 title: 'Notas de versão do Adobe Experience Platform '
-description: Notas de versão de Experience Platform 10 de agosto de 2020
+description: Notas de versão de Experience Platform 9 de setembro de 2020
 doc-type: release notes
-last-update: August 10, 2020
-author: crhoades, ens28527
+last-update: September 8, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '883'
+ht-degree: 4%
 
 ---
 
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 12 de agosto de 2020**
+**Data de lançamento: 9 de setembro de 2020**
 
 Atualizações dos recursos existentes no Adobe Experience Platform:
 
-- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Data Governance]](#governance)
 - [[!Destinos DNL]](#destinations)
-- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Observability Insights]](#observability)
+- [[!DNL Privacy Service]](#privacy)
+- [[!DNL Perfil do cliente em tempo real]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!Fontes DNL]](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## [!DNL Data Governance] {#governance}
 
-[!DNL Data Science Workspace] usa o aprendizado de máquina e a inteligência artificial para liberar insights de seus dados. Integrado ao Adobe Experience Platform, [!DNL Data Science Workspace] ajuda você a fazer previsões usando seu conteúdo e seus ativos de dados nas soluções de Adobe.
+O Adobe Experience Platform Data Governance é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em vários [!DNL Experience Platform] níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso de dados para ações de marketing.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Melhorias na VM em [!DNL JupyterLab] | Aprimorada a estabilidade de máquinas virtuais de longa duração. [!DNL JupyterLab notebook] |
+| Aprimoramentos da interface de identificação do conjunto de dados | Vários novos controles de classificação e filtragem foram adicionados à interface do usuário de etiquetagem do conjunto de dados para facilitar o trabalho com schemas grandes: <ul><li>Classifique os campos por ordem alfabética com base no caminho completo do schema.</li><li>Execute pesquisas parciais em nomes de caminho de campo.</li><li>Filtre campos sem rótulos, um rótulo selecionado ou uma categoria de rótulo.</li></ul> |
 
-Para obter mais informações sobre [!DNL JupyterLab], consulte o guia [[!DNL JupyterLab] do usuário](../../data-science-workspace/jupyterlab/overview.md).
+Consulte a visão geral [do](../../data-governance/home.md) Data Governance para obter mais informações sobre o serviço.
 
 ## Destinos {#destinations}
 
 Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
-**Novos destinos**
+**Novos recursos**
 
-Novos destinos estão disponíveis onde você pode ativar seus dados do Adobe Experience Platform. Consulte abaixo para obter detalhes:
+| Recurso | Descrição |
+| ------- | ----------- |
+| Melhorias no UX | Os usuários podem acessar ações de tabelas em linha para facilitar o acesso a ações primárias, como adicionar dados, editar agendamento e adicionar segmentos. Consulte o documento de espaço de trabalho [de](../../rtcdp/destinations/destinations-workspace.md) destinos para obter mais informações. |
 
-| Destino | Descrição |
-|--- | ---|
-| [!DNL Google Customer Match] | A Correspondência de clientes do Google permite que você use seus dados online e offline para alcançar e reinteragir com seus clientes em todas as propriedades operadas e pertencentes ao Google, como: [!DNL Search], [!DNL Shopping], Gmail e YouTube. <br><br> Visite a [!DNL Google Customer Match] página [](/help/rtcdp/destinations/google-customer-match-destination.md) no catálogo de destinos para obter mais informações sobre o destino e como configurá-lo no Adobe Real-time CDP. |
+Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] permite que você monitore atividades no Adobe Experience Platform através do uso de métricas estatísticas e notificações de eventos.
 
 **Novos recursos**
 
 | Recurso | Descrição |
-|------- | -----------|
-| Editor personalizado de nomes de arquivos | Atualize para o fluxo de trabalho da ativação de dados para destinos de marketing por email e destinos de armazenamento na nuvem que permitem editar o nome dos arquivos exportados. Para obter mais informações, consulte a etapa [](/help/rtcdp/destinations/activate-destinations.md#configure) Configurar no fluxo de trabalho da ativação. |
-| Atributos recomendados | Atualize para o fluxo de trabalho da ativação de dados para destinos de marketing por email e destinos de armazenamento na nuvem que exibem os atributos recomendados para que você adicione aos arquivos exportados. Para obter mais informações, consulte a etapa [](/help/rtcdp/destinations/activate-destinations.md#select-attributes) Selecionar atributos no fluxo de trabalho da ativação. |
+| --- | --- |
+| Notificações de Evento de E/S de Adobe | [!DNL Observability Insights] aproveita Eventos de E/S de Adobe para criar notificações de evento para vários serviços de Experience Platform. As cargas de notificação são enviadas para um webhook configurado, que você pode usar para automatizar outros processos de downstream. Consulte a visão geral [das](../../observability/notifications/overview.md) notificações para obter mais informações. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+Consulte a [[!DNL Observability Insights] visão geral](../../observability/home.md) para obter mais informações sobre o serviço.
 
-Construída no Experience Platform, a Adobe Real-time Customer Data Platform ([!DNL Real-time CDP]) ajuda as empresas a unir dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes durante toda a jornada do cliente. [!DNL Real-time CDP] combina várias fontes de dados corporativas para criar perfis de clientes em tempo real. Segmentos criados a partir desses perfis podem ser enviados para destinos downstream para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
+## [!DNL Privacy Service] {#privacy}
+
+Várias regulamentações legais e organizacionais conferem aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados mediante solicitação. A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudá-lo a gerenciar essas solicitações de dados de seus clientes. Com [!DNL Privacy Service]o, você pode enviar solicitações para acessar e excluir dados pessoais ou particulares de clientes de aplicativos Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte a IAB TCF 2.0 | [!DNL Real-time CDP] agora é um fornecedor registrado para a versão 2.0 do [!DNL Transparency & Consent Framework] (TCF), conforme descrito pelo [!DNL Interactive Advertising Bureau] (IAB). Você pode configurar suas operações de dados e schemas de perfis para aceitar dados de consentimento do cliente gerados por um CMP e impor as preferências de consentimento do cliente ao ativar segmentos para destinos de downstream. Consulte a visão geral sobre o suporte ao [IAB TCF 2.0 na CDP](../../rtcdp/privacy/iab/overview.md) em tempo real para obter mais informações. |
+| Suporte para LGPD (Brasil) | Trabalhos de privacidade agora podem ser criados sob a regulamentação do Brasil [!DNL Lei Geral de Proteção de Dados] (LGPD). Estes postos de trabalho são rastreados ao abrigo do código regulamentar `lgpd_bra`. |
 
-Para obter mais informações sobre [!DNL Real-time CDP], consulte a [[!DNL Real-time CDP] visão geral](../../rtcdp/overview.md).
+Consulte a visão geral [do](../../privacy-service/home.md) Privacy Service para obter mais informações sobre o serviço.
+
+## Perfil do cliente em tempo real {#profile}
+
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Visualizador de perfis | O visualizador de perfis, na interface do usuário da plataforma, foi atualizado para ser um painel com personalização total. O usuário agora tem a opção de fazer as seguintes tarefas: <ul><li>Atualize os atributos padrão e personalizados selecionados no widget de informações básicas.</li><li>Criar, editar e remover widgets personalizados</li><li>Redimensionar e reorganizar widgets</li></ul> |
+
+Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com [!DNL Profile] dados, leia a visão geral [do Perfil do cliente em tempo](../../profile/home.md)real.
+
+## Serviço de segmentação {#segmentation}
+
+O Adobe Experience Platform Segmentation Service fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar audiências a partir de seus [!DNL Real-time Customer Profile] dados. Esses segmentos são configurados e mantidos centralmente [!DNL Platform], tornando-os facilmente acessíveis por qualquer aplicativo Adobe.
+
+[!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo comercializável de pessoas dentro da sua base de clientes. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Exportar trabalhos | Um sinalizador foi adicionado para permitir que os segmentos sejam avaliados como parte de um trabalho de exportação. Como resultado, os usuários podem executar a segmentação e as exportações em uma única tarefa. |
+| Mesclar políticas | Várias políticas de mesclagem podem ser incluídas em um único trabalho de segmentação em lote. |
+
+Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 
@@ -77,8 +110,7 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Monitoramento de execução de fluxo | Os usuários podem monitorar todas as execuções de fluxo e ver uma visualização detalhada de cada execução, incluindo status de conclusão, duração da execução, lista de arquivos processados, erros e métricas. Consulte o documento de [monitoramento de fluxos de dados](../../sources/tutorials/ui/monitor.md) para obter mais informações. |
-| Notificações de execução de fluxo | Os usuários podem se inscrever em eventos e registrar webhooks para receber notificações em tempo real sobre o status, as métricas e os erros relacionados às execuções de fluxo. |
-| Melhorias no catálogo da interface | Atualizações na tela de catálogo de fontes para facilitar o acesso às ações primárias de objetos selecionados. |
+| Mapeamento automático | [!DNL Platform] fornece recomendações inteligentes para o mapeamento automático durante o fluxo de trabalho de ingestão de dados, com base em um schema de público alvo ou conjunto de dados selecionado pelo usuário. Você pode ajustar manualmente as regras flexíveis de mapeamento automático para atender aos casos de uso. |
+| Melhorias no UX | Os usuários podem acessar ações de tabelas em linha para facilitar o acesso a ações primárias, como adicionar dados, editar agendamento e adicionar segmentos. Consulte o documento de [monitoramento de fluxos de dados](../../sources/tutorials/ui/monitor.md) para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.

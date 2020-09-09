@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Notas de versão de Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
 
 # Notas de versão do [!DNL Privacy Service]
 
-Este documento contém informações sobre novos recursos para o Adobe Experience Platform [!DNL Privacy Service], bem como melhorias e correções significativas de erros.
+Este documento contém informações sobre novos recursos do Adobe Experience Platform [!DNL Privacy Service]e melhorias e correções significativas de erros.
 
 >[!NOTE]
 >
 >As notas de versão mais recentes para outros [!DNL Experience Platform] serviços podem ser encontradas [aqui](../release-notes/latest/latest.md).
+
+## 9 de setembro de 2020
+
+### Novos recursos
+
+| Recurso | Descrição |
+| --- | --- |
+| Suporte para LGPD (Brasil) | Trabalhos de privacidade agora podem ser criados sob a regulamentação do Brasil [!DNL Lei Geral de Proteção de Dados] (LGPD). Estes postos de trabalho são rastreados ao abrigo do código regulamentar `lgpd_bra`. |
 
 ## 8 de abril de 2020
 
@@ -27,7 +35,7 @@ Este documento contém informações sobre novos recursos para o Adobe Experienc
 | Recurso | Descrição |
 | --- | --- |
 | Suporte a PDPA | [!DNL Privacy] as solicitações agora podem ser criadas e rastreadas sob o Personal Data Protection Act (PDPA) na Tailândia. Ao fazer solicitações de privacidade na API, a `regulation` matriz aceita o valor &quot;pdpa_tha&quot;. |
-| Tipos de Namespace na interface do usuário | Agora é possível especificar diferentes tipos de namespace no Construtor de solicitações na [!DNL Privacy Service] interface do usuário. Consulte o guia [do](ui/user-guide.md) usuário para obter mais informações. |
+| Tipos de namespace na interface do usuário | Agora é possível especificar diferentes tipos de namespace no Construtor de solicitações na [!DNL Privacy Service] interface do usuário. Consulte o guia [do](ui/user-guide.md) usuário para obter mais informações. |
 | Substituição de ponto final antigo | O ponto de extremidade da API antiga (`data/privacy/gdpr`) foi substituído. |
 
 ## 14 de janeiro de 2020
@@ -55,7 +63,7 @@ Este documento contém informações sobre novos recursos para o Adobe Experienc
 | --- | --- |
 | Painel de métricas de solicitação | O novo painel de métricas na [!DNL Privacy Service] interface do usuário fornece visibilidade sobre solicitações de RGPD enviadas, erradas e concluídas. |
 | Construtor de solicitações | Para atender organizações com usuários técnicos e não técnicos que enviam solicitações de RGPD, uma funcionalidade &quot;Criar solicitação&quot; foi adicionada à interface do usuário. O recurso de envio de arquivos JSON ainda está disponível na [!DNL Privacy Service] interface do usuário para as organizações que preferirem continuar usando-o. |
-| Notificações de Evento de Trabalho do GDPR | As notificações de Eventos sobre status de trabalhos do RGPD são um elemento crítico para muitos workflows. Embora as notificações tenham sido enviadas por meio de avisos de email individuais, as notificações de evento do RGPD são mensagens que aproveitam eventos de E/S de Adobe, que são enviadas para um webhook configurado, facilitando a automação de solicitações de trabalho. [!DNL Privacy Service] Os usuários da interface do usuário podem assinar eventos RGPD de E/S de Adobe para receber atualizações quando um produto ou o trabalho RGPD for concluído. |
+| Notificações de Evento de Trabalho do GDPR | As notificações de eventos sobre status de trabalhos do RGPD são um elemento crítico para muitos workflows. Embora as notificações tenham sido enviadas por meio de avisos de email individuais, as notificações de evento do RGPD são mensagens que aproveitam eventos de E/S de Adobe, que são enviadas para um webhook configurado, facilitando a automação de solicitações de trabalho. [!DNL Privacy Service] Os usuários da interface do usuário podem assinar eventos RGPD de E/S de Adobe para receber atualizações quando um produto ou o trabalho RGPD for concluído. |
 
 ## 18 de abril de 2019
 

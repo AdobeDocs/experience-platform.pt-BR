@@ -5,7 +5,7 @@ title: Criar um pipeline de recursos
 topic: Tutorial
 description: A Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de execução da Sensei Machine Learning Framework. Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizado usando o SDK de criação de modelos no PySpark.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -397,7 +397,7 @@ Agora que você criou seu pipeline de recursos, é necessário criar uma imagem 
 
 Opcionalmente, você também pode usar a seguinte coleção Postman para ajudar a concluir o fluxo de trabalho da API do pipeline de recursos:
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Criar um mecanismo de pipeline de recursos {#create-engine-api}
 

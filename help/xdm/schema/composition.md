@@ -5,7 +5,7 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Um campo é o elemento mais básico de um schema. Os campos fornecem restriçõe
 
 * String
 * Número inteiro
-* Número
+* Duplo
 * Booleano
 * Matriz
 * Objeto

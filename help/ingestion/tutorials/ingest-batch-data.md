@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ingressar dados no Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -32,17 +32,19 @@ Visualização a área de trabalho Conjuntos de dados clicando em **[!UICONTROL 
 >
 >Clique no ícone de filtro ao lado da barra Pesquisar para usar os recursos de filtragem para visualização somente dos conjuntos de dados habilitados para [!DNL Profile].
 
-![Visualização de todos os conjuntos de dados](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![Visualização de todos os conjuntos de dados](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## Criar um conjunto de dados
 
 Para criar um conjunto de dados, clique em **[!UICONTROL Criar conjunto]** de dados no canto superior direito da área de trabalho Conjuntos de dados.
 
+![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
+
 Na tela **[!UICONTROL Criar conjunto de dados]** , selecione se deseja &quot;[!UICONTROL Criar conjunto de dados a partir do Schema]&quot; ou &quot;[!UICONTROL Criar conjunto de dados a partir do arquivo]CSV&quot;.
 
 Para este tutorial, um schema será usado para criar o conjunto de dados. Clique em **[!UICONTROL Criar conjunto de dados do Schema]** para continuar.
 
-![Selecionar fonte de dados](../images/tutorials/ingest-batch-data/create_dataset.png)
+![Selecionar fonte de dados](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## Selecionar schema de conjunto de dados
 
@@ -50,7 +52,7 @@ Na tela **[!UICONTROL Selecionar Schema]** , escolha um schema clicando no botã
 
 Depois de selecionar o botão de opção ao lado do schema que deseja usar, clique em **[!UICONTROL Avançar]**.
 
-![Selecionar schema](../images/tutorials/ingest-batch-data/select_schema.png)
+![Selecionar schema](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## Configurar conjunto de dados
 
@@ -64,7 +66,7 @@ Na tela **[!UICONTROL Configurar conjunto de dados]** , será necessário fornec
 
 Depois que o conjunto de dados tiver um nome e uma descrição, clique em **[!UICONTROL Concluir]**.
 
-![Configurar conjunto de dados](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![Configurar conjunto de dados](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## Atividade do conjunto de dados
 
@@ -74,7 +76,7 @@ No lado direito da área de trabalho dos Conjuntos de dados, você verá a guia 
 
 Também na guia Informações há uma alternância de **[!UICONTROL Perfil]** usada para habilitar seu conjunto de dados para uso com [!DNL Real-time Customer Profile]. O uso dessa alternância e [!DNL Real-time Customer Profile]será explicado com mais detalhes na seção a seguir.
 
-![Atividade do conjunto de dados](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![Atividade do conjunto de dados](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## Ativar conjunto de dados para [!DNL Real-time Customer Profile]
 
@@ -86,15 +88,15 @@ Para saber mais sobre [!DNL Real-time Customer Profile] e trabalhar com identida
 
 Para ativar o conjunto de dados para [!DNL Real-time Customer Profile], clique na alternância de **[!UICONTROL Perfil]** na guia **[!UICONTROL Informações]** .
 
-![Alternar perfil](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
+![Alternar perfil](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
 Será exibida uma caixa de diálogo solicitando que você confirme que deseja ativar o conjunto de dados para [!DNL Real-time Customer Profile].
 
-![Habilitar caixa de diálogo Perfil](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![Habilitar caixa de diálogo Perfil](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
 Clique em **[!UICONTROL Ativar]** e a alternância ficará azul, indicando que está ativada.
 
-![Ativado para Perfil](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![Ativado para Perfil](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## Adicionar dados ao conjunto de dados
 
@@ -106,13 +108,13 @@ Para começar a adicionar dados ao conjunto de dados, clique na guia **[!UICONTR
 >
 >A plataforma oferece suporte a dois tipos de arquivos para ingestão de dados, parquet ou JSON. Você pode adicionar até cinco arquivos de cada vez, com o tamanho máximo de cada arquivo de 10 GB.
 
-![Guia Adicionar dados](../images/tutorials/ingest-batch-data/add_data.png)
+![Guia Adicionar dados](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Carregar um arquivo
 
 Depois de arrastar e soltar (ou navegar e selecionar) um parquet ou arquivo JSON que você deseja carregar, [!DNL Platform] começará imediatamente a processar o arquivo e uma caixa de diálogo **[!UICONTROL Carregar]** aparecerá na guia **[!UICONTROL Adicionar dados]** mostrando o progresso do upload do arquivo.
 
-![Caixa de diálogo de upload](../images/tutorials/ingest-batch-data/uploading.png)
+![Caixa de diálogo de upload](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## Métricas do conjunto de dados
 
@@ -120,7 +122,7 @@ Após a conclusão do upload do arquivo, a guia Atividade **[!UICONTROL do conju
 
 Na parte inferior da guia, há uma lista que mostra a ID **[!UICONTROL do]** lote dos dados que foram ingeridos pelo processo [&quot;Adicionar dados ao conjunto de dados&quot;](#add-data-to-dataset) . Também estão incluídas as informações relacionadas ao lote, incluindo a data de **[!UICONTROL assimilação]** , o número de **[!UICONTROL Registros ingeridos]** e o **[!UICONTROL Status]** atual do lote.
 
-![Métricas do conjunto de dados](../images/tutorials/ingest-batch-data/batch_loading.png)
+![Métricas do conjunto de dados](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Detalhes do lote
 
@@ -130,7 +132,7 @@ Para obter mais informações e perguntas frequentes sobre a ingestão em lote, 
 
 Para retornar à tela Atividade **[!UICONTROL do Conjunto de]** Dados, clique no nome do conjunto de dados (Detalhes **[!UICONTROL da]** Fidelidade) na navegação estrutural.
 
-![Visão geral do lote](../images/tutorials/ingest-batch-data/batch_overview.png)
+![Visão geral do lote](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## Conjunto de dados de pré-visualização
 
@@ -138,7 +140,7 @@ Quando o conjunto de dados estiver pronto, uma opção para **[!UICONTROL Pré-v
 
 Clique em Conjunto de dados de **[!UICONTROL Pré-visualização]** para abrir uma caixa de diálogo mostrando dados de amostra do conjunto de dados. Se o conjunto de dados tiver sido criado usando um schema, os detalhes do schema do conjunto de dados aparecerão no lado esquerdo da pré-visualização. Você pode expandir o schema usando as setas para ver a estrutura do schema. Cada cabeçalho de coluna nos dados de pré-visualização representa um campo no conjunto de dados.
 
-![Detalhes do conjunto de dados](../images/tutorials/ingest-batch-data/dataset_details.png)
+![Detalhes do conjunto de dados](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## Próximos passos e recursos adicionais
 
@@ -151,3 +153,4 @@ Para saber mais sobre a ingestão em lote, leia a visão geral [da Ingestão em]
 >A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+arrasto

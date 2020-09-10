@@ -5,9 +5,9 @@ title: Segmentação em streaming
 topic: ui guide
 description: A segmentação contínua no Adobe Experience Platform permite que você faça a segmentação em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam à Plataforma, o que diminui a necessidade de programar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,8 @@ Além disso, algumas diretrizes se aplicam ao fazer a segmentação de streaming
 | Query de evento único | A janela de retrospectiva é limitada a **sete dias**. |
 | Query com histórico de eventos | <ul><li>A janela de retrospectiva é limitada a **um dia**.</li><li>Uma condição de pedido de tempo estrita **deve** existir entre os eventos.</li><li>Somente pedidos de tempo simples (antes e depois) entre os eventos são permitidos.</li><li>Os eventos individuais **não podem** ser negados. Entretanto, todo o query **pode** ser negado.</li></ul> |
 
+Se uma definição de segmento for modificada de modo que não atenda mais aos critérios para a segmentação de fluxo contínuo, a definição de segmento mudará automaticamente de &quot;Streaming&quot; para &quot;Lote&quot;.
+
 ## Detalhes do segmento de segmentação de transmissão
 
 Depois de criar um segmento habilitado para streaming, você pode visualização os detalhes desse segmento.
@@ -66,7 +68,7 @@ Depois de criar um segmento habilitado para streaming, você pode visualização
 
 Especificamente, os detalhes sobre o tamanho **** total da audiência qualificada são mostrados. O tamanho **** total da audiência qualificada mostra o número total de audiências qualificadas da última execução de tarefa de segmento concluída. Se um trabalho de segmento não tiver sido concluído nas últimas 24 horas, o número de audiências será obtido de uma estimativa.
 
-Embaixo está um gráfico de linhas que mostra o número de segmentos que foram qualificados e desqualificados nas últimas 24 horas. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, a semana passada ou os últimos 30 dias.
+Embaixo está um gráfico de linhas que mostra o número de segmentos que foram qualificados e desqualificados nas últimas 24 horas. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, semana passada ou últimos 30 dias.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

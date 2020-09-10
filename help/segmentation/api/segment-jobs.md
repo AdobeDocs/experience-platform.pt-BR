@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Trabalhos de segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1002'
 ht-degree: 3%
 
 ---
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Para obter mais informações sobre definições de segmentos, consulte o guia [de endpoint de definição de](./segment-definitions.md)segmento. |
+| `segmentId` | A ID da definição de segmento para a qual você deseja criar um trabalho de segmento. Essas definições de segmento podem pertencer a políticas de mesclagem diferentes. Para obter mais informações sobre definições de segmentos, consulte o guia [de endpoint de definição de](./segment-definitions.md)segmento. |
 
 **Resposta**
 

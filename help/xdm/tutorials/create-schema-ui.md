@@ -5,9 +5,9 @@ title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 description: Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform.
 translation-type: tm+mt
-source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
+source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
 workflow-type: tm+mt
-source-wordcount: '3528'
+source-wordcount: '3797'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,13 @@ Selecione o ícone de filtro ao lado da barra de pesquisa para usar os recursos 
 
 ## Criar e nomear um schema {#create}
 
-Para começar a compor um schema, selecione **[!UICONTROL Criar Schema]** no canto superior direito da área de trabalho dos **[!UICONTROL Schemas]** . Um menu suspenso é exibido, dando a você a opção de escolher entre as classes principais Perfil [!UICONTROL XDM Individual e] XDM ExperienceEvent , ou de navegar por outras classes disponíveis. Para os fins deste tutorial, selecione Perfil **[!UICONTROL individual]** XDM.
+Para começar a compor um schema, selecione **[!UICONTROL Criar schema]** no canto superior direito da área de trabalho dos **[!UICONTROL Schemas]** . Um menu suspenso é exibido, dando a você a opção de escolher entre as classes principais Perfil [!UICONTROL XDM Individual e] XDM ExperienceEvent . Se essas classes não se adequarem aos seus propósitos, você também poderá selecionar **[!UICONTROL Procurar]** para escolher entre outras classes disponíveis ou [criar uma nova classe](#create-new-class).
+
+Para os fins deste tutorial, selecione Perfil **[!UICONTROL individual]** XDM.
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-O [!DNL Schema Editor] é exibido. Esta é a tela sobre a qual você irá compor seu schema. Quando você chega ao editor, um schema sem título é criado automaticamente na seção **[!UICONTROL Estrutura]** da tela, juntamente com os campos padrão incluídos em todos os schemas com base na classe [!UICONTROL XDM Individual Perfil] . A classe atribuída ao schema está listada em **[!UICONTROL Classe]** na seção **[!UICONTROL Composição]** .
+O [!DNL Schema Editor] é exibido. Esta é a tela sobre a qual você irá compor seu schema. Como você escolheu uma classe XDM padrão para basear o schema, um schema sem título é criado automaticamente na seção **[!UICONTROL Estrutura]** da tela quando você chega ao editor, juntamente com os campos padrão incluídos em todos os schemas com base nessa classe. A classe atribuída ao schema também está listada em **[!UICONTROL Classe]** na seção **[!UICONTROL Composição]** .
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -75,37 +77,47 @@ Para adicionar uma mistura, selecione **[!UICONTROL Adicionar]** na subseção *
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-Uma nova caixa de diálogo é exibida, exibindo uma lista de combinações disponíveis. Cada mistura é destinada somente para uso com uma classe específica, portanto, a caixa de diálogo somente lista combinações compatíveis com a classe selecionada (neste caso, a [!DNL XDM Individual Profile] classe).
+Uma nova caixa de diálogo é exibida, exibindo uma lista de combinações disponíveis. Cada mistura é destinada somente para uso com uma classe específica, portanto, a caixa de diálogo somente lista combinações compatíveis com a classe selecionada (neste caso, a [!DNL XDM Individual Profile] classe). Se você estiver usando uma classe XDM padrão, a lista de combinações será classificada de forma inteligente com base na popularidade de uso.
 
-Selecionar uma mistura na lista faz com que ela apareça no painel direito. Além disso, um ícone é exibido no lado direito do mixin selecionado, permitindo que você pré-visualização a estrutura dos campos fornecidos. Selecione a combinação Detalhes **[!UICONTROL da pessoa do]** Perfil e selecione **[!UICONTROL Adicionar mistura]**.
+![](../images/tutorials/create-schema/mixin-popularity.png)
+
+Selecionar uma mistura na lista faz com que ela apareça no painel direito. Se desejar, você pode selecionar várias combinações, adicionando cada uma à lista no painel direito antes de confirmar. Além disso, um ícone é exibido no lado direito do mixin atualmente selecionado, permitindo que você pré-visualização a estrutura dos campos fornecidos.
+
+![](../images/tutorials/create-schema/preview-mixin-button.png)
+
+Ao visualizar uma mistura, uma descrição detalhada do schema da mistura é fornecida no painel direito. Também é possível navegar pelos campos do mixin na tela fornecida. À medida que você seleciona campos diferentes, o painel direito é atualizado para mostrar detalhes sobre o campo em questão. Selecione **[!UICONTROL Voltar]** quando terminar de visualizar para retornar à caixa de diálogo de seleção de mixin.
+
+![](../images/tutorials/create-schema/preview-mixin.png)
+
+Para este tutorial, selecione a combinação de detalhes **[!UICONTROL da pessoa do]** Perfil e, em seguida, selecione **[!UICONTROL Adicionar mistura]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-A tela do schema é exibida novamente. A seção **[!UICONTROL Misturas]** agora lista &quot;Detalhes[!UICONTROL da pessoa do]Perfil&quot; e a seção **[!UICONTROL Estrutura]** inclui os campos contribuídos pelo mixin. Você pode selecionar o nome da mistura na seção **[!UICONTROL Misturas]** para realçar os campos específicos que ela fornece dentro da tela.
+A tela do schema é exibida novamente. A seção **[!UICONTROL Misturas]** agora lista &quot;detalhes[!UICONTROL da pessoa do]Perfil&quot; e a seção **[!UICONTROL Estrutura]** inclui os campos contribuídos pela mistura. Você pode selecionar o nome da mistura na seção **[!UICONTROL Misturas]** para realçar os campos específicos que ela fornece dentro da tela.
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
-Esse mixin contribui com vários campos sob o nome de nível superior &quot;[!UICONTROL pessoa]&quot; com o tipo de dados &quot;[!UICONTROL Pessoa]&quot;. Este grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
+Esse mixin contribui com vários campos sob o nome de nível superior `person` com o tipo de dados &quot;[!UICONTROL Pessoa]&quot;. Este grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
 
 >[!NOTE]
 >
 >Lembre-se de que os campos podem usar tipos escalares (como string, integer, array ou data), bem como qualquer tipo de dados (um grupo de campos que representa um conceito comum) definido dentro do [!DNL Schema Registry].
 
-Observe que o campo &quot;[!UICONTROL name]&quot; tem um tipo de dados de &quot;[!UICONTROL Full name]&quot;, o que significa que também descreve um conceito comum e contém subcampos relacionados ao nome, como nome, sobrenome, título de cortesia e sufixo.
+Observe que o `name` campo tem um tipo de dados de &quot;Nomecompleto&quot;, o que significa que também descreve um conceito comum e contém subcampos relacionados ao nome, como nome, sobrenome, título de cortesia e sufixo.
 
-Selecione os diferentes campos na tela para ver quaisquer campos adicionais que contribuem para a estrutura do schema.
+Selecione os diferentes campos na tela para revelar quaisquer campos adicionais que contribuem para a estrutura do schema.
 
 ## Adicionar outra mistura {#mixin-2}
 
-Agora você pode repetir as mesmas etapas para adicionar outra mixin. Ao visualização da caixa de diálogo **[!UICONTROL Adicionar mistura]** desta vez, observe que a combinação &quot;Detalhes[!UICONTROL da pessoa do]Perfil&quot; está esmaecida e o botão de opção ao lado dela não pode ser selecionado. Isso evita que você duplique acidentalmente misturas que já foram incluídas no schema atual.
+Agora você pode repetir as mesmas etapas para adicionar outra mixin. Ao visualização da caixa de diálogo **[!UICONTROL Adicionar mixagem]** desta vez, observe que a mistura &quot;Detalhes[!UICONTROL da pessoa do]Perfil&quot; foi esmaecida e a caixa de seleção ao lado dela não pode ser selecionada. Isso evita que você duplique acidentalmente misturas que já foram incluídas no schema atual.
 
-Agora é possível adicionar &quot;[!DNL Profile Personal Details" mixin] a partir da caixa de diálogo.
+Para este tutorial, selecione a combinação &quot;[!DNL Profile personal details]&quot; na caixa de diálogo e, em seguida, selecione **[!UICONTROL Adicionar mistura]** para adicioná-la ao schema.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
 Depois de adicionada, a tela de desenho reaparece. &quot;Detalhes[!UICONTROL pessoais do]Perfil&quot; agora está listado em **[!UICONTROL Mixins]** na seção **[!UICONTROL Composição]** , e campos para endereço residencial, telefone celular e muito mais foram adicionados em **[!UICONTROL Estrutura]**.
 
-Semelhante ao campo &quot;[!UICONTROL name]&quot;, os campos que você acabou de adicionar representam os conceitos de vários campos. Por exemplo, &quot;[!UICONTROL homeAddress]&quot; tem um tipo de dados de &quot;[!UICONTROL Address]&quot; e &quot;[!UICONTROL mobilePhone]&quot; tem um tipo de dados de &quot;Número[!UICONTROL de]telefone&quot;. Você pode selecionar cada um desses campos para expandi-los e ver os campos adicionais incluídos no tipo de dados.
+Semelhante ao `name` campo, os campos que você acabou de adicionar representam os conceitos de vários campos. Por exemplo, `homeAddress` tem um tipo de dados de &quot;Endereçopostal&quot; e `mobilePhone` tem um tipo de dados de &quot;Número[!UICONTROL de]telefone&quot;. Você pode selecionar cada um desses campos para expandi-los e ver os campos adicionais incluídos no tipo de dados.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
@@ -121,13 +133,13 @@ Assim como com os nomes de classe, o nome da mistura deve ser curto e simples, d
 
 Para este tutorial, nomeie a nova combinação como &quot;Detalhes[!UICONTROL da]Fidelidade&quot;.
 
-Selecione **[!UICONTROL Adicionar mistura]** para retornar ao [!DNL Schema Editor]. &quot;Detalhes[!UICONTROL da]fidelidade&quot; agora deve aparecer em **[!UICONTROL Mixins]** no lado esquerdo da tela, mas não há campos associados a ela ainda e, portanto, nenhum campo novo aparece em **[!UICONTROL Estrutura]**.
+Selecione **[!UICONTROL Adicionar mixin]** para retornar ao [!DNL Schema Editor]. &quot;Detalhes[!UICONTROL da]fidelidade&quot; agora deve aparecer em **[!UICONTROL Mixins]** no lado esquerdo da tela, mas não há campos associados a ela ainda e, portanto, nenhum campo novo aparece em **[!UICONTROL Estrutura]**.
 
 ## Adicionar campos ao mixin {#mixin-fields}
 
 Agora que você criou a combinação &quot;Detalhes[!UICONTROL da]Fidelidade&quot;, é hora de definir os campos que a combinação contribuirá para o schema.
 
-Para começar, selecione o nome da mistura na seção **[!UICONTROL Misturas]** . Depois disso, as propriedades do mixin são exibidas no lado direito do editor e um botão **[!UICONTROL Adicionar campo]** é exibido ao lado do nome do schema em **[!UICONTROL Estrutura]**.
+Para começar, selecione o nome da mistura na seção **[!UICONTROL Misturas]** . Depois disso, as propriedades do mixin são exibidas no lado direito do editor e um botão de campo **** Adicionar é exibido ao lado do nome do schema em **[!UICONTROL Estrutura]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
@@ -139,11 +151,11 @@ Dentro desse nó com namespaces há um &quot;[!UICONTROL Novo campo]&quot;. Este
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Usando os controles no lado direito do editor, start criando um campo &quot;[!DNL loyalty]&quot; com o tipo &quot;[!UICONTROL Objeto]&quot; que será usado para manter seus campos relacionados à fidelidade. Quando terminar, selecione **[!UICONTROL Aplicar]**.
+Usando os controles no lado direito do editor, crie um `loyalty` campo com o tipo &quot;[!UICONTROL Objeto]&quot; que será usado para manter seus campos relacionados à fidelidade. Quando terminar, selecione **[!UICONTROL Aplicar]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-As alterações são aplicadas e o objeto &quot;[!DNL loyalty]&quot; recém-criado é exibido. Selecione **[!UICONTROL Adicionar campo]** ao lado do objeto para adicionar campos relacionados à fidelidade. Um &quot;[!UICONTROL Novo campo]&quot; é exibido e a seção Propriedades **[!UICONTROL do]** campo está visível no lado direito da tela.
+As alterações são aplicadas e o `loyalty` objeto recém-criado é exibido. Selecione **[!UICONTROL Adicionar campo]** ao lado do objeto para adicionar campos adicionais relacionados à fidelidade. Um &quot;[!UICONTROL Novo campo]&quot; é exibido e a seção de propriedades **[!UICONTROL de]** campo é visível no lado direito da tela.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -151,25 +163,25 @@ Cada campo requer as seguintes informações:
 
 * **[!UICONTROL Nome]do campo:** O nome do campo, escrito em caso de camelo. Exemplo: leyaltyLevel
 * **[!UICONTROL Nome]de exibição:** O nome do campo, escrito em caso de título. Exemplo: Nível de Fidelidade
-* **[!UICONTROL Tipo]:** O tipo de dados do campo. Isso inclui tipos escalares básicos e quaisquer tipos de dados definidos no [!DNL Schema Registry]. Exemplos: [!UICONTROL string], [!UICONTROL integer], [!UICONTROL booleano], [!UICONTROL Pessoa], [!UICONTROL Endereço], Número de telefone, etc.
+* **[!UICONTROL Tipo]:** O tipo de dados do campo. Isso inclui tipos escalares básicos e quaisquer tipos de dados definidos no [!DNL Schema Registry]. Exemplos: [!UICONTROL Sequência], [!UICONTROL Número inteiro], [!UICONTROL booleano], [!UICONTROL Pessoa], [!UICONTROL Endereço], Número de telefone, etc.
 * **[!UICONTROL Descrição]:** Uma descrição opcional do campo deve ser incluída, escrita em caso de sentença, com um máximo de 200 caracteres.
 
-O primeiro campo do [!DNL Loyalty] objeto será uma string chamada &quot;[!DNL loyaltyId]&quot;. Ao definir o tipo do novo campo como &quot;[!UICONTROL String]&quot;, a seção Propriedades **[!UICONTROL do]** campo é preenchida com várias opções para aplicar restrições, incluindo Valor **** padrão, **[!UICONTROL Formato]** e Comprimento **** máximo.
+O primeiro campo do `Loyalty` objeto será uma string chamada `loyaltyId`. Ao definir o tipo do novo campo como &quot;[!UICONTROL String]&quot;, a seção de propriedades **[!UICONTROL de]** Campo é preenchida com várias opções para aplicar restrições, incluindo valor **** Padrão, **[!UICONTROL Formato]** e comprimento **** Máximo.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
-Diferentes opções de restrição estão disponíveis dependendo do tipo de dados selecionado. Como &quot;[!DNL loyaltyId]&quot; será um endereço de email, selecione &quot;[!UICONTROL email]&quot; no menu suspenso **[!UICONTROL Formato]** . Selecione **[!UICONTROL Aplicar]** para aplicar suas alterações.
+Diferentes opções de restrição estão disponíveis dependendo do tipo de dados selecionado. Como `loyaltyId` será um endereço de email, selecione &quot;[!UICONTROL email]&quot; no menu suspenso **[!UICONTROL Formato]** . Selecione **[!UICONTROL Aplicar]** para aplicar suas alterações.
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
 ## Adicionar mais campos ao mixin {#mixin-fields-2}
 
-Agora que você adicionou o campo &quot;[!DNL loyaltyId]&quot;, é possível adicionar campos adicionais para capturar informações relacionadas à fidelidade, como:
+Agora que você adicionou o `loyaltyId` campo, é possível adicionar campos adicionais para capturar informações relacionadas à fidelidade, como:
 
 * Pontos (número inteiro)
 * Membro desde (data)
 
-Cada campo é adicionado selecionando **[!UICONTROL Adicionar campo]** no objeto de fidelidade e preenchendo as informações necessárias.
+Cada campo é adicionado selecionando **[!UICONTROL Adicionar campo]** no `loyalty` objeto e preenchendo as informações necessárias.
 
 Quando concluído, o objeto de Fidelidade conterá campos para ID de fidelidade, pontos e membro-a-partir.
 
@@ -187,7 +199,7 @@ Ao definir campos no campo, [!DNL Schema Editor]há algumas opções adicionais 
 | [!UICONTROL Identidade] | Indica que este campo é um campo de identidade. Mais informações sobre campos de identidade são fornecidas [posteriormente neste tutorial](#identity-field). |
 | [!UICONTROL Relação] | Embora as relações com os schemas possam ser inferidas com o uso do schema da união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. A restrição [!UICONTROL Relacionamento] indica que esse campo faz referência à identidade primária de um schema com base em uma classe diferente, o que implica uma relação entre os dois schemas. Consulte o tutorial sobre como [definir um relacionamento](./relationship-ui.md) para obter mais informações. |
 
-Para este tutorial, o [!DNL "loyalty"] objeto no schema requer um novo campo enum que descreva o &quot;nível de fidelidade&quot; de um cliente, onde o valor pode ser apenas uma das quatro opções possíveis. Para adicionar esse campo ao schema, selecione **[!UICONTROL Adicionar campo]** ao lado do objeto &quot;[!DNL loyalty]&quot; e preencha os campos obrigatórios para nome **** de campo e nome **[!UICONTROL de]** exibição. Para **[!UICONTROL Tipo]**, selecione &quot;[!UICONTROL String]&quot;.
+Para este tutorial, o [!DNL "loyalty"] objeto no schema requer um novo campo enum que descreva o &quot;nível de fidelidade&quot; de um cliente, onde o valor pode ser apenas uma das quatro opções possíveis. Para adicionar esse campo ao schema, selecione **[!UICONTROL Adicionar campo]** ao lado do `loyalty` objeto e preencha os campos obrigatórios para Nome **** de campo e Nome **[!UICONTROL de]** exibição. Para **[!UICONTROL Tipo]**, selecione &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
@@ -195,33 +207,43 @@ Caixas de seleção adicionais aparecem para o campo depois que seu tipo é sele
 
 Marque a caixa de seleção **[!UICONTROL Enum]** para abrir a seção Valores **** Enum abaixo. Aqui, você pode inserir o **[!UICONTROL Valor]** (em camelCase) e o **[!UICONTROL Rótulo]** (um nome opcional e amigável para o leitor no Título Case) para cada nível de fidelidade aceitável.
 
-Depois de concluir todas as propriedades do campo, selecione **[!UICONTROL Aplicar]** para adicionar o campo &quot;[!DNL loyaltyLevel]&quot; ao objeto &quot;[!DNL loyalty]&quot;.
+Depois de concluir todas as propriedades do campo, selecione **[!UICONTROL Aplicar]** para adicionar o campo &quot;[!DNL loyaltyLevel]&quot; ao `loyalty` objeto.
 
 ![](../images/tutorials/create-schema/loyalty_level_enum.png)
 
 ## Converter um objeto de vários campos em um tipo de dados {#datatype}
 
-O objeto &quot;[!DNL loyalty]&quot; agora contém vários campos específicos de fidelidade e representa uma estrutura de dados comum que pode ser útil em outros schemas. O [!DNL Schema Editor] permite aplicar prontamente objetos de vários campos reutilizáveis, convertendo a estrutura desses objetos em tipos de dados.
+O `loyalty` objeto agora contém vários campos específicos de fidelidade e representa uma estrutura de dados comum que pode ser útil em outros schemas. O [!DNL Schema Editor] permite aplicar prontamente objetos de vários campos reutilizáveis, convertendo a estrutura desses objetos em tipos de dados.
 
 Os tipos de dados permitem o uso consistente de estruturas de vários campos e proporcionam mais flexibilidade do que uma combinação, pois podem ser usados em qualquer lugar dentro de um schema. Isso é feito configurando o valor **[!UICONTROL Tipo]** do campo para o valor de qualquer tipo de dados definido no [!DNL Schema Registry].
 
-Para converter o objeto &quot;[!DNL loyalty]&quot; em um tipo de dados, selecione o campo &quot;[!DNL loyalty]&quot; em **[!UICONTROL Estrutura]** e, em seguida, selecione **[!UICONTROL Converter em novo tipo]** de dados no lado direito do editor em Propriedades **[!UICONTROL de]** campo. Uma janela verde é exibida, confirmando que o objeto foi convertido com êxito.
+Para converter o `loyalty` objeto em um tipo de dados, selecione o `loyalty` campo em **[!UICONTROL Estrutura]** e, em seguida, selecione **[!UICONTROL Converter em novo tipo]** de dados no lado direito do editor em Propriedades **[!UICONTROL de]** campo. Uma janela verde é exibida, confirmando que o objeto foi convertido com êxito.
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
-Agora, quando você olha em **[!UICONTROL Estrutura]**, você pode ver que o campo &quot;[!DNL loyalty]&quot; tem um tipo de dados &quot;[!DNL Loyalty]&quot; e os campos têm pequenos ícones de bloqueio ao seu lado, indicando que não são mais campos individuais, mas sim parte de um tipo de dados de vários campos.
+Agora, quando você olha em **[!UICONTROL Estrutura]**, você pode ver que o `loyalty` campo tem um tipo de dados &quot;[!DNL Loyalty]&quot; e que os campos têm pequenos ícones de bloqueio ao seu lado, indicando que eles não são mais campos individuais, mas sim parte de um tipo de dados de vários campos.
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
 Em um schema futuro, agora é possível atribuir um campo ao **[!UICONTROL Tipo]** de &quot;[!DNL Loyalty]&quot; e ele incluirá automaticamente campos para ID, nível de fidelidade, membro desde e pontos.
 
+## Pesquisar e filtrar campos de schema
+
+Seu schema agora contém várias combinações além dos campos fornecidos por sua classe base. Ao trabalhar com schemas maiores, você pode marcar as caixas de seleção ao lado dos nomes de mixagem no painel esquerdo para filtrar os campos exibidos somente para os campos fornecidos pelas combinações que você está interessado.
+
+![](../images/tutorials/create-schema/filter-by-mixin.png)
+
+Se você estiver procurando um campo específico no seu schema, também poderá usar a barra de pesquisa para filtrar os campos exibidos pelo nome, independentemente da combinação em que eles são fornecidos.
+
+![](../images/tutorials/create-schema/search.png)
+
 ## Definir um campo de schema como um campo de identidade {#identity-field}
 
-A estrutura de dados padrão que os schemas fornecem pode ser aproveitada para identificar dados pertencentes ao mesmo indivíduo em várias fontes, permitindo vários casos de uso downstream, como segmentação, relatórios, análise de ciência de dados e muito mais. Para unir dados com base em identidades individuais, os campos principais devem ser marcados como campos de &quot;[!UICONTROL Identidade]&quot; nos schemas aplicáveis.
+A estrutura de dados padrão que os schemas fornecem pode ser aproveitada para identificar dados pertencentes ao mesmo indivíduo em várias fontes, permitindo vários casos de uso downstream, como segmentação, relatórios, análise de ciência de dados e muito mais. Para unir dados com base em identidades individuais, os campos principais devem ser marcados como campos de [!UICONTROL identidade] nos schemas aplicáveis.
 
 [!DNL Experience Platform] facilita a identificação de um campo de identidade através do uso de uma caixa de seleção **[!UICONTROL Identidade]** no [!DNL Schema Editor]. No entanto, você deve determinar qual campo é o melhor candidato a usar como uma identidade, com base na natureza de seus dados.
 
-Por exemplo, pode haver milhares de membros do programa de fidelidade pertencentes ao mesmo &quot;nível de fidelidade&quot;, mas cada membro do programa de fidelidade tem um &quot;[!DNL loyaltyId]&quot; exclusivo (que, neste caso, é o endereço de email do membro individual). O fato de que &quot;[!DNL loyaltyId]&quot; é um identificador exclusivo para cada membro faz dele um bom candidato para um campo de identidade, ao passo que &quot;nível de fidelidade&quot; não é.
+Por exemplo, pode haver milhares de membros do programa de fidelidade pertencentes ao mesmo &quot;nível de fidelidade&quot;, mas cada membro do programa de fidelidade tem um único `loyaltyId` (que neste caso é o endereço de email do membro individual). O fato de que `loyaltyId` é um identificador exclusivo para cada membro faz dele um bom candidato para um campo de identidade, ao contrário do que `loyaltyLevel` é feito.
 
 >[!IMPORTANT]
 >
@@ -229,23 +251,25 @@ Por exemplo, pode haver milhares de membros do programa de fidelidade pertencent
 >
 >Se você planeja usar `identityMap`, lembre-se de que isso substituirá qualquer identidade primária adicionada ao schema diretamente. Consulte a seção sobre `identityMap` as [noções básicas do guia](../schema/composition.md#identityMap) de composição do schema para obter mais informações.
 
-Na seção **[!UICONTROL Estrutura]** do editor, selecione o campo &quot;[!DNL loyaltyId]&quot; e a caixa de seleção **[!UICONTROL Identidade]** aparecerá em Propriedades **** de campo. Marque a caixa e a opção para definir isso como a Identidade **** principal será exibida. Selecione essa caixa também.
+Na seção **[!UICONTROL Estrutura]** do editor, selecione o `loyaltyId` campo e a caixa de seleção **[!UICONTROL Identidade]** aparecerá em Propriedades **** de campo. Marque a caixa e a opção para definir isso como a identidade **** Principal será exibida. Selecione essa caixa também.
 
-Em seguida, você deve fornecer uma Namespace **[!UICONTROL de]** identidade da lista de namespaces predefinidas na lista suspensa. Como &quot;[!DNL loyaltyId]&quot; é o endereço de email do cliente, selecione &quot;[!UICONTROL Email]&quot; na lista suspensa. Selecione **[!UICONTROL Aplicar]** para confirmar as atualizações do campo &quot;[!DNL loyaltyId]&quot;.
+>[!NOTE]
+>
+>Cada schema pode conter apenas um campo de identidade principal. Depois que um campo de schema for definido como a identidade primária, você receberá uma mensagem de erro se tentar definir outro campo de identidade no schema como principal.
+
+Em seguida, você deve fornecer uma namespace **[!UICONTROL de]** identidade da lista de namespaces predefinidas na lista suspensa. Como `loyaltyId` é o endereço de email do cliente, selecione &quot;[!UICONTROL Email]&quot; na lista suspensa. Selecione **[!UICONTROL Aplicar]** para confirmar as atualizações do `loyaltyId` campo.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
 >[!NOTE]
 >
->Para obter uma lista de namespaces padrão e suas definições, consulte a documentação [do Serviço de](../../identity-service/troubleshooting-guide.md#standard-namespaces)identidade.
+>Para obter uma lista de namespaces padrão e suas definições, consulte a [[!DNL Identity Service] documentação](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
-Agora, todos os dados ingeridos no campo &quot;[!DNL loyaltyId]&quot; serão usados para ajudar a identificar esse indivíduo e unir uma única visualização do cliente.
+Depois de aplicar a alteração, o ícone para `loyaltyId` mostra um símbolo de impressão digital, indicando que agora é um campo de identidade. Além disso, a [!DNL Loyalty Details] mistura no painel esquerdo lista o campo de identidade abaixo dele, permitindo que você determine facilmente qual mistura em um schema fornece os campos de identidade do schema.
 
->[!NOTE]
->
->Depois que um campo de schema for definido como a identidade primária, você receberá uma mensagem de erro se tentar definir outro campo no schema como principal. Cada schema pode conter apenas um campo de identidade principal.
+![](../images/tutorials/create-schema/identity-applied.png)
 
-Para saber mais sobre como trabalhar com identidades no, consulte a documentação do [!DNL Experience Platform][!DNL Identity Service] [](../../identity-service/home.md) .
+Agora, todos os dados ingeridos no `loyaltyId` campo serão usados para ajudar a identificar esse indivíduo e unir uma única visualização do cliente. Para saber mais sobre como trabalhar com identidades no, consulte a documentação do [!DNL Experience Platform][!DNL Identity Service] [](../../identity-service/home.md) .
 
 ## Ative o schema para uso em [!DNL Real-time Customer Profile] {#profile}
 
@@ -263,7 +287,7 @@ No lado direito do editor, são mostradas informações sobre o schema, incluind
 
 Selecione **[!UICONTROL Perfil]** e um  será exibido, solicitando que você confirme que deseja ativar o schema para [!DNL Profile].
 
-![](../images/tutorials/create-schema/enable-profile.png)
+<img src="../images/tutorials/create-schema/enable-profile.png" width="700" /><br>
 
 >[!WARNING]
 >
@@ -273,7 +297,7 @@ Selecione **[!UICONTROL Ativar]** para confirmar sua escolha. Se desejar, você 
 
 ## Próximos passos e recursos adicionais
 
-Agora que você terminou de compor um schema &quot;Membros da Fidelidade&quot;, você pode ver o schema completo na tela. Selecione **[!UICONTROL Salvar]** e o schema será salvo no [!DNL Schema Library], tornando-o acessível pelo [!DNL Schema Registry].
+Agora que você terminou de compor o schema, você pode ver o schema completo na tela. Selecione **[!UICONTROL Salvar]** e o schema será salvo no [!DNL Schema Library], tornando-o acessível pelo [!DNL Schema Registry].
 
 Seu novo schema agora pode ser usado para assimilar dados em [!DNL Platform]. Lembre-se de que, uma vez que o schema tenha sido usado para ingerir dados, somente alterações aditivas poderão ser feitas. Consulte as [noções básicas da composição](../schema/composition.md) do schema para obter mais informações sobre o controle de versão do schema.
 
@@ -307,13 +331,13 @@ Na área de trabalho **[!UICONTROL Schemas]** , selecione **[!UICONTROL Criar sc
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-Uma caixa de diálogo é exibida permitindo que você selecione uma lista de classes disponíveis. Na parte superior da caixa de diálogo, selecione **[!UICONTROL Criar nova classe]**. Em seguida, você pode atribuir a sua nova classe um Nome **[!UICONTROL de]** exibição (um nome curto, descritivo, exclusivo e fácil de usar para a classe), uma **[!UICONTROL Descrição]** e um **[!UICONTROL Comportamento]** (&quot;[!UICONTROL Registro]&quot; ou &quot;Sériecronológica&quot;) para os dados que o schema definirá.
+Uma caixa de diálogo é exibida permitindo que você selecione uma lista de classes disponíveis. Na parte superior da caixa de diálogo, selecione **[!UICONTROL Criar nova classe]**. Em seguida, é possível atribuir à sua nova classe um nome **[!UICONTROL de]** exibição (um nome curto, descritivo, exclusivo e amigável para a classe), uma **[!UICONTROL Descrição]** e um **[!UICONTROL comportamento]** (&quot;[!UICONTROL Registro]&quot; ou &quot;Sériecronológica&quot;) para os dados que o schema definirá.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
 >[!IMPORTANT]
 >
->Ao criar um schema que implemente uma classe definida pela sua organização, lembre-se de que as combinações estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há combinações compatíveis listadas na caixa de diálogo *Adicionar mistura* . Em vez disso, será necessário selecionar **[!UICONTROL Criar nova mistura]** e definir uma mistura para uso com essa classe. Na próxima vez que você redigir um schema que implementa a nova classe, a combinação definida será listada e estará disponível para uso.
+>Ao criar um schema que implemente uma classe definida pela sua organização, lembre-se de que as combinações estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há combinações compatíveis listadas na caixa de diálogo **[!UICONTROL Adicionar mixin]** . Em vez disso, você precisará selecionar **[!UICONTROL Criar nova combinação]** e definir uma mistura para usar com essa classe. Na próxima vez que você redigir um schema que implementa a nova classe, a combinação definida será listada e estará disponível para uso.
 
 ### Alterar a classe de um schema {#change-class}
 
@@ -329,7 +353,7 @@ Para reatribuir uma classe, selecione **[!UICONTROL Atribuir]** no lado esquerdo
 
 Uma caixa de diálogo é exibida mostrando uma lista de todas as classes disponíveis, incluindo qualquer classe definida por sua organização (o proprietário sendo &quot;[!UICONTROL Cliente]&quot;), bem como as classes padrão definidas pelo Adobe.
 
-Selecione uma classe na lista para exibir sua descrição no lado direito da caixa de diálogo. Você também pode selecionar Estrutura **[!UICONTROL de classe de]** Pré-visualização para ver os campos e metadados associados à classe. Selecione **[!UICONTROL Atribuir classe]** para continuar.
+Selecione uma classe na lista para exibir sua descrição no lado direito da caixa de diálogo. Você também pode selecionar a estrutura **[!UICONTROL da classe de]** Pré-visualização para ver os campos e os metadados associados à classe. Selecione **[!UICONTROL Atribuir classe]** para continuar.
 
 ![](../images/tutorials/create-schema/assign_class.png)
 

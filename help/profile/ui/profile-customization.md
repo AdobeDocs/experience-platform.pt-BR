@@ -5,9 +5,9 @@ title: Personalização de detalhes do perfil
 description: 'Este guia fornece instruções passo a passo para personalizar a forma como os dados do Perfil do cliente em tempo real são exibidos na interface do usuário do Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Depois de salvar, você retornará à guia [!UICONTROL Detalhe] , onde seu novo 
 
 ## Restaurar cartões padrão
 
-Se você decidir remover as edições e retornar à visualização padrão a qualquer momento, poderá restaurar rápida e facilmente todos os cartões e atributos padrão. Para fazer isso, selecione **[!UICONTROL Modificar painel]** e, em seguida, selecione **[!UICONTROL Restaurar cartões]** padrão. Isso removerá todas as personalizações (incluindo o redimensionamento) feitas. Você pode selecionar **[!UICONTROL Salvar]** para salvar as alterações ou, se não quiser restaurar o padrão, selecione **[!UICONTROL Cancelar]** para manter as edições feitas.
-
->[!NOTE]
->
->Tenha cuidado ao restaurar cartões e atributos padrão. Depois que o padrão for restaurado e salvo, a única maneira de retornar às personalizações de visualização será criá-las novamente usando as etapas descritas neste documento.
+Se você decidir que deseja restaurar os cartões padrão que foram removidos desde então, poderá fazê-lo de forma rápida e fácil. Primeiro, selecione **[!UICONTROL Modificar painel]** e, em seguida, selecione **[!UICONTROL Restaurar cartões]** padrão. Quando os cartões padrão estiverem visíveis, você poderá selecionar **[!UICONTROL Salvar]** para salvar suas alterações ou selecionar **[!UICONTROL Cancelar]** se não desejar restaurar os cartões padrão.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 

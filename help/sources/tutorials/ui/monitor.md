@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,14 @@ O painel de classificação permite acessar contas de uma fonte específica. Sel
 > Use o botão de controle ![de](../../images/tutorials/monitor/spectrum-control.png) espectro na coluna **[!UICONTROL Nome]** para criar um novo fluxo de dados de origem para a conta selecionada.
 
 ![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
+
+Além disso, você pode editar informações de conta existentes e atualizar suas credenciais de conta. Selecione o ícone de lápis para obter as informações de conta que deseja editar.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+O modal **[!UICONTROL Editar detalhes]** da conta é exibido. Nesta página, você pode atualizar seus detalhes de conta e credenciais de autenticação existentes.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 Na página **[!UICONTROL Contas]** , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada. Selecione o botão de elipses (`...`) para exibir mais opções disponíveis para o seu fluxo de dados selecionado. Essas opções são descritas a seguir:
 

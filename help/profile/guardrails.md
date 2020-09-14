@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Diretrizes para o Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -96,5 +96,5 @@ Os seguintes coletores se referem ao tamanho dos dados e são recomendados para 
 
 | Guarda | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Tamanho total máximo por entidade dimensional | 1GB | Suave | **O tamanho total máximo recomendado para uma entidade de dimensão é de 1 GB.** Ingerir entidades de dimensão grande resultará em desempenho degradado do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
+| Tamanho total máximo para todas as entidades dimensionais | 5GB | Suave | **O tamanho total máximo recomendado para todas as entidades dimensionais é de 5 GB.** Ingerir entidades de dimensão grande resultará em desempenho degradado do sistema. Por exemplo, não é recomendado tentar carregar um catálogo de produtos de 10 GB como uma entidade de dimensão. |
 | Conjuntos de dados por schema de entidade dimensional | 5 | Suave | **É recomendado um máximo de cinco conjuntos de dados associados a cada schema de entidade dimensional.** Por exemplo, se você criar um schema para &quot;produtos&quot; e adicionar cinco conjuntos de dados de contribuição, não deverá criar um sexto conjunto de dados vinculado ao schema de produtos. |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ingressar dados no Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
+source-git-commit: 2eef47cd4afe8c6dfd71d7b78035861ba1b368f7
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -153,4 +153,3 @@ Para saber mais sobre a ingestão em lote, leia a visão geral [da Ingestão em]
 >A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
-arrasto

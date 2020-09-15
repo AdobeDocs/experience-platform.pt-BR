@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da ingestão parcial de lote Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: a345efca3c38c3077c89b47271f54b924d58db45
+source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 2%
@@ -290,7 +290,7 @@ Se o lote tiver um ou mais erros e o diagnóstico de erros estiver ativado, a re
 >               "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
 >       }]
 >}
-> ```
+>```
 
 ## Tipos de erro de ingestão parcial em lote {#appendix}
 

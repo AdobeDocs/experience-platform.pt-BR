@@ -5,9 +5,9 @@ description: Saiba como rastrear eventos SDK da Web do Experience Platform
 seo-description: Saiba como rastrear eventos SDK da Web do Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ Os dados enviados à Adobe Experience Cloud são divididos em duas categorias:
 Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um schema criado no Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Todos os dados XDM que você deseja que façam parte de suas análises, personalização, audiências ou destinos devem ser enviados usando a `xdm` opção.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -53,7 +54,37 @@ Atualmente, não há suporte para o envio de dados que não correspondem a um sc
 
 ### Configuração `eventType`
 
-Em um evento de experiência XDM, há um `eventType` campo. Isso mantém o tipo de evento principal do registro. Isso pode ser passado como parte da `xdm` opção.
+Em um evento de experiência XDM, há um `eventType` campo opcional. Isso mantém o tipo de evento principal do registro. A configuração de um tipo de evento pode ajudá-lo a diferenciar entre os diferentes eventos que você enviará. O XDM fornece vários tipos de evento predefinidos que você pode usar ou você sempre cria seus próprios tipos de evento personalizados para seus casos de uso. Abaixo está uma lista de todos os tipos de evento predefinidos fornecidos pelo XDM.
+
+
+| **Tipo de evento:** | **Definição:** |
+| ---------------------------------- | ------------ |
+| advertising.completes | Indica se um ativo de mídia cronometrado foi observado até a conclusão - isso não significa necessariamente que o visualizador assistiu ao vídeo inteiro; o visualizador poderia ter ignorado na frente |
+| advertising.timePlayed | Descreve a quantidade de tempo gasta por um usuário em um ativo de mídia cronometrado específico |
+| advertising.federated | Indica se um evento de experiência foi criado por meio da federação de dados (compartilhamento de dados entre clientes) |
+| advertising.clicks | Ações de clique em um anúncio |
+| advertising.conversions | Uma ação(ões) predefinida(s) do cliente que aciona um evento para avaliação do desempenho |
+| advertising.firstQuartiles | Um anúncio de vídeo digital tem uma duração de 25% em velocidade normal |
+| advertising.impressions | Impressão(ões) de um anúncio para um usuário final com o potencial de ser visualizado |
+| advertising.midpoints | Um anúncio de vídeo digital tem 50% de sua duração em velocidade normal |
+| advertising.starts | Um anúncio de vídeo digital começou a ser reproduzido |
+| advertising.thirdQuartiles | Um anúncio de vídeo digital tem uma duração de 75% em velocidade normal |
+| web.webpagedetails.pageViews | Ocorreu(m) visualização(s) de uma página da Web |
+| web.webinteraction.linkClicks | Ocorreu um clique de um link da Web |
+| commerce.checkouts | Uma ação durante um processo de finalização de uma lista de produto, pode haver mais de um evento de finalização se houver várias etapas em um processo de finalização. Se houver várias etapas, as informações de hora do evento e a página ou experiência referenciada serão usadas para identificar a etapa representada pelos eventos individuais em ordem |
+| commerce.productListAdds | Adição de um produto à lista do produto. Exemplo de um produto adicionado a um carrinho de compras |
+| commerce.productListOpens | Inicializações de uma nova lista de produto. Exemplo de criação de um carrinho de compras |
+| commerce.productListRemovals | Remoção(ões) de uma entrada de produto de uma lista de produto. Exemplo de um produto removido de um carrinho de compras |
+| commerce.productListReopens | Uma lista de produto que não estava mais acessível (abandonada) foi reativada pelo usuário. Exemplo por meio de uma atividade de recomercialização |
+| commerce.productListViews | Ocorreu(m) visualização(s) de uma lista de produto |
+| commerce.productViews | Ocorreram visualizações de um produto |
+| commerce.purchases | Um pedido foi aceito. A compra é a única ação necessária em uma conversão de comércio. A compra deve ter uma lista de produto referenciada |
+| commerce.saveForLaters | A lista do produto é salva para uso futuro. Exemplo de uma lista de desejo de produto |
+| delivery.feedback | Eventos de feedback para um delivery. Exemplo de eventos de feedback para um delivery de email |
+
+
+Esses tipos de evento serão mostrados em uma lista suspensa se você estiver usando a extensão Iniciar ou você sempre poderá enviá-los sem Iniciar. Eles podem ser passados como parte da `xdm` opção.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -73,6 +104,7 @@ alloy("sendEvent", {
 
 Como alternativa, o comando `eventType` pode ser passado para o evento usando a `type` opção. Em segundo plano, isso é adicionado aos dados XDM. Ter a opção `type` como uma permite que você defina mais facilmente a carga `eventType` sem precisar modificar a carga do XDM.
 
+
 ```javascript
 var myXDMData = { ... };
 
@@ -85,6 +117,7 @@ alloy("sendEvent", {
 ### Substituição da ID do conjunto de dados
 
 Em alguns casos de uso, talvez você queira enviar um evento para um conjunto de dados diferente daquele configurado na interface do usuário de configuração. Para isso, é necessário definir a opção `datasetId` no `sendEvent` comando:
+
 
 ```javascript
 var myXDMData = { ... };
@@ -103,6 +136,7 @@ As informações de identidade personalizadas também podem ser adicionadas ao e
 ## Uso da API sendBeacon
 
 Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura na navegação da página. Para solicitar que a Adobe Experience Platform [!DNL Web SDK] use `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando evento.  Exemplo:
+
 
 ```javascript
 alloy("sendEvent", {
@@ -125,6 +159,7 @@ Os navegadores impuseram limites para a quantidade de dados que pode ser enviada
 ## Tratamento de respostas de eventos
 
 Se quiser lidar com uma resposta de um evento, você pode ser notificado de um sucesso ou falha da seguinte maneira:
+
 
 ```javascript
 alloy("sendEvent", {
@@ -150,6 +185,7 @@ alloy("sendEvent", {
 ## Modificação global de eventos {#modifying-events-globally}
 
 Se quiser adicionar, remover ou modificar campos do evento globalmente, você pode configurar um `onBeforeEventSend` retorno de chamada.  Esse retorno de chamada é chamado sempre que um evento é enviado.  Esse retorno de chamada é passado em um objeto de evento com um `xdm` campo.  Modifique `event.xdm` para alterar os dados enviados no evento.
+
 
 ```javascript
 alloy("configure", {

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar destinos de marketing por email
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1636'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Se você preferir usar a interface do usuário no CDP em tempo real do Adobe par
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados no [!DNL Experience Platform].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
@@ -599,7 +599,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Use o fluxo de dados obtido na etapa anterior.
 * `{ETAG}`: Use a tag obtida na etapa anterior.
-* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento dos segmentos que você deseja ativar, acesse https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ e procure a `GET /segment/jobs` operação.
+* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar as IDs de segmento dos segmentos que você deseja ativar, acesse **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecione API **[!UICONTROL do serviço de]** segmentação no menu de navegação esquerdo e procure a `GET /segment/definitions` operação nas Definições **** de segmento.
 * `{PROFILE_ATTRIBUTE}`: Por exemplo, `"person.lastName"`
 
 **Resposta**

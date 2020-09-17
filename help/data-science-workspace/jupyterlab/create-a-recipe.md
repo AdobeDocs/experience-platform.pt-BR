@@ -5,9 +5,9 @@ title: Crie uma receita usando notebooks em Júpiter
 topic: Tutorial
 description: Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo no Notebook JupyterLab. Em seguida, você exercerá o fluxo de trabalho do notebook para receber receitas dentro do JupyterLab para criar uma receita dentro da Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2335'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,11 @@ O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e 
 >
 >O notebook Construtor de receita suporta o trabalho com todos os formatos de arquivo, mas atualmente a funcionalidade Criar receita suporta apenas [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-Quando você clica no notebook do Recipe Builder no lançador, o notebook será aberto na guia. O modelo usado no notebook é a Receita de Previsão de Vendas de Retalho Python, que também pode ser encontrada [neste repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
+Quando você clica no notebook do Recipe Builder no lançador, o notebook é aberto na guia. O modelo usado no notebook é a Receita de Previsão de Vendas de Retalho Python, que também pode ser encontrada [neste repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Você notará que na barra de ferramentas existem três ações adicionais, a saber: **[!UICONTROL Treinamento]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criação de Receita]**. Esses ícones só aparecerão no notebook [!UICONTROL Recipe Builder] . Mais informações sobre essas ações serão discutidas [na seção](#training-and-scoring) Treinamento e pontuação depois de criar a Receita no notebook.
+Você notará que na barra de ferramentas existem três ações adicionais, a saber: **[!UICONTROL Treinamento]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criação de Receita]**. Esses ícones só aparecem no notebook [!UICONTROL Recipe Builder] . Mais informações sobre essas ações serão discutidas [na seção](#training-and-scoring) Treinamento e pontuação depois de criar a Receita no notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 

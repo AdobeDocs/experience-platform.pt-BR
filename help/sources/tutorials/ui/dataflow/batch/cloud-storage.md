@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
-title: Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
+title: Configurar um fluxo de dados para um conector em lote de armazenamentos na nuvem na interface do usuário
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1584'
 ht-degree: 0%
 
 ---
 
 
-# Configurar um fluxo de dados para um conector de lote de armazenamentos em nuvem na interface do usuário
+# Configurar um fluxo de dados para um conector em lote de armazenamentos na nuvem na interface do usuário
 
 Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um [!DNL Platform] conjunto de dados. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 
@@ -47,7 +47,7 @@ Selecionar uma pasta listada permite que você transfira a hierarquia de pastas 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Quando a janela pré-visualização for preenchida, você poderá selecionar **[!UICONTROL Próximo]** para carregar todos os arquivos dentro da pasta selecionada. Se você quiser fazer upload para um arquivo específico, selecione-o na lista antes de selecionar **[!UICONTROL Próximo]**.
+Quando a janela pré-visualização for preenchida, você poderá selecionar **[!UICONTROL Próximo]** para fazer upload de todos os arquivos dentro da pasta selecionada. Se você quiser fazer upload para um arquivo específico, selecione esse arquivo na lista antes de selecionar **[!UICONTROL Próximo]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
 
@@ -88,6 +88,10 @@ A caixa de diálogo **[!UICONTROL Selecionar schema]** é exibida. Selecione o s
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 Com base em suas necessidades, você pode optar por mapear os campos diretamente ou usar as funções do mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre funções de mapeamento e mapeamento de dados, consulte o tutorial sobre como [mapear dados CSV para campos](../../../../../ingestion/tutorials/map-a-csv-file.md)de schema XDM.
+
+>[!TIP]
+>
+>[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
 
 Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Avançar]**.
 

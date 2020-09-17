@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mapear um arquivo CSV para um schema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1350'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,10 @@ A seção Dados **[!UICONTROL de]** amostra é exibida assim que o arquivo é ca
 
 A etapa **[!UICONTROL Mapeamento]** é exibida. As colunas do arquivo CSV são listadas em Campo **[!UICONTROL de]** origem, com seus campos de schema XDM correspondentes listados em Campo **[!UICONTROL de]** Público alvo. Os campos de público alvo não selecionados são contornados em vermelho. Você pode usar a opção de filtrar campos para restringir a lista dos campos de origem disponíveis.
 
+>[!TIP]
+>
+>[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
+
 Para mapear uma coluna CSV para um campo XDM, selecione o ícone de schema ao lado do campo de público alvo correspondente da coluna.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ A janela **[!UICONTROL Selecionar campo]** schema é exibida. Aqui, você pode n
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-A tela **[!UICONTROL Mapeamento]** é exibida novamente, com o campo XDM selecionado aparecendo agora em Campo **[!UICONTROL de]** Público alvo.
+Depois de concluir as etapas para os campos de origem não mapeados restantes, a tela **[!UICONTROL Mapeamento]** será exibida novamente com o campo XDM selecionado que agora aparece em Campo **[!UICONTROL de]** Público alvo.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-Se você não desejar mapear uma coluna CSV específica, é possível remover o mapeamento clicando no ícone **** remover ao lado do campo público alvo. Você também pode remover todos os mapeamentos selecionando o botão **[!UICONTROL Limpar todos os mapeamentos]**.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-Se desejar adicionar um novo mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]** na parte superior da lista de campo **[!UICONTROL de]** origem.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Ao mapear campos, também é possível incluir funções para calcular valores com base nos campos de origem de entrada. Consulte a seção de funções [de](#mapping-functions) mapeamento no apêndice para obter mais informações.
 
@@ -89,7 +85,7 @@ Campos calculados permitem que valores sejam criados com base nos atributos no s
 
 Selecione o botão **[!UICONTROL Adicionar campo]** calculado para continuar.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 O painel **[!UICONTROL Criar campo]** calculado é exibido. A caixa de diálogo esquerda contém os campos, as funções e os operadores suportados nos campos calculados. Selecione uma das guias para adicionar funções, campos ou operadores ao editor de expressões.
 

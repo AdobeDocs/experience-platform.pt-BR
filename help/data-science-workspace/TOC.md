@@ -5,9 +5,9 @@ user-guide-title: Ajuda da Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 638a7ea607ffe269b2c6788324860f3a25f43727
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '204'
 ht-degree: 5%
 
 ---
@@ -19,9 +19,10 @@ ht-degree: 5%
 * [Apresentação da Data Science Workspace](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
    * [Guia do usuário do JupyterLab](jupyterlab/overview.md)
-   * [Analise seus dados usando notebooks](jupyterlab/analyze-your-data.md)
-   * [Serviço de query em Jupyter notebook](jupyterlab/query-service.md)
-   * [Crie uma receita usando notebooks em Júpiter](jupyterlab/create-a-recipe.md)
+   * [Acesso aos dados](jupyterlab/access-notebook-data.md)
+   * [Analisar seus dados](jupyterlab/analyze-your-data.md)
+   * [serviço query](jupyterlab/query-service.md)
+   * [Criar uma fórmula](jupyterlab/create-a-recipe.md)
    * [Colaborar no JupyterLab usando Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizado de máquina do Sensei {#api}
    * [Introdução](api/getting-started.md)
@@ -61,7 +62,6 @@ ht-degree: 5%
    * [Publicar um modelo como um serviço (UI)](models-recipes/publish-model-service-ui.md)
    * [Publicar um modelo como um serviço (API)](models-recipes/publish-model-service-api.md)
    * [Agendar treinamento automatizado e pontuação em um serviço (IU)](models-recipes/schedule-models-ui.md)
-* [Guias de migração de receitas e notebooks](recipe-notebook-migration.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector em lote de armazenamentos n
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,15 @@ Com base em suas necessidades, você pode optar por mapear os campos diretamente
 >
 >[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
 
-Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Avançar]**.
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Selecione dados **[!UICONTROL de]** Pré-visualização para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+
+Durante a pré-visualização, a coluna de identidade é priorizada como o primeiro campo, já que são as principais informações necessárias ao validar os resultados do mapeamento.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Fechar]**.
 
 ## Execuções de ingestão agendada
 

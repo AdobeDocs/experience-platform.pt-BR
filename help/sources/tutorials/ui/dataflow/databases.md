@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector de banco de dados na interf
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de banco de dados.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1396'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,15 @@ Com base em suas necessidades, você pode optar por mapear os campos diretamente
 >
 >[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
 
-Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Avançar]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selecione dados **[!UICONTROL de]** Pré-visualização para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+
+Durante a pré-visualização, a coluna de identidade é priorizada como o primeiro campo, já que são as principais informações necessárias ao validar os resultados do mapeamento.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Fechar]**.
 
 ## Execuções de ingestão agendada
 

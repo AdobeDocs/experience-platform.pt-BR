@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector de pagamento na interface d
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Adobe Experience Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de pagamentos.
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,13 @@ A caixa de diálogo **[!UICONTROL Selecionar schema]** é exibida. Selecione o s
 
 Com base em suas necessidades, você pode optar por mapear os campos diretamente ou usar as funções do mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre funções de mapeamento e mapeamento de dados, consulte o tutorial sobre como [mapear dados CSV para campos](../../../../ingestion/tutorials/map-a-csv-file.md)de schema XDM.
 
-Depois que os dados de origem forem mapeados, clique em **[!UICONTROL Avançar]**.
+>[!TIP]
+>
+>[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Avançar]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Execuções de ingestão agendada
 

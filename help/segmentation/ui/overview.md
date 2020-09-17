@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia do usuário do Serviço de segmentação
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,19 @@ Selecione a guia **[!UICONTROL Procurar]** para ver uma lista de todas as defini
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Essa visualização lista informações sobre a definição do segmento, incluindo o método de avaliação, a data de criação e a data da última modificação.
+Essa visualização lista informações sobre a definição do segmento, incluindo detalhamento, taxa, contagem de perfis, método de avaliação, data de criação e data da última modificação.
+
+O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Informado], [!UICONTROL Realizado]e [!UICONTROL Saindo].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| Status | Descrição |
+| ------ | ----------- |
+| Digitado | Um novo perfil dentro do segmento. |
+| Realizado | Um perfil existente que permaneceu dentro do segmento. |
+| Saindo | Um perfil existente que está deixando o segmento. |
+
+A taxa representa a porcentagem de perfis que estão mudando dentro de uma definição de segmento em comparação à última vez que o trabalho de segmento foi executado, enquanto a contagem de perfis representa o número total de perfis que se qualificam para o segmento.
 
 O método de avaliação pode ser streaming ou lote. Segmentos de transmissão são constantemente avaliados à medida que os dados entram no sistema. Os segmentos de lote são avaliados de acordo com uma programação definida.
 

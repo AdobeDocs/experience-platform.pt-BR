@@ -5,7 +5,7 @@ title: Analise seus dados usando notebooks
 topic: Tutorial
 description: Este tutorial foca em como usar notebooks Júpiter, criados na Data Science Workspace, para acessar, explorar e visualizar seus dados.
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Por padrão, a fórmula do Tensorflow funciona em um cluster de GPU e o Python �
 
 Na [!DNL Adobe Experience Platform] interface do usuário, clique na guia Data Science no menu superior para levá-lo à Data Science Workspace. Nesta página, clique na [!DNL JupyterLab] guia que abrirá o [!DNL JupyterLab] iniciador. Você deve ver uma página semelhante a esta.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 Em nosso tutorial, estaremos usando o [!DNL Python] 3 no notebook de Júpiter para mostrar como acessar e explorar os dados. Na página Iniciador, há exemplos de notebooks fornecidos. Usaremos a receita de vendas de varejo para [!DNL Python] 3.
 

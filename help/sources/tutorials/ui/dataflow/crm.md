@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector CRM na interface do usuári
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ Com base em suas necessidades, você pode optar por mapear os campos diretamente
 >
 >[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
 
-Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Avançar]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selecione dados **[!UICONTROL de]** Pré-visualização para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+
+Durante a pré-visualização, a coluna de identidade é priorizada como o primeiro campo, já que são as principais informações necessárias ao validar os resultados do mapeamento.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Depois que os dados de origem forem mapeados, selecione **[!UICONTROL Fechar]**.
 
 ## Execuções de ingestão agendada
 
@@ -92,7 +98,7 @@ A etapa **[!UICONTROL Agendamento]** é exibida, permitindo que você configure 
 | Frequência | As frequências selecionáveis incluem `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervalo | Um número inteiro que define o intervalo para a frequência selecionada. |
 | hora do start | Um carimbo de data e hora UTC indicando quando a primeira ingestão está definida para ocorrer. |
-| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o **[!UICONTROL preenchimento retroativo ]*estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o*preenchimento retroativo *estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora*[!UICONTROL do ]*Start serão assimilados. Os arquivos carregados antes da hora*[!UICONTROL do]** Start não serão ingeridos. |
+| Backfill | Um valor booliano que determina quais dados são inicialmente assimilados. Se o **[!UICONTROL preenchimento retroativo]** estiver ativado, todos os arquivos atuais no caminho especificado serão ingeridos durante a primeira ingestão programada. Se o **[!UICONTROL preenchimento retroativo]** estiver desativado, somente os arquivos carregados entre a primeira execução da ingestão e a hora **[!UICONTROL do]** Start serão assimilados. Os arquivos carregados antes da hora **[!UICONTROL do]** Start não serão ingeridos. |
 | Coluna Delta | Uma opção com um conjunto filtrado de campos de schema de origem de tipo, data ou hora. Esse campo é usado para diferenciar entre dados novos e existentes. Os dados incrementais serão ingeridos com base no carimbo de data e hora da coluna selecionada. |
 
 Os fluxos de dados são projetados para assimilar dados automaticamente de acordo com uma programação. Start selecionando a frequência da ingestão. Em seguida, defina o intervalo para designar o período entre duas execuções de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser definido como maior ou igual a 15.

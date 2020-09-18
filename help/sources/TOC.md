@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 breadcrumb-title: Source Connectors Guide
-user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+user-guide-description: Structure, label, and enhance ingested data or ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -108,11 +108,11 @@ ht-degree: 0%
          - [Conector do SQL Server](tutorials/api/create/databases/sql-server.md)
       - Automação de marketing {#marketing-automation}
          - [Conector HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
-      - Pagamentos {#payments}
+      - oud {#payments}
          - [Conector PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
-   - Explorar dados {#explore}
+   - Pagamentos {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento em nuvem](tutorials/api/explore/cloud-storage.md)
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)

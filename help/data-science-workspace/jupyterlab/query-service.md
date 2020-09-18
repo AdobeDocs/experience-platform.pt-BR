@@ -5,7 +5,7 @@ title: Serviço de query em Jupyter notebook
 topic: Tutorial
 description: A Adobe Experience Platform permite que você use a Linguagem de Query Estruturada (SQL) na Data Science Workspace, integrando o Serviço de Query ao JúpiterLab como um recurso padrão. Este tutorial demonstra query SQL de amostra para casos de uso comuns para explorar, transformar e analisar dados da Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 69c466658e1cb41f4da957148e63b962ad975a21
+source-git-commit: f1af460ca139d6105e8e6bbbf62809d72ef730ee
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    - [[!DNL Experience Data Model (XDM) e Sistema XDM]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
    - [[!DNL Query Service Sintaxe SQL]](../../query-service/sql/overview.md)
-   - [Adobe Analytics]
+   - Adobe Analytics
 
 ## Acesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 

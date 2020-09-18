@@ -5,9 +5,9 @@ title: Visão geral da Análise do espaço de trabalho da Data Science
 topic: overview
 description: Este guia fornece uma visão geral dos principais conceitos relacionados à Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Ao navegar, use R, [!DNL Python]ou Scala com a página integrada hospedada [!DNL
 
 Como parte do fluxo de trabalho da exploração de dados, você também pode assimilar novos dados ou usar recursos existentes para ajudar na preparação dos dados.
 
-### Criação  
+### Criação
 
 Com [!DNL Data Science Workspace], você decide como quer criar receitas.
 
@@ -182,7 +182,7 @@ Você pode usar [!DNL Jupyter Notebook] para simplificar o pré-processamento de
 
 ### Aumentar a receita
 
-Se você já encontrar uma fórmula que atenda a todas as suas necessidades, poderá passar para a experimentação. Ou você pode modificar um pouco a fórmula ou criar uma do zero - aproveitando o tempo de execução de [!DNL Data Science Workspace] criação em [!DNL Jupyter Notebook]. O uso do tempo de execução de criação garante que você possa usar o fluxo de trabalho de treinamento e de pontuação e converter a receita posteriormente para que possa ser armazenada e reutilizada por outras pessoas em sua organização. [!DNL Data Science Workspace]
+Se você já encontrar uma fórmula que atenda a todas as suas necessidades, poderá passar para a experimentação. Ou você pode modificar um pouco a fórmula ou criar uma do zero - aproveitando o tempo de execução de [!DNL Data Science Workspace] criação em [!DNL Jupyter Notebook]. O uso do tempo de execução de criação garante que você possa usar o fluxo de trabalho de treinamento e pontuação e converter a receita posteriormente para que possa ser armazenada e reutilizada por outras pessoas em sua organização. [!DNL Data Science Workspace]
 
 Você também pode importar uma receita para [!DNL Data Science Workspace] e aproveitar os workflows de experimentação ao criar seu serviço inteligente.
 
@@ -196,7 +196,7 @@ Com uma receita que incorpora os algoritmos principais de aprendizado de máquin
 
 ![](./images/home/evaluation_metrics.png)
 
-Visite [esta seção](https://www.adobe.io/apis/experienceplatform/home/tutorials/data-science-workspace/dsw-tutorials/trainmodel.html) para obter tutoriais sobre como treinar e avaliar modelos em [!DNL Data Science Workspace].
+Visite o tutorial da [API](./models-recipes/train-evaluate-model-api.md) ou da [interface](./models-recipes/train-evaluate-model-ui.md) do usuário sobre como treinar e avaliar modelos no [!DNL Data Science Workspace].
 
 ### Operacionalizar o modelo
 
@@ -206,7 +206,7 @@ Um serviço inteligente publicado é configurável para se treinar automaticamen
 
 ## Próximas etapas
 
-[!DNL Data Science Workspace] ajuda a otimizar e simplificar o fluxo de trabalho da ciência de dados, desde a coleta de dados até os algoritmos e serviços inteligentes, para cientistas de dados de todos os níveis de habilidades. Com as ferramentas sofisticadas [!DNL Data Science Workspace] fornecidas, é possível reduzir significativamente o tempo de dados para insights.
+[!DNL Data Science Workspace] ajuda a simplificar o fluxo de trabalho da ciência de dados, desde a coleta de dados até os algoritmos até serviços inteligentes para cientistas de dados de todos os níveis de habilidades. Com as ferramentas sofisticadas [!DNL Data Science Workspace] fornecidas, é possível reduzir significativamente o tempo de dados para insights.
 
 Mais importante, [!DNL Data Science Workspace] coloca os recursos de ciência de dados e otimização de algoritmos da plataforma de marketing líder em Adobe nas mãos dos cientistas de dados da empresa. Pela primeira vez, as empresas podem trazer algoritmos proprietários para a plataforma, aproveitando os poderosos recursos de aprendizado de máquina e AI para fornecer experiências altamente personalizadas aos clientes em larga escala.
 

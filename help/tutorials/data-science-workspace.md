@@ -5,9 +5,9 @@ title: Tutoriais da Data Science Workspace
 topic: tutorial
 description: A Adobe Experience Platform Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,18 @@ Para saber mais e obter os valores necessários para executar operações CRUD c
 - Acesse e entenda a [!DNL JupyterLab] interface.
 - Entenda as células de código e os kernels disponíveis dentro [!DNL JupyterLab].
 - Entenda a configuração da GPU e do servidor de memória em [!DNL Python]/R.
-- Leia e query [!DNL Platform] de dados usando notebooks.
-- Entenda os limites de dados do notebook.
 
 Para saber mais, visite o guia [do usuário do](../data-science-workspace/jupyterlab/overview.md)JupyterLab.
+
+## Acesso a dados em notebooks JupyterLab
+
+Atualmente, o JupyterLab na Data Science Workspace suporta notebooks para [!DNL Python]R, PySpark e Scala. Cada kernel suportado fornece funcionalidades incorporadas que permitem ler dados da plataforma a partir de um conjunto de dados dentro de um notebook. No entanto, o suporte para paginação de dados é limitado a notebooks [!DNL Python] e R. Este guia foca em como usar notebooks JupyterLab para acessar seus dados.
+
+**Este guia o ajudará a:**
+- Leia, grave e utilize os dados da Plataforma de query usando notebooks Python, R, PySpark ou Scala.
+- Entenda as limitações de leitura de cada tipo de notebook.
+
+Para saber mais, visite o guia do desenvolvedor de acesso aos dados do notebook [JupyterLab](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Arquivos de origem do pacote para criação de [!DNL Docker] fórmula
 

@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Monitorar contas e fluxos de dados
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 0%
+source-wordcount: '1097'
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ Na página **[!UICONTROL Contas]** , é possível visualização de uma lista de
 
 | Controle | Descrição |
 | ------- | ----------- |
-| [!UICONTROL Editar agendamento] | Permite editar o agendamento de ingestão do fluxo de dados. |
+| [!UICONTROL Editar programação] | Permite editar o agendamento de ingestão do fluxo de dados. |
 | [!UICONTROL Desativar o fluxo de dados] | Permite desativar a ingestão de dados para o fluxo de dados selecionado. |
 | [!UICONTROL Excluir] | Permite que você exclua o fluxo de dados selecionado. |
 
@@ -72,7 +72,18 @@ Os fluxos de dados podem ser acessados diretamente da página **[!UICONTROL Cat�
 
 ![catálogo-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Uma lista de fluxos de dados existentes é exibida. Nesta página há uma lista de fluxos de dados visualizáveis, incluindo informações sobre sua fonte, nome de usuário, número de fluxos de dados e status. Selecione o ícone de funil na parte superior esquerda para classificar.
+Uma lista de fluxos de dados existentes é exibida. Nesta página há uma lista de fluxos de dados visualizáveis, incluindo informações sobre sua fonte, nome de usuário, número de fluxos de dados e status.
+
+Consulte a tabela a seguir para obter mais informações sobre status:
+
+| Status | Descrição |
+| ------ | ----------- |
+| Ativado | O `Enabled` status indica que um fluxo de dados está ativo e está ingerindo dados de acordo com o agendamento fornecido. |
+| Desativado | O `Disabled` status indica que um fluxo de dados está inativo e não está ingerindo dados. |
+| Processamento | O `Processing` status indica que um fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados. |
+| Erro | O `Error` status indica que o processo de ativação de um fluxo de dados foi interrompido. |
+
+Selecione o ícone de funil na parte superior esquerda para classificar.
 
 ![lista de dados](../../images/tutorials/monitor/dataflows-list.png)
 

@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Guia de solução de problemas do Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 # Guia de solução de problemas do Perfil do cliente em tempo real
 
-Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns. Para questões e solução de problemas relacionados a outros serviços no Adobe Experience Platform, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
+Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns. Para questões e solução de problemas relacionados a outros serviços da Adobe Experience Platform, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
 
 O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico que reúne dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 
@@ -26,15 +25,15 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Perfil do
 
 O Perfil aceita dados de **registro** e de série **** cronológica, desde que os dados em questão contenham pelo menos um valor de identidade que associe os dados a uma pessoa individual única.
 
-Como todos os serviços da Platform, o Perfil exige que seus dados sejam estruturados semanticamente em um schema do Modelo de Dados de Experiência (XDM). Por sua vez, esse schema deve ter uma identidade **** primária definida e estar habilitado para uso no Perfil.
+Como todos os serviços da plataforma, o Perfil exige que seus dados sejam estruturados semanticamente em um schema do Modelo de Dados de Experiência (XDM). Por sua vez, esse schema deve ter uma identidade **** primária definida e estar habilitado para uso no Perfil.
 
 Se você não estiver familiarizado com o XDM, start com a visão geral [do](../xdm/home.md) XDM para saber mais. Em seguida, consulte o guia do usuário XDM para obter etapas sobre como [definir campos](../xdm/tutorials/create-schema-ui.md#identity-field) de identidade e [ativar um schema para o Perfil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Onde os dados do Perfil são armazenados?
 
-O Perfil do cliente em tempo real mantém seu próprio armazenamento de dados (conhecido como &quot;repositório de Perfis&quot;), separado do Data Lake que contém outros dados Platform assimilados.
+O Perfil do cliente em tempo real mantém seu próprio armazenamento de dados (conhecido como &quot;repositório de Perfis&quot;), separado do Data Lake que contém outros dados de plataforma assimilados.
 
-### Se eu já ingerir dados na Platform, posso disponibilizá-los na Perfil store?
+### Se eu já ingerir dados na Plataforma, posso disponibilizá-los na Perfil store?
 
 Se os dados tiverem sido ingeridos em um conjunto de dados que não seja de Perfil, você deverá assimilá-los novamente em um conjunto de dados habilitado para Perfil para disponibilizá-los no repositório de Perfis. É possível habilitar um conjunto de dados existente para o Perfil, no entanto, quaisquer dados que foram ingeridos antes dessa configuração ainda não aparecerão no repositório de Perfis.
 
@@ -48,7 +47,7 @@ Existem vários métodos de exibição de dados de Perfil, dependendo se você e
 
 Se você souber as IDs das entidades de Perfil que deseja acessar, poderá usar o terminal `/entities` (acesso ao Perfil) na API do Perfil para procurar essas entidades. Consulte a seção sobre [entidades](./api/entities.md) no guia do desenvolvedor para obter mais informações.
 
-Você também pode usar a API de serviço de segmentação de Adobe Experience Platform para acessar os perfis individuais dos clientes que se qualificaram para uma associação de segmento. See the [Segmentation Service overview](../segmentation/home.md) for more information.
+Você também pode usar a Adobe Experience Platform Segmentation Service API para acessar os perfis individuais dos clientes que se qualificaram para uma associação de segmento. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### Uso da interface
 
@@ -58,7 +57,7 @@ Você também pode visualização uma lista dos segmentos na guia **[!UICONTROL 
 
 ## Códigos de erro
 
-Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com a API do Perfil do cliente em tempo real. Se o erro encontrado não estiver listado aqui, você pode encontrá-lo no guia [geral de solução de problemas da](../landing/troubleshooting.md) Platform.
+Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com a API do Perfil do cliente em tempo real. Se o erro encontrado não estiver listado aqui, você pode encontrá-lo no guia [geral de solução de problemas da](../landing/troubleshooting.md) plataforma.
 
 ### Não foi possível pesquisar o schema do atributo calculado para o caminho fornecido
 

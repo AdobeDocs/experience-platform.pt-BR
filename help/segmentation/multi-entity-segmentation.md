@@ -5,9 +5,9 @@ title: Segmentação de várias entidades
 topic: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais baseados em produtos, lojas ou outras classes que não sejam perfis. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos para o schema do Perfil.
 translation-type: tm+mt
-source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
+source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,16 @@ A criação de um segmento de várias entidades requer primeiro a definição de
 
 ### Definir relacionamentos
 
-A definição de relacionamentos dentro da estrutura dos schemas do Modelo de Dados de Experiência (XDM) é parte integrante da criação de segmentos de várias entidades. Esse processo pode ser feito usando a API do Registro do Schema ou o Editor do Schema. Para obter etapas detalhadas mostrando como definir uma relação entre dois schemas, escolha um dos seguintes tutoriais:
+A definição de relacionamentos dentro da estrutura dos schemas do Modelo de Dados de Experiência (XDM) é parte integrante da criação de segmentos de várias entidades. Para relacionamentos, o campo no destino precisa ser marcado como a identidade primária desse schema. Uma identidade só pode ser marcada em strings e não pode ser marcada em arrays. Além disso, os relacionamentos não precisam ser necessariamente um para um, pois você pode conectar perfis e experimentar eventos a vários destinos.
+
+A definição de relações pode ser feita usando a API de Registro do Schema ou o Editor do Schema. Para obter etapas detalhadas mostrando como definir uma relação entre dois schemas, escolha um dos seguintes tutoriais:
 
 * [Definição de uma relação entre dois schemas usando a API](../xdm/tutorials/relationship-api.md)
 * [Definição de uma relação entre dois schemas usando a interface do editor de Schemas](../xdm/tutorials/relationship-ui.md)
 
 ### Criar um segmento multientidade
 
-Depois de definir os relacionamentos XDM necessários, você pode começar a criar um segmento multientidade. Esse processo pode ser feito usando a API de segmentação ou a interface do usuário do Construtor de segmentos. Para obter mais informações, escolha um dos seguintes guias:
+Depois de definir os relacionamentos XDM necessários, você pode começar a criar um segmento multientidade. Isso pode ser feito usando a API de segmentação ou a interface do usuário do Construtor de segmentos. Para obter mais informações, escolha um dos seguintes guias:
 
 * [Criação de um segmento usando a API de segmentação](./tutorials/create-a-segment.md)
 * [Criação de um segmento usando a interface do usuário do Construtor de segmentos](./ui/overview.md)

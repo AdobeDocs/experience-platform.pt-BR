@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector em lote de armazenamentos n
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,11 @@ A caixa de diálogo **[!UICONTROL Selecionar conjunto de dados]** é exibida. En
 
 Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos. Para adicionar um schema, você pode inserir um nome de schema existente na caixa de diálogo **[!UICONTROL Selecionar schema]** . Como alternativa, você pode selecionar a pesquisa **[!UICONTROL avançada do]** Schema para procurar um schema apropriado.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+Durante esta etapa, você pode ativar seu conjunto de dados para [!DNL Real-time Customer Profile] e criar uma visualização holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados serão incluídos e as alterações serão aplicadas quando você salvar seu fluxo de dados. [!DNL Profile]
+
+Alterne o botão Conjunto de dados **[!UICONTROL do]** Perfil para ativar o conjunto de dados do público alvo para [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 A caixa de diálogo **[!UICONTROL Selecionar schema]** é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e, em seguida, selecione **[!UICONTROL Concluído]**.
 

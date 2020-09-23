@@ -5,9 +5,9 @@ title: Configurar um fluxo de dados para um conector de publicidade na interface
 topic: overview
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Adobe Experience Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de publicidade.
 translation-type: tm+mt
-source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
+source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,11 @@ Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Criar
 
 É possível anexar um campo de schema inserindo um nome de schema na barra de pesquisa **[!UICONTROL Selecionar schema]** . Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar Pesquisa **** avançada para acessar a tela de schemas existentes, incluindo seus respectivos detalhes.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+Durante esta etapa, você pode ativar seu conjunto de dados para [!DNL Real-time Customer Profile] e criar uma visualização holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados serão incluídos e as alterações serão aplicadas quando você salvar seu fluxo de dados. [!DNL Profile]
+
+Alterne o botão Conjunto de dados **[!UICONTROL do]** Perfil para ativar o conjunto de dados do público alvo para [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/advertising/target-dataset.png)
 
 A caixa de diálogo **[!UICONTROL Selecionar schema]** é exibida. Selecione o schema que deseja aplicar ao novo conjunto de dados e clique em **[!DNL Done]**.
 

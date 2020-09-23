@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
-solution: Adobe Experience Platform
 title: Configurar um conjunto de dados para Perfil e serviço de identidade usando APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 1%
@@ -28,7 +27,7 @@ Este tutorial aborda o processo de ativação de um conjunto de dados para uso e
 Este tutorial requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados [!DNL Profile]habilitados. Antes de iniciar este tutorial, reveja a documentação dos seguintes [!DNL Platform] serviços relacionados:
 
 - [[!DNL Perfil do cliente em tempo real]](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-- [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de fontes de dados diferentes em [!DNL Platform]que estão sendo ingeridas.
+- [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de fontes de dados diferentes em [!DNL Platform]que estão sendo assimiladas.
 - [[!DNL Catalog Service]](../../catalog/home.md): Uma API RESTful que permite criar conjuntos de dados e configurá-los para [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 

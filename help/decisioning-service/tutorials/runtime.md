@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;decision events;decision event
 solution: Experience Platform
 title: Trabalhar com tempo de execução do serviço de decisão usando APIs
 topic: tutorial
+type: Tutorial
 description: 'Este documento fornece um tutorial para trabalhar com os serviços de tempo de execução do serviço de decisão usando APIs da Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
@@ -21,9 +22,9 @@ Este documento fornece um tutorial para trabalhar com os serviços de tempo de e
 
 Este tutorial requer uma compreensão do trabalho dos [!DNL Experience Platform] serviços envolvidos na tomada de decisões e na determinação da próxima melhor oferta a ser apresentada durante as experiências do cliente. Antes de iniciar este tutorial, reveja a documentação do seguinte:
 
-- [[!DNL Decisioning Service]](./../home.md): Fornece a estrutura para adicionar e remover ofertas e criar algoritmos para escolher o melhor para apresentar durante a experiência do cliente.
+- [[!Serviço de Decisão DNL]](./../home.md): Fornece a estrutura para adicionar e remover ofertas e criar algoritmos para escolher o melhor para apresentar durante a experiência do cliente.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): O PQL é usado para definir regras e filtros.
+- [[!Linguagem de Query de Perfil DNL (PQL)](../../segmentation/pql/overview.md): O PQL é usado para definir regras e filtros.
 - [Gerencie objetos e regras de decisão usando APIs](./entities.md): Antes de usar o tempo de execução dos Serviços de tomada de decisão, será necessário configurar as entidades relacionadas.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.

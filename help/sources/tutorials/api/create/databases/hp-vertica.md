@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
 title: Crie um conector HP Vertica usando a API de Serviço de Fluxo
 topic: overview
+type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o HP Vertica ao Experience Platform.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 3%

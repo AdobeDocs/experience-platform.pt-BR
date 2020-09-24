@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;activate inbound data;populate
 solution: Experience Platform
 title: Ativar dados de origem de entrada para preencher perfis de clientes
 topic: overview
+type: Tutorial
 description: Os dados de entrada do conector de origem podem ser usados para enriquecer e preencher os dados de Perfil do cliente em tempo real.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%

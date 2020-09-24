@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Da
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector CRM na interface do usuário
 topic: overview
+type: Tutorial
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta CRM.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 0%

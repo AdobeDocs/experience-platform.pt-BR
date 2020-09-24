@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;manage decisioning;decisioning
 solution: Experience Platform
 title: Gerenciar entidades do serviço de decisão usando APIs
 topic: tutorial
+type: Tutorial
 description: 'Este documento fornece um tutorial para trabalhar com as entidades de negócios do Serviço de tomada de decisão usando APIs da Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '7239'
 ht-degree: 0%
@@ -28,8 +29,8 @@ O tutorial tem duas partes:
 Este tutorial requer uma compreensão funcional dos [!DNL Experience Platform] serviços e das convenções da API. O [!DNL Platform] repositório é um serviço usado por vários outros [!DNL Platform] serviços para armazenar objetos de negócios e vários tipos de metadados. Ele oferece uma maneira segura e flexível de gerenciar e query desses objetos para uso por vários serviços de tempo de execução. O [!DNL Decisioning Service] é um desses. Antes de iniciar este tutorial, reveja a documentação do seguinte:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [[!DNL Decisioning Service]](./../home.md): Explica os conceitos e componentes utilizados para a Decisão de Experiência em geral e para a decisão Oferta em particular. Ilustra as estratégias usadas para escolher a melhor opção para apresentar durante a experiência de um cliente.
-- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): O PQL é um idioma avançado para gravar expressões em instâncias do XDM. O PQL é usado para definir regras de decisão.
+- [[!Serviço de Decisão DNL]](./../home.md): Explica os conceitos e componentes utilizados para a Decisão de Experiência em geral e para a decisão Oferta em particular. Ilustra as estratégias usadas para escolher a melhor opção para apresentar durante a experiência de um cliente.
+- [[!Linguagem de Query de Perfil DNL (PQL)](../../segmentation/pql/overview.md): O PQL é um idioma avançado para gravar expressões em instâncias do XDM. O PQL é usado para definir regras de decisão.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.
 

@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synaps
 solution: Experience Platform
 title: Criar um conector de origem do Azure Synapse Analytics na interface do usuário
 topic: overview
+type: Tutorial
 description: Este tutorial fornece etapas para a criação de um conector de origem do Azure Synapse Analytics (a seguir denominado "Synapse") usando a interface de usuário da Plataforma.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 1%
@@ -40,7 +41,7 @@ Para acessar sua [!DNL Synapse] conta em [!DNL Platform], forneça os seguintes 
 | ---------- | ----------- |
 | `connectionString` | A cadeia de conexão associada à sua [!DNL Synapse] autenticação. O padrão da string de [!DNL Synapse] conexão é `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
-Para obter mais informações sobre esse valor, consulte [ [!DNL Synapse] este documento](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
+For more information about this value, refer to [this [!DNL Synapse] document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 
 ## Conectar sua [!DNL Synapse] conta
 

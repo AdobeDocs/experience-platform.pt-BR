@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: Criar e publicar uma apresentação de modelo de aprendizado de máquina
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: A Adobe Experience Platform Data Science Workspace fornece os meios para atingir sua meta usando a Receita Recommendations de produto pré-criada. Siga este tutorial para ver como você pode acessar e entender seus dados de varejo, criar e otimizar um Modelo de aprendizado de máquina e gerar insights na Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%

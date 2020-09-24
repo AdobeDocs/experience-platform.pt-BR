@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;configure dataflow;advertising
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de publicidade na interface do usuário
 topic: overview
+type: Tutorial
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados Adobe Experience Platform. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de publicidade.
 translation-type: tm+mt
-source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 0%

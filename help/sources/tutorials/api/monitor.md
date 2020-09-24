@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;monitor dataflows;flow service
 solution: Experience Platform
 title: Fluxos e execuções do monitor
 topic: overview
+type: Tutorial
 description: Este tutorial aborda as etapas para monitorar os dados de execução do fluxo para obter integridade, erros e métricas usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 1%

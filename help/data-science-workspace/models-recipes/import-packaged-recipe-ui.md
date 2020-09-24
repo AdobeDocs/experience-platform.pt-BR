@@ -2,10 +2,11 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;ui;create engine
 solution: Experience Platform
 title: Importar uma receita empacotada (IU)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Este tutorial fornece informações sobre como configurar e importar uma receita empacotada usando o exemplo de Vendas de Varejo fornecido. Até o final deste tutorial, você estará pronto para criar, treinar e avaliar um Modelo na Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 0%

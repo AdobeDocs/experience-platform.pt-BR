@@ -5,9 +5,9 @@ title: Criar um esquema usando o Editor de esquemas.
 topic: tutorials
 description: Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3835'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Para começar, selecione o nome da mistura na seção **[!UICONTROL Misturas]** 
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Selecione **[!UICONTROL Adicionar campo]** ao lado de &quot;[!DNL Loyalty Members]&quot; para criar um novo nó na estrutura. Esse nó (chamado &quot;_locatárioId&quot; neste exemplo) representa a ID de locatário da organização IMS, precedida de um sublinhado. A presença da ID do locatário indica que os campos que você está adicionando estão contidos na namespace de sua organização.
+Selecione **[!UICONTROL Adicionar campo]** ao lado de &quot;[!DNL Loyalty Members]&quot; para criar um novo nó na estrutura. Esse nó (chamado `_tenantId` neste exemplo) representa a ID de locatário da Organização IMS, precedida por um sublinhado. A presença da ID do locatário indica que os campos que você está adicionando estão contidos na namespace de sua organização.
 
 Em outras palavras, os campos que você está adicionando são exclusivos à sua organização e serão salvos no [!DNL Schema Registry] em uma área específica acessível apenas à sua organização. Os campos que você definir devem ser sempre adicionados à namespace do locatário para evitar colisões com nomes de outras classes padrão, combinações, tipos de dados e campos.
 
@@ -236,6 +236,10 @@ Seu schema agora contém várias combinações além dos campos fornecidos por s
 Se você estiver procurando um campo específico no seu schema, também poderá usar a barra de pesquisa para filtrar os campos exibidos pelo nome, independentemente da combinação em que eles são fornecidos.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>A função de pesquisa leva em conta qualquer filtros de combinação selecionado ao exibir campos correspondentes. Se um query de pesquisa não estiver exibindo os resultados que você espera, talvez seja necessário verificar no duplo se você não está filtrando nenhuma mistura relevante.
 
 ## Definir um campo de schema como um campo de identidade {#identity-field}
 

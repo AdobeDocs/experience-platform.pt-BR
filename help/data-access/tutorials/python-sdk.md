@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;data access;python sdk;data ac
 solution: Experience Platform
 title: SDK seguro de acesso a dados Python
 topic: tutorial
+type: Tutorial
 description: O Secure Python Data Access SDK é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%

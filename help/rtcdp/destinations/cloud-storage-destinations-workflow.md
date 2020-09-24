@@ -2,10 +2,11 @@
 keywords: cloud storage destination;cloud storage
 title: Fluxo de trabalho de destinos de armazenamentos na nuvem
 seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
+type: Tutorial
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%

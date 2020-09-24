@@ -4,8 +4,9 @@ description: Os conectores de origem na Adobe Experience Platform fornecem a cap
 solution: Experience Platform
 title: Excluir fluxos de dados
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 1%

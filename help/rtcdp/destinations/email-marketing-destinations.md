@@ -2,10 +2,11 @@
 keywords: email;Email;e-mail;email destinations
 title: Destinos de marketing de email
 seo-title: Destinos de marketing de email
+type: Tutorial
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 1%
@@ -15,7 +16,7 @@ ht-degree: 1%
 
 # Destinos de marketing de email {#email-marketing-destinations}
 
-Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como enviar campanhas de email promocionais. A Plataforma de dados do cliente em tempo real do Adobe integra-se aos ESPs, permitindo que você ative segmentos para destinos de marketing por email.
+Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como o envio de campanhas de email promocionais. A Plataforma de dados do cliente em tempo real do Adobe integra-se aos ESPs, permitindo que você ative segmentos para destinos de marketing por email.
 
 Para enviar segmentos para destinos de marketing de email para suas campanhas, a CDP em tempo real do Adobe deve primeiro se conectar ao destino.
 

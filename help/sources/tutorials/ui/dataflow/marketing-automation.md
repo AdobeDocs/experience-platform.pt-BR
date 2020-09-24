@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de automação de marketing na interface do usuário
 topic: overview
+type: Tutorial
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um [!DNL Platform] conjunto de dados. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de automação de marketing.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 0%

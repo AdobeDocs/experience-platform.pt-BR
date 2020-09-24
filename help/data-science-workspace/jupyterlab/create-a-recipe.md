@@ -2,10 +2,11 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Crie uma receita usando notebooks em Júpiter
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo no Notebook JupyterLab. Em seguida, você exercerá o fluxo de trabalho do notebook para receber receitas dentro do JupyterLab para criar uma receita dentro da Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%

@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros usando a API de Serviço de Fluxo
 topic: overview
+type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para assimilar dados de busca de um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1088'
 ht-degree: 2%
 
 ---
@@ -36,17 +37,17 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
 
-- Autorização: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: `{SANDBOX_NAME}`
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
-- Tipo de conteúdo: `application/json`
+- `Content-Type: application/json`
 
 ## Criar uma conexão
 

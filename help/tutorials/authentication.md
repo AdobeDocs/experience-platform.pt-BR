@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Autenticar e acessar APIs Experience Platform
 topic: tutorial
+type: Tutorial
 description: 'Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor Adobe Experience Platform para fazer chamadas para APIs Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 1%
@@ -162,4 +163,4 @@ Se sua resposta for semelhante à mostrada abaixo, suas credenciais serão váli
 
 Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para [!DNL Platform] APIs. Agora você pode seguir com as chamadas de API de exemplo fornecidas na [documentação](../landing/documentation/overview.md).
 
-Além dos valores de autenticação que você coletou neste tutorial, muitas [!DNL Platform] APIs também exigem um valor válido `{SANDBOX_NAME}` para ser fornecido como cabeçalho. Consulte a visão geral [das](../sandboxes/home.md) caixas de proteção para obter mais informações.
+Além dos valores de autenticação que você coletou neste tutorial, muitas [!DNL Platform] APIs também exigem um valor válido `{SANDBOX_NAME}` para ser fornecido como cabeçalho. See the [sandboxes overview](../sandboxes/home.md) for more information.

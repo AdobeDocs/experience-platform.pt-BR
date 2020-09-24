@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Criar um schema usando a API de registro do Schema
-topic: tutorials
+topic: tutorial
+type: Tutorials
 description: Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2368'
 ht-degree: 1%
@@ -23,7 +24,7 @@ Este tutorial usa a [!DNL Schema Registry] API para guiá-lo pelas etapas para c
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
 * [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
@@ -347,7 +348,7 @@ As [!DNL Schema Registry] contas para isso permitem que você defina suas própr
 
 Para criar (POST) uma nova combinação, sua solicitação deve incluir um `meta:intendedToExtend` campo que contenha o campo `$id` para as classes base com as quais a combinação é compatível, juntamente com as propriedades que a mistura incluirá.
 
-Todas as propriedades personalizadas devem ser aninhadas sob sua conta `TENANT_ID` para evitar colisões com outras combinações ou campos.
+Todas as propriedades personalizadas devem ser aninhadas em suas contas `TENANT_ID` para evitar colisões com outras combinações ou campos.
 
 **Formato da API**
 

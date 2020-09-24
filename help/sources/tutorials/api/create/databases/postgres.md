@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psq
 solution: Experience Platform
 title: Criar um conector PostgreSQL usando a API de Serviço de Fluxo
 topic: overview
+type: Tutorial
 description: Este tutorial usa a API do Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao PostgreSQL (a seguir denominado "PSQL").
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 2%

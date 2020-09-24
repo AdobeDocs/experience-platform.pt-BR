@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;a
 solution: Experience Platform
 title: Criar um conector Gen2 do Armazenamento Azure Data Lake usando a API de Serviço de Fluxo
 topic: overview
+type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Armazenamento Gen2 do Azure Data Lake (a seguir denominado "ADLS Gen2").
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 2%

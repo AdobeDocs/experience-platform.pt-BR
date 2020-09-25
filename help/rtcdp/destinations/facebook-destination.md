@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Destino do Facebook
 seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,10 @@ ht-degree: 2%
 
 Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, personalização e supressão de audiências com base em emails com hash.
 
+Você pode usar esse destino para segmentação de audiências em toda a [!DNL Facebook’s] família de aplicativos compatíveis com [!DNL Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram][!DNL Audience Network] e [!DNL Messenger]. A seleção do aplicativo no qual você deseja executar a campanha é indicada no nível de posicionamento no [!DNL Facebook Ads Manager].
+
 ![Destino do Facebook na interface do usuário do CDP em tempo real](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## Casos de uso
 

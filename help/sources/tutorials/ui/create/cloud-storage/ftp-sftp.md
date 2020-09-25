@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de origem FTP ou SFTP usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -61,9 +61,24 @@ A página **[!UICONTROL Conectar-se ao SFTP]** é exibida. Nesta página, você 
 
 ### Nova conta
 
-Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais FTP ou SFTP. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
-![connect](../../../../images/tutorials/create/sftp/new.png)
+O conector SFTP fornece tipos de autenticação diferentes para acesso. Em Autenticação **[!UICONTROL de]** conta, selecione **[!UICONTROL Senha]** para usar uma credencial baseada em senha.
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+Como alternativa, você pode selecionar chave **[pública SSH e conectar sua conta SFTP usando uma combinação de conteúdo]** de chave **[!UICONTROL privada e]** Senha ****.
+
+>[!IMPORTANT]
+>
+>O conector SFTP suporta uma chave RSA/DSA OpenSSH. Certifique-se de que seu conteúdo de arquivo principal seja start com `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Se o arquivo de chave privada for um arquivo no formato PPK, use a ferramenta PuTTY para converter do formato PPK para OpenSSH.
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| Credencial | Descrição |
+| ---------- | ----------- |
+| Conteúdo da chave privada | Um conteúdo de chave privada SSH codificado em Base64. A chave privada SSH deve estar no formato OpenSSH. |
+| Senha | Especifica a senha ou senha para descriptografar a chave privada se o arquivo de chave ou o conteúdo de chave estiver protegido por uma senha. Se PrivateKeyContent for protegido por senha, esse parâmetro deverá ser usado com a senha de PrivateKeyContent como valor. |
 
 ### Conta existente
 

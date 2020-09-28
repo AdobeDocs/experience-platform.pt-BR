@@ -5,7 +5,7 @@ user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Structure, label, and enhance ingested data or ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
+source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -64,7 +64,7 @@ ht-degree: 0%
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - Automação de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
-   - Pagamentos {#payments}
+   - oud {#payments}
       - [Conector PayPal](connectors/payments/paypal.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
@@ -112,7 +112,7 @@ ht-degree: 0%
          - [Conector PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
-   - Pagamentos {#explore}
+   - Explorar dados {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento em nuvem](tutorials/api/explore/cloud-storage.md)
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da ingestão parcial de lote Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -292,7 +292,15 @@ Se o lote tiver um ou mais erros e o diagnóstico de erros estiver ativado, a re
 >}
 >```
 
-## Tipos de erro de ingestão parcial em lote {#appendix}
+## Próximas etapas {#next-steps}
+
+Este tutorial aborda como monitorar erros de ingestão em lote parcial. Para mais informações sobre a ingestão por lote, leia o guia [do desenvolvedor da ingestão por](../batch-ingestion/api-overview.md)lote.
+
+## Apêndice {#appendix}
+
+Esta seção fornece informações complementares sobre tipos de erros de ingestão.
+
+### Tipos de erro de ingestão parcial em lote {#partial-ingestion-types}
 
 A ingestão parcial em lote tem três tipos de erro diferentes ao assimilar dados:
 
@@ -379,7 +387,3 @@ Uma amostra de resposta da recuperação do arquivo de erro pode ser vista abaix
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## Próximas etapas {#next-steps}
-
-Este tutorial aborda como monitorar erros de ingestão em lote parcial. Para mais informações sobre a ingestão por lote, leia o guia [do desenvolvedor da ingestão por](../batch-ingestion/api-overview.md)lote.

@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Funções de string
 topic: developer guide
+description: Linguagem do Query do perfil (PQL) oferta funciona para simplificar a interação com strings.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '766'
 ht-degree: 7%
 
 ---
@@ -183,7 +184,7 @@ O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas,
 person.emailAddress.doesNotContain("2010@gm")
 ```
 
-## Igual
+## Igual a
 
 A `equals` função é usada para determinar se uma string é igual à string especificada.
 

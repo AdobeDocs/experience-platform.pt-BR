@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Mapear um arquivo CSV para um schema XDM
 topic: tutorial
 type: Tutorial
+description: Este tutorial aborda como mapear um arquivo CSV para um schema XDM usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1370'
 ht-degree: 2%
 
 ---

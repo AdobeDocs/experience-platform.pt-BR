@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Criar uma conexão de streaming autenticada
 topic: tutorial
 type: Tutorial
+description: A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como o Perfil e a identidade do cliente em tempo real, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 2%
 
 ---

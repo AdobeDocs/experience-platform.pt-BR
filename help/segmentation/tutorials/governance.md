@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Impor conformidade de uso de dados para segmentos de audiência
 topic: tutorial
 type: Tutorial
+description: Este tutorial aborda as etapas para impor a conformidade de uso de dados para segmentos de audiência de Perfis de clientes em tempo real usando APIs.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1351'
 ht-degree: 1%
 
 ---

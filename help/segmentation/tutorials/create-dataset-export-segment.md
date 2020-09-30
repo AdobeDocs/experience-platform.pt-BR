@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Criar um conjunto de dados para exportar um segmento de audiência
 topic: tutorial
 type: Tutorial
+description: Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de audiência usando a interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---

@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Guia do desenvolvedor do Serviço de segmentação
 topic: developer guide
+description: A documentação a seguir fornece informações adicionais que você precisa saber para trabalhar com a API de segmentação com êxito.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ A Adobe Experience Platform [!DNL Segmentation Service] permite que você crie s
 O guia do desenvolvedor requer uma compreensão funcional dos diversos [!DNL Experience Platform] serviços envolvidos no uso [!DNL Segmentation Service].
 
 - [[!Segmentação DNL]](../home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 - [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 

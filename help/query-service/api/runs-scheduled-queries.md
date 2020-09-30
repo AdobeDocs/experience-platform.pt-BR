@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;run scheduled qu
 solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: runs for scheduled queries
+description: As seções a seguir percorrem as várias chamadas de API que podem ser feitas para executar query programados com a API de serviço de Query.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '676'
 ht-degree: 2%
 
 ---

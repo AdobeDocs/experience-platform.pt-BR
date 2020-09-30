@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Transmissão de várias mensagens em uma única solicitação HTTP
 topic: tutorial
 type: Tutorial
+description: Este documento fornece um tutorial para enviar várias mensagens para a Adobe Experience Platform dentro de uma única solicitação HTTP usando a assimilação de streaming.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1487'
 ht-degree: 1%
 
 ---

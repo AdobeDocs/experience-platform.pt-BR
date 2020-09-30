@@ -1,27 +1,58 @@
 ---
-keywords: Experience Platform;home;popular topics;access data sources
+keywords: Experience Platform;home;popular topics;access data sources;data access;spark sdk;python sdk
 solution: Experience Platform
 title: Tutoriais de acesso a dados
 topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform permite que os usuários descubram e acessem conjuntos de dados ingeridos no Experience Platform usando a API de acesso a dados.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 0ec93ef44facc725e22547d002de677d93f3bd1f
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
 
-# Dados de Experience Platform de acesso
+# Tutoriais de acesso a dados
 
-A Adobe Experience Platform permite que os usuários descubram e acessem conjuntos de dados ingeridos com [!DNL Experience Platform] a API de acesso a dados.
+O Data Access oferece suporte à Adobe Experience Platform, fornecendo aos usuários ferramentas voltadas para a descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 
-## Acessar dados usando APIs
+Para saber mais, comece lendo a visão geral [do Acesso aos](../data-access/home.md)dados.
 
-Saiba como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API de acesso a dados no Adobe Experience Platform, bem como alguns dos recursos exclusivos da API de acesso a dados, como paginação e downloads parciais. Para começar, siga o tutorial [da API de acesso a](../data-access/tutorials/dataset-data.md)dados.
+## Query de um conjunto de dados usando a API de acesso a dados
 
-## Criar um conjunto de dados
+A API de acesso a dados oferece suporte à Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados ingeridos no Experience Platform.
 
-Siga as instruções passo a passo para criar um conjunto de dados usando [!DNL Platform] APIs e preenchendo esse conjunto de dados usando um arquivo no tutorial [](../catalog/datasets/create.md)Criar um conjunto de dados.
+**Este tutorial o ajudará a:**
+- Localize os dados na Plataforma.
+- Acesse um arquivo usando uma ID de arquivo.
+- Recupere os metadados de um arquivo.
+- Acesse o conteúdo de um arquivo.
+- Baixe o conteúdo parcial de um arquivo.
+- Configurar a paginação de resposta da API.
+
+Para começar, siga o tutorial [da API de acesso a](../data-access/tutorials/dataset-data.md)dados.
+
+## Usar o SDK do Python seguro para acessar dados
+
+O Secure Python Data Access SDK é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados do Experience Platform usando Python.
+
+**Este guia o ajudará a:**
+- Configure seu ambiente e instale os pacotes corretos.
+- Leitura de um conjunto de dados.
+- Gravar em um conjunto de dados.
+- Leia e grave em um diretório de espaço de usuário.
+
+Para começar, visualização a documentação [do SDK de acesso a dados do](../data-access/tutorials/python-sdk.md)Python.
+
+## Usar o SDK do Secure Spark para acessar dados
+
+O SDK de acesso a dados do Secure Spark é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados da Adobe Experience Platform usando o Spark.
+
+**Este guia o ajudará a:**
+- Configure seu ambiente e instale os pacotes corretos.
+- Leitura de um conjunto de dados.
+- Gravar em um conjunto de dados.
+
+Para começar, visualização na documentação [SDK de acesso a dados](../data-access/tutorials/spark-sdk.md)Spark.

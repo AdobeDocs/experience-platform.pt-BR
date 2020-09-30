@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Query de amostra
 topic: queries
+description: Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM ExperienceEvents e ingeridos no Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform Query Service usa esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---

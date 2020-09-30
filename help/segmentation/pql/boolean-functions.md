@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Funções booleanas
 topic: developer guide
+description: As funções booleanas são usadas para executar lógica booleana em diferentes elementos na Linguagem do Query do Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '236'
 ht-degree: 6%
 
 ---

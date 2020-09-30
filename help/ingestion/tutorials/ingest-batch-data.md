@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Ingressar dados no Adobe Experience Platform
 topic: tutorial
 type: Tutorial
+description: A Adobe Experience Platform permite importar facilmente dados como arquivos em lote na forma de arquivos de parâmetros ou dados em conformidade com um schema conhecido do Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---

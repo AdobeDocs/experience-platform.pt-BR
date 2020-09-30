@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Como participar de conjuntos de dados
 topic: queries
 type: Tutorial
+description: Ingressar em conjuntos de dados permite incluir dados de outros conjuntos de dados em seu query. Este exemplo usa um conjunto de dados do sistema operacional personalizado para mapear a ID do sistema operacional para o valor do sistema operacional.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 3%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 

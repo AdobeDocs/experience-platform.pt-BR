@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Query de amostra
 topic: queries
+description: Os dados da Adobe Target são transformados em schema XDM do Experience Evento e ingeridos em conjuntos de dados do Experience Platform para você. Este documento contém query de amostra para usar o Query Service com seus conjuntos de dados Adobe Target.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '261'
 ht-degree: 2%
 
 ---

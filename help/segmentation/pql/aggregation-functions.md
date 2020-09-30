@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Funções de agregação
 topic: developer guide
+description: 'As funções de agregação são usadas para agrupar vários valores em matrizes de linguagem de Query de Perfil (PQL) para formar um único valor de resumo. '
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 8%
+source-wordcount: '226'
+ht-degree: 7%
 
 ---
 

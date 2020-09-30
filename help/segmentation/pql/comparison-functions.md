@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Funções de comparação
 topic: developer guide
+description: As funções de comparação são usadas para comparar entre expressões e valores diferentes, retornando "true" ou "false" de acordo.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '308'
 ht-degree: 10%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 10%
 
 As funções de comparação são usadas para comparar expressões e valores diferentes, retornando `true` ou `false` de acordo. Para obter mais informações sobre outras funções PQL, consulte a [[!DNL Profile Query Language] visão geral](./overview.md).
 
-## Igual
+## Igual a
 
 A função `=` (igual) verifica se um valor ou expressão é igual a outro valor ou expressão.
 

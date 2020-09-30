@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Funções de data e hora
 topic: developer guide
+description: As funções de data e hora são usadas para executar operações de data e hora em valores dentro do Linguagem do Query do Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '484'
 ht-degree: 4%
 
 ---

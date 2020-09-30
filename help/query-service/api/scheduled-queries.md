@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sc
 solution: Experience Platform
 title: Guia do desenvolvedor do Query Service
 topic: scheduled queries
+description: As seções a seguir percorrem as várias chamadas de API que podem ser feitas para query agendados com a API de serviço de Query.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---

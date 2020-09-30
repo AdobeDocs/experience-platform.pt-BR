@@ -2,11 +2,13 @@
 keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
 solution: Experience Platform
 title: Recuperar lotes com falha
-topic: overview
+topic: tutorial
+type: Tutorial
+description: Este tutorial aborda as etapas para recuperar informações sobre um lote com falha usando APIs de ingestão de dados.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -22,7 +24,7 @@ Este tutorial aborda as etapas para recuperar informações sobre um lote com fa
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!Ingestão de Dados DNL]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API

@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ajuda dos Conectores de origem Adobe Experience Platform
 breadcrumb-title: Source Connectors Guide
-user-guide-description: Structure, label, and enhance ingested data or ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
 translation-type: tm+mt
-source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
+source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -64,7 +64,7 @@ ht-degree: 0%
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - Automação de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
-   - oud {#payments}
+   - Pagamentos {#payments}
       - [Conector PayPal](connectors/payments/paypal.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
@@ -108,7 +108,7 @@ ht-degree: 0%
          - [Conector do SQL Server](tutorials/api/create/databases/sql-server.md)
       - Automação de marketing {#marketing-automation}
          - [Conector HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
-      - oud {#payments}
+      - Pagamentos {#payments}
          - [Conector PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
@@ -121,7 +121,7 @@ ht-degree: 0%
       - [Explore os dados de automação de marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorar os dados de pagamento](tutorials/api/explore/payments.md)
       - [Explorar dados do protocolo](tutorials/api/explore/protocols.md)
-   - Coletar dados {#collect}
+   - Explorar dados {#collect}
       - [Coletar dados de publicidade](tutorials/api/collect/advertising.md)
       - [Coletar dados de armazenamento em nuvem](tutorials/api/collect/cloud-storage.md)
       - [Coletar dados do CRM](tutorials/api/collect/crm.md)

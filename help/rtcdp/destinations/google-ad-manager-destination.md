@@ -5,9 +5,9 @@ seo-title: Destino do Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 seo-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis. '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ Observe os seguintes detalhes específicos para [!DNL Google Ad Manager] os dest
 >[!IMPORTANT]
 >
 >Se você estiver procurando criar seu primeiro destino com [!DNL Google Ad Manager] e não tiver ativado a funcionalidade [de sincronização de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID no Serviço de ID da Experience Cloud no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Consultoria da Adobe ou com o Atendimento ao cliente para ativar sincronizações de ID. Se você tiver configurado anteriormente [!DNL Google] integrações no Audience Manager, a ID sincronizará a transferência para o CDP em tempo real do Adobe.
+
+### Tipo de exportação {#export-type}
+
+**Exportação** de segmento - você está exportando todos os membros de um segmento (audiência) para o destino do Google.
 
 ## Pré-requisitos
 

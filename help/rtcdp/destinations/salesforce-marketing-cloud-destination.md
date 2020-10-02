@@ -5,9 +5,9 @@ seo-title: Marketing Cloud do Salesforce
 description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
 seo-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 [O [!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) é um conjunto de marketing digital anteriormente conhecido como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
 
 Para enviar dados de segmento para [!DNL Salesforce Marketing Cloud], é necessário primeiro [conectar o destino](#connect-destination) no Adobe Real-time CDP e [configurar uma importação](#import-data-into-salesforce) de dados do local do armazenamento para [!DNL Salesforce Marketing Cloud].
+
+## Tipo de exportação {#export-type}
+
+**Exportação** de perfil - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [da ativação de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
 
 ## Destino do Connect {#connect-destination}
 

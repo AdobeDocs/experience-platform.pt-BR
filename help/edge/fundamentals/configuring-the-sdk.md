@@ -5,7 +5,7 @@ description: Saiba como configurar o SDK da Web do Experience Platform
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -36,7 +36,7 @@ Há muitas opções que podem ser definidas durante a configuração. Todas as o
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
-| String | Sim | none |
+| String | Sim | nenhuma |
 
 Sua ID de configuração atribuída, que vincula o SDK às contas e configuração apropriadas.  Ao configurar várias instâncias em uma única página, você deve configurar uma diferente `edgeConfigId` para cada instância.
 
@@ -73,7 +73,7 @@ O domínio usado para interagir com os serviços de Adobe. Isso só será usado 
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
-| String | Sim | none |
+| String | Sim | nenhuma |
 
 Your assigned [!DNL Experience Cloud] organization ID.  Ao configurar várias instâncias em uma página, você deve configurar uma diferente `orgId` para cada instância.
 
@@ -103,7 +103,7 @@ Configure isso para configurar um retorno de chamada chamado para cada evento an
 
 ## Opções de privacidade
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
@@ -117,7 +117,7 @@ Define o consentimento padrão do usuário. Isso é usado quando não há prefer
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
-| String | Não | none |
+| String | Não | nenhuma |
 
 Usado para criar uma definição de estilo CSS que oculta áreas de conteúdo da sua página da Web enquanto o conteúdo personalizado é carregado do servidor. Se essa opção não for fornecida, o SDK não tentará ocultar nenhuma área de conteúdo enquanto o conteúdo personalizado for carregado, resultando potencialmente em &quot;oscilação&quot;.
 

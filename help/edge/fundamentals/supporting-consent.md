@@ -5,7 +5,7 @@ description: Saiba como suportar preferências de consentimento com o SDK da Web
 seo-description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Quando o consentimento é definido dessa forma, o Perfil Unificado é atualizado com as informações de consentimento. Para que isso funcione, o schema XDM do perfil precisa conter a Mixin [de privacidade do](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)Perfil. Ao enviar eventos, as informações de consentimento IAB precisam ser adicionadas manualmente ao objeto xdm do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento nos eventos, o [Experience Evento Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) precisa ser adicionado ao schema do evento da experiência.
+Quando o consentimento é definido dessa forma, o Perfil de cliente em tempo real é atualizado com as informações de consentimento. Para que isso funcione, o schema XDM do perfil precisa conter a Mixin [de privacidade do](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)Perfil. Ao enviar eventos, as informações de consentimento IAB precisam ser adicionadas manualmente ao objeto XDM do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento em eventos, o Mixin [de privacidade do Evento de](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) experiência precisa ser adicionado ao schema do Evento de experiência.
 
 ## Envio de ambos os padrões em uma solicitação
 

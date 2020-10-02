@@ -5,7 +5,7 @@ seo-title: Destino de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 seo-description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -34,13 +34,13 @@ Uma marca de vestuário atlética quer atingir os clientes existentes através d
 
 Uma empresa de tecnologia de destaque acabou de lançar um novo telefone. Em um esforço para promover esse novo modelo de telefone, eles estão buscando conscientizar sobre os novos recursos e funcionalidades do telefone para clientes que possuem modelos anteriores de seus telefones.
 
-Para promover o lançamento, eles carregam endereços de email de seu banco de dados CRM para o Adobe Real-time CDP, usando os endereços de email como identificadores. Os segmentos são criados com base em clientes que possuem modelos de telefone mais antigos e enviados para [!DNL Google Customer Match] que possam público alvo clientes atuais, clientes que possuem modelos de telefone mais antigos, bem como clientes semelhantes [!DNL YouTube].
+Para promover o lançamento, eles carregam endereços de email de seu banco de dados CRM para o Adobe Real-time CDP, usando os endereços de email como identificadores. Os segmentos são criados com base em clientes que possuem modelos de telefone mais antigos e são enviados para [!DNL Google Customer Match] que possam público alvo clientes atuais, clientes que possuem modelos de telefone mais antigos, bem como clientes semelhantes [!DNL YouTube].
 
 ## Controle de dados para [!DNL Google Customer Match] destinos {#data-governance}
 
 Os destinos no Adobe Real-time CDP podem ter certas regras e obrigações para os dados enviados para a plataforma de destino ou recebidos dela. Você é responsável por entender as limitações e obrigações dos seus dados e como usa esses dados na Adobe Experience Platform e na plataforma de destino. A Adobe Experience Platform fornece ferramentas de controle de dados para ajudá-lo a gerenciar algumas dessas obrigações de uso de dados. [Saiba mais](/help/data-governance/labels/overview.md) sobre as ferramentas e políticas de controle de dados.
 
-## Tipo de ativação e identidades {#activation-type}
+## Tipo e identidades de exportação {#export-type}
 
 **Exportação** de segmento - você está exportando todos os membros de um segmento (audiência) com os identificadores (nome, número de telefone etc.) usado no [!DNL Google Customer Match] destino.
 

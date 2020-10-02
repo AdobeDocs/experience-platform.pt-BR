@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 seo-description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 1%
 A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline. Consulte [Sobre o Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obter mais informações.
 
 Para enviar dados de segmento para a Adobe Campaign, é necessário primeiro [conectar o destino](#connect-destination) na Plataforma de dados do cliente em tempo real do Adobe e [configurar uma importação](#import-data-into-campaign) de dados do local do armazenamento para a Adobe Campaign.
+
+## Tipo de exportação {#export-type}
+
+**Exportação** de perfil - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [da ativação de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
 
 ## Destino do Connect {#connect-destination}
 

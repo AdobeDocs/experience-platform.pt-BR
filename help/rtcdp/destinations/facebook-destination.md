@@ -5,7 +5,7 @@ seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -52,7 +52,7 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 >
 >Os dados enviados para [!DNL Facebook] não devem incluir identidades agrupadas. Você é responsável por cumprir essa obrigação e pode fazê-lo garantindo que os segmentos selecionados para ativação não usem uma opção de agrupamento em sua política de mesclagem. Saiba mais sobre as políticas [de](/help/profile/ui/merge-policies.md)mesclagem.
 
-### Tipo de ativação {#activation-type}
+### Tipo de exportação {#export-type}
 
 **Exportação** de segmento - você está exportando todos os membros de um segmento (audiência) com os identificadores (nome, número de telefone etc.) usado no destino do Facebook.
 

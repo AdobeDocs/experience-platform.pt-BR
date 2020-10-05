@@ -5,9 +5,9 @@ description: Saiba como enviar dados de link para a Adobe Analytics com o Experi
 seo-description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Envio de dados para a Adobe Analytics
 
-Enquanto no passado havia funções diferentes para diferenciar entre uma visualização de página e um link (por exemplo, `s.t(), s.tl()`), no SDK da Web há apenas o `sendEvent` comando. Os dados enviados com um evento determinam se devem ser uma visualização de página ou um link.
+Enquanto no passado havia funções diferentes para distinguir entre uma visualização de página e um link (por exemplo, `s.t(), s.tl()`), no SDK da Web há apenas o `sendEvent` comando. Os dados enviados com um evento determinam se devem ser uma visualização de página ou um link.
 
 ## Envio de uma visualização de página
 
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-Embora o Analytics registre tecnicamente uma visualização de página mesmo se essa variável não estiver definida, é uma prática recomendada definir essa variável sempre que você quiser registrar uma visualização de página para ser explícita nos seus dados e para a sua implementação futura.
+Embora o Analytics registre tecnicamente uma visualização de página mesmo se essa variável não estiver definida, é uma prática recomendada definir essa variável sempre que você quiser registrar uma visualização de página para ser explícita nos seus dados e para prova futura da sua implementação.
 
 ## Rastreamento de links
 

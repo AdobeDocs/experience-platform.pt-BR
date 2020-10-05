@@ -2,12 +2,13 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Guia de solução de problemas e perguntas frequentes da Adobe Experience Platform
+description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform, bem como um guia de solução de problemas de alto nível para erros comuns que podem ser encontrados em qualquer API Experience Platform.
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 3798e687da07dee7336121c203948158523de5bd
+source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
 workflow-type: tm+mt
-source-wordcount: '1965'
-ht-degree: 2%
+source-wordcount: '1996'
+ht-degree: 3%
 
 ---
 

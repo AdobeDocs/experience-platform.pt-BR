@@ -5,7 +5,7 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Todos os schemas XDM descrevem dados que podem ser classificados como registros 
 
 Os schemas de registro e de série de tempo contêm um mapa de identidades (`xdm:identityMap`). Este campo contém a representação de identidade de um assunto, extraída de campos marcados como &quot;Identidade&quot;, conforme descrito na próxima seção.
 
-### [!UICONTROL Identidade]
+### [!UICONTROL Identidade] {#identity}
 
 Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante que, ao pensar nos schemas, se pense nas identidades dos clientes e nos campos que podem ser usados para identificar um assunto, independentemente de onde os dados venham.
 

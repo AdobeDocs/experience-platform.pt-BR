@@ -5,9 +5,9 @@ title: Ponto final da API de classificação de texto
 topic: Developer guide
 description: O serviço de classificação de texto, quando recebe um fragmento de texto, pode classificá-lo em um ou mais rótulos. A classificação pode ser de rótulo único, de vários rótulos ou hierárquica.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 4%
 
 ---

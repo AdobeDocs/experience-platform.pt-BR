@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Perfil do cliente em tempo real
 topic: overview
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -36,20 +36,25 @@ Para obter mais informações sobre namespaces de identidade em [!DNL Experience
 
 ## Enviando solicitações {#submit}
 
->[!NOTE]
->
->Esta seção aborda como criar solicitações de privacidade para o armazenamento de [!DNL Profile] dados. É altamente recomendável que você reveja a documentação da API [do](../privacy-service/api/getting-started.md) Privacy Service ou da interface do usuário [do](../privacy-service/ui/overview.md) Privacy Service para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
+As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-time Customer Profile] usar a [!DNL Privacy Service] API ou a interface do usuário. Antes de ler essas seções, é altamente recomendável revisar a documentação da API [do](../privacy-service/api/getting-started.md) Privacy Service ou da interface do usuário [do](../privacy-service/ui/overview.md) Privacy Service para obter as etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
-A seção a seguir descreve como fazer solicitações de privacidade para [!DNL Real-time Customer Profile] e o [!DNL Data Lake] uso da [!DNL Privacy Service] API ou da interface do usuário.
+>[!IMPORTANT]
+>
+>O Privacy Service só pode processar [!DNL Profile] dados usando uma política de mesclagem que não executa identificação. Se você estiver usando a interface do usuário para confirmar se suas solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como o tipo de identificação [!UICONTROL da ID] . Em outras palavras, não é possível usar uma política de mesclagem em que a sutura [!UICONTROL de] ID está definida como &quot;Gráficoprivado&quot;.
+>
+>![](./images/privacy/no-id-stitch.png)
 
 ### Uso da API
 
-Ao criar solicitações de trabalho na API, qualquer `userIDs` um fornecido deve usar um arquivo específico `namespace` e `type` dependendo do armazenamento de dados ao qual se aplicam. As IDs da [!DNL Profile] loja devem usar &quot;padrão&quot; ou &quot;personalizado&quot; para o `type` valor, e uma namespace [de](#namespaces) identidade válida reconhecida pelo [!DNL Identity Service] `namespace` valor.
+Ao criar solicitações de trabalho na API, quaisquer IDs fornecidas dentro `userIDs` devem usar um `namespace` e `type`específicos. Uma namespace [de](#namespaces) identidade válida reconhecida pelo [!DNL Identity Service] deve ser fornecida para o `namespace` valor, enquanto o `type` deve ser `standard` ou `unregistered` (para namespaces padrão e personalizadas, respectivamente).
 
+>[!NOTE]
+>
+>Talvez seja necessário fornecer mais de uma ID para cada cliente, dependendo do gráfico de identidade e de como os fragmentos do perfil são distribuídos nos conjuntos de dados da plataforma. Consulte os fragmentos [do](#fragments) perfil da próxima seção para obter mais informações.
 
 Além disso, a `include` matriz da carga da solicitação deve incluir os valores do produto para os diferentes armazenamentos de dados aos quais a solicitação está sendo feita. Ao fazer solicitações para o [!DNL Data Lake], a matriz deve incluir o valor &quot;ProfileService&quot;.
 
-A solicitação a seguir cria um novo trabalho de privacidade para ambos [!DNL Real-time Customer Profile], usando a namespace de identidade &quot;Email&quot; padrão. Também inclui o valor do produto para [!DNL Profile] na `include` matriz:
+A solicitação a seguir cria uma nova tarefa de privacidade para os dados de um único cliente na [!DNL Profile] loja. Dois valores de identidade são fornecidos para o cliente no `userIDs` storage; um usando a namespace de `Email` identidade padrão e o outro usando uma `Customer_ID` namespace personalizada. Também inclui o valor do produto para [!DNL Profile] (`ProfileService`) na `include` matriz:
 
 ```shell
 curl -X POST \
@@ -58,6 +63,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "companyContexts": [
       {
@@ -76,14 +82,14 @@ curl -X POST \
             "type": "standard"
           },
           {
-            "namespace": "email_label",
-            "value": "ajones@acme.com",
+            "namespace": "Customer_ID",
+            "value": "12345678",
             "type": "unregistered"
           }
         ]
       }
     ],
-    "include": ["ProfileService", "aepDataLake"],
+    "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
@@ -97,9 +103,35 @@ Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICO
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
+## Fragmentos de perfil em solicitações de privacidade {#fragments}
+
+No armazenamento de [!DNL Profile] dados, os dados pessoais de um cliente individual geralmente são compostos de vários fragmentos de perfil, que são associados à pessoa por meio do gráfico de identidade. Ao fazer solicitações de privacidade para a [!DNL Profile] loja, é importante observar que as solicitações são processadas somente no nível do fragmento do perfil, em vez do perfil inteiro.
+
+Por exemplo, considere uma situação em que você está armazenando dados de atributos do cliente em três conjuntos de dados separados, que usam identificadores diferentes para associar esses dados a clientes individuais:
+
+| Nome do conjunto de dados | Campo de identidade principal | Atributos armazenados |
+| --- | --- | --- |
+| Conjunto de dados 1 | `customer_id` | `address` |
+| Conjunto de dados 2 | `email_id` | `firstName`, `lastName` |
+| Conjunto de dados 3 | `email_id` | `mlScore` |
+
+Um dos conjuntos de dados usa `customer_id` como seu identificador principal, enquanto os outros dois usam `email_id`. Se você enviasse uma solicitação de privacidade (acesso ou exclusão) usando apenas `email_id` como valor da ID do usuário, somente os atributos `firstName`, `lastName`e `mlScore` seriam processados, enquanto não `address` seriam afetados.
+
+Para garantir que suas solicitações de privacidade processem todos os atributos relevantes do cliente, forneça os valores de identidade principais para todos os conjuntos de dados aplicáveis nos quais esses atributos possam ser armazenados (até no máximo nove IDs por cliente). Consulte a seção sobre campos de identidade nas [noções básicas da composição](../xdm/schema/composition.md#identity) do schema para obter mais informações sobre campos que são comumente marcados como identidades.
+
+>[!NOTE]
+>
+>Se você estiver usando [caixas de proteção](../sandboxes/home.md) diferentes para armazenar seus [!DNL Profile] dados, deverá fazer uma solicitação de privacidade separada para cada caixa de proteção, indicando o nome apropriado da caixa de proteção no `x-sandbox-name` cabeçalho.
+
 ## Excluir processamento de solicitação
 
-Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Platform] envia uma confirmação para [!DNL Privacy Service] que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são removidos da loja [!DNL Data Lake] ou da [!DNL Profile] loja dentro de sete dias. Durante esse período de sete dias, os dados são apagados em modo suave e, portanto, não podem ser acessados por nenhum [!DNL Platform] serviço.
+Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Platform] envia uma confirmação para [!DNL Privacy Service] que a solicitação foi recebida e os dados afetados foram marcados para exclusão. Os registros são removidos do repositório [!DNL Data Lake] ou da [!DNL Profile] loja após a conclusão do trabalho de privacidade. Enquanto o trabalho de exclusão ainda estiver sendo processado, os dados serão excluídos automaticamente e, portanto, não poderão ser acessados por nenhum [!DNL Platform] serviço. Consulte a [[!DNL Privacy Service] documentação](../privacy-service/home.md#monitor) para obter mais informações sobre o status do job de rastreamento.
+
+>[!IMPORTANT]
+>
+>Enquanto uma solicitação de exclusão bem-sucedida remove os dados de atributo coletados para um cliente (ou conjunto de clientes), a solicitação não remove as associações estabelecidas no gráfico de identidade.
+>
+>Por exemplo, uma solicitação de exclusão que usa um cliente `email_id` e `customer_id` remove todos os dados de atributo armazenados nessas IDs. No entanto, quaisquer dados posteriormente assimilados ao abrigo do mesmo `customer_id` serão ainda associados aos dados adequados `email_id`, uma vez que a associação ainda existe.
 
 Em versões futuras, [!DNL Platform] enviará uma confirmação para [!DNL Privacy Service] depois que os dados tiverem sido fisicamente excluídos.
 

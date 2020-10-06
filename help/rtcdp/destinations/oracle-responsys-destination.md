@@ -5,9 +5,9 @@ seo-title: Destino do Oracle Responsys
 description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
 seo-description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Para enviar dados de segmento para [!DNL Oracle Responsys], é necessário prime
 
 ## Tipo de exportação {#export-type}
 
-**Exportação** de perfil - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [da ativação de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
+**Baseado** em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [da ativação de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
 
 ## Destino do Connect {#connect-destination}
 

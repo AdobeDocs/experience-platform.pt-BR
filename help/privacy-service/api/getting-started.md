@@ -5,7 +5,7 @@ title: Guia do desenvolvedor do Privacy Service
 description: Use a RESTful API para gerenciar os dados pessoais de seus participantes de dados em aplicativos Adobe Experience Cloud
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -77,7 +77,7 @@ O par de chaves é gerado automaticamente e um arquivo ZIP contendo uma chave pr
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página de visão geral _da API do_ Privacy Service. Aqui, role para baixo até a seção **[!UICONTROL Service Account (JWT)]** , que fornece as seguintes credenciais de acesso que são necessárias em todas as chamadas para a [!DNL Privacy Service] API:
+Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página de visão geral **da API do** Privacy Service. Aqui, role para baixo até a seção **[!UICONTROL Service Account (JWT)]** , que fornece as seguintes credenciais de acesso que são necessárias em todas as chamadas para a [!DNL Privacy Service] API:
 
 * **[!UICONTROL ID]** DO CLIENTE: A ID do cliente é a necessária `{API_KEY}` para isso, que deve ser fornecida no cabeçalho x-api-key.
 * **[!UICONTROL ID]** DA ORGANIZAÇÃO: A ID da organização é o `{IMS_ORG}` valor que deve ser usado no cabeçalho x-gw-ims-org-id.

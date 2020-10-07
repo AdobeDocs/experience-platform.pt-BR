@@ -4,7 +4,7 @@ title: Guia do usuário do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -40,11 +40,11 @@ Selecione a guia **[!UICONTROL Procurar]** para procurar perfis por identidade.
 
 ### Métricas de perfil {#profile-metrics}
 
-No lado direito da guia [!UICONTROL Procurar] estão várias métricas importantes relacionadas aos dados do seu perfil, incluindo a contagem [total de](#profile-count) perfis, bem como uma lista de [perfis por namespace](#profiles-by-namespace).
+No lado direito da guia **[!UICONTROL Procurar]** estão várias métricas importantes relacionadas aos dados do seu perfil, incluindo a contagem [total de](#profile-count) perfis, bem como uma lista de [perfis por namespace](#profiles-by-namespace).
 
 Essas métricas de perfil são avaliadas usando a política de mesclagem padrão de sua organização. Para obter mais informações sobre como trabalhar com políticas de mesclagem, incluindo como definir uma política de mesclagem padrão, consulte o guia [do usuário](merge-policies.md)Mesclar políticas.
 
-Além dessas métricas, a seção de métricas de perfil também fornece uma data e hora [!UICONTROL última atualização] , mostrando quando as métricas foram avaliadas pela última vez.
+Além dessas métricas, a seção de métricas de perfil também fornece uma data e hora atualizadas, mostrando quando as métricas foram avaliadas pela última vez.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ Na caixa de diálogo **[!UICONTROL Selecionar namespace]** de identidade, escolh
 
 ### Valor de identidade
 
-Depois de selecionar uma namespace [!UICONTROL de]identidade, você retorna à guia [!UICONTROL Procurar] , onde pode inserir um valor **[!UICONTROL de]** Identidade. Esse valor é específico para um perfil de cliente individual e deve ser uma entrada válida para a namespace fornecida. Por exemplo, a seleção da namespace [!UICONTROL de] identidade &quot;Email&quot; exigiria um valor [!UICONTROL de] identidade na forma de um endereço de email válido.
+Depois de selecionar uma namespace de identidade, você volta à guia **[!UICONTROL Procurar]** , onde pode inserir um valor **[!UICONTROL de]** Identidade. Esse valor é específico para um perfil de cliente individual e deve ser uma entrada válida para a namespace fornecida. Por exemplo, selecionar a namespace de identidade &quot;Email&quot; exigiria um valor de identidade na forma de um endereço de email válido.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ Depois que um valor for inserido, selecione **[!UICONTROL Mostrar perfil]** e um
 
 ### Detalhes do perfil {#profile-detail}
 
-Ao selecionar a ID [!UICONTROL do]Perfil, a guia **[!UICONTROL Detalhe]** é aberta. As informações do perfil exibidas na guia [!UICONTROL Detalhe] foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal. Os campos padrão mostrados também podem ser alterados em nível organizacional para exibir os atributos de Perfil preferenciais. Para saber mais sobre como personalizar esses campos, incluindo instruções passo a passo para adicionar e remover atributos e redimensionar painéis de painéis, leia o guia [de personalização dos detalhes do](profile-customization.md)perfil.
+Ao selecionar a ID **[!UICONTROL do]** Perfil, a guia **[!UICONTROL Detalhe]** é aberta. As informações do perfil exibidas na guia **[!UICONTROL Detalhe]** foram unidas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal. Os campos padrão mostrados também podem ser alterados em nível organizacional para exibir os atributos de Perfil preferenciais. Para saber mais sobre como personalizar esses campos, incluindo instruções passo a passo para adicionar e remover atributos e redimensionar painéis de painéis, leia o guia [de personalização dos detalhes do](profile-customization.md)perfil.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Você pode visualização informações adicionais relacionadas ao perfil individual selecionando outra das guias disponíveis. Essas guias incluem [!UICONTROL Atributos], [!UICONTROL Eventos]e associação [!UICONTROL de]segmento, que mostra os [!UICONTROL segmentos] para os quais o perfil está qualificado no momento.
+Você pode visualização informações adicionais relacionadas ao perfil individual selecionando outra das guias disponíveis. Essas guias incluem atributos, eventos e membros de segmentos, que mostram os segmentos para os quais o perfil está qualificado no momento.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Mesclar políticas
 
-No menu principais [!UICONTROL Perfis] , selecione a guia **[!UICONTROL Mesclar políticas]** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
+No menu principais **[!UICONTROL Perfis]** , selecione a guia **[!UICONTROL Mesclar políticas]** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
 
 Para obter mais informações sobre políticas de mesclagem, consulte o guia [do usuário das políticas de](merge-policies.md)mesclagem.
 
@@ -108,7 +108,7 @@ Para obter mais informações sobre políticas de mesclagem, consulte o guia [do
 
 ## Schema união {#union-schema}
 
-No menu principal [!UICONTROL Perfis] , selecione a guia Schema **[!UICONTROL de]** União para visualização dos schemas de união dos dados do Perfil. Um schema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos schemas foram habilitados para uso em [!DNL Real-time Customer Profile]. Ao selecionar uma classe da lista [!UICONTROL Classe] no lado esquerdo, é possível visualização a estrutura de seu schema na tela. Por exemplo, selecionar &quot;[!DNL XDM Profile]&quot; exibe o schema de união da [!DNL XDM Individual Profile] classe.
+No menu principal **[!UICONTROL Perfis]** , selecione a guia Schema **[!UICONTROL de]** União para visualização dos schemas de união dos dados do Perfil. Um schema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos schemas foram habilitados para uso em [!DNL Real-time Customer Profile]. Ao selecionar uma classe da lista &quot;[!UICONTROL Classe]&quot; no lado esquerdo, é possível visualização a estrutura do schema na tela. Por exemplo, selecionar &quot;[!DNL XDM Profile]&quot; exibe o schema de união da [!DNL XDM Individual Profile] classe.
 
 Para obter mais informações sobre schemas de união e sua função no Adobe Experience Platform, consulte a seção sobre schemas de união no guia [de composição do](../../xdm/schema/composition.md)schema.
 

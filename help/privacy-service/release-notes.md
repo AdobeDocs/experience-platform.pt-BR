@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Notas de versão de Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 6%
@@ -53,7 +53,7 @@ Este documento contém informações sobre novos recursos do Adobe Experience Pl
 
 * [!DNL Privacy Service] Aprimoramentos da interface:
    * Separe as páginas de rastreamento de trabalho para os regulamentos de RGPD e CCPA.
-   * Novo menu suspenso Tipo _de_ regulamento para alternar entre os dados de rastreamento para RGPD e CCPA.
+   * Novo menu suspenso Tipo *de* regulamento para alternar entre os dados de rastreamento para RGPD e CCPA.
 
 ## 25 de julho de 2019
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
-title: Modelo de domínio de decisão de oferta
+title: Modelo de domínio Offer Decisioning
 topic: overview
 description: A decisão de oferta é um caso de uso do serviço de decisão no qual você formaliza e gerencia centralmente as regras e previsões usadas para envolver clientes com ofertas.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '2640'
 ht-degree: 0%
@@ -13,25 +13,25 @@ ht-degree: 0%
 ---
 
 
-# Visão geral do modelo de domínio de decisão de ofertas
+# Visão geral do modelo de domínio do Offer Decisioning
 
-A decisão de oferta é um caso de uso no qual você formaliza e gerencia centralmente as regras e previsões usadas para envolver clientes com ofertas. [!DNL Decisioning Service] A decisão de oferta é considerada um tipo de decisão de _**conteúdo**_. Nesse caso de uso, as opções _**de**_ decisão são conhecidas como _**ofertas**_ e são caracterizadas como tal pelo conteúdo anexado a elas. Para obter uma introdução do modelo de objeto usado pelo [!DNL Decisioning Service], consulte o Modelo [de Domínio do Serviço de](experience-model.md)Decisão.
+A decisão de oferta é um caso de uso no qual você formaliza e gerencia centralmente as regras e previsões usadas para envolver clientes com ofertas. [!DNL Decisioning Service] A decisão de oferta é considerada um tipo de decisão de conteúdo. Nesse caso de uso, as opções de decisão são chamadas de ofertas e são caracterizadas como tal pelo conteúdo anexado a elas. Para obter uma introdução do modelo de objeto usado pelo [!DNL Decisioning Service], consulte o Modelo [de Domínio do Serviço de](experience-model.md)Decisão.
 
 O objetivo é apresentar ao usuário final uma &quot;Melhor Oferta&quot; em qualquer canal com base em critérios de definição de metas, restrições de custo e frequência, bem como interações anteriores entre canais, incluindo Ofertas anteriores propostas.
 
 Como em todos os casos de uso de decisão, as opções de decisão (oferta) são gerenciadas em um repositório compartilhado por qualquer número de aplicativos. As ofertas podem ser criadas por diferentes departamentos de sua organização ou por parceiros, e essas ofertas podem ser adicionadas e removidas diariamente.
 
-As ofertas são visualmente colocadas em experiências maiores pelo aplicativo que está oferecendo a experiência. _**As disposições**_, às vezes chamadas de pontos ou slots, são componentes importantes para a elaboração de uma estratégia. O design de uma estratégia de oferta geralmente start com a definição dessas disposições. Em geral, uma oferta tem várias representações _**de**_ conteúdo para que possa ser integrada corretamente em várias experiências, em que cada uma tem várias restrições dimensionais ou outras e requer formatos de mídia diferentes.
+As ofertas são visualmente colocadas em experiências maiores pelo aplicativo que está oferecendo a experiência. As disposições, às vezes chamadas de pontos ou slots, são componentes importantes para a elaboração de uma estratégia. O design de uma estratégia de oferta geralmente start com a definição dessas disposições. Uma oferta normalmente tem várias representações de conteúdo para que possa ser integrada corretamente em várias experiências, onde cada uma tem várias restrições dimensionais ou outras e requer formatos de mídia diferentes.
 
-As ofertas estão frequentemente associadas a bens ou serviços físicos e há um cálculo dos custos envolvidos. Uma organização tem de ser capaz de limitar os recursos que são consumidos pelas ofertas e, por conseguinte, tem de ser capaz de _**limitar**_ o número total de vezes que uma oferta pode ser proposta.
+As ofertas estão frequentemente associadas a bens ou serviços físicos e há um cálculo dos custos envolvidos. Uma organização tem de ser capaz de limitar os recursos que são consumidos pelas ofertas e, por conseguinte, tem de ser capaz de limitar o número total de vezes que uma oferta pode ser proposta.
 
 O valor previsto de uma oferta aceita para a organização é o critério de otimização e contraria o custo de fazer uma oferta. O custo, a probabilidade de aceitação e o valor previsto são usados para classificar as ofertas. A melhor Oferta é aquela com maior impacto positivo previsto nas metas de suas atividades ofertas.
 
-A decisão de oferta considera as interações que um usuário final teve, _**em vários canais**_ e aplicativos, aproveita os dados de perfis e eventos de um usuário final. Por exemplo, um aplicativo de central de atendimento pode usar a Decisão de Oferta para ativar ou suprimir uma oferta com base em compras feitas e revisões publicadas pelo usuário final; ou um aplicativo de gerenciamento de e-mail pode depender da decisão de Oferta para selecionar a melhor Oferta em um boletim semanal com base no histórico de navegação em um site.
+A Offer Decisioning considera que as interações que um usuário final teve, em vários canais e aplicativos, aproveitam os dados de perfis e eventos de um usuário final. Por exemplo, um aplicativo de call center pode usar o Offer Decisioning para ativar ou suprimir uma oferta com base em compras feitas e revisões postadas pelo usuário final; ou um aplicativo de gerenciamento de email pode depender da Offer Decisioning para selecionar a melhor Oferta em um boletim semanal com base no histórico de navegação em um site.
 
-Ofertas têm outras propriedades interessantes. Frequentemente, há um _**agendamento**_ definido ou data e intervalo de tempo quando a oferta é válida e até quando a oferta precisa ser invalidada.
+Ofertas têm outras propriedades interessantes. Frequentemente, há um agendamento definido ou data e intervalo de tempo quando a oferta é válida e até quando a oferta precisa ser invalidada.
 
-Por último, o recurso de uma oferta agrava-se com a frequência com que é apresentado. Uma Oferta que não é aceite depois de ter sido proposta repetidamente é uma oportunidade perdida porque poderia ter sido apresentada uma oferta diferente. Por essa razão, a _**fadiga**_ dos utilizadores finais deve ser gerida.
+Por último, o recurso de uma oferta agrava-se com a frequência com que é apresentado. Uma Oferta que não é aceite depois de ter sido proposta repetidamente é uma oportunidade perdida porque poderia ter sido apresentada uma oferta diferente. Por essa razão, a fadiga do utilizador final tem de ser gerida.
 
 ## Visão geral da estratégia de decisão da oferta
 
@@ -52,7 +52,7 @@ A abordagem geral é restringir a seleção de Ofertas até que todas as restri�
 | Modelo para utilitário *esperado* | Classificação de oferta ou prioridade |
 
 O número total de ofertas no inventário de opções é geralmente bastante grande (da ordem de 10.000) e cada atividade de oferta pode estar focada em ofertas que se encaixam em uma categoria diferente (tópico). A estratégia de decisão de oferta permite anexar um filtro de oferta a uma atividade de oferta. As restrições adicionais serão avaliadas no momento em que a decisão for solicitada.
-As seções a seguir explicam detalhadamente os componentes do domínio de decisão de Oferta.
+As seções a seguir explicam detalhadamente os componentes do domínio Offer Decisioning.
 
 ## Ofertas gerais
 
@@ -84,7 +84,7 @@ As ofertas de fallback são especificadas no atividade para indicar uma experiê
 
 ### Restrições do calendário
 
-No domínio de decisão de oferta, as ofertas têm um período de validade. Isso significa que a oferta não pode ser proposta antes de a data e a hora do start terem expirado e que não pode ser proposta mais depois de a data e a hora do  terem expirado. A entidade oferta tem uma estrutura simples que define essas restrições de calendário.
+No domínio de decisão de oferta, as ofertas têm um período de validade. Isso significa que a oferta não pode ser proposta antes de a data e a hora do start terem expirado e não pode ser proposta mais depois de a data e a hora do  terem expirado. A entidade oferta tem uma estrutura simples que define essas restrições de calendário.
 
 Periodicamente, as Ofertas expiradas serão removidas da lista de opções consideradas. Mas o filtro de calendário é aplicado no momento em que a decisão é solicitada para que as restrições sejam aplicadas com precisão.
 
@@ -126,7 +126,7 @@ Quando as opções são explicitamente colocadas em uma coleção, seu conjunto 
 
 ## Atividades ofertas
 
-O Atividade configura e controla o processo de decisão. Atualmente, a estratégia de decisão é principalmente pré-determinada, mas as iterações futuras do modelo de domínio de decisão de Oferta permitirão a seleção de modelos, regras adicionais e restrições.
+O Atividade configura e controla o processo de decisão. Atualmente, a estratégia de decisão é principalmente pré-determinada, mas as iterações futuras do modelo de domínio Offer Decisioning permitirão a seleção de modelos, regras adicionais e restrições.
 
 Uma experiência pode ser montada usando várias atividades simultaneamente. Atualmente, até 30 atividades podem ser endereçadas em uma única solicitação de decisão. Se mais de 30 atividades ou slots em uma experiência precisarem ser preenchidos com conteúdo, várias solicitações poderão ser feitas para o mesmo perfil. No entanto, quando as atividades forem incluídas na mesma solicitação de decisão, a eliminação da duplicação de apresentações da oferta será realizada entre essas atividades.
 
@@ -144,7 +144,7 @@ Quando os clientes criam e vinculam o gráfico de objetos para decisões, normal
 
 - Criação de ofertas com as várias representações e regras de negócios (restrições). Este fluxo de trabalho central fornece as opções entre as quais precisamos selecionar as melhores. As tags do primeiro fluxo de trabalho são usadas para categorizar ofertas e as disposições são usadas para indicar quais opções podem ser apresentadas e onde.
 
-   - Esse fluxo de trabalho também define restrições absolutas para as ofertas. Elas são absolutas porque sempre serão aplicadas e não estão afetando apenas a classificação entre um conjunto de ofertas. Por exemplo, quando uma restrição de calendário é definida, é imposto que a oferta nunca será selecionada antes da data/hora do start definida e nunca depois da data/hora de término. As restrições que serão definidas neste fluxo de trabalho são as restrições [do](#calendar-constraints)calendário, as restrições [de](#capping-constraints) limite e as restrições [de](#profile-constraints---eligibility-rules)qualificação. Um subfluxo de trabalho aqui é a definição de regras adicionais que determinam quem está qualificado para receber uma determinada oferta.
+   - Esse fluxo de trabalho também define restrições absolutas para as ofertas. Elas são absolutas porque sempre serão aplicadas e não estão afetando apenas a classificação entre um conjunto de ofertas. Por exemplo, quando uma restrição de calendário é definida, é imposto que a oferta nunca será selecionada antes da data/hora do start definida e nunca depois da data/hora de término. As restrições que serão definidas neste fluxo de trabalho são as restrições [do](#calendar-constraints)calendário, as restrições [de](#capping-constraints) limite e as restrições [de](#profile-constraints---eligibility-rules)qualificação. Um subfluxo de trabalho aqui é a definição de regras adicionais que determinam quem está qualificado para receber determinada oferta.
 
       - Ao mesmo tempo, as restrições são criadas para uma oferta, suas representações são selecionadas. Esse fluxo de trabalho presume que o conteúdo já foi criado em algum lugar e é simplesmente carregado e escolhido no repositório de conteúdo. Aqui é onde as disposições do primeiro fluxo de trabalho entram em vigor. Uma oferta pode selecionar disposições e associar o conteúdo a essa [disposição](#offer-placements).
 

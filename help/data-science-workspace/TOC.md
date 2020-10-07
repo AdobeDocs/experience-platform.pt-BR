@@ -5,9 +5,9 @@ user-guide-title: Ajuda da Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 translation-type: tm+mt
-source-git-commit: 53137238022a08e38bc00888c1b9df53ff911271
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '210'
 ht-degree: 5%
 
 ---
@@ -46,6 +46,8 @@ ht-degree: 5%
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
    * [Guia do SDK da plataforma (Python)](authoring/platform-sdk.md)
+   * [Acesso aos dados Python](authoring/python.md)
+   * [Acesso aos dados do Spark](authoring/spark.md)
 * Tutoriais de modelo e fórmula {#models-recipes}
    * [Criar e publicar uma apresentação de modelo de aprendizado de máquina](models-recipes/create-publish-model.md)
    * [Criar o schema de vendas de varejo e o conjunto de dados](models-recipes/create-retails-sales-dataset.md)

@@ -5,7 +5,7 @@ title: Dados de identidade para solicitações de privacidade
 topic: overview
 description: Este documento fornece orientação geral sobre como configurar suas operações de dados e aproveitar as tecnologias de Adobe para recuperar efetivamente as informações de identidade apropriadas para as solicitações de privacidade do cliente.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 3%
@@ -25,7 +25,7 @@ Quando um cliente pode interagir com sua marca através de vários canais difere
 
 Por exemplo, ao lidar com solicitações de dados do cliente em [!DNL Privacy Service], uma identidade pode representar um valor de cookie definido em um domínio controlado por Adobe, um valor de cookie em um domínio de terceiros e compartilhado com o Adobe, ou um identificador personalizado que você define explicitamente em sua Organização IMS.
 
-Por conseguinte, é necessário que cada identidade enviada [!DNL Privacy Service] seja acompanhada de uma **namespace** que forneça o contexto, relacionando o valor de identificação com o seu sistema de origens. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
+Por conseguinte, é necessário que cada identidade enviada [!DNL Privacy Service] seja acompanhada de uma namespace que permita contextualizar relacionando o valor de identificação com o seu sistema de origens. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
 
 O Adobe Experience Platform Identity Service mantém um armazenamento de namespaces de identidade definidas globalmente e pelo usuário. Para obter informações mais detalhadas sobre namespaces, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade. Para obter uma lista de qualificadores padrão de namespaces e namespaces comumente usados em [!DNL Privacy Service], consulte a seção [do](api/appendix.md) apêndice no guia do desenvolvedor.
 

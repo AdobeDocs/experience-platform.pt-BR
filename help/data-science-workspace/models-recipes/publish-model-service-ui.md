@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform Data Science Workspace permite que você publique seu Modelo treinado e avaliado como um Serviço, permitindo que os usuários na organização IMS pontuem dados sem a necessidade de criar seus próprios Modelos.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,9 @@ Se preferir publicar um Modelo usando APIs de aprendizado de máquina, consulte 
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. Quando um Serviço é criado, ele herda configurações de pontuação padrão. Você pode revisar essas configurações e ajustá-las conforme necessário clicando com o duplo nos valores. Quando estiver satisfeito com as configurações, clique em **[!UICONTROL Concluir]** para começar a execução da pontuação.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Na página *Visão geral* do serviço, os detalhes do novo trabalho de pontuação e seu progresso são mostrados. Quando o trabalho for concluído, o trabalho de pontuação **[!UICONTROL mais recente]** será atualizado.
+5. Na página **Visão geral** do serviço, os detalhes do novo trabalho de pontuação e seu progresso são mostrados. Quando a tarefa for concluída, o cabeçalho **[!UICONTROL Mais recente]** no container de **[!UICONTROL Pontuação]** será atualizado.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da **[!UICONTROL Service Gallery]**. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).
+Ao seguir este tutorial, você publicou com êxito um Modelo como um Serviço acessível e marcou dados usando o novo Serviço por meio da [!UICONTROL Service Gallery]. Continue para o próximo tutorial para saber como [agendar execuções de treinamento e pontuação automatizadas em um Serviço](./schedule-models-ui.md).

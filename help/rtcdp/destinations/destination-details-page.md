@@ -5,7 +5,7 @@ seo-title: Página Detalhes de Destinos
 description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 2%
@@ -53,8 +53,8 @@ O painel direito inclui informações sobre seu destino. Consulte a tabela abaix
 | Plataforma | Representa a plataforma de destino para a qual o audiência é enviado. Consulte Catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) destinos para obter mais informações. |
 | Descrição | Você pode editar a descrição do fluxo de destino. |
 | Categoria | Indica o tipo de destino. Consulte Catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) destinos para obter mais informações. |
-| Tipo de conexão | Indica em qual formulário suas audiências estão sendo enviadas para o destino. Pode ser **[!UICONTROL Cookie]** ou baseado em **[!UICONTROL Perfis]**. |
-| Frequência | Indica com que frequência as audiências são enviadas para o destino. Pode ser **[!UICONTROL Streaming]** ou **[!UICONTROL Batch]**. |
+| Tipo de conexão | Indica em qual formulário suas audiências estão sendo enviadas para o destino. Pode ser [!UICONTROL Cookie] ou baseado em [!UICONTROL Perfis]. |
+| Frequência | Indica com que frequência as audiências são enviadas para o destino. Pode ser [!UICONTROL Streaming] ou [!UICONTROL Batch]. |
 | Identidade | Representa a namespace de identidade aceita pelo destino. Por exemplo, o campo Identidade pode ser GAID, IDFA, email. Para obter todas as namespaces de identidade aceitas, consulte namespaces padrão na visão geral [da namespace de](../../identity-service/namespaces.md)identidade. |
 | Criado por | Indica o usuário que criou esse fluxo de destino. |
 | Criado | Indica a data e a hora UTC em que esse fluxo de destino foi criado. |

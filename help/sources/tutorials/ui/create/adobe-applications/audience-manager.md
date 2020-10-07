@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial o orienta pelas etapas para criar conectores de origem para a Adobe Audience Manager trazer os dados do Evento da Experiência do consumidor para a Plataforma usando a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 2%
@@ -20,9 +20,9 @@ Este tutorial o orienta pelas etapas para criar conectores de origem para a Adob
 
 ## Criar uma conexão de origem com o Adobe Audience Manager
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela *Catálogo* exibe várias fontes com as quais você pode criar conexões de origem e cada fonte mostra o número de conexões existentes associadas a elas.
+Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **Fontes** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela **Catálogo** exibe várias fontes com as quais você pode criar conexões de origem e cada fonte mostra o número de conexões existentes associadas a elas.
 
-Na categoria de aplicativos *de* Adobe, selecione **Adobe Audience Manager** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para visualização de sua documentação ou para conexão com a fonte.
+Na categoria de aplicativos **de** Adobe, selecione **Adobe Audience Manager** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para visualização de sua documentação ou para conexão com a fonte.
 
 Para criar um novo conector de origem para Adobe Audience Manager, clique em **Adicionar dados**.
 
@@ -32,7 +32,7 @@ Uma caixa de diálogo é exibida. Clique em **Conectar** para criar a conexão.
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-Se uma conexão de origem com o Adobe Audience Manager for estabelecida, a página atividade *de* origem do conector Audience Manager será exibida.
+Se uma conexão de origem com o Adobe Audience Manager for estabelecida, a página atividade **de** origem do conector Audience Manager será exibida.
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 

@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform permite que você use a Linguagem de Query Estruturada (SQL) na Data Science Workspace, integrando o Serviço de Query ao JúpiterLab como um recurso padrão. Este tutorial demonstra query SQL de amostra para casos de uso comuns para explorar, transformar e analisar dados da Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -104,7 +104,7 @@ Quando um notebook está inativo por um longo período de tempo, a conexão entr
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-O kernel do notebook será redefinido, mas as células permanecerão, execute novamente **[!UICONTROL todas]** as células para continuar onde você parou.
+O kernel do notebook será redefinido, mas as células permanecerão, execute novamente **todas** as células para continuar onde você parou.
 
 ### Contagem horária de visitantes {#hourly-visitor-count}
 

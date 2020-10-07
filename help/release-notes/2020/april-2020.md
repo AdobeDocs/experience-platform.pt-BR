@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 5%
@@ -79,7 +79,7 @@ A [!DNL Data Governance] estrutura simplifica e simplifica o processo de categor
 
 | Recurso | Descrição |
 | -----------| ---------- |
-| Gerenciar políticas de uso de dados na interface do usuário | As políticas de uso de dados agora podem ser gerenciadas dentro da área de trabalho _Políticas_ na [!DNL Experience Platform] UI. Consulte o guia [do usuário da](../../data-governance/policies/user-guide.md) política para obter mais informações. |
+| Gerenciar políticas de uso de dados na interface do usuário | As políticas de uso de dados agora podem ser gerenciadas dentro da área de trabalho **Políticas** na [!DNL Experience Platform] UI. Consulte o guia [do usuário da](../../data-governance/policies/user-guide.md) política para obter mais informações. |
 
 **Problemas conhecidos**
 

@@ -5,7 +5,7 @@ title: Guia do usuário do notebook Aprendizagem de máquina em tempo real
 topic: Training and scoring a ML model
 description: O guia a seguir descreve as etapas necessárias para criar um aplicativo de aprendizado de máquina em tempo real no Adobe Experience Platform JúpiterLab.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ O guia a seguir descreve as etapas necessárias para criar um aplicativo de apre
 
 ## Criar um notebook de aprendizado de máquina em tempo real
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Notebooks]** na *Data Science*. Em seguida, selecione **[!UICONTROL JupyterLab]** e aguarde algum tempo para o ambiente carregar.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Notebooks]** na **Data Science**. Em seguida, selecione **[!UICONTROL JupyterLab]** e aguarde algum tempo para o ambiente carregar.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ Usando o modelo ML **[!UICONTROL em tempo]** real, você precisa analisar, pré-
 
 **Transformações de dados**
 
-A célula Modelos ML **[!UICONTROL em tempo]** real de Transformações *de* dados precisa ser modificada para funcionar com seu próprio conjunto de dados. Normalmente, isso envolve renomear colunas, acúmulo de dados e preparação de dados/engenharia de recursos.
+A célula Modelos ML **[!UICONTROL em tempo]** real de Transformações **de** dados precisa ser modificada para funcionar com seu próprio conjunto de dados. Normalmente, isso envolve renomear colunas, acúmulo de dados e preparação de dados/engenharia de recursos.
 
 >[!NOTE]
 >

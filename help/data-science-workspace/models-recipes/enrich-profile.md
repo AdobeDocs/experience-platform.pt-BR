@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial passo a passo para aprimorar o Perfil do cliente em tempo real com insights de aprendizado da máquina, as etapas são divididas nas seções a seguir, cria um schema de saída/conjunto de dados, configura um schema de saída/conjunto de dados e cria segmentos usando o Construtor de segmentos.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
@@ -43,10 +43,10 @@ O primeiro passo para enriquecer [!DNL Real-time Customer Profile] com insights 
 
 A composição de um schema começa com a atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o schema conterá (registro ou série cronológica). Esta seção fornece instruções básicas para criar um schema usando o construtor de schemas. Para obter um tutorial mais detalhado, consulte o tutorial sobre como [criar um schema usando o Editor](../../xdm/tutorials/create-schema-ui.md)de Schemas.
 
-1. No Adobe Experience Platform, clique na guia **[!UICONTROL Schema]** para acessar o navegador do schema. Clique em **[!UICONTROL Criar Schema]** para acessar o Editor *de*Schemas, onde você pode criar e criar schemas interativamente.
+1. No Adobe Experience Platform, clique na guia **[!UICONTROL Schema]** para acessar o navegador do schema. Clique em **[!UICONTROL Criar Schema]** para acessar o Editor **de**Schemas, onde você pode criar e criar schemas interativamente.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Na janela *Composição* , clique em **[!UICONTROL Atribuir]** para procurar as classes disponíveis.
+2. Na janela **Composição** , clique em **[!UICONTROL Atribuir]** para procurar as classes disponíveis.
    * Para atribuir uma classe existente, clique e realce a classe desejada e clique em **[!UICONTROL Atribuir classe]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ A composição de um schema começa com a atribuição de uma classe. As classes
 
    Nesse ponto, a estrutura do schema deve conter alguns campos de classe e você está pronto para atribuir combinações. Uma combinação é um grupo de um ou mais campos que descrevem um conceito específico.
 
-3. Na janela *Composição* , clique em **[!UICONTROL Adicionar]** na subseção *Misturas* .
+3. Na janela **Composição** , clique em **[!UICONTROL Adicionar]** na subseção **Misturas** .
    * Para atribuir uma mistura existente, clique e realce a mistura desejada e clique em **[!UICONTROL Adicionar mistura]**. Diferentemente das classes, várias combinações podem ser atribuídas a um único schema, desde que seja apropriado.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 

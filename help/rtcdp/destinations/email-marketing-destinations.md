@@ -6,9 +6,9 @@ type: Tutorial
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ No fluxo de destino de conexão, descrito na seção abaixo, conecte-se ao Amazo
 
    ![Conectar ao destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Na etapa **[!UICONTROL Autenticação]** , se você já tiver configurado uma conexão com o destino de marketing por email, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com seu destino de marketing de email. No seletor de tipo **** Conexão, você pode selecionar entre **Amazon S3**, **SFTP com senha**, **SFTP com chave** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
+2. Na etapa **[!UICONTROL Autenticação]** , se você já tiver configurado uma conexão com o destino de marketing por email, selecione Conta **** existente e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão com seu destino de marketing de email. No seletor de tipo **[!UICONTROL de]** conexão, você pode selecionar entre Amazon S3, SFTP com senha ou SFTP com chave SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Connect (Conectar]**).
 
    Para conexões **** S3, você deve fornecer a ID da chave de acesso Amazon e a chave de acesso secreta.
 
@@ -38,9 +38,9 @@ No fluxo de destino de conexão, descrito na seção abaixo, conecte-se ao Amazo
 
    Para **SFTP com conexões de chave** SSH, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH para seu servidor SFTP.
 
-3. Na etapa **[!UICONTROL Configuração]** , digite um **[!UICONTROL Nome]** e uma **[!UICONTROL Descrição]** para o novo destino, bem como o formato **** Arquivo para os arquivos exportados. <br>
-Se você selecionou Amazon S3 como opção de armazenamento na etapa anterior, insira o nome **[!UICONTROL do]** compartimento e o caminho **[!UICONTROL da]** pasta no destino do armazenamento na nuvem onde os arquivos serão entregues. Para a opção armazenamento SFTP, insira o caminho **[!UICONTROL da]** pasta onde os arquivos serão entregues. <br>
-Também nesta etapa, você pode selecionar qualquer caso **[!UICONTROL de uso de]** Marketing que deve ser aplicado a este destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pelo Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados. <br>
+3. Na etapa **[!UICONTROL Configuração]** , digite um [!UICONTROL Nome] e uma [!UICONTROL Descrição] para o novo destino, bem como o formato  Arquivo para os arquivos exportados. <br>
+Se você selecionou Amazon S3 como opção de armazenamento na etapa anterior, insira o nome [!UICONTROL do] compartimento e o caminho [!UICONTROL da] pasta no destino do armazenamento na nuvem onde os arquivos serão entregues. Para a opção armazenamento SFTP, insira o caminho [!UICONTROL da] pasta onde os arquivos serão entregues. <br>
+Também nesta etapa, você pode selecionar qualquer caso [!UICONTROL de uso de] Marketing que deve ser aplicado a este destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) em tempo real. Para obter informações sobre casos individuais de uso de marketing definidos pelo Adobe, consulte a visão geral [das políticas de uso de](/help/data-governance/policies/overview.md#core-actions)dados. <br>
    ![Etapa de configuração de email](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## Etapa 2 - Selecione os membros do segmento a serem incluídos nas exportações de destino {#select-segments}

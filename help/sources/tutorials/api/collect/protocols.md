@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1587'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Você pode criar uma conexão de origem, fazendo uma solicitação POST para a [
 
 Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
 
-Use os seguintes valores enum para conectores **baseados em** arquivo:
+Use os seguintes valores enum para conectores baseados em arquivo:
 
 | Data.format | Valor Enum |
 | ----------- | ---------- |
@@ -67,7 +67,7 @@ Use os seguintes valores enum para conectores **baseados em** arquivo:
 | Arquivos JSON | `json` |
 | Arquivos de parâmetro | `parquet` |
 
-Para todos os conectores **baseados em** tabela, use o valor enum: `tabular`.
+Para todos os conectores baseados em tabela, use o valor enum: `tabular`.
 
 **Formato da API**
 

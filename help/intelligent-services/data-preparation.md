@@ -5,7 +5,7 @@ title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 description: 'Para que os Serviços inteligentes detectem insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes aproveitam os schemas do Experience Data Model (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados nos Serviços inteligentes] devem estar em conformidade com o schema XDM da Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Preparar dados para uso em [!DNL Intelligent Services]
 
-Para [!DNL Intelligent Services] descobrir insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. [!DNL Intelligent Services] aproveite os schemas [!DNL Experience Data Model] (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados devem estar em conformidade com [!DNL Intelligent Services] o schema XDM **Consumer ExperienceEvent (CEE)** .
+Para [!DNL Intelligent Services] descobrir insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. [!DNL Intelligent Services] aproveite os schemas [!DNL Experience Data Model] (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados devem estar em conformidade com [!DNL Intelligent Services] o schema XDM Consumer ExperienceEvent (CEE).
 
 Este documento fornece orientação geral sobre como mapear os dados de seus eventos de marketing de vários canais para esse schema, descrevendo informações sobre campos importantes dentro do schema para ajudá-lo a determinar como mapear efetivamente seus dados para sua estrutura.
 

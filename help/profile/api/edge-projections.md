@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Projeções do Edge - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 2%
@@ -226,7 +226,7 @@ O objeto response mostra os detalhes do destino da projeção. O `id` atributo d
 
 ### Atualizar um destino
 
-Um destino existente pode ser atualizado fazendo uma solicitação de PUT para o ponto de extremidade e incluindo a ID do destino a ser atualizada no caminho da solicitação. `/config/destinations` Essa operação é essencialmente _reescrever_ o destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação, como são fornecidos ao criar um novo destino.
+Um destino existente pode ser atualizado fazendo uma solicitação de PUT para o ponto de extremidade e incluindo a ID do destino a ser atualizada no caminho da solicitação. `/config/destinations` Essa operação está essencialmente regravando o destino, portanto, os mesmos atributos devem ser fornecidos no corpo da solicitação como são fornecidos ao criar um novo destino.
 
 >[!CAUTION]
 >

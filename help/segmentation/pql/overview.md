@@ -5,10 +5,10 @@ title: Visão geral do Linguagem do Query do perfil (PQL)
 topic: developer guide
 description: Este guia fornece uma visão geral do PQL, abrangendo diretrizes de formatação e fornecendo expressões de exemplo do PQL.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Os query PQL têm a seguinte assinatura:
 
 O parâmetro de entrada pode ser um primitivo simples, como um booleano ou uma string, ou um tipo mais complexo, como um objeto, uma matriz ou um mapa.
 
-Existem **três** maneiras diferentes de se referir aos parâmetros de entrada no corpo de uma expressão PQL:
+Há três maneiras diferentes de se referir aos parâmetros de entrada no corpo de uma expressão PQL:
 
 ### Referência implícita ao primeiro parâmetro
 
@@ -65,7 +65,7 @@ O PQL oferece suporte para os seguintes tipos literais:
 | Booleano | Um tipo de dados verdadeiro ou falso. | `true`, `false` |
 | Número inteiro | Um tipo de dados que representa um número inteiro. Pode ser positivo, negativo ou zero. | `-201`, `0`, `412` |
 | Duplo | Um tipo de dados que representa qualquer número real. Pode ser positivo, negativo ou zero. | `-51.24`, `3.14`, `0.6942058` |
-| Data | Um tipo de dados que pode ser usado para criar datas com base em ano, mês e dia como parâmetros inteiros. Está formatado como `date(year, month, day)` | `date(2020, 3, 14)` |
+| Data | Um tipo de dados que pode ser usado para criar datas com base em ano, mês e dia como parâmetros inteiros. É formatado como `date(year, month, day)` | `date(2020, 3, 14)` |
 | Matriz | Um tipo de dados que é composto como um grupo de outros valores literais. Ele usa colchetes para agrupar e vírgulas para delimitar entre valores diferentes. <br> **Observação:** Não é possível acessar diretamente as propriedades de itens em uma matriz. Portanto, se você precisar acessar uma propriedade em um storage, o método suportado será `select X from array where X.item = ...`. <br> O PQL reserva a palavra `xEvent` para fazer referência a uma matriz de eventos de experiência vinculados a um perfil. | `[1, 4, 7]`, `["US", "CA"]` |
 | Referências de tempo relativas | Palavras reservadas que podem ser usadas para formar referências de carimbo de data e hora. <ul><li>agora, hoje, ontem, amanhã</li><li>this, last, next</li><li>before, after, from</li><li>milissegundo(s), segundo(s), minuto(s), hora(s), dia(s), semana(s), mês(es), ano(s), década(s), século/séculos, milênio/milênio</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 

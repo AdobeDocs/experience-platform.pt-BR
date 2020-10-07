@@ -5,7 +5,7 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Os dados destinados ao uso em [!DNL Experience Platform] são agrupados em dois 
 * **Registrar dados**: Fornece informações sobre os atributos de um assunto. Um sujeito pode ser uma organização ou um indivíduo.
 * **Dados** das séries cronológicas: Fornece um instantâneo do sistema no momento em que uma ação foi tomada, direta ou indiretamente, por um participante do registro.
 
-Todos os schemas XDM descrevem dados que podem ser classificados como registros ou séries de tempo. O comportamento de dados de um schema é definido pela **classe** schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM são descritas com mais detalhes posteriormente neste documento.
+Todos os schemas XDM descrevem dados que podem ser classificados como registros ou séries de tempo. O comportamento de dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM são descritas com mais detalhes posteriormente neste documento.
 
 Os schemas de registro e de série de tempo contêm um mapa de identidades (`xdm:identityMap`). Este campo contém a representação de identidade de um assunto, extraída de campos marcados como &quot;Identidade&quot;, conforme descrito na próxima seção.
 
@@ -133,7 +133,7 @@ Os schemas são compostos usando a seguinte fórmula:
 
 **Classe + Mixin&amp;ast; = Schema XDM**
 
-&amp;ast;Um schema é composto por uma classe e _zero ou mais_ combinações. Isso significa que você pode compor um schema de conjunto de dados sem usar misturas.
+&amp;ast;Um schema é composto por uma classe e zero ou mais combinações. Isso significa que você pode compor um schema de conjunto de dados sem usar misturas.
 
 ### Classe
 

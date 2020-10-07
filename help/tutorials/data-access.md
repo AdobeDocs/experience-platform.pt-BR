@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform permite que os usuários descubram e acessem conjuntos de dados ingeridos no Experience Platform usando a API de acesso a dados.
 translation-type: tm+mt
-source-git-commit: 0ec93ef44facc725e22547d002de677d93f3bd1f
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -33,26 +33,3 @@ A API de acesso a dados oferece suporte à Adobe Experience Platform, fornecendo
 - Configurar a paginação de resposta da API.
 
 Para começar, siga o tutorial [da API de acesso a](../data-access/tutorials/dataset-data.md)dados.
-
-## Usar o SDK do Python seguro para acessar dados
-
-O Secure Python Data Access SDK é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados do Experience Platform usando Python.
-
-**Este guia o ajudará a:**
-- Configure seu ambiente e instale os pacotes corretos.
-- Leitura de um conjunto de dados.
-- Gravar em um conjunto de dados.
-- Leia e grave em um diretório de espaço de usuário.
-
-Para começar, visualização a documentação [do SDK de acesso a dados do](../data-access/tutorials/python-sdk.md)Python.
-
-## Usar o SDK do Secure Spark para acessar dados
-
-O SDK de acesso a dados do Secure Spark é um kit de desenvolvimento de software que permite a leitura e a gravação de conjuntos de dados da Adobe Experience Platform usando o Spark.
-
-**Este guia o ajudará a:**
-- Configure seu ambiente e instale os pacotes corretos.
-- Leitura de um conjunto de dados.
-- Gravar em um conjunto de dados.
-
-Para começar, visualização na documentação [SDK de acesso a dados](../data-access/tutorials/spark-sdk.md)Spark.

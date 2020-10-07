@@ -5,9 +5,9 @@ title: Visão geral do acesso aos dados
 topic: overview
 description: O Data Access oferece suporte à Adobe Experience Platform, fornecendo aos usuários ferramentas voltadas para a descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '173'
 ht-degree: 1%
 
 ---
@@ -23,17 +23,11 @@ ht-degree: 1%
 
 Informações detalhadas sobre o uso da [!DNL Data Access] API para conexão [!DNL Platform] podem ser encontradas no guia [do desenvolvedor do](api.md)Data Access.
 
-## [!DNL Python] SDK
+## Acessar dados na Data Science Workspace
 
-Você pode ler e gravar com conjuntos de dados usando o [!DNL Python] SDK. Informações mais detalhadas sobre o [!DNL Python] SDK podem ser encontradas no tutorial [do](./tutorials/python-sdk.md)Python SDK.
+Você pode ler e gravar em conjuntos de dados usando [!DNL Python] e [!DNL Spark] para o desenvolvimento de receitas e modelos na Data Science Workspace. Para saber mais sobre como acessar seus dados, visite a documentação de acesso [aos dados do](../data-science-workspace/authoring/python.md) Python ou [Spark](../data-science-workspace/authoring/spark.md) .
 
-[!DNL Data Science Workspace] usa o [!DNL Python] SDK em notebooks e receitas. Para obter mais informações sobre [!DNL Data Science Workspace], leia a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
-
-## [!DNL Spark] SDK
-
-Você pode ler e gravar com conjuntos de dados usando o [!DNL Spark] SDK. Informações mais detalhadas sobre o [!DNL Spark] SDK podem ser encontradas no tutorial [do SDK do](./tutorials/spark-sdk.md)Spark.
-
-[!DNL Data Science Workspace] usa o [!DNL Spark] SDK em notebooks e receitas. Para obter mais informações sobre [!DNL Data Science Workspace], leia a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
+Para obter mais informações sobre [!DNL Data Science Workspace], consulte a visão geral [da](../data-science-workspace/home.md)Data Science Workspace.
 
 ## Assinar eventos de ingestão de dados
 

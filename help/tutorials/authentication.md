@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor Adobe Experience Platform para fazer chamadas para APIs Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 1%
@@ -89,17 +89,17 @@ As etapas são abordadas em detalhes abaixo.
 
 Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Console do desenvolvedor do Adobe.
 
-Depois de criar um novo projeto, clique em **[!UICONTROL Adicionar API]** na tela Visão geral _do_ projeto.
+Depois de criar um novo projeto, clique em **[!UICONTROL Adicionar API]** na tela Visão geral **do** projeto.
 
 ![](images/authentication/add-api-button.png)
 
-A tela _Adicionar uma API_ é exibida. Clique no ícone do produto para Adobe Experience Platform e selecione API **** Experience Platform antes de clicar em **[!UICONTROL Avançar]**.
+A tela **Adicionar uma API** é exibida. Clique no ícone do produto para Adobe Experience Platform e selecione API **** Experience Platform antes de clicar em **[!UICONTROL Avançar]**.
 
 ![](images/authentication/add-platform-api.png)
 
 Depois de selecionar [!DNL Experience Platform] como a API a ser adicionada ao projeto, siga as etapas descritas no tutorial sobre como [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partir da etapa &quot;Configurar API&quot;) para concluir o processo.
 
-Depois que a API é adicionada ao projeto, a página de visão geral _do_ projeto exibe as seguintes credenciais necessárias em todas as chamadas para [!DNL Experience Platform] APIs:
+Depois que a API é adicionada ao projeto, a página de visão geral **do** projeto exibe as seguintes credenciais necessárias em todas as chamadas para [!DNL Experience Platform] APIs:
 
 * `{API_KEY}` (ID do cliente)
 * `{IMS_ORG}` (ID da organização)

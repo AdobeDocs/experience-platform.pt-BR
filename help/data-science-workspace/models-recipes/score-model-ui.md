@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'A pontuação na Adobe Experience Platform Data Science Workspace pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Uma execução de pontuação é criada usando configurações otimizadas de uma
 
 1. Encontre a execução de treinamento mais ideal para usar suas configurações para pontuação. Abra a execução de treinamento desejada clicando em seu nome.
 
-2. Na guia Training Run **[!UICONTROL Evaluation]** (Avaliação **[!UICONTROL de execução de treinamento), clique no botão]** Score(Pontuação) na parte superior direita da tela. Isso iniciará um novo fluxo de trabalho *Executar Pontuação* .
+2. Na guia Training Run **[!UICONTROL Evaluation]** (Avaliação **[!UICONTROL de execução de treinamento), clique no botão]** Score(Pontuação) na parte superior direita da tela. Isso iniciará um novo fluxo de trabalho **Executar Pontuação** .
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Selecione o conjunto de dados de pontuação de entrada e clique em **[!UICONTROL Avançar]**.

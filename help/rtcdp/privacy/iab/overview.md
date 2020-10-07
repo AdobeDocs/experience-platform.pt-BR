@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suporte ao IAB TCF 2.0 na Plataforma de dados do cliente em tempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Essa caixa de diálogo deve permitir que o cliente opt in ou saia do seguinte:
 
 ### Strings de consentimento {#consent-strings}
 
-Independentemente do método usado para coletar os dados, o objetivo é gerar um valor de sequência de caracteres com base nas opções de consentimento escolhidas pelo cliente, chamadas de sequência de caracteres **de** consentimento.
+Independentemente do método usado para coletar os dados, o objetivo é gerar um valor de sequência de caracteres com base nas opções de consentimento escolhidas pelo cliente, chamadas de sequência de caracteres de consentimento.
 
 Na especificação TCF, as strings de consentimento são usadas para codificar detalhes relevantes sobre as configurações de consentimento de um cliente, em termos de finalidades de marketing específicas, conforme definido pelas políticas e fornecedores. [!DNL Real-time CDP] utiliza essas sequências de caracteres para armazenar as configurações de consentimento para cada cliente e, portanto, uma nova sequência de caracteres de consentimento deve ser gerada sempre que essas configurações forem alteradas.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Documentação do produto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 0%
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 **Catálogo de destino:** Um catálogo de destino é uma lista de destinos disponíveis no [!DNL Real-time Customer Data Platform].
 
-**Regras de chamada direta:** no [!DNL Experience Platform Launch], você pode configurar uma [!UICONTROL regra] de chamada  direta que é executada quando é chamada diretamente da página. Se o carregamento de sua página ou a ação no site for muito simples, ou se for exclusiva e puder executar um conjunto específico de instruções toda vez (definido [!DNL eVar4] como X e acionado [!DNL event2] toda vez), você poderá usar uma [!UICONTROL regra] de chamada direta. Consulte [!DNL Launch] a documentação referente à criação de [!UICONTROL regras] de chamada direta.
+**Regras de chamada direta:** em [!DNL Experience Platform Launch], você pode configurar uma regra de chamada direta que é executada quando é chamada diretamente da página. Se o carregamento de sua página ou a ação no site for muito simples, ou se for exclusiva e puder executar um conjunto específico de instruções toda vez (definido como X e acionado todas as vezes [!DNL eVar4] [!DNL event2] ), você poderá usar uma regra de chamada direta. Consulte [!DNL Launch] a documentação referente à criação de regras de chamada direta.
 
 **Nome de exibição:** O nome de exibição é um nome amigável para o usuário de um campo que é mostrado na interface do usuário.
 
@@ -370,7 +370,7 @@ ht-degree: 0%
 
 **Oferta:** Uma oferta é uma mensagem de marketing que pode ter regras associadas a ela, especificando quem está qualificado para ver a oferta.
 
-**Decisão de oferta:** A decisão de oferta permite que um profissional de marketing gerencie regras e modelos treinados de apresentações da oferta ao se envolver com um usuário final com base em dados coletados em canais e aplicativos.
+**Offer Decisioning:** A decisão de oferta permite que um profissional de marketing gerencie regras e modelos treinados de apresentações da oferta ao se envolver com um usuário final com base em dados coletados em canais e aplicativos.
 
 **Biblioteca de ofertas:** A biblioteca de ofertas é uma biblioteca central usada para gerenciar ofertas personalizadas e de fallback, regras de decisão e atividades.
 
@@ -576,7 +576,7 @@ ht-degree: 0%
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 
-## S
+## Y
 
 [Voltar ao início](#adobe-experience-platform-glossary)
 

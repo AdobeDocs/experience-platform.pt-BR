@@ -6,7 +6,7 @@ description: Este documento fornece um tutorial para definir uma relação entre
 topic: tutorial
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 A capacidade de entender as relações entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante da Adobe Experience Platform. A definição desses relacionamentos dentro da estrutura dos schemas [!DNL Experience Data Model] (XDM) permite obter insights complexos sobre os dados do cliente.
 
-Embora as relações com os schemas possam ser inferidas com o uso do schema da união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo **de** relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
+Embora as relações com os schemas possam ser inferidas com o uso do schema da união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo de relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
 
 Este documento fornece um tutorial para definir uma relação entre dois schemas usando o Editor de Schemas na interface do [!DNL Experience Platform] usuário. Para obter etapas sobre como definir relações de schema usando a API, consulte o tutorial sobre como [definir uma relação usando a API](relationship-api.md)de Registro de Schemas.
 

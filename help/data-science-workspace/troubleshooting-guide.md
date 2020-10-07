@@ -5,7 +5,7 @@ title: Guia de solução de problemas da Data Science Workspace
 topic: Troubleshooting
 description: Este documento fornece respostas para perguntas frequentes sobre a Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -31,7 +31,7 @@ No [!DNL Chrome] navegador, navegue até o canto superior direito e selecione **
 
 ![cromo avançado](./images/faq/chrome-advanced.png)
 
-A seção *Privacidade e segurança* é exibida. Em seguida, clique nas configurações **** do site seguidas por **Cookies e dados** do site.
+A seção **Privacidade e segurança** é exibida. Em seguida, clique nas configurações **** do site seguidas por **Cookies e dados** do site.
 
 ![cromo avançado](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Na janela Preferências do Safari, selecione **Avançado**. Em seguida, marque o
 
 ![Safari avançado](./images/faq/advanced.png)
 
-Em seguida, na barra de navegação superior, selecione o menu **Desenvolver** . Na lista suspensa *Desenvolver* , passe o mouse sobre o Agente ** do usuário. Você pode selecionar a sequência de caracteres do Agente do Usuário **[!DNL Chrome]** ou **[!DNL Firefox]** do Agente do Usuário que deseja usar.
+Em seguida, na barra de navegação superior, selecione o menu **Desenvolver** . Na lista suspensa **Desenvolver** , passe o mouse sobre o Agente **** do usuário. Você pode selecionar a sequência de caracteres do Agente do Usuário **[!DNL Chrome]** ou **[!DNL Firefox]** do Agente do Usuário que deseja usar.
 
 ![Menu Desenvolver](./images/faq/user-agent.png)
 

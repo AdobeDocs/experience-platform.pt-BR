@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia do usuário do Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Este documento fornece etapas para criar e gerenciar solicitações de privacida
 
 ## Procurar o painel da [!DNL Privacy Service] interface do usuário
 
-O painel para a [!DNL Privacy Service] interface do usuário fornece dois widgets que permitem que você visualização o status de seus trabalhos de privacidade: **[!UICONTROL Relatório]** de Status e Solicitações **** de Job. O painel também exibe a regra selecionada atual para as tarefas exibidas.
+O painel para a [!DNL Privacy Service] interface do usuário fornece dois widgets que permitem que você visualização o status de seus trabalhos de privacidade: &quot;Relatório[!UICONTROL de]Status&quot; e &quot;Solicitaçõesde Job&quot;. O painel também exibe a regra selecionada atual para as tarefas exibidas.
 
 ![Painel da interface](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ A caixa de diálogo **[!UICONTROL Criar solicitação]** é aberta, exibindo as 
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selecione o Tipo **[!UICONTROL de]** trabalho da solicitação (&quot;Excluir&quot; ou &quot;Acesso&quot;) e um ou mais **[!UICONTROL Produtos]** disponíveis na lista.
+Selecione o Tipo **[!UICONTROL de]** trabalho da solicitação (&quot;Excluir&quot; ou &quot;Acesso&quot;) e um ou mais produtos disponíveis da lista.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ Em Tipo **[!UICONTROL de]** Namespace, selecione o tipo de namespace apropriado 
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Ao usar o tipo de namespace _padrão_ , selecione uma namespace no menu suspenso (email, ECID ou AAID) e digite os valores de ID na caixa de texto à direita, pressionando **\&lt;enter>** para cada ID para adicioná-la à lista.
+Ao usar o tipo de namespace padrão, selecione uma namespace no menu suspenso (email, ECID ou AAID) e digite os valores de ID na caixa de texto à direita, pressionando **\&lt;enter>** para cada ID para adicioná-la à lista.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Ao usar o tipo de namespace _personalizado_ , você deve digitar manualmente na namespace antes de fornecer os valores de ID abaixo.
+Ao usar o tipo de namespace personalizada, você deve digitar manualmente na namespace antes de fornecer os valores de ID abaixo.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ Se você não tiver um arquivo JSON para carregar, clique em **[!UICONTROL Baixa
 
 Localize o arquivo JSON no computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo será exibido na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando-os e soltando-os na caixa de diálogo.
 
-When finished, click **[!UICONTROL Create]**. A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações _de_ trabalho junto com seu status de processamento atual.
+When finished, click **[!UICONTROL Create]**. A caixa de diálogo desaparece e o novo trabalho (ou trabalhos) é listado no widget Solicitações de trabalho juntamente com seu status de processamento atual.
 
 ### Próximas etapas
 

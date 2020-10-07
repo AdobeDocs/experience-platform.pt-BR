@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de execução da Sensei Machine Learning Framework. Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizado usando o SDK de criação de modelos no PySpark.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -71,7 +71,7 @@ O arquivo JSON de configuração consiste em pares de valores chave e destina-se
 
 O exemplo a seguir demonstra os pares de valores chave encontrados em um arquivo de configuração:
 
-**exemplo JSON de configuração**
+**Exemplo de JSON de configuração**
 
 ```json
 [

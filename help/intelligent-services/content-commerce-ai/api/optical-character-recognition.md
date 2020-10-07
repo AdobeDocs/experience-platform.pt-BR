@@ -1,13 +1,13 @@
 ---
-keywords: text classification;Text classification
+keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
-title: Ponto final da API de classificação de texto
+title: Reconhecimento ótico de caracteres
 topic: Developer guide
-description: O serviço de classificação de texto, quando recebe um fragmento de texto, pode classificá-lo em um ou mais rótulos. A classificação pode ser de rótulo único, de vários rótulos ou hierárquica.
+description: O serviço de Presença de texto / Reconhecimento ótico de caracteres (OCR), quando recebe uma imagem, pode indicar se o texto está presente na imagem. Se houver texto, o OCR poderá retornar o texto
 translation-type: tm+mt
-source-git-commit: d57d4412ffd8beccc529681db559007a14ff8120
+source-git-commit: 4d12caf949aeb6619cd27b55855014a61d4e54bb
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '512'
 ht-degree: 3%
 
 ---

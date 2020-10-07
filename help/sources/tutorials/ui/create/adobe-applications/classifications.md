@@ -6,7 +6,7 @@ title: Criar um conector de dados de classificações da Adobe Analytics na inte
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Na categoria de aplicativos **[!UICONTROL do]** Adobe, selecione o cartão **[!U
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-A etapa de adição de dados **[!UICONTROL de origem do]** Analytics é exibida. Selecione **[!UICONTROL Classificações]** no cabeçalho superior para ver uma lista de [!DNL Classifications] conjuntos de dados, incluindo informações sobre a ID **[!UICONTROL de]** Dimension, o nome **[!UICONTROL do Conjunto de]** relatórios e a ID **[!UICONTROL do Conjunto de]** relatórios.
+A etapa de adição de dados **[!UICONTROL de origem do]** Analytics é exibida. Selecione **[!UICONTROL Classificações]** no cabeçalho superior para ver uma lista de [!DNL Classifications] conjuntos de dados, incluindo informações sobre a ID da dimensão, o nome do conjunto de relatórios e a ID do conjunto de relatórios.
 
 Cada página exibe até dez [!DNL Classifications] conjuntos de dados diferentes dos quais você pode escolher. Selecione **[!UICONTROL Próximo]** na parte inferior da página para procurar mais opções. O painel à direita mostra o número total de [!DNL Classifications] conjuntos de dados selecionados, bem como seus nomes. Esse painel também permite remover quaisquer [!DNL Classifications] conjuntos de dados selecionados por engano ou apagar todas as seleções com uma única ação.
 

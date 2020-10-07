@@ -5,7 +5,7 @@ title: Guia do usuário do Editor de query
 topic: query editor
 description: O Editor de query é uma ferramenta interativa fornecida pelo Adobe Experience Platform Query Service, que permite que você grave, valide e execute query para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de query oferece suporte ao desenvolvimento de query para a exploração de análises e dados e permite que você execute query interativos para fins de desenvolvimento, bem como query não interativos para preencher conjuntos de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%
@@ -99,7 +99,7 @@ Consulte a visão geral [da interface do usuário do serviço de][query-service-
 
 ## Execução de query usando o Editor de Query
 
-Para executar um query no, insira o SQL no editor ou carregue um query anterior na guia [!DNL Query Editor]Log *ou* Procurar **[!UICONTROL e clique em]** Reproduzir ****. O status da execução do query é exibido na guia **[!UICONTROL Console]** abaixo e os dados de saída são mostrados na guia **[!UICONTROL Resultados]** .
+Para executar um query no, insira o SQL no editor ou carregue um query anterior na guia [!DNL Query Editor]Log **[!UICONTROL ou]** Procurar **[!UICONTROL e clique em]** Reproduzir ****. O status da execução do query é exibido na guia **[!UICONTROL Console]** abaixo e os dados de saída são mostrados na guia **[!UICONTROL Resultados]** .
 
 ### Console
 

@@ -5,7 +5,7 @@ title: Políticas
 topic: developer guide
 description: As políticas de uso de dados são regras adotadas por sua organização que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro do Experience Platform. O terminal /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de uso de dados.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 2%
@@ -235,7 +235,7 @@ Na [!DNL Policy Service] API, uma política é definida pelo seguinte:
 * Uma referência a uma ação de marketing específica
 * Uma expressão que descreve os rótulos de uso de dados com os quais a ação de marketing está restrita a não ser executada em relação
 
-Para atender ao último requisito, as definições de política devem incluir uma expressão booleana em relação à presença de rótulos de uso de dados. Esta expressão é chamada de expressão **** política.
+Para atender ao último requisito, as definições de política devem incluir uma expressão booleana em relação à presença de rótulos de uso de dados. Esta expressão é chamada de expressão política.
 
 Expressões de políticas são fornecidas na forma de uma `deny` propriedade dentro de cada definição de política. Um exemplo de um `deny` objeto simples que verifica apenas a presença de um único rótulo seria semelhante ao seguinte:
 
@@ -245,7 +245,7 @@ Expressões de políticas são fornecidas na forma de uma `deny` propriedade den
 }
 ```
 
-Entretanto, muitas políticas especificam condições mais complexas relacionadas à presença de rótulos de uso de dados. Para suportar esses casos de uso, você também pode incluir operações booleanas para descrever suas expressões de política. O objeto de expressão de política deve conter _uma etiqueta_ ou __ um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política.
+Entretanto, muitas políticas especificam condições mais complexas relacionadas à presença de rótulos de uso de dados. Para suportar esses casos de uso, você também pode incluir operações booleanas para descrever suas expressões de política. O objeto de expressão de política deve conter um rótulo ou um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política.
 
 Por exemplo, para definir uma política que proíbe que uma ação de marketing seja executada em dados onde `C1 OR (C3 AND C7)` os rótulos estão presentes, a propriedade da política `deny` será especificada como:
 
@@ -375,7 +375,7 @@ Uma resposta bem-sucedida retorna os detalhes da política recém-criada, inclui
 >
 >Você só pode atualizar políticas personalizadas. Se desejar ativar ou desativar as principais políticas, consulte a seção sobre como [atualizar a lista das principais políticas](#update-enabled-core)habilitadas.
 
-É possível atualizar uma política personalizada existente fornecendo sua ID no caminho de uma solicitação de PUT com uma carga que inclui o formulário atualizado da política na sua totalidade. Por outras palavras, o pedido de PUT _reescreve_ essencialmente a política.
+É possível atualizar uma política personalizada existente fornecendo sua ID no caminho de uma solicitação de PUT com uma carga que inclui o formulário atualizado da política na sua totalidade. Por outras palavras, o pedido de PUT essencialmente reescreve a política.
 
 >[!NOTE]
 >

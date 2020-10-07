@@ -5,7 +5,7 @@ title: Configuração de uma instância do AI do cliente
 topic: Instance creation
 description: Os Serviços inteligentes fornecem IA do cliente como um serviço Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância da API do cliente.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Abaixo estão informações importantes sobre valores que devem ser fornecidos �
 
 * O nome da instância será usado em todos os locais onde a pontuação da AI do cliente for exibida. Assim, os nomes devem descrever o que as pontuações de previsão representam, por exemplo, &quot;Probabilidade de cancelar a subscrição de revistas&quot;.
 
-* O tipo de propensão determina a intenção da pontuação e da polaridade da métrica. Você pode escolher **[!UICONTROL Churn]** ou **[!UICONTROL Conversion]**. Consulte a nota em [um resumo](./discover-insights.md#scoring-summary) de pontuação no documento de insights de descoberta para obter mais informações sobre como o tipo de propensão afeta sua instância.
+* O tipo de propensão determina a intenção da pontuação e da polaridade da métrica. Você pode escolher &quot;[!UICONTROL Churn]&quot; ou &quot;[!UICONTROL Conversão]&quot;. Consulte a nota em [um resumo](./discover-insights.md#scoring-summary) de pontuação no documento de insights de descoberta para obter mais informações sobre como o tipo de propensão afeta sua instância.
 
 * A fonte de dados é o local onde os dados estão localizados. Conjunto de dados é o conjunto de dados de entrada usado para prever pontuações. Por padrão, a IA do cliente usa os dados do Evento da experiência do consumidor para calcular as pontuações de propensão. Ao selecionar um conjunto de dados no seletor suspenso, somente os que são compatíveis com a IA do cliente são listados.
 
@@ -47,7 +47,7 @@ Forneça os valores necessários e clique em **[!UICONTROL Avançar]**.
 
 ### Definir uma meta {#define-a-goal}
 
-A etapa *Definir meta* é exibida e fornece um ambiente interativo para que você defina visualmente uma meta. Uma meta é composta de um ou mais eventos, nos quais cada ocorrência de evento é baseada na condição que contém. O objetivo de uma instância da API do cliente é determinar a probabilidade de atingir sua meta dentro de um determinado intervalo de tempo.
+A etapa **[!UICONTROL Definir meta]** é exibida e fornece um ambiente interativo para que você defina visualmente uma meta. Uma meta é composta de um ou mais eventos, nos quais cada ocorrência de evento é baseada na condição que contém. O objetivo de uma instância da API do cliente é determinar a probabilidade de atingir sua meta dentro de um determinado intervalo de tempo.
 
 Clique em **[!UICONTROL Inserir nome]** do campo e selecione um campo na lista suspensa. Clique na segunda entrada e selecione uma cláusula para a condição do evento, em seguida, forneça o valor do público alvo para concluir o evento. Eventos adicionais podem ser configurados clicando em **[!UICONTROL Adicionar evento]**. Por fim, conclua a meta aplicando um período de previsão em número de dias e clique em **[!UICONTROL Avançar]**.
 
@@ -55,7 +55,7 @@ Clique em **[!UICONTROL Inserir nome]** do campo e selecione um campo na lista s
 
 ### Configurar um agendamento *(opcional)* {#configure-a-schedule}
 
-A etapa *avançada* é exibida. Esta etapa opcional permite configurar uma programação para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou clicar em **[!UICONTROL Concluir]** se nada for necessário.
+A etapa **[!UICONTROL Avançado]** é exibida. Esta etapa opcional permite configurar uma programação para automatizar execuções de previsão, definir exclusões de previsão para filtrar determinados eventos ou clicar em **[!UICONTROL Concluir]** se nada for necessário.
 
 Configure um agendamento de pontuação configurando a Frequência *de* Pontuação. As execuções de previsão automatizadas podem ser programadas para serem executadas semanalmente ou mensalmente.
 

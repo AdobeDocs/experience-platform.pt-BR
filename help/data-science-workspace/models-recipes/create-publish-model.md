@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform Data Science Workspace fornece os meios para atingir sua meta usando a Receita Recommendations de produto pré-criada. Siga este tutorial para ver como você pode acessar e entender seus dados de varejo, criar e otimizar um Modelo de aprendizado de máquina e gerar insights na Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -85,7 +85,7 @@ As receitas são a base para um Modelo, pois contêm algoritmos de aprendizado d
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Localize e abra a Receita **[!UICONTROL Recommendations]** fornecida clicando em seu nome.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. No painel direito, clique em **[!UICONTROL Recommendations Input Schema]** para visualização do schema que alimenta a receita. Os campos de schema **[!UICONTROL itemId]** e **[!UICONTROL userId]** correspondem a um produto comprado (**[!UICONTROL integrationType]**) por esse cliente em um horário específico (**[!UICONTROL carimbo de data e hora]**). Siga as mesmas etapas para revisar os campos do Schema **[!UICONTROL de saída do]**Recommendations.
+3. No painel direito, clique em **[!UICONTROL Recommendations Input Schema]** para visualização do schema que alimenta a receita. Os campos de schema &quot;[!UICONTROL itemId]&quot; e &quot;[!UICONTROL userId]&quot; correspondem a um produto comprado ([!UICONTROL interventionType]) por esse cliente em um horário específico ([!UICONTROL carimbo de data e hora]). Siga as mesmas etapas para revisar os campos do Schema **[!UICONTROL de saída do]**Recommendations.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Agora você revisou os schemas de entrada e saída exigidos pela Receita Recommendations do Produto. Agora você pode continuar com a próxima seção para descobrir como criar, treinar e avaliar um Modelo Recommendations de produto.
@@ -113,9 +113,9 @@ Você pode optar por aguardar a conclusão da execução do treinamento ou conti
 
 ### Treinar o modelo usando hiperparâmetros personalizados
 
-1. Na página Visão geral *do* modelo, clique em **[!UICONTROL Treinar]** perto da parte superior direita para criar uma nova execução de treinamento. Selecione o mesmo conjunto de dados de entrada que você usou ao criar o Modelo e clique em **[!UICONTROL Avançar]**.
+1. Na página Visão geral **do** modelo, clique em **[!UICONTROL Treinar]** perto da parte superior direita para criar uma nova execução de treinamento. Selecione o mesmo conjunto de dados de entrada que você usou ao criar o Modelo e clique em **[!UICONTROL Avançar]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. A página *Configuração* é exibida. Aqui você pode configurar o valor **[!UICONTROL num_Recomendações]** da execução de treinamento, também conhecido como um Hiperparâmetro. Um Modelo treinado e otimizado utilizará os hiperparâmetros de melhor desempenho com base nos resultados da execução do treinamento.
+2. A página **Configuração** é exibida. Aqui você pode configurar o valor &quot;[!UICONTROL num_Recomendações]&quot; da execução de treinamento, também conhecido como um Hiperparâmetro. Um Modelo treinado e otimizado utilizará os hiperparâmetros de melhor desempenho com base nos resultados da execução do treinamento.
 
    Hiperparâmetros não podem ser aprendidos, portanto, eles devem ser atribuídos antes que as execuções de treinamento ocorram. Ajustar hiperparâmetros pode alterar a precisão do modelo treinado. Como a otimização de um modelo é um processo iterativo, podem ser necessárias várias execuções de treinamento antes de se obter uma avaliação satisfatória.
 
@@ -159,7 +159,7 @@ Depois que a execução da pontuação for concluída com êxito, você poderá 
 
 1. Na página de execuções de pontuação, clique na execução de pontuação concluída e, em seguida, clique em Conjunto de Dados **[!UICONTROL de Resultados de Pontuação de]** Pré-visualização no painel direito.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. Na tabela pré-visualização, cada linha contém recomendações de produto para um cliente específico, rotuladas como **[!UICONTROL recomendações]** e **[!UICONTROL userId]** , respectivamente. Como o **[!UICONTROL hiperparâmetro num_Recomendações]** foi definido como 10 nas capturas de tela de amostra, cada linha de recomendações pode conter até 10 identidades de produto delimitadas por um sinal de número (#).
+2. Na tabela pré-visualização, cada linha contém recomendações de produto para um cliente específico, rotuladas como [!UICONTROL recomendações] e [!UICONTROL userId] , respectivamente. Como o [!UICONTROL hiperparâmetro num_Recomendações] foi definido como 10 nas capturas de tela de amostra, cada linha de recomendações pode conter até 10 identidades de produto delimitadas por um sinal de número (#).
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Próximas etapas {#next-steps}

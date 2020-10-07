@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um schema XDM usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 1%
@@ -117,7 +117,7 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 
 Para usar uma função, digite-a em Campo **[!UICONTROL de]** origem com a sintaxe e as entradas apropriadas.
 
-Por exemplo, para concatenar campos CSV de **cidade** e **país** e atribuí-los ao campo XDM de **cidade** , defina o campo de origem como `concat(city, ", ", county)`.
+Por exemplo, para concatenar campos CSV de cidade e de país e atribuí-los ao campo XDM de cidade, defina o campo de origem como `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 

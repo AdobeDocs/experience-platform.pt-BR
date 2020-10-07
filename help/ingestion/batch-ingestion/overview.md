@@ -5,7 +5,7 @@ title: Visão geral da ingestão em lote
 topic: overview
 description: A API de ingestão em lote permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 2%
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Depois de criar com êxito um novo lote para upload, os arquivos podem ser carregados em um conjunto de dados específico.
 
-Você pode fazer upload de arquivos usando a **Small File Upload API**. No entanto, se os arquivos forem muito grandes e o limite do gateway for excedido (como tempos limite estendidos, solicitações de tamanho de corpo excedido e outras restrições), você poderá alternar para a API **de upload de arquivo** grande. Essa API carrega o arquivo em blocos e une os dados usando a chamada **Large File Upload Complete API** .
+Você pode carregar arquivos usando a API de Upload de Arquivo Pequeno. No entanto, se os arquivos forem muito grandes e o limite do gateway for excedido (como tempos limite estendidos, solicitações de tamanho de corpo excedido e outras restrições), você poderá alternar para a API de Upload de Arquivo Grande. Essa API carrega o arquivo em blocos e une os dados usando a chamada API Large File Upload Complete.
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Conclusão do lote de sinais
 
-Depois que todos os arquivos forem carregados no lote, o lote poderá ser sinalizado para conclusão. Ao fazer isso, as entradas [!DNL Catalog] DataSetFile **** são criadas para os arquivos concluídos e associadas ao lote gerado acima. O [!DNL Catalog] lote é marcado como bem-sucedido, o que aciona os fluxos downstream para assimilar os dados disponíveis.
+Depois que todos os arquivos forem carregados no lote, o lote poderá ser sinalizado para conclusão. Ao fazer isso, as entradas [!DNL Catalog] DataSetFile são criadas para os arquivos concluídos e associadas ao lote gerado acima. O [!DNL Catalog] lote é marcado como bem-sucedido, o que aciona os fluxos downstream para assimilar os dados disponíveis.
 
 **Solicitação**
 
@@ -389,10 +389,10 @@ O `"status"` campo é o que mostra o status atual do lote solicitado. Os lotes p
 | Status | Descrição |
 | ------ | ----------- |
 | Abandonado | O lote não foi concluído no período de tempo esperado. |
-| Abortado | Uma operação abort foi chamada **explicitamente** (por meio da API de assimilação em lote) para o lote especificado. Quando o lote estiver em um estado **Carregado** , ele não poderá ser abortado. |
-| Ativo | O lote foi promovido com êxito e está disponível para consumo a jusante. Esse status pode ser usado alternadamente com o **Success**. |
+| Abortado | Uma operação abort foi chamada **explicitamente** (por meio da API de assimilação em lote) para o lote especificado. Quando o lote estiver em um estado &quot;Carregado&quot;, ele não poderá ser abortado. |
+| Ativo | O lote foi promovido com êxito e está disponível para consumo a jusante. Esse status pode ser usado alternadamente com &quot;Sucesso&quot;. |
 | Excluído | Os dados do lote foram completamente removidos. |
-| Falha | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Os dados de um lote com falha **não** serão exibidos. Esse status pode ser usado alternadamente com a **Falha**. |
+| Falha | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Os dados de um lote com falha **não** serão exibidos. Esse status pode ser usado alternadamente com &quot;Falha&quot;. |
 | Inativo | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não está mais disponível para consumo a jusante. |
 | Carregado | Os dados do lote estão completos e o lote está pronto para promoção. |
 | Carregando | Os dados para este lote estão sendo carregados e o lote **não** está pronto para ser promovido no momento. |

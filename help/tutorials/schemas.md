@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: A normalização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. O Experience Data Model (XDM), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente. Os schemas são a forma padrão de descrever dados no Experience Platform, permitindo que todos os dados que estão em conformidade com os schemas sejam reutilizáveis sem conflitos em uma organização e até mesmo compartilháveis entre várias organizações.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%

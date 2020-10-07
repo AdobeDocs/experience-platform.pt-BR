@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo no Notebook JupyterLab. Em seguida, você exercerá o fluxo de trabalho do notebook para receber receitas dentro do JupyterLab para criar uma receita dentro da Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -302,7 +302,7 @@ O objetivo do treinamento é criar um modelo usando recursos e etiquetas no conj
 
 >[!NOTE]
 > 
->_Os recursos_ se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os _rótulos_.
+>Os recursos se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os rótulos.
 
 A `train()` função deve incluir o modelo de treinamento e devolver o modelo treinado. Alguns exemplos de diferentes modelos podem ser encontrados na documentação [do guia do usuário](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 

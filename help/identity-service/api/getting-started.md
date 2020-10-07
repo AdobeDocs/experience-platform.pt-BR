@@ -5,7 +5,7 @@ title: Introdução
 topic: API guide
 description: 'O Adobe Experience Platform Identity Service gerencia a identificação de dispositivos cruzados, canais cruzados e quase em tempo real de seus clientes no que é conhecido como um gráfico de identidade no Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '754'
 ht-degree: 1%
@@ -88,4 +88,4 @@ Os exemplos neste documento não abrangem a funcionalidade completa da [!DNL Ide
 
 ## Próximas etapas
 
-Agora que você reuniu as credenciais necessárias, pode continuar a ler o restante do guia do desenvolvedor. Cada seção fornece informações importantes sobre seus pontos de extremidade e demonstra exemplos de chamadas de API para executar operações CRUD. Cada chamada inclui o formato **geral da** API, uma **solicitação** de amostra mostrando os cabeçalhos necessários e cargas formatadas corretamente e uma **resposta** de amostra para uma chamada bem-sucedida.
+Agora que você reuniu as credenciais necessárias, pode continuar a ler o restante do guia do desenvolvedor. Cada seção fornece informações importantes sobre seus pontos de extremidade e demonstra exemplos de chamadas de API para executar operações CRUD. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e as cargas formatadas corretamente e uma resposta de amostra para uma chamada bem-sucedida.

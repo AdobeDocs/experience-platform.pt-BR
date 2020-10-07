@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform Data Science Workspace permite que você configure execuções programadas de pontuação e treinamento em um serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 A Adobe Experience Platform [!DNL Data Science Workspace] permite que você configure execuções programadas de pontuação e treinamento em um Serviço de aprendizado de máquina. Automatizar o processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um serviço ao longo do tempo, acompanhando os padrões em seus dados.
 
-Este tutorial percorre as etapas para configurar os agendamentos de treinamento e pontuação em um Serviço existente por meio da Galeria **[!UICONTROL de]** serviços. Ele é dividido nas seguintes seções principais:
+Este tutorial percorre as etapas para configurar os agendamentos de treinamento e pontuação em um Serviço existente por meio da Galeria [!UICONTROL de]serviços. Ele é dividido nas seguintes seções principais:
 
 - [Configurar pontuação programada](#configure-scheduled-scoring)
 - [Configurar treinamento agendado](#configure-scheduled-training)
@@ -33,7 +33,7 @@ Este tutorial requer um Serviço existente. Se você não tiver um Serviço aces
 
 A pontuação do modelo pode ser configurada para ser um processo automatizado em uma base programada. Depois que um Serviço é criado, você pode seguir as etapas abaixo para configurar e aplicar um agendamento de pontuação:
 
-1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar o *[!DNL Service Gallery]*. Localize o Serviço no qual você deseja agendar a pontuação e clique em **[!UICONTROL Abrir]** para visualização na página *Visão geral* .
+1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar o **[!DNL Service Gallery]**. Localize o Serviço no qual você deseja agendar a pontuação e clique em **[!UICONTROL Abrir]** para visualização na página **Visão geral** .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. A página Visão geral exibe as informações de pontuação do Serviço. Clique no link **[!UICONTROL Atualizar agendamento]** para configurar um agendamento de pontuação.
@@ -42,7 +42,7 @@ A pontuação do modelo pode ser configurada para ser um processo automatizado e
 3. Configure a frequência, a data do start, a data de término, o conjunto de dados de entrada e o conjunto de dados de saída para a programação de pontuação. Quando estiver satisfeito com as configurações, clique em **[!UICONTROL Criar]** para atualizar o agendamento de pontuação do Serviço.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
-4. Seu agendamento de pontuação atualizado é mostrado na página *Visão geral* do serviço.
+4. Seu agendamento de pontuação atualizado é mostrado na página **Visão geral** do serviço.
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
@@ -52,7 +52,7 @@ A configuração de execuções de treinamento programado em um Serviço garante
 
 Depois que um Serviço é criado, você pode seguir as etapas abaixo para configurar e aplicar um agendamento de treinamento:
 
-1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a **[!UICONTROL Service Gallery]**. Localize o Serviço no qual você deseja programar a execução do treinamento e clique em **[!UICONTROL Abrir]** para visualização na página *Visão geral* .
+1. No Adobe Experience Platform, clique na guia **[!UICONTROL Serviços]** localizada na coluna de navegação esquerda para acessar a **[!UICONTROL Service Gallery]**. Localize o Serviço no qual você deseja programar a execução do treinamento e clique em **[!UICONTROL Abrir]** para visualização na página **Visão geral** .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. A página Visão geral exibe as informações de treinamento do Serviço. Clique no link **[!UICONTROL Atualizar agendamento]** para configurar um agendamento de treinamento.
@@ -61,7 +61,7 @@ Depois que um Serviço é criado, você pode seguir as etapas abaixo para config
 3. Configure a frequência, a data do start, a data de término e o conjunto de dados de entrada usados para a programação de treinamento. Quando estiver satisfeito com as configurações, clique em **[!UICONTROL Criar]** para atualizar a programação de treinamento do Serviço.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
-4. Seu cronograma de treinamento atualizado é mostrado na página *Visão geral* do serviço.
+4. Seu cronograma de treinamento atualizado é mostrado na página **Visão geral** do serviço.
    ![](../images/models-recipes/schedule/service_with_training_schedule.png)
 
 ## Próximas etapas

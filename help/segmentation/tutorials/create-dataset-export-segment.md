@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de audiência usando a interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Para visualização de schemas de união na interface do usuário, clique em **[
 
 A área de trabalho dos conjuntos de dados na [!DNL Experience Platform] interface do usuário permite que você visualização e gerencie todos os conjuntos de dados criados pela organização do IMS, bem como criar novos conjuntos.
 
-Para visualização da área de trabalho dos conjuntos de dados, clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda e, em seguida, clique na guia **[!UICONTROL Procurar]** . A área de trabalho dos conjuntos de dados contém uma lista de conjuntos de dados, incluindo colunas que mostram **[!UICONTROL Nome]**, **[!UICONTROL Criado]** (data e hora), **[!UICONTROL Origem]**, **[!UICONTROL Schema]** e Status **[!UICONTROL do]******&#x200B;Último Lote, bem como a data e a hora em que o conjunto de dados foi Última Atualização. Dependendo da largura de cada coluna, talvez seja necessário rolar para a esquerda ou para a direita para ver todas as colunas.
+Para visualização da área de trabalho dos conjuntos de dados, clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda e, em seguida, clique na guia **[!UICONTROL Procurar]** . A área de trabalho dos conjuntos de dados contém uma lista de conjuntos de dados, incluindo colunas que mostram o nome, a data e a hora, a origem, o schema e o status do último lote, bem como a data e a hora em que o conjunto de dados foi atualizado pela última vez. Dependendo da largura de cada coluna, talvez seja necessário rolar para a esquerda ou para a direita para ver todas as colunas.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Para visualização da área de trabalho dos conjuntos de dados, clique em **[!U
 
 ## Criar um conjunto de dados
 
-Para criar um conjunto de dados, clique em **[!UICONTROL Criar conjunto]** de dados no canto superior direito da área de trabalho [!UICONTROL Conjuntos] de dados.
+Para criar um conjunto de dados, clique em **[!UICONTROL Criar conjunto]** de dados no canto superior direito da área de trabalho **[!UICONTROL Conjuntos]** de dados.
 
 ![Clique em Criar conjunto de dados](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
@@ -63,7 +63,7 @@ Selecionado o botão de opção ao lado de Perfil **[!UICONTROL individual]** XD
 
 ## Configurar conjunto de dados
 
-Na tela **[!UICONTROL Configurar conjunto de dados]** , será necessário fornecer um **[!UICONTROL Nome]** ao conjunto de dados e também uma **[!UICONTROL Descrição]** do conjunto de dados.
+Na tela **[!UICONTROL Configurar conjunto de dados]** , será necessário fornecer um nome ao conjunto de dados e também fornecer uma descrição do conjunto de dados.
 
 **Notas sobre os nomes dos conjuntos de dados:**
 - Os nomes dos conjuntos de dados devem ser curtos e descritivos para que o conjunto de dados possa ser facilmente encontrado na biblioteca posteriormente.
@@ -76,9 +76,9 @@ Depois que o conjunto de dados tiver um nome e uma descrição, clique em **[!UI
 
 ## Atividade do conjunto de dados
 
-Um conjunto de dados vazio foi criado e você foi retornado para a guia Atividade **** Conjunto de dados na área de trabalho [!UICONTROL Conjuntos] de dados. Você deve ver o nome do conjunto de dados no canto superior esquerdo do espaço de trabalho, juntamente com uma notificação de que &quot;Nenhum lote foi adicionado.&quot; Isso é esperado, pois você ainda não adicionou nenhum lote a esse conjunto de dados.
+Um conjunto de dados vazio foi criado e você foi retornado para a guia Atividade **** Conjunto de dados na área de trabalho **[!UICONTROL Conjuntos]** de dados. Você deve ver o nome do conjunto de dados no canto superior esquerdo do espaço de trabalho, juntamente com uma notificação de que &quot;Nenhum lote foi adicionado.&quot; Isso é esperado, pois você ainda não adicionou nenhum lote a esse conjunto de dados.
 
-No lado direito da área de trabalho dos Conjuntos de dados, você verá a guia **[!UICONTROL Informações]** contendo informações relacionadas ao seu novo conjunto de dados, como ID **[!UICONTROL do]** Conjunto de dados, **[!UICONTROL Nome]**, **[!UICONTROL Descrição]**, Nome **[!UICONTROL da]************** tabela, Schema, Streaming eSource. A guia [!UICONTROL Informações] também inclui informações sobre quando o conjunto de dados foi **[!UICONTROL criado]** e sua data de **[!UICONTROL última modificação]** .
+No lado direito da área de trabalho dos conjuntos de dados, você verá a guia **[!UICONTROL Informações]** contendo informações relacionadas ao seu novo conjunto de dados, como ID do conjunto de dados, nome, descrição, nome da tabela, schema], transmissão e origem. A guia **[!UICONTROL Informações]** também inclui informações sobre quando o conjunto de dados foi criado e sua última data de modificação.
 
 Anote a ID **[!UICONTROL do]** conjunto de dados, pois esse valor é necessário para concluir o fluxo de trabalho de exportação do segmento de audiência.
 
@@ -86,6 +86,6 @@ Anote a ID **[!UICONTROL do]** conjunto de dados, pois esse valor é necessário
 
 ## Próximas etapas
 
-Agora que você criou um conjunto de dados com base no [!DNL XDM Individual Profile Union Schema], é possível usar a ID **[!UICONTROL do]** conjunto de dados para continuar o tutorial de [avaliação e acesso aos resultados](./evaluate-a-segment.md) do segmento.
+Agora que você criou um conjunto de dados com base no [!DNL XDM Individual Profile Union Schema], é possível usar a ID do conjunto de dados para continuar o tutorial de [avaliação e acesso aos resultados](./evaluate-a-segment.md) do segmento.
 
 Neste momento, volte ao tutorial de resultados do segmento de avaliação e pegue na etapa de [geração de perfis para membros](./evaluate-a-segment.md#generate-profiles) da audiência de exportar um fluxo de trabalho de segmento.

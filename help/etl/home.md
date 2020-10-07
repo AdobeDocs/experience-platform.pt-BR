@@ -5,7 +5,7 @@ title: Criação de integrações de ETL
 topic: overview
 description: O guia de integração ETL descreve as etapas gerais para a criação de conectores seguros e de alto desempenho para o Experience Platform e a incorporação de dados na plataforma.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 0%
@@ -95,7 +95,7 @@ Usando a fonte de dados para mapeamento, uma lista de todos os conjuntos de dado
 
 Você pode emitir uma única solicitação de API para visualização de todos os conjuntos de dados disponíveis (por exemplo, `GET /dataSets`), com a prática recomendada de incluir parâmetros de query que limitem o tamanho da resposta.
 
-Nos casos em que são solicitadas informações _completas_ do conjunto de dados, a carga da resposta pode atingir 3 GB de tamanho, o que pode retardar o desempenho geral. Portanto, usar parâmetros de query para filtrar somente as informações necessárias tornará os [!DNL Catalog] query mais eficientes.
+Nos casos em que informações completas do conjunto de dados estão sendo solicitadas, a carga da resposta pode atingir 3 GB de tamanho, o que pode retardar o desempenho geral. Portanto, usar parâmetros de query para filtrar somente as informações necessárias tornará os [!DNL Catalog] query mais eficientes.
 
 #### Filtragem de lista
 
@@ -165,7 +165,7 @@ A resposta inclui três (`limit=3`) conjuntos de dados que mostram &quot;nome&qu
 
 ### Schema de conjunto de dados de visualização
 
-A propriedade &quot;schemaRef&quot; de um conjunto de dados contém um URI que faz referência ao schema XDM no qual o conjunto de dados se baseia. O schema XDM (&quot;schemaRef&quot;) representa todos os campos _potenciais_ que podem ser usados pelo conjunto de dados, não necessariamente os campos que _estão_ sendo usados (consulte &quot;observableSchema&quot; abaixo).
+A propriedade &quot;schemaRef&quot; de um conjunto de dados contém um URI que faz referência ao schema XDM no qual o conjunto de dados se baseia. O schema XDM (&quot;schemaRef&quot;) representa todos os campos em potencial que podem ser usados pelo conjunto de dados, não necessariamente os campos que estão sendo usados (consulte &quot;observableSchema&quot; abaixo).
 
 O schema XDM é o schema que você usa quando precisa apresentar ao usuário uma lista de todos os campos disponíveis que podem ser gravados.
 
@@ -601,7 +601,7 @@ Detalhes para a criação de um lote, incluindo solicitações de amostra e resp
 
 ### Gravar no conjunto de dados
 
-Depois de criar com êxito um novo lote, os arquivos podem ser carregados em um conjunto de dados específico. Vários arquivos podem ser publicados em um lote até que seja promovido. Os arquivos podem ser carregados usando a _Small File Upload API_; no entanto, se os arquivos forem muito grandes e o limite do gateway for excedido, você poderá usar a API _de upload de arquivo_ grande. Detalhes sobre o uso de Upload de Arquivo Grande e Pequeno podem ser encontrados na visão geral [de Ingestão em](../ingestion/batch-ingestion/overview.md)Lote.
+Depois de criar com êxito um novo lote, os arquivos podem ser carregados em um conjunto de dados específico. Vários arquivos podem ser publicados em um lote até que seja promovido. O upload dos arquivos pode ser feito usando a Small File Upload API; no entanto, se os arquivos forem muito grandes e o limite do gateway for excedido, você poderá usar a API de upload de arquivo grande. Detalhes sobre o uso de Upload de Arquivo Grande e Pequeno podem ser encontrados na visão geral [de Ingestão em](../ingestion/batch-ingestion/overview.md)Lote.
 
 **Solicitação**
 

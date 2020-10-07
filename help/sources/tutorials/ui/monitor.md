@@ -6,7 +6,7 @@ title: Monitorar contas e fluxos de dados
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 1%
@@ -96,7 +96,7 @@ A página de atividade **[!UICONTROL do]** Dataflow contém detalhes sobre o nú
 
 ![atividade de fluxo de dados](../../images/tutorials/monitor/dataflow-activity.png)
 
-O calendário permite que você visualização os diferentes intervalos de tempo para registros ingeridos. Você pode selecionar uma das duas opções predefinidas **[!UICONTROL Últimos 7 dias]** ou **[!UICONTROL Últimos 30 dias]**. Como alternativa, você pode definir um período de tempo personalizado usando o calendário. Selecione seu período de tempo de escolha e selecione **[!UICONTROL Aplicar]** para continuar.
+O calendário permite que você visualização os diferentes intervalos de tempo para registros ingeridos. Você pode selecionar uma das duas opções predefinidas &quot;[!UICONTROL Últimos 7 dias]&quot; ou &quot;[!UICONTROL Últimos 30 dias]&quot;. Como alternativa, você pode definir um período de tempo personalizado usando o calendário. Selecione seu período de tempo de escolha e selecione **[!UICONTROL Aplicar]** para continuar.
 
 ![calendário de fluxo](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Selecione start **[!UICONTROL de execução do]** Dataflow para acessar a visão
 
 ![run](../../images/tutorials/monitor/run-metadata.png)
 
-A visão geral **[!UICONTROL da execução do]** Fluxo de dados exibe informações sobre o fluxo de dados, incluindo seus metadados, o status da ingestão **[!UICONTROL parcial e o limite]** de **** Erro atribuído. O cabeçalho superior também inclui um resumo **[!UICONTROL de]** Erro. O resumo **[!UICONTROL de]** Erro contém o erro de nível superior específico que mostra em qual etapa o processo de ingestão encontrou um erro.
+A visão geral **[!UICONTROL da execução do]** Fluxo de dados exibe informações sobre o fluxo de dados, incluindo seus metadados, status de ingestão parcial e limite de erro atribuído. O cabeçalho superior também inclui um resumo de erro. O resumo **[!UICONTROL de]** Erro contém o erro de nível superior específico que mostra em qual etapa o processo de ingestão encontrou um erro.
 
 ![visão geral da execução do dataflow](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Consulte a tabela a seguir para obter os erros que podem ser vistos no resumo **
 
 A metade inferior da tela contém informações sobre erros **[!UICONTROL de execução do]** Dataflow. Daqui, você também pode visualização os arquivos assimilados, pré-visualização e fazer download do diagnóstico de erros ou fazer download do manifesto do arquivo.
 
-A seção **[!UICONTROL Dataflow run errors]** exibe o código **[!UICONTROL de]** erro, o número de registros que falharam e as informações que descrevem o erro.
+A seção **[!UICONTROL Dataflow run errors]** exibe o código de erro, o número de registros que falharam e as informações que descrevem o erro.
 
 Selecione Diagnóstico **[!UICONTROL de erro de]** Pré-visualização para ver mais informações sobre o erro de ingestão.
 
 ![Erros de execução de fluxo de dados](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-O painel pré-visualização **[!UICONTROL do diagnóstico]** Error (Erro) é exibido. Essa tela exibe informações específicas sobre a falha de ingestão, incluindo o nome **[!UICONTROL do]** arquivo, o código **[!UICONTROL de]** erro, o nome da coluna na qual o erro ocorreu e uma descrição do erro.
+O painel pré-visualização **[!UICONTROL do diagnóstico]** Error (Erro) é exibido. Essa tela exibe informações específicas sobre a falha de ingestão, incluindo o nome do arquivo, o código de erro, o nome da coluna na qual o erro ocorreu e uma descrição do erro.
 
 Esta seção também inclui uma pré-visualização da coluna que contém o erro.
 

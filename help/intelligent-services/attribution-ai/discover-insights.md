@@ -5,7 +5,7 @@ title: Descobrindo insights no Attribution AI
 topic: Attribution AI insights
 description: Este documento serve como um guia para interagir com informações da instância do serviço na interface do usuário do Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Para utilizar insights para o Attribution AI, é necessário ter uma instância 
 
 ## Visão geral dos insights da instância de serviço
 
-Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **Abrir**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe os Serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +43,7 @@ Em seguida, a página de insights para essa instância de serviço é exibida, o
 
 ### Detalhes da instância de serviço
 
-Para visualização de detalhes adicionais para uma instância de serviço, clique em **Mostrar mais** no canto superior direito.
+Para visualização de detalhes adicionais para uma instância de serviço, clique em **[!UICONTROL Mostrar mais]** no canto superior direito.
 
 ![mostrar mais](./images/insights/show-more.png)
 
@@ -53,20 +53,20 @@ Uma lista detalhada é exibida. Para obter mais informações sobre qualquer uma
 
 ### Editar uma instância
 
-Para editar uma instância, clique em *Editar* na navegação superior direita.
+Para editar uma instância, clique em **[!UICONTROL Editar]** na navegação superior direita.
 ![clique no botão editar](./images/insights/edit-button.png)
 
-A caixa de diálogo Editar é exibida, permitindo que você edite a descrição e a frequência de pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, clique em *Editar* no canto inferior direito.
+A caixa de diálogo Editar é exibida, permitindo que você edite a descrição e a frequência de pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, clique em **[!UICONTROL Editar]** no canto inferior direito.
 
 ![editar fornecedor](./images/insights/edit-popover.png)
 
 ### Mais ações {#more-actions}
 
-O botão *Mais ações* está localizado na navegação superior direita ao lado de *Editar*. Clicar em **Mais ações** abre uma lista suspensa que permite selecionar uma das seguintes operações:
+O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de *Editar*. Clicar em **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
 - **Excluir**: Exclui a instância.
 - **Baixar dados** de resumo: Faz o download de um arquivo CSV que contém os dados de resumo.
-- **Pontuações** de acesso: Clicar em *Acessar pontuações* o redireciona para as pontuações de [acesso do tutorial](./download-scores.md).
+- **Pontuações** de acesso: Clicar em **Acessar pontuações** o redireciona para as pontuações de [acesso do tutorial](./download-scores.md).
 - **Histórico** de execução da visualização: Um provedor que contém uma lista de todas as execuções de pontuação associadas à instância do serviço é exibido.
 
 ![mais ações](./images/insights/more-actions.png)
@@ -77,31 +77,31 @@ Os insights do Attribution AI permitem filtrar seus dados e atualizar automatica
 
 >[!NOTE]
 >
->Por padrão, cada filtro é definido como &quot;Todos&quot;, exceto o filtro do modelo *de* Atribuição, que é definido como &quot;Conversões atribuídas incrementais e influenciadas&quot;.
+>Por padrão, cada filtro é definido como &quot;Todos&quot;, exceto o filtro &quot;Modelo[!UICONTROL de]atribuição&quot;, que é definido como &quot;Conversões atribuídas incrementais e influenciadas&quot;.
 
 ### Evento de conversão
 
 Quando você cria uma nova instância no Attribution AI, um dos campos obrigatórios é &quot;eventos de conversão&quot;. Os eventos de conversão são objetivos de negócios que identificam o impacto das atividades de marketing, como pedidos de comércio eletrônico, compras na loja e visitas ao site.
 
-Na instância, a lista suspensa eventos *de* conversão permite selecionar qualquer um dos eventos definidos para sua instância para filtrar seus dados. A seleção de eventos específicos altera as visualizações da interface para preencher somente as conversões pertencentes a esses eventos.
+Na instância, a lista suspensa eventos **[!UICONTROL de]** conversão permite selecionar qualquer um dos eventos definidos para sua instância para filtrar seus dados. A seleção de eventos específicos altera as visualizações da interface para preencher somente as conversões pertencentes a esses eventos.
 
 ![evento de conversão](./images/insights/conversion-event.png)
 
 ### Modelo de atribuição
 
-Clicar no modelo *de* Atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do [Attribution AI](./overview.md) que contém uma tabela com informações sobre cada modelo.
+Clicar em Modelo **[!UICONTROL de]** atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do [Attribution AI](./overview.md) que contém uma tabela com informações sobre cada modelo.
 
 ![modelo de atribuição](./images/insights/attribution-model.png)
 
 ### Produto
 
-O filtro *Produto* permite selecionar entre quaisquer produtos que foram inicialmente ingeridos na criação da sua instância. Clique na lista suspensa e use o recurso de pesquisa para selecionar rapidamente todos os produtos que deseja comparar.
+O filtro **[!UICONTROL Produto]** permite selecionar entre quaisquer produtos que foram inicialmente ingeridos na criação da sua instância. Clique na lista suspensa e use o recurso de pesquisa para selecionar rapidamente todos os produtos que deseja comparar.
 
 ![filtro de produtos](./images/insights/product-filter.png)
 
 ### Geografia
 
-O filtro *Geografia* preenche códigos de países com base em modelos baseados em região. Dependendo dos seus dados, este filtro pode ou não estar presente.
+O filtro **[!UICONTROL Geografia]** preenche códigos de países com base em modelos baseados em região. Dependendo dos seus dados, este filtro pode ou não estar presente.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Esse filtro permite que você selecione quaisquer regiões configuradas no proce
 
 ### Channel
 
-Clicar no filtro *Canal* revela uma lista suspensa que contém todos os canais de marketing disponíveis. Você pode selecionar vários canais para compará-los.
+Clicar no filtro **[!UICONTROL Canal]** revela uma lista suspensa que contém todos os canais de marketing disponíveis. Você pode selecionar vários canais para compará-los.
 
 ![Channel](./images/insights/channel.png)
 
@@ -129,13 +129,13 @@ Clique no ícone de calendário para abrir o intervalo de datas. As datas de in�
 
 ## Visão geral de seus dados
 
-O cartão *Visão geral* mostra o total de conversões por modelo de atribuição. O número total muda com base no quão específico você faz sua pesquisa usando os filtros descritos anteriormente neste documento. Selecionar mais modelos adiciona círculos adicionais à Visão geral, cada um com sua própria cor correspondente à legenda.
+O cartão **[!UICONTROL Visão geral]** mostra o total de conversões por modelo de atribuição. O número total muda com base no quão específico você faz sua pesquisa usando os filtros descritos anteriormente neste documento. Selecionar mais modelos adiciona círculos adicionais à Visão geral, cada um com sua própria cor correspondente à legenda.
 
 ![visão geral](./images/insights/Overview.png)
 
 ## Tendências semanais
 
-O cartão de tendências ** semanais detalha sua conversão total pelo intervalo de datas definido durante o processo de filtragem.
+O cartão de tendências **** semanais detalha sua conversão total pelo intervalo de datas definido durante o processo de filtragem.
 
 ![tendências](./images/insights/weekly-trends.png)
 
@@ -147,17 +147,17 @@ Passar o mouse sobre a linha de dados de um modelo de atribuição específico c
 
 ## Detalhamento por canal
 
-A *Análise por placa de canal* é usada para determinar o número total de conversões em relação a cada canal. Este cartão pode ser utilizado para ajudar a tomar decisões sobre a eficácia de cada canal e o retorno do investimento.
+A **[!UICONTROL Análise por placa de canal]** é usada para determinar o número total de conversões em relação a cada canal. Este cartão pode ser utilizado para ajudar a tomar decisões sobre a eficácia de cada canal e o retorno do investimento.
 
 ![canal detalhado](./images/insights/channel-breakdown.png)
 
-Clicar nas elipses na parte superior direita do cartão *Detalhamento por canal* abre uma lista suspensa que permite preencher dados com base em pontos de contato.
+Clicar nas elipses na parte superior direita do cartão **[!UICONTROL Detalhamento por canal]** abre uma lista suspensa que permite preencher dados com base em pontos de contato.
 
 ![pontos de contato](./images/insights/breakdown-by-touchpoints.png)
 
 ## Principais campanhas
 
-A placa *Top campanha* exibe uma visão geral das campanhas e o desempenho da campanha em cada canal. Este cartão pode ajudar a informar sua equipe sobre a eficácia de uma campanha específica para um determinado canal e fornecer informações sobre onde investir mais.
+A placa **[!UICONTROL Top campanha]** exibe uma visão geral das campanhas e o desempenho da campanha em cada canal. Este cartão pode ajudar a informar sua equipe sobre a eficácia de uma campanha específica para um determinado canal e fornecer informações sobre onde investir mais.
 
 ![campanhas principais](./images/insights/top-campaigns.png)
 

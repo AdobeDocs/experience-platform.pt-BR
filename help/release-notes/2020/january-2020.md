@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 **Data de lançamento: 15 de janeiro de 2020**
 
-Atualizações dos recursos existentes no Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 * [Sistema do [!DNL Experience Data Model (XDM)]](#xdm)
 * [[!DNL Privacy Service]](#privacy)
@@ -55,7 +55,7 @@ As novas regulamentações legais e organizacionais estão dando aos usuários o
 | Novos pontos de extremidade de API | O caminho básico para a [!DNL Privacy Service] API foi atualizado de `/data/privacy/gdpr` para `/data/core/privacy/jobs`. |
 | Nova propriedade `regulation` obrigatória | Ao criar novos trabalhos na [!DNL Privacy Service] API, uma `regulation` propriedade deve ser fornecida na carga da solicitação para indicar em qual regulamento rastrear o trabalho. Os valores aceitos são `gdpr` e `ccpa`. |
 | Suporte para [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] agora aceita solicitações de acesso/exclusão do Adobe [!DNL Primetime Authentication], usando `primetimeAuthentication` como valor do produto. |
-| Aprimoramentos da interface do Privacy Service | Separe as páginas de rastreamento de trabalho para os regulamentos de RGPD e CCPA. Novo menu suspenso Tipo _de_ regulamento para alternar entre os dados de rastreamento para RGPD e CCPA. |
+| Aprimoramentos da interface do Privacy Service | Separe as páginas de rastreamento de trabalho para os regulamentos de RGPD e CCPA. Novo **Tipo de regulamento **menu suspenso para alternar entre os dados de rastreamento para RGPD e CCPA. |
 
 **Problemas conhecidos**
 
@@ -81,8 +81,8 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
-| Ingestão de dados | Gerenciar fontes | Acesso para ler, criar, editar e desativar fontes. |
-| Ingestão de dados | Fontes de visualização | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]** . |
+| Assimilação de dados | Gerenciar fontes | Acesso para ler, criar, editar e desativar fontes. |
+| Assimilação de dados | Fontes de visualização | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]** . |
 
 **Problemas conhecidos**
 
@@ -105,11 +105,11 @@ No [Adobe Real-time CDP](../../rtcdp/overview.md), os destinos são integraçõe
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
 | Destinos | Gerenciar destinos | Acesso para ler, criar, editar e desativar destinos. |
-| Destinos | Destinos da visualização | Acesso somente leitura a destinos disponíveis na guia [!UICONTROL _Catálogo_] e destinos autenticados na guia _Procurar_ . |
+| Destinos | Destinos da visualização | Acesso somente leitura a destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **Procurar** . |
 | Destinos | Ativar destinos | Capacidade de ativar dados para destinos. Essa permissão requer que &quot;Gerenciar destinos&quot; ou &quot;Destinos de Visualização&quot; sejam adicionados ao perfil do produto. |
 
 **Problemas conhecidos**
 
 * None
 
-Consulte a visão geral [de](../../rtcdp/destinations/destinations-overview.md) Destinos para obter mais informações.
+See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.

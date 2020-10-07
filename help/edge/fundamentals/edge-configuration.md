@@ -5,7 +5,7 @@ description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Abaixo estão cada uma das configurações disponíveis para um ambiente. A maio
 
 #### [!UICONTROL Identidade]
 
-A seção de identidade é a única seção que está sempre ativada. Ele tem duas configurações disponíveis: [!UICONTROL Sincronizações de ID ativadas] e ID [!UICONTROL de Container de sincronização de]ID.
+A seção de identidade é a única seção que está sempre ativada. Ele tem duas configurações disponíveis: &quot;[!UICONTROL Sincronizações de ID ativadas]&quot; e &quot;ID[!UICONTROL do Container de sincronização de]ID&quot;.
 
 ![Seção de identidade da interface de usuário de configuração](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ As caixas de proteção são locais no Adobe Experience Platform que permitem qu
 
 ##### [!UICONTROL Entrada de fluxo]
 
-Uma entrada de fluxo contínuo é uma fonte HTTP no Adobe Experience Platform. Eles são criados na guia [!UICONTROL Fontes] no Adobe Experience Platform como uma API HTTP.
+Uma entrada de fluxo contínuo é uma fonte HTTP no Adobe Experience Platform. Eles são criados na guia &quot;[!UICONTROL Fontes]&quot; no Adobe Experience Platform como uma API HTTP.
 
 ##### [!UICONTROL Conjunto de dados do evento]
 
@@ -95,7 +95,7 @@ O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICO
 
 [Os ambientes](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) no Adobe Target ajudam você a gerenciar sua implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
 
-O Adobe recomenda configurar isso de forma diferente para cada um dos ambientes de configuração `dev`, `stage`e `prod` borda para manter as coisas simples. No entanto, se você já tiver ambientes  Adobe Target definidos, poderá usá-los.
+O Adobe recomenda configurar isso de forma diferente para cada um dos ambientes de configuração `dev`, `stage`e `prod` borda para manter as coisas simples. No entanto, se você já tiver ambientes Adobe Target definidos, poderá usá-los.
 
 #### Adobe Audience Manager
 

@@ -5,7 +5,7 @@ title: Guia do usuário do Attribution AI
 topic: User guide
 description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Este documento serve como um guia para interagir com o Attribution AI na interfa
 
 ## Criar uma instância
 
-Na [!DNL Adobe Experience Platform] interface do usuário, clique em **Serviços** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **Abrir**.
+Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe os serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Em seguida, a página de configuração do Attribution AI é exibida, onde você
 
 ### Nomeie a instância
 
-Em Informações ** básicas, forneça um nome e uma descrição opcional para a sua instância de serviço.
+Em Informações **** básicas, forneça um nome e uma descrição opcional para a sua instância de serviço.
 
 ![nomear uma instância](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Quando um evento é selecionado, uma nova lista suspensa é exibida à direita. 
 
 ![sem menu suspenso](./images/user-guide/conversion_event_1.png)
 
-Os botões *Adicionar evento* e *Adicionar grupo* são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar os botões *Adicionar evento* e *Adicionar grupo* para fornecer mais contexto.
+Os botões **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** são usados para definir ainda mais sua conversão. Dependendo da conversão que você estiver definindo, talvez seja necessário usar os botões **[!UICONTROL Adicionar evento]** e **[!UICONTROL Adicionar grupo]** para fornecer mais contexto.
 
 ![adicionar evento](./images/user-guide/add_event.png)
 
-Clicar em **Adicionar evento** cria campos adicionais que podem ser preenchidos usando o mesmo método descrito acima. Isso adiciona uma instrução *AND* à definição da string abaixo do nome *da* conversão. Clique no **x** para remover um evento que foi adicionado.
+Clicar em **[!UICONTROL Adicionar evento]** cria campos adicionais que podem ser preenchidos usando o mesmo método descrito acima. Isso adiciona uma declaração AND à definição da string abaixo do nome da conversão. Clique no **x** para remover um evento que foi adicionado.
 
 ![adicionar menu evento](./images/user-guide/add_event_result.png)
 
-Clicar em **Adicionar grupo** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *E* é exibido. Clicar em **E** oferece uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;E&quot; estende o caminho de conversão para incluir condições adicionais.
+Clicar em **[!UICONTROL Adicionar grupo]** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *E* é exibido. Clicar em **E** oferece uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;E&quot; estende o caminho de conversão para incluir condições adicionais.
 
 ![usando e ou](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Para alterar a hora do dia em que deseja que a pontuação ocorra, clique no íc
 
 Os comportamentos de seus clientes podem diferir significativamente por país e região geográfica. Para empresas globais, o uso de modelos baseados em país ou em região pode aumentar a precisão da atribuição. Cada região adicionada cria um novo modelo com os dados dessa região.
 
-Para definir uma nova região, start clicando em **Adicionar região**. No container exibido, forneça um nome para a região. Somente um valor (&quot;placeContext.geo.countryCode&quot;) é preenchido na lista suspensa *Inserir nome* do campo. Selecione este valor.
+Para definir uma nova região, start clicando em **[!UICONTROL Adicionar região]**. No container exibido, forneça um nome para a região. Somente um valor (&quot;placeContext.geo.countryCode&quot;) é preenchido na lista suspensa **[!UICONTROL Inserir nome]** do campo. Selecione este valor.
 
 ![Selecionar região em](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Em seguida, selecione um operador.
 
 ![operador regional](./images/user-guide/region_operators.png)
 
-Por fim, digite o código do país na lista suspensa *Inserir valor* do campo.
+Por fim, digite o código do país na lista suspensa **[!UICONTROL Inserir valor]** do campo.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Para garantir que você obtenha o modelo mais preciso possível, é importante t
 
 ![janela de treinamento](./images/user-guide/training_window.png)
 
-Depois de selecionar sua janela de treinamento, clique em **Concluir** no canto superior direito. Aguarde até que os dados sejam processados. Após a conclusão, uma caixa de diálogo pop-up será exibida confirmando que a configuração da instância foi concluída. Clique em **Ok** para ser redirecionado para a página de instâncias *de* serviço onde você pode ver sua instância de serviço.
+Depois de selecionar sua janela de treinamento, clique em **[!UICONTROL Concluir]** no canto superior direito. Aguarde até que os dados sejam processados. Após a conclusão, uma caixa de diálogo pop-up será exibida confirmando que a configuração da instância foi concluída. Clique em **[!UICONTROL Ok]** para ser redirecionado para a página de instâncias **[!UICONTROL de]** serviço onde você pode ver sua instância de serviço.
 
 ![configuração concluída](./images/user-guide/instance_setup_complete.png)
 

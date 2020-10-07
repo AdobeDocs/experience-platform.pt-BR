@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: A API do Serviço de Política permite que você crie e gerencie políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados. Este documento fornece um tutorial passo a passo para a criação de uma política usando a API do Serviço de Política.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 2%
@@ -195,7 +195,7 @@ Registre a ID de URI da ação de marketing recém-criada, pois ela será usada 
 
 A criação de uma nova política exige que você forneça a ID de URI de uma ação de marketing com uma expressão dos rótulos de uso que proíbem essa ação de marketing.
 
-Essa expressão é chamada de expressão **de** política e é um objeto que contém (A) uma etiqueta ou (B) um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política. Por exemplo, uma política relacionada à exportação de dados para terceiros pode ser proibida se `C1 OR (C3 AND C7)` houver etiquetas. Essa expressão seria especificada como:
+Essa expressão é chamada de expressão de política e é um objeto que contém (A) um rótulo ou (B) um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política. Por exemplo, uma política relacionada à exportação de dados para terceiros pode ser proibida se `C1 OR (C3 AND C7)` houver etiquetas. Essa expressão seria especificada como:
 
 ```json
 "deny": {

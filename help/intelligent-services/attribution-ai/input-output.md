@@ -5,7 +5,7 @@ title: Entrada e saída de Attribution AI
 topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -37,7 +37,7 @@ Nem todas as colunas no schema [!DNL Consumer Experience Event] (CEE) são obrig
 | Marketing.trackingCode | Ponto de contato |
 | Marketing.campaignname | Ponto de contato |
 | Marketing.campaigngroup | Ponto de contato |
-| Comércio | Conversão  |
+| Comércio | Conversão |
 
 Normalmente, a atribuição é executada em colunas de conversão, como ordem, compras e finalizações em &quot;comércio&quot;. As colunas &quot;canal&quot; e &quot;marketing&quot; são altamente recomendadas para definir pontos de contato para obter bons insights. No entanto, é possível incluir qualquer outra coluna adicional junto com as colunas acima para configurar como uma conversão ou definição de ponto de contato.
 
@@ -140,7 +140,7 @@ Você pode visualização o caminho para suas pontuações brutas na interface d
 
 ![Escolha seu schema](./images/input-output/schemas_browse.png)
 
-Em seguida, selecione um campo na janela **[!UICONTROL Estrutura]** da interface do usuário, a guia Propriedades **[!UICONTROL de]** campo será aberta. Dentro das propriedades **** de campo é o campo **[!UICONTROL Caminho]** que mapeia para suas pontuações brutas.
+Em seguida, selecione um campo na janela **[!UICONTROL Estrutura]** da interface do usuário, a guia Propriedades **[!UICONTROL de]** campo será aberta. Dentro das propriedades **[!UICONTROL de]** campo é o campo de caminho que mapeia para suas pontuações brutas.
 
 ![Escolha um Schema](./images/input-output/field_properties.png)
 

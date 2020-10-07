@@ -5,7 +5,7 @@ description: Saiba como renderizar conteúdo personalizado com o SDK da Web Expe
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` define seções, locais ou partes de suas páginas nas quais você gostaria de renderizar uma experiência personalizada. Eles `decisionScopes` são personalizáveis e definidos pelo usuário. Para [!DNL Target] os clientes atuais, `decisionScopes` também são conhecidos como &quot;mboxes&quot;. Na [!DNL Target] interface do usuário, `decisionScopes` apareça como &quot;locais&quot;.
 
-## __Escopo da visualização__
+## O `__view__` âmbito
 
 O AEP [!DNL Web SDK] fornece uma funcionalidade na qual você pode recuperar ações VEC sem depender do AEP [!DNL Web SDK] para renderizar as ações do VEC para você. Envie um evento com `__view__` definição de `decisionScopes`.
 
@@ -127,10 +127,10 @@ Se você tiver atividades Públicos alvos com audiências predefinidas que usam 
 
 ## Terminologia
 
-__Decisões__ - No [!DNL Target]entanto, elas estão correlacionadas à experiência selecionada de uma Atividade.
+**Decisões** - No [!DNL Target]entanto, elas estão correlacionadas à experiência selecionada de uma Atividade.
 
-__Âmbito__ - Âmbito de aplicação da decisão. Em [!DNL Target]casa, aqui está a mBox. A mBox global é o `__view__` escopo.
+**Âmbito** - Âmbito de aplicação da decisão. Em [!DNL Target]casa, aqui está a mBox. A mBox global é o `__view__` escopo.
 
-__Schema__ - O schema de uma decisão é o tipo de oferta em [!DNL Target].
+**Schema** - O schema de uma decisão é o tipo de oferta em [!DNL Target].
 
-__XDM__ - o XDM é serializado em notação de pontos e colocado em parâmetros [!DNL Target] de mBox.
+**XDM** - o XDM é serializado em notação de pontos e colocado em parâmetros [!DNL Target] de mBox.

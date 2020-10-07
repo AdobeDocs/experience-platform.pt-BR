@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 **Data de lançamento: 11 de dezembro de 2019**
 
-Atualizações dos recursos existentes no Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 * [[!DNL Segmentation Service]](#segmentation)
 * [[!Serviço de Decisão DNL]](#decisioning)
@@ -34,7 +34,7 @@ O Adobe Experience Platform Segmentation Service fornece uma interface de usuár
 
 | Recurso | Descrição |
 |--- | ---|
-| Guia Audiências mescladas em [!DNL Segment Builder] | As guias [!UICONTROL _Segmentos_] e [!UICONTROL _Audiências_] no [!DNL Segment Builder] foram combinadas em uma única guia [!UICONTROL _Audiência_] . Essa guia permite que você procure e procure audiências existentes, que podem ser arrastadas e soltas na tela do construtor de regras para criar uma nova definição de segmento. A referência a uma audiência pode adicionar um dos seguintes conjuntos de lógica de regra à nova definição de segmento: associação de audiência como uma regra, o conjunto completo de lógicas de regra que definiram a audiência referenciada. |
+| Guia Audiências mescladas em [!DNL Segment Builder] | As guias [!UICONTROL Segmentos] e [!UICONTROL Audiências] no [!DNL Segment Builder] foram combinadas em uma única guia [!UICONTROL Audiência] . Essa guia permite que você procure e procure audiências existentes, que podem ser arrastadas e soltas na tela do construtor de regras para criar uma nova definição de segmento. A referência a uma audiência pode adicionar um dos seguintes conjuntos de lógica de regra à nova definição de segmento: associação de audiência como uma regra, o conjunto completo de lógicas de regra que definiram a audiência referenciada. |
 | Novo local para o seletor de política de mesclagem | O local do seletor de política de mesclagem no [!DNL Segment Builder] foi alterado. Para selecionar uma política de mesclagem para uma definição de segmento, clique no ícone de engrenagem na guia **[!UICONTROL Campos]** e use o menu suspenso Política **[!UICONTROL de]** mesclagem para selecionar a política de mesclagem que deseja usar. |
 
 **Problemas conhecidos**

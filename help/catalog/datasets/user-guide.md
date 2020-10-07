@@ -5,9 +5,9 @@ title: Guia do usuário de conjuntos de dados
 topic: datasets
 description: Este guia do usuário de conjuntos de dados fornece instruções sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Este guia do usuário fornece instruções sobre como executar ações comuns ao
 Este guia do usuário requer uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 * [Conjuntos de dados](overview.md): A construção de armazenamento e gerenciamento para a persistência de dados no [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)de schemas: Saiba como criar seus próprios schemas XDM personalizados usando o [!DNL Schema Editor] na interface do [!DNL Platform] usuário.
 * [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
@@ -41,7 +41,7 @@ Clique no nome de um conjunto de dados para acessar a tela de atividade **** do 
 
 ## Pré-visualização de um conjunto de dados
 
-Na tela atividade **[!UICONTROL do conjunto de]** dados, clique em Conjunto de dados de **[!UICONTROL Pré-visualização]** próximo ao canto superior direito da tela para pré-visualização de até 100 linhas de dados. Se o conjunto de dados estiver vazio, o link pré-visualização será desativado e, em vez disso, dirá que a **[!UICONTROL Pré-visualização não está disponível]**.
+Na tela atividade **[!UICONTROL do conjunto de]** dados, clique em Conjunto de dados de **[!UICONTROL Pré-visualização]** próximo ao canto superior direito da tela para pré-visualização de até 100 linhas de dados. Se o conjunto de dados estiver vazio, o link pré-visualização será desativado e, em vez disso, informará que a pré-visualização não está disponível.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 

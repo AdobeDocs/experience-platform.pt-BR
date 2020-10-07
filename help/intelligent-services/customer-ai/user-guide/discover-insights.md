@@ -5,7 +5,7 @@ title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 description: A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -98,7 +98,7 @@ O Resumo da Pontuação exibe o número total de perfis pontuados e os categoriz
 
 ## Distribuição das pontuações
 
-O cartão de *distribuição de pontuações* fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão *Distribuição de pontuações* representam o tipo de pontuação de propensão gerada.
+O cartão de **[!UICONTROL distribuição de pontuações]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão *Distribuição de pontuações* representam o tipo de pontuação de propensão gerada.
 
 ![distribuição das pontuações](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!U
 
 ![Preenchimento do segmento em](../images/insights/segment-saving.png)
 
-Para visualização do novo segmento na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página *Procurar* é exibida e exibe todos os segmentos disponíveis.
+Para visualização do novo segmento na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no painel de navegação esquerdo. A página **[!UICONTROL Procurar]** é exibida e exibe todos os segmentos disponíveis.
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 

@@ -5,7 +5,7 @@ title: Processamento de solicitação de privacidade no Data Lake
 topic: overview
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, opt out da venda ou excluir seus dados pessoais, conforme delineado pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados de clientes armazenados no Data Lake.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -25,12 +25,12 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais em aplicativos Adobe Experience Cloud.
 * [[!DNL Catalog Service]](home.md): O sistema de registro para localização e linhagem de dados no [!DNL Experience Platform]. Fornece uma API que pode ser usada para atualizar metadados do conjunto de dados.
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 
-A Adobe Experience Platform [!DNL Identity Service] faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. [!DNL Identity Service] usa namespaces **[!UICONTROL de]** identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
+A Adobe Experience Platform [!DNL Identity Service] faz a ponte entre os dados de identidade do cliente nos sistemas e dispositivos. [!DNL Identity Service] usa namespaces de identidade para fornecer contexto aos valores de identidade relacionando-os ao seu sistema de origem. Uma namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
 
 [!DNL Identity Service] mantém um armazenamento de namespaces de identidade definidas globalmente (padrão) e definidas pelo usuário (personalizadas). Namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizadas para atender às suas necessidades específicas.
 
@@ -38,7 +38,7 @@ Para obter mais informações sobre namespaces de identidade em [!DNL Experience
 
 ## Adicionar dados de identidade a conjuntos de dados
 
-Ao criar solicitações de privacidade para o [!DNL Data Lake], devem ser fornecidos valores de identidade válidos (e suas namespaces associadas) para cada cliente individual, a fim de localizar seus dados e processá-los de acordo. Portanto, todos os conjuntos de dados sujeitos a solicitações de privacidade devem conter um descritor **[!UICONTROL de]** identidade em seu schema XDM associado.
+Ao criar solicitações de privacidade para o [!DNL Data Lake], devem ser fornecidos valores de identidade válidos (e suas namespaces associadas) para cada cliente individual, a fim de localizar seus dados e processá-los de acordo. Portanto, todos os conjuntos de dados sujeitos a solicitações de privacidade devem conter um descritor de identidade em seu schema XDM associado.
 
 >[!NOTE]
 >

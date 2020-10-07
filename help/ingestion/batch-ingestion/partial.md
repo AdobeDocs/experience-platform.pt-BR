@@ -5,9 +5,9 @@ title: Visão geral da ingestão parcial em lote
 topic: overview
 description: Este documento fornece um tutorial para gerenciar a ingestão parcial em lote.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ A alternância do diagnóstico **** Error só é exibida quando a alternância d
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-O limite **[!UICONTROL de]** Erro permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+**[!UICONTROL O limite]** de erro permite definir a porcentagem de erros aceitáveis antes que o lote inteiro falhe. Por padrão, esse valor é definido como 5%.
 
 ## Próximas etapas {#next-steps}
 

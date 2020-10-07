@@ -5,7 +5,7 @@ title: Guia de solução de problemas do Adobe Experience Platform Identity Serv
 topic: troubleshooting
 description: Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Usando a API [do Serviço de](https://www.adobe.io/apis/experienceplatform/home/
 
 ## O que são identidades compostas e XIDs?
 
-As identidades são referenciadas em chamadas de API pela identidade composta ou por XID. Uma identidade **** composta é uma representação de uma identidade que contém um valor de ID e uma namespace. Um **XID** é um identificador de valor único que representa a mesma construção que uma identidade composta (uma ID e uma namespace) e é automaticamente atribuído a novas identidades quando persistido pelo Serviço de identidade. Consulte a visão geral [da API do Serviço de](./home.md) identidade para obter mais informações.
+As identidades são referenciadas em chamadas de API pela identidade composta ou por XID. Uma identidade composta é uma representação de uma identidade que contém um valor de ID e uma namespace. Um XID é um identificador de valor único que representa a mesma construção que uma identidade composta (uma ID e uma namespace) e é automaticamente atribuído a novas identidades quando persistido pelo Serviço de identidade. Consulte a visão geral [da API do Serviço de](./home.md) identidade para obter mais informações.
 
 ## Como o Serviço de Identidade lida com informações de identificação pessoal (PII)?
 
@@ -112,7 +112,7 @@ Não é necessário criptografar manualmente os dados de PII antes de assimilá-
 
 Para obter etapas sobre como aplicar e gerenciar rótulos de uso de dados, consulte o tutorial [de rótulos de uso de](../data-governance/labels/user-guide.md)dados.
 
-## Há alguma consideração ao hash identidades baseadas em PII?
+## Existem considerações ao hash identidades baseadas em PII?
 
 Se você estiver enviando valores de PII com hash para o Serviço de identidade, deverá usar o mesmo método de criptografia nos conjuntos de dados. Isso garante que o mesmo valor de identidade nos conjuntos de dados gere os mesmos valores com hash e seja capaz de ser corretamente correspondido e vinculado no gráfico de identidade.
 
@@ -233,7 +233,7 @@ Esta mensagem de erro é exibida quando a Organização IMS não foi provisionad
 }
 ```
 
-No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
+No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token do serviço de autorização não é válido
 
@@ -245,7 +245,7 @@ No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram 
 }
 ```
 
-No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
+No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial [de](../tutorials/authentication.md) autenticação para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token de usuário não tem um contexto de produto válido
 

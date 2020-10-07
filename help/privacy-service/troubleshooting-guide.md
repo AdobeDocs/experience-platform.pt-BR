@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] guia de solução de problemas
 
-O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudar o empresa a gerenciar solicitações de privacidade de dados do cliente. Com [!DNL Privacy Service], você pode enviar solicitações para acessar e excluir dados pessoais ou privados do cliente, facilitando a conformidade automatizada com as regulamentações organizacionais e legais de privacidade.
+A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário para ajudar o empresa a gerenciar solicitações de privacidade de dados do cliente. Com [!DNL Privacy Service], você pode enviar solicitações para acessar e excluir dados pessoais ou privados do cliente, facilitando a conformidade automatizada com as regulamentações organizacionais e legais de privacidade.
 
 Este documento fornece respostas para perguntas frequentes sobre [!DNL Privacy Service]o , bem como informações sobre erros frequentemente encontrados na API.
 
@@ -94,7 +94,7 @@ Para obter mais detalhes, consulte a seção sobre como [procurar um trabalho pe
 
 ### Uso da interface
 
-No painel da interface do usuário, localize o trabalho que deseja baixar do widget Solicitações [!DNL Privacy Service] de **** trabalho. Clique na ID do trabalho para abrir a página Detalhes _do_ trabalho. Aqui, clique em **Download** no canto superior direito para baixar o arquivo ZIP. Consulte o guia [do usuário do](ui/user-guide.md) Privacy Service para obter etapas mais detalhadas.
+No painel da interface do usuário, localize o trabalho que deseja baixar do widget Solicitações [!DNL Privacy Service] de **** trabalho. Clique na ID do job para abrir a página Detalhes do Job. Aqui, clique em **Download** no canto superior direito para baixar o arquivo ZIP. Consulte o guia [do usuário do](ui/user-guide.md) Privacy Service para obter etapas mais detalhadas.
 
 ## Mensagens de erro comuns
 

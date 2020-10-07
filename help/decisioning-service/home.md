@@ -5,7 +5,7 @@ title: Serviço de tomada de decisão
 topic: overview
 description: O Serviço de tomada de decisão oferece a capacidade de criar experiências personalizadas, otimizadas e orquestradas em aplicativos executados no Adobe Experience Platform. Usando o Serviço de tomada de decisão, você pode determinar a melhor opção a partir de um conjunto de opções disponíveis. Essas opções, também chamadas de alternativas, podem ser ofertas, recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Visão geral do serviço de decisão
 
-[!DNL Decisioning Service] fornece a capacidade de criar experiências personalizadas, otimizadas e orquestradas em aplicativos executados no Adobe Experience Platform. Usando [!DNL Decisioning Service], você pode determinar a melhor *opção* a partir de um conjunto de opções disponíveis. Essas opções, também chamadas de alternativas, podem ser ofertas, recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas. Atualmente, o caso de uso e o domínio da decisão *de* Oferta são suportados, onde as opções de decisão são modeladas especificamente como ofertas, com suporte para mais casos de uso a serem disponibilizados.
+[!DNL Decisioning Service] fornece a capacidade de criar experiências personalizadas, otimizadas e orquestradas em aplicativos executados no Adobe Experience Platform. Usando [!DNL Decisioning Service], você pode determinar a melhor *opção* a partir de um conjunto de opções disponíveis. Essas opções, também chamadas de alternativas, podem ser ofertas, recomendações de produtos, componentes de conteúdo para uma experiência da Web, scripts de conversação e ações a serem realizadas. Atualmente, o caso de uso e o domínio do *Offer Decisioning* são suportados, onde as opções de decisão são modeladas especificamente como ofertas, com suporte para mais casos de uso que virão.
 
 Com [!DNL Decisioning Service]isso, os clientes podem reutilizar a lógica comercial, bem como compartilhar um catálogo de opções entre canais e aplicativos. Em vez de gerenciar opções de decisão - e estratégias para selecioná-las - profundamente em um aplicativo, elas podem ser aproveitadas independentemente de quando, como e em que canal o usuário final de um cliente interage com um negócio ou organização.
 
@@ -49,7 +49,7 @@ Alternativamente, ou adicionalmente, uma estratégia poderia basear-se nos resul
 
 ### Estratégia de decisão
 
-As estratégias de decisão são configuradas por objetos chamados _atividade_. Cada estratégia de decisão é essencialmente um algoritmo ou uma função que utiliza N opções {o1, o2, ...oN} como entrada e produz uma lista ordenada de opções (o1, o2,...oK), em que a primeira opção na lista é considerada a melhor de acordo com um critério de otimização, a segunda opção na lista resultante é então considerada a segunda melhor opção e assim por diante.
+As estratégias de decisão são configuradas por objetos chamados atividades. Cada estratégia de decisão é essencialmente um algoritmo ou uma função que utiliza N opções {o1, o2, ...oN} como entrada e produz uma lista ordenada de opções (o1, o2,...oK), em que a primeira opção na lista é considerada a melhor de acordo com um critério de otimização, a segunda opção na lista resultante é então considerada a segunda melhor opção e assim por diante.
 
 A qualquer momento durante a jornada de um cliente, a melhor opção para uma determinada atividade é reavaliada com base no conjunto mais atual de variáveis de contexto, regras e restrições. As variáveis de contexto incluem os registros armazenados em [!DNL Real Time Customer Profile]. Uma entidade de registro central é o perfil de um cliente, mas outras entidades, como os dados operacionais de negócios, estão igualmente disponíveis para a atividade.
 

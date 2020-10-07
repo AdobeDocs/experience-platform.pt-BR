@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial para desenvolver, testar, visualizar e salvar uma definição de segmento usando a Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Desenvolver uma definição de segmento
 
-A primeira etapa da segmentação é definir um segmento, representado em uma construção chamada definição **de** segmento. Uma definição de segmento é um objeto que encapsula um query gravado em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado **PQL**. Os predicados de PQL definem as regras para o segmento com base nas condições relacionadas a qualquer registro ou série de tempo que você fornecer para [!DNL Real-time Customer Profile]. Consulte o guia [](../pql/overview.md) PQL para obter mais informações sobre como escrever query PQL.
+A primeira etapa da segmentação é definir um segmento, representado em uma construção chamada definição de segmento. Uma definição de segmento é um objeto que encapsula um query gravado em [!DNL Profile Query Language] (PQL). Esse objeto também é chamado de predicado PQL. Os predicados de PQL definem as regras para o segmento com base nas condições relacionadas a qualquer registro ou série de tempo que você fornecer para [!DNL Real-time Customer Profile]. Consulte o guia [](../pql/overview.md) PQL para obter mais informações sobre como escrever query PQL.
 
 Você pode criar uma nova definição de segmento, fazendo uma solicitação POST para o `/segment/definitions` terminal na [!DNL Segmentation] API. O exemplo a seguir descreve como formatar uma solicitação de definição, incluindo quais informações são necessárias para que um segmento seja definido com sucesso.
 

@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial fornece instruções sobre como disponibilizar os arquivos de origem de amostra de Vendas de varejo fornecidos em um arquivo de arquivamento, que pode ser usado para criar uma fórmula no Adobe Experience Platform Data Science Workspace seguindo o fluxo de trabalho de importação da fórmula na interface do usuário ou usando a API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Para obter suas credenciais do Registro de Container do Azure, faça logon no [A
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-A página *Configurar* é aberta. Forneça um Nome *de* Receita apropriado, por exemplo, &quot;Fórmula de Vendas de Varejo&quot; e, opcionalmente, forneça uma descrição ou um URL de documentação. Depois de concluído, clique em **[!UICONTROL Avançar]**.
+A página **[!UICONTROL Configurar]** é aberta. Forneça um Nome **[!UICONTROL de]** Receita apropriado, por exemplo, &quot;Fórmula de Vendas de Varejo&quot; e, opcionalmente, forneça uma descrição ou um URL de documentação. Depois de concluído, clique em **[!UICONTROL Avançar]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Selecione o *Tempo* de execução apropriado e escolha uma **[!UICONTROL Classif
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Observe os valores para Host *do* Docker, *Nome* de usuário e *Senha*. Eles são usados para criar e empurrar sua [!DNL Docker] imagem nos workflows descritos abaixo.
+Anote os valores para host, nome de usuário e senha do Docker. Eles são usados para criar e empurrar sua [!DNL Docker] imagem nos workflows descritos abaixo.
 
 >[!NOTE]
 >

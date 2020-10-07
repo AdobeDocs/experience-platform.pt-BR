@@ -5,7 +5,7 @@ title: Guia de solução de problemas do controle de acesso
 topic: troubleshooting guide
 description: Este documento fornece respostas para perguntas frequentes sobre o controle de acesso no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Este documento fornece respostas para perguntas frequentes sobre o controle de acesso no Adobe Experience Platform. Para questões e solução de problemas relacionados a outros [!DNL Platform] serviços, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
 
-[!DNL Experience Platform] aproveita perfis de produtos no [Adobe Admin Console](http://adminconsole.adobe.com) para fornecer **controles de acesso** baseados em funções, vinculando usuários com permissões e caixas de proteção.  Consulte a visão geral [do](home.md) controle de acesso para obter mais informações.
+[!DNL Experience Platform] aproveita perfis de produtos no [Adobe Admin Console](http://adminconsole.adobe.com) para fornecer controles de acesso baseados em funções, vinculando usuários com permissões e caixas de proteção.  Consulte a visão geral [do](home.md) controle de acesso para obter mais informações.
 
 ## Onde posso encontrar minhas permissões de acesso atuais?
 

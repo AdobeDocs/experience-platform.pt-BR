@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial para enviar várias mensagens para a Adobe Experience Platform dentro de uma única solicitação HTTP usando a assimilação de streaming.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Depois de registrar uma conexão de streaming, você, como produtor de dados, te
 
 O exemplo a seguir mostra como enviar várias mensagens para um conjunto de dados específico em uma única solicitação HTTP. Insira a ID do conjunto de dados no cabeçalho da mensagem para que a mensagem seja assimilada diretamente nela.
 
-Você pode obter a ID de um conjunto de dados existente usando a [!DNL Platform] interface do usuário ou uma operação de listagem na API. A ID do conjunto de dados pode ser encontrada no [Experience Platform](https://platform.adobe.com) , indo até a guia **[!UICONTROL Conjuntos]** de dados, clicando no conjunto de dados para o qual deseja obter a ID e copiando a string do campo ID **[!UICONTROL do]** Conjunto de dados na guia **[!UICONTROL Informações]** . Consulte a visão geral [do serviço de](../../catalog/home.md) catálogo para obter informações sobre como recuperar conjuntos de dados usando a API.
+Você pode obter a ID de um conjunto de dados existente usando a [!DNL Platform] interface do usuário ou uma operação de listagem na API. A ID do conjunto de dados pode ser encontrada no [Experience Platform](https://platform.adobe.com) , indo até a guia **[!UICONTROL Conjuntos]** de dados, clicando no conjunto de dados para o qual deseja obter a ID e copiando a string do campo ID do conjunto de dados na guia **[!UICONTROL Informações]** . Consulte a visão geral [do serviço de](../../catalog/home.md) catálogo para obter informações sobre como recuperar conjuntos de dados usando a API.
 
 Em vez de usar um conjunto de dados existente, você pode criar um novo conjunto de dados. Leia o tutorial para [criar um conjunto de dados usando APIs](../../catalog/api/create-dataset.md) para obter mais informações sobre como criar um conjunto de dados usando APIs.
 
@@ -543,7 +543,7 @@ A tabela a seguir mostra os códigos de status retornados por mensagens de respo
 
 | Código de status | Descrição |
 | :---: | --- |
-| 207 | Embora &quot;207&quot; seja usado como o código de status de resposta geral, o recipient precisa consultar o conteúdo do corpo de resposta de multistatus para obter mais informações sobre o sucesso ou falha da execução do método. O código de resposta é usado em situações de sucesso, sucesso parcial e também em situações de falha. |
+| 207 | Embora &quot;207&quot; seja usado como o código de status de resposta geral, o recipient precisa consultar o conteúdo do corpo de resposta de vários status para obter mais informações sobre o sucesso ou falha da execução do método. O código de resposta é usado em situações de sucesso, sucesso parcial e também em situações de falha. |
 | 400 | Houve um problema com o pedido. Consulte o corpo da resposta para obter uma mensagem de erro mais específica (por exemplo, a carga da mensagem não possuía os campos obrigatórios ou a mensagem era desconhecida no formato xdm). |
 | 401 | Não autorizado: cabeçalho de autorização válido ausente na solicitação. Isso só é retornado para entradas com autenticação ativada. |
 | 403 | Não autorizado:  O token de autorização fornecido é inválido ou expirou. Isso só é retornado para entradas com autenticação ativada. |

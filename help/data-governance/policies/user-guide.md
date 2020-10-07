@@ -5,7 +5,7 @@ title: Guia do usuário das políticas de uso de dados
 topic: policies
 description: O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho Políticas na interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Guia do usuário das políticas de uso de dados
 
-A Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho _Políticas_ na interface do [!DNL Experience Platform] usuário.
+A Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho **Políticas** na interface do [!DNL Experience Platform] usuário.
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ A etapa **[!UICONTROL Selecionar ações]** de marketing é exibida. Escolha as 
 
 >[!NOTE]
 >
->Ao selecionar várias ações de marketing, a política as interpreta como uma regra &quot;OU&quot;. Em outras palavras, a política se aplica se _qualquer_ uma das ações de marketing selecionadas for executada.
+>Ao selecionar várias ações de marketing, a política as interpreta como uma regra &quot;OU&quot;. Em outras palavras, a política se aplica se **qualquer** uma das ações de marketing selecionadas for executada.
 
 ![](../images/policies/add-marketing-actions.png)
 

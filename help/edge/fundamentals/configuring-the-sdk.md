@@ -5,7 +5,7 @@ description: Saiba como configurar o SDK da Web do Experience Platform
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -135,7 +135,7 @@ Por exemplo, se você tivesse um elemento em sua página da Web com uma ID cujo 
 | -------- | ------------ | ----------------- |
 | Booleano | Não | `true` |
 
-Habilita destinos [!DNL Audience Manager] de cookies, o que permite a configuração de cookies com base na qualificação de segmentos.
+Ativa destinos de [!DNL Audience Manager] cookies, o que permite a configuração de cookies com base na qualificação de segmentos.
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Habilita destinos [!DNL Audience Manager] de cookies, o que permite a configura�
 | -------- | ------------ | ----------------- |
 | Booleano | Não | `true` |
 
-Habilita destinos [!DNL Audience Manager] de URL, o que permite acionar URLs com base na qualificação de segmentos.
+Permite destinos de [!DNL Audience Manager] URL, o que permite acionar URLs com base na qualificação de segmentos.
 
 ## Opções de identidade
 

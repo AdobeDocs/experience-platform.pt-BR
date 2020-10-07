@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial fornece etapas para a criação de um conector de origem Adobe Analytics na interface do usuário para trazer dados de consumidor para o Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 ## Criar uma conexão de origem com o Adobe Analytics
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela *Catálogo* exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela **Catálogo** exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -73,7 +73,7 @@ Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os d
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-A tela Fluxos *do* Conjunto de Dados é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, tempo de criação e status.
+A tela Fluxos **do** Conjunto de Dados é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, tempo de criação e status.
 
 O conector instancia dois fluxos de conjunto de dados. Um fluxo representa dados de preenchimento retroativo e o outro é para dados em tempo real. Os dados de preenchimento retroativo não estão configurados para o Perfil, mas são enviados para o lago de dados para casos de uso analíticos e de ciência de dados.
 
@@ -83,7 +83,7 @@ Selecione o fluxo do conjunto de dados que deseja visualização na lista.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-A página atividade *do* Conjunto de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico. Selecione *Controle* de dados no cabeçalho superior para acessar os campos de rotulagem.
+A página atividade **do** Conjunto de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico. Selecione *Controle* de dados no cabeçalho superior para acessar os campos de rotulagem.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ Você pode visualização rótulos herdados de um fluxo de conjunto de dados da 
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-O painel *Editar rótulos* de controle é exibido. Essa tela permite acessar e editar o contrato, a identidade e os rótulos confidenciais de um fluxo de conjunto de dados.
+O painel **Editar rótulos** de controle é exibido. Essa tela permite acessar e editar o contrato, a identidade e os rótulos confidenciais de um fluxo de conjunto de dados.
 
 Para obter mais informações sobre como rotular dados provenientes do Analytics, visite o guia [de uso de](../../../../../data-governance/labels/user-guide.md)dados.
 

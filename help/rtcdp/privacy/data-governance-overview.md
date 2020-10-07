@@ -5,7 +5,7 @@ seo-title: Controle de dados na plataforma de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Os casos de uso de marketing só podem ser selecionados ao configurar um destino
 
 Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser definidas e ativadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados dentro da CDP em tempo real. Consulte a seção &quot;Políticas de uso de dados&quot; na visão geral [!DNL Experience Platform] do [](../../data-governance/home.md) Data Governance para obter mais informações.
 
-A Adobe Experience Platform fornece várias políticas **** principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser exibidas na interface do usuário navegando até a área de trabalho **[!UICONTROL Políticas]** e selecionando a guia **[!UICONTROL Procurar]** . Consulte o guia [de usuário de](../../data-governance/policies/user-guide.md) [!DNL Experience Platform] políticas na documentação para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
+A Adobe Experience Platform fornece várias políticas principais para casos comuns de uso da experiência do cliente. Essas políticas podem ser exibidas na interface do usuário navegando até a área de trabalho **[!UICONTROL Políticas]** e selecionando a guia **[!UICONTROL Procurar]** . Consulte o guia [de usuário de](../../data-governance/policies/user-guide.md) [!DNL Experience Platform] políticas na documentação para obter etapas mais detalhadas sobre como trabalhar com políticas na interface do usuário, incluindo como fazer suas próprias políticas personalizadas.
 
 ## Impor conformidade de uso de dados {#enforce-data-usage-compliance}
 

@@ -5,7 +5,7 @@ title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Os sistemas CRM fornecem dados que podem ajudar a construir relações com os cl
 
 - [[!DNL HubSpot] conector](connectors/marketing-automation/hubspot.md)
 
-### oud
+### Pagamentos
 
 [!DNL Experience Platform] fornece suporte para a assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
@@ -118,7 +118,7 @@ A tabela a seguir descreve como a interface se comporta com base em diferentes c
 
 | Nível de permissão | Descrição |
 | ---- | ----|
-| **[!UICONTROL Fontes]** de visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia *Catálogo* , bem como nas guias *Procurar*, *Contas* e *DataFlow* . |
+| **[!UICONTROL Fontes]** de visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia Catálogo, bem como nas guias Navegar, Contas e Fluxo de dados. |
 | **[!UICONTROL Gerenciar fontes]** em | Além das funções incluídas nas Fontes **[!UICONTROL de]** Visualização, concede acesso à opção Fonte **[!UICONTROL do]** Connect no **[!UICONTROL Catálogo]** e à opção **[!UICONTROL Selecionar dados]** na **[!UICONTROL Navegação]**. **[!UICONTROL Gerenciar fontes]** também permite ativar ou desativar **[!UICONTROL DataFlows]** e editar seus agendamentos. |
 | **[!UICONTROL Fontes]** de visualização desativadas e **[!UICONTROL gerenciamento de fontes]** desativadas | Revogar todo o acesso às fontes. |
 

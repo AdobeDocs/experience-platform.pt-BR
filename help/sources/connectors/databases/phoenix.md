@@ -5,7 +5,7 @@ title: Conector Phoenix
 topic: overview
 description: A documentação abaixo fornece informações sobre como conectar a Phoenix à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >O [!DNL Phoenix] conector está em beta. Consulte a visão geral [das](../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da [!UICONTROL plataforma] . Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um banco de dados de terceiros. [!DNL Platform] pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Phoenix].
 

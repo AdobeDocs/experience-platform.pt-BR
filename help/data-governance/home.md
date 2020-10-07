@@ -5,7 +5,7 @@ title: Adobe Experience Platform Data Governance
 topic: overview
 description: O Adobe Experience Platform Data Governance permite gerenciar os dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso dos dados. Ele desempenha um papel fundamental no Experience Platform em vários níveis, incluindo a catalogação, a linhagem de dados, a rotulagem de uso de dados, as políticas de uso de dados e o controle do uso de dados para ações de marketing
 translation-type: tm+mt
-source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -21,7 +21,7 @@ A Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cl
 
 ## Funções de controle de dados
 
-Como conceito, o controle de dados não é automático nem ocorre no vácuo. O que começou como uma função para um indivíduo, tipicamente reconhecido como um **administrador** de dados, cresceu consideravelmente à medida que o ecossistema de controle de dados se expandia. Atualmente, o controle de dados exige gerenciamento e monitoramento contínuos para ter sucesso e depende de os administradores de dados terem ferramentas com as quais os dados podem ser rotulados corretamente, políticas de uso podem ser criadas e a conformidade com essas políticas pode ser imposta.
+Como conceito, o controle de dados não é automático nem ocorre no vácuo. O que começou como uma função para um indivíduo, tipicamente reconhecido como um administrador de dados, cresceu consideravelmente à medida que o ecossistema de controle de dados se expandia. Atualmente, o controle de dados exige gerenciamento e monitoramento contínuos para ter sucesso e depende de os administradores de dados terem ferramentas com as quais os dados podem ser rotulados corretamente, políticas de uso podem ser criadas e a conformidade com essas políticas pode ser imposta.
 
 Embora o controle de dados deva ser da responsabilidade de cada indivíduo na organização, aqui estão algumas das funções essenciais dentro do ciclo de gerenciamento de dados:
 

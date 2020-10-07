@@ -5,7 +5,7 @@ title: Visão geral das políticas de uso de dados
 topic: policies
 description: Para que os rótulos de uso de dados suportem de forma eficaz a conformidade dos dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para executar em dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Este documento fornece uma visão geral de alto nível das políticas de uso de 
 
 ## Ações de marketing {#marketing-actions}
 
-**As ações** de marketing (também chamadas de casos **de uso de** marketing) no contexto da estrutura de controle de dados são ações que um consumidor de [!DNL Experience Platform] dados pode realizar, para as quais sua organização deseja restringir o uso de dados. Dessa forma, uma política de uso de dados é definida pelo seguinte:
+As ações de marketing (também chamadas de casos de uso de marketing) no contexto da estrutura de controle de dados são ações que um consumidor de [!DNL Experience Platform] dados pode realizar, para as quais sua organização deseja restringir o uso de dados. Dessa forma, uma política de uso de dados é definida pelo seguinte:
 
 1. Uma ação de marketing específica
 2. Os rótulos de uso de dados com os quais a ação está restrita não são executados

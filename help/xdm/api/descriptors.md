@@ -5,7 +5,7 @@ title: Descritores
 description: 'Os schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. A Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Solicitação**
 
-Essa solicitação basicamente _regrava_ o descritor, de modo que o corpo da solicitação deve incluir todos os campos necessários para definir um descritor desse tipo. Em outras palavras, a carga da solicitação para atualizar (PUT) um descritor é a mesma carga para criar (POST) um descritor do mesmo tipo.
+Essa solicitação basicamente regrava o descritor, de modo que o corpo da solicitação deve incluir todos os campos necessários para definir um descritor desse tipo. Em outras palavras, a carga da solicitação para atualizar (PUT) um descritor é a mesma carga para criar (POST) um descritor do mesmo tipo.
 
 Neste exemplo, o descritor de identidade está sendo atualizado para fazer referência a um `xdm:sourceProperty` (&quot;celular&quot;) diferente e alterar o `xdm:namespace` para &quot;Telefone&quot;.
 

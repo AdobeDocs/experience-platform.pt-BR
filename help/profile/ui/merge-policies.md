@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guia do usuário de políticas de mesclagem
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Na interface do [!DNL Experience Platform] usuário, você pode começar a traba
 
 ![Landing page de políticas de mesclagem](../images/merge-policies/landing.png)
 
-Os detalhes de cada política de mesclagem disponível para sua organização estão visíveis na landing page, incluindo o Nome [!UICONTROL da]política, a política [!UICONTROL de mesclagem]padrão e o [!UICONTROL Schema].
+Os detalhes de cada política de mesclagem disponível para sua organização estão visíveis na landing page, incluindo o nome da política, a política de mesclagem padrão e o schema.
 
 Para selecionar quais detalhes estão visíveis ou para adicionar outras colunas à exibição, selecione o ícone do seletor de colunas e clique no nome de uma coluna para adicioná-lo ou removê-lo da visualização.
 
@@ -54,14 +54,14 @@ A tela **[!UICONTROL Criar política]** de mesclagem é exibida, permitindo que 
 * **[!UICONTROL Arranque]** de ID: Este campo define como determinar as identidades relacionadas de um cliente. Há dois valores possíveis:
    * **[!UICONTROL Nenhum]**: Não execute nenhum ajuste de identidade.
    * **[!UICONTROL Gráfico]** privado: Realize a identificação com base no seu gráfico de identidade particular.
-* **[!UICONTROL Mesclagem]** de atributos: Um fragmento de perfil contém informações para apenas uma identidade fora da lista de identidades existentes para um cliente individual. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há a possibilidade de atributos de perfil conflitantes e a prioridade deve ser especificada. Usar a mesclagem [!UICONTROL de] atributos permite especificar quais valores de perfil de conjunto de dados priorizar se ocorrer um conflito de mesclagem entre conjuntos de dados do tipo de valor chave (dados de registro). Há dois valores possíveis:
+* **[!UICONTROL Mesclagem]** de atributos: Um fragmento de perfil contém informações para apenas uma identidade fora da lista de identidades existentes para um cliente individual. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há a possibilidade de atributos de perfil conflitantes e a prioridade deve ser especificada. O uso da &quot;mesclagem[!UICONTROL de]atributos&quot; permite especificar quais valores de perfil de conjunto de dados devem ser priorizados se ocorrer um conflito de mesclagem entre conjuntos de dados do tipo de valor chave (dados de registro). Há dois valores possíveis:
    * **[!UICONTROL Carimbo de data e hora solicitado]**: No evento de um conflito, é dada prioridade ao perfil que foi atualizado mais recentemente. [!UICONTROL O carimbo de data e hora solicitado] também oferece suporte a carimbos de data e hora personalizados que têm prioridade sobre os carimbos de data e hora do sistema ao mesclar dados dentro do mesmo conjunto de dados (várias identidades) ou entre conjuntos de dados. Para saber mais, consulte a seção [com carimbo de data e hora solicitada](#timestamp-ordered) a seguir.
    * **[!UICONTROL Precedência]** do conjunto de dados: No evento de um conflito, dê prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Ao selecionar essa opção, você deve escolher os conjuntos de dados relacionados e sua ordem de prioridade. Consulte os detalhes sobre a precedência [do conjunto de](#dataset-precedence) dados abaixo para obter mais informações.
 * **[!UICONTROL Política]** de mesclagem padrão: Um botão de alternância que permite selecionar se essa política de mesclagem será ou não o padrão para sua organização. Se o seletor estiver ativado e a nova política for salva, sua política padrão anterior será atualizada automaticamente para não ser mais o padrão.
 
 ### Carimbo de data e hora solicitado {#timestamp-ordered}
 
-Como os registros de Perfis são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando [!UICONTROL Carimbo de data e hora solicitado] é selecionado como o tipo de mesclagem  Atributo para uma política de mesclagem, os perfis são mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
+Como os registros de Perfis são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando o **[!UICONTROL Carimbo de data e hora solicitado]** é selecionado como o tipo &quot;[!UICONTROL Mesclagem]de atributo&quot; para uma política de mesclagem, os perfis são mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
 
 Ocasionalmente, pode haver casos de uso em que é necessário fornecer um carimbo de data e hora personalizado e fazer com que a política de mesclagem cumpra o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema. Exemplos disso incluem preenchimento retroativo de dados ou garantia da ordem correta de eventos se os registros forem ingeridos fora de ordem.
 
@@ -71,7 +71,7 @@ Ocasionalmente, pode haver casos de uso em que é necessário fornecer um carimb
 
 ### Uso de carimbos de data e hora personalizados {#custom-timestamps}
 
-Para usar um carimbo de data e hora personalizado, a Mixin [!UICONTROL de Detalhes de Auditoria do Sistema de Origem] Externa deve ser adicionada ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `lastUpdatedDate` campo.
+Para usar um carimbo de data e hora personalizado, a &quot;Mixin[!UICONTROL de detalhes de auditoria do sistema de origem]externa&quot; deve ser adicionada ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `lastUpdatedDate` campo.
 
 Quando um registro é ingerido com o `lastUpdatedDate` campo preenchido, o Experience Platform usará esse campo para unir registros em conjuntos de dados. Se não `lastUpdatedDate` estiver presente ou não estiver preenchida, a Plataforma continuará a usar o carimbo de data e hora do sistema.
 
@@ -79,7 +79,7 @@ Quando um registro é ingerido com o `lastUpdatedDate` campo preenchido, o Exper
 >
 >Você deve garantir que o `lastUpdatedDate` carimbo de data e hora seja preenchido ao assimilar uma atualização no mesmo registro.
 
-A captura de tela a seguir exibe os campos na Mixin [!UICONTROL Detalhes da Auditoria do Sistema de Origem]Externa. Para obter instruções passo a passo sobre como trabalhar com schemas usando a interface do usuário, incluindo como adicionar combinações a schemas, visite o [tutorial para criar um schema usando a interface do usuário](../../xdm/tutorials/create-schema-ui.md).
+A seguinte captura de tela exibe os campos na &quot;MixinExternal Source System Audit Details&quot;. Para obter instruções passo a passo sobre como trabalhar com schemas usando a interface do usuário, incluindo como adicionar combinações a schemas, visite o [tutorial para criar um schema usando a interface do usuário](../../xdm/tutorials/create-schema-ui.md).
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
@@ -87,15 +87,15 @@ Para trabalhar com carimbos de data e hora personalizados usando a API, consulte
 
 ### Precedência do conjunto de dados {#dataset-precedence}
 
-Ao selecionar um valor de mesclagem [!UICONTROL de] Atributo, você pode selecionar a precedência [!UICONTROL de] Conjunto de Dados que permite que você atribua prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram.
+Ao selecionar um valor de mesclagem **[!UICONTROL de]** Atributo, você pode selecionar a precedência **[!UICONTROL de]** Conjunto de Dados que permite que você atribua prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram.
 
 Um exemplo de caso de uso seria se sua organização tivesse informações presentes em um conjunto de dados que seja preferencial ou confiável em relação aos dados em outro conjunto de dados.
 
-Ao selecionar a precedência [!UICONTROL do]Conjunto de Dados, um painel separado é aberto, exigindo que você selecione dos conjuntos de dados  Disponíveis quais conjuntos de dados serão incluídos (ou use a caixa de seleção para selecionar todos). Em seguida, você pode arrastar e soltar esses conjuntos de dados no painel Conjuntos de dados  selecionados e arrastá-los para a ordem de prioridade correta. O conjunto de dados principal terá prioridade máxima, o segundo conjunto de dados será o segundo mais alto e assim por diante.
+Ao selecionar a precedência **[!UICONTROL do]** Conjunto de Dados, um painel separado é aberto, exigindo que você selecione dos conjuntos de dados **** Disponíveis quais conjuntos de dados serão incluídos (ou use a caixa de seleção para selecionar todos). Em seguida, você pode arrastar e soltar esses conjuntos de dados no painel [**!UICONTROL Seleted Datasets]** e arrastá-los para a ordem de prioridade correta. O conjunto de dados principal terá prioridade máxima, o segundo conjunto de dados será o segundo mais alto e assim por diante.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Depois de terminar de criar a política de mesclagem, selecione **[!UICONTROL Salvar]** para retornar à guia [!UICONTROL Mesclar políticas] , onde sua nova política de mesclagem agora aparece na lista de políticas.
+Depois de terminar de criar a política de mesclagem, selecione **[!UICONTROL Salvar]** para retornar à guia **[!UICONTROL Mesclar políticas]** , onde sua nova política de mesclagem agora aparece na lista de políticas.
 
 ## Editar uma política de mesclagem
 
@@ -103,7 +103,7 @@ Você pode modificar uma política de mesclagem existente por meio da guia [!UIC
 
 ![Landing page de políticas de mesclagem](../images/merge-policies/select-edit.png)
 
-Quando a tela **[!UICONTROL Editar política]** de mesclagem for exibida, você poderá fazer alterações no [!UICONTROL Nome], no [!UICONTROL Schema], no tipo de agrupamento [!UICONTROL de] ID e no tipo de mesclagem   Atributo, bem como selecionar se essa política será ou não a política de mesclagem Padrão para a sua organização.
+Quando a tela **[!UICONTROL Editar política]** de mesclagem for exibida, você poderá fazer alterações no nome, schema, tipo de identificação e tipo de mesclagem do atributo, bem como selecionar se essa política será ou não a política de mesclagem padrão para sua organização.
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ Quando a tela **[!UICONTROL Editar política]** de mesclagem for exibida, você 
 
 ![](../images/merge-policies/edit-screen.png)
 
-Depois de fazer as alterações necessárias, selecione **[!UICONTROL Salvar]** para retornar à guia [!UICONTROL Mesclar políticas] , onde as informações atualizadas da política de mesclagem agora estão visíveis.
+Depois de fazer as alterações necessárias, selecione **[!UICONTROL Salvar]** para retornar à guia **[!UICONTROL Mesclar políticas]** , onde as informações atualizadas da política de mesclagem agora estão visíveis.
 
 ![](../images/merge-policies/edited.png)
 
@@ -119,7 +119,7 @@ Depois de fazer as alterações necessárias, selecione **[!UICONTROL Salvar]** 
 
 Ao criar ou atualizar uma política de mesclagem, é realizada uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte do Adobe Experience Platform [!DNL Data Governance] e são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para realizar em [!DNL Platform] dados específicos. Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tiver uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberá uma notificação &quot;Violação de política de controle de[!UICONTROL dados detectada]&quot; ao tentar salvar sua política de mesclagem.
 
-Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite que você visualização os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia de linhagem [!UICONTROL de] dados fornece o motivo para a violação e as ativações Afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
+Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite que você visualização os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia de linhagem **** de dados fornece o motivo para a violação e as ativações afetadas], cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
 
 Para saber mais sobre como o controle de dados é executado no Adobe Experience Platform, comece lendo a visão geral [do](../../data-governance/home.md)Data Governance.
 

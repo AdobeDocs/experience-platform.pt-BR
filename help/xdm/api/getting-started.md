@@ -5,7 +5,7 @@ title: Guia do desenvolvedor da API de Registro do schema
 description: O Registro do Schema é usado para acessar a Biblioteca de Schemas no Adobe Experience Platform, fornecendo uma interface do usuário e uma API RESTful a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis. Usando a API do Registro do Schema, você pode executar operações CRUD básicas para visualização e gerenciamento de todos os schemas e recursos relacionados disponíveis no Adobe Experience Platform.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a [!DNL 
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema do [!DNL Experience Data Model (XDM)](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM.
 * [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
@@ -162,7 +162,7 @@ Uma resposta bem-sucedida retorna informações relacionadas ao uso do [!DNL Sch
 
 ## Entenda o `CONTAINER_ID` {#container}
 
-As chamadas à [!DNL Schema Registry] API exigem o uso de uma `CONTAINER_ID`. Há dois container contra os quais as chamadas de API podem ser feitas: o container **** global e o container **do** locatário.
+As chamadas à [!DNL Schema Registry] API exigem o uso de uma `CONTAINER_ID`. Há dois container contra os quais as chamadas de API podem ser feitas: o container global e o container locatário.
 
 ### Container global
 

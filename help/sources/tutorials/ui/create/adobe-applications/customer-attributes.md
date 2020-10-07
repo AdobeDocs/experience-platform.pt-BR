@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de origem na interface do usuário para coletar dados de perfil de atributos do cliente no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 8%
@@ -28,7 +28,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-A tela atividade *de origem lista todas as conexões estabelecidas anteriormente para os dados de perfil dos atributos do cliente. Você pode criar uma nova conexão clicando em* Selecionar dados ****.
+A tela atividade **de origem lista todas as conexões estabelecidas anteriormente para os dados de perfil dos atributos do cliente. Você pode criar uma nova conexão clicando em** Selecionar dados ****.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ Na lista de conjuntos de dados de perfil de atributos do cliente disponíveis, s
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-A etapa *Revisar* é exibida, permitindo que você revise sua nova conexão de entrada antes de ela ser criada. Os detalhes da conexão são agrupados por categorias, incluindo:
+A etapa **Revisar** é exibida, permitindo que você revise sua nova conexão de entrada antes de ela ser criada. Os detalhes da conexão são agrupados por categorias, incluindo:
 
-* *Detalhes* da fonte: Mostra o tipo da conexão de origem e os dados de origem selecionados.
-* *Detalhes* do público alvo: Ao criar outros conectores de origem, esse container mostra em qual conjunto de dados os dados de origem estão assimilando, incluindo o schema ao qual o conjunto de dados está aderindo. Os dados do perfil dos atributos do cliente são mapeados e assimilados automaticamente nos Perfis do cliente em tempo real.
+* **Detalhes** da fonte: Mostra o tipo da conexão de origem e os dados de origem selecionados.
+* **Detalhes** do público alvo: Ao criar outros conectores de origem, esse container mostra em qual conjunto de dados os dados de origem estão assimilando, incluindo o schema ao qual o conjunto de dados está aderindo. Os dados do perfil dos atributos do cliente são mapeados e assimilados automaticamente nos Perfis do cliente em tempo real.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 

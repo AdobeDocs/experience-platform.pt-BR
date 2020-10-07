@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Atributos calculados - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -31,7 +31,7 @@ O endpoint da API usado neste guia faz parte da API [de Perfil do cliente em tem
 
 A Adobe Experience Platform permite importar e unir dados de várias fontes com facilidade para gerar [!DNL Real-time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
 
-Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão desses dados rapidamente, [!DNL Platform] permite criar atributos **** calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
+Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;primeiro nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total da compra vitalícia&quot;). Para facilitar a compreensão desses dados rapidamente, [!DNL Platform] permite criar atributos calculados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
 Os atributos calculados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera em dados recebidos e armazena o valor resultante em um atributo ou evento de perfil. As expressões podem ser definidas de várias maneiras diferentes, permitindo especificar que uma regra avalie somente eventos recebidos, dados de eventos e perfis recebidos ou eventos recebidos, dados de perfis e eventos históricos.
 
@@ -69,7 +69,7 @@ Depois de localizar o schema, clique em seu nome para abrir o local [!DNL Schema
 
 ### Criar uma mistura
 
-Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de *Misturas* na seção **[!UICONTROL Composição]** no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova mistura]** para definir sua nova combinação.
+Para criar uma nova mistura, clique em **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Misturas]** na seção **[!UICONTROL Composição]** no lado esquerdo do editor. Isso abre a caixa de diálogo **[!UICONTROL Adicionar mixagem]** , onde você pode ver as misturas existentes. Clique no botão de opção para **[!UICONTROL Criar nova mistura]** para definir sua nova combinação.
 
 Dê um nome e uma descrição ao mixin e clique em **[!UICONTROL Adicionar mixin]** quando concluído.
 
@@ -77,7 +77,7 @@ Dê um nome e uma descrição ao mixin e clique em **[!UICONTROL Adicionar mixin
 
 ### Adicionar um campo de atributo calculado ao schema
 
-A sua nova mistura deve aparecer agora na seção **[!UICONTROL Misturas]** em **[!UICONTROL Composição]**. Clique no nome do mixin e vários botões de campo **** Adicionar aparecerão na seção *[!UICONTROL Structure]** do editor.
+A sua nova mistura deve aparecer agora na seção &quot;[!UICONTROL Misturas]&quot; em &quot;[!UICONTROL Composição]&quot;. Clique no nome do mixin e vários botões de campo **** Adicionar aparecerão na seção **[!UICONTROL Estrutura]** do editor.
 
 Selecione **[!UICONTROL Adicionar campo]** ao lado do nome do schema para adicionar um campo de nível superior ou selecione para adicionar o campo em qualquer lugar no schema que você preferir.
 

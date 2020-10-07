@@ -5,7 +5,7 @@ title: Criar segmentos de clientes com pontuações previstas
 topic: Create a segment
 description: Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Na interface do usuário da plataforma, clique em **[!UICONTROL Segmentos]** no 
 
 ![](../images/user-guide/segments.png)
 
-O Construtor *de segmentos* é exibido. Na coluna *Campos* à esquerda e na guia *Atributos* , clique na pasta chamada Perfil **[!UICONTROL individual]** XDM e clique na pasta com a namespace de sua organização. A pasta chamada AI **[!UICONTROL do]** cliente contém os resultados de execuções de previsão e são nomeados após a instância à qual as pontuações pertencem. Clique em uma pasta de instância para acessar os resultados da instância desejada.
+O Construtor **de segmentos** é exibido. Na coluna **[!UICONTROL Campos]** à esquerda e na guia **[!UICONTROL Atributos]** , clique na pasta chamada Perfil **[!UICONTROL individual]** XDM e clique na pasta com a namespace de sua organização. A pasta chamada AI **[!UICONTROL do]** cliente contém os resultados de execuções de previsão e são nomeados após a instância à qual as pontuações pertencem. Clique em uma pasta de instância para acessar os resultados da instância desejada.
 
 ![](../images/user-guide/results.png)
 
@@ -41,4 +41,4 @@ Acima da coluna *Campos* à esquerda, clique no ícone de **engrenagem** e selec
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você encontrou audiências com êxito com base em suas pontuações de propensão usando o Construtor de segmentos. Agora você pode público alvo suas audiências ativando-as para destinos. Consulte a visão geral [de](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) destinos para obter mais informações.
+Ao seguir este tutorial, você encontrou audiências com êxito com base em suas pontuações de propensão usando o Construtor de segmentos. Agora você pode público alvo suas audiências ativando-as para destinos. See the [destinations overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) for more information.

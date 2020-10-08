@@ -5,9 +5,9 @@ user-guide-title: Ajuda do Serviço de Segmentação do Adobe Experience Platfor
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
 translation-type: tm+mt
-source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '121'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 - [Visão geral](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- Guia do desenvolvedor da API de segmentação{#api}
+- Guia do desenvolvedor da API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
    - [Exportar trabalhos](api/export-jobs.md)
@@ -31,6 +31,7 @@ ht-degree: 9%
    - [Visão geral](ui/overview.md)
    - [Construtor de segmentos](ui/segment-builder.md)
    - [Segmentação em streaming](ui/streaming-segmentation.md)
+   - [Reconsideração de restrições de tempo](ui/segment-refactoring.md)
 - [Aceitar opções](honoring-opt-outs.md)
 - [Segmentação de várias entidades](multi-entity-segmentation.md)
 - Idioma do Query do perfil {#pql}

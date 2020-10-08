@@ -61,7 +61,7 @@ A tela **[!UICONTROL Criar política]** de mesclagem é exibida, permitindo que 
 
 ### Carimbo de data e hora solicitado {#timestamp-ordered}
 
-Como os registros de Perfis são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando o **[!UICONTROL Carimbo de data e hora solicitado]** é selecionado como o tipo &quot;[!UICONTROL Mesclagem]de atributo&quot; para uma política de mesclagem, os perfis são mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
+Como os registros de Perfis são ingeridos no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da ingestão e adicionado ao registro. Quando **[!UICONTROL Carimbo de data e hora solicitado]** é selecionado como o tipo de mesclagem **** Atributo para uma política de mesclagem, os perfis são mesclados com base no carimbo de data e hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora para quando o registro foi ingerido na Plataforma.
 
 Ocasionalmente, pode haver casos de uso em que é necessário fornecer um carimbo de data e hora personalizado e fazer com que a política de mesclagem cumpra o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema. Exemplos disso incluem preenchimento retroativo de dados ou garantia da ordem correta de eventos se os registros forem ingeridos fora de ordem.
 

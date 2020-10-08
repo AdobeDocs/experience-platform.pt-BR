@@ -5,9 +5,9 @@ title: Guia do usuário do Construtor de segmentos do serviço de segmentação
 topic: ui guide
 description: 'O Construtor de segmentos fornece uma área de trabalho avançada que permite interagir com elementos de dados do Perfil. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ Uma definição de segmento é uma coleção de regras usadas para descrever as 
 Para adicionar uma nova regra à definição do segmento, arraste um bloco da guia **[!UICONTROL Campos]** e solte-o na tela do construtor de regras. Você receberá então opções específicas de contexto, de acordo com o tipo de dados que está sendo adicionado. Os tipos de dados disponíveis incluem: strings, datas, [!DNL ExperienceEvents], &quot;[!UICONTROL Tipos de evento]&quot; e audiências.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>As alterações mais recentes no Adobe Experience Platform atualizaram o uso dos operadores `OR` e `AND` lógicos entre eventos. Essas atualizações não afetarão os segmentos existentes. No entanto, todas as atualizações subsequentes de segmentos existentes e novas criações de segmentos serão afetadas por essas alterações. Leia a atualização [das constantes de](./segment-refactoring.md) tempo para obter mais informações.
 
 ### Adicionar audiências
 

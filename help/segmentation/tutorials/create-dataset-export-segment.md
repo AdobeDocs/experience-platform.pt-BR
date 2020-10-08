@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial percorre as etapas necessárias para criar um conjunto de dados que pode ser usado para exportar um segmento de audiência usando a interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 1%
@@ -78,7 +78,7 @@ Depois que o conjunto de dados tiver um nome e uma descrição, clique em **[!UI
 
 Um conjunto de dados vazio foi criado e você foi retornado para a guia Atividade **** Conjunto de dados na área de trabalho **[!UICONTROL Conjuntos]** de dados. Você deve ver o nome do conjunto de dados no canto superior esquerdo do espaço de trabalho, juntamente com uma notificação de que &quot;Nenhum lote foi adicionado.&quot; Isso é esperado, pois você ainda não adicionou nenhum lote a esse conjunto de dados.
 
-No lado direito da área de trabalho dos conjuntos de dados, você verá a guia **[!UICONTROL Informações]** contendo informações relacionadas ao seu novo conjunto de dados, como ID do conjunto de dados, nome, descrição, nome da tabela, schema], transmissão e origem. A guia **[!UICONTROL Informações]** também inclui informações sobre quando o conjunto de dados foi criado e sua última data de modificação.
+No lado direito da área de trabalho dos conjuntos de dados, você verá a guia **[!UICONTROL Informações]** contendo informações relacionadas ao novo conjunto de dados, como ID do conjunto de dados, nome, descrição, nome da tabela, schema, transmissão e origem. A guia **[!UICONTROL Informações]** também inclui informações sobre quando o conjunto de dados foi criado e sua última data de modificação.
 
 Anote a ID **[!UICONTROL do]** conjunto de dados, pois esse valor é necessário para concluir o fluxo de trabalho de exportação do segmento de audiência.
 

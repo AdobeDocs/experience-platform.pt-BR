@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guia do usuário de políticas de mesclagem
 topic: guide
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Depois de fazer as alterações necessárias, selecione **[!UICONTROL Salvar]** 
 
 Ao criar ou atualizar uma política de mesclagem, é realizada uma verificação para determinar se a política de mesclagem viola qualquer uma das políticas de uso de dados definidas pela organização. As políticas de uso de dados fazem parte do Adobe Experience Platform [!DNL Data Governance] e são regras que descrevem os tipos de ações de marketing às quais você tem permissão ou é restrito para realizar em [!DNL Platform] dados específicos. Por exemplo, se uma política de mesclagem foi usada para criar um segmento que foi ativado para um destino de terceiros e sua organização tiver uma política de uso de dados que impedia a exportação de dados específicos para terceiros, você receberá uma notificação &quot;Violação de política de controle de[!UICONTROL dados detectada]&quot; ao tentar salvar sua política de mesclagem.
 
-Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite que você visualização os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia de linhagem **** de dados fornece o motivo para a violação e as ativações afetadas], cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
+Esta notificação inclui uma lista de políticas de uso de dados que foram violadas e permite que você visualização os detalhes da violação selecionando uma política na lista. Ao selecionar uma política violada, a guia de linhagem **[!UICONTROL de]** dados fornece o motivo para a violação e as ativações afetadas, cada uma fornecendo mais detalhes sobre como a política de uso de dados foi violada.
 
 Para saber mais sobre como o controle de dados é executado no Adobe Experience Platform, comece lendo a visão geral [do](../../data-governance/home.md)Data Governance.
 

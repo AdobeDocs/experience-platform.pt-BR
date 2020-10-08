@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 2%
@@ -217,11 +217,12 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->&#x200B; códigos de Namespace de **identidade &#x200B;**
+>Códigos **de Namespace de identidade &#x200B;**
 >
 > Certifique-se de que os códigos sejam válidos - o exemplo acima usa &quot;email&quot;, que é uma namespace de identidade padrão. Outras namespaces de identidade padrão comumente usadas podem ser encontradas nas Perguntas frequentes [do Serviço de](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)identidade.
 >
 > Se você quiser criar uma namespace personalizada, siga as etapas descritas na visão geral [da namespace de](../../identity-service/home.md)identidade.
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 201 com informações sobre a namespace de identidade primária recém-criada para o schema.

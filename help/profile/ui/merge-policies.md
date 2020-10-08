@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guia do usuário de políticas de mesclagem
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Ao selecionar um valor de mesclagem **[!UICONTROL de]** Atributo, você pode sel
 
 Um exemplo de caso de uso seria se sua organização tivesse informações presentes em um conjunto de dados que seja preferencial ou confiável em relação aos dados em outro conjunto de dados.
 
-Ao selecionar a precedência **[!UICONTROL do]** Conjunto de Dados, um painel separado é aberto, exigindo que você selecione dos conjuntos de dados **** Disponíveis quais conjuntos de dados serão incluídos (ou use a caixa de seleção para selecionar todos). Em seguida, você pode arrastar e soltar esses conjuntos de dados no painel [**!UICONTROL Seleted Datasets]** e arrastá-los para a ordem de prioridade correta. O conjunto de dados principal terá prioridade máxima, o segundo conjunto de dados será o segundo mais alto e assim por diante.
+Ao selecionar a precedência **[!UICONTROL do]** Conjunto de Dados, um painel separado é aberto, exigindo que você selecione dos conjuntos de dados **** Disponíveis quais conjuntos de dados serão incluídos (ou use a caixa de seleção para selecionar todos). Em seguida, você pode arrastar e soltar esses conjuntos de dados no painel Conjuntos de dados **** selecionados e arrastá-los para a ordem de prioridade correta. O conjunto de dados principal terá prioridade máxima, o segundo conjunto de dados será o segundo mais alto e assim por diante.
 
 ![](../images/merge-policies/dataset-precedence.png)
 

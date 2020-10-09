@@ -5,10 +5,10 @@ user-guide-title: Ajuda do Adobe Experience Platform
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 51%
+source-wordcount: '323'
+ht-degree: 52%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 51%
 
 * [Visão geral do Experience Platform](home.md)
 * [Introdução](get-started.md)
+* [Guia do usuário da Experience Platform ](./ui-guide.md)
 * Documentação da Experience Platform {#documentation}
    * [Visão geral da documentação](documentation/overview.md)
    * [Controle de acesso](https://docs.adobe.com/content/help/pt-BR/experience-platform/access-control/home.html)
@@ -35,7 +36,7 @@ ht-degree: 51%
    * [Serviço de identidade](https://docs.adobe.com/content/help/pt-BR/experience-platform/identity/home.html)
    * [Serviços inteligentes](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/pt-BR/launch/using/overview.html)
-   * [Insights de Observabilidade](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
+   * [Insights de capacidade de observação](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [Perfil (Perfil do cliente em tempo real)](https://docs.adobe.com/content/help/pt-BR/experience-platform/profile/home.html)
    * [Serviço de query](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)

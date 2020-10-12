@@ -5,7 +5,7 @@ seo-title: O destino HTTP é um destino Adobe Real-Time Customer Data Platform q
 description: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
 seo-description: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 O [!DNL HTTP] destino é um destino de [!DNL Adobe Real-Time Customer Data Platform] streaming que ajuda a enviar dados do perfil para [!DNL HTTP] pontos de extremidade de terceiros.
 
-Para enviar dados de perfil para [!DNL HTTP] pontos de extremidade, primeiro você deve se conectar ao destino no [!DNL Adobe Real-Time Customer Data Platform](#connect-destination).
+Para enviar dados de perfil para [!DNL HTTP] pontos de extremidade, primeiro você deve se conectar ao destino no [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 
@@ -33,14 +33,15 @@ O [!DNL HTTP] destino é direcionado para clientes que precisam exportar dados d
 
 ## Conectar ao destino {#connect-destination}
 
-1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL  HTTP API]e selecione **[!UICONTROL Configurar]**.
+1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL HTTP API]e selecione **[!UICONTROL Configurar]**.
 
    ![Ativar destino HTTP](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](../destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
-   ![Ativar destino HTTP](assets/connect-http-destination.png)
+   >
+   >![Ativar destino HTTP](assets/connect-http-destination.png)
 
 2. Na etapa [!UICONTROL Conta] , é necessário definir os detalhes da conexão do terminal HTTP. Selecione **[!UICONTROL Nova conta]** e insira os detalhes da conexão do terminal HTTP ao qual você deseja se conectar.
    * **[!UICONTROL httpEndpoint]**: a conclusão [!DNL URL] do endpoint HTTP para o qual você deseja enviar os dados do perfil.

@@ -1,13 +1,13 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
 title: Destinos de Adobe
 seo-title: Destinos de Adobe
 description: Gerencie sua experiência com o cliente, conectando seus dados no Adobe Real-time CDP a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
 seo-description: Gerencie sua experiência com o cliente, conectando seus dados no Adobe Real-time CDP a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
 translation-type: tm+mt
-source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
+source-git-commit: e3e01474fcd6874f50b929116eff5bdfd4298f22
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 13%
 
 ---
@@ -43,4 +43,4 @@ Para entender a diferença entre conexões e extensões, consulte [Extensões](/
 
 Use o recurso de compartilhamento de segmentos de Experience Platform para compartilhar seus segmentos de Experience Platform para outros destinos de Adobe. Consulte a página abaixo para obter mais informações (abre no portal de documentação do Audience Manager):
 
-* [Compartilhamento de segmentos de Experience Platform com Adobe Audience Manager, Ad Cloud e Público alvo por meio da integração dos principais serviços](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Compartilhamento de segmentos de Experience Platform com Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target por meio da integração dos principais serviços](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

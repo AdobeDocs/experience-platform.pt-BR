@@ -5,7 +5,7 @@ seo-title: O destino HTTP é um destino Adobe Real-Time Customer Data Platform q
 description: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
 seo-description: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%

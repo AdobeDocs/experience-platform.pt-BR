@@ -5,9 +5,9 @@ title: Segmentação em streaming
 topic: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API de segmentação de fluxo.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1359'
 ht-degree: 1%
 
 ---
@@ -25,14 +25,14 @@ A segmentação contínua permite [!DNL Adobe Experience Platform] que os client
 
 >[!NOTE]
 >
->A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e exigirão que a avaliação em lote seja acionada.
+>A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e serão avaliados juntamente com o trabalho segmentado agendado à noite.
 
 ## Introdução
 
 Este guia do desenvolvedor requer um entendimento prático dos vários [!DNL Adobe Experience Platform] serviços envolvidos com a segmentação de streaming. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
-- [[!Segmentação DNL]](../home.md): Fornece a capacidade de criar segmentos e audiências a partir de seus [!DNL Real-time Customer Profile] dados.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Segmentation]](../home.md): Fornece a capacidade de criar segmentos e audiências a partir de seus [!DNL Real-time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para [!DNL Platform] APIs.
@@ -74,26 +74,25 @@ Para que um segmento seja avaliado usando a segmentação de fluxo contínuo, o 
 | Tipo de query | Detalhes |
 | ---------- | ------- |
 | Ocorrência recebida | Qualquer definição de segmento que se refere a um único evento recebido sem nenhuma restrição de tempo. |
-| Ocorrência recebida dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido **nos últimos sete dias**. |
+| Ocorrência recebida dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido. |
 | Somente perfil | Qualquer definição de segmento que se refere somente a um atributo de perfil. |
 | Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento recebido, sem restrição de tempo, e um ou mais atributos de perfil. |
-| Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido e um ou mais atributos do perfil, **nos últimos sete dias**. |
+| Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido e um ou mais atributos do perfil. |
 | Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
 A seção a seguir lista exemplos de definição de segmento que **não** serão ativados para a segmentação de streaming.
 
 | Tipo de query | Detalhes |
 | ---------- | ------- | 
-| Ocorrência recebida dentro de uma janela de tempo relativa | Se a definição do segmento se refere a um evento recebido **não** dentro do **último período** de sete dias. Por exemplo, nas **últimas duas semanas**. |
-| Ocorrência recebida que se refere a um perfil em uma janela relativa | As seguintes opções **não** suportam a segmentação de streaming:<ul><li>Um evento recebido **não** dentro dos **últimos sete dias**.</li><li>Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM).</li></ul> |
-| Vários eventos que se referem a um perfil | As seguintes opções **não** suportam a segmentação de streaming:<ul><li>Um evento que **não** ocorre dentro **das últimas 24 horas**.</li><li>Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM).</li></ul> |
+| Ocorrência recebida que se refere a um perfil em uma janela relativa | Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM). |
+| Vários eventos que se referem a um perfil | Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM). |
 | Query de várias entidades | Os query de várias entidades **não** são suportados pela segmentação de streaming. |
 
 Além disso, algumas diretrizes se aplicam ao fazer a segmentação de streaming:
 
 | Tipo de query | Orientação |
 | ---------- | -------- |
-| Query de evento único | A janela de retrospectiva é limitada a **sete dias**. |
+| Query de evento único | Não há limites para a janela de pesquisa. |
 | Query com histórico de eventos | <ul><li>A janela de retrospectiva é limitada a **um dia**.</li><li>Uma condição de pedido de tempo estrita **deve** existir entre os eventos.</li><li>Somente pedidos de tempo simples (antes e depois) entre os eventos são permitidos.</li><li>Os eventos individuais **não podem** ser negados. Entretanto, todo o query **pode** ser negado.</li></ul> |
 
 ## Recuperar todos os segmentos habilitados para a segmentação em streaming
@@ -336,7 +335,7 @@ curl -X POST \
 | `name` | **(Obrigatório)** O nome do agendamento. Deve ser uma string. |
 | `type` | **(Obrigatório)** O tipo de trabalho no formato de string. Os tipos suportados são `batch_segmentation` e `export`. |
 | `properties` | **(Obrigatório)** Um objeto que contém propriedades adicionais relacionadas à programação. |
-| `properties.segments` | **(Obrigatório quando`type`igual`batch_segmentation`)** Usar `["*"]` garante que todos os segmentos sejam incluídos. |
+| `properties.segments` | **(Obrigatório quando `type` igual `batch_segmentation`)** Usar `["*"]` garante que todos os segmentos sejam incluídos. |
 | `schedule` | **(Obrigatório)** Uma string que contém a programação da tarefa. As ordens de produção só podem ser programadas para execução uma vez por dia, o que significa que você não pode programar uma ordem de produção para execução mais de uma vez durante um período de 24 horas. O exemplo mostrado (`0 0 1 * * ?`) significa que o trabalho é acionado todos os dias às 13:00:00 UTC. Para obter mais informações, consulte a documentação do formato [de expressão](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. |
 | `state` | *(Opcional)* String que contém o estado da programação. Valores disponíveis: `active` e `inactive`. O valor padrão é `inactive`. Uma organização IMS só pode criar uma programação. As etapas para atualizar o agendamento estão disponíveis posteriormente neste tutorial. |
 

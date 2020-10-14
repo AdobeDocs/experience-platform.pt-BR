@@ -5,9 +5,9 @@ title: Funções de data
 topic: overview
 description: Este documento apresenta as funções de data usadas com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '384'
 ht-degree: 17%
 
 ---
@@ -80,4 +80,4 @@ A tabela a seguir mostra quais letras de padrão estão definidas para strings d
 
 **Exemplo**
 
-A expressão `date(orderDate, 'yyyy-MM-dd')` converterá orderDate, se seu valor for &quot;31 de dezembro de 2020&quot;, em um horário de data com o valor &quot;2020-12-31&quot;.
+A expressão `date(orderDate, 'yyyy-MM-dd')` converterá um `orderDate` valor de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;2020-12-31&quot;.

@@ -5,9 +5,9 @@ title: Segmentação em streaming
 topic: ui guide
 description: A segmentação contínua no Adobe Experience Platform permite que você faça a segmentação em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam à Plataforma, o que diminui a necessidade de programar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 translation-type: tm+mt
-source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ A segmentação contínua permite [!DNL Adobe Experience Platform] que os client
 
 >[!NOTE]
 >
->A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e exigirão que a avaliação em lote seja acionada.
+>A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e serão avaliados juntamente com o trabalho segmentado agendado à noite.
 
 ## Tipos de query de segmentação de transmissão
 
@@ -36,26 +36,25 @@ Um query será avaliado automaticamente com a segmentação de streaming se aten
 | Tipo de query | Detalhes | Exemplo |
 | ---------- | ------- | ------- |
 | Ocorrência recebida | Qualquer definição de segmento que se refere a um único evento recebido sem nenhuma restrição de tempo. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Ocorrência recebida dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido **nos últimos sete dias**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Ocorrência recebida dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Somente perfil | Qualquer definição de segmento que se refere somente a um atributo de perfil. |  |
 | Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento recebido, sem restrição de tempo, e um ou mais atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido e um ou mais atributos do perfil, **nos últimos sete dias**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido e um ou mais atributos do perfil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 A seção a seguir lista exemplos de definição de segmento que **não** serão ativados para a segmentação de streaming.
 
-| Tipo de query | Detalhes | Exemplo |
-| ---------- | ------- | ------- |
-| Ocorrência recebida dentro de uma janela de tempo relativa | Se a definição do segmento se refere a um evento recebido **não** dentro do **último período** de sete dias. Por exemplo, nas **últimas duas semanas**. | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
-| Ocorrência recebida que se refere a um perfil em uma janela relativa | As seguintes opções **não** suportam a segmentação de streaming:<ul><li>Um evento recebido **não** dentro dos **últimos sete dias**.</li><li>Uma definição de segmento que inclui [!DNL Adobe Audience Manager (AAM)] segmentos ou características.</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
-| Vários eventos que se referem a um perfil | As seguintes opções **não** suportam a segmentação de streaming:<ul><li>Um evento que **não** ocorre dentro **das últimas 24 horas**.</li><li>Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM).</li></ul> | ![](../images/ui/streaming-segmentation/event-history-failure.png) |
-| Query de várias entidades | Os query de várias entidades **não** são suportados pela segmentação de streaming. |  |
+| Tipo de query | Detalhes |
+| ---------- | ------- |
+| Ocorrência recebida que se refere a um perfil em uma janela relativa | Uma definição de segmento que inclui [!DNL Adobe Audience Manager (AAM)] segmentos ou características. |
+| Vários eventos que se referem a um perfil | Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM). |
+| Query de várias entidades | Os query de várias entidades **não** são suportados pela segmentação de streaming. |
 
 Além disso, algumas diretrizes se aplicam ao fazer a segmentação de streaming:
 
 | Tipo de query | Orientação |
 | ---------- | -------- |
-| Query de evento único | A janela de retrospectiva é limitada a **sete dias**. |
+| Query de evento único | Não há limites para a janela de pesquisa. |
 | Query com histórico de eventos | <ul><li>A janela de retrospectiva é limitada a **um dia**.</li><li>Uma condição de pedido de tempo estrita **deve** existir entre os eventos.</li><li>Somente pedidos de tempo simples (antes e depois) entre os eventos são permitidos.</li><li>Os eventos individuais **não podem** ser negados. Entretanto, todo o query **pode** ser negado.</li></ul> |
 
 Se uma definição de segmento for modificada de modo que não atenda mais aos critérios para a segmentação de fluxo contínuo, a definição de segmento mudará automaticamente de &quot;Streaming&quot; para &quot;Lote&quot;.

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
+source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 7%
+source-wordcount: '478'
+ht-degree: 6%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 7%
 **Data de lançamento: Outubro de 2020**
 
 - [Preparo de dados](#data-prep)
+- [Perfil do cliente em tempo real](#profile)
 - [Fontes](#sources)
 
 ## Preparo de dados {#data-prep}
@@ -32,6 +33,17 @@ O Data Prep permite que os engenheiros de dados mapeiem, transformem e validem d
 | Função `get_values`  | A `get_values` função permite obter os valores do mapa de entrada para qualquer tecla. |
 
 Para obter mais informações, leia a visão geral [da Preparação de](../../data-prep/home.md)dados.
+
+## Perfil do cliente em tempo real {#profile}
+
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com [!DNL Real-time Customer Profile]o, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar seus dados de clientes diferentes em uma visualização unificada, oferecendo uma conta acionável e com carimbos de data e hora de cada interação com o cliente.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Adições à API de pré-visualização do perfil | A API de pré-visualização do Perfil (`/previewsamplestatus`) agora inclui a capacidade de visualização de um detalhamento do total de fragmentos do perfil na organização IMS, bem como de visualização da distribuição de fragmentos do perfil nas namespaces de identidade. |
+| Atualizações da visualização do schema união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações relacionadas a todos os schemas e conjuntos de dados que contribuem para o schema da união, bem como os principais atributos da superfície, como campos de identidade e relacionamento. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, se as identidades estão corretamente agrupadas e se os dados foram assimilados com êxito. |
+
+Para obter mais informações sobre [!DNL Real-time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com [!DNL Profile] dados, leia a visão geral [do Perfil do cliente em tempo](../../profile/home.md)real.
 
 ## Fontes {#sources}
 

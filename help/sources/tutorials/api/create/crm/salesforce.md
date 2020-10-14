@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma a uma conta Salesforce para coletar dados do CRM.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -145,11 +145,9 @@ Uma resposta bem-sucedida retorna as especificações de conexão para [!DNL Sal
 }
 ```
 
-## Criar uma conexão básica
+## Criar uma conexão para a API
 
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão básica é necessária por [!DNL Salesforce] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
-
-Execute a seguinte solicitação de POST para criar uma conexão básica.
+Uma conexão para a API especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão para a API é necessária por [!DNL Salesforce] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -161,7 +159,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -205,4 +203,4 @@ Uma resposta bem-sucedida contém o identificador exclusivo (`id`) da conexão b
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica para sua [!DNL Salesforce] conta usando APIs e uma ID exclusiva foi obtida como parte do corpo da resposta. Você pode usar essa ID de conexão básica no próximo tutorial à medida que aprende a [explorar sistemas CRM usando a API](../../explore/crm.md)de Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão para sua [!DNL Salesforce] conta usando APIs e uma ID exclusiva foi obtida como parte do corpo da resposta. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar sistemas CRM usando a API](../../explore/crm.md)de Serviço de Fluxo.

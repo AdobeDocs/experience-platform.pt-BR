@@ -2,13 +2,13 @@
 keywords: metrics overview; rtcdp metrics overview
 title: Home page e Painéis da plataforma de dados do cliente em tempo real
 seo-title: Home page e Painéis da plataforma de dados do cliente em tempo real
-description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
-seo-description: Painéis, Home page e experiência de usuário iniciante da Adobe Experience Platform
+description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
+seo-description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 

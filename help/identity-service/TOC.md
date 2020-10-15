@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Platform Identity Service Guide
-user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
+breadcrumb-title: Guia do Serviço de identidade do Platform
+user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 18%
+source-wordcount: '90'
+ht-degree: 33%
 
 ---
 

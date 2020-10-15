@@ -5,7 +5,7 @@ description: Saiba como configurar o SDK da Web do Experience Platform
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -46,7 +46,7 @@ Sua ID de configuração atribuída, que vincula o SDK às contas e configuraç�
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matriz de sequências de caracteres | Não | `["web", "device", "environment", "placeContext"]` |
 
-Indica quais categorias de contexto devem ser coletadas automaticamente, conforme descrito em Informações [](../reference/automatic-information.md)automáticas.  Se essa configuração não for especificada, todas as categorias serão usadas por padrão.
+Indica quais categorias de contexto devem ser coletadas automaticamente, conforme descrito em Informações [](../data-collection/automatic-information.md)automáticas.  Se essa configuração não for especificada, todas as categorias serão usadas por padrão.
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Configure isso para configurar um retorno de chamada chamado para cada evento an
 | -------- | ------------ | ----------------- |
 | Objeto | Não | `"in"` |
 
-Define o consentimento padrão do usuário. Isso é usado quando não há preferência de consentimento já salva para o usuário. O outro valor válido é `"pending"`. Quando definido, o trabalho será enfileirado até que o usuário forneça as preferências de consentimento. Depois que as preferências do usuário forem fornecidas, o trabalho continuará ou será abortado com base nas preferências do usuário. Consulte [Suporte ao consentimento](supporting-consent.md) para obter mais informações.
+Define o consentimento padrão do usuário. Isso é usado quando não há preferência de consentimento já salva para o usuário. O outro valor válido é `"pending"`. Quando definido, o trabalho será enfileirado até que o usuário forneça as preferências de consentimento. Depois que as preferências do usuário forem fornecidas, o trabalho continuará ou será abortado com base nas preferências do usuário. Consulte [Suporte ao consentimento](../consent/supporting-consent.md) para obter mais informações.
 
 ## Opções de personalização
 

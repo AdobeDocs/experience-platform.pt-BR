@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Web SDK
-breadcrumb-title: Web SDK Guide
-user-guide-description: Interact with Experience Cloud services through the Edge Network.
+breadcrumb-title: Guia do Web SDK
+user-guide-description: Interaja com os serviços da Experience Cloud por meio da Edge Network.
 translation-type: tm+mt
 source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 17%
+source-wordcount: '128'
+ht-degree: 29%
 
 ---
 

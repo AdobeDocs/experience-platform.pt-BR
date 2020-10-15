@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: controle de acesso na Ajuda do Adobe Experience Platform
-breadcrumb-title: Access Control Guide
-user-guide-description: Leverage product profiles in Adobe Admin Console to link users with permissions and sandboxes.
+user-guide-title: Ajuda do controle de acesso na Adobe Experience Platform
+breadcrumb-title: Guia de controle de acesso
+user-guide-description: Utilize perfis de produtos no Adobe Admin Console para vincular usuários com permissões e sandboxes.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 17%
+source-wordcount: '99'
+ht-degree: 38%
 
 ---
 

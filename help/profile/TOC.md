@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guia de Perfil do cliente em tempo real
-user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
+user-guide-title: Guia do Real-time Customer Profile
+user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 19%
+source-wordcount: '96'
+ht-degree: 35%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 19%
    * [Introdução](api/getting-started.md)
    * [(Alfa) Atributos calculados](api/computed-attributes.md)
    * [Projeções de borda](api/edge-projections.md)
-   * [Entidades (acesso ao Perfil [!DNL])](api/entities.md)
-   * [Exportar trabalhos ([!DNL Perfil] exportação)](api/export-jobs.md)
+   * [Entidades ([!DNL Profile] acesso)](api/entities.md)
+   * [Exportar trabalhos ([!DNL Profile] exportar)](api/export-jobs.md)
    * [Mesclar políticas](api/merge-policies.md)
-   * [Status de amostra da pré-visualização ([!DNL Perfil] pré-visualização)](api/preview-sample-status.md)
+   * [Status da amostra da pré-visualização ([!DNL Profile] pré-visualização)](api/preview-sample-status.md)
    * [[!DNL Profile] trabalhos do sistema (Excluir solicitações)](api/profile-system-jobs.md)
 * Guias da interface do usuário {#ui}
    * [[!DNL Profile] guia do usuário](ui/user-guide.md)

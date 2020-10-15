@@ -5,9 +5,9 @@ description: 'Saiba como configurar a rede Experience Platform Edge. '
 seo-description: 'Saiba como configurar a rede Experience Platform Edge. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 2%
 
 A configuração do Adobe Experience Platform [!DNL Web SDK] é dividida entre dois locais. O comando [configure](configuring-the-sdk.md) no SDK controla os itens que devem ser manipulados no cliente, como o `edgeDomain`. A configuração da borda lida com todas as outras configurações do SDK. Quando uma solicitação é enviada para a Adobe Experience Platform [!DNL Edge Network], o `edgeConfigId` é usado para fazer referência à configuração do lado do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
 
+Sua organização deve ser provisionada para esse recurso. Entre em contato com o gerente de software certificado (CSM) para obter a lista de permissões.
+
 ## Criando uma ID de configuração de borda
 
-As IDs de configuração de borda podem ser criadas no Adobe [!DNL Launch] usando a ferramenta de configuração de borda. Essa ferramenta permite criar a configuração da borda, bem como ambientes nessas configurações.
+As IDs de configuração de borda podem ser criadas no Adobe [!DNL Experience Platform Launch] usando a ferramenta de configuração de borda. Essa ferramenta permite criar a configuração da borda, bem como ambientes nessas configurações.
 
 ![navegação da ferramenta de configuração de borda](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->A ferramenta de configuração de borda está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Launch] como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento em [!DNL Launch]. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na [!DNL Launch] documentação para obter mais detalhes.
+>A ferramenta de configuração de borda está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Experience Platform Launch] como gerenciador de tags. Além disso, os usuários exigem permissões de Desenvolvimento em [!DNL Experience Platform Launch]. Consulte o artigo Permissões [do](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) usuário na [!DNL Experience Platform Launch] documentação para obter mais detalhes.
 
 Você pode criar uma configuração de borda clicando em **[!UICONTROL Nova configuração]** de borda na área superior direita da tela. Depois de fornecer um nome e uma descrição, você será solicitado a fornecer as configurações padrão para cada ambiente.
 
-### Configurações de Ambiente padrão
+### Configurações de ambiente padrão
 
-Essas configurações padrão são usadas para criar os três primeiros ambientes com configurações idênticas. Esses três ambientes são *dev*, *stage* e *prod*. Eles correspondem aos três ambientes padrão em [!DNL Launch]. Quando você cria uma [!DNL Launch] biblioteca para um ambiente dev, a biblioteca usa automaticamente o ambiente dev de sua configuração. Você pode editar as configurações em ambientes individuais tanto quanto desejar.
+Essas configurações padrão são usadas para criar os três primeiros ambientes com configurações idênticas. Esses três ambientes são *dev*, *stage* e *prod*. Eles correspondem aos três ambientes padrão em [!DNL Experience Platform Launch]. Quando você cria uma [!DNL Experience Platform Launch] biblioteca para um ambiente dev, a biblioteca usa automaticamente o ambiente dev de sua configuração. Você pode editar as configurações em ambientes individuais tanto quanto desejar.
 
 A ID usada no SDK como `edgeConfigId` é uma ID composta que especifica a configuração e o ambiente. Se nenhum ambiente estiver presente, o ambiente de produção será usado.
 
@@ -113,7 +115,7 @@ Permite que o SDK compartilhe informações do segmento por meio de Destinos [de
 
 #### Adobe Analytics
 
-Controla se os dados são enviados para a Adobe Analytics. Detalhes adicionais estão na Visão geral [do](../solution-specific/analytics/analytics-overview.md)Analytics.
+Controla se os dados são enviados para a Adobe Analytics. Detalhes adicionais estão na Visão geral [do](../data-collection/adobe-analytics/analytics-overview.md)Analytics.
 
 ![Bloco de configurações do Adobe Analytics](../../assets/edge_configuration_aa.png)
 

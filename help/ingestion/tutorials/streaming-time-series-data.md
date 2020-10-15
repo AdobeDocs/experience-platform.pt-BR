@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
+source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1215'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
-- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 - [Guia](../../xdm/api/getting-started.md)do desenvolvedor do Registro do schema: Um guia abrangente que abrange cada um dos pontos finais disponíveis da [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas ao longo deste tutorial, bem como saber como criar schemas, que são usados na criação de um conjunto de dados para ingestão.
 
 Além disso, este tutorial requer que você já tenha criado uma conexão de streaming. Para obter mais informações sobre como criar uma conexão de streaming, leia o tutorial [](./create-streaming-connection.md)Criar uma conexão de streaming.
@@ -101,7 +101,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | O nome que você deseja usar para o seu schema. Esse nome deve ser exclusivo. |
 | `description` | Uma descrição significativa do schema que você está criando. |
-| `meta:immutableTags` | Neste exemplo, a `union` tag é usada para persistir seus dados em [[!DNL Real-time Customer Perfil]](../../profile/home.md). |
+| `meta:immutableTags` | Neste exemplo, a `union` tag é usada para persistir nos dados [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Resposta**
 
@@ -312,10 +312,13 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Solicitação**
 
+A inserção de dados de séries de tempo em uma conexão de streaming pode ser feita com ou sem o nome de origem.
+
+A solicitação de exemplo abaixo ingere dados de séries de tempo com um nome de origem ausente na Plataforma. Se o nome de origem estiver ausente nos dados, ele adicionará a ID de origem da definição de conexão de streaming.
+
 >[!NOTE]
 >
 >Você precisará gerar o seu próprio `xdmEntity._id` e `xdmEntity.timestamp`. Uma boa maneira de gerar uma ID é usar uma UUID. Além disso, a chamada de API a seguir **não** requer cabeçalhos de autenticação.
-
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -380,6 +383,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
+Se você quiser incluir um nome de origem, o exemplo a seguir mostra como incluí-lo.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
+```
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo streaming [!DNL Profile].
@@ -404,7 +423,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do novo streami
 
 ## Recuperar os dados de séries de tempo ingeridos recentemente
 
-Para validar os registros ingeridos anteriormente, você pode usar a [[!DNL Perfil Access API]](../../profile/api/entities.md) para recuperar os dados das séries de tempo. Isso pode ser feito usando uma solicitação de GET para o `/access/entities` ponto de extremidade e usando parâmetros de query opcionais. Vários parâmetros podem ser usados, separados por E comercial (&amp;).&quot;
+Para validar os registros ingeridos anteriormente, você pode usar o para recuperar os dados das séries de tempo [[!DNL Profile Access API]](../../profile/api/entities.md) . Isso pode ser feito usando uma solicitação de GET para o `/access/entities` ponto de extremidade e usando parâmetros de query opcionais. Vários parâmetros podem ser usados, separados por E comercial (&amp;).&quot;
 
 >[!NOTE]
 >

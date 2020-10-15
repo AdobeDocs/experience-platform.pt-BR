@@ -5,9 +5,9 @@ description: Saiba o que é o Adobe Experience Platform Web SDK e como ele pode 
 seo-description: permita que os clientes da Adobe Experience Cloud interajam com os vários serviços no Experience Cloud.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 # O que é o Adobe Experience Platform Web SDK
 
-O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes da Adobe Experience Cloud interajam com os vários serviços do [!DNL Experience Cloud] por meio da Adobe [!DNL Experience Platform Edge Network]. Além da biblioteca JavaScript, há uma extensão [](https://docs.adobe.com/content/help/pt-BR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Launch para ajudar nas configurações do SDK da Web.
+O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes da Adobe Experience Cloud interajam com os vários serviços do [!DNL Experience Cloud] por meio da Adobe [!DNL Experience Platform Edge Network]. Além da biblioteca JavaScript, há uma extensão [de](https://docs.adobe.com/content/help/pt-BR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Experience Platform Launch para ajudar nas configurações do SDK da Web.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] faz parte da coleção que compõe o Experience Edge. O Experience Edge consiste em três tecnologias:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** Um SDK e uma extensão JavaScript para simplificar consideravelmente [!DNL Launch] as [!DNL Adobe] tecnologias de implantação
+* **[!DNL Adobe Experience Platform Web SDK]:** Um SDK e uma extensão JavaScript para simplificar consideravelmente [!DNL Experience Platform Launch] as [!DNL Adobe] tecnologias de implantação
 * **Adobe Experience Platform Mobile SDK:** Uma extensão do SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
 * **[!DNL Adobe Experience Platform Edge Network]:** Uma rede global distribuída de servidores que permite uma nova metodologia de implantação de [!DNL Adobe] produtos
 
@@ -65,7 +65,7 @@ O vídeo a seguir demonstra o Adobe Experience Platform [!DNL Web SDK] e [!DNL E
 
 ## Introdução
 
-Recomendamos que você [confira nosso guia](getting-started/quick-start-with-launch.md) de introdução para obter um tutorial rápido sobre como começar a usar o Adobe Launch.
+É altamente recomendável [conferir o guia](consent/iab-tcf/with-launch.md) de introdução para obter um tutorial rápido sobre como começar a usar o Adobe Experience Platform Launch.
 
 Este produto está em constante evolução e crescendo para suportar cada vez mais casos de uso. Para acompanhar as últimas novidades, verifique nossa placa [de casos de uso](https://github.com/adobe/alloy/projects/5)suportados. Mantemos isso atualizado com os casos de uso que apoiamos atualmente e aqueles em que estamos trabalhando para permitir que você tome as melhores decisões possíveis.
 

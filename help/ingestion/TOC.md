@@ -1,19 +1,19 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda para ingestão de dados da Adobe Experience Platform
-breadcrumb-title: Data Ingestion Guide
-user-guide-description: Bring your data into Platform through batch or streaming ingestion.
+user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
+breadcrumb-title: Guia da Ingestão de dados
+user-guide-description: Traga seus dados para o Platform por meio de uma assimilação em lote ou streaming.
 translation-type: tm+mt
 source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 7%
+source-wordcount: '124'
+ht-degree: 21%
 
 ---
 
 
-# Ingestão de dados Adobe Experience Platform {#ingestion}
+# Adobe Experience Platform Data Ingestion {#ingestion}
 
 - [Visão geral da ingestão de dados](home.md)
 - Streaming ingestion {#streaming}

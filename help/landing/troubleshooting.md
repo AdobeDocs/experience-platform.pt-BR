@@ -2,15 +2,15 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Guia de solução de problemas e perguntas frequentes da Adobe Experience Platform
-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns no Experience Platform.
+description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 topic: getting started
 type: Documentation
-user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
+user-guide-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 translation-type: tm+mt
 source-git-commit: bc7c0a5d59c666ba80fac81a859b5ecf4dd37412
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 3%
+source-wordcount: '1956'
+ht-degree: 4%
 
 ---
 
@@ -243,7 +243,7 @@ Veja a seguir uma lista de guias de solução de problemas e a documentação de
 | Serviço de | Referência da API | Solução de problemas |
 | --- | --- | --- |
 | Controle de acesso | [API do controle de acesso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guia de solução de problemas do controle de acesso](../access-control/troubleshooting-guide.md) |
-| Ingestão de dados Adobe Experience Platform | [[!API de ingestão de dados DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guia de solução de problemas de ingestão em lote](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guia de solução de problemas de ingestão em streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Ingestão de dados Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guia de solução de problemas de ingestão em lote](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guia de solução de problemas de ingestão em streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guia de solução de problemas](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] guia de solução de problemas](../identity-service/troubleshooting-guide.md) |
@@ -252,6 +252,6 @@ Veja a seguir uma lista de guias de solução de problemas e a documentação de
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Perguntas frequentes e guia de solução de problemas](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] e [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL API de Perfil do cliente em tempo real]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guia de solução de problemas](../profile/troubleshooting.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guia de solução de problemas](../profile/troubleshooting.md) |
 | Sandboxes | [API do Sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guia de solução de problemas de caixas de proteção](../sandboxes/troubleshooting-guide.md) |
 

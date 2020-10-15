@@ -6,9 +6,9 @@ title: Monitorar contas e fluxos de dados
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-- [[!DNL Perfil do cliente em tempo real]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Monitorar contas
 
@@ -54,6 +54,10 @@ Além disso, você pode editar informações de conta existentes e atualizar sua
 ![](../../images/tutorials/monitor/click-edit.png)
 
 O modal **[!UICONTROL Editar detalhes]** da conta é exibido. Nesta página, você pode atualizar seus detalhes de conta e credenciais de autenticação existentes.
+
+>[!NOTE]
+>
+> A edição de detalhes da conta está disponível em todos os conectores de origem em lote.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 

@@ -5,9 +5,9 @@ title: Conectar-se a destinos de streaming e ativar dados
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1813'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Se você preferir usar a interface do usuário no CDP em tempo real para conecta
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados dentro do Experience Platform.
 * [Caixas de proteção](../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
@@ -166,7 +166,7 @@ Uma resposta bem-sucedida contém o identificador exclusivo (`id`) da conexão b
 }
 ```
 
-### Conecte-se aos seus dados de Experience Platform
+### Conecte-se aos seus dados de Experience Platform {#connect-to-platform-data}
 
 **Formato da API**
 
@@ -263,12 +263,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão obtida na etapa [Obtenha a lista dos destinos](#get-the-list-of-available-destinations)disponíveis.
 * `{AUTHENTICATION_CREDENTIALS}`: preencha o nome do seu destino de streaming, por exemplo: `Amazon Kinesis authentication credentials` ou `Azure Event Hubs authentication credentials`.
-* `{ACCESS_ID}`: *Para[!DNL Amazon Kinesis]conexões.* Sua ID de acesso para a localização do armazenamento Amazon Kinesis.
-* `{SECRET_KEY}`: *Para[!DNL Amazon Kinesis]conexões.* Sua chave secreta para a localização do armazenamento Amazon Kinesis.
-* `{REGION}`: *Para[!DNL Amazon Kinesis]conexões.* A região na sua [!DNL Amazon Kinesis] conta onde a CDP em tempo real do Adobe fará o stream dos seus dados.
-* `{SAS_KEY_NAME}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha o nome da chave SAS. Saiba mais sobre como autenticar [!DNL Azure Event Hubs] com chaves SAS na documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
-* `{SAS_KEY}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha sua chave SAS. Saiba mais sobre como autenticar [!DNL Azure Event Hubs] com chaves SAS na documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha a [!DNL Azure Event Hubs] namespace onde a CDP em tempo real do Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar uma namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de Hubs de Evento na [!DNL Microsoft] documentação.
+* `{ACCESS_ID}`: *Para [!DNL Amazon Kinesis] conexões.* Sua ID de acesso para a localização do armazenamento Amazon Kinesis.
+* `{SECRET_KEY}`: *Para [!DNL Amazon Kinesis] conexões.* Sua chave secreta para a localização do armazenamento Amazon Kinesis.
+* `{REGION}`: *Para [!DNL Amazon Kinesis] conexões.* A região na sua [!DNL Amazon Kinesis] conta onde a CDP em tempo real do Adobe fará o stream dos seus dados.
+* `{SAS_KEY_NAME}`: *Para [!DNL Azure Event Hubs] conexões.* Preencha o nome da chave SAS. Saiba mais sobre como autenticar [!DNL Azure Event Hubs] com chaves SAS na documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
+* `{SAS_KEY}`: *Para [!DNL Azure Event Hubs] conexões.* Preencha sua chave SAS. Saiba mais sobre como autenticar [!DNL Azure Event Hubs] com chaves SAS na documentação [da](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
+* `{EVENT_HUB_NAMESPACE}`: *Para [!DNL Azure Event Hubs] conexões.* Preencha a [!DNL Azure Event Hubs] namespace onde a CDP em tempo real do Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar uma namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de Hubs de Evento na [!DNL Microsoft] documentação.
 
 **Resposta**
 
@@ -319,9 +319,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Use a ID de conexão básica obtida na etapa acima.
 * `{CONNECTION_SPEC_ID}`: Use as especificações de conexão obtidas na etapa [Obtenha a lista dos destinos](#get-the-list-of-available-destinations)disponíveis.
-* `{NAME_OF_DATA_STREAM}`: *Para[!DNL Amazon Kinesis]conexões.* Forneça o nome do seu fluxo de dados existente na sua [!DNL Amazon Kinesis] conta. A CDP em tempo real do Adobe exportará dados para esse fluxo.
-* `{REGION}`: *Para[!DNL Amazon Kinesis]conexões.* A região na sua conta Amazon Kinesis onde a CDP em tempo real do Adobe fará o stream dos seus dados.
-* `{EVENT_HUB_NAME}`: *Para[!DNL Azure Event Hubs]conexões.* Preencha o [!DNL Azure Event Hub] nome onde a CDP em tempo real do Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar um hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de eventos na [!DNL Microsoft] documentação.
+* `{NAME_OF_DATA_STREAM}`: *Para [!DNL Amazon Kinesis] conexões.* Forneça o nome do seu fluxo de dados existente na sua [!DNL Amazon Kinesis] conta. A CDP em tempo real do Adobe exportará dados para esse fluxo.
+* `{REGION}`: *Para [!DNL Amazon Kinesis] conexões.* A região na sua conta Amazon Kinesis onde a CDP em tempo real do Adobe fará o stream dos seus dados.
+* `{EVENT_HUB_NAME}`: *Para [!DNL Azure Event Hubs] conexões.* Preencha o [!DNL Azure Event Hub] nome onde a CDP em tempo real do Adobe fará o stream dos seus dados. Para obter mais informações, consulte [Criar um hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de eventos na [!DNL Microsoft] documentação.
 
 **Resposta**
 

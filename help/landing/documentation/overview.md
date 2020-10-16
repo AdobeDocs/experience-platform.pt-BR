@@ -5,10 +5,10 @@ title: Visão geral da documentação do Adobe Experience Platform
 topic: overview
 description: A documentação da Adobe Experience Platform é fornecida em vários formatos, incluindo visões gerais, tutoriais e guias para a interface do usuário e a API. Esta é uma breve descrição dos tipos mais comuns de documentação disponíveis para os serviços de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1035'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ A documentação da Adobe Experience Platform é fornecida em vários formatos, 
 
 * **Tutorial:** Um tutorial é um guia passo a passo por meio da interface do usuário, da API ou de uma combinação de ambos, que leva a um resultado específico. Ao contrário de um guia do desenvolvedor, um tutorial da API pode focar apenas em um ou dois pontos finais e não é um recurso exaustivo da API. Da mesma forma, os tutoriais da interface do usuário podem se concentrar apenas em etapas específicas, não na interface completa disponível para esse serviço. Os Tutorials muitas vezes fazem parte de um fluxo de trabalho maior e apresentam &quot;próximas etapas&quot; que descrevem quais tutoriais você pode querer experimentar a seguir.
 
-* **Guia do usuário:** Um guia do usuário descreve as ações disponíveis na [!DNL Platform] interface do usuário para um serviço específico. Esses documentos contêm capturas de tela e etapas focadas em interagir com a Plataforma por meio da interface do usuário. Semelhante a um guia do desenvolvedor, o guia do usuário descreve todas as ações e opções disponíveis, incluindo &quot;gotchas&quot; para evitar. Este é o recurso mais detalhado para trabalhar com a interface do usuário.
+* **Guia da interface do usuário:** Um guia de interface descreve as ações disponíveis na interface do [!DNL Platform] usuário para um serviço específico. Esses documentos contêm capturas de tela e etapas focadas na interação com a Plataforma por meio da interface do usuário. Semelhante a um guia do desenvolvedor, o guia da interface do usuário descreve todas as ações e opções disponíveis, incluindo &quot;gotchas&quot; para evitar. Este é o recurso mais detalhado para trabalhar com a interface do usuário.
 
 ## Suporte a linguagem de documentação
 
@@ -63,6 +63,6 @@ A documentação está disponível atualmente para os serviços e recursos da Ad
 * **[!DNL Query Service]:** Use query SQL para recuperar dados da Adobe Experience Platform, como dados da solução Adobe, dados de terceiros do cliente ou quaisquer outros dados da plataforma.
 * **[!DNL Real-time Customer Data Platform]:** A CDP em tempo real combina várias fontes de dados corporativos para criar perfis unificados em tempo real que podem ser usados para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
 * **[!DNL Sandboxes]:** As caixas de proteção particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* **Schemas**: Orientado pelo Adobe, o Experience Data Model (XDM) é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente. Os schemas XDM oferecem suporte à interoperabilidade de dados entre [!DNL Experience Platform] componentes.
 * **[!DNL Segmentation]:** Crie segmentos com base nos dados de Perfil do cliente em tempo real para gerar audiências e experiências de consumo de energia.
 * **[!DNL Sources](Conexões):** {#sources} Traga dados para o Adobe Experience Platform de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muito mais.
-* **Schemas**: Orientado pelo Adobe, o Experience Data Model (XDM) é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente. Os schemas XDM oferecem suporte à interoperabilidade de dados entre [!DNL Experience Platform] componentes.

@@ -5,9 +5,9 @@ title: Guia da interface do usuário Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ A navegação no lado esquerdo da tela lista todos os diferentes serviços supor
 
 A seção **[!UICONTROL Início]** permite retornar à página inicial da interface do usuário da plataforma.
 
-A seção **[!UICONTROL Workflows]** mostra uma lista de workflows de várias etapas para executar operações dentro da Plataforma.
+A seção **[!UICONTROL Workflows]** mostra uma lista de workflows de várias etapas para executar operações dentro da Plataforma. Para obter mais informações sobre workflows, consulte a visão geral [dos](./workflows.md)workflows.
 
 ### [!UICONTROL Conexões]
 

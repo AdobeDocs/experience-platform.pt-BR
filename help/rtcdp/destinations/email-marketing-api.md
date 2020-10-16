@@ -5,9 +5,9 @@ title: Criar destinos de marketing por email
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1625'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Se você preferir usar a interface do usuário no CDP em tempo real do Adobe par
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] é o sistema de registro para localização e linhagem de dados no [!DNL Experience Platform].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
@@ -210,7 +210,7 @@ Uma resposta bem-sucedida contém o identificador exclusivo (`id`) da conexão b
 }
 ```
 
-### Conecte-se aos seus [!DNL Experience Platform] dados
+### Conecte-se aos seus [!DNL Experience Platform] dados {#connect-to-platform-data}
 
 **Formato da API**
 

@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -20,5 +20,10 @@ ht-degree: 0%
 # tour da interface do Experience Platform
 
 Este vídeo fornece um rápido tour pela interface do usuário do Adobe Experience Platform (UI), incluindo mostrar como navegar até o Experience Platform a partir do Experience Cloud, interagir com a homepage, alternar as caixas de proteção e como usar vários elementos de navegação na UI.
+
+>[!NOTE]
+>
+>A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

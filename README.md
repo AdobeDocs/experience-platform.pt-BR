@@ -1,11 +1,18 @@
 ---
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '643'
+ht-degree: 65%
 
 ---
 # Contribuir com conteúdo
 
-| Produção | Estágio |
+| EXL-PR | EXL | Visualização | Ativar | Publicado | Ajuda |
+|--- |--- |--- |--- |--- |--- |
+| [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [URL de pré-visualização](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [ativate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [Live URL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [Guia de criação](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
+
+| Produção | Preparo |
 |---|---|
 | [![Status da compilação](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Status da compilação](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
 | [Prod. de saída](https://docs.adobe.com/content/help/pt-BR/experience-platform/landing/home.html) | [Etapa de saída](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
@@ -16,7 +23,7 @@ Agradecemos as contribuições de conteúdo da nossa comunidade e dos funcionár
 
 Esse projeto segue o [Código de conduta aberto da Adobe](code-of-conduct.md) ou o [Código de conduta da .NET Foundation](https://dotnetfoundation.org/code-of-conduct). Para obter mais informações, consulte o artigo [Contribuição](contributing.md).
 
-## Formas de contribuir com o conteúdo da Adobe
+## Formas de contribuir com o conteúdo do Adobe
 
 Consulte o [Guia do colaborador dos documentos da Adobe](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -38,15 +45,15 @@ Se você fizer parte da comunidade da Adobe e quiser criar um artigo ou enviar g
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Principais alterações ou novos artigos dos funcionários da Adobe
+### Grandes mudanças ou novos artigos de funcionários do Adobe
 
 Se você for um autor técnico, gerente de programa ou desenvolvedor da equipe de produtos para uma solução da Adobe Experience Cloud e seu trabalho for criar artigos técnicos, deverá usar o repositório privado em `https://git.corp.adobe.com/AdobeDocs`. Consulte o Guia [de colaboração](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) interna para obter mais informações.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Entrando em contato com a equipe de documentação da plataforma de experiência
+## Entrando em contato com a equipe de documentação do Experience Platform
 
-Como mencionado acima, os membros da comunidade Adobe podem enviar um problema que será atribuído ao autor apropriado. Se você for um funcionário da Adobe, poderá enviar um problema ou entrar em contato diretamente com a equipe de documentação da plataforma de experiência. Para encontrar o autor principal para uma área específica da Plataforma, consulte o wiki [da Documentação da plataforma de experiência](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)Adobe.
+Como mencionado acima, os membros da comunidade de Adobe podem enviar um problema que será atribuído ao autor apropriado. Se você for um funcionário do Adobe, poderá enviar um problema ou entrar em contato diretamente com a equipe de documentação do Experience Platform. Para encontrar o autor principal para uma área específica da Plataforma, consulte o wiki da Documentação do [Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Ferramentas e configuração
 

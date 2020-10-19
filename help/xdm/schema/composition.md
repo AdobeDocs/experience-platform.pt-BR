@@ -5,9 +5,9 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '2834'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Os schemas de registro e de série de tempo contêm um mapa de identidades (`xdm
 
 Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante que, ao pensar nos schemas, se pense nas identidades dos clientes e nos campos que podem ser usados para identificar um assunto, independentemente de onde os dados venham.
 
-Para ajudar nesse processo, os campos principais dentro dos schemas podem ser marcados como identidades. Após a ingestão dos dados, os dados nesses campos são inseridos no &quot;Gráfico[!UICONTROL de]identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Perfil]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
+Para ajudar nesse processo, os campos principais dentro dos schemas podem ser marcados como identidades. Após a ingestão dos dados, os dados nesses campos são inseridos no &quot;Gráfico[!UICONTROL de]identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), ID CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
+Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos de sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
 
 É importante pensar nas identidades dos clientes durante a fase de planejamento do schema, a fim de ajudar a garantir que os dados estejam sendo reunidos para construir o perfil mais robusto possível. Consulte a visão geral do Serviço [de identidade da](../../identity-service/home.md) Adobe Experience Platform para saber mais sobre como as informações de identidade podem ajudá-lo a fornecer experiências digitais aos seus clientes.
 
@@ -194,9 +194,9 @@ Os intervalos válidos desses tipos escalares podem ser restringidos ainda mais 
 
 Algumas operações de dados usadas por serviços e aplicativos de downstream impõem restrições em tipos de campo específicos. Os serviços afetados incluem, entre outros:
 
-* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!Segmentação DNL]](../../segmentation/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
 * [[!DNL Query Service]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
@@ -238,7 +238,12 @@ Todos os arquivos de dados que são assimilados [!DNL Experience Platform] devem
 
 ## Próximas etapas
 
-Agora que você entende as noções básicas da composição do schema, você está pronto para começar a construir schemas usando o [!DNL Schema Registry].
+Agora que você entende as noções básicas da composição do schema, você está pronto para começar a explorar e construir schemas usando o [!DNL Schema Registry].
+
+Para revisar a estrutura das duas classes XDM principais e suas misturas compatíveis comumente usadas, consulte a seguinte documentação de referência:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform e fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis. O [!DNL Schema Library] contém recursos do Setor definidos pelo Adobe, recursos do Fornecedor definidos pelos [!DNL Experience Platform] parceiros e classes, mixins, tipos de dados e schemas que foram compostos por membros da sua organização.
 

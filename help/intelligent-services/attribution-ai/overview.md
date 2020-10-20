@@ -8,14 +8,14 @@ translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
 
 # Visão geral do Attribution AI
 
-Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais, algorítmico, que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual do cliente em cada fase das viagens do cliente.
+Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais, algorítmico, que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual com o cliente em cada fase das viagens do cliente.
 
 ## Como entender o Attribution AI
 

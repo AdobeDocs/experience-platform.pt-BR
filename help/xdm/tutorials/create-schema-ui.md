@@ -8,7 +8,7 @@ description: Este tutorial aborda as etapas para a criação de um schema usando
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Este tutorial requer um entendimento prático dos vários aspectos do Adobe Expe
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../schema/composition.md)do schema: Uma visão geral dos schemas XDM e seus blocos de construção, incluindo classes, misturas, tipos de dados e campos.
-* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Procurar schemas existentes na área de trabalho de [!UICONTROL Schemas] {#browse}
 
@@ -274,11 +274,11 @@ Depois de aplicar a alteração, o ícone para `loyaltyId` mostra um símbolo de
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-Agora, todos os dados ingeridos no `loyaltyId` campo serão usados para ajudar a identificar esse indivíduo e unir uma única visualização do cliente. Para saber mais sobre como trabalhar com identidades no, consulte a documentação do [!DNL Experience Platform][!DNL Identity Service] [](../../identity-service/home.md) .
+Agora, todos os dados ingeridos no `loyaltyId` campo serão usados para ajudar a identificar esse indivíduo e unir uma única visualização do cliente. Para saber mais sobre como trabalhar com identidades no, consulte a [!DNL Experience Platform][[!DNL Identity Service]](../../identity-service/home.md) documentação.
 
 ## Ative o schema para uso em [!DNL Real-time Customer Profile] {#profile}
 
-[O [!DNL Real-time Customer Perfil]](../../profile/home.md) aproveita os dados de identidade [!DNL Experience Platform] para fornecer uma visualização holística de cada cliente individual. O serviço cria perfis robustos, 360°, de atributos do cliente, bem como contas com carimbos de data e hora de cada interação que os clientes tiveram em qualquer sistema integrado com [!DNL Experience Platform].
+[[!DNL Real-time Customer Profile]](../../profile/home.md) aproveita os dados de identidade para [!DNL Experience Platform] fornecer uma visualização holística de cada cliente individual. O serviço cria perfis robustos, 360°, de atributos do cliente, bem como contas com carimbos de data e hora de cada interação que os clientes tiveram em qualquer sistema integrado com [!DNL Experience Platform].
 
 Para que um schema seja habilitado para uso com [!DNL Real-time Customer Profile], ele deve ter uma identidade primária definida. Você receberá uma mensagem de erro se tentar ativar um schema sem primeiro definir uma identidade primária.
 

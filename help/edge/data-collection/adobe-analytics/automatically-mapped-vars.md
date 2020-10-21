@@ -5,7 +5,7 @@ description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analy
 seo-description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analytics com o Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 Abaixo está uma lista de variáveis nas quais o Adobe Experience Platform [!DNL Edge Network] mapeia automaticamente [!DNL Analytics].
 
 | Caminho do campo XDM | [!DNL Analytics Query String] / Cabeçalho HTTP | Descrição |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | Mapeamento PURCHASEID do parâmetro de query do AppMeasurement. |
 | `commerce.order.currencyCode` | `cc` | Mapeamento CURRENCY do parâmetro do query AppMeasurement. |
 | `commerce.purchases.value` | `events` | Mapeamento do parâmetro de query do AppMeasurement EVENTO_LISTA_FULL com a conversão COMMERCE_PURCHASE, usando delimitador `,`. |

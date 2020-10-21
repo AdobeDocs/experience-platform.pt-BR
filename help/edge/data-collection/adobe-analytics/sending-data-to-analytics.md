@@ -5,7 +5,7 @@ description: Saiba como enviar dados de link para a Adobe Analytics com o Experi
 seo-description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 9e1ad05285b27a9fc8b56db903609add3fef144e
+source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Envio de dados para a Adobe Analytics
 
-Enquanto no passado havia funções diferentes para distinguir entre uma visualização de página e um link (por exemplo, `s.t(), s.tl()`), no SDK da Web há apenas o `sendEvent` comando. Os dados enviados com um evento determinam se devem ser uma visualização de página ou um link. [Saiba mais sobre links de rastreamento](../track-links.md)
+Enquanto no passado havia funções diferentes para distinguir entre uma visualização de página e um link (por exemplo, `s.t(), s.tl()`), no SDK da Web há apenas o `sendEvent` comando. Os dados enviados com um evento determinam se devem ser uma visualização de página ou um link. [Saiba mais sobre links](../track-links.md)de rastreamento.
 
 ## Envio de uma visualização de página
 

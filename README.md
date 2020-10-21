@@ -1,5 +1,5 @@
 ---
-source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+source-git-commit: 87d46c0d813cd31408eaed8331677b74fc42dd38
 workflow-type: tm+mt
 translation-type: tm+mt
 source-wordcount: '643'
@@ -10,7 +10,7 @@ ht-degree: 65%
 
 | EXL-PR | EXL | Visualização | Ativar | Publicado | Ajuda |
 |--- |--- |--- |--- |--- |--- |
-| [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [URL de pré-visualização](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [ativate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [Live URL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [Guia de criação](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
+| [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Status da compilação](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [URL de pré-visualização](https://experienceleague.corp.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [ativate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [Live URL](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [Guia de criação](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 | Produção | Preparo |
 |---|---|

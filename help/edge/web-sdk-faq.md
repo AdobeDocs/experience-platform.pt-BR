@@ -4,9 +4,9 @@ seo-title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 seo-description: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1631'
 ht-degree: 2%
 
 ---
@@ -145,15 +145,9 @@ No entanto:
 
 * É recomendável usar o Experience Platform Launch para implantar `alloy.js`, mesmo se for a única tag usada.
 
-## O que é o XDM e o que eu tenho que usar para o SDK da Web?
-
-XDM é o formato de dados usado para enviar dados para a Adobe Experience Platform e o SDK da Web. A documentação [do SDK da](https://docs.adobe.com/content/help/en/experience-platform/edge/get-started/quick-start-with-launch.html#prepare-a-schema) Web o orienta a configurar facilmente um schema que você pode personalizar para suas necessidades específicas.
-
 ## O que é &quot;Adobe Experience Platform Launch Server Side&quot;?
 
 Mais tarde em 2020, o Experience Platform Launch lançará os recursos de encaminhamento pelo lado do servidor. Se você usar nossos SDKs e enviar o XDM para o Experience Edge, esses novos recursos permitirão instalar novas extensões do lado do servidor e mapear esses dados em qualquer lugar da nossa rede de borda. Pense nisso como &quot;coleta de dados como um serviço&quot;.  Isso estará disponível por um custo, além de ser fornecido como parte da Adobe Experience Platform.
-
-**Mais informações** sobre a apresentação do[Adobe Summit](https://adobe.bluejeans.com/playback/s/9LhauPOnRSUTYg6RMHAw4oJekhYfOQgdBLlNekVJdWevYktpxqX2IYyl5fz2Wxh9)
 
 ## O que é um domínio CNAME ou primário e por que isso importa?
 

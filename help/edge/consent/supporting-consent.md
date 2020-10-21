@@ -5,9 +5,9 @@ description: Saiba como suportar preferências de consentimento com o SDK da Web
 seo-description: Saiba como suportar preferências de consentimento com o SDK da Web do Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Quando o consentimento é definido dessa forma, o Perfil de cliente em tempo real é atualizado com as informações de consentimento. Para que isso funcione, o schema XDM do perfil precisa conter a Mixin [de privacidade do](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)Perfil. Ao enviar eventos, as informações de consentimento IAB precisam ser adicionadas manualmente ao objeto XDM do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento em eventos, o Mixin [de privacidade do Evento de](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) experiência precisa ser adicionado ao schema do Evento de experiência.
+Quando o consentimento é definido dessa forma, o Perfil de cliente em tempo real é atualizado com as informações de consentimento. Para que isso funcione, o schema XDM do perfil precisa conter a Mixin [de privacidade do](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)Perfil. Ao enviar eventos, as informações de consentimento IAB precisam ser adicionadas manualmente ao objeto XDM do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento em eventos, o Mixin [de privacidade do Evento de](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) experiência precisa ser adicionado ao schema do Evento de experiência.
 
 ## Envio de ambos os padrões em uma solicitação
 

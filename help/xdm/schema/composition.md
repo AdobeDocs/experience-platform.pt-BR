@@ -5,9 +5,9 @@ title: Noções básicas da composição do schema
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2834'
+source-wordcount: '3099'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Além de descrever a estrutura dos dados, os schemas aplicam restrições e expe
 
 Ao trabalhar com bancos de dados relacionais, as práticas recomendadas envolvem a normalização de dados, ou a tomada de uma entidade e a divisão em partes discretas que são então exibidas em várias tabelas. Para ler os dados como um todo ou atualizar a entidade, as operações de leitura e gravação devem ser feitas em várias tabelas individuais usando JOIN.
 
-Por meio do uso de objetos incorporados, os schemas XDM podem representar diretamente dados complexos e armazená-los em documentos independentes com estrutura hierárquica. Um dos principais benefícios dessa estrutura é que ela permite que você query os dados sem precisar reconstruir a entidade por meio de junções caras a várias tabelas desnormalizadas.
+Por meio do uso de objetos incorporados, os schemas XDM podem representar diretamente dados complexos e armazená-los em documentos independentes com uma estrutura hierárquica. Um dos principais benefícios dessa estrutura é que ela permite que você query os dados sem precisar reconstruir a entidade por meio de junções caras a várias tabelas desnormalizadas. Não há restrições rígidas para quantos níveis sua hierarquia de schemas pode ter.
 
 ### Schemas e grandes dados
 
@@ -42,6 +42,8 @@ Os schemas resolvem esse problema permitindo a integração de dados de várias 
 A normalização é um conceito fundamental subjacente [!DNL Experience Platform]. O XDM, impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas padrão para o gerenciamento da experiência do cliente.
 
 A infraestrutura na qual [!DNL Experience Platform] está construído, conhecida como [!DNL XDM System], facilita workflows baseados em schemas e inclui os padrões [!DNL Schema Registry], [!DNL Schema Editor], metadados de schemas e consumo de serviços. See the [XDM System overview](../home.md) for more information.
+
+Há vários benefícios chave na construção e utilização de schemas no [!DNL Experience Platform]. Primeiro, os schemas permitem um melhor controle de dados e minimização de dados, o que é especialmente importante com as regulamentações de privacidade. Segundo, a criação de schemas com componentes padrão do Adobe permite insights prontos e o uso de serviços AI/ML com personalizações mínimas. Por último, os schemas fornecem infraestrutura para informações sobre compartilhamento de dados e orquestração eficiente.
 
 ## Planejamento do schema
 
@@ -135,19 +137,13 @@ Os schemas são compostos usando a seguinte fórmula:
 
 &amp;ast;Um schema é composto por uma classe e zero ou mais combinações. Isso significa que você pode compor um schema de conjunto de dados sem usar misturas.
 
-### Classe
+### Class {#class}
 
 A composição de um schema começa com a atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o schema conterá (registro ou série cronológica). Além disso, as classes descrevem o menor número de propriedades comuns que todos os schemas baseados nessa classe precisariam incluir e fornecer uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 
-Uma classe também determina quais combinações serão elegíveis para uso no schema. Esta questão é discutida com mais detalhes na seção [de mistura](#mixin) que se segue.
+Uma classe de schemas determina quais combinações serão elegíveis para uso nesse schema. Esta questão é discutida mais pormenorizadamente na [próxima seção](#mixin).
 
-Há classes padrão fornecidas com cada integração de classes [!DNL Experience Platform], conhecidas como &quot;Setor&quot;. As classes do setor são geralmente aceitas como padrões do setor que se aplicam a um amplo conjunto de casos de uso. Exemplos de classes Industry incluem as classes [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent] fornecidas pelo Adobe.
-
-[!DNL Experience Platform] permite também classes &quot;Fornecedor&quot;, que são classes definidas por [!DNL Experience Platform] parceiros e disponibilizadas a todos os clientes que usam o serviço ou aplicativo do fornecedor dentro [!DNL Platform].
-
-Há também classes usadas para descrever casos de uso mais específicos para organizações individuais dentro das classes [!DNL Platform], chamadas de &quot;Cliente&quot;. As classes Customer são definidas por uma organização quando não há classes Industry ou Vendor disponíveis para descrever um caso de uso exclusivo.
-
-Por exemplo, um schema que representa membros de um programa de Fidelidade descreve dados de registro sobre um indivíduo e, portanto, pode ser baseado na [!DNL XDM Individual Profile] classe, uma classe padrão do Setor definida pelo Adobe.
+O Adobe fornece duas classes XDM padrão (&quot;core&quot;): [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent]. Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos para sua organização. As classes personalizadas são definidas por uma organização quando não há classes principais definidas por Adobe disponíveis para descrever um caso de uso exclusivo.
 
 ### Mistura {#mixin}
 
@@ -155,15 +151,21 @@ Um mixin é um componente reutilizável que define um ou mais campos que impleme
 
 As misturas definem a(s) classe(s) com que são compatíveis com base no comportamento dos dados que representam (séries de registros ou de horas). Isso significa que nem todas as combinações estão disponíveis para uso com todas as classes.
 
-As misturas têm o mesmo escopo e a mesma definição que as classes: há misturas do setor, misturas de fornecedores e misturas de clientes definidas por organizações individuais que usam [!DNL Platform]. [!DNL Experience Platform] inclui muitas mixagens padrão do setor, além de permitir que os fornecedores definam mixagens para seus usuários, e que usuários individuais definam mixagens para seus próprios conceitos específicos.
+[!DNL Experience Platform] inclui muitas combinações de Adobe padrão, além de permitir que os fornecedores definam combinações para seus usuários, e que usuários individuais definam combinações para seus próprios conceitos específicos.
 
 Por exemplo, para capturar detalhes como &quot;[!UICONTROL Nome]&quot; e &quot;Endereçoresidencial&quot; para o schema &quot;Membros[!UICONTROL de]fidelidade&quot;, você poderá usar combinações padrão que definem esses conceitos comuns. No entanto, conceitos específicos de casos de uso menos comuns (como &quot;Nível[!UICONTROL de Programa de]fidelidade&quot;) geralmente não têm uma combinação predefinida. Nesse caso, você deve definir sua própria combinação para capturar essas informações.
 
 Lembre-se de que os schemas são compostos de combinações &quot;zero ou mais&quot;, o que significa que você pode compor um schema válido sem usar nenhuma mistura.
 
+Para obter uma lista de todas as misturas padrão atuais, consulte o repositório [XDM](https://github.com/adobe/xdm/tree/master/components/mixins)oficial.
+
 ### Data type {#data-type}
 
 Os tipos de dados são usados como tipos de campos de referência em classes ou schemas da mesma forma que os campos literais básicos. A principal diferença é que os tipos de dados podem definir vários subcampos. Semelhante a uma combinação, um tipo de dados permite o uso consistente de uma estrutura de vários campos, mas tem mais flexibilidade do que uma combinação, pois um tipo de dados pode ser incluído em qualquer lugar de um schema adicionando-o como o &quot;tipo de dados&quot; de um campo.
+
+>[!NOTE]
+>
+>Consulte o [apêndice](#mixins-v-datatypes) para obter mais informações sobre as diferenças entre misturas e tipos de dados e os prós e contras de usar um sobre o outro para casos de uso semelhantes.
 
 [!DNL Experience Platform] fornece vários tipos de dados comuns como parte do [!DNL Schema Registry] para suportar a utilização de padrões padrão para descrever estruturas de dados comuns. Isso é explicado em mais detalhes nos [!DNL Schema Registry] tutoriais, onde ficará mais claro à medida que você percorre as etapas para definir tipos de dados.
 
@@ -177,6 +179,10 @@ Um campo é o elemento mais básico de um schema. Os campos fornecem restriçõe
 * Booleano
 * Matriz
 * Objeto
+
+>[!TIP]
+>
+>Consulte o [apêndice](#objects-v-freeform) para obter informações sobre os prós e contras do uso de campos de forma livre em campos de tipo de objeto.
 
 Os intervalos válidos desses tipos escalares podem ser restringidos ainda mais a determinados padrões, formatos, mínimos/máximos ou valores predefinidos. Usando essas restrições, uma grande variedade de tipos de campos mais específicos pode ser representada, incluindo:
 
@@ -250,3 +256,44 @@ O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe 
 Para começar a compor o schema usando a interface do usuário, siga o tutorial [do Editor de](../tutorials/create-schema-ui.md) Schemas para criar o schema &quot;Membros da fidelidade&quot; mencionado em todo o documento.
 
 Para começar a usar a [!DNL Schema Registry] API, leia o guia [do desenvolvedor da API de Registro de](../api/getting-started.md)Schemas. Após ler o guia do desenvolvedor, siga as etapas descritas no tutorial sobre como [criar um schema usando a API](../tutorials/create-schema-api.md)de registro do Schema.
+
+## Apêndice
+
+A seção seguinte contém informações adicionais relativas aos princípios da composição do schema.
+
+### Objetos versus campos de forma livre {#objects-v-freeform}
+
+Há alguns fatores chave a serem considerados ao escolher objetos em vez de campos de forma livre ao projetar seus schemas:
+
+| Objetos | Campos de forma livre |
+| --- | --- |
+| Aumenta o aninhamento | Menos ou sem aninhamento |
+| Cria agrupamentos de campos lógicos | Os campos são colocados em locais ad-hoc |
+
+#### Objetos
+
+Os prós e contras do uso de objetos em campos de forma livre estão listados abaixo.
+
+**Vantagens**:
+
+* Os objetos são melhor usados quando você deseja criar um agrupamento lógico de determinados campos.
+* Os objetos organizam o schema de forma mais estruturada.
+* Os objetos ajudam indiretamente na criação de uma boa estrutura de menu na interface do usuário do Construtor de segmentos. Os campos agrupados dentro do schema são refletidos diretamente na estrutura de pastas fornecida na interface do usuário do Construtor de segmentos.
+
+**Cons**:
+
+* Os campos ficam mais aninhados.
+* Ao usar o Serviço [de Query](../../query-service/home.md)Adobe Experience Platform, é necessário fornecer strings de referência mais longas para os campos de query aninhados em objetos.
+
+#### Campos de forma livre
+
+Os prós e contras do uso de campos de forma livre sobre objetos estão listados abaixo.
+
+**Vantagens**:
+
+* Campos de forma livre são criados diretamente sob o objeto raiz do schema (`_tenantId`), aumentando a visibilidade.
+* As strings de referência para campos de forma livre tendem a ser mais curtas ao usar o Serviço de Query.
+
+**Cons**:
+
+* O local dos campos de forma livre no schema é ad-hoc, o que significa que eles aparecem em ordem alfabética no Editor de Schemas. Isso pode tornar os schemas menos estruturados, e campos de forma livre semelhantes podem acabar muito separados dependendo de seus nomes.

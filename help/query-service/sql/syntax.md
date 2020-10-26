@@ -5,7 +5,7 @@ title: Sintaxe SQL
 topic: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Query Service.
 translation-type: tm+mt
-source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
+source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 1%
@@ -118,7 +118,7 @@ A sintaxe a seguir define um query `CREATE TABLE AS SELECT` (CTAS) suportado por
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-onde,`target_schema_title` é o título do schema XDM. Use esta cláusula somente se desejar usar um schema XDM existente para o novo conjunto de dados criado pelo query`rowvalidation` CTAS especifica se o usuário deseja a validação no nível da linha de todos os novos lotes ingeridos para o novo conjunto de dados criado. O valor padrão é &#39;false&#39;
+onde,`target_schema_title` é o título do schema XDM. Use esta cláusula somente se desejar usar um schema XDM existente para o novo conjunto de dados criado pelo query`rowvalidation` CTAS especifica se o usuário deseja a validação no nível da linha de todos os novos lotes ingeridos para o novo conjunto de dados criado. O valor padrão é &#39;true&#39;
 
 e `select_query` é uma `SELECT` declaração cuja sintaxe é definida acima neste documento.
 

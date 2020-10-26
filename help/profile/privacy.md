@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Perfil do cliente em tempo real
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 * [[!DNL Privacy Service]](home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais em aplicativos Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
-* [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 
@@ -43,6 +43,8 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 >O Privacy Service só pode processar [!DNL Profile] dados usando uma política de mesclagem que não executa identificação. Se você estiver usando a interface do usuário para confirmar se suas solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como o tipo de identificação [!UICONTROL da ID] . Em outras palavras, não é possível usar uma política de mesclagem em que a sutura [!UICONTROL de] ID está definida como &quot;Gráficoprivado&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>Também é importante observar que o tempo que uma solicitação de privacidade pode levar para ser concluída não pode ser garantido. Se ocorrerem alterações nos seus [!DNL Profile] dados enquanto uma solicitação ainda estiver sendo processada, o processamento desses registros também não poderá ser garantido.
 
 ### Uso da API
 

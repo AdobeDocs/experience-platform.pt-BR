@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no Data Lake
 topic: overview
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, opt out da venda ou excluir seus dados pessoais, conforme delineado pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados de clientes armazenados no Data Lake.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, opt out da venda ou excluir seus dados pessoais em aplicativos Adobe Experience Cloud.
 * [[!DNL Catalog Service]](home.md): O sistema de registro para localização e linhagem de dados no [!DNL Experience Platform]. Fornece uma API que pode ser usada para atualizar metadados do conjunto de dados.
-* [Sistema do [!DNL Experience Data Model (XDM)](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
@@ -136,6 +136,10 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do de
 >Esta seção aborda como formatar solicitações de privacidade para o [!DNL Data Lake]. É altamente recomendável que você reveja a documentação da [[!DNL Privacy Service] IU](../privacy-service/ui/overview.md) ou da [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) para obter etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados nas cargas de solicitação.
 
 A seção a seguir descreve como fazer solicitações de privacidade para o [!DNL Data Lake] usando a [!DNL Privacy Service] interface do usuário ou a API.
+
+>[!IMPORTANT]
+>
+>O tempo que uma solicitação de privacidade pode levar para ser concluída não pode ser garantido. Se ocorrerem alterações no Data Lake enquanto uma solicitação ainda estiver sendo processada, o processamento desses registros também não poderá ser garantido.
 
 ### Uso da interface
 

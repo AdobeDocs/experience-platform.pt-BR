@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 4%
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
+- [Tempo para o valor](#time-to-value)
 
 ## Preparação de dados {#data-prep}
 
@@ -58,7 +59,7 @@ O Adobe Experience Platform Segmentation Service fornece uma interface de usuár
 | ------- | ----------- |
 | Remoção do limite de segmentação de fluxo | O limite de sete dias para o período de pesquisa foi removido. |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [Segmentação](../../segmentation/home.md)
+Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 
@@ -76,7 +77,7 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.
 
-## Tempo para o valor
+## Tempo para o valor {#time-to-value}
 
 A Adobe Experience Platform permite que as equipes de Operações de marketing construam uma visualização de 360 graus de seus clientes sem exigir uma ampla experiência em engenharia de dados. O objetivo é acelerar as equipes e valorizar a velocidade dos dados.
 

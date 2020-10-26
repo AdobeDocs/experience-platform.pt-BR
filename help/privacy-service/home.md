@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1627'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Estas decisões podem ser resumidas através das seguintes questões:
    * Para aproveitar ao máximo [!DNL Privacy Service], é necessário conhecer detalhadamente os tipos de dados coletados pelos clientes e quais deles estão sujeitos às regras de privacidade. Consulte a seção sobre como [determinar os requisitos](#requirements) de privacidade para obter mais informações.
 1. **Eu rotulei corretamente meus dados?**
    * Os dados devem ser rotulados corretamente para que o serviço determine quais campos devem ser acessados ou excluídos durante trabalhos de privacidade. Consulte a seção sobre dados [de](#label) rotulagem para obter mais informações.
-1. **Eu sei para quais IDs enviar[!DNL Privacy Service]?**
+1. **Eu sei para quais IDs enviar [!DNL Privacy Service]?**
    * Ao enviar solicitações de privacidade, é necessário fornecer IDs individuais do cliente específicas para determinados aplicativos de Adobe. Consulte as seções sobre como [fornecer dados](#identity) de identidade e [fazer solicitações](#requests) de privacidade para obter mais informações.
 1. **Como estou rastreando meus trabalhos de privacidade?**
    * Depois de fazer solicitações de privacidade, há várias opções para rastrear o status e os resultados. Consulte a seção sobre [monitoramento de trabalhos](#monitor) de privacidade para obter mais informações.
@@ -75,10 +75,12 @@ Depois de determinar as necessidades de privacidade de sua empresa e decidir par
 >As seções abaixo fornecem links para a documentação que abordam como fazer solicitações de privacidade genéricas na API ou na interface do usuário. No entanto, dependendo dos [!DNL Experience Cloud] aplicativos que você está usando, os campos que você deve enviar na carga da solicitação podem ser diferentes dos exemplos mostrados nesses guias.
 >
 >Conforme você segue os guias da API ou da interface do usuário, consulte o documento nos aplicativos [de](./experience-cloud-apps.md) Privacy Service e Experience Cloud para obter mais documentação sobre como formatar solicitações de privacidade para seus [!DNL Experience Cloud] aplicativos específicos.
+>
+>Também é importante observar que as solicitações de privacidade são processadas de forma assíncrona nos aplicativos Experience Cloud. Depois que uma solicitação é recebida pelo Privacy Service, cada aplicativo pode levar de minutos a semanas para concluir a solicitação. O tempo necessário para concluir cada solicitação é específico para o aplicativo com o qual você está trabalhando e a quantidade de dados que precisa ser processada.
 
 #### Uso da API
 
-A [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornece vários pontos de extremidade para criar e gerenciar trabalhos de privacidade usando chamadas RESTful API, permitindo que você adote uma abordagem programática da conformidade com a regulamentação de privacidade para seus [!DNL Experience Cloud] aplicativos. Para obter etapas detalhadas sobre como usar a API, consulte o guia [do desenvolvedor da API de](api/getting-started.md)Privacy Service.
+O [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornece vários endpoints para criar e gerenciar trabalhos de privacidade usando chamadas RESTful API, permitindo que você adote uma abordagem programática da conformidade com a regulamentação de privacidade para seus [!DNL Experience Cloud] aplicativos. Para obter etapas detalhadas sobre como usar a API, consulte o guia [do desenvolvedor da API de](api/getting-started.md)Privacy Service.
 
 #### Uso da interface
 

@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: Mistura de segmentação de perfis
+title: Mistura de detalhes de associação ao segmento
 topic: overview
-description: Este documento fornece uma visão geral da classe de Perfil individual XDM.
+description: Este documento fornece uma visão geral da combinação Detalhes da associação ao segmento.
 translation-type: tm+mt
-source-git-commit: 53575488c08f73a65a7f1cc5f803f9ead707ae48
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mistura de segmentação] de perfis
+# [!UICONTROL Mistura de detalhes] da associação do segmento
 
-[!UICONTROL A segmentação] do perfil é uma mistura padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece um único campo de mapa que captura informações relacionadas à associação de segmentos, incluindo a quais segmentos o indivíduo pertence, a última hora de qualificação e quando a associação é válida até.
+>[!NOTE]
+>
+>Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../name-updates.md) mixin para obter mais informações.
+
+[!UICONTROL Detalhes] da associação do segmento é uma combinação padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece um único campo de mapa que captura informações relacionadas à associação de segmentos, incluindo a quais segmentos o indivíduo pertence, a última hora de qualificação e quando a associação é válida até.
 
 >[!WARNING]
 >

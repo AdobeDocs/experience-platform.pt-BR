@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
 solution: Experience Platform
-title: mixagem de detalhes de trabalho do perfil
+title: Mistura Detalhes do contato de trabalho
 topic: overview
-description: Este documento fornece uma visão geral da classe de Perfil individual XDM.
+description: Este documento fornece uma visão geral da combinação Detalhes do contato de trabalho.
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL mixagem de detalhes] de trabalho do perfil
+# [!UICONTROL Mistura de Detalhes] do Contato de Trabalho
 
-[!UICONTROL Detalhes] de trabalho do perfil é uma combinação padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece vários campos que capturam informações profissionais relacionadas a uma pessoa individual, como endereço de trabalho, email de trabalho, número de telefone de trabalho e organizações às quais a pessoa pertence.
+>[!NOTE]
+>
+>Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../name-updates.md) mixin para obter mais informações.
+
+[!UICONTROL Detalhes] do contato de trabalho é uma combinação padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece vários campos que capturam informações profissionais relacionadas a uma pessoa individual, como endereço de trabalho, email de trabalho, número de telefone de trabalho e organizações às quais a pessoa pertence.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 

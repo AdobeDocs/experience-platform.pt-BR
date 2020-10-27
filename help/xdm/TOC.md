@@ -5,9 +5,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 translation-type: tm+mt
-source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
+source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '198'
 ht-degree: 20%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 20%
 * Misturas {#mixins}
    * Misturas de perfis {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Detalhes da pessoa do perfil](./mixins/profile/person-details.md)
-      * [Detalhes pessoais do perfil](./mixins/profile/personal-details.md)
-      * [Segmentação do perfil](./mixins/profile/segmentation.md)
-      * [Detalhes de trabalho do perfil](./mixins/profile/work-details.md)
+      * [Detalhes demográficos](./mixins/profile/person-details.md)
+      * [Detalhes do contato pessoal](./mixins/profile/personal-details.md)
+      * [Detalhes da associação ao segmento](./mixins/profile/segmentation.md)
+      * [Detalhes do contato de trabalho](./mixins/profile/work-details.md)
    * Misturas de eventos {#event}
-      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
-      * [Detalhes do ambiente ExperienceEvent](./mixins/event/environment-details.md)
+      * [Detalhes da ID do usuário final](./mixins/event/enduserids.md)
+      * [Detalhes do ambiente](./mixins/event/environment-details.md)
    * [Misturar atualizações de nomes](./mixins/name-updates.md)
 * Tipos de dados {#data-types}
    * [Beacon](./data-types/beacon.md)

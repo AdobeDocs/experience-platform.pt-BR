@@ -5,10 +5,10 @@ title: Visão geral dos conjuntos de dados
 topic: datasets
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '683'
+ht-degree: 3%
 
 ---
 
@@ -58,11 +58,10 @@ A seguir está uma lista de serviços downstream que usam conjuntos de dados par
 
 * [[!DNL Data Access API]](../../data-access/home.md): Permite acessar e baixar o conteúdo de arquivos armazenados em conjuntos de dados.
 * [Serviço](../../identity-service/home.md)de identidade Adobe Experience Platform: Corresponde identidades entre dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos schemas XDM aos quais eles estão em conformidade.
-* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Aproveita [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-time Customer Profile] extrai dados dos perfis do cliente [!DNL Data Lake] e persiste em seu próprio armazenamento de dados separado.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Aproveita [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-time Customer Profile] extrai dados dos perfis do cliente [!DNL Data Lake] e persiste em seu próprio armazenamento de dados separado.
 * [Serviço](../../segmentation/home.md)de segmentação do Adobe Experience Platform: Permite que você crie segmentos e gere audiências a partir de seus [!DNL Real-time Customer Profile] dados. Essas audiências podem ser exportadas para seus próprios conjuntos de dados dentro da [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Usa aprendizado de máquina e inteligência artificial para descobrir insights em grandes conjuntos de dados.
 * [Serviço](../../query-service/home.md)de Query Adobe Experience Platform: Permite que você use SQL padrão para query de dados no, unindo quaisquer conjuntos de dados no [!DNL Experience Platform]e capturando resultados de query como um novo conjunto de dados para uso em relatórios, [!DNL Data Lake] ou [!DNL Data Science Workspace][!DNL Real-time Customer Profile].
-* [Serviço](../../decisioning-service/home.md)de decisão da Adobe Experience Platform: Aproveita [!DNL Real-time Customer Profile] para determinar a escolha mais provável que um cliente fará de um conjunto de opções, com base nos dados comportamentais que [!DNL Profile] extraem de conjuntos de dados ativados.
 
 ## Próximas etapas
 

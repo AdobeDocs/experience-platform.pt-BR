@@ -6,17 +6,17 @@ title: Excluir fluxos de dados
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 1%
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
 
 # Excluir fluxos de dados
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para excluir fluxos de dados da área de trabalho [!UICONTROL Fontes] .
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para excluir fluxos de dados da área de trabalho **[!UICONTROL Fontes]** .
 
 ## Introdução
 
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-- [[!DNL Perfil do cliente em tempo real]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 ## Excluir fluxos de dados usando a interface do usuário
 
@@ -64,7 +64,6 @@ Após alguns instantes, uma caixa de confirmação verde é exibida na parte inf
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você acessou com êxito contas e fluxos de dados existentes na área de trabalho **[!UICONTROL Fontes]** . Os dados recebidos agora podem ser usados por [!DNL Platform] serviços de downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você usou com êxito a área de trabalho **[!UICONTROL Fontes]** para excluir os fluxos de dados existentes.
 
-- [[!DNL Real-time Customer Profile] visão geral](../../../profile/home.md)
-- [[!DNL Data Science Workspace] visão geral](../../../data-science-workspace/home.md)
+Para obter etapas sobre como executar essas operações de forma programática usando a [!DNL Flow Service] API, consulte o tutorial sobre como [excluir conexões usando a API de Serviço de Fluxo](../../tutorials/api/delete.md)

@@ -5,15 +5,19 @@ title: Mistura IdentityMap
 topic: overview
 description: Este documento fornece uma visão geral da classe de Perfil individual XDM.
 translation-type: tm+mt
-source-git-commit: fd5bd4134bd35d5d87c79bf1e75bc88c67511b2b
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
 # [!UICONTROL Mistura IdentityMap]
+
+>[!NOTE]
+>
+>Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../name-updates.md) mixin para obter mais informações.
 
 [!UICONTROL O IdentityMap] é uma combinação padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece um único campo de mapa, que contém um conjunto de identidades de usuário digitadas pela namespace.
 

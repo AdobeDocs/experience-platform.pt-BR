@@ -5,9 +5,9 @@ title: Trabalhos de segmento
 topic: developer guide
 description: Este guia fornece informações para ajudá-lo a entender melhor os trabalhos de segmento e inclui chamadas de API de amostra para executar ações básicas usando a API.
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 2%
 
 ---
@@ -177,7 +177,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos d
 | `metrics.profileSegmentationTime` | Um objeto que contém informações sobre o horário em que a avaliação de segmentação começou e terminou, bem como o tempo total gasto. |
 | `metrics.segmentProfileCounter` | O número de perfis qualificados por segmento. |
 | `metrics.segmentedProfileByNamespaceCounter` | O número de perfis qualificados para cada namespace de identidade com base em cada segmento. |
-| `metrics.segmentProfileByStatusCounter` | A contagem de fragmentos **de** perfil para cada status. Os três status a seguir são suportados: <ul><li>&quot;realizado&quot; - o número de novos perfis que entraram no segmento.</li><li>&quot;existente&quot; - o número de perfis que continuam a existir no segmento.</li><li>&quot;exit&quot; - O número de segmentos de perfil que não existem mais no segmento.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | A contagem de perfis para cada status. Os três status a seguir são suportados: <ul><li>&quot;realizado&quot; - o número de novos perfis que entraram no segmento.</li><li>&quot;existente&quot; - o número de perfis que continuam a existir no segmento.</li><li>&quot;exit&quot; - O número de segmentos de perfil que não existem mais no segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | O número total de perfis mesclados por política de mesclagem. |
 
 ## Criar um novo trabalho de segmento {#create}

@@ -5,10 +5,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 21%
+source-wordcount: '197'
+ht-degree: 20%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 21%
    * Misturas de eventos {#event}
       * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
       * [Detalhes do ambiente ExperienceEvent](./mixins/event/environment-details.md)
+   * [Misturar atualizações de nomes](./mixins/name-updates.md)
 * Tipos de dados {#data-types}
    * [Beacon](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)

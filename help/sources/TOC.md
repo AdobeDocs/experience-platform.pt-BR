@@ -5,9 +5,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 4%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 4%
    - [Criar uma conexão básica de conjunto de dados usando a API de Serviço de Fluxo](tutorials/api/create-dataset-base-connection.md)
    - [Monitorar fluxos de dados usando a API de Serviço de Fluxo](tutorials/api/monitor.md)
    - [Atualizar informações de conexão usando a API de Serviço de Fluxo](tutorials/api/update.md)
+   - [Excluir conexões usando a API Serviço de Fluxo](tutorials/api/delete.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar um conector de origem {#create}
       - aplicativos Adobe {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 4%
       - [Configurar um fluxo de dados para um conector de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Ativar dados de entrada para preencher perfis do cliente](tutorials/ui/profile.md)
    - [Monitorar contas e fluxos de dados](tutorials/ui/monitor.md)
+   - [Excluir contas](tutorials/ui/delete-accounts.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
 - [Notificações de execução de fluxo](notifications.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

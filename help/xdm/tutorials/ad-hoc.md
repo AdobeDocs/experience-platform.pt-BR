@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um schema ad-hoc
 description: Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema "ad-hoc". Schemas ad-hoc são usados em vários workflows de ingestão de dados para o Experience Platform, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 2%

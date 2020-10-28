@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Misturar atualizações de nomes
 topic: overview
 description: Uma lista de alterações recentes no nome da mixagem XDM.
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ A tabela a seguir descreve as combinações existentes que foram atualizadas, ju
 
 | Nome anterior | Nome atualizado |
 | --- | --- |
-| [!UICONTROL Mistura ExperienceEvent do consumidor] | [!UICONTROL Detalhes de consumo de conteúdo] |
 | [!UICONTROL Combinação de privacidade do Experience evento] | [!UICONTROL Detalhes de privacidade] |
 | [!UICONTROL Detalhes do aplicativo ExperienceEvent] | [!UICONTROL Detalhes do aplicativo] |
 | [!UICONTROL Detalhes do canal ExperienceEvent] | [!UICONTROL Detalhes do canal] |
@@ -44,7 +43,7 @@ A tabela a seguir descreve as combinações existentes que foram atualizadas, ju
 | [!UICONTROL Telefones do perfil] | [!UICONTROL Detalhes do número de telefone] |
 | [!UICONTROL Detalhes das preferências do perfil] | [!UICONTROL Detalhes da Preferência] |
 | [!UICONTROL Privacidade do perfil] | [!UICONTROL Detalhes de privacidade] |
-| [!UICONTROL Detalhes de push do perfil] | [!UICONTROL Detalhes da notificação por push] |
+| [!UICONTROL Detalhes de push do perfil] | [!UICONTROL Detalhes do token de notificação por push] |
 | [!UICONTROL Segmentação do perfil] | [!UICONTROL Detalhes da associação ao segmento] |
 | [!UICONTROL Subscrições perfis] | [!UICONTROL Detalhes da subscrição] |
 | [!UICONTROL Detalhes de trabalho do perfil] | [!UICONTROL Detalhes do contato de trabalho] |

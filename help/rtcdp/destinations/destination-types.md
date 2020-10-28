@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Tipos de destinos e Categorias
 seo-title: Tipos de destinos e Categorias
-description: 'Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. '
-seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos.
+description: 'Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. As extensões Experience Platform Launch encaminham os dados brutos do evento para vários tipos de destinos. '
+seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, os destinos de exportação de Perfil/segmento capturam dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. As extensões Experience Platform Launch encaminham os dados brutos do evento para vários tipos de destinos.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 ### Extensões {#extensions}
 
-A CDP em tempo real do Adobe aproveita a potência e a flexibilidade do Experience Platform Launch para incluir extensões de lançamento na interface CDP em tempo real do Adobe.
+A CDP em tempo real do Adobe aproveita o poder e a flexibilidade da Adobe Experience Platform Launch para incluir extensões de lançamento de plataforma na interface CDP em tempo real do Adobe.
 
 >[!TIP]
 >
->Para obter informações detalhadas sobre extensões de Experience Platform Launch, incluindo casos de uso e como encontrá-las na interface, consulte a visão geral [das extensões de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)lançamento.
+>Para obter informações detalhadas sobre extensões do Adobe Experience Platform Launch, incluindo casos de uso e como encontrá-las na interface, consulte a visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
-Inicie extensões para encaminhar dados brutos do evento a vários tipos de destinos. Pense nas extensões como um tipo de destino de Encaminhamento de **Eventos** . Esse é um tipo mais simples de integração com as plataformas de destino, que apenas encaminha dados brutos do evento. Exemplos disso são a extensão [de personalização](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou a [Confirmar voz da extensão](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
+As extensões de lançamento de plataforma encaminham os dados brutos do evento para vários tipos de destinos. Pense nas extensões como um tipo de destino de Encaminhamento de **Eventos** . Esse é um tipo mais simples de integração com as plataformas de destino, que apenas encaminha dados brutos do evento. Exemplos disso são a extensão [de personalização](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou a [Confirmar voz da extensão](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
 ![extensões de Experience Platform Launch em relação a outros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 

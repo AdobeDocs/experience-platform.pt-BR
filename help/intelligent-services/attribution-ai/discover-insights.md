@@ -5,10 +5,10 @@ title: Descobrindo insights no Attribution AI
 topic: Attribution AI insights
 description: Este documento serve como um guia para interagir com informações da instância do serviço na interface do usuário do Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 69c27fc45aa9d9acaaed29c2324d02ebd471d63d
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 1%
+source-wordcount: '1646'
+ht-degree: 0%
 
 ---
 
@@ -25,11 +25,11 @@ Para utilizar insights para o Attribution AI, é necessário ter uma instância 
 
 ## Visão geral dos insights da instância de serviço
 
-Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe os Serviços inteligentes Adobe disponíveis. No container para Attribution AI, clique em **[!UICONTROL Abrir]**.
+Na [!DNL Adobe Experience Platform] interface do usuário, selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe os Serviços inteligentes Adobe disponíveis. No container para Attribution AI, selecione **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](./images/insights/open_Attribution_ai.png)
 
-A página de serviço do Attribution AI é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique no nome de uma instância de serviço para começar.
+A página de serviço do Attribution AI é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Selecione um nome de instância de serviço para começar.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Em seguida, a página de insights para essa instância de serviço é exibida, o
 
 ### Detalhes da instância de serviço
 
-Para visualização de detalhes adicionais para uma instância de serviço, clique em **[!UICONTROL Mostrar mais]** no canto superior direito.
+Para visualização de detalhes adicionais para uma instância de serviço, selecione **[!UICONTROL Mostrar mais]** no canto superior direito.
 
 ![mostrar mais](./images/insights/show-more.png)
 
@@ -53,31 +53,28 @@ Uma lista detalhada é exibida. Para obter mais informações sobre qualquer uma
 
 ### Editar uma instância
 
-Para editar uma instância, clique em **[!UICONTROL Editar]** na navegação superior direita.
+Para editar uma instância, selecione **[!UICONTROL Editar]** na navegação superior direita.
 ![clique no botão editar](./images/insights/edit-button.png)
 
-A caixa de diálogo Editar é exibida, permitindo que você edite a descrição e a frequência de pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, clique em **[!UICONTROL Editar]** no canto inferior direito.
+A caixa de diálogo Editar é exibida, permitindo que você edite o nome, a descrição e a frequência de pontuação da instância. Se o status da instância estiver desativado, a frequência de pontuação não poderá ser editada. Para confirmar suas alterações e fechar a caixa de diálogo, selecione **[!UICONTROL Salvar]** no canto inferior direito.
 
 ![editar fornecedor](./images/insights/edit-popover.png)
 
 ### Mais ações {#more-actions}
 
-O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de *Editar*. Clicar em **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
+O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Selecionar **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
-- **Excluir**: Exclui a instância.
-- **Baixar dados** de resumo: Faz o download de um arquivo CSV que contém os dados de resumo.
-- **Pontuações** de acesso: Clicar em **Acessar pontuações** o redireciona para as pontuações de [acesso do tutorial](./download-scores.md).
-- **Histórico** de execução da visualização: Um provedor que contém uma lista de todas as execuções de pontuação associadas à instância do serviço é exibido.
+- **[!UICONTROL Clonar]**: Clona a instância.
+- **[!UICONTROL Excluir]**: Exclui a instância.
+- **[!UICONTROL Baixar dados]** de resumo: Faz o download de um arquivo CSV que contém os dados de resumo.
+- **[!UICONTROL Pontuações]** de acesso: A seleção das pontuações **[!UICONTROL de]** acesso o redireciona para as pontuações de [acesso do tutorial](./download-scores.md).
+- **[!UICONTROL Histórico]** de execução da visualização: Um provedor que contém uma lista de todas as execuções de pontuação associadas à instância do serviço é exibido.
 
 ![mais ações](./images/insights/more-actions.png)
 
 ## Filtrar seus dados
 
 Os insights do Attribution AI permitem filtrar seus dados e atualizar automaticamente os visuais da interface com base nos filtros selecionados.
-
->[!NOTE]
->
->Por padrão, cada filtro é definido como &quot;Todos&quot;, exceto o filtro &quot;Modelo[!UICONTROL de]atribuição&quot;, que é definido como &quot;Conversões atribuídas incrementais e influenciadas&quot;.
 
 ### Evento de conversão
 
@@ -89,23 +86,9 @@ Na instância, a lista suspensa eventos **[!UICONTROL de]** conversão permite s
 
 ### Modelo de atribuição
 
-Clicar em Modelo **[!UICONTROL de]** atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do [Attribution AI](./overview.md) que contém uma tabela com informações sobre cada modelo.
+Selecionar Modelo **[!UICONTROL de]** atribuição abre uma lista suspensa com todos os diferentes modelos de atribuição disponíveis. Você pode selecionar vários modelos para comparar resultados. Para obter mais informações sobre os diferentes modelos de atribuição e como eles funcionam, visite a visão geral do [Attribution AI](./overview.md) que contém uma tabela com informações sobre cada modelo.
 
 ![modelo de atribuição](./images/insights/attribution-model.png)
-
-### Produto
-
-O filtro **[!UICONTROL Produto]** permite selecionar entre quaisquer produtos que foram inicialmente ingeridos na criação da sua instância. Clique na lista suspensa e use o recurso de pesquisa para selecionar rapidamente todos os produtos que deseja comparar.
-
-![filtro de produtos](./images/insights/product-filter.png)
-
-### Geografia
-
-O filtro **[!UICONTROL Geografia]** preenche códigos de países com base em modelos baseados em região. Dependendo dos seus dados, este filtro pode ou não estar presente.
-
->[!NOTE]
->
->Os códigos de país têm dois caracteres. Uma lista completa pode ser encontrada aqui [ISO 3166-1 alfa-2](https://datahub.io/core/country-list).
 
 ### Região
 
@@ -115,15 +98,22 @@ O filtro **[!UICONTROL Geografia]** preenche códigos de países com base em mod
 
 Esse filtro permite que você selecione quaisquer regiões configuradas no processo de criação de instâncias.
 
-### Channel
+### Adicionar filtros
 
-Clicar no filtro **[!UICONTROL Canal]** revela uma lista suspensa que contém todos os canais de marketing disponíveis. Você pode selecionar vários canais para compará-los.
+Você pode adicionar filtros adicionais selecionando o ícone de **filtro** para abrir o pod **[!UICONTROL Adicionar filtros]** . O **[!UICONTROL provedor Adicionar filtros]** permite filtrar por Canal, Geografia, tipo de mídia e Produto. Somente os filtros aplicáveis para uma instância de serviço são preenchidos pelo provedor. Por exemplo, se você não forneceu dados geográficos ou um tipo de mídia, esses atributos de filtro não estarão disponíveis para sua instância.
 
-![Channel](./images/insights/channel.png)
+![filtros adicionais](./images/insights/additional-filters.png)
+
+![provedor de filtro](./images/insights/filter-popover.png)
+
+- **[!UICONTROL Canal]:** A seleção do atributo canal permite filtrar qualquer canal de marketing disponível. Você pode selecionar vários canais para compará-los.
+- **[!UICONTROL Geografia]:** A seleção do atributo geográfico permite filtrar os códigos de país com base em modelos baseados na região. Dependendo dos seus dados, este filtro pode estar ou não presente. Os códigos de país têm dois caracteres. Consulte a lista completa do código do país [aqui](https://datahub.io/core/country-list).
+- **[!UICONTROL Tipo]de mídia:** Selecionar o atributo de tipo de mídia permite filtrar qualquer um dos tipos de mídia definidos.
+- **[!UICONTROL Produto]:** Selecionar o atributo do produto permite filtrar de quaisquer produtos que foram inicialmente ingeridos na criação da sua instância.
 
 ### Date Range
 
-Clique no ícone de calendário para abrir o intervalo de datas. As datas de início e término do evento de conversão determinam a quantidade de dados preenchidos na interface do usuário. Você pode escolher restringir ou ampliar o intervalo de datas para focar ou expandir a quantidade de dados preenchidos.
+Selecione o ícone de calendário para abrir o intervalo de datas. As datas de início e término do evento de conversão determinam a quantidade de dados preenchidos na interface do usuário. Você pode escolher restringir ou ampliar o intervalo de datas para focar ou expandir a quantidade de dados preenchidos.
 
 ![intervalo de datas](./images/insights/display-date-range.png)
 
@@ -137,29 +127,65 @@ O cartão **[!UICONTROL Visão geral]** mostra o total de conversões por modelo
 
 O cartão de tendências **** semanais detalha sua conversão total pelo intervalo de datas definido durante o processo de filtragem.
 
-![tendências](./images/insights/weekly-trends.png)
-
-Clicar nas elipses na parte superior direita do cartão de tendências ** semanais exibe uma lista suspensa que permite selecionar tendências diárias, semanais ou mensais.
+Selecionar as elipses no canto superior direito do cartão de tendências **** semanais exibe uma lista suspensa que permite selecionar tendências diárias, semanais ou mensais.
 
 Passar o mouse sobre a linha de dados de um modelo de atribuição específico cria um provedor que mostra o número total de conversões para essa data.
 
-![tendências de flutuação](./images/insights/weekly-trend-hover.png)
+![tendências](./images/insights/weekly-trends.png)
 
 ## Detalhamento por canal
 
 A **[!UICONTROL Análise por placa de canal]** é usada para determinar o número total de conversões em relação a cada canal. Este cartão pode ser utilizado para ajudar a tomar decisões sobre a eficácia de cada canal e o retorno do investimento.
 
+Selecionar as elipses na parte superior direita do cartão **[!UICONTROL Detalhamento por canal]** abre uma lista suspensa que permite preencher dados com base em pontos de contato.
+
 ![canal detalhado](./images/insights/channel-breakdown.png)
-
-Clicar nas elipses na parte superior direita do cartão **[!UICONTROL Detalhamento por canal]** abre uma lista suspensa que permite preencher dados com base em pontos de contato.
-
-![pontos de contato](./images/insights/breakdown-by-touchpoints.png)
 
 ## Principais campanhas
 
-A placa **[!UICONTROL Top campanha]** exibe uma visão geral das campanhas e o desempenho da campanha em cada canal. Este cartão pode ajudar a informar sua equipe sobre a eficácia de uma campanha específica para um determinado canal e fornecer informações sobre onde investir mais.
+A placa **[!UICONTROL Top campanha]** exibe uma visão geral das campanhas e o desempenho da campanha em cada canal. Este cartão pode ajudar a informar sua equipe sobre a eficácia de uma campanha específica para um determinado canal e fornecer insights, como sobre as campanhas nas quais você deve investir mais.
 
 ![campanhas principais](./images/insights/top-campaigns.png)
+
+## Detalhamento por posição do ponto de contato
+
+A seleção da guia Análise **[!UICONTROL de]** caminho carrega os gráficos **[!UICONTROL Detalhamento por posição]** de ponto de contato e caminhos **[!UICONTROL de conversão]** Superior.
+
+O gráfico de **[!UICONTROL Detalhamento por posição]** de ponto de contato é um detalhamento de conversões atribuídas por posição do ponto de contato comparada em todos os caminhos de conversão. Este gráfico ajuda você a entender quais pontos de contato são mais eficazes em diferentes estágios do caminho de conversão. Os estágios são iniciais, jogadores e mais próximos.
+
+- **Início:** Indica que o ponto de contato foi o primeiro toque em um caminho de conversão.
+- **Jogador:** Indica que o ponto de contato não foi o primeiro ou o último toque que levou a uma conversão.
+- **Mais próximo:** Indica que o ponto de contato foi o último toque antes de uma conversão.
+
+>!![NOTE]
+A soma da contribuição percentual para um modelo de atribuição em todos os pontos de contato e posições deve ser igual a 100.
+
+![ponto de contato de detalhamento do caminho do usuário](./images/insights/user-paths.png)
+
+## Caminhos de conversão principais
+
+O gráfico **[!UICONTROL Principais caminhos]** de conversão mostra as pontuações influenciadas e algorítmicas nos principais caminhos de conversão nas regiões selecionadas. Este gráfico permite visualizar quais pontos de contato contribuem para conversões e qual é a pontuação de atribuição para cada ponto de contato. Você pode usar essas informações para visualização dos caminhos mais frequentes em uma determinada região e ver se algum padrão surge entre os diferentes conjuntos de pontos de contato.
+
+![Caminhos mais comuns do usuário](./images/insights/Touchpoint-paths.png)
+
+## Eficácia do ponto de contato
+
+Selecionar a guia **[!UICONTROL Touchpoint Effectivity]** carrega a placa de eficácia **[!UICONTROL do]** Touchpoint. Este cartão usa a distribuição de dados pelo Attribution AI para exibir informações para cada ponto de contato. Os dados desta tabela são gerados apenas para períodos específicos, conforme indicado pela data de **[!UICONTROL início]** no canto superior direito do cartão.
+
+![seleção da eficácia do ponto de contato](./images/insights/Touchpoint-effectiveness.png)
+
+Você pode usar as informações do cartão de eficácia **[!UICONTROL do ponto de]** contato para entender como um ponto de contato contribui para uma conversão. Você também pode ver a eficácia de cada ponto de contato com as seguintes métricas de desempenho:
+
+**Caminhos tocados**: Essa métrica exibe uma porcentagem de caminhos que alcançaram/não alcançaram a conversão para o ponto de contato. Você verá conversões atribuídas mais altas se a proporção de caminhos (porcentagem) que atingem a conversão para caminhos que não atingem a conversão for alta.
+
+![Caminhos tocados na métrica](./images/insights/Touchpoint-metrics.png)
+
+**Medida** de eficiência: Essa métrica exibe estrelas em uma escala de um a cinco. A escala indica a importância relativa de um ponto de contato para fazer uma conversão.
+
+>[!NOTE]
+Um volume de ponto de contato mais alto não garante uma medida de eficiência mais alta.
+
+**Volume** total: O número agregação de vezes que um ponto de contato foi tocado por um usuário. Isso inclui pontos de contato que aparecem em um caminho que realiza a conversão, bem como caminhos que não resultam em uma conversão.
 
 ## Próximas etapas
 

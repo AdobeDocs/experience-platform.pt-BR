@@ -5,10 +5,10 @@ title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 description: 'Para que os Serviços inteligentes detectem insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes aproveitam os schemas do Experience Data Model (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados nos Serviços inteligentes] devem estar em conformidade com o schema XDM da Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
-ht-degree: 1%
+source-wordcount: '1882'
+ht-degree: 0%
 
 ---
 
@@ -276,81 +276,15 @@ Após a criação do conjunto de dados, é possível encontrá-lo na interface d
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Adicionar uma tag de namespace de identidade primária ao conjunto de dados
+#### Adicionar campos de identidade ao conjunto de dados
 
 >[!NOTE]
 >
 >Versões futuras do [!DNL Intelligent Services] integrarão o Serviço [de identidade da](../identity-service/home.md) Adobe Experience Platform em seus recursos de identificação do cliente. Assim, as etapas descritas abaixo estão sujeitas a alterações.
 
-Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, é necessário adicionar uma `primaryIdentityNameSpace` tag ao conjunto de dados. Isso pode ser feito fazendo uma solicitação de PATCH para a API do serviço de catálogo.
+Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, você terá a opção de definir um campo de schema como um campo de identidade. Para definir um campo de schema como um campo de identidade, visualização a seção sobre como configurar campos de identidade no tutorial [da](../xdm/tutorials/create-schema-ui.md#identity-field) interface para criar um schema usando o Editor de Schemas ou, alternativamente, o tutorial [da](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
 
 Se você estiver assimilando dados de um arquivo CSV local, poderá pular para a próxima seção sobre [mapeamento e assimilação de dados](#ingest).
-
-Antes de seguir com a chamada de API de exemplo abaixo, consulte a seção [](../catalog/api/getting-started.md) Introdução no guia do desenvolvedor do Catálogo para obter informações importantes sobre os cabeçalhos necessários.
-
-**Formato da API**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Parâmetro | Descrição |
-| --- | --- |
-| `{DATASET_ID}` | A ID do conjunto de dados criado anteriormente. |
-
-**Solicitação**
-
-Dependendo da fonte de onde você está assimilando dados, é necessário fornecer valores apropriados `primaryIdentityNamespace` e de `sourceConnectorId` tag na carga da solicitação.
-
-A solicitação a seguir adiciona os valores de tag apropriados para Audience Manager:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-A solicitação a seguir adiciona os valores de tag apropriados para o Analytics:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->Para obter mais informações sobre como trabalhar com namespaces de identidade na Plataforma, consulte a visão geral [da namespace de](../identity-service/namespaces.md)identidade.
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados atualizado. Essa ID deve corresponder àquela enviada na solicitação de PATCH.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Mapear e assimilar dados {#ingest}
 

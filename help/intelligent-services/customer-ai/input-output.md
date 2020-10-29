@@ -5,9 +5,9 @@ title: Entrada e saída de IA do cliente
 topic: Getting started
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas na IA do cliente.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ A IA do cliente usa os dados do Evento de experiência do consumidor para calcul
 
 A IA do cliente exige dados históricos para o treinamento do modelo, mas a quantidade de dados necessária se baseia em dois elementos principais: janela de resultados e população elegível.
 
-Por padrão, a API do cliente procura que um usuário tenha tido atividade nos últimos 120 dias se nenhuma definição de população qualificada for fornecida durante a configuração do aplicativo. Além da quantidade mínima de dados de Evento de experiência do consumidor que é necessária, a IA do cliente também precisa de uma quantidade mínima de eventos bem-sucedidos com base em uma definição de meta prevista. Atualmente, a API do cliente precisa de no mínimo 500 eventos bem-sucedidos.
+Por padrão, a API do cliente procura que um usuário tenha tido atividade nos últimos 120 dias se nenhuma definição de população qualificada for fornecida durante a configuração do aplicativo. Além disso, a Inteligência Artificial do Cliente exige um mínimo de 500 eventos qualificados e 500 não qualificados (total de 1000) de dados históricos com base em uma definição de meta prevista.
 
 Os exemplos a seguir fornecidos usam uma fórmula simples para ajudar a determinar a quantidade mínima de dados necessária. Se você tiver mais do que o requisito mínimo, seu modelo provavelmente fornecerá resultados mais precisos. Se você tiver menos do que a quantidade mínima necessária, o modelo falhará, pois não há uma quantidade suficiente de dados para o treinamento do modelo.
 

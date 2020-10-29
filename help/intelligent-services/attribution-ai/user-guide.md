@@ -5,17 +5,17 @@ title: Guia do usuário do Attribution AI
 topic: User guide
 description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 0%
+source-wordcount: '1746'
+ht-degree: 1%
 
 ---
 
 
 # Guia do usuário do Attribution AI
 
-Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais, algorítmico, que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual do cliente em cada fase das viagens do cliente.
+Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais, algorítmico, que calcula a influência e o impacto incremental das interações do cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual com o cliente em cada fase das viagens do cliente.
 
 Este documento serve como um guia para interagir com o Attribution AI na interface do usuário do Intelligent Services.
 
@@ -25,7 +25,29 @@ Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTR
 
 ![Acessar sua instância](./images/user-guide/open_Attribution_ai.png)
 
-A página de serviço do Attribution AI é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização. Clique em **Criar instância** para começar.
+A página de serviço do Attribution AI é exibida. Esta página lista as instâncias de serviço do Attribution AI e exibe informações sobre elas, incluindo o nome da instância, os eventos de conversão, a frequência de execução da instância e o status da última atualização.
+
+Você pode encontrar a métrica de pontuação **[!UICONTROL de eventos de conversão]** Total localizada no lado inferior direito do container de instância **** Criar. Essa métrica rastreia o número total de eventos de conversão pontuados por Attribution AI para o ano civil atual, incluindo todos os ambientes da caixa de proteção e quaisquer instâncias de serviço excluídas.
+
+![](./images/user-guide/total_conversions.png)
+
+As instâncias de serviço podem ser editadas, clonadas e excluídas usando os controles no lado direito da interface. Para exibir esses controles, selecione uma instância de suas instâncias **[!UICONTROL de]** Serviço existentes. Os controles contêm as seguintes informações:
+
+- **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. Você pode editar o nome, a descrição, o status e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a instância de serviço selecionada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
+- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
+- **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados que está sendo usado por essa instância.
+- **[!UICONTROL Detalhes]** da última execução: Isso só é exibido quando uma execução falha. Informações sobre o motivo da falha na execução, como códigos de erro, são exibidas aqui.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Eventos]** de conversão: Uma visão geral rápida dos eventos de conversão configurados para esta instância.
+- **[!UICONTROL Janela]** de pesquisa: O período definido que indica quantos dias antes dos pontos de contato do evento de conversão foram incluídos.
+- **[!UICONTROL Pontos de contato]**: Uma lista de todos os pontos de contato definidos ao criar esta instância.
+
+![](./images/user-guide/side_panel_2.png)
+
+Selecione **[!UICONTROL Criar instância]** para começar.
 
 ![Criar instância](./images/user-guide/landing_page.png)
 
@@ -77,7 +99,7 @@ Clicar em **[!UICONTROL Adicionar evento]** cria campos adicionais que podem ser
 
 Clicar em **[!UICONTROL Adicionar grupo]** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *E* é exibido. Clicar em **E** oferece uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;E&quot; estende o caminho de conversão para incluir condições adicionais.
 
-![usando e ou](./images/user-guide/and_or.png)
+![using and or](./images/user-guide/and_or.png)
 
 Se você precisar de mais de uma conversão, clique em **Adicionar conversão** para criar um novo cartão de conversão. Você pode repetir o processo acima para definir várias conversões.
 
@@ -133,7 +155,7 @@ Quando terminar de definir todos os pontos de contato necessários, role para ci
 
 ## Configuração avançada de treinamento e pontuação
 
-A página final no Attribution AI é a página *Avançado* usada para configurar treinamento e pontuação.
+A página final no Attribution AI é a página **[!UICONTROL Avançado]** usada para configurar treinamento e pontuação.
 
 ![nova página avançada](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Para alterar a hora do dia em que deseja que a pontuação ocorra, clique no íc
 >Pode levar até 24 horas para que cada processo de pontuação seja concluído.
 
 ![ícone do relógio](./images/user-guide/time_of_day.png)
+
+### Colunas adicionais do conjunto de dados de pontuação (opcional)
+
+Por padrão, um conjunto de dados de pontuação é criado para cada instância de serviço em um schema padrão. Você pode optar por adicionar colunas adicionais com base nas configurações de Evento de conversão e ponto de contato à saída do conjunto de dados de pontuação. Start selecionando colunas do conjunto de dados de entrada, você pode arrastá-las e soltá-las para alterar a ordem, mantendo pressionado o botão esquerdo do mouse sobre o ícone de hambúrguer.
+
+![adição da coluna de conjunto de dados de pontuação](./images/user-guide/Add-score-dataset.png)
 
 ### Modelagem com base na região (opcional) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Depois de selecionar sua janela de treinamento, clique em **[!UICONTROL Concluir
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de marcar (aguarde até 24 horas), você estará pronto para [descobrir insights](./discover-insights.md)do Attribution AI. Além disso, se desejar baixar os resultados da pontuação, visite a documentação de [download das pontuações](./download-scores.md) brutas.
+Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de marcar (aguarde até 24 horas), você estará pronto para [descobrir insights](./discover-insights.md)do Attribution AI. Além disso, se desejar baixar os resultados da pontuação, visite a documentação de [download das pontuações](./download-scores.md) .
 
 ## Recursos adicionais
 

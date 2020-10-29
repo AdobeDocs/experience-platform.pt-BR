@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
-description: A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
+description: Este documento serve como um guia para interagir com as informações da instância do serviço na interface do usuário da API do cliente do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 0%
+source-wordcount: '1389'
+ht-degree: 1%
 
 ---
 
 
 # Descobrindo insights com a IA do cliente
 
-A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
+A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
 
 Este documento serve como um guia para interagir com as informações da instância do serviço na interface do usuário da API do cliente do Intelligent Services.
 
@@ -48,15 +48,22 @@ Em seguida, a página de insights para essa instância de serviço será exibida
 
 ### Detalhes da instância de serviço
 
-Há duas maneiras de visualização dos detalhes da instância do serviço: a primeira é do painel e a segunda, dentro da instância do serviço.
+Há duas maneiras de visualização detalhes da instância do serviço: do painel ou dentro da instância do serviço.
 
-Para obter detalhes da visualização dentro do painel, clique em um container de instância de serviço, evitando o hiperlink anexado ao nome. Isso abre um trilho certo que fornece detalhes adicionais, como descrição, frequência de pontuação, o objetivo da previsão e população elegível. Além disso, você pode optar por editar e excluir a instância clicando em **[!UICONTROL Editar]** ou **[!UICONTROL Excluir]**.
+Para visualização de uma visão geral dos detalhes da instância do serviço no painel, selecione um container de instância do serviço, evitando o hiperlink anexado ao nome. Isso abre um painel direito que fornece detalhes adicionais. Os controles contêm o seguinte:
 
-![trilho direito](../images/insights/success-run.png)
+- **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. Você pode editar o nome, a descrição e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
+- **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
+- **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados usado por esta instância.
+- **[!UICONTROL Frequência]** de execução: Com que frequência uma execução de pontuação ocorre e quando.
+- **[!UICONTROL Definição]** da pontuação: Uma visão geral rápida da meta configurada para esta instância.
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->No evento de que uma execução de pontuação falhe, uma mensagem de erro é fornecida. A mensagem de erro é listada em Detalhes *da* última execução no painel direito, que está visível apenas para execução com falha.
+>No evento de que uma execução de pontuação falhe, uma mensagem de erro é fornecida. A mensagem de erro é listada em Detalhes **da** última execução no painel direito, que está visível apenas para execução com falha.
 
 ![falha ao executar mensagem](../images/insights/failed-run.png)
 
@@ -72,7 +79,7 @@ Para editar uma instância, clique em **[!UICONTROL Editar]** na navegação sup
 
 ![clique no botão editar](../images/insights/edit-button.png)
 
-A caixa de diálogo Editar é exibida, permitindo que você edite a *Descrição* e a Frequência *de* Pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, clique em **[!UICONTROL Editar]** no canto inferior direito.
+A caixa de diálogo de edição é exibida, permitindo que você edite o nome, a descrição, o status e a frequência de pontuação da instância. Para confirmar suas alterações e fechar a caixa de diálogo, selecione **[!UICONTROL Salvar]** no canto inferior direito.
 
 ![editar fornecedor](../images/insights/edit-instance.png)
 
@@ -80,15 +87,16 @@ A caixa de diálogo Editar é exibida, permitindo que você edite a *Descrição
 
 O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Clicar em **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
+- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a instância de serviço configurada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: Exclui a instância.
-- **[!UICONTROL Pontuações]** de acesso: Clicar nas pontuações *de* acesso abre uma caixa de diálogo que fornece um link para as pontuações de [download do tutorial de IA](./download-scores.md) do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
+- **[!UICONTROL Pontuações]** de acesso: Selecionar pontuações **[!UICONTROL de]** acesso abre uma caixa de diálogo que fornece um link para as pontuações de [download do tutorial de IA](./download-scores.md) do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
 - **[!UICONTROL Histórico]** de execução da visualização: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
 
 ![mais ações](../images/insights/more-actions.png)
 
-## Resumo da Pontuação {#scoring-summary}
+## Resumo da pontuação {#scoring-summary}
 
-O Resumo da Pontuação exibe o número total de perfis pontuados e os categoriza em compartimentos com propensão alta, média e baixa. Os compartimentos de propensão são determinados com base no intervalo de pontuação, baixa é menor que 24, média é de 25 a 74 e alta é acima de 74. Cada bucket tem uma cor correspondente à legenda.
+O resumo de pontuação exibe o número total de perfis pontuados e os categoriza em compartimentos que contêm alta, média e baixa propensão. Os compartimentos de propensão são determinados com base no intervalo de pontuação, baixa é menor que 24, média é de 25 a 74 e alta é acima de 74. Cada bucket tem uma cor correspondente à legenda.
 
 >[!NOTE]
 >
@@ -96,9 +104,13 @@ O Resumo da Pontuação exibe o número total de perfis pontuados e os categoriz
 
 ![resumo da pontuação](../images/insights/scoring-summary.png)
 
+É possível passar o mouse sobre qualquer cor do anel para obter informações adicionais de visualização, como uma porcentagem e o número total de perfis pertencentes a um bucket.
+
+![](../images/insights/scoring-ring.png)
+
 ## Distribuição das pontuações
 
-O cartão de **[!UICONTROL distribuição de pontuações]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão *Distribuição de pontuações* representam o tipo de pontuação de propensão gerada.
+O cartão de **[!UICONTROL distribuição de pontuações]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão [!UICONTROL Distribuição de pontuações] representam o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer distribuição de pontuação fornece a contagem exata pertencente a essa distribuição.
 
 ![distribuição das pontuações](../images/insights/distribution-of-scores.png)
 
@@ -108,9 +120,21 @@ Para cada grupo de pontuação, é gerado um cartão que mostra os 10 fatores in
 
 ![Fatores influentes](../images/insights/influential-factors.png)
 
+### Derivados de fatores influentes
+
+Passar o mouse sobre qualquer um dos principais fatores influentes desagrega ainda mais os dados. Você recebe uma visão geral sobre por que certos perfis pertencem a um grupo de propensão. Dependendo do fator, você pode receber valores numéricos, categóricos ou booleanos. O exemplo abaixo exibe valores categóricos por região.
+
+![captura de tela de detalhamento](../images/insights/drilldown.png)
+
+Além disso, usando detalhamentos, você pode comparar um fator de distribuição se ele ocorrer em dois ou mais compartimentos de propensão e criar segmentos mais específicos com esses valores. O exemplo a seguir ilustra o primeiro caso de uso:
+
+![](../images/insights/drilldown-compare.png)
+
+Você pode ver que perfis com baixa propensão para conversão têm menos probabilidade de ter feito uma visita recente às páginas da Web adobe.com. O fator &quot;Dias desde a última visita à web&quot; tem apenas 8% de cobertura em comparação com 26% em perfis de propensão média. Usando esses números, você pode comparar a distribuição dentro de cada grupo para o fator. Essas informações podem ser usadas para inferir que a recenticidade na visita da Web não é tão influente no balde de baixa propensão, como no balde de propensão média.
+
 ### Criar um segmento
 
-Clicar no botão **[!UICONTROL Criar segmento]** em qualquer um dos compartimentos para propensão Baixa, Média e Alta redireciona você para o construtor de segmentos.
+Selecionar o botão **[!UICONTROL Criar segmento]** em qualquer um dos compartimentos para propensão baixa, média e alta redireciona você para o construtor de segmentos.
 
 >[!NOTE]
 >

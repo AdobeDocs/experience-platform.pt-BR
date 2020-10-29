@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-* [[!DNL Perfil do cliente em tempo real]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Além disso, este tutorial requer uma conta de armazenamento em nuvem estabelecida. Uma lista de tutoriais para criar diferentes contas de armazenamento na nuvem na interface do usuário pode ser encontrada na visão geral [dos conectores de](../../../../home.md)origem.
 
@@ -54,17 +54,23 @@ Quando a janela pré-visualização for preenchida, você poderá selecionar **[
 
 ### Ingest Parquet ou arquivos JSON
 
-Os formatos de arquivo suportados para uma conta de armazenamento na nuvem também incluem JSON e Parquet. Os arquivos JSON e Parquet devem ser compatíveis com XDM. Para assimilar arquivos JSON ou Parquet, selecione o formato de arquivo apropriado no navegador de diretório e aplique o formato de dados compatível na interface correta. Selecione **[!UICONTROL Avançar]** para continuar.
+As contas de armazenamento em nuvem também suportam arquivos JSON e Parquet. Os arquivos de parâmetro devem ser compatíveis com XDM, enquanto os arquivos JSON não precisam ser compatíveis com XDM. Para assimilar arquivos JSON ou Parquet, selecione o formato de arquivo apropriado no navegador de diretório e aplique o formato de dados compatível na interface correta.
+
+Se o formato de dados estiver no JSON, uma pré-visualização será exibida, mostrando informações sobre os dados no arquivo. Na tela de pré-visualização, você pode selecionar se o JSON é compatível com XDM usando o menu suspenso compatível com **[!UICONTROL o]** XDM.
+
+Selecione **[!UICONTROL Avançar]** para continuar.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->Diferentemente dos tipos de arquivos delimitados, os arquivos formatados JSON e Parquet não estão disponíveis para pré-visualização.
+>Diferentemente dos tipos de arquivos delimitados e JSON, os arquivos formatados Parquet não estão disponíveis para pré-visualização.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Mapear campos de dados para um schema XDM
 
-A etapa **[!UICONTROL Mapeamento]** é exibida, fornecendo uma interface interativa para mapear os dados de origem para um [!DNL Platform] conjunto de dados. Os arquivos de origem formatados em JSON ou Parquet devem ser compatíveis com XDM e não exigem a configuração manual do mapeamento. Os arquivos CSV, inversamente, exigem que você configure explicitamente o mapeamento, mas permitem que você escolha quais campos de dados de origem serão mapeados.
+A etapa **[!UICONTROL Mapeamento]** é exibida, fornecendo uma interface interativa para mapear os dados de origem para um [!DNL Platform] conjunto de dados. Os arquivos de origem formatados no Parquet devem ser compatíveis com XDM e não exigem que você configure manualmente o mapeamento, enquanto os arquivos CSV exigem que você configure explicitamente o mapeamento, mas permitem que você escolha quais campos de dados de origem serão mapeados. Os arquivos JSON, se marcados como reclamação XDM, não exigem configuração manual. No entanto, se não estiver marcado como compatível com XDM, será necessário configurar explicitamente o mapeamento.
 
 Escolha um conjunto de dados para os dados de entrada a serem ingeridos. Você pode usar um conjunto de dados existente ou criar um novo.
 
@@ -94,11 +100,19 @@ A caixa de diálogo **[!UICONTROL Selecionar schema]** é exibida. Selecione o s
 
 Com base em suas necessidades, você pode optar por mapear os campos diretamente ou usar as funções do mapeador para transformar dados de origem para derivar valores calculados ou calculados. Para obter mais informações sobre funções de mapeamento e mapeamento de dados, consulte o tutorial sobre como [mapear dados CSV para campos](../../../../../ingestion/tutorials/map-a-csv-file.md)de schema XDM.
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Para arquivos JSON, além de mapear campos diretamente para outros campos, é possível mapear objetos diretamente para outros objetos e matrizes para outras matrizes.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Observe que não é possível mapear tipos diferentes. Por exemplo, não é possível mapear um objeto para uma matriz ou um campo para um objeto.
+
 >[!TIP]
 >
 >[!DNL Platform] fornece recomendações inteligentes para campos mapeados automaticamente com base no schema ou conjunto de dados do público alvo selecionado. É possível ajustar manualmente as regras de mapeamento para atender aos casos de uso.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Selecione dados **[!UICONTROL de]** Pré-visualização para ver os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
 

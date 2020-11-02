@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Mesclar políticas - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2458'
 ht-degree: 1%
 
 ---
@@ -13,11 +13,17 @@ ht-degree: 1%
 
 # Mesclar ponto final de políticas
 
-A Adobe Experience Platform permite que você reúna dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia mostra as etapas para trabalhar com políticas de mesclagem usando a API. Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
+A Adobe Experience Platform permite que você reúna fragmentos de dados de várias fontes e os combine para ver uma visualização completa de cada um de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usam para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada.
+
+Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são ingeridos na Plataforma, eles são unidos para criar um único perfil para o cliente. Quando os dados de várias fontes entram em conflito (por exemplo, um fragmento lista o cliente como &quot;único&quot; enquanto o outro lista o cliente como &quot;casado&quot;), a política de mesclagem determina quais informações devem ser incluídas no perfil do indivíduo.
+
+Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece etapas para trabalhar com políticas de mesclagem usando a API.
+
+Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o guia [do usuário das políticas de](../ui/merge-policies.md)mesclagem.
 
 ## Introdução
 
-O terminal da API usado neste guia faz parte da [[!DNL Real-time Customer Perfil API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Componentes das políticas de mesclagem {#components-of-merge-policies}
 
@@ -25,7 +31,7 @@ As políticas de mesclagem são privadas para sua Organização IMS, permitindo 
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
+O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
 
 **Objeto de política de mesclagem**
 
@@ -126,7 +132,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
 * **`dataSetPrecedence`** : Atribua prioridade aos fragmentos do perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em vez de dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o `order` atributo é obrigatório, pois lista os conjuntos de dados na ordem de prioridade.
    * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, uma `order` matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será unido. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A `order` matriz lista as IDs dos conjuntos de dados em ordem de prioridade.
 
-**Exemplo de objeto attributeMerge usando`dataSetPrecedence`tipo**
+**Exemplo de objeto attributeMerge usando `dataSetPrecedence` tipo**
 
 ```json
     "attributeMerge": {
@@ -140,7 +146,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
     }
 ```
 
-**Exemplo de objeto attributeMerge usando`timestampOrdered`tipo**
+**Exemplo de objeto attributeMerge usando `timestampOrdered` tipo**
 
 ```json
     "attributeMerge": {
@@ -737,7 +743,7 @@ Esta seção fornece informações complementares relacionadas ao trabalho com p
 
 Ocasionalmente, pode haver casos de uso, como preenchimento retroativo de dados ou garantia da ordem correta dos eventos, se os registros forem ingeridos fora de ordem, quando for necessário fornecer um carimbo de data e hora personalizado e a política de mesclagem respeitar o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema.
 
-Para usar um carimbo de data e hora personalizado, o [[!DNL External Source System Audit Details Mixin]](#mixin-details) deve ser adicionado ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `xdm:lastUpdatedDate` campo. Quando um registro é ingerido com o `xdm:lastUpdatedDate` campo preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se não `xdm:lastUpdatedDate` estiver presente ou não estiver preenchida, a Plataforma continuará a usar o carimbo de data e hora do sistema.
+Para usar um carimbo de data e hora personalizado, o carimbo [[!DNL External Source System Audit Details Mixin]](#mixin-details) deve ser adicionado ao schema do Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o `xdm:lastUpdatedDate` campo. Quando um registro é ingerido com o `xdm:lastUpdatedDate` campo preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se não `xdm:lastUpdatedDate` estiver presente ou não estiver preenchida, a Plataforma continuará a usar o carimbo de data e hora do sistema.
 
 >[!NOTE]
 >

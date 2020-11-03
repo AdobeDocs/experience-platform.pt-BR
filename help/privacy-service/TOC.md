@@ -5,10 +5,10 @@ user-guide-title: Ajuda do Serviço de privacidade da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de privacidade
 user-guide-description: Gerencie solicitações de dados do cliente para cumprir com as normas legais de privacidade, como o GDPR e o CCPA.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 37f07e11abe3c6757edc635153454339118fc45c
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 31%
+source-wordcount: '91'
+ht-degree: 35%
 
 ---
 
@@ -28,14 +28,10 @@ ht-degree: 31%
    * [Visão geral da interface do Privacy Service](ui/overview.md)
    * [Guia do usuário do Privacy Service](ui/user-guide.md)
 * [Inscrever-se em Eventos de privacidade](privacy-events.md)
-* Guias do RGPD {#gdpr}
-   * [Perguntas frequentes sobre o GDPR](gdpr/faq.md)
-   * [Terminologia do GDPR](gdpr/terminology.md)
-* Guias CCPA {#ccpa}
-   * [Perguntas frequentes sobre CCPA](ccpa/faq.md)
-* Guias PDPA (Tailândia) {#pdpa-tha}
-   * [Perguntas frequentes sobre PDPA (Tailândia)](./pdpa-tha/faq.md)
-   * [Terminologia do PDPA (Tailândia)](./pdpa-tha/terminology.md)
+* Guias de regulamentação da privacidade {#regulations}
+   * [Visão geral](regulations/overview.md)
+   * [Perguntas frequentes](regulations/faq.md)
+   * [Terminologia](regulations/terminology.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Notas de versão](release-notes.md)

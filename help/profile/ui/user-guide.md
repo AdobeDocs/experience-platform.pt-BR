@@ -1,28 +1,26 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: Guia do usuário do Perfil do cliente em tempo real
+title: Guia da interface do usuário do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] guia do usuário
+# [!DNL Real-time Customer Profile] Guia da interface do usuário
 
-[!DNL Real-time Customer Profile] cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros.
-
-Este documento serve como um guia para interagir com [!DNL Real-time Customer Profile] dados na interface do usuário do Adobe Experience Platform.
+[!DNL Real-time Customer Profile] cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com [!DNL Real-time Customer Profile] dados na interface do usuário do Adobe Experience Platform (UI).
 
 ## Introdução
 
-Este guia do usuário requer uma compreensão dos vários [!DNL Experience Platform] serviços envolvidos no gerenciamento [!DNL Real-time Customer Profiles]. Antes de ler este guia do usuário, consulte a documentação dos seguintes serviços:
+Este guia de interface exige uma compreensão dos vários [!DNL Experience Platform] serviços envolvidos no gerenciamento [!DNL Real-time Customer Profiles]. Antes de ler este guia ou trabalhar na interface do usuário, consulte a documentação dos seguintes serviços:
 
-* [[!DNL Perfil do cliente em tempo real]](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a ponte de identidades de fontes de dados diferentes à medida que são assimiladas [!DNL Platform].
 * [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
@@ -102,15 +100,15 @@ Você pode visualização informações adicionais relacionadas ao perfil indivi
 
 No menu principais **[!UICONTROL Perfis]** , selecione a guia **[!UICONTROL Mesclar políticas]** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
 
-Para obter mais informações sobre políticas de mesclagem, consulte o guia [do usuário das políticas de](merge-policies.md)mesclagem.
+Para obter mais informações sobre políticas de mesclagem, consulte o guia [da interface do usuário das políticas de](merge-policies.md)mesclagem.
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## Schema união {#union-schema}
 
-No menu principal **[!UICONTROL Perfis]** , selecione a guia Schema **[!UICONTROL de]** União para visualização dos schemas de união dos dados do Perfil. Um schema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos schemas foram habilitados para uso em [!DNL Real-time Customer Profile]. Ao selecionar uma classe da lista &quot;[!UICONTROL Classe]&quot; no lado esquerdo, é possível visualização a estrutura do schema na tela. Por exemplo, selecionar &quot;[!DNL XDM Profile]&quot; exibe o schema de união da [!DNL XDM Individual Profile] classe.
+No menu principal **[!UICONTROL Perfis]** , selecione a guia Schema **[!UICONTROL de]** União para visualização dos schemas de união dos dados ingeridos. Um schema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos schemas foram habilitados para uso em [!DNL Real-time Customer Profile].
 
-Para obter mais informações sobre schemas de união e sua função no Adobe Experience Platform, consulte a seção sobre schemas de união no guia [de composição do](../../xdm/schema/composition.md)schema.
+Para obter mais informações sobre schemas de união, consulte o guia [da interface do schema da](union-schema.md)união.
 
 ![](../images/user-guide/profiles-union-schema.png)
 

@@ -6,7 +6,7 @@ description: Este documento fornece um tutorial para definir uma relação um pa
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -117,7 +117,7 @@ Dentro do [!DNL Schema Registry], os descritores de relacionamento funcionam de 
 >
 >Ao contrário do schema de destino, o schema de origem não pode usar sua identidade primária como campo de referência.
 
-Neste tutorial, o schema de destino &quot;[!DNL Hotels]&quot; contém um `email` campo que serve como a identidade principal do schema e, portanto, também atuará como seu campo de referência. No entanto, o schema de origem &quot;[!DNL Loyalty Members]&quot; não tem um campo dedicado para ser usado como referência e deve receber uma nova combinação que adicione um novo campo ao schema: `favoriteHotel`.
+Neste tutorial, o schema de destino &quot;[!DNL Hotels]&quot; contém um `hotelId` campo que serve como a identidade principal do schema e, portanto, também atuará como seu campo de referência. No entanto, o schema de origem &quot;[!DNL Loyalty Members]&quot; não tem um campo dedicado para ser usado como referência e deve receber uma nova combinação que adicione um novo campo ao schema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 ## Criar um descritor de identidade de referência {#reference-identity}
 
-Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `email` campo em &quot;[!DNL Hotels]&quot;, `email` deve ser fornecido um descritor de identidade de referência.
+Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `hotelId` campo em &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve ser fornecido um descritor de identidade de referência.
 
 Crie um descritor de referência para o schema de destino, fazendo uma solicitação de POST para o `/tenant/descriptors` ponto final.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Solicitação**
 
-A solicitação a seguir cria um descritor de referência para o `email` campo no schema de destino &quot;[!DNL Hotels]&quot;.
+A solicitação a seguir cria um descritor de referência para o `hotelId` campo no schema de destino &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ Uma resposta bem-sucedida retorna os detalhes do descritor de referência recém
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 

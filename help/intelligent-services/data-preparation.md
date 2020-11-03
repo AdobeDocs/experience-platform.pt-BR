@@ -5,10 +5,10 @@ title: Preparar dados para uso no Intelligent Services
 topic: Intelligent Services
 description: 'Para que os Serviços inteligentes detectem insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes aproveitam os schemas do Experience Data Model (XDM) para conseguir isso. Especificamente, todos os conjuntos de dados usados nos Serviços inteligentes] devem estar em conformidade com o schema XDM da Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 0%
+source-wordcount: '1851'
+ht-degree: 1%
 
 ---
 
@@ -278,11 +278,7 @@ Após a criação do conjunto de dados, é possível encontrá-lo na interface d
 
 #### Adicionar campos de identidade ao conjunto de dados
 
->[!NOTE]
->
->Versões futuras do [!DNL Intelligent Services] integrarão o Serviço [de identidade da](../identity-service/home.md) Adobe Experience Platform em seus recursos de identificação do cliente. Assim, as etapas descritas abaixo estão sujeitas a alterações.
-
-Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, você terá a opção de definir um campo de schema como um campo de identidade. Para definir um campo de schema como um campo de identidade, visualização a seção sobre como configurar campos de identidade no tutorial [da](../xdm/tutorials/create-schema-ui.md#identity-field) interface para criar um schema usando o Editor de Schemas ou, alternativamente, o tutorial [da](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
+Se você estiver trazendo dados de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]ou outra fonte externa, você terá a opção de definir um campo de schema como um campo de identidade. Para definir um campo de schema como um campo de identidade, visualização a seção sobre como definir campos de identidade no tutorial [da](../xdm/tutorials/create-schema-ui.md#identity-field) interface do usuário ou tutorial [da](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) API para criar um schema.
 
 Se você estiver assimilando dados de um arquivo CSV local, poderá pular para a próxima seção sobre [mapeamento e assimilação de dados](#ingest).
 
@@ -301,4 +297,4 @@ Este documento forneceu orientações gerais sobre como preparar seus dados para
 Depois de preencher com êxito um conjunto de dados com os dados de experiência do cliente, você pode usar [!DNL Intelligent Services] para gerar insights. Consulte os seguintes documentos para começar:
 
 * [Visão geral do Attribution AI](./attribution-ai/overview.md)
-* [Visão geral da IA do cliente](./customer-ai/overview.md)
+* [Visão geral do Customer AI](./customer-ai/overview.md)

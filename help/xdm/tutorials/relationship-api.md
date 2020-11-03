@@ -6,7 +6,7 @@ description: Este documento fornece um tutorial para definir uma relação um pa
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -339,7 +339,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 ## Criar um descritor de identidade de referência {#reference-identity}
 
-Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `hotelId` campo em &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve ser fornecido um descritor de identidade de referência.
+Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `hotelId` campo em &quot;[!DNL Hotels]&quot;, `hotelId` deve ser fornecido um descritor de identidade de referência.
 
 Crie um descritor de referência para o schema de destino, fazendo uma solicitação de POST para o `/tenant/descriptors` ponto final.
 

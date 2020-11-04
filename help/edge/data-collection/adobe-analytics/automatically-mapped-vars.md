@@ -5,9 +5,9 @@ description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analy
 seo-description: Saiba quais variáveis são mapeadas automaticamente no Adobe Analytics com o Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,8 @@ Abaixo está uma lista de variáveis nas quais o Adobe Experience Platform [!DNL
 | `placeContext.geo.postalCode` | `zip` | Mapeamento ZIP do parâmetro de query do AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Mapeamento STATE do parâmetro do query AppMeasurement. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parâmetro de query do AppMeasurement Produtos Eventos de merchandise / mapeamento de Evars. |
-| `productlistitems.[N].lineitemid` | `products` | Parâmetro de query do AppMeasurement Mapeamento de Categoria de produtos. |
 | `productlistitems.[N].name` | `products` | Mapeamento do nome dos produtos do parâmetro do query AppMeasurement. |
-| `productlistitems.[N].pricetotal` | `products` | Mapeamento de preços de produtos do parâmetro de query do AppMeasurement. |
+| `productlistitems.[N].priceTotal` | `products` | Mapeamento de preços de produtos do parâmetro de query do AppMeasurement. |
 | `productlistitems.[N].quantity` | `products` | Parâmetro de query do AppMeasurement - Mapeamento de quantidade de produtos. |
 | `web.webInteraction.URL` | `pev1` | Mapeamento do parâmetro de query do AppMeasurement PAGE_EVENTO_VAR1. |
 | `web.webInteraction.name` | `pev2` | Mapeamento do parâmetro de query do AppMeasurement PAGE_EVENTO_VAR2. |

@@ -1,19 +1,29 @@
 ---
-title: Notas de versão do Adobe Experience Platform Web SDK
-seo-title: Notas de versão do Adobe Experience Platform Web SDK
-description: Notas de versão do Adobe Experience Platform Web SDK.
-seo-description: Notas de versão do Adobe Experience Platform Web SDK.
+title: Notas de versão do SDK da Web da Adobe Experience Platform
+seo-title: Notas de versão do SDK da Web da Adobe Experience Platform
+description: Notas de versão do SDK da Web da Adobe Experience Platform.
+seo-description: Notas de versão do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
 
 # Notas de versão
+
+## Versão 2.3.0
+
+* Adição de suporte único para permitir políticas de segurança de conteúdo mais rigorosas.
+* Adicionado suporte à personalização para aplicativos de página única.
+* Compatibilidade aprimorada com outros códigos JavaScript na página que podem estar substituindo `window.console` as APIs.
+* Correção de erros: `sendBeacon` não estava sendo usado quando `documentUnloading` estava definido como `true` ou quando cliques em links eram acompanhados automaticamente.
+* Correção de erros: Um link não seria rastreado automaticamente se o elemento âncora contivesse conteúdo HTML.
+* Correção de erros: Determinados erros de navegador contendo uma propriedade somente leitura não foram tratados adequadamente, resultando em um erro diferente sendo exposto ao cliente. `message`
+* Correção de erros: A execução do SDK em um iframe resultaria em um erro se a página HTML do iframe fosse de um subdomínio diferente da página HTML da janela pai.
 
 ## Versão 2.2.0
 

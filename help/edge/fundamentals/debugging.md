@@ -5,7 +5,7 @@ description: Saiba como alternar a depuração do SDK da Web do Experience Platf
 seo-description: Saiba como alternar a depuração do SDK da Web do Experience Platform
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -74,8 +74,8 @@ Quando a depuração é definida pelo parâmetro de string de query ou comando, 
 Geralmente, é útil acessar alguns detalhes por trás da biblioteca que você carregou em seu site. Para fazer isso, execute o `getLibraryInfo` comando da seguinte maneira:
 
 ```js
-alloy("getLibraryInfo").then(function(libraryInfo) {
-  console.log(libraryInfo.version);
+alloy("getLibraryInfo").then(function(result) {
+  console.log(result.libraryInfo.version);
 });
 ```
 

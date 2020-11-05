@@ -5,9 +5,9 @@ description: O Adobe Experience Platform Web SDK pode fornecer e renderizar ofer
 seo-description: O Adobe Experience Platform Web SDK pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. Você pode criar suas ofertas e outros objetos relacionados usando a interface do usuário ou a API do Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '839'
 ht-degree: 9%
 
 ---
@@ -56,9 +56,9 @@ A Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar ofertas pe
 
    ![](assets/decision-scope-copy.png)
 
-**Configuração do Edge:** Para obter mais informações, leia a documentação de configuração [da](../../fundamentals/edge-configuration.md) borda.
+* **Configuração do Edge:** Para obter mais informações, leia a documentação de configuração [da](../../fundamentals/edge-configuration.md) borda.
 
-**Identidade**: Para obter mais informações, leia esta documentação descrevendo como o SDK da Web da [plataforma aproveita o Serviço](../../identity/overview.md)de identidade.
+* **Identidade**: Para obter mais informações, leia esta documentação descrevendo como o SDK da Web da [plataforma aproveita o Serviço](../../identity/overview.md)de identidade.
 
 ## Ativação do Offer Decisioning
 
@@ -66,7 +66,7 @@ Para habilitar o Offer Decisioning, é necessário executar as seguintes etapas:
 
 1. Habilitada a Adobe Experience Platform na configuração [da](../../fundamentals/edge-configuration.md) borda e marque a caixa &quot;Offer Decisioning&quot;
    ![oferta-decisão-borda-configuração](./assets/offer-decisioning-edge-config.png)
-2. Siga as instruções para [instalar o SDK](../../fundamentals/installing-the-sdk.md) (o SDK pode ser instalado independentemente ou por meio do [Adobe Experience Platform Launch](http://launch.adobe.com/br). Este é um guia de start [rápido para o Launch](https://docs.adobe.com/content/help/pt-BR/launch/using/intro/get-started/quick-start.html)).
+2. Siga as instruções para [instalar o SDK](../../fundamentals/installing-the-sdk.md) (o SDK pode ser instalado independentemente ou por meio do [Adobe Experience Platform Launch](http://launch.adobe.com/br). Este é um guia de start [rápido para o lançamento](https://docs.adobe.com/content/help/pt-BR/launch/using/intro/get-started/quick-start.html)da plataforma).
 3. [Configure o SDK](../../fundamentals/configuring-the-sdk.md) para Offer Decisioning. Etapas adicionais específicas da Offer Decisioning são fornecidas abaixo.
    * SDK instalado independente
       1. Configure a ação &quot;sendEvent&quot; com seu `decisionScopes`
@@ -80,19 +80,19 @@ Para habilitar o Offer Decisioning, é necessário executar as seguintes etapas:
           ]
       })
       ```
-   * Iniciar SDK instalado
-      1. [Criar uma propriedade Launch](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/companies-and-properties.html)
-      2. [Adicionar o código incorporado do Launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Instale e configure a extensão AEP Web SDK com a Configuração de borda que você acabou de criar selecionando a configuração no menu suspenso &quot;Configuração de borda&quot;. Documentação útil sobre [extensões](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+   * SDK instalado do Launch da plataforma
+      1. [Criar uma propriedade de lançamento de plataforma](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/companies-and-properties.html)
+      2. [Adicione o código incorporado de inicialização da plataforma](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Instale e configure a extensão do Adobe Experience Platform Web SDK com a Configuração de borda que você acabou de criar selecionando a configuração no menu suspenso &quot;Configuração de borda&quot;. Documentação útil sobre [extensões](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Crie os elementos [de dados](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/manage-resources/data-elements.html)necessários. No mínimo, você precisará criar um Mapa de identidade do SDK da Web AEP e um elemento de dados do Objeto XDM do SDK da Web AEP. (espero que haja mais documentação sobre os elementos de dados do SDK da Web AEP que possamos vincular aqui)
+      4. Crie os elementos [de dados](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/manage-resources/data-elements.html)necessários. No mínimo, você precisará criar um Mapa de identidade do SDK da Web da plataforma e um elemento de dados do Objeto XDM do SDK da Web da plataforma.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. Crie suas [regras](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/manage-resources/rules.html).
-         * Adicione uma ação Enviar Evento do AEP Web SDK e adicione a ação relevante `decisionScopes` à configuração dessa ação
+         * Adicione uma ação Enviar Evento do SDK da Web da plataforma e adicione a ação relevante `decisionScopes` à configuração dessa ação
             ![send-evento-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
       6. [Crie e publique uma biblioteca](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/publish/libraries.html) contendo todas as Regras, Elementos de dados e Extensões relevantes configuradas por você
 

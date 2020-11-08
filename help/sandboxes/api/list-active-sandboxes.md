@@ -5,10 +5,10 @@ title: Lista de caixas de proteção ativas para o usuário atual
 topic: developer guide
 description: Você pode lista as caixas de proteção que estão ativas para o usuário atual, fazendo uma solicitação de GET para o terminal raiz.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 1%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
@@ -24,14 +24,18 @@ Você pode lista as caixas de proteção que estão ativas para o usuário atual
 **Formato da API**
 
 ```http
-GET /
+GET /{QUERY_PARAMS}
 ```
+
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
 
 **Solicitação**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/ \
+  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -84,7 +88,17 @@ Uma resposta bem-sucedida retorna uma lista de caixas de proteção ativas para 
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 3,
+        "count": 1
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/?limit={limit}&offset={offset}",
+            "templated": true
+        }
+    }
 }
 ```
 
@@ -96,3 +110,16 @@ Uma resposta bem-sucedida retorna uma lista de caixas de proteção ativas para 
 | `type` | O tipo de caixa de proteção, &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
 | `isDefault` | Uma propriedade booleana que indica se essa caixa de proteção é a caixa de proteção padrão da organização. Normalmente, essa é a caixa de proteção de produção. |
 | `eTag` | Um identificador para uma versão específica da caixa de proteção. Usado para controle de versão e eficiência de cache, esse valor é atualizado sempre que uma alteração é feita na caixa de proteção. |
+
+## Uso de parâmetros de query {#query}
+
+A [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API suporta o uso de parâmetros de query para a página e filtrar resultados ao listar caixas de proteção.
+
+>[!NOTE]
+>
+>Os parâmetros `limit` e `offset` query devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão será 50 e o deslocamento será 0.
+
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| `limit` | O número máximo de registros a serem retornados na resposta. |
+| `offset` | O número de entidades do primeiro registro para o start (deslocamento) da lista de resposta. |

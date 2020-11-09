@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Práticas recomendadas para modelagem de dados no Adobe Experience Platform
 topic: overview
 description: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 1%
 
 ---
@@ -220,7 +220,7 @@ Este documento aborda as diretrizes gerais e as práticas recomendadas para o de
 
 * Use uma abordagem de cima para baixo classificando suas tabelas de dados em categorias de perfil, pesquisa e evento antes de construir seus schemas.
 * Muitas vezes, há várias abordagens e opções quando se trata de projetar schemas para diferentes fins.
-* Seu modelo de dados deve suportar casos de uso de segmentação.
+* Seu modelo de dados deve suportar casos de uso de sua empresa, como segmentação ou análise de viagem do cliente.
 * Torne seus schemas o mais simples possível e adicione apenas novos campos quando absolutamente necessário.
 
 Quando estiver pronto, consulte o tutorial sobre como [criar um schema na interface do usuário](../tutorials/create-schema-ui.md) para obter instruções passo a passo sobre como criar um schema, atribuir a classe apropriada para a entidade e adicionar campos para mapear seus dados.

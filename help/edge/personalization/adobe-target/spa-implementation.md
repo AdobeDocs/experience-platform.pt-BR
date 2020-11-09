@@ -5,9 +5,9 @@ description: Saiba como renderizar conteúdo personalizado com o SDK da Web Expe
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 485c2e3b0ad7b38a8e4a482cac49c123a744c47b
+source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1671'
 ht-degree: 14%
 
 ---
@@ -223,7 +223,7 @@ Quando você terminar de definir suas Visualizações XDM e implementar`sendEven
 
 >[!NOTE]
 >
->Para usar o Visual Experience Composer para o seu SPA, você deve instalar a extensão [](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)Adobe Target VEC Helper Chrome.
+>Para usar o VEC para o seu SPA, você deve instalar e ativar o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ### Painel de modificações
 

@@ -5,9 +5,9 @@ title: Visão geral do Adobe Experience Platform
 topic: getting started
 description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para a construção e gerenciamento de soluções completas que impulsionam a experiência do cliente. A Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '464'
 ht-degree: 21%
 
 ---
@@ -23,7 +23,7 @@ A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do me
 
 Criado com APIs abertas, [!DNL Experience Platform] expõe a funcionalidade completa do sistema aos desenvolvedores, suportando a fácil integração de soluções corporativas usando ferramentas conhecidas. [!DNL Experience Platform] também apoia os parceiros na construção e integração de seus próprios produtos e tecnologias, conforme necessário. Este poder e flexibilidade tornam-se [!DNL Experience Platform] únicos no mercado. Ela oferece aos parceiros, clientes e a uma comunidade de desenvolvedores uma base para a criação de inovações que impulsionam a Experience Business: excedendo as expectativas do cliente, fornecendo uma experiência continuamente aprimorada e totalmente personalizada, obtida de uma visualização de 360 graus do cliente e de suas preferências individuais.
 
-## [!DNL Experience Platform] documentação
+## [!DNL Experience Platform]documentação
 
 [!DNL Experience Platform] a documentação é fornecida em vários formatos para uma variedade de recursos e serviços. Para saber mais sobre os tipos de documentação disponíveis, visite a visão geral [da documentação da](documentation/overview.md)plataforma. Para começar a aprender mais sobre um [!DNL Platform] serviço específico imediatamente, selecione um guia na navegação à esquerda.
 
@@ -33,7 +33,7 @@ A Adobe criou serviços de aplicativos sobre o Experience Platform. Você pode e
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/pt-BR/analytics-platform/using/cja-landing.html)
 * [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/pt-BR/journeys/using/journey-orchestration-home.html)
-* [[!DNL Real-time Customer Data Platform] (CDP em tempo real)](../rtcdp/overview.md)
+* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 
 ## [!DNL Experience Platform] tutoriais
 

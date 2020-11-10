@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicativos Privacy Service e Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4cd7b9d3ca542c2fba83d066197b92775c053729
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '555'
 ht-degree: 22%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 22%
 
 # [!DNL Privacy Service] e [!DNL Experience Cloud] aplicativos
 
-O Adobe Experience Platform [!DNL Privacy Service] foi desenvolvido para suportar solicitações de privacidade para vários aplicativos Adobe Experience Cloud. Cada aplicativo oferece suporte a diferentes valores de produto e IDs para identificar os indivíduos de dados.
+A Adobe Experience Platform [!DNL Privacy Service] foi criada para suportar solicitações de privacidade para vários aplicativos Adobe Experience Cloud. Cada aplicativo oferece suporte a diferentes valores de produto e IDs para identificar os indivíduos de dados.
 
 Este documento serve como uma referência para a documentação do [!DNL Experience Cloud] aplicativo que descreve como configurar esse aplicativo para operações relacionadas à privacidade. Isso inclui como formatar e rotular seus dados. São abrangidas duas categorias de aplicações:
 
@@ -29,7 +29,7 @@ Veja a seguir uma lista de [!DNL Experience Cloud] aplicativos integrados com [!
 
 | aplicação | Acesso/exclusão | Recusa de venda | Documentação e considerações |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] aproveita os recursos globais de opção de não participação existentes fornecidos pelo Centro de privacidade do Adobe. Consulte o guia sobre como [fazer solicitações](https://docs.adobe.com/content/help/pt-BR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidade de dados para obter mais informações.</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão para RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Documentação de acesso/exclusão para CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentação de não venda para CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] lida com solicitações de recusa usando variáveis de relatórios de [privacidade](https://docs.adobe.com/content/help/pt-BR/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.adobe.com/content/help/pt-BR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentação de não participação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Documentação de acesso/exclusão](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentação de não participação](../segmentation/honoring-opt-outs.md)</li></ul> |

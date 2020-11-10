@@ -5,9 +5,9 @@ title: Guia do desenvolvedor de ingestão em lote
 topic: developer guide
 description: Este documento fornece uma visão geral abrangente do uso de APIs de ingestão em lote.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2675'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ As seções a seguir fornecem informações adicionais que você precisará conh
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 - [Ingestão](./overview.md)em lote: Permite que você ingira dados no Adobe Experience Platform como arquivos em lote.
-- [[!DNL Experience Data Model] (XDM) Sistema](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Lendo chamadas de exemplo da API

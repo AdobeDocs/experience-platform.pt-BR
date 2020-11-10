@@ -5,9 +5,9 @@ title: Visão geral dos rótulos de uso de dados
 topic: labels
 description: O Adobe Experience Platform Data Governance permite que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Este documento fornece uma visão geral das etiquetas de uso de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Além das etiquetas fornecidas pelo Adobe, você também pode definir suas próp
 
 ## Herança de etiqueta para segmentos de audiência
 
-Todos os segmentos de audiência criados pelo Serviço [de segmentação da](../../segmentation/home.md) Adobe Experience Platform herdam os rótulos de uso de seus conjuntos de dados correspondentes. Isso permite que os aplicativos criados sobre [!DNL Experience Platform] (como [!DNL Real-time Customer Data Platform]) forneçam a aplicação automática da política de uso de dados ao ativar segmentos para destinos.
+Todos os segmentos de audiência criados pelo Serviço [de segmentação da](../../segmentation/home.md) Adobe Experience Platform herdam os rótulos de uso de seus conjuntos de dados correspondentes. Isso permite que aplicativos criados sobre o Experience Platform (como [!DNL Real-time Customer Data Platform]) forneçam a aplicação automática da política de uso de dados ao ativar segmentos para destinos.
 
 Além de herdar rótulos de nível de conjunto de dados, os segmentos herdam todos os rótulos de nível de campo de seus conjuntos de dados associados por padrão. Dependendo de como seu aplicativo [!DNL Platform]baseado consome segmentos, você pode especificar potencialmente quais campos são usados, impedindo assim o segmento de herdar rótulos de campos excluídos.
 

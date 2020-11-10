@@ -5,7 +5,7 @@ title: Funções SQL Spark
 topic: spark sql functions
 description: Esta documentação contém informações sobre os auxiliares SQL Spark que fornecem funções SQL Spark incorporadas para estender a funcionalidade SQL.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: d0fa57effb45fad6934345323366ef45383bed01
 workflow-type: tm+mt
 source-wordcount: '5009'
 ht-degree: 5%
@@ -2813,7 +2813,7 @@ As `start` expressões e `stop` as  devem ser resolvidas no mesmo tipo. Se `star
 Argumentos:
 - `start`: Uma expressão. O start do intervalo.
 - `stop`: Uma expressão. O fim do intervalo (inclusive).
-- `step`: Uma expressão opcional. A etapa do intervalo. Por padrão, `step` é 1 se `start` for menor que ou igual a `stop`, caso contrário, é -1. Para as sequências temporais é de 1 dia e -1 dia, respectivamente. Se `start` for maior que `stop`, o `step` deve ser negativo e vice-versa.
+- `step`: Uma expressão opcional. A etapa do intervalo. Por padrão `step` é &#39;1&#39; se `start` for menor que ou igual a `stop`, caso contrário, é &#39;-1&#39;. Para as sequências temporais, são &quot;1&quot; dia e &quot;1&quot; dia, respectivamente. Se `start` for maior que `stop`, o `step` deve ser negativo e vice-versa.
 
 Exemplos:
 
@@ -2822,7 +2822,7 @@ Exemplos:
  [1,2,3,4,5]
 > SELECT sequence(5, 1);
  [5,4,3,2,1]
-> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval 1 month);
+> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval '1' month);
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 

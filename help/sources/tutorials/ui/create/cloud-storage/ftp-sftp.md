@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de origem FTP ou SFTP usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '696'
 ht-degree: 1%
 
 ---
@@ -26,10 +26,10 @@ Os conectores de origem na Adobe Experience Platform fornecem a capacidade de as
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-* [[!DNL Perfil do cliente em tempo real]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
 Se você já tiver uma conexão FTP ou SFTP válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 

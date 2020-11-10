@@ -5,9 +5,9 @@ seo-title: Privacidade no Perfil de dados do cliente em tempo real
 description: O Perfil de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
 seo-description: O Perfil de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
 translation-type: tm+mt
-source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Consulte o documento sobre como [atender às solicitações](../../segmentation/
 
 ## Suporte a IAB TCF 2.0
 
-[!DNL Real-time CDP] faz parte da lista [do](https://iabeurope.eu/vendor-list-tcf-v2-0/) fornecedor registrado para o [!DNL Transparency & Consent Framework] (TCF), conforme descrito pelo [!DNL Interactive Advertising Bureau] (IAB). Em conformidade com os requisitos do TCF 2.0, [!DNL Real-time CDP] permite coletar dados detalhados de consentimento do cliente e integrá-los aos perfis armazenados do cliente. Esses dados de consentimento podem ser tidos em conta para determinar se determinados perfis estão incluídos em segmentos de audiência exportados, dependendo de seu caso de uso.
+[!DNL Real-time CDP] faz parte da lista [do](https://iabeurope.eu/vendor-list-tcf-v2-0/) fornecedor registrado para o [!DNL Transparency & Consent Framework (TCF)], conforme descrito pela [!DNL Interactive Advertising Bureau] (IAB). Em conformidade com os requisitos do TCF 2.0, [!DNL Real-time CDP] permite coletar dados detalhados de consentimento do cliente e integrá-los aos perfis armazenados do cliente. Esses dados de consentimento podem ser tidos em conta para determinar se determinados perfis estão incluídos em segmentos de audiência exportados, dependendo de seu caso de uso.
 
 Consulte a visão geral sobre o suporte ao [IAB TCF 2.0 em [!DNL Real-time CDP]](./iab/overview.md) para obter mais informações.
 

@@ -5,9 +5,9 @@ title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ As fontes em [!DNL Experience Platform] são agrupadas nas seguintes categorias:
 
 [!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de publicidade de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [Conector [!DNL Google AdWords]](connectors/advertising/ads.md)
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) conector
 
 ### Armazenamento em nuvem
 
@@ -91,6 +91,12 @@ Os sistemas CRM fornecem dados que podem ajudar a construir relações com os cl
 - [[!DNL Oracle] conector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] conector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] conector](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de comércio eletrônico de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Automação de marketing
 

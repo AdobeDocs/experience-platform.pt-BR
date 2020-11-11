@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Mesclar políticas - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2494'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,13 @@ O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profil
 
 ## Componentes das políticas de mesclagem {#components-of-merge-policies}
 
-As políticas de mesclagem são privadas para sua Organização IMS, permitindo que você crie políticas diferentes para unir schemas da maneira específica que você precisa. Qualquer API que acesse [!DNL Profile] dados requer uma política de mesclagem, embora um padrão seja usado se não for fornecido explicitamente. [!DNL Platform] fornece uma política de mesclagem padrão ou você pode criar uma política de mesclagem para um schema específico e marcá-la como padrão para sua organização. Cada organização pode potencialmente ter várias políticas de mesclagem por schema, no entanto, cada schema pode ter apenas uma política de mesclagem padrão. Qualquer política de mesclagem definida como padrão será usada nos casos em que o nome do schema for fornecido e uma política de mesclagem for necessária, mas não fornecida. Quando você define uma política de mesclagem como padrão, qualquer política de mesclagem existente definida anteriormente como padrão será automaticamente atualizada para não ser mais usada como padrão.
+As políticas de mesclagem são privadas para sua Organização IMS, permitindo que você crie políticas diferentes para mesclar schemas das maneiras específicas de que precisa. Qualquer API que acesse [!DNL Profile] dados requer uma política de mesclagem, embora um padrão seja usado se não for fornecido explicitamente. [!DNL Platform] fornece às organizações uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para uma classe de schema do Modelo de Dados de Experiência (XDM) específica e marcá-la como padrão para sua organização.
+
+Embora cada organização possa potencialmente ter várias políticas de mesclagem por classe de schema, cada classe pode ter apenas uma política de mesclagem padrão. Qualquer política de mesclagem definida como padrão será usada nos casos em que o nome da classe do schema for fornecido e uma política de mesclagem for necessária, mas não fornecida.
+
+>[!NOTE]
+>
+>Quando você define uma nova política de mesclagem como padrão, qualquer política de mesclagem existente definida anteriormente como padrão será automaticamente atualizada para não ser mais usada como padrão.
 
 ### Objeto de política de mesclagem completa
 
@@ -41,7 +47,7 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ O objeto de política de mesclagem completa representa um conjunto de preferênc
 | `imsOrgId` | ID da organização à qual esta política de mesclagem pertence |
 | `identityGraph` | [Objeto de gráfico](#identity-graph) de identidade que indica o gráfico de identidade a partir do qual as identidades relacionadas serão obtidas. Os fragmentos de perfil encontrados para todas as identidades relacionadas serão mesclados. |
 | `attributeMerge` | [Objeto de mesclagem](#attribute-merge) de atributo que indica a maneira pela qual a política de mesclagem priorizará os atributos do perfil em caso de conflitos de dados. |
-| `schema` | O objeto [schema](#schema) no qual a política de mesclagem pode ser usada. |
+| `schema.name` | Parte do [`schema`](#schema) objeto, o `name` campo contém a classe de schema XDM à qual a política de mesclagem está relacionada. Para obter mais informações sobre schemas e classes, leia a documentação [do](../../xdm/home.md)XDM. |
 | `default` | Valor booliano que indica se essa política de mesclagem é o padrão para o schema especificado. |
 | `version` | [!DNL Platform] versão mantida da política de mesclagem. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
 | `updateEpoch` | Data da última atualização da política de mesclagem. |
@@ -132,7 +138,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
 * **`dataSetPrecedence`** : Atribua prioridade aos fragmentos do perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em vez de dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o `order` atributo é obrigatório, pois lista os conjuntos de dados na ordem de prioridade.
    * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, uma `order` matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será unido. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados em um perfil. A `order` matriz lista as IDs dos conjuntos de dados em ordem de prioridade.
 
-**Exemplo de objeto attributeMerge usando `dataSetPrecedence` tipo**
+#### Exemplo `attributeMerge` de objeto usando `dataSetPrecedence` tipo
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
     }
 ```
 
-**Exemplo de objeto attributeMerge usando `timestampOrdered` tipo**
+#### Exemplo `attributeMerge` de objeto usando `timestampOrdered` tipo
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Quando `{ATTRIBUTE_MERGE_TYPE}` for uma das seguintes opções:
 
 ### Esquema {#schema}
 
-O objeto schema especifica o schema do Modelo de Dados de Experiência (XDM) para o qual essa política de mesclagem é criada.
+O objeto schema especifica a classe de schema do Modelo de Dados de Experiência (XDM) para a qual essa política de mesclagem é criada.
 
 **`schema`objeto**
 
@@ -731,7 +737,7 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua Organização IMS, pode usá-las para criar segmentos de audiência a partir de seus [!DNL Real-time Customer Profile] dados. Consulte a documentação [do Serviço de segmentação da](../../segmentation/home.md) Adobe Experience Platform para começar a definir e trabalhar com segmentos.
+Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, pode usá-las para ajustar a visualização dos perfis do cliente na Plataforma e criar segmentos de audiência a partir dos seus [!DNL Real-time Customer Profile] dados. Consulte a documentação [do Serviço de segmentação da](../../segmentation/home.md) Adobe Experience Platform para começar a definir e trabalhar com segmentos.
 
 ## Apêndice
 

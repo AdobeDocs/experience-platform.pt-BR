@@ -4,9 +4,9 @@ title: Guia da interface do usuário do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Semelhante à métrica de contagem [de](#profile-count) perfis, quando a ingest�
 
 ### Política de mesclagem
 
-O seletor de política **[!UICONTROL de]** mesclagem seleciona automaticamente a política de mesclagem padrão para sua organização. Se você não quiser usar essa política de mesclagem, poderá selecionar a política `X` ao lado da política de mesclagem padrão para abrir a caixa de diálogo **[!UICONTROL Selecionar política]** de mesclagem, onde poderá escolher outra política de mesclagem. Para saber mais sobre as políticas de mesclagem e sua função na Plataforma, consulte o guia [do usuário das políticas de](merge-policies.md)mesclagem.
+O seletor de política **[!UICONTROL de]** mesclagem seleciona automaticamente a política de mesclagem padrão para sua organização. Se você não quiser usar essa política de mesclagem, poderá selecionar a política `X` ao lado da política de mesclagem padrão para abrir a caixa de diálogo **[!UICONTROL Selecionar política]** de mesclagem, onde poderá escolher outra política de mesclagem. Para saber mais sobre as políticas de mesclagem e sua função na Plataforma, consulte o guia [da interface do usuário das políticas de](merge-policies.md)mesclagem.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ Você pode visualização informações adicionais relacionadas ao perfil indivi
 
 ## Mesclar políticas
 
-No menu principais **[!UICONTROL Perfis]** , selecione a guia **[!UICONTROL Mesclar políticas]** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e o schema ao qual ela se aplica.
+No menu principais **[!UICONTROL Perfis]** , selecione a guia **[!UICONTROL Mesclar políticas]** para visualização de uma lista de políticas de mesclagem pertencentes à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão ou não, e a classe de schema à qual ela se aplica.
 
 Para obter mais informações sobre políticas de mesclagem, consulte o guia [da interface do usuário das políticas de](merge-policies.md)mesclagem.
 

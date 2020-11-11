@@ -3,12 +3,12 @@ keywords: activate destination;activate destinations;activate data
 title: Ativar perfis e segmentos em um destino
 type: Tutorial
 seo-title: Ativar perfis e segmentos em um destino
-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real do Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
-seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real do Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1583'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Ativar perfis e segmentos em um destino
 
-Ative os dados que você tem na Plataforma de dados do cliente em tempo real do Adobe mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -24,74 +24,73 @@ Para ativar os dados para destinos, você deve ter [conectado com êxito um dest
 
 ## Ativar dados {#activate-data}
 
-As etapas no fluxo de trabalho de ativação variam ligeiramente entre os tipos de destino. O fluxo de trabalho completo para todos os tipos de destino está descrito abaixo.
+As etapas no fluxo de trabalho da ativação variam ligeiramente entre os tipos de destino. O fluxo de trabalho completo para todos os tipos de destino está descrito abaixo.
 
 ### Selecione para qual destino os dados serão ativados {#select-destination}
 
 Aplica-se a: Todos os destinos
 
-1. Na interface de usuário CDP em tempo real do Adobe, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]**e selecione o destino onde deseja ativar seus segmentos.
-   ![navegar até o destino](assets/oracle-eloqua-connect.png)
-2. Clique no nome do destino. Isso leva você ao fluxo de trabalho da ativação.
-   ![ativar-fluxo](assets/activate-flow.png)Observe que se já existir um fluxo de trabalho de ativação para um destino, você poderá ver os segmentos que estão sendo ativados no momento para o destino. Selecione **[!UICONTROL Editar ativação]** no painel direito e siga as etapas abaixo para modificar os detalhes da ativação.
-3. Selecione **[!UICONTROL Ativar]**.
+Na interface de usuário CDP em tempo real, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]**e selecione o destino onde deseja ativar seus segmentos.
+![navegar até o destino](assets/oracle-eloqua-connect.png)
 
-<br> 
+Selecione o nome do destino para navegar até o fluxo de trabalho da ativação.
 
-### **[!UICONTROL Etapa Selecionar segmentos]** {#select-segments}
+![ativar fluxo](assets/activate-flow.png)
+
+Observe que se já existir um fluxo de trabalho de ativação para um destino, você poderá ver os segmentos que estão sendo ativados no momento para o destino. Selecione **[!UICONTROL Editar ativação]** no painel direito e siga as etapas abaixo para modificar os detalhes da ativação.
+
+Depois de selecionar um destino, selecione **[!UICONTROL Ativar]**.
+
+### [!UICONTROL Etapa Selecionar segmentos] {#select-segments}
 
 Aplica-se a: Todos os destinos
 
-![Selecionar etapa de segmentos](/help/rtcdp/destinations/assets/select-segments-icon.png)
+![Selecionar etapa de segmentos](./assets/select-segments-icon.png)
 
-
-Na página **[!UICONTROL Ativar fluxo de trabalho de destino]** , na página **[!UICONTROL Selecionar segmentos]** , selecione um ou mais segmentos para ativar no destino. Pressione **[!UICONTROL Avançar]** para prosseguir para a próxima etapa.
+Na página **[!UICONTROL Ativar fluxo de trabalho de destino]** , na página **[!UICONTROL Selecionar segmentos]** , selecione um ou mais segmentos para ativar no destino. Selecione **[!UICONTROL Avançar]** para prosseguir para a próxima etapa.
 ![segmentos para destino](assets/email-select-segments.png)
 
-<br> 
-
-### **[!UICONTROL Etapa de mapeamento]** de identidade {#identity-mapping}
+### [!UICONTROL Etapa de mapeamento] de identidade {#identity-mapping}
 
 Aplica-se a: destinos sociais e destino publicitário da Correspondência de clientes do Google
 
-![Etapa de mapeamento de identidade](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
+![Etapa de mapeamento de identidade](./assets/identity-mapping-icon.png)
 
-Para destinos ** sociais, na etapa de mapeamento **** Identidade, você pode selecionar atributos de origem para mapear como identidades de público alvo no destino. Essa etapa é opcional ou obrigatória, dependendo da identidade primária usada no schema. <br> 
+Para destinos sociais, você pode selecionar atributos de origem para mapear como identidades de público alvo no destino. Essa etapa é opcional ou obrigatória, dependendo da identidade primária usada no schema.
 
-*Endereço de email como identidade* principal: Se você estiver usando o endereço de email como identidade primária em seu schema, poderá ignorar a etapa de mapeamento de identidade, como mostrado abaixo:
+Se você estiver usando o endereço de email como identidade primária em seu schema, poderá ignorar a etapa de mapeamento de identidade, como mostrado abaixo:
 
 ![Endereço de email como identidade](assets/email-as-identity.gif)
 
-<br> 
-
-*Outra ID como identidade* primária: Se estiver usando outra ID, como ID *de* recompensa ou ID *de* fidelidade, como a principal identidade do seu schema, é necessário mapear manualmente o endereço de email do seu schema de identidade como uma identidade de público alvo no destino social, como mostrado abaixo:
+Se estiver usando outra ID, como &quot;ID de recompensa&quot; ou &quot;ID de fidelidade&quot;, como a principal identidade do seu schema, é necessário mapear manualmente o endereço de email do seu schema de identidade como uma identidade de público alvo no destino social, como mostrado abaixo:
 
 ![ID de fidelidade como identidade](assets/rewardsid-as-identity.gif)
 
+Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [!DNL Facebook] de hash do [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email.
 
-Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [!DNL Facebook] de hash do [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email. <br> Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real do Adobe hash os endereços de email para atender aos [!DNL Facebook] requisitos.
+Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real hash os endereços de email para atender aos [!DNL Facebook] requisitos.
 
 ![mapeamento de identidade após preencher campos](assets/identity-mapping.png)
-
-<br> 
 
 ### **[!UICONTROL Configurar]** etapa {#configure}
 
 Aplica-se a: Destinos de marketing por email e destinos de armazenamentos na nuvem
 
-![Configurar etapa](/help/rtcdp/destinations/assets/configure-icon.png)
+![Configurar etapa](./assets/configure-icon.png)
 
-Esta etapa é opcional. Na etapa **[!UICONTROL Configurar]** , é possível configurar os nomes de arquivo para cada segmento que você está exportando. Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, é possível editar os nomes de arquivos exportados para distinguir entre campanhas diferentes ou para anexar o tempo de exportação de dados aos arquivos.
+Na etapa **[!UICONTROL Configurar]** , é possível configurar os nomes de arquivo para cada segmento que você está exportando. Configurar o nome do arquivo é opcional.
 
-Selecione **[!UICONTROL Avançar]** para usar os nomes de arquivo padrão ou clique no ícone de lápis para abrir uma janela modal e editar os nomes dos arquivos. Observe que os nomes de arquivos são limitados a 255 caracteres.
+Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, é possível editar os nomes de arquivos exportados para distinguir entre campanhas diferentes ou para anexar o tempo de exportação de dados aos arquivos.
 
-![configurar nome do arquivo](assets/activation-workflow-configure-step.png)
+Selecione o ícone de lápis para abrir uma janela modal e editar os nomes dos arquivos. Observe que os nomes de arquivos são limitados a 255 caracteres.
+
+![configurar nome do arquivo](./assets/activate-destinations/configure-name.png)
 
 No editor de nome de arquivo, você pode selecionar componentes diferentes para adicionar ao nome do arquivo. O nome de destino e a ID de segmento não podem ser removidos dos nomes de arquivo. Além disso, você pode adicionar o seguinte:
 
-* **[!UICONTROL Nome]** do segmento: É possível anexar o nome do segmento ao nome do arquivo.
-* **[!UICONTROL Data e hora]**: Selecione entre adicionar um `MMDDYYYY_HHMMSS` formato ou um carimbo de data e hora Unix de 10 dígitos do horário em que os arquivos são gerados. Selecione uma dessas opções se desejar que seus arquivos tenham um nome de arquivo dinâmico gerado a cada exportação incremental.
-* **[!UICONTROL Texto]** personalizado: Adicione texto personalizado aos nomes dos arquivos.
+- **[!UICONTROL Nome]** do segmento: É possível anexar o nome do segmento ao nome do arquivo.
+- **[!UICONTROL Data e hora]**: Selecione entre adicionar um `MMDDYYYY_HHMMSS` formato ou um carimbo de data e hora Unix de 10 dígitos do horário em que os arquivos são gerados. Escolha uma dessas opções se desejar que seus arquivos tenham um nome de arquivo dinâmico gerado a cada exportação incremental.
+- **[!UICONTROL Texto]** personalizado: Adicione texto personalizado aos nomes dos arquivos.
 
 Selecione **[!UICONTROL Aplicar alterações]** para confirmar sua seleção.
 
@@ -99,15 +98,15 @@ Selecione **[!UICONTROL Aplicar alterações]** para confirmar sua seleção.
 > 
 >Se você não selecionar o componente **[!UICONTROL Data e hora]** , os nomes dos arquivos serão estáticos e o novo arquivo exportado substituirá o arquivo anterior no local do armazenamento a cada exportação. Ao executar um trabalho de importação recorrente de um local de armazenamento para uma plataforma de marketing por email, essa é a opção recomendada.
 
-![editar opções de nome de arquivo](assets/activate-workflow-configure-step-2.png)
+![editar opções de nome de arquivo](./assets/activate-workflow-configure-step-2.png)
 
-<br> 
+Após terminar de configurar todos os seus segmentos, selecione **[!UICONTROL Avançar]** para continuar.
 
-### **[!UICONTROL Etapa Agendamento]** do segmento {#segment-schedule}
+### **[!UICONTROL Etapa do agendamento]** do segmento {#segment-schedule}
 
 Aplica-se a: destinos publicitários, destinos sociais
 
-![etapa de programação de segmento](/help/rtcdp/destinations/assets/segment-schedule-icon.png)
+![etapa de programação de segmento](./assets/segment-schedule-icon.png)
 
 Na página Agendamento **[!UICONTROL do]** segmento, é possível definir a data do start para enviar dados para o destino, bem como a frequência do envio de dados para o destino.
 
@@ -115,61 +114,53 @@ Na página Agendamento **[!UICONTROL do]** segmento, é possível definir a data
 >
 >Para destinos sociais, você deve selecionar a origem de sua audiência nesta etapa. Você pode prosseguir para a próxima etapa somente depois de selecionar uma das opções na imagem abaixo.
 
-![escolher origem de dados](assets/choose-data-origin.png)
-
-<br> 
+![escolher origem de dados](./assets/choose-data-origin.png)
 
 ### **[!UICONTROL Etapa de agendamento]** {#scheduling}
 
 Aplica-se a: destinos de marketing por email e destinos de armazenamentos na nuvem
 
-![etapa de programação de segmento](assets/scheduling-icon.png)
+![etapa de programação de segmento](./assets/scheduling-icon.png)
 
 Na página **[!UICONTROL Agendamento]** , você pode ver a data de start para enviar dados para o destino, bem como a frequência de envio de dados para o destino. Esses valores não podem ser editados.
-
-<br> 
 
 ### **[!UICONTROL Etapa Selecionar atributos]** {#select-attributes}
 
 Aplica-se a: destinos de marketing por email e destinos de armazenamentos na nuvem
 
-![etapa selecionar atributos](/help/rtcdp/destinations/assets/select-attributes-icon.png)
+![etapa selecionar atributos](./assets/select-attributes-icon.png)
 
-
-Na página **[!UICONTROL Selecionar atributos]** , selecione **[!UICONTROL Adicionar novo campo]** e selecione os atributos que deseja enviar para o destino.
+Na página **[!UICONTROL Selecionar atributos]** , selecione **[!UICONTROL Adicionar novo campo]** e escolha os atributos que deseja enviar para o destino.
 
 >[!NOTE]
 >
-> A CDP em tempo real do Adobe pré-preenche sua seleção com quatro atributos recomendados e comumente usados do seu schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> A CDP em tempo real preenche sua seleção com quatro atributos recomendados e comumente usados do seu schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-As exportações de arquivos variam da seguinte forma, dependendo se `segmentMembership.status` estiver selecionado:
-* Se o `segmentMembership.status` campo for selecionado, os arquivos exportados incluirão membros **ativos** no instantâneo completo inicial e membros **ativos** e **expirados** em exportações incrementais subsequentes.
-* Se o `segmentMembership.status` campo não estiver selecionado, os arquivos exportados incluirão apenas membros **ativos** no instantâneo completo inicial e em exportações incrementais subsequentes.
+As exportações de arquivos variam das seguintes maneiras, dependendo se `segmentMembership.status` estiver selecionado:
+- Se o `segmentMembership.status` campo for selecionado, os arquivos exportados incluirão membros **[!UICONTROL ativos]** no instantâneo completo inicial e membros **[!UICONTROL ativos]** e **[!UICONTROL expirados]** em exportações incrementais subsequentes.
+- Se o `segmentMembership.status` campo não estiver selecionado, os arquivos exportados incluirão apenas membros **[!UICONTROL ativos]** no instantâneo completo inicial e em exportações incrementais subsequentes.
 
-![atributos recomendados](/help/rtcdp/destinations/assets/recommended-attributes.png)
+![atributos recomendados](./assets/activate-destinations/mark-mandatory.png)
 
+Além disso, é possível marcar atributos diferentes como obrigatórios. Marcar um atributo como obrigatório faz com que o segmento exportado contenha esse atributo. Como resultado, ele pode ser usado como uma forma adicional de filtragem. Marcar um atributo como obrigatório **não** é necessário.
 
-Recomendamos que um dos atributos seja um identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) exclusivo do seu schema. Para obter mais informações sobre atributos obrigatórios, consulte Identidade no artigo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) email.
+É recomendável que um dos atributos seja um identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) exclusivo do seu schema. Para obter mais informações sobre atributos obrigatórios, consulte a seção de identidade na documentação de destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) email.
 
 >[!NOTE]
 > 
 >Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez de todo o conjunto de dados), a imposição desses rótulos de nível de campo na ativação ocorrerá sob as seguintes condições:
->* Os campos são usados na definição do segmento.
->* Os campos são configurados como atributos projetados para o destino do público alvo.
+>- Os campos são usados na definição do segmento.
+>- Os campos são configurados como atributos projetados para o destino do público alvo.
 
 >
 > 
-Considere a captura de tela abaixo. Por exemplo, se o campo `person.name.firstName` tivesse determinados rótulos de uso de dados que entrassem em conflito com o caso de uso de marketing do destino, você veria uma violação da política de uso de dados na etapa de revisão (etapa 9). Para obter mais informações, consulte Controle de [dados em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)em tempo real.
-
-![atributos de destino](assets/select-attributes-step.png)
-
-<br> 
+Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que entram em conflito com o caso de uso de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte Controle de [dados em CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)em tempo real.
 
 ### **[!UICONTROL Etapa de revisão]** {#review}
 
 Aplica-se a: todos os destinos
 
-![etapa de revisão](/help/rtcdp/destinations/assets/review-icon.png)
+![etapa de revisão](./assets/review-icon.png)
 
 Na página **[!UICONTROL Revisar]** , você pode ver um resumo de sua seleção. Selecione **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e start enviando dados para o destino.
 
@@ -183,7 +174,6 @@ Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL
 
 ![confirmação de seleção](assets/confirm-selection.png)
 
-
 ## Editar ativação {#edit-activation}
 
 Siga as etapas abaixo para editar os fluxos de ativação existentes na CDP em tempo real:
@@ -195,7 +185,7 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes na CDP em t
 
 ### Destinos de marketing por email e destinos de armazenamentos na nuvem {#esp-and-cloud-storage}
 
-Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Real-time CDP cria um arquivo delimitado por tabulação `.csv` ou `.txt` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The default file format is:
+Para destinos de marketing por email e destinos de armazenamentos na nuvem, o CDP em tempo real cria um arquivo delimitado por tabulação `.csv` ou `.txt` no local do armazenamento fornecido. Espera que um novo arquivo seja criado no local do armazenamento todos os dias. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Observe que você pode editar o formato de arquivo. Para obter mais informações, vá para a etapa [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) destinos de armazenamentos na nuvem e destinos de marketing por email.
@@ -220,7 +210,7 @@ Por exemplo, [!DNL Facebook]uma ativação bem-sucedida significa que uma audiê
 
 >[!TIP]
 >
->A integração entre a CDP em tempo real do Adobe e [!DNL Facebook] suporta preenchimentos retroativos históricos de audiência. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
+>A integração entre a CDP em tempo real e [!DNL Facebook] suporta preenchimentos retroativos históricos de audiência. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
 
 ## Desativar ativação {#disable-activation}
 

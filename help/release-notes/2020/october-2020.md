@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
+source-git-commit: e2b0048703816dc481eb9486310d86a8f2483af2
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 6%
+source-wordcount: '1028'
+ht-degree: 4%
 
 ---
 
@@ -17,12 +17,13 @@ ht-degree: 6%
 
 **Data de lançamento: 14 de outubro de 2020**
 
-- [Preparo de dados](#data-prep)
+- [Preparação de dados](#data-prep)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
 - [Fontes](#sources)
+- [Tempo para o valor](#time-to-value)
 
-## Preparo de dados {#data-prep}
+## Preparação de dados {#data-prep}
 
 O Data Prep permite que os engenheiros de dados mapeiem, transformem e validem dados para e do Experience Data Model (XDM).
 
@@ -58,7 +59,7 @@ O Adobe Experience Platform Segmentation Service fornece uma interface de usuár
 | ------- | ----------- |
 | Remoção do limite de segmentação de fluxo | O limite de sete dias para o período de pesquisa foi removido. |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [segmentação](../../segmentation/home.md)
+Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [Segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 
@@ -75,3 +76,45 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 | Melhorias no UX | Você pode ativar seu conjunto de dados para [!DNL Profile] durante o processo de ingestão de dados. Consulte o tutorial de fluxo de trabalho [de fluxo de dados do armazenamento](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) em nuvem para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.
+
+## Tempo para o valor {#time-to-value}
+
+A Adobe Experience Platform permite que as equipes de Operações de marketing construam uma visualização de 360 graus de seus clientes sem exigir uma ampla experiência em engenharia de dados. O objetivo é acelerar as equipes e valorizar a velocidade dos dados.
+
+&quot;Tempo para valorizar&quot; recorta entre personas. Os engenheiros de dados podem concluir as tarefas de forma eficiente e rápida, com transparência de atividade de dados, para que um perfil robusto e escalonável do cliente em tempo real esteja disponível mais cedo. Os profissionais de marketing podem usar o perfil completo e robusto do cliente para segmentação e ativação.
+
+### Destaques dos recursos
+
+#### Esquema
+
+Atualiza a utilização e o fluxo de trabalho, além de fornecer insights prontos para uso, padronização e transparência dos campos principais nas composições do schema. Expõe a linha de dados para a combinação de modelos de dados individuais representados como o &quot;schema de união&quot;, fornecendo insight sobre a estrutura e os ingredientes para o Perfil do cliente em tempo real.
+
+- Atualização do fluxo de trabalho do schema
+   - Use atalhos para o tipo mais comum de schemas XDM, com configurações automatizadas no editor de schemas e recomendações de combinação baseadas em seus objetivos
+   - Aumente a eficiência do fluxo de trabalho com vários recursos de seleção e pré-visualização de mixagem
+   - Forneça transparência nos principais atributos da composição do schema, incluindo identidade, relacionamento e campos obrigatórios e obsoletos
+- União Linha de dados do Schema e Principais atributos Transparência
+
+#### Ingestão de dados e coleta
+
+O mapeamento automático, a pré-visualização de mapeamento e a atualização de usabilidade trazem dados de qualquer plataforma ou fonte para uso em perfis, segmentação de downstream e ativação. O sistema tem a eficiência e inteligência para facilitar o uso desse processo, mesmo para pessoas fora da TI.
+
+- Acesso mais fácil a fontes de dados com cartão de página de catálogo e atualização do padrão de ação em linha da tabela de dados
+- Campo/expressão calculada para ingestão de dados
+- As recomendações de mapeamento de dados agilizam o processo de ingestão
+- Mapeamento de pré-visualizações e validações
+
+#### Configuração do perfil
+
+O visualizador de perfis amigável ao profissional de marketing com personalização ajuda você a entender a composição de um perfil para uso em casos de segmentação, planejamento e ativação. O fluxo de trabalho consolidado monta o perfil de forma controlada e eficiente, fornecendo um fluxo de trabalho passo a passo para a política de mesclagem.
+
+- Visualização cada perfil individual em um visualizador de perfis aprimorado que exibe um painel com personalização total, permitindo dados agrupados entre canais com base nas metas comerciais do profissional de marketing.
+- Edite atributos padrão e personalizados no widget Informações básicas, de acordo com as necessidades dos negócios.
+- Personalize widgets com atributos do perfil do cliente em tempo real, usando o seletor de schemas de união. O schema de união é derivado dos modelos de dados subjacentes usados na ingestão dos dados do perfil.
+
+
+#### Monitoramento
+
+Garante a transparência do fluxo de dados e fornece insight sobre a integridade do tráfego de dados no sistema a partir dos conectores de origem, fornecendo mais autoatendimento e uma acionabilidade mais rápida para solucionar problemas.
+
+- Monitore todas as execuções de fluxo e veja uma visualização detalhada de cada execução, incluindo status de conclusão, duração da execução, lista de arquivos processados, erros e diagnósticos acionáveis

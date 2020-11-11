@@ -5,10 +5,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
+source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 4%
+source-wordcount: '676'
+ht-degree: 3%
 
 ---
 
@@ -62,6 +62,8 @@ ht-degree: 4%
       - [Conector Oracle](connectors/databases/oracle.md)
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
+   - eCommerce {#ecommerce}
+      - [Conector Shopify](connectors/ecommerce/shopify.md)
    - Automação de marketing {#marketing-automation}
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
    - Pagamentos {#payments}
@@ -106,6 +108,8 @@ ht-degree: 4%
          - [Conector Phoenix](tutorials/api/create/databases/phoenix.md)
          - [Conector PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Conector do SQL Server](tutorials/api/create/databases/sql-server.md)
+      - eCommerce {#ecommerce}
+         - [Conector Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automação de marketing {#marketing-automation}
          - [Conector HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - Pagamentos {#payments}
@@ -118,6 +122,7 @@ ht-degree: 4%
       - [Explorar dados do CRM](tutorials/api/explore/crm.md)
       - [Explore os dados de sucesso do cliente](tutorials/api/explore/customer-success.md)
       - [Explorar dados de banco de dados ou NoSQL](tutorials/api/explore/database-nosql.md)
+      - [Explorar dados de eCommerce](tutorials/api/explore/ecommerce.md)
       - [Explore os dados de automação de marketing](tutorials/api/explore/marketing-automation.md)
       - [Explorar os dados de pagamento](tutorials/api/explore/payments.md)
       - [Explorar dados do protocolo](tutorials/api/explore/protocols.md)
@@ -127,6 +132,7 @@ ht-degree: 4%
       - [Coletar dados do CRM](tutorials/api/collect/crm.md)
       - [Coletar dados de sucesso do cliente](tutorials/api/collect/customer-success.md)
       - [Coletar dados de banco de dados ou NoSQL](tutorials/api/collect/database-nosql.md)
+      - [Coletar dados de eCommerce](tutorials/api/collect/ecommerce.md)
       - [Coletar dados de automação de marketing](tutorials/api/collect/marketing-automation.md)
       - [Coletar dados de pagamento](tutorials/api/collect/payments.md)
       - [Coletar dados do protocolo](tutorials/api/collect/protocols.md)
@@ -178,6 +184,8 @@ ht-degree: 4%
          - [Conector Oracle](tutorials/ui/create/databases/oracle.md)
          - [Conector Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Conector PostgreSQL](tutorials/ui/create/databases/postgres.md)
+      - eCommerce {#ecommerce}
+         - [Conector Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Automação de marketing {#marketing-automation}
          - [Conector HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Pagamentos {#payments}
@@ -188,9 +196,10 @@ ht-degree: 4%
       - [Configurar um fluxo de dados para um conector de publicidade](tutorials/ui/dataflow/advertising.md)
       - [Configurar um fluxo de dados para um conector de armazenamento de nuvem em lote](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Configurar um fluxo de dados para um conector de armazenamento de nuvem de streaming](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Configurar um fluxo de dados para um conector de banco de dados](tutorials/ui/dataflow/databases.md)
       - [Configurar um fluxo de dados para um conector CRM](tutorials/ui/dataflow/crm.md)
       - [Configurar um fluxo de dados para um conector bem-sucedido do cliente](tutorials/ui/dataflow/customer-success.md)
+      - [Configurar um fluxo de dados para um conector de banco de dados](tutorials/ui/dataflow/databases.md)
+      - [Configurar um fluxo de dados para um conector de comércio eletrônico](tutorials/ui/dataflow/ecommerce.md)
       - [Configurar um fluxo de dados para um conector de automação de marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Configurar um fluxo de dados para um conector de pagamento](tutorials/ui/dataflow/payments.md)
       - [Configurar um fluxo de dados para um conector de protocolo](tutorials/ui/dataflow/protocols.md)

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5f184de8c20001f7d9a78dab17130ccadb918dfb
+source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
 workflow-type: tm+mt
-source-wordcount: '2049'
+source-wordcount: '2086'
 ht-degree: 3%
 
 ---
@@ -211,6 +211,7 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 | ------- | ----------- |
 | Atualizar informações de conexão | Agora você pode atualizar os nomes, as descrições e as credenciais das conexões em lote existentes usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [atualizar conexões usando a API](../../sources/tutorials/api/update.md) do Serviço de Fluxo e [editar detalhes da conta usando a interface do usuário](../../sources/tutorials/ui/monitor.md). |
 | Excluir conexões | As conexões em lote que contêm erros ou se tornaram desnecessárias agora podem ser excluídas usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [excluir conexões usando a API](../../sources/tutorials/api/delete.md) do Serviço de Fluxo e [excluir contas usando a interface do usuário](../../sources/tutorials/ui/delete-accounts.md). |
+| Mapeamento hierárquico | Você pode pré-visualização um arquivo de origem hierárquico, como JSON ou Parquet, durante o processo de ingestão de dados. Consulte o tutorial sobre como [configurar um fluxo de dados para conectores de armazenamento em nuvem na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
 | Suporte a API para mapeamento em fontes de transmissão | Agora você pode usar as APIs para executar funções de mapeamento com fontes de transmissão. |
 | Suporte de API para delimitadores personalizados para fontes de armazenamentos na nuvem | Agora é possível coletar arquivos não delimitados por CSV usando fontes de armazenamentos em nuvem. Você pode usar qualquer delimitador de coluna único, como tabulação, vírgula, barra vertical, ponto-e-vírgula ou hash, para coletar arquivos simples em qualquer formato. O padrão do valor é uma vírgula, se não for fornecida. |
 | Suporte a sandbox para conector Adobe Audience Manager | O conector Audience Manager está agora habilitado para a caixa de proteção. Os usuários podem permitir que o conector roteie conjuntos de dados de Audience Manager para a caixa de proteção de sua escolha (incluindo caixas de proteção de não produção). A configuração é limitada a uma caixa de proteção por Organização IMS. |

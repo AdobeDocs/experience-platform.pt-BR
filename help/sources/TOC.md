@@ -5,9 +5,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 3%
 
 ---
@@ -208,4 +208,5 @@ ht-degree: 3%
    - [Excluir contas](tutorials/ui/delete-accounts.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
 - [Notificações de execução de fluxo](notifications.md)
+- [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

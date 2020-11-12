@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e2b0048703816dc481eb9486310d86a8f2483af2
+source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1009'
 ht-degree: 4%
 
 ---
@@ -71,7 +71,6 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Mapeamento hierárquico | Você pode pré-visualização um arquivo de origem hierárquico, como JSON ou Parquet, durante o processo de ingestão de dados. |
 | Suporte de autenticação SSH para SFTP | Você pode conectar sua conta SFTP com [!DNL Platform] chaves SSH abertas RSA/DSA. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
 | Melhorias no UX | Você pode ativar seu conjunto de dados para [!DNL Profile] durante o processo de ingestão de dados. Consulte o tutorial de fluxo de trabalho [de fluxo de dados do armazenamento](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) em nuvem para obter mais informações. |
 

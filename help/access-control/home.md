@@ -5,9 +5,9 @@ topic: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso para Adobe Experience Platform é fornecido através do Adobe Admin Console. Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção.
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 3%
 
 ---
@@ -52,8 +52,8 @@ Na página [!DNL Admin Console], as permissões são atribuídas aos usuários p
 
 | Perfil de produto | Acesso à caixa de proteção | Permissões |
 | --- | --- | --- |
-| Produção padrão - Todos os acessos | Produção | Todas as permissões se aplicam a [!DNL Experience Platform], exceto as permissões de Administração da caixa de proteção. |
-| Administração padrão de sandbox | N/D | Fornece acesso somente às permissões de Administração da caixa de proteção. |
+| Acesso total à produção padrão | Produção | Todas as permissões se aplicam a [!DNL Experience Platform], exceto as permissões de Administração da caixa de proteção. |
+| Administradores de sandbox | N/D | Fornece acesso somente às permissões de Administração da caixa de proteção. |
 
 ## Caixas de proteção e permissões
 

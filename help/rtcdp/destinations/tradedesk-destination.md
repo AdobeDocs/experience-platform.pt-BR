@@ -5,9 +5,9 @@ seo-title: O Destino do Trade Desk
 description: 'O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel. '
 seo-description: O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel.
 translation-type: tm+mt
-source-git-commit: c9fb63b390d4c7dddcdb35a85710ff664614ad63
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,10 @@ Como profissional de marketing, quero ser capaz de usar segmentos criados a part
    >[!NOTE]
    >
    >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](../destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
-   >
-   >![Ativar O Destino Do Trade Desk](assets/tradedesk-destination-activate.png)
 
-1. Na etapa [!UICONTROL Autenticação] , é necessário digitar os detalhes [!DNL The Trade Desk] da conexão:
+       ![Ativar O Destino Do Trade Desk](assets/tradedesk-destination-activate.png)
+   
+2. Na etapa [!UICONTROL Autenticação] , é necessário digitar os detalhes [!DNL The Trade Desk] da conexão:
 
    * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
    * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
@@ -67,13 +67,13 @@ Como profissional de marketing, quero ser capaz de usar segmentos criados a part
 
    ![Etapa de autenticação do Trade Desk](assets/tradedesk-destination-authentication.png)
 
-1. Clique em **[!UICONTROL Criar destino]**. Seu destino agora é criado. Você pode clicar em [!UICONTROL Salvar e sair] se quiser ativar segmentos posteriormente, ou selecionar [!UICONTROL Próximo] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
+3. Clique em **[!UICONTROL Criar destino]**. Seu destino agora é criado. Você pode clicar em [!UICONTROL Salvar e sair] se quiser ativar segmentos posteriormente, ou selecionar [!UICONTROL Próximo] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
 
 ## Ativar segmentos {#activate-segments}
 
 Consulte [Ativar perfis e segmentos em um destino](activate-destinations.md#select-attributes) para obter informações sobre o fluxo de trabalho da ativação de segmentos.
 
-Durante a etapa de agendamento [do](activate-destinations.md#segment-schedule) segmento, é necessário mapear manualmente seus segmentos para a ID correspondente ou o nome amigável no destino.
+Na etapa de programação [do](activate-destinations.md#segment-schedule) segmento, é necessário mapear manualmente seus segmentos para a ID correspondente ou o nome amigável no destino.
 
 Ao mapear segmentos, recomendamos que você use o nome do [!DNL Platform] segmento ou um formulário mais curto para facilitar o uso. No entanto, a ID ou o nome do segmento no destino não precisa corresponder ao da sua [!DNL Platform] conta. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 

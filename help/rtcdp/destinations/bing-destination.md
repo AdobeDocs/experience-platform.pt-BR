@@ -5,7 +5,7 @@ seo-title: O destino do Microsoft Bing ajuda a enviar dados do perfil para o Mic
 description: Com o destino do Microsoft Bing, você pode executar redirecionamento e audiência de campanhas digitais direcionadas através do Microsoft Display Advertising.
 seo-description: Com o destino do Microsoft Bing, você pode executar redirecionamento e audiência de campanhas digitais direcionadas através do Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ Ao configurar o destino, você será solicitado a fornecer as seguintes informa�
    >[!NOTE]
    >
    >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](../destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
-
-   ![Ativar o Destino do Microsoft Bing](assets/bing-destination-activate.png)
+   >
+   >![Ativar o Destino do Microsoft Bing](assets/bing-destination-activate.png)
 
 1. Na etapa [!UICONTROL Autenticação] , você deve digitar os detalhes da conexão de destino:
 

@@ -5,7 +5,7 @@ seo-title: O destino do Microsoft Bing ajuda a enviar dados do perfil para o Mic
 description: Com o destino do Microsoft Bing, você pode executar redirecionamento e audiência de campanhas digitais direcionadas através do Microsoft Display Advertising.
 seo-description: Com o destino do Microsoft Bing, você pode executar redirecionamento e audiência de campanhas digitais direcionadas através do Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 979256ea975dcc0c1f6c59792b70d6899ee11376
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ Ao configurar o destino, você será solicitado a fornecer as seguintes informa�
    >[!NOTE]
    >
    >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](../destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
-   >
-   >![Ativar o Destino do Microsoft Bing](assets/bing-destination-activate.png)
+
+   ![Ativar o Destino do Microsoft Bing](assets/bing-destination-activate.png)
 
 1. Na etapa [!UICONTROL Autenticação] , você deve digitar os detalhes da conexão de destino:
 
@@ -68,7 +68,7 @@ Ao configurar o destino, você será solicitado a fornecer as seguintes informa�
 
 Consulte [Ativar perfis e segmentos em um destino](activate-destinations.md#select-attributes) para obter informações sobre o fluxo de trabalho da ativação de segmentos.
 
-Durante a etapa de agendamento [do](activate-destinations.md#segment-schedule) segmento, é necessário mapear manualmente seus segmentos para a ID correspondente ou o nome amigável no destino.
+Na etapa de programação [do](activate-destinations.md#segment-schedule) segmento, é necessário mapear manualmente seus segmentos para a ID correspondente ou o nome amigável no destino.
 
 Ao mapear segmentos, recomendamos que você use o nome do [!DNL Platform] segmento ou um formulário mais curto para facilitar o uso. No entanto, a ID ou o nome do segmento no destino não precisa corresponder ao da sua [!DNL Platform] conta. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
 

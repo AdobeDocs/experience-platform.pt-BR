@@ -5,9 +5,9 @@ seo-title: O Destino do Trade Desk
 description: 'O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel. '
 seo-description: O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
@@ -46,9 +46,9 @@ Como profissional de marketing, quero ser capaz de usar segmentos criados a part
    >[!NOTE]
    >
    >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativar]** e **[!UICONTROL Configurar]**, consulte a seção [Catálogo](../destinations/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
+   >
+   >![Ativar O Destino Do Trade Desk](assets/tradedesk-destination-activate.png)
 
-       ![Ativar O Destino Do Trade Desk](assets/tradedesk-destination-activate.png)
-   
 2. Na etapa [!UICONTROL Autenticação] , é necessário digitar os detalhes [!DNL The Trade Desk] da conexão:
 
    * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.

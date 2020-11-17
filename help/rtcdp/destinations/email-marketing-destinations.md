@@ -6,9 +6,9 @@ type: Tutorial
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,8 @@ Na etapa **[!UICONTROL Autenticação]** , se você já tiver configurado uma co
 - Para conexões **** S3, você deve fornecer a ID da chave de acesso Amazon e a chave de acesso secreta.
 - Para **SFTP com conexões de senha** , você deve fornecer Domínio, Porta, Nome de usuário e Senha para seu servidor SFTP.
 - Para **SFTP com conexões de chave** SSH, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH para seu servidor SFTP.
+
+Opcionalmente, você pode anexar sua chave pública formatada pelo RSA para adicionar criptografia aos arquivos exportados na seção **[!UICONTROL Chave]** . Observe que essa chave pública **deve** ser gravada como uma string codificada em Base64.
 
 Na etapa **[!UICONTROL de configuração]** , digite um nome e uma descrição para o seu novo destino, bem como o formato de arquivo para os arquivos exportados.
 

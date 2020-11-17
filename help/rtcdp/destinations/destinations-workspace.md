@@ -3,11 +3,11 @@ keywords: RTCDP;rtcdp
 title: Área de trabalho Destinos
 seo-title: Área de trabalho Destinos
 description: A área de trabalho Destinos consiste em quatro seções, Catálogo, Procurar, Contas e Visualização do sistema, descritas nas seções abaixo.
-seo-description: Na Plataforma de dados do cliente em tempo real do Adobe, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
+seo-description: Na Plataforma de dados do cliente em tempo real, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: a3e35dee98b7b2758a4246a63bb0e1bde6b2f165
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '905'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # Área de trabalho Destinos {#destinations-workspace}
 
-Na Plataforma de dados do cliente em tempo real do Adobe, selecione **[!UICONTROL Destinos]** na barra de navegação esquerda para acessar a área de trabalho [!UICONTROL Destinos] .
+Na Plataforma de dados do cliente em tempo real, selecione **[!UICONTROL Destinos]** na barra de navegação esquerda para acessar a área de trabalho [!UICONTROL Destinos] .
 
 A área de trabalho [!UICONTROL Destinos] consiste em quatro seções, [!UICONTROL Catálogo], [!UICONTROL Navegação], [!UICONTROL Contas]e Visualização [!UICONTROL do]sistema, descritas nas seções abaixo.
 
@@ -23,13 +23,13 @@ A área de trabalho [!UICONTROL Destinos] consiste em quatro seções, [!UICONTR
 
 ## [!UICONTROL Catálogo] {#catalog}
 
-A guia **[!UICONTROL Catálogo]** exibe uma lista de todos os destinos disponíveis no Adobe Real-time CDP, para os quais você pode enviar dados.
+A guia **[!UICONTROL Catálogo]** exibe uma lista de todos os destinos disponíveis em CDP em tempo real para os quais você pode enviar dados.
 
-A interface de usuário CDP em tempo real do Adobe fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
+A interface de usuário CDP em tempo real fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
 
 * Use a funcionalidade de pesquisa na página para localizar um destino específico.
 * Filtre destinos usando o controle [!UICONTROL Categoria] .
-* Alternar entre [!UICONTROL Todos os destinos] e [!UICONTROL Meus destinos]. Quando **[!UICONTROL Todos os destinos]** são selecionados, todos os destinos CDP em tempo real disponíveis do Adobe são exibidos. Quando a opção **[!UICONTROL Meus destinos]** estiver selecionada, você só poderá ver os destinos com os quais estabeleceu uma conexão.
+* Alternar entre [!UICONTROL Todos os destinos] e [!UICONTROL Meus destinos]. Quando **[!UICONTROL Todos os destinos]** são selecionados, todos os destinos CDP em tempo real disponíveis são exibidos. Quando a opção **[!UICONTROL Meus destinos]** estiver selecionada, você só poderá ver os destinos com os quais estabeleceu uma conexão.
 * Selecione para visualização de **[!UICONTROL Conexões]** e/ou **[!UICONTROL Extensões]**. Para entender a diferença entre as duas categorias, consulte Tipos de [destino e Categorias](/help/rtcdp/destinations/destination-types.md).
 
 ![filtragem de destinos e demonstração de pesquisa](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -60,7 +60,7 @@ Na guia **[!UICONTROL Contas]** , você pode saber mais sobre as conexões estab
 >
 >Use o botão ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Adicionar dados na coluna **[!UICONTROL Plataforma]** para criar uma nova conexão de destino para essa conta.
 
-![Guia Contas](/help/rtcdp/destinations/assets/accounts-tab.png)
+![Guia Contas](./assets/workspace/edit-account-destinations.png)
 
 | Elemento | Descrição |
 ---------|----------
@@ -69,6 +69,18 @@ Na guia **[!UICONTROL Contas]** , você pode saber mais sobre as conexões estab
 | [!UICONTROL Nome do usuário] | O nome de usuário selecionado no assistente [de destino da](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)conexão. |
 | [!UICONTROL Destinos] | Representa o número de fluxos de destino exclusivos e bem-sucedidos ligados a informações básicas criadas para um destino. |
 | [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
+
+Além disso, você pode editar ou atualizar suas informações de conta. Selecione o botão ![](./assets/workspace/pencil-icon.png) Editar conta na coluna **[!UICONTROL Plataforma]** para editar as informações da conta.
+
+Para contas que usam um tipo de `OAuth2` conexão, você pode selecionar **[!UICONTROL Reconectar OAuth]** para renovar suas credenciais de conta.
+
+![Imagem de Oauth](./assets/workspace/reconnect-oauth.png)
+
+Para contas que usam um tipo `Access Key` ou `ConnectionString` conexão, é possível editar as informações de autenticação da conta, incluindo informações como ID de acesso, chaves secretas ou strings de conexão.
+
+![Imagem de informações da conta](./assets/workspace/edit-account-details.png)
+
+Quando terminar de editar os detalhes de sua conta, selecione **[!UICONTROL Salvar]** para concluir a atualização.
 
 ## [!UICONTROL Procurar] {#browse}
 

@@ -5,7 +5,7 @@ seo-title: Destino das Etiquetas de Avião
 description: Transmita dados de Audiência para o Airship sem problemas como Etiquetas de Audiência para definição de metas dentro do Airship.
 seo-description: Transmita dados de Audiência para o Airship sem problemas como Etiquetas de Audiência para definição de metas dentro do Airship.
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# (Beta) [!DNL Airship Tags] Destino {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] destino {#airship-tags-destination}
 
 >[!IMPORTANT]
 >

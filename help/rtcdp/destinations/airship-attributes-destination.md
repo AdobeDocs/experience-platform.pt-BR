@@ -5,15 +5,15 @@ seo-title: Destino dos atributos do navio
 description: Transmita dados de Audiência para o Airship sem problemas como atributos de Audiência para definição de metas dentro do Airship.
 seo-description: Transmita dados de Audiência para o Airship sem problemas como atributos de Audiência para definição de metas dentro do Airship.
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Airship Attributes] Destino {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] destino {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ Aproveite os dados do perfil coletados no Adobe Experience Platform para persona
 
 Aproveite os atributos da Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] os perfis e combiná-los com SDK ou dados [!DNL Airship] preditivos. Por exemplo, um varejista pode criar um segmento com status de fidelidade e dados de localização (atributos da Plataforma) e [!DNL Airship] prevê gerar dados para enviar mensagens altamente direcionadas aos usuários no status de fidelidade dourada que vivem em Las Vegas, NV, e têm uma alta probabilidade de se movimentar.
 
-## Conectar aos [!DNL Airship] atributos {#connect-airship-attributes}
+## Conectar-se a [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, navegue até a categoria de envolvimento **[!UICONTROL do]** Mobile. Selecione **[!DNL Airship Attributes]**, em seguida, **[!UICONTROL Configurar]**.
 

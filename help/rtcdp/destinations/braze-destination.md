@@ -1,11 +1,11 @@
 ---
 keywords: mobile; braze; messaging;
-title: Destino do Brasil
-seo-title: Destino do Brasil
+title: Destino da brasileira
+seo-title: Destino da brasileira
 description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 seo-description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 1%
@@ -57,6 +57,7 @@ Como profissional de marketing, quero público alvo os usuários em um destino d
    >![Ativar Destino do Brasil](assets/braze-destination-activate.png)
 
 1. Na etapa [!UICONTROL Conta] , é necessário fornecer o token da sua [!DNL Braze] conta. Esta é a sua [!DNL Braze][!DNL API] chave. Você pode encontrar instruções detalhadas sobre como obter sua [!DNL API] chave aqui: [Visão geral](https://www.braze.com/docs/api/api_key/)da chave da API REST. Digite o token e clique em **[!UICONTROL Conectar-se ao destino]**.
+
    ![Etapa da Conta de Destino Brasileira](assets/braze-destination-account.png)
 
 1. Clique em **[!UICONTROL Próximo]**.

@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guia da plataforma de dados do cliente em tempo real
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, criar segmentos de público-alvo a partir desses perfis e ativar esses segmentos para destinos de terceiros.
 translation-type: tm+mt
-source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
+source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 17%
+source-wordcount: '525'
+ht-degree: 16%
 
 ---
 
@@ -102,9 +102,11 @@ ht-degree: 17%
          * [Marketing Cloud do Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Visão geral das extensões de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * Destinos móveis {#mobile}
-         * [Visão geral de destinos móveis](destinations/mobile-destinations.md)
-         * [Destino da brasileira](destinations/braze-destination.md)
+      * Destinos de envolvimento móvel {#mobile}
+         * [Visão geral dos destinos de envolvimento móvel](destinations/mobile-destinations.md)
+         * [Atributos do navio](destinations/airship-attributes-destination.md)
+         * [Etiquetas de aeróstato](destinations/airship-tags-destination.md)
+         * [Bico](destinations/braze-destination.md)
       * Destinos de personalização {#personalization-destinations}
          * [Visão geral dos destinos de personalização](/help/rtcdp/destinations/personalization-destinations.md)
          * [Extensão do Adobe Target](/help/rtcdp/destinations/adobe-target-extension.md)

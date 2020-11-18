@@ -3,12 +3,12 @@ keywords: activate destination;activate destinations;activate data
 title: Ativar perfis e segmentos em um destino
 type: Tutorial
 seo-title: Ativar perfis e segmentos em um destino
-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+description: 'Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. '
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1768'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,19 @@ Aplica-se a: Destinos de marketing por email e destinos de armazenamentos na nuv
 
 ![Configurar etapa](./assets/configure-icon.png)
 
-Na etapa **[!UICONTROL Configurar]** , é possível configurar os nomes de arquivo para cada segmento que você está exportando. Configurar o nome do arquivo é opcional.
+Na etapa **[!UICONTROL Configurar]** , é possível configurar o agendamento e os nomes de arquivo para cada segmento que você está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
+
+Para adicionar um agendamento para o segmento, selecione **[!UICONTROL Criar agendamento]**.
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+Uma janela pop-up é exibida mostrando opções para criar a programação de segmentos.
+
+- **Exportação** de arquivo: Você tem a opção de exportar arquivos completos ou incrementais. Exportar um arquivo completo publica um instantâneo completo de todos os perfis que se qualificam para esse segmento. Exportar um arquivo incremental publica o delta de perfis que se qualificam para esse segmento desde a última exportação.
+- **Frequência**: Se a opção **[!UICONTROL Exportar arquivos]** completos estiver selecionada, você terá a opção de exportar **[!UICONTROL uma vez]** ou **[!UICONTROL diariamente]**. Se a opção **[!UICONTROL Exportar arquivos]** incrementais estiver selecionada, você só terá a opção de exportar **[!UICONTROL diariamente]**. Exportar um arquivo **[!UICONTROL Uma vez]** exporta o arquivo uma vez. Exportar um arquivo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data do start para a data final às 12:00 AM UTC (7:00 PM EST) se os arquivos completos estiverem selecionados e 12:00 PM UTC (7:00 AM EST) se os arquivos incrementais estiverem selecionados.
+- **Data**: Se **[!UICONTROL Uma vez]** estiver selecionado, você poderá selecionar a data para a exportação única. Se **[!UICONTROL Diariamente]** estiver selecionado, você poderá selecionar as datas de start e término das exportações.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, é possível editar os nomes de arquivos exportados para distinguir entre campanhas diferentes ou para anexar o tempo de exportação de dados aos arquivos.
 

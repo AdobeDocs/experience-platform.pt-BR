@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic: overview
 description: Este documento fornece uma visão geral da classe ExperienceEvent do XDM.
 translation-type: tm+mt
-source-git-commit: 4d109244e57799c7e3837ceee3e2f5d17fbf0a18
+source-git-commit: 9e55e9ef6c619a952ca7519ca05dab59da2c573b
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ A [!DNL XDM ExperienceEvent] classe em si fornece vários campos relacionados a 
 | `eventMergeId` | A ID do lote ingerido que fez com que o registro fosse criado. Esse campo é automaticamente preenchido pelo sistema após a ingestão dos dados. |
 | `eventType` | Uma string que indica o tipo de evento primário do registro. Os valores aceites e as respectivas definições são apresentados na seção [do](#eventType)apêndice. |
 | `identityMap` | Um campo de mapa que contém um conjunto de identidades namespacadas para o indivíduo ao qual o evento se aplica. Este campo é atualizado automaticamente pelo sistema à medida que os dados de identidade são assimilados. Para utilizar corretamente este campo para o Perfil [Cliente em tempo](../../profile/home.md)real, não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade nos [fundamentos da composição](../schema/composition.md#identityMap) do schema para obter mais informações sobre o caso de uso. |
-| `timestamp` | A hora em que ocorreu o evento ou observação. Todos os valores datetime devem ser fornecidos no formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
+| `timestamp` | A hora em que ocorreu o evento ou observação, formatada de acordo com a seção 5.6 [da](https://tools.ietf.org/html/rfc3339#section-5.6)RFC 3339). |
 
 ## Misturas compatíveis {#mixins}
 

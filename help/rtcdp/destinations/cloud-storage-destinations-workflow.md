@@ -6,7 +6,7 @@ type: Tutorial
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: d72f392bc3b47bb23ed36b3d1d218373f62b4679
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 0%

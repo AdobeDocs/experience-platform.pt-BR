@@ -1,23 +1,22 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Destinos móveis
-seo-title: Destinos móveis
-description: Inserir caso de uso para destinos móveis
-seo-description: Inserir caso de uso para destinos móveis
+title: Destinos de envolvimento móvel
+seo-title: Destinos de envolvimento móvel
+description: A Adobe Experience Platform suporta os destinos de envolvimento móvel listados abaixo
+seo-description: A Adobe Experience Platform suporta os destinos de envolvimento móvel listados abaixo
 translation-type: tm+mt
-source-git-commit: 6c8084f35c4981b41a5beecd57ce5b3ef4e409d6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
 
-# Destinos móveis {#mobile-destinations}
+# Destinos de envolvimento móvel {#mobile-destinations}
 
-Inserir uma descrição para destinos móveis
+[!DNL Adobe Experience Platform] suporta atualmente os seguintes destinos de envolvimento móvel:
 
-[!DNL Adobe Experience Platform] suporta atualmente os seguintes destinos móveis:
-
-* Navio - inserir ligação à página de documentação do dirigível
+* [Atributos do navio](airship-attributes-destination.md)
+* [Etiquetas de aeróstato](airship-tags-destination.md)
 * [Bico](braze-destination.md)

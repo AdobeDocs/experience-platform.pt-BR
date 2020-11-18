@@ -6,9 +6,9 @@ type: Tutorial
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Na página **[!UICONTROL Selecionar segmentos]** , selecione quais segmentos ser
 
 ## Configurar nomes de arquivos
 
-Para obter informações sobre as opções de edição de nome de arquivo, consulte a etapa [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) no tutorial de ativação de destinos.
+Para obter informações sobre as opções de programação de segmentos e edição de nomes de arquivos, consulte a etapa [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) no tutorial de ativação de destinos.
 
 ## Selecionar atributos - Selecione quais campos de schema usar como atributos de destino nos arquivos exportados {#destination-attributes}
 

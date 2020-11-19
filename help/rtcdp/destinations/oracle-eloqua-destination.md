@@ -1,13 +1,13 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
-title: Destino Oracle Eloqua
-seo-title: Destino Oracle Eloqua
-description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e geração de leads de vendas.
-seo-description: O Oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e geração de leads de vendas.
+title: Destino oracle Eloqua
+seo-title: Destino oracle Eloqua
+description: A oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
+seo-description: A oracle Eloqua é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida pela Oracle que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [A Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) é uma plataforma de software como serviço (SaaS) para automação de marketing oferecida por [!DNL Oracle] ela, que tem como objetivo ajudar os comerciantes e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 
-Para enviar dados de segmento para [!DNL Oracle Eloqua], é necessário primeiro [conectar o destino](#connect-destination) na Plataforma de dados do cliente em tempo real do Adobe e [configurar uma importação](#import-data-into-eloqua) de dados do local do armazenamento para [!DNL Oracle Eloqua].
+Para enviar dados de segmento para [!DNL Oracle Eloqua], é necessário primeiro [conectar o destino](#connect-destination) na Plataforma de dados do cliente em tempo real e [configurar uma importação](#import-data-into-eloqua) de dados do local do armazenamento para [!DNL Oracle Eloqua].
 
 ## Tipo de exportação {#export-type}
 

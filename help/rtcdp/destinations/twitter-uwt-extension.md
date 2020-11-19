@@ -2,12 +2,12 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Extensão de tag do Twitter Universal Website
 seo-title: Extensão de tag do Twitter Universal Website
-description: A extensão de tag do site universal do Twitter é um destino de publicidade na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão da tag do site universal do Twitter é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão da tag do site universal do Twitter é um destino publicitário na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão da tag do site universal do Twitter é um destino publicitário na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Twitter Universal Website Tag] fornece ações para enviar beacons para a Tag UWT do Twitter.
 
-[!DNL Twitter Universal Website Tag] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte Rastreamento [de conversão](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)avançado.
+[!DNL Twitter Universal Website Tag] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte Rastreamento [de conversão](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)avançado.
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

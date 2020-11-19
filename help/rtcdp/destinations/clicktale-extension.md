@@ -2,12 +2,12 @@
 keywords: clicktale;clicktale extension;clicktale destination
 title: Extensão Clicktale
 seo-title: Extensão Clicktale
-description: A extensão Clicktale é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Clicktale é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão Clicktale é um destino analítico na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão Clicktale é um destino analítico na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '557'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 [!DNL Clicktale's] a integração com o Experience Platform Launch permite a implantação do [!DNL Clicktale] código e a capacidade de mapear elementos de dados no Launch, usando o Editor [!DNL Clicktale's] visual.
 
-[!DNL Clicktale] é uma extensão de análise na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
+[!DNL Clicktale] é uma extensão de análise na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

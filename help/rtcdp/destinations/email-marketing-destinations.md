@@ -6,9 +6,9 @@ type: Tutorial
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 seo-description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Destinos de marketing de email {#email-marketing-destinations}
 
-Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como o envio de campanhas de email promocionais. A Plataforma de dados do cliente em tempo real do Adobe integra-se aos ESPs, permitindo que você ative segmentos para destinos de marketing por email.
+Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como o envio de campanhas de email promocionais. A Plataforma de dados do cliente em tempo real integra-se aos ESPs, permitindo que você ative segmentos para destinos de marketing por email.
 
 Para enviar segmentos para destinos de marketing de email para suas campanhas, a CDP em tempo real do Adobe deve primeiro se conectar ao destino.
 

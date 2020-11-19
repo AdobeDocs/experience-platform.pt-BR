@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
+source-wordcount: '2180'
 ht-degree: 3%
 
 ---
@@ -113,20 +113,18 @@ Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os de
 
 | Destino | Descrição |
 | ----------- | ----------- |
+| Bico | O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram. |
 | Microsoft Bing | O destino do Microsoft Bing o ajuda a executar o redirecionamento e a audiência de campanhas digitais direcionadas através do Microsoft Display Advertising. |
 | A carteira comercial | O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamento e campanhas digitais direcionadas para audiência em fontes de exibição, vídeo e inventário móvel. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Atualizações de UX de detalhes de destino | O fluxo de trabalho de destino da CDP em tempo real agora inclui monitoramento em linha para que você possa ver quais ativações em lote foram bem-sucedidas. Esse recurso permitirá que os usuários resolvam problemas diretamente no fluxo de trabalho para destinos em lote por meio de alertas e um painel de monitoramento para rastrear erros no pipeline de processamento. |
+| Criptografia de arquivo | Para destinos baseados em arquivos, os usuários agora podem adicionar criptografia aos arquivos exportados. |
+| Agendamento de arquivos | Para os destinos de armazenamentos baseados em email e em nuvem, os usuários podem criar uma exportação única ou instantâneos diários. |
 | Campos obrigatórios | Os usuários podem marcar campos como obrigatórios, garantindo que somente os campos que contêm o campo obrigatório sejam exportados. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 Para obter mais informações, consulte a visão geral [de](../../rtcdp/destinations/destinations-overview.md)Destinos.
 
@@ -202,8 +200,9 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
 **Novas fontes**
+
 | Recurso | Descrição |
-| — | — |
+| ------- | ----------- |
 | [!DNL Shopify] | Agora você pode se conectar [!DNL Shopify] a [!DNL Experience Platform] usar a [!DNL Flow Service] API ou a interface do usuário. Consulte a visão geral [do conector](../../sources/connectors/ecommerce/shopify.md) Shopify para obter mais informações. |
 
 **Principais recursos**

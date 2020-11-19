@@ -5,21 +5,21 @@ seo-title: Visão geral da plataforma de dados do cliente em tempo real
 description: Visão geral da plataforma de dados do cliente em tempo real
 seo-description: Visão geral da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
 
-# Visão geral da Plataforma de dados do cliente em tempo real do Adobe
+# Visão geral da plataforma de dados do cliente em tempo real
 
-Construída na Adobe Experience Platform, a Adobe Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes que podem ser usados para fornecer experiências personalizadas aos clientes em todos os canais e dispositivos em tempo real.
+Construída na Adobe Experience Platform, a Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes que podem ser usados para fornecer experiências personalizadas aos clientes em todos os canais e dispositivos em tempo real.
 
 A CDP em tempo real inclui ferramentas para controle de dados, gerenciamento de identidade, segmentação avançada e ciência de dados, para que você possa criar perfis e definir audiências, além de obter informações avançadas e, ao mesmo tempo, poder aplicar políticas rígidas de controle de dados.
 
-A Plataforma de dados do cliente em tempo real do Adobe conecta-se a um grande ecossistema de parceiros, para não mencionar as integrações nativas com a Adobe Experience Cloud, para que você possa ativar essas audiências sem interrupções e fornecer excelentes experiências do cliente em todos os canais, desde a personalização no site ou no aplicativo até e-mail, mídia paga, centrais de atendimento, dispositivos conectados e muito mais.
+A Plataforma de dados do cliente em tempo real se conecta a um grande ecossistema de parceiros, para não mencionar as integrações nativas com a Adobe Experience Cloud, para que você possa ativar essas audiências sem interrupções e fornecer excelentes experiências do cliente em todos os canais, desde a personalização no site ou no aplicativo até email, mídia paga, centrais de atendimento, dispositivos conectados e muito mais.
 
 Com a Plataforma de dados do cliente em tempo real, você pode:
 

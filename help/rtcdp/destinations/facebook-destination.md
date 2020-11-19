@@ -5,9 +5,9 @@ seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Você pode usar esse destino para segmentação de audiências em toda a [!DNL F
 
 ## Casos de uso
 
-Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois exemplos de casos de uso que os clientes da Plataforma de dados do cliente em tempo real podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois casos de uso de exemplo que os clientes da Plataforma de dados do cliente em tempo real podem resolver usando esse recurso.
 
 
 ### Caso de uso nº 1
@@ -101,7 +101,7 @@ Para obter instruções sobre como ativar segmentos para [!DNL Facebook], consul
 
 ## Dados exportados {#exported-data}
 
-Para [!DNL Facebook], uma ativação bem-sucedida significa que uma audiência [!DNL Facebook] personalizada seria criada programaticamente no [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento na audiência seria adicionada e removida, pois os usuários são qualificados ou desqualificados para os segmentos ativados.
+Por exemplo, [!DNL Facebook]uma ativação bem-sucedida significa que uma audiência [!DNL Facebook] personalizada seria criada programaticamente no [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento na audiência seria adicionada e removida, pois os usuários são qualificados ou desqualificados para os segmentos ativados.
 
 >[!TIP]
 >

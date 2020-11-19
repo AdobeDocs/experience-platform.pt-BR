@@ -2,12 +2,12 @@
 keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Awin Advertiser Mastertag extension
 seo-title: Awin Advertiser Mastertag extension
-description: A extensão Awin Advertiser Mastertag é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Awin Advertiser Mastertag é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão Awin Advertiser Mastertag é um destino publicitário na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão Awin Advertiser Mastertag é um destino publicitário na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '556'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 A [!DNL MasterTag] é uma biblioteca JavaScript que contém todas as funções necessárias para a solução de rastreamento Awin e deve ser anexada incondicionalmente a cada página do site, incluindo a página de confirmação, mas excluindo qualquer página que exibe ou processa informações de pagamento.
 
-[!DNL Awin Advertiser Mastertag] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
+[!DNL Awin Advertiser Mastertag] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
 
 Este destino é uma [!DNL Experience Platform Launch] extensão. Para obter mais informações sobre como as extensões do Launch funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 

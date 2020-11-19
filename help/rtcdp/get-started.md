@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Introdução à plataforma de dados do cliente em tempo real Adobe
-seo-title: Introdução à plataforma de dados do cliente em tempo real Adobe
-description: Exemplo de cenário para a Adobe Real-time Customer Data Platform
-seo-description: Exemplo de cenário para a Adobe Real-time Customer Data Platform
+title: Introdução à Plataforma de dados do cliente em tempo real
+seo-title: Introdução à Plataforma de dados do cliente em tempo real
+description: Exemplo de cenário para a Real-time Customer Data Platform
+seo-description: Exemplo de cenário para a Real-time Customer Data Platform
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2318'
 ht-degree: 1%
 
 ---
 
 
-# Introdução à plataforma de dados do cliente em tempo real Adobe
+# Introdução à Plataforma de dados do cliente em tempo real
 
-Este guia de introdução o orienta por uma implementação de amostra da Plataforma de dados do cliente em tempo real (CDP em tempo real) do Adobe. Você pode usá-la como exemplo ao configurar sua própria implementação. Embora este guia mostre exemplos específicos, ele vincula a informações adicionais que podem ser usadas ao criar sua configuração.
+Este guia de introdução o orienta por uma implementação de amostra da Plataforma de dados do cliente em tempo real (CDP em tempo real). Você pode usá-la como exemplo ao configurar sua própria implementação. Embora este guia mostre exemplos específicos, ele vincula a informações adicionais que podem ser usadas ao criar sua configuração.
 
-Este exemplo mostra o poder do Adobe Real-time Customer Data Platform, capacitado pela Adobe Experience Platform, de:
+Este exemplo mostra o poder da Plataforma de dados do cliente em tempo real, capacitada pela Adobe Experience Platform, de:
 
 * Obter dados de várias fontes
 * Mesclar em um único [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Este conteúdo personalizado ajuda a Sarah a encontrar rapidamente itens relevan
 
 Sarah se distrai e deixa o site, terminando sua sessão. Luma pode usar seus dados no Adobe Experience Platform para ajudar a trazê-la de volta ao site.
 
-A Plataforma de dados do cliente em tempo real Adobe, capacitada pela Adobe Experience Platform, foi criada para o gerenciamento da experiência do cliente. Ela permite que as organizações:
+A Plataforma de dados do cliente em tempo real, capacitada pela Adobe Experience Platform, foi criada para o gerenciamento da experiência do cliente. Ela permite que as organizações:
 
 * Simplificar a integração e a ativação de dados
 * Governar o uso de dados conhecidos e desconhecidos

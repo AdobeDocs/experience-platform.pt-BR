@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
-seo-title: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
-description: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
-seo-description: O destino HTTP é um destino Adobe Real-Time Customer Data Platform que ajuda a enviar dados de perfis para pontos de extremidade HTTP de terceiros.
+title: O destino HTTP é um destino da Plataforma de dados do cliente em tempo real que ajuda a enviar dados do perfil para pontos de extremidade HTTP de terceiros.
+seo-title: O destino HTTP é um destino da Plataforma de dados do cliente em tempo real que ajuda a enviar dados do perfil para pontos de extremidade HTTP de terceiros.
+description: O destino HTTP é um destino da Plataforma de dados do cliente em tempo real que ajuda a enviar dados do perfil para pontos de extremidade HTTP de terceiros.
+seo-description: O destino HTTP é um destino da Plataforma de dados do cliente em tempo real que ajuda a enviar dados do perfil para pontos de extremidade HTTP de terceiros.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-O [!DNL HTTP] destino é um destino de [!DNL Adobe Real-Time Customer Data Platform] streaming que ajuda a enviar dados do perfil para [!DNL HTTP] pontos de extremidade de terceiros.
+O [!DNL HTTP] destino é um destino de [!DNL Real-time Customer Data Platform] streaming que ajuda a enviar dados do perfil para [!DNL HTTP] pontos de extremidade de terceiros.
 
-Para enviar dados de perfil para [!DNL HTTP] pontos de extremidade, primeiro você deve se conectar ao destino no [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+Para enviar dados de perfil para [!DNL HTTP] pontos de extremidade, primeiro você deve se conectar ao destino no [[!DNL Real-time Customer Data Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 

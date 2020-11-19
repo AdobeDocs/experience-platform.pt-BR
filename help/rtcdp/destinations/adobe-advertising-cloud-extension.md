@@ -2,12 +2,12 @@
 keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
 title: Extensão Adobe Advertising Cloud
 seo-title: Extensão Adobe Advertising Cloud
-description: A extensão do Adobe Advertising Cloud é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão do Adobe Advertising Cloud é um destino publicitário na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão Adobe Advertising Cloud é um destino publicitário na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão Adobe Advertising Cloud é um destino publicitário na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '504'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 Esta é a [!DNL Advertising Cloud] extensão para implementar tags de [!DNL Advertising Cloud] conversão e segmento para o DSP e a Pesquisa (atualmente, o DCO não é compatível).
 
-A Adobe Advertising Cloud é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe.
+A Adobe Advertising Cloud é uma extensão de publicidade na Plataforma de dados do cliente em tempo real.
 
 Este destino é uma [!DNL Adobe Experience Platform Launch] extensão. Para obter mais informações sobre como [!DNL Platform Launch] as extensões funcionam no CDP em tempo real do Adobe, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 

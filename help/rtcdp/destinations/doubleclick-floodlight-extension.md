@@ -2,12 +2,12 @@
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: Extensão do DoubleClick Floodlight (Beta)
 seo-title: Extensão do DoubleClick Floodlight (Beta)
-description: A extensão DoubleClick Floodlight (Beta) é um destino de publicidade na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão DoubleClick Floodlight (Beta) é um destino de publicidade na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão DoubleClick Floodlight (Beta) é um destino de publicidade na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão DoubleClick Floodlight (Beta) é um destino de publicidade na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '557'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 Essa extensão permite a implantação rápida e fácil de [!DNL DoubleClick Floodlight] tags usando o formato tradicional de Floodlight (não a tag global do site). Observação: Esta extensão está em beta.
 
-[!DNL DoubleClick Floodlight] (Beta) é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a documentação de [!DNL Google] suporte do [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (Beta) é uma extensão de publicidade na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a documentação de [!DNL Google] suporte do [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

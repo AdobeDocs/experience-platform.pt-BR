@@ -2,12 +2,12 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: Extensão Inteligência do Visitante D&B
 seo-title: Extensão Inteligência do Visitante D&B
-description: A extensão de Inteligência do Visitante D&B é um destino de personalização na Plataforma de Dados do Cliente em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão de Inteligência do Visitante D&B é um destino de personalização na Plataforma de Dados do Cliente em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão de Inteligência do Visitante D&B é um destino de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão de Inteligência do Visitante D&B é um destino de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 Analise seus visitantes desconhecidos e converta-os em clientes potenciais.
 
-[!DNL D&B Visitor Intelligence] é uma extensão de personalização na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [da](https://www.dnb.com/)D&amp;B.
+[!DNL D&B Visitor Intelligence] é uma extensão de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [da](https://www.dnb.com/)D&amp;B.
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

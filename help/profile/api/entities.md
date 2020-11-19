@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Entidades - API de Perfil do cliente em tempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1695'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ A Adobe Experience Platform permite acessar [!DNL Real-time Customer Profile] da
 
 ## Introdução
 
-O terminal da API usado neste guia faz parte da [[!DNL Real-time Customer Perfil API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte do [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
 
 ## Acessar dados do perfil por identidade
 
@@ -910,4 +910,5 @@ Os parâmetros a seguir são usados no caminho para solicitações de GET para o
 | `startTime` | Especifique a hora do start para filtrar objetos de série de tempo (em milissegundos). | `startTime=1539838505` |
 | `endTime` | Especifique a hora de término para filtrar objetos de série de tempo (em milissegundos). | `endTime=1539838510` |
 | `limit` | Valor numérico que especifica o número máximo de objetos a serem retornados. Padrão: 1000 | `limit=100` |
+| `property` | Filtros pelo valor da propriedade. Apoia os seguintes avaliadores: =, !=, &lt;, &lt;=, >, >=. Só pode ser usado com eventos de experiência, com um máximo de três propriedades compatíveis. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | Sinalizador de recurso para ativar atributos calculados para pesquisa. Padrão: false | `withCA=true` |

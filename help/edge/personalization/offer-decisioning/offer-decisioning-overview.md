@@ -5,9 +5,9 @@ description: O Adobe Experience Platform Web SDK pode fornecer e renderizar ofer
 seo-description: O Adobe Experience Platform Web SDK pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. Você pode criar suas ofertas e outros objetos relacionados usando a interface do usuário ou a API do Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 9%
 
 ---
@@ -29,7 +29,7 @@ A Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar ofertas pe
 
 ## Terminologia
 
-É importante entender a seguinte terminologia ao trabalhar com a Offer Decisioning. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+É importante entender a seguinte terminologia ao trabalhar com a Offer Decisioning. Para obter mais informações e visualização de termos adicionais, visite o glossário [da](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)Offer Decisioning.
 
 * **Container:** Um container é um mecanismo de isolamento para manter diferentes preocupações separadas. A ID do container é o primeiro elemento de caminho para todas as APIs do repositório. Todos os objetos de decisão residem em um container.
 

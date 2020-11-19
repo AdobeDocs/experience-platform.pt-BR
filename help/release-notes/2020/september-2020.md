@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 4%
+source-wordcount: '862'
+ht-degree: 6%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 4%
 
 **Data de lançamento: 9 de setembro de 2020**
 
-Atualizações dos recursos existentes no Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Governance]](#governance)
-- [[!Destinos DNL]](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
-- [[!DNL Perfil do cliente em tempo real]](#profile)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
-- [[!Fontes DNL]](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -41,7 +41,7 @@ Consulte a visão geral [do](../../data-governance/home.md) Data Governance para
 
 ## Destinos {#destinations}
 
-Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos recursos**
 
@@ -59,7 +59,7 @@ Para saber mais, visite a visão geral de [destinos](../../rtcdp/destinations/de
 
 | Recurso | Descrição |
 | --- | --- |
-| Notificações de Evento de E/S de Adobe | [!DNL Observability Insights] aproveita Eventos de E/S de Adobe para criar notificações de evento para vários serviços de Experience Platform. As cargas de notificação são enviadas para um webhook configurado, que você pode usar para automatizar outros processos de downstream. Consulte a visão geral [das](../../observability/notifications/overview.md) notificações para obter mais informações. |
+| Notificações de Evento de E/S de Adobe | [!DNL Observability Insights] aproveita Eventos de E/S de Adobe para criar notificações de evento para vários serviços de Experience Platform. As cargas de notificação são enviadas para um webhook configurado, que você pode usar para automatizar outros processos de downstream. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 Consulte a [[!DNL Observability Insights] visão geral](../../observability/home.md) para obter mais informações sobre o serviço.
 
@@ -98,7 +98,7 @@ O Adobe Experience Platform Segmentation Service fornece uma interface de usuár
 | Exportar trabalhos | Um sinalizador foi adicionado para permitir que os segmentos sejam avaliados como parte de um trabalho de exportação. Como resultado, os usuários podem executar a segmentação e as exportações em uma única tarefa. |
 | Mesclar políticas | Várias políticas de mesclagem podem ser incluídas em um único trabalho de segmentação em lote. |
 
-Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [segmentação](../../segmentation/home.md)
+Para obter mais informações sobre [!DNL Segmentation Service], consulte a visão geral da [Segmentação](../../segmentation/home.md)
 
 ## Fontes {#sources}
 

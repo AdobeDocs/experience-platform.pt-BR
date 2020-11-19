@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 5%
+source-wordcount: '840'
+ht-degree: 6%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 5%
 
 **Data de lançamento: 11 de março de 2020**
 
-Atualizações dos recursos existentes no Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 * [[!DNL Data Governance]](#governance)
-* [[!Ingestão de Dados DNL]](#ingestion)
-* [[!Destinos DNL]](#destinations)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
-* [[!Fontes DNL]](#sources)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -50,7 +50,7 @@ A Adobe Experience Platform [!DNL Data Governance] é uma série de estratégias
 
 Para obter mais informações sobre [!DNL Data Governance], consulte a visão geral [do](../../data-governance/home.md)Data Governance.
 
-## Ingestão de dados {#ingestion}
+## Assimilação de dados {#ingestion}
 
 A Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. A Adobe Experience Platform [!DNL Data Ingestion] oferece várias alternativas para assimilar dados, incluindo APIs em lote, APIs de transmissão, conectores nativos de Adobe, parceiros de integração de dados ou a interface do usuário Adobe Experience Platform.
 
@@ -69,7 +69,7 @@ Para saber mais sobre como ingerir dados na Plataforma, visite a documentação 
 
 ## Destinos {#destinations}
 
-Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 

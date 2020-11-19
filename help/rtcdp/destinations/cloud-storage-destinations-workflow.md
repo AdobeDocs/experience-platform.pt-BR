@@ -6,9 +6,9 @@ type: Tutorial
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: d72f392bc3b47bb23ed36b3d1d218373f62b4679
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Visão geral
 
-Esta página explica como você pode se conectar aos locais do armazenamento em nuvem na Plataforma de dados do cliente em tempo real do Adobe.
+Esta página explica como você pode se conectar aos locais do armazenamento em nuvem na Plataforma de dados do cliente em tempo real.
 
 1. Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione o destino preferencial do armazenamento na nuvem e, em seguida, selecione **[!UICONTROL Configurar]**.
 

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1878'
 ht-degree: 2%
 
 ---
@@ -19,18 +19,18 @@ ht-degree: 2%
 
 Novos recursos no Adobe Experience Platform:
 * [[!DNL Real-time Customer Data Platform]](#rtcdp)
-* [[!Destinos DNL]](#destinations)
-* [[!Fontes DNL]](#sources)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 Atualizações dos recursos existentes:
 * [[!DNL Data Science Workspace]](#dsw)
-* [Sistema do [!DNL Experience Data Model (XDM)]](#xdm)
-* [[!DNL Perfil do cliente em tempo real]](#profile)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Construída na Adobe Experience Platform, a Adobe Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes durante toda a jornada do cliente. A CDP em tempo real combina várias fontes de dados corporativos para criar perfis unificados em tempo real que podem ser usados para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
+Construída na Adobe Experience Platform, a Real-time Customer Data Platform (CDP em tempo real) ajuda as empresas a unir dados conhecidos e desconhecidos para ativar perfis de clientes com decisões inteligentes durante toda a jornada do cliente. A CDP em tempo real combina várias fontes de dados corporativos para criar perfis unificados em tempo real que podem ser usados para fornecer experiências personalizadas individuais do cliente em todos os canais e dispositivos.
 
 [!DNL Real-time Customer Data Platform] inclui ferramentas para controle de dados, gerenciamento de identidade, segmentação avançada e ciência de dados, para que você possa criar perfis e definir audiências, bem como obter informações avançadas e, ao mesmo tempo, poder aplicar políticas rigorosas de controle de dados.
 
@@ -43,19 +43,19 @@ Com a CDP em tempo real, você pode:
 * Gerar insights acionáveis e audiências dimensionáveis com IA e aprendizado de máquina capacitado pela Adobe Sensei e desenvolvido para profissionais de marketing.
 * Forneça experiências personalizadas em tempo real em todos os canais e destinos.
 
-Para obter mais informações, consulte a documentação [](../../rtcdp/overview.md)Adobe Real-time Customer Data Platform.
+Para obter mais informações, consulte a documentação [da Plataforma de dados do cliente em tempo](../../rtcdp/overview.md)real.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 |---|---|
-| Destinos | Integrações pré-criadas com plataformas de destino suportadas pela Adobe [!DNL Real-time Customer Data Platform] que ativam os dados para esses parceiros de forma contínua. See [Destinations](#destinations) below for more information. |
-| Painel de métricas de home page | O home page Adobe Real-time Customer Data Platform (CDP em tempo real) inclui um painel de métricas que mostra informações sobre perfis e segmentos. O home page também contém links para materiais de aprendizado. Consulte a seção sobre métricas [da Plataforma de dados do cliente em tempo](#real-time-customer-data-platform-metrics) real abaixo. |
+| Destinos | Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information. |
+| Painel de métricas de home page | O home page Real-time Customer Data Platform (CDP em tempo real) inclui um painel de métricas que mostra informações sobre perfis e segmentos. O home page também contém links para materiais de aprendizado. Consulte a seção sobre métricas [da Plataforma de dados do cliente em tempo](#real-time-customer-data-platform-metrics) real abaixo. |
 | Fontes | Você pode assimilar dados de várias fontes, como Adobe Solutions, armazenamento baseado em nuvem, software de terceiros e seu CRM. Consulte a seção [Fontes](#sources) abaixo para saber mais. |
 
 **[!DNL Real-time Customer Data Platform]métricas**
 
-O home page Adobe Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
+O home page Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
 
 O home page é apenas um dos locais onde os cartões de métrica aparecem. A CDP em tempo real fornece cartões de métricas em toda a sua experiência. Essas métricas informam sobre as audiências de dados, perfis e segmentos no sistema.
 
@@ -112,7 +112,7 @@ A Adobe Experience Platform [!DNL Data Science Workspace] permite que os cientis
 | Recurso | Descrição |
 | -----------| ---------- |
 | Acesso aos dados usando o [!DNL Platform] SDK | As receitas pré-criadas e os notebooks de iniciação [!DNL Python] agora usam o [!DNL Platform] SDK para acessar dados. |
-| Suporte para caixas de proteção | Suporte para a funcionalidade da caixa de proteção futura (atualmente em beta), incluindo a capacidade de isolar notebooks e Fórmulas em caixas de proteção de desenvolvimento ou produção. Consulte a visão geral [das](../../sandboxes/home.md) caixas de proteção para obter mais informações. |
+| Suporte para caixas de proteção | Suporte para a funcionalidade da caixa de proteção futura (atualmente em beta), incluindo a capacidade de isolar notebooks e Fórmulas em caixas de proteção de desenvolvimento ou produção. See the [sandboxes overview](../../sandboxes/home.md) for more information. |
 
 Para obter mais informações, consulte a visão geral [da](../../data-science-workspace/home.md)Data Science Workspace.
 

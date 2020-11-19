@@ -5,9 +5,9 @@ description: Saiba como enviar dados de link para a Adobe Analytics com o Experi
 seo-description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ O tipo de link pode ser um dos três valores:
 
 ## Rastreamento automático de links {#automaticLinkTracking}
 
-Por padrão, o SDK da Web captura, [rotula](#labelingLinks)e [registra](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) cliques em tags de link [qualificadas](#qualifyingLinks) . Os cliques são capturados com um ouvinte de evento de [captura](https://www.w3.org/TR/uievents/#capture-phase) que é anexado ao documento.
+Por padrão, o SDK da Web captura, rotula e registra cliques em tags de link qualificadas. Os cliques são capturados com um ouvinte de evento de [captura](https://www.w3.org/TR/uievents/#capture-phase) que é anexado ao documento.
 
-A desativação do rastreamento automático de links pode ser feita pela [configuração](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) do SDK da Web.
+O rastreamento automático de links pode ser desativado pela [configuração](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) do SDK da Web.
 
 ```javascript
 clickCollectionEnabled: false

@@ -2,12 +2,12 @@
 keywords: livefyre;livefyre extension
 title: extensão Adobe Livefyre
 seo-title: extensão Adobe Livefyre
-description: A extensão Adobe Livefyre é um destino social na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Adobe Livefyre é um destino social na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão Adobe Livefyre é um destino social na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão Adobe Livefyre é um destino social na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 O Adobe Livefyre permite que você descubra, organize e publique um fluxo constante de conteúdo gerado pelo usuário no seu site para criar experiências autênticas e altamente personalizadas.
 
-O Adobe Livefyre é uma extensão social na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+O Adobe Livefyre é uma extensão social na Plataforma de dados de clientes em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
 Este destino é uma [!DNL Adobe Experience Platform Launch] extensão. Para obter mais informações sobre como [!DNL Platform Launch] as extensões funcionam no CDP em tempo real do Adobe, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 

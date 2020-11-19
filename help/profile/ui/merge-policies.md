@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: Guia da interface do usuário para unir políticas
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Se preferir trabalhar com políticas de mesclagem usando a [!DNL Real-time Custo
 
 Este guia exige uma compreensão funcional de vários [!DNL Experience Platform] recursos importantes. Antes de seguir este guia ou usar as APIs de Perfil, consulte a documentação dos seguintes serviços:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [Perfil](../home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [Serviço](../../identity-service/home.md)de identidade Adobe Experience Platform: Habilita o Perfil do cliente em tempo real, fazendo a ponte entre identidades de diferentes fontes de dados que estão sendo assimiladas [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
+* [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 ## Métodos de mesclagem {#merge-methods}
 

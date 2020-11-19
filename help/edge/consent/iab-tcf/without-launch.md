@@ -1,20 +1,20 @@
 ---
 title: Uso do IAB TCF 2.0 sem Experience Platform Launch
-seo-title: Configurar o consentimento do IAB TCF 2.0 com o SDK da Web da Adobe Experience Platform
+seo-title: Configurar o consentimento do IAB TCF 2.0 com o Adobe Experience Platform Web SDK
 description: Saiba como configurar o consentimento do IAB TCF 2.0 com o Adobe Experience Platform Web SDK
 seo-description: Saiba como configurar o consentimento do IAB TCF 2.0 com o Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# Uso do IAB TCF 2.0 com a extensão do Adobe Experience Platform Web SDK
+# Uso do IAB TCF 2.0 com a extensão AEP Web SDK
 
-Este guia mostra como integrar o Interative Advertising Bureau Transparency &amp; Consent Framework, versão 2.0 (IAB TCF 2.0) com o SDK da Web da Adobe Experience Platform sem usar o Experience Platform Launch. Para obter uma visão geral da integração com o IAB TCF 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como fazer a integração com o Experience Platform Launch, leia o guia [IAB TCF 2.0 para o Experience Platform Launch](./with-launch.md).
+Este guia mostra como integrar o Interative Advertising Bureau Transparency &amp; Consent Framework, versão 2.0 (IAB TCF 2.0) com o Adobe Experience Platform Web SDK sem usar o Experience Platform Launch. Para obter uma visão geral da integração com o IAB TCF 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como fazer a integração com o Experience Platform Launch, leia o guia [IAB TCF 2.0 para o Experience Platform Launch](./with-launch.md).
 
 ## Introdução
 
@@ -26,7 +26,7 @@ Este guia usa a `__tcfapi` interface para acessar as informações de consentime
 
 Para usar o IAB TCF 2.0 com Experience Platform Launch e a extensão AEP Web SDK, é necessário ter um schema XDM disponível. Se você não configurou nenhum desses, start exibindo esta página antes de continuar.
 
-Além disso, este guia exige que você tenha uma compreensão funcional do SDK da Web da Adobe Experience Platform. Para obter uma atualização rápida, leia a visão geral [do SDK da Web da](../../home.md) Adobe Experience Platform e a documentação de perguntas [](../../web-sdk-faq.md) frequentes.
+Além disso, este guia exige que você tenha uma compreensão funcional do Adobe Experience Platform Web SDK. Para obter uma atualização rápida, leia a visão geral [do SDK da Web da](../../home.md) Adobe Experience Platform e a documentação de perguntas [](../../web-sdk-faq.md) frequentes.
 
 ## Ativação do consentimento padrão
 
@@ -58,7 +58,7 @@ Neste exemplo, o `configure` comando é chamado depois que `tcData` é obtido da
 
 ## Uso do evento setConsent
 
-A API IAB TCF 2.0 fornece uma evento para quando o consentimento é atualizado pelo cliente. Isso ocorre quando o cliente define inicialmente suas preferências e quando atualiza suas preferências.
+A API TCF 2.0 da IAB fornece uma evento para quando o consentimento é atualizado pelo cliente. Isso ocorre quando o cliente define inicialmente suas preferências e quando atualiza suas preferências.
 
 O exemplo a seguir mostra uma maneira de fazer isso:
 
@@ -110,4 +110,4 @@ A outra maneira de adicionar as informações de consentimento a cada solicitaç
 
 ## Próximas etapas
 
-Agora que você aprendeu a usar o IAB TCF 2.0 com a extensão Adobe Experience Platform Web SDK, também pode optar por integrar com outras soluções de Adobe, como a Adobe Analytics ou a plataforma Dados do cliente em tempo real. Consulte a visão geral [do](./overview.md) IAB Transparency &amp; Consent Framework 2.0 para obter mais informações.
+Agora que você aprendeu a usar o IAB TCF 2.0 com a extensão AEP Web SDK, também é possível optar por integrar com outras soluções de Adobe, como a Adobe Analytics ou a plataforma Dados do cliente em tempo real. Consulte a visão geral [do](./overview.md) IAB Transparency &amp; Consent Framework 2.0 para obter mais informações.

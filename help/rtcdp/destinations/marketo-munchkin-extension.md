@@ -2,12 +2,12 @@
 keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo
 title: Extensão do Marketo Munchkin
 seo-title: Extensão do Marketo Munchkin
-description: A extensão do Marketo Munchkin é um destino de personalização na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão do Marketo Munchkin é um destino de personalização na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão do Marketo Munchkin é um destino de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão do Marketo Munchkin é um destino de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '585'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ Desde o gerenciamento de clientes potenciais até o marketing baseado em conta, 
 
 O JavaScript [!DNL Marketo’s Munchkin][!DNL Marketo] permite rastrear as visitas da página do usuário final e os cliques nas páginas de aterrissagem do e páginas da Web externas.
 
-[!DNL Marketo Munchkin] é uma extensão de email na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
+[!DNL Marketo Munchkin] é uma extensão de email na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

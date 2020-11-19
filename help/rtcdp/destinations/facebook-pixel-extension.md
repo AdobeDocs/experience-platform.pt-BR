@@ -2,12 +2,12 @@
 keywords: facebook pixel extensions;facebook pixel extension;facebook pixel destinations;facebook pixel
 title: Extensão de pixel do Facebook
 seo-title: Extensão de pixel do Facebook
-description: A extensão do Facebook Pixel é um destino publicitário na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão do Facebook Pixel é um destino publicitário na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão do Facebook Pixel é um destino publicitário na Plataforma de dados de clientes em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão do Facebook Pixel é um destino publicitário na Plataforma de dados de clientes em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '543'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 A [!DNL Facebook Pixel] é uma ferramenta de análise que permite medir a eficácia de sua publicidade ao compreender as ações que as pessoas executam em seu site.
 
-[!DNL Facebook Pixel] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [do](https://developers.facebook.com/docs/facebook-pixel/)Facebook Pixel.
+[!DNL Facebook Pixel] é uma extensão de anúncio na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [do](https://developers.facebook.com/docs/facebook-pixel/)Facebook Pixel.
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

@@ -5,9 +5,9 @@ seo-title: Voz dos destinos do cliente
 description: As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de bate-papo. As informações agrupadas podem ser filtradas e analisadas para permitir que o empresa otimize seu site para atender às suas necessidades.
 seo-description: As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de bate-papo. As informações agrupadas podem ser filtradas e analisadas para permitir que o empresa otimize seu site para atender às suas necessidades.
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de bate-papo. As informações agrupadas podem ser filtradas e analisadas para permitir que o empresa otimize seu site para atender às suas necessidades.
 
-Atualmente, a Plataforma de dados do cliente em tempo real Adobe suporta a Voz dos destinos do cliente listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, a Plataforma de dados do cliente em tempo real suporta a Voz dos destinos do cliente listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
 * [Confirmar extensão de Comentários Digitais](confirmit-digital-feedback-extension.md)
 * [Extensão Tags Invoca](/help/rtcdp/destinations/invoca-extension.md)

@@ -2,12 +2,12 @@
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
 title: extensão Nielsen BSDK
 seo-title: extensão Nielsen BSDK
-description: A extensão Nielsen BSDK é um destino analítico no Adobe Real-time Customer Data Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Nielsen BSDK é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão Nielsen BSDK é um destino analítico na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão Nielsen BSDK é um destino analítico na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '630'
 ht-degree: 5%
 
 ---
@@ -23,7 +23,7 @@ DCR: Uma solução de avaliação que fornece a medição diária do conteúdo d
 
 DTVR: Isso é responsável pela exibição linear de TV que ocorre em dispositivos móveis e desktop para fontes de programação participantes. Esta é a primeira solução a receber acreditação da MRC por sua contribuição para a medição da audiência da TV para programação visualizada em computadores e dispositivos móveis.
 
-[!DNL Nielsen BSDK] é uma extensão de análise na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
+[!DNL Nielsen BSDK] é uma extensão de análise na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

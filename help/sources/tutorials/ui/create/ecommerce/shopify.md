@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial fornece etapas para a criação de um conector de origem do Shopify usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: 918e9fc4eafb21cb40cc475e967aece3018ace87
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '460'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Os conectores de origem na Adobe Experience Platform fornecem a capacidade de as
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.

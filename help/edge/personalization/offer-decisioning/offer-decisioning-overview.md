@@ -5,9 +5,9 @@ description: O Adobe Experience Platform Web SDK pode fornecer e renderizar ofer
 seo-description: O Adobe Experience Platform Web SDK pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. Você pode criar suas ofertas e outros objetos relacionados usando a interface do usuário ou a API do Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
+source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '810'
 ht-degree: 9%
 
 ---
@@ -29,7 +29,7 @@ A Adobe Experience Platform [!DNL Web SDK] pode fornecer e renderizar ofertas pe
 
 ## Terminologia
 
-É importante entender a seguinte terminologia ao trabalhar com a Offer Decisioning. Para obter mais informações e visualização de termos adicionais, visite o glossário [da](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started)Offer Decisioning.
+É importante entender a seguinte terminologia ao trabalhar com a Offer Decisioning. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
 
 * **Container:** Um container é um mecanismo de isolamento para manter diferentes preocupações separadas. A ID do container é o primeiro elemento de caminho para todas as APIs do repositório. Todos os objetos de decisão residem em um container.
 
@@ -83,7 +83,7 @@ Para habilitar o Offer Decisioning, é necessário executar as seguintes etapas:
    * SDK instalado do Launch da plataforma
       1. [Criar uma propriedade de lançamento de plataforma](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/companies-and-properties.html)
       2. [Adicione o código incorporado de inicialização da plataforma](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Instale e configure a extensão do Adobe Experience Platform Web SDK com a Configuração de borda que você acabou de criar selecionando a configuração no menu suspenso &quot;Configuração de borda&quot;. Documentação útil sobre [extensões](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Instale e configure a extensão AEP Web SDK com a Configuração de borda que você acabou de criar selecionando a configuração no menu suspenso &quot;Configuração de borda&quot;. Documentação útil sobre [extensões](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
@@ -240,7 +240,7 @@ Para habilitar o Offer Decisioning, é necessário executar as seguintes etapas:
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style="color:red;">20% Off on shipping</p>",
+                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"

@@ -2,12 +2,12 @@
 keywords: media analytics extension;media analytics;audio and video extension
 title: Extensão Adobe Media Analytics for Audio and Video
 seo-title: Extensão Adobe Media Analytics for Audio and Video
-description: A extensão Adobe Media Analytics para áudio e vídeo é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Adobe Media Analytics for Video é um destino analítico na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão Adobe Media Analytics para áudio e vídeo é um destino analítico na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão Adobe Media Analytics for Video é um destino analítico na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '584'
 ht-degree: 12%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 12%
 
 O Adobe Media Analytics para áudio e vídeo é um complemento da oferta básica do Analytics que fornece aos clientes avaliações robustas para vídeo, áudio e anúncios.
 
-O Adobe Media Analytics para áudio e vídeo é uma extensão de análise na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
+O Adobe Media Analytics para áudio e vídeo é uma extensão de análise na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
 Este destino é uma [!DNL Adobe Experience Platform Launch] extensão. Para obter mais informações sobre como [!DNL Platform Launch] as extensões funcionam no CDP em tempo real do Adobe, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 

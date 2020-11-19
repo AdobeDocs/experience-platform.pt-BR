@@ -5,9 +5,9 @@ seo-title: Extensões do Experience Platform Launch
 description: O Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 seo-description: O Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Para localizar as extensões de lançamento de plataforma na interface CDP em te
 
 As extensões de lançamento de plataforma encaminham os dados brutos do evento para vários tipos de destinos. Pense nas extensões como um tipo de destino de Encaminhamento de **Eventos** . Esse é um tipo mais simples de integração com as plataformas de destino, que apenas encaminha dados brutos do evento. Exemplos disso são a extensão [de personalização](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou a [Confirmar voz da extensão](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
-**Os destinos de exportação** de perfil/segmento no Adobe Real-time Customer Data Platform capturam os dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Exemplos disso são o destino [do armazenamento em nuvem do](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 ou o destino [de publicidade do](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
+**Os destinos de exportação** de perfil/segmento na Plataforma de dados do cliente em tempo real capturam os dados do evento, os combinam com outras fontes de dados, aplicam a segmentação e exportam segmentos e perfis qualificados para destinos. Exemplos disso são o destino [do armazenamento em nuvem](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 ou o destino [de publicidade do](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
 
 ![extensões de Experience Platform Launch em relação a outros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 

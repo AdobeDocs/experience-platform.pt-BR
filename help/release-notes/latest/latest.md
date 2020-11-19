@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
+source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2077'
 ht-degree: 3%
 
 ---
@@ -107,7 +107,7 @@ Para obter mais informações, leia o documento sobre como [criar uma receita us
 
 ## [!DNL Destinations] Serviço de {#destinations}
 
-Na Plataforma [de dados do cliente em tempo real do](../../rtcdp/overview.md)Adobe, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 

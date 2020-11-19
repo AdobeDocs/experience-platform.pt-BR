@@ -5,62 +5,86 @@ seo-title: Página Detalhes de Destinos
 description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 2%
+source-wordcount: '681'
+ht-degree: 1%
 
 ---
 
 
-# Página de detalhes do destino {#destinations-details-page}
+# Página de detalhes do destino
 
-A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. Para visualização desses detalhes, vá para **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e clique no nome do destino com o qual você deseja trabalhar.
+Na interface do usuário do Adobe Experience Platform, você pode visualização e monitorar os atributos e atividades de seus destinos. Esses detalhes incluem o nome e a ID do destino, controles para ativar ou desativar os destinos e muito mais. Detalhes para destinos em lote também incluem métricas para registros de perfis ativados e histórico de execuções de fluxo de dados.
 
-Os componentes principais de um destino individual são:
+>[!NOTE]
+>
+>A página de detalhes de destinos faz parte da área de trabalho [!UICONTROL Destinos] na interface do usuário da plataforma. Consulte a visão geral [[!UICONTROL da área de trabalho] Destinos](./destinations-workspace.md) para obter mais informações.
 
-* 1 - Nome e ID de destino
-* 2 - Segmentos ativados para o destino
-* 3 - Informação sobre o painel direito
-* 4 - Controles para editar a ativação e ativar/desativar o fluxo de dados
+Na área de trabalho **[!UICONTROL Destinos]** na interface do usuário da plataforma, navegue até a guia **[!UICONTROL Procurar]** e selecione o nome de um destino em lote que deseja visualização.
 
-![Página de destinos numerada](/help/rtcdp/destinations/assets/destination-page-numbered.png)
+![](./assets/details-page/select-destination.png)
 
-Navegue até uma página de destino individual para obter uma visão geral dos detalhes de destino, como:
+A página de detalhes do destino é exibida, mostrando seus controles disponíveis. Se você estiver visualizando os detalhes de um destino em lote, um painel de monitoramento também será exibido.
 
-## 1. Nome e ID do destino
+![](./assets/details-page/details.png)
 
-Você pode ver o nome de destino no cabeçalho da página e a ID de destino no URL da página.
+## Trilho direito
 
-## 2. Segmentos ativados para o destino
+O painel direito exibe as informações básicas sobre o destino.
 
-Esta seção exibe quais segmentos estão mapeados no momento para o destino, bem como mais informações sobre esses segmentos. Consulte a tabela abaixo para obter mais informações:
+![](./assets/details-page/right-rail.png)
 
-| Item | Descrição |
----------|----------|
-| Nome do segmento | O nome do seu segmento. |
-| Descrição do segmento | A descrição do seu segmento. |
-| Data do start | A data em que esses segmentos estão sendo ativados para o destino. |
-| Data final | A data em que esses segmentos pararão de ser ativados para o destino. |
-| ID de mapeamento | *Não disponível para destinos* de marketing por email. Indica a ID pela qual o segmento é conhecido na plataforma de destino. |
+O quadro seguinte cobre os controlos e os pormenores fornecidos pelo painel direito:
 
-## 3. Informações sobre o painel direito
+| Item do painel direito | Descrição |
+| --- | --- |
+| [!UICONTROL Ativar] | Selecione esse controle para editar quais segmentos são mapeados para o destino. Consulte o guia sobre como [ativar segmentos em um destino](/help/rtcdp/destinations/activate-destinations.md) para obter mais informações. |
+| [!UICONTROL Nome do destino] | Este campo pode ser editado para atualizar o nome do destino. |
+| [!UICONTROL Descrição] | Esse campo pode ser editado para atualizar ou adicionar uma descrição opcional ao destino. |
+| [!UICONTROL Destino] | Representa a plataforma de destino para a qual o audiência é enviado. Consulte o catálogo [de](./destinations-catalog.md) destinos para obter mais informações. |
+| [!UICONTROL Status] | Indica se o destino está ativado ou desativado. |
+| [!UICONTROL Ações de marketing] | Indica as ações de marketing (casos de uso) que se aplicam a esse destino para fins de gerenciamento de dados. |
+| [!UICONTROL Categoria] | Indica o tipo de destino. Consulte o catálogo [de](./destinations-catalog.md) destinos para obter mais informações. |
+| [!UICONTROL Tipo de conexão] | Indica o formulário pelo qual suas audiências estão sendo enviadas para o destino. Os valores possíveis incluem &quot;[!UICONTROL Cookie]&quot; e &quot;baseado[!UICONTROL em]Perfis&quot;. |
+| [!UICONTROL Frequência] | Indica com que frequência as audiências são enviadas para o destino. Os valores possíveis incluem &quot;[!UICONTROL Streaming]&quot; e &quot;[!UICONTROL Batch]&quot;. |
+| [!UICONTROL Identidade] | Representa a namespace de identidade aceita pelo destino, como `GAID`, `IDFA`ou `email`. Para obter mais informações sobre namespaces de identidade aceitas, consulte a visão geral [da namespace de](../../identity-service/namespaces.md)identidade. |
+| [!UICONTROL Criado por] | Indica o usuário que criou este destino. |
+| [!UICONTROL Criado] | Indica a data e hora UTC em que esse destino foi criado. |
 
-O painel direito inclui informações sobre seu destino. Consulte a tabela abaixo para obter mais informações:
+## [!UICONTROL Alternância ativada]/[!UICONTROL desativada]
 
-| Item | Descrição |
----------|----------|
-| Plataforma | Representa a plataforma de destino para a qual o audiência é enviado. Consulte Catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) destinos para obter mais informações. |
-| Descrição | Você pode editar a descrição do fluxo de destino. |
-| Categoria | Indica o tipo de destino. Consulte Catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) destinos para obter mais informações. |
-| Tipo de conexão | Indica em qual formulário suas audiências estão sendo enviadas para o destino. Pode ser [!UICONTROL Cookie] ou baseado em [!UICONTROL Perfis]. |
-| Frequência | Indica com que frequência as audiências são enviadas para o destino. Pode ser [!UICONTROL Streaming] ou [!UICONTROL Batch]. |
-| Identidade | Representa a namespace de identidade aceita pelo destino. Por exemplo, o campo Identidade pode ser GAID, IDFA, email. Para obter todas as namespaces de identidade aceitas, consulte namespaces padrão na visão geral [da namespace de](../../identity-service/namespaces.md)identidade. |
-| Criado por | Indica o usuário que criou esse fluxo de destino. |
-| Criado | Indica a data e a hora UTC em que esse fluxo de destino foi criado. |
+Você pode usar a opção **[!UICONTROL Ativado]/[!UICONTROL Desativado]** para alternar para o start e pausar todas as exportações de dados para o destino.
 
-## 4. Controles para editar a ativação e ativar/desativar o fluxo de dados
+![](./assets/details-page/enable-disable.png)
 
-O controle Editar ativação permite editar quais segmentos são mapeados para o destino. Pressione Editar ativação para abrir o fluxo de trabalho [da ativação de](/help/rtcdp/destinations/activate-destinations.md)segmentos.
+## [!UICONTROL Execuções do Dataflow]
 
-Use a opção **Ativar/Desativar** para alternar para o start e pausar a exportação de dados para um destino.
+A guia [!UICONTROL Dataflow executa] fornece dados de métricas em suas execuções de fluxo de dados para destinos em lote. Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais para registros de perfis:
+
+* **[!UICONTROL Registros de perfil ativados]**: A contagem total de registros de perfis criados ou atualizados para ativação.
+* **[!UICONTROL Registros de perfil ignorados]**:  A contagem total de registros de perfis ignorados para ativação com base em saídas de perfis ou atributos ausentes.
+
+![](./assets/details-page/dataflow-runs.png)
+
+>[!NOTE]
+>
+>As execuções de fluxo de dados são geradas com base na frequência de programação do fluxo de dados de destino. Uma execução de fluxo de dados separada é realizada para cada política de mesclagem aplicada a um segmento.
+
+Para visualização dos detalhes de uma execução específica do fluxo de dados, selecione o tempo de start da execução na lista. A página de detalhes de uma execução de fluxo de dados contém informações adicionais, como o tamanho dos dados processados e uma lista de erros que ocorreram com detalhes do diagnóstico de erros.
+
+![](./assets/details-page/dataflow.png)
+
+## [!UICONTROL Segmentos]
+
+A guia [!UICONTROL Segmentos] exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data e a data de start (se aplicável). Para visualização dos detalhes sobre um segmento específico, selecione seu nome na lista.
+
+![](./assets/details-page/segments.png)
+
+>[!NOTE]
+>
+>Para obter detalhes sobre como explorar a página de detalhes de um segmento, consulte a visão geral [da interface do usuário de](../../segmentation/ui/overview.md#segment-details)segmentação.
+
+## Próximas etapas
+
+Este documento cobriu os recursos da página de detalhes de destino. Para obter mais informações sobre como gerenciar destinos na interface do usuário, consulte a visão geral da área de trabalho [[!UICONTROL Destinos]](./destinations-workspace.md).

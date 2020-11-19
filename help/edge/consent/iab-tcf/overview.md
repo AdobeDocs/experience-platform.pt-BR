@@ -5,9 +5,9 @@ description: Saiba como suportar as preferências de consentimento do IAB TCF 2.
 seo-description: Saiba como suportar as preferências de consentimento do IAB TCF 2.0 com o SDK da Web do Experience Platform
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Para implementar o AEP Web SDK com IAB TCF 2.0, é necessário que você tenha u
 
 ## Integração da plataforma de dados do cliente em tempo real
 
-Construída no Adobe Experience Platform, a Adobe Real-time Customer Data Platform (CDP em tempo real) ajuda a reunir dados conhecidos e anônimos de várias fontes corporativas. Isso permite criar perfis de clientes que podem ser usados para fornecer experiências personalizadas de clientes em todos os canais e dispositivos em tempo real. Para enviar dados de consentimento para a CDP em tempo real por meio do SDK da Web AEP, é necessário o seguinte:
+Construída na Adobe Experience Platform, a Real-time Customer Data Platform (CDP em tempo real) ajuda a reunir dados conhecidos e anônimos de várias fontes corporativas. Isso permite criar perfis de clientes que podem ser usados para fornecer experiências personalizadas de clientes em todos os canais e dispositivos em tempo real. Para enviar dados de consentimento para a CDP em tempo real por meio do SDK da Web AEP, é necessário o seguinte:
 
 - Um conjunto de dados baseado na [!DNL XDM Individual Profile] classe, habilitado para uso em, com a combinação de privacidade do Perfil [!DNL Real-time Customer Profile].
 - Uma configuração de borda configurada com CDP em tempo real e o conjunto de dados do perfil mencionado acima.

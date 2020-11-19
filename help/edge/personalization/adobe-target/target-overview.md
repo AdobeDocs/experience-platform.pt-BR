@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target e o Adobe Experience Platform Web SDK. '
+title: 'Adobe Target e Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK e uso do Adobe Target
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '629'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ Para usar o VEC com uma implementação do SDK da Web de plataforma, é necessá
 
 ## Atividades VEC de renderização automática
 
-O SDK da Web AEP tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC da Adobe Target na Web para seus usuários. Para indicar ao AEP Web SDK para renderizar automaticamente atividades VEC, envie um evento com `renderDecisions = true`:
+O Adobe Experience Platform Web SDK tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC da Adobe Target na Web para seus usuários. Para indicar ao Adobe Experience Platform Web SDK para renderizar automaticamente atividades VEC, envie um evento com `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -85,32 +85,33 @@ alloy
 
 ## O `__view__` âmbito
 
-O AEP [!DNL Web SDK] fornece uma funcionalidade na qual você pode recuperar ações VEC sem depender do AEP [!DNL Web SDK] para renderizar as ações do VEC para você. Envie um evento com `__view__` definição de `decisionScopes`.
+O Adobe Experience Platform Web SDK fornece funcionalidade onde você pode recuperar ações do VEC sem depender do SDK para renderizar as ações do VEC para você. Envie um evento com `__view__` definição de `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
-  decisionScopes: [“__view__”,"foo", "bar"], 
-  "xdm": { 
-    "web": { 
-      "webPageDetails": { 
-        "name": "Home Page"
-       }
-      } 
-     }
+      "decisionScopes": ["__view__", "foo", "bar"], 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+            "name": "Home Page"
+          }
+        } 
+      }
     }
-   ).then(results){
-  for (decision of results.decisions){
-     if(decision.decisionScope == "__view__")
-       console.log(decision.content)
-}
-};
+  ).then(function(results) {
+    for (decision of results.decisions) {
+      if (decision.decisionScope === "__view__") {
+        console.log(decision.content)
+      }
+    }
+  });
 ```
 
 ## Audiências no XDM
 
-Ao definir Audiências para as atividades do Público alvo que serão entregues por meio do SDK da Web do AEP, o [XDM](https://docs.adobe.com/content/help/pt-BR/experience-platform/xdm/home.html) deve ser definido e usado. Depois de definir schemas XDM, classes e combinações, você pode criar uma regra de audiência de Público alvo definida pelos dados XDM para definição de metas. No Público alvo, os dados XDM são exibidos no Construtor de Audiências como um parâmetro personalizado. O XDM é serializado usando a notação de pontos (por exemplo, `web.webPageDetails.name`).
+Ao definir Audiências para as atividades do Público alvo que serão entregues via Adobe Experience Platform Web SDK, o [XDM](https://docs.adobe.com/content/help/pt-BR/experience-platform/xdm/home.html) deve ser definido e usado. Depois de definir schemas XDM, classes e combinações, você pode criar uma regra de audiência de Público alvo definida pelos dados XDM para definição de metas. No Público alvo, os dados XDM são exibidos no Construtor de Audiências como um parâmetro personalizado. O XDM é serializado usando a notação de pontos (por exemplo, `web.webPageDetails.name`).
 
-Se você tiver atividades Públicos alvos com audiências predefinidas que usam parâmetros personalizados ou um perfil de usuário, lembre-se de que elas não serão entregues corretamente pelo SDK da Web AEP. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. Entretanto, há campos de direcionamento de audiência prontos para uso compatíveis com o SDK da Web do AEP que não exigem o XDM. Estes são os campos disponíveis na interface do Público alvo que não exigem o XDM:
+Se você tiver atividades Públicos alvos com audiências predefinidas que usam parâmetros personalizados ou um perfil de usuário, lembre-se de que elas não serão entregues corretamente pelo SDK. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. Entretanto, há campos de direcionamento de audiência prontos para uso compatíveis com o SDK da Adobe Experience Platform Web que não exigem o XDM. Estes são os campos disponíveis na interface do Público alvo que não exigem o XDM:
 
 * Biblioteca do Target
 * Geografia  

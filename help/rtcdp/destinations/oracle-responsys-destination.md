@@ -1,13 +1,13 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle responsys destination
-title: Destino do Oracle Responsys
-seo-title: Destino do Oracle Responsys
-description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
-seo-description: A Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, exibição e redes sociais.
+title: Destino do oracle Responsys
+seo-title: Destino do oracle Responsys
+description: A Responsys é uma ferramenta de marketing por email empresarial para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, vídeos e redes sociais.
+seo-description: A Responsys é uma ferramenta de marketing por email empresarial para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, vídeos e redes sociais.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [A Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) é uma ferramenta de marketing por email empresarial para campanhas de marketing entre canais, oferecida pela [!DNL Oracle] para personalizar interações entre email, dispositivos móveis, vídeos e redes sociais.
 
-Para enviar dados de segmento para [!DNL Oracle Responsys], é necessário primeiro [conectar-se ao destino](#connect-destination) na Plataforma de dados do cliente em tempo real do Adobe e [configurar uma importação](#import-data-into-responsys) de dados do local do armazenamento para [!DNL Oracle Responsys].
+Para enviar dados de segmento para [!DNL Oracle Responsys], é necessário primeiro [conectar-se ao destino](#connect-destination) na Plataforma de dados do cliente em tempo real e [configurar uma importação](#import-data-into-responsys) de dados do local do armazenamento para [!DNL Oracle Responsys].
 
 ## Tipo de exportação {#export-type}
 

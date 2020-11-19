@@ -2,12 +2,12 @@
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: Extensão KickFire
 seo-title: Extensão KickFire
-description: A extensão KickFire é um destino de personalização na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão KickFire é um destino de personalização na Plataforma de Dados de Clientes em Tempo Real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão KickFire é um destino de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+seo-description: A extensão KickFire é um destino de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '544'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL KickFire's] A inteligência de endereço IP e os dados firmmográficos B2B permitem traduzir endereços IP para o empresa, identificar visitantes web anônimos e integrar dados de conta à sua pilha de tecnologia - tudo com base em um endereço IP de empresa.
 
-[!DNL KickFire] é uma extensão de personalização na Plataforma de dados do cliente em tempo real do Adobe. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [Kickfire](https://www.kickfire.com/).
+[!DNL KickFire] é uma extensão de personalização na Plataforma de dados do cliente em tempo real. Para obter mais informações sobre a funcionalidade de extensão, consulte o site [Kickfire](https://www.kickfire.com/).
 
 Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam no Adobe Real-time CDP, consulte Visão geral [das extensões do](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 

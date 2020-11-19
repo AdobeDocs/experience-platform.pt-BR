@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target e o Adobe Experience Platform Web SDK. '
+title: 'Adobe Target e Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK e uso do Adobe Target
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -25,7 +25,7 @@ Aplicativos da Web modernos, como Aplicativos de página única, adotaram em vez
 
 ## Benefícios do SDK da Web da plataforma para SPA
 
-Estes são alguns benefícios de usar o Adobe Experience Platform Web SDK para seus aplicativos de página única:
+Estes são alguns benefícios do uso do Adobe Experience Platform Web SDK para aplicativos de página única:
 
 * Capacidade de armazenar em cache todas as ofertas no carregamento da página para reduzir várias chamadas do servidor a uma única chamada de servidor.
 * Melhore tremendamente a experiência do usuário em seu site, pois as ofertas são mostradas imediatamente pelo cache, sem o atraso de tempo introduzido pelas chamadas tradicionais do servidor.
@@ -63,20 +63,20 @@ O conceito de Visualizações pode ser muito mais alargado do que isso. Estes s�
 
 As Visualizações XDM podem ser aproveitadas no Adobe Target para permitir que os profissionais de marketing executem testes A/B e XT no SPA por meio do Visual Experience Composer. Isso requer a execução das seguintes etapas para concluir uma configuração única do desenvolvedor:
 
-1. Instalar o SDK da Web do [Adobe Experience Platform](../../fundamentals/installing-the-sdk.md)
+1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
 2. Determine todas as Visualizações XDM no aplicativo de página única que você deseja personalizar.
 3. Depois de definir as Visualizações XDM, para fornecer atividades AB ou XT VEC, implemente a `sendEvent()` função com `renderDecisions` definido como `true` e a Visualização XDM correspondente em seu aplicativo de página única. A Visualização XDM deve ser transmitida `xdm.web.webPageDetails.viewName`. Essa etapa permite que os profissionais de marketing aproveitem o Visual Experience Composer para iniciar testes A/B e XT para esses XDM.
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ A equipe de marketing deseja executar testes A/B em todo o home page.
 
 Para executar testes A/B em todo o site inicial, `sendEvent()` deve ser chamado com o XDM `viewName` definido como `home`:
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ A equipe de marketing deseja personalizar a segunda linha de produtos alterando 
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 Para personalizar o conteúdo do site, dependendo da preferência do delivery selecionada, é possível criar uma Visualização para cada preferência de delivery. Quando **Normal Delivery** é selecionado, a Visualização pode ser chamada de &quot;normal de finalização&quot;. If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## Uso do Visual Experience Composer para um SPA
 
-Quando você terminar de definir suas Visualizações XDM e implementar`sendEvent()` com essas Visualizações XDM passadas, o VEC poderá detectar essas Visualizações e permitir que os usuários criem ações e modificações para atividades A/B ou XT.
+Quando você terminar de definir suas Visualizações XDM e implementar `sendEvent()` com essas Visualizações XDM passadas, o VEC poderá detectar essas Visualizações e permitir que os usuários criem ações e modificações para atividades A/B ou XT.
 
 >[!NOTE]
 >

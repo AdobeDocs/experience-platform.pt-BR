@@ -5,9 +5,9 @@ title: Conector Hubs de Evento do Azure
 topic: overview
 description: A documentação abaixo fornece informações sobre como conectar os Hubs de Evento do Azure à plataforma usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,7 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Azure
 ### Uso de APIs
 
 - [Criar um conector Hubs de Evento do Azure usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Explore um sistema de armazenamento em nuvem usando a API de Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
-- [Coletar dados de armazenamento na nuvem usando a API de Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
+- [Coletar dados de fluxo usando a API de Serviço de Fluxo](../../tutorials/api/collect/streaming.md)
 
 ### Uso da interface
 

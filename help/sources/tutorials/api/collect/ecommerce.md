@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los à Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Coletar dados de comércio eletrônico por meio de conectores de origem e APIs
+# Coletar dados de eCommerce por meio de conectores de origem e APIs
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 

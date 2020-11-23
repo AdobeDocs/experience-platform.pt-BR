@@ -2,18 +2,18 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
 solution: Experience Platform
 title: Descritores
-description: 'Os schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. A Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores. '
+description: O endpoint /descriptors na API do Registro do Schema permite que você gerencie programaticamente os descritores XDM no aplicativo da experiência.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1569'
 ht-degree: 1%
 
 ---
 
 
-# Descritores
+# Ponto de extremidade do descritor
 
 Os schemas definem uma visualização estática de entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses schemas (conjuntos de dados, por exemplo) podem se relacionar entre si. A Adobe Experience Platform permite que você descreva esses relacionamentos e outros metadados interpretativos sobre um schema usando descritores.
 
@@ -21,15 +21,15 @@ Os descritores de schema são metadados de nível de locatário, o que significa
 
 Cada schema pode ter uma ou mais entidades de descritor de schema aplicadas a ele. Cada entidade do descritor de schema inclui um descritor `@type` e o `sourceSchema` qual ele se aplica. Depois de aplicados, esses descritores serão aplicados a todos os conjuntos de dados criados usando o schema.
 
-Este documento fornece exemplos de chamadas de API para descritores, bem como uma lista completa de descritores disponíveis e os campos necessários para definir cada tipo.
+O `/descriptors` endpoint na [!DNL Schema Registry] API permite que você gerencie programaticamente os descritores dentro do aplicativo de experiência.
 
->[!NOTE]
->
->Os descritores exigem cabeçalhos Accept exclusivos que substituem `xed` por `xdm`, mas que, de outra forma, pareçam muito semelhantes aos cabeçalhos Accept usados em outros locais do [!DNL Schema Registry]. Os cabeçalhos de Aceitação corretos foram incluídos nas chamadas de amostra abaixo, mas tenha cuidado extra para garantir que os cabeçalhos corretos estejam sendo usados.
+## Introdução
 
-## Descritores de lista
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Antes de continuar, consulte o guia [de](./getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
-Uma única solicitação de GET pode ser usada para retornar uma lista de todos os descritores que foram definidos pela sua organização.
+## Recuperar uma lista de descritores {#list}
+
+Você pode lista todos os descritores que foram definidos pela sua organização fazendo uma solicitação de GET para `/tenant/descriptors`.
 
 **Formato da API**
 
@@ -49,21 +49,24 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-O formato de resposta depende do cabeçalho Aceitar enviado na solicitação. Observe que o `/descriptors` ponto de extremidade usa cabeçalhos Aceitar que são diferentes de todos os outros pontos de extremidade na [!DNL Schema Registry] API.
+O formato de resposta depende do `Accept` cabeçalho enviado na solicitação. Observe que o `/descriptors` ponto de extremidade usa `Accept` cabeçalhos diferentes de todos os outros pontos de extremidade na [!DNL Schema Registry] API.
 
-Os cabeçalhos Aceitar descritor substituem `xed` por `xdm`e oferta uma `link` opção exclusiva aos descritores.
+>[!IMPORTANT]
+>
+>Os descritores exigem cabeçalhos exclusivos `Accept` que substituem `xed` por `xdm`e também oferta uma `link` opção exclusiva aos descritores. Os `Accept` cabeçalhos corretos foram incluídos nas chamadas de exemplos abaixo, mas tenha cuidado extra para garantir que os cabeçalhos corretos estejam sendo usados ao trabalhar com descritores.
 
-| Aceitar | Descrição |
+| `Accept` header | Descrição |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Retorna uma matriz de IDs de descritor |
 | `application/vnd.adobe.xdm-link+json` | Retorna uma matriz de caminhos da API do descritor |
 | `application/vnd.adobe.xdm+json` | Retorna uma matriz de objetos de descritor expandidos |
+| `application/vnd.adobe.xdm-v2+json` | Esse `Accept` cabeçalho deve ser usado para utilizar os recursos de paginação. |
 
 **Resposta**
 
 A resposta inclui uma matriz para cada tipo de descritor que tenha descritores definidos. Em outras palavras, se não houver descritores de um determinado `@type` tipo definido, o registro não retornará uma matriz vazia para esse tipo de descritor.
 
-Ao usar o cabeçalho `link` Aceitar, cada descritor é mostrado como um item de matriz no formato `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
+Ao usar o `link` `Accept` cabeçalho, cada descritor é mostrado como um item de matriz no formato `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
 
 ```JSON
 {
@@ -81,7 +84,7 @@ Ao usar o cabeçalho `link` Aceitar, cada descritor é mostrado como um item de 
 }
 ```
 
-## Procurar um descritor
+## Procurar um descritor {#lookup}
 
 Se desejar visualização nos detalhes de um descritor específico, você pode procurar (GET) um descritor individual usando seu `@id`.
 
@@ -93,11 +96,11 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | O `@id` descritor que você deseja pesquisar. |
+| `{DESCRIPTOR_ID}` | O `@id` descritor que você deseja procurar. |
 
 **Solicitação**
 
-Os descritores não têm controle de versão, portanto, nenhum cabeçalho Accept é necessário na solicitação de pesquisa.
+A solicitação a seguir recupera um descritor pelo seu `@id` valor. Os descritores não têm controle de versão, portanto, nenhum `Accept` cabeçalho é necessário na solicitação de pesquisa.
 
 ```SHELL
 curl -X GET \
@@ -132,9 +135,13 @@ Uma resposta bem-sucedida retorna os detalhes do descritor, incluindo seus `@typ
 }
 ```
 
-## Criar descritor
+## Criar um descritor {#create}
 
-O [!DNL Schema Registry] permite definir vários tipos diferentes de descritor. Cada tipo de descritor requer que seus próprios campos específicos sejam enviados na solicitação de POST. Uma lista completa de descritores e os campos necessários para defini-los estão disponíveis na seção do apêndice sobre a [definição de descritores](#defining-descriptors).
+Você pode criar um novo descritor, fazendo uma solicitação de POST para o `/tenant/descriptors` terminal.
+
+>[!IMPORTANT]
+>
+>O [!DNL Schema Registry] permite definir vários tipos diferentes de descritor. Cada tipo de descritor requer que seus próprios campos específicos sejam enviados no corpo da solicitação. Consulte o [apêndice](#defining-descriptors) para obter uma lista completa de descritores e os campos necessários para defini-los.
 
 **Formato da API**
 
@@ -184,9 +191,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e os detalhes do de
 }
 ```
 
-## Descritor de atualização
+## Atualizar um descritor {#put}
 
-Você pode atualizar um descritor fazendo uma solicitação de PUT que faça referência ao `@id` descritor que deseja atualizar no caminho da solicitação.
+É possível atualizar um descritor incluindo-o `@id` no caminho de uma solicitação de PUT.
 
 **Formato da API**
 
@@ -200,9 +207,13 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Solicitação**
 
-Essa solicitação basicamente regrava o descritor, de modo que o corpo da solicitação deve incluir todos os campos necessários para definir um descritor desse tipo. Em outras palavras, a carga da solicitação para atualizar (PUT) um descritor é a mesma carga para criar (POST) um descritor do mesmo tipo.
+Essa solicitação basicamente regrava o descritor, de modo que o corpo da solicitação deve incluir todos os campos necessários para definir um descritor desse tipo. Em outras palavras, a carga da solicitação para atualizar (PUT) um descritor é a mesma carga para [criar (POST) um descritor](#create) do mesmo tipo.
 
-Neste exemplo, o descritor de identidade está sendo atualizado para fazer referência a um `xdm:sourceProperty` (&quot;celular&quot;) diferente e alterar o `xdm:namespace` para &quot;Telefone&quot;.
+>[!IMPORTANT]
+>
+>Assim como na criação de descritores usando solicitações de POST, cada tipo de descritor requer que seus próprios campos específicos sejam enviados em cargas de solicitação de PUT. Consulte o [apêndice](#defining-descriptors) para obter uma lista completa de descritores e os campos necessários para defini-los.
+
+O exemplo a seguir atualiza um descritor de identidade para referenciar um `xdm:sourceProperty` (`mobile phone`) diferente e altera o `xdm:namespace` para `Phone`.
 
 ```SHELL
 curl -X PUT \
@@ -223,8 +234,6 @@ curl -X PUT \
       }'
 ```
 
-Detalhes sobre as propriedades `xdm:namespace` e `xdm:property`como acessá-las estão disponíveis na seção do apêndice sobre a [definição de descritores](#defining-descriptors).
-
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e o `@id` do descritor atualizado (que deve corresponder ao `@id` enviado na solicitação).
@@ -235,9 +244,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e o `@id` do descri
 }
 ```
 
-A execução de uma solicitação de pesquisa (GET) para visualização do descritor mostrará que os campos foram atualizados para refletir as alterações enviadas na solicitação de PUT.
+A execução de uma solicitação [de](#lookup) pesquisa (GET) para visualização do descritor mostrará que os campos foram atualizados para refletir as alterações enviadas na solicitação de PUT.
 
-## Excluir descritor
+## Excluir um descritor {#delete}
 
 Ocasionalmente, talvez seja necessário remover um descritor definido do [!DNL Schema Registry]. Isso é feito fazendo uma solicitação de DELETE que faz referência ao `@id` descritor que você deseja remover.
 
@@ -253,8 +262,6 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Solicitação**
 
-Não é necessário aceitar cabeçalhos ao excluir descritores.
-
 ```SHELL
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/ca921946fb5281cbdb8ba5e07087486ce531a1f2  \
@@ -268,13 +275,13 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
-Para confirmar que o descritor foi excluído, é possível executar uma solicitação de pesquisa em relação ao descritor `@id`. A resposta retorna o status HTTP 404 (Não encontrado) porque o descritor foi removido do [!DNL Schema Registry].
+Para confirmar que o descritor foi excluído, é possível executar uma solicitação [de](#lookup) pesquisa em relação ao descritor `@id`. A resposta retorna o status HTTP 404 (Não encontrado) porque o descritor foi removido do [!DNL Schema Registry].
 
 ## Apêndice
 
 A seção a seguir fornece informações adicionais sobre como trabalhar com descritores na [!DNL Schema Registry] API.
 
-### Definição de descritores
+### Definição de descritores {#defining-descriptors}
 
 As seções a seguir fornecem uma visão geral dos tipos de descritor disponíveis, incluindo os campos obrigatórios para definir um descritor de cada tipo.
 
@@ -301,7 +308,7 @@ Um descritor de identidade sinaliza que &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | O `$id` URI do schema no qual o descritor está sendo definido. |
 | `xdm:sourceVersion` | A versão principal do schema de origem. |
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | O `id` valor ou `code` da namespace de identidade. Uma lista do namespace pode ser encontrada usando a [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | O `id` valor ou `code` da namespace de identidade. Uma lista de namespaces pode ser encontrada usando o [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | Ou `xdm:id` ou `xdm:code`, dependendo do `xdm:namespace` usado. |
 | `xdm:isPrimary` | Um valor booliano opcional. Quando verdadeiro, indica o campo como a identidade primária. Os schemas podem conter apenas uma identidade primária. |
 
@@ -337,7 +344,7 @@ Descritores de nome amigáveis permitem que um usuário modifique os valores `ti
 | `xdm:sourceProperty` | O caminho para a propriedade específica que será a identidade. O caminho deve começar com &quot;/&quot; e não terminar com um. Não inclua &quot;propriedades&quot; no caminho (por exemplo, use &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | O novo título que você deseja exibir para este campo, escrito em Caixa alta/baixa. |
 | `xdm:description` | Uma descrição opcional pode ser adicionada junto com o título. |
-| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na [!DNL Experience Platform] interface do usuário. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado somente para os campos principais XDM definidos pelo Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, edite a propriedade do campo `meta:enum` diretamente por meio de uma solicitação [de](./update-resource.md)PATCH. |
+| `meta:enum` | Se o campo indicado por `xdm:sourceProperty` for um campo de string, `meta:enum` determinará a lista dos valores sugeridos para o campo na [!DNL Experience Platform] interface do usuário. É importante observar que `meta:enum` não declara uma lista discriminada ou fornece nenhuma validação de dados para o campo XDM.<br><br>Isso deve ser usado somente para os campos principais XDM definidos pelo Adobe. Se a propriedade de origem for um campo personalizado definido pela sua organização, você deve editar a propriedade do campo diretamente por meio de uma solicitação de PATCH para o recurso pai do campo. `meta:enum` |
 
 #### Descritor de relação
 

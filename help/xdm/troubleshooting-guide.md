@@ -5,9 +5,9 @@ title: Guia de solução de problemas do sistema do Experience Data Model (XDM)
 description: Este documento fornece respostas para perguntas frequentes sobre o sistema Experience Data Model (XDM), bem como um guia de solução de problemas para erros comuns.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o sistema X
 
 É possível adicionar campos a um schema usando uma combinação. Cada mistura é compatível com uma ou mais classes, permitindo que a mistura seja usada em qualquer schema que implemente uma dessas classes compatíveis. Enquanto a Adobe Experience Platform fornece várias combinações do setor com seus próprios campos predefinidos, você pode adicionar seus próprios campos a um schema criando novas combinações usando a API ou a interface do usuário.
 
-Para obter detalhes sobre como criar novas combinações na API, consulte [criar um documento de combinação](api/create-mixin.md) no guia do desenvolvedor da [!DNL Schema Registry] API. Se você estiver usando a interface do usuário, consulte o tutorial [do Editor de](./tutorials/create-schema-ui.md)Schemas.
+Para obter detalhes sobre como criar novas combinações na [!DNL Schema Registry] API, consulte o guia [de ponto de extremidade](api/mixins.md#create)misto. Se você estiver usando a interface do usuário, consulte o tutorial [do Editor de](./tutorials/create-schema-ui.md)Schemas.
 
 ### Quais são os melhores usos para misturas e tipos de dados?
 
@@ -39,21 +39,21 @@ Para obter detalhes sobre como criar novas combinações na API, consulte [criar
 
 Todos os [!DNL Schema Registry] recursos (schemas, misturas, tipos de dados, classes) têm um URI que atua como uma ID exclusiva para fins de referência e pesquisa. Ao exibir um schema na API, ele pode ser encontrado nos atributos de nível superior `$id` e `meta:altId` .
 
-Para obter mais informações, consulte a seção Identificação [do](api/getting-started.md#schema-identification) schema no guia do desenvolvedor da [!DNL Schema Registry] API.
+Para obter mais informações, consulte a seção de identificação [de](api/getting-started.md#resource-identification) recursos no guia do desenvolvedor da [!DNL Schema Registry] API.
 
 ### Quando um start de schema impede a quebra de alterações?
 
-É possível fazer alterações de quebra em um schema, desde que ele nunca tenha sido usado na criação de um conjunto de dados ou esteja habilitado para uso no [[!DNL Real-time Customer Perfil]](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-time Customer Profile], as regras da Evolução [do](schema/composition.md#evolution) Schema se tornam rigorosamente aplicadas pelo sistema.
+Alterações de quebra podem ser feitas em um schema, desde que nunca tenham sido usadas na criação de um conjunto de dados ou estejam habilitadas para uso em [[!DNL Real-time Customer Profile]](../profile/home.md). Depois que um schema é usado na criação do conjunto de dados ou ativado para uso com [!DNL Real-time Customer Profile], as regras da Evolução [do](schema/composition.md#evolution) Schema se tornam rigorosamente aplicadas pelo sistema.
 
 ### Qual é o tamanho máximo de um tipo de campo longo?
 
 Um tipo de campo longo é um número inteiro com um tamanho máximo de 53(+1) bits, dando a ele um intervalo potencial entre -9007199254740992 e 9007199254740992. Isso se deve a uma limitação de como as implementações JavaScript do JSON representam inteiros longos.
 
-Para obter mais informações sobre tipos de campos, consulte a seção [Definição de tipos](api/appendix.md#field-types) de campos XDM no guia do desenvolvedor da [!DNL Schema Registry] API.
+Para obter mais informações sobre tipos de campo, consulte o documento sobre restrições [de tipo de campo](./schema/field-constraints.md)XDM.
 
 ### Como definir identidades para o meu schema?
 
-Em [!DNL Experience Platform]geral, as identidades são usadas para identificar um indivíduo (normalmente uma pessoa individual) independentemente das fontes de dados que estão sendo interpretadas. São definidos em schemas marcando os campos de chave como &quot;Identidade&quot;. Os campos usados frequentemente para identificação incluem endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html), ID do CRM e outros campos de ID exclusivos.
+Em [!DNL Experience Platform]geral, as identidades são usadas para identificar um indivíduo (normalmente uma pessoa individual) independentemente das fontes de dados que estão sendo interpretadas. São definidos em schemas marcando os campos de chave como &quot;Identidade&quot;. Os campos usados frequentemente para identificação incluem endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID de CRM e outros campos de ID exclusivos.
 
 Os campos podem ser marcados como identidades usando a API ou a interface do usuário.
 
@@ -77,7 +77,7 @@ As identidades primárias são opcionais, já que os schemas podem ter 0 ou 1 de
 
 ### Como ativar um schema para uso em [!DNL Real-time Customer Profile]?
 
-Os schemas estão habilitados para uso no [[!DNL Real-time Customer Perfil]](../profile/home.md) por meio da adição de uma tag &quot;união&quot;, localizada no `meta:immutableTags` atributo do schema. A habilitação de um schema para uso com [!DNL Profile] pode ser feita usando a API ou a interface do usuário.
+Os schemas são ativados para uso [[!DNL Real-time Customer Profile]](../profile/home.md) por meio da adição de uma tag &quot;união&quot;, localizada no `meta:immutableTags` atributo do schema. A habilitação de um schema para uso com [!DNL Profile] pode ser feita usando a API ou a interface do usuário.
 
 #### Habilitar um schema existente para [!DNL Profile] usar a API
 
@@ -120,7 +120,7 @@ A seguir está uma lista de mensagens de erro que podem ser encontradas ao traba
 
 Este erro é exibido quando o sistema não conseguiu localizar um recurso específico. O recurso pode ter sido excluído ou o caminho na chamada da API é inválido. Verifique se você inseriu um caminho válido para sua chamada de API antes de tentar novamente. Você pode verificar se digitou a ID correta para o recurso e se o caminho foi nomeado corretamente com o container apropriado (global ou locatário).
 
-Para obter mais informações sobre como construir caminhos de pesquisa na API, consulte as seções de identificação [de](./api/getting-started.md#container) container [e](api/getting-started.md#schema-identification) schemas no guia do [!DNL Schema Registry] desenvolvedor.
+Para obter mais informações sobre como construir caminhos de pesquisa na API, consulte as seções de identificação [de](./api/getting-started.md#container) container [e](api/getting-started.md#resource-identification) recursos no guia do [!DNL Schema Registry] desenvolvedor.
 
 ### O título deve ser exclusivo
 
@@ -149,7 +149,7 @@ Esta mensagem de erro é exibida quando você tenta criar um recurso com um tít
 }
 ```
 
-Esta mensagem de erro é exibida quando você tenta criar uma nova combinação com campos com nomes inadequados. As misturas que são definidas pela organização do IMS devem namespace seus campos a um `TENANT_ID` para evitar conflitos com outros recursos do setor e do fornecedor. Exemplos detalhados de estruturas de dados adequadas para misturas podem ser encontrados no documento sobre a [criação de uma seção de mixin](api/create-mixin.md) no guia do desenvolvedor da [!DNL Schema Registry] API.
+Esta mensagem de erro é exibida quando você tenta criar uma nova combinação com campos com nomes inadequados. As misturas que são definidas pela organização do IMS devem namespace seus campos a um `TENANT_ID` para evitar conflitos com outros recursos do setor e do fornecedor. Exemplos detalhados de estruturas de dados adequadas para misturas podem ser encontrados no guia [de ponto de extremidade de](./api/mixins.md#create)combinações.
 
 
 ### [!DNL Real-time Customer Profile] erros

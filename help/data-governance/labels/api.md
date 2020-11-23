@@ -5,9 +5,9 @@ title: 'Gerenciar rótulos de uso de dados usando APIs '
 topic: developer guide
 description: A API de Serviço de Conjunto de Dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do serviço de catálogo que gerencia os metadados do conjunto de dados.
 translation-type: tm+mt
-source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
+source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Este documento fornece etapas sobre como gerenciar rótulos de uso de dados usando a [!DNL Policy Service] API e a [!DNL Dataset Service] API.
 
-A [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornece vários pontos de extremidade que permitem criar e gerenciar rótulos de uso de dados para sua organização.
+O [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornece vários pontos de extremidade que permitem criar e gerenciar rótulos de uso de dados para sua organização.
 
 A [!DNL Dataset Service] API permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da [!DNL Catalog Service] API que gerencia os metadados do conjunto de dados.
 
@@ -327,7 +327,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `labels` | Uma lista de rótulos de uso de dados que você deseja adicionar ao conjunto de dados. |
-| `optionalLabels` | Uma lista de qualquer campo individual no conjunto de dados ao qual você deseja adicionar rótulos. Cada item nesta matriz deve ter as seguintes propriedades: <br/><br/>`option`: Um objeto que contém os atributos [!DNL Experience Data Model] (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li>id</code>: O valor URI $id</code> do schema associado ao campo.</li><li>contentType</code>: O tipo de conteúdo e o número da versão do schema. Isso deve assumir a forma de um dos cabeçalhos <a href="../../xdm/api/look-up-resource.md">Accept válidos</a> para uma solicitação de pesquisa XDM.</li><li>schemaPath</code>: O caminho para o campo dentro do schema do conjunto de dados.</li></ul>`labels`: Uma lista de rótulos de uso de dados que você deseja adicionar ao campo. |
+| `optionalLabels` | Uma lista de qualquer campo individual no conjunto de dados ao qual você deseja adicionar rótulos. Cada item nesta matriz deve ter as seguintes propriedades: <br/><br/>`option`: Um objeto que contém os atributos [!DNL Experience Data Model] (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li>id</code>: O valor URI $id</code> do schema associado ao campo.</li><li>contentType</code>: O tipo de conteúdo e o número da versão do schema. Isso deve assumir a forma de um dos cabeçalhos <a href="../../xdm/api/getting-started.md#accept">Accept válidos</a> para uma solicitação de pesquisa XDM.</li><li>schemaPath</code>: O caminho para o campo dentro do schema do conjunto de dados.</li></ul>`labels`: Uma lista de rótulos de uso de dados que você deseja adicionar ao campo. |
 
 **Resposta**
 

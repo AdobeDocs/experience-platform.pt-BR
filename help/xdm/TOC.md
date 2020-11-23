@@ -5,10 +5,10 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 translation-type: tm+mt
-source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
+source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 20%
+source-wordcount: '181'
+ht-degree: 23%
 
 ---
 
@@ -56,18 +56,14 @@ ht-degree: 20%
    * [Interação POI](./data-types/poi-interaction.md)
    * [Endereço postal](./data-types/postal-address.md)
 * API de registro do schema {#api}
+   * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
-   * [Recursos de lista](api/list-resources.md)
-   * [Pesquisar um recurso](api/look-up-resource.md)
-   * [Atualizar um recurso](api/update-resource.md)
-   * [Substituir um recurso](api/replace-resource.md)
-   * [Excluir um recurso](api/delete-resource.md)
-   * [Criar uma classe](api/create-class.md)
-   * [Criar uma mistura](api/create-mixin.md)
-   * [Criar um tipo de dados](api/create-data-type.md)
-   * [Criar um schema](api/create-schema.md)
-   * [Uniões](api/unions.md)
+   * [Esquemas](api/schemas.md)
+   * [Classes](api/classes.md)
+   * [Misturas](api/mixins.md)
+   * [Tipos de dados](api/data-types.md)
    * [Descritores](api/descriptors.md)
+   * [Uniões](api/unions.md)
    * [Schemas Ad-hoc](api/ad-hoc.md)
    * [Apêndice](api/appendix.md)
 * Tutoriais {#tutorials}

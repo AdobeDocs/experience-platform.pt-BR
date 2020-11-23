@@ -5,9 +5,9 @@ title: Apêndice do desenvolvedor do Registro do schema
 description: Este documento fornece informações complementares relacionadas ao trabalho com a API de registro do Schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,43 @@ ht-degree: 0%
 # Apêndice
 
 Este documento fornece informações complementares relacionadas ao trabalho com a [!DNL Schema Registry] API.
+
+## Uso de parâmetros de query {#query}
+
+O [!DNL Schema Registry] oferece suporte ao uso de parâmetros de query para a página e filtrar resultados ao listar recursos.
+
+>[!NOTE]
+>
+>Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (`&`).
+
+### Paginação {#paging}
+
+Os parâmetros de query mais comuns para paginação incluem:
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `start` | Especifique onde os resultados listados devem começar. Esse valor pode ser obtido a partir do `_page.next` atributo de uma resposta de lista e usado para acessar a próxima página de resultados. Se o `_page.next` valor for nulo, então não há nenhuma página adicional disponível. |
+| `limit` | Limite o número de recursos retornados. Exemplo: `limit=5` retornará uma lista de cinco recursos. |
+| `orderby` | Classifique os resultados por uma propriedade específica. Exemplo: `orderby=title` classificará os resultados por título em ordem crescente (A-Z). A adição de um valor `-` antes do valor do parâmetro (`orderby=-title`) classificará os itens por título em ordem decrescente (Z-A). |
+
+### Filtragem {#filtering}
+
+Você pode filtrar os resultados usando o `property` parâmetro, que é usado para aplicar um operador específico em relação a uma determinada propriedade JSON dentro dos recursos recuperados. Os operadores suportados incluem:
+
+| Operador | Descrição | Exemplo |
+| --- | --- | --- |
+| `==` | Filtros se a propriedade é igual ao valor fornecido. | `property=title==test` |
+| `!=` | Filtros se a propriedade não é igual ao valor fornecido. | `property=title!=test` |
+| `<` | Filtros se a propriedade é menor que o valor fornecido. | `property=version<5` |
+| `>` | Filtros se a propriedade é maior que o valor fornecido. | `property=version>5` |
+| `<=` | Filtros se a propriedade é menor ou igual ao valor fornecido. | `property=version<=5` |
+| `>=` | Filtros se a propriedade é maior ou igual ao valor fornecido. | `property=version>=5` |
+| `~` | Filtros se a propriedade corresponde a uma expressão regular fornecida. | `property=title~test$` |
+| (None) | A indicação apenas do nome da propriedade retorna somente entradas nas quais a propriedade existe. | `property=title` |
+
+>[!TIP]
+>
+>Você pode usar o `property` parâmetro para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a [!DNL XDM Individual Profile] classe.
 
 ## Modo de compatibilidade
 

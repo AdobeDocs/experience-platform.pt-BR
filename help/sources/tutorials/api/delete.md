@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Excluir uma conexão usando a API Serviço de Fluxo
 topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para excluir uma conexão usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Este tutorial também exige que você tenha uma compreensão funcional dos segui
 * [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
 * [Caixas de proteção](../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para atualizar com êxito as informações de sua conexão usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito uma conexão usando a [!DNL Flow Service] API.
 
 ### Lendo chamadas de exemplo da API
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja atualizar. |
+| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja excluir. |
 
 **Solicitação**
 

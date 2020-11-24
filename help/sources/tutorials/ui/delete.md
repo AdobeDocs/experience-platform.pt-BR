@@ -6,7 +6,7 @@ title: Excluir fluxos de dados
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -66,4 +66,4 @@ Após alguns instantes, uma caixa de confirmação verde é exibida na parte inf
 
 Ao seguir este tutorial, você usou com êxito a área de trabalho **[!UICONTROL Fontes]** para excluir os fluxos de dados existentes.
 
-Para obter etapas sobre como executar essas operações de forma programática usando a [!DNL Flow Service] API, consulte o tutorial sobre como [excluir conexões usando a API de Serviço de Fluxo](../../tutorials/api/delete.md)
+Para obter etapas sobre como executar essas operações de forma programática usando a [!DNL Flow Service] API, consulte o tutorial sobre como [excluir fluxos de dados usando a API de Serviço de Fluxo](../../tutorials/api/delete-dataflows.md)

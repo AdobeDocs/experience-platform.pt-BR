@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: Introdução ao AI de conteúdo e comércio]
+title: Introdução ao AI de conteúdo e comércio
 topic: Getting started
 description: A API de E/S de conteúdo e comércio utiliza APIs de E/S de Adobe. Para fazer chamadas para APIs de E/S de Adobe e a Integração do console de E/S, você deve primeiro concluir o tutorial de autenticação.
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# Introdução ao AI de conteúdo e comércio
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Você é redirecionado e é solicitado a selecionar um arquivo de ambiente do co
 
 ![](./images/click-open.png)
 
-Você é redirecionado para a guia *Gerenciar ambientes* com um novo nome de ambiente preenchido. Selecione o nome do ambiente a ser visualização e edite as variáveis disponíveis no Postman. Você ainda precisa preencher manualmente os campos `JWT_TOKEN` e `ACCESS_TOKEN`. Esses valores devem ter sido obtidos ao concluir o tutorial [de](../../tutorials/authentication.md)autenticação.
+Você é redirecionado para a guia *Gerenciar ambientes* com um novo nome de ambiente preenchido. Selecione o nome do ambiente a ser visualização e edite as variáveis disponíveis no Postman. Você ainda precisa preencher manualmente o formulário `JWT_TOKEN` e `ACCESS_TOKEN`. Esses valores devem ter sido obtidos ao concluir o tutorial [de](../../tutorials/authentication.md)autenticação.
 
 ![](./images/re-direct.png)
 
@@ -75,4 +75,4 @@ Depois de ter todas as suas credenciais, você estará pronto para configurar um
 
 Para saber mais sobre a Estrutura de extensibilidade, leia a [introdução ao documento de extensibilidade](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) . Este documento descreve os pré-requisitos e os requisitos de provisionamento.
 
-Para saber mais sobre como configurar um ambiente para [!DNL Content and Commerce AI], consulte o guia para [configurar um ambiente](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)para desenvolvedores. Este documento fornece instruções de configuração que permitem que você se desenvolva para o Asset Compute Service.
+Para saber mais sobre como configurar um ambiente para [!DNL Content and Commerce AI], consulte o guia para [configurar um ambiente](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)para desenvolvedores. Este documento fornece instruções de configuração que permitem que você se desenvolva para o Serviço de Asset computes.

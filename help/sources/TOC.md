@@ -5,10 +5,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 3%
+source-wordcount: '663'
+ht-degree: 4%
 
 ---
 
@@ -138,10 +138,11 @@ ht-degree: 3%
       - [Coletar dados do protocolo](tutorials/api/collect/protocols.md)
       - [Coletar dados de transmissão](tutorials/api/collect/streaming.md)
    - [Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
-   - [Criar uma conexão básica de conjunto de dados usando a API de Serviço de Fluxo](tutorials/api/create-dataset-base-connection.md)
-   - [Monitorar fluxos de dados usando a API de Serviço de Fluxo](tutorials/api/monitor.md)
-   - [Atualizar informações de conexão usando a API de Serviço de Fluxo](tutorials/api/update.md)
-   - [Excluir conexões usando a API Serviço de Fluxo](tutorials/api/delete.md)
+   - [Criar uma conexão de conjunto de dados](tutorials/api/create-dataset-base-connection.md)
+   - [Monitorar fluxos de dados](tutorials/api/monitor.md)
+   - [Atualizar conexões](tutorials/api/update.md)
+   - [Excluir conexões](tutorials/api/delete.md)
+   - [Excluir fluxos de dados](tutorials/api/delete-dataflows.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar um conector de origem {#create}
       - aplicativos Adobe {#adobe-applications}

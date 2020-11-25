@@ -3,12 +3,12 @@ keywords: activate destination;activate destinations;activate data
 title: Ativar perfis e segmentos em um destino
 type: Tutorial
 seo-title: Ativar perfis e segmentos em um destino
-description: 'Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. '
+description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -127,14 +127,6 @@ Na página Agendamento **[!UICONTROL do]** segmento, é possível definir a data
 >Para destinos sociais, você deve selecionar a origem de sua audiência nesta etapa. Você pode prosseguir para a próxima etapa somente depois de selecionar uma das opções na imagem abaixo.
 
 ![escolher origem de dados](./assets/choose-data-origin.png)
-
-### **[!UICONTROL Etapa de agendamento]** {#scheduling}
-
-Aplica-se a: destinos de marketing por email e destinos de armazenamentos na nuvem
-
-![etapa de programação de segmento](./assets/scheduling-icon.png)
-
-Na página **[!UICONTROL Agendamento]** , você pode ver a data de start para enviar dados para o destino, bem como a frequência de envio de dados para o destino. Esses valores não podem ser editados.
 
 ### **[!UICONTROL Etapa Selecionar atributos]** {#select-attributes}
 

@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho Fontes.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de fluxos de dados existentes na área de trabalho Fontes.
 solution: Experience Platform
-title: Monitorar contas e fluxos de dados
+title: Monitorar fluxos de dados
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
 
 
-# Monitorar contas e fluxos de dados na interface do usuário
+# Monitorar fluxos de dados na interface do usuário
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de contas e fluxos de dados existentes na área de trabalho [!UICONTROL Fontes] .
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de fluxos de dados existentes na área de trabalho [!UICONTROL Fontes] .
 
 ## Introdução
 
@@ -27,53 +27,9 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-## Monitorar contas
-
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]** . A tela **[!UICONTROL Catálogo]** exibe várias fontes com as quais você pode criar contas e fluxos de dados. Cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
-
-Selecione **[!UICONTROL Contas]** no cabeçalho superior para visualização contas existentes.
-
-![catálogo](../../images/tutorials/monitor/catalog-accounts.png)
-
-As páginas **[!UICONTROL Contas]** são exibidas. Nesta página há uma lista de contas visualizáveis, incluindo informações sobre a origem, o nome de usuário, o número de fluxos de dados e a data de criação.
-
-Selecione o ícone de funil na parte superior esquerda para abrir a janela de classificação.
-
-![account](../../images/tutorials/monitor/accounts-list.png)
-
-O painel de classificação permite acessar contas de uma fonte específica. Selecione a fonte com a qual deseja trabalhar e selecione a conta na lista à direita.
-
->[!TIP]
->
-> Use o botão de controle ![de](../../images/tutorials/monitor/spectrum-control.png) espectro na coluna **[!UICONTROL Nome]** para criar um novo fluxo de dados de origem para a conta selecionada.
-
-![selecionar contas](../../images/tutorials/monitor/accounts-sort.png)
-
-Além disso, você pode editar informações de conta existentes e atualizar suas credenciais de conta. Selecione o ícone de lápis para obter as informações de conta que deseja editar.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-O modal **[!UICONTROL Editar detalhes]** da conta é exibido. Nesta página, você pode atualizar seus detalhes de conta e credenciais de autenticação existentes.
-
->[!NOTE]
->
-> A edição de detalhes da conta está disponível em todos os conectores de origem em lote.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-Na página **[!UICONTROL Contas]** , é possível visualização de uma lista de fluxos de dados ou conjuntos de dados de públicos alvos existentes associados à conta acessada. Selecione o botão de elipses (`...`) para exibir mais opções disponíveis para o seu fluxo de dados selecionado. Essas opções são descritas a seguir:
-
-| Controle | Descrição |
-| ------- | ----------- |
-| [!UICONTROL Editar programação] | Permite editar o agendamento de ingestão do fluxo de dados. |
-| [!UICONTROL Desativar o fluxo de dados] | Permite desativar a ingestão de dados para o fluxo de dados selecionado. |
-| [!UICONTROL Excluir] | Permite que você exclua o fluxo de dados selecionado. |
-
-![fluxo de dados](../../images/tutorials/monitor/dataflows.png)
-
 ## Monitorar fluxos de dados
 
-Os fluxos de dados podem ser acessados diretamente da página **[!UICONTROL Catálogo]** sem exibir **[!UICONTROL Contas]**. Selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior para visualização de uma lista de fluxos de dados.
+Faça logon na interface do usuário [do](https://platform.adobe.com) Experience Platform e selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar a área de trabalho [!UICONTROL Fontes] . Selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior para visualização de fluxos de dados existentes.
 
 ![catálogo-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 

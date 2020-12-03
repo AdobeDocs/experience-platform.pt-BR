@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com sua marca em diferentes canais.
 translation-type: tm+mt
-source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
+source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -93,14 +93,19 @@ Gráficos de identidade com grupos maiores de identidades também são acessíve
 
 ## Apêndice
 
-O visualizador de gráficos retornará um erro se os seguintes pré-requisitos não forem atendidos:
+A seção a seguir fornece informações adicionais para trabalhar com o visualizador de gráficos de identidade.
 
-- O valor de identidade não existe na namespace selecionada.
-- O gráfico tem menos de duas identidades.
-- O gráfico excede o máximo de 400 identidades.
-- Você está em um ambiente de caixa de proteção de não produção.
+### Noções básicas sobre mensagens de erro
 
-![cluster grande](../images/identity-graph-viewer/error-screen.png)
+Erros podem ocorrer ao acessar o visualizador de gráficos de identidade. A seguir está uma lista de pré-requisitos e limitações que devem ser observados ao trabalhar com o visualizador de gráficos de identidade.
+
+- Deve existir um valor de identidade na namespace selecionada.
+- O visualizador de gráficos de identidade requer no mínimo duas identidades vinculadas para serem geradas.
+- O visualizador de gráficos de identidade não pode exceder o máximo de 400 identidades.
+- No momento, o visualizador de gráficos de identidade não está acessível em caixas de proteção que não sejam de produção.
+- Atualmente, o visualizador de gráficos de identidade suporta apenas dados ingeridos em lote e não exibe dados ingeridos usando fontes de transmissão.
+
+![tela de erro](../images/identity-graph-viewer/error-screen.png)
 
 ## Próximas etapas
 

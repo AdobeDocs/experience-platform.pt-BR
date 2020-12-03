@@ -1,11 +1,11 @@
 ---
-title: 'Notas de versão do Adobe Experience Platform '
+title: Notas de versão da Adobe Experience Platform
 description: Notas de versão de Experience Platform 18 de novembro de 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Para saber mais, consulte a visão geral das métricas da Plataforma de dados do
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino compatíveis com a Plataforma de dados do cliente em tempo real do Adobe que ativam os dados para esses parceiros de forma contínua. Para obter mais informações, leia o artigo de visão geral [](../../rtcdp/destinations/destinations-overview.md) Destinos.
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino compatíveis com a Plataforma de dados do cliente em tempo real do Adobe que ativam os dados para esses parceiros de forma contínua. Para obter mais informações, leia o artigo de visão geral [](../../destinations/home.md) Destinos.
 
 **Destinos disponíveis**
 
@@ -74,12 +74,12 @@ Com a versão de novembro, a Plataforma de dados do cliente em tempo real oferec
 * Publicidade: [!DNL Google]
 * Marketing por email: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Consulte o catálogo [de](../../rtcdp/destinations/destinations-catalog.md) destino para obter informações sobre cada um dos destinos.
+Consulte o catálogo [de](../../destinations/catalog/overview.md) destino para obter informações sobre cada um dos destinos.
 
 **Limitações conhecidas**
 
-* O controle para permitir programações de ativação personalizadas no fluxo [de](../../rtcdp/destinations/activate-destinations.md#activate-data) ativação (etapa de programação) não está disponível na versão inicial.
-* No momento, não há como editar ou excluir uma configuração de destino. Para contornar essa limitação, você pode ativar ou desativar o destino no canto superior direito da página [de detalhes do](../../rtcdp/destinations/destination-details-page.md)destino.
+* O controle para permitir programações de ativação personalizadas no fluxo [de](../../destinations/ui/activate-destinations.md#activate-data) ativação (etapa de programação) não está disponível na versão inicial.
+* No momento, não há como editar ou excluir uma configuração de destino. Para contornar essa limitação, você pode ativar ou desativar o destino no canto superior direito da página [de detalhes do](../../destinations/ui/destination-details-page.md)destino.
 * Nenhuma validação está atualmente em vigor para detalhes da conta, caminho ou credenciais ao se conectar ao destino ou à conta do armazenamento. Verifique se você está inserindo as credenciais corretas e duplo para verificar erros ortográficos ou erros de digitação.
 * Nenhuma renovação de credenciais está em vigor com a versão inicial. Depois que uma conta expirar ou precisar de atualização, você deverá criar uma nova conexão de destino e remapear seus segmentos mapeados anteriormente.
 

@@ -1,13 +1,13 @@
 ---
-title: 'Notas de versão do Adobe Experience Platform '
+title: Notas de versão da Adobe Experience Platform
 description: Notas de versão de Experience Platform 15 de janeiro de 2020
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '880'
 ht-degree: 7%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-* [Sistema do [!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Privacy Service]](#privacy)
-* [[!Fontes DNL]](#sources)
-* [[!Destinos DNL]](#destinations)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
@@ -92,7 +92,7 @@ Para obter mais informações sobre fontes, consulte a visão geral [das fontes]
 
 ## Destinos {#destinations}
 
-No [Adobe Real-time CDP](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de uma forma contínua.
+Na CDP [em tempo](../../rtcdp/overview.md)real, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de uma forma contínua.
 
 **Novos recursos**
 
@@ -112,4 +112,4 @@ No [Adobe Real-time CDP](../../rtcdp/overview.md), os destinos são integraçõe
 
 * None
 
-See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
+See the [Destinations overview](../../destinations/home.md) for more information.

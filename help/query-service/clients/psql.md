@@ -5,10 +5,10 @@ title: Conectar com o PSQL
 topic: connect
 description: 'O PSQL é uma interface de linha de comando que aparece quando você instala os Postgres em sua máquina. Você pode instalá-lo seguindo estas instruções. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
@@ -71,7 +71,7 @@ Clique em **[!UICONTROL copiar]** para Comando **** PSQL.
 
 >[!IMPORTANT]
 >
->Se você estiver em um PC, use um editor de texto para remover as quebras de linha na string de comando e, em seguida, copie a string.
+>Se você estiver em um PC, use um editor de texto para remover as quebras de linha na string de comando e, em seguida, copie a string. Além disso, se estiver usando a versão 12.0 ou superior, será necessário adicionar `PGGSSENCMODE=disable` à sequência de caracteres de conexão.
 
 Cole a string de comando em um terminal ou uma janela de comando e pressione Enter.
 

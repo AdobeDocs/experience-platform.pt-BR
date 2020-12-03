@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
-breadcrumb-title: Visão geral do Experience Platform
+breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite entregar experiências personalizadas aos seus clientes em tempo real.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 44%
+source-wordcount: '399'
+ht-degree: 47%
 
 ---
 
@@ -43,9 +43,9 @@ ht-degree: 44%
    * [Preparação de dados](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
    * [Assimilação de dados](https://docs.adobe.com/content/help/pt-BR/experience-platform/ingestion/home.html)
    * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
-   * [Depurador](https://docs.adobe.com/content/help/pt-BR/debugger/using/experience-cloud-debugger.html)
+   * [Debugger](https://docs.adobe.com/content/help/pt-BR/debugger/using/experience-cloud-debugger.html)
    * [Depurador 2.0 (Beta)](https://docs.adobe.com/content/help/pt-BR/debugger/using-v2/experience-cloud-debugger.html)
-   * [Destinos](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [Destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL (Extrair, Transformar, Carregar)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Serviço de identidade](https://docs.adobe.com/content/help/pt-BR/experience-platform/identity/home.html)
    * [Serviços inteligentes](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
@@ -53,7 +53,7 @@ ht-degree: 44%
    * [Insights de capacidade de observação](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [Perfil (Perfil do cliente em tempo real)](https://docs.adobe.com/content/help/pt-BR/experience-platform/profile/home.html)
-   * [Serviço de query](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
+   * [Serviço de query](https://docs.adobe.com/content/help/pt-BR/experience-platform/query/home.html)
    * [Plataforma de dados do cliente em tempo real](https://docs.adobe.com/content/help/pt-BR/experience-platform/rtcdp/overview.html)
    * [Sandboxes](https://docs.adobe.com/content/help/pt-BR/experience-platform/sandbox/home.html)
    * [Schemas (XDM)](https://docs.adobe.com/content/help/pt-BR/experience-platform/xdm/home.html)

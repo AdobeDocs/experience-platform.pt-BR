@@ -5,7 +5,7 @@ title: Guia da interface do usuário Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ A seção **[!UICONTROL Perfis]** mostra o número total de pessoas com perfis n
 
 A seção **[!UICONTROL Segmentos]** mostra o número total de segmentos criados na organização IMS. Esse número é atualizado quando um novo segmento é criado. Para obter mais informações sobre segmentos, consulte a visão geral [do Serviço de](../segmentation/home.md)segmentação.
 
-A seção **[!UICONTROL Destinos]** mostra o número total de destinos criados para a Organização IMS. Esse número é atualizado quando um novo destino é criado. Para obter mais informações sobre os destinos, consulte a visão geral [dos](../rtcdp/destinations/destinations-overview.md)destinos.
+A seção **[!UICONTROL Destinos]** mostra o número total de destinos criados para a Organização IMS. Esse número é atualizado quando um novo destino é criado. Para obter mais informações sobre os destinos, consulte a visão geral [dos](../destinations/home.md)destinos.
 
 ### Dados recentes
 
@@ -51,7 +51,7 @@ A seção Fontes **** recentes lista os cinco conectores de origem criados mais 
 
 A seção Segmentos **** recentes lista as cinco definições de segmento criadas mais recentemente na Organização IMS. Essa lista é atualizada sempre que uma nova definição de segmento é criada. Você pode selecionar uma definição de segmento na lista para visualização de mais informações sobre a definição de segmento especificada ou selecionar **[!UICONTROL Visualização de todos]** para ver uma lista de todas as definições de segmento criadas. Para obter mais informações sobre segmentos, consulte a visão geral [do Serviço de](../segmentation/home.md)segmentação.
 
-A seção Destinos **** recentes lista os cinco destinos criados mais recentemente na sua Organização IMS. Esta lista é atualizada sempre que um novo destino é criado. Você pode selecionar um destino da lista para visualização de mais informações sobre o destino especificado ou selecionar **[!UICONTROL Visualização de todos]** para ver uma lista de todos os destinos criados. Para obter mais informações sobre os destinos, consulte a visão geral [dos](../rtcdp/destinations/destinations-overview.md)destinos.
+A seção Destinos **** recentes lista os cinco destinos criados mais recentemente na sua Organização IMS. Esta lista é atualizada sempre que um novo destino é criado. Você pode selecionar um destino da lista para visualização de mais informações sobre o destino especificado ou selecionar **[!UICONTROL Visualização de todos]** para ver uma lista de todos os destinos criados. Para obter mais informações sobre os destinos, consulte a visão geral [dos](../destinations/home.md)destinos.
 
 ### Aprendizagem recomendada
 
@@ -117,7 +117,7 @@ A seção **[!UICONTROL Workflows]** mostra uma lista de workflows de várias et
 
 A seção **[!UICONTROL Fontes]** permite criar, atualizar e excluir conexões de origem, permitindo que você ingira dados de fontes externas na Plataforma. Mais informações sobre fontes podem ser encontradas na visão geral [](../sources/home.md)das fontes.
 
-A seção **[!UICONTROL Destinos]** permite criar, atualizar e excluir destinos, permitindo exportar dados da Plataforma para muitos destinos externos. Para obter mais informações sobre os destinos, consulte a visão geral [dos](../rtcdp/destinations/destinations-overview.md)destinos.
+A seção **[!UICONTROL Destinos]** permite criar, atualizar e excluir destinos, permitindo exportar dados da Plataforma para muitos destinos externos. Para obter mais informações sobre os destinos, consulte a visão geral [dos](../destinations/home.md)destinos.
 
 ### [!UICONTROL Cliente]
 

@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guia da plataforma de dados do cliente em tempo real
 user-guide-description: Reúna dados conhecidos e anônimos de várias fontes corporativas para criar perfis de clientes, criar segmentos de público-alvo a partir desses perfis e ativar esses segmentos para destinos de terceiros.
 translation-type: tm+mt
-source-git-commit: 44a129e5a92fc9994e43c199bf902459c012eca3
+source-git-commit: 24e8f6bce76c772567f9ef017ad82bdb459db1bf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 16%
@@ -101,7 +101,7 @@ ht-degree: 16%
          * [Extensão PebblePost](destinations/pebblepost-extension.md)
          * [Marketing Cloud do Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
-         * [Visão geral das extensões de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+         * [Visão geral das extensões de Experience Platform Launch](destinations/experience-platform-launch-extensions.md)
       * Destinos de envolvimento móvel {#mobile-engagement-destinations}
          * [Visão geral dos destinos de envolvimento móvel](destinations/mobile-destinations.md)
          * [Atributos do navio](destinations/airship-attributes-destination.md)

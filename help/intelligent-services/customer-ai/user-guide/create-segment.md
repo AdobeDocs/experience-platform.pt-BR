@@ -5,9 +5,9 @@ title: Criar segmentos de clientes com pontuações previstas
 topic: Create a segment
 description: Quando uma execução de previsão é concluída, as pontuações de propensão previstas são automaticamente consumidas pelos Perfis. Enriquecendo Perfis com pontuações de AI do cliente permite que a criação de segmentos do cliente localize audiências com base em suas pontuações de propensão. Esta seção fornece etapas para a criação de segmentos usando o Construtor de segmentos.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -41,4 +41,4 @@ Acima da coluna *Campos* à esquerda, clique no ícone de **engrenagem** e selec
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você encontrou audiências com êxito com base em suas pontuações de propensão usando o Construtor de segmentos. Agora você pode público alvo suas audiências ativando-as para destinos. See the [destinations overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) for more information.
+Ao seguir este tutorial, você encontrou audiências com êxito com base em suas pontuações de propensão usando o Construtor de segmentos. Agora você pode público alvo suas audiências ativando-as para destinos. See the [destinations overview](../../../destinations/home.md) for more information.

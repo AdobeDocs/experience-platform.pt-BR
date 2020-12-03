@@ -1,14 +1,14 @@
 ---
-title: 'Notas de versão do Adobe Experience Platform '
+title: Notas de versão da Adobe Experience Platform
 description: Notas de versão de Experience Platform 8 de abril de 2020
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 8%
 
 ---
@@ -94,14 +94,14 @@ Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os de
 
 **Novos destinos**
 
-A CDP em tempo real do Adobe agora oferece suporte à ativação de dados para mais de cinquenta [!DNL Experience Cloud Launch] extensões, permitindo análises, personalização e outros casos de uso. Consulte abaixo para obter detalhes:
+A CDP em tempo real agora oferece suporte à ativação de dados para mais de cinquenta [!DNL Experience Cloud Launch] extensões, permitindo análises, personalização e outros casos de uso. Consulte abaixo para obter detalhes:
 
 | Documentação | Descrição |
 |--- | ---|
-| [Tipos de destino e categorias](/help/rtcdp/destinations/destination-types.md) | Este artigo explica a diferença entre conexões e extensões na interface CDP em tempo real do Adobe e recomenda quando usar cada um desses destinos. |
-| [extensões Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Esta página explica quais são [!DNL Launch] as extensões, os casos de uso do lista para usá-las e os links para a documentação de cada [!DNL Launch] extensão no Adobe Real-time CDP. |
+| [Tipos de destino e categorias](../../destinations/destination-types.md) | Este artigo explica a diferença entre conexões e extensões na interface CDP em tempo real e recomenda quando usar cada um desses destinos. |
+| [extensões Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica quais [!DNL Launch] são as extensões, os casos de uso do lista para usá-las e os links para a documentação de cada [!DNL Launch] extensão no CDP em tempo real. |
 
-Para obter mais informações, consulte a visão geral [de](/help/rtcdp/destinations/destinations-overview.md)Destinos.
+Para obter mais informações, consulte a visão geral [de](../../destinations/home.md)Destinos.
 
 ## [!DNL Privacy Service] {#privacy}
 

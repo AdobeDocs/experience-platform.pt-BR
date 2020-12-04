@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
-description: 'Os namespaces de identidade são um componente do Serviço de identidade da   que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
+description: 'Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
 source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 Trabalhar com namespaces de identidade requer uma compreensão dos vários serviços da Adobe Experience Platform envolvidos. Antes de começar a trabalhar com o namespace, consulte a documentação dos seguintes serviços:
 
-- [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
 - [[!DNL Identity Service]](./home.md): Obtenha uma melhor visualização de clientes individuais e de seu comportamento ao unir identidades entre dispositivos e sistemas.
 - [[!DNL Privacy Service]](../privacy-service/home.md): As namespaces de identidade são usadas para cumprir o Regulamento Geral de Proteção de Dados (RGPD), onde os pedidos RGPD podem ser feitos em relação a uma namespace.
 

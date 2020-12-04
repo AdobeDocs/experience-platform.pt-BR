@@ -7,7 +7,7 @@ description: A API de ingestão em lote permite que você ingira dados no Adobe 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---

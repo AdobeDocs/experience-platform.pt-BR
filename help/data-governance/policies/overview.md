@@ -21,7 +21,7 @@ Este documento fornece uma visão geral de alto nível das políticas de uso de 
 
 ## Ações de marketing {#marketing-actions}
 
-As ações de marketing (também chamadas de casos de uso de marketing) no contexto da estrutura de controle de dados são ações que um consumidor de [!DNL Experience Platform] dados pode realizar, para as quais sua organização deseja restringir o uso de dados. Dessa forma, uma política de uso de dados é definida pelo seguinte:
+As ações de marketing (também chamadas de casos de uso de marketing) no contexto da estrutura de controle de dados são ações que um consumidor de [!DNL Experience Platform] dados pode realizar, para as quais sua organização deseja restringir o uso de dados. Assim, uma política de uso de dados é definida pelo seguinte:
 
 1. Uma ação de marketing específica
 2. Os rótulos de uso de dados com os quais a ação está restrita não são executados

@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle DB;oracle db
 solution: Experience Platform
-title: Criar um conector de origem do Oracle DB na interface do usuário
+title: Criar um conector de origem Oracle DB na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para a criação de um conector de origem do Oracle DB usando a interface do usuário da Plataforma.
+description: Este tutorial fornece etapas para a criação de um conector de origem Oracle DB usando a interface do usuário da plataforma.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -42,7 +42,7 @@ Para acessar sua [!DNL Oracle DB] conta em [!DNL Platform], forneça os seguinte
 | `connectionString` | A string de conexão usada para conexão [!DNL Oracle DB]. O padrão da string de [!DNL Oracle DB] conexão é: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Oracle DB] é `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Para obter mais informações sobre a introdução, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
+Para obter mais informações sobre como começar, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
 
 ## Conectar sua [!DNL Oracle DB] conta
 
@@ -52,7 +52,7 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Bancos]** de Dados, selecione **[!UICONTROL Oracle DB]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Oracle DB] conector.
+Na categoria **[!UICONTROL Bancos]** de dados, selecione **[!UICONTROL Oracle DB]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Oracle DB] conector.
 
 ![catálogo](../../../../images/tutorials/create/oracle/catalog.png)
 

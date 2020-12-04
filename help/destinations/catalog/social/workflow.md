@@ -6,7 +6,7 @@ seo-title: Fluxo de trabalho de destinos de rede social
 description: Instruções para conectar-se à sua rede social e contas
 seo-description: Instruções para conectar-se à sua rede social e contas
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Na etapa **Autenticação** , se você já tiver configurado uma conexão com o 
 
 Depois que suas credenciais forem confirmadas e o Adobe Experience Cloud estiver conectado à sua rede social, você poderá selecionar **[!UICONTROL Avançar]** para prosseguir para a etapa **[!UICONTROL de instalação]** .
 
-![Credenciais confirmadas](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![Credenciais confirmadas](../../assets/catalog/social/workflow/post-connect.png)
 
 Na etapa **[!UICONTROL Configuração]** , digite um [!UICONTROL Nome] e uma [!UICONTROL Descrição] para o fluxo de ativação e preencha a ID [!UICONTROL de] conta da sua conta de anúncio de rede social.
 

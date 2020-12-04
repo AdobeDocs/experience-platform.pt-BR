@@ -7,7 +7,7 @@ description: 'O Experience Platform permite que seus clientes enviem solicitaç�
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Depois que um cliente optar por não participar, é importante que sua organiza�
 
 O cumprimento dos pedidos de opção de não participação exige uma compreensão dos vários [!DNL Adobe Experience Platform] serviços envolvidos. Antes de trabalhar com solicitações de recusa, consulte a documentação dos seguintes serviços:
 
-- [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Ajuda as organizações a automatizar a conformidade com as regulamentações de privacidade de dados que envolvem dados de clientes dentro [!DNL Platform].
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Para obter mais informações sobre segmentação, inclusive trabalhar com definições de segmentos e audiências por meio da API e da interface do usuário, comece lendo a visão geral [da](./home.md)segmentação.
 
-Para saber mais sobre a privacidade de dados no [!DNL Platform], incluindo como [!DNL Privacy Service] facilitar a conformidade automatizada com as regulamentações legais e organizacionais de privacidade, consulte a documentação em [[!DNL Privacy Service]](../privacy-service/home.md).
+Para saber mais sobre a privacidade de dados no [!DNL Platform], incluindo como [!DNL Privacy Service] facilitar a conformidade automatizada com as regulamentações legais e organizacionais de privacidade, consulte a documentação sobre [[!DNL Privacy Service]](../privacy-service/home.md).

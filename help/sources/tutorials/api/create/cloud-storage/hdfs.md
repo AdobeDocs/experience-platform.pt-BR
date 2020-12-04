@@ -22,7 +22,7 @@ ht-degree: 2%
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes para serem trazidas para o Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para conectar um Apache Hadoop Distributed File System (a seguir denominado &quot;HDFS&quot;) ao [!DNL Experience Platform].
+Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para conectar um Apache Hadoop Distributed File System (a seguir denominado &quot;HDFS&quot;) a [!DNL Experience Platform].
 
 ## Introdução
 

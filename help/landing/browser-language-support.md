@@ -7,8 +7,8 @@ description: A Adobe Experience Platform é o sistema mais poderoso, flexível e
 translation-type: tm+mt
 source-git-commit: 56116abcb4273b27ffcb3aefed0acf2ac35152fe
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '222'
+ht-degree: 20%
 
 ---
 

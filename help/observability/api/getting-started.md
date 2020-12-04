@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Introdução à [!DNL Observability Insights] API
+# Getting started with the [!DNL Observability Insights] API
 
 A [!DNL Observability Insights] API permite recuperar dados de métricas para vários recursos do Adobe Experience Platform. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a [!DNL Observability Insights] API.
 

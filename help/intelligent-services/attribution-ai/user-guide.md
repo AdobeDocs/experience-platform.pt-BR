@@ -99,7 +99,7 @@ Clicar em **[!UICONTROL Adicionar evento]** cria campos adicionais que podem ser
 
 Clicar em **[!UICONTROL Adicionar grupo]** dá a opção de criar campos adicionais separados do original. Com a adição de grupos, um botão azul *E* é exibido. Clicar em **E** oferece uma opção para alterar o parâmetro para conter &quot;Ou&quot;. &quot;Ou&quot; é usado para definir vários caminhos de conversão bem-sucedidos. &quot;E&quot; estende o caminho de conversão para incluir condições adicionais.
 
-![using and or](./images/user-guide/and_or.png)
+![usando e ou](./images/user-guide/and_or.png)
 
 Se você precisar de mais de uma conversão, clique em **Adicionar conversão** para criar um novo cartão de conversão. Você pode repetir o processo acima para definir várias conversões.
 

@@ -8,7 +8,7 @@ description: A ingestão de streaming permite carregar seus dados para a Adobe E
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -22,8 +22,8 @@ A ingestão de streaming permite carregar seus dados para a Adobe Experience Pla
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!Ingestão de Streaming DNL]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API
 

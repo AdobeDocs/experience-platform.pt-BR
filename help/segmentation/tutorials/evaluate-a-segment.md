@@ -8,7 +8,7 @@ description: Este documento fornece um tutorial para avaliar segmentos e acessar
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 # Avaliar e acessar os resultados do segmento
 
-Este documento fornece um tutorial para avaliar segmentos e acessar resultados de segmentos usando a [[!DNL Segmentation API]](../api/getting-started.md).
+Este documento fornece um tutorial para avaliar segmentos e acessar resultados de segmentos usando o [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de audiência. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite que você crie segmentos de audiência a partir de [!DNL Real-time Customer Profile] dados.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 - [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
@@ -230,7 +230,7 @@ Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas n
 
 ## Próximas etapas
 
-Depois que a exportação for concluída com êxito, seus dados estarão disponíveis no [!DNL Data Lake] em [!DNL Experience Platform]. Em seguida, você pode usar a [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acessar os dados usando o `batchId` associado à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
+Depois que a exportação for concluída com êxito, seus dados estarão disponíveis no [!DNL Data Lake] em [!DNL Experience Platform]. Em seguida, você pode usar o para acessar os dados usando o [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) `batchId` associado à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar a [!DNL Data Access] API para acessar e baixar arquivos em lote, siga o tutorial [Acesso a](../../data-access/tutorials/dataset-data.md)dados.
 

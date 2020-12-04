@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Autenticar e acessar APIs Experience Platform
 topic: tutorial
 type: Tutorial
-description: 'Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor Adobe Experience Platform para fazer chamadas para APIs Experience Platform. '
+description: 'Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform. '
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 1%
+source-wordcount: '875'
+ht-degree: 4%
 
 ---
 
 
-# Autenticar e acessar [!DNL Experience Platform] APIs
+# Authenticate and access [!DNL Experience Platform] APIs
 
-Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor Adobe Experience Platform para fazer chamadas para [!DNL Experience Platform] APIs.
+This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
 
 ## Autenticar para fazer chamadas de API
 
-Para manter a segurança de seus aplicativos e usuários, todas as solicitações para APIs de E/S de Adobe devem ser autenticadas e autorizadas usando padrões como OAuth e JSON Web Tokens (JWT). O JWT é então usado junto com informações específicas do cliente para gerar seu token de acesso pessoal.
+Para manter a segurança de seus aplicativos e usuários, todas as solicitações para APIs da Adobe I/O devem ser autenticadas e autorizadas usando padrões como OAuth e JSON Web Tokens (JWT). O JWT é então usado junto com informações específicas do cliente para gerar seu token de acesso pessoal.
 
 Este tutorial aborda as etapas de autenticação através da criação de um token de acesso descrito no seguinte fluxograma:
 ![](images/authentication/authentication-flowchart.png)
@@ -45,7 +45,7 @@ Se você não tiver um Adobe ID, poderá criar um usando as seguintes etapas:
 
 ## Torne-se um desenvolvedor e usuário para [!DNL Experience Platform] uma organização
 
-Antes de criar integrações em E/S de Adobe, sua conta deve ter permissões de desenvolvedor para um produto em uma organização IMS. Informações detalhadas sobre contas de desenvolvedor no Admin Console podem ser encontradas no documento [de](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) suporte para o gerenciamento de desenvolvedores.
+Antes de criar integrações no Adobe I/O, sua conta deve ter permissões de desenvolvedor para um produto em uma organização IMS. Informações detalhadas sobre contas de desenvolvedor no Admin Console podem ser encontradas no documento [de](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) suporte para o gerenciamento de desenvolvedores.
 
 **Obter acesso do desenvolvedor**
 
@@ -57,7 +57,7 @@ O administrador deve atribuí-lo como desenvolvedor a pelo menos um perfil de pr
 
 ![](images/authentication/add-developer.png)
 
-Depois de ser atribuído como desenvolvedor, você terá privilégios de acesso para criar integrações em E/S do [Adobe](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para a API do Adobe.
+Depois que você for atribuído como desenvolvedor, terá privilégios de acesso para criar integrações no [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para a API do Adobe.
 
 **Obter acesso do usuário**
 

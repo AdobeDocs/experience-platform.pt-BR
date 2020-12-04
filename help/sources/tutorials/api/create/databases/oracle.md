@@ -38,7 +38,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 | `connectionString` | A string de conexão usada para conexão [!DNL Oracle]. O padrão da string de [!DNL Oracle] conexão é: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Oracle] é `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Para obter mais informações sobre a introdução, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
+Para obter mais informações sobre como começar, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
 
 ### Lendo chamadas de exemplo da API
 

@@ -7,8 +7,8 @@ description: A Adobe Experience Platform é o sistema mais poderoso, flexível e
 translation-type: tm+mt
 source-git-commit: 958074b3dde925f543e54982284c7ea5f2928169
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 26%
 
 ---
 
@@ -19,6 +19,6 @@ A documentação do Adobe Experience Platform está disponível em vários idiom
 
 ![imagem](../images/overview/lang.jpg)
 
-## [!DNL Experience Platform] documentação
+## [!DNL Experience Platform]documentação
 
 Para saber mais sobre os tipos de documentação disponíveis, visite a visão geral [dos tipos de documentação da](overview.md)plataforma. Para saber mais sobre um recurso ou serviço específico [!DNL Platform] , selecione um guia na landing page [Documentação do](https://experienceleague.corp.adobe.com/docs/experience-platform.html?lang=en)Experience Platform.

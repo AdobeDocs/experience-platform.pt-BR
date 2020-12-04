@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar um conector de Armazenamento do Google Cloud usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a uma conta de Armazenamento do Google Cloud.
+description: Este tutorial usa a API de Serviço de Fluxo para orientá-lo pelas etapas para conectar o Experience Platform a uma conta de Armazenamento do Google Cloud.
 translation-type: tm+mt
 source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt

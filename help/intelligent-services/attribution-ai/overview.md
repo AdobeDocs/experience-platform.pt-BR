@@ -3,12 +3,12 @@ keywords: Experience Platform;attribution ai overview;popular topics;attribution
 solution: Experience Platform
 title: Visão geral do Attribution AI
 topic: Attribution AI
-description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Isso pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em viagens de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
+description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 6%
+ht-degree: 29%
 
 ---
 
@@ -19,7 +19,7 @@ Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribui
 
 ## Como entender o Attribution AI
 
-O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Isso pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em viagens de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
+O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
 
 As saídas de Attribution AI podem ser segregadas em várias dimensões e podem ser utilizadas em diferentes estágios da jornada do cliente. Isso é feito sem a necessidade de traduzir as necessidades de negócios para problemas de aprendizado em máquinas, escolher algoritmos, treinamento ou implantar modelos.
 

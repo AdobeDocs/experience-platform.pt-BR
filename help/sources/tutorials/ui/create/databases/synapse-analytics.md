@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: Criar um conector de origem do Azure Synapse Analytics na interface do usuário
+title: Criar um conector de origem do Azure synapse Analytics na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para a criação de um conector de origem do Azure Synapse Analytics (a seguir denominado "Synapse") usando a interface de usuário da Plataforma.
+description: Este tutorial fornece etapas para a criação de um conector de origem do Azure synapse Analytics (a seguir denominado "Synapse") usando a interface do usuário da plataforma.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -51,11 +51,11 @@ Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecio
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Bancos]** de Dados, selecione **[!UICONTROL Azure Synapse Analytics]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Synapse] conector.
+Na categoria **[!UICONTROL Bancos]** de dados, selecione **[!UICONTROL Azure synapse Analytics]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Synapse] conector.
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-A página **[!UICONTROL Conectar-se ao Azure Synapse Analytics]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar-se ao Azure synapse Analytics]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Nova conta
 

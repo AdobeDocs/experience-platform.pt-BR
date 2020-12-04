@@ -8,7 +8,7 @@ description: Este documento fornece um tutorial para enviar várias mensagens pa
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -510,7 +510,7 @@ A segunda mensagem falhou porque faltou um corpo de mensagem. A solicitação de
     },
 ```
 
-A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual ID de organização IMS corresponde à conexão de streaming que você está usando, é possível executar uma `GET inlet` solicitação usando a [[!DNL Data Ingsion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [recuperação de uma conexão](./create-streaming-connection.md#get-data-collection-url) de streaming para obter um exemplo de como recuperar conexões de streaming criadas anteriormente.
+A terceira mensagem falhou porque uma ID de organização IMS inválida estava sendo usada no cabeçalho. A organização IMS deve corresponder à {CONNECTION_ID} para a qual você está tentando postar. Para determinar qual ID de organização IMS corresponde à conexão de streaming que você está usando, é possível executar uma `GET inlet` solicitação usando o [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [recuperação de uma conexão](./create-streaming-connection.md#get-data-collection-url) de streaming para obter um exemplo de como recuperar conexões de streaming criadas anteriormente.
 
 A quarta mensagem falhou porque não seguiu o schema XDM esperado. Os itens `xdmSchema` incluídos no cabeçalho e no corpo da solicitação não correspondem ao schema XDM da `{DATASET_ID}`. A correção do schema no cabeçalho e no corpo da mensagem permite que ele passe pela validação do DCCS e seja enviado com êxito para [!DNL Platform]. O corpo da mensagem também deve ser atualizado para corresponder ao schema XDM do para `{DATASET_ID}` que ele passe a validação de streaming [!DNL Platform]. Para obter mais informações sobre o que acontece com as mensagens que fluem com êxito para a Plataforma, consulte a seção [confirmar mensagens assimiladas](#confirm-messages-ingested) deste tutorial.
 
@@ -531,7 +531,7 @@ As mensagens em lote que passam pela validação do streaming [!DNL Platform] s�
 
 ## Próximas etapas
 
-Agora que você sabe como enviar várias mensagens em uma única solicitação e verificar quando as mensagens são ingeridas com êxito no conjunto de dados do público alvo, é possível fazer o start do streaming dos seus próprios dados para [!DNL Platform]. Para obter uma visão geral de como query e recuperar dados ingeridos de [!DNL Platform], consulte o guia [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) .
+Agora que você sabe como enviar várias mensagens em uma única solicitação e verificar quando as mensagens são ingeridas com êxito no conjunto de dados do público alvo, é possível fazer o start do streaming dos seus próprios dados para [!DNL Platform]. Para obter uma visão geral de como query e recuperar dados ingeridos de [!DNL Platform], consulte o [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guia.
 
 ## Apêndice
 

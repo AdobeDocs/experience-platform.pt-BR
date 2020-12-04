@@ -58,7 +58,7 @@ Com o notebook de vendas de varejo aberto, a primeira coisa que você deve fazer
 - **sklearn**: Biblioteca de aprendizado de máquina que apresenta classificação, regressão, vetor de suporte e algoritmos de cluster
 - **avisos**: Biblioteca que controla as mensagens de aviso
 
-### Pagamentos {#exploring-data}
+### Explorar dados {#exploring-data}
 
 #### Carregar dados
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Identidades na CDP em tempo real
 
-A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seus clientes e de seu comportamento ao unir identidades entre dispositivos e sistemas. Geralmente, seus clientes interagem com sua marca em vários canais, isso pode incluir a navegação online em seu site, a compra na loja, a entrada em seu programa de fidelidade ou a ligação para um suporte técnico, para nomear alguns. Nesses vários sistemas, existe uma identidade criada para esse cliente e [!DNL Identity Service] permite reunir essas identidades para ver a imagem completa.
+A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melhor visualização de seus clientes e de seu comportamento ao unir identidades entre dispositivos e sistemas. Geralmente, seus clientes interagem com sua marca em vários canais, isso pode incluir a navegação online em seu site, a compra na loja, a entrada em seu programa de fidelidade ou a chamada de um suporte técnico para nomear alguns. Nesses vários sistemas, existe uma identidade criada para esse cliente e [!DNL Identity Service] permite reunir essas identidades para ver a imagem completa.
 
 Agora, em vez de cinco clientes separados interagindo com sua marca em cinco canais diferentes, você pode ver que esse é o mesmo cliente, e você pode garantir que eles recebam uma experiência consistente, personalizada e relevante em cada interação. À medida que mais informações se tornam conhecidas sobre seu cliente (por exemplo, um navegador anônimo do seu site decide se inscrever para obter uma conta e fazer login), essas informações são agrupadas e a imagem do seu cliente se torna cada vez mais clara.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suporte ao IAB TCF 2.0 na Plataforma de dados do cliente em tempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
+source-git-commit: 75a0b4ba1342ece3e34a7ef41782b9014516d4fe
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Este guia também requer uma compreensão prática dos seguintes serviços da Ad
    * [Comandos](../../../edge/consent/supporting-consent.md)de consentimento do SDK: Uma visão geral de caso de uso dos comandos SDK relacionados ao consentimento mostrados neste guia.
 * [Serviço](../../../segmentation/home.md)de segmentação do Adobe Experience Platform: Permite dividir [!DNL Real-time Customer Profile] dados em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 
-Além dos [!DNL Platform] serviços listados acima, você também deve estar familiarizado com os [destinos](../../destinations/destinations-overview.md) e seu uso em [!DNL Real-time CDP].
+Além dos [!DNL Platform] serviços listados acima, você também deve estar familiarizado com os [destinos](../../destinations/overview.md) e seu uso em [!DNL Real-time CDP].
 
 ## Resumo do fluxo de consentimento do cliente {#summary}
 

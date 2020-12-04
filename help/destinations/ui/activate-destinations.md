@@ -6,7 +6,7 @@ seo-title: Ativar perfis e segmentos em um destino
 description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Plataforma de dados do cliente em tempo real mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Se estiver usando outra ID, como &quot;ID de recompensa&quot; ou &quot;ID de fid
 
 ![ID de fidelidade como identidade](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [!DNL Facebook] de hash do [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)email.
+Selecione `Email_LC_SHA256` como identidade de público alvo se você tiver hash dos endereços de email do cliente na ingestão de dados no Adobe Experience Platform, de acordo com os requisitos [!DNL Facebook] de hash do [](../catalog/social/facebook.md#email-hashing-requirements)email.
 
 Selecione `Email` como identidade de público alvo se os endereços de email que você está usando não estiverem com hash. A CDP em tempo real hash os endereços de email para atender aos [!DNL Facebook] requisitos.
 
@@ -158,7 +158,7 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 
 Além disso, é possível marcar atributos diferentes como obrigatórios. Marcar um atributo como obrigatório faz com que o segmento exportado contenha esse atributo. Como resultado, ele pode ser usado como uma forma adicional de filtragem. Marcar um atributo como obrigatório **não** é necessário.
 
-É recomendável que um dos atributos seja um identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) exclusivo do seu schema. Para obter mais informações sobre atributos obrigatórios, consulte a seção de identidade na documentação de destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) email.
+É recomendável que um dos atributos seja um identificador [](../../destinations/catalog/email-marketing/overview.md#identity) exclusivo do seu schema. Para obter mais informações sobre atributos obrigatórios, consulte a seção de identidade na documentação de destinos [de marketing de](../../destinations/catalog/email-marketing/overview.md#identity) email.
 
 >[!NOTE]
 > 

@@ -75,7 +75,7 @@ O query PQL a seguir define as pessoas cujas cores favoritas incluem pelo menos 
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersecção
+## Interseção
 
 A `intersection` função é usada para determinar os membros comuns de duas matrizes ou listas.
 

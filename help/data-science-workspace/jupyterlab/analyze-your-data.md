@@ -8,7 +8,7 @@ description: Este tutorial foca em como usar notebooks Júpiter, criados na Data
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Este tutorial foca em como usar notebooks Júpiter, criados na Data Science Work
 
 São introduzidos os seguintes conceitos:
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface baseada na Web da próxima geração do Project Júpitter e está totalmente integrado ao Project [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) é a interface baseada na Web da próxima geração para o Project Júpiter, e é totalmente integrada ao projeto [!DNL Adobe Experience Platform].
 - **Lotes:** Os conjuntos de dados são compostos de lotes. Um lote é um conjunto de dados coletados durante um período de tempo e processados juntos como uma única unidade. Novos lotes são criados quando os dados são adicionados a um conjunto de dados.
-- **SDK de acesso a dados (obsoleto):** O SDK de acesso a dados agora está obsoleto. Use o guia [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
+- **SDK de acesso a dados (obsoleto):** O SDK de acesso a dados agora está obsoleto. Use o [[!DNL Platform SDK]](../authoring/platform-sdk.md) guia, por favor.
 
 ## Explore notebooks na Data Science Workspace
 
@@ -92,7 +92,7 @@ Agora, podemos clicar com o botão direito do mouse no `Retail-Training-<your-al
 
 >[!TIP]
 >
->Consulte o guia [[!DNL Platform SDK]](../authoring/platform-sdk.md) para converter seu código.
+>Consulte o [[!DNL Platform SDK]](../authoring/platform-sdk.md) guia para converter seu código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

@@ -151,7 +151,7 @@ O novo [!DNL Platform] SDK oferece suporte às seguintes operações:
 
 | Operação | Função |
 | --------- | -------- |
-| Igual (`=`) | `eq()` |
+| Igual a (`=`) | `eq()` |
 | Greater than (`>`) | `gt()` |
 | Greater than or equal to (`>=`) | `ge()` |
 | Less than (`<`) | `lt()` |

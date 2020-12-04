@@ -45,7 +45,7 @@ Você pode começar com [!DNL Platform] rapidez e facilidade seguindo os tutoria
    Saiba mais sobre as noções básicas de como trabalhar com [!DNL Platform] APIs.
 
 * [**DOCUMENTOS de referência da API**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
-   APIs do Discover, incluindo cabeçalhos, parâmetros, solicitações de amostra e respostas. [!DNL Experience Platform]<br/>*Esses documentos são hospedados em E/S de Adobe.*
+   APIs do Discover, incluindo cabeçalhos, parâmetros, solicitações de amostra e respostas. [!DNL Experience Platform]<br/>*Esses documentos estão hospedados no Adobe I/O.*
 
 * [**Glossário**](glossary.md)\
    Examine a terminologia da Adobe Experience Platform.

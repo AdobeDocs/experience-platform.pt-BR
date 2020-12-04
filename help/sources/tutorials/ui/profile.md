@@ -69,4 +69,4 @@ Com o schema e o conjunto de dados habilitados para [!DNL Profile], os dados ass
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você ativou com êxito os dados de entrada para a [!DNL Profile] população. For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
+Ao seguir este tutorial, você ativou com êxito os dados de entrada para a [!DNL Profile] população. Para obter mais informações, consulte a [[!DNL Real-time Customer Profile] visão geral](../../../profile/home.md).

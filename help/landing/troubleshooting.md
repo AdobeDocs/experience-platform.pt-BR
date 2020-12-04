@@ -25,7 +25,7 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Adobe Exp
 
 ## O que são [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API em E/S de Adobe.
+[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API no Adobe I/O.
 
 ## Como formatar uma solicitação de API? {#how-do-i-format-an-api-request}
 
@@ -175,7 +175,7 @@ Esta mensagem de erro é exibida quando um `Authorization` cabeçalho está ause
 }
 ```
 
-Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho não é válido. `Authorization` Verifique se o token foi inserido corretamente ou [gere um novo token](../tutorials/authentication.md) no Console de E/S do Adobe.
+Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho não é válido. `Authorization` Verifique se o token foi inserido corretamente ou [gere um novo token](../tutorials/authentication.md) no Adobe I/O Console.
 
 ### A chave da API é obrigatória
 
@@ -197,7 +197,7 @@ Esta mensagem de erro é exibida quando um cabeçalho de chave da API (`x-api-ke
 }
 ```
 
-Esta mensagem de erro é exibida quando o valor do cabeçalho da chave da API (`x-api-key`) fornecido é inválido. Verifique se você inseriu a chave corretamente antes de tentar novamente. Se você não souber sua chave de API, poderá encontrá-la no Console [de E/S do](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a chave da API em Credenciais **do** cliente.
+Esta mensagem de erro é exibida quando o valor do cabeçalho da chave da API (`x-api-key`) fornecido é inválido. Verifique se você inseriu a chave corretamente antes de tentar novamente. Se você não souber sua chave de API, poderá encontrá-la no Console [do](https://console.adobe.io)Adobe I/O: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a chave da API em Credenciais **do** cliente.
 
 
 ### Cabeçalho ausente
@@ -220,7 +220,7 @@ Esta mensagem de erro é exibida quando um cabeçalho organizacional IMS (`x-gw-
 }
 ```
 
-Esta mensagem de erro é exibida quando a integração de E/S do usuário ou Adobe (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no `Authorization` cabeçalho) não tem direito a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no `x-gw-ims-org-id` cabeçalho. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no Console [de E/S do](https://console.adobe.io)Adobe: na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a ID em Credenciais **do** cliente.
+Essa mensagem de erro é exibida quando a integração do usuário ou do Adobe I/O (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no `Authorization` cabeçalho) não tem direito a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no `x-gw-ims-org-id` cabeçalho. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da sua organização, poderá encontrá-la no [Adobe I/O Console](https://console.adobe.io): na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica para localizar a ID em Credenciais **do** cliente.
 
 ### Tipo de conteúdo válido não especificado
 

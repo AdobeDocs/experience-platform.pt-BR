@@ -35,7 +35,7 @@ Este tutorial contém as seguintes etapas:
 
 Primeiro, instale a [!DNL Web SDK] extensão Adobe Experience Platform.
 
-1. Em [!DNL Launch], abra a guia **[!UICONTROL Extensões]** .
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
    ![imagem](assets/launch-overview.png)
 

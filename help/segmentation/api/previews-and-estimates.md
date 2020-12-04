@@ -7,7 +7,7 @@ description: À medida que você desenvolve a definição do segmento, você pod
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
@@ -172,7 +172,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando a API de acesso ao Perfil [[!DNL]](../../profile/api/entities.md). |
+| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando o [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Recuperar os resultados de uma ordem de produção de estimativa específica {#get-estimate}
 

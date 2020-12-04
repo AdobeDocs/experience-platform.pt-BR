@@ -7,7 +7,7 @@ description: Este guia do desenvolvedor fornece etapas para executar várias ope
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '369'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este guia do desenvolvedor fornece etapas para executar várias operações na A
 
 Este guia exige uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos com o uso [!DNL Query Service].
 
-- [[!Serviço de Query DNL]](../home.md): Fornece a capacidade de query de conjuntos de dados e captura os query resultantes como novos conjuntos de dados em [!DNL Experience Platform].
+- [[!DNL Query Service]](../home.md): Fornece a capacidade de query de conjuntos de dados e captura os query resultantes como novos conjuntos de dados em [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 

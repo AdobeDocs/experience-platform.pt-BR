@@ -31,7 +31,7 @@ Consulte Fluxo de trabalho de destinos do armazenamento [Cloud ](/help/rtcdp/des
 
 Para [!DNL Amazon S3] destinos, insira as seguintes informações no fluxo de trabalho de criação de destino:
 
-* **[!DNL Amazon S3]chave de acesso e chave[!DNL Amazon S3]secreta**: Em [!DNL Amazon S3], gere um `access key - secret access key` par para conceder acesso CDP Adobe em tempo real à sua [!DNL Amazon S3] conta. Saiba mais na documentação [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
+* **[!DNL Amazon S3]chave de acesso e chave [!DNL Amazon S3] secreta**: Em [!DNL Amazon S3], gere um `access key - secret access key` par para conceder acesso CDP Adobe em tempo real à sua [!DNL Amazon S3] conta. Saiba mais na documentação [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 
 >[!IMPORTANT]
 >

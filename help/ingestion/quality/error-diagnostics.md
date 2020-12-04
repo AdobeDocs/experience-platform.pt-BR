@@ -7,7 +7,7 @@ description: Este documento fornece informações sobre como monitorar a ingest�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '892'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ Este documento fornece informações sobre como monitorar a ingestão em lote, g
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!Ingestão de Dados Adobe Experience Platform DNL]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API
 

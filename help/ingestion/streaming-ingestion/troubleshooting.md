@@ -7,7 +7,7 @@ description: Este documento fornece respostas para perguntas frequentes sobre a 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,4 @@ Se [!DNL Real-time Customer Profile] rejeitar uma mensagem, provavelmente ela se
 
 Existem dois tipos de namespaces de identidade: padrão e personalizado. Ao usar namespaces personalizadas, verifique se a namespace foi registrada dentro [!DNL Identity Service]. Consulte a visão geral [da namespace de](../../identity-service/namespaces.md) identidade para obter mais informações sobre o uso de namespaces padrão e personalizadas.
 
-Você pode usar a [[!DNL Experience Platform UI]](https://platform.adobe.com) para ver mais informações sobre por que uma mensagem falhou na ingestão. Clique em **[!UICONTROL Monitoramento]** na navegação à esquerda e, em seguida, visualização a guia **[!UICONTROL Streaming end-to-end]** para ver os lotes de mensagens transmitidos durante um período selecionado.
+Você pode usar o para obter mais informações sobre [[!DNL Experience Platform UI]](https://platform.adobe.com) o motivo pelo qual uma mensagem falhou na ingestão. Clique em **[!UICONTROL Monitoramento]** na navegação à esquerda e, em seguida, visualização a guia **[!UICONTROL Streaming end-to-end]** para ver os lotes de mensagens transmitidos durante um período selecionado.

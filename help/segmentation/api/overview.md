@@ -34,7 +34,7 @@ As estimativas fornecem informações estatísticas para definições de segment
 
 Para obter mais informações sobre como usar esses pontos de extremidade, leia o guia [de pontos de extremidade de](./previews-and-estimates.md)pré-visualizações e estimativas.
 
-## Programações
+## Scheduler
 
 As programações são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia. Você pode usar o `/config/schedules` ponto de extremidade para recuperar uma lista de programações, criar uma nova programação, recuperar detalhes de uma programação específica, atualizar uma programação específica ou excluir uma programação específica.
 

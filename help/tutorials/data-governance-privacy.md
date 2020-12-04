@@ -36,6 +36,6 @@ Depois de adicionar rótulos de uso para seus dados e criar políticas para aç�
 
 Os segmentos que estão habilitados para uso em [!DNL Real-time Customer Profile] contêm uma ID de política de mesclagem dentro de sua definição de segmento. Esta política de mesclagem contém informações sobre quais conjuntos de dados devem ser incluídos no segmento, que por sua vez contêm quaisquer rótulos de uso de dados aplicáveis. Para obter etapas específicas que abrangem a imposição da conformidade de uso de dados para um segmento de audiência, siga o tutorial de imposição de conformidade de uso de [dados para segmentos](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+## Introdução a [!DNL Privacy Service]
 
 [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem gerenciar os dados pessoais de seus participantes de dados (clientes) em aplicativos Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem [!DNL Experience Cloud] aplicativos. Para obter instruções sobre como criar e monitorar [!DNL Privacy Service] trabalhos, siga as etapas fornecidas no guia [do desenvolvedor do](../privacy-service/api/getting-started.md) Privacy Service ou no guia [do usuário do](../privacy-service/ui/overview.md)Privacy Service.

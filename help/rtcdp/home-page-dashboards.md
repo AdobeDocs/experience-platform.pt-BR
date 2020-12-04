@@ -5,7 +5,7 @@ seo-title: Home page e Painéis da plataforma de dados do cliente em tempo real
 description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 seo-description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 4%
@@ -68,7 +68,7 @@ Para obter mais informações sobre segmentos, consulte Visão geral [do Serviç
 
 **[!UICONTROL Destinos]** mostra o número total de destinos criados para a organização. Esse número é atualizado quando novos destinos são criados.
 
-Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/destinations-overview.md)Destinos.
+Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/overview.md)Destinos.
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ O cartão de métricas de destinos **** recentes mostra os cinco destinos mais r
 
 Clique em um destino para visualização dos detalhes desse item ou **[!UICONTROL Visualização todos]** para ver informações sobre mais destinos.
 
-Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/destinations-overview.md)Destinos.
+Para obter mais informações sobre destinos, consulte Visão geral [sobre](destinations/overview.md)Destinos.

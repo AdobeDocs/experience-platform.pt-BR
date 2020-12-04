@@ -26,7 +26,7 @@ Você pode usar esse destino para segmentação de audiências em toda a [!DNL F
 
 ## Casos de uso
 
-Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois casos de uso de exemplo que os clientes da Plataforma de dados do cliente em tempo real podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando você deve usar o [!DNL Facebook] destino, veja dois exemplos de casos de uso que os clientes da Plataforma de dados do cliente em tempo real podem resolver usando esse recurso.
 
 
 ### Caso de uso nº 1

@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ A Adobe Experience Platform fornece uma série de garantias para ajudar você a 
 
 É recomendável que você leia a seguinte documentação dos serviços de Experience Platform antes de tentar criar modelos de dados para uso em [!DNL Real-time Customer Profile]. Trabalhar com modelos de dados e as garantias descritas neste documento requer uma compreensão dos vários serviços de Experience Platform envolvidos com [!DNL Real-time Customer Profile] entidades gerenciadoras:
 
-* [[!DNL Perfil do cliente em tempo real]](home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [Serviço](../identity-service/home.md)de identidade Adobe Experience Platform: Suporta a criação de uma &quot;visualização única do cliente&quot;, fazendo a ponte entre identidades de fontes de dados diferentes conforme são assimiladas [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../xdm/schema/composition.md)do schema: Uma introdução aos schemas e modelagem de dados dentro do Experience Platform.
@@ -62,7 +62,7 @@ Ao definir o modelo de dados, é recomendável que você fique dentro dos coleto
 
 | Guarda | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Número de conjuntos de dados recomendados para contribuir com o schema da [!DNL Profile] união | 20 | Suave | **É recomendado um máximo de 20 conjuntos de dados[!DNL Profile]habilitados.** Para habilitar outro conjunto de dados para [!DNL Profile], um conjunto de dados existente deve ser removido ou desabilitado primeiro. |
+| Número de conjuntos de dados recomendados para contribuir com o schema da [!DNL Profile] união | 20 | Suave | **É recomendado um máximo de 20 conjuntos de dados [!DNL Profile]habilitados.** Para habilitar outro conjunto de dados para [!DNL Profile], um conjunto de dados existente deve ser removido ou desabilitado primeiro. |
 | Número de relacionamentos de várias entidades recomendados | 5 | Suave | **É recomendado um máximo de 5 relacionamentos multientidades definidos entre entidades primárias e entidades de dimensão.** Mapeamentos de relacionamento adicionais não devem ser feitos até que um relacionamento existente seja removido ou desativado. |
 | Profundidade máxima do JSON para o campo de ID usado em relação de várias entidades | 4 | Suave | **A profundidade máxima de JSON recomendada para um campo de ID usado em relações de várias entidades é 4.** Isso significa que em um schema altamente aninhado, os campos que têm mais de 4 níveis de profundidade não devem ser usados como campo de ID em um relacionamento. |
 | cardinalidade de matriz em um fragmento de perfil | &lt;=500 | Suave | **A cardinalidade ideal do storage em um fragmento de perfil (dados independentes de tempo) é &lt;=500.** |
@@ -72,8 +72,8 @@ Ao definir o modelo de dados, é recomendável que você fique dentro dos coleto
 
 | Guarda | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
-| Não são permitidos dados de séries cronológicas para não[!DNL XDM Individual Profile] entidades | 0 | Grave | **Dados de séries de tempo não são permitidos para não[!DNL XDM Individual Profile]entidades no Serviço de Perfis.** Se um conjunto de dados de séries de tempo estiver associado a uma ID que não seja[!DNL XDM Individual Profile] a ID, o conjunto de dados não deverá ser ativado para [!DNL Profile]. |
-| Sem relações aninhadas | 0 | Suave | **Você não deve criar uma relação entre dois não[!DNL XDM Individual Profile]schemas.** A capacidade de criar relações não é recomendada para schemas que não façam parte do schema da [!DNL Profile] união. |
+| Não são permitidos dados de séries cronológicas para não[!DNL XDM Individual Profile] entidades | 0 | Grave | **Dados de séries de tempo não são permitidos para não[!DNL XDM Individual Profile] entidades no Serviço de Perfis.** Se um conjunto de dados de séries de tempo estiver associado a uma ID que não seja[!DNL XDM Individual Profile] a ID, o conjunto de dados não deverá ser ativado para [!DNL Profile]. |
+| Sem relações aninhadas | 0 | Suave | **Você não deve criar uma relação entre dois não[!DNL XDM Individual Profile] schemas.** A capacidade de criar relações não é recomendada para schemas que não façam parte do schema da [!DNL Profile] união. |
 | Profundidade máxima do JSON para o campo de ID principal | 4 | Suave | **A profundidade máxima de JSON recomendada para o campo de ID principal é 4.** Isso significa que em um schema altamente aninhado, você não deve selecionar um campo como ID principal se ele estiver aninhado com mais de quatro níveis de profundidade. Um campo que está no quarto nível aninhado pode ser usado como uma ID primária. |
 
 ## Resgates de tamanho de dados

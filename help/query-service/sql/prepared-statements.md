@@ -88,9 +88,9 @@ O query SQL acima retornará a seguinte resposta:
 | 10000 | alexandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
-| 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | rios |
+| 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
 | 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
-| 10005 | fernando | lince | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Este query SQL pode ser parametrizado usando a seguinte instrução preparada:
 
@@ -112,7 +112,7 @@ Quando for chamado, você verá exatamente os mesmos resultados de antes:
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
 | 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
-| 10004 | aasir | wathaka | 1976-12-17 | Suécia | Nairobi | Quênia |
+| 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Depois de terminar de usar a declaração preparada, você pode desalocá-la usando a seguinte chamada:

@@ -5,7 +5,7 @@ seo-title: Visão geral da plataforma de dados do cliente em tempo real
 description: Visão geral da plataforma de dados do cliente em tempo real
 seo-description: Visão geral da plataforma de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -38,5 +38,5 @@ A documentação a seguir é recomendada para ajudá-lo a começar a usar a Plat
 * [Como assimilar dados](sources/sources-overview.md)
 * [Como acessar perfis](profile/profile-overview.md)
 * [Como criar segmentos](segmentation/segmentation-overview.md)
-* [Como ativar segmentos para destinos](destinations/activate-destinations.md)
+* [Como ativar segmentos para destinos](destinations/overview.md)
 * [Como definir e aplicar políticas de controle de dados](privacy/data-governance-overview.md)

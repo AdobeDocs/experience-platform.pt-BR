@@ -8,7 +8,7 @@ description: Este tutorial fornece os pré-requisitos e os ativos necessários p
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---

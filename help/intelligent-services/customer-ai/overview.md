@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
-title: Visão geral da IA do cliente
+title: Visão geral do Customer AI
 topic: Customer AI overview
-description: A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
-# Visão geral da IA do cliente
+# Visão geral do Customer AI
 
 A IA do cliente, como parte dos Serviços inteligentes, fornece aos profissionais de marketing o poder de gerar previsões de clientes a nível individual com explicações.
 
@@ -21,7 +21,7 @@ Com a ajuda de fatores influentes, a IA do cliente pode informar o que um client
 
 ## Compreensão da IA do cliente
 
-A IA do cliente é usada para gerar pontuações de propensão personalizadas, como conversão e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
 A IA do cliente foi criada para:
 

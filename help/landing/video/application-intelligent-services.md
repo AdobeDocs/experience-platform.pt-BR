@@ -11,8 +11,8 @@ thumbnail: 32554.jpg
 translation-type: tm+mt
 source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '88'
+ht-degree: 10%
 
 ---
 
@@ -23,7 +23,7 @@ Este vídeo fornece uma visão geral dos Serviços inteligentes e aplicativos cr
 
 * Attribution AI
 * AI do cliente
-* Customer Journey Analytics
+* Customer Journey Analytics 
 * Journey Orchestration
 * Plataforma de dados do cliente em tempo real
 

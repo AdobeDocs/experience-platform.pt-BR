@@ -39,7 +39,7 @@ Consulte a visão geral [da ingestão de](./streaming-ingestion/overview.md) str
 
 Conexões de origem podem ser configuradas para coletar dados de outros aplicativos de Adobe (como Adobe Analytics e Adobe Audience Manager), fontes de armazenamento em nuvem de terceiros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
-Consulte a visão geral [das](../sources/home.md) Fontes para obter mais informações.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## Próximos passos e recursos adicionais
 

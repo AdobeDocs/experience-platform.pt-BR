@@ -37,7 +37,7 @@ Embora cada organização possa potencialmente ter várias políticas de mesclag
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências controlando aspectos da mesclagem de fragmentos de perfil.
+O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da união de fragmentos de perfis.
 
 **Objeto de política de mesclagem**
 

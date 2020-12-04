@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
 solution: Experience Platform
-title: Programações
+title: Scheduler
 topic: developer guide
 description: As programações são uma ferramenta que pode ser usada para executar automaticamente tarefas de segmentação em lote uma vez por dia.
 translation-type: tm+mt
@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Obrigatório.** O nome do agendamento como uma string. |
 | `type` | **Obrigatório.** O tipo de tarefa como uma string. Os dois tipos suportados são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `properties` | **Obrigatório.** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
-| `properties.segments` | **Obrigatório quando`type`é igual a &quot;batch_segmentation&quot;.** Usar `["*"]` garante que todos os segmentos sejam incluídos. |
+| `properties.segments` | **Obrigatório quando `type` é igual a &quot;batch_segmentation&quot;.** Usar `["*"]` garante que todos os segmentos sejam incluídos. |
 | `schedule` | *Opcional.* Uma string que contém a programação da tarefa. As ordens de produção só podem ser programadas para execução uma vez por dia, o que significa que você não pode programar uma ordem de produção para execução mais de uma vez durante um período de 24 horas. Para obter mais informações sobre programações de cron, leia a documentação do formato [de expressão de](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado à meia-noite no primeiro de cada mês. <br><br>Se essa string não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
 | `state` | *Opcional.* Uma string contendo o estado da programação. Os dois estados suportados são &quot;ativos&quot; e &quot;inativos&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 

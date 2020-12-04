@@ -5,19 +5,19 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
 
 
-# Introdução à [!DNL Real-time Customer Profile] API {#getting-started}
+# Getting started with the [!DNL Real-time Customer Profile] API {#getting-started}
 
 Usando a [!DNL Real-time Customer Profile] API, você pode executar operações CRUD básicas em relação aos recursos do Perfil, como configurar atributos calculados, acessar entidades, exportar dados do Perfil e excluir conjuntos de dados ou lotes desnecessários.
 
 O uso do guia do desenvolvedor requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos no trabalho com [!DNL Profile] dados. Antes de começar a trabalhar com a [!DNL Real-time Customer Profile] API, consulte a documentação dos seguintes serviços:
 
-* [[!DNL Perfil do cliente em tempo real]](../home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Obtenha uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.

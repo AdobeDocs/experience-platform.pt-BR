@@ -11,14 +11,14 @@ thumbnail: 32456.jpg
 translation-type: tm+mt
 source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '42'
+ht-degree: 35%
 
 ---
 
 
 # Arquitetura básica do Experience Platform
 
-Este vídeo apresenta um diagrama de visão geral e explica os componentes principais do Experience Platform.
+Este vídeo apresenta um diagrama de visão geral e explica os componentes principais da Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)

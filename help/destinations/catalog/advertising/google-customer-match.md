@@ -5,7 +5,7 @@ seo-title: Destino de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 seo-description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 24c8dd0f01d7ea14b2fa5827722e797bd209f50c
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
@@ -174,19 +174,6 @@ Na página **[!UICONTROL Revisar]** , você pode ver um resumo de sua seleção.
 Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Concluir]** para confirmar sua seleção e start enviando dados para o destino.
 
 ![confirmação de seleção](../../assets/catalog/advertising/google-customer-match/review.png)
-
-
-<!--
-
-Insert in Step 6 when mobile device ID activation is available
-
-    >[!IMPORTANT]
-    >
-    >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
-
-    ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
-
--->
 
 ## Verificar se a ativação de segmentos foi bem-sucedida {#verify-activation}
 

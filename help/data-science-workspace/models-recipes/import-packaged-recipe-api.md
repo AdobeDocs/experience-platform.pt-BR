@@ -8,7 +8,7 @@ description: 'Este tutorial usa a API Sensei Machine Learning para criar um Meca
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Importar uma fórmula empacotada (API)
 
-Este tutorial usa a [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para criar um [Mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
+Este tutorial usa o para [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) criar um [Mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
 
 Antes de começar, é importante observar que a Adobe Experience Platform [!DNL Data Science Workspace] usa termos diferentes para fazer referência a elementos semelhantes dentro da API e da interface do usuário. Os termos da API são usados neste tutorial e a tabela a seguir descreve os termos correspondentes:
 

@@ -5,7 +5,7 @@ seo-title: Controle de dados na plataforma de dados do cliente em tempo real
 description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 seo-description: 'O Data Governance permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. '
 translation-type: tm+mt
-source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
+source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Para obter informações detalhadas sobre como trabalhar com rótulos de uso de 
 
 A definição de casos de uso de marketing em destinos permite garantir que quaisquer perfis ou segmentos enviados para esses destinos sejam compatíveis com as políticas de uso de dados. Portanto, você deve adicionar casos de uso de marketing apropriados aos seus destinos com base nas necessidades de sua organização para aplicar restrições de política à ativação.
 
-Os casos de uso de marketing só podem ser selecionados ao configurar um destino pela primeira vez. Dependendo do tipo de destino com o qual você está trabalhando, a oportunidade de configurar casos de uso de marketing aparecerá em diferentes pontos no fluxo de trabalho da configuração. Consulte a documentação [de](../destinations/destinations-overview.md#data-governance) destinos para obter etapas sobre como configurar seu destino específico.
+Os casos de uso de marketing só podem ser selecionados ao configurar um destino pela primeira vez. Dependendo do tipo de destino com o qual você está trabalhando, a oportunidade de configurar casos de uso de marketing aparecerá em diferentes pontos no fluxo de trabalho da configuração. Consulte a documentação [de](../destinations/overview.md) destinos para obter etapas sobre como configurar seu destino específico.
 
 ## Gerenciar políticas de uso de dados {#policies}
 

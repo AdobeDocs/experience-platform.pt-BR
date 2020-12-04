@@ -168,7 +168,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `entityType` | O tipo de entidade cuja ID é indicada na `entityId` propriedade irmão. Atualmente, o único valor aceito é `dataSet`. |
-| `entityId` | A ID de um conjunto de dados para testar a ação de marketing. Uma lista de conjuntos de dados e suas IDs correspondentes pode ser obtida por meio de uma solicitação de GET para o `/dataSets` endpoint na [!DNL Catalog Service] API. Consulte o guia na [ [!DNL Catalog] listagem de objetos](../../catalog/api/list-objects.md) para obter mais informações. |
+| `entityId` | A ID de um conjunto de dados para testar a ação de marketing. Uma lista de conjuntos de dados e suas IDs correspondentes pode ser obtida por meio de uma solicitação de GET para o `/dataSets` endpoint na [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **Resposta**
 
@@ -416,7 +416,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `entityType` | O tipo de entidade cuja ID é indicada na `entityId` propriedade irmão. Atualmente, o único valor aceito é `dataSet`. |
-| `entityId` | A ID de um conjunto de dados cujos campos devem ser avaliados em relação à ação de marketing. Uma lista de conjuntos de dados e suas IDs correspondentes pode ser obtida por meio de uma solicitação de GET para o `/dataSets` endpoint na [!DNL Catalog Service] API. Consulte o guia na [ [!DNL Catalog] listagem de objetos](../../catalog/api/list-objects.md) para obter mais informações. |
+| `entityId` | A ID de um conjunto de dados cujos campos devem ser avaliados em relação à ação de marketing. Uma lista de conjuntos de dados e suas IDs correspondentes pode ser obtida por meio de uma solicitação de GET para o `/dataSets` endpoint na [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | Uma matriz de caminhos para campos específicos no schema do conjunto de dados, fornecida na forma de strings de ponteiro JSON. Consulte a seção sobre Ponteiro [](../../landing/api-fundamentals.md#json-pointer) JSON no guia Fundamentos da API para obter detalhes sobre a sintaxe aceita para essas strings. |
 
 **Resposta**

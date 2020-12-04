@@ -8,7 +8,7 @@ description: A coleta de dados autenticada permite que os serviços da Adobe Exp
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '650'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Depois de registrar uma conexão de streaming, você, como produtor de dados, te
 Este tutorial também requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado através do qual [!DNL Platform] organiza os dados da experiência.
-- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de ingestão de streaming.
 

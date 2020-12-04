@@ -7,7 +7,7 @@ description: A segmentação de várias entidades é a capacidade de estender os
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ A segmentação de várias entidades é um recurso avançado disponível como pa
 
 A segmentação de várias entidades requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos na segmentação. Antes de continuar com este guia, reveja a seguinte documentação:
 
-* [[!DNL Perfil do cliente em tempo real]](../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
    * [Perfis](../profile/guardrails.md): Práticas recomendadas para a criação de modelos de dados compatíveis com [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite que você crie segmentos a partir de [!DNL Real-time Customer Profile] dados.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.

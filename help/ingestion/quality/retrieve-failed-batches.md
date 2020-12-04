@@ -8,7 +8,7 @@ description: Este tutorial aborda as etapas para recuperar informações sobre u
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '613'
 ht-degree: 1%
 
 ---
@@ -24,8 +24,8 @@ Este tutorial aborda as etapas para recuperar informações sobre um lote com fa
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [Sistema do [!DNL Experience Data Model (XDM)](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!Ingestão de Dados DNL]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API
 

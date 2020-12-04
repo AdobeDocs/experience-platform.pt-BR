@@ -8,7 +8,7 @@ description: Este documento fornece um tutorial passo a passo para aprimorar o P
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Este documento fornece um tutorial passo a passo para enriquecer [!DNL Real-time
 
 Este tutorial requer uma compreensão funcional dos vários aspectos de [!DNL Adobe Experience Platform] envolvimento na assimilação de [!DNL Profile] dados e na criação de segmentos. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-* [[!DNL Perfil do cliente em tempo real]](../../rtcdp/overview.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-time Customer Profile] a união de identidades de diferentes fontes de dados na Plataforma.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
 

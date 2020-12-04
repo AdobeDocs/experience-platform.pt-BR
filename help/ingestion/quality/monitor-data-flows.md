@@ -7,7 +7,7 @@ description: Este guia do usuário fornece etapas sobre como monitorar seus dado
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Na interface do usuário [do](https://platform.adobe.com)Experience Platform, cl
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-A página **[!UICONTROL Streaming end-to-end]** de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito pelo [[!DNL Real-time Customer Perfil]](../../profile/home.md), bem como uma lista detalhada dos dados recebidos.
+A página **[!UICONTROL Streaming end-to-end]** de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados recebidos.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ Além disso, os registros com falha fornecem detalhes sobre os erros que ocorrer
 
 ## Monitorar a ingestão de dados de ponta a ponta em lote
 
-Na [[!DNL Experience Platform UI]](https://platform.adobe.com), clique em **[!UICONTROL Monitoramento]** no menu de navegação esquerdo.
+No [[!DNL Experience Platform UI]](https://platform.adobe.com), clique em **[!UICONTROL Monitoramento]** no menu de navegação esquerdo.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 

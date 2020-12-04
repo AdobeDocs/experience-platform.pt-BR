@@ -80,7 +80,7 @@ Na interface do usuário da plataforma, clique em **[!UICONTROL Schemas]** no pa
 
 ### Criar um schema de consentimento baseado em registros {#profile-schema}
 
-Na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Schemas], crie um novo schema com base na**[!DNL XDM Individual Profile] classe. Depois que o schema for aberto no Editor de Schemas, clique em **[!UICONTROL Adicionar]** na seção **[!UICONTROL Misturas]** no lado esquerdo da tela.
+Na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Schemas] , crie um novo schema com base na**[!DNL XDM Individual Profile] classe. Depois que o schema for aberto no Editor de Schemas, clique em **[!UICONTROL Adicionar]** na seção **[!UICONTROL Misturas]** no lado esquerdo da tela.
 
 ![](../assets/iab/add-mixin-profile.png)
 

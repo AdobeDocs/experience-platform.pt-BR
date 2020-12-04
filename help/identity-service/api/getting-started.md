@@ -7,7 +7,7 @@ description: 'O Adobe Experience Platform Identity Service gerencia a identifica
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ A Adobe Experience Platform [!DNL Identity Service] gerencia a identificação d
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Identity Service]](../home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados do perfil do cliente. Ele faz isso ao fazer a ponte de identidades entre dispositivos e sistemas nos quais os clientes interagem com sua marca.
-- [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
 
 As seções a seguir fornecem informações adicionais que você precisará conhecer ou ter em mãos para fazer chamadas à [!DNL Identity Service] API com êxito.

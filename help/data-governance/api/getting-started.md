@@ -7,13 +7,13 @@ description: A API do Serviço de Política permite que você crie e gerencie v�
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 
-# Introdução à [!DNL Policy Service] API
+# Getting started with the [!DNL Policy Service] API
 
 A [!DNL Policy Service] API permite que você crie e gerencie vários recursos relacionados ao Adobe Experience Platform [!DNL Data Governance]. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a [!DNL Policy Service] API.
 
@@ -22,8 +22,8 @@ A [!DNL Policy Service] API permite que você crie e gerencie vários recursos r
 O uso do guia do desenvolvedor requer uma compreensão trabalhada dos vários [!DNL Experience Platform] serviços envolvidos no trabalho com os recursos de controle de dados. Antes de começar a trabalhar com o [!DNL Policy Service API], consulte a documentação dos seguintes serviços:
 
 * [[!DNL Data Governance]](../home.md): A estrutura pela qual [!DNL Experience Platform] aplica a conformidade de uso de dados.
-* [Sistema do [!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [[!DNL Perfil do cliente em tempo real]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ## Lendo chamadas de exemplo da API

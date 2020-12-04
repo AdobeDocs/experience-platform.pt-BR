@@ -151,7 +151,7 @@ A placa **[!UICONTROL Top campanha]** exibe uma visão geral das campanhas e o d
 
 A seleção da guia Análise **[!UICONTROL de]** caminho carrega os gráficos **[!UICONTROL Detalhamento por posição]** de ponto de contato e caminhos **[!UICONTROL de conversão]** Superior.
 
-O gráfico de **[!UICONTROL Detalhamento por posição]** de ponto de contato é um detalhamento de conversões atribuídas por posição do ponto de contato comparada em todos os caminhos de conversão. Este gráfico ajuda você a entender quais pontos de contato são mais eficazes em diferentes estágios do caminho de conversão. Os estágios são iniciais, jogadores e mais próximos.
+O **[!UICONTROL Detalhamento por gráfico de posição]** de ponto de contato é um detalhamento de conversões atribuídas por posição do ponto de contato comparada em todos os caminhos de conversão. Este gráfico ajuda você a entender quais pontos de contato são mais eficazes em diferentes estágios do caminho de conversão. Os estágios são iniciais, jogadores e mais próximos.
 
 - **Início:** Indica que o ponto de contato foi o primeiro toque em um caminho de conversão.
 - **Jogador:** Indica que o ponto de contato não foi o primeiro ou o último toque que levou a uma conversão.

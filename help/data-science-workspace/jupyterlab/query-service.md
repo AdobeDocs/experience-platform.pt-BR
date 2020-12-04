@@ -8,7 +8,7 @@ description: A Adobe Experience Platform permite que você use a Linguagem de Qu
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '807'
 ht-degree: 1%
 
 ---
@@ -29,9 +29,9 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 - Um [!DNL Adobe Analytics] conjunto de dados
 
 - Um entendimento prático dos seguintes conceitos-chave usados neste tutorial:
-   - [[!DNL Experience Data Model (XDM) e Sistema XDM]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
-   - [[!DNL Query Service Sintaxe SQL]](../../query-service/sql/overview.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## Acesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}

@@ -7,7 +7,7 @@ description: A API do serviço de catálogo permite que os dados de resposta sej
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2077'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ Há algumas limitações a serem consideradas ao usar tags:
 * Os nomes das tags são exclusivos à sua organização IMS.
 * Os processos de Adobe podem aproveitar as tags para determinados comportamentos. Os nomes dessas tags recebem o prefixo &quot;adobe&quot; como padrão. Portanto, você deve evitar essa convenção ao declarar nomes de tags.
 * Os seguintes nomes de tags são reservados para uso em toda a empresa [!DNL Experience Platform], pelo que não podem ser declarados como um nome de tag para sua organização:
-   * `unifiedProfile`: Este nome de tag está reservado para conjuntos de dados a serem assimilados por [[!DNL Real-time Customer Perfil]](../../profile/home.md).
-   * `unifiedIdentity`: Este nome de tag está reservado para conjuntos de dados a serem assimilados por [[!DNL Identity Service]](../../identity-service/home.md).
+   * `unifiedProfile`: Esse nome de tag é reservado para que conjuntos de dados sejam assimilados [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`: Esse nome de tag é reservado para que conjuntos de dados sejam assimilados [[!DNL Identity Service]](../../identity-service/home.md).
 
 Abaixo está um exemplo de um conjunto de dados que contém uma `tags` propriedade. As tags dentro dessa propriedade assumem a forma de pares de valores chave, com cada valor de tag exibido como uma matriz contendo uma única string:
 

@@ -105,7 +105,7 @@ curl -X POST \
 
 **Solicitar PySpark/Scala**
 
-Ao fazer uma solicitação de receitas do PySpark, o e `executionType` é `type` &quot;PySpark&quot;. Ao fazer um pedido para receitas Scala, o e `executionType` é `type` &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
+Ao fazer uma solicitação de receitas do PySpark, o e `executionType` é `type` &quot;PySpark&quot;. Ao solicitar receitas Scala, o e `executionType` `type` é &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
 
 ```shell
 curl -X POST \

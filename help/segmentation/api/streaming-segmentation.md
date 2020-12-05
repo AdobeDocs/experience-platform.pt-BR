@@ -5,9 +5,9 @@ title: Segmentação em streaming
 topic: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API de segmentação de fluxo.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1310'
 ht-degree: 1%
 
 ---
@@ -80,20 +80,17 @@ Para que um segmento seja avaliado usando a segmentação de fluxo contínuo, o 
 | Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento recebido e um ou mais atributos do perfil. |
 | Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
-A seção a seguir lista exemplos de definição de segmento que **não** serão ativados para a segmentação de streaming.
+Uma definição de segmento **não** será ativada para a segmentação de streaming nos seguintes cenários:
 
-| Tipo de query | Detalhes |
-| ---------- | ------- | 
-| Ocorrência recebida que se refere a um perfil em uma janela relativa | Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM). |
-| Vários eventos que se referem a um perfil | Uma definição de segmento que inclui segmentos ou características do Adobe Audience Manager (AAM). |
-| Query de várias entidades | Os query de várias entidades **não** são suportados pela segmentação de streaming. |
+- A definição do segmento inclui segmentos ou características do Adobe Audience Manager (AAM).
+- A definição do segmento inclui várias entidades (query de várias entidades).
 
 Além disso, algumas diretrizes se aplicam ao fazer a segmentação de streaming:
 
 | Tipo de query | Orientação |
 | ---------- | -------- |
 | Query de evento único | Não há limites para a janela de pesquisa. |
-| Query com histórico de eventos | <ul><li>A janela de retrospectiva é limitada a **um dia**.</li><li>Uma condição de pedido de tempo estrita **deve** existir entre os eventos.</li><li>Somente pedidos de tempo simples (antes e depois) entre os eventos são permitidos.</li><li>Os eventos individuais **não podem** ser negados. Entretanto, todo o query **pode** ser negado.</li></ul> |
+| Query com histórico de eventos | <ul><li>A janela de pesquisa é limitada a **um dia**.</li><li>Uma condição rigorosa de ordem de tempo **deve** existir entre os eventos.</li><li>Query com pelo menos um evento negado são suportados. No entanto, todo o evento **não pode** ser uma negação.</li></ul> |
 
 ## Recuperar todos os segmentos habilitados para a segmentação em streaming
 

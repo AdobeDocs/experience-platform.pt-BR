@@ -5,9 +5,9 @@ seo-title: Destino da brasileira
 description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 seo-description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,10 @@ Observe os seguintes detalhes específicos do [!DNL Braze] destino:
 
 * Você pode enviar qualquer [identidade](../../../identity-service/namespaces.md) para o [!DNL Braze] destino, contanto que a mapeie para o destino [!DNL Braze][`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] segmentos são exportados para [!DNL Braze] sob o `AdobeExperiencePlatformSegments` atributo.
+
+>[!NOTE]
+>
+>Lembre-se de que o envio de atributos personalizados adicionais pode [!DNL Braze] causar aumento no consumo do ponto [!DNL Braze] de dados. Consulte o seu gerente de [!DNL Braze] conta antes de enviar atributos personalizados adicionais.
 
 ## Casos de uso {#use-cases}
 

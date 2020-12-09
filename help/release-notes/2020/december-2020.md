@@ -3,12 +3,12 @@ title: Notas de versão da Adobe Experience Platform
 description: Notas de versão de Experience Platform 9 de dezembro de 2020
 doc-type: release notes
 last-update: December 9, 2020
-author: ens60013
+author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 25c162f50f0a66d77eb638dbf87893af3c543ddc
+source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 10%
+source-wordcount: '343'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,20 @@ ht-degree: 10%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
+- [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe.
+
+### Recursos principais
+
+| Recurso | Descrição |
+|--- | ---|
+| Anúncio de pacote do Adobe Experience Platform Intelligence | O complemento do pacote Adobe Experience Platform Intelligence é uma atualização da Data Science Workspace que desbloqueia recursos principais adicionais, como: <li> Experimentação e avaliação de modelos orientados pela interface do usuário.</li><li> Capacidade de implantar e operacionalizar modelos com treinamentos programados e trabalhos de dedução.</li><li> Suporte para o aprendizado profundo em modelos de fluxo de dados (GPU Compute).</li><li> Computação distribuída com base em faísca para treinar e pontuar com base em grandes conjuntos de dados (10MM + linhas).</li><li>E mais</li> |
+
+Para saber mais sobre o complemento do pacote Adobe Experience Platform Intelligence, consulte a documentação sobre acesso e recursos [da](../../data-science-workspace/access-features-dsw.md)Data Science Workspace.
 
 ## [!DNL Sources] {#sources}
 
@@ -35,3 +48,5 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 | Excluir fluxos de dados | Fluxos de dados de fluxo que contêm erros ou se tornaram desnecessários agora podem ser excluídos usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [excluir fluxos de dados usando a API](../../sources/tutorials/api/delete-dataflows.md) e [excluir fluxos de dados usando a interface do usuário](../../sources/tutorials/ui/delete.md). |
 
 Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.
+
+

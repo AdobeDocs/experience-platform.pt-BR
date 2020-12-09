@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com sua marca em diferentes canais.
 translation-type: tm+mt
-source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
+source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -55,7 +55,7 @@ O visualizador de gráficos de identidade é exibido. No lado esquerdo da tela e
 
 >[!IMPORTANT]
 >
->Um gráfico de identidade requer no mínimo duas identidades vinculadas para serem geradas, bem como uma namespace e um par de ID válidos. O número máximo de identidades que o visualizador de gráficos pode exibir é 400. See the [appendix](#appendix) section below for more information.
+>Um gráfico de identidade requer no mínimo duas identidades vinculadas para serem geradas, bem como uma namespace e um par de ID válidos. O número máximo de identidades que o visualizador de gráficos pode exibir é 150. See the [appendix](#appendix) section below for more information.
 
 ![gráfico de identidade](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -101,7 +101,7 @@ Erros podem ocorrer ao acessar o visualizador de gráficos de identidade. A segu
 
 - Deve existir um valor de identidade na namespace selecionada.
 - O visualizador de gráficos de identidade requer no mínimo duas identidades vinculadas para serem geradas.
-- O visualizador de gráficos de identidade não pode exceder o máximo de 400 identidades.
+- O visualizador de gráficos de identidade não pode exceder o máximo de 150 identidades.
 - No momento, o visualizador de gráficos de identidade não está acessível em caixas de proteção que não sejam de produção.
 - Atualmente, o visualizador de gráficos de identidade suporta apenas dados ingeridos em lote e não exibe dados ingeridos usando fontes de transmissão.
 

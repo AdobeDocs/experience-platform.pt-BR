@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Atualizar informações de conexão usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para atualizar suas informações de conexão, incluindo seu nome, descrição e credenciais usando a API de Serviço de Fluxo.
+description: Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. A API de Serviço de Fluxo fornece a você a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de fluxo existente, incluindo seu nome, descrição e credenciais.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d1a9f7d0c83b8bb34e26b6e5a9825488e62b43de
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '696'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,9 @@ ht-degree: 2%
 
 # Atualizar informações de conexão usando a API de Serviço de Fluxo
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. [!DNL Flow Service] fornece a você a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de fluxo existente, incluindo seu nome, descrição e credenciais.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
-
-Este tutorial aborda as etapas para atualizar as informações de conexão, incluindo nome, descrição e credenciais usando o [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão existente usando o [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 

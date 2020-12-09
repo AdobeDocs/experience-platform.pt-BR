@@ -1,69 +1,66 @@
 ---
 keywords: Experience Platform;home;popular topics; delete dataflows
-description: Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para excluir fluxos de dados da área de trabalho Fontes.
+description: A área de trabalho de fontes oferece a capacidade de excluir fluxos de dados em lote e em fluxo contínuo existentes que contenham erros ou se tenham tornado obsoletos.
 solution: Experience Platform
 title: Excluir fluxos de dados
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
+source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 0%
+source-wordcount: '358'
+ht-degree: 1%
 
 ---
 
 
-# Excluir fluxos de dados
+# Excluir fluxos de dados na interface do usuário
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para excluir fluxos de dados da área de trabalho **[!UICONTROL Fontes]** .
+A área de trabalho [!UICONTROL Fontes] permite que você exclua fluxos de dados em lote e fluxo contínuo existentes que contêm erros ou se tornaram obsoletos.
+
+Este tutorial fornece etapas para excluir fluxos de dados usando a área de trabalho [!UICONTROL Fontes] .
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   - [Noções básicas da composição](../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+- [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
+- [Caixas de proteção](../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-## Excluir fluxos de dados usando a interface do usuário
+## Excluir fluxos de dados
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]** . A tela **[!UICONTROL Catálogo]** exibe várias fontes com as quais você pode criar contas e fluxos de dados. Cada fonte mostra o número de contas e fluxos de dados existentes associados a elas.
+Na interface do usuário [do](https://platform.adobe.com)Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar a área de trabalho [!UICONTROL Fontes] e, em seguida, selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior.
 
-Selecione **[!UICONTROL Fluxos de dados]** para acessar a página **[!UICONTROL Fluxos de dados]** .
+![catálogo](../../images/tutorials/delete/catalog.png)
 
-![dataset-flow-atividade](../../images/tutorials/delete/dataflows.png)
+A página **[!UICONTROL Fluxos de dados]** é exibida. Nesta página há uma lista de fluxos de dados visualizáveis, incluindo informações sobre o conjunto de dados do público alvo, a fonte, o nome da conta e a data de criação.
 
-Uma lista de fluxos de dados existentes é exibida. Nesta página há uma lista de informações classificáveis para fluxos de dados existentes, como origem, nome de usuário, status de execução e data da última execução. Selecione o ícone **de** funil na parte superior esquerda para classificar.
+Selecione o ícone de filtro (ícone![de](../../images/tutorials/delete/filter.png)filtro) na parte superior esquerda para iniciar o painel de classificação.
 
-![lista de dados](../../images/tutorials/delete/dataflows-list.png)
+![fluxo de dados](../../images/tutorials/delete/dataflows.png)
 
-O painel de classificação é exibido no lado esquerdo da tela, contendo uma lista de fontes disponíveis.
-É possível selecionar mais de uma fonte usando a função de classificação.
+O painel de classificação fornece uma lista de todas as fontes. Você pode selecionar mais de uma fonte da lista para acessar uma seleção filtrada de fluxos de dados associados às fontes específicas que você selecionou.
 
-Selecione a fonte que deseja acessar e localize o fluxo de dados que deseja excluir da lista de fluxos de dados na interface principal. No exemplo, a fonte selecionada é **[!DNL Azure Blob Storage]** e o nome do fluxo de dados é o fluxo de dados de perfis **[!UICONTROL do cliente]**. Ao selecionar várias fontes do painel de classificação, seus fluxos de dados criados mais recentemente aparecem primeiro porque a lista é classificada por data criada.
+Selecione a fonte com a qual deseja trabalhar para ver uma lista de seus fluxos de dados existentes. Depois de identificar o fluxo de dados que deseja excluir, selecione as elipses (`...`) ao lado do nome do fluxo de dados.
 
-Selecione o fluxo de dados que você deseja excluir.
+![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-![dataflows-sort](../../images/tutorials/delete/dataflows-sort.png)
+Um menu suspenso é exibido, fornecendo opções para editar a programação do seu fluxo de dados, desativar o fluxo de dados ou excluí-lo totalmente.
 
-O painel **[!UICONTROL Propriedades]** é exibido no lado direito da tela, contendo informações relacionadas ao fluxo de dados selecionado, bem como uma opção para **[!UICONTROL Editar agendamento]**.
-
-Para excluir o fluxo de dados, selecione **[!UICONTROL Excluir]**.
-
-![dataflows-sort](../../images/tutorials/delete/dataflows-properties.png)
-
-Uma caixa de diálogo de confirmação final é exibida; selecione **[!UICONTROL Excluir]** para concluir o processo.
+Selecione **[!UICONTROL Excluir]** para excluir o fluxo de dados.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
-Após alguns instantes, uma caixa de confirmação verde é exibida na parte inferior da tela para confirmar a exclusão bem-sucedida.
+Uma caixa de diálogo de confirmação final é exibida. Selecione **[!UICONTROL Excluir]** para concluir o processo.
+
+![confirmar](../../images/tutorials/delete/confirm.png)
+
+Após alguns instantes, uma caixa de confirmação será exibida na parte inferior da tela para confirmar uma exclusão bem-sucedida.
 
 ![confirmado](../../images/tutorials/delete/confirmed.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com êxito a área de trabalho **[!UICONTROL Fontes]** para excluir os fluxos de dados existentes.
+Ao seguir este tutorial, você usou com êxito a área de trabalho [!UICONTROL Fontes] para excluir um fluxo de dados existente.
 
-Para obter etapas sobre como executar essas operações de forma programática usando a [!DNL Flow Service] API, consulte o tutorial sobre como [excluir fluxos de dados usando a API de Serviço de Fluxo](../../tutorials/api/delete-dataflows.md)
+Consulte o tutorial sobre como [excluir fluxos de dados usando a API](../../tutorials/api/delete-dataflows.md) de Serviço de Fluxo para obter etapas sobre como executar essas operações de forma programática usando chamadas de API.

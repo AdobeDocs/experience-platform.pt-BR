@@ -5,9 +5,9 @@ seo-title: Página Detalhes de Destinos
 description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,10 @@ A página de detalhes do destino é exibida, mostrando seus controles disponíve
 
 ![](../assets/ui/details-page/details.png)
 
+Além disso, na guia Procurar, é possível optar por excluir o fluxo de dados selecionado selecionando o ícone da ![lixeira](../assets/ui/details-page/trash-icon.png) . Todos os segmentos ativados para destinos serão desmapeados antes que o fluxo de dados seja excluído.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Trilho direito
 
 O painel direito exibe as informações básicas sobre o destino.
@@ -40,6 +44,7 @@ O quadro seguinte cobre os controlos e os pormenores fornecidos pelo painel dire
 | Item do painel direito | Descrição |
 | --- | --- |
 | [!UICONTROL Ativar] | Selecione esse controle para editar quais segmentos são mapeados para o destino. Consulte o guia sobre como [ativar segmentos em um destino](./activate-destinations.md) para obter mais informações. |
+| [!UICONTROL Excluir] | Permite que você exclua esse fluxo de dados e desmapeie os segmentos que foram ativados anteriormente, se houver. |
 | [!UICONTROL Nome do destino] | Este campo pode ser editado para atualizar o nome do destino. |
 | [!UICONTROL Descrição] | Esse campo pode ser editado para atualizar ou adicionar uma descrição opcional ao destino. |
 | [!UICONTROL Destino] | Representa a plataforma de destino para a qual o audiência é enviado. Consulte o catálogo [de](../catalog/overview.md) destinos para obter mais informações. |
@@ -75,11 +80,11 @@ Para visualização dos detalhes de uma execução específica do fluxo de dados
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segmentos]
+## [!UICONTROL dados de ativação]
 
-A guia [!UICONTROL Segmentos] exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data e a data de start (se aplicável). Para visualização dos detalhes sobre um segmento específico, selecione seu nome na lista.
+A guia Dados [!UICONTROL da] Ativação exibe uma lista de segmentos que foram mapeados para o destino, incluindo a data e a data de start (se aplicável). Para visualização dos detalhes sobre um segmento específico, selecione seu nome na lista.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >

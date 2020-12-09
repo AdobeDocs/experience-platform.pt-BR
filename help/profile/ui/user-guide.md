@@ -4,10 +4,10 @@ title: Guia da interface do usuário do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 0%
+source-wordcount: '1304'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,19 @@ Este guia de interface exige uma compreensão dos vários [!DNL Experience Platf
 
 ## Visão geral
 
-Na [[!DNL Experience Platform] interface](http://platform.adobe.com)do usuário, selecione **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** . Esta guia fornece links para a documentação e vídeos para ajudá-lo a entender e começar a trabalhar com perfis.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** . Esta guia fornece links para a documentação e vídeos para ajudá-lo a entender e começar a trabalhar com perfis.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### painel do Perfil (alfa)
+
+>[!IMPORTANT]
+>
+>A funcionalidade do painel está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+
+Para alguns usuários, selecionar **[!UICONTROL Perfis]** na navegação à esquerda e abrir a guia **[!UICONTROL Visão geral]** fornece um painel que descreve as principais métricas relacionadas aos dados do Perfil.
+
+Para saber mais, visite o guia [do painel do](profile-dashboard.md)Perfil.
 
 ## Procurar
 

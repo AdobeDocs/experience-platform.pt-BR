@@ -5,9 +5,9 @@ title: Visão geral do sistema XDM
 topic: overview
 description: 'A normalização e a interoperabilidade são conceitos-chave por trás da Adobe Experience Platform. O Experience Data Model (XDM), desenvolvido pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente. '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1581'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Para obter mais informações sobre o modelo de composição do schema, incluind
 
 ### [!DNL Schema Registry] e [!DNL Schema Library]
 
-O **[!DNL Schema Registry]** fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos relacionados ao schema no Adobe Experience Platform **[!DNL Schema Library]**. O [!DNL Schema Library] contém recursos padrão do setor disponibilizados pelo Adobe, bem como recursos de [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. A interface do usuário e a API do Registro do Schema também podem ser usadas para criar e gerenciar novos schemas e recursos exclusivos à sua organização.
+O **[!DNL Schema Registry]** fornece uma interface de usuário e uma RESTful API da qual você pode visualização e gerenciar todos os recursos relacionados ao schema no Adobe Experience Platform **[!DNL Schema Library]**. O [!DNL Schema Library] contém recursos padrão do setor disponibilizados pela Adobe, bem como recursos de [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. A interface do usuário e a API do Registro do Schema também podem ser usadas para criar e gerenciar novos schemas e recursos exclusivos à sua organização.
 
 Para obter um guia abrangente das principais operações disponíveis no [!DNL Schema Registry], consulte o guia [do desenvolvedor do Registro do](api/getting-started.md)Schema.
 
@@ -46,7 +46,7 @@ Os dados destinados ao uso em [!DNL Experience Platform] são agrupados em dois 
 
 Todos os schemas XDM descrevem dados que podem ser classificados como registros ou séries de tempo. O comportamento de dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM descrevem o menor número de propriedades que um schema deve conter para representar um comportamento de dados específico.
 
-Embora seja possível definir suas próprias classes dentro do [!DNL Schema Registry], recomenda-se que você use as classes preferenciais **[!DNL XDM Individual Profile]** e **[!DNL XDM ExperienceEvent]** para dados de registro e de série de tempo, respectivamente. Essas classes são descritas com mais detalhes abaixo.
+Embora seja possível definir suas próprias classes dentro do [!DNL Schema Registry], recomenda-se usar as classes preferenciais **[!DNL XDM Individual Profile]** e **[!DNL XDM ExperienceEvent]** para dados de registro e de série de tempo, respectivamente. Essas classes são descritas com mais detalhes abaixo.
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 

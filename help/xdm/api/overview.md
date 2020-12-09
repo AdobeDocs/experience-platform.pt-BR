@@ -5,9 +5,9 @@ title: Guia do desenvolvedor da API de Registro do schema
 description: 'A API de Registro de Schemas permite gerenciar programaticamente todos os schemas e os recursos XDM relacionados disponíveis para você no Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0e5865fddcf2592e9b6d8d4b2747bdceee6bda7
+source-git-commit: 33f9ee45e8dd649d23f9b3b4f03ecf00d8e18fd2
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,13 @@ Os schemas XDM representam e validam a estrutura e o formato dos dados ingeridos
 
 Para obter um guia passo a passo sobre como criar um schema completo na API do Registro do Schema, incluindo a criação e adição de misturas e tipos de dados, consulte o tutorial [de criação do schema da](../tutorials/create-schema-api.md)API.
 
+## Comportamentos
+
+Os comportamentos definem a natureza dos dados que um schema descreve. Cada classe XDM deve fazer referência a um comportamento específico, que todos os schemas que empregam essa classe herdarão. Consulte o guia [de ponto de extremidade de](./behaviors.md) comportamentos para saber como visualização os comportamentos disponíveis na API.
+
 ## Classes
 
-As classes definem os aspectos comportamentais dos dados que um schema conterá (registro ou série cronológica). Além disso, uma classe determina a estrutura básica das propriedades comuns que todos os schemas baseados nessa classe devem conter. Uma classe de schemas determina quais combinações são elegíveis para uso nesse schema. Consulte o guia [de ponto de extremidade de](./classes.md) classes para obter detalhes sobre como trabalhar com classes na API.
+Uma classe define a estrutura básica das propriedades comuns que todos os schemas baseados nessa classe devem conter e determina quais combinações são elegíveis para uso nesses schemas. Cada classe deve estar associada a um comportamento existente. Consulte o guia [de ponto de extremidade de](./classes.md) classes para obter detalhes sobre como trabalhar com classes na API.
 
 ## Misturas
 
@@ -47,7 +51,7 @@ Os tipos de dados são usados como campos do tipo de referência em classes ou c
 
 ## Descritores
 
-Descritores são conjuntos de metadados aos quais são atribuídos campos específicos em um schema, fornecendo vários detalhes contextuais, incluindo como esses campos (e o próprio schema) estão relacionados a outros schemas. Cada schema pode ter uma ou mais entidades de descritor aplicadas a ele, e existem vários tipos diferentes de descritor para servir a finalidades diferentes. Consulte o guia [de ponto de extremidade dos](./descriptors.md) descritores para obter mais informações sobre como trabalhar com descritores na API e uma visão geral dos diferentes tipos de descritores e seus casos de uso.
+Descritores são conjuntos de metadados que são atribuídos a campos específicos em um schema, fornecendo vários detalhes contextuais, incluindo como esses campos (e o próprio schema) são relacionados a outros schemas. Cada schema pode ter uma ou mais entidades de descritor aplicadas a ele, e existem vários tipos diferentes de descritor para servir a finalidades diferentes. Consulte o guia [de ponto de extremidade dos](./descriptors.md) descritores para obter mais informações sobre como trabalhar com descritores na API e uma visão geral dos diferentes tipos de descritores e seus casos de uso.
 
 ## Uniões
 

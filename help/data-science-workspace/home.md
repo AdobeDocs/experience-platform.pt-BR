@@ -5,9 +5,9 @@ title: Visão geral da Análise do espaço de trabalho da Data Science
 topic: overview
 description: Este guia fornece uma visão geral dos principais conceitos relacionados à Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
+source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -120,35 +120,12 @@ Quando você está feliz com sua receita, é só alguns cliques para criar um se
 
 Os cientistas de dados podem aproveitar as novas tecnologias e conjuntos de dados assim que estiverem disponíveis através dos serviços de Adobe. Através de atualizações frequentes, fazemos o trabalho de integração de conjuntos de dados e tecnologias na plataforma, para que você não precise.
 
-### Controle de acesso em [!DNL Data Science Workspace]
-
-O controle de acesso for [!DNL Experience Platform] administrado através do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção. Consulte a visão geral [do](../access-control/home.md) controle de acesso para obter mais informações.
-
->[!IMPORTANT]
->
->Para usar [!DNL Data Science Workspace], a permissão [!UICONTROL &quot;Gerenciar a área de trabalho de dados&quot; deve estar ativada] .
-
-A tabela a seguir descreve os efeitos da ativação ou desativação dessa permissão:
-
-| Permissão | Ativado | Desativado |
-|---|---|---|
-| [!DNL Manage Data Science Workspace] | Fornece acesso a todos os serviços em [!DNL Data Science Workspace]. | O acesso à API e à interface do usuário para todos os serviços dentro [!DNL Data Science Workspace] está desativado. Enquanto estiver desativado, o roteamento para as páginas [!DNL Data Science Workspace] Modelos **[!UICONTROL e]** Serviços **** será impedido. |
-
 ### Segurança e paz de espírito
 
 A segurança de seus dados é uma prioridade máxima para o Adobe. O Adobe protege seus dados com os processos e controles de segurança desenvolvidos para ajudar a cumprir padrões, regulamentos e certificações aceitos pela indústria.
 
 A segurança é integrada em software e serviços como parte do ciclo de vida seguro do produto Adobe.
 Para saber mais sobre segurança, conformidade e outros dados do Adobe, visite a página de segurança em https://www.adobe.com/security.html.
-
-### Suporte a sandbox
-
-As caixas de proteção são partições virtuais em uma única instância do [!DNL Experience Platform]. Cada [!DNL Platform] instância suporta uma caixa de proteção de produção e várias caixas de proteção de não produção, cada uma mantendo sua própria biblioteca de [!DNL Platform] recursos. As caixas de proteção de não-produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar sua caixa de proteção de produção. Para obter mais informações sobre caixas de proteção, consulte a visão geral [das](../sandboxes/home.md)caixas de proteção.
-
-Atualmente, [!DNL Data Science Workspace] há algumas limitações de sandbox:
-
-- Os recursos de computação são compartilhados na caixa de proteção de produção e nas caixas de proteção de não produção. O isolamento para caixas de proteção de produção está definido para ser fornecido no futuro.
-- Atualmente, as cargas de trabalho Scala/[!DNL Spark] e PySpark para notebooks e fórmulas são compatíveis apenas na área de segurança de produção. O suporte para caixas de proteção que não sejam de produção está definido para ser fornecido no futuro.
 
 ## [!DNL Data Science Workspace] em ação
 
@@ -182,7 +159,7 @@ Você pode usar [!DNL Jupyter Notebook] para simplificar o pré-processamento de
 
 ### Aumentar a receita
 
-Se você já encontrar uma fórmula que atenda a todas as suas necessidades, poderá passar para a experimentação. Ou você pode modificar um pouco a fórmula ou criar uma do zero - aproveitando o tempo de execução de [!DNL Data Science Workspace] criação em [!DNL Jupyter Notebook]. O uso do tempo de execução de criação garante que você possa usar o fluxo de trabalho de treinamento e pontuação e converter a receita posteriormente para que possa ser armazenada e reutilizada por outras pessoas em sua organização. [!DNL Data Science Workspace]
+Se você já encontrar uma fórmula que atenda a todas as suas necessidades, poderá passar para a experimentação. Ou você pode modificar um pouco a fórmula ou criar uma do zero - aproveitando o tempo de execução de [!DNL Data Science Workspace] criação em [!DNL Jupyter Notebook]. O uso do tempo de execução de criação garante que você possa usar o fluxo de trabalho de treinamento e de pontuação e converter a receita posteriormente para que possa ser armazenada e reutilizada por outras pessoas em sua organização. [!DNL Data Science Workspace]
 
 Você também pode importar uma receita para [!DNL Data Science Workspace] e aproveitar os workflows de experimentação ao criar seu serviço inteligente.
 

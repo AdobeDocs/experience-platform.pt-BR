@@ -5,7 +5,7 @@ title: Guia do usuário do Serviço de segmentação
 topic: ui guide
 description: O Adobe Experience Platform Segmentation Service fornece uma interface de usuário para criar e gerenciar definições de segmentos.
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 3e83215cc24b32b7fe9486c6faf455f247b6c922
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Guia do usuário do Serviço de segmentação
+# Guia da interface do usuário do serviço de segmentação
 
 [!DNL Adobe Experience Platform Segmentation Service] fornece uma interface de usuário para criar e gerenciar definições de segmentos.
 

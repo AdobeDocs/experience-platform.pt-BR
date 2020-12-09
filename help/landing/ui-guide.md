@@ -5,10 +5,10 @@ title: Guia da interface do usuário Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 1%
 
 ---
 
@@ -143,13 +143,25 @@ A seção **[!UICONTROL Serviços]** permite que você gerencie seus modelos pub
 
 ### [!UICONTROL Gerenciamento de dados]
 
-A seção **[!UICONTROL Schemas]** permite criar e gerenciar schemas. Para saber mais sobre como usar a seção Schemas, leia o tutorial sobre como [criar um schema](../xdm/tutorials/create-schema-ui.md). Para obter mais informações sobre o Experience Data Model (XDM), consulte a visão geral [do](../xdm/home.md)XDM.
+A seção **[!UICONTROL Schemas]** permite criar e gerenciar schemas do Modelo de Dados de Experiência (XDM). Para saber mais sobre schemas, leia o tutorial sobre como [criar um schema](../xdm/tutorials/create-schema-ui.md). Mais informações sobre o XDM podem ser encontradas na visão geral [do Sistema](../xdm/home.md)XDM.
 
-A seção **[!UICONTROL Conjuntos]** de dados permite criar e gerenciar conjuntos de dados. Para obter mais informações sobre a seção Conjuntos de dados, consulte o guia [do usuário dos](../catalog/datasets/user-guide.md)conjuntos de dados.
+A seção **[!UICONTROL Conjuntos]** de dados permite criar e gerenciar conjuntos de dados. Mais informações sobre conjuntos de dados podem ser encontradas no guia [do usuário](../catalog/datasets/user-guide.md)dos conjuntos de dados.
 
-A seção **[!UICONTROL Query]** permite que você crie e gerencie query, registre query SQL criados pelo Query Service e visualização suas credenciais do PostgreSQL. Para obter mais informações sobre a seção Query, consulte o guia [do usuário do Serviço de](../query-service/ui/overview.md)Query.
+A seção **[!UICONTROL Query]** permite que você crie e gerencie query, registre query SQL criados pelo Adobe Experience Platform Query Service e visualização suas credenciais do PostgreSQL. Para obter mais informações sobre query, consulte o guia [do usuário do Serviço de](../query-service/ui/overview.md)Query.
 
-A seção **[!UICONTROL Monitoramento]** permite monitorar a ingestão em lote e em streaming. Para obter mais informações sobre a seção Monitoramento, consulte o Guia [do usuário de ingestão de dados de](../ingestion/quality/monitor-data-flows.md)monitoramento.
+A seção **[!UICONTROL Monitoramento]** permite monitorar a ingestão em lote e em streaming. Mais informações sobre o monitoramento podem ser encontradas no guia [do usuário de ingestão de dados de](../ingestion/quality/monitor-data-flows.md)monitoramento.
+
+### [!UICONTROL Decisão]
+
+A Offer Decisioning é um Serviço de Aplicativo integrado à Adobe Experience Platform. Ele permite que você aproveite o Experience Platform para oferecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato no momento certo. Para saber mais sobre o Offer Decisioning, inclusive trabalhar com o [!UICONTROL Oferta] e o [!UICONTROL Atividade] , visite a documentação [do](https://experienceleague.adobe.com/docs/offer-decisioning.html)Offer Decisioning.
+
+### [!UICONTROL Administração]
+
+A interface do usuário da plataforma (UI) fornece um painel através do qual você pode visualização informações importantes sobre o uso de licenças de sua organização, como capturado durante um instantâneo diário. Isso pode ser acessado selecionando Uso **[!UICONTROL da]** licença na navegação. Para saber mais sobre o painel de uso da licença, visite o guia [de uso da](license-usage-dashboard.md)licença.
+
+>[!IMPORTANT]
+>
+>A funcionalidade do painel de uso de licença está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Próximas etapas
 

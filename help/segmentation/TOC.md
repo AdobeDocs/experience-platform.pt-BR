@@ -5,10 +5,10 @@ user-guide-title: Ajuda do Serviço de segmentação da Adobe Experience Platfor
 breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie segmentos e gere públicos a partir dos dados do Real-time Customer Profile.
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 27%
+source-wordcount: '139'
+ht-degree: 25%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 27%
    - [Pesquisa de segmento](api/segment-search.md)
    - [Segmentação em streaming](api/streaming-segmentation.md)
 - IU de segmentação {#ui}
-   - [Visão geral](ui/overview.md)
+   - [Guia da interface de segmentação](ui/overview.md)
+   - [Painel do segmento](ui/segment-dashboard.md)
    - [Construtor de segmentos](ui/segment-builder.md)
    - [Segmentação em streaming](ui/streaming-segmentation.md)
    - [Reconsideração de restrições de tempo](ui/segment-refactoring.md)

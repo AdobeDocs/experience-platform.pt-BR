@@ -4,9 +4,9 @@ title: Visão geral do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico que reúne dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ A relação entre o Perfil do cliente em tempo real e outros serviços no Experi
 
 ### repositório de dados do perfil
 
-Embora [!DNL Real-time Customer Profile] processe dados ingeridos e use o Adobe Experience Platform [!DNL Identity Service] para unir dados relacionados por meio do mapeamento de identidade, ele mantém seus próprios dados na [!DNL Profile] loja. Em outras palavras, o [!DNL Profile] armazenamento é separado dos [!DNL Catalog] dados ([!DNL Data Lake]) e [!DNL Identity Service] dos dados (gráfico de identidade).
+Embora [!DNL Real-time Customer Profile] processe dados ingeridos e use o Adobe Experience Platform [!DNL Identity Service] para unir dados relacionados por meio do mapeamento de identidade, ele mantém seus próprios dados na [!DNL Profile] loja. O [!DNL Profile] armazenamento é separado dos [!DNL Catalog] dados no [!DNL Data Lake] e dos [!DNL Identity Service] dados no gráfico de identidade.
+
+O repositório de Perfis usa uma infraestrutura de BD do Microsoft Azure Cosmos e o Lago de Dados da Plataforma usa o armazenamento Data Lake do Microsoft Azure.
 
 ### Perfil
 
@@ -34,7 +36,7 @@ O Experience Platform oferece uma série de garantias para ajudar você a evitar
 
 [!DNL Real-time Customer Profile] une dados de vários sistemas corporativos e, em seguida, fornece acesso a esses dados na forma de perfis do cliente com eventos de séries cronológicas relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais. As seções a seguir destacam alguns dos conceitos principais que você deve entender para construir e manter perfis com eficácia na Plataforma.
 
-### Fragmentos de perfil vs perfis mesclados
+### Fragmentos de perfil vs perfis mesclados {#profile-fragments-vs-merged-profiles}
 
 Cada perfil de cliente individual é composto de vários fragmentos de perfil que foram mesclados para formar uma única visualização desse cliente. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são ingeridos na Plataforma, eles são unidos para criar um único perfil para o cliente.
 

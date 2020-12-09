@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Excluir um fluxo de dados usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para excluir um fluxo de dados usando a API de Serviço de Fluxo.
+description: Este tutorial aborda as etapas para excluir fluxos de dados em lote e streaming usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 # Excluir um fluxo de dados usando a API de Serviço de Fluxo
 
-Este tutorial aborda as etapas para excluir os fluxos de dados feitos com fontes de lote e streaming usando o [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Você pode excluir fluxos de dados em lote e de fluxo contínuo que contenham erros ou se tornaram obsoletos usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+Este tutorial aborda as etapas para excluir os fluxos de dados feitos com fontes de lote e streaming usando [!DNL Flow Service].
 
 ## Introdução
 

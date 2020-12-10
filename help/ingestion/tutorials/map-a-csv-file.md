@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um schema XDM usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -113,9 +113,9 @@ A tela de mapeamento reaparece com o campo de origem recém-criado. Aplique o ca
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## Monitore seu fluxo de dados
+## Monitorar ingestão de dados
 
-Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial sobre como [monitorar fluxos de dados](../../ingestion/quality/monitor-data-flows.md)de transmissão contínua.
+Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Para obter mais informações sobre como monitorar a ingestão de dados, consulte o tutorial sobre como [monitorar a ingestão](../../ingestion/quality/monitor-data-ingestion.md)de dados.
 
 ## Próximas etapas
 

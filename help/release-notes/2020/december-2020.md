@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
+source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 7%
+source-wordcount: '426'
+ht-degree: 6%
 
 ---
 
@@ -17,19 +17,35 @@ ht-degree: 7%
 
 **Data de lançamento: 9 de dezembro de 2020**
 
+Novos recursos no Adobe Experience Platform:
+
+- [[!DNL Dataflows]](#dataflows)
+
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
+## [!DNL Dataflows] {#dataflows}
+
+Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de público alvo, para Serviço de identidade e Perfil e para destinos.
+
+**Recurso principal**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Transparência para fluxos de dados | Você pode monitorar fluxos de dados para fontes e destinos. Para obter mais informações, leia o [tutorial sobre fontes](../../dataflows/ui/monitor-sources.md) de monitoramento ou o [tutorial sobre como monitorar destinos](../../dataflows/ui/monitor-destinations.md). |
+
+Para saber mais sobre os fluxos de dados, leia a visão geral [dos](../../dataflows/home.md)fluxos de dados.
+
 ## [!DNL Data Science Workspace] {#dsw}
 
 A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe.
 
-### Recursos principais
+**Principais recursos**
 
 | Recurso | Descrição |
-|--- | ---|
+| --- | ---|
 | Anúncio de pacote do Adobe Experience Platform Intelligence | O complemento do pacote Adobe Experience Platform Intelligence é uma atualização da Data Science Workspace que desbloqueia recursos principais adicionais, como: <li> Experimentação e avaliação de modelos orientados pela interface do usuário.</li><li> Capacidade de implantar e operacionalizar modelos com treinamentos programados e trabalhos de dedução.</li><li> Suporte para o aprendizado profundo em modelos de fluxo de dados (GPU Compute).</li><li> Computação distribuída com base em faísca para treinar e pontuar com base em grandes conjuntos de dados (10MM + linhas).</li><li>E mais</li> |
 
 Para saber mais sobre o complemento do pacote Adobe Experience Platform Intelligence, consulte a documentação sobre acesso e recursos [da](../../data-science-workspace/access-features-dsw.md)Data Science Workspace.

@@ -5,9 +5,9 @@ title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,9 @@ As fontes de armazenamentos na nuvem podem inserir seus próprios dados [!DNL Pl
 - [[!DNL Apache HDFS] conector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] conector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] conector](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] conector](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL FTP] conector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] conector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] conector](connectors/cloud-storage/sftp.md)
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM)
 

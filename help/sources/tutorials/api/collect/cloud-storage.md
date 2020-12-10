@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1599'
 ht-degree: 2%
 
 ---
@@ -572,6 +572,10 @@ A última etapa para coletar dados de armazenamento em nuvem é criar um fluxo d
 Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação de POST ao fornecer os valores mencionados anteriormente dentro da carga.
 
 Para agendar uma ingestão, é necessário primeiro definir o valor de tempo do start para cada tempo em segundos. Em seguida, você deve definir o valor de frequência para uma das cinco opções: `once`, `minute`, `hour`, `day`ou `week`. O valor do intervalo designa o período entre duas ingestões consecutivas e a criação de uma ingestão única não requer a definição de um intervalo. Para todas as outras frequências, o valor do intervalo deve ser definido como igual ou maior que `15`.
+
+>[!IMPORTANT]
+>
+>É altamente recomendável agendar seu fluxo de dados para ingestão única ao usar o conector [](../../../connectors/cloud-storage/ftp.md)FTP.
 
 **Formato da API**
 

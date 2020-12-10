@@ -5,7 +5,7 @@ title: Solução de problemas de ingestão de streaming
 topic: troubleshooting
 description: Este documento fornece respostas para perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Para obter mais informações sobre a validação síncrona e assíncrona, consu
 
 ### É possível validar uma carga de solicitação antes de enviá-la para [!DNL Platform]?
 
-As cargas de solicitação só podem ser avaliadas depois de enviadas para [!DNL Platform]. Ao executar a validação síncrona, as cargas válidas retornam objetos JSON preenchidos enquanto cargas inválidas retornam mensagens de erro. Durante a validação assíncrona, o serviço detecta e envia todos os dados malformados para o local em [!DNL Data Lake] que podem ser recuperados posteriormente para análise. Consulte a visão geral [da validação de](../quality/streaming-validation.md) streaming para obter mais informações.
+As cargas de solicitação só podem ser avaliadas depois de enviadas para [!DNL Platform]. Ao executar a validação síncrona, as cargas válidas retornam objetos JSON preenchidos enquanto cargas inválidas retornam mensagens de erro. Durante a validação assíncrona, o serviço detecta e envia todos os dados malformados para o local em [!DNL Data Lake] que podem ser recuperados posteriormente para análise. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### O que acontece quando a validação síncrona é solicitada em uma borda que não oferece suporte a ela?
 
@@ -59,7 +59,7 @@ Eventos com transmissão contínua geralmente são refletidos em menos [!DNL Rea
 
 Todos os dados enviados para [!DNL Platform] (com êxito ou de outra forma) são armazenados como arquivos em lote antes de serem persistentes em conjuntos de dados. O status de processamento dos lotes é exibido no conjunto de dados para o qual foram enviados.
 
-Você pode verificar se os dados foram ingeridos com êxito verificando a atividade do conjunto de dados usando a interface [do usuário do](https://platform.adobe.com)Experience Platform. Clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para exibir uma lista de conjuntos de dados. Selecione o conjunto de dados para o qual você está fazendo streaming na lista exibida para abrir a página de atividade **[!UICONTROL do Conjunto de]** Dados, mostrando todos os lotes enviados durante um período selecionado. Para obter mais informações sobre como usar [!DNL Experience Platform] para monitorar fluxos de dados, consulte o guia sobre como [monitorar fluxos](../quality/monitor-data-flows.md)de dados de transmissão.
+Você pode verificar se os dados foram ingeridos com êxito verificando a atividade do conjunto de dados usando a interface [do usuário do](https://platform.adobe.com)Experience Platform. Clique em **[!UICONTROL Conjuntos]** de dados na navegação à esquerda para exibir uma lista de conjuntos de dados. Selecione o conjunto de dados para o qual você está fazendo streaming na lista exibida para abrir a página de atividade **[!UICONTROL do Conjunto de]** Dados, mostrando todos os lotes enviados durante um período selecionado. Para obter mais informações sobre como usar [!DNL Experience Platform] para monitorar fluxos de dados, consulte o guia sobre como [monitorar fluxos](../quality/monitor-data-ingestion.md)de dados de transmissão.
 
 Se os seus dados não foram assimilados e você deseja recuperá-los, [!DNL Platform]é possível recuperar os lotes com falha enviando suas IDs para o [!DNL Data Access API]. Consulte o guia sobre como [recuperar lotes](../quality/retrieve-failed-batches.md) com falha para obter mais informações.
 

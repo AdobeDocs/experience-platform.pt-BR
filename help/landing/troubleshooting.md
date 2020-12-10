@@ -7,10 +7,10 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 3%
+source-wordcount: '1954'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Adobe Exp
 
 ## O que são [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API no Adobe I/O.
+[!DNL Experience Platform] oferta várias RESTful APIs que usam solicitações HTTP para acessar [!DNL Platform] recursos. Essas APIs de serviço expõem vários pontos de extremidade e permitem que você execute operações para recursos de lista (GET), pesquisa (GET), edição (PUT e/ou PATCH) e exclusão (DELETE). Para obter mais informações sobre endpoints e operações específicos disponíveis para cada serviço, consulte a documentação [de Referência da](http://www.adobe.com/go/platform-api-reference-en) API no Adobe I/O.
 
 ## Como formatar uma solicitação de API? {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ A resposta ilustra o que você esperaria receber após uma chamada bem-sucedida 
 }
 ```
 
-Para obter mais informações sobre endpoints específicos nas APIs de plataforma, incluindo cabeçalhos obrigatórios e corpos de solicitação, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
+Para obter mais informações sobre endpoints específicos nas APIs de plataforma, incluindo cabeçalhos obrigatórios e corpos de solicitação, consulte a documentação [de Referência da](http://www.adobe.com/go/platform-api-reference-en)API.
 
 ## Qual é a minha organização IMS? {#what-is-my-ims-organization}
 
-Uma organização IMS é uma representação Adobe de um cliente. Todas as soluções licenciadas de Adobe são integradas a esta organização de clientes. Quando uma organização IMS tem direito a [!DNL Experience Platform], ela pode atribuir acesso a desenvolvedores. A ID de organização IMS (`x-gw-ims-org-id`) representa a organização para a qual uma chamada de API deve ser executada e, portanto, é necessária como um cabeçalho em todas as solicitações de API. Essa ID pode ser encontrada no [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): na guia **Integrações** , navegue até a seção **Visão geral** de qualquer integração específica para localizar a ID em Credenciais **do** cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](../tutorials/authentication.md)autenticação.
+Uma organização IMS é uma representação Adobe de um cliente. Todas as soluções licenciadas de Adobe são integradas a esta organização de clientes. Quando uma organização IMS tem direito a [!DNL Experience Platform], ela pode atribuir acesso a desenvolvedores. A ID de organização IMS (`x-gw-ims-org-id`) representa a organização para a qual uma chamada de API deve ser executada e, portanto, é necessária como um cabeçalho em todas as solicitações de API. Essa ID pode ser encontrada no [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): na guia **Integrações** , navegue até a seção **Visão geral** de qualquer integração específica para localizar a ID em Credenciais **do** cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](http://www.adobe.com/go/platform-api-authentication-en)autenticação.
 
 ## Onde posso encontrar minha chave de API? {#where-can-i-find-my-api-key}
 
-Uma chave de API é necessária como um cabeçalho em todas as solicitações de API. Ele pode ser encontrado por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). No console, na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica e você encontrará a chave em Credenciais **** do cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](../tutorials/authentication.md)autenticação.
+Uma chave de API é necessária como um cabeçalho em todas as solicitações de API. Ele pode ser encontrado por meio do [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). No console, na guia **Integrações** , navegue até a seção **Visão geral** de uma integração específica e você encontrará a chave em Credenciais **** do cliente. Para obter uma apresentação passo a passo sobre como autenticar em [!DNL Platform], consulte o tutorial [de](http://www.adobe.com/go/platform-api-authentication-en)autenticação.
 
 ## Como faço para obter um token de acesso? {#how-do-i-get-an-access-token}
 
-Tokens de acesso são necessários no cabeçalho de autorização de todas as chamadas de API. Eles podem ser gerados usando um `curl` comando, desde que você tenha acesso a uma integração para uma organização IMS. Os tokens de acesso só são válidos por 24 horas, após o que um novo token deve ser gerado para continuar usando a API. Para obter detalhes sobre a geração de tokens de acesso, consulte o tutorial [de](../tutorials/authentication.md)autenticação.
+Tokens de acesso são necessários no cabeçalho de autorização de todas as chamadas de API. Eles podem ser gerados usando um `curl` comando, desde que você tenha acesso a uma integração para uma organização IMS. Os tokens de acesso só são válidos por 24 horas, após o que um novo token deve ser gerado para continuar usando a API. Para obter detalhes sobre a geração de tokens de acesso, consulte o tutorial [de](http://www.adobe.com/go/platform-api-authentication-en)autenticação.
 
 ## Como usar parâmetros de query? {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ Os seguintes códigos de status podem ser encontrados em qualquer [!DNL Experien
 
 ## Erros de cabeçalho de solicitação {#request-header-errors}
 
-Todas as chamadas de API em [!DNL Platform] exigem cabeçalhos de solicitação específicos. Para ver quais cabeçalhos são necessários para serviços individuais, consulte a documentação [de Referência da](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API. Para localizar os valores dos cabeçalhos de autenticação necessários, consulte o tutorial [](../tutorials/authentication.md)Autenticação. Se algum desses cabeçalhos estiver ausente ou for inválido ao fazer uma chamada de API, os seguintes erros podem ocorrer.
+Todas as chamadas de API em [!DNL Platform] exigem cabeçalhos de solicitação específicos. Para ver quais cabeçalhos são necessários para serviços individuais, consulte a documentação [de Referência da](http://www.adobe.com/go/platform-api-reference-en)API. Para localizar os valores dos cabeçalhos de autenticação necessários, consulte o tutorial [](http://www.adobe.com/go/platform-api-authentication-en)Autenticação. Se algum desses cabeçalhos estiver ausente ou for inválido ao fazer uma chamada de API, os seguintes erros podem ocorrer.
 
 ### O token OAuth está ausente {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ Esta mensagem de erro é exibida quando um `Authorization` cabeçalho está ause
 }
 ```
 
-Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho não é válido. `Authorization` Verifique se o token foi inserido corretamente ou [gere um novo token](../tutorials/authentication.md) no Adobe I/O Console.
+Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho não é válido. `Authorization` Verifique se o token foi inserido corretamente ou [gere um novo token](http://www.adobe.com/go/platform-api-authentication-en) no Adobe I/O Console.
 
 ### A chave da API é obrigatória
 

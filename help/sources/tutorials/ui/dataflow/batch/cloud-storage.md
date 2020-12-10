@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1808'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ Forneça valores para o agendamento e selecione **[!UICONTROL Próximo]**.
 
 ### Configurar um fluxo de dados de ingestão única
 
-Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**. Você pode continuar fazendo edições em um conjunto de fluxo de dados para uma ingestão de frequência única, desde que o tempo de start permaneça no futuro. Depois que a hora do start passar, o valor de frequência única não poderá mais ser editado.
+Para configurar a ingestão única, selecione a seta suspensa de frequência e selecione **[!UICONTROL Uma vez]**. Você pode continuar fazendo edições em um conjunto de fluxo de dados para uma ingestão de frequência única, desde que o tempo de start permaneça no futuro. Depois que a hora do start passar, o valor de frequência única não poderá mais ser editado. **[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis ao configurar um fluxo de dados de ingestão única.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL O intervalo]** e o preenchimento **[!UICONTROL retroativo]** não são visíveis durante uma ingestão única.
+>É altamente recomendável agendar seu fluxo de dados para ingestão única ao usar o conector [](../../../../connectors/cloud-storage/ftp.md)FTP.
 
 Depois de fornecer os valores apropriados para a programação, selecione **[!UICONTROL Avançar]**.
 

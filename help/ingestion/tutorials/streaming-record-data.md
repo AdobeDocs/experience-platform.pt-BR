@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 2%
@@ -453,7 +453,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Ao ler este documento, agora você entende como assimilar dados de registro [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode monitorar seus dados ingeridos por start por meio da [!DNL Platform] interface do usuário. Para mais informações, leia o guia de ingestão [de dados de](../quality/monitor-data-flows.md) monitorização.
+Ao ler este documento, agora você entende como assimilar dados de registro [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode monitorar seus dados ingeridos por start por meio da [!DNL Platform] interface do usuário. Para mais informações, leia o guia de ingestão [de dados de](../quality/monitor-data-ingestion.md) monitorização.
 
 Para obter mais informações sobre a ingestão de streaming em geral, leia a visão geral [da ingestão de](../streaming-ingestion/overview.md)streaming.
 

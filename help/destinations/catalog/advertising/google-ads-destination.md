@@ -5,9 +5,9 @@ seo-title: Destino de anúncios do Google
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem propaganda por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 seo-description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem propaganda por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,9 @@ Observe os seguintes detalhes específicos para [!DNL Google Ads] os destinos:
 
 ### Conta [!DNL Google Ads] existente
 
-[!DNL Google] pausou novas integrações [!DNL Google Ads] com fornecedores terceirizados. É necessário ter uma integração existente com [!DNL Google Ads] o para poder executar as etapas de lista de permissões na próxima seção e criar um [!DNL Google Ads] destino no CDP em tempo real.
+>[!IMPORTANT]
+>
+> [!DNL Google] substituiu novas integrações de [!DNL Google Ads] cookies com fornecedores de terceiros. Para executar as etapas de lista de permissões na próxima seção, é necessário ter uma integração existente com [!DNL Google Ads]. Como resultado, a abordagem recomendada para usar [!DNL Google Ads] é configurar uma [!DNL Google Customer Match] integração. Para obter mais detalhes sobre como criar uma [!DNL Google Customer Match] integração, leia o tutorial sobre como criar uma [[!DNL Google Customer Match]](./google-customer-match.md) conexão.
 
 ### Lista de permissões
 

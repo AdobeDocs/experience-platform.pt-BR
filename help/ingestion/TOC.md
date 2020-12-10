@@ -5,7 +5,7 @@ user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
 breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para o Platform por meio de uma assimilação em lote ou streaming.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 21%
@@ -36,7 +36,7 @@ ht-degree: 21%
    - [Transmissão de várias mensagens](tutorials/streaming-multiple-messages.md)
 - Qualidade e monitorização da ingestão de dados{#quality}
    - [Visão geral](quality/overview.md)
-   - [Monitorar fluxos de dados](quality/monitor-data-flows.md)
+   - [Monitorar ingestão de dados](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de erro](quality/error-diagnostics.md)
    - [Recuperar lotes com falha](quality/retrieve-failed-batches.md)
    - [Validação de ingestão de fluxo](quality/streaming-validation.md)

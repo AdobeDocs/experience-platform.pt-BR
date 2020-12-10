@@ -5,9 +5,9 @@ title: Guia da interface do usuário Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1737'
 ht-degree: 1%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 Este guia serve como uma introdução ao uso da interface do usuário do Adobe Experience Platform (UI), explicando para que os vários componentes são usados e fornecendo links para documentação adicional para obter mais informações.
 
-Para saber mais sobre o Adobe Experience Platform, leia a visão geral [do](./home.md)Experience Platform.
+Para saber mais sobre o Adobe Experience Platform, leia a visão geral [do](home.md)Experience Platform.
 
 ## Ecrã inicial
 
-Depois de fazer logon no Adobe Experience Platform, você chegará à página [!UICONTROL inicial] , que é composta pelo painel de métricas, pelos dados recentes e pelas seções de aprendizado recomendadas.
+Depois de fazer logon no Adobe Experience Platform, você estará na [!UICONTROL página inicial] , que é composta pelo painel [de](#metrics)métricas, pelos dados [](#recent-data)recentes e pelas seções de aprendizado [](#recommended-learning) recomendadas.
 
 ![](images/user-guide/homepage.png)
 
-### Painel de métricas
+### Métricas
 
 O painel de métricas fornece cartões que fornecem informações sobre conjuntos de dados, perfis, segmentos e destinos em sua organização.
 
@@ -63,13 +63,13 @@ A seção **[!UICONTROL Recomendado para aprendizado]** fornece links para a doc
 
 A barra de navegação superior na interface do usuário da plataforma exibe a Organização IMS na qual você está conectado e fornece vários controles importantes.
 
-No lado esquerdo da barra de navegação está o logotipo Adobe Experience Platform. Se você selecionar essa opção, você voltará à tela inicial da interface do usuário da plataforma.
+No lado esquerdo da barra de navegação está o logotipo Adobe Experience Platform. Selecionar essa opção a qualquer momento o levará de volta à tela inicial da interface do usuário da plataforma.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### Alternador de Organização IMS
 
-O primeiro item no lado direito da barra de navegação é o alternador **Organização** IMS.
+O primeiro item no lado direito da barra de navegação superior é o alternador **Organização** IMS.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ A seleção do alternador abre um menu suspenso de Organizações IMS às quais 
 
 ### Aplicativos de comutação
 
-O próximo item no lado direito é o alternador **de** aplicativos, representado pelo ícone do alternador ![de](./images/user-guide/app-switcher-icon.png) aplicativos. Ao selecionar esse ícone, você pode alternar entre Experience Platform, Ativos, Exchange e Iniciar.
+O próximo item no lado direito da navegação superior é o alternador **de** aplicativos, representado pelo ícone do alternador ![de](./images/user-guide/app-switcher-icon.png) aplicativos. Ao selecionar esse ícone, você pode alternar entre os aplicativos de Adobe aos quais a sua Organização IMS tem acesso, como Experience Platform, Analytics, Assets e Launch.
 
 ### Ajuda
 
@@ -89,7 +89,7 @@ O próximo item no lado direito é o alternador **de** aplicativos, representado
 
 ### Notificações e anúncios
 
-Após o menu de ajuda e suporte, é exibida a seção **** Notificações, que é representada pelo ícone ![Sino/Notificações e Anúncios](images/user-guide/notification-icon.png) . A guia **[!UICONTROL Notificações]** mostra informações importantes sobre o produto e outras atualizações relevantes, enquanto a guia **[!UICONTROL Anúncios]** mostra notificações sobre manutenção do serviço.
+Na seção **** Notificações, que é representada pelo ícone ![sino/Notificações e Anúncios](images/user-guide/notification-icon.png) . A guia **[!UICONTROL Notificações]** mostra informações importantes sobre o produto e outras atualizações relevantes, enquanto a guia **[!UICONTROL Anúncios]** mostra informações sobre a manutenção do serviço.
 
 ### Perfil do usuário
 

@@ -5,7 +5,7 @@ title: Qualidade de ingestão de dados
 topic: overview
 description: O documento a seguir fornece um resumo das verificações e comportamentos de validação suportados para a ingestão em lote e streaming no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 5%
@@ -56,4 +56,4 @@ As validações a seguir são feitas para a ingestão de streaming:
 | Conjunto de dados | Garante que o conjunto de dados seja especificado, ativado e não tenha sido removido. |
 | Header | Garante que o cabeçalho seja especificado e seja válido. |
 
-Mais informações sobre como [!DNL Platform] monitores e validações de dados podem ser encontradas na documentação [de fluxos de dados de](./monitor-data-flows.md)monitoramento.
+Mais informações sobre como [!DNL Platform] monitores e validações de dados podem ser encontradas na documentação [de fluxos de dados de](./monitor-data-ingestion.md)monitoramento.

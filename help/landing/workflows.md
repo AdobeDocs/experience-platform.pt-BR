@@ -5,9 +5,9 @@ title: Guia da interface do usuário dos workflows Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 068e8270f389ed84cae6ef4b7185259cb5f6dadc
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ A seção **[!UICONTROL Workflows]** na interface do usuário do Adobe Experienc
 
 ## [!UICONTROL Inserção de dados]
 
-O fluxo de trabalho do **[!UICONTROL Mapa CSV para o schema]** XDM permite que você carregue e converta um arquivo CSV em um formato de schema do Modelo de Dados de Experiência (XDM). Mais informações sobre esse fluxo de trabalho podem ser encontradas no tutorial sobre como [mapear um arquivo CSV para um schema](../ingestion/tutorials/map-a-csv-file.md)XDM.
+O fluxo de trabalho do **[!UICONTROL Mapa CSV para o schema]** XDM permite que você carregue e converta um arquivo CSV em um schema do Modelo de Dados de Experiência (XDM). Mais informações sobre esse fluxo de trabalho podem ser encontradas no tutorial sobre como [mapear um arquivo CSV para um schema](../ingestion/tutorials/map-a-csv-file.md)XDM.
 
-O fluxo de trabalho **[!UICONTROL Criar conjunto de dados a partir do schema]** permite criar um novo conjunto de dados a partir de um schema XDM registrado. Mais informações sobre esse fluxo de trabalho podem ser encontradas no guia [do usuário dos](../catalog/datasets/user-guide.md#schema)conjuntos de dados.
+O fluxo de trabalho **[!UICONTROL Criar conjunto de dados a partir do schema]** permite criar um novo conjunto de dados a partir de um schema XDM existente. Mais informações sobre esse fluxo de trabalho podem ser encontradas no guia [do usuário dos](../catalog/datasets/user-guide.md#schema)conjuntos de dados.
 
 O fluxo de trabalho **[!UICONTROL Criar conjunto de dados a partir de CSV]** permite criar um novo conjunto de dados carregando um arquivo CSV. Mais informações sobre esse fluxo de trabalho podem ser encontradas no guia [do usuário dos](../catalog/datasets/user-guide.md#csv)conjuntos de dados.
 
@@ -37,4 +37,4 @@ O **[!UICONTROL Publicar um modelo como um fluxo de trabalho de serviço]** perm
 
 ## Próximas etapas
 
-Ao ler este guia, você foi apresentado à página de [!UICONTROL Workflows] na interface do usuário do Experience Platform. Para obter mais informações sobre a interface do usuário da plataforma em geral, leia o guia [da interface do usuário do](./ui-guide.md)Adobe Experience Platform.
+Ao ler este guia, você foi apresentado aos [!UICONTROL Workflows] disponíveis na interface do usuário do Experience Platform. Para obter mais informações sobre recursos e funcionalidade da interface do usuário da plataforma, leia o guia [da interface do usuário do](ui-guide.md)Adobe Experience Platform.

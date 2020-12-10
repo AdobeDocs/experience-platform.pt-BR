@@ -5,9 +5,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 4%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 4%
       - [Conector Blob do Azure](connectors/cloud-storage/blob.md)
       - [Conector Hubs de Evento do Azure](connectors/cloud-storage/eventhub.md)
       - [Conector do Armazenamento de Arquivo do Azure](connectors/cloud-storage/azure-file-storage.md)
-      - [Conector FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
+      - [Conector FTP](connectors/cloud-storage/ftp.md)
       - [Conector de Armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Conector SFTP](connectors/cloud-storage/sftp.md)
       - [Conector Blob do Amazon S3 e do Azure](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
@@ -82,6 +83,7 @@ ht-degree: 4%
          - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Conector Hubs de Evento do Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Conector do Armazenamento de Arquivo do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Conector FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 4%
          - [Conector Blob do Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Conector Hubs de Evento do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Conector do Armazenamento de Arquivo do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Conector FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [Conector FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Conector de Armazenamento do Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Conector SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Conector Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Conector do Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)

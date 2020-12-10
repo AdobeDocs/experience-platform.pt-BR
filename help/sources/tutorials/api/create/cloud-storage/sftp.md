@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a um servidor SFTP (Secure File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 71653681a0f4b31319bd352202bf55fb3947a455
+source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -20,18 +20,14 @@ ht-degree: 2%
 >
 >O conector SFTP está em beta. Os recursos e a documentação estão sujeitos a alterações. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
-
-Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se conectar [!DNL Experience Platform] a um servidor SFTP (Secure File Transfer Protocol).
-
-Se você preferir usar a interface do usuário no [!DNL Experience Platform], o tutorial [da](../../../ui/create/cloud-storage/ftp-sftp.md) interface do usuário fornece instruções passo a passo para executar ações semelhantes.
+Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para conectar o Experience Platform a um servidor SFTP (Secure File Transfer Protocol).
 
 ## Introdução
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Caixas de proteção](../../../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um servidor SFTP usando a [!DNL Flow Service] API.
 

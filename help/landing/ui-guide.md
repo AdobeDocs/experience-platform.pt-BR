@@ -5,7 +5,7 @@ title: Guia da interface do usuário Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -149,7 +149,7 @@ A seção **[!UICONTROL Conjuntos]** de dados permite criar e gerenciar conjunto
 
 A seção **[!UICONTROL Query]** permite que você crie e gerencie query, registre query SQL criados pelo Adobe Experience Platform Query Service e visualização suas credenciais do PostgreSQL. Para obter mais informações sobre query, consulte o guia [do usuário do Serviço de](../query-service/ui/overview.md)Query.
 
-A seção **[!UICONTROL Monitoramento]** permite monitorar a ingestão em lote e em streaming. Mais informações sobre o monitoramento podem ser encontradas no guia [do usuário de ingestão de dados de](../ingestion/quality/monitor-data-flows.md)monitoramento.
+A seção **[!UICONTROL Monitoramento]** permite monitorar a ingestão em lote e em streaming. Mais informações sobre o monitoramento podem ser encontradas no guia [do usuário de ingestão de dados de](../ingestion/quality/monitor-data-ingestion.md)monitoramento.
 
 ### [!UICONTROL Decisão]
 

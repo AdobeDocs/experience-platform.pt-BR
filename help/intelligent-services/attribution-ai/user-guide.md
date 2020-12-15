@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics;region
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Guia do usuário do Attribution AI
 topic: User guide
 description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1746'
 ht-degree: 1%

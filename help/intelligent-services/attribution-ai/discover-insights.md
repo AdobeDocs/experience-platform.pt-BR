@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
-solution: Experience Platform
+solution: Intelligent Services, Experience Platform
 title: Descobrindo insights no Attribution AI
 topic: Attribution AI insights
 description: Este documento serve como um guia para interagir com informações da instância do serviço na interface do usuário do Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 69c27fc45aa9d9acaaed29c2324d02ebd471d63d
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 0%
@@ -151,7 +151,7 @@ A placa **[!UICONTROL Top campanha]** exibe uma visão geral das campanhas e o d
 
 A seleção da guia Análise **[!UICONTROL de]** caminho carrega os gráficos **[!UICONTROL Detalhamento por posição]** de ponto de contato e caminhos **[!UICONTROL de conversão]** Superior.
 
-O **[!UICONTROL Detalhamento por gráfico de posição]** de ponto de contato é um detalhamento de conversões atribuídas por posição do ponto de contato comparada em todos os caminhos de conversão. Este gráfico ajuda você a entender quais pontos de contato são mais eficazes em diferentes estágios do caminho de conversão. Os estágios são iniciais, jogadores e mais próximos.
+O gráfico de **[!UICONTROL Detalhamento por posição]** de ponto de contato é um detalhamento de conversões atribuídas por posição do ponto de contato comparada em todos os caminhos de conversão. Este gráfico ajuda você a entender quais pontos de contato são mais eficazes em diferentes estágios do caminho de conversão. Os estágios são iniciais, jogadores e mais próximos.
 
 - **Início:** Indica que o ponto de contato foi o primeiro toque em um caminho de conversão.
 - **Jogador:** Indica que o ponto de contato não foi o primeiro ou o último toque que levou a uma conversão.

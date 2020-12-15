@@ -4,7 +4,7 @@ title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Preferências de privacidade/marketing (Consentimento) é destinado a suportar a coleta de permissões e preferências do cliente geradas pelas Plataformas de gerenciamento de consentimento (CMPs) e outras fontes das operações de dados.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -285,7 +285,7 @@ Consulte o tutorial sobre como [criar um schema na interface do usuário](http:/
 >
 >Se desejar enviar dados de consentimento para [!DNL Real-time Customer Profile], é necessário criar um schema [!DNL Profile]habilitado com base na [!DNL XDM Individual Profile] classe que contém o tipo de [!DNL Consents & Preferences] dados. O conjunto de dados criado com base nesse schema também deve estar habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para obter etapas específicas relacionadas aos [!DNL Real-time Customer Profile] requisitos para schemas e conjuntos de dados.
 >
->Além disso, você também deve garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral sobre políticas [de](../../rtcdp/profile/merge-policies.md) mesclagem para obter mais informações.
+>Além disso, você também deve garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
 
 ## Tratamento de alterações de consentimento e preferência
 
@@ -333,4 +333,4 @@ A tabela a seguir descreve os valores aceitos para `xdm:preferred`:
 
 ### Schema [!DNL Consents & Preferences] completo {#full-schema}
 
-Para visualização do schema completo para o tipo de [!DNL Consents & Preferences] dados, consulte o repositório [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)oficial.
+Para visualização do schema completo para o tipo de [!DNL Consents & Preferences] dados, consulte o repositório [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)oficial.

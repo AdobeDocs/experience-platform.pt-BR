@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Descobrindo insights com a IA do cliente
 topic: Discovering insights
 description: Este documento serve como um guia para interagir com as informações da instância do serviço na interface do usuário da API do cliente do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 1%

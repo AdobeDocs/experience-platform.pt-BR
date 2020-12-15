@@ -1,11 +1,11 @@
 ---
 keywords: text classification;Text classification
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Ponto final da API de classificação de texto
 topic: Developer guide
 description: O serviço de classificação de texto, quando recebe um fragmento de texto, pode classificá-lo em um ou mais rótulos. A classificação pode ser de rótulo único, de vários rótulos ou hierárquica.
 translation-type: tm+mt
-source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 4%

@@ -5,30 +5,29 @@ user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '144'
 ht-degree: 20%
 
 ---
 
 
-# Adobe Experience Platform Query Service {#query}
+# Serviço de Query Adobe Experience Platform {#query}
 
 - [Visão geral do Serviço de query](home.md)
 - [Guia de início rápido](quickstart.md)
-- API de serviço de query {#api}
+- API do Serviço de query {#api}
    - [Introdução](api/getting-started.md)
    - [Queries](api/queries.md)
    - [Parâmetros de conexão](api/connection-parameters.md)
    - [Query agendados](api/scheduled-queries.md)
    - [É executado para query agendados](api/runs-scheduled-queries.md)
    - [Modelos de query](api/query-templates.md)
-- Interface do usuário do serviço de query {#ui}
+- UI do Serviço de query {#ui}
    - [Visão geral da interface do usuário](ui/overview.md)
    - [Guia do usuário do Editor de query](ui/user-guide.md)
 - Criação de consultas {#creating-queries}
-   - [funções definidas pelo Adobe](creating-queries/using-adobe-defined-functions.md)
    - [Visão geral da criação de query](creating-queries/creating-queries.md)
    - [Conjuntos de dados vs tabelas e schemas](creating-queries/datasets-and-tables.md)
    - [Orientações gerais para a execução de query](creating-queries/writing-queries.md)

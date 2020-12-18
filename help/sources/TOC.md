@@ -5,9 +5,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 - [Visão geral dos conectores de origem](home.md)
 - Conectores de origem disponíveis {#connectors}
-   - aplicativos Adobe {#adobe-applications}
+   - Aplicativos Adobe {#adobe-applications}
       - [Conector de dados de classificações do Analytics](connectors/adobe-applications/classifications.md)
       - [Conector de dados do Analytics](connectors/adobe-applications/analytics.md)
       - [conector Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -87,7 +87,6 @@ ht-degree: 4%
          - [Conector de Armazenamento do Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Conector HubSpot](tutorials/api/create/crm/hubspot.md)
          - [Conector do Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Conector Salesforce](tutorials/api/create/crm/salesforce.md)
       - Êxito do cliente {#customer-success}
@@ -145,9 +144,9 @@ ht-degree: 4%
    - [Atualizar conexões](tutorials/api/update.md)
    - [Excluir conexões](tutorials/api/delete.md)
    - [Excluir fluxos de dados](tutorials/api/delete-dataflows.md)
-- Tutoriais da interface do usuário {#ui-tutorials}
+- Tutoriais da interface {#ui-tutorials}
    - Criar um conector de origem {#create}
-      - aplicativos Adobe {#adobe-applications}
+      - Aplicativos Adobe {#adobe-applications}
          - [Conector de dados de classificações Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Conector Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
          - [Conector Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)

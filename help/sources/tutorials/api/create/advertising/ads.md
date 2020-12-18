@@ -6,71 +6,71 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Google AdWords.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
 
 
-# Criar um [!DNL Google AdWords] conector usando a [!DNL Flow Service] API
+# Crie um conector [!DNL Google AdWords] usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >
->O [!DNL Google AdWords] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+>O conector [!DNL Google AdWords] está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se conectar [!DNL Experience Platform] a [!DNL Google AdWords].
+Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para conectar [!DNL Experience Platform] a [!DNL Google AdWords].
 
 ## Introdução
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Caixas de proteção](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao anúncio usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao anúncio usando a API [!DNL Flow Service].
 
 ### Reunir credenciais obrigatórias
 
-Para [!DNL Flow Service] se conectar ao AdWords, é necessário fornecer valores para as seguintes propriedades de conexão:
+Para que [!DNL Flow Service] se conecte com AdWords, é necessário fornecer valores para as seguintes propriedades de conexão:
 
 | **Credencial** | **Descrição** |
 | -------------- | --------------- |
 | ID do cliente | A ID do cliente do cliente da conta AdWords. |
 | Token do desenvolvedor | O token do desenvolvedor associado à conta do gerente. |
-| Atualizar token | O token de atualização obtido [!DNL Google] para autorizar o acesso ao AdWords. |
-| ID do cliente | A ID do cliente do [!DNL Google] aplicativo usado para adquirir o token de atualização. |
-| Segredo do cliente | O segredo do cliente do [!DNL Google] aplicativo usado para adquirir o token de atualização. |
+| Atualizar token | O token de atualização obtido de [!DNL Google] para autorizar o acesso ao AdWords. |
+| ID do cliente | A ID do cliente do aplicativo [!DNL Google] usada para adquirir o token de atualização. |
+| Segredo do cliente | O segredo do cliente do aplicativo [!DNL Google] usado para adquirir o token de atualização. |
 | ID da especificação da conexão | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Google AdWords] é: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
-Para obter mais informações sobre esses valores, consulte este documento [do](https://developers.google.com/adwords/api/docs/guides/authentication)Google AdWords.
+Para obter mais informações sobre esses valores, consulte este [documento do Google AdWords](https://developers.google.com/adwords/api/docs/guides/authentication).
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
-* Autorização: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
-* Tipo de conteúdo: `application/json`
+* `Content-Type: application/json`
 
 ## Criar uma conexão
 
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por [!DNL Google AdWords] conta, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta [!DNL Google AdWords], pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -80,8 +80,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova conexão AdWords, configurada pelas propriedades fornecidas na carga:
-
+Para criar uma conexão [!DNL Google AdWords], sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL Google AdWords] é `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
 
 ```shell
 curl -X POST \
@@ -114,12 +113,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | A ID do cliente da sua [!DNL AdWords] conta. |
-| `auth.params.developerToken` | O token de desenvolvedor da sua [!DNL AdWords] conta. |
-| `auth.params.refreshToken` | O token de atualização da sua [!DNL AdWords] conta. |
-| `auth.params.clientID` | A ID do cliente da sua [!DNL AdWords] conta. |
-| `auth.params.clientSecret` | O segredo do cliente da sua [!DNL AdWords] conta. |
-| `connectionSpec.id` | A ID da especificação da [!DNL Google AdWords] conexão: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | A ID do cliente da sua conta [!DNL AdWords]. |
+| `auth.params.developerToken` | O token do desenvolvedor da sua conta [!DNL AdWords]. |
+| `auth.params.refreshToken` | O token de atualização da sua conta [!DNL AdWords]. |
+| `auth.params.clientID` | A ID do cliente da sua conta [!DNL AdWords]. |
+| `auth.params.clientSecret` | O segredo do cliente da sua conta [!DNL AdWords]. |
+| `connectionSpec.id` | A ID de especificação de conexão [!DNL Google AdWords]: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Resposta**
 
@@ -134,4 +133,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma [!DNL Google AdWords] conexão usando a [!DNL Flow Service] API e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar sistemas de publicidade usando a API](../../explore/advertising.md)de Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão [!DNL Google AdWords] usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar sistemas de publicidade usando a API de Serviço de Fluxo](../../explore/advertising.md).

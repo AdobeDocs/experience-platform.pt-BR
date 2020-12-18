@@ -6,69 +6,69 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Armazenamento de Arquivo do Azure ao Experience Platform.
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '574'
 ht-degree: 2%
 
 ---
 
 
-# Criar um [!DNL Azure File Storage] conector usando a [!DNL Flow Service] API
+# Crie um conector [!DNL Azure File Storage] usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >
->O [!DNL Azure File Storage] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+>O conector [!DNL Azure File Storage] está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a [!DNL Flow Service] API para guiá-lo pelas etapas para se conectar [!DNL Azure File Storage] a [!DNL Experience Platform].
+Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para conectar [!DNL Azure File Storage] a [!DNL Experience Platform].
 
 ## Introdução
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Caixas de proteção](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito [!DNL Azure File Storage] usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a [!DNL Azure File Storage] usando a API [!DNL Flow Service].
 
 ### Reunir credenciais obrigatórias
 
-Para [!DNL Flow Service] se conectar com [!DNL Azure File Storage], é necessário fornecer valores para as seguintes propriedades de conexão:
+Para que [!DNL Flow Service] se conecte com [!DNL Azure File Storage], é necessário fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `host` | O terminal da instância [!DNL Azure File Storag]e que você está acessando. |
-| `userId` | O usuário com acesso suficiente ao ponto de [!DNL Azure File Storage] extremidade. |
-| `password` | A senha da sua [!DNL Azure File Storage] instância |
+| `host` | O ponto de extremidade da instância [!DNL Azure File Storag]e que você está acessando. |
+| `userId` | O usuário com acesso suficiente ao terminal [!DNL Azure File Storage]. |
+| `password` | A senha da sua instância [!DNL Azure File Storage] |
 | ID da especificação da conexão | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Azure File Storage] é: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 
-Para obter mais informações sobre a introdução, consulte [este documento](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)de Armazenamento de Arquivo do Azure.
+Para obter mais informações sobre a introdução, consulte [este documento de Armazenamento de Arquivo do Azure](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
-* Autorização: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos no [!DNL Experience Platform], incluindo os pertencentes ao [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
-* Tipo de conteúdo: `application/json`
+* `Content-Type: application/json`
 
 ## Criar uma conexão
 
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta do Armazenamento de Arquivo do Azure, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta [!DNL Azure File Storage], pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -78,7 +78,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova [!DNL Azure File Storage] conexão, configurada pelas propriedades fornecidas na carga:
+Para criar uma conexão [!DNL Azure File Storage], sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL Azure File Storage] é `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
 
 ```shell
 curl -X POST \
@@ -108,10 +108,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.host` | O ponto de extremidade da [!DNL Azure File Storage] instância que você está acessando. |
-| `auth.params.userId` | O usuário com acesso suficiente ao ponto de [!DNL Azure File Storage] extremidade. |
-| `auth.params.password` | A chave [!DNL Azure File Storage] de acesso. |
-| `connectionSpec.id` | A ID da especificação da [!DNL Azure File Storage] conexão: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.host` | O ponto de extremidade da instância [!DNL Azure File Storage] que você está acessando. |
+| `auth.params.userId` | O usuário com acesso suficiente ao terminal [!DNL Azure File Storage]. |
+| `auth.params.password` | A chave de acesso [!DNL Azure File Storage]. |
+| `connectionSpec.id` | A ID de especificação de conexão [!DNL Azure File Storage]: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 **Resposta**
 
@@ -126,4 +126,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma [!DNL Azure File Storage] conexão usando a [!DNL Flow Service] API e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar um armazenamento em nuvem de terceiros usando a API](../../explore/cloud-storage.md)de Serviço de Fluxo.
+Ao seguir este tutorial, você criou uma conexão [!DNL Azure File Storage] usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar um armazenamento em nuvem de terceiros usando a API do Serviço de Fluxo](../../explore/cloud-storage.md).

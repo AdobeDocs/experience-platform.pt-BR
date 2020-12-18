@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial fornece etapas para a criação de um conector de origem SFTP usando a interface do usuário da plataforma.
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->O conector SFTP está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+>O conector SFTP está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
 
 Este tutorial fornece etapas para a criação de um conector de origem SFTP usando a interface do usuário da plataforma.
 
@@ -27,11 +27,15 @@ Este tutorial fornece etapas para a criação de um conector de origem SFTP usan
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+   * [Noções básicas da composição](../../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão SFTP válida, poderá ignorar o restante deste documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
+>[!IMPORTANT]
+>
+>É recomendável evitar novas linhas ou retornos de carro ao assimilar objetos JSON com uma conexão de origem SFTP. Para contornar a limitação, use um único objeto JSON por linha e use várias linhas para arquivos subsequentes.
+
+Se você já tiver uma conexão SFTP válida, poderá ignorar o restante desse documento e prosseguir para o tutorial em [configurar um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
 ### Reunir credenciais obrigatórias
 
@@ -49,11 +53,11 @@ Depois de reunir as credenciais necessárias, siga as etapas abaixo para criar u
 
 ## Conecte-se ao seu servidor SFTP
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho [!UICONTROL Fontes] . A tela [!UICONTROL Catálogo] exibe várias fontes com as quais você pode criar uma conta de entrada.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catalog] exibe várias fontes com as quais você pode criar uma conta de entrada.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria [!UICONTROL armazenamento] da nuvem, selecione **[!UICONTROL SFTP]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar uma nova conexão SFTP.
+Na categoria [!UICONTROL armazenamento de nuvem], selecione **[!UICONTROL SFTP]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar uma nova conexão SFTP.
 
 ![catálogo](../../../../images/tutorials/create/sftp/catalog.png)
 
@@ -63,11 +67,11 @@ A página **[!UICONTROL Conectar-se ao SFTP]** é exibida. Nesta página, você 
 
 Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
-O conector SFTP fornece tipos de autenticação diferentes para acesso. Em Autenticação **[!UICONTROL de]** conta, selecione **[!UICONTROL Senha]** para usar uma credencial baseada em senha.
+O conector SFTP fornece tipos de autenticação diferentes para acesso. Em **[!UICONTROL Autenticação de conta]** selecione **[!UICONTROL Senha]** para utilizar uma credencial baseada em senha.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-Como alternativa, você pode selecionar chave **[pública SSH e conectar sua conta SFTP usando uma combinação de conteúdo]** de chave [!UICONTROL privada e] Senha .
+Como alternativa, você pode selecionar **[chave pública SSH]** e conectar sua conta SFTP usando uma combinação de [!UICONTROL conteúdo de chave privada] e [!UICONTROL Senha].
 
 >[!IMPORTANT]
 >
@@ -82,7 +86,7 @@ Como alternativa, você pode selecionar chave **[pública SSH e conectar sua con
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta FTP ou SFTP com a qual você deseja se conectar e selecione **[!UICONTROL Avançar]** para continuar.
+Para conectar uma conta existente, selecione a conta FTP ou SFTP com a qual deseja se conectar e, em seguida, selecione **[!UICONTROL Próximo]** para continuar.
 
 ![existente](../../../../images/tutorials/create/sftp/existing.png)
 

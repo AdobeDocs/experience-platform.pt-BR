@@ -6,38 +6,38 @@ topic: enforcement
 type: Tutorial
 description: Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a API de serviço de política para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 translation-type: tm+mt
-source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
+source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '992'
 ht-degree: 1%
 
 ---
 
 
-# Impor políticas de uso de dados usando a [!DNL Policy Service] API
+# Impor políticas de uso de dados usando a API [!DNL Policy Service]
 
-Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar o [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
+Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 
 >[!NOTE]
 >
->Por padrão, somente as políticas cujo status está definido para `ENABLED` poder participar da avaliação. Para permitir que `DRAFT` as políticas participem da avaliação, é necessário incluir o parâmetro query `includeDraft=true` no caminho da solicitação.
+>Por padrão, somente as políticas cujo status está definido como `ENABLED` podem participar da avaliação. Para permitir que as políticas `DRAFT` participem da avaliação, você deve incluir o parâmetro de query `includeDraft=true` no caminho da solicitação.
 
-Este documento fornece etapas sobre como usar a [!DNL Policy Service] API para verificar violações de políticas em diferentes cenários.
+Este documento fornece etapas sobre como usar a API [!DNL Policy Service] para verificar violações de política em diferentes cenários.
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes conceitos chave envolvidos na aplicação das políticas de uso de dados:
 
-* [Controle](../home.md)de dados: A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
-   * [Rótulos](../labels/overview.md)de uso de dados: Os rótulos de uso de dados são aplicados a conjuntos de dados (e/ou campos individuais nesses conjuntos de dados), especificando restrições para como esses dados podem ser usados.
-   * [Políticas](../policies/overview.md)de uso de dados: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que são permitidas ou restritas para determinados conjuntos de rótulos de uso de dados.
-* [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Controle](../home.md) de dados: A estrutura pela qual  [!DNL Platform] aplica a conformidade de uso de dados.
+   * [Rótulos](../labels/overview.md) de uso de dados: Os rótulos de uso de dados são aplicados a conjuntos de dados (e/ou campos individuais nesses conjuntos de dados), especificando restrições para como esses dados podem ser usados.
+   * [Políticas](../policies/overview.md) de uso de dados: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que são permitidas ou restritas para determinados conjuntos de rótulos de uso de dados.
+* [Caixas de proteção](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a [!DNL Policy Service] API, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Policy Service], incluindo cabeçalhos necessários e como ler exemplos de chamadas de API.
 
 ## Avaliar usando rótulos e uma ação de marketing
 
-É possível avaliar uma política testando uma ação de marketing em relação a um conjunto de rótulos de uso de dados que estariam presentes em um conjunto de dados. Isso é feito por meio do uso do parâmetro do `duleLabels` query, onde os rótulos são fornecidos como uma lista de valores separada por vírgulas, como mostrado no exemplo abaixo.
+É possível avaliar uma política testando uma ação de marketing em relação a um conjunto de rótulos de uso de dados que estariam presentes em um conjunto de dados. Isso é feito usando o parâmetro de query `duleLabels`, onde os rótulos são fornecidos como uma lista de valores separada por vírgulas, como mostrado no exemplo abaixo.
 
 **Formato da API**
 
@@ -53,11 +53,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 **Solicitação**
 
-A solicitação a seguir testa a ação `exportToThirdParty` de marketing contra rótulos `C1` e `C3`. Como a política de uso de dados criada anteriormente neste tutorial define o `C1` rótulo como uma das `deny` condições em sua expressão de política, a ação de marketing deve acionar uma violação de política.
+A solicitação a seguir testa a ação de marketing `exportToThirdParty` contra rótulos `C1` e `C3`. Como a política de uso de dados que você criou anteriormente neste tutorial define o rótulo `C1` como uma das condições `deny` em sua expressão de política, a ação de marketing deve acionar uma violação de política.
 
 >[!NOTE]
 >
->Os rótulos de uso de dados fazem distinção entre maiúsculas e minúsculas. As violações de política ocorrem somente quando os rótulos definidos em suas expressões de política são correspondidos exatamente. Neste exemplo, um `C1` rótulo acionaria uma violação, ao passo que um `c1` rótulo não.
+>Os rótulos de uso de dados fazem distinção entre maiúsculas e minúsculas. As violações de política ocorrem somente quando os rótulos definidos em suas expressões de política são correspondidos exatamente. Neste exemplo, um rótulo `C1` acionaria uma violação, ao passo que um rótulo `c1` não acionaria.
 
 ```shell
 curl -X GET \
@@ -70,7 +70,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de uso com os quais foi testada e uma lista de quaisquer políticas que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou a violação de política esperada.
+Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de uso com os quais foi testada e uma lista de quaisquer políticas que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada na matriz `violatedPolicies`, indicando que a ação de marketing acionou a violação de política esperada.
 
 ```json
 {
@@ -130,7 +130,7 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de u
 
 | Propriedade | Descrição |
 | --- | --- |
-| `violatedPolicies` | Um array que lista quaisquer políticas que foram violadas testando a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
+| `violatedPolicies` | Um array que lista quaisquer políticas que foram violadas testando a ação de marketing (especificada em `marketingActionRef`) em relação ao `duleLabels` fornecido. |
 
 ## Avaliar usando conjuntos de dados
 
@@ -149,7 +149,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **Solicitação**
 
-A solicitação a seguir testa a ação de `exportToThirdParty` marketing em relação a três conjuntos de dados diferentes. Os conjuntos de dados são referenciados por tipo e ID em uma matriz fornecida na carga.
+A solicitação a seguir testa a ação de marketing `exportToThirdParty` em relação a três conjuntos de dados diferentes. Os conjuntos de dados são referenciados por tipo e ID em uma matriz fornecida na carga.
 
 ```shell
 curl -X POST \
@@ -185,11 +185,11 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Cada item na matriz de carga deve indicar o tipo de entidade que está sendo definida. Nesse caso de uso, o valor sempre será &quot;dataSet&quot;. |
 | `entityId` | Cada item na matriz de carga deve fornecer a ID exclusiva para um conjunto de dados. |
-| `entityMeta.fields` | (Opcional) Uma matriz de strings de ponteiro [](../../landing/api-fundamentals.md#json-pointer) JSON, referenciando campos específicos no schema do conjunto de dados. Se essa matriz for incluída, somente os campos contidos na matriz participarão da avaliação. Quaisquer campos de schema que não estejam incluídos no storage não participarão da avaliação.<br><br>Se esse campo não for incluído, todos os campos dentro do schema do conjunto de dados serão incluídos na avaliação. |
+| `entityMeta.fields` | (Opcional) Uma matriz de [Ponteiro JSON](../../landing/api-fundamentals.md#json-pointer) strings, referenciando campos específicos no schema do conjunto de dados. Se essa matriz for incluída, somente os campos contidos na matriz participarão da avaliação. Quaisquer campos de schema que não estejam incluídos no storage não participarão da avaliação.<br><br>Se esse campo não for incluído, todos os campos dentro do schema do conjunto de dados serão incluídos na avaliação. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de uso que foram coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada no `violatedPolicies` storage, indicando que a ação de marketing acionou a violação de política esperada.
+Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de uso que foram coletados dos conjuntos de dados fornecidos e uma lista de quaisquer políticas que foram violadas como resultado do teste da ação contra esses rótulos. Neste exemplo, a política &quot;Exportar dados para terceiros&quot; é mostrada na matriz `violatedPolicies`, indicando que a ação de marketing acionou a violação de política esperada.
 
 ```json
 {
@@ -372,10 +372,10 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de u
 | --- | --- |
 | `duleLabels` | Uma lista de rótulos de uso de dados que foram extraídos dos conjuntos de dados fornecidos na carga da solicitação. |
 | `discoveredLabels` | Uma lista dos conjuntos de dados que foram fornecidos na carga da solicitação, exibindo os rótulos no nível do conjunto de dados e no nível do campo que foram encontrados em cada um. |
-| `violatedPolicies` | Um array que lista quaisquer políticas que foram violadas testando a ação de marketing (especificada em `marketingActionRef`) em relação ao fornecido `duleLabels`. |
+| `violatedPolicies` | Um array que lista quaisquer políticas que foram violadas testando a ação de marketing (especificada em `marketingActionRef`) em relação ao `duleLabels` fornecido. |
 
 ## Próximas etapas
 
 Ao ler esse documento, você verificou com êxito violações de política ao executar uma ação de marketing em um conjunto de dados ou em um conjunto de rótulos de uso de dados. Usando os dados retornados nas respostas da API, você pode configurar protocolos em seu aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrem.
 
-Para obter etapas sobre como aplicar políticas de uso de dados para segmentos de audiência em [!DNL Real-time Customer Profile], consulte o seguinte [tutorial](../../segmentation/tutorials/governance.md).
+Para obter informações sobre como a Plataforma fornece a imposição automática de políticas para segmentos ativados, consulte o guia em [imposição automática](./auto-enforcement.md).

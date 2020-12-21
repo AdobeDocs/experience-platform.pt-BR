@@ -5,10 +5,10 @@ user-guide-title: Ajuda do Adobe Experience Platform Data Governance
 breadcrumb-title: Guia do Data Governance
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 24%
+source-wordcount: '118'
+ht-degree: 25%
 
 ---
 
@@ -25,9 +25,10 @@ ht-degree: 24%
    * [Visão geral das políticas de uso de dados](policies/overview.md)
    * [Guia do usuário das políticas de uso de dados](policies/user-guide.md)
    * [Criar uma política de uso de dados usando a API do Serviço de Política](policies/create.md)
-* Aplicação das políticas {#enforcement}
+* Aplicação de política {#enforcement}
    * [Visão geral da aplicação de políticas](enforcement/overview.md)
-   * [Impor políticas de uso de dados usando a API do Serviço de Política](enforcement/api-enforcement.md)
+   * [Aplicação automática](enforcement/auto-enforcement.md)
+   * [Aplicação baseada em API](enforcement/api-enforcement.md)
 * Guia do desenvolvedor da API do Serviço de Política {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)

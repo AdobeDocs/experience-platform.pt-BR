@@ -2,18 +2,18 @@
 product: experience-platform
 audience: user
 user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
-breadcrumb-title: Guia do Modelo de Dados de Experiência (XDM)
+breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 19%
+source-wordcount: '216'
+ht-degree: 24%
 
 ---
 
 
-# Experience Data Model (XDM) System {#xdm}
+# Sistema do Modelo de Dados de Experiência (XDM) {#xdm}
 
 * [Visão geral do sistema XDM](home.md)
 * Esquemas {#schema}
@@ -56,7 +56,23 @@ ht-degree: 19%
    * [Detalhes do POI](./data-types/poi-details.md)
    * [Interação POI](./data-types/poi-interaction.md)
    * [Endereço postal](./data-types/postal-address.md)
-* API de registro do schema {#api}
+*  SchemasUI  {#ui}
+   * [Visão geral](./ui/overview.md)
+   * [Explore os recursos do XDM](./ui/explore.md)
+   * Criar e editar recursos {#resources}
+      * [Esquemas](./ui/resources/schemas.md)
+      * [Classes](./ui/resources/classes.md)
+      * [Misturas](./ui/resources/mixins.md)
+      * [Tipos de dados](./ui/resources/data-types.md)
+   * Definir campos {#fields}
+      * [Visão geral](./ui/fields/overview.md)
+      * [Campos obrigatórios](./ui/fields/required.md)
+      * [Campos de objeto](./ui/fields/object.md)
+      * [Campos de matriz](./ui/fields/array.md)
+      * [Campos Enum](./ui/fields/enum.md)
+      * [Campos de identidade](./ui/fields/identity.md)
+      * [Campos de relacionamento](./ui/fields/relationship.md)
+* API de Registro do schema {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Esquemas](api/schemas.md)
@@ -69,10 +85,8 @@ ht-degree: 19%
    * [Schemas Ad-hoc](api/ad-hoc.md)
    * [Apêndice](api/appendix.md)
 * Tutoriais {#tutorials}
-   * [Explore recursos na interface do usuário](./tutorials/explore.md)
    * [Criar um schema (API)](tutorials/create-schema-api.md)
    * [Criar um schema (UI)](tutorials/create-schema-ui.md)
-   * [Criar e editar tipos de dados (UI)](./tutorials/create-data-type.md)
    * [Definir uma relação entre dois schemas (API)](tutorials/relationship-api.md)
    * [Definir uma relação entre dois schemas (UI)](tutorials/relationship-ui.md)
    * [Criar um schema ad-hoc (API)](tutorials/ad-hoc.md)

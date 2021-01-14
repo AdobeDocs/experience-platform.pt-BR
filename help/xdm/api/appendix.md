@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
 title: Apêndice do desenvolvedor do Registro do schema
 description: Este documento fornece informações complementares relacionadas ao trabalho com a API de registro do Schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # Apêndice
 
-Este documento fornece informações complementares relacionadas ao trabalho com a [!DNL Schema Registry] API.
+Este documento fornece informações complementares relacionadas ao trabalho com a API [!DNL Schema Registry].
 
-## Uso de parâmetros de query {#query}
+## Usando parâmetros de query {#query}
 
 O [!DNL Schema Registry] oferece suporte ao uso de parâmetros de query para a página e filtrar resultados ao listar recursos.
 
@@ -31,13 +31,13 @@ Os parâmetros de query mais comuns para paginação incluem:
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `start` | Especifique onde os resultados listados devem começar. Esse valor pode ser obtido a partir do `_page.next` atributo de uma resposta de lista e usado para acessar a próxima página de resultados. Se o `_page.next` valor for nulo, então não há nenhuma página adicional disponível. |
+| `start` | Especifique onde os resultados listados devem começar. Esse valor pode ser obtido do atributo `_page.next` de uma resposta de lista e usado para acessar a próxima página de resultados. Se o valor `_page.next` for nulo, então não há nenhuma página adicional disponível. |
 | `limit` | Limite o número de recursos retornados. Exemplo: `limit=5` retornará uma lista de cinco recursos. |
-| `orderby` | Classifique os resultados por uma propriedade específica. Exemplo: `orderby=title` classificará os resultados por título em ordem crescente (A-Z). A adição de um valor `-` antes do valor do parâmetro (`orderby=-title`) classificará os itens por título em ordem decrescente (Z-A). |
+| `orderby` | Classifique os resultados por uma propriedade específica. Exemplo: `orderby=title` classificará os resultados por título em ordem crescente (A-Z). Adicionar um `-` antes do valor do parâmetro (`orderby=-title`) classificará os itens por título em ordem decrescente (Z-A). |
 
 ### Filtragem {#filtering}
 
-Você pode filtrar os resultados usando o `property` parâmetro, que é usado para aplicar um operador específico em relação a uma determinada propriedade JSON dentro dos recursos recuperados. Os operadores suportados incluem:
+Você pode filtrar os resultados usando o parâmetro `property`, que é usado para aplicar um operador específico em relação a uma determinada propriedade JSON dentro dos recursos recuperados. Os operadores suportados incluem:
 
 | Operador | Descrição | Exemplo |
 | --- | --- | --- |
@@ -52,13 +52,13 @@ Você pode filtrar os resultados usando o `property` parâmetro, que é usado pa
 
 >[!TIP]
 >
->Você pode usar o `property` parâmetro para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a [!DNL XDM Individual Profile] classe.
+>Você pode usar o parâmetro `property` para filtrar as misturas por sua classe compatível. Por exemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` retorna somente misturas compatíveis com a classe [!DNL XDM Individual Profile].
 
 ## Modo de compatibilidade
 
-[!DNL Experience Data Model] (XDM) é uma especificação publicamente documentada, impulsionada pela Adobe para melhorar a interoperabilidade, a expressividade e o poder das experiências digitais. O Adobe mantém o código fonte e as definições XDM formais em um projeto de código [aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas na notação XDM Standard, usando a notação JSON-LD (JavaScript Object Notation for Linked Data) e o Schema JSON como a gramática para definir schemas XDM.
+[!DNL Experience Data Model] (XDM) é uma especificação publicamente documentada, impulsionada pela Adobe para melhorar a interoperabilidade, a expressividade e o poder das experiências digitais. O Adobe mantém o código fonte e as definições XDM formais em um [projeto de código aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas na notação XDM Standard, usando a notação JSON-LD (JavaScript Object Notation for Linked Data) e o Schema JSON como a gramática para definir schemas XDM.
 
-Ao analisar as definições formais de XDM no repositório público, você pode ver que o XDM padrão é diferente do que você vê no Adobe Experience Platform. O que você está vendo no modo de compatibilidade [!DNL Experience Platform] é chamado de Modo de compatibilidade, e ele fornece um mapeamento simples entre o XDM padrão e a forma como ele é usado no [!DNL Platform].
+Ao analisar as definições formais de XDM no repositório público, você pode ver que o XDM padrão é diferente do que você vê no Adobe Experience Platform. O que você está vendo em [!DNL Experience Platform] é chamado de Modo de compatibilidade e fornece um mapeamento simples entre o XDM padrão e a forma como ele é usado em [!DNL Platform].
 
 ### Como o Modo de compatibilidade funciona
 
@@ -74,12 +74,50 @@ A seguir está uma comparação lado a lado mostrando campos relacionados ao ani
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-        { "xdm:bornDate": { "title": "Data de nascimento", "tipo": "string", "format": "date", }, "xdm:bornDayAndMonth": { "title": "Data de nascimento", "tipo": "string", "pattern": "[0-1][0-9]-[0-9][0-9]", }, "xdm:bornYear": { "title": "Ano de nascimento", "tipo": "número inteiro", "mínimo": 1, "máximo": 32767 }
+        {
+          "xdm:bornDate": {
+              "Título": "Data de nascimento",
+              "Tipo": "string",
+              "format": "date",
+          },
+          "xdm:bornDayAndMonth": {
+              "Título": "Data de nascimento",
+              "Tipo": "string",
+              "padrão": "[0-1][0-9]-[0-9][0-9]",
+          },
+          "xdm:bornYear": {
+              "Título": "Ano de nascimento",
+              "Tipo": "integer",
+              "mínimo": 1,
+              "Máximo": 32767
+        }
   </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
-        { "bornDate": { "title": "Data de nascimento", "tipo": "string", "format": "date", "meta:xdmField": "xdm:bornDate", "meta:xdmType": "date" }, "bornDayAndMonth": { "title": "Data de nascimento", "tipo": "string", "pattern": "[0-1][0-9]-[0-9][0-9]", "meta:xdmField": "xdm:bornDayAndMonth", "meta:xdmType": "string" }, "bornYear": { "title": "Ano de nascimento", "tipo": "número inteiro", "mínimo": 1, "máximo": 32767, "meta:xdmField": "xdm:bornYear", "meta:xdmType": "short" }
+        {
+          "bornDate": {
+              "Título": "Data de nascimento",
+              "Tipo": "string",
+              "format": "date",
+              "meta:xdmField": "xdm:bornDate",
+              "meta:xdmType": "date"
+          },
+          "bornDayAndMonth": {
+              "Título": "Data de nascimento",
+              "Tipo": "string",
+              "padrão": "[0-1][0-9]-[0-9][0-9]",
+              "meta:xdmField": "xdm:bornDayAndMonth",
+              "meta:xdmType": "string"
+          },
+          "bornYear" (Ano de nascimento): {
+              "Título": "Ano de nascimento",
+              "Tipo": "integer",
+              "mínimo": 1,
+              "Máximo": 32767
+              "meta:xdmField": "xdm:bornYear",
+              "meta:xdmType": "short"
+        }
       </pre>
   </td>
   </tr>
@@ -89,8 +127,8 @@ A seguir está uma comparação lado a lado mostrando campos relacionados ao ani
 
 A Adobe Experience Platform foi projetada para trabalhar com várias soluções e serviços, cada um com seus próprios desafios e limitações técnicas (por exemplo, como determinadas tecnologias lidam com caracteres especiais). A fim de ultrapassar estas limitações, foi desenvolvido o Modo de Compatibilidade.
 
-A maioria dos [!DNL Experience Platform] serviços inclui [!DNL Catalog], [!DNL Data Lake]e [!DNL Real-time Customer Profile] uso [!DNL Compatibility Mode] no lugar do XDM padrão. A [!DNL Schema Registry] API também usa [!DNL Compatibility Mode]e os exemplos nesse documento são mostrados usando [!DNL Compatibility Mode].
+A maioria dos serviços [!DNL Experience Platform], incluindo [!DNL Catalog], [!DNL Data Lake] e [!DNL Real-time Customer Profile] usam [!DNL Compatibility Mode] no lugar do XDM padrão. A API [!DNL Schema Registry] também usa [!DNL Compatibility Mode], e os exemplos nesse documento são mostrados usando [!DNL Compatibility Mode].
 
-Vale a pena saber que um mapeamento ocorre entre o XDM padrão e a forma como ele é operacionalizado no [!DNL Experience Platform], mas não deve afetar seu uso de [!DNL Platform] serviços.
+Vale a pena saber que um mapeamento ocorre entre o XDM padrão e a forma como ele é operacionalizado em [!DNL Experience Platform], mas não deve afetar seu uso dos serviços [!DNL Platform].
 
 O projeto de código aberto está disponível para você, mas quando se trata de interagir com recursos por meio do [!DNL Schema Registry], os exemplos de API neste documento fornecem as práticas recomendadas que você deve conhecer e seguir.

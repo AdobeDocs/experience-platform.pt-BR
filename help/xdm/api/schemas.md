@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Criar um schema
 description: O endpoint /schemas na API de Registro de Schemas permite que você gerencie programaticamente schemas XDM no aplicativo de experiência.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 2%
@@ -13,21 +13,21 @@ ht-degree: 2%
 ---
 
 
-# Ponto de extremidade de schemas
+# Ponto de extremidade schemas
 
-Um schema pode ser considerado como o modelo para os dados que você deseja ingerir no Adobe Experience Platform. Cada schema é composto de uma classe e zero ou mais combinações. O `/schemas` endpoint na [!DNL Schema Registry] API permite que você gerencie programaticamente schemas dentro do seu aplicativo de experiência.
+Um schema pode ser considerado como o modelo para os dados que você deseja ingerir no Adobe Experience Platform. Cada schema é composto de uma classe e zero ou mais combinações. O endpoint `/schemas` na API [!DNL Schema Registry] permite que você gerencie programaticamente schemas dentro do seu aplicativo de experiência.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o guia [de](./getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint da API usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
 
 ## Recuperar uma lista de schemas {#list}
 
-Você pode lista todos os schemas sob o `global` container ou `tenant` realizando uma solicitação de GET para `/global/schemas` ou `/tenant/schemas`, respectivamente.
+Você pode lista todos os schemas no container `global` ou `tenant`, fazendo uma solicitação de GET para `/global/schemas` ou `/tenant/schemas`, respectivamente.
 
 >[!NOTE]
 >
->Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros de paginação. Também é recomendável usar parâmetros de query adicionais para filtrar resultados e reduzir o número de recursos retornados. Consulte a seção sobre parâmetros [do](./appendix.md#query) query no documento apêndice para obter mais informações.
+>Ao listar recursos, o resultado do Limite do Registro do Schema é definido como 300 itens. Para retornar recursos além desse limite, você deve usar parâmetros de paginação. Também é recomendável usar parâmetros de query adicionais para filtrar resultados e reduzir o número de recursos retornados. Consulte a seção sobre [parâmetros de query](./appendix.md#query) no documento apêndice para obter mais informações.
 
 **Formato da API**
 
@@ -37,12 +37,12 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O container que contém os schemas que você deseja recuperar: `global` para schemas criados por Adobe ou `tenant` para schemas de sua organização. |
-| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte o documento [de](./appendix.md#query) apêndice para obter uma lista dos parâmetros disponíveis. |
+| `{CONTAINER_ID}` | O container que contém os schemas que você deseja recuperar: `global` para schemas criados por Adobe ou `tenant` para schemas pertencentes à sua organização. |
+| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte o documento [apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 **Solicitação**
 
-A solicitação a seguir recupera uma lista de schemas do `tenant` container, usando um parâmetro de `orderby` query para classificar os resultados pelo `title` atributo.
+A solicitação a seguir recupera uma lista de schemas do container `tenant`, usando um parâmetro de query `orderby` para classificar os resultados pelo atributo `title`.
 
 ```shell
 curl -X GET \
@@ -54,16 +54,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-O formato de resposta depende do `Accept` cabeçalho enviado na solicitação. Os `Accept` cabeçalhos a seguir estão disponíveis para a listagem de schemas:
+O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. Os seguintes cabeçalhos `Accept` estão disponíveis para schemas de listagem:
 
 | `Accept` header | Descrição |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para a listagem de recursos. (Limite: 300) |
-| `application/vnd.adobe.xed+json` | Retorna o schema JSON completo para cada recurso, com original `$ref` e `allOf` incluído. (Limite: 300) |
+| `application/vnd.adobe.xed+json` | Retorna o schema JSON completo para cada recurso, com `$ref` e `allOf` originais incluídos. (Limite: 300) |
 
 **Resposta**
 
-A solicitação acima usou o `application/vnd.adobe.xed-id+json` cabeçalho, portanto a resposta inclui apenas os atributos `Accept` , `title`, `$id`e `meta:altId``version` para cada schema. Usar o outro `Accept` cabeçalho (`application/vnd.adobe.xed+json`) retorna todos os atributos de cada schema. Selecione o `Accept` cabeçalho apropriado, dependendo das informações necessárias na sua resposta.
+A solicitação acima usou o cabeçalho `application/vnd.adobe.xed-id+json` `Accept`, portanto, a resposta inclui apenas os atributos `title`, `$id`, `meta:altId` e `version` para cada schema. Usar o outro cabeçalho `Accept` (`application/vnd.adobe.xed+json`) retorna todos os atributos de cada schema. Selecione o cabeçalho `Accept` apropriado, dependendo das informações necessárias na sua resposta.
 
 ```json
 {
@@ -108,11 +108,11 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{CONTAINER_ID}` | O container que hospeda o schema que você deseja recuperar: `global` para um schema criado por Adobe ou `tenant` para um schema pertencente à sua organização. |
-| `{SCHEMA_ID}` | O `meta:altId` ou codificado por URL `$id` do schema que você deseja pesquisar. |
+| `{SCHEMA_ID}` | O `meta:altId` ou `$id` codificado por URL do schema que você deseja pesquisar. |
 
 **Solicitação**
 
-A solicitação a seguir recupera um schema especificado por seu `meta:altId` valor no caminho.
+A solicitação a seguir recupera um schema especificado pelo valor `meta:altId` no caminho.
 
 ```shell
 curl -X GET \
@@ -124,19 +124,19 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-O formato de resposta depende do `Accept` cabeçalho enviado na solicitação. Todas as solicitações de pesquisa exigem que `version` sejam incluídas no `Accept` cabeçalho. The following `Accept` headers are available:
+O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. Todas as solicitações de pesquisa exigem que `version` sejam incluídas no cabeçalho `Accept`. Os seguintes cabeçalhos `Accept` estão disponíveis:
 
 | `Accept` header | Descrição |
 | ------- | ------------ |
 | `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Bruto com `$ref` e `allOf`, tem títulos e descrições. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e `allOf` resolvido, tem títulos e descrições. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvido, tem títulos e descrições. |
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Bruto com `$ref` e `allOf`, sem títulos ou descrições. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e `allOf` resolvido, sem títulos ou descrições. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e `allOf` resolvidos, descritores incluídos. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidos, sem títulos ou descrições. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidos, descritores incluídos. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do schema. Os campos retornados dependem do `Accept` cabeçalho enviado na solicitação. Experimente com `Accept` cabeçalhos diferentes para comparar as respostas e determinar qual cabeçalho é melhor para seu caso de uso.
+Uma resposta bem-sucedida retorna os detalhes do schema. Os campos retornados dependem do cabeçalho `Accept` enviado na solicitação. Experimente com cabeçalhos `Accept` diferentes para comparar as respostas e determinar qual cabeçalho é melhor para seu caso de uso.
 
 ```json
 {
@@ -193,7 +193,7 @@ O processo de composição do schema começa atribuindo uma classe. A classe def
 
 >[!NOTE]
 >
->A chamada de exemplo abaixo é apenas um exemplo básico de como criar um schema na API, com os requisitos mínimos de composição de uma classe e sem combinações. Para obter as etapas completas sobre como criar um schema na API, incluindo como atribuir campos usando misturas e tipos de dados, consulte o tutorial [de criação de](../tutorials/create-schema-api.md)schemas.
+>A chamada de exemplo abaixo é apenas um exemplo básico de como criar um schema na API, com os requisitos mínimos de composição de uma classe e sem combinações. Para obter as etapas completas sobre como criar um schema na API, incluindo como atribuir campos usando misturas e tipos de dados, consulte o tutorial de criação de schemas [a1/>.](../tutorials/create-schema-api.md)
 
 **Formato da API**
 
@@ -203,7 +203,7 @@ POST /tenant/schemas
 
 **Solicitação**
 
-A solicitação deve incluir um `allOf` atributo que faça referência ao `$id` de uma classe. Este atributo define a &quot;classe base&quot; que o schema implementará. Neste exemplo, a classe base é uma classe &quot;Informações de propriedade&quot; criada anteriormente.
+A solicitação deve incluir um atributo `allOf` que faça referência a `$id` de uma classe. Este atributo define a &quot;classe base&quot; que o schema implementará. Neste exemplo, a classe base é uma classe &quot;Informações de propriedade&quot; criada anteriormente.
 
 ```SHELL
 curl -X POST \
@@ -227,11 +227,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou combinação cujos campos o schema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa o valor `$id` da classe ou da combinação no novo schema será implementada. Deve ser fornecida uma classe, com zero ou mais misturas adicionais. No exemplo acima, o único objeto na `allOf` matriz é a classe schema. |
+| `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou combinação cujos campos o schema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa `$id` da classe ou o mixin do novo schema será implementado. Deve ser fornecida uma classe, com zero ou mais misturas adicionais. No exemplo acima, o único objeto na matriz `allOf` é a classe schema. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes do schema recém-criado, incluindo o `$id`, `meta:altId`e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
+Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes do schema recém-criado, incluindo `$id`, `meta:altId` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {
@@ -266,9 +266,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que con
 }
 ```
 
-Executar uma solicitação de GET para [lista de todos os schemas](#list) no container do locatário agora inclui o novo schema. Você pode executar uma solicitação [de](#lookup) pesquisa (GET) usando o `$id` URI codificado por URL para visualização direta do novo schema.
+A execução de uma solicitação de GET para [lista de todos os schemas](#list) no container locatário agora inclui o novo schema. Você pode executar uma solicitação [de pesquisa (GET)](#lookup) usando o URI `$id` codificado em URL para visualização do novo schema diretamente.
 
-Para adicionar campos adicionais a um schema, é possível executar uma operação [de](#patch) PATCH para adicionar combinações ao schema `allOf` e às `meta:extends` matrizes.
+Para adicionar campos adicionais a um schema, você pode executar uma operação [PATCH](#patch) para adicionar combinações às matrizes `allOf` e `meta:extends` do schema.
 
 ## Atualizar um schema {#put}
 
@@ -276,7 +276,7 @@ Você pode substituir um schema inteiro por uma operação de PUT, essencialment
 
 >[!NOTE]
 >
->Se você quiser apenas atualizar parte de um schema em vez de substituí-lo totalmente, consulte a seção sobre como [atualizar uma parte de um schema](#patch).
+>Se você quiser apenas atualizar parte de um schema em vez de substituí-lo totalmente, consulte a seção sobre [atualizar uma parte de um schema](#patch).
 
 **Formato da API**
 
@@ -286,11 +286,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `meta:altId` ou codificado por URL `$id` do schema que você deseja regravar. |
+| `{SCHEMA_ID}` | O `meta:altId` ou `$id` codificado por URL do schema que você deseja gravar novamente. |
 
 **Solicitação**
 
-A solicitação a seguir substitui um schema existente, alterando seus atributos `title`, `description`e `allOf` .
+A solicitação a seguir substitui um schema existente, alterando seus atributos `title`, `description` e `allOf`.
 
 ```SHELL
 curl -X PUT \
@@ -351,11 +351,11 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado.
 
 ## Atualizar uma parte de um schema {#patch}
 
-É possível atualizar uma parte de um schema usando uma solicitação de PATCH. O [!DNL Schema Registry] suporta todas as operações padrão de Patch JSON, incluindo `add`, `remove`e `replace`. Para obter mais informações sobre o Patch JSON, consulte o guia [de fundamentos da](../../landing/api-fundamentals.md#json-patch)API.
+É possível atualizar uma parte de um schema usando uma solicitação de PATCH. O [!DNL Schema Registry] suporta todas as operações padrão de Patch JSON, incluindo `add`, `remove` e `replace`. Para obter mais informações sobre o Patch JSON, consulte o [guia de fundamentos da API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte a seção sobre como [substituir um schema usando uma operação](#put)PUT.
+>Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte a seção em [substituição de um schema usando uma operação PUT](#put).
 
 Uma das operações de PATCH mais comuns envolve a adição de misturas previamente definidas a um schema, como demonstrado pelo exemplo abaixo.
 
@@ -367,11 +367,11 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` o schema que você deseja atualizar. |
+| `{SCHEMA_ID}` | O URI `$id` codificado por URL ou `meta:altId` do schema que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação de exemplo abaixo adiciona uma nova combinação a um schema adicionando o `$id` valor dessa combinação às `meta:extends` matrizes `allOf` e às matrizes.
+A solicitação de exemplo abaixo adiciona uma nova combinação a um schema adicionando o valor `$id` dessa combinação às matrizes `meta:extends` e `allOf`.
 
 O corpo da solicitação assume a forma de uma matriz, com cada objeto listado representando uma alteração específica para um campo individual. Cada objeto inclui a operação a ser executada (`op`), em qual campo a operação deve ser executada (`path`) e quais informações devem ser incluídas nessa operação (`value`).
 
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **Resposta**
 
-A resposta mostra que ambas as operações foram executadas com êxito. A mistura `$id` foi adicionada à `meta:extends` matriz e uma referência (`$ref`) à mistura `$id` agora aparece na `allOf` matriz.
+A resposta mostra que ambas as operações foram executadas com êxito. A mistura `$id` foi adicionada à matriz `meta:extends` e uma referência (`$ref`) à mistura `$id` agora aparece na matriz `allOf`.
 
 ```JSON
 {
@@ -442,7 +442,7 @@ A resposta mostra que ambas as operações foram executadas com êxito. A mistur
 
 ## Ative um schema para uso no Perfil do cliente em tempo real {#union}
 
-Para que um schema participe do Perfil [Cliente em tempo](../../profile/home.md)real, é necessário adicionar uma `union` tag ao storage do schema `meta:immutableTags` . Para fazer isso, faça uma solicitação PATCH para o schema em questão.
+Para que um schema participe do [Perfil do cliente em tempo real](../../profile/home.md), é necessário adicionar uma tag `union` ao storage do schema `meta:immutableTags`. Para fazer isso, faça uma solicitação PATCH para o schema em questão.
 
 >[!IMPORTANT]
 >
@@ -456,11 +456,11 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` o schema que você deseja ativar. |
+| `{SCHEMA_ID}` | O URI `$id` codificado por URL ou `meta:altId` do schema que você deseja ativar. |
 
 **Solicitação**
 
-A solicitação de exemplo abaixo adiciona uma `meta:immutableTags` matriz a um schema existente, dando ao storage um valor de sequência de caracteres único de `union` para permitir o uso no Perfil.
+A solicitação de exemplo abaixo adiciona uma matriz `meta:immutableTags` a um schema existente, dando ao storage um valor de sequência de caracteres único de `union` para permitir seu uso no Perfil.
 
 ```SHELL
 curl -X PATCH\
@@ -481,7 +481,7 @@ curl -X PATCH\
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do schema atualizado, mostrando que o `meta:immutableTags` storage foi adicionado.
+Uma resposta bem-sucedida retorna os detalhes do schema atualizado, mostrando que a matriz `meta:immutableTags` foi adicionada.
 
 ```JSON
 {
@@ -523,7 +523,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, mostrando qu
 }
 ```
 
-Agora você pode visualização a união desta classe de schemas para confirmar se os campos de schemas estão representados. Consulte o guia [de endpoint do](./unions.md) união para obter mais informações.
+Agora você pode visualização a união desta classe de schemas para confirmar se os campos de schemas estão representados. Consulte o [guia de ponto de extremidade do união](./unions.md) para obter mais informações.
 
 ## Excluir um schema {#delete}
 
@@ -537,7 +537,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` o schema que você deseja excluir. |
+| `{SCHEMA_ID}` | O URI `$id` codificado por URL ou `meta:altId` do schema que você deseja excluir. |
 
 **Solicitação**
 
@@ -554,4 +554,4 @@ curl -X DELETE \
 
 Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo em branco.
 
-Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o schema. Você precisará incluir um `Accept` cabeçalho na solicitação, mas deverá receber um status HTTP 404 (Não encontrado), pois o schema foi removido do Registro do Schema.
+Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) para o schema. Você precisará incluir um cabeçalho `Accept` na solicitação, mas deverá receber um status HTTP 404 (Não encontrado), pois o schema foi removido do Registro do Schema.

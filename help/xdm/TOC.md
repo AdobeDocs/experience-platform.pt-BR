@@ -5,9 +5,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 translation-type: tm+mt
-source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
+source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '215'
 ht-degree: 24%
 
 ---
@@ -21,8 +21,6 @@ ht-degree: 24%
    * [Práticas recomendadas para modelagem de dados](schema/best-practices.md)
    * [Restrições de tipo de campo XDM](schema/field-constraints.md)
    * [Dicionário de campos XDM](schema/field-dictionary.md)
-   * Casos de uso do schema {#use-cases}
-      * [Tipo de dados de consentimentos e preferências](schema/privacy-consent.md)
 * Classes {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -82,6 +80,9 @@ ht-degree: 24%
    * [Tipos de dados](api/data-types.md)
    * [Descritores](api/descriptors.md)
    * [Uniões](api/unions.md)
+   * [Exportar/Importar](api/export-import.md)
+   * [Dados de amostra](api/sample-data.md)
+   * [Log de auditoria](api/audit-log.md)
    * [Schemas Ad-hoc](api/ad-hoc.md)
    * [Apêndice](api/appendix.md)
 * Tutoriais {#tutorials}

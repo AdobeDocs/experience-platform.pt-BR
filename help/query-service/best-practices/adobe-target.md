@@ -1,0 +1,226 @@
+---
+keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
+solution: Experience Platform
+title: Query de amostra
+topic: queries
+description: Os dados da Adobe Target são transformados em schema XDM do Experience Evento e ingeridos em conjuntos de dados do Experience Platform para você. Este documento contém query de amostra para usar o Query Service com seus conjuntos de dados Adobe Target.
+translation-type: tm+mt
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+workflow-type: tm+mt
+source-wordcount: '309'
+ht-degree: 1%
+
+---
+
+
+# Query de amostra para dados do Adobe Target
+
+Os dados da Adobe Target são transformados em schema XDM do Experience Evento e ingeridos no Adobe Experience Platform como conjuntos de dados para você. Há muitos casos de uso do Adobe Experience Platform Query Service com esses dados, e os seguintes query de amostra devem funcionar com seus conjuntos de dados Adobe Target.
+
+No Experience Platform, o nome do conjunto de dados criado automaticamente é &quot;Eventos do Adobe Target Experience&quot;. Ao usar esse conjunto de dados com query, você deve usar o nome `adobe_target_experience_events`.
+
+## Mapeamento de campo XDM parcial de alto nível
+
+A lista a seguir mostra os campos de Público alvo que mapeiam para seus campos XDM correspondentes.
+
+>[!NOTE]
+>
+> O uso de `[ ]` no campo XDM denota uma matriz.
+
+- mboxName: `_experience.target.mboxname`
+- ID da atividade: `_experience.target.activities.activityID`
+- ID da experiência: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
+- ID do segmento: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
+- Escopo do evento: `_experience.target.activities[].activityEvents[].eventScope`
+   - Esse campo rastreia novos visitantes e visitas.
+- ID da etapa: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
+   - Este campo é uma ID de etapa personalizada para Adobe Campaign.
+- Preço Total: `commerce.order.priceTotal`
+
+## Query de amostra
+
+Os query a seguir mostram exemplos de query usados com frequência no Adobe Target.
+
+Nos exemplos a seguir, será necessário editar o SQL para preencher os parâmetros esperados para seus query com base no conjunto de dados, nas variáveis ou no período de tempo que você está interessado em avaliar. Forneça parâmetros onde quer que você veja `{ }` no SQL.
+
+### Contagens de atividade por hora para um determinado dia
+
+```sql
+SELECT
+  Hour,
+  ActivityID,
+  COUNT(ActivityID) AS Instances
+FROM
+(
+  SELECT
+    date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd HH') AS Hour,
+    EXPLODE(_experience.target.activities.activityID) AS ActivityID
+  FROM adobe_target_experience_events
+  WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
+    _experience.target.activities IS NOT NULL
+)
+GROUP BY Hour, ActivityID
+ORDER BY Hour DESC, Instances DESC
+LIMIT 24
+```
+
+### Detalhes por hora de uma atividade específica para um determinado dia
+
+```sql
+SELECT
+  date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd HH') AS Hour,
+  _experience.target.activities.activityID AS ActivityID,
+  COUNT(ActivityID) AS Instances
+FROM adobe_target_experience_events
+WHERE
+  array_contains( _experience.target.activities.activityID, {Activity ID} ) AND 
+    TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
+  _experience.target.activities IS NOT NULL
+GROUP BY Hour, ActivityID
+ORDER BY Hour DESC
+LIMIT 24
+```
+
+### IDs de experiência para uma atividade específica de um determinado dia
+
+```sql
+SELECT
+  Day,
+  Activities.activityID,
+  ExperienceID,
+  COUNT(ExperienceID) AS Instances
+FROM
+(
+  SELECT
+    Day,
+    Activities,
+    EXPLODE(Activities.activityEvents._experience.target.activity.activityevent.context.experienceID) AS ExperienceID
+  FROM
+  (
+    SELECT
+      date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd') AS Day,
+      EXPLODE(_experience.target.activities) AS Activities
+    FROM adobe_target_experience_events
+    WHERE 
+      TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
+      _experience.target.activities IS NOT NULL
+  )
+  WHERE Activities.activityID = {activity_id}
+)
+GROUP BY Day, Activities.activityID, ExperienceID
+ORDER BY Day DESC, Instances DESC
+LIMIT 20
+```
+
+### Retorna uma lista de escopos de Evento (visitante, visita, impressão) por instâncias por ID de Atividade para um determinado dia
+
+```sql
+SELECT
+  Day,
+  Activities.activityID,
+  EventScope,
+  COUNT(EventScope) AS Instances
+FROM
+(
+  SELECT
+    Day,
+    Activities,
+    EXPLODE(Activities.activityEvents.eventScope) AS EventScope
+  FROM
+  (
+    SELECT
+      date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd') AS Day,
+      EXPLODE(_experience.target.activities) AS Activities
+    FROM adobe_target_experience_events
+    WHERE 
+      TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
+      _experience.target.activities IS NOT NULL
+  )
+)
+GROUP BY Day, Activities.activityID, EventScope
+ORDER BY Day DESC, Instances DESC
+LIMIT 30
+```
+
+### Contagem de retorno de visitantes, visitas, impressões por atividade para um determinado dia
+
+```sql
+SELECT
+  Hour,
+  Activities.activityid,
+  SUM(CASE WHEN array_contains( Activities.activityEvents.eventScope, 'visitor' ) THEN 1 END) as Visitors,
+  SUM(CASE WHEN array_contains( Activities.activityEvents.eventScope, 'visit' ) THEN 1 END) as Visits,
+  SUM(CASE WHEN array_contains( Activities.activityEvents.eventScope, 'impression' ) THEN 1 END) as Impressions
+FROM
+(
+  SELECT
+    date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd HH') AS Hour,
+    EXPLODE(_experience.target.activities) AS Activities
+  FROM adobe_target_experience_events
+  WHERE
+    TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
+    _experience.target.activities IS NOT NULL
+)
+GROUP BY Hour, Activities.activityid
+ORDER BY Hour DESC, Visitors DESC
+LIMIT 30
+```
+
+### Retornar visitantes, visitas, impressões para Experience ID, Segment ID e EventScope para um determinado dia
+
+```sql
+SELECT
+  Day,
+  Activities.activityID,
+  ExperienceID,
+  SegmentID._id,
+  SUM(CASE WHEN ActivityEvent.eventScope = 'visitor' THEN 1 END) as Visitors,
+  SUM(CASE WHEN ActivityEvent.eventScope = 'visit' THEN 1 END) as Visits,
+  SUM(CASE WHEN ActivityEvent.eventScope = 'impression' THEN 1 END) as Impressions
+FROM
+(
+  SELECT
+    Day,
+    Activities,
+    ActivityEvent,
+    ActivityEvent._experience.target.activity.activityevent.context.experienceID AS ExperienceID,
+    EXPLODE(ActivityEvent.segmentEvents.segmentID) AS SegmentID
+  FROM
+  (
+    SELECT
+      Day,
+      Activities,
+      EXPLODE(Activities.activityEvents) AS ActivityEvent
+    FROM
+    (
+      SELECT
+        date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd') AS Day,
+        EXPLODE(_experience.target.activities) AS Activities
+      FROM adobe_target_experience_events
+      WHERE 
+        TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
+        _experience.target.activities IS NOT NULL
+      LIMIT 1000000
+    )
+    LIMIT 1000000
+  )
+  LIMIT 1000000
+)
+GROUP BY Day, Activities.activityID, ExperienceID, SegmentID._id
+ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, Visitors DESC
+LIMIT 20
+```
+
+### Retornar nomes de mbox e contagem de registros para um determinado dia
+
+```sql
+SELECT
+  _experience.target.mboxname,
+  COUNT(timestamp) AS records
+FROM
+  adobe_target_experience_events
+WHERE
+  TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
+  GROUP BY _experience.target.mboxname ORDER BY records DESC
+LIMIT 100
+```

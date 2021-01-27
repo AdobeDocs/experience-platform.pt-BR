@@ -5,7 +5,7 @@ title: funções definidas pelo Adobe
 topic: functions
 description: Este documento fornece informações para as funções definidas pelo Adobe, disponíveis no Serviço de Query.
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 2%
@@ -667,14 +667,14 @@ Uma explicação dos parâmetros dentro da função `OVER()` pode ser encontrada
 **Exemplo de query**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **Resultados**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ Para o query de amostra fornecido, os resultados são fornecidos na coluna `aver
 
 ## Próximas etapas
 
-Usando as funções descritas aqui, você pode gravar query para acessar seus próprios conjuntos de dados [!DNL Experience Event] usando [!DNL Query Service]. Para obter mais informações sobre a criação de query em [!DNL Query Service], consulte a documentação sobre [criação de query](../creating-queries/creating-queries.md).
+Usando as funções descritas aqui, você pode gravar query para acessar seus próprios conjuntos de dados [!DNL Experience Event] usando [!DNL Query Service]. Para obter mais informações sobre a criação de query em [!DNL Query Service], consulte a documentação sobre [criação de query](../best-practices/writing-queries.md).
 
 ## Recursos adicionais
 

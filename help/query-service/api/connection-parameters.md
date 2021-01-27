@@ -5,9 +5,9 @@ title: Guia do desenvolvedor do Query Service
 topic: connection parameters
 description: Você pode recuperar seus parâmetros de conexão para usar o serviço interativo, fazendo uma solicitação de GET para o terminal /connection_parameters.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '134'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 ## Chamadas de API de exemplo
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a [!DNL Query Service] API. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a [!DNL Query Service] API. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
-### Solicitar parâmetros de conexão para o serviço interativo
+### Solicitar parâmetros de conexão
 
-Você pode recuperar seus parâmetros de conexão para usar o serviço [](../creating-queries/writing-queries.md) interativo, fazendo uma solicitação de GET para o `/connection_parameters` endpoint. Para obter mais informações sobre clientes que usam parâmetros de conexão para se conectar via serviço interativo, leia a documentação sobre clientes [do Serviço de](../clients/overview.md)Query.
+Você pode recuperar seus parâmetros de conexão fazendo uma solicitação de GET para o terminal `/connection_parameters`. Para obter mais informações sobre clientes que usam parâmetros de conexão para se conectar via serviço interativo, leia a documentação em [clientes do Serviço de Query](../clients/overview.md).
 
 **Formato da API**
 

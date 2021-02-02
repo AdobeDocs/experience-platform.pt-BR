@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform;home;popular topics;CJA;análise de jornada;análise de jornada do cliente;orquestração de campanha;orquestração;jornada do cliente;jornada;orquestração de jornada;capacidade;região
 solution: Experience Platform
 title: Suporte a navegador e idioma Adobe Experience Platform
 topic: getting started
 description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para a construção e gerenciamento de soluções completas que impulsionam a experiência do cliente. A Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 translation-type: tm+mt
-source-git-commit: 56116abcb4273b27ffcb3aefed0acf2ac35152fe
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 20%
+source-wordcount: '243'
+ht-degree: 18%
 
 ---
 
@@ -19,7 +19,7 @@ A interface do usuário do Adobe Experience Platform (UI) foi projetada para sup
 
 ## Suporte ao navegador
 
-A interface do usuário da plataforma foi projetada para funcionar de forma ideal nas versões **mais** recentes do Google Chrome, Safari, Firefox e Microsoft Edge. Você pode ter problemas para usar determinados recursos em versões mais antigas de navegadores.
+A interface do usuário da plataforma foi projetada para funcionar perfeitamente nas **versões mais recentes** do Google Chrome, Safari, Firefox e Microsoft Edge. Você pode ter problemas para usar determinados recursos em versões mais antigas de navegadores.
 
 | Sistema operacional | Navegadores compatíveis |
 |---|---|
@@ -48,8 +48,8 @@ Seu idioma padrão da interface é determinado pela região especificada no perf
 
 Para alterar seu idioma:
 
-1. Selecione o idioma atual no rodapé da interface do [!DNL Experience Platform] usuário.
-2. Nas configurações do perfil, clique em **[!UICONTROL Alterar região]**.
+1. Selecione o idioma atual no rodapé da interface do usuário [!DNL Experience Platform].
+2. Nas configurações de perfil, selecione **[!UICONTROL Alterar região]**.
 3. Selecione sua região.
 
 >[!NOTE]

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados;Modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;ad-hoc;ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Adhoc;
 solution: Experience Platform
 title: Schemas Ad-hoc
 description: Em circunstâncias específicas, pode ser necessário criar um schema XDM com campos que são namespacados para uso somente por um único conjunto de dados. Isso é chamado de schema ad-hoc.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---

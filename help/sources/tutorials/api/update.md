@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;lar;tópicos populares; serviço de fluxo; atualizar conexões
 solution: Experience Platform
 title: Atualizar informações de conexão usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
 description: Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. A API de Serviço de Fluxo fornece a você a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de fluxo existente, incluindo seu nome, descrição e credenciais.
 translation-type: tm+mt
-source-git-commit: d1a9f7d0c83b8bb34e26b6e5a9825488e62b43de
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '709'
 ht-degree: 2%
 
 ---
@@ -18,26 +18,26 @@ ht-degree: 2%
 
 Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. [!DNL Flow Service] fornece a você a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de fluxo existente, incluindo seu nome, descrição e credenciais.
 
-Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão existente usando o [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para atualizar os detalhes e as credenciais de uma conexão existente usando [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
-Este tutorial requer que você tenha uma ID de conexão válida. Se você não tiver uma ID de conexão válida, selecione seu conector de opção na visão geral [das](../../home.md) fontes e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer que você tenha uma ID de conexão válida. Se você não tiver uma ID de conexão válida, selecione seu conector de opção na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Caixas de proteção](../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para atualizar com êxito as informações de sua conexão usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para atualizar com êxito as informações de sua conexão usando a API [!DNL Flow Service].
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -54,7 +54,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 ## Procurar detalhes da conexão
 
 >[!NOTE]
->Este tutorial usa o conector [de origem do](../../connectors/crm/salesforce.md) Salesforce como exemplo, mas as etapas descritas se aplicam a qualquer um dos conectores [de origem](../../home.md)disponíveis.
+>Este tutorial usa o [conector de origem do Salesforce](../../connectors/crm/salesforce.md) como exemplo, mas as etapas descritas se aplicam a qualquer um dos [conectores de origem disponíveis](../../home.md).
 
 A primeira etapa para atualizar suas informações de conexão é recuperar detalhes de conexão usando sua ID de conexão.
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja recuperar. |
+| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja recuperar. |
 
 **Solicitação**
 
@@ -121,10 +121,10 @@ Uma resposta bem-sucedida retorna os detalhes atuais de sua conexão, incluindo 
 
 ## Atualizar conexão
 
-Depois de ter uma ID de conexão existente, execute uma solicitação PATCH para a [!DNL Flow Service] API.
+Depois de ter uma ID de conexão existente, execute uma solicitação PATCH para a API [!DNL Flow Service].
 
 >[!IMPORTANT]
->Uma solicitação de PATCH requer o uso do `If-Match` cabeçalho. O valor desse cabeçalho é a versão exclusiva da sua conexão.
+>Uma solicitação de PATCH requer o uso do cabeçalho `If-Match`. O valor desse cabeçalho é a versão exclusiva da sua conexão.
 
 **Formato da API**
 
@@ -134,7 +134,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja atualizar. |
+| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja atualizar. |
 
 **Solicitação**
 
@@ -173,7 +173,7 @@ curl -X PATCH \
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `op` | A chamada de operação usada para definir a ação necessária para atualizar a conexão. As operações incluem: `add`, `replace`e `remove`. |
+| `op` | A chamada de operação usada para definir a ação necessária para atualizar a conexão. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | O caminho do parâmetro a ser atualizado. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
@@ -190,7 +190,7 @@ Uma resposta bem-sucedida retorna sua ID de conexão e uma tag atualizada.
 
 ## Procurar detalhes de ligação atualizados
 
-Você pode recuperar a mesma ID de conexão que atualizou para ver as alterações feitas, fazendo uma solicitação de GET para a [!DNL Flow Service] API.
+Você pode recuperar a mesma ID de conexão que atualizou para ver as alterações feitas, fazendo uma solicitação de GET para a API [!DNL Flow Service].
 
 **Formato da API**
 
@@ -200,7 +200,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja recuperar. |
+| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja recuperar. |
 
 **Solicitação**
 
@@ -255,4 +255,4 @@ Uma resposta bem-sucedida retorna os detalhes atualizados de sua ID de conexão,
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você atualizou as credenciais e as informações associadas à sua conexão usando a [!DNL Flow Service] API. Para obter mais informações sobre como usar conectores de origem, consulte a visão geral [das](../../home.md)fontes.
+Ao seguir este tutorial, você atualizou as credenciais e informações associadas à sua conexão usando a API [!DNL Flow Service]. Para obter mais informações sobre como usar conectores de origem, consulte a [visão geral das fontes](../../home.md).

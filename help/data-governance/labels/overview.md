@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
+keywords: Experience Platform;home;popular tópicos;controle de dados;etiqueta de uso de dados api;api de serviço de política;visão geral dos rótulos de uso de dados;;home;popular topics;controle de dados;data usage label api;policy service api;data usage label
 solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 topic: labels
 description: O Adobe Experience Platform Data Governance permite que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Este documento fornece uma visão geral das etiquetas de uso de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Para obter mais informações sobre como a imposição automática funciona na P
 
 [!DNL Experience Platform] tem a capacidade de compartilhar segmentos com a Adobe Audience Manager. Todos os Controles de exportação de dados que foram aplicados a segmentos Audience Manager são traduzidos para rótulos e ações de marketing equivalentes reconhecidos por [!DNL Experience Platform] [!DNL Data Governance].
 
-Para obter uma referência sobre como os controles de exportação de dados específicos mapeiam para rótulos de uso de dados em [!DNL Platform], consulte a [documentação do Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Para obter uma referência sobre como os controles de exportação de dados específicos mapeiam para rótulos de uso de dados em [!DNL Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gerenciando rótulos de uso de dados em [!DNL Experience Platform] {#manage-labels}
 

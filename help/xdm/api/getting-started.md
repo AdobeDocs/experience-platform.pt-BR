@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;
 solution: Experience Platform
 title: Introdução à API do Registro de Schemas
 description: Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do Registro do Schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ A documentação da API [!DNL Schema Registry] fornece exemplos de chamadas de A
 
 ## Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -203,7 +203,7 @@ Ao executar operações de lista e pesquisa (GET) na API [!DNL Schema Registry],
 
 A tabela a seguir lista valores de cabeçalho compatíveis `Accept`, incluindo aqueles com números de versão, juntamente com descrições do que a API retornará quando for usada.
 
-| Aceitar | Descrição |
+| Accept | Descrição |
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Retorna apenas uma lista de IDs. Isso é usado com mais frequência para a listagem de recursos. |
 | `application/vnd.adobe.xed+json` | Retorna uma lista de schema JSON completo com `$ref` e `allOf` originais incluídos. Isto é usado para devolver uma lista de recursos completos. |

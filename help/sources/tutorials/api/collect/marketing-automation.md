@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
+keywords: Experience Platform;home;popular topics;sistema de automação de marketing;Coletar dados de automação de marketing
 solution: Experience Platform
 title: Coletar dados de automação de marketing por meio de conectores de origem e APIs
 topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de automação de marketing e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1537'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

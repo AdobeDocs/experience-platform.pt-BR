@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
+keywords: Experience Platform;home;popular topics;nuvem armazenamento;armazenamento na nuvem
 solution: Experience Platform
 title: Explore um sistema de armazenamento em nuvem usando a API de Serviço de Fluxo
 topic: overview
 description: Este tutorial usa a API de Serviço de Fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
-source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '759'
 ht-degree: 2%
 
 ---
 
 
-# Explore um sistema de armazenamento em nuvem usando a [!DNL Flow Service] API
+# Explore um sistema de armazenamento em nuvem usando a API [!DNL Flow Service]
 
 Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para explorar um sistema de armazenamento em nuvem de terceiros.
 
@@ -21,10 +21,10 @@ Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/apis/experien
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Caixas de proteção](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um sistema de armazenamento em nuvem usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um sistema de armazenamento em nuvem usando a API [!DNL Flow Service].
 
 ### Obter uma ID de conexão
 
@@ -41,11 +41,11 @@ Para explorar um armazenamento em nuvem de terceiros usando [!DNL Platform] APIs
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no diretório consultado. Anote a `path` propriedade do arquivo que deseja carregar, pois é necessário fornecê-lo na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no diretório consultado. Anote a propriedade `path` do arquivo que deseja carregar, pois é necessário fornecê-lo na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -175,4 +175,4 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo n
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja inserir [!DNL Platform]e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu armazenamento em nuvem e trazê-los para a plataforma](../collect/cloud-storage.md).
+Ao seguir este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja inserir em [!DNL Platform] e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu armazenamento em nuvem e trazê-los para a plataforma](../collect/cloud-storage.md).

@@ -5,41 +5,47 @@ title: Conectar com o Looker
 topic: connect
 description: Este documento percorre as etapas para conectar o Looker ao Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
 
-# Conectar-se com [!DNL Looker]
+# [!DNL Looker]
 
-Para conectar [!DNL Looker] com [!DNL Query Service] no Adobe Experience Platform, siga as etapas abaixo:
-
-Depois de fazer logon em [!DNL Looker], clique em **[!UICONTROL Admin]**, seguido por **[!UICONTROL Conexões]**.
-
-![](../images/clients/looker/click-admin-connections.png)
-
-Nesta página, clique em **Nova conexão**.
-
-![](../images/clients/looker/click-new-connection.png)
-
-Aqui, você pode preencher os detalhes das Configurações de conexão.
-
-![](../images/clients/looker/new-connection.png)
-
-- **Nome:** O nome da sua conexão.
-- **Dialeto:** o dialeto usado para o banco de dados SQL. [!DNL Query Service] usa  **[!DNL PostgreSQL]**.
-- **Host e porta:** o ponto de extremidade do host e sua porta para  [!DNL Query Service].
-- **Banco de dados:** o banco de dados que será usado.
-- **Nome de usuário e senha:** as credenciais de logon que serão usadas. O nome de usuário estará na forma de `ORG_ID@AdobeOrg`.
+Este documento cobre as etapas para conectar [!DNL Looker] ao Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
->Para obter mais informações sobre como localizar seu host e porta, nome do banco de dados e credenciais de logon, visite a página [credenciais em Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform], clique em **[!UICONTROL Query]** e, em seguida, clique em **[!UICONTROL Credenciais]**.
+> Este guia supõe que você já tenha acesso a [!DNL Looker] e esteja familiarizado com como navegar em sua interface. Mais informações sobre [!DNL Looker] podem ser encontradas na [oficial [!DNL Looker] documentação](https://docs.looker.com/).
 
-Depois de inserir os detalhes da conexão, clique em **[!UICONTROL Testar essas configurações]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem informando que você pode se conectar será exibida abaixo. Se a conexão for realmente bem-sucedida, clique em **[!UICONTROL Adicionar conexão]** para criar a conexão.
+## Conectar [!DNL Looker] com a plataforma
+
+Depois de fazer logon em [!DNL Looker], selecione **[!DNL Admin]**, seguido por **[!DNL Connections]**.
+
+![](../images/clients/looker/click-admin-connections.png)
+
+Nesta página, selecione **[!DNL New Connection]**.
+
+![](../images/clients/looker/click-new-connection.png)
+
+Aqui, você pode preencher os detalhes das configurações de conexão.
+
+![](../images/clients/looker/new-connection.png)
+
+- **[!DNL Name]:** O nome da sua conexão.
+- **[!DNL Dialect]:** O dialeto usado para o banco de dados SQL. [!DNL Query Service] usa  **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** O terminal do host e sua porta para  [!DNL Query Service].
+- **[!DNL Database]:** O banco de dados que será usado.
+- **[!DNL Username and Password]:** As credenciais de logon que serão usadas. O nome de usuário estará na forma de `ORG_ID@AdobeOrg`.
+
+>[!NOTE]
+>
+>Para obter mais informações sobre como localizar seu host e porta, nome do banco de dados e credenciais de logon, visite a página [credenciais em Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform] e selecione **[!UICONTROL Query]**, seguido por **[!UICONTROL Credenciais]**.
+
+Depois de inserir os detalhes da conexão, selecione **[!DNL Test These Settings]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem indicando que você pode se conectar será exibida abaixo. Se sua conexão for realmente bem-sucedida, selecione **[!DNL Add Connection]** para criar sua conexão.
 
 ![](../images/clients/looker/click-test-connection.png)
 

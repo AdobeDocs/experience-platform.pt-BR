@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;classe;classes;
 solution: Experience Platform
 title: Criar e editar classes na interface do usuário
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Depois que você tiver um schema que emprega uma classe personalizada aberta no 
 
 >[!IMPORTANT]
 >
->Lembre-se de que todos os campos adicionados a uma classe serão usados em todos os schemas que empregam essa classe. Portanto, você deve considerar cuidadosamente quais campos serão úteis em todos os casos de uso de schemas. Se você estiver pensando em adicionar um campo que pode ver o uso somente em alguns schemas desta classe, talvez você queira adicionar o campo a esses schemas ao criar uma combinação[.](./mixins.md#create)
+>Lembre-se de que todos os campos adicionados a uma classe serão usados em todos os schemas que empregam essa classe. Portanto, você deve considerar cuidadosamente quais campos serão úteis em todos os casos de uso de schemas. Se você estiver pensando em adicionar um campo que pode ver o uso somente em alguns schemas desta classe, talvez você queira adicionar o campo a esses schemas ao criar uma combinação](./mixins.md#create).[
 
 Um **[!UICONTROL Novo campo]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia em [definindo campos na interface do usuário](../fields/overview.md#define) para obter etapas específicas sobre como configurar e adicionar o campo à classe.
 

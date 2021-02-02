@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;mixin registry;mixin registry;mixin;Mixin;Mixins;Mixins;create
 solution: Experience Platform
 title: Criar uma mistura
-description: O endpoint /mixins na API do Registro de Schemas permite que você gerencie programaticamente as misturas XDM no aplicativo da experiência.
+description: O endpoint /mixins na API do Registro de Schemas permite que você gerencie programaticamente as misturas XDM dentro do aplicativo de experiência.
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---

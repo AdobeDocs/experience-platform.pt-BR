@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
-title: Consentimento
+title: Ponto de extremidade de consentimento
 topic: developer guide
+description: Saiba como gerenciar solicitações de consentimento do cliente para aplicativos Experience Cloud usando a API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
 
 
-# Consentimento
+# Ponto de extremidade de consentimento
 
-Determinados regulamentos exigem consentimento explícito do cliente antes que seus dados pessoais possam ser coletados. O `/consent` endpoint na [!DNL Privacy Service] API permite processar solicitações de consentimento do cliente e integrá-las ao seu fluxo de trabalho de privacidade.
+Determinadas regulamentações exigem o consentimento explícito do cliente antes que seus dados pessoais possam ser coletados. O endpoint `/consent` na API [!DNL Privacy Service] permite processar solicitações de consentimento do cliente e integrá-las ao seu fluxo de trabalho de privacidade.
 
-Antes de usar este guia, consulte a seção [Introdução](./getting-started.md) para obter informações sobre os cabeçalhos de autenticação necessários apresentados na chamada de API de exemplo abaixo.
+Antes de usar este guia, consulte a seção [getting started](./getting-started.md) para obter informações sobre os cabeçalhos de autenticação necessários apresentados na chamada de API de exemplo abaixo.
 
 ## Processar uma solicitação de consentimento do cliente
 
-As solicitações de consentimento são processadas por meio de uma solicitação POST para o `/consent` ponto final.
+As solicitações de consentimento são processadas fazendo uma solicitação POST para o terminal `/consent`.
 
 **Formato da API**
 
@@ -30,7 +31,7 @@ POST /consent
 
 **Solicitação**
 
-A solicitação a seguir cria um novo trabalho de consentimento para as IDs de usuário fornecidas no `entities` storage.
+A solicitação a seguir cria um novo trabalho de consentimento para as IDs de usuário fornecidas na matriz `entities`.
 
 ```shell
 curl -X POST \
@@ -61,14 +62,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `optOutOfSale` | Quando definido como true, indica que os usuários fornecidos desejam `entities` recusar a venda ou compartilhar seus dados pessoais. |
+| `optOutOfSale` | Quando definido como true, indica que os usuários fornecidos em `entities` desejam excluir a venda ou compartilhar seus dados pessoais. |
 | `entities` | Uma matriz de objetos que indica aos usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma matriz de `values` para corresponder usuários individuais a essa namespace. |
-| `nameSpace` | Cada objeto na `entities` matriz deve conter uma das namespaces [de identidade](./appendix.md#standard-namespaces) padrão reconhecidas pela API Privacy Service. |
-| `values` | Uma matriz de valores para cada usuário, correspondente ao fornecido `nameSpace`. |
+| `nameSpace` | Cada objeto na matriz `entities` deve conter uma das [namespaces de identidade padrão](./appendix.md#standard-namespaces) reconhecidas pela API Privacy Service. |
+| `values` | Uma matriz de valores para cada usuário, correspondente ao `nameSpace` fornecido. |
 
 >[!NOTE]
 >
->Para obter mais informações sobre como determinar para quais valores de identidade do cliente enviar, consulte o guia sobre como [!DNL Privacy Service]fornecer dados [](../identity-data.md)de identidade.
+>Para obter mais informações sobre como determinar quais valores de identidade do cliente enviar para [!DNL Privacy Service], consulte o guia em [fornecendo dados de identidade](../identity-data.md).
 
 **Resposta**
 

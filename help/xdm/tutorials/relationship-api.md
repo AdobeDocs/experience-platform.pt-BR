@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;schema;Schema;schemas;relacionamento;relacionamento;Descritor de relacionamento;Descritor de relacionamento;identidade de referência;Identidade de referência;
 solution: Experience Platform
 title: Definir uma relação entre dois schemas usando a API do Registro de Schemas
 description: Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando a API do Registro do Schema.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1337'
 ht-degree: 1%
 
 ---
 
 
-# Definir uma relação entre dois schemas usando a [!DNL Schema Registry] API
+# Defina uma relação entre dois schemas usando a API [!DNL Schema Registry]
 
-A capacidade de entender as relações entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante da Adobe Experience Platform. A definição desses relacionamentos dentro da estrutura dos schemas [!DNL Experience Data Model] (XDM) permite obter insights complexos sobre os dados do cliente.
+A capacidade de entender as relações entre seus clientes e suas interações com a sua marca em vários canais é uma parte importante da Adobe Experience Platform. Definir esses relacionamentos dentro da estrutura dos schemas [!DNL Experience Data Model] (XDM) permite que você obtenha insights complexos sobre os dados do cliente.
 
-Embora as relações com os schemas possam ser inferidas com o uso do schema da união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo de relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
+Embora as relações de schema possam ser inferidas com o uso do schema de união e [!DNL Real-time Customer Profile], isso se aplica somente aos schemas que compartilham a mesma classe. Para estabelecer uma relação entre dois schemas pertencentes a classes diferentes, um campo de relacionamento dedicado deve ser adicionado a um schema de origem, que faz referência à identidade de um schema de destino.
 
-Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando o [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Este documento fornece um tutorial para definir uma relação um para um entre dois schemas definidos pela sua organização usando [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Introdução
 
-Este tutorial requer uma compreensão de trabalho do [!DNL Experience Data Model] (XDM) e do [!DNL XDM System]. Antes de iniciar este tutorial, reveja a seguinte documentação:
+Este tutorial requer uma compreensão funcional de [!DNL Experience Data Model] (XDM) e [!DNL XDM System]. Antes de iniciar este tutorial, reveja a seguinte documentação:
 
-* [Sistema XDM no Experience Platform](../home.md): Uma visão geral do XDM e sua implementação em [!DNL Experience Platform].
-   * [Noções básicas da composição](../schema/composition.md)do schema: Uma introdução dos blocos de construção dos schemas XDM.
+* [Sistema XDM no Experience Platform](../home.md): Uma visão geral do XDM e sua implementação em  [!DNL Experience Platform].
+   * [Noções básicas da composição](../schema/composition.md) do schema: Uma introdução dos blocos de construção dos schemas XDM.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Caixas de proteção](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas à [!DNL Schema Registry] API com êxito. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho [!DNL Accept] e seus possíveis valores).
+Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Schema Registry]. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho [!DNL Accept] e seus possíveis valores).
 
 ## Definir um schema de origem e de destino {#define-schemas}
 
-Espera-se que você já tenha criado os dois schemas que serão definidos no relacionamento. Este tutorial cria uma relação entre os membros do programa de fidelidade atual de uma organização (definido em um &quot;[!DNL Loyalty Members]&quot; schema) e seus hotéis favoritos (definido em um schema &quot;[!DNL Hotels]&quot;).
+Espera-se que você já tenha criado os dois schemas que serão definidos no relacionamento. Este tutorial cria uma relação entre os membros do programa de fidelidade atual de uma organização (definido em um schema &quot;[!DNL Loyalty Members]&quot;) e seus hotéis favoritos (definido em um schema &quot;[!DNL Hotels]&quot;).
 
-As relações de schema são representadas por um schema **de** origem com um campo que se refere a outro campo dentro de um schema **de** destino. Nas etapas a seguir, &quot;[!DNL Loyalty Members]&quot; será o schema de origem, enquanto &quot;[!DNL Hotels]&quot; atuará como o schema de destino.
+As relações de schema são representadas por um **schema de origem** com um campo que se refere a outro campo dentro de um **schema de destino**. Nas etapas a seguir, &quot;[!DNL Loyalty Members]&quot; será o schema de origem, enquanto &quot;[!DNL Hotels]&quot; atuará como o schema de destino.
 
 >[!IMPORTANT]
 >
->Para estabelecer uma relação, ambos os schemas devem ter identidades primárias definidas e estar habilitados para [!DNL Real-time Customer Profile]. Consulte a seção sobre como [ativar um schema para uso no Perfil](./create-schema-api.md#profile) no tutorial de criação do schema se precisar de orientação sobre como configurar seus schemas de acordo.
+>Para estabelecer uma relação, ambos os schemas devem ter identidades primárias definidas e estar habilitados para [!DNL Real-time Customer Profile]. Consulte a seção sobre [ativar um schema para uso no Perfil](./create-schema-api.md#profile) no tutorial de criação do schema se precisar de orientação sobre como configurar seus schemas de acordo.
 
-Para definir uma relação entre dois schemas, primeiro você deve adquirir os `$id` valores para ambos os schemas. Se você souber os nomes para exibição (`title`) dos schemas, poderá encontrar seus `$id` valores fazendo uma solicitação de GET para o `/tenant/schemas` endpoint na [!DNL Schema Registry] API.
+Para definir uma relação entre dois schemas, primeiro adquira os valores `$id` para ambos os schemas. Se você souber os nomes para exibição (`title`) dos schemas, poderá encontrar os valores `$id` deles fazendo uma solicitação de GET para o ponto de extremidade `/tenant/schemas` na API [!DNL Schema Registry].
 
 **Formato da API**
 
@@ -65,11 +65,11 @@ curl -X GET \
 
 >[!NOTE]
 >
->O [!DNL Accept] cabeçalho `application/vnd.adobe.xed-id+json` retorna somente os títulos, IDs e versões dos schemas resultantes.
+>O cabeçalho [!DNL Accept] `application/vnd.adobe.xed-id+json` retorna somente os títulos, IDs e versões dos schemas resultantes.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de schemas definidos pela sua organização, incluindo seus `name`, `$id`, `meta:altId`e `version`.
+Uma resposta bem-sucedida retorna uma lista de schemas definidos pela sua organização, incluindo seus `name`, `$id`, `meta:altId` e `version`.
 
 ```json
 {
@@ -107,25 +107,25 @@ Uma resposta bem-sucedida retorna uma lista de schemas definidos pela sua organi
 }
 ```
 
-Registre os `$id` valores dos dois schemas entre os quais deseja definir uma relação. Esses valores serão usados em etapas posteriores.
+Registre os valores de `$id` dos dois schemas entre os quais deseja definir uma relação. Esses valores serão usados em etapas posteriores.
 
 ## Definir um campo de referência para o schema de origem
 
-Dentro do [!DNL Schema Registry], os descritores de relacionamento funcionam de forma semelhante às chaves estrangeiras nas tabelas de banco de dados relacionais: um campo no schema de origem atua como uma referência ao campo de identidade primário de um schema de destino. Se o schema de origem não tiver um campo para essa finalidade, talvez seja necessário criar uma combinação com o novo campo e adicioná-la ao schema. Esse novo campo deve ter um `type` valor de &quot;[!DNL string]&quot;.
+Em [!DNL Schema Registry], os descritores de relacionamento funcionam de forma semelhante às chaves estrangeiras nas tabelas de banco de dados relacionais: um campo no schema de origem atua como uma referência ao campo de identidade primário de um schema de destino. Se o schema de origem não tiver um campo para essa finalidade, talvez seja necessário criar uma combinação com o novo campo e adicioná-la ao schema. Esse novo campo deve ter um valor `type` de &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
 >Ao contrário do schema de destino, o schema de origem não pode usar sua identidade primária como campo de referência.
 
-Neste tutorial, o schema de destino &quot;[!DNL Hotels]&quot; contém um `hotelId` campo que serve como a identidade principal do schema e, portanto, também atuará como seu campo de referência. No entanto, o schema de origem &quot;[!DNL Loyalty Members]&quot; não tem um campo dedicado para ser usado como referência e deve receber uma nova combinação que adicione um novo campo ao schema: `favoriteHotel`.
+Neste tutorial, o schema de destino &quot;[!DNL Hotels]&quot; contém um campo `hotelId` que serve como a identidade principal do schema e, portanto, também atuará como seu campo de referência. No entanto, o schema de origem &quot;[!DNL Loyalty Members]&quot; não tem um campo dedicado para ser usado como referência e deve receber uma nova combinação que adicione um novo campo ao schema: `favoriteHotel`.
 
 >[!NOTE]
 >
->Se o seu schema de origem já tiver um campo dedicado que você planeja usar como campo de referência, você pode pular para a etapa de [criação de um descritor](#reference-identity)de referência.
+>Se o seu schema de origem já tiver um campo dedicado que você planeja usar como campo de referência, você pode pular para a etapa em [criar um descritor de referência](#reference-identity).
 
 ### Criar uma nova mistura
 
-Para adicionar um novo campo a um schema, ele deve primeiro ser definido em uma mistura. Você pode criar um novo mixin, fazendo uma solicitação de POST para o `/tenant/mixins` terminal.
+Para adicionar um novo campo a um schema, ele deve primeiro ser definido em uma mistura. Você pode criar um novo mixin fazendo uma solicitação POST para o terminal `/tenant/mixins`.
 
 **Formato da API**
 
@@ -135,7 +135,7 @@ POST /tenant/mixins
 
 **Solicitação**
 
-A solicitação a seguir cria um novo mixin que adiciona um `favoriteHotel` campo sob a `_{TENANT_ID}` namespace de qualquer schema ao qual ele seja adicionado.
+A solicitação a seguir cria um novo mixin que adiciona um campo `favoriteHotel` na namespace `_{TENANT_ID}` de qualquer schema ao qual ele seja adicionado.
 
 ```shell
 curl -X POST\
@@ -231,11 +231,11 @@ Uma resposta bem-sucedida retorna os detalhes da combinação recém-criada.
 | --- | --- |
 | `$id` | O sistema gerou um identificador exclusivo somente leitura para a nova combinação. Assume a forma de um URI. |
 
-Registre o `$id` URI da mistura, a ser usado na próxima etapa da adição do mixin ao schema de origem.
+Registre o URI `$id` do mixin, a ser usado na próxima etapa da adição do mixin ao schema de origem.
 
 ### Adicionar a mistura ao schema de origem
 
-Depois de criar um mixin, você pode adicioná-lo ao schema de origem, fazendo uma solicitação de PATCH para o `/tenant/schemas/{SCHEMA_ID}` endpoint.
+Depois de criar um mixin, você pode adicioná-lo ao schema de origem, fazendo uma solicitação PATCH para o terminal `/tenant/schemas/{SCHEMA_ID}`.
 
 **Formato da API**
 
@@ -245,7 +245,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` do schema de origem. |
+| `{SCHEMA_ID}` | O URI `$id` codificado por URL ou `meta:altId` do schema de origem. |
 
 **Solicitação**
 
@@ -272,13 +272,13 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `op` | A operação de PATCH a ser executada. Esta solicitação usa a `add` operação. |
+| `op` | A operação de PATCH a ser executada. Esta solicitação usa a operação `add`. |
 | `path` | O caminho para o campo schema no qual o novo recurso será adicionado. Ao adicionar misturas a schemas, o valor deve ser &quot;/allOf/-&quot;. |
-| `value.$ref` | A `$id` mistura a ser adicionada. |
+| `value.$ref` | O `$id` da mistura a ser adicionado. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora inclui o `$ref` valor da mistura adicionada sob sua `allOf` matriz.
+Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora inclui o valor `$ref` do mixin adicionado sob sua matriz `allOf`.
 
 ```json
 {
@@ -339,9 +339,9 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, que agora in
 
 ## Criar um descritor de identidade de referência {#reference-identity}
 
-Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o `favoriteHotel` campo em &quot;[!DNL Loyalty Members]&quot; fará referência ao `hotelId` campo em &quot;[!DNL Hotels]&quot;, `hotelId` deve ser fornecido um descritor de identidade de referência.
+Os campos de schema devem ter um descritor de identidade de referência aplicado a eles se estiverem sendo usados como referência de outros schemas em um relacionamento. Como o campo `favoriteHotel` em &quot;[!DNL Loyalty Members]&quot; fará referência ao campo `hotelId` em &quot;[!DNL Hotels]&quot;, `hotelId` deve ser fornecido um descritor de identidade de referência.
 
-Crie um descritor de referência para o schema de destino, fazendo uma solicitação de POST para o `/tenant/descriptors` ponto final.
+Crie um descritor de referência para o schema de destino, fazendo uma solicitação de POST para o terminal `/tenant/descriptors`.
 
 **Formato da API**
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Solicitação**
 
-A solicitação a seguir cria um descritor de referência para o `hotelId` campo no schema de destino &quot;[!DNL Hotels]&quot;.
+A solicitação a seguir cria um descritor de referência para o campo `hotelId` no schema de destino &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -373,10 +373,10 @@ curl -X POST \
 | Parâmetro | Descrição |
 | --- | --- |
 | `@type` | O tipo de descritor que está sendo definido. Para descritores de referência, o valor deve ser &quot;xdm:descriptorReferenceIdentity&quot;. |
-| `xdm:sourceSchema` | O `$id` URL do schema de destino. |
+| `xdm:sourceSchema` | O URL `$id` do schema de destino. |
 | `xdm:sourceVersion` | O número da versão do schema de destino. |
 | `sourceProperty` | O caminho para o campo de identidade principal do schema de destino. |
-| `xdm:identityNamespace` | A namespace de identidade do campo de referência. Essa deve ser a mesma namespace usada ao definir o campo que a identidade principal do schema. Consulte a visão geral [da namespace de](../../identity-service/home.md) identidade para obter mais informações. |
+| `xdm:identityNamespace` | A namespace de identidade do campo de referência. Essa deve ser a mesma namespace usada ao definir o campo que a identidade principal do schema. Consulte [visão geral da namespace de identidade](../../identity-service/home.md) para obter mais informações. |
 
 **Resposta**
 
@@ -396,7 +396,7 @@ Uma resposta bem-sucedida retorna os detalhes do descritor de referência recém
 
 ## Criar um descritor de relação {#create-descriptor}
 
-Os descritores de relacionamento estabelecem uma relação um para um entre um schema de origem e um schema de destino. Depois de definir um descritor de referência para o schema de destino, você pode criar um novo descritor de relação, solicitando POST para o `/tenant/descriptors` ponto final.
+Os descritores de relacionamento estabelecem uma relação um para um entre um schema de origem e um schema de destino. Depois de definir um descritor de referência para o schema de destino, você pode criar um novo descritor de relação, solicitando POST para o terminal `/tenant/descriptors`.
 
 **Formato da API**
 
@@ -429,11 +429,11 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `@type` | O tipo de descritor a ser criado. O `@type` valor dos descritores de relação é &quot;xdm:descriptorOneToOne&quot;. |
-| `xdm:sourceSchema` | O `$id` URL do schema de origem. |
+| `@type` | O tipo de descritor a ser criado. O valor `@type` para descritores de relação é &quot;xdm:descriptorOneToOne&quot;. |
+| `xdm:sourceSchema` | O URL `$id` do schema de origem. |
 | `xdm:sourceVersion` | O número da versão do schema de origem. |
 | `xdm:sourceProperty` | O caminho para o campo de referência no schema de origem. |
-| `xdm:destinationSchema` | O `$id` URL do schema de destino. |
+| `xdm:destinationSchema` | O URL `$id` do schema de destino. |
 | `xdm:destinationVersion` | O número da versão do schema de destino. |
 | `xdm:destinationProperty` | O caminho para o campo de referência no schema de destino. |
 
@@ -457,4 +457,4 @@ Uma resposta bem-sucedida retorna os detalhes do descritor de relacionamento rec
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma relação um para um entre dois schemas. Para obter mais informações sobre como trabalhar com descritores usando a [!DNL Schema Registry] API, consulte o guia [do desenvolvedor do Registro de](../api/descriptors.md)Schemas. Para obter etapas sobre como definir relações de schema na interface do usuário, consulte o tutorial sobre como [definir relações de schema usando o Editor](relationship-ui.md)de Schemas.
+Ao seguir este tutorial, você criou com êxito uma relação um para um entre dois schemas. Para obter mais informações sobre como trabalhar com descritores usando a API [!DNL Schema Registry], consulte o [Guia do desenvolvedor do Registro de Schemas](../api/descriptors.md). Para obter etapas sobre como definir relações de schema na interface do usuário, consulte o tutorial em [definindo relações de schema usando o Editor de Schemas](relationship-ui.md).

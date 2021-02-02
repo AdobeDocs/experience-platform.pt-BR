@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
+keywords: Experience Platform;home;popular topics;query service;Query service;experience event query;experience event query;Experience Evento;
 solution: Experience Platform
 title: Query do Evento Experience
 topic: queries
@@ -8,7 +8,7 @@ description: O documento a seguir fornece exemplos de query que envolvem Eventos
 translation-type: tm+mt
 source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---

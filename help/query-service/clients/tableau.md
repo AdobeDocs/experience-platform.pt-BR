@@ -7,8 +7,8 @@ description: Este documento percorre as etapas para conectar o Tableau ao Adobe 
 translation-type: tm+mt
 source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 

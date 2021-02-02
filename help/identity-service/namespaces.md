@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;home;popular tópicos;namespace;Namespace;Namespaces;namespaces;namespace de identidade;namespace de identidade;identidade;identidade;serviço de identidade;serviço de identidade
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
@@ -7,8 +7,8 @@ description: 'Os namespaces de identidade são um componente do Identity Service
 translation-type: tm+mt
 source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
 

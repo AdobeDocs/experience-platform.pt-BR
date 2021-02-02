@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
+keywords: Experience Platform;atribuição ai;acesso pontuações;tópicos populares;baixar pontuações;atribuição ai pontuações;exportar;Exportar
 solution: Experience Platform, Intelligent Services
 title: Acessar pontuações no Attribution AI
 topic: Accessing scores
 description: Este documento serve como guia para o download das pontuações do Attribution AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
@@ -19,13 +19,13 @@ Este documento serve como guia para o download das pontuações do Attribution A
 
 ## Introdução
 
-O Attribution AI permite baixar pontuações no formato de arquivo de parquet. Este tutorial requer que você tenha lido e concluído o download da seção de pontuações do Attribution AI no guia de [introdução](./getting-started.md) .
+O Attribution AI permite baixar pontuações no formato de arquivo do Parquet. Este tutorial requer que você tenha lido e concluído o download da seção de pontuações do Attribution AI no guia [getting started](./getting-started.md).
 
-Além disso, para acessar as pontuações do Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o guia [do usuário do](./user-guide.md)Attribution AI. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
+Além disso, para acessar as pontuações do Attribution AI, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite o [guia do usuário do Attribution AI](./user-guide.md). Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
 
-## Find your dataset ID {#dataset-id}
+## Localizar a ID do conjunto de dados {#dataset-id}
 
-Na instância de serviço para obter insights de Attribution AI, clique na lista suspensa *Mais ações* na navegação superior direita e selecione Pontuações **[!UICONTROL de]** acesso.
+Na instância de serviço para obter insights de Attribution AI, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Pontuações de acesso]**.
 
 ![mais ações](./images/download-scores/more-actions.png)
 
@@ -35,7 +35,7 @@ Uma nova caixa de diálogo é exibida, contendo um link para a documentação da
 
 ## Recuperar a ID do lote {#retrieve-your-batch-id}
 
-Usando a ID do conjunto de dados da etapa anterior, é necessário fazer uma chamada para a API de catálogo para recuperar uma ID de lote. Parâmetros de query adicionais são usados para esta chamada de API a fim de retornar o lote bem-sucedido mais recente em vez de uma lista de lotes pertencentes à sua organização. Para retornar lotes adicionais, aumente o número do parâmetro do `limit` query para a quantia desejada que você deseja que seja retornada. Para obter mais informações sobre os tipos de parâmetros de query disponíveis, visite o guia sobre como [filtrar dados do catálogo usando parâmetros](../../catalog/api/filter-data.md)de query.
+Usando a ID do conjunto de dados da etapa anterior, é necessário fazer uma chamada para a API de catálogo para recuperar uma ID de lote. Parâmetros de query adicionais são usados para esta chamada de API a fim de retornar o lote bem-sucedido mais recente em vez de uma lista de lotes pertencentes à sua organização. Para retornar lotes adicionais, aumente o número do parâmetro de query `limit` para a quantidade desejada que você deseja que seja retornada. Para obter mais informações sobre os tipos de parâmetros de query disponíveis, visite o guia em [filtrar dados do catálogo usando parâmetros de query](../../catalog/api/filter-data.md).
 
 **Formato da API**
 
@@ -63,7 +63,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto de ID de lote. Ne
 
 >[!NOTE]
 >
-> A resposta a seguir fez com que o `tags` objeto fosse reformado para leitura.
+> A resposta a seguir teve o objeto `tags` reformado para leitura.
 
 ```json
 {
@@ -112,7 +112,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto de ID de lote. Ne
 }
 ```
 
-## Recuperar a próxima chamada de API com sua ID de lote {#retrieve-the-next-api-call-with-your-batch-id}
+## Recupere a próxima chamada de API com sua ID de lote {#retrieve-the-next-api-call-with-your-batch-id}
 
 Depois de ter a ID do lote, você poderá fazer uma nova solicitação de GET para `/batches`. A solicitação retorna um link usado como a próxima solicitação de API.
 
@@ -124,7 +124,7 @@ GET batches/{BATCH_ID}/files
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{BATCH_ID}` | A ID de lote recuperada na etapa anterior [recupera a ID](#retrieve-your-batch-id)de lote. |
+| `{BATCH_ID}` | A ID de lote recuperada na etapa anterior [recupera a ID de lote](#retrieve-your-batch-id). |
 
 **Solicitação**
 
@@ -140,7 +140,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que contém um `_links` objeto. Dentro do `_links` objeto há uma nova chamada de API `href` com seu valor. Copie esse valor para prosseguir para a próxima etapa.
+Uma resposta bem-sucedida retorna uma carga contendo um objeto `_links`. Dentro do objeto `_links` há um `href` com uma nova chamada de API como seu valor. Copie esse valor para prosseguir para a próxima etapa.
 
 ```json
 {
@@ -168,7 +168,7 @@ Uma resposta bem-sucedida retorna uma carga que contém um `_links` objeto. Dent
 
 ## Recuperar seus arquivos {#retrieving-your-files}
 
-Usando o `href` valor obtido na etapa anterior como uma chamada de API, faça uma nova solicitação de GET para recuperar seu diretório de arquivos.
+Usando o valor `href` obtido na etapa anterior como uma chamada de API, faça uma nova solicitação de GET para recuperar seu diretório de arquivos.
 
 **Formato da API**
 
@@ -178,7 +178,7 @@ GET files/{DATASETFILE_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | A ID dataSetFile é retornada no `href` valor da etapa [](#retrieve-the-next-api-call-with-your-batch-id)anterior. Ele também pode ser acessado na `data` matriz sob o tipo de objeto `dataSetFileId`. |
+| `{DATASETFILE_ID}` | A ID dataSetFile é retornada no valor `href` da [etapa anterior](#retrieve-the-next-api-call-with-your-batch-id). Ele também pode ser acessado na matriz `data` sob o tipo de objeto `dataSetFileId`. |
 
 **Solicitação**
 
@@ -219,11 +219,11 @@ A resposta contém uma matriz de dados que pode ter uma única entrada ou uma li
 | `_links.self.href` | O URL de solicitação de GET usado para baixar um arquivo em seu diretório. |
 
 
-Copie o `href` valor para qualquer objeto de arquivo na `data` matriz e prossiga para a próxima etapa.
+Copie o valor `href` para qualquer objeto de arquivo na matriz `data` e prossiga para a próxima etapa.
 
 ## Baixar seus dados de arquivo
 
-Para baixar os dados do arquivo, faça uma solicitação de GET para o `"href"` valor copiado na etapa anterior [que recupera os arquivos](#retrieving-your-files).
+Para baixar seus dados de arquivo, faça uma solicitação de GET para o valor `"href"` copiado na etapa anterior [recuperando seus arquivos](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -237,7 +237,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | A ID dataSetFile é retornada no `href` valor de uma etapa [](#retrieve-the-next-api-call-with-your-batch-id)anterior. |
+| `{DATASETFILE_ID}` | A ID dataSetFile é retornada no valor `href` de uma [etapa anterior](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | O nome do arquivo. |
 
 **Solicitação**
@@ -261,11 +261,11 @@ A resposta baixa o arquivo solicitado no diretório atual. Neste exemplo, o nome
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-As pontuações baixadas estarão no formato parquet e precisarão de um leitor de [!DNL Spark]shell ou parquet para visualização das pontuações. Para a exibição de pontuação bruta, você pode usar ferramentas [de parquet](https://github.com/apache/parquet-mr/tree/master/parquet-tools). As ferramentas de parâmetro podem analisar os dados com [!DNL Spark].
+As pontuações baixadas estarão no formato Parquet e precisarão de um leitor [!DNL Spark]-shell ou Parquet para visualização das pontuações. Para a exibição de pontuação bruta, você pode usar [ferramentas do Apache Parquet](https://github.com/apache/parquet-mr/tree/master/parquet-tools). As ferramentas de parâmetro podem analisar os dados com [!DNL Spark].
 
 ## Próximas etapas
 
-Este documento descreveu as etapas necessárias para o download das pontuações dos Attribution AI. Para obter mais informações sobre os resultados da pontuação, visite a documentação de entrada e saída [do](./input-output.md) atributo AI.
+Este documento descreveu as etapas necessárias para o download das pontuações dos Attribution AI. Para obter mais informações sobre os resultados da pontuação, visite a documentação [Entrada e saída do AI de atributos](./input-output.md).
 
 ## Acessar pontuações usando o Snowflake
 
@@ -279,7 +279,7 @@ Depois que o suporte ao Adobe tiver processado sua solicitação, você receber�
 
 - Snowflake URL
 - Nome do usuário
-- Password
+- Senha
 
 >[!NOTE]
 >
@@ -301,7 +301,7 @@ Em seguida, clique em **Selecionar Schema** no canto superior direito da tela. N
 
 Suas credenciais de Snowflake podem ser usadas para configurar uma conexão entre os bancos de dados PowerBI Desktop e Snowflake.
 
-Primeiro, na caixa *Servidor* , digite o URL do Snowflake. Em seguida, em *Warehouse*, digite &quot;XSMALL&quot;. Em seguida, digite seu nome de usuário e senha.
+Primeiro, na caixa *Servidor*, digite o URL do Snowflake. Em seguida, em *Depósito*, digite &quot;XSMALL&quot;. Em seguida, digite seu nome de usuário e senha.
 
 ![exemplo de POWERBI](./images/download-scores/powerbi-snowflake.png)
 

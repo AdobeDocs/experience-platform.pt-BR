@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;ad-hoc;ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Tutorial;Tutorial;criar;Criar;schema;Schema
 solution: Experience Platform
 title: Criar um schema ad-hoc
 description: Em circunstâncias específicas, pode ser necessário criar um schema do Modelo de Dados de Experiência (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema "ad-hoc". Schemas ad-hoc são usados em vários workflows de ingestão de dados para o Experience Platform, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '823'
 ht-degree: 2%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 # Criar um schema ad-hoc
 
-Em circunstâncias específicas, pode ser necessário criar um schema [!DNL Experience Data Model] (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. Schemas ad-hoc são usados em vários workflows de ingestão de dados para [!DNL Experience Platform]o, incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
+Em circunstâncias específicas, pode ser necessário criar um schema [!DNL Experience Data Model] (XDM) com campos que são namespacados para uso somente por um único conjunto de dados. Isso é conhecido como um schema &quot;ad-hoc&quot;. Schemas ad-hoc são usados em vários workflows de ingestão de dados para [!DNL Experience Platform], incluindo a assimilação de arquivos CSV e a criação de certos tipos de conexões de origem.
 
-Este documento fornece etapas gerais para a criação de um schema ad-hoc usando a API [do Registro do](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schema. Ela deve ser usada em conjunto com outros [!DNL Experience Platform] tutoriais que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um schema ad-hoc para seu caso de uso específico.
+Este documento fornece etapas gerais para a criação de um schema ad-hoc usando a [API do Registro do Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Ela deve ser usada em conjunto com outros tutoriais [!DNL Experience Platform] que exigem a criação de um schema ad-hoc como parte de seu fluxo de trabalho. Cada um desses documentos fornece informações detalhadas sobre como configurar corretamente um schema ad-hoc para seu caso de uso específico.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional do Sistema [!DNL Experience Data Model] (XDM). Antes de iniciar este tutorial, reveja a seguinte documentação XDM:
+Este tutorial requer uma compreensão funcional do [!DNL Experience Data Model] (XDM) System. Antes de iniciar este tutorial, reveja a seguinte documentação XDM:
 
-- [Visão geral](../home.md)do sistema XDM: Uma visão geral de alto nível do XDM e sua implementação no [!DNL Experience Platform].
-- [Noções básicas da composição](../schema/composition.md)do schema: Uma visão geral dos componentes básicos dos schemas XDM.
+- [Visão geral](../home.md) do sistema XDM: Uma visão geral de alto nível do XDM e sua implementação no  [!DNL Experience Platform].
+- [Noções básicas da composição](../schema/composition.md) do schema: Uma visão geral dos componentes básicos dos schemas XDM.
 
-Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas à [!DNL Schema Registry] API com êxito. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
+Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Schema Registry]. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
 
 ## Criar uma classe ad-hoc
 
-O comportamento de dados de um schema XDM é determinado pela classe subjacente. A primeira etapa na criação de um schema ad-hoc é criar uma classe com base no `adhoc` comportamento. Isso é feito fazendo uma solicitação POST ao `/tenant/classes` endpoint.
+O comportamento de dados de um schema XDM é determinado pela classe subjacente. A primeira etapa na criação de um schema ad-hoc é criar uma classe com base no comportamento `adhoc`. Isso é feito fazendo uma solicitação POST para o terminal `/tenant/classes`.
 
 **Formato da API**
 
@@ -41,7 +41,7 @@ POST /tenant/classes
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova classe XDM, configurada pelos atributos fornecidos na carga. Ao fornecer uma `$ref` propriedade definida como `https://ns.adobe.com/xdm/data/adhoc` na `allOf` matriz, essa classe herda o `adhoc` comportamento. A solicitação também define um `_adhoc` objeto, que contém os campos personalizados para a classe.
+A solicitação a seguir cria uma nova classe XDM, configurada pelos atributos fornecidos na carga. Ao fornecer uma propriedade `$ref` definida como `https://ns.adobe.com/xdm/data/adhoc` na matriz `allOf`, essa classe herda o comportamento `adhoc`. A solicitação também define um objeto `_adhoc`, que contém os campos personalizados da classe.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nome do `properties._adhoc` objeto por um GUID que é um identificador exclusivo de leitura gerado pelo sistema para a classe. O `meta:datasetNamespace` atributo também é gerado automaticamente e incluído na resposta.
+Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nome do objeto `properties._adhoc` por um GUID que é um identificador exclusivo gerado pelo sistema e somente leitura para a classe. O atributo `meta:datasetNamespace` também é gerado automaticamente e incluído na resposta.
 
 ```json
 {
@@ -150,7 +150,7 @@ Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nom
 
 ## Criar um schema ad-hoc
 
-Depois de criar uma classe ad-hoc, você pode criar um novo schema que implementa essa classe, fazendo uma solicitação POST para o `/tenant/schemas` endpoint.
+Depois de criar uma classe ad-hoc, você pode criar um novo schema que implementa essa classe, fazendo uma solicitação POST para o terminal `/tenant/schemas`.
 
 **Formato da API**
 
@@ -160,7 +160,7 @@ POST /tenant/schemas
 
 **Solicitação**
 
-A solicitação a seguir cria um novo schema, fornecendo uma referência (`$ref`) à classe ad-hoc criada anteriormente `$id` em sua carga útil.
+A solicitação a seguir cria um novo schema, fornecendo uma referência (`$ref`) para `$id` da classe ad-hoc criada anteriormente em sua carga.
 
 ```shell
 curl -X POST \
@@ -184,7 +184,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do schema recém-criado, incluindo somente leitura gerado pelo sistema `$id`.
+Uma resposta bem-sucedida retorna os detalhes do schema recém-criado, incluindo o gerado pelo sistema e somente leitura `$id`.
 
 ```json
 {
@@ -225,7 +225,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema recém-criado, incluindo
 
 >[!NOTE]
 >
->Esta etapa é opcional. Se você não quiser inspecionar a estrutura de campo do seu schema ad-hoc, vá para a seção de [próximas etapas](#next-steps) no final deste tutorial.
+>Esta etapa é opcional. Se você não quiser inspecionar a estrutura de campo do seu schema ad-hoc, pule para a seção [próximas etapas](#next-steps) no final deste tutorial.
 
 Depois que o schema ad-hoc for criado, você poderá fazer uma solicitação de pesquisa (GET) para visualização do schema em seu formulário expandido. Isso é feito usando o cabeçalho Aceitar apropriado na solicitação do GET, como demonstrado abaixo.
 
@@ -237,11 +237,11 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `$id` URI codificado por URL ou `meta:altId` o schema ad-hoc que você deseja acessar. |
+| `{SCHEMA_ID}` | O URI `$id` codificado por URL ou `meta:altId` do schema ad-hoc que você deseja acessar. |
 
 **Solicitação**
 
-A solicitação a seguir usa o cabeçalho Aceitar `application/vnd.adobe.xed-full+json; version=1`, que retorna a forma expandida do schema. Observe que ao recuperar um recurso específico do [!DNL Schema Registry], o cabeçalho Accept da solicitação deve incluir a versão principal do recurso em questão.
+A solicitação a seguir usa o cabeçalho Accept `application/vnd.adobe.xed-full+json; version=1`, que retorna a forma expandida do schema. Observe que ao recuperar um recurso específico de [!DNL Schema Registry], o cabeçalho Accept da solicitação deve incluir a versão principal do recurso em questão.
 
 ```shell
 curl -X GET \
@@ -305,6 +305,6 @@ Uma resposta bem-sucedida retorna os detalhes do schema, incluindo todos os camp
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você criou com êxito um novo schema ad-hoc. Se você tiver sido direcionado para esse documento como parte de outro tutorial, agora é possível usar o `$id` de seu schema ad-hoc para concluir o fluxo de trabalho como indicado.
+Ao seguir este tutorial, você criou com êxito um novo schema ad-hoc. Se você tiver sido direcionado para esse documento como parte de outro tutorial, agora é possível usar `$id` do schema ad-hoc para concluir o fluxo de trabalho conforme as instruções.
 
-Para obter mais informações sobre como trabalhar com a [!DNL Schema Registry] API, consulte o guia [do](../api/getting-started.md)desenvolvedor.
+Para obter mais informações sobre como trabalhar com a API [!DNL Schema Registry], consulte o [guia do desenvolvedor](../api/getting-started.md).

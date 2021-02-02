@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
 title: Ponto de extremidade de etiquetas
 topic: developer guide
+description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API do Serviço de política.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '509'
 ht-degree: 3%
 
 ---
@@ -14,19 +15,19 @@ ht-degree: 3%
 
 # Ponto de extremidade de etiquetas
 
-Os rótulos de uso de dados permitem que você categorize dados de acordo com as políticas de uso que podem se aplicar a esses dados. O `/labels` endpoint no aplicativo [!DNL Policy Service API] permite gerenciar programaticamente as etiquetas de uso de dados no aplicativo de experiência.
+Os rótulos de uso de dados permitem que você categorize dados de acordo com as políticas de uso que podem se aplicar a esses dados. O endpoint `/labels` no [!DNL Policy Service API] permite que você gerencie programaticamente os rótulos de uso de dados no aplicativo de experiência.
 
 >[!NOTE]
 >
->O `/labels` ponto de extremidade é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o guia sobre como [gerenciar rótulos](../labels/dataset-api.md)de conjuntos de dados.
+>O ponto de extremidade `/labels` é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o guia em [gerenciar rótulos de conjuntos de dados](../labels/dataset-api.md).
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte do [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
-## Recuperar uma lista de etiquetas {#list}
+## Recuperar uma lista de rótulos {#list}
 
-É possível lista de todas as `core` ou `custom` etiquetas fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
+Você pode lista todos os rótulos `core` ou `custom` fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
 
 **Formato da API**
 
@@ -106,9 +107,9 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 }
 ```
 
-## Procurar uma etiqueta {#look-up}
+## Procure um rótulo {#look-up}
 
-Você pode procurar um rótulo específico incluindo a propriedade desse rótulo no caminho de uma solicitação de GET para a `name` [!DNL Policy Service] API.
+Você pode procurar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação de GET para a API [!DNL Policy Service].
 
 **Formato da API**
 
@@ -119,7 +120,7 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{LABEL_NAME}` | A `name` propriedade do rótulo personalizado que você deseja pesquisar. |
+| `{LABEL_NAME}` | A propriedade `name` do rótulo personalizado que você deseja pesquisar. |
 
 **Solicitação**
 
@@ -162,7 +163,7 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado.
 
 ## Criar ou atualizar um rótulo personalizado {#create-update}
 
-Para criar ou atualizar um rótulo personalizado, é necessário fazer uma solicitação PUT para a [!DNL Policy Service] API.
+Para criar ou atualizar um rótulo personalizado, você deve fazer uma solicitação PUT para a API [!DNL Policy Service].
 
 **Formato da API**
 
@@ -172,11 +173,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{LABEL_NAME}` | A `name` propriedade de um rótulo personalizado. Se um rótulo personalizado com esse nome não existir, um novo rótulo será criado. Se existir, esse rótulo será atualizado. |
+| `{LABEL_NAME}` | A propriedade `name` de um rótulo personalizado. Se um rótulo personalizado com esse nome não existir, um novo rótulo será criado. Se existir, esse rótulo será atualizado. |
 
 **Solicitação**
 
-A solicitação a seguir cria um novo rótulo, `L3`que tem como objetivo descrever os dados que contêm informações relacionadas aos planos de pagamento selecionados dos clientes.
+A solicitação a seguir cria um novo rótulo, `L3`, que visa descrever dados que contêm informações relacionadas aos planos de pagamento selecionados dos clientes.
 
 ```shell
 curl -X PUT \
@@ -228,4 +229,4 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o c�
 
 ## Próximas etapas
 
-Este guia cobriu o uso do ponto de extremidade `/labels` na API do Serviço de Política. Para obter etapas sobre como aplicar rótulos a conjuntos de dados e campos, consulte o guia [da API de etiquetas de](../labels/dataset-api.md)conjuntos de dados.
+Este guia cobriu o uso do terminal `/labels` na API do Serviço de Política. Para obter etapas sobre como aplicar rótulos a conjuntos de dados e campos, consulte o [guia da API de etiquetas de conjuntos de dados](../labels/dataset-api.md).

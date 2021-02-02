@@ -1,13 +1,13 @@
 ---
-keywords: Amazon Kinesis;kinesis destination;kinesis
+keywords: Amazon Kinesis;destino cinesis;cinesis
 title: Destino Amazon Kinesis
 seo-title: Destino Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da Adobe Experience Platform.
 seo-description: Crie uma conexão de saída em tempo real com seu armazenamento Amazon Kinesis para transmitir dados da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7484e64d0d359f40ef242dfc9d2d1704018a8ed6
+source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 2%
 
 ---
@@ -15,52 +15,50 @@ ht-degree: 2%
 
 # (Beta) [!DNL Amazon Kinesis] destino
 
-
 >[!IMPORTANT]
 >
->O [!DNL Amazon Kinesis] destino no CDP em tempo real está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>O destino [!DNL Amazon Kinesis] na Plataforma está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 
-O [!DNL Kinesis Data Streams] serviço por [!DNL Amazon Web Services] permite coletar e processar grandes fluxos de registros de dados em tempo real.
+O serviço [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
-Você pode criar uma conexão de saída em tempo real com seu [!DNL Amazon Kinesis] armazenamento para transmitir dados da Adobe Experience Platform.
+Você pode criar uma conexão de saída em tempo real com seu armazenamento [!DNL Amazon Kinesis] para transmitir dados do Adobe Experience Platform.
 
-* Para obter mais informações sobre [!DNL Amazon Kinesis], consulte a documentação [da](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
-* Para conectar-se a [!DNL Amazon Kinesis] chamadas de API, consulte o tutorial [da API de destinos de](../../api/streaming-destinations.md)transmissão contínua.
-* Para se conectar ao [!DNL Amazon Kinesis] uso da interface de usuário CDP em tempo real, consulte as seções abaixo.
+* Para obter mais informações sobre [!DNL Amazon Kinesis], consulte a [documentação da Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* Para se conectar a [!DNL Amazon Kinesis] usando chamadas de API, consulte o [tutorial da API de destino de transmissão](../../api/streaming-destinations.md).
+* Para conectar-se a [!DNL Amazon Kinesis] usando a interface do usuário da plataforma, consulte as seções abaixo.
 
 ![Amazon Kinesis na interface do usuário](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-
 ## Casos de uso {#use-cases}
 
-Ao usar destinos de streaming como [!DNL Amazon Kinesis], você pode facilmente alimentar eventos de segmentação de alto valor e atributos de perfil associados em seus sistemas preferidos.
+Ao usar destinos de streaming como [!DNL Amazon Kinesis], você pode facilmente alimentar eventos de segmentação de alto valor e atributos de perfil associados em seus sistemas de escolha.
 
-Por exemplo, um prospecto baixou um white paper que os qualifica em um segmento de &quot;alta propensão para converter&quot;. Ao mapear o segmento no qual o prospecto cai para o [!DNL Amazon Kinesis] destino, você receberá esse evento [!DNL Amazon Kinesis]. Lá, você pode usar uma abordagem faça-você-mesmo e descrever a lógica comercial sobre o evento, pois você acha que funcionaria melhor com seus sistemas de TI corporativos.
+Por exemplo, um prospecto baixou um white paper que os qualifica em um segmento de &quot;alta propensão para converter&quot;. Ao mapear o segmento no qual o prospecto cai para o destino [!DNL Amazon Kinesis], você receberá esse evento em [!DNL Amazon Kinesis]. Lá, você pode usar uma abordagem faça-você-mesmo e descrever a lógica comercial sobre o evento, pois você acha que funcionaria melhor com seus sistemas de TI corporativos.
 
 ## Tipo de exportação {#export-type}
 
-**Baseado** em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [da ativação de](../../ui/activate-destinations.md#select-attributes)destino.
+**Baseado**  em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [ da ativação de ](../../ui/activate-destinations.md#select-attributes)destino.
 
 ## Destino do Connect {#connect-destination}
 
-Consulte Fluxo de trabalho de destinos do armazenamento [Cloud ](./workflow.md)para obter instruções sobre como se conectar aos destinos do armazenamento na nuvem, incluindo aqueles suportados por [!DNL Amazon].
+Consulte [Fluxo de trabalho de destinos de armazenamentos na nuvem ](./workflow.md)para obter instruções sobre como se conectar aos destinos de armazenamentos na nuvem, incluindo aqueles suportados por [!DNL Amazon].
 
-Para [!DNL Amazon Kinesis] destinos, insira as seguintes informações no fluxo de trabalho de criação de destino:
+Para destinos [!DNL Amazon Kinesis], insira as seguintes informações no fluxo de trabalho de criação de destino:
 
 ### Na etapa Autenticação {#authentication-step}
 
-* **[!DNL Amazon Web Services]chave de acesso e chave** secreta: Em [!DNL Amazon Web Services], gere um `access key - secret access key` par para conceder acesso CDP em tempo real à sua [!DNL Amazon Kinesis] conta. Saiba mais na documentação [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
-* **região**: Indica em qual [!DNL Amazon Web Services] região os dados serão transmitidos.
+* **[!DNL Amazon Web Services]chave de acesso e chave** secreta: Em  [!DNL Amazon Web Services], gere um  `access key - secret access key` par para conceder acesso à Plataforma à sua  [!DNL Amazon Kinesis] conta. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **região**: Indica para qual  [!DNL Amazon Web Services] região transmitir dados.
 
 ![Campos de entrada na etapa da conta](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
 ### Na etapa de configuração {#setup-step}
 
-* **Nome**: Forneça um nome para a sua conexão com [!DNL Amazon Kinesis]
-* **Descrição**: Forneça uma descrição para a sua conexão com [!DNL Amazon Kinesis].
-* **fluxo**: Forneça o nome de um fluxo de dados existente em sua [!DNL Amazon Kinesis] conta. A CDP em tempo real exportará dados para esse fluxo.
+* **Nome**: Forneça um nome para a sua conexão com  [!DNL Amazon Kinesis]
+* **Descrição**: Forneça uma descrição para a sua conexão com  [!DNL Amazon Kinesis].
+* **fluxo**: Forneça o nome de um fluxo de dados existente em sua  [!DNL Amazon Kinesis] conta. A plataforma exportará dados para esse fluxo.
 
 ![Campos de entrada na etapa de autenticação](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -68,7 +66,7 @@ Para [!DNL Amazon Kinesis] destinos, insira as seguintes informações no fluxo 
 
 >[!IMPORTANT]
 >
->Real-time CDP needs `write` permissions on the bucket object where the export files will be delivered.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -78,7 +76,7 @@ Consulte [Ativar perfis e segmentos em um destino](../../ui/activate-destination
 
 ## Dados exportados {#exported-data}
 
-Seus [!DNL Experience Platform] dados exportados chegam [!DNL Amazon Kinesis] no formato JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de uma audiência que se qualificou para um determinado segmento e saiu de outro. As identidades para este prospecto são ECID e email.
+Seus dados exportados [!DNL Experience Platform] chegam em [!DNL Amazon Kinesis] no formato JSON. Por exemplo, o evento abaixo contém o atributo de perfil de endereço de email de uma audiência que se qualificou para um determinado segmento e saiu de outro. As identidades para este prospecto são ECID e email.
 
 ```json
 {

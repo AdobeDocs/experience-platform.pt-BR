@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;pré-visualização;exemplo
 title: Pré-visualização do perfil - API do Perfil do cliente em tempo real
-description: A Adobe Experience Platform permite que você ingira dados do cliente de várias fontes para criar perfis unificados robustos para clientes individuais. Como os dados habilitados para o Perfil de cliente em tempo real são ingeridos na Plataforma, eles são armazenados no armazenamento de dados do Perfil. À medida que o número de registros no repositório de Perfis aumenta ou diminui, uma tarefa de amostra é executada que inclui informações sobre quantos fragmentos de perfil e perfis mesclados estão no repositório de dados. Usando a API de Perfil, você pode pré-visualização a amostra mais recente bem-sucedida, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade.
+description: Usando os pontos de extremidade da API de Perfil do cliente em tempo real, você pode pré-visualização a última amostra bem-sucedida de seus dados de Perfil, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade dentro da Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1554'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Ponto de extremidade do status da amostra da pré-visualização (pré-visualização do Perfil)
 
-A Adobe Experience Platform permite que você ingira dados do cliente de várias fontes para criar perfis unificados robustos para clientes individuais. Como os dados habilitados para o Perfil do cliente em tempo real são ingeridos, [!DNL Platform]eles são armazenados no armazenamento de dados do Perfil.
+A Adobe Experience Platform permite que você ingira dados do cliente de várias fontes para criar perfis unificados robustos para clientes individuais. Como os dados ativados para o Perfil do cliente em tempo real são ingeridos em [!DNL Platform], eles são armazenados no armazenamento de dados do Perfil.
 
 Quando a ingestão de registros no repositório de Perfis aumenta ou diminui a contagem total de perfis em mais de 5%, uma tarefa é acionada para atualizar a contagem. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se houver, uma tarefa será acionada automaticamente para atualizar a contagem. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no repositório de Perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de Perfil, você pode pré-visualização o trabalho de amostra mais recente e bem-sucedido, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade.
 
-Essas métricas também estão disponíveis na seção [!UICONTROL Perfil] da interface do usuário do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, visite o guia [[!DNL Profile] do](../ui/user-guide.md)usuário.
+Essas métricas também estão disponíveis na seção [!UICONTROL Perfis] da interface do usuário do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, visite o [[!DNL Profile] guia do usuário](../ui/user-guide.md).
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, reveja o guia [de](getting-started.md) introdução para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer [!DNL Experience Platform] API.
+O endpoint da API usado neste guia faz parte da [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
 ## Fragmentos de perfil vs perfis mesclados
 
@@ -30,9 +30,9 @@ Este guia faz referência a &quot;fragmentos de perfil&quot; e &quot;perfis mesc
 
 Cada perfil de cliente individual é composto de vários fragmentos de perfil que foram mesclados para formar uma única visualização desse cliente. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são ingeridos na Plataforma, eles são unidos (com base na política de mesclagem) para criar um único perfil para o cliente. Portanto, o número total de fragmentos de perfil provavelmente será sempre maior que o número total de perfis unidos, já que cada perfil é composto de vários fragmentos.
 
-## Status da última amostra da visualização {#view-last-sample-status}
+## Visualização do último status de amostra {#view-last-sample-status}
 
-Você pode executar uma solicitação de GET para o `/previewsamplestatus` ponto de extremidade para visualização dos detalhes do último trabalho de amostra bem-sucedido executado para sua Organização IMS. Isso inclui o número total de perfis na amostra, bem como a métrica de contagem de perfis ou o número total de perfis que sua organização tem dentro do Experience Platform. A contagem de perfis é gerada após a união de fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em canais diferentes, mas esses fragmentos seriam unidos (de acordo com a política de mesclagem padrão) e retornariam uma contagem de perfis &quot;1&quot;, pois estão todos relacionados ao mesmo indivíduo.
+Você pode executar uma solicitação de GET para o terminal `/previewsamplestatus` para visualização dos detalhes do último trabalho de amostra bem-sucedido executado para sua Organização IMS. Isso inclui o número total de perfis na amostra, bem como a métrica de contagem de perfis ou o número total de perfis que sua organização tem dentro do Experience Platform. A contagem de perfis é gerada após a união de fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em canais diferentes, mas esses fragmentos seriam unidos (de acordo com a política de mesclagem padrão) e retornariam uma contagem de perfis &quot;1&quot;, pois estão todos relacionados ao mesmo indivíduo.
 
 A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de séries cronológicas (eventos), como perfis Adobe Analytics. O trabalho de amostra é atualizado regularmente à medida que os dados do Perfil são ingeridos para fornecer um número total atualizado de perfis na Plataforma.
 
@@ -59,7 +59,7 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 
 >[!NOTE]
 >
->Neste exemplo de resposta, `numRowsToRead` e `totalRows` são iguais entre si. Dependendo do número de perfis que sua organização tiver no Experience Platform, isso pode ser o caso. No entanto, geralmente esses dois números são diferentes, sendo `numRowsToRead` o menor, porque representa a amostra como um subconjunto do número total de perfis (`totalRows`).
+>Neste exemplo de resposta, `numRowsToRead` e `totalRows` são iguais entre si. Dependendo do número de perfis que sua organização tiver no Experience Platform, isso pode ser o caso. No entanto, geralmente esses dois números são diferentes, com `numRowsToRead` sendo o menor número, pois representa a amostra como um subconjunto do número total de perfis (`totalRows`).
 
 ```json
 {
@@ -92,13 +92,13 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 | `totalRows` | O número total de perfis unidos na plataforma Experience, também conhecidos como a &quot;contagem de perfis&quot;. |
 | `lastBatchId` | ID de ingestão do último lote. |
 | `status` | Status da última amostra. |
-| `samplingRatio` | Rácio entre perfis unidos amostrados (`numRowsToRead`) e o total de perfis unidos (`totalRows`), expresso em percentagem no formato decimal. |
+| `samplingRatio` | Proporção de perfis unidos amostrados (`numRowsToRead`) para o total de perfis unidos (`totalRows`), expressa como uma porcentagem em formato decimal. |
 | `mergeStrategy` | Estratégia de mesclagem usada na amostra. |
 | `lastSampledTimestamp` | Último carimbo de data e hora de amostra bem-sucedido. |
 
 ## Distribuição de perfis de lista por conjunto de dados
 
-Para ver a distribuição de perfis por conjunto de dados, é possível executar uma solicitação de GET para o `/previewsamplestatus/report/dataset` ponto de extremidade.
+Para ver a distribuição de perfis por conjunto de dados, é possível executar uma solicitação de GET para o terminal `/previewsamplestatus/report/dataset`.
 
 **Formato da API**
 
@@ -113,7 +113,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Solicitação**
 
-A solicitação a seguir usa o `date` parâmetro para retornar o relatório mais recente para a data especificada.
+A solicitação a seguir usa o parâmetro `date` para retornar o relatório mais recente da data especificada.
 
 ```shell
 curl -X GET \
@@ -126,7 +126,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta inclui uma `data` matriz que contém uma lista de objetos de conjunto de dados. A resposta mostrada foi truncada para mostrar três conjuntos de dados.
+A resposta inclui uma matriz `data`, que contém uma lista de objetos de conjunto de dados. A resposta mostrada foi truncada para mostrar três conjuntos de dados.
 
 >[!NOTE]
 >
@@ -179,21 +179,21 @@ A resposta inclui uma `data` matriz que contém uma lista de objetos de conjunto
 | Propriedade | Descrição |
 |---|---|
 | `sampleCount` | O número total de perfis unidos de amostra com essa ID de conjunto de dados. |
-| `samplePercentage` | A `sampleCount` porcentagem do número total de perfis unidos de amostra (o `numRowsToRead` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
+| `samplePercentage` | O `sampleCount` como uma porcentagem do número total de perfis unidos de amostra (o valor `numRowsToRead` como retornado no [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
 | `fullIDsCount` | O número total de perfis unidos com essa ID de conjunto de dados. |
-| `fullIDsPercentage` | A `fullIDsCount` porcentagem do número total de perfis unidos (o `totalRows` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
+| `fullIDsPercentage` | O `fullIDsCount` como uma porcentagem do número total de perfis unidos (o valor `totalRows` como retornado no [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
 | `name` | O nome do conjunto de dados, conforme fornecido durante a criação do conjunto de dados. |
 | `description` | A descrição do conjunto de dados, conforme fornecida durante a criação do conjunto de dados. |
 | `value` | A ID do conjunto de dados. |
 | `streamingIngestionEnabled` | Se o conjunto de dados está habilitado para a ingestão em streaming. |
 | `createdUser` | A ID de usuário do usuário que criou o conjunto de dados. |
-| `reportTimestamp` | O carimbo de data e hora do relatório. Se um `date` parâmetro foi fornecido durante a solicitação, o relatório retornado é a data fornecida. Se nenhum `date` parâmetro for fornecido, o relatório mais recente será retornado. |
+| `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` tiver sido fornecido durante a solicitação, o relatório retornado será da data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 
 
 
 ## Distribuição de perfis de lista por namespace
 
-Você pode executar uma solicitação de GET para o `/previewsamplestatus/report/namespace` ponto de extremidade para visualização do detalhamento por namespace de identidade em todos os perfis unidos em sua loja de Perfis. As namespaces de identidade são um componente importante do Adobe Experience Platform Identity Service que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, visite a visão geral [](../../identity-service/namespaces.md)da namespace de identidade.
+Você pode executar uma solicitação de GET para o ponto de extremidade `/previewsamplestatus/report/namespace` para visualização do detalhamento por namespace de identidade em todos os perfis unidos em sua loja de Perfis. As namespaces de identidade são um componente importante do Adobe Experience Platform Identity Service que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, visite a [visão geral da namespace de identidade](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Solicitação**
 
-A solicitação a seguir não especifica um `date` parâmetro e, portanto, retornará o relatório mais recente.
+A solicitação a seguir não especifica um parâmetro `date` e, portanto, retornará o relatório mais recente.
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta inclui uma `data` matriz, com objetos individuais contendo os detalhes de cada namespace. A resposta mostrada foi truncada para mostrar quatro namespaces.
+A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhes de cada namespace. A resposta mostrada foi truncada para mostrar quatro namespaces.
 
 ```json
 {
@@ -278,15 +278,15 @@ A resposta inclui uma `data` matriz, com objetos individuais contendo os detalhe
 | Propriedade | Descrição |
 |---|---|
 | `sampleCount` | O número total de perfis unidos de amostra na namespace. |
-| `samplePercentage` | O `sampleCount` como uma porcentagem de perfis unidos de amostra (o `numRowsToRead` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
-| `reportTimestamp` | O carimbo de data e hora do relatório. Se um `date` parâmetro foi fornecido durante a solicitação, o relatório retornado é a data fornecida. Se nenhum `date` parâmetro for fornecido, o relatório mais recente será retornado. |
+| `samplePercentage` | O `sampleCount` como uma porcentagem de perfis unidos de amostra (o valor `numRowsToRead` como retornado em [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
+| `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` tiver sido fornecido durante a solicitação, o relatório retornado será da data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 | `fullIDsFragmentCount` | O número total de fragmentos de perfil na namespace. |
 | `fullIDsCount` | O número total de perfis unidos na namespace. |
-| `fullIDsPercentage` | O `fullIDsCount` como uma porcentagem do total de perfis unidos (o `totalRows` valor retornado no status [da](#view-last-sample-status)última amostra), expresso em formato decimal. |
-| `code` | O `code` da namespace. Isso pode ser encontrado ao trabalhar com o namespace usando a API [do](../../identity-service/api/list-namespaces.md) Adobe Experience Platform Identity Service e também é conhecido como o símbolo [!UICONTROL de] identidade na interface do usuário do Experience Platform. Para saber mais, visite a visão geral [](../../identity-service/namespaces.md)da namespace de identidade. |
-| `value` | O `id` valor da namespace. Isso pode ser encontrado ao trabalhar com o namespace usando a API [do Serviço de](../../identity-service/api/list-namespaces.md)identidade. |
+| `fullIDsPercentage` | O `fullIDsCount` como uma porcentagem do total de perfis unidos (o valor `totalRows` como retornado em [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
+| `code` | O `code` para a namespace. Isso pode ser encontrado ao trabalhar com o namespace usando a [API do Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md) e também é conhecido como o [!UICONTROL símbolo de identidade] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral da namespace de identidade](../../identity-service/namespaces.md). |
+| `value` | O valor `id` para a namespace. Isso pode ser encontrado ao trabalhar com o namespace usando a [API do Serviço de Identidade](../../identity-service/api/list-namespaces.md). |
 
 ## Próximas etapas
 
-Você também pode usar estimativas e pré-visualizações semelhantes para obter informações de nível de resumo da visualização relacionadas às definições de segmento, para ajudar a garantir que você esteja isolando a audiência esperada. Para encontrar etapas detalhadas para trabalhar com pré-visualizações de segmentos e estimativas usando a [!DNL Adobe Experience Platform Segmentation Service] API, visite o guia [de pontos de extremidade de](../../segmentation/api/previews-and-estimates.md)pré-visualizações e estimativas, parte do guia do desenvolvedor de [!DNL Segmentation] API.
+Você também pode usar estimativas e pré-visualizações semelhantes para obter informações de nível de resumo da visualização relacionadas às definições de segmento, para ajudar a garantir que você esteja isolando a audiência esperada. Para encontrar etapas detalhadas para trabalhar com pré-visualizações de segmentos e estimativas usando a API [!DNL Adobe Experience Platform Segmentation Service], visite o [guia de pré-visualizações e estimativas de pontos finais](../../segmentation/api/previews-and-estimates.md), parte do [!DNL Segmentation] guia do desenvolvedor da API.
 

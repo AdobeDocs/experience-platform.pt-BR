@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;perfil individual;campos;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;união schema;união
 solution: Experience Platform
 title: Classe XDM ExperienceEvent
 topic: overview
 description: Este documento fornece uma visão geral da classe ExperienceEvent do XDM.
 translation-type: tm+mt
-source-git-commit: 9e55e9ef6c619a952ca7519ca05dab59da2c573b
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
@@ -17,34 +17,34 @@ ht-degree: 1%
 
 [!DNL XDM ExperienceEvent] é uma classe XDM padrão que permite criar um instantâneo com carimbo de data e hora do sistema quando ocorre um evento específico ou quando um determinado conjunto de condições é atingido.
 
-Um Evento de experiência é um registro de fatos do que ocorreu, incluindo o momento e a identidade do indivíduo envolvido. Os eventos podem ser explícitos (ações humanas diretamente observáveis) ou implícitos (criados sem uma ação humana direta) e são registrados sem agregação ou interpretação. Para obter mais informações de alto nível sobre o uso dessa classe no ecossistema da plataforma, consulte a visão geral [do](../home.md#data-behaviors)XDM.
+Um Evento de experiência é um registro de fatos do que ocorreu, incluindo o momento e a identidade do indivíduo envolvido. Os eventos podem ser explícitos (ações humanas diretamente observáveis) ou implícitos (criados sem uma ação humana direta) e são registrados sem agregação ou interpretação. Para obter mais informações de alto nível sobre o uso dessa classe no ecossistema da plataforma, consulte a [visão geral do XDM](../home.md#data-behaviors).
 
-A [!DNL XDM ExperienceEvent] classe em si fornece vários campos relacionados a séries de tempo a um schema. Os valores de alguns desses campos são automaticamente preenchidos quando os dados são assimilados:
+A classe [!DNL XDM ExperienceEvent] em si fornece vários campos relacionados a séries de tempo para um schema. Os valores de alguns desses campos são automaticamente preenchidos quando os dados são assimilados:
 
 <img src="../images/classes/experienceevent.png" width="650" /><br />
 
 | Propriedade | Descrição |
 | --- | --- |
-| `_id` | Um identificador exclusivo de sequência gerado pelo sistema para o evento. Este campo é usado para rastrear a singularidade de um evento individual, evitar a duplicação de dados e buscar esse evento em serviços de downstream. Como esse campo é gerado pelo sistema, ele não deve receber um valor explícito durante a ingestão dos dados.<br><br>É importante distinguir que este campo **não** representa uma identidade relacionada com uma pessoa individual, mas sim o registro dos dados propriamente ditos. Os dados de identidade relativos a uma pessoa devem ser relegados para campos [de](../schema/composition.md#identity) identidade. |
+| `_id` | Um identificador exclusivo de sequência gerado pelo sistema para o evento. Este campo é usado para rastrear a singularidade de um evento individual, evitar a duplicação de dados e buscar esse evento em serviços de downstream. Como esse campo é gerado pelo sistema, ele não deve receber um valor explícito durante a ingestão dos dados.<br><br>É importante distinguir que este campo  **não** representa uma identidade relacionada com uma pessoa individual, mas sim o registro dos próprios dados. Os dados de identidade relacionados a uma pessoa devem ser relegados para [campos de identidade](../schema/composition.md#identity). |
 | `eventMergeId` | A ID do lote ingerido que fez com que o registro fosse criado. Esse campo é automaticamente preenchido pelo sistema após a ingestão dos dados. |
-| `eventType` | Uma string que indica o tipo de evento primário do registro. Os valores aceites e as respectivas definições são apresentados na seção [do](#eventType)apêndice. |
-| `identityMap` | Um campo de mapa que contém um conjunto de identidades namespacadas para o indivíduo ao qual o evento se aplica. Este campo é atualizado automaticamente pelo sistema à medida que os dados de identidade são assimilados. Para utilizar corretamente este campo para o Perfil [Cliente em tempo](../../profile/home.md)real, não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade nos [fundamentos da composição](../schema/composition.md#identityMap) do schema para obter mais informações sobre o caso de uso. |
-| `timestamp` | A hora em que ocorreu o evento ou observação, formatada de acordo com a seção 5.6 [da](https://tools.ietf.org/html/rfc3339#section-5.6)RFC 3339). |
+| `eventType` | Uma string que indica o tipo de evento primário do registro. Os valores aceitos e suas definições são fornecidos na seção [apêndice](#eventType). |
+| `identityMap` | Um campo de mapa que contém um conjunto de identidades namespacadas para o indivíduo ao qual o evento se aplica. Este campo é atualizado automaticamente pelo sistema à medida que os dados de identidade são assimilados. Para utilizar adequadamente este campo para [Perfil do cliente em tempo real](../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade nas  [noções básicas de ](../schema/composition.md#identityMap) composição de schemas para obter mais informações sobre o caso de uso. |
+| `timestamp` | A hora em que ocorreu o evento ou observação, formatada de acordo com [RFC 3339, seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
 
 ## Misturas compatíveis {#mixins}
 
 >[!NOTE]
 >
->Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../mixins/name-updates.md) mixin para obter mais informações.
+>Os nomes de várias misturas mudaram. Consulte o documento em [mixin name updates](../mixins/name-updates.md) para obter mais informações.
 
-Adobe fornece várias combinações padrão para uso com a [!DNL XDM ExperienceEvent] classe. A seguir está uma lista de algumas combinações comumente usadas para a classe:
+O Adobe fornece várias combinações padrão para uso com a classe [!DNL XDM ExperienceEvent]. A seguir está uma lista de algumas combinações comumente usadas para a classe:
 
 * [[!UICONTROL Detalhes da ID do usuário final]](../mixins/event/enduserids.md)
 * [[!UICONTROL Detalhes do ambiente]](../mixins/event/environment-details.md)
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre a classe [!UICONTROL XDM ExperienceEvent] .
+A seção a seguir contém informações adicionais sobre a classe [!UICONTROL XDM ExperienceEvent].
 
 ### Valores aceitos para xdm:eventType {#eventType}
 
@@ -63,7 +63,7 @@ A tabela a seguir descreve os valores aceitos para `xdm:eventType`, juntamente c
 | `advertising.starts` | Um anúncio de vídeo digital começou a ser reproduzido. |
 | `advertising.thirdQuartiles` | Um anúncio de vídeo digital tem uma duração de 75% em velocidade normal. |
 | `web.webpagedetails.pageViews` | Uma página da Web recebeu uma ou mais visualizações. |
-| `web.webinteraction.linkClicks` | Um link recebeu um ou mais cliques. |
+| `web.webinteraction.linkClicks` | Um link foi selecionado uma ou mais vezes. |
 | `commerce.checkouts` | Ocorreu um evento de finalização para uma lista de produto. Pode haver mais de um evento de finalização se houver várias etapas em um processo de finalização. Se houver várias etapas, o carimbo de data e hora e a página/experiência referenciada para cada evento serão usados para identificar cada evento individual (etapa), representado em ordem. |
 | `commerce.productListAdds` | Um produto foi adicionado à lista do produto ou ao carrinho de compras. |
 | `commerce.productListOpens` | Uma nova lista de produto (carrinho de compras) foi inicializada ou criada. |

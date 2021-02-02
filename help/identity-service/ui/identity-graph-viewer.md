@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;home;popular topics;visualizador de gráfico de identidade;Visualizador de gráfico de identidade;Visualizador de gráfico;Visualizador de gráfico;namespace de identidade;namespace de identidade;identidade;serviço de identidade;serviço de identidade
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com sua marca em diferentes canais.
 translation-type: tm+mt
-source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
+source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -31,23 +31,23 @@ Trabalhar com o visualizador de gráficos de identidade requer uma compreensão 
 
 ### Terminologia
 
-- **Identidade (nó):** Uma identidade ou um nó são dados exclusivos de uma entidade, geralmente uma pessoa. Uma identidade é composta de uma namespace e um valor de identidade.
+- **Identidade (nó):** uma identidade ou um nó são dados exclusivos de uma entidade, normalmente uma pessoa. Uma identidade é composta de uma namespace e um valor de identidade.
 - **Link (borda):** Um link ou uma borda representa a conexão entre identidades.
 - **Gráfico (cluster):** Um gráfico ou cluster é um grupo de identidades e links que representam uma pessoa.
 
 ## Acessar o visualizador de gráficos de identidade
 
-Para usar o visualizador de gráfico de identidade na interface do usuário, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione a guia Gráfico **[!UICONTROL de]** identidade. Na tela **[!UICONTROL Namespace]** de identidade, clique no ícone **[!UICONTROL Selecionar namespace]** de identidade para pesquisar a namespace que deseja usar.
+Para usar o visualizador de gráficos de identidade na interface, selecione **[!UICONTROL Identidades]** no painel de navegação esquerdo e selecione a guia **[!UICONTROL Gráfico de identidade]**. Na tela **[!UICONTROL Namespace de identidade]**, clique no ícone **[!UICONTROL Selecionar namespace de identidade]** para procurar a namespace que pretende utilizar.
 
 ![namespace](../images/identity-graph-viewer/identity-namespace.png)
 
-O painel **[!UICONTROL Selecionar namespace]** de identidade é exibido. Esta tela contém uma lista de namespaces disponíveis para sua organização, incluindo informações sobre um nome **[!UICONTROL de]** exibição de namespace, símbolo **[!UICONTROL de]** identidade, **[!UICONTROL proprietário]**, data **[!UICONTROL da última atualização]** e **[!UICONTROL descrição]**. Você pode usar qualquer uma das namespaces fornecidas, desde que tenha um valor de identidade válido conectado a elas.
+O painel **[!UICONTROL Selecionar namespace de identidade]** é exibido. Esta tela contém uma lista de namespaces disponíveis para sua organização, incluindo informações sobre uma namespace **[!UICONTROL Nome de exibição]**, **[!UICONTROL Símbolo de identidade]**, **[!UICONTROL Proprietário]**, **[!UICONTROL Data da última atualização]** e **[!UICONTROL Descrição]**. Você pode usar qualquer uma das namespaces fornecidas, desde que tenha um valor de identidade válido conectado a elas.
 
-Selecione a namespace que deseja usar e clique em **[!UICONTROL Selecionar]** para prosseguir.
+Selecione a namespace que pretende utilizar e clique em **[!UICONTROL Selecione]** para prosseguir.
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Depois de selecionar uma namespace, digite o valor correspondente para um cliente específico na caixa de texto Valor **[!UICONTROL de]** identidade e selecione **[!UICONTROL Visualização]**.
+Depois de selecionar uma namespace, digite o valor correspondente para um cliente específico na caixa de texto **[!UICONTROL Valor de identidade]** e selecione **[!UICONTROL Visualização]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
@@ -55,15 +55,15 @@ O visualizador de gráficos de identidade é exibido. No lado esquerdo da tela e
 
 >[!IMPORTANT]
 >
->Um gráfico de identidade requer no mínimo duas identidades vinculadas para serem geradas, bem como uma namespace e um par de ID válidos. O número máximo de identidades que o visualizador de gráficos pode exibir é 150. See the [appendix](#appendix) section below for more information.
+>Um gráfico de identidade requer no mínimo duas identidades vinculadas para serem geradas, bem como uma namespace e um par de ID válidos. O número máximo de identidades que o visualizador de gráficos pode exibir é 150. Consulte a seção [Appendix](#appendix) abaixo para obter mais informações.
 
 ![gráfico de identidade](../images/identity-graph-viewer/graph-viewer.png)
 
-Selecione uma identidade para atualizar a linha realçada na tabela **[!UICONTROL Identidades]** e para atualizar as informações fornecidas no painel direito, que inclui um **[!UICONTROL Valor]** de identidade, ID **[!UICONTROL de]** lote e sua data **[!UICONTROL Última atualização]** .
+Selecione uma identidade para atualizar a linha realçada na tabela **[!UICONTROL Identidades]** e para atualizar as informações fornecidas no painel direito, que inclui **[!UICONTROL Valor]**, **[!UICONTROL ID do lote]** e a data **[!UICONTROL Última atualização]** da identidade.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-É possível filtrar por um gráfico e isolar uma namespace específica usando a opção de classificação na parte superior da tabela **[!UICONTROL Identidades]** . No menu suspenso, selecione a namespace que deseja realçar.
+Você pode filtrar por um gráfico e isolar uma namespace específica usando a opção de classificação na parte superior da tabela **[!UICONTROL Identidades]**. No menu suspenso, selecione a namespace que deseja realçar.
 
 ![filtrar por namespace](../images/identity-graph-viewer/filter-namespace.png)
 
@@ -75,7 +75,7 @@ A parte superior direita da caixa do visualizador de gráficos contém opções 
 
 ![zoom](../images/identity-graph-viewer/zoom.png)
 
-Você pode visualização mais informações sobre lotes selecionando a fonte **[!UICONTROL de]** dados no cabeçalho. A tabela da fonte **[!UICONTROL de]** dados exibe uma lista de IDs **[!UICONTROL de]** lote associadas ao gráfico, bem como suas IDs **** vinculadas, o schema de origem e a data de ingestão.
+Você pode visualização mais informações sobre lotes selecionando **[!UICONTROL Fonte de dados]** no cabeçalho. A tabela **[!UICONTROL Fonte de dados]** exibe uma lista de **[!UICONTROL IDs de lote]** associadas ao gráfico, bem como suas **[!UICONTROL IDs vinculadas]**, schema de origem e data de ingestão.
 
 ![fonte de dados](../images/identity-graph-viewer/data-source-table.png)
 
@@ -102,11 +102,9 @@ Erros podem ocorrer ao acessar o visualizador de gráficos de identidade. A segu
 - Deve existir um valor de identidade na namespace selecionada.
 - O visualizador de gráficos de identidade requer no mínimo duas identidades vinculadas para serem geradas.
 - O visualizador de gráficos de identidade não pode exceder o máximo de 150 identidades.
-- No momento, o visualizador de gráficos de identidade não está acessível em caixas de proteção que não sejam de produção.
-- Atualmente, o visualizador de gráficos de identidade suporta apenas dados ingeridos em lote e não exibe dados ingeridos usando fontes de transmissão.
 
 ![tela de erro](../images/identity-graph-viewer/error-screen.png)
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da plataforma. Para obter mais informações sobre identidades na plataforma, consulte a visão geral do Serviço de [identidade](../home.md)
+Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da plataforma. Para obter mais informações sobre identidades na Plataforma, consulte a [visão geral do Serviço de Identidade](../home.md)

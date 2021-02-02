@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform;lar;tópicos populares;ingestão em lote;ingestão em lote;ingestão;guia do desenvolvedor;guia da api;carregar;ingerir parquet;ingest json;
 solution: Experience Platform
 title: Guia do desenvolvedor de ingestão em lote
 topic: developer guide
 description: Este documento fornece uma visão geral abrangente do uso de APIs de ingestão em lote.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2698'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # Guia do desenvolvedor de ingestão em lote
 
-Este documento fornece uma visão geral abrangente do uso de APIs [de ingestão em](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)lote.
+Este documento fornece uma visão geral abrangente do uso de [APIs de ingestão em lote](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-O apêndice deste documento fornece informações para a [formatação de dados a serem usados para ingestão](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
+O apêndice deste documento fornece informações para [dados de formatação a serem usados para ingestão](#data-transformation-for-batch-ingestion), incluindo arquivos de dados CSV e JSON de amostra.
 
 ## Introdução
 
@@ -27,17 +27,17 @@ As seções a seguir fornecem informações adicionais que você precisará conh
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [Ingestão](./overview.md)em lote: Permite que você ingira dados no Adobe Experience Platform como arquivos em lote.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Ingestão](./overview.md) em lote: Permite que você ingira dados no Adobe Experience Platform como arquivos em lote.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -49,17 +49,17 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
 
-As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um `Content-Type` cabeçalho adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada.
+As solicitações que contêm uma carga útil (POST, PUT, PATCH) podem exigir um cabeçalho `Content-Type` adicional. Os valores aceitos específicos para cada chamada são fornecidos nos parâmetros da chamada.
 
 ## Tipos
 
-Ao assimilar dados, é importante entender como os schemas [!DNL Experience Data Model] (XDM) funcionam. Para obter mais informações sobre como os tipos de campos XDM mapeiam para diferentes formatos, leia o guia [do desenvolvedor do Registro de](../../xdm/api/getting-started.md)Schemas.
+Ao assimilar dados, é importante entender como os schemas [!DNL Experience Data Model] (XDM) funcionam. Para obter mais informações sobre como os tipos de campos XDM mapeiam para diferentes formatos, leia o [Guia do desenvolvedor do Registro de Schemas](../../xdm/api/getting-started.md).
 
-Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no schema do público alvo, os dados serão convertidos no tipo de público alvo expresso. Se não puder, o lote será reprovado com um `TypeCompatibilityException`.
+Há alguma flexibilidade ao assimilar dados - se um tipo não corresponder ao que está no schema do público alvo, os dados serão convertidos no tipo de público alvo expresso. Se não puder, ocorrerá falha no lote com um `TypeCompatibilityException`.
 
-Por exemplo, nem JSON nem CSV têm um tipo de data ou data e hora. Como resultado, esses valores são expressos usando strings [formatadas com](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Unix Time formatado em milissegundos (153126395 (9000) e são convertidos no momento da ingestão para o tipo XDM do público alvo.
+Por exemplo, nem JSON nem CSV têm um tipo de data ou data e hora. Como resultado, esses valores são expressos usando strings formatadas [ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou Horário Unix formatados em milissegundos (153126 3959000) e são convertidos no momento da ingestão para o tipo XDM do público alvo.
 
 A tabela abaixo mostra as conversões suportadas ao assimilar dados.
 
@@ -100,7 +100,7 @@ Primeiro, você precisará criar um lote, com JSON como o formato de entrada. Ao
 
 >[!NOTE]
 >
->Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, o sinalizador `isMultiLineJson` precisa ser definido. Para obter mais informações, leia o guia [de solução de problemas de ingestão em](./troubleshooting.md)lote.
+>Os exemplos abaixo são para JSON de linha única. Para assimilar JSON de várias linhas, o sinalizador `isMultiLineJson` deverá ser definido. Para obter mais informações, leia o [guia de solução de problemas de ingestão em lote](./troubleshooting.md).
 
 **Formato da API**
 
@@ -162,7 +162,7 @@ Agora que você criou um lote, é possível usar o `batchId` de antes para fazer
 
 >[!NOTE]
 >
->Consulte a seção de apêndice para obter um [exemplo de um arquivo](#data-transformation-for-batch-ingestion)de dados JSON devidamente formatado.
+>Consulte a seção de apêndice para obter um [exemplo de um arquivo de dados JSON devidamente formatado](#data-transformation-for-batch-ingestion).
 
 **Formato da API**
 
@@ -578,7 +578,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Ingressar arquivos CSV
 
-Para assimilar arquivos CSV, é necessário criar uma classe, um schema e um conjunto de dados compatível com CSV. Para obter informações detalhadas sobre como criar a classe e o schema necessários, siga as instruções fornecidas no tutorial [de criação de schemas](../../xdm/api/ad-hoc.md)ad-hoc.
+Para assimilar arquivos CSV, é necessário criar uma classe, um schema e um conjunto de dados compatível com CSV. Para obter informações detalhadas sobre como criar a classe e o schema necessários, siga as instruções fornecidas no [tutorial de criação de schemas ad-hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -646,10 +646,10 @@ Uma explicação sobre a parte diferente da seção &quot;fileDescription&quot; 
 | `delimiters` | O caractere a ser usado como delimitador. |
 | `quotes` | O caractere a ser usado para aspas. |
 | `escapes` | O caractere a ser usado como o caractere de escape. |
-| `header` | O arquivo carregado **deve** conter cabeçalhos. Como a validação do schema é feita, isso deve ser definido como true. Além disso, os cabeçalhos **não** podem conter espaços - se você tiver espaços no cabeçalho, substitua-os por sublinhados. |
+| `header` | O arquivo carregado **must** contém cabeçalhos. Como a validação do schema é feita, isso deve ser definido como true. Além disso, os cabeçalhos podem **e não** conter espaços - se você tiver espaços no cabeçalho, substitua-os por sublinhados. |
 | `charset` | Um campo opcional. Outros caracteres suportados incluem &quot;US-ASCII&quot; e &quot;ISO-8869-1&quot;. Se deixado em branco, UTF-8 é assumido por padrão. |
 
-O conjunto de dados referenciado deve ter o bloco de descrição de arquivo listado acima e deve apontar para um schema válido no registro. Caso contrário, o arquivo não será dominado em parquet.
+O conjunto de dados referenciado deve ter o bloco de descrição de arquivo listado acima e deve apontar para um schema válido no registro. Caso contrário, o arquivo não será dominado no Parquet.
 
 ### Criar lote
 
@@ -720,7 +720,7 @@ Agora que você criou um lote, é possível usar o `batchId` de antes para fazer
 
 >[!NOTE]
 >
->Consulte a seção de apêndice para obter um [exemplo de um arquivo](#data-transformation-for-batch-ingestion)de dados CSV corretamente formatado.
+>Consulte a seção de apêndice para obter um [exemplo de um arquivo de dados CSV devidamente formatado](#data-transformation-for-batch-ingestion).
 
 **Formato da API**
 
@@ -819,7 +819,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Excluir um lote {#delete-a-batch}
 
-Um lote pode ser excluído executando a seguinte solicitação de POST com o parâmetro de `action=REVERT` query para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o elegível para coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
+Um lote pode ser excluído executando a seguinte solicitação de POST com o parâmetro de query `action=REVERT` para a ID do lote que você deseja excluir. O lote é marcado como &quot;inativo&quot;, tornando-o elegível para coleta de lixo. O lote será coletado de forma assíncrona e, nesse momento, será marcado como &quot;excluído&quot;.
 
 **Formato da API**
 
@@ -1001,9 +1001,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Transformação de dados para ingestão em lote
 
-Para assimilar um arquivo de dados, [!DNL Experience Platform]a estrutura hierárquica do arquivo deve estar em conformidade com o schema do Modelo de Dados de [Experiência (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual o upload está sendo feito.
+Para assimilar um arquivo de dados em [!DNL Experience Platform], a estrutura hierárquica do arquivo deve estar em conformidade com o schema [Modelo de Dados de Experiência (XDM)](../../xdm/home.md) associado ao conjunto de dados para o qual está sendo feito o upload.
 
-Informações sobre como mapear um arquivo CSV para estar em conformidade com um schema XDM podem ser encontradas no documento de transformações [de](../../etl/transformations.md) amostra, juntamente com um exemplo de um arquivo de dados JSON devidamente formatado. Arquivos de amostra fornecidos no documento podem ser encontrados aqui:
+Informações sobre como mapear um arquivo CSV para estar em conformidade com um schema XDM podem ser encontradas no documento [exemplo de transformações](../../etl/transformations.md), juntamente com um exemplo de um arquivo de dados JSON corretamente formatado. Arquivos de amostra fornecidos no documento podem ser encontrados aqui:
 
 - [CRM_perfis.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_perfis.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

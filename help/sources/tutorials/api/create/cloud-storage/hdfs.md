@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar um Apache Hadoop Distributed File System (a seguir denominado "HDFS") ao Experience Platform.
 translation-type: tm+mt
-source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

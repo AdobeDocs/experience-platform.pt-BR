@@ -5,42 +5,42 @@ title: Explore uma conexão de eCommerce usando a API de Serviço de Fluxo
 topic: overview
 description: Este tutorial usa a API de Serviço de Fluxo para explorar conexões de eCommerce.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
 
 
-# Explore uma conexão de eCommerce usando a [!DNL Flow Service] API
+# Explore uma conexão de comércio eletrônico usando a API [!DNL Flow Service]
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a [!DNL Flow Service] API para explorar uma conexão de **[!UICONTROL comércio eletrônico]** de terceiros.
+Este tutorial usa a API [!DNL Flow Service] para explorar uma conexão **[!UICONTROL eCommerce]** de terceiros.
 
 ## Introdução
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [[!DNL Sources]](../../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a uma conexão de **[!UICONTROL comércio eletrônico]** usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a uma conexão **[!UICONTROL eCommerce]** usando a API [!DNL Flow Service].
 
 ### Obter uma ID de conexão
 
-Para explorar sua conexão de **[!UICONTROL eCommerce]** usando [!DNL Platform] APIs, é necessário ter uma ID de conexão válida. Se você ainda não tiver uma conexão para a conexão de **[!UICONTROL comércio eletrônico]** com a qual deseja trabalhar, poderá criar uma através do seguinte tutorial:
+Para explorar sua conexão **[!UICONTROL eCommerce]** usando [!DNL Platform] APIs, você deve possuir uma ID de conexão válida. Se você ainda não tiver uma conexão para a conexão **[!UICONTROL eCommerce]** com a qual deseja trabalhar, poderá criar uma através do seguinte tutorial:
 
 * [Shopify](../create/ecommerce/shopify.md)
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -56,7 +56,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Explore suas tabelas de dados
 
-Usando sua ID de conexão de **[!UICONTROL eCommerce]** , você pode explorar suas tabelas de dados realizando solicitações de GET. Use a chamada a seguir para localizar o caminho da tabela na qual você deseja inspecionar ou assimilar [!DNL Platform].
+Usando sua ID de conexão **[!UICONTROL eCommerce]**, você pode explorar suas tabelas de dados realizando solicitações de GET. Use a chamada a seguir para localizar o caminho da tabela que deseja inspecionar ou assimilar em [!DNL Platform].
 
 **Formato da API**
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONNECTION_ID}` | Sua ID de conexão de **[!UICONTROL eCommerce]** . |
+| `{CONNECTION_ID}` | Sua ID de conexão **[!UICONTROL eCommerce]**. |
 
 **Solicitação**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de tabelas da sua conexão de **[!UICONTROL eCommerce]** . Encontre a tabela que deseja trazer [!DNL Platform] e anote sua `path` propriedade, pois é necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de tabelas da sua conexão **[!UICONTROL eCommerce]**. Encontre a tabela que deseja trazer para [!DNL Platform] e anote sua propriedade `path`, conforme necessário na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -118,7 +118,7 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas da sua conexão de **[!U
 
 ## Inspect a estrutura de uma tabela
 
-Para inspecionar a estrutura de uma tabela da sua conexão de **[!UICONTROL eCommerce]** , execute uma solicitação de GET enquanto especifica o caminho de uma tabela dentro de um parâmetro de `object` query.
+Para inspecionar a estrutura de uma tabela da conexão **[!UICONTROL eCommerce]**, execute uma solicitação de GET enquanto especifica o caminho de uma tabela dentro de um parâmetro de query `object`.
 
 **Formato da API**
 
@@ -128,8 +128,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | A ID de conexão da sua conexão de **[!UICONTROL comércio eletrônico]** . |
-| `{TABLE_PATH}` | O caminho de uma tabela dentro da sua conexão de **[!UICONTROL comércio eletrônico]** . |
+| `{CONNECTION_ID}` | A ID de conexão da sua conexão **[!UICONTROL eCommerce]**. |
+| `{TABLE_PATH}` | O caminho de uma tabela dentro da sua conexão **[!UICONTROL eCommerce]**. |
 
 **Solicitação**
 
@@ -144,7 +144,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Os detalhes referentes a cada coluna da tabela estão localizados em elementos da `columns` matriz.
+Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Os detalhes referentes a cada coluna da tabela estão localizados em elementos da matriz `columns`.
 
 ```json
 {
@@ -198,4 +198,4 @@ Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Os detalhe
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você explorou sua conexão de **[!UICONTROL eCommerce]** , encontrou o caminho da tabela na qual deseja assimilar [!DNL Platform]e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados de comércio eletrônico e trazê-los para a Plataforma](../collect/ecommerce.md).
+Ao seguir este tutorial, você explorou sua conexão **[!UICONTROL eCommerce]**, encontrou o caminho da tabela que deseja assimilar em [!DNL Platform] e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados de comércio eletrônico e trazê-los para a Plataforma](../collect/ecommerce.md).

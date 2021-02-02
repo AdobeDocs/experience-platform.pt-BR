@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform;home;popular topics;query service;Query service;exemplo de query;exemplo de query;adobe analytics;
 solution: Experience Platform
 title: Query de amostra
 topic: queries
@@ -7,7 +7,7 @@ description: Os dados de conjuntos de relatórios selecionados da Adobe Analytic
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -215,8 +215,8 @@ No relatórios, os pedidos, a receita, as visualizações de produtos e as adiç
 
 | eVar6 (método de descoberta de produtos) | receita | ordens | visualizações de produtos | adição ao carrinho |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| pesquisa interna:camisa de verão | 19,99 | 1 | 1 | 1 |
-| pesquisa interna:chapéu de inverno | 12,99 | 3 | 3 | 3 |
+| pesquisa interna:camisa de verão | 19,99 | 1 | 1 | 3 |
+| pesquisa interna:chapéu de inverno | 12,99 | 1 | 3 | 3 |
 
 Para saber mais sobre como usar a sintaxe de conversão, leia a documentação da Adobe Analytics em [implementar eVars usando a sintaxe de conversão](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 

@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;schema;Schema;schemas;Schemas;criar
 solution: Experience Platform
 title: Criar um schema usando a API de registro do Schema
 topic: tutorial
 type: Tutorial
 description: Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2373'
 ht-degree: 1%
 
 ---
 
 
-# Criar um schema usando a [!DNL Schema Registry] API
+# Criar um schema usando a API [!DNL Schema Registry]
 
-O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] Adobe Experience Platform. O [!DNL Schema Library] contém recursos disponibilizados para você pelo Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. O Registro fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
+O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform. O [!DNL Schema Library] contém recursos disponibilizados pelo Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa. O Registro fornece uma interface de usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
 
-Este tutorial usa a [!DNL Schema Registry] API para guiá-lo pelas etapas para compor um schema usando uma classe padrão. Se você preferir usar a interface do usuário no [!DNL Experience Platform], o Tutorial [do Editor de](create-schema-ui.md) Schemas fornece instruções passo a passo para executar ações semelhantes no editor de schemas.
+Este tutorial usa a API [!DNL Schema Registry] para guiá-lo pelas etapas para compor um schema usando uma classe padrão. Se você preferir usar a interface do usuário em [!DNL Experience Platform], o [Tutorial do editor de Schemas](create-schema-ui.md) fornece instruções passo a passo para executar ações semelhantes no editor de schemas.
 
 ## Introdução
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas da composição](../schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas à [!DNL Schema Registry] API com êxito. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
+Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Schema Registry]. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
 
-Este tutorial descreve as etapas da composição de um schema de Membros de Fidelidade que descreve os dados relacionados aos membros de um programa de fidelidade de varejo. Antes de começar, você pode desejar pré-visualização do schema [Membros da Fidelidade](#complete-schema) completo no apêndice.
+Este tutorial descreve as etapas da composição de um schema de Membros de Fidelidade que descreve os dados relacionados aos membros de um programa de fidelidade de varejo. Antes de começar, você pode querer pré-visualização o schema [membros da Fidelidade completa](#complete-schema) no apêndice.
 
 ## Compor um schema com uma classe padrão
 
-Um schema pode ser considerado o modelo para os dados que você deseja assimilar [!DNL Experience Platform]. Cada schema é composto de uma classe e zero ou mais combinações. Em outras palavras, não é necessário adicionar uma mistura para definir um schema, mas na maioria dos casos, pelo menos uma é usada.
+Um schema pode ser considerado como o modelo para os dados que você deseja assimilar em [!DNL Experience Platform]. Cada schema é composto de uma classe e zero ou mais combinações. Em outras palavras, não é necessário adicionar uma mistura para definir um schema, mas na maioria dos casos, pelo menos uma é usada.
 
 ### Atribuir uma classe
 
 O processo de composição do schema começa com a seleção de uma classe. A classe define os principais aspectos comportamentais dos dados (séries de registros e de tempo), bem como os campos mínimos necessários para descrever os dados que serão ingeridos.
 
-O schema que você está fazendo neste tutorial usa a [!DNL XDM Individual Profile] classe. [!DNL XDM Individual Profile] é uma classe padrão fornecida pelo Adobe para definir o comportamento do registro. Mais informações sobre o comportamento podem ser encontradas nos [fundamentos da composição](../schema/composition.md)do schema.
+O schema que você está fazendo neste tutorial usa a classe [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] é uma classe padrão fornecida pelo Adobe para definir o comportamento do registro. Mais informações sobre o comportamento podem ser encontradas em [noções básicas da composição do schema](../schema/composition.md).
 
 Para atribuir uma classe, é feita uma chamada de API para criar (POST) um novo schema no container do locatário. Esta chamada inclui a classe que o schema implementará. Cada schema só pode implementar uma classe.
 
@@ -53,7 +53,7 @@ POST /tenant/schemas
 
 **Solicitação**
 
-A solicitação deve incluir um `allOf` atributo que faça referência ao `$id` de uma classe. Este atributo define a &quot;classe base&quot; que o schema implementará. Neste exemplo, a classe base é a [!DNL XDM Individual Profile] classe. O valor `$id` da [!DNL XDM Individual Profile] classe é usado como o valor do `$ref` campo na `allOf` matriz abaixo.
+A solicitação deve incluir um atributo `allOf` que faça referência a `$id` de uma classe. Este atributo define a &quot;classe base&quot; que o schema implementará. Neste exemplo, a classe base é a classe [!DNL XDM Individual Profile]. O `$id` da classe [!DNL XDM Individual Profile] é usado como o valor do campo `$ref` na matriz `allOf` abaixo.
 
 ```SHELL
 curl -X POST \
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta que contém os detalhes do schema recém-criado, incluindo `$id`, `meta:altIt`e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
+Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta que contém os detalhes do schema recém-criado, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {
@@ -117,7 +117,7 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
 
 ### Procure um schema
 
-Para visualização de seu schema recém-criado, execute uma solicitação de pesquisa (GET) usando o URL `meta:altId` ou o `$id` URL codificado para o schema.
+Para visualização do schema recém-criado, execute uma solicitação de pesquisa (GET) usando o URI `meta:altId` ou o URL codificado `$id` para o schema.
 
 **Formato da API**
 
@@ -181,7 +181,7 @@ O formato de resposta depende do cabeçalho Aceitar enviado com a solicitação.
 
 Agora que o schema de Membros de Fidelidade foi criado e confirmado, é possível adicionar misturas a ele.
 
-Há diferentes combinações padrão disponíveis para uso, dependendo da classe de schema selecionada. Cada mixin contém um `intendedToExtend` campo que define as classes com as quais essa mistura é compatível.
+Há diferentes combinações padrão disponíveis para uso, dependendo da classe de schema selecionada. Cada mixin contém um campo `intendedToExtend` que define as classes com as quais essa combinação é compatível.
 
 As misturas definem conceitos, como &quot;nome&quot; ou &quot;endereço&quot;, que podem ser reutilizados em qualquer schema que precise capturar as mesmas informações.
 
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **Resposta**
 
-A resposta mostra a mistura recém-adicionada na `meta:extends` matriz e contém um `$ref` para a mistura no `allOf` atributo.
+A resposta mostra a mistura recém-adicionada na matriz `meta:extends` e contém um `$ref` para a mistura no atributo `allOf`.
 
 ```JSON
 {
@@ -260,7 +260,7 @@ Agora é possível adicionar outra mixagem padrão repetindo as etapas usando ou
 
 >[!TIP]
 >
->Vale a pena rever todas as combinações disponíveis para se familiarizar com os campos incluídos em cada uma. Você pode lista (GET) todas as combinações disponíveis para uso com uma classe específica, executando uma solicitação em relação a cada um dos container &quot;global&quot; e &quot;locatário&quot;, retornando somente as combinações nas quais o campo &quot;meta:pretendidoToExtend&quot; corresponde à classe que você está usando. Nesse caso, é a [!DNL XDM Individual Profile] classe, então o [!DNL XDM Individual Profile] `$id` é usado:
+>Vale a pena rever todas as combinações disponíveis para se familiarizar com os campos incluídos em cada uma. Você pode lista (GET) todas as combinações disponíveis para uso com uma classe específica, executando uma solicitação em relação a cada um dos container &quot;global&quot; e &quot;locatário&quot;, retornando somente as combinações nas quais o campo &quot;meta:pretendidoToExtend&quot; corresponde à classe que você está usando. Nesse caso, é a classe [!DNL XDM Individual Profile], portanto, [!DNL XDM Individual Profile] `$id` é usado:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -292,9 +292,9 @@ curl -X PATCH \
 
 **Resposta**
 
-A resposta mostra a mistura recém-adicionada na `meta:extends` matriz e contém um `$ref` para a mistura no `allOf` atributo.
+A resposta mostra a mistura recém-adicionada na matriz `meta:extends` e contém um `$ref` para a mistura no atributo `allOf`.
 
-O schema de Membros de Fidelidade agora deve conter três `$ref` valores na `allOf` matriz: &quot;perfil&quot;, &quot;perfil-pessoa-detalhes&quot; e &quot;perfil-pessoais-detalhes&quot;, conforme mostrado abaixo.
+O schema de Membros de Fidelidade agora deve conter três valores `$ref` na matriz `allOf`: &quot;perfil&quot;, &quot;perfil-pessoa-detalhes&quot; e &quot;perfil-pessoais-detalhes&quot;, conforme mostrado abaixo.
 
 ```JSON
 {
@@ -344,11 +344,11 @@ O schema de Membros de Fidelidade agora deve conter três `$ref` valores na `all
 
 O schema de Membros de Fidelidade precisa capturar informações exclusivas do programa de fidelidade. Esta informação não está incluída em nenhuma das misturas padrão.
 
-As [!DNL Schema Registry] contas para isso permitem que você defina suas próprias combinações dentro do container do locatário. Essas combinações são exclusivas da sua organização e não são visíveis nem editáveis por ninguém fora da sua Organização IMS.
+As contas [!DNL Schema Registry] para isso permitem que você defina suas próprias combinações no container do locatário. Essas combinações são exclusivas da sua organização e não são visíveis nem editáveis por ninguém fora da sua Organização IMS.
 
-Para criar (POST) uma nova combinação, sua solicitação deve incluir um `meta:intendedToExtend` campo que contenha o campo `$id` para as classes base com as quais a combinação é compatível, juntamente com as propriedades que a mistura incluirá.
+Para criar (POST) uma nova combinação, sua solicitação deve incluir um campo `meta:intendedToExtend` contendo `$id` para as classes base com as quais a combinação é compatível, juntamente com as propriedades que a mistura incluirá.
 
-Todas as propriedades personalizadas devem ser aninhadas em suas contas `TENANT_ID` para evitar colisões com outras combinações ou campos.
+Todas as propriedades personalizadas devem ser aninhadas em `TENANT_ID` para evitar colisões com outras combinações ou campos.
 
 **Formato da API**
 
@@ -419,7 +419,7 @@ curl -X POST\
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta que contém os detalhes da combinação recém-criada, incluindo `$id`, `meta:altIt`e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
+Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta que contém os detalhes da combinação recém-criada, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {
@@ -498,7 +498,7 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
 
 ### Adicionar mixagem personalizada ao schema
 
-Agora, você pode seguir as mesmas etapas para [adicionar uma mistura](#add-a-mixin) padrão para adicionar essa mistura recém-criada ao seu schema.
+Agora você pode seguir as mesmas etapas para [adicionar uma mixin padrão](#add-a-mixin) para adicionar essa mixin recém-criada ao seu schema.
 
 **Formato da API**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Você pode ver que a mistura foi adicionada com êxito porque a resposta agora mostra a mistura recém-adicionada na `meta:extends` matriz e contém um `$ref` para a mistura no `allOf` atributo.
+Você pode ver que a mistura foi adicionada com êxito porque a resposta agora mostra a mistura recém-adicionada na matriz `meta:extends` e contém um `$ref` para a mistura no atributo `allOf`.
 
 ```JSON
 {
@@ -599,9 +599,9 @@ curl -X GET \
 
 **Resposta**
 
-Ao usar o cabeçalho `application/vnd.adobe.xed-full+json; version=1` Aceitar, você pode ver o schema completo mostrando todas as propriedades. Essas propriedades são os campos contribuídos pela classe e as combinações usadas para compor o schema. Neste exemplo de resposta, os atributos de propriedade individuais foram minimizados para espaço. Você pode visualização o schema completo, incluindo todas as propriedades e seus atributos, no [apêndice](#appendix) ao final deste documento.
+Ao usar o cabeçalho `application/vnd.adobe.xed-full+json; version=1` Aceitar, você pode ver o schema completo mostrando todas as propriedades. Essas propriedades são os campos contribuídos pela classe e as combinações usadas para compor o schema. Neste exemplo de resposta, os atributos de propriedade individuais foram minimizados para espaço. Você pode visualização o schema completo, incluindo todas as propriedades e seus atributos, no [apêndice](#appendix) no final deste documento.
 
-Em `"properties"`, você pode ver a `_{TENANT_ID}` namespace criada ao adicionar a mixagem personalizada. Dentro dessa namespace está o objeto &quot;fidelidade&quot; e os campos que foram definidos quando a combinação foi criada.
+Em `"properties"`, você pode ver a namespace `_{TENANT_ID}` que foi criada quando adicionou o mixin personalizado. Dentro dessa namespace está o objeto &quot;fidelidade&quot; e os campos que foram definidos quando a combinação foi criada.
 
 ```JSON
 {
@@ -705,7 +705,7 @@ POST /tenant/datatypes
 
 **Solicitação**
 
-A definição de um tipo de dados não exige campos `meta:extends` ou `meta:intendedToExtend` , nem campos precisam ser aninhados para evitar colisões.
+A definição de um tipo de dados não exige os campos `meta:extends` ou `meta:intendedToExtend`, nem os campos precisam ser aninhados para evitar colisões.
 
 ```SHELL
 curl -X POST \
@@ -756,7 +756,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta que contém os detalhes do tipo de dados recém-criado, incluindo o `$id`, `meta:altIt`e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
+Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta contendo os detalhes do tipo de dados recém-criado, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {
@@ -818,7 +818,7 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
 }
 ```
 
-Você pode executar uma solicitação de pesquisa (GET) usando o URL `$id` codificado para visualização do novo tipo de dados diretamente. Certifique-se de incluir o `version` no cabeçalho Aceitar para uma solicitação de pesquisa.
+Você pode executar uma solicitação de pesquisa (GET) usando o URL codificado `$id` URI para visualização do novo tipo de dados diretamente. Certifique-se de incluir `version` no cabeçalho Accept (Aceitar) para obter uma solicitação de pesquisa.
 
 ### Usar tipo de dados no schema
 
@@ -958,13 +958,13 @@ Executar uma solicitação de GET para pesquisar o schema agora mostra a referê
 
 Schemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados são usados em vários serviços para criar uma visualização única e unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a ingestão de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/pt-BR/id-service/using/home.html)ID do CRM ou outros campos de ID exclusivos.
+Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID CRM ou outros campos de ID exclusivos.
 
 Considere todos os identificadores exclusivos específicos da sua organização, pois também podem ser bons campos de identidade.
 
 Os descritores de identidade sinalizam que &quot;sourceProperty&quot; do &quot;sourceSchema&quot; é um identificador exclusivo que deve ser considerado uma &quot;Identity&quot;.
 
-Para obter mais informações sobre como trabalhar com descritores, consulte o guia [do desenvolvedor do Registro de](../api/getting-started.md)Schemas.
+Para obter mais informações sobre como trabalhar com descritores, consulte o [Guia do desenvolvedor do Registro de Schemas](../api/getting-started.md).
 
 **Formato da API**
 
@@ -974,7 +974,7 @@ POST /tenant/descriptors
 
 **Solicitação**
 
-A solicitação a seguir define um descritor de identidade no campo &quot;loyaltyId&quot;. Isso diz [!DNL Experience Platform] para usar o identificador exclusivo do membro do programa de fidelidade (neste caso, o endereço de email do membro) para ajudar a unir informações sobre o indivíduo.
+A solicitação a seguir define um descritor de identidade no campo &quot;loyaltyId&quot;. Isso instrui [!DNL Experience Platform] a usar o identificador exclusivo do membro do programa de fidelidade (neste caso, o endereço de email do membro) para ajudar a unir informações sobre o indivíduo.
 
 ```SHELL
 curl -X POST \
@@ -997,11 +997,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Você pode lista valores &quot;xdm:namespace&quot; disponíveis ou criar novos valores usando o [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). O valor para &quot;xdm:property&quot; pode ser &quot;xdm:code&quot; ou &quot;xdm:id&quot;, dependendo da &quot;xdm:namespace&quot; usada.
+>Você pode lista valores &quot;xdm:namespace&quot; disponíveis ou criar novos valores usando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). O valor para &quot;xdm:property&quot; pode ser &quot;xdm:code&quot; ou &quot;xdm:id&quot;, dependendo da &quot;xdm:namespace&quot; usada.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) com um corpo de resposta contendo os detalhes do descritor recém-criado, incluindo seu `@id`. O campo `@id` é somente leitura atribuído pelo [!DNL Schema Registry] e é usado para referenciar o descritor na API.
+Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) com um corpo de resposta contendo os detalhes do descritor recém-criado, incluindo seu `@id`. O `@id` é um campo somente leitura atribuído pelo [!DNL Schema Registry] e é usado para referenciar o descritor na API.
 
 ```JSON
 {
@@ -1017,15 +1017,15 @@ Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) com um corpo de res
 }
 ```
 
-## Ativar schema para uso em [!DNL Real-time Customer Profile] {#profile}
+## Habilitar schema para uso em [!DNL Real-time Customer Profile] {#profile}
 
-Ao adicionar a tag &quot;união&quot; ao `meta:immutableTags` atributo, você pode ativar o schema Membros de Fidelidade para uso por [!DNL Real-time Customer Profile].
+Ao adicionar a tag &quot;união&quot; ao atributo `meta:immutableTags`, você pode ativar o schema Membros de Fidelidade para uso por [!DNL Real-time Customer Profile].
 
-Para obter mais informações sobre como trabalhar com visualizações de união, consulte a seção sobre [união](../api/unions.md) no guia do [!DNL Schema Registry] desenvolvedor.
+Para obter mais informações sobre como trabalhar com visualizações de união, consulte a seção em [união](../api/unions.md) no guia do desenvolvedor [!DNL Schema Registry].
 
 ### Adicionar tag &quot;união&quot;
 
-Para que um schema seja incluído na visualização de união mesclada, a tag &quot;união&quot; deve ser adicionada ao `meta:immutableTags` atributo do schema. Isso é feito por meio de uma solicitação de PATCH para atualizar o schema e adicionar a `meta:immutableTags` matriz com um valor de &quot;união&quot;.
+Para que um schema seja incluído na visualização de união mesclada, a tag &quot;união&quot; deve ser adicionada ao atributo `meta:immutableTags` do schema. Isso é feito por meio de uma solicitação de PATCH para atualizar o schema e adicionar a matriz `meta:immutableTags` com um valor de &quot;união&quot;.
 
 **Formato da API**
 
@@ -1105,9 +1105,9 @@ A resposta mostra que a operação foi executada com êxito, e o schema agora co
 
 ### Schemas de lista em uma união
 
-Agora você adicionou com êxito seu schema à [!DNL XDM Individual Profile] união. Para ver uma lista de todos os schemas que fazem parte da mesma união, é possível executar uma solicitação de GET usando parâmetros de query para filtrar a resposta.
+Agora você adicionou com êxito seu schema à união [!DNL XDM Individual Profile]. Para ver uma lista de todos os schemas que fazem parte da mesma união, é possível executar uma solicitação de GET usando parâmetros de query para filtrar a resposta.
 
-Usando o parâmetro `property` query, você pode especificar que apenas schemas que contenham um `meta:immutableTags` campo que tenha um valor `meta:class` igual ao `$id` da [!DNL XDM Individual Profile] classe sejam retornados.
+Usando o parâmetro de query `property`, você pode especificar que apenas schemas contendo um campo `meta:immutableTags` com um `meta:class` igual a `$id` da classe [!DNL XDM Individual Profile] sejam retornados.
 
 **Formato da API**
 
@@ -1117,7 +1117,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Solicitação**
 
-A solicitação de exemplo abaixo retorna todos os schemas que fazem parte da [!DNL XDM Individual Profile] união.
+A solicitação de exemplo abaixo retorna todos os schemas que fazem parte da união [!DNL XDM Individual Profile].
 
 ```SHELL
 curl -X GET \
@@ -1175,17 +1175,17 @@ Ao seguir este tutorial, você compôs com êxito um schema usando misturas padr
 
 O schema Membros de Fidelidade completa, conforme criado neste tutorial, está disponível no apêndice a seguir. Ao observar o schema, é possível ver como as combinações contribuem para a estrutura geral e quais campos estão disponíveis para a ingestão de dados.
 
-Depois de criar mais de um schema, você pode definir relacionamentos entre eles por meio do uso de descritores de relacionamento. Consulte o tutorial para [definir uma relação entre dois schemas](relationship-api.md) para obter mais informações. Para obter exemplos detalhados de como executar todas as operações (GET, POST, PUT, PATCH e DELETE no registro), consulte o guia [do desenvolvedor do Registro de](../api/getting-started.md) Schemas enquanto trabalha com a API.
+Depois de criar mais de um schema, você pode definir relacionamentos entre eles por meio do uso de descritores de relacionamento. Consulte o tutorial para [definir uma relação entre dois schemas](relationship-api.md) para obter mais informações. Para obter exemplos detalhados de como executar todas as operações (GET, POST, PUT, PATCH e DELETE no registro), consulte o [Guia do desenvolvedor do Registro do Schema](../api/getting-started.md) enquanto trabalha com a API.
 
 ## Apêndice {#appendix}
 
 As informações a seguir complementam o tutorial da API.
 
-## Schema de Membros da Fidelidade Completa {#complete-schema}
+## Schema Completo de Membros de Fidelidade {#complete-schema}
 
 Neste tutorial, um schema é composto para descrever os membros de um programa de fidelidade de varejo.
 
-O schema implementa a [!DNL XDM Individual Profile] classe e combina várias misturas; trazendo informações sobre os membros da fidelidade usando as combinações padrão &quot;Detalhes da pessoa&quot; e &quot;Detalhes pessoais&quot;, bem como por meio de uma combinação &quot;Detalhes da fidelidade&quot; definida durante o tutorial.
+O schema implementa a classe [!DNL XDM Individual Profile] e combina várias combinações; trazendo informações sobre os membros da fidelidade usando as combinações padrão &quot;Detalhes da pessoa&quot; e &quot;Detalhes pessoais&quot;, bem como por meio de uma combinação &quot;Detalhes da fidelidade&quot; definida durante o tutorial.
 
 A seguir, é mostrado o schema de Membros de Fidelidade concluído no formato JSON:
 

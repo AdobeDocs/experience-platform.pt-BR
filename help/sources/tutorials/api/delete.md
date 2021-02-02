@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
+keywords: Experience Platform;home;popular tópicos;serviço de fluxo;excluir conexões;excluir;api
 solution: Experience Platform
 title: Excluir uma conexão usando a API Serviço de Fluxo
 topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para excluir uma conexão usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
@@ -16,30 +16,30 @@ ht-degree: 2%
 
 # Excluir uma conexão usando a API Serviço de Fluxo
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para excluir o uso do [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para excluir usando o [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
-Este tutorial requer que você tenha uma ID de conexão válida. Se você não tiver uma ID de conexão válida, selecione seu conector de opção na visão geral [das](../../home.md) fontes e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer que você tenha uma ID de conexão válida. Se você não tiver uma ID de conexão válida, selecione seu conector de opção na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando [!DNL Platform] serviços.
-* [Caixas de proteção](../../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Caixas de proteção](../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito uma conexão usando a [!DNL Flow Service] API.
+As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito uma conexão usando a API [!DNL Flow Service].
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -56,7 +56,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 ## Procurar detalhes da conexão
 
 >[!NOTE]
->Este tutorial usa o conector [de origem Blob do](../../connectors/cloud-storage/blob.md) Azure como exemplo, mas as etapas descritas se aplicam a qualquer um dos conectores [de origem](../../home.md)disponíveis.
+>Este tutorial usa o [conector de origem do Blob do Azure](../../connectors/cloud-storage/blob.md) como exemplo, mas as etapas descritas se aplicam a qualquer um dos [conectores de origem disponíveis](../../home.md).
 
 A primeira etapa para atualizar suas informações de conexão é recuperar detalhes de conexão usando sua ID de conexão.
 
@@ -68,7 +68,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja recuperar. |
+| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja recuperar. |
 
 **Solicitação**
 
@@ -122,7 +122,7 @@ Uma resposta bem-sucedida retorna os detalhes atuais de sua conexão, incluindo 
 
 ## Excluir conexão
 
-Depois de ter uma ID de conexão existente, execute uma solicitação DELETE para a [!DNL Flow Service] API.
+Depois de ter uma ID de conexão existente, execute uma solicitação DELETE para a API [!DNL Flow Service].
 
 **Formato da API**
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O `id` valor exclusivo da conexão que você deseja excluir. |
+| `{CONNECTION_ID}` | O valor exclusivo `id` para a conexão que você deseja excluir. |
 
 **Solicitação**
 
@@ -153,6 +153,6 @@ Você pode confirmar a exclusão tentando uma solicitação de pesquisa (GET) pa
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com êxito a [!DNL Flow Service] API para excluir contas existentes.
+Ao seguir este tutorial, você utilizou com êxito a API [!DNL Flow Service] para excluir contas existentes.
 
-Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial sobre como [excluir contas na interface do usuário](../../tutorials/ui/delete-accounts.md)
+Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [excluir contas na interface do usuário](../../tutorials/ui/delete-accounts.md)

@@ -1,67 +1,80 @@
 ---
 title: Notas de versão da Adobe Experience Platform
-description: Notas de versão de Experience Platform 9 de dezembro de 2020
+description: Notas de versão de Experience Platform 27 de janeiro de 2021
 doc-type: release notes
-last-update: December 9, 2020
-author: ens60013 & ens72471
+last-update: January 27, 2021
+author: ens60013
 translation-type: tm+mt
-source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
+source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 6%
+source-wordcount: '639'
+ht-degree: 27%
 
 ---
 
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 9 de dezembro de 2020**
-
-Novos recursos no Adobe Experience Platform:
-
-- [[!DNL Dataflows]](#dataflows)
+**Data de lançamento: 27 de janeiro de 2021**
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
+- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Dataflows] {#dataflows}
+## [!DNL Data Prep] {#data-prep}
 
-Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de público alvo, para Serviço de identidade e Perfil e para destinos.
+[!DNL Data Prep] permite que os engenheiros de dados mapeiem, transformem e validem dados para e do Experience Data Model (XDM).
 
-**Recurso principal**
+**Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Transparência para fluxos de dados | Você pode monitorar fluxos de dados para fontes e destinos. Para obter mais informações, leia o [tutorial sobre fontes](../../dataflows/ui/monitor-sources.md) de monitoramento ou o [tutorial sobre como monitorar destinos](../../dataflows/ui/monitor-destinations.md). |
+| Funções de expressão regular | [!DNL Data Prep] O mapeador agora oferece suporte à correspondência e extração de parte do campo de entrada com base em expressões regulares. |
 
-Para saber mais sobre os fluxos de dados, leia a visão geral [dos](../../dataflows/home.md)fluxos de dados.
+Para obter mais informações, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
 
-## [!DNL Data Science Workspace] {#dsw}
+## Destinos {#destinations}
 
-A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe.
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 
-**Principais recursos**
+**Novos recursos**
 
 | Recurso | Descrição |
-| --- | ---|
-| Anúncio de pacote do Adobe Experience Platform Intelligence | O complemento do pacote Adobe Experience Platform Intelligence é uma atualização da Data Science Workspace que desbloqueia recursos principais adicionais, como: <li> Experimentação e avaliação de modelos orientados pela interface do usuário.</li><li> Capacidade de implantar e operacionalizar modelos com treinamentos programados e trabalhos de dedução.</li><li> Suporte para o aprendizado profundo em modelos de fluxo de dados (GPU Compute).</li><li> Computação distribuída com base em faísca para treinar e pontuar com base em grandes conjuntos de dados (10MM + linhas).</li><li>E mais</li> |
+| ------- | ----------- |
+| Correspondência avançada de ID | Melhorias nos recursos de taxa de correspondência de audiência em [!DNL Facebook Custom Audiences] e [!DNL Google Customer Match], adicionando suporte para correspondência de identidade adicional, como IDs externas, números de telefone e IDs de dispositivo móvel. Consulte a documentação a seguir para obter mais detalhes: <ul><li>[Destino do Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destino de Correspondência de Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Ativar perfis e segmentos em um destino](../../destinations/ui/activate-destinations.md)</li></ul> |
 
-Para saber mais sobre o complemento do pacote Adobe Experience Platform Intelligence, consulte a documentação sobre acesso e recursos [da](../../data-science-workspace/access-features-dsw.md)Data Science Workspace.
+Para saber mais, visite a [visão geral de destinos](../../destinations/home.md).
 
 ## [!DNL Sources] {#sources}
 
-A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
-[!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
+O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
-**Principais recursos**
+**Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Atualizar detalhes de conta e conexão para fontes de transmissão | Agora você pode atualizar os nomes, as descrições e as credenciais das conexões de streaming existentes usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [atualizar conexões usando a API](../../sources/tutorials/api/update.md) e [editar detalhes da conta usando a interface do usuário](../../sources/tutorials/ui/monitor.md). |
-| Excluir fluxos de dados | Fluxos de dados de fluxo que contêm erros ou se tornaram desnecessários agora podem ser excluídos usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [excluir fluxos de dados usando a API](../../sources/tutorials/api/delete-dataflows.md) e [excluir fluxos de dados usando a interface do usuário](../../sources/tutorials/ui/delete.md). |
+| Aprimoramentos no conector de origem Adobe Audience Manager | Agora você pode filtrar e selecionar segmentos primários individuais do Audience Manager para assimilar à plataforma, bem como filtrar características originais. Consulte o tutorial em [criar um conector de origem de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obter mais informações. |
+| [!DNL Google BigQuery] melhorias no conector de origem | Agora é possível assimilar arquivos maiores que 10 GB em uma execução de fluxo usando o conector de origem [!DNL BigQuery]. Consulte [[!DNL BigQuery] visão geral do conector de origem](../../sources/connectors/databases/bigquery.md) para obter mais informações. |
+| Suporte para tipos de dados complexos para armazenamentos em nuvem | Agora é possível assimilar tipos de dados complexos, como matrizes em arquivos JSON, ao usar um conector de origem de armazenamento na nuvem. Consulte os tutoriais sobre como criar um fluxo de dados de armazenamento em nuvem [na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [usando a  [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) para obter mais informações. |
+| Suporte para autenticação baseada em chave principal do serviço para [!DNL Microsoft Dynamics] origem | Agora você pode autenticar em sua conta [!DNL Dynamics] usando uma chave principal de serviço como uma alternativa à autenticação baseada em senha. Consulte [[!DNL Dynamics] visão geral do conector de origem](../../sources/connectors/crm/ms-dynamics.md) para obter mais informações. |
+| Suporte de interface para separadores personalizados em fontes de armazenamentos na nuvem | Agora é possível definir um delimitador de coluna personalizado, como uma vírgula (`,`), uma guia (`\t`) ou um pipe (`|`), para coletar arquivos delimitados na interface do usuário. Consulte o tutorial em [criar um fluxo de dados com um conector de origem de armazenamento em nuvem](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações |
 
-Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.
+Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).
 
+## [!DNL Experience Platform Launch Server Side] {#launch}
+
+O Adobe Experience Platform Launch Server Side diminui o peso da página da Web e do aplicativo usando a rede de borda da Adobe Experience Platform para executar tarefas normalmente realizadas no cliente. As regras do Platform Launch Server Side podem transformar e enviar dados para novos destinos sem alterar as implementações do lado do cliente.
+
+O Platform Launch Server Side, combinado com os SDKs móveis e da Adobe Experience Platform, torna possível:
+
+- Fazer uma única chamada da página que contém uma carga de dados e, em seguida, federar esses dados do lado do servidor para reduzir o tráfego de rede do lado do cliente e fornecer uma experiência mais rápida aos clientes.
+- Diminuir o tempo de carregamento das páginas da Web para que seu site esteja em conformidade com as práticas recomendadas do setor em relação ao desempenho.
+- Aumentar a transparência e o controle sobre quais tipos de dados são enviados para onde, em todas as propriedades do lado do cliente.
+- Criar uma regra do lado do servidor para enviar dados rastreados anteriormente para um novo destino.
+
+Para obter informações, consulte a [documentação do Launch da plataforma](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).

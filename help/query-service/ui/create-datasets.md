@@ -8,7 +8,7 @@ description: 'O Serviço de query permite a criação de conjuntos de dados da i
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '320'
 ht-degree: 1%
 
 ---

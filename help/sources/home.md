@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
+keywords: Experience Platform;início;tópicos populares;conectores de origem;conector de origem;fontes;fontes de dados;fonte de dados;conexão de fonte de dados
 solution: Experience Platform
 title: Visão geral dos Conectores de origem Adobe Experience Platform
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de publ
 
 ### Armazenamento em nuvem
 
-As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
+As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Azure Data Lake Storage Gen2] conector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] conector](connectors/cloud-storage/blob.md)

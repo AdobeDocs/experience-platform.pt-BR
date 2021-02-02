@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
+keywords: Experience Platform;fórmula de vendas de varejo;Data Science Workspace;tópicos populares;fórmulas
 solution: Experience Platform
 title: Criar o schema de vendas de varejo e o conjunto de dados
 topic: tutorial
 type: Tutorial
 description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais da Adobe Experience Platform Data Science Workspace. Após a conclusão, o schema de vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros da organização IMS no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 # Criar o schema de vendas de varejo e o conjunto de dados
 
-Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros [!DNL Adobe Experience Platform][!DNL Data Science Workspace] tutoriais. Após a conclusão, o schema de vendas de varejo e os conjuntos de dados estarão disponíveis para você e para os membros da organização IMS em [!DNL Experience Platform].
+Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Após a conclusão, o schema de vendas de varejo e os conjuntos de dados estarão disponíveis para você e os membros da organização IMS em [!DNL Experience Platform].
 
 ## Introdução
 
 Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
-- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de prosseguir.
-- Autorização para fazer chamadas [!DNL Experience Platform] de API. Complete o tutorial [Autenticar e acessar as APIs](../../tutorials/authentication.md) do Adobe Experience Platform para obter os seguintes valores para concluir este tutorial com êxito:
+- Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de continuar.
+- Autorização para fazer chamadas [!DNL Experience Platform] da API. Complete o tutorial [Autentique e acesse as APIs do Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para obter os seguintes valores para concluir este tutorial com êxito:
    - Autorização: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
-   - Client secret: `{CLIENT_SECRET}`
+   - Segredo do cliente: `{CLIENT_SECRET}`
    - Certificado do cliente: `{PRIVATE_KEY}`
-- Dados de amostra e arquivos de origem para a Receita [de Vendas de](../pre-built-recipes/retail-sales.md)Varejo. Baixe os ativos necessários para este e outros [!DNL Data Science Workspace] tutoriais do repositório [Git público do](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
-- [Python >= 2.7](https://www.python.org/downloads/) e as seguintes [!DNL Python] embalagens:
+- Dados de amostra e arquivos de origem para a [Receita de Vendas de Varejo](../pre-built-recipes/retail-sales.md). Baixe os ativos necessários para este e outros tutoriais [!DNL Data Science Workspace] do repositório Git público [Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
+- [Python >= 2.7](https://www.python.org/downloads/) e as seguintes  [!DNL Python] embalagens:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [ditador](https://pypi.org/project/dictor/)
@@ -44,8 +44,8 @@ O schema de vendas de varejo e os conjuntos de dados são criados automaticament
 
 ### Configurar arquivos
 
-1. No pacote de recursos do [!DNL Experience Platform] tutorial, navegue até o diretório `bootstrap`e abra `config.yaml` usando um editor de texto apropriado.
-2. Na `Enterprise` seção, insira os seguintes valores:
+1. Dentro do pacote de recursos do tutorial [!DNL Experience Platform], navegue até o diretório `bootstrap` e abra `config.yaml` usando um editor de texto apropriado.
+2. Na seção `Enterprise`, insira os seguintes valores:
 
    ```yaml
    Enterprise:
@@ -56,7 +56,7 @@ O schema de vendas de varejo e os conjuntos de dados são criados automaticament
        priv_key_filename: {PRIVATE_KEY}
    ```
 
-3. Edite os valores encontrados na `Platform` seção, Exemplo mostrado abaixo:
+3. Edite os valores encontrados na seção `Platform`, Exemplo mostrado abaixo:
 
    ```yaml
    Platform:
@@ -68,12 +68,12 @@ O schema de vendas de varejo e os conjuntos de dados são criados automaticament
    ```
 
    - `platform_gateway` : O caminho base para chamadas de API. Não modifique esse valor.
-   - `ims_token` : O seu `{ACCESS_TOKEN}` vai aqui.
-   - `ingest_data` : Para a finalidade deste tutorial, defina esse valor como `"True"` a fim de criar os schemas de vendas de varejo e os conjuntos de dados. Um valor de apenas `"False"` criará os schemas.
-   - `build_recipe_artifacts` : Para a finalidade deste tutorial, defina esse valor como `"False"` para impedir que o script gere um artefato de Receita.
-   - `kernel_type` : O tipo de execução do artefato de Receita. Deixe esse valor como `Python` se `build_recipe_artifacts` estivesse definido como `"False"`, caso contrário, especifique o tipo de execução correto.
+   - `ims_token` : O seu  `{ACCESS_TOKEN}` vai aqui.
+   - `ingest_data` : Para a finalidade deste tutorial, defina esse valor como  `"True"` a fim de criar os schemas de vendas de varejo e os conjuntos de dados. Um valor de `"False"` criará apenas os schemas.
+   - `build_recipe_artifacts` : Para a finalidade deste tutorial, defina esse valor como  `"False"` para impedir que o script gere um artefato de Receita.
+   - `kernel_type` : O tipo de execução do artefato de Receita. Deixe esse valor como `Python` se `build_recipe_artifacts` estiver definido como `"False"`; caso contrário, especifique o tipo de execução correto.
 
-4. Na `Titles` seção, forneça as seguintes informações adequadamente para os dados de amostra de Vendas de varejo, salve e feche o arquivo depois que as edições estiverem em vigor. Exemplo mostrado abaixo:
+4. Na seção `Titles`, forneça as seguintes informações adequadamente para os dados de amostra de Vendas de varejo, salve e feche o arquivo depois que as edições estiverem em vigor. Exemplo mostrado abaixo:
 
    ```yaml
    Titles:
@@ -93,8 +93,8 @@ O schema de vendas de varejo e os conjuntos de dados são criados automaticament
 
 ### Executar o script de inicialização
 
-1. Abra o aplicativo de terminal e navegue até o diretório de recursos do [!DNL Experience Platform] tutorial.
-2. Defina o `bootstrap` diretório como o caminho de trabalho atual e execute o `bootstrap.py` [!DNL Python] script digitando o seguinte comando:
+1. Abra o aplicativo de terminal e navegue até o diretório de recursos do tutorial [!DNL Experience Platform].
+2. Defina o diretório `bootstrap` como o caminho de trabalho atual e execute o script `bootstrap.py` [!DNL Python] inserindo o seguinte comando:
 
    ```bash
    python bootstrap.py
@@ -106,12 +106,13 @@ O schema de vendas de varejo e os conjuntos de dados são criados automaticament
 
 ## Próximas etapas
 
-Após a conclusão com êxito do script de inicialização, os schemas de entrada e saída e os conjuntos de dados do Retail Sales podem ser visualizados no [!DNL Experience Platform]. Consulte o tutorial de dados de schema de [pré-visualização](./preview-schema-data.md)para obter mais informações.
+Após a conclusão com êxito do script de inicialização, os schemas de entrada e saída e os conjuntos de dados do Retail Sales podem ser exibidos em [!DNL Experience Platform]. Consulte o tutorial [pré-visualização de dados do schema](./preview-schema-data.md)
+para obter mais informações.
 
-Você também assimilou com êxito dados de amostra de Vendas de varejo [!DNL Experience Platform] usando o script de inicialização fornecido.
+Você também assimilou com êxito dados de amostra de Vendas de varejo em [!DNL Experience Platform] usando o script de inicialização fornecido.
 
 Para continuar trabalhando com os dados ingeridos:
 - [Analise seus dados usando notebooks Jupyter](../jupyterlab/analyze-your-data.md)
    - Use notebooks Júpiter na Data Science Workspace para acessar, explorar, visualizar e entender seus dados.
 - [Empacotar arquivos de origem em uma Receita](./package-source-files-recipe.md)
-   - Siga este tutorial para saber como inserir seu próprio Modelo [!DNL Data Science Workspace] por meio da embalagem de arquivos de origem em um arquivo de Receita importante.
+   - Siga este tutorial para saber como trazer seu próprio Modelo para [!DNL Data Science Workspace] ao empacotar arquivos de origem em um arquivo de Receita importável.

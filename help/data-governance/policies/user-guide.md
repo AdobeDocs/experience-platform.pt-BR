@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
+keywords: Experience Platform;home;popular topics;controle de dados;guia do usuário da política de uso de dados
 solution: Experience Platform
 title: Guia do usuário das políticas de uso de dados
 topic: policies
 description: O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho Políticas na interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -15,32 +15,32 @@ ht-degree: 0%
 
 # Guia do usuário das políticas de uso de dados
 
-A Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho **Políticas** na interface do [!DNL Experience Platform] usuário.
+O Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho **Policies** na interface do usuário [!DNL Experience Platform].
 
 >[!IMPORTANT]
 >
->Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente. Consulte a seção sobre como [ativar políticas](#enable) para obter etapas sobre como fazer isso na interface do usuário.
+>Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente. Consulte a seção sobre [ativar políticas](#enable) para obter etapas sobre como fazer isso na interface do usuário.
 
 ## Pré-requisitos
 
-Este guia exige um entendimento prático dos seguintes [!DNL Experience Platform] conceitos:
+Este guia exige uma compreensão funcional dos seguintes conceitos [!DNL Experience Platform]:
 
 - [[!DNL Data Governance]](../home.md)
 - [Políticas de uso de dados](./overview.md)
 
 ## Políticas de uso de dados de visualização {#view-policies}
 
-Na [!DNL Experience Platform] interface do usuário, clique em **[!UICONTROL Políticas]** para abrir a área de trabalho **[!UICONTROL Políticas]** . Na guia **[!UICONTROL Procurar]** , é possível visualizar uma lista de políticas disponíveis, incluindo seus rótulos, ações de marketing e status associados.
+Na interface do usuário [!DNL Experience Platform], selecione **[!UICONTROL Políticas]** para abrir a área de trabalho **[!UICONTROL Políticas]**. Na guia **[!UICONTROL Procurar]**, é possível visualizar uma lista de políticas disponíveis, incluindo rótulos associados, ações de marketing e status.
 
 ![](../images/policies/browse-policies.png)
 
-Clique em uma política listada para visualização sua descrição e tipo. Se uma política personalizada for selecionada, serão exibidos controles adicionais para editar, excluir ou [ativar/desativar a política](#enable).
+Selecione uma política listada para visualização sua descrição e tipo. Se uma política personalizada for selecionada, serão exibidos controles adicionais para editar, excluir ou [ativar/desativar a política](#enable).
 
 ![](../images/policies/policy-details.png)
 
 ## Criar uma política de uso de dados personalizada {#create-policy}
 
-Para criar uma nova política de uso de dados personalizada, clique em **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]** .
+Para criar uma nova política personalizada de uso de dados, selecione **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]**.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -48,19 +48,19 @@ O fluxo de trabalho **[!UICONTROL Criar política]** é exibido. Start fornecend
 
 ![](../images/policies/create-policy-description.png)
 
-Em seguida, selecione os rótulos de uso de dados nos quais a política será baseada. Ao selecionar vários rótulos, você tem a opção de escolher se os dados devem conter todos os rótulos ou apenas um deles para que a política seja aplicada. Clique em **[!UICONTROL Avançar]** ao concluir.
+Em seguida, selecione os rótulos de uso de dados nos quais a política será baseada. Ao selecionar vários rótulos, você tem a opção de escolher se os dados devem conter todos os rótulos ou apenas um deles para que a política seja aplicada. Selecione **[!UICONTROL Next]** quando terminar.
 
 ![](../images/policies/add-labels.png)
 
-A etapa **[!UICONTROL Selecionar ações]** de marketing é exibida. Escolha as ações de marketing apropriadas na lista fornecida e clique em **[!UICONTROL Avançar]** para continuar.
+A etapa **[!UICONTROL Selecionar ações de marketing]** é exibida. Escolha as ações de marketing apropriadas na lista fornecida e selecione **[!UICONTROL Próximo]** para continuar.
 
 >[!NOTE]
 >
->Ao selecionar várias ações de marketing, a política as interpreta como uma regra &quot;OU&quot;. Em outras palavras, a política se aplica se **qualquer** uma das ações de marketing selecionadas for executada.
+>Ao selecionar várias ações de marketing, a política as interpreta como uma regra &quot;OU&quot;. Em outras palavras, a política se aplica se **qualquer** das ações de marketing selecionadas forem executadas.
 
 ![](../images/policies/add-marketing-actions.png)
 
-A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você analise os detalhes da nova política antes de criá-la. Quando estiver satisfeito, clique em **[!UICONTROL Concluir]** para criar a política.
+A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você reveja os detalhes da nova política antes de criá-la. Quando estiver satisfeito, selecione **[!UICONTROL Concluir]** para criar a política.
 
 ![](../images/policies/policy-review.png)
 
@@ -68,31 +68,31 @@ A guia **[!UICONTROL Procurar]** reaparece, que agora lista a política recém-c
 
 ![](../images/policies/created-policy.png)
 
-## Ativar ou desativar uma política de uso de dados {#enable}
+## Habilitar ou desabilitar uma política de uso de dados {#enable}
 
 Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
 
-Você pode ativar ou desativar as políticas na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]** . Selecione uma política personalizada na lista para exibir seus detalhes à direita. Em **[!UICONTROL Status]**, selecione o botão de alternância para ativar ou desativar a política.
+Você pode ativar ou desativar as políticas na guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]**. Selecione uma política personalizada na lista para exibir seus detalhes à direita. Em **[!UICONTROL Status]**, selecione o botão de alternância para ativar ou desativar a política.
 
 ![](../images/policies/enable-policy.png)
 
 ## Ações de marketing de visualização {#view-marketing-actions}
 
-Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização.
+Na área de trabalho **[!UICONTROL Policies]**, selecione a guia **[!UICONTROL Ações de marketing]** para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização.
 
 ![](../images/policies/marketing-actions.png)
 
 ## Criar uma ação de marketing {#create-marketing-action}
 
-Para criar uma nova ação de marketing personalizada, clique em **[!UICONTROL Criar ação]** de marketing no canto superior direito da guia Ações **[!UICONTROL de]** marketing na área de trabalho **[!UICONTROL Políticas]** .
+Para criar uma nova ação de marketing personalizada, selecione **[!UICONTROL Criar ação de marketing]** no canto superior direito da guia **[!UICONTROL Ações de marketing]** na área de trabalho **[!UICONTROL Políticas]**.
 
 ![](../images/policies/create-marketing-action.png)
 
-A caixa de diálogo **[!UICONTROL Criar ação]** de marketing é exibida. Insira um nome e uma descrição para a ação de marketing e clique em **[!UICONTROL Criar]**.
+A caixa de diálogo **[!UICONTROL Criar ação de marketing]** é exibida. Insira um nome e uma descrição para a ação de marketing e selecione **[!UICONTROL Criar]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-A ação recém-criada é exibida na guia Ações **[!UICONTROL de]** marketing. Agora você pode usar a ação de marketing ao [criar novas políticas](#create-policy)de uso de dados.
+A ação recém-criada é exibida na guia **[!UICONTROL Ações de marketing]**. Agora você pode usar a ação de marketing ao [criar novas políticas de uso de dados](#create-policy).
 
 ![](../images/policies/created-marketing-action.png)
 
@@ -102,11 +102,11 @@ A ação recém-criada é exibida na guia Ações **[!UICONTROL de]** marketing.
 >
 >Somente as ações de marketing personalizadas definidas pela sua organização podem ser editadas. As ações de marketing definidas pelo Adobe não podem ser alteradas ou excluídas.
 
-Na área de trabalho **[!UICONTROL Políticas]** , selecione a guia Ações **[!UICONTROL de]** marketing para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização. Selecione uma ação de marketing personalizada na lista e, em seguida, use os campos fornecidos na seção à direita para editar os detalhes da ação de marketing.
+Na área de trabalho **[!UICONTROL Policies]**, selecione a guia **[!UICONTROL Ações de marketing]** para visualização de uma lista de ações de marketing disponíveis definidas pelo Adobe e sua própria organização. Selecione uma ação de marketing personalizada na lista e, em seguida, use os campos fornecidos na seção à direita para editar os detalhes da ação de marketing.
 
 ![](../images/policies/edit-marketing-action.png)
 
-Se a ação de marketing não estiver sendo usada por nenhuma política de uso existente, você poderá excluí-la clicando em **[!UICONTROL Excluir ação]** de marketing.
+Se a ação de marketing não estiver sendo usada por nenhuma política de uso existente, é possível excluí-la selecionando **[!UICONTROL Excluir ação de marketing]**.
 
 >[!NOTE]
 >
@@ -116,8 +116,8 @@ Se a ação de marketing não estiver sendo usada por nenhuma política de uso e
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral de como gerenciar políticas de uso de dados na [!DNL Experience Platform] interface do usuário. Para obter etapas sobre como gerenciar políticas usando o [!DNL Policy Service API], consulte o guia [do](../api/getting-started.md)desenvolvedor. Para obter informações sobre como aplicar políticas de uso de dados, consulte a visão geral [da aplicação de](../enforcement/overview.md)políticas.
+Este documento forneceu uma visão geral de como gerenciar políticas de uso de dados na interface do usuário [!DNL Experience Platform]. Para obter etapas sobre como gerenciar políticas usando o [!DNL Policy Service API], consulte o [guia do desenvolvedor](../api/getting-started.md). Para obter informações sobre como aplicar políticas de uso de dados, consulte a [visão geral de aplicação de política](../enforcement/overview.md).
 
-O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na [!DNL Experience Platform] interface do usuário:
+O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na interface do usuário [!DNL Experience Platform]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

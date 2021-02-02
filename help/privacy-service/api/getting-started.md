@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
 title: Guia do desenvolvedor do Privacy Service
 description: Use a RESTful API para gerenciar os dados pessoais de seus participantes de dados em aplicativos Adobe Experience Cloud
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 5d1b22253f2b382bef83e30a4295218ba6b85331
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] guia do desenvolvedor
 
-A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permite gerenciar (acessar e excluir) os dados pessoais de seus sujeitos de dados (clientes) nos aplicativos Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem [!DNL Experience Cloud] aplicativos.
+A Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface de usuário que permitem gerenciar (acessar e excluir) os dados pessoais de seus sujeitos de dados (clientes) em todos os aplicativos Adobe Experience Cloud. [!DNL Privacy Service] também fornece um mecanismo central de auditoria e registro que permite acessar o status e os resultados de trabalhos que envolvem  [!DNL Experience Cloud] aplicativos.
 
-Este guia aborda como usar a [!DNL Privacy Service] API. Para obter detalhes sobre como usar a interface do usuário, consulte a visão geral [da interface do](../ui/overview.md)Privacy Service. Para obter uma lista abrangente de todos os pontos de extremidade disponíveis na [!DNL Privacy Service] API, consulte a referência [da](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
+Este guia aborda como usar a API [!DNL Privacy Service]. Para obter detalhes sobre como usar a interface do usuário, consulte a [visão geral da interface do Privacy Service](../ui/overview.md). Para obter uma lista abrangente de todos os pontos de extremidade disponíveis na API [!DNL Privacy Service], consulte a [referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml).
 
 ## Introdução {#getting-started}
 
-Este guia exige um entendimento prático dos seguintes [!DNL Experience Platform] recursos:
+Este guia exige um entendimento prático dos seguintes recursos [!DNL Experience Platform]:
 
 * [[!DNL Privacy Service]](../home.md): Fornece uma API RESTful e uma interface de usuário que permite gerenciar o acesso e a exclusão de solicitações de seus participantes de dados (clientes) em aplicativos Adobe Experience Cloud.
 
@@ -29,11 +29,11 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md) no guia de solução de problemas [!DNL Experience Platform].
 
 ## Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para a [!DNL Privacy Service] API, primeiro você deve coletar suas credenciais de acesso para serem usadas nos cabeçalhos necessários:
+Para fazer chamadas para a API [!DNL Privacy Service], primeiro você deve coletar suas credenciais de acesso para serem usadas nos cabeçalhos necessários:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -43,7 +43,7 @@ Isso envolve obter permissões de desenvolvedor para [!DNL Experience Platform] 
 
 ### Obtenha acesso de desenvolvedor a [!DNL Experience Platform]
 
-Para obter acesso do desenvolvedor ao [!DNL Platform], siga as etapas iniciais no tutorial [de autenticação do](../../tutorials/authentication.md)Experience Platform. Quando você chegar à etapa &quot;Gerar credenciais de acesso no Console do desenvolvedor do Adobe&quot;, retorne a este tutorial para gerar as credenciais específicas para [!DNL Privacy Service].
+Para obter acesso do desenvolvedor a [!DNL Platform], siga as etapas iniciais no [tutorial de autenticação do Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Quando você chegar à etapa &quot;Gerar credenciais de acesso no Console do desenvolvedor do Adobe&quot;, volte a este tutorial para gerar as credenciais específicas para [!DNL Privacy Service].
 
 ### Gerar credenciais de acesso
 
@@ -53,42 +53,42 @@ Usando o Console do desenvolvedor do Adobe, você deve gerar as três credenciai
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Sua `{IMS_ORG}` e `{API_KEY}` só precisam ser geradas uma vez e podem ser reutilizadas em futuras chamadas de API. No entanto, o seu `{ACCESS_TOKEN}` é temporário e precisa ser regenerado a cada 24 horas.
+Seus `{IMS_ORG}` e `{API_KEY}` precisam ser gerados apenas uma vez e podem ser reutilizados em futuras chamadas de API. No entanto, seu `{ACCESS_TOKEN}` é temporário e deve ser regenerado a cada 24 horas.
 
 As etapas para gerar esses valores são abordadas em detalhes abaixo.
 
 #### Configuração única
 
-Vá para o [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial sobre como [criar um projeto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vazio na documentação do Console do desenvolvedor do Adobe.
+Vá para [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui) e faça logon com seu Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
 
-Depois de criar um novo projeto, clique em **[!UICONTROL Adicionar API]** na tela Visão geral **[!UICONTROL do]** projeto.
+Depois de criar um novo projeto, selecione **[!UICONTROL Adicionar API]** na tela **[!UICONTROL Visão geral do projeto]**.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-A tela **[!UICONTROL Adicionar uma API]** é exibida. Selecione **[!UICONTROL Privacy Service API]** na lista de APIs disponíveis antes de clicar em **[!UICONTROL Avançar]**.
+A tela **[!UICONTROL Adicionar uma API]** é exibida. Selecione **[!UICONTROL API Privacy Service]** na lista de APIs disponíveis antes de selecionar **[!UICONTROL Next]**.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-A tela **[!UICONTROL Configure API (Configurar API]** ) é exibida. Selecione a opção para **[!UICONTROL Gerar um par]** de teclas e clique em **[!UICONTROL Gerar um par]** de teclas no canto inferior direito.
+A tela **[!UICONTROL Configurar API]** é exibida. Selecione a opção para **[!UICONTROL Gerar um par de teclas]** e selecione **[!UICONTROL Gerar par de teclas]** no canto inferior direito.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
-O par de chaves é gerado automaticamente e um arquivo ZIP contendo uma chave privada e um certificado público é baixado para o computador local (para ser usado em uma etapa posterior). Selecione **[!UICONTROL Salvar API]** configurada para concluir a configuração.
+O par de chaves é gerado automaticamente e um arquivo ZIP contendo uma chave privada e um certificado público é baixado para o computador local (para ser usado em uma etapa posterior). Selecione **[!UICONTROL Salvar a API configurada]** para concluir a configuração.
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página de visão geral **da API do** Privacy Service. Aqui, role para baixo até a seção **[!UICONTROL Service Account (JWT)]** , que fornece as seguintes credenciais de acesso que são necessárias em todas as chamadas para a [!DNL Privacy Service] API:
+Depois que a API for adicionada ao projeto, a página do projeto será exibida novamente na página **Visão geral da API de Privacy Service**. Aqui, role para baixo até a seção **[!UICONTROL Conta de Serviço (JWT)]**, que fornece as seguintes credenciais de acesso necessárias em todas as chamadas para a API [!DNL Privacy Service]:
 
-* **[!UICONTROL ID]** DO CLIENTE: A ID do cliente é a necessária `{API_KEY}` para isso, que deve ser fornecida no cabeçalho x-api-key.
-* **[!UICONTROL ID]** DA ORGANIZAÇÃO: A ID da organização é o `{IMS_ORG}` valor que deve ser usado no cabeçalho x-gw-ims-org-id.
+* **[!UICONTROL ID]** DO CLIENTE: A ID do cliente é a necessária  `{API_KEY}` para isso, que deve ser fornecida no cabeçalho x-api-key.
+* **[!UICONTROL ID]** DA ORGANIZAÇÃO: A ID da organização é o  `{IMS_ORG}` valor que deve ser usado no cabeçalho x-gw-ims-org-id.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
 #### Autenticação para cada sessão
 
-A credencial final necessária que você deve coletar é sua, `{ACCESS_TOKEN}`usada no cabeçalho Autorização. Diferentemente dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando [!DNL Platform] APIs.
+A credencial final necessária que você deve coletar é seu `{ACCESS_TOKEN}`, que é usado no cabeçalho de Autorização. Ao contrário dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando [!DNL Platform] APIs.
 
-Para gerar uma nova `{ACCESS_TOKEN}`, abra a chave privada baixada anteriormente e cole seu conteúdo na caixa de texto ao lado de **[!UICONTROL Gerar token de acesso]** antes de clicar em **[!UICONTROL Gerar token]**.
+Para gerar um novo `{ACCESS_TOKEN}`, abra a chave privada baixada anteriormente e cole seu conteúdo na caixa de texto ao lado de **[!UICONTROL Gerar token de acesso]** antes de selecionar **[!UICONTROL Gerar token]**.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
@@ -98,4 +98,4 @@ Um novo token de acesso é gerado e um botão para copiar o token na área de tr
 
 ## Próximas etapas
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a [!DNL Privacy Service] API. O documento em trabalhos [de](privacy-jobs.md) privacidade percorre as várias chamadas de API que você pode fazer usando a [!DNL Privacy Service] API. Cada chamada de exemplo inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a API [!DNL Privacy Service]. O documento em [tarefas de privacidade](privacy-jobs.md) percorre as várias chamadas de API que você pode fazer usando a API [!DNL Privacy Service]. Cada chamada de exemplo inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.

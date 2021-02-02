@@ -1,6 +1,9 @@
 ---
-source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '296'
+ht-degree: 95%
 
 ---
 # Contribuição
@@ -12,12 +15,14 @@ A seguir, há um conjunto de diretrizes a seguir ao contribuir com esse projeto.
 ## Código de conduta
 
 Esse projeto segue o [código de conduta](code-of-conduct.md) da Adobe. Ao participar, você 
-deve seguir esse código. Denuncie qualquer comportamento inaceitável para 
+deve seguir esse código.
+
+Denuncie qualquer comportamento inaceitável para 
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Documentação do Guia do colaborador
 
-See the [Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consulte o [Guia do contribuidor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
 
 ## Dúvidas?
 
@@ -29,14 +34,18 @@ de problema (quando apropriado).
 
 Todas as contribuições de terceiros para esse projeto devem ser acompanhadas por um Contrato de Licença de Colaborador
 assinado. Esse contrato fornece à Adobe permissão para redistribuir suas contribuições
-como parte do projeto. [Assine nosso CLA](http://opensource.adobe.com/cla.html). Você
+como parte do projeto.
+
+[Assine nosso CLA](http://opensource.adobe.com/cla.html).
+
+Você
 precisa enviar um CLA da Adobe somente uma vez. Por isso, se já tiver enviado um,
 você pode ir em frente!
 
 ## Revisões do código
 
 Todos os envios devem ser recebidos na forma de solicitações de pull e devem ser revisados
-pelos responsáveis pelo projeto. Leia a [documentação de solicitação de pull do GitHub](https://help.github.com/articles/about-pull-requests/)
+pelos responsáveis pelo projeto. Leia a [documentação de solicitação de pull do GitHub](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
 para obter mais informações sobre como enviar solicitações de pull.
 
 <!--
@@ -55,4 +64,4 @@ entre em contato com os responsáveis existentes para conversar sobre isso.
 
 ## Problemas de segurança
 
-Problemas de segurança não devem ser relatados neste rastreador de problemas. Em vez disso, [envie o problema para nossos especialistas em segurança](https://helpx.adobe.com/security/alertus.html)
+Problemas de segurança não devem ser relatados neste rastreador de problemas. Em vez disso, [envie o problema para nossos especialistas em segurança](https://helpx.adobe.com/br/security/alertus.html).

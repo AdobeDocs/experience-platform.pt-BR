@@ -1,13 +1,13 @@
 ---
-keywords: personalization;Personalization
+keywords: personalização;Personalização
 title: Destinos de personalização
 seo-title: Destinos de personalização
 description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
 seo-description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
 translation-type: tm+mt
-source-git-commit: 3486aa053be903a3844bbc79a957699b18b30a74
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
 
-Atualmente, a CDP em tempo real suporta os destinos de personalização listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, a Plataforma suporta os destinos de personalização listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
 * [Extensão do Adobe Target](./adobe-target.md)
 * [Extensão do Adobe Target v2](./adobe-target-v2.md)

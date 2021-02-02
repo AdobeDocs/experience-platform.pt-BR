@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;access control;adobe admin console
+keywords: Experience Platform;home;popular topics;controle de acesso;adobe admin console
 solution: Experience Platform
 topic: overview
 title: Visão geral do controle de acesso
 description: O controle de acesso para Adobe Experience Platform é fornecido através do Adobe Admin Console. Essa funcionalidade aproveita perfis de produtos no Admin Console, que vinculam usuários com permissões e caixas de proteção.
 translation-type: tm+mt
-source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
+source-git-commit: c277caabe851c81f66b822c07a25f4b94466eef0
 workflow-type: tm+mt
-source-wordcount: '1298'
-ht-degree: 3%
+source-wordcount: '1281'
+ht-degree: 2%
 
 ---
 
 
 # Visão geral do controle de acesso
 
-O controle de acesso for [!DNL Experience Platform] é fornecido pelo [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos no, [!DNL Admin Console]que vinculam usuários com permissões e caixas de proteção.
+O controle de acesso para [!DNL Experience Platform] é fornecido por meio do [Adobe Admin Console](https://adminconsole.adobe.com). Essa funcionalidade aproveita perfis de produtos em [!DNL Admin Console], que vinculam usuários com permissões e caixas de proteção.
 
 ## Hierarquia de controles de acesso e fluxo de trabalho
 
-Para configurar o controle de acesso para [!DNL Experience Platform], você deve ter privilégios de administrador para uma organização que tenha uma integração de [!DNL Experience Platform] produto. A função mínima que concede ou retira permissões é um administrador do perfil do produto. Outras funções de administrador que podem gerenciar permissões são administradores de produtos (podem gerenciar todos os perfis em um produto) e administradores de sistema (sem restrições). Consulte o artigo da Adobe Help Center sobre funções [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obter mais informações.
+Para configurar o controle de acesso para [!DNL Experience Platform], você deve ter privilégios de administrador para uma organização que tenha uma integração de produto [!DNL Experience Platform]. A função mínima que concede ou retira permissões é um administrador do perfil do produto. Outras funções de administrador que podem gerenciar permissões são administradores de produtos (podem gerenciar todos os perfis em um produto) e administradores de sistema (sem restrições). Consulte o artigo da Adobe Help Center sobre [funções administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obter mais informações.
 
 >[!NOTE]
 >
@@ -29,22 +29,22 @@ Um fluxo de trabalho de alto nível para obter e atribuir permissões de acesso 
 
 - Depois de licenciar a Adobe Experience Platform ou um serviço de aplicativos/aplicativos que usa o Experience Platform, um email é enviado ao administrador especificado durante o licenciamento.
 - O administrador faz logon no [Adobe Admin Console](#adobe-admin-console) e seleciona **Adobe Experience Platform** na lista de produtos na página de visão geral.
-- O administrador pode visualização os perfis [de](#product-profiles) produtos padrão ou criar novos perfis de produtos do cliente, conforme necessário.
+- O administrador pode visualização os [perfis de produto](#product-profiles) padrão ou criar novos perfis de produto do cliente, conforme necessário.
 - O administrador pode editar as permissões e os usuários de qualquer perfil de produto existente.
-- Ao criar ou editar um perfil de produto, o administrador adiciona usuários ao perfil usando a guia **[!UICONTROL usuários]** e concede permissões a esses usuários (como &quot;[!UICONTROL Ler conjuntos]de dados&quot; ou &quot;[!UICONTROL Gerenciar Schemas]&quot;) acessando a guia **[!UICONTROL permissões]** . Da mesma forma, o administrador pode atribuir acesso a caixas de proteção usando a mesma guia de permissões.
-- Quando os usuários fazem logon na interface do [!DNL Experience Platform] [!DNL Platform] usuário, seu acesso aos recursos é determinado pelas permissões que lhes foram concedidas na Etapa 2. Por exemplo, se um usuário não tiver a permissão &quot;[!UICONTROL Visualização Datasets]&quot;, a guia **[!UICONTROL Datasets]** no menu lateral não estará visível para esse usuário.
+- Ao criar ou editar um perfil de produto, o administrador adiciona usuários ao perfil usando a guia **[!UICONTROL usuários]** e concede permissões a esses usuários (como &quot;[!UICONTROL Ler conjuntos de dados]&quot; ou &quot;[!UICONTROL Gerenciar Schemas]&quot;) acessando a guia **[!UICONTROL permissions]**. Da mesma forma, o administrador pode atribuir acesso a caixas de proteção usando a mesma guia de permissões.
+- Quando os usuários fazem logon na interface do usuário [!DNL Experience Platform], seu acesso aos recursos [!DNL Platform] é controlado pelas permissões que lhes foram concedidas na Etapa 2. Por exemplo, se um usuário não tiver a permissão &quot;[!UICONTROL conjuntos de dados de Visualização]&quot;, a guia **[!UICONTROL conjuntos de dados]** no menu lateral não estará visível para esse usuário.
 
-Para obter etapas mais detalhadas sobre como gerenciar o controle de acesso em [!DNL Experience Platform], consulte o guia [do usuário do](./ui/overview.md)controle de acesso.
+Para obter etapas mais detalhadas sobre como gerenciar o controle de acesso em [!DNL Experience Platform], consulte o [guia do usuário do controle de acesso](./ui/overview.md).
 
-Todas as chamadas para [!DNL Experience Platform] APIs são validadas para obter permissões e retornarão erros se as permissões apropriadas não forem encontradas no contexto do usuário atual. Na interface do usuário, os elementos serão omitidos ou alterados, dependendo das permissões concedidas ao usuário atual.
+Todas as chamadas para [!DNL Experience Platform] APIs são validadas para permissões e retornarão erros se as permissões apropriadas não forem encontradas no contexto do usuário atual. Na interface do usuário, os elementos serão omitidos ou alterados, dependendo das permissões concedidas ao usuário atual.
 
 ## Adobe Admin Console
 
-A Adobe Admin Console fornece um local central para gerenciar os direitos e o acesso de produtos do Adobe para sua organização. Por meio do console, você pode conceder a grupos de usuários permissões de acesso para vários [!DNL Platform] recursos, como &quot;[!UICONTROL Gerenciar conjuntos]de dados&quot;, &quot;Conjuntos[!UICONTROL de dados de]Visualização&quot; ou &quot;[!UICONTROL Gerenciar Perfis]&quot;.
+A Adobe Admin Console fornece um local central para gerenciar os direitos e o acesso de produtos do Adobe para sua organização. Por meio do console, você pode conceder a grupos de usuários permissões de acesso para vários recursos [!DNL Platform], como &quot;[!UICONTROL Gerenciar conjuntos de dados]&quot;, &quot;[!UICONTROL conjuntos de dados de Visualização]&quot; ou &quot;[!UICONTROL Gerenciar Perfis]&quot;.
 
 ### Perfis de produtos
 
-Na página [!DNL Admin Console], as permissões são atribuídas aos usuários por meio do uso de perfis de produtos. Os perfis de produtos permitem que você conceda permissões a um ou vários usuários e também contêm seu acesso ao escopo das caixas de proteção que lhes são atribuídas por meio de perfis de produtos. Os usuários podem ser atribuídos a um ou vários perfis de produtos pertencentes à sua organização.
+No [!DNL Admin Console], as permissões são atribuídas aos usuários por meio do uso de perfis de produtos. Os perfis de produtos permitem que você conceda permissões a um ou vários usuários e também contêm seu acesso ao escopo das caixas de proteção que lhes são atribuídas por meio de perfis de produtos. Os usuários podem ser atribuídos a um ou vários perfis de produtos pertencentes à sua organização.
 
 ### Perfis de produtos padrão
 
@@ -57,13 +57,13 @@ Na página [!DNL Admin Console], as permissões são atribuídas aos usuários p
 
 ## Caixas de proteção e permissões
 
-As caixas de proteção de não-produção são uma forma de virtualização de dados que permite isolar dados de outras caixas de proteção e geralmente são usadas para experimentos de desenvolvimento, testes ou testes. As permissões de um perfil de produto concedem aos usuários do perfil acesso aos recursos dentro dos ambientes da caixa de proteção aos quais eles receberam acesso. [!DNL Platform] Uma licença padrão de Experience Platform concede cinco caixas de proteção (uma produção e quatro não-produção). Você pode adicionar pacotes de dez caixas de proteção de não produção até um máximo de 75 caixas de proteção no total. Entre em contato com seu administrador de organização IMS ou seu representante de vendas de Adobe para obter mais detalhes.
+As caixas de proteção de não-produção são uma forma de virtualização de dados que permite isolar dados de outras caixas de proteção e geralmente são usadas para experimentos de desenvolvimento, testes ou testes. As permissões de um perfil de produto concedem aos usuários do perfil acesso aos recursos [!DNL Platform] dentro dos ambientes da caixa de proteção aos quais eles receberam acesso. Uma licença padrão de Experience Platform concede cinco caixas de proteção (uma produção e quatro não-produção). Você pode adicionar pacotes de dez caixas de proteção de não produção até um máximo de 75 caixas de proteção no total. Entre em contato com seu administrador de organização IMS ou seu representante de vendas de Adobe para obter mais detalhes.
 
-Para obter mais informações sobre caixas de proteção em [!DNL Experience Platform], consulte a visão geral [das](../sandboxes/home.md)caixas de proteção.
+Para obter mais informações sobre caixas de proteção em [!DNL Experience Platform], consulte [a visão geral das caixas de proteção](../sandboxes/home.md).
 
 ### Acesso a caixas de proteção
 
-O acesso às caixas de proteção é gerenciado por meio de perfis de produtos. Para obter etapas detalhadas sobre como ativar o acesso a uma caixa de proteção para um perfil de produto, consulte o guia [do usuário do](./ui/overview.md)controle de acesso.
+O acesso às caixas de proteção é gerenciado por meio de perfis de produtos. Para obter etapas detalhadas sobre como ativar o acesso a uma caixa de proteção para um perfil de produto, consulte o [guia do usuário do controle de acesso](./ui/overview.md).
 
 Os usuários podem receber acesso a uma ou mais caixas de proteção em um perfil de produto. Se um usuário estiver incluído em dois ou mais perfis de produtos, ele terá acesso a todas as caixas de proteção incluídas nesses perfis.
 
@@ -75,9 +75,9 @@ A guia Permissões em um perfil de produto exibe as caixas de proteção e as pe
 
 ![permissões-visão geral](./images/permissions-overview.png)
 
-As permissões que são concedidas por meio do [!DNL Admin Console] são classificadas por categoria, com algumas permissões concedendo acesso a várias funcionalidades de baixo nível.
+As permissões que são concedidas por meio de [!DNL Admin Console] são classificadas por categoria, com algumas permissões concedendo acesso a várias funcionalidades de baixo nível.
 
-A tabela a seguir descreve as permissões disponíveis [!DNL Experience Platform] no [!DNL Admin Console], com descrições dos [!DNL Platform] recursos específicos aos quais eles concedem acesso. Para obter etapas detalhadas sobre como adicionar permissões a um perfil de produto, consulte o guia [do usuário do](./ui/overview.md)controle de acesso.
+A tabela a seguir descreve as permissões disponíveis para [!DNL Experience Platform] no [!DNL Admin Console], com descrições dos recursos específicos [!DNL Platform] aos quais eles concedem acesso. Para obter etapas detalhadas sobre como adicionar permissões a um perfil de produto, consulte o [guia do usuário do controle de acesso](./ui/overview.md).
 
 | Categoria | Permissão | Descrição |
 | --- | --- | --- |
@@ -101,19 +101,17 @@ A tabela a seguir descreve as permissões disponíveis [!DNL Experience Platform
 | [!DNL Sandbox Administration] | [!UICONTROL Gerenciar caixas de proteção] | Acesso para ler, criar, editar e excluir caixas de proteção. |
 | [!DNL Sandbox Administration] | [!UICONTROL Visualizar sandboxes] | Acesso somente leitura para caixas de proteção pertencentes à sua organização. |
 | [!DNL Sandbox Administration] | [!UICONTROL Redefinir uma caixa de proteção] | Capacidade de reiniciar uma caixa de proteção. |
-| [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar, editar e desativar destinos.* |
-| [!DNL Destinations] | [!UICONTROL Destinos da visualização] | Acesso somente leitura para destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **[!UICONTROL Procurar]** .* |
-| [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Esta permissão requer que &quot;Destinos de Visualização&quot; ou &quot;Gerenciar [!UICONTROL destinos&quot;] sejam concedidos ao usuário que ativará os destinos.* |
+| [!DNL Destinations] | [!UICONTROL Gerenciar destinos] | Acesso para ler, criar, editar e desativar destinos. |
+| [!DNL Destinations] | [!UICONTROL Destinos da visualização] | Acesso somente leitura a destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **[!UICONTROL Procurar]**. |
+| [!DNL Destinations] | [!UICONTROL Ativar destinos] | Capacidade de ativar dados para destinos ativos que foram criados. Essa permissão exige que &quot;Destinos de Visualização&quot; ou &quot;Gerenciar [!UICONTROL Destinos&quot;] seja concedida ao usuário que ativará os destinos. |
 | [!DNL Data Ingestion] | [!UICONTROL Gerenciar fontes] | Acesso para ler, criar, editar e desativar fontes. |
-| [!DNL Data Ingestion] | [!UICONTROL Fontes de visualização] | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]** . |
+| [!DNL Data Ingestion] | [!UICONTROL Fontes de visualização] | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]**. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gerenciar a área de trabalho da análise de dados] | Acesso para ler, criar, editar e excluir em [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Aplicar rótulos de uso de dados] | Acesso para ler, criar e excluir rótulos de uso. |
 | [!DNL Data Governance] | [!UICONTROL Gerenciar políticas de uso de dados] | Acesso para ler, criar, editar e excluir políticas de uso de dados. |
 | [!DNL Data Governance] | [!UICONTROL Políticas de uso de dados de visualização] | Acesso somente leitura para políticas de uso de dados pertencentes à sua organização. |
 | [!DNL Query Service] | [!UICONTROL Gerenciar Query] | Acesso para ler, criar, editar e excluir query SQL estruturados para dados da plataforma. |
 
-_(*) Esta permissão exige disposições para [!DNL Real-time Customer Data Platform]. Para obter mais informações sobre a CDP em tempo real, comece lendo a visão geral [da CDP em tempo](https://docs.adobe.com/content/help/pt-BR/experience-platform/rtcdp/overview.html)real._
-
 ## Próximas etapas
 
-Ao ler este guia, o senhor foi apresentado aos principais princípios do controle de acesso em [!DNL Experience Platform]. Agora você pode continuar com o guia [do usuário do](./ui/overview.md) controle de acesso para obter etapas detalhadas sobre como usar o [!DNL Admin Console] para criar perfis de produtos e atribuir permissões para [!DNL Platform].
+Ao ler este guia, você foi apresentado aos princípios principais do controle de acesso em [!DNL Experience Platform]. Agora você pode continuar para o [guia do usuário do controle de acesso](./ui/overview.md) para obter etapas detalhadas sobre como usar o [!DNL Admin Console] para criar perfis de produtos e atribuir permissões para [!DNL Platform].

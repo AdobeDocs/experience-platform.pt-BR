@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;campo;
 solution: Experience Platform
 title: Definir campos XDM na interface do usuário
 description: Saiba como definir campos XDM na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -86,10 +86,10 @@ Ao definir um novo campo, opções de configuração adicionais podem aparecer n
 | [!UICONTROL Formato] | [!UICONTROL String] | Selecione de uma lista de formatos predefinidos para strings que o valor deve estar em conformidade. Os formatos disponíveis incluem: <ul><li>[[!UICONTROL data e hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nome do host]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL referência uri]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL ponteiro json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Comprimento mínimo] | [!UICONTROL String] | O número mínimo de caracteres que a string deve conter para que o valor seja aceito durante a ingestão. |
 | [!UICONTROL Tamanho máximo] | [!UICONTROL String] | O número máximo de caracteres que a string deve conter para que o valor seja aceito durante a ingestão. |
-| [!UICONTROL Valor mínimo] | [!UICONTROL Duplo] | Valor mínimo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, então o valor será aceito. |
-| [!UICONTROL Valor máximo] | [!UICONTROL Duplo] | O valor máximo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, então o valor será aceito. |
-| [!UICONTROL Valor mínimo exclusivo] | [!UICONTROL Duplo] | O valor máximo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, o valor será rejeitado. |
-| [!UICONTROL Valor máximo exclusivo] | [!UICONTROL Duplo] | O valor máximo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, o valor será rejeitado. |
+| [!UICONTROL Valor mínimo] | [!UICONTROL Duplo] | Valor mínimo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, então o valor será aceito. Ao usar essa restrição, a restrição &quot;[!UICONTROL Valor mínimo exclusivo]&quot; deve ser deixada em branco. |
+| [!UICONTROL Valor máximo] | [!UICONTROL Duplo] | O valor máximo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, então o valor será aceito. Ao usar essa restrição, a restrição &quot;[!UICONTROL Valor máximo exclusivo]&quot; deve ser deixada em branco. |
+| [!UICONTROL Valor mínimo exclusivo] | [!UICONTROL Duplo] | O valor máximo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, o valor será rejeitado. Ao usar essa restrição, a restrição &quot;[!UICONTROL Valor mínimo]&quot; (não exclusiva) deve ser deixada em branco. |
+| [!UICONTROL Valor máximo exclusivo] | [!UICONTROL Duplo] | O valor máximo para o Duplo a aceitar durante a ingestão. Se o valor ingerido corresponder exatamente ao valor inserido aqui, o valor será rejeitado. Ao usar essa restrição, a restrição &quot;[!UICONTROL Valor máximo]&quot; (não exclusiva) deve ser deixada em branco. |
 
 ## Tipos de campos especiais {#special}
 

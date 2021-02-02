@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: segmentos rtcdp;segmento rtcdp;segmento rtcdp;segmento rtcdp;segmento ai do cliente rtcdp
 title: AI do cliente na plataforma de dados do cliente em tempo real
 description: Uma visão geral da IA do cliente e como ela pode ajudar a gerar pontuações para resultados específicos, como conversões ou mudanças.
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---

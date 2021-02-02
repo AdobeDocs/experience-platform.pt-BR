@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;map csv guide;ui guide;mapper;map;date;funções de data;date;
 solution: Experience Platform
 title: Funções de data
 topic: overview
 description: Este documento apresenta as funções de data usadas com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 17%
+source-wordcount: '411'
+ht-degree: 16%
 
 ---
 
@@ -73,11 +73,11 @@ A tabela a seguir mostra quais letras de padrão estão definidas para strings d
 | S | Milissegundo | Número | 245 |
 | z | Fuso horário | Fuso horário geral | Hora Padrão do Pacífico; PST; GMT-08:00 |
 | Z | Fuso horário | Fuso horário RFC 822 | -0800 |
-| X | Fuso horário | Fuso horário ISO 8601 | -08; -0800; -08:00 |
+| X | Fuso horário | Fuso horário ISO 8601 | -08; -0800; 08:00 |
 | V | ID de fuso horário | Texto | América/Los_Angeles |
 | O | Deslocamento do fuso horário | Texto | GMT+8 |
 | Q/q | Trimestre do ano | Número/Texto | 3; 03; Q3; terceiro trimestre |
 
 **Exemplo**
 
-A expressão `date(orderDate, 'yyyy-MM-dd')` converterá um `orderDate` valor de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;2020-12-31&quot;.
+A expressão `date(orderDate, "yyyy-MM-dd")` converterá um valor `orderDate` de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;2020-12-31&quot;.

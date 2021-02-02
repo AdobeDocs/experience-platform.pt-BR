@@ -1,14 +1,14 @@
 ---
-keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
+keywords: iniciar tags da Web;tags da Web iniciar;tags do site;tags da Web;iniciar;Iniciar;Iniciar
 title: Tutorial Implementar tags de site com Adobe Launch
 seo-title: Implementar tags de site com o Adobe Launch
 description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 seo-description: Use o Adobe Launch para implementar tags de site no Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 9%
+source-wordcount: '493'
+ht-degree: 8%
 
 ---
 
@@ -27,56 +27,57 @@ Este tutorial explica como implementar as tags de seu site para enviar dados par
 
 Este tutorial contém as seguintes etapas:
 
-1. Instale a [!DNL Web SDK] extensão Adobe Experience Platform.
-1. Crie uma regra para informar [!DNL Launch] quais dados serão enviados.
+1. Instale a extensão Adobe Experience Platform [!DNL Web SDK].
+1. Crie uma regra para dizer [!DNL Launch] quais dados enviar.
 1. Compacte a extensão e a regra em uma biblioteca.
 
-## Instale a [!DNL Web SDK] extensão Adobe Experience Platform
+## Instale a extensão Adobe Experience Platform [!DNL Web SDK]
 
-Primeiro, instale a [!DNL Web SDK] extensão Adobe Experience Platform.
+Primeiro, instale a extensão Adobe Experience Platform [!DNL Web SDK].
 
-1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
+1. Em [!DNL Launch], abra a guia **[!UICONTROL Extensões]**.
 
    ![imagem](assets/launch-overview.png)
 
-1. Selecione a extensão do Adobe Experience Platform Web SDK no Catálogo de extensões de inicializaçãoA tela de configuração é aberta.
+1. Selecione a extensão do Adobe Experience Platform Web SDK no Catálogo de extensão de inicialização
+A tela de configuração é aberta.
 
    ![imagem](assets/launch-extension-install.png)
 
-   Para obter mais informações, consulte [Extensões](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) na [!DNL Launch] documentação.
+   Para obter mais informações, consulte [Extensões](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) na documentação [!DNL Launch].
 
 1. Configurar a extensão.
 
    As únicas configurações necessárias no momento são:
 
-   * **ID de configuração:** Especifique a ID de configuração obtida do seu representante de Adobe.
-   * **Domínio de borda:** Especifique o domínio de borda obtido do seu representante de Adobe.
+   * **ID de configuração:** especifique a ID de configuração obtida do representante do Adobe.
+   * **Domínio de borda:** especifique o domínio de borda obtido do seu representante de Adobe.
 
-1. Clique em **[!UICONTROL Salvar]** e prossiga para a próxima etapa.
+1. Selecione **[!UICONTROL Salvar]** e vá para a próxima etapa.
 
-## Criar uma regra para informar [!DNL Launch] quais dados serão enviados
+## Crie uma regra para dizer [!DNL Launch] quais dados serão enviados
 
-Em seguida, crie uma regra para [!DNL Launch] saber quais dados você deseja enviar à Adobe Experience Platform e quando deseja enviá-los.
+Em seguida, crie uma regra para permitir que [!DNL Launch] saiba quais dados você deseja enviar à Adobe Experience Platform e quando deseja enviá-los.
 
-1. Na guia **[!UICONTROL Regras]** , configure um evento que será acionado em cada nova página do site quando a [!DNL Launch] biblioteca for carregada.
+1. Na guia **[!UICONTROL Regras]**, configure um evento que será acionado em cada nova página do site quando a biblioteca [!DNL Launch] for carregada.
 
    ![imagem](assets/launch-make-a-rule.png)
 
 1. Adicionar uma ação.
 
-   Para configurar a ação, diga [!DNL Launch] onde localizar sua camada de dados. A camada de dados é um objeto JavaScript que existe na página, que é entregue pelo mesmo CMS que renderiza a página da Web. Forneça o caminho do JavaScript para o objeto de dados.
+   Para configurar a ação, diga [!DNL Launch] onde localizar a camada de dados. A camada de dados é um objeto JavaScript que existe na página, que é entregue pelo mesmo CMS que renderiza a página da Web. Forneça o caminho do JavaScript para o objeto de dados.
 
    ![imagem](assets/launch-add-aep-action.png)
 
    O objeto de dados enviado precisa ser um XDM válido que passe a validação em relação ao schema usado pelo conjunto de dados conectado à sua ID de configuração.
 
-1. Clique em **[!UICONTROL Manter alterações]**.
+1. Selecione **[!UICONTROL Manter alterações]**.
 
-Para obter mais informações, consulte [Regras](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/manage-resources/rules.html) na [!DNL Launch] documentação.
+Para obter mais informações, consulte [Regras](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) na documentação [!DNL Launch].
 
 ## Compacte a extensão e a regra em uma biblioteca
 
-Em seguida, [agrupe a extensão](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/publish/overview.html) e a nova regra em uma biblioteca e teste essas alterações em um ambiente de desenvolvimento.
+Em seguida, [agrupe a extensão](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) e a nova regra em uma biblioteca e teste essas alterações em um ambiente de desenvolvimento.
 
 ![imagem](assets/launch-add-changes-to-library.png)
 
@@ -84,4 +85,4 @@ Depois de concluir o teste, promova a biblioteca por meio do fluxo de trabalho p
 
 ![imagem](assets/launch-promote-library.png)
 
-Para obter mais informações, consulte [Bibliotecas](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/publish/libraries.html) na [!DNL Launch] documentação.
+Para obter mais informações, consulte [Bibliotecas](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/publish/libraries.html) na documentação [!DNL Launch].

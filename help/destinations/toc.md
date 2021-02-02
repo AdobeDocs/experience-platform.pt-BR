@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+description: Este documento lista o sumário para destinos do Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 0%
+source-wordcount: '443'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 0%
 * Tutoriais de API {#api}
    * [Conecte-se aos destinos de streaming (Kinesis AWS e Hubs de Evento do Azure) e ative os dados](./api/streaming-destinations.md)
    * [Conectar-se aos destinos de marketing de email e ativar dados](./api/email-marketing.md)
-* Guias da interface do usuário {#ui}
+* Guias da interface {#ui}
    * [Área de trabalho Destinos](./ui/destinations-workspace.md)
    * [Página de detalhes do destino](./ui/destination-details-page.md)
    * [Conectar-se a um destino](./ui/connect-destination.md)
@@ -27,9 +28,9 @@ ht-degree: 0%
 * Catálogo de destinos {#catalog}
    * [Visão geral do catálogo de destinos](./catalog/overview.md)
    * [ (Alfa) Destino HTTP](./catalog/http-destination.md)
-   * Adobe destinations{#adobe}
+   * destinos de Adobe{#adobe}
       * [Visão geral dos destinos de Adobe](./catalog/adobe/overview.md)
-      * [compartilhamento de segmentos Experience Platform](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [compartilhamento de segmentos Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos de publicidade{#advertising}
       * [Visão geral de destinos de publicidade](./catalog/advertising/overview.md)
       * [Destino Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
@@ -72,11 +73,12 @@ ht-degree: 0%
       * [Destino de SessionCam](./catalog/analytics/sessioncam.md)
       * [Destino TMMData](./catalog/analytics/tmmdata.md)
       * [Destino de rastreamento de conversão de texto](./catalog/analytics/yext.md)
-   * Destinos de armazenamentos na nuvem{#cloud-storage}
+   * Destinos de armazenamentos em nuvem{#cloud-storage}
       * [Visão geral dos destinos de armazenamentos na nuvem](./catalog/cloud-storage/overview.md)
       * [Fluxo de trabalho para criar destinos de armazenamentos na nuvem](./catalog/cloud-storage/workflow.md)
       * [Destino Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Destino Amazon S3](./catalog/cloud-storage/amazon-s3.md)
+      * [Destino Blob do Azure](./catalog/cloud-storage/azure-blob.md)
       * [Destino dos Hubs de Evento do Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Destino SFTP](./catalog/cloud-storage/sftp.md)
    * Destinos da plataforma de gestão de dados {#data-management}
@@ -93,7 +95,7 @@ ht-degree: 0%
       * [Destino oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Destino do oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Destino do Marketing Cloud do Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch extensions{#launch-extensions}
+   * extensões Experience Platform Launch{#launch-extensions}
       * [Visão geral das extensões de Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinos de envolvimento móvel {#mobile-engagement}
       * [Visão geral dos destinos de envolvimento móvel](./catalog/mobile-engagement/overview.md)
@@ -110,12 +112,12 @@ ht-degree: 0%
       * [Destino de obtenção](./catalog/personalization/gainsight.md)
       * [Destino do fogo de artifício](./catalog/personalization/kickfire.md)
       * [Destino de personalização da Web do Marketing](./catalog/personalization/marketo-web-personalization.md)
-   * Destinos da rede social{#social}
+   * Destinos de rede social{#social}
       * [Visão geral dos destinos de rede social](./catalog/social/overview.md)
       * [Fluxo de autenticação de destinos de rede social](./catalog/social/workflow.md)
       * [destino de Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Destino do Facebook](./catalog/social/facebook.md)
-   * Destinos da pesquisa {#survey}
+   * Destinos de pesquisa {#survey}
       * [Visão geral dos destinos de pesquisa](./catalog/survey/overview.md)
       * [Destino previsto](./catalog/survey/foresee.md)
       * [Destino no momento](./catalog/survey/inmoment.md)

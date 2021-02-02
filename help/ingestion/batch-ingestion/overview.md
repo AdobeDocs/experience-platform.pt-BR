@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
+keywords: Experience Platform;home;popular topics;ingestão de dados;lote;habilitar conjunto de dados;visão geral da ingestão em lote;visão geral;visão geral da ingestão em lote;
 solution: Experience Platform
 title: Visão geral da ingestão em lote
 topic: overview
-description: A API de ingestão em lote permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
+description: A API de ingestão em lote permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1216'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 # [!DNL Batch Ingestion]visão geral
 
-A [!DNL Batch Ingestion] API permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados que estão sendo ingeridos podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo parquet) ou dados que estão em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
+A API [!DNL Batch Ingestion] permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados de perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
 
-A referência [da API de ingestão de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) dados fornece informações adicionais sobre essas chamadas de API.
+A [Referência da API de ingestão de dados](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fornece informações adicionais sobre essas chamadas de API.
 
 O diagrama a seguir descreve o processo de ingestão em lote:
 
@@ -25,7 +25,7 @@ O diagrama a seguir descreve o processo de ingestão em lote:
 
 ## Uso da API
 
-A [!DNL Data Ingestion] API permite que você ingira dados como lotes (uma unidade de dados que consiste em um ou mais arquivos para serem ingeridos como uma única unidade) [!DNL Experience Platform] em três etapas básicas:
+A API [!DNL Data Ingestion] permite que você ingira dados como lotes (uma unidade de dados que consiste em um ou mais arquivos para serem ingeridos como uma única unidade) em [!DNL Experience Platform] em três etapas básicas:
 
 1. Crie um novo lote.
 2. Faça upload de arquivos para um conjunto de dados especificado que corresponda ao schema XDM dos dados.
@@ -35,8 +35,8 @@ A [!DNL Data Ingestion] API permite que você ingira dados como lotes (uma unida
 ### [!DNL Data Ingestion] pré-requisitos
 
 - Os dados a serem carregados devem estar nos formatos Parquet ou JSON.
-- Um conjunto de dados criado no [[!DNL Catalog services]](../../catalog/home.md).
-- O conteúdo do arquivo parquet deve corresponder a um subconjunto do schema do conjunto de dados para o qual está sendo feito upload.
+- Um conjunto de dados criado em [[!DNL Catalog services]](../../catalog/home.md).
+- O conteúdo do arquivo Parquet deve corresponder a um subconjunto do schema do conjunto de dados para o qual está sendo feito upload.
 - Tenha seu Token de acesso exclusivo após a autenticação.
 
 ### Práticas recomendadas de ingestão em lote
@@ -48,11 +48,11 @@ Para carregar um arquivo maior que 512 MB, o arquivo precisará ser dividido em 
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -64,7 +64,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -131,7 +131,7 @@ Você pode carregar arquivos usando a API de Upload de Arquivo Pequeno. No entan
 
 >[!NOTE]
 >
->Os exemplos abaixo usam o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) . Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia [do desenvolvedor de ingestão em](./api-overview.md)lote.
+>Os exemplos abaixo usam o formato de arquivo [Apache Parquet](https://parquet.apache.org/documentation/latest/). Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](./api-overview.md).
 
 ### Upload de arquivo pequeno
 
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Conclusão do lote de sinais
 
-Depois que todos os arquivos forem carregados no lote, o lote poderá ser sinalizado para conclusão. Ao fazer isso, as entradas [!DNL Catalog] DataSetFile são criadas para os arquivos concluídos e associadas ao lote gerado acima. O [!DNL Catalog] lote é marcado como bem-sucedido, o que aciona os fluxos downstream para assimilar os dados disponíveis.
+Depois que todos os arquivos forem carregados no lote, o lote poderá ser sinalizado para conclusão. Ao fazer isso, as entradas [!DNL Catalog] DataSetFile são criadas para os arquivos concluídos e associadas ao lote gerado acima. O lote [!DNL Catalog] é marcado como bem-sucedido, o que aciona os fluxos de downstream para assimilar os dados disponíveis.
 
 **Solicitação**
 
@@ -382,20 +382,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | A ID do usuário que criou ou atualizou o lote. |
 
-O `"status"` campo é o que mostra o status atual do lote solicitado. Os lotes podem ter um dos seguintes estados:
+O campo `"status"` é o que mostra o status atual do lote solicitado. Os lotes podem ter um dos seguintes estados:
 
 ## Status de ingestão em lote
 
 | Status | Descrição |
 | ------ | ----------- |
 | Abandonado | O lote não foi concluído no período de tempo esperado. |
-| Abortado | Uma operação abort foi chamada **explicitamente** (por meio da API de assimilação em lote) para o lote especificado. Quando o lote estiver em um estado &quot;Carregado&quot;, ele não poderá ser abortado. |
+| Abortado | Uma operação abort **explicitamente** foi chamada (por meio da API de assimilação em lote) para o lote especificado. Quando o lote estiver em um estado &quot;Carregado&quot;, ele não poderá ser abortado. |
 | Ativo | O lote foi promovido com êxito e está disponível para consumo a jusante. Esse status pode ser usado alternadamente com &quot;Sucesso&quot;. |
 | Excluído | Os dados do lote foram completamente removidos. |
 | Falha | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Os dados de um lote com falha **não** serão exibidos. Esse status pode ser usado alternadamente com &quot;Falha&quot;. |
 | Inativo | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não está mais disponível para consumo a jusante. |
 | Carregado | Os dados do lote estão completos e o lote está pronto para promoção. |
-| Carregando | Os dados para este lote estão sendo carregados e o lote **não** está pronto para ser promovido no momento. |
+| Carregando | Os dados deste lote estão sendo carregados e o lote está **não** pronto para ser promovido. |
 | Tentando novamente | Os dados deste lote estão sendo processados. No entanto, devido a um erro transitório ou do sistema, o lote falhou - como resultado, esse lote está sendo repetido. |
 | Preparado | A fase de preparo do processo de promoção para um lote está concluída e o trabalho de ingestão foi executado. |
 | Armazenamento temporário | Os dados do lote estão sendo processados. |

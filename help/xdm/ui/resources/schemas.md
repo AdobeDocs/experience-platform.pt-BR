@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;schema;schemas;
 solution: Experience Platform
 title: Criar e editar schemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar schemas na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -65,13 +65,21 @@ Depois de abrir um schema dentro de [!DNL Schema Editor], é possível adicionar
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-Na caixa de diálogo exibida, você pode selecionar as combinações desejadas na lista. É possível selecionar várias combinações na lista, com cada combinação selecionada aparecendo no painel direito.
+Uma caixa de diálogo é exibida mostrando uma lista de combinações que você pode selecionar para o schema. Como as misturas são compatíveis apenas com uma classe, somente as misturas associadas à classe selecionada do schema serão listadas. Por padrão, as misturas listadas são classificadas com base na popularidade de uso dentro da organização.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+Você pode usar a barra de pesquisa para ajudar a localizar a combinação desejada. As misturas cujo nome corresponde ao query são exibidas na parte superior da lista. Em **[!UICONTROL Campos padrão]**, as combinações que contêm campos que descrevem os atributos de dados desejados são exibidas.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+Marque a caixa de seleção ao lado do nome da mistura que você deseja adicionar ao schema. É possível selecionar várias combinações na lista, com cada combinação selecionada aparecendo no painel direito.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->Para qualquer combinação listada, você pode selecionar o ícone de pré-visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para visualização da estrutura dos campos fornecidos pelo mixin antes de decidir adicioná-lo ao schema.
+>Para qualquer combinação listada, você pode passar o mouse ou focar no ícone de informações (![](../../images/ui/resources/schemas/info-icon.png)) para visualização de uma breve descrição do tipo de dados capturados pela mistura. Você também pode selecionar o ícone de pré-visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para visualização da estrutura dos campos fornecidos pelo mixin antes de decidir adicioná-lo ao schema.
 
 Depois de terminar de escolher a mixin, selecione **[!UICONTROL Adicionar mixin]** para adicioná-los ao schema.
 

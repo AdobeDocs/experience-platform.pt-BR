@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;popular topics;Aplicação automática;Aplicação baseada em API;controle de dados
 solution: Experience Platform
-title: Visão geral da aplicação de políticas
-topic: enforcement
+title: Aplicação automática de política
+topic: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Quando um segmento é ativado pela primeira vez, [!DNL Policy Service] verifica 
 
 A linhagem de dados desempenha um papel fundamental na forma como as políticas são aplicadas na Plataforma. Em termos gerais, a linhagem de dados se refere à origem de um conjunto de dados, e o que acontece a ele (ou onde ele se move) ao longo do tempo.
 
-No contexto de [!DNL Data Governance], a linhagem permite que os rótulos de uso de dados se propaguem de conjuntos de dados para serviços de downstream que consomem seus dados, como Perfil e destinos do cliente em tempo real. Isso permite que as políticas sejam avaliadas e aplicadas em vários pontos-chave na jornada dos dados pela Plataforma, e fornece contexto aos consumidores de dados sobre o porquê de uma violação de política ter ocorrido.
+No contexto de [!DNL Data Governance], a linhagem permite que os rótulos de uso de dados se propaguem de conjuntos de dados para serviços de downstream que consomem seus dados, como Perfil e destinos do cliente em tempo real. Isso permite que as políticas sejam avaliadas e aplicadas em vários pontos-chave na jornada dos dados por meio da Plataforma, e fornece contexto aos consumidores de dados sobre o porquê de uma violação de política ter ocorrido.
 
 Na Experience Platform, a aplicação da política está relacionada com a seguinte linhagem:
 

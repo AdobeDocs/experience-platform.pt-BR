@@ -1,13 +1,13 @@
 ---
-keywords: email;Email;e-mail;email destinations;salesforce;salesforce destination
+keywords: email;Email;email;email destinos;salesforce;salesforce destino
 title: Marketing Cloud do Salesforce
 seo-title: Marketing Cloud do Salesforce
-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
-seo-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
+description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
+seo-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -17,37 +17,37 @@ ht-degree: 0%
 
 ## Visão geral
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar viagens para visitantes e clientes para personalizar sua experiência.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 
-Para enviar dados de segmento para [!DNL Salesforce Marketing Cloud], é necessário primeiro [conectar o destino](#connect-destination) em CDP em tempo real e [configurar uma importação](#import-data-into-salesforce) de dados do local do armazenamento para [!DNL Salesforce Marketing Cloud].
+Para enviar dados de segmento para [!DNL Salesforce Marketing Cloud], primeiro [conecte o destino](#connect-destination) na Plataforma e, em seguida, [configure uma importação de dados](#import-data-into-salesforce) do local do seu armazenamento para [!DNL Salesforce Marketing Cloud].
 
 ## Tipo de exportação {#export-type}
 
-**Baseado** em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [da ativação de](../../ui/activate-destinations.md#select-attributes)destino.
+**Baseado**  em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [ da ativação de ](../../ui/activate-destinations.md#select-attributes)destino.
 
 ## Destino do Connect {#connect-destination}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Salesforce Marketing Cloud]e, em seguida, selecione o destino **[!UICONTROL do]** Connect.
+Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Salesforce Marketing Cloud] e **[!UICONTROL Ligar destino]**.
 
 ![Conectar-se ao Salesforce](../../assets/catalog/email-marketing/salesforce/catalog.png)
 
-Na etapa **[!UICONTROL Autenticação]** , se você tiver configurado anteriormente uma conexão com o destino do armazenamento na nuvem, selecione Conta **** existente e selecione uma de suas conexões existentes. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão. Preencha as credenciais de autenticação de sua conta e selecione **[!UICONTROL Conectar ao destino]**. Para [!DNL Salesforce Marketing Cloud], você pode selecionar entre **[!UICONTROL SFTP com senha]** e **[!UICONTROL SFTP com chave]** SSH. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Conectar-se ao destino]**.
+Na etapa **[!UICONTROL Autenticação]**, se você tiver configurado anteriormente uma conexão com o destino do armazenamento na nuvem, selecione **[!UICONTROL Conta existente]** e selecione uma de suas conexões existentes. Ou você pode selecionar **[!UICONTROL Nova conta]** para configurar uma nova conexão. Preencha as credenciais de autenticação da sua conta e selecione **[!UICONTROL Ligar ao destino]**. Para [!DNL Salesforce Marketing Cloud], você pode selecionar entre **[!UICONTROL SFTP com Password]** e **[!UICONTROL SFTP com chave SSH]**. Preencha as informações abaixo, dependendo do tipo de conexão, e selecione **[!UICONTROL Conecte-se ao destino]**.
 
-Para **[!UICONTROL SFTP com conexões de senha]** , você deve fornecer Domínio, Porta, Nome de usuário e Senha.
+Para conexões **[!UICONTROL SFTP com Password]**, você deve fornecer Domínio, Porta, Nome de usuário e Senha.
 
-Para **[!UICONTROL SFTP com conexões de chave]** SSH, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH.
+Para conexões **[!UICONTROL SFTP com chave SSH]**, você deve fornecer Domínio, Porta, Nome de usuário e Chave SSH.
 
 ![Preencha as informações do Salesforce](../../assets/catalog/email-marketing/salesforce/account-info.png)
 
-Na etapa **[!UICONTROL de configuração]** , preencha as informações relevantes para seu destino, conforme mostrado abaixo:
+Na etapa **[!UICONTROL Setup]**, preencha as informações relevantes para seu destino, conforme mostrado abaixo:
 - **[!UICONTROL Nome]**: Escolha um nome relevante para o seu destino.
 - **[!UICONTROL Descrição]**: Insira uma descrição para o seu destino.
-- **[!UICONTROL Caminho]** da pasta: Forneça o caminho no local do armazenamento onde a CDP em tempo real depositará seus dados de exportação como CSV ou arquivos delimitados por tabulação.
-- **[!UICONTROL Formato]** de arquivo: **[!UICONTROL CSV]** ou **[!UICONTROL TAB_DELIMITED]**. Selecione o formato de arquivo a ser exportado para o local do armazenamento.
+- **[!UICONTROL Caminho]** da pasta: Forneça o caminho no local do armazenamento onde a Plataforma depositará seus dados de exportação como CSV ou arquivos delimitados por tabulação.
+- **[!UICONTROL Formato]** de arquivo:  **** CSV ou  **[!UICONTROL TAB_DELIMITED]**. Selecione o formato de arquivo a ser exportado para o local do armazenamento.
 
 ![Informações básicas sobre o Salesforce](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 
-Clique em **[!UICONTROL Criar destino]** após preencher os campos acima. Seu destino agora está conectado e você pode [ativar segmentos](../../ui/activate-destinations.md) no destino.
+Clique em **[!UICONTROL Criar destino]** depois de preencher os campos acima. Seu destino agora está conectado e você pode [ativar segmentos](../../ui/activate-destinations.md) no destino.
 
 ## Ativar segmentos {#activate-segments}
 
@@ -55,12 +55,12 @@ Consulte [Ativar perfis e segmentos em um destino](../../ui/activate-destination
 
 ## Atributos de destino {#destination-attributes}
 
-Ao [ativar segmentos](../../ui/activate-destinations.md) para o [!DNL Salesforce Marketing Cloud] destino, recomendamos que você selecione um identificador exclusivo do seu schema [de](../../../profile/home.md#profile-fragments-and-union-schemas)união. Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecionar quais campos de schema usar como atributos de destino em seus arquivos](./overview.md#destination-attributes) exportados em Destinos de marketing de email.
+Quando [ativar segmentos](../../ui/activate-destinations.md) no destino [!DNL Salesforce Marketing Cloud], recomendamos que você selecione um identificador exclusivo do seu [schema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte [Selecione quais campos de schema usar como atributos de destino em seus arquivos exportados](./overview.md#destination-attributes) em Destinos de marketing de email.
 
 ## Dados exportados {#exported-data}
 
-Para [!DNL Salesforce Marketing Cloud] destinos, o CDP em tempo real cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte Destinos de marketing de [email e destinos](../../ui/activate-destinations.md#esp-and-cloud-storage) de armazenamentos da Cloud no tutorial de ativação de segmentos.
+Para destinos [!DNL Salesforce Marketing Cloud], a plataforma cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
 
-## Configurar importação de dados em [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
+## Configurar importação de dados para [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Depois de conectar o CDP em tempo real ao seu armazenamento [!DNL Amazon S3] ou SFTP, você deve configurar a importação de dados do local do armazenamento para [!DNL Salesforce Marketing Cloud]. Para saber como fazer isso, consulte [Importando assinantes para o Marketing Cloud a partir de um arquivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) no [!DNL Salesforce Help Center].
+Depois de conectar a Plataforma ao seu [!DNL Amazon S3] ou armazenamento SFTP, você deve configurar a importação de dados do local do armazenamento para [!DNL Salesforce Marketing Cloud]. Para saber como fazer isso, consulte [Importando assinantes para o Marketing Cloud a partir de um Arquivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) no [!DNL Salesforce Help Center].

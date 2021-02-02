@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;
 solution: Experience Platform
 title: Guia do desenvolvedor da API de Registro do schema
 description: 'A API de Registro de Schemas permite gerenciar programaticamente todos os schemas e os recursos XDM relacionados disponíveis para você no Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -63,19 +63,19 @@ Para saber como visualização uniões na API do Registro do Schema, consulte o 
 
 A API do Registro de Schemas permite que você transfira e compartilhe recursos XDM entre caixas de proteção e organizações IMS. Para qualquer schema, combinação ou tipo de dados, é possível gerar uma carga de exportação que contenha a estrutura do recurso e quaisquer recursos dependentes. Essa carga pode ser usada para importar o recurso para uma caixa de proteção de destino e uma Organização IMS.
 
-Consulte a [referência da API do Registro do Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) para obter mais informações sobre o uso deste terminal.
+Consulte o guia [exportar/importar endpoints](./export-import.md) para obter mais informações sobre como usar esses endpoints.
 
 ## Dados de amostra
 
 Você pode gerar dados de amostra para qualquer schema especificado na Biblioteca de Schemas. O objeto de resposta retornado pode ser usado como uma fonte de ingestão de dados.
 
-Consulte a [referência da API do Registro do Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) para obter mais informações sobre o uso deste terminal.
+Consulte o [guia de ponto final de dados de amostra](./sample-data.md) para obter mais informações sobre o uso desse ponto final.
 
 ## Log de auditoria
 
 O Registro de Schemas mantém um log de todas as alterações que ocorreram em um recurso (classe, mixagem, tipo de dados ou schema) entre diferentes atualizações. Você pode recuperar o log de um recurso específico fornecendo seu `$id` ou `meta:altId` no caminho de uma solicitação de GET para esse terminal.
 
-Consulte a [referência da API do Registro do Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) para obter mais informações sobre o uso deste terminal.
+Consulte o [guia de ponto de extremidade de registro de auditoria](./audit-log.md) para obter mais informações sobre o uso desse ponto de extremidade.
 
 ## Próximas etapas
 

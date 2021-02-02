@@ -1,13 +1,13 @@
 ---
-keywords: advertising destinations;destinations;rtcdp destinations
+keywords: destinos de publicidade;destinos;destinos de plataforma
 title: Destinos de publicidade
 seo-title: Destinos de publicidade
-description: Conecte sua Plataforma de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimo nessas plataformas.
-seo-description: Conecte sua Plataforma de dados do cliente em tempo real a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimo nessas plataformas.
+description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
+seo-description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '225'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Destinos de publicidade {#advertising-destinations}
 
-Conecte seu site [!DNL Real-time Customer Data Platform] a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas para essas plataformas.
+Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 
 Ao se conectar a um destino de publicidade, suas audiências são enviadas como IDs para a plataforma de destino, onde são mapeadas para uma ID conhecida pela plataforma de destino.
 
-Atualmente, a CDP em tempo real suporta os destinos de publicidade listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, a Plataforma suporta os destinos de publicidade listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
 ## Conexões
 

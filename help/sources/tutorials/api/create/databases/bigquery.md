@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Google BigQuery (a seguir denominado "BigQuery").
 translation-type: tm+mt
-source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '624'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

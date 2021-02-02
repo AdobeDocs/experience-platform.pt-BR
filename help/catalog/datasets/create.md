@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
+keywords: Experience Platform;home;popular tópicos;dataset;Dataset;criar um conjunto de dados;criar um conjunto de dados;;home;popular topics;dataset;Dataset;create a dataset;create a dataset
 solution: Experience Platform
 title: Criar um conjunto de dados usando APIs
 topic: datasets
 description: Este documento fornece etapas gerais para a criação de um conjunto de dados usando APIs Adobe Experience Platform e preenchendo o conjunto de dados usando um arquivo.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1268'
 ht-degree: 1%
 
 ---
@@ -21,19 +21,19 @@ Este documento fornece etapas gerais para a criação de um conjunto de dados us
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-* [Ingestão](../../ingestion/batch-ingestion/overview.md)em lote: [!DNL Experience Platform] permite que você ingira dados como arquivos em lote.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Ingestão](../../ingestion/batch-ingestion/overview.md) em lote:  [!DNL Experience Platform] permite que você ingira dados como arquivos em lote.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as [!DNL Platform] APIs.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas bem-sucedidas para as APIs [!DNL Platform].
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -45,7 +45,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para caixas de pro
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -55,15 +55,15 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 Para criar um conjunto de dados, um schema deve ser definido primeiro. Um schema é um conjunto de regras para ajudar a representar dados. Além de descrever a estrutura dos dados, os schemas fornecem restrições e expectativas que podem ser aplicadas e usadas para validar os dados conforme são movidos entre os sistemas.
 
-Essas definições padrão permitem que os dados sejam interpretados de forma consistente, independentemente da origem, e removem a necessidade de tradução entre aplicativos. Para obter mais informações sobre a composição de schemas, consulte o guia sobre os [fundamentos da composição do schema](../../xdm/schema/composition.md)
+Essas definições padrão permitem que os dados sejam interpretados de forma consistente, independentemente da origem, e removem a necessidade de tradução entre aplicativos. Para obter mais informações sobre a composição de schemas, consulte o guia sobre as [noções básicas de composição de schemas](../../xdm/schema/composition.md)
 
 ## Pesquisar um schema de conjunto de dados
 
-Este tutorial inicia onde o tutorial [da API do Registro do](../../xdm/tutorials/create-schema-api.md) Schema termina, utilizando o schema Membros da Fidelidade criado durante esse tutorial.
+Este tutorial começa no local [tutorial da API do Registro do Schema](../../xdm/tutorials/create-schema-api.md) termina, utilizando o schema Membros da Fidelidade criado durante esse tutorial.
 
-Se você não tiver concluído o [!DNL Schema Registry] tutorial, start lá e continue com este tutorial de conjunto de dados somente depois de ter composto o schema necessário.
+Se você não tiver concluído o tutorial [!DNL Schema Registry], start para lá e continue com esse tutorial de conjunto de dados somente depois de ter composto o schema necessário.
 
-A chamada a seguir pode ser usada para visualização do schema Membros de Fidelidade que você criou durante o tutorial da [!DNL Schema Registry] API:
+A chamada a seguir pode ser usada para visualização do schema Membros de Fidelidade que você criou durante o tutorial da API [!DNL Schema Registry]:
 
 **Formato da API**
 
@@ -215,7 +215,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Este tutorial usa o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia do desenvolvedor de ingestão em [lote](../../ingestion/batch-ingestion/api-overview.md)
+>Este tutorial usa o formato de arquivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para todos os seus exemplos. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](../../ingestion/batch-ingestion/api-overview.md)
 
 **Resposta**
 
@@ -239,7 +239,7 @@ POST /batches
 
 **Solicitação**
 
-O corpo da solicitação inclui um campo &quot;datasetId&quot;, cujo valor é o `{DATASET_ID}` gerado na etapa anterior.
+O corpo da solicitação inclui um campo &quot;datasetId&quot;, cujo valor é `{DATASET_ID}` gerado na etapa anterior.
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -256,7 +256,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta que contém detalhes do lote recém-criado, incluindo `id`uma sequência de caracteres gerada pelo sistema, somente leitura.
+Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta que contém detalhes do lote recém-criado, incluindo `id`, uma sequência de caracteres gerada pelo sistema somente leitura.
 
 ```JSON
 {
@@ -295,7 +295,7 @@ Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resp
 
 ## Carregar arquivos em um lote
 
-Depois de criar com êxito um novo lote para upload, agora é possível fazer upload de arquivos para o conjunto de dados específico. É importante lembrar que, ao definir o conjunto de dados, você especificou o formato de arquivo como parquet. Portanto, os arquivos carregados devem estar nesse formato.
+Depois de criar com êxito um novo lote para upload, agora é possível fazer upload de arquivos para o conjunto de dados específico. É importante lembrar que, ao definir o conjunto de dados, você especificou o formato de arquivo como Parquet. Portanto, os arquivos carregados devem estar nesse formato.
 
 >[!NOTE]
 >
@@ -309,8 +309,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{BATCH_ID}` | O lote `id` para o qual você está fazendo upload. |
-| `{DATASET_ID}` | O conjunto `id` de dados no qual o lote será mantido. |
+| `{BATCH_ID}` | O `id` do lote para o qual você está fazendo upload. |
+| `{DATASET_ID}` | O `id` do conjunto de dados no qual o lote será mantido. |
 | `{FILE_NAME}` | O nome do arquivo que você está carregando. |
 
 **Solicitação**
@@ -330,7 +330,7 @@ Um arquivo carregado com êxito retorna um corpo de resposta em branco e o Statu
 
 ## Conclusão do lote de sinais
 
-Depois de carregar todos os arquivos de dados no lote, você pode sinalizar o lote para conclusão. A conclusão da sinalização faz com que o serviço crie [!DNL Catalog]`DataSetFile` entradas para os arquivos carregados e as associe ao lote gerado anteriormente. O [!DNL Catalog] lote é marcado como bem-sucedido, o que aciona todos os fluxos downstream que podem então funcionar nos dados agora disponíveis.
+Depois de carregar todos os arquivos de dados no lote, você pode sinalizar o lote para conclusão. A conclusão da sinalização faz com que o serviço crie entradas [!DNL Catalog] `DataSetFile` para os arquivos carregados e as associe ao lote gerado anteriormente. O lote [!DNL Catalog] é marcado como bem-sucedido, o que aciona todos os fluxos downstream que podem então funcionar nos dados agora disponíveis.
 
 **Formato da API**
 
@@ -357,7 +357,7 @@ Um lote concluído com êxito retorna um corpo de resposta em branco e o Status 
 
 ## Monitorar ingestão
 
-Dependendo do tamanho dos dados, os lotes levam tempos variados para serem ingeridos. É possível monitorar o status de um lote anexando um parâmetro de `batch` solicitação que contém a ID do lote a uma `GET /batches` solicitação. A API pesquisa o conjunto de dados para o status do lote a partir da ingestão até que a resposta `status` indique a conclusão (&quot;sucesso&quot; ou &quot;falha&quot;).
+Dependendo do tamanho dos dados, os lotes levam tempos variados para serem ingeridos. Você pode monitorar o status de um lote anexando um parâmetro de solicitação `batch` contendo a ID do lote a uma solicitação `GET /batches`. A API pesquisa o conjunto de dados para o status do lote desde a ingestão até que `status` na resposta indique a conclusão (&quot;sucesso&quot; ou &quot;falha&quot;).
 
 **Formato da API**
 
@@ -382,7 +382,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta positiva retorna um objeto com seu `status` atributo contendo o valor de `success`:
+Uma resposta positiva retorna um objeto com seu atributo `status` contendo o valor de `success`:
 
 ```JSON
 {
@@ -414,7 +414,7 @@ Uma resposta positiva retorna um objeto com seu `status` atributo contendo o val
 }
 ```
 
-Uma resposta negativa retorna um objeto com o valor de `"failed"` em seu `"status"` atributo e inclui qualquer mensagem de erro relevante:
+Uma resposta negativa retorna um objeto com o valor de `"failed"` em seu atributo `"status"` e inclui qualquer mensagem de erro relevante:
 
 ```JSON
 {
@@ -466,14 +466,14 @@ Com a ID do lote, você pode usar a API de acesso a dados para retornar e verifi
 
 Você também pode usar a API de acesso a dados para retornar o nome, o tamanho em bytes e um link para baixar o arquivo ou a pasta.
 
-As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encontradas no guia [do desenvolvedor de acesso a](../../data-access/home.md)dados.
+As etapas detalhadas para trabalhar com a API de acesso a dados podem ser encontradas no [Guia do desenvolvedor de acesso a dados](../../data-access/home.md).
 
 ## Atualizar o schema de conjunto de dados
 
 Você pode adicionar campos e assimilar dados adicionais em conjuntos de dados criados. Para fazer isso, primeiro é necessário atualizar o schema adicionando propriedades adicionais que definem os novos dados. Isso pode ser feito usando operações de PATCH e/ou PUT para atualizar o schema existente.
 
-Para obter mais informações sobre a atualização de schemas, consulte o Guia [do desenvolvedor da API do Registro de](../../xdm/api/getting-started.md)Schemas.
+Para obter mais informações sobre a atualização de schemas, consulte [Guia do desenvolvedor da API do Registro de Schemas](../../xdm/api/getting-started.md).
 
 Depois de atualizar o schema, você poderá seguir novamente as etapas neste tutorial para assimilar novos dados que estejam em conformidade com o schema revisado.
 
-É importante lembrar que a evolução do schema é meramente aditiva, o que significa que você não pode introduzir uma alteração de quebra em um schema depois que ela for salva no registro e usada para a ingestão de dados. Para saber mais sobre as práticas recomendadas para a composição de schemas para uso com a Adobe Experience Platform, consulte o guia sobre as [noções básicas de composição](../../xdm/schema/composition.md)de schemas.
+É importante lembrar que a evolução do schema é meramente aditiva, o que significa que você não pode introduzir uma alteração de quebra em um schema depois que ela for salva no registro e usada para a ingestão de dados. Para saber mais sobre as práticas recomendadas para a composição de schemas para uso com o Adobe Experience Platform, consulte o guia sobre [noções básicas de composição de schemas](../../xdm/schema/composition.md).

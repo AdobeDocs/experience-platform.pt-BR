@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
+keywords: Experience Platform;home;popular tópicos;conjunto de dados;criar um conjunto de dados;criar conjunto de dados;ativar conjunto de dados;;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Criar um conjunto de dados
 topic: developer guide
 description: Este documento aborda como criar um objeto de conjunto de dados no Catálogo.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '223'
 ht-degree: 1%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 # Criar um conjunto de dados
 
-Para criar um conjunto de dados usando a [!DNL Catalog] API, é necessário saber o `$id` valor do schema [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do schema, você pode criar um conjunto de dados, solicitando um POST para o `/datasets` endpoint na [!DNL Catalog] API.
+Para criar um conjunto de dados usando a API [!DNL Catalog], é necessário saber o valor `$id` do schema [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do schema, você pode criar um conjunto de dados, fazendo uma solicitação POST para o ponto final `/datasets` na API [!DNL Catalog].
 
 >[!NOTE]
 >
->Este documento só aborda como criar um objeto de conjunto de dados no [!DNL Catalog]. Para obter as etapas completas sobre como criar, preencher e monitorar um conjunto de dados, consulte o [tutorial](../datasets/create.md)a seguir.
+>Este documento só aborda como criar um objeto de conjunto de dados em [!DNL Catalog]. Para obter as etapas completas sobre como criar, preencher e monitorar um conjunto de dados, consulte o seguinte [tutorial](../datasets/create.md).
 
 **Formato da API**
 
@@ -56,11 +56,11 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome do conjunto de dados a ser criado. |
-| `schemaRef.id` | O `$id` valor de URI para o schema XDM no qual o conjunto de dados será baseado. |
+| `schemaRef.id` | O valor de URI `$id` para o schema XDM no qual o conjunto de dados será baseado. |
 
 >[!NOTE]
 >
->Este exemplo usa o formato de arquivo [parquet](https://parquet.apache.org/documentation/latest/) para sua `containerFormat` propriedade. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no guia [do desenvolvedor de ingestão em](../../ingestion/batch-ingestion/api-overview.md)lote.
+>Este exemplo usa o formato de arquivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para sua propriedade `containerFormat`. Um exemplo que usa o formato de arquivo JSON pode ser encontrado no [guia do desenvolvedor de ingestão em lote](../../ingestion/batch-ingestion/api-overview.md).
 
 **Resposta**
 

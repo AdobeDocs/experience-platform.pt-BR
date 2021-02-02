@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
+keywords: Experience Platform;home;popular topics;CJA;análise de jornada;análise de jornada do cliente;orquestração de campanha;orquestração;jornada do cliente;jornada;orquestração de jornada;capacidade;fluxo de trabalho
 solution: Experience Platform
 title: Visão geral da documentação do Adobe Experience Platform
 topic: overview
@@ -7,7 +7,7 @@ description: A documentação da Adobe Experience Platform é fornecida em vári
 translation-type: tm+mt
 source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---

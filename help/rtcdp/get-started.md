@@ -1,12 +1,12 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+keywords: RTCDP;CDP;Plataforma de dados do cliente em tempo real;plataforma de dados do cliente em tempo real;cdp;cdp;rtcdp em tempo real
 title: Introdução à Plataforma de dados do cliente em tempo real
-description: Use esse cenário de exemplo como exemplo ao configurar sua implementação da Plataforma de dados do cliente em tempo real.
+description: Use esse cenário como exemplo ao configurar sua implementação da Plataforma de dados do cliente em tempo real.
 translation-type: tm+mt
-source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 0%
+source-wordcount: '2326'
+ht-degree: 1%
 
 ---
 
@@ -50,13 +50,13 @@ Com a CDP em tempo real, capacitada pela Adobe Experience Platform, a organizaç
 
 Este tutorial inclui as seguintes etapas:
 
-1. Crie o perfil [do](#customer-profile)cliente.
-1. [Personalize](#personalizing-the-user-experience) a experiência do usuário.
-1. Use [várias fontes](#using-multiple-data-sources)de dados.
-1. [Configure uma fonte](#configuring-a-data-source)de dados.
-1. [Colete os dados](#bringing-the-data-together-for-a-specific-customer) para um cliente específico.
-1. Configurar [segmentos](#segments).
-1. Configurar [destinos](#destinations).
+1. Crie o [perfil do cliente](#customer-profile).
+1. [](#personalizing-the-user-experience) Personalize a experiência do usuário.
+1. Use [várias fontes de dados](#using-multiple-data-sources).
+1. [Configure uma fonte](#configuring-a-data-source) de dados.
+1. [Colete os ](#bringing-the-data-together-for-a-specific-customer) dados de um cliente específico.
+1. Configure [segmentos](#segments).
+1. Configure [destinos](#destinations).
 1. [Encaixe o perfil nos dispositivos](#cross-device-identity-stitching).
 1. [Analise o perfil](#analyzing-the-profile).
 
@@ -76,7 +76,7 @@ Por exemplo, um visitante não identificado navega até a seção Men’s (Mascu
 
 ![imagem](assets/luma-sweatshirts.png)
 
-À medida que o cliente clica para saber mais sobre esses produtos, essas visualizações de produtos são coletadas na Adobe Analytics e enviadas para [!DNL Experience Platform].
+À medida que o cliente navega para saber mais sobre esses produtos, essas visualizações de produtos são coletadas no Adobe Analytics e enviadas para [!DNL Experience Platform].
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -103,11 +103,11 @@ Com base no comportamento de navegação do visitante anônimo na seção Men&#3
 
 Sarah é recebida com uma mensagem de lealdade e agradecida por ser uma membro do Bronze com mais informações sobre benefícios e como aumentar seu status e pontos.
 
-Ela clica no home page para procurar mais um pouco.
+Ela navega até o home page para navegar um pouco mais.
 
 ![imagem](assets/luma-personal.png)
 
-Sarah recebe uma experiência personalizada de home page que é dinamicamente entregue, com base nela [!DNL Real-time Customer Profile] no Adobe Experience Platform.
+Sarah recebe uma experiência personalizada de home page que é fornecida dinamicamente, com base em seu [!DNL Real-time Customer Profile] no Adobe Experience Platform.
 
 Ela vê conteúdo relevante, graças à personalização da Adobe Sensei na Adobe Target, que leva em conta suas compras passadas e afinidade para roupas e equipamentos. Luma também adapta o conteúdo do catálogo masculino em direção ao equipamento de corrida para homens, com base em sua navegação mais recente.
 
@@ -142,11 +142,11 @@ Todos esses dados de fontes diferentes são mesclados em um único perfil unific
 
 ## Configurar uma fonte de dados
 
-Use [!DNL Real-time Customer Data Platform] para trazer novas fontes de dados para a plataforma. A CDP em tempo real inclui um catálogo de fontes de dados que podem ser adicionadas ao perfil em apenas alguns cliques.
+Use [!DNL Real-time Customer Data Platform] para trazer novas fontes de dados para a Plataforma. A CDP em tempo real inclui um catálogo de fontes de dados que podem ser rápida e facilmente adicionadas ao perfil.
 
 ![imagem](assets/luma-source-cat.png)
 
-Por exemplo, para assimilar os dados do CRM da Luma, filtre o catálogo por *CRM* e todos os conectores prontos contendo *CRM* serão listados. Para adicionar [!DNL Microsoft Dynamics CRM] dados:
+Por exemplo, para assimilar os dados do CRM do Luma, filtre o catálogo por *CRM* e todos os conectores predefinidos que contêm *CRM* estão listados. Para adicionar [!DNL Microsoft Dynamics CRM] dados:
 
 1. Autorize a conexão.
 
@@ -171,15 +171,15 @@ Por exemplo, para assimilar os dados do CRM da Luma, filtre o catálogo por *CRM
 
    ![imagem](assets/luma-source-sched.png)
 
-Está feito. Você acabou de adicionar [!DNL Microsoft CRM] como uma fonte de dados no [!DNL Experience Platform].
+Está feito. Você acabou de adicionar [!DNL Microsoft CRM] como uma fonte de dados em [!DNL Experience Platform].
 
 ### Rotular dados ingeridos para políticas de uso
 
-O Luma tem muitas políticas internas que restringem o uso de certos tipos de informações coletadas e também devem estar em conformidade com as preocupações legais e de privacidade relacionadas ao uso de dados. Usando o Adobe Experience Platform [!DNL Data Governance], rótulos de uso de dados predefinidos podem ser aplicados a conjuntos de dados (e campos específicos nesses conjuntos de dados), permitindo que o Luma categorize seus dados de acordo com restrições específicas de uso.
+O Luma tem muitas políticas internas que restringem o uso de certos tipos de informações coletadas e também devem estar em conformidade com as preocupações legais e de privacidade relacionadas ao uso de dados. Usando o Adobe Experience Platform [!DNL Data Governance], os rótulos de uso de dados predefinidos podem ser aplicados a conjuntos de dados (e campos específicos nesses conjuntos de dados), permitindo que o Luma categorize seus dados de acordo com restrições de uso específicas.
 
 ![](assets/governance-labels.png)
 
-Depois que os rótulos de uso de dados forem aplicados, o Luma poderá então usar [!DNL Data Governance] para criar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações que você pode executar em dados que contêm determinados rótulos. Ao tentar executar uma ação em CDP em tempo real que constitui uma violação de política, a ação é impedida e um alerta é fornecido para mostrar qual política foi violada e por que.
+Depois que os rótulos de uso de dados forem aplicados, o Luma poderá usar [!DNL Data Governance] para criar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações que você pode executar em dados que contêm determinados rótulos. Ao tentar executar uma ação em CDP em tempo real que constitui uma violação de política, a ação é impedida e um alerta é fornecido para mostrar qual política foi violada e por que.
 
 ## Reunindo os dados para um cliente específico
 
@@ -191,7 +191,7 @@ Todas as informações do perfil que Luma tem sobre a Sarah. Isso inclui suas in
 
 | Categoria | Descrição |
 |---|---|
-| Identidades | Mostra as identidades que foram unidas nas interações [!DNL Platform] de Sarah com Luma através de canais e dispositivos. Seu ECID do site é exibido. Sua identidade também inclui a ECID de seu aplicativo móvel, sua ID de email, uma ID CRM do conjunto de dados recém-adicionado e uma ID de fidelidade passada para a Adobe Experience Platform pelo sistema de fidelidade Luma. [!DNL Microsoft Dynamics] |
+| Identidades | Mostra as identidades que foram vinculadas em [!DNL Platform] das interações de Sarah com o Luma em canais e dispositivos. Seu ECID do site é exibido. Sua identidade também inclui a ECID de seu aplicativo móvel, sua ID de e-mail, uma ID CRM do conjunto de dados [!DNL Microsoft Dynamics] recém-adicionado e uma ID de fidelidade passada para a Adobe Experience Platform pelo sistema de fidelidade Luma. |
 | Eventos | Mostra todos os dados de interação da Sarah com a marca Luma. Isto inclui o item que ela acabou de ver, qualquer coisa que ela tenha visto no passado, os emails que ela recebeu, suas interações com a central de atendimento, e o canal e o dispositivo em que cada uma dessas interações aconteceram. |
 
 O perfil CDP em tempo real reduz o fluxo de trabalho da equipe de marketing da Luma de semanas para minutos e desbloqueia possibilidades de personalização com base nessa visualização de 360 graus do cliente. A perfil combina os dados comportamentais de quando ela navegou no site antes de entrar, com seu perfil de cliente existente, criando uma visualização abrangente da Sarah.
@@ -233,7 +233,7 @@ Como Sarah adicionou um aparente item de presente no carrinho e o abandonou, Lum
 
 Quando você adiciona o segmento &quot;Presente Doando Abandonadores de Carrinho&quot;, você pode ver aproximadamente quantas pessoas fazem parte desse segmento. É possível executar ações e disponibilizá-las para personalização em todos os canais.
 
-Clique em **[!UICONTROL Enviar para destinos]**.
+Selecione **[!UICONTROL Enviar para destinos]**.
 
 Na CDP em tempo real, a Luma pode agir perfeitamente em seus segmentos de audiência para personalização.\
 Aqui vemos todos os destinos disponíveis para o Luma para enviar este destino, tanto soluções Adobe quanto não-Adobe:
@@ -257,9 +257,9 @@ Você também pode programar o segmento para start ou término em um horário es
 
 >[!NOTE]
 >
->Como opção, se você clicar no campo de data, ele automaticamente será programado por 90 dias.
+>Como opção, se você selecionar o campo de data, ele automaticamente programará por 90 dias de atraso.
 
-Clique em **[!UICONTROL Salvar]** para ir para a próxima página.
+Selecione **[!UICONTROL Salvar]** para ir para a próxima página.
 
 Quando um cliente nesta audiência efetua uma compra, sua associação a essa audiência é suprimida em tempo real. Eles não se qualificam mais porque seu status mudou.
 
@@ -271,7 +271,7 @@ A Adobe Experience Platform inclui controles de privacidade e segurança para de
 
 Se sua atividade violar a política, um aviso será exibido. Este aviso contém informações de linhagem de dados que podem ajudá-lo a identificar por que a política foi violada e o que você pode fazer para resolver a violação.
 
-Com esses controles, [!DNL Experience Platform] ajuda o Luma a cumprir regulamentos e comercializar de forma responsável. Esses controles são flexíveis e podem ser modificados para atender aos requisitos das equipes Luma de segurança e controle, permitindo que elas atendam com confiança aos requisitos regionais e organizacionais para gerenciar dados conhecidos e desconhecidos do cliente.
+Com esses controles, [!DNL Experience Platform] ajuda a Luma a cumprir regulamentos e comercializar de forma responsável. Esses controles são flexíveis e podem ser modificados para atender aos requisitos das equipes Luma de segurança e controle, permitindo que elas atendam com confiança aos requisitos regionais e organizacionais para gerenciar dados conhecidos e desconhecidos do cliente.
 
 ### Tela de fluxo de dados
 
@@ -283,7 +283,7 @@ Quando você salva, uma tela de fluxo de dados visual mostra o segmento mapeado 
 
 Sarah navega em um site de mídia social em seu dispositivo móvel, e ela vê um anúncio Luma. Ela lembra o item que ela deixou no carrinho.
 
-Mais tarde, ela abre seu e-mail e vê os e-mails redirecionados. Ela clica em um link para a Luma por e-mail.
+Mais tarde, ela abre seu e-mail e vê os e-mails redirecionados. Ela seleciona um link para a Luma por e-mail.
 
 O link leva Sarah à página inicial do Luma móvel, onde ela vê uma experiência altamente personalizada da Adobe Target.
 

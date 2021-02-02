@@ -5,9 +5,9 @@ title: Guia do desenvolvedor da API Sandbox
 topic: developer guide
 description: Este guia do desenvolvedor fornece etapas para ajudá-lo a usar a API do Sandbox para gerenciar caixas de proteção no Experience Platform e inclui chamadas de API de amostra para executar várias operações.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ Este guia do desenvolvedor fornece etapas para ajudá-lo a usar a API do Sandbox
 
 ## Introdução à API do Sandbox
 
-Para gerenciar caixas de proteção para a organização IMS, é necessário ter permissões de administração de caixa de proteção. Os usuários sem permissões de acesso podem usar somente o ponto de extremidade para [listar as caixas de proteção ativas do usuário](./list-active-sandboxes.md)atual. Consulte a visão geral [do](../../access-control/home.md) controle de acesso para obter mais informações sobre como atribuir permissões de caixa de proteção para o Experience Platform.
+Para gerenciar caixas de proteção para a organização IMS, é necessário ter permissões de administração de caixa de proteção. Os usuários sem permissões de acesso podem usar somente o ponto de extremidade para [listar caixas de proteção ativas para o usuário atual](./list-active-sandboxes.md). Consulte a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir permissões de caixa de proteção para Experience Platform.
 
 ### Lendo chamadas de exemplo da API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de solução de problemas do Experience Platform.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
 ### Reunir valores para cabeçalhos necessários
 
-Este guia requer que você tenha concluído o tutorial [de](../../tutorials/authentication.md) autenticação para fazer chamadas com êxito para as APIs da plataforma. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Este guia requer que você tenha concluído o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para APIs de plataforma. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

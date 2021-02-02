@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
+keywords: Experience Platform;home;popular topics;recuperar lotes com falha;lotes com falha;ingestão em lote;lote ingestão;Lotes com falha;Obter lotes com falha;Obter lotes com falha;Baixar lotes com falha;baixar lotes com falha;baixar lotes com falha;
 solution: Experience Platform
 title: Recuperar lotes com falha
 topic: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar informações sobre um lote com falha usando APIs de ingestão de dados.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 1%
+source-wordcount: '645'
+ht-degree: 2%
 
 ---
 
 
 # Recuperando lotes com falha usando a API
 
-A Adobe Experience Platform fornece dois métodos para fazer upload e ingestão de dados. Você pode usar a ingestão em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite inserir seus dados para [!DNL Platform] usar pontos de extremidade de streaming em tempo real.
+A Adobe Experience Platform fornece dois métodos para fazer upload e ingestão de dados. Você pode usar a ingestão em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite inserir seus dados em [!DNL Platform] usando pontos finais de streaming em tempo real.
 
 Este tutorial aborda as etapas para recuperar informações sobre um lote com falha usando [!DNL Data Ingestion] APIs.
 
@@ -24,28 +24,28 @@ Este tutorial aborda as etapas para recuperar informações sobre um lote com fa
 
 Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [[!DNL Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados  [!DNL Experience Platform].
 
 ### Lendo chamadas de exemplo da API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção sobre [como ler chamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de exemplo no guia de [!DNL Experience Platform] solução de problemas.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o tutorial [de](../../tutorials/authentication.md)autenticação. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de [!DNL Experience Platform] API, como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no [!DNL Experience Platform], incluindo os pertencentes ao [!DNL Schema Registry], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Schema Registry], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a documentação [de visão geral da](../../sandboxes/home.md)caixa de proteção.
+>Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -53,7 +53,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ### Amostra de lote com falha
 
-Este tutorial usará dados de amostra com um carimbo de data e hora formatado incorretamente que define o valor do mês como **00**, como mostrado abaixo:
+Este tutorial usará dados de amostra com um carimbo de data e hora formatado incorretamente que define o valor do mês como **00**, como visto abaixo:
 
 ```json
 {
@@ -186,7 +186,7 @@ Como o lote ingerido anterior tinha uma data e hora inválida, o seguinte erro d
 
 ## Próximas etapas
 
-Após ler este tutorial, você aprendeu a recuperar erros de lotes com falha. Para mais informações sobre a ingestão em lote, leia o guia [do desenvolvedor da ingestão em](../batch-ingestion/overview.md)lote. Para obter mais informações sobre a assimilação de streaming, leia o tutorial [](../tutorials/create-streaming-connection.md)Criação de uma conexão de streaming.
+Após ler este tutorial, você aprendeu a recuperar erros de lotes com falha. Para obter mais informações sobre a ingestão em lote, leia o [guia do desenvolvedor de ingestão em lote](../batch-ingestion/overview.md). Para obter mais informações sobre a assimilação de streaming, leia o [tutorial de criação de uma conexão de streaming](../tutorials/create-streaming-connection.md).
 
 ## Apêndice
 
@@ -213,7 +213,7 @@ Esse erro é exibido se a ID de organização IMS estiver ausente na carga for i
 
 ### Schema XDM ausente
 
-Esse erro será exibido se o `schemaRef` para o `xdmMeta` estiver ausente.
+Esse erro será exibido se `schemaRef` para `xdmMeta` estiver ausente.
 
 ```json
 {
@@ -228,7 +228,7 @@ Esse erro será exibido se o `schemaRef` para o `xdmMeta` estiver ausente.
 
 ### Nome de origem ausente
 
-Esse erro será exibido se o cabeçalho estiver ausente `source` no cabeçalho `name`.
+Esse erro será exibido se `source` no cabeçalho estiver faltando seu `name`.
 
 ```json
 {
@@ -244,7 +244,7 @@ Esse erro será exibido se o cabeçalho estiver ausente `source` no cabeçalho `
 
 ### Entidade XDM ausente
 
-Esse erro será exibido se não houver nenhum `xdmEntity` presente.
+Esse erro será exibido se não houver `xdmEntity` presente.
 
 ```json
 {

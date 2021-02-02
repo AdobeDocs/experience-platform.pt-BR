@@ -1,21 +1,21 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: destinos;soluções da Experience Cloud; público alvo;destino do público alvo; nuvem de anúncios; nuvem de publicidade; gestor de audiências; destino do adobe público alvo; público alvo; destino do gestor de audiências;
 title: Destinos de Adobe
 seo-title: Destinos de Adobe
-description: Gerencie a experiência do cliente conectando seus dados em CDP em tempo real a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
-seo-description: Gerencie a experiência do cliente conectando seus dados em CDP em tempo real a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
+description: Gerencie a experiência do cliente ao conectar seus dados na Plataforma a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
+seo-description: Gerencie a experiência do cliente ao conectar seus dados na Plataforma a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 13%
+source-wordcount: '243'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Destinations {#adobe-destinations}
+# Destinos de Adobe {#adobe-destinations}
 
-Gerencie a experiência do cliente conectando seus dados em CDP em tempo real a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais.
+Gerencie a experiência do cliente ao conectar seus dados no Adobe Experience Platform a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais.
 
 ## Conexões
 

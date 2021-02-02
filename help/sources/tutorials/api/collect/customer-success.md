@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;collect customer success;customer success
+keywords: Experience Platform;home;popular topics;coletar sucesso do cliente;sucesso do cliente;;home;popular topics;collect customer success;customer success;
 solution: Experience Platform
 title: Coletar dados de um sistema de sucesso do cliente por meio de conectores de origem e APIs
 topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente e assimilá-los na Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1541'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

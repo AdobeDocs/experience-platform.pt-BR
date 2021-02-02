@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
+keywords: Experience Platform;home;popular topics;serviço de fluxo;publicidade;google adwords;publicidade
 solution: Experience Platform
 title: Coletar dados de publicidade por meio de conectores de origem e APIs
 topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los na Plataforma por meio de conectores de origem e da API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 90a7e49033afe3bc348225df0688e17dbf842a15
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1513'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

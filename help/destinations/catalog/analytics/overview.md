@@ -1,13 +1,13 @@
 ---
-keywords: analytics destinations;analytics destination
+keywords: destinos do Analytics;destino do Analytics
 title: Destinos do Analytics
 seo-title: Destinos do Analytics
 description: Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento da audiência. Essas plataformas fornecem insights exclusivos sobre o envolvimento e a conversão de seus visitantes mais valiosos.
 seo-description: Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento da audiência. Essas plataformas fornecem insights exclusivos sobre o envolvimento e a conversão de seus visitantes mais valiosos.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '204'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 Os destinos do Analytics rastreiam como os visitantes interagem com o conteúdo do site e coletam dados para entender o comportamento da audiência. Essas plataformas fornecem insights exclusivos sobre o envolvimento e a conversão de seus visitantes mais valiosos.
 
-Atualmente, a Plataforma de dados do cliente em tempo real suporta os destinos de análise listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+Atualmente, a Adobe Experience Platform suporta os destinos de análise listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
 
 - [Adicionar extensão de rastreamento de site](./adform.md)
 - [Extensão do Adobe Analytics](./adobe-analytics.md)

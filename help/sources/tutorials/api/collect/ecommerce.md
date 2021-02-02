@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
+keywords: Experience Platform;home;popular topics;Coletar dados de eCommerce;eCommerce
 solution: Experience Platform
 title: Coletar dados de eCommerce por meio de conectores de origem e APIs
 topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los à Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: a7a7c52f5b0c57562039883ae8ff48efefbcbbf5
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1489'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Reunir valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](../../../../tutorials/authentication.md). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

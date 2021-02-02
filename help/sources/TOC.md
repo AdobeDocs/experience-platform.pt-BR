@@ -5,7 +5,7 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 4%
@@ -138,7 +138,7 @@ ht-degree: 4%
       - [Coletar dados de pagamento](tutorials/api/collect/payments.md)
       - [Coletar dados do protocolo](tutorials/api/collect/protocols.md)
       - [Coletar dados de transmissão](tutorials/api/collect/streaming.md)
-   - [Ingressar dados de parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
+   - [Ingressar dados do Parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
    - [Criar uma conexão de conjunto de dados](tutorials/api/create-dataset-base-connection.md)
    - [Monitorar fluxos de dados](tutorials/api/monitor.md)
    - [Atualizar conexões](tutorials/api/update.md)

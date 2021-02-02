@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform;treinamento e avaliação;Data Science Workspace;topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Treinar e avaliar um modelo (API)
 topic: tutorial
 type: Tutorial
 description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas à API de aprendizado de máquina do Sensei.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1230'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas 
 
 ## Pré-requisitos
 
-Siga a opção [Importar uma receita empacotada usando a API](./import-packaged-recipe-api.md) para criar um mecanismo, que é necessária para treinar e avaliar um modelo usando a API.
+Siga [Importe uma Receita empacotada usando a API](./import-packaged-recipe-api.md) para criar um Mecanismo, que é necessário para treinar e avaliar um Modelo usando a API.
 
-Siga este [tutorial](../../tutorials/authentication.md) para obter autorização para chamadas de API de criação de start.
+Siga o tutorial de autenticação da API de [Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas de API de start.
 
 No tutorial, agora você deve ter os seguintes valores:
 
@@ -54,7 +54,7 @@ Estaremos consumindo as APIs para criar uma Execução de Experimento para trein
 
 ### Criar uma instância MLI
 
-A criação de uma instância MLI pode ser feita usando a seguinte solicitação. Você usará o que foi retornado ao criar um Mecanismo a partir do tutorial `{ENGINE_ID}` Importar uma Receita empacotada usando a API [](./import-packaged-recipe-ui.md) .
+A criação de uma instância MLI pode ser feita usando a seguinte solicitação. Você usará o `{ENGINE_ID}` que foi retornado ao criar um Mecanismo a partir do tutorial [Importar uma Receita empacotada usando a API](./import-packaged-recipe-ui.md).
 
 **Solicitação**
 
@@ -126,9 +126,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->No `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação no `tasks` array. A ID `{ENGINE_ID}` é o Mecanismo que você deseja usar e o `tag` campo é um parâmetro opcional usado para identificar a Instância.
+>Na `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação na matriz `tasks`. `{ENGINE_ID}` é a ID do Mecanismo que você deseja usar e o campo `tag` é um parâmetro opcional usado para identificar a Instância.
 
-A resposta conterá o `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInentes de modelo com configurações diferentes.
+A resposta conterá a `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInentes de modelo com configurações diferentes.
 
 **Resposta**
 
@@ -222,7 +222,7 @@ A resposta da criação do Experimento é assim.
 
 Experimentos programados são usados para que não seja necessário criar cada Execução de experimento por meio de uma chamada de API. Em vez disso, fornecemos todos os parâmetros necessários durante a criação do Experimento e cada execução será criada periodicamente.
 
-Para indicar a criação de um Experimento programado, é necessário adicionar uma `template` seção no corpo da solicitação. Em `template`, todos os parâmetros necessários para as execuções de programação são incluídos, como `tasks`, que indicam a ação e `schedule`, que indica o tempo das execuções programadas.
+Para indicar a criação de um Experimento programado, é necessário adicionar uma seção `template` no corpo da solicitação. Em `template`, todos os parâmetros necessários para as execuções de agendamento são incluídos, como `tasks`, que indicam a ação, e `schedule`, que indica o tempo das execuções agendadas.
 
 **Solicitação**
 
@@ -269,7 +269,7 @@ curl -X POST \
 }
 ```
 
-Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmetro `mlInstanceId` ou o `mlInstanceQuery` . Neste exemplo, um Experimento programado chamará uma execução a cada 20 minutos, definido no `cron` parâmetro, começando do `startTime` até o `endTime`.
+Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmetro `mlInstanceId` ou `mlInstanceQuery`. Neste exemplo, um Experimento programado chamará uma execução a cada 20 minutos, definido no parâmetro `cron`, começando de `startTime` até `endTime`.
 
 **Resposta**
 
@@ -309,7 +309,7 @@ Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmet
 
 ### Criar uma Execução de Experimento para treinamento
 
-Com uma entidade do Experimento criada, uma execução de treinamento pode ser criada e executada usando a chamada abaixo. Você precisará do `{EXPERIMENT_ID}` e indicará o que `mode` deseja acionar no corpo da solicitação.
+Com uma entidade do Experimento criada, uma execução de treinamento pode ser criada e executada usando a chamada abaixo. Você precisará do `{EXPERIMENT_ID}` e indicará `mode` que você deseja acionar no corpo da solicitação.
 
 **Solicitação**
 
@@ -335,7 +335,7 @@ curl -X POST \
 }
 ```
 
-Você também pode substituir os parâmetros de configuração incluindo uma `tasks` matriz:
+Você também pode substituir os parâmetros de configuração incluindo uma matriz `tasks`:
 
 ```JSON
 {
@@ -354,7 +354,7 @@ Você também pode substituir os parâmetros de configuração incluindo uma `ta
 }
 ```
 
-Você obterá a seguinte resposta, informando o usuário `{EXPERIMENT_RUN_ID}` e a configuração em `tasks`.
+Você obterá a seguinte resposta, que permitirá que você conheça `{EXPERIMENT_RUN_ID}` e a configuração em `tasks`.
 
 **Resposta**
 
@@ -375,7 +375,7 @@ Você obterá a seguinte resposta, informando o usuário `{EXPERIMENT_RUN_ID}` e
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  A ID que representa a Execução do Experimento.\
+`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do Experimento.\
 `{EXPERIMENT_ID}`: A ID que representa o Experimento em que a Execução de Experimento está.
 
 ### Recuperar um status de Execução de Experimento
@@ -400,7 +400,7 @@ curl -X GET \
 
 **Resposta**
 
-A chamada do GET fornecerá o status no `state` parâmetro, como mostrado abaixo:
+A chamada do GET fornecerá o status no parâmetro `state`, conforme mostrado abaixo:
 
 ```JSON
 {
@@ -433,15 +433,15 @@ A chamada do GET fornecerá o status no `state` parâmetro, como mostrado abaixo
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  A ID que representa a Execução do Experimento.\
+`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do Experimento.\
 `{EXPERIMENT_ID}`: A ID que representa o Experimento em que a Execução de Experimento está.
 
-Além do `DONE` estado, outros estados incluem:
+Além do estado `DONE`, outros estados incluem:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Para obter mais informações, os registros detalhados podem ser encontrados sob o `tasklogs` parâmetro.
+Para obter mais informações, os registros detalhados podem ser encontrados no parâmetro `tasklogs`.
 
 ### Recuperar o modelo treinado
 
@@ -487,12 +487,12 @@ A resposta representa o Modelo treinado que foi criado.
 ```
 
 `{MODEL_ID}`: A ID correspondente ao Modelo.\
-`{EXPERIMENT_ID}`:  A ID correspondente ao Experimento em que a Execução do Experimento está localizada.\
+`{EXPERIMENT_ID}`: A ID correspondente ao Experimento em que a Execução do Experimento está localizada.\
 `{EXPERIMENT_RUN_ID}`: A ID correspondente à execução do experimento.
 
 ### Parar e excluir um Experimento programado
 
-Se você quiser interromper a execução de um Experimento programado antes de seu lançamento, `endTime`isso pode ser feito consultando uma solicitação de DELETE para o `{EXPERIMENT_ID}`
+Se você deseja interromper a execução de um Experimento programado antes de seu `endTime`, isso pode ser feito consultando uma solicitação de DELETE para o `{EXPERIMENT_ID}`
 
 **Solicitação**
 
@@ -503,7 +503,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  A ID correspondente ao Experimento.\
+`{EXPERIMENT_ID}`: A ID correspondente ao Experimento.\
 `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
 `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.
 
@@ -525,4 +525,4 @@ A seguir está a Resposta notificando que o Experimento foi excluído com êxito
 
 ## Próximas etapas
 
-Este tutorial mostra como consumir as APIs para criar um Mecanismo, um Experimento, Execuções de Experimento programadas e Modelos treinados. No [próximo exercício](./score-model-api.md), você fará previsões marcando um novo conjunto de dados usando o modelo treinado de melhor desempenho.
+Este tutorial mostra como consumir as APIs para criar um Mecanismo, um Experimento, Execuções de Experimento programadas e Modelos treinados. No próximo exercício [a1/>, você fará previsões marcando um novo conjunto de dados usando o modelo treinado de melhor desempenho.](./score-model-api.md)

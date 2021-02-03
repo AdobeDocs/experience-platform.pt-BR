@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de automação de marketing e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 1%
@@ -87,7 +87,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -104,7 +104,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `connectionId` | A ID de conexão exclusiva do sistema de automação de marketing de terceiros que você está acessando. |
+| `baseConnectionId` | A ID de conexão exclusiva do sistema de automação de marketing de terceiros que você está acessando. |
 | `params.path` | O caminho do arquivo de origem que você está acessando. |
 | `connectionSpec.id` | A ID de especificação de conexão do seu sistema de automação de marketing. |
 

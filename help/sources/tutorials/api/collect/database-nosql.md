@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los na Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1611'
 ht-degree: 2%
 
 ---
@@ -86,17 +86,42 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Database Source Connector",
-        "connectionId": "d5cbb5bc-44cc-41a2-8bb5-bc44ccf1a2fb",
-        "description": "A test source connector for a database",
+        "name": "Database source connection",
+        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+        "description": "Database source connection",
         "data": {
-            "format": "tabular",
+            "format": "tabular"
         },
         "params": {
-            "path": "ADMIN.E2E"
+            "tableName": "test1.Mytable",
+            "columns": [
+                {
+                    "name": "TestID",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Datefield",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
-            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
         }
     }'
@@ -104,7 +129,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `connectionId` | A ID de conexão da origem do banco de dados. |
+| `baseConnectionId` | A ID de conexão da origem do banco de dados. |
 | `params.path` | O caminho do arquivo de origem. |
 | `connectionSpec.id` | A ID de especificação de conexão da fonte do banco de dados. Consulte [Appendix](#appendix) para obter uma lista de IDs de especificações de bancos de dados. |
 
@@ -114,14 +139,14 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ```json
 {
-    "id": "2f7356d9-a866-47ea-b356-d9a86687ea7a",
-    "etag": "\"c8006055-0000-0200-0000-5ecd79520000\""
+    "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
+    "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
 }
 ```
 
 ## Criar um schema XDM de público alvo {#target-schema}
 
-Em etapas anteriores, um schema XDM ad-hoc foi criado para estruturar os dados de origem. Para que os dados de origem sejam usados na Plataforma, um schema de público alvo também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um conjunto de dados da Plataforma no qual os dados de origem estão contidos. Esse schema XDM do público alvo também estende a classe [!DNL XDM Individual Profile].
+Para que os dados de origem sejam usados na Plataforma, um schema XDM do público alvo deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema XDM do público alvo é então usado para criar um conjunto de dados da plataforma no qual os dados de origem estão contidos. Esse schema XDM do público alvo também estende a classe [!DNL XDM Individual Profile].
 
 Um schema XDM de público alvo pode ser criado executando-se uma solicitação POST para a [API do Registro de Schemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
@@ -145,8 +170,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Database Source Connector Target Schema",
-        "description": "Target schema for a database",
+        "title": "Database target XDM schema",
+        "description": "Database target XDM schema",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -171,13 +196,13 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
-    "meta:altId": "_{TENANT_ID}.schemas.c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
+    "meta:altId": "_{TENANT_ID}.schemas.52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for a database",
+    "title": "Database target XDM schema",
     "type": "object",
-    "description": "Target schema for Database",
+    "description": "Database target XDM schema",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -212,17 +237,19 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1590523478581,
-        "repo:lastModifiedDate": 1590523478581,
+        "repo:createdDate": 1612308675206,
+        "repo:lastModifiedDate": 1612308675206,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{MODIFIEDD_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "34fdf36fc3029999a07270c4e7719d8a627f7e93e2fbc13888b3c11fb08983c0",
-        "meta:globalLibVersion": "1.10.2.1"
+        "eTag": "7c5c09e62421e6b172c925f059ac524a99f348dd837b5f13abd77ee91aa6bb61",
+        "meta:globalLibVersion": "1.18.4"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
+    "meta:sandboxId": "{SANDBOX_ID}",
+    "meta:sandboxType": "production",
     "meta:tenantNamespace": "_{TENANT_ID}"
 }
 ```
@@ -248,9 +275,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a third-party database source connector",
+        "name": "Database target dataset",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -266,7 +293,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 
 ```json
 [
-    "@/dataSets/5ecd766e4bab17191b78e892"
+    "@/dataSets/6019e0e7c5dcf718db5ebc71"
 ]
 ```
 
@@ -293,16 +320,16 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Connection for a third-party database source connector",
-        "description": "Target Connection for a third-party database source connector",
+        "name": "Database target connection",
+        "description": "Database target connection",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ecd766e4bab17191b78e892"
+            "dataSetId": "6019e0e7c5dcf718db5ebc71"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -323,8 +350,8 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 
 ```json
 {
-    "id": "e66fdb22-06df-48ac-afdb-2206dff8ac10",
-    "etag": "\"7e03773a-0000-0200-0000-5ecd768d0000\""
+    "id": "320f119a-5ac1-4ab1-88ea-eb19e674ea2e",
+    "etag": "\"c0038936-0000-0200-0000-6019e1190000\""
 }
 ```
 
@@ -350,29 +377,29 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name.fullName",
-                "sourceAttribute": "NAME",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_repo.createDate",
-                "sourceAttribute": "DOB",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
                 "destinationXdmPath": "_id",
-                "sourceAttribute": "ID",
+                "sourceAttribute": "TestID",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
+                "sourceAttribute": "Name",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.birthDate",
+                "sourceAttribute": "Datefield",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -392,10 +419,10 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ```json
 {
-    "id": "d9d94124417d4df48ea3d00e28eb4327",
+    "id": "0b090130b58b4819afc78b6dc98b484d",
     "version": 0,
-    "createdDate": 1590523552440,
-    "modifiedDate": 1590523552440,
+    "createdDate": 1612309018666,
+    "modifiedDate": 1612309018666,
     "createdBy": "{CREATED_BY}",
     "modifiedBy": "{MODIFIED_BY}"
 }
@@ -681,24 +708,24 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow for a third-party database and Platform,
-        "description": "collecting ADMIN.E2E",
+        "name": "Database dataflow using BigQuery",
+        "description": "collecting test1.Mytable",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "89cf81c9-47b4-463a-8f81-c947b4863afb"
+            "b7581b59-c603-4df1-a689-d23d7ac440f3"
         ],
         "targetConnectionIds": [
-            "e66fdb22-06df-48ac-afdb-2206dff8ac10"
+            "320f119a-5ac1-4ab1-88ea-eb19e674ea2e"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "updatedAt",
+                        "name": "Datefield",
                         "dateFormat": "YYYY-MM-DD",
                         "timezone": "UTC"
                     }
@@ -707,13 +734,13 @@ curl -X POST \
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "d9d94124417d4df48ea3d00e28eb4327",
+                    "mappingId": "0b090130b58b4819afc78b6dc98b484d",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1590523836",
+            "startTime": "1612310466",
             "frequency":"minute",
             "interval":"15",
             "backfill": "true"
@@ -739,8 +766,8 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"770029f8-0000-0200-0000-6019e7d40000\""
 }
 ```
 

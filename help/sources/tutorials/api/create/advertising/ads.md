@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao Google AdWords.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -39,12 +39,12 @@ Para que [!DNL Flow Service] se conecte com AdWords, é necessário fornecer val
 
 | **Credencial** | **Descrição** |
 | -------------- | --------------- |
-| ID do cliente | A ID do cliente do cliente da conta AdWords. |
-| Token do desenvolvedor | O token do desenvolvedor associado à conta do gerente. |
-| Atualizar token | O token de atualização obtido de [!DNL Google] para autorizar o acesso ao AdWords. |
-| ID do cliente | A ID do cliente do aplicativo [!DNL Google] usada para adquirir o token de atualização. |
-| Segredo do cliente | O segredo do cliente do aplicativo [!DNL Google] usado para adquirir o token de atualização. |
-| ID da especificação da conexão | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Google AdWords] é: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | A ID do cliente do cliente da conta AdWords. |
+| `developerToken` | O token do desenvolvedor associado à conta do gerente. |
+| `refreshToken` | O token de atualização obtido de [!DNL Google] para autorizar o acesso ao AdWords. |
+| `clientId` | A ID do cliente do aplicativo [!DNL Google] usada para adquirir o token de atualização. |
+| `clientSecret` | O segredo do cliente do aplicativo [!DNL Google] usado para adquirir o token de atualização. |
+| `connectionSpec` | O identificador exclusivo necessário para criar uma conexão. A ID de especificação de conexão para [!DNL Google AdWords] é: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Para obter mais informações sobre esses valores, consulte este [documento do Google AdWords](https://developers.google.com/adwords/api/docs/guides/authentication).
 

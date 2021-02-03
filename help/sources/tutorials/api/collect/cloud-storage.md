@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 2%
@@ -90,7 +90,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -109,7 +109,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `connectionId` | A ID exclusiva de conexão do sistema de armazenamento em nuvem de terceiros que você está acessando. |
+| `baseConnectionId` | A ID exclusiva de conexão do sistema de armazenamento em nuvem de terceiros que você está acessando. |
 | `data.format` | Um valor enum que define o atributo de formato de dados. |
 | `data.columnDelimiter` | Você pode usar qualquer delimitador de coluna de caractere único para coletar arquivos simples. Essa propriedade só é necessária ao assimilar arquivos CSV ou TSV. |
 | `params.path` | O caminho do arquivo de origem que você está acessando. |

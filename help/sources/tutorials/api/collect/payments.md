@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los na Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 9b4965e4256967961a92c544bbe355eae768e3dd
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -87,14 +87,46 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "PayPal source connection",
-        "connectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
+        "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "PayPal source connection",
         "data": {
             "format": "tabular",
             }
         },
         "params": {
-            "path": "PayPal.Catalog_Products"
+            "tableName": "PayPal.Catalog_Products",
+            "columns": [
+                {
+                    "name": "Product_Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Product_Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Description",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Create_Time",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "221c7626-58f6-4eec-8ee2-042b0226f03b",
@@ -105,7 +137,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `connectionId` | A ID de conexão exclusiva do aplicativo de pagamentos de terceiros que você está acessando. |
+| `baseConnectionId` | A ID de conexão exclusiva do aplicativo de pagamentos de terceiros que você está acessando. |
 | `params.path` | O caminho do arquivo de origem. |
 | `connectionSpec.id` | A ID de especificação de conexão do aplicativo de pagamentos. |
 

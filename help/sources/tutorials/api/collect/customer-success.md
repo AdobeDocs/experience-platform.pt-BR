@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente e assimilá-los na Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
@@ -87,24 +87,56 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Source connection for Customer Success",
-        "connectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
         "description": "Source connection for a Customer Success connector",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Account"
+            "tableName": "Account",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Phone",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "CreatedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
         }
-    }}'
+    }'
 ```
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `connectionId` | A ID exclusiva de conexão do sistema de sucesso de terceiros que você está acessando. |
+| `baseConnectionId` | A ID exclusiva de conexão do sistema de sucesso de terceiros que você está acessando. |
 | `params.path` | O caminho do arquivo de origem. |
 | `connectionSpec.id` | A ID de especificação de conexão associada ao seu sistema de sucesso de terceiros específico. Consulte o [apêndice](#appendix) para obter uma lista de IDs de especificações de conexão. |
 

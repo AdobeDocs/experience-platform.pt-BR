@@ -5,7 +5,7 @@ title: Criar e editar schemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar schemas na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Marque a caixa de seleção ao lado do nome da mistura que você deseja adiciona
 >
 >Para qualquer combinação listada, você pode passar o mouse ou focar no ícone de informações (![](../../images/ui/resources/schemas/info-icon.png)) para visualização de uma breve descrição do tipo de dados capturados pela mistura. Você também pode selecionar o ícone de pré-visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para visualização da estrutura dos campos fornecidos pelo mixin antes de decidir adicioná-lo ao schema.
 
-Depois de terminar de escolher a mixin, selecione **[!UICONTROL Adicionar mixin]** para adicioná-los ao schema.
+Depois de escolher suas combinações, selecione **[!UICONTROL Adicionar mixin]** para adicioná-las ao schema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 

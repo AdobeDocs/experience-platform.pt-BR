@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -341,6 +341,10 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 ## Criar um mapeamento {#mapping}
 
 Para que os dados de origem sejam ingeridos em um conjunto de dados de público alvo, eles devem primeiro ser mapeados para o schema de público alvo ao qual o conjunto de dados de público alvo adere. Isso é feito executando uma solicitação POST para o Serviço de conversão com mapeamentos de dados definidos na carga da solicitação.
+
+>[!TIP]
+>
+>Você pode mapear tipos de dados complexos, como matrizes em arquivos JSON, usando um conector de fonte de armazenamento na nuvem.
 
 **Formato da API**
 

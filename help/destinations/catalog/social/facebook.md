@@ -5,10 +5,10 @@ seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->A migração do cliente para a nova experiência de configuração de destino está em andamento. No momento, você pode ter dificuldades para acessar a página de configuração de destino.
+>A migração do cliente para as novas versões de destino está em andamento. Até a migração ser concluída, você verá somente as identidades disponíveis [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] para este destino.
 
 Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, personalização e supressão de audiências com base em emails com hash.
 

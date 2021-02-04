@@ -5,9 +5,9 @@ title: Criar e editar schemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar schemas na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Para editar um schema existente, selecione a guia **[!UICONTROL Procurar]** e se
 >
 >Você pode usar os recursos de pesquisa e filtragem do espaço de trabalho para ajudar a encontrar o schema com mais facilidade. Consulte o guia em [exploração de recursos XDM](../explore.md) para obter mais informações.
 
-Após selecionar um schema, o [!DNL Schema Editor] será exibido com a estrutura do schema mostrada na tela. Agora você pode [adicionar mixins](#add-mixins) ao schema ou [editar mixins personalizados existentes](./mixins.md#edit) se o schema empregar algum.
+Após selecionar um schema, o [!DNL Schema Editor] será exibido com a estrutura do schema mostrada na tela. Agora você pode [adicionar mixins](#add-mixins) ao schema, [editar nomes de exibição de campos](#display-names) ou [editar mixins personalizados existentes](./mixins.md#edit) se o schema empregar algum.
 
 ## Adicionar misturas a um schema {#add-mixins}
 
@@ -116,6 +116,22 @@ Para concluir o processo, selecione **[!UICONTROL Salvar]** para salvar o schema
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 O schema agora está habilitado para uso no Perfil do cliente em tempo real. Quando a Platform ingressar dados em conjuntos de dados baseados nesse schema, esses dados serão incorporados aos dados do Perfil agrupado.
+
+## Editar nomes de exibição para campos de schema {#display-names}
+
+Depois de atribuir uma classe e adicionar combinações a um schema, você pode editar os nomes de exibição de qualquer um dos campos do schema, independentemente de esses campos terem sido fornecidos por recursos XDM padrão ou personalizados.
+
+>[!NOTE]
+>
+>Lembre-se de que os nomes de exibição de campos que pertencem a classes ou combinações padrão só podem ser editados no contexto de um schema específico. Em outras palavras, alterar o nome de exibição de um campo padrão em um schema não afeta outros schemas que usam a mesma classe ou combinação associada.
+
+Para editar o nome de exibição de um campo de schema, selecione o campo na tela. No painel direito, forneça o novo nome em **[!UICONTROL Nome de exibição]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Selecione **[!UICONTROL Aplicar]** no painel direito e a tela é atualizada para mostrar o novo nome de exibição do campo. Selecione **[!UICONTROL Salvar]** para aplicar as alterações ao schema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Alterar uma classe de schema {#change-class}
 

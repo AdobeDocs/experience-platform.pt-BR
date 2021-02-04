@@ -5,9 +5,9 @@ seo-title: Destino do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 seo-description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 3%
 # [!DNL Facebook] Destino
 
 ## Visão geral {#overview}
+
+>[!IMPORTANT]
+>
+>A migração do cliente para a nova experiência de configuração de destino está em andamento. No momento, você pode ter dificuldades para acessar a página de configuração de destino.
 
 Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, personalização e supressão de audiências com base em emails com hash.
 

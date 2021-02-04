@@ -5,9 +5,9 @@ title: Criar e editar classes na interface do usuário
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ Agora você pode start [adicionar campos à classe](#add-fields), que será comp
 
 >[!NOTE]
 >
->Somente as classes personalizadas definidas pela sua organização podem ser editadas.
+>Somente as classes personalizadas definidas por sua organização podem ser totalmente editadas e personalizadas. Para as classes principais definidas pelo Adobe, somente os nomes para exibição de seus campos podem ser editados no contexto de schemas individuais. Consulte a seção sobre [edição de nomes de exibição para campos de schema](./schemas.md#display-names) para obter detalhes.
 >
->Além disso, uma vez que uma classe é salva e usada na ingestão de dados, somente alterações aditivas podem ser feitas a ela depois. Consulte as [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
+>Depois que uma classe personalizada é salva e usada na ingestão de dados, somente alterações aditivas podem ser feitas nela posteriormente. Consulte as [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
 
 Para editar uma classe existente, selecione a guia **[!UICONTROL Procurar]** e selecione o nome de um schema que emprega a classe que deseja editar.
 

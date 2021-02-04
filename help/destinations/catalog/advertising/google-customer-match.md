@@ -5,9 +5,9 @@ seo-title: Destino de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 seo-description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 3837f00ff8b950e1f7642a9ffb5d194388dcab28
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 # Destino de correspondência de cliente do Google
 
 ## Visão geral {#overview}
+
+>[!IMPORTANT]
+>
+>A migração do cliente para a nova experiência de configuração de destino está em andamento. No momento, você pode ter dificuldades para acessar a página de configuração de destino.
 
 [O Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets permite que você use seus dados online e offline para alcançar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]e  [!DNL YouTube].
 

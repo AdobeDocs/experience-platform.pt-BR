@@ -5,9 +5,9 @@ title: Criar e editar combinações na interface do usuário
 description: Saiba como criar e editar mixins na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ O [!DNL Schema Editor] reaparece, com a nova combinação listada no painel esqu
 
 >[!NOTE]
 >
->Somente misturas personalizadas definidas pela sua organização podem ser editadas.
+>Somente as misturas personalizadas definidas pela sua organização podem ser totalmente editadas e personalizadas. Para as combinações principais definidas pelo Adobe, somente os nomes de exibição para seus campos podem ser editados no contexto de schemas individuais. Consulte a seção sobre [edição de nomes de exibição para campos de schema](./schemas.md#display-names) para obter detalhes.
 >
->Além disso, uma vez guardada e utilizada uma mistura num schema para ingestão de dados, só podem ser efetuadas alterações aditivas à mistura a partir daí. Consulte as [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
+>Uma vez que uma mistura personalizada tenha sido salva e usada em um schema para ingestão de dados, somente alterações aditivas poderão ser feitas na mistura depois disso. Consulte as [regras de evolução do schema](../../schema/composition.md#evolution) para obter mais informações.
 
 Para editar uma mistura existente, primeiro abra um schema que utilize a mistura dentro de [!DNL Schema Editor]. Você pode [selecionar um schema existente para editar](./schemas.md#edit) ou [criar um novo schema](./schemas.md#create) e adicionar a mistura em questão.
 

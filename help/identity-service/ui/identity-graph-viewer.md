@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;visualizador de gráfico de identidade;Visualizador de gráfico de identidade;Visualizador de gráfico;Visualizador de gráfico;namespace de identidade;namespace de identidade;identidade;serviço de identidade;serviço de identidade
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Visão geral do visualizador do gráfico de identidade
 topic: tutorial
 description: Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com sua marca em diferentes canais.
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 1%
+source-wordcount: '946'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Visualizador de gráficos de identidade
+# (Beta) Visão geral do visualizador do gráfico de identidade
 
 >[!NOTE]
 >
@@ -108,3 +108,9 @@ Erros podem ocorrer ao acessar o visualizador de gráficos de identidade. A segu
 ## Próximas etapas
 
 Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da plataforma. Para obter mais informações sobre identidades na Plataforma, consulte a [visão geral do Serviço de Identidade](../home.md)
+
+## Recursos adicionais
+
+O vídeo a seguir é destinado a suportar sua compreensão do visualizador de gráficos de identidade.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)

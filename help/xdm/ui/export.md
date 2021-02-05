@@ -5,7 +5,7 @@ description: Saiba como exportar um schema existente para uma caixa de proteçã
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Isso copia uma carga JSON para a área de transferência, gerada com base na est
 
 A carga assume a forma de uma matriz, com cada item de matriz sendo um objeto que representa um recurso XDM personalizado a ser exportado. No exemplo acima, a combinação personalizada &quot;[!DNL Loyalty details]&quot; e o schema &quot;[!DNL Loyalty Members]&quot; estão incluídos. Os recursos principais empregados pelo schema não são incluídos na exportação, pois estão disponíveis em todas as caixas de proteção e organizações IMS.
 
-Observe que cada instância da ID de locatário de sua organização aparece como `<XDM_TENANTID_PLACEHOLDER>` na carga. Esses espaços reservados serão automaticamente substituídos pelo valor de ID do locatário apropriado, dependendo de onde você exportar o schema na próxima etapa.
+Observe que cada instância da ID de locatário de sua organização aparece como `<XDM_TENANTID_PLACEHOLDER>` na carga. Esses espaços reservados serão automaticamente substituídos pelo valor de ID do locatário apropriado, dependendo de onde você importa o schema na próxima etapa.
 
 ## Importe o recurso usando a API
 
-Depois de copiar o JSON de exportação para o schema, você pode usá-lo como carga de uma solicitação de POST para o terminal `/import` na API do Registro do Schema. Consulte a seção sobre [importar um recurso XDM na API](../api/export-import.md#import) para obter detalhes sobre como configurar a chamada para enviar o schema para a Organização IMS e caixa de proteção corretas.
+Depois de copiar o JSON de exportação para o schema, você pode usá-lo como carga de uma solicitação de POST para o terminal `/import` na API do Registro do Schema. Consulte a seção sobre [importar um recurso XDM na API](../api/export-import.md#import) para obter detalhes sobre como configurar a chamada para enviar o schema para a Organização IMS e caixa de proteção desejadas.
 
 ## Próximas etapas
 

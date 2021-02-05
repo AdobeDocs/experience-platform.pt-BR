@@ -4,7 +4,7 @@ title: Gerar dados de amostra para um Schema XDM na interface do usuário
 description: Saiba como gerar dados JSON de amostra com base em um schema existente na interface do usuário do Adobe Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Para assimilar dados no Adobe Experience Platform, o formato e a estrutura dos d
 
 Para qualquer schema definido na interface do usuário do Experience Platform, é possível gerar um objeto JSON de amostra que esteja em conformidade com a estrutura do schema. Esse objeto pode servir de modelo para quaisquer dados ingeridos em conjuntos de dados que empregam o schema em questão.
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** no painel de navegação esquerdo. Na guia **[!UICONTROL Procurar]**, localize o schema para o qual deseja gerar dados de amostra. Selecione-o na lista e o painel direito é atualizado para mostrar detalhes sobre o schema. Aqui, selecione **[!UICONTROL Baixar arquivo de amostra].**
+Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** no painel de navegação esquerdo. Na guia **[!UICONTROL Procurar]**, localize o schema para o qual deseja gerar dados de amostra. Selecione-o na lista e o painel direito é atualizado para mostrar detalhes sobre o schema. Aqui, selecione **[!UICONTROL Baixar arquivo de amostra]**.
 
 ![](../images/ui/sample/sample-data.png)
 

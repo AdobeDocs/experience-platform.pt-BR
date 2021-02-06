@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inMoment;InMoment;launch integration
-title: Extensão InMoment
-seo-title: Extensão InMoment
+title: Destino da extensão no momento
 description: A extensão InMoment é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão InMoment é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '538'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL InMoment] extensão {#inmoment-extension}
-
-## Visão geral {#overview}
 
 A [!DNL InMoment] Integração do Launch permite que você ative de forma rápida e fácil o feedback on-line por meio do produto Digital Intercept. No aplicativo, as interceptações podem ser configuradas e gerenciadas pelo administrador da nuvem CXI, permitindo que os gerentes CX tenham mais controle sobre seus programas.
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;mixin;mixins;
 solution: Experience Platform
-title: Criar e editar combinações na interface do usuário
+title: Criar e editar misturas na interface do usuário
 description: Saiba como criar e editar mixins na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: cf74c7922271035474c7f10534692983add48616
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 0%

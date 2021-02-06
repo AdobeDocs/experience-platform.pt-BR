@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
+keywords: Experience Platform;visão geral do ai de atribuição;tópicos populares;atribuição ai;Atribuição ai
 solution: Experience Platform, Intelligent Services
 title: Visão geral do Attribution AI
 topic: Attribution AI
 description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes. Exemplos de pontos de contato incluem impressões de anúncio de exibição, envios por email, aberturas de email e cliques de pesquisa pagos.
-landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+landing-page-description: O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 29%
+source-wordcount: '499'
+ht-degree: 32%
 
 ---
 
@@ -48,4 +48,4 @@ O Attribution AI também oferta a integração com outras soluções Adobe como 
 
 ## Próximas etapas
 
-Você pode começar seguindo o guia de [introdução](./getting-started.md) . Este guia o orienta a configurar todas as pré-solicitações necessárias para o Attribution AI. Se você já tiver suas credenciais e dados prontos, visite o guia [do usuário do](./user-guide.md)Attribution AI. Este guia aborda a criação de uma instância e o envio para treinamento e pontuação.
+Você pode começar seguindo o guia [getting started](./getting-started.md). Este guia o orienta a configurar todas as pré-solicitações necessárias para o Attribution AI. Se você já tiver suas credenciais e dados prontos, visite o [guia do usuário do Attribution AI](./user-guide.md). Este guia aborda a criação de uma instância e o envio para treinamento e pontuação.

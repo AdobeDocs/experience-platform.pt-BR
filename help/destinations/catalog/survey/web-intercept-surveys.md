@@ -1,21 +1,17 @@
 ---
 keywords: Pesquisas de interceptação do Questionpro pesquisas;PerguntaPro;perguntaPro;perguntaPro
-title: Extensão Pesquisas do Intercept do QuestionPro
-seo-title: Extensão Pesquisas do Intercept do QuestionPro
+title: Destino da Extensão do Pesquisa Intercept do QueryPro
 description: A extensão do Pesquisa do Intercepto do QuestionPro é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão do Pesquisa do Intercepto do QuestionPro é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '532'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL QuestionPro Intercept Surveys] Extensão {#questionpro-extension}
-
-## Visão geral {#overview}
+# [!DNL QuestionPro Intercept Surveys] extensão {#questionpro-extension}
 
 [!DNL QuestionPro Intercept Surveys] é uma plataforma para implantar pesquisas e coletar dados atitudinais no ponto da transação ou quando os usuários entram/saem de seu site.
 

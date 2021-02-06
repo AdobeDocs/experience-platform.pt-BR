@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;lar;tópicos populares; serviço de fluxo; atualizar conexões
 solution: Experience Platform
-title: Atualizar informações de conexão usando a API de Serviço de Fluxo
+title: Atualizar informações de conexão usando a API de serviço de fluxo
 topic: overview
 type: Tutorial
 description: Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conexão de origem existente. A API de Serviço de Fluxo fornece a você a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de fluxo existente, incluindo seu nome, descrição e credenciais.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 2%

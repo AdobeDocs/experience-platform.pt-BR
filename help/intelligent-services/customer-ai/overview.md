@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: Experience Platform;visão geral;atendimento ao cliente;tópicos populares;visão geral do atendimento ao cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Visão geral do Customer AI
-topic: Customer AI overview
+topic: Customer AI Overview
 description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 16%
+source-wordcount: '554'
+ht-degree: 18%
 
 ---
 
@@ -37,8 +37,8 @@ O cliente não foi criado para:
 
 - A IA do cliente não deve ser usada para prever preços dinâmicos, ou o ponto de preço no qual o cliente fará uma compra.
 - A IA do cliente não pode determinar se dar uma oferta aumentará a probabilidade de o cliente comprar um item. Embora você possa decidir enviar ofertas de desconto com base nas pontuações de propensão, não é necessariamente a melhor maneira de converter esses clientes.
-- A IA do cliente não é uma ferramenta de recomendações de produtos. Se você tiver milhares de SKUs, não use a API do cliente como proxy para uma solução real de recomendações de produtos como [!DNL Adobe Target].
-- A IA do cliente não pode prever em qual estágio da jornada de compra o cliente está, por exemplo, se ele estiver em fases de &quot;reconhecimento&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
+- A IA do cliente não é uma ferramenta de recomendações de produtos. Se você tiver milhares de SKUs, não use a API do cliente como proxy para uma solução de recomendações de produto real, como [!DNL Adobe Target].
+- A IA do cliente não pode prever em qual estágio da Jornada de compra o cliente está, por exemplo, se ele estiver em fases de &quot;reconhecimento&quot;, &quot;consideração&quot;, &quot;compra&quot; ou &quot;retenção&quot;.
 - Não use a Inteligência Artificial do Cliente para determinar os clientes que provavelmente comprarão uma inicialização de produto no futuro. Isso requer que alguns eventos bem-sucedidos estejam presentes no passado para que a IA do cliente possa treinar com êxito o algoritmo de aprendizado da máquina em seus dados.
 
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA do cliente.
@@ -51,4 +51,4 @@ A IA do cliente trabalha analisando os dados existentes do Evento da Experiênci
 
 ## Próximas etapas
 
-Você pode começar seguindo o guia de [introdução](./getting-started.md) . Este guia o orienta a configurar todos os pré-requisitos necessários para a API do cliente. Se você já tiver todas as suas credenciais e dados prontos, visite a [configuração de uma instância](./user-guide/configure.md)do AI do cliente. Ele fornece etapas para usar a IA do cliente.
+Você pode começar seguindo o guia [getting started](./getting-started.md). Este guia o orienta a configurar todos os pré-requisitos necessários para a API do cliente. Se você já tiver todas as suas credenciais e dados prontos, visite [configurar uma instância do AI do cliente](./user-guide/configure.md). Ele fornece etapas para usar a IA do cliente.

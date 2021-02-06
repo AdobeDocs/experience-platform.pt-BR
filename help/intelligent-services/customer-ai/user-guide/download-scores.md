@@ -5,7 +5,7 @@ title: Download de pontuações na IA do cliente
 topic: Downloading scores
 description: O AI do cliente permite baixar pontuações no formato de arquivo do Parquet.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Download de pontuações na IA do cliente
+# Fazer download de pontuações no AI do cliente
 
 Este documento serve como um guia para o download das pontuações para a IA do cliente.
 

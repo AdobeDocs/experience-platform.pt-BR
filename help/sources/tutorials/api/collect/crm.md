@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
-title: Coletar dados do CRM por meio de conectores de origem e APIs
+title: Coletar dados do CRM por meio de conectores de fonte e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um sistema CRM de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um sistema CRM de terceiros e trazê-los para a Plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Coletar dados do CRM por meio de conectores de origem e APIs
+# Coletar dados do CRM usando conectores de fonte e APIs
 
 Este tutorial aborda as etapas para recuperar dados de um CRM de terceiros e assimilá-los ao Adobe Experience Platform por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

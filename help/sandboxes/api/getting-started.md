@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
-title: Guia do desenvolvedor da API Sandbox
+title: Guia da API do Sandbox
 topic: developer guide
-description: Este guia do desenvolvedor fornece etapas para ajudá-lo a usar a API do Sandbox para gerenciar caixas de proteção no Experience Platform e inclui chamadas de API de amostra para executar várias operações.
+description: A API Sandbox permite que desenvolvedores gerenciem programaticamente as caixas de proteção no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
 
-# Guia do desenvolvedor da API Sandbox
+# Guia da API do Sandbox
 
 As caixas de proteção da Adobe Experience Platform fornecem ambientes de desenvolvimento isolados que permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar seu ambiente de produção.
 

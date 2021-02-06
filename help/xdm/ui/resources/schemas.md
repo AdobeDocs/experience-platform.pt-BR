@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;schema;schemas;
 solution: Experience Platform
-title: Criar e editar schemas na interface do usuário
+title: Criar e editar Schemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar schemas na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%

@@ -1,19 +1,17 @@
 ---
 keywords: destinos;soluções da Experience Cloud; público alvo;destino do público alvo; nuvem de anúncios; nuvem de publicidade; gestor de audiências; destino do adobe público alvo; público alvo; destino do gestor de audiências;
-title: Destinos de Adobe
-seo-title: Destinos de Adobe
+title: Visão geral dos destinos do Adobe
 description: Gerencie a experiência do cliente ao conectar seus dados na Plataforma a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
-seo-description: Gerencie a experiência do cliente ao conectar seus dados na Plataforma a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 12%
+source-wordcount: '219'
+ht-degree: 13%
 
 ---
 
 
-# Destinos de Adobe {#adobe-destinations}
+# Visão geral dos destinos de Adobe {#adobe-destinations}
 
 Gerencie a experiência do cliente ao conectar seus dados no Adobe Experience Platform a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais.
 

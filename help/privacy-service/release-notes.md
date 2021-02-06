@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
-title: Notas de versão de Privacy Service
+title: Notas de versão do Privacy Service
 topic: release notes
 description: As notas de versão mais recentes do Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%

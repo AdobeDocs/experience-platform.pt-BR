@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox troubleshooting
+keywords: Experience Platform;home;popular topics;solução de problemas da caixa de proteção
 solution: Experience Platform
 title: Guia de solução de problemas de caixas de proteção
 topic: troubleshooting guide
 description: Este documento fornece respostas para perguntas frequentes sobre caixas de proteção no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # Guia de solução de problemas de caixas de proteção
 
-Este documento fornece respostas para perguntas frequentes sobre caixas de proteção no Adobe Experience Platform. Para questões e solução de problemas relacionados a outros serviços da plataforma, consulte o guia [de solução de problemas do](../landing/troubleshooting.md)Experience Platform.
+Este documento fornece respostas para perguntas frequentes sobre caixas de proteção no Adobe Experience Platform. Para questões e solução de problemas relacionados a outros serviços da plataforma, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
-Os Sandboxes dividem uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital. See the [sandboxes overview](home.md) for more information.
+Os Sandboxes dividem uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital. Consulte [sandboxes overview](home.md) para obter mais informações.
 
 ## O que é uma caixa de areia?
 
-As caixas de proteção são partições virtuais em uma única instância do Experience Platform. Cada caixa de proteção mantém sua própria biblioteca independente de recursos da plataforma (incluindo schemas, conjuntos de dados, perfis etc.). Todo o conteúdo e as ações realizadas em uma caixa de proteção estão confinados apenas a essa caixa de proteção e não afetam nenhuma outra caixa de proteção. See the [sandboxes overview](home.md) for more information.
+As caixas de proteção são partições virtuais em uma única instância do Experience Platform. Cada caixa de proteção mantém sua própria biblioteca independente de recursos da plataforma (incluindo schemas, conjuntos de dados, perfis etc.). Todo o conteúdo e as ações realizadas em uma caixa de proteção estão confinados apenas a essa caixa de proteção e não afetam nenhuma outra caixa de proteção. Consulte [sandboxes overview](home.md) para obter mais informações.
 
 ## Que tipos de caixas de proteção estão disponíveis e quais são as suas diferenças?
 
@@ -34,7 +34,7 @@ Experience Platform fornece uma única caixa de proteção de produção, que n�
 
 Por outro lado, várias caixas de proteção de não produção podem ser criadas por administradores de caixa de proteção para uma única instância da Plataforma. As caixas de proteção de não-produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar sua caixa de proteção de produção. Além disso, as caixas de proteção de não produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da caixa de proteção. As caixas de proteção de não produção não podem ser convertidas em caixas de proteção de produção. Uma licença padrão de Experience Platform concede cinco caixas de proteção (uma produção e quatro não-produção). Você pode adicionar pacotes de dez caixas de proteção de não produção até um máximo de 75 caixas de proteção no total. Entre em contato com seu administrador de organização IMS ou seu representante de vendas de Adobe para obter mais detalhes.
 
-See the [sandboxes overview](./home.md) for more information.
+Consulte [sandboxes overview](./home.md) para obter mais informações.
 
 ## Posso acessar um recurso de mais de uma caixa de proteção?
 
@@ -54,4 +54,4 @@ O Adobe Admin Console vincula os usuários a caixas de proteção e permissões 
 
 Se desejar adicionar permissões exclusivas aos usuários de uma área de segurança específica, talvez seja necessário criar um novo perfil de produto com as caixas de proteção e permissões apropriadas aplicadas e atribuir esses usuários a esse perfil.
 
-Consulte o guia [do usuário do](../access-control/ui/overview.md) controle de acesso para obter mais informações sobre como gerenciar caixas de proteção e permissões no Admin Console.
+Consulte o [Guia do usuário do controle de acesso](../access-control/ui/overview.md) para obter mais informações sobre como gerenciar caixas de proteção e permissões no Admin Console.

@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: 'Experience Platform;home;popular topics;mapeamento de Audience Manager;mapeamento do gerenciador de audiências;home;popular topics;mapeamento;mapeamento do gerenciador de '
 solution: Experience Platform
-title: campo de mapeamento Audience Manager
+title: Mapeamento de campos para o Adobe Audience Manager Source Connector
 topic: overview
-description: As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (Dados em tempo real, Onboard e Perfil) e seus campos XDM correspondentes.
+description: Saiba como mapear dados da Adobe Audience Manager (dados em tempo real, onboard e Perfil) para os campos correspondentes do Modelo de dados da experiência (XDM) para o conector de fonte de Audience Manager.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 
-# campos de mapeamento de Audience Manager
+# Mapeamentos de campos Audience Manager
 
 As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (Dados em tempo real, Onboard e Perfil) e seus campos XDM correspondentes.
 
-Consulte o dicionário [de campos](../../../../xdm/schema/field-dictionary.md) XDM para obter mais informações sobre cada campo XDM.
+Consulte o [dicionário de campos XDM](../../../../xdm/schema/field-dictionary.md) para obter mais informações sobre cada campo XDM.
 
 ## Dados em tempo real
 
@@ -26,9 +26,9 @@ Tipo: Dados em tempo real
 | Campo de dados em tempo real | Campo XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente para o primeiro valor.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente o primeiro valor.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |

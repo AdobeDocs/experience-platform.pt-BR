@@ -5,7 +5,7 @@ title: Guia de solução de problemas de Privacy Service
 topic: troubleshooting
 description: Este documento fornece respostas para perguntas frequentes sobre o Privacy Service, bem como informações sobre erros frequentemente encontrados na API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 0%

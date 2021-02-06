@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;lar;tópicos populares;Armazenamento Gen2 do Azure Data Lake;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
-title: Conector Gen2 do Armazenamento Azure Data Lake
+title: Visão Geral do Conector de Origem Gen2 do Armazenamento Azure Data Lake
 topic: overview
-description: A documentação abaixo fornece informações sobre como conectar o Armazenamento Gen2 do Azure Data Lake à Plataforma usando APIs ou a interface do usuário.
+description: Saiba como conectar o Armazenamento Gen2 do Azure Data Lake à Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -40,11 +40,11 @@ A documentação abaixo fornece informações sobre como conectar [!DNL Azure Da
 
 ### Uso de APIs
 
-- [Criar um conector ADLS-Gen2 usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Criar uma conexão de origem ADLS-Gen2 usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [Explore um sistema de armazenamento em nuvem usando a API de Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
 - [Coletar dados de armazenamento na nuvem usando a API de Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
 
 ## Uso da interface
 
-- [Criar um conector de origem ADLS-Gen2 na interface do usuário](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Configurar um fluxo de dados para um conector de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Criar uma conexão de origem ADLS-Gen2 na interface do usuário](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/batch/cloud-storage.md)

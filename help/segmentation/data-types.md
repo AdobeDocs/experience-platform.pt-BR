@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
+keywords: Experience Platform;home;popular topics;tipo de dados;Tipos de dados;Tipo de dados;Tipos de dados;Segmentação;segmentação;segmentação;Serviço de segmentação;Tipos de dados do serviço de segmentação;
 solution: Experience Platform
-title: Tipos de dados do Serviço de segmentação do Adobe Experience Platform
+title: Tipos de dados suportados no serviço de segmentação
 topic: overview
-description: Todos os tipos de dados XDM são suportados no Serviço de segmentação. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
+description: Todos os tipos de dados do Experience Data Model (XDM) são suportados no Serviço de segmentação de Adobe. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
 
 
-# Tipos de dados suportados pela Adobe Experience Platform [!DNL Segmentation Service]
+# Tipos de dados suportados no Serviço de segmentação
 
-Todos os tipos de dados XDM são suportados dentro [!DNL Segmentation Service]. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
+Todos os tipos de dados do Experience Data Model (XDM) são suportados no Adobe Experience Platform Segmentation Service. As regras que constituem uma definição de segmento são contextualizadas pelos seguintes tipos de dados.
 
 ## Dados da string
 
@@ -27,20 +27,20 @@ Os dados de sequência de caracteres são incluídos nas definições de segment
 | -------------- | -------- |
 | Lógica | `and`, `or`, `not` |
 | Inclusivo/exclusivo | `include`, `must` `exist`, `exclude`, `must not exist` |
-| Comparação | `equals`, `does not equal`, `contains`, `starts with` |
+| Comparação | `equals`,  `does not equal`,  `contains`,  `starts with` |
 
 ## Dados de data
 
-Os dados de data permitem que você atribua contexto baseado em tempo às definições de segmento, usando datas de start/término específicas ou usando declarações relevantes de data, conforme mostrado na tabela abaixo. Uma implementação pode estar criando uma audiência de clientes que interagiram com a sua marca a qualquer momento *neste ano* e também tem estado ativo *nos últimos* dias.
+Os dados de data permitem que você atribua contexto baseado em tempo às definições de segmento, usando datas de start/término específicas ou usando declarações relevantes de data, conforme mostrado na tabela abaixo. Uma implementação pode estar criando uma audiência de clientes que interagiram com sua marca a qualquer momento *este ano* e também esteve ativa *em* nos últimos dias.
 
 | Exemplo de campo | Declarações relevantes à data | Linha do tempo |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevante para o dia em que o segmento foi construído. |
+| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | Relevante para o dia em que o segmento foi construído. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevante dentro de uma determinada semana/mês. |
 
 ## Eventos de experiência
 
-Como um schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registre interações explícitas e implícitas com aplicativos [!DNL Platform]integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
+Como um schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra interações explícitas e implícitas entre os clientes e os aplicativos [!DNL Platform] integrados, incluindo um instantâneo do sistema no momento em que a interação ocorreu. [!DNL ExperienceEvents] são registros de fatos. Dessa forma, eles são uma fonte de dados disponível para você durante a definição do segmento.
 
 Conforme visto na tabela abaixo, os dados do evento são renderizados usando palavras-chave que ajudam a refinar o comportamento do evento e a especificar atributos do evento.
 
@@ -55,7 +55,7 @@ Conforme visto na tabela abaixo, os dados do evento são renderizados usando pal
 
 Audiências externas também podem ser usadas como componentes de uma nova definição de segmento, adicionando suas regras de atributo ao novo segmento.
 
-Atualmente, somente o Adobe Audience Manager é suportado como uma audiência externa, com fontes adicionais sendo ativadas no futuro. Para obter mais informações sobre o uso do Adobe Audience Manager audiência com plataforma, consulte o guia de compartilhamento de [audiências na documentação](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)do Adobe Audience Manager.
+Atualmente, somente o Adobe Audience Manager é suportado como uma audiência externa, com fontes adicionais sendo ativadas no futuro. Para obter mais informações sobre o uso do Adobe Audience Manager audiência com plataforma, consulte o [guia de compartilhamento de audiências na documentação do Adobe Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Compartilhamento de segmentos
 

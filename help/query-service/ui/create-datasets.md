@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
-title: Gerar conjuntos de dados a partir dos resultados do query
+title: Gerar conjuntos de dados a partir dos resultados no serviço de Query
 topic: queries
 type: Tutorial
-description: 'O Serviço de query permite a criação de conjuntos de dados da interface do usuário. Depois que um conjunto de dados é criado, ele pode ser acessado como qualquer outro conjunto de dados no Data Lake e usado para diversos casos de uso. '
+description: 'O Serviço de Query Adobe Experience Platform permite a criação de conjuntos de dados da interface do usuário. Depois que um conjunto de dados é criado, ele pode ser acessado como qualquer outro conjunto de dados no Data Lake e usado para diversos casos de uso. '
 translation-type: tm+mt
-source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
 
 
-# Gerar conjuntos de dados a partir dos resultados do query
+# Gerar conjuntos de dados a partir dos resultados no Serviço de Query
 
 A verdadeira potência de [!DNL Query Service] é revelada quando query são usados para gerar conjuntos de dados em [!DNL Data Lake] para serem usados como entrada em mais query ou em outros serviços, como [!DNL Data Science Workspace], [!DNL Real-time Customer Profile] ou [!DNL Analysis Workspace].
 

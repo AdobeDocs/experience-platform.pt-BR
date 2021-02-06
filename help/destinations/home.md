@@ -2,13 +2,13 @@
 keywords: destinos;adobe experiência plataforma;plataforma;visão geral de destinos;ativar dados;ativar;
 title: Visão geral dos destinos
 seo-title: Visão geral dos destinos
-description: Ative os dados do Platform para destinos de campanhas de marketing entre canais, emails, anúncios direcionados e muito mais.
+description: Saiba como ativar os dados da Adobe Experience Platform para destinos para campanhas de marketing entre canais, emails, anúncios direcionados e muito mais.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar Destinos no Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 3%
+source-wordcount: '493'
+ht-degree: 1%
 
 ---
 

@@ -5,7 +5,7 @@ title: Schemas Ad-hoc
 description: Em circunstâncias específicas, pode ser necessário criar um schema XDM com campos que são namespacados para uso somente por um único conjunto de dados. Isso é chamado de schema ad-hoc.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%

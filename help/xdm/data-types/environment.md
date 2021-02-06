@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;environment;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;ambiente;datatype;data-type;data type;
 solution: Experience Platform
 title: Tipo de dados do ambiente
 topic: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do Ambiente.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '464'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Tipo de dados do ambiente]
+# [!UICONTROL Tipo de ] Ambientdata
 
-[!UICONTROL Ambiente] é um tipo de dados XDM padrão que descreve o ambiente ao redor de um evento observado, detalhando especificamente informações transitórias, como versões de rede e software.
+[!UICONTROL O ] Ambiente é um tipo de dados XDM padrão que descreve o ambiente ao redor de um evento observado, detalhando especificamente informações transitórias, como versões de rede e software.
 
 >[!IMPORTANT]
 >
->Todos os valores devem ser alinhados com o banco de dados [DeviceAtlas](https://deviceatlas.com) , licenciado pelo Adobe.
+>Todos os valores devem ser alinhados com o banco de dados [DeviceAtlas](https://deviceatlas.com), licenciado pelo Adobe.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 | `domain` | String | O domínio do ISP do usuário. |
 | `ipV4` | String | O rótulo numérico atribuído a um dispositivo participante em uma rede de computadores que usa o Internet Protocol para comunicação (32 bits). |
 | `ipV6` | String | O rótulo numérico atribuído a um dispositivo participante em uma rede de computadores que usa o Internet Protocol para comunicação (128 bits). |
-| `operatingSystem` | String | O nome do sistema operacional usado quando a observação foi feita. O atributo não deve conter nenhuma informação de versão, como `10.5.3`, mas conter designações de &quot;edição&quot;, como `Ultimate` ou `Professional`. |
+| `operatingSystem` | String | O nome do sistema operacional usado quando a observação foi feita. O atributo não deve conter nenhuma informação de versão, como `10.5.3`, mas conter designações &quot;edition&quot;, como `Ultimate` ou `Professional`. |
 | `operatingSystemVendor` | String | O nome do fornecedor do sistema operacional usado quando a observação foi feita. |
 | `operatingSystemVersion` | String | Identificador da versão completa do sistema operacional utilizado quando a observação foi feita. As versões geralmente são compostas numericamente, mas podem estar em um formato definido pelo fornecedor. |
 | `type` | String | O tipo do ambiente do aplicativo. Consulte o [apêndice](#type) para obter os valores aceitos. |
@@ -48,9 +48,9 @@ Para obter mais detalhes sobre a mistura, consulte o repositório XDM público:
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados do [!UICONTROL Dispositivo] .
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device].
 
-## Valores aceitos para tipo {#type}
+## Valores aceitos para o tipo {#type}
 
 A tabela a seguir descreve os valores aceitos para `type` e seus significados associados:
 

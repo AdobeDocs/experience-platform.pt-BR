@@ -5,15 +5,15 @@ seo-title: Home page e Painéis da plataforma de dados do cliente em tempo real
 description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 seo-description: Painéis, Página inicial e experiência de usuário iniciante da Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Real-time Customer Data Platform] visão geral das métricas
+# [!DNL Real-time Customer Data Platform] home page e painéis
 
 O home page Real-time Customer Data Platform (CDP em tempo real), que inclui um painel de métricas, é exibido quando você faz logon na CDP em tempo real.
 

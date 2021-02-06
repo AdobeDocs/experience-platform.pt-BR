@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
+keywords: Experience Platform;guia do desenvolvedor;Data Science Workspace;topics;Aprendizagem de máquina em tempo real;
 solution: Experience Platform
 title: Introdução ao aprendizado de máquina em tempo real
 topic: Getting started
 description: O documento a seguir descreve as etapas necessárias para criar um modelo de aprendizado de máquina em tempo real no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -21,26 +21,26 @@ ht-degree: 0%
 
 Para utilizar o aprendizado de máquina em tempo real, é necessário ter acesso a uma organização provisionada com a Adobe Experience Platform e [!DNL Data Science Workspace]. Além disso, é necessário ter um conjunto de dados completo para uso em treinamento e pontuação.
 
-Os guias para aprendizado de máquina em tempo real exigem uma compreensão funcional do Python 3, notebooks [de](../jupyterlab/overview.md)Júpiter, ciência de dados e aprendizado de máquina.
+Os guias de aprendizado de máquina em tempo real exigem uma compreensão funcional dos notebooks Python 3, [Júpiter](../jupyterlab/overview.md), da ciência de dados e do aprendizado de máquina.
 
 **Principais termos:**
 
-- **DSL:** Idioma Específico do Domínio.
-- **Borda:** O serviço de pontuação do Machine Learning em tempo real pode ser executado em clusters do Edge mais próximos de suas ativações e aplicativos.
-- **Hub:** O alfa atual está executando o serviço de pontuação Aprendizado de máquina em tempo real no Adobe Experience Platform Hub enquanto a Experience Edge Network está em desenvolvimento.
-- **Nó:** Um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
+- **DSL:Idioma específico** do domínio.
+- **Edge: o serviço de pontuação de aprendizado de máquina em tempo** real pode ser executado em clusters do Edge mais próximos às suas ativações e aplicativos.
+- **Hub:** O alfa atual está executando o serviço de pontuação de aprendizado de máquina em tempo real no Adobe Experience Platform Hub enquanto a Experience Edge Network está em desenvolvimento.
+- **Nó:** Um Nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
 
 ## Conjuntos de dados no Adobe Experience Platform
 
-Para start usando o aprendizado de máquina em tempo real, é necessário ter acesso a um conjunto de dados. Você tem a opção de usar um conjunto de dados externo e carregá-lo no seu [!DNL JupyterLab] ambiente ou criar um novo conjunto de dados na Plataforma, se ainda não tiver feito isso.
+Para start usando o aprendizado de máquina em tempo real, é necessário ter acesso a um conjunto de dados. Você tem a opção de usar um conjunto de dados externo e carregá-lo no seu ambiente [!DNL JupyterLab] ou criar um novo conjunto de dados na Plataforma se ainda não tiver feito isso.
 
 >[!NOTE]
 >
->Se você já tiver um conjunto de dados que deseja usar, pule para as [Próximas etapas](#next-steps).
+>Se você já tiver um conjunto de dados que deseja usar, pule para [Próximas etapas](#next-steps).
 
 ### Usar um conjunto de dados externo
 
-Para saber mais sobre como usar um conjunto de dados externo, como carregar dados para seu [!DNL JupyterLab] ambiente, visite o tutorial sobre como [analisar seus dados usando notebooks](../jupyterlab/analyze-your-data.md#external-data).
+Para saber mais sobre como usar um conjunto de dados externo, como carregar dados para seu ambiente [!DNL JupyterLab], visite o tutorial em [análise de seus dados usando notebooks](../jupyterlab/analyze-your-data.md#external-data).
 
 ### Criar um novo conjunto de dados
 
@@ -51,5 +51,5 @@ Para criar um novo conjunto de dados para uso em Aprendizagem de máquina em tem
 
 ## Próximas etapas {#next-steps}
 
-Depois de preparar seus dados para Aprendizagem de máquina em tempo real, siga o guia [do usuário do notebook Aprendizagem de máquina em tempo](./rtml-authoring-notebook.md) real para aprender a criar e carregar um modelo ONNX na loja de modelos Aprendizagem de máquina em tempo real.
+Depois de preparar seus dados para o Aprendizado de máquina em tempo real, siga o [Guia do usuário do notebook de Aprendizagem de máquina em tempo real](./rtml-authoring-notebook.md) para saber como criar e carregar um modelo ONNX na loja de modelos de Aprendizagem de máquina em tempo real.
 

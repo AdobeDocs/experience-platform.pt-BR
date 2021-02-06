@@ -6,19 +6,19 @@ topic: tutorial
 type: Tutorial
 description: A ingestão de dados inclui a ingestão em lote, a ingestão em streaming e a ingestão usando conectores de origem.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
 # Ingressar dados em [!DNL Experience Platform]
 
-A Adobe Experience Platform reúne dados de várias fontes para ajudar os comerciantes a entender melhor o comportamento de seus clientes. Adobe [!DNL Experience Platform Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso pelo downstream [!DNL Platform services]. [!DNL Data Ingestion] inclui a ingestão em lote, a ingestão em fluxo contínuo e a ingestão por meio de conectores de origem. Para saber mais, leia a [visão geral de ingestão de dados](../ingestion/home.md) ou vá diretamente para a [documentação de Fontes](../sources/home.md).
+A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. Adobe [!DNL Experience Platform Data Ingestion] representa os vários métodos pelos quais [!DNL Platform] ingere dados dessas fontes, bem como como como esses dados são persistentes no Data Lake para uso pelo downstream [!DNL Platform services]. [!DNL Data Ingestion] inclui a ingestão em lote, a ingestão em fluxo contínuo e a ingestão por meio de conectores de origem. Para saber mais, leia a [visão geral de ingestão de dados](../ingestion/home.md) ou vá diretamente para a [documentação de Fontes](../sources/home.md).
 
-## Criar um conector de origem na interface do usuário e na API
+## Criar uma conexão de origem na interface do usuário e na API
 
 Os conectores de origem permitem que você ingira dados de várias fontes, onde eles podem ser rotulados, estruturados e aprimorados usando [!DNL Platform services]. Para começar a criar um conector de origem, consulte a [visão geral das fontes](../sources/home.md).
 

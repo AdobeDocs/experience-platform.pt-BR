@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: Experience Platform;home;popular topics;catálogo;api;substituir um objeto
 solution: Experience Platform
-title: Substituir um objeto
+title: Substituir um objeto de catálogo
 topic: developer guide
 description: É possível substituir o conteúdo de um objeto de Catálogo usando uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
 
 
-# Substituir um objeto
+# Substituir um objeto de catálogo
 
-É possível substituir o conteúdo de um [!DNL Catalog] objeto usando uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
+Você pode substituir o conteúdo de um objeto [!DNL Catalog] usando uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
 
 >[!NOTE]
 >
->Se for necessário atualizar apenas alguns campos específicos em um [!DNL Catalog] objeto, o uso de uma solicitação de PATCH pode ser mais eficiente.
+>Se você precisar apenas atualizar alguns campos específicos em um objeto [!DNL Catalog], o uso de uma solicitação de PATCH pode ser mais eficiente.
 
 **Formato da API**
 
@@ -29,7 +29,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de [!DNL Catalog] objeto a ser substituído. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser substituído. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
+keywords: Experience Platform;home;populares tópicos;serviço de query;serviço de Query;instruções preparadas;preparadas;sql;
 solution: Experience Platform
-title: Declarações preparadas
+title: Declarações preparadas no serviço do Query
 topic: prepared statements
 description: No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. O Serviço de Query Adobe Experience Platform suporta declarações preparadas usando um query parametrizado.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '381'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 # Declarações preparadas
 
-No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. A Adobe Experience Platform [!DNL Query Service] suporta declarações preparadas usando um query parametrizado. Isso pode ser usado para otimizar o desempenho, pois não será mais necessário analisar novamente um query várias vezes.
+No SQL, instruções preparadas são usadas para modelar query ou atualizações semelhantes. A Adobe Experience Platform [!DNL Query Service] suporta instruções preparadas usando um query com parâmetros. Isso pode ser usado para otimizar o desempenho, pois não será mais necessário analisar novamente um query várias vezes.
 
 ## Uso de declarações preparadas
 
@@ -27,7 +27,7 @@ Ao usar instruções preparadas, as seguintes sintaxes são suportadas:
 
 ### Preparar uma declaração preparada {#prepare}
 
-Este query SQL salva o query SELECT gravado com o nome fornecido como `PLAN_NAME`. É possível usar variáveis, como `$1` em vez de valores reais. Essa declaração preparada será salva durante a sessão atual. Observe que os nomes dos planos **não** diferenciam maiúsculas de minúsculas.
+Este query SQL salva o query SELECT gravado com o nome fornecido como `PLAN_NAME`. Você pode usar variáveis, como `$1` no lugar de valores reais. Essa declaração preparada será salva durante a sessão atual. Observe que os nomes de plano não distinguem maiúsculas de minúsculas **e**.
 
 #### Formato SQL
 
@@ -41,7 +41,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### Executar uma declaração preparada {#execute}
+### Executar uma instrução preparada {#execute}
 
 Este query SQL usa a instrução preparada que foi criada anteriormente.
 
@@ -57,7 +57,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Desalocar uma declaração preparada {#deallocate}
+### Desalocar uma instrução preparada {#deallocate}
 
 Este query SQL é usado para excluir a instrução preparada nomeada.
 
@@ -86,10 +86,10 @@ O query SQL acima retornará a seguinte resposta:
 | id | nome | sobrenome | data de nascimento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
+| 10001 | antoína | dubois | 03-01-1967 | example2@example.com | Paris | França |
+| 10002 | kyoko | sakura | 11-1999-26 | example3@example.com | Tóquio | Japão |
 | 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
-| 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
+| 10004 | aasir | wathaka | 17-12-1976 | example5@example.com | Nairobi | Quênia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Este query SQL pode ser parametrizado usando a seguinte instrução preparada:
@@ -106,13 +106,13 @@ EXECUTE getIdRange(10000, 10005);
 
 Quando for chamado, você verá exatamente os mesmos resultados de antes:
 
-| id | nome | sobrenome | data de nascimento | email | city | país |
+| id | nome | sobrenome | data de nascimento | email | cidade | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | Paris | França |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tóquio | Japão |
+| 10001 | antoína | dubois | 03-01-1967 | example2@example.com | Paris | França |
+| 10002 | kyoko | sakura | 11-1999-26 | example3@example.com | Tóquio | Japão |
 | 10003 | linus | petersson | 1982-06-03 | example4@example.com | Estocolmo | Suécia |
-| 10004 | aasir | wathaka | 1976-12-17 | example5@example.com | Nairobi | Quênia |
+| 10004 | aasir | wathaka | 17-12-1976 | example5@example.com | Nairobi | Quênia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Depois de terminar de usar a declaração preparada, você pode desalocá-la usando a seguinte chamada:

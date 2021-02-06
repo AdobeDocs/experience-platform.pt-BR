@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;browser;browser details;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;navegador;detalhes;datatype;data-type;data type;;home;popular topics;;social;social;social;pesquisa;data-type;data type;data type;
 solution: Experience Platform
 title: Tipo de dados de detalhes do navegador
 topic: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de detalhes do navegador.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 8%
+source-wordcount: '262'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL Tipo de dados de detalhes] do navegador
+# [!UICONTROL O navegador ] detalha o tipo de dados
 
-[!UICONTROL Os detalhes] do navegador são um tipo de dados XDM padrão que descreve os detalhes relacionados a um navegador ou aplicativo.
+[!UICONTROL Os ] detalhes do navegador são um tipo de dados XDM padrão que descreve os detalhes relacionados a um navegador ou aplicativo.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 

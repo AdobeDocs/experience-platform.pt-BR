@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
+keywords: Experience Platform;home;popular topics;monitorar contas;monitorar fluxos de dados;fluxos de dados;destinos
 description: Os destinos permitem ativar seus dados da Adobe Experience Platform para inúmeros parceiros externos. Este tutorial fornece instruções sobre como você pode monitorar os fluxos de dados para seus destinos usando a interface do usuário do Experience Platform.
 solution: Experience Platform
-title: Monitorar fluxos de dados
+title: Monitorar fluxos de dados para destinos na interface do usuário
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Os destinos permitem ativar seus dados da Adobe Experience Platform para inúmer
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [Destinos](../../destinations/home.md): Os destinos são integrações pré-criadas com aplicativos comumente usados que permitem a ativação contínua de dados da Plataforma para campanhas de marketing entre canais, campanhas de email, anúncios direcionados e muitos outros casos de uso.
-- [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [Caixas de proteção](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ## Monitorar fluxos de dados
 
@@ -37,17 +37,17 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 
 | Status | Descrição |
 | ------ | ----------- |
-| Ativado | O `Enabled` status indica que um fluxo de dados está ativo e está ingerindo dados de acordo com o agendamento fornecido. |
-| Desativado | O `Disabled` status indica que um fluxo de dados está inativo e não está ingerindo dados. |
-| Processamento | O `Processing` status indica que um fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados. |
-| Erro | O `Error` status indica que o processo de ativação de um fluxo de dados foi interrompido. |
+| Ativado | O status `Enabled` indica que um fluxo de dados está ativo e está ingerindo dados de acordo com o agendamento fornecido. |
+| Desativado | O status `Disabled` indica que um fluxo de dados está inativo e não está ingerindo dados. |
+| Processamento | O status `Processing` indica que um fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados. |
+| Erro | O status `Error` indica que o processo de ativação de um fluxo de dados foi interrompido. |
 
 ## [!UICONTROL Execuções do Dataflow]
 
-A guia [!UICONTROL Dataflow executa] fornece dados de métricas em suas execuções de fluxo de dados para destinos em lote. Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais para registros de perfis:
+A guia [!UICONTROL Fluxo de dados executa] fornece dados de métrica em suas execuções de fluxo de dados para destinos em lote. Uma lista de execuções individuais e suas métricas específicas é exibida, juntamente com os seguintes totais para registros de perfis:
 
 - **[!UICONTROL Registros de perfil ativados]**: A contagem total de registros de perfis criados ou atualizados para ativação.
-- **[!UICONTROL Registros de perfil ignorados]**:  A contagem total de registros de perfis ignorados para ativação com base em saídas de perfis ou atributos ausentes.
+- **[!UICONTROL Registros de perfil ignorados]**: A contagem total de registros de perfis ignorados para ativação com base em saídas de perfis ou atributos ausentes.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 

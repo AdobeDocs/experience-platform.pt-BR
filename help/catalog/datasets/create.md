@@ -5,7 +5,7 @@ title: Criar um conjunto de dados usando APIs
 topic: datasets
 description: Este documento fornece etapas gerais para a criação de um conjunto de dados usando APIs Adobe Experience Platform e preenchendo o conjunto de dados usando um arquivo.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 1%

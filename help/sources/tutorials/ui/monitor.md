@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+keywords: Experience Platform;home;popular tópicos;monitorar contas;monitorar fluxos de dados;dataflows;;home;popular topics;monitor accounts;monitor dataflows;dataflows
 description: Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a exibição de fluxos de dados existentes na área de trabalho Fontes.
 solution: Experience Platform
-title: Monitorar fluxos de dados
+title: Monitorar fluxos de dados na interface do usuário
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: cd658a5de08ae16babb016fa158b1f16e94f2009
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---

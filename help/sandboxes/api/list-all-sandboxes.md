@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;home;popular topics;lista sandboxes;home;popular topics; sandboxes
 solution: Experience Platform
-title: Lista de todas as caixas de proteção
+title: Lista em caixas de proteção na API
 topic: developer guide
 description: Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o ponto de extremidade /sandboxes.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 2%
 
 ---
 
 
-# Lista de todas as caixas de proteção
+# Caixas de proteção de lista na API
 
-Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o `/sandboxes` ponto de extremidade.
+Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o ponto de extremidade `/sandboxes`.
 
 **Formato da API**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
+| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre [parâmetros de query](#query) para obter mais informações. |
 
 **Solicitação**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de caixas de proteção pertencentes à sua organização, incluindo detalhes como `name`, `title`, `state`e `type`.
+Uma resposta bem-sucedida retorna uma lista de caixas de proteção pertencentes à sua organização, incluindo detalhes como `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -128,13 +128,13 @@ Uma resposta bem-sucedida retorna uma lista de caixas de proteção pertencentes
 | `isDefault` | Uma propriedade booleana que indica se essa caixa de proteção é a caixa de proteção padrão da organização. Normalmente, essa é a caixa de proteção de produção. |
 | `eTag` | Um identificador para uma versão específica da caixa de proteção. Usado para controle de versão e eficiência de cache, esse valor é atualizado sempre que uma alteração é feita na caixa de proteção. |
 
-## Uso de parâmetros de query {#query}
+## Usando parâmetros de query {#query}
 
-A [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API suporta o uso de parâmetros de query para a página e filtrar resultados ao listar caixas de proteção.
+A API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) oferece suporte ao uso de parâmetros de query para a página e filtrar os resultados ao listar caixas de proteção.
 
 >[!NOTE]
 >
->Os parâmetros `limit` e `offset` query devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão será 50 e o deslocamento será 0.
+>Os parâmetros de query `limit` e `offset` devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão será 50 e o deslocamento será 0.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |

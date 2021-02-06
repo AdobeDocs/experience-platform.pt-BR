@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;nuvem armazenamento;armazenamento na nuvem
 solution: Experience Platform
-title: Explore um sistema de armazenamento em nuvem usando a API de Serviço de Fluxo
+title: Explore um sistema de Armazenamento cLoud usando a API de serviço de fluxo
 topic: overview
 description: Este tutorial usa a API de Serviço de Fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '758'
 ht-degree: 2%
 
 ---

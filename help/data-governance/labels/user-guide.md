@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics;controle de dados;etiqueta de uso de dados;serviço de política;guia do usuário de etiquetas de uso de dados
 solution: Experience Platform
-title: Guia do usuário de etiquetas de uso de dados
+title: Gerenciar rótulos de uso de dados na interface do usuário
 topic: labels
-description: Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
+description: Este guia aborda as etapas para trabalhar com rótulos de uso de dados na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
 
 
-# Guia do usuário de etiquetas de uso de dados
+# Gerenciar rótulos de uso de dados na interface do usuário
 
 Este guia do usuário aborda as etapas para trabalhar com rótulos de uso de dados na [!DNL Experience Platform] interface do usuário. Antes de usar o guia, consulte a [[!DNL Data Governance] visão geral](../home.md) para obter uma introdução mais robusta à estrutura [!DNL Data Governance].
 
-## Gerenciamento de rótulos de uso de dados no nível do conjunto de dados
+## Gerenciar rótulos no nível do conjunto de dados
 
 Para gerenciar rótulos de uso de dados no nível do conjunto de dados, é necessário selecionar um conjunto de dados existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para abrir a área de trabalho **[!UICONTROL Conjuntos de dados]**. Esta página lista todos os conjuntos de dados criados pertencentes à sua organização, juntamente com detalhes úteis relacionados a cada conjunto de dados.
 
@@ -75,7 +75,7 @@ A alternância **[!UICONTROL Mostrar rótulos herdados]** está ativada por padr
 
 ![Ocultar etiquetas herdadas](../images/labels/hide_inherited_labels.png)
 
-## Gerenciamento de rótulos de uso de dados no nível do campo do conjunto de dados
+## Gerenciar rótulos no nível do campo
 
 Continuando o fluxo de trabalho para [adicionar e editar rótulos de uso de dados no nível do conjunto de dados](#add-labels), você também pode gerenciar rótulos no nível do campo na área de trabalho **[!UICONTROL Data Governance]** desse conjunto de dados.
 
@@ -101,7 +101,7 @@ Você pode repetir essas etapas para continuar adicionando e editando rótulos d
 
 É importante lembrar que a herança move somente do nível superior para baixo (conjunto de dados → campos), o que significa que os rótulos aplicados no nível do campo não são propagados para outros campos ou conjuntos de dados.
 
-## Gerenciamento de rótulos personalizados
+## Gerenciar rótulos personalizados
 
 Você pode criar seus próprios rótulos de uso personalizados na área de trabalho **[!UICONTROL Policies]** na interface do usuário [!DNL Experience Platform]. Selecione **[!UICONTROL Policies]** na navegação à esquerda e selecione **[!UICONTROL Labels]** para visualização de uma lista de rótulos existentes. Aqui, selecione **[!UICONTROL Criar rótulo]**.
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;modelo de dados;sampledata;exemplo de dados;rpc;
 solution: Experience Platform
-title: Exemplo de guia de ponto de extremidade de dados
+title: Ponto final da API de dados de amostra
 description: O endpoint /sampledata na API do Registro do Schema permite gerar dados de amostra mapeados para a estrutura de qualquer schema XDM existente.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 1%

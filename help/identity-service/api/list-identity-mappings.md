@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity;Identity
+keywords: Experience Platform;home;popular topics;identidade;identidade;;home;popular topics;identity;Identity
 solution: Experience Platform
 title: Mapeamentos de identidade de lista
 topic: API guide
 description: Um mapeamento é uma coleção de todas as identidades em um cluster, para uma namespace especificada.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '270'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento que cobre a [obtenção do XID para uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção desse documento cobrindo [obter o XID de uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,7 +64,7 @@ curl -X GET \
 
 ### Obter mapeamentos de identidade para várias identidades
 
-Use o `POST` método como um equivalente em lote do `GET` método descrito acima para recuperar mapeamentos para várias identidades.
+Use o método `POST` como um equivalente em lote do método `GET` descrito acima para recuperar os mapeamentos de várias identidades.
 
 >[!NOTE]
 >
@@ -146,7 +146,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, um código de `HTTP 204` resposta é retornado sem conteúdo.
+Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, um código de resposta `HTTP 204` será retornado sem conteúdo.
 
 **Resposta**
 
@@ -185,8 +185,8 @@ Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, um có
 ```
 
 - `lastAssociationTime`: O carimbo de data e hora quando a identidade de entrada foi associada pela última vez a essa identidade.
-- `regions`: Fornece o `regionId` e `lastAssociationTime` para onde a identidade foi vista.
+- `regions`: Fornece o  `regionId` e  `lastAssociationTime` para onde a identidade foi vista.
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para [lista das namespaces](./list-namespaces.md)disponíveis.
+Vá para o próximo tutorial para [lista disponível namespace](./list-namespaces.md).

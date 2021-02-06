@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;lar;tópicos populares; analytics;classificações
-description: Este tutorial fornece etapas para a criação de um conector de dados de classificações da Adobe Analytics na interface do usuário para trazer dados de classificações para o Adobe Experience Platform.
+description: Saiba como criar um conector de origem Adobe Analytics na interface do usuário para trazer dados de classificações para o Adobe Experience Platform.
 solution: Experience Platform
-title: Criar um conector de dados de classificações da Adobe Analytics na interface do usuário
+title: Criar uma conexão de origem Adobe Analytics para dados de classificações na interface do usuário
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 
-# Criar um conector de dados de classificações da Adobe Analytics na interface do usuário
+# Criar uma conexão de origem Adobe Analytics para dados de classificações na interface do usuário
 
-Este tutorial fornece etapas para a criação de um conector de dados de classificações da Adobe Analytics na interface do usuário para trazer dados de classificações para o Adobe Experience Platform.
+Este tutorial fornece etapas para a criação de uma conexão de fonte de dados de classificações do Adobe Analytics na interface do usuário para trazer dados de classificações para o Adobe Experience Platform.
 
 ## Introdução
 
@@ -86,5 +86,5 @@ A página **[!UICONTROL atividade do conjunto de dados]** exibe informações so
 Ao seguir este tutorial, você criou um conector de Dados de classificações do Analytics que traz [!DNL Classifications] dados para [!DNL Platform]. Consulte os seguintes documentos para obter mais informações sobre os dados [!DNL Analytics] e [!DNL Classifications]:
 
 * [Visão geral do Conector de dados do Analytics](../../../../connectors/adobe-applications/analytics.md)
-* [Criar um conector de dados do Analytics na interface do usuário](./analytics.md)
+* [Criar uma conexão de dados do Analytics na interface do usuário](./analytics.md)
 * [Sobre as classificações](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)

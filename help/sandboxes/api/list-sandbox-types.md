@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;home;popular topics;lista sandboxes;home;popular topics; sandboxes
 solution: Experience Platform
-title: Tipos de sandbox suportados pela lista
+title: Lista com suporte de tipos de sandbox na API
 topic: developer guide
 description: Você pode recuperar uma lista de tipos de sandbox suportados para sua organização, fazendo uma solicitação de GET para o endpoint /sandboxTypes.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '81'
 ht-degree: 2%
 
 ---
 
 
-# Tipos de sandbox suportados pela lista
+# Tipos de caixa de proteção suportados pela lista na API
 
-Você pode recuperar uma lista de tipos de caixa de proteção suportados para sua organização, fazendo uma solicitação de GET para o `/sandboxTypes` ponto de extremidade.
+Você pode recuperar uma lista de tipos de sandbox suportados para sua organização, fazendo uma solicitação de GET para o terminal `/sandboxTypes`.
 
 **Formato da API**
 

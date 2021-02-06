@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;ingestão de dados;lote;habilitar conjunto de dados;visão geral da ingestão em lote;visão geral;visão geral da ingestão em lote;
 solution: Experience Platform
-title: Visão geral da ingestão em lote
+title: Visão Geral da Ingestão em Lote
 topic: overview
-description: A API de ingestão em lote permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
+description: A API de ingestão de dados da Adobe Experience Platform permite que você ingira dados na Plataforma como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um schema conhecido no registro do Modelo de Dados de Experiência (XDM).
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1222'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Batch Ingestion]visão geral
+# Visão geral da ingestão em lote
 
-A API [!DNL Batch Ingestion] permite que você ingira dados no Adobe Experience Platform como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados de perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
+A API de ingestão de dados da Adobe Experience Platform permite que você ingira dados na Plataforma como arquivos em lote. Os dados que estão sendo assimilados podem ser os dados de perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um schema conhecido no registro [!DNL Experience Data Model] (XDM).
 
 A [Referência da API de ingestão de dados](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fornece informações adicionais sobre essas chamadas de API.
 

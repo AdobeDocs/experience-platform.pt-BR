@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;hub de evento;hub de evento do Azure;hub de Evento;hub de ;topics;hub de ;hub de  do Azure
 solution: Experience Platform
-title: Criar um conector Hubs de Evento do Azure usando a API de Serviço de Fluxo
+title: Criar uma conexão de origem de hubs de Evento do Azure usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a uma conta de Hubs de Evento do Azure.
+description: Saiba como conectar o Adobe Experience Platform a uma conta do Evento Hubs do Azure usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
 
 
-# Crie um conector [!DNL Azure Event Hubs] usando a API [!DNL Flow Service]
+# Criar uma conexão de origem [!DNL Azure Event Hubs] usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >

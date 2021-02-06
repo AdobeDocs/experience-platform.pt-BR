@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage policy
+keywords: Experience Platform;home;popular topics;controle de dados;política de uso de dados;;home;popular topics;data governance;data usage policy
 solution: Experience Platform
-title: Criar uma política de uso de dados
+title: Criar uma política de uso de dados na API
 topic: policies
 type: Tutorial
 description: A API do Serviço de Política permite que você crie e gerencie políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados. Este documento fornece um tutorial passo a passo para a criação de uma política usando a API do Serviço de Política.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1219'
 ht-degree: 2%
 
 ---
@@ -16,37 +16,37 @@ ht-degree: 2%
 
 # Criar uma política de uso de dados na API
 
-A API [de serviço de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) política permite criar e gerenciar políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados.
+A [API do Serviço de Política](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) permite que você crie e gerencie políticas de uso de dados para determinar quais ações de marketing podem ser tomadas em relação aos dados que contêm determinados rótulos de uso de dados.
 
-Este documento fornece um tutorial passo a passo para a criação de uma política usando a [!DNL Policy Service] API. Para obter um guia mais abrangente das diferentes operações disponíveis na API, consulte o guia [do desenvolvedor do Serviço de](../api/getting-started.md)política.
+Este documento fornece um tutorial passo a passo para a criação de uma política usando a API [!DNL Policy Service]. Para obter um guia mais abrangente das diferentes operações disponíveis na API, consulte o [Guia do desenvolvedor do Serviço de Política](../api/getting-started.md).
 
 ## Introdução
 
 Este tutorial requer um entendimento prático dos seguintes conceitos-chave envolvidos na criação e avaliação de políticas:
 
-* [[!DNL Data Governance]](../home.md): A estrutura pela qual [!DNL Platform] aplica a conformidade de uso de dados.
-* [Rótulos](../labels/overview.md)de uso de dados: Os rótulos de uso de dados são aplicados aos campos de dados XDM, especificando restrições para como esses dados podem ser acessados.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual [!DNL Platform] organiza os dados de experiência do cliente.
-* [Caixas de proteção](../../sandboxes/home.md): [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Adobe Experience Platform Data Governance](../home.md): A estrutura pela qual  [!DNL Platform] aplica a conformidade de uso de dados.
+   * [Rótulos](../labels/overview.md) de uso de dados: Os rótulos de uso de dados são aplicados aos campos de dados XDM, especificando restrições para como esses dados podem ser acessados.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Platform] organiza os dados de experiência do cliente.
+* [Caixas de proteção](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
-Antes de iniciar este tutorial, reveja o guia [do](../api/getting-started.md) desenvolvedor para obter informações importantes que você precisa saber para fazer chamadas com êxito para a [!DNL Policy Service] API, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Policy Service], incluindo cabeçalhos necessários e como ler exemplos de chamadas de API.
 
 ## Definir uma ação de marketing {#define-action}
 
-No [!DNL Data Governance] quadro, uma ação de marketing é uma ação que um consumidor de [!DNL Experience Platform] dados toma, para a qual há necessidade de verificar violações das políticas de uso de dados.
+Na estrutura [!DNL Data Governance], uma ação de marketing é uma ação que um [!DNL Experience Platform] consumidor de dados toma, para a qual há necessidade de verificar violações das políticas de uso de dados.
 
 A primeira etapa na criação de uma política de uso de dados é determinar que ação de marketing a política avaliará. Isso pode ser feito usando uma das seguintes opções:
 
 * [Pesquisar uma ação de marketing existente](#look-up)
 * [Criar uma nova ação de marketing](#create-new)
 
-### Pesquisar uma ação de marketing existente {#look-up}
+### Procure uma ação de marketing existente {#look-up}
 
-Você pode pesquisar ações de marketing existentes a serem avaliadas por sua política, fazendo uma solicitação de GET para um dos `/marketingActions` pontos finais.
+Você pode procurar ações de marketing existentes para serem avaliadas por sua política, fazendo uma solicitação de GET para um dos pontos finais `/marketingActions`.
 
 **Formato da API**
 
-Dependendo de se você estiver pesquisando uma ação de marketing fornecida por [!DNL Experience Platform] ou uma ação de marketing personalizada criada por sua organização, use os pontos de extremidade `marketingActions/core` ou `marketingActions/custom` , respectivamente.
+Dependendo de se você estiver pesquisando uma ação de marketing fornecida por [!DNL Experience Platform] ou uma ação de marketing personalizada criada por sua organização, use os pontos de extremidade `marketingActions/core` ou `marketingActions/custom`, respectivamente.
 
 ```http
 GET /marketingActions/core
@@ -55,7 +55,7 @@ GET /marketingActions/custom
 
 **Solicitação**
 
-A solicitação a seguir usa o `marketingActions/custom` endpoint, que busca uma lista de todas as ações de marketing definidas pela Organização IMS.
+A solicitação a seguir usa o endpoint `marketingActions/custom`, que obtém uma lista de todas as ações de marketing definidas pela Organização IMS.
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o número total de ações de marketing encontradas (`count`) e lista os detalhes das próprias ações de marketing dentro do `children` storage.
+Uma resposta bem-sucedida retorna o número total de ações de marketing encontradas (`count`) e lista os detalhes das próprias ações de marketing dentro da matriz `children`.
 
 ```json
 {
@@ -121,13 +121,13 @@ Uma resposta bem-sucedida retorna o número total de ações de marketing encont
 
 | Propriedade | Descrição |
 | --- | --- |
-| `_links.self.href` | Cada item na `children` matriz contém uma ID de URI para a ação de marketing listada. |
+| `_links.self.href` | Cada item na matriz `children` contém uma ID de URI para a ação de marketing listada. |
 
-Quando você encontrar a ação de marketing que deseja usar, registre o valor de sua `href` propriedade. Esse valor é usado durante a próxima etapa da [criação de uma política](#create-policy).
+Quando você encontrar a ação de marketing que deseja usar, registre o valor de sua propriedade `href`. Esse valor é usado durante a próxima etapa de [criar uma política](#create-policy).
 
-### Create a new marketing action {#create-new}
+### Criar uma nova ação de marketing {#create-new}
 
-Você pode criar uma nova ação de marketing, fazendo uma solicitação de PUT ao `/marketingActions/custom/` endpoint e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
+Você pode criar uma nova ação de marketing, solicitando um PUT ao terminal `/marketingActions/custom/` e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
 
 **Formato da API**
 
@@ -141,7 +141,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova ação de marketing personalizada chamada &quot;exportToThirdParty&quot;. Observe que a carga `name` na solicitação é igual ao nome fornecido no caminho da solicitação.
+A solicitação a seguir cria uma nova ação de marketing personalizada chamada &quot;exportToThirdParty&quot;. Observe que `name` na carga da solicitação é igual ao nome fornecido no caminho da solicitação.
 
 ```shell
 curl -X PUT \  
@@ -195,7 +195,7 @@ Registre a ID de URI da ação de marketing recém-criada, pois ela será usada 
 
 A criação de uma nova política exige que você forneça a ID de URI de uma ação de marketing com uma expressão dos rótulos de uso que proíbem essa ação de marketing.
 
-Essa expressão é chamada de expressão de política e é um objeto que contém (A) um rótulo ou (B) um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política. Por exemplo, uma política relacionada à exportação de dados para terceiros pode ser proibida se `C1 OR (C3 AND C7)` houver etiquetas. Essa expressão seria especificada como:
+Essa expressão é chamada de expressão de política e é um objeto que contém (A) um rótulo ou (B) um operador e operandos, mas não ambos. Por sua vez, cada operando também é um objeto de expressão de política. Por exemplo, uma política relacionada à exportação de dados para terceiros pode ser proibida se `C1 OR (C3 AND C7)` rótulos estiverem presentes. Essa expressão seria especificada como:
 
 ```json
 "deny": {
@@ -223,7 +223,7 @@ Essa expressão é chamada de expressão de política e é um objeto que contém
 >
 >Somente operadores OR e AND são suportados.
 
-Depois de configurar sua expressão de política, você pode criar uma nova política, fazendo uma solicitação de POST para o `/policies/custom` endpoint.
+Depois de configurar sua expressão de política, você pode criar uma nova política, fazendo uma solicitação POST para o terminal `/policies/custom`.
 
 **Formato da API**
 
@@ -268,8 +268,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `marketingActionRefs` | Uma matriz contendo o `href` valor de uma ação de marketing, obtida na etapa [](#define-action)anterior. Enquanto o exemplo acima lista apenas uma ação de marketing, várias ações também podem ser fornecidas. |
-| `deny` | O objeto de expressão de política. Define os rótulos e as condições de uso que fazem com que a política rejeite a ação de marketing mencionada em `marketingActionRefs`. |
+| `marketingActionRefs` | Uma matriz que contém o valor `href` de uma ação de marketing, obtido na [etapa anterior](#define-action). Enquanto o exemplo acima lista apenas uma ação de marketing, várias ações também podem ser fornecidas. |
+| `deny` | O objeto de expressão de política. Define os rótulos e as condições de uso que fazem com que a política rejeite a ação de marketing referenciada em `marketingActionRefs`. |
 
 **Resposta**
 
@@ -328,9 +328,9 @@ Registre a ID de URI da política recém-criada, como ela é usada na próxima e
 
 >[!NOTE]
 >
->Embora esta etapa seja opcional se você deseja deixar sua política em `DRAFT` status, observe que por padrão uma política deve ter seu status definido como `ENABLED` para participar da avaliação. Consulte o guia sobre a aplicação [de](../enforcement/api-enforcement.md) políticas para obter informações sobre como fazer exceções para políticas em `DRAFT` status.
+>Embora esta etapa seja opcional se você deseja deixar sua política no status `DRAFT`, observe que por padrão uma política deve ter seu status definido como `ENABLED` para participar da avaliação. Consulte o guia em [fiscalização de políticas](../enforcement/api-enforcement.md) para obter informações sobre como fazer exceções para políticas no status `DRAFT`.
 
-Por padrão, as políticas que têm sua `status` propriedade definida para `DRAFT` não participam da avaliação. Você pode habilitar sua política para avaliação, fazendo uma solicitação de PATCH ao `/policies/custom/` endpoint e fornecendo o identificador exclusivo da política no final do caminho da solicitação.
+Por padrão, as políticas que têm a propriedade `status` definida como `DRAFT` não participam da avaliação. Você pode habilitar sua política para avaliação, fazendo uma solicitação PATCH ao terminal `/policies/custom/` e fornecendo o identificador exclusivo da política no final do caminho da solicitação.
 
 **Formato da API**
 
@@ -340,11 +340,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{POLICY_ID}` | O `id` valor da política que você deseja ativar. |
+| `{POLICY_ID}` | O valor `id` da política que você deseja ativar. |
 
 **Solicitação**
 
-A solicitação a seguir executa uma operação PATCH na `status` propriedade da política, alterando seu valor de `DRAFT` para `ENABLED`.
+A solicitação a seguir executa uma operação PATCH na propriedade `status` da política, alterando seu valor de `DRAFT` para `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -367,11 +367,11 @@ curl -X PATCH \
 | --- | --- |
 | `op` | O tipo de operação de PATCH a ser executada. Esta solicitação executa uma operação de &quot;substituição&quot;. |
 | `path` | O caminho para o campo a ser atualizado. Ao ativar uma política, o valor deve ser definido como &quot;/status&quot;. |
-| `value` | O novo valor a ser atribuído à propriedade especificada em `path`. Esta solicitação define a propriedade da política como &quot; `status` ATIVADO&quot;. |
+| `value` | O novo valor a ser atribuído à propriedade especificada em `path`. Esta solicitação define a propriedade `status` da política como &quot;ENABLED&quot;. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e os detalhes da política atualizada, com sua definição `status` agora definida como `ENABLED`.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e os detalhes da política atualizada, com seu `status` agora definido como `ENABLED`.
 
 ```json
 {
@@ -418,8 +418,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e os detalhes da polít
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma política de uso de dados para uma ação de marketing. Agora você pode continuar com o tutorial sobre como [impor políticas](../enforcement/api-enforcement.md) de uso de dados para saber como verificar violações de política e lidar com elas no aplicativo de experiência.
+Ao seguir este tutorial, você criou com êxito uma política de uso de dados para uma ação de marketing. Agora você pode continuar com o tutorial em [impor políticas de uso de dados](../enforcement/api-enforcement.md) para saber como verificar violações de política e lidar com elas no aplicativo de experiência.
 
-Para obter mais informações sobre as diferentes operações disponíveis na [!DNL Policy Service] API, consulte o guia [do desenvolvedor do](../api/getting-started.md)Policy Service. Para obter informações sobre como aplicar políticas para [!DNL Real-time Customer Profile] dados, consulte o tutorial sobre como [impor a conformidade de uso de dados para segmentos](../../segmentation/tutorials/governance.md)de audiência.
+Para obter mais informações sobre as diferentes operações disponíveis na API [!DNL Policy Service], consulte o [Guia do desenvolvedor do Serviço de Política](../api/getting-started.md). Para obter informações sobre como aplicar políticas para [!DNL Real-time Customer Profile] dados, consulte o tutorial em [impor a conformidade de uso de dados para segmentos de audiência](../../segmentation/tutorials/governance.md).
 
-Para saber como gerenciar políticas de uso na interface do [!DNL Experience Platform] usuário, consulte o guia [do usuário da](user-guide.md)política.
+Para saber como gerenciar políticas de uso na interface do usuário [!DNL Experience Platform], consulte o [guia do usuário da política](user-guide.md).

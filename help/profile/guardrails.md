@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;guardrails;diretrizes;limite;entidade;entidade primária;entidade de dimensão;
-title: Experience Platform para obter os dados de Perfil do cliente em tempo real
+title: Garantias para dados de Perfil do cliente em tempo real
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'A Adobe Experience Platform oferece uma série de garantias para ajudá-lo a evitar a criação de modelos de dados que o Perfil do cliente em tempo real não suporta. Esse documento descreve as práticas recomendadas e as restrições a serem levadas em conta ao modelar os dados do Perfil. '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Platform] guardões para  [!DNL Real-time Customer Profile]
+# Guardões para dados [!DNL Real-time Customer Profile]
 
 [!DNL Real-time Customer Profile] fornece perfis individuais que permitem fornecer experiências personalizadas entre canais com base em insights comportamentais e atributos do cliente. Para atingir essa definição de metas, [!DNL Profile] e o mecanismo de segmentação dentro da Adobe Experience Platform usam um modelo de dados híbridos altamente desnormalizado que oferta uma nova abordagem para perfis de clientes em desenvolvimento. O uso desse modelo de dados híbridos torna extremamente importante que os dados coletados sejam modelados corretamente. Embora o armazenamento de dados [!DNL Profile] que mantém os dados do perfil não seja um armazenamento relacional, [!DNL Profile] permite a integração com pequenas entidades de dimensão para criar segmentos de maneira simplificada e intuitiva. Essa integração é conhecida como segmentação de várias entidades.
 

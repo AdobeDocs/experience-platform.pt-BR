@@ -1,19 +1,19 @@
 ---
 keywords: destinos de publicidade;destinos;destinos de plataforma
 title: Destinos de publicidade
-seo-title: Destinos de publicidade
+seo-title: Visão geral dos destinos de publicidade
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 seo-description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 2%
 
 ---
 
 
-# Destinos de publicidade {#advertising-destinations}
+# Visão geral dos destinos de publicidade {#advertising-destinations}
 
 Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 

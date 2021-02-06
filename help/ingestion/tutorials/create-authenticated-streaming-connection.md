@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como o Perfil e a identidade do cliente em tempo real, diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Criação de uma conexão de streaming autenticada
+# Criar uma conexão de streaming autenticada
 
 A coleta de dados autenticada permite que os serviços da Adobe Experience Platform, como [!DNL Real-time Customer Profile] e [!DNL Identity], diferenciem entre registros provenientes de fontes confiáveis e fontes não confiáveis. Os clientes que desejam enviar informações pessoais identificáveis (PII) podem fazê-lo enviando tokens de acesso como parte da solicitação de POST.
 

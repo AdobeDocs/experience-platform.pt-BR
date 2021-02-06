@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados de experiência;Modelo de dados de experiência;Modelo de dados;Modelo de dados;Modelo de dados;Registro do schema;comportamento;comportamentos;comportamentos;comportamentos;comportamento;comportamentos;comportamento;comportamento;comportamento;comportamento;Schema;home;popular topics;api;API;XDM;system;experience data model;Experience Data Model;data model;
 solution: Experience Platform
-title: Guia de ponto de extremidade de comportamento
+title: Comportamento do Ponto Final da API
 description: O endpoint /comporors na API do Registro de Schemas permite recuperar todos os comportamentos disponíveis no container global.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%

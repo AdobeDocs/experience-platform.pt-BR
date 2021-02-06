@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Coletar dados de eCommerce;eCommerce
 solution: Experience Platform
-title: Coletar dados de eCommerce por meio de conectores de origem e APIs
+title: Coletar dados de comércio eletrônico usando conectores de origem e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los à Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los à Plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Coletar dados de eCommerce por meio de conectores de origem e APIs
+# Coletar dados de comércio eletrônico usando conectores de origem e APIs
 
 Este tutorial aborda as etapas para recuperar dados de um sistema **[!UICONTROL eCommerce]** de terceiros e assimilá-los em [!DNL Platform] através de conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

@@ -1,21 +1,17 @@
 ---
 keywords: clicktale;extensão clicktale;destino de clicktale
-title: Extensão Clicktale
-seo-title: Extensão Clicktale
+title: Destino da Extensão do Clicktale
 description: A extensão Clicktale é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Clicktale é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 4%
+source-wordcount: '519'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Clicktale] extensão {#clicktale-extension}
-
-## Visão geral {#overview}
 
 [!DNL Clicktale's] a integração com o Experience Platform Launch permite a implantação do  [!DNL Clicktale] código e a capacidade de mapear elementos de dados no Launch, usando o Editor  [!DNL Clicktale's] visual.
 

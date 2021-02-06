@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;serviço de fluxo;conexão de conexão de conjunto de dados;conexão de serviço de fluxo;conexão de serviço de fluxo
 solution: Experience Platform
-title: Criar uma conexão básica de conjunto de dados de Experience Platform usando a API de Serviço de Fluxo
+title: Criar uma conexão base de conjunto de dados Adobe Experience Platform usando a API de serviço de fluxo
 topic: overview
 type: Tutorial
-description: O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+description: Saiba como usar a API de Serviço de Fluxo para criar uma conexão básica de conjunto de dados com a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '721'
 ht-degree: 1%
 
 ---

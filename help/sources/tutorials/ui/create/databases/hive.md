@@ -1,76 +1,76 @@
 ---
 keywords: Experience Platform;home;popular topics;Apache Hive;Azure HDInsights;azure hdinsights
 solution: Experience Platform
-title: Criar um Apache Hive no conector de origem do Azure HDInsights na interface do usuário
+title: Criar um Apache Hive na Conexão de Origem do Azure HDInsights na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para a criação de uma Apache Hive no conector de origem do Azure HDInsights usando a interface de usuário da plataforma.
+description: Saiba como criar um Apache Hive na conexão de origem do Azure HDInsights usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conector [!DNL Apache Hive] on- [!DNL Azure HDInsights] source na interface do usuário
+# Crie uma conexão de origem [!DNL Apache Hive] em [!DNL Azure HDInsights] na interface do usuário
 
 >[!NOTE]
 >
-> O conector [!DNL Apache Hive] ligado [!DNL Azure HDInsights] está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+> O conector [!DNL Apache Hive] no conector [!DNL Azure HDInsights] está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Apache Hive] on [!DNL Azure HDInsights] source usando a interface do [!DNL Platform] usuário.
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para criar um [!DNL Apache Hive] no conector de origem [!DNL Azure HDInsights] usando a interface do usuário [!DNL Platform].
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   * [Noções básicas da composição](../../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Se você já tiver uma [!DNL Hive] conexão válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/databases.md)
+Se você já tiver uma conexão válida [!DNL Hive], poderá ignorar o restante desse documento e prosseguir para o tutorial em [configurar um fluxo de dados](../../dataflow/databases.md)
 
 ### Reunir credenciais obrigatórias
 
-Para acessar sua [!DNL Hive] conta em [!DNL Platform], forneça os seguintes valores:
+Para acessar sua conta [!DNL Hive] em [!DNL Platform], forneça os seguintes valores:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `host` | O endereço IP ou o nome do host do [!DNL Hive] servidor. |
-| `username` | O nome de usuário que você usa para acessar o [!DNL Hive] servidor. |
+| `host` | O endereço IP ou nome do host do servidor [!DNL Hive]. |
+| `username` | O nome de usuário que você usa para acessar o servidor [!DNL Hive]. |
 | `password` | A senha que corresponde ao usuário. |
 
-Para obter mais informações sobre a introdução, consulte [ [!DNL Hive] este documento](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+Para obter mais informações sobre a introdução, consulte [this [!DNL Hive] documento](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
-## Conectar sua [!DNL Hive] conta
+## Conectar sua conta [!DNL Hive]
 
-Depois de reunir as credenciais necessárias, siga as etapas abaixo para vincular sua [!DNL Hive] conta a [!DNL Platform].
+Depois de reunir as credenciais necessárias, siga as etapas abaixo para vincular sua conta [!DNL Hive] a [!DNL Platform].
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]** . A tela **[!UICONTROL Catálogo]** exibe várias fontes com as quais você pode criar uma conta.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catalog]** exibe várias fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Bancos]** de dados, selecione **[!UICONTROL Colar]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo [!DNL Hive] conector.
+Na categoria **[!UICONTROL Bancos de Dados]**, selecione **[!UICONTROL Hive]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector [!DNL Hive].
 
 ![catálogo](../../../../images/tutorials/create/hive/catalog.png)
 
-A página **[!UICONTROL Conectar-se à colmeia]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar-se ao Hive]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Nova conta
 
-Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas [!DNL Hive] credenciais. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais [!DNL Hive]. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
 ![connect](../../../../images/tutorials/create/hive/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a [!DNL Hive] conta à qual deseja se conectar e, em seguida, selecione **[!UICONTROL Avançar]** para continuar.
+Para conectar uma conta existente, selecione a conta [!DNL Hive] com a qual você deseja se conectar e selecione **[!UICONTROL Próximo]** para prosseguir.
 
 ![existente](../../../../images/tutorials/create/hive/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua [!DNL Hive] conta. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer [!DNL Platform]](../../dataflow/databases.md)os dados para o
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta [!DNL Hive]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados para [!DNL Platform]](../../dataflow/databases.md).

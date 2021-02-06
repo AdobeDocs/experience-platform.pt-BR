@@ -1,25 +1,21 @@
 ---
 keywords: atributos do dirigível;destino do dirigível
-title: Destino dos atributos do navio
-seo-title: Destino dos atributos do navio
+title: Destino da Conexão dos Atributos de Aeronave
 description: Transmita dados de Audiência para o Airship sem problemas como atributos de Audiência para definição de metas dentro do Airship.
-seo-description: Transmita dados de Audiência para o Airship sem problemas como atributos de Audiência para definição de metas dentro do Airship.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 1%
+source-wordcount: '1205'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) [!DNL Airship Attributes] destino {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] conexão {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >O destino [!DNL Airship Attributes] no Adobe Experience Platform está atualmente em beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-## Visão geral {#overview}
 
 [!DNL Airship] é a plataforma líder de envolvimento do cliente, ajudando você a fornecer mensagens de canal significativas e personalizadas para seus usuários em cada estágio do ciclo de vida do cliente.
 

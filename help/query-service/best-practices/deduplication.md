@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular tópicos;serviço de query;serviço de Query;dados desduplicação-duplicados;desduplicação-duplicado;
 solution: Experience Platform
-title: Dados desduplicação-duplicados
+title: Dados Desduplicação-duplicados no serviço de Query
 topic: queries
 type: Tutorial
 description: Este documento descreve exemplos completos e de subseleção de query para desduplicar três casos de uso comuns de Eventos de experiência, compras e métricas.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---

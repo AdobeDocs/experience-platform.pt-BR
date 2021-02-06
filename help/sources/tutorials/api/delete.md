@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular tópicos;serviço de fluxo;excluir conexões;excluir;api
 solution: Experience Platform
-title: Excluir uma conexão usando a API Serviço de Fluxo
+title: Excluir uma conexão usando a API de Serviço de fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para excluir uma conexão usando a API de Serviço de Fluxo.
+description: Saiba como excluir uma conexão usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 2%
 
 ---

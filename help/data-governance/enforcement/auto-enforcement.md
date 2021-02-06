@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;Aplicação automática;Aplicação baseada em API;controle de dados
 solution: Experience Platform
-title: Aplicação automática de política
+title: Aplicação Automática de Política
 topic: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 0%

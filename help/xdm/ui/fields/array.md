@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;array;field;
 solution: Experience Platform
-title: Definir um campo de matriz na interface do usuário
+title: Definir campos de matriz na interface do usuário
 description: Saiba como definir um campo de matriz na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 
-# Definir um campo de matriz na interface do usuário
+# Definir campos de matriz na interface do usuário
 
 Ao definir um campo do Modelo de dados de experiência (XDM) na interface do usuário do Adobe Experience Platform, você pode designar esse campo como um storage.
 

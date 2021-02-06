@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;sistema de publicidade;sistema de publicidade
 solution: Experience Platform
-title: Explore um sistema de publicidade usando a API de Serviço de Fluxo
+title: Explore um sistema de publicidade usando a API de serviço de fluxo
 topic: overview
 description: O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis. Este tutorial usa a API de Serviço de Fluxo para explorar sistemas de publicidade.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%

@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
+keywords: Experience Platform;home;popular topics;query service;executar query programados;executar query programado;Query service;programado query;agendado query;
 solution: Experience Platform
-title: Guia do desenvolvedor do Query Service
+title: O Query agendado executa o ponto final da API
 topic: runs for scheduled queries
 description: As seções a seguir percorrem as várias chamadas de API que podem ser feitas para executar query programados com a API de serviço de Query.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '696'
 ht-degree: 2%
 
 ---
 
 
-# É executado para query agendados
+# Ponto de extremidade de execução de query agendado
 
 ## Chamadas de API de exemplo
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a [!DNL Query Service] API. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a [!DNL Query Service] API. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de todas as execuções de um query agendado especificado
 
-Você pode recuperar uma lista de todas as execuções para um query programado específico, independentemente de elas estarem em execução ou já concluídas. Isso é feito fazendo uma solicitação de GET para o ponto de extremidade, onde `/schedules/{SCHEDULE_ID}/runs` é o `{SCHEDULE_ID}` `id` valor do query agendado cujas execuções você deseja recuperar.
+Você pode recuperar uma lista de todas as execuções para um query programado específico, independentemente de elas estarem em execução ou já concluídas. Isso é feito fazendo uma solicitação de GET para o terminal `/schedules/{SCHEDULE_ID}/runs`, onde `{SCHEDULE_ID}` é o valor `id` do query programado cujas execuções você deseja recuperar.
 
 **Formato da API**
 
@@ -32,8 +32,8 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query programado que você deseja recuperar. |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado que você deseja recuperar. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
 **Parâmetros do query**
 
@@ -41,10 +41,10 @@ A seguir está uma lista de parâmetros de query disponíveis para listar execu�
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados em ordem crescente. A adição de um item `-` antes de criado (`orderby=-created`) classificará os itens em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Default value: 20*) |
-| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Default value: 0*) |
-| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `state`e `externalTrigger`. A lista dos operadores suportados é `>` (maior que), `<` (menor que) e `==` (igual a) e `!=` (diferente de). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas manualmente, bem-sucedidas e criadas após 20 de abril de 2019. |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. A adição de `-` antes de criado (`orderby=-created`) classificará os itens por meio de itens criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **must** devem ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `state` e `externalTrigger`. A lista dos operadores suportados é `>` (maior que), `<` (menor que) e `==` (igual a) e `!=` (não igual a). Por exemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` retornará todas as execuções criadas, bem-sucedidas e criadas manualmente após 20 de abril de 2019. |
 
 **Solicitação**
 
@@ -150,11 +150,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.cancel` para [interromper uma execução de um query](#immediately-stop-a-run-for-a-specific-scheduled-query)agendado especificado.
+>Você pode usar o valor de `_links.cancel` para [parar uma execução para um query programado especificado](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Acionar imediatamente uma execução para um query programado específico
 
-Você pode disparar imediatamente uma execução para um query programado especificado fazendo uma solicitação de POST para o `/schedules/{SCHEDULE_ID}/runs` ponto final, onde `{SCHEDULE_ID}` é o `id` valor do query programado cuja execução você deseja acionar.
+Você pode disparar imediatamente uma execução para um query programado especificado, fazendo uma solicitação de POST para o terminal `/schedules/{SCHEDULE_ID}/runs`, onde `{SCHEDULE_ID}` é o valor `id` do query programado cuja execução você deseja acionar.
 
 **Formato da API**
 
@@ -185,7 +185,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Recuperar detalhes de uma execução para um query agendado específico
 
-Você pode recuperar detalhes sobre uma execução para um query programado específico, fazendo uma solicitação de GET para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` terminal e fornecendo a ID do query programado e a execução no caminho da solicitação.
+Você pode recuperar detalhes sobre uma execução de um query programado específico, fazendo uma solicitação de GET para o terminal `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID do query programado e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -195,8 +195,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query agendado cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | O `id` valor da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | O valor `id` da execução que você deseja recuperar. |
 
 **Solicitação**
 
@@ -246,7 +246,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da execução e
 
 ### Interromper imediatamente uma execução para um query programado específico
 
-Você pode interromper imediatamente uma execução de um query programado específico, fazendo uma solicitação de PATCH para o `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` ponto final e fornecendo a ID do query programado e a execução no caminho da solicitação.
+Você pode interromper imediatamente uma execução de um query programado específico fazendo uma solicitação de PATCH para o terminal `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornecendo a ID do query programado e a execução no caminho da solicitação.
 
 **Formato da API**
 
@@ -256,8 +256,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query agendado cuja execução você deseja recuperar detalhes. |
-| `{RUN_ID}` | O `id` valor da execução que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado cuja execução você deseja recuperar detalhes. |
+| `{RUN_ID}` | O valor `id` da execução que você deseja recuperar. |
 
 **Solicitação**
 

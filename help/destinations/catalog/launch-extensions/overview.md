@@ -1,19 +1,17 @@
 ---
 keywords: iniciar extensões;iniciar extensão;iniciar destinos; extensões de inicialização da plataforma;extensão de lançamento da plataforma;destinos de inicialização da plataforma
-title: Extensões do Experience Platform Launch
-seo-title: Extensões do Experience Platform Launch
-description: O Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
-seo-description: O Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
+title: Destinos de extensão do Adobe Experience Platform Launch
+description: A Adobe Experience Platform Launch é a próxima geração de recursos de gerenciamento de tags da Adobe. O Platform Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 19%
+source-wordcount: '617'
+ht-degree: 12%
 
 ---
 
 
-# Extensões do Adobe Experience Platform Launch {#overview.md}
+# Extensões do Adobe Experience Platform Launch
 
 A Adobe Experience Platform Launch é a próxima geração de recursos de gerenciamento de tags da Adobe. O Platform Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes. O Launch de plataforma é oferecido aos clientes da Adobe Experience Cloud como um recurso incluído, de valor agregado.
 

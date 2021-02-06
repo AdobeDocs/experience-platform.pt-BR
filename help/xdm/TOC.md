@@ -5,9 +5,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 translation-type: tm+mt
-source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '236'
 ht-degree: 24%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 24%
    * [aplicação](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
+   * [Comércio](./data-types/commerce.md)
    * [Consentimentos e preferências](./data-types/consents.md)
    * [Dispositivo](./data-types/device.md)
    * [Endereço de email](./data-types/email-address.md)
@@ -50,6 +51,8 @@ ht-degree: 24%
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Identidade](./data-types/identity.md)
    * [Medição](./data-types/measure.md)
+   * [Pedido](./data-types/order.md)
+   * [Item de Pagamento](./data-types/payment-item.md)
    * [Pessoa](./data-types/person.md)
    * [Nome da pessoa](./data-types/person-name.md)
    * [Número de telefone](./data-types/phone-number.md)
@@ -95,10 +98,10 @@ ht-degree: 24%
    * [Schemas Ad-hoc](api/ad-hoc.md)
    * [Apêndice](api/appendix.md)
 * Tutoriais {#tutorials}
-   * [Criar um schema (API)](tutorials/create-schema-api.md)
    * [Criar um schema (UI)](tutorials/create-schema-ui.md)
-   * [Definir uma relação entre dois schemas (API)](tutorials/relationship-api.md)
+   * [Criar um schema (API)](tutorials/create-schema-api.md)
    * [Definir uma relação entre dois schemas (UI)](tutorials/relationship-ui.md)
+   * [Definir uma relação entre dois schemas (API)](tutorials/relationship-api.md)
    * [Criar um schema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)

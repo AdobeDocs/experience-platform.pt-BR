@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;schema;Schema;schemas;Schemas;criar
 solution: Experience Platform
-title: Criar um schema
+title: Ponto Final da API de schemas
 description: O endpoint /schemas na API de Registro de Schemas permite que você gerencie programaticamente schemas XDM no aplicativo de experiência.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 2%

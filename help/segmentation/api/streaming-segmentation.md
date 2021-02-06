@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Streaming segmentation;Continuous assessment;
 solution: Experience Platform
-title: Segmentação em streaming
+title: 'Avaliar Eventos em tempo real próximo com segmentação de fluxo contínuo '
 topic: developer guide
-description: Este documento contém exemplos de como usar a segmentação de fluxo com a API de segmentação de fluxo.
+description: Este documento contém exemplos de como usar a segmentação de fluxo contínuo com a API do Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---

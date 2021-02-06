@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
-title: Guia do usuário do Privacy Service
+title: Gerenciar trabalhos de privacidade na interface do usuário do Privacy Service
 topic: UI guide
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos do Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] Guia do usuário
+# Gerenciar trabalhos de privacidade na interface do usuário do Privacy Service
 
 Este documento fornece etapas para criar e gerenciar solicitações de privacidade usando a interface do usuário [!DNL Privacy Service].
 

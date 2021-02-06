@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial mostra como ativar um conjunto de dados para uso com o Perfil do cliente em tempo real e o Serviço de identidade usando as APIs da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 1%

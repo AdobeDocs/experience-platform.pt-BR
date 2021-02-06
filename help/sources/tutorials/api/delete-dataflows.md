@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular tópicos;serviço de fluxo;API;api;excluir;excluir fluxos de dados
 solution: Experience Platform
-title: Excluir um fluxo de dados usando a API de Serviço de Fluxo
+title: Excluir um fluxo de dados usando a API de serviço de fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para excluir fluxos de dados em lote e streaming usando a API de Serviço de Fluxo.
+description: Saiba como excluir fluxos de dados em lote e em fluxo usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---

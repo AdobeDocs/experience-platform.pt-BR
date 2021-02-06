@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Criar tabela como selecionar
 solution: Experience Platform
-title: Sintaxe SQL
+title: Sintaxe SQL no Query Service
 topic: syntax
-description: Este documento mostra a sintaxe SQL suportada pelo Query Service.
+description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2221'
 ht-degree: 0%
 
 ---
 
 
-# Sintaxe SQL
+# Sintaxe SQL no Query Service
 
 [!DNL Query Service] fornece a capacidade de usar SQL ANSI padrão para  `SELECT` instruções e outros comandos limitados. Este documento mostra a sintaxe SQL suportada por [!DNL Query Service].
 

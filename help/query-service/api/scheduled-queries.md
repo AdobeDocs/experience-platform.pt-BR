@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
+keywords: Experience Platform;home;popular topics;query service;Query service;programado query;agendado query;
 solution: Experience Platform
-title: Guia do desenvolvedor do Query Service
+title: Endpoint da API de Query agendados
 topic: scheduled queries
 description: As seções a seguir percorrem as várias chamadas de API que podem ser feitas para query agendados com a API de serviço de Query.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '977'
 ht-degree: 3%
 
 ---
 
 
-# Query agendados
+# Ponto de extremidade de query agendados
 
 ## Chamadas de API de exemplo
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a [!DNL Query Service] API. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a [!DNL Query Service] API. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de query agendados
 
-Você pode recuperar uma lista de todos os query agendados para sua Organização IMS, fazendo uma solicitação de GET para o `/schedules` endpoint.
+Você pode recuperar uma lista de todos os query agendados para sua Organização IMS, fazendo uma solicitação de GET para o terminal `/schedules`.
 
 **Formato da API**
 
@@ -32,7 +32,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
 **Parâmetros do query**
 
@@ -40,10 +40,10 @@ A seguir está uma lista de parâmetros de query disponíveis para listar query 
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados em ordem crescente. A adição de um item `-` antes de criado (`orderby=-created`) classificará os itens em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Default value: 20*) |
-| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Default value: 0*) |
-| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `templateId`e `userId`. A lista dos operadores suportados é `>` (maior que), `<` (menor que) e `==` (igual a). Por exemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todos os query agendados nos quais a ID do usuário está conforme especificado. |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. A adição de `-` antes de criado (`orderby=-created`) classificará os itens por meio de itens criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **must** devem ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `templateId` e `userId`. A lista dos operadores suportados é `>` (maior que), `<` (menor que) e `==` (igual a). Por exemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todos os query agendados nos quais a ID do usuário está conforme especificado. |
 
 **Solicitação**
 
@@ -125,7 +125,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de query progr
 
 ### Criar um novo query agendado
 
-Você pode criar um novo query agendado fazendo uma solicitação de POST para o `/schedules` endpoint.
+Você pode criar um novo query agendado fazendo uma solicitação POST para o terminal `/schedules`.
 
 **Formato da API**
 
@@ -162,12 +162,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | O nome do banco de dados para o qual você está criando um query programado. |
 | `query.sql` | O query SQL que você deseja criar. |
 | `query.name` | O nome do query agendado. |
-| `schedule.schedule` | O cronograma do cron para o query. Para obter mais informações sobre programações de cron, leia a documentação do formato [de expressão de](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. Neste exemplo, &quot;30 * * * * *&quot; significa que o query será executado a cada hora na marca de 30 minutos. |
+| `schedule.schedule` | O cronograma do cron para o query. Para obter mais informações sobre programações de cron, leia a documentação [cron expressão format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Neste exemplo, &quot;30 * * * * *&quot; significa que o query será executado a cada hora na marca de 30 minutos. |
 | `schedule.startDate` | A data de start do query agendado, escrito como um carimbo de data e hora UTC. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do query agendado recém-criado. Quando o query agendado terminar de ser ativado, ele `state` será alterado de `REGISTERING` para `ENABLED`.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do query agendado recém-criado. Quando o query agendado terminar de ser ativado, `state` mudará de `REGISTERING` para `ENABLED`.
 
 ```json
 {
@@ -220,11 +220,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir o query](#delete-a-specified-scheduled-query)programado criado.
+>Você pode usar o valor de `_links.delete` para [excluir seu query programado criado](#delete-a-specified-scheduled-query).
 
 ### Solicitar detalhes de um query agendado especificado
 
-Você pode recuperar informações de um query programado específico, fazendo uma solicitação de GET para o ponto final e fornecendo sua ID no caminho da solicitação. `/schedules`
+Você pode recuperar informações de um query programado específico, fazendo uma solicitação de GET para o terminal `/schedules` e fornecendo sua ID no caminho da solicitação.
 
 **Formato da API**
 
@@ -234,7 +234,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query programado que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado que você deseja recuperar. |
 
 **Solicitação**
 
@@ -303,17 +303,17 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do query progra
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir o query](#delete-a-specified-scheduled-query)programado criado.
+>Você pode usar o valor de `_links.delete` para [excluir seu query programado criado](#delete-a-specified-scheduled-query).
 
 ### Atualizar detalhes de um query programado especificado
 
-Você pode atualizar os detalhes de um query programado especificado, fazendo uma solicitação de PATCH para o `/schedules` terminal e fornecendo sua ID no caminho da solicitação.
+Você pode atualizar os detalhes de um query programado especificado, fazendo uma solicitação de PATCH para o terminal `/schedules` e fornecendo sua ID no caminho da solicitação.
 
 A solicitação PATCH suporta dois caminhos diferentes: `/state` e `/schedule/schedule`.
 
 ### Atualizar estado de query agendado
 
-Você pode usar `/state` para atualizar o estado do query programado selecionado - ATIVADO ou DESATIVADO. Para atualizar o estado, é necessário definir o valor como `enable` ou `disable`.
+Você pode usar `/state` para atualizar o estado do query agendado selecionado - ATIVADO ou DESATIVADO. Para atualizar o estado, é necessário definir o valor como `enable` ou `disable`.
 
 **Formato da API**
 
@@ -323,7 +323,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query programado que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado que você deseja recuperar. |
 
 
 **Solicitação**
@@ -350,7 +350,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o estado do query programado, é necessário definir o valor de `path` como `/state`. |
-| `value` | O valor atualizado do `/state`. Esse valor pode ser definido como `enable` ou `disable` para ativar ou desativar o query programado. |
+| `value` | O valor atualizado de `/state`. Esse valor pode ser definido como `enable` ou `disable` para ativar ou desativar o query programado. |
 
 **Resposta**
 
@@ -365,7 +365,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Atualizar agendamento de query agendado
 
-Você pode usar `/schedule/schedule` para atualizar o cronograma de execução do query agendado. Para obter mais informações sobre programações de cron, leia a documentação do formato [de expressão de](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron.
+Você pode usar `/schedule/schedule` para atualizar o cronograma de cron do query agendado. Para obter mais informações sobre programações de cron, leia a documentação [cron expressão format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Formato da API**
 
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query programado que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado que você deseja recuperar. |
 
 **Solicitação**
 
@@ -401,7 +401,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `path` | O caminho do valor que você deseja corrigir. Nesse caso, como você está atualizando o agendamento do query programado, é necessário definir o valor de `path` como `/schedule/schedule`. |
-| `value` | O valor atualizado do `/schedule`. Esse valor precisa estar na forma de um cronograma de execução. Assim, neste exemplo, o query programado será executado a cada hora, na marca de 45 minutos. |
+| `value` | O valor atualizado de `/schedule`. Esse valor precisa estar na forma de um cronograma de execução. Assim, neste exemplo, o query programado será executado a cada hora, na marca de 45 minutos. |
 
 **Resposta**
 
@@ -416,11 +416,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mens
 
 ### Excluir um query programado especificado
 
-Você pode excluir um query especificado, fazendo uma solicitação de DELETE para o `/schedules` ponto de extremidade e fornecendo a ID do query programado que deseja excluir no caminho da solicitação.
+Você pode excluir um query programado especificado, fazendo uma solicitação de DELETE para o terminal `/schedules` e fornecendo a ID do query programado que deseja excluir no caminho da solicitação.
 
 >[!NOTE]
 >
->O agendamento **deve** ser desativado antes de ser excluído.
+>O agendamento **deve** estar desativado antes de ser eliminado.
 
 **Formato da API**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | O `id` valor do query programado que você deseja recuperar. |
+| `{SCHEDULE_ID}` | O valor `id` do query programado que você deseja recuperar. |
 
 **Solicitação**
 

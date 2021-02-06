@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ingestão;ingested data;streaming;overview;streaming ingestão;latência;streaming latency;streaming latency;
 solution: Experience Platform
-title: Visão geral da ingestão de streaming do Adobe Experience Platform
+title: Visão geral de ingestão de fluxo
 topic: overview
 description: A ingestão de streaming para Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para o Experience Platform em tempo real.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 3%
 
 ---

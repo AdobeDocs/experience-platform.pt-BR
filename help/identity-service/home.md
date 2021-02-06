@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
+keywords: Experience Platform;home;popular tópicos;identidade;Identidade;gráficos XDM;serviço de identidade;serviço de identidade
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Visão geral do serviço de identidade
 topic: overview
 description: O Adobe Experience Platform Identity Service ajuda você a obter uma melhor visualização de seu cliente e de seu comportamento ao unir identidades entre dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real.
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ Mary tem uma conta em seu site de comércio eletrônico onde ela completou algun
 
 Nesse ponto, a atividade de Maria aparece como dois perfis separados: seu login de eCommerce e seu tablet, talvez identificado pela ID do dispositivo.
 
-Mary, mais tarde, retoma sua sessão em tablet e fornece seu endereço de email enquanto assina seu boletim informativo. Ao fazer isso, a ingestão em streaming acrescenta uma nova identidade como dados de registro dentro de seu perfil. Como resultado, [!DNL Identity Service] agora relaciona a atividade do tablet de Maria ao histórico de sua conta de comércio eletrônico.
+Mary, mais tarde, retoma sua sessão em tablet e fornece seu endereço de email enquanto assina seu boletim informativo. Ao fazer isso, a ingestão em streaming acrescenta uma nova identidade como dados de registro dentro de seu perfil. Como resultado, [!DNL Identity Service] agora relaciona a atividade do tablet de Mary com o histórico da conta de comércio eletrônico.
 
 Ao clicar em seu tablet, seu conteúdo direcionado pode refletir o perfil e a história completos de Mary, em vez de apenas um tablet usado por um comprador desconhecido.
 
-Os relacionamentos de identidade que [!DNL Identity Service] definem e mantêm são aproveitados [!DNL Real-time Customer Profile] para criar uma imagem completa de um cliente e suas interações com sua marca. Para obter mais informações, consulte a visão geral [do Perfil do cliente em tempo](../profile/home.md)real.
+Os relacionamentos de identidade que [!DNL Identity Service] define e mantém são aproveitados por [!DNL Real-time Customer Profile] para criar uma imagem completa de um cliente e suas interações com sua marca. Para obter mais informações, consulte [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
 
 ### Identidades
 
@@ -39,13 +39,13 @@ Uma identidade são dados exclusivos de uma entidade, geralmente uma pessoa indi
 
 As PII, como endereço de email e número de telefone, servem para identificar diretamente um cliente. Como resultado, a PII é usada para corresponder as múltiplas identidades de um cliente nos sistemas.
 
-Identidades desconhecidas ou anônimas identificam um dispositivo sem identificar a pessoa real que o utiliza. Esta categoria inclui informações como o endereço IP do visitante e a ID do cookie. Embora os dados comportamentais possam ser coletados de um dispositivo usando identidades desconhecidas, a associação dessas identidades em dispositivos ou mídias é limitada até que o cliente forneça PII durante sua jornada.
+Identidades desconhecidas ou anônimas identificam um dispositivo sem identificar a pessoa real que o utiliza. Esta categoria inclui informações como o endereço IP do visitante e a ID do cookie. Embora os dados comportamentais possam ser coletados de um dispositivo usando identidades desconhecidas, a associação dessas identidades em dispositivos ou mídias é limitada até que o cliente forneça PII durante a jornada.
 
-Como mostrado na imagem abaixo, identidades conhecidas e anônimas são componentes importantes dos gráficos [de](#identity-graphs)identidade, que são discutidos posteriormente neste documento.
+Conforme mostrado na imagem abaixo, identidades conhecidas e anônimas são componentes importantes de [gráficos de identidade](#identity-graphs), que são discutidos posteriormente neste documento.
 
 ![Ajuste de identidade na plataforma](./images/identity-service-stitching.png)
 
-Exemplos de [!DNL Identity Service] implementações incluem:
+Exemplos de implementações [!DNL Identity Service] incluem:
 
 - Uma empresa de telecom pode depender do valor do &quot;número de telefone&quot;, onde um número de telefone se refere ao mesmo indivíduo de interesse tanto em conjuntos de dados offline quanto online.
 - Uma empresa de varejo pode usar &quot;endereço de email&quot; em conjuntos de dados offline e ECID em conjuntos de dados online devido à alta porcentagem de visitantes anônimos.
@@ -60,7 +60,7 @@ Se você perguntasse a uma pessoa &quot;Qual é a sua identificação?&quot; sem
 
 Os clientes podem interagir com a sua marca através de uma combinação de canais online e offline, resultando no desafio de como reconciliar essas interações fragmentadas em uma única identidade de cliente.
 
-[!DNL Experience Platform] soluciona esse desafio através de dois conceitos: [namespaces](#identity-namespaces) de identidade e gráficos [de](#identity-graphs)identidade.
+[!DNL Experience Platform] soluciona esse desafio através de dois conceitos:  [espaços para ](#identity-namespaces) nomes de identidade e gráficos [ de ](#identity-graphs)identidade.
 
 O vídeo a seguir é destinado a suportar a compreensão de identidades e gráficos de identidade. O vídeo a seguir aborda os três recursos da coleção de identidade, gráficos de identidade e as APIs. Ele também descreve como os algoritmos determinísticos e probabilísticos são usados para construir gráficos de identidade privados e discute a função dos gráficos de identidade privados, do Gráfico de Cooperativa do Adobe Experience Platform Identity Service e de gráficos de terceiros.
 
@@ -75,13 +75,13 @@ O vídeo a seguir é destinado a suportar a compreensão de identidades e gráfi
 Quando seu cliente interage com sua marca em vários canais, incluindo Web, aplicativos móveis, call center ou uma loja, pode ser difícil entendê-los e servi-los caso você não consiga observar e rastrear a atividade nos canais.
 
 Entendendo seu cliente em vários dispositivos e start, reconhecendo-os em cada canal. A Adobe Experience Platform consegue isso usando namespaces de identidade.
-Uma namespace de identidade é um identificador, como ID de dispositivo ou ID de email, usado para fornecer o contexto de onde os dados se originam. As namespaces de identidade são usadas para procurar ou vincular identidades individuais e fornecem contexto para valores de identidade para evitar colisões de dados. Por exemplo, a ID &quot;123456&quot; pode se referir a uma pessoa em seu sistema de comércio eletrônico e a outra pessoa em seu sistema de suporte técnico. Para obter mais informações, consulte a visão geral [da namespace de](./namespaces.md)identidade.
+Uma namespace de identidade é um identificador, como ID de dispositivo ou ID de email, usado para fornecer o contexto de onde os dados se originam. As namespaces de identidade são usadas para procurar ou vincular identidades individuais e fornecem contexto para valores de identidade para evitar colisões de dados. Por exemplo, a ID &quot;123456&quot; pode se referir a uma pessoa em seu sistema de comércio eletrônico e a outra pessoa em seu sistema de suporte técnico. Para obter mais informações, consulte a [visão geral da namespace de identidade](./namespaces.md).
 
 ### Gráficos de identidade
 
 Um gráfico de identidade é um mapa de relações entre diferentes namespaces de identidade, fornecendo uma representação visual de como seu cliente interage com sua marca em diferentes canais.
 
-Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente [!DNL Identity Service] em tempo quase real, em resposta à atividade do cliente.
+Todos os gráficos de identidade do cliente são gerenciados coletivamente e atualizados por [!DNL Identity Service] em tempo quase real, em resposta à atividade do cliente.
 
 [!DNL Identity Service] gerencia um gráfico de identidade visível somente pela sua organização e criado com base em seus dados, conhecido como gráfico privado. [!DNL Identity Service] aumenta seu gráfico particular quando um registro de dados assimilados contém mais de uma identidade, adicionando uma relação entre as identidades encontradas.
 
@@ -91,7 +91,7 @@ Para obter mais informações, consulte o tutorial sobre como [acessar o visuali
 
 ## Fornecimento de dados de identidade para [!DNL Identity Service]
 
-Esta seção aborda como os dados fornecidos à Adobe Experience Platform são processados antes de serem usados [!DNL Identity Service] para criar um gráfico de identidade para cada cliente.
+Esta seção aborda como os dados fornecidos à Adobe Experience Platform são processados antes de serem usados por [!DNL Identity Service] para criar um gráfico de identidade para cada cliente.
 
 ### Decidir sobre campos de identidade
 
@@ -103,7 +103,7 @@ Dependendo da sua estratégia de coleta de dados corporativos, os campos de dado
 
 ### Criar namespaces de identidade adicionais
 
-Ao [!DNL Experience Platform] oferta uma variedade de namespaces padrão, talvez seja necessário criar namespaces adicionais para categorizar suas identidades corretamente. Para obter mais informações, consulte a seção sobre como [visualizar e criar namespaces para sua organização](./namespaces.md) na visão geral da namespace de identidade.
+Enquanto [!DNL Experience Platform] oferta uma variedade de namespaces padrão, talvez seja necessário criar namespaces adicionais para categorizar corretamente suas identidades. Para obter mais informações, consulte a seção sobre [visualizar e criar namespaces para sua organização](./namespaces.md) na visão geral da namespace de identidade.
 
 >[!NOTE]
 >
@@ -111,16 +111,16 @@ Ao [!DNL Experience Platform] oferta uma variedade de namespaces padrão, talvez
 
 ### Incluir dados de identidade em [!DNL Experience Data Model] (XDM)
 
-Como a estrutura padronizada pela qual [!DNL Platform] organiza os dados do cliente, [!DNL Experience Data Model] (XDM) permite que os dados sejam compartilhados e entendidos entre [!DNL Experience Platform] e outros serviços que interagem com [!DNL Platform]. Para obter mais informações, consulte a visão geral [do Sistema](../xdm/home.md)XDM.
+Como a estrutura padronizada pela qual [!DNL Platform] organiza os dados do cliente, [!DNL Experience Data Model] (XDM) permite que os dados sejam compartilhados e compreendidos entre [!DNL Experience Platform] e outros serviços interagindo com [!DNL Platform]. Para obter mais informações, consulte [Visão geral do Sistema XDM](../xdm/home.md).
 
 Os schemas de registro e de série cronológica fornecem os meios para incluir dados de identidade. À medida que os dados são ingeridos, o gráfico de identidade criará novas relações entre fragmentos de dados de diferentes namespaces, se forem encontrados para compartilhar dados de identidade comuns.
 
 ### Marcar campos XDM como identidade
 
-Qualquer campo do tipo `string` nos schemas que implementam classes XDM de registro ou de série de tempo pode ser rotulado como um campo de identidade. Como resultado, todos os dados ingeridos nesse campo seriam considerados dados de identidade.
+Qualquer campo do tipo `string` em schemas que implementam classes XDM de séries de registro ou de tempo pode ser rotulado como um campo de identidade. Como resultado, todos os dados ingeridos nesse campo seriam considerados dados de identidade.
 
 Os campos de identidade também permitem a vinculação de identidades se compartilharem dados PII comuns.
-Por exemplo, ao rotular os campos de número de telefone como campos de identidade, [!DNL Identity Service] o gráfico automaticamente relacionamentos com os outros indivíduos encontrados usando o mesmo número de telefone.
+Por exemplo, ao rotular os campos de número de telefone como campos de identidade, [!DNL Identity Service] automaticamente mapeia as relações com os outros indivíduos que estão usando o mesmo número de telefone.
 
 >[!NOTE]
 >
@@ -128,24 +128,24 @@ Por exemplo, ao rotular os campos de número de telefone como campos de identida
 
 ### Configurar um conjunto de dados para [!DNL Identity Service]
 
-Durante o processo de ingestão em streaming, extrai [!DNL Identity Service ]automaticamente os dados de identidade dos dados de registro e da série de tempo. No entanto, antes que os dados possam ser ingeridos, eles devem estar habilitados para [!DNL Identity Service]. Consulte o tutorial sobre como [configurar um conjunto de dados para o Perfil do cliente em tempo real e o serviço de identidade usando APIs](../profile/tutorials/dataset-configuration.md) para obter mais informações.
+Durante o processo de ingestão de streaming, [!DNL Identity Service ]extrai automaticamente os dados de identidade dos dados de registro e da série de tempo. No entanto, antes que os dados possam ser ingeridos, eles devem estar habilitados para [!DNL Identity Service]. Consulte o tutorial em [configurar um conjunto de dados para o Perfil do cliente em tempo real e o serviço de identidade usando as APIs](../profile/tutorials/dataset-configuration.md) para obter mais informações.
 
 ### Ingressar dados em [!DNL Identity Service]
 
-[!DNL Identity Service] consome dados em conformidade com XDM enviados para [!DNL Experience Platform] a ingestão [em](../ingestion/batch-ingestion/overview.md) lote ou a ingestão [em](../ingestion/streaming-ingestion/overview.md)streaming.
+[!DNL Identity Service] consome dados em conformidade com XDM enviados para  [!DNL Experience Platform] cada ingestão [ de ](../ingestion/batch-ingestion/overview.md) lote  [do ](../ingestion/streaming-ingestion/overview.md)ingestãoem sequência.
 
 O vídeo a seguir é destinado a suportar sua compreensão do Serviço de identidade. Este vídeo mostra como rotular campos de dados como identidades, assimilar dados de identidade e, em seguida, verificar se os dados foram enviados para o Gráfico Privado do Adobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
->A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+>A interface do usuário [!DNL Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Governação de dados
 
-A Adobe Experience Platform foi criada pensando na privacidade e inclui uma estrutura de controle de dados para proteger seus dados de PII do cliente. Os dados de identidade na namespace &quot;email&quot; ou &quot;telefone&quot; são criptografados por padrão, mas para garantir que os dados confidenciais sejam criptografados antes de serem persistentes, os rótulos de uso de dados podem ser aplicados aos dados à medida que são ingeridos ou quando chegam [!DNL Platform]. Para obter mais informações, leia a visão geral [do](../data-governance/home.md)Data Governance.
+A Adobe Experience Platform foi criada pensando na privacidade e inclui uma estrutura de controle de dados para proteger seus dados de PII do cliente. Os dados de identidade na namespace &quot;email&quot; ou &quot;telefone&quot; são criptografados por padrão, mas para garantir que os dados confidenciais sejam criptografados antes de serem persistentes, os rótulos de uso de dados podem ser aplicados aos dados conforme são ingeridos ou quando chegam em [!DNL Platform]. Para obter mais informações, leia a [visão geral do Data Governance](../data-governance/home.md).
 
 ## Próximas etapas
 
-Agora que você entende os conceitos-chave de [!DNL Identity Service] e seu papel dentro [!DNL Experience Platform], você pode começar a aprender como trabalhar com seu gráfico de identidade usando o [[!DNL Identity Service API]](./api/getting-started.md).
+Agora que você entende os conceitos principais de [!DNL Identity Service] e sua função dentro de [!DNL Experience Platform], você pode começar a aprender como trabalhar com seu gráfico de identidade usando o [[!DNL Identity Service API]](./api/getting-started.md).

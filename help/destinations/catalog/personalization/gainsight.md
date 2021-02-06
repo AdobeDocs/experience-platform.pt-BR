@@ -1,21 +1,17 @@
 ---
 keywords: prever;prever extensão;prever destino
-title: Extensão de gansight
-seo-title: Extensão de gansight
+title: Destino da extensão de Gainsight
 description: A extensão Gainsight é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Gainsight é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '517'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Gainsight] extensão {#gainsight-extension}
-
-## Visão geral {#overview}
 
 [!DNL Gainsight] capacita os proprietários de produtos com as ferramentas para entender profundamente o comportamento do usuário, orientar a adoção de produtos e coletar feedback dos usuários.
 

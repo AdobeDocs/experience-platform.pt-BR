@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular tópicos;blob do Azure;blob do Azure;conector blob do Azure
 solution: Experience Platform
-title: Criar um conector de origem do Blob do Azure na interface do usuário
+title: Criar uma Conexão de Origem do Blob do Azure na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para a criação de um blob do Azure (a seguir denominado "Blob") usando a interface do usuário da Plataforma.
+description: Saiba como criar um conector de origem Blob do Azure usando a interface de usuário da Plataforma.
 translation-type: tm+mt
-source-git-commit: e22e57e20b985b50e1d29e944fb8f04addc91703
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
 
 
-# Crie um conector de origem [!DNL Azure Blob] na interface do usuário
+# Criar uma conexão de origem [!DNL Azure Blob] na interface do usuário
 
 Este tutorial fornece etapas para criar um [!DNL Azure Blob] (a seguir denominado &quot;[!DNL Blob]&quot;) usando a interface do usuário da plataforma.
 

@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
+keywords: Experience Platform;home;popular tópicos;serviço de query;modelos de query;guia de api;modelos;serviço de Query;
 solution: Experience Platform
-title: Guia do desenvolvedor do Query Service
+title: Ponto Final da API de Modelos de query
 topic: query templates
 description: A documentação a seguir acompanha as várias chamadas de API que você pode fazer usando modelos de query para a API de serviço de Query.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '674'
 ht-degree: 3%
 
 ---
 
 
-# Modelos de query
+# Ponto de extremidade de modelos de query
 
 ## Chamadas de API de exemplo
 
-Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a [!DNL Query Service] API. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a [!DNL Query Service] API. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Agora que você entende quais cabeçalhos devem ser usados, você está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir percorrem as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de modelos de query
 
-Você pode recuperar uma lista de todos os modelos de query para a organização IMS, fazendo uma solicitação de GET para o `/query-templates` endpoint.
+Você pode recuperar uma lista de todos os modelos de query para sua Organização IMS, fazendo uma solicitação de GET para o terminal `/query-templates`.
 
 **Formato da API**
 
@@ -32,7 +32,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo. |
 
 **Parâmetros do query**
 
@@ -40,10 +40,10 @@ A seguir está uma lista de parâmetros de query disponíveis para a listagem de
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados em ordem crescente. A adição de um item `-` antes de criado (`orderby=-created`) classificará os itens em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Default value: 20*) |
-| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Default value: 0*) |
-| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `name` e `userId`. O único operador suportado é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de query com o nome `my_template`. |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. A adição de `-` antes de criado (`orderby=-created`) classificará os itens por meio de itens criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **must** devem ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `name` e `userId`. O único operador suportado é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de query com o nome `my_template`. |
 
 **Solicitação**
 
@@ -108,11 +108,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de modelos de 
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de query](#delete-a-specified-query-template).
 
 ### Criar um modelo de query
 
-Você pode criar um modelo de query, fazendo uma solicitação de POST para o `/query-templates` terminal.
+Você pode criar um modelo de query, fazendo uma solicitação POST para o terminal `/query-templates`.
 
 **Formato da API**
 
@@ -171,11 +171,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do mod
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de query](#delete-a-specified-query-template).
 
 ### Recuperar um modelo de query especificado
 
-Você pode recuperar um modelo de query específico, fazendo uma solicitação de GET para o `/query-templates/{TEMPLATE_ID}` terminal e fornecendo a ID do modelo de query no caminho da solicitação.
+Você pode recuperar um modelo de query específico, fazendo uma solicitação de GET para o terminal `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de query no caminho da solicitação.
 
 **Formato da API**
 
@@ -185,7 +185,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | O `id` valor do modelo de query que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O valor `id` do modelo de query que você deseja recuperar. |
 
 **Solicitação**
 
@@ -229,11 +229,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de qu
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de query](#delete-a-specified-query-template).
 
 ### Atualizar um modelo de query especificado
 
-Você pode atualizar um modelo de query específico, fazendo uma solicitação de PUT para o `/query-templates/{TEMPLATE_ID}` terminal e fornecendo a ID do modelo de query no caminho da solicitação.
+Você pode atualizar um modelo de query específico, fazendo uma solicitação de PUT para o terminal `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de query no caminho da solicitação.
 
 **Formato da API**
 
@@ -243,7 +243,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | O `id` valor do modelo de query que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O valor `id` do modelo de query que você deseja recuperar. |
 
 **Solicitação**
 
@@ -301,11 +301,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com as informaçõe
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.delete` para [excluir seu modelo](#delete-a-specified-query-template)de query.
+>Você pode usar o valor de `_links.delete` para [excluir seu modelo de query](#delete-a-specified-query-template).
 
 ### Excluir um modelo de query especificado
 
-Você pode excluir um modelo de query específico, fazendo uma solicitação de DELETE para o e fornecendo a ID do modelo de query no caminho da solicitação. `/query-templates/{TEMPLATE_ID}`
+Você pode excluir um modelo de query específico, fazendo uma solicitação de DELETE para `/query-templates/{TEMPLATE_ID}` e fornecendo a ID do modelo de query no caminho da solicitação.
 
 **Formato da API**
 
@@ -315,7 +315,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | O `id` valor do modelo de query que você deseja recuperar. |
+| `{TEMPLATE_ID}` | O valor `id` do modelo de query que você deseja recuperar. |
 
 **Solicitação**
 

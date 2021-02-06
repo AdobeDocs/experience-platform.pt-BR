@@ -1,22 +1,19 @@
 ---
 keywords: destino do armazenamento em nuvem;armazenamento em nuvem
-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
-seo-title: Fluxo de trabalho de destinos de armazenamentos na nuvem
+title: Criar um destino de Armazenamento na nuvem
 type: Tutorial
 description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 seo-description: Instruções para conectar-se aos locais dos armazenamentos na nuvem
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
 
 
-# Fluxo de trabalho para criar destinos de armazenamentos na nuvem
-
-## Visão geral
+# Criar um destino de armazenamento em nuvem
 
 Esta página explica como você pode se conectar aos locais do armazenamento em nuvem no Adobe Experience Platform.
 

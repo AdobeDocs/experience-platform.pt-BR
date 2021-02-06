@@ -4,7 +4,7 @@ title: Guia da interface do usuário do Perfil do cliente em tempo real
 topic: guide
 description: O Perfil de cliente em tempo real cria uma visualização holística de cada um de seus clientes individuais, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil Cliente em tempo real na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 1%

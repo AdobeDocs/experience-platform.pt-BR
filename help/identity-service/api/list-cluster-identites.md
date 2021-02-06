@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;list identities;list cluster
+keywords: Experience Platform;home;popular topics;identidades de lista;cluster de listas;home;popular topics;identities;
 solution: Experience Platform
-title: Identidades de cluster de lista
+title: Lista de todas as identidades em um cluster
 topic: API guide
 description: As identidades que estão relacionadas em um gráfico de identidade, independentemente da namespace, são consideradas parte do mesmo "cluster" nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ As identidades que estão relacionadas em um gráfico de identidade, independent
 
 Recupere todos os membros do cluster para obter uma única identidade.
 
-Você pode usar o `graph-type` parâmetro opcional para indicar o gráfico de identidade do qual o cluster deve ser obtido. As opções são:
+Você pode usar o parâmetro opcional `graph-type` para indicar o gráfico de identidade do qual o cluster será obtido. As opções são:
 
 - Nenhum - Não execute nenhum ajuste de identidade.
 - Gráfico privado - Realize a identificação com base no seu gráfico de identidade particular. Se nenhum `graph-type` for fornecido, esse será o padrão.
@@ -56,7 +56,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento que cobre a [obtenção do XID para uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção desse documento cobrindo [obter o XID de uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -69,7 +69,7 @@ curl -X GET \
 
 ## Obter identidades associadas para várias identidades
 
-Use `POST` como um equivalente em lote do `GET` método descrito acima para retornar as identidades nos clusters de várias identidades.
+Use `POST` como um equivalente em lote do método `GET` descrito acima para retornar as identidades nos clusters de várias identidades.
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ A solicitação a seguir demonstra o fornecimento de uma lista de XIDs para a qu
 
 **Solicitação de Stub**
 
-O uso do `x-uis-cst-ctx: stub` cabeçalho retornará uma resposta com bloqueio. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão sendo concluídos. Isso será substituído quando não for mais necessário.
+O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta com bloqueio. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão sendo concluídos. Isso será substituído quando não for mais necessário.
 
 ```shell
 curl -X POST \

@@ -1,21 +1,17 @@
 ---
 keywords: correspondência de cliente do Google;Correspondência de cliente do Google;Correspondência de cliente do Google
-title: Destino de correspondência de cliente do Google
-seo-title: Destino de correspondência de cliente do Google
+title: Destino da conexão de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
-seo-description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
 
 
-# Destino de correspondência de cliente do Google
-
-## Visão geral {#overview}
+# Conexão de correspondência de cliente do Google
 
 >[!IMPORTANT]
 >

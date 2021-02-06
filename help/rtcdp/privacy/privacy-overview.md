@@ -1,19 +1,19 @@
 ---
 keywords: controle de dados rtcdp;controle de dados rtcdp;controle de dados de perfil de dados de cliente em tempo real;privacidade rtcdp;rtcdp privacidade
-title: Privacidade no Perfil de dados do cliente em tempo real
-seo-title: Privacidade no Perfil de dados do cliente em tempo real
-description: O Perfil de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
-seo-description: O Perfil de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
+title: Privacidade na plataforma de dados do cliente em tempo real
+seo-title: Privacidade na plataforma de dados do cliente em tempo real
+description: A Plataforma de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
+seo-description: A Plataforma de dados do cliente em tempo real permite simplificar o processo de manter suas operações de dados em conformidade com as regras de privacidade.
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
 
-# Privacidade em [!DNL Real-time CDP]
+# Privacidade na plataforma de dados do cliente em tempo real
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) ajuda os profissionais de marketing a unir dados de vários sistemas empresariais, permitindo que eles identifiquem, compreendam e engajem melhor seus clientes. A Adobe mantém a privacidade dos dados do consumidor como um princípio fundamental de design e fornece vários controles para ajudar os profissionais de marketing a gerenciar a privacidade dos dados de seus clientes.
 

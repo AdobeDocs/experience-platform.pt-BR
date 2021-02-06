@@ -1,19 +1,17 @@
 ---
-keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Destinos de envolvimento móvel
-seo-title: Destinos de envolvimento móvel
-description: A Adobe Experience Platform suporta os destinos de envolvimento móvel listados abaixo
-seo-description: A Adobe Experience Platform suporta os destinos de envolvimento móvel listados abaixo
+keywords: mensagens móveis;destinos de mensagens móveis;Braze; Avião
+title: Visão geral dos destinos de envolvimento móvel
+description: Saiba mais sobre os diferentes destinos de envolvimento móvel suportados pela Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Destinos de envolvimento móvel {#mobile-destinations}
+# Visão geral dos destinos de envolvimento móvel {#mobile-destinations}
 
 [!DNL Adobe Experience Platform] suporta atualmente os seguintes destinos de envolvimento móvel:
 

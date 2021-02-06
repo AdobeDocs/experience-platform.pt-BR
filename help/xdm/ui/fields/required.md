@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;obrigatório;campo;
 solution: Experience Platform
-title: Definir um campo obrigatório na interface do usuário
+title: Definir campos obrigatórios na interface do usuário
 description: Saiba como definir um campo XDM obrigatório na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 48025fc11558bf6773ce5c48054483758c7e993f
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 1%
 
 ---
 
 
-# Definir um campo obrigatório na interface do usuário
+# Definir campos obrigatórios na interface do usuário
 
 No Modelo de Dados de Experiência (XDM), um campo obrigatório indica que ele deve receber um valor válido para que um registro ou evento de série cronológica específico seja aceito durante a ingestão de dados. Casos de uso comuns para campos obrigatórios incluem informações de identidade do usuário e carimbos de data e hora.
 

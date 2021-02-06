@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
-title: Introdução à API de Perfil do cliente em tempo real
+title: Introdução à API do Perfil do cliente em tempo real
 topic: guide
 type: Documentation
 description: O guia de introdução à API do Perfil descreve os conceitos principais e a funcionalidade básica que você precisa saber para usar os pontos finais da API do Perfil do cliente em tempo real para executar operações CRUD básicas em relação aos dados do Perfil.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---

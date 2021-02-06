@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;export jobs;api;
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation Service;export jobs;api;
 solution: Experience Platform
-title: Exportar ponto de extremidade de trabalhos
+title: Ponto Final da API de Serviços de Exportação
 topic: developer guide
-description: Os trabalhos de exportação são processos assíncronos usados para persistir membros de segmentos de audiência em conjuntos de dados. Você pode usar o terminal /export/jobs na API de segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
+description: Os trabalhos de exportação são processos assíncronos usados para persistir membros de segmentos de audiência em conjuntos de dados. Você pode usar o terminal /export/jobs na API do Adobe Experience Platform Segmentation Service, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
 translation-type: tm+mt
-source-git-commit: 783fa7ff0c22143a21c4f666c956c8b4d956189e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1680'
 ht-degree: 2%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 2%
 
 # Exportar ponto de extremidade de trabalhos
 
-Os trabalhos de exportação são processos assíncronos usados para persistir membros de segmentos de audiência em conjuntos de dados. Você pode usar o `/export/jobs` endpoint na API de segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
+Os trabalhos de exportação são processos assíncronos usados para persistir membros de segmentos de audiência em conjuntos de dados. Você pode usar o terminal `/export/jobs` na API de segmentação do Adobe Experience Platform, que permite recuperar, criar e cancelar programaticamente trabalhos de exportação.
 
 >[!NOTE]
 >
->Este guia cobre o uso de trabalhos de exportação no [!DNL Segmentation API]. Para obter informações sobre como gerenciar trabalhos de exportação para [!DNL Real-time Customer Profile] dados, consulte o guia sobre trabalhos de [exportação na API do Perfil](../../profile/api/export-jobs.md)
+>Este guia cobre o uso de trabalhos de exportação no [!DNL Segmentation API]. Para obter informações sobre como gerenciar trabalhos de exportação para dados [!DNL Real-time Customer Profile], consulte o guia em [trabalhos de exportação na API de Perfil](../../profile/api/export-jobs.md)
 
 ## Introdução
 
-Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte o guia [de](./getting-started.md) introdução para obter informações importantes que você precisa saber para fazer chamadas à API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Os pontos de extremidade usados neste guia fazem parte da API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas à API com êxito, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
 ## Recuperar uma lista de trabalhos de exportação {#retrieve-list}
 
-É possível recuperar uma lista de todos os trabalhos de exportação para a Organização IMS, fazendo uma solicitação de GET para o `/export/jobs` endpoint.
+Você pode recuperar uma lista de todos os trabalhos de exportação para a Organização IMS, fazendo uma solicitação de GET para o terminal `/export/jobs`.
 
 **Formato da API**
 
-O `/export/jobs` terminal suporta vários parâmetros de query para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Efetuar uma chamada para este terminal sem parâmetros recuperará todas as tarefas de exportação disponíveis para a sua organização. Vários parâmetros podem ser incluídos, separados por E comercial (`&`).
+O endpoint `/export/jobs` suporta vários parâmetros de query para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a reduzir a sobrecarga cara. Efetuar uma chamada para este terminal sem parâmetros recuperará todas as tarefas de exportação disponíveis para a sua organização. Vários parâmetros podem ser incluídos, separados por E comercial (`&`).
 
 ```http
 GET /export/jobs
@@ -199,10 +199,10 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de trabalhos de expo
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `destination` | Informações de destino para os dados exportados:<ul><li>`datasetId`: A ID do conjunto de dados no qual os dados foram exportados.</li><li>`segmentPerBatch`: Um valor booliano que mostra se as IDs de segmento estão ou não consolidadas. Um valor de &quot;false&quot; significa que todas as IDs de segmento são exportadas para uma única ID de lote. Um valor &quot;true&quot; significa que uma ID de segmento é exportada para uma ID de lote. **Observação:** Definir o valor como true pode afetar o desempenho da exportação em lote.</li></ul> |
+| `destination` | Informações de destino para os dados exportados:<ul><li>`datasetId`: A ID do conjunto de dados no qual os dados foram exportados.</li><li>`segmentPerBatch`: Um valor booliano que mostra se as IDs de segmento estão ou não consolidadas. Um valor de &quot;false&quot; significa que todas as IDs de segmento são exportadas para uma única ID de lote. Um valor &quot;true&quot; significa que uma ID de segmento é exportada para uma ID de lote. **Observação:** a definição do valor como true pode afetar o desempenho da exportação em lote.</li></ul> |
 | `fields` | Uma lista dos campos exportados, separada por vírgulas. |
 | `schema.name` | O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
-| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: A ID de segmento para a qual os perfis serão exportados.</li><li>`segmentNs`: Namespace do segmento para o determinado `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;. O valor &quot;realizado&quot; significa que o perfil está a entrar no segmento. Um valor de &quot;existente&quot; significa que o perfil continua a estar no segmento. Um valor de &quot;existente&quot; significa que o perfil está saindo do segmento.</li></ul> |
+| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: A ID de segmento para a qual os perfis serão exportados.</li><li>`segmentNs`: Namespace do segmento para o determinado  `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o  `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;. O valor &quot;realizado&quot; significa que o perfil está a entrar no segmento. Um valor de &quot;existente&quot; significa que o perfil continua a estar no segmento. Um valor de &quot;existente&quot; significa que o perfil está saindo do segmento.</li></ul> |
 | `mergePolicy` | Mesclar informações de política para os dados exportados. |
 | `metrics.totalTime` | Um campo que indica o tempo total que o trabalho de exportação levou para ser executado. |
 | `metrics.profileExportTime` | Um campo que indica o tempo que os perfis levaram para exportar. |
@@ -211,7 +211,7 @@ A resposta a seguir retorna o status HTTP 200 com uma lista de trabalhos de expo
 
 ## Criar um novo trabalho de exportação {#create}
 
-Você pode criar um novo trabalho de exportação, fazendo uma solicitação POST para o `/export/jobs` endpoint.
+Você pode criar um novo trabalho de exportação fazendo uma solicitação POST para o terminal `/export/jobs`.
 
 **Formato da API**
 
@@ -281,16 +281,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | Uma lista dos campos exportados, separada por vírgulas. Se deixado em branco, todos os campos serão exportados. |
 | `mergePolicy` | Especifica a política de mesclagem para reger os dados exportados. Inclua esse parâmetro quando houver vários segmentos sendo exportados. Se não fornecido, a exportação adotará a mesma política de mesclagem que o segmento especificado. |
 | `filter` | Um objeto que especifica os segmentos que serão incluídos na tarefa de exportação por ID, tempo de qualificação ou tempo de assimilação, dependendo das subpropriedades listadas abaixo. Se deixados em branco, todos os dados serão exportados. |
-| `filter.segments` | Especifica os segmentos a serem exportados. A omissão desse valor resultará na exportação de todos os dados de todos os perfis. Aceita uma matriz de objetos de segmento, cada um contendo os seguintes campos:<ul><li>`segmentId`: **(Obrigatório se estiver usando `segments`)** a ID do segmento para perfis a serem exportados.</li><li>`segmentNs` *(Opcional)* namespace de segmento para o determinado `segmentID`.</li><li>`status` *(Opcional)* Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Possible values include: `"realized"`, `"existing"`, and `"exited"`.  O valor &quot;realizado&quot; significa que o perfil está a entrar no segmento. Um valor de &quot;existente&quot; significa que o perfil continua a estar no segmento. Um valor de &quot;existente&quot; significa que o perfil está saindo do segmento.</li></ul> |
+| `filter.segments` | Especifica os segmentos a serem exportados. A omissão desse valor resultará na exportação de todos os dados de todos os perfis. Aceita uma matriz de objetos de segmento, cada um contendo os seguintes campos:<ul><li>`segmentId`:  **(Obrigatório se estiver usando  `segments`)ID** do segmento para perfis a serem exportados.</li><li>`segmentNs` *(Opcional)* namespace de segmento para o  `segmentID`dado.</li><li>`status` *(Opcional)* Uma matriz de strings que fornece um filtro de status para o  `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: `"realized"`, `"existing"` e `"exited"`.  O valor &quot;realizado&quot; significa que o perfil está a entrar no segmento. Um valor de &quot;existente&quot; significa que o perfil continua a estar no segmento. Um valor de &quot;existente&quot; significa que o perfil está saindo do segmento.</li></ul> |
 | `filter.segmentQualificationTime` | Filtrar com base no tempo de qualificação do segmento. A hora e/ou a hora de término do start podem ser fornecidas. |
-| `filter.segmentQualificationTime.startTime` | Hora do start de qualificação de segmento para uma ID de segmento para um determinado status. Não fornecido, não haverá filtro na hora do start para uma qualificação de ID de segmento. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
-| `filter.segmentQualificationTime.endTime` | Hora de término da qualificação de segmento para uma ID de segmento para um determinado status. Não fornecido, não haverá filtro na hora de término para uma qualificação de ID de segmento. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
-| `filter.fromIngestTimestamp ` | Limita os perfis exportados a incluírem apenas os que foram atualizados após esse carimbo de data e hora. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . <ul><li>`fromIngestTimestamp` para **perfis**, se fornecidos: Inclui todos os perfis unidos nos quais o carimbo de data e hora atualizado unido é maior que o carimbo de data e hora fornecido. Suporta `greater_than` operando.</li><li>`fromIngestTimestamp` para **eventos**: Todos os eventos ingeridos após esse carimbo de data e hora serão exportados, correspondendo ao resultado do perfil resultante. Não é o tempo de evento em si, mas o tempo de ingestão dos eventos.</li> |
-| `filter.emptyProfiles` | Um valor booliano que indica se deve ser filtrado para perfis vazios. Perfis podem conter registros de perfis, registros ExperienceEvent ou ambos. Perfis sem registros de perfis e somente registros ExperienceEvent são chamados de &quot;emptyProfiles&quot;. Para exportar todos os perfis no repositório de perfis, incluindo &quot;emptyProfiles&quot;, defina o valor de `emptyProfiles` como `true`. Se `emptyProfiles` estiver definido como `false`, somente perfis com registros de perfis na loja serão exportados. Por padrão, se `emptyProfiles` o atributo não estiver incluído, somente os perfis que contêm registros de perfis serão exportados. |
+| `filter.segmentQualificationTime.startTime` | Hora do start de qualificação de segmento para uma ID de segmento para um determinado status. Não fornecido, não haverá filtro na hora do start para uma qualificação de ID de segmento. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.segmentQualificationTime.endTime` | Hora de término da qualificação de segmento para uma ID de segmento para um determinado status. Não fornecido, não haverá filtro na hora de término para uma qualificação de ID de segmento. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.fromIngestTimestamp ` | Limita os perfis exportados a incluírem apenas os que foram atualizados após esse carimbo de data e hora. O carimbo de data e hora deve ser fornecido no formato [RFC 3339](https://tools.ietf.org/html/rfc3339). <ul><li>`fromIngestTimestamp` para  **perfis**, se fornecidos: Inclui todos os perfis unidos nos quais o carimbo de data e hora atualizado unido é maior que o carimbo de data e hora fornecido. Suporta `greater_than` operando.</li><li>`fromIngestTimestamp` para  **eventos**: Todos os eventos ingeridos após esse carimbo de data e hora serão exportados, correspondendo ao resultado do perfil resultante. Não é o tempo de evento em si, mas o tempo de ingestão dos eventos.</li> |
+| `filter.emptyProfiles` | Um valor booliano que indica se deve ser filtrado para perfis vazios. Perfis podem conter registros de perfis, registros ExperienceEvent ou ambos. Perfis sem registros de perfis e somente registros ExperienceEvent são chamados de &quot;emptyProfiles&quot;. Para exportar todos os perfis no repositório de perfis, incluindo &quot;emptyProfiles&quot;, defina o valor de `emptyProfiles` como `true`. Se `emptyProfiles` estiver definido como `false`, somente os perfis com registros de perfis na loja serão exportados. Por padrão, se o atributo `emptyProfiles` não estiver incluído, somente os perfis que contêm registros de perfis serão exportados. |
 | `additionalFields.eventList` | Controla os campos de evento da série de tempo exportados para objetos filhos ou associados, fornecendo uma ou mais das seguintes configurações:<ul><li>`fields`: Controle os campos a serem exportados.</li><li>`filter`: Especifica critérios que limitam os resultados incluídos dos objetos associados. Espera um valor mínimo necessário para exportação, geralmente uma data.</li><li>`filter.fromIngestTimestamp`: Filtros eventos de séries de tempo para os que foram ingeridos após o carimbo de data e hora fornecido. Não é o tempo de evento em si, mas o tempo de ingestão dos eventos.</li><li>`filter.toIngestTimestamp`: Filtros o carimbo de data e hora para aqueles que foram ingeridos antes do carimbo de data e hora fornecido. Não é o tempo de evento em si, mas o tempo de ingestão dos eventos.</li></ul> |
-| `destination` | **(Obrigatório)** Informações sobre os dados exportados:<ul><li>`datasetId`: **(Obrigatório)** A ID do conjunto de dados no qual os dados devem ser exportados.</li><li>`segmentPerBatch`: *(Opcional)* Um valor booliano que, se não fornecido, assume como padrão &quot;false&quot;. Um valor de &quot;false&quot; exporta todas as IDs de segmento para uma única ID de lote. Um valor &quot;true&quot; exporta uma ID de segmento para uma ID de lote. Observe que definir o valor como &quot;true&quot; pode afetar o desempenho de exportação em lote.</li></ul> |
+| `destination` | **(Obrigatório)** Informações sobre os dados exportados:<ul><li>`datasetId`:  **(Obrigatório)** A ID do conjunto de dados no qual os dados devem ser exportados.</li><li>`segmentPerBatch`:  *(Opcional)* Um valor booliano que, se não fornecido, assume como padrão &quot;false&quot;. Um valor de &quot;false&quot; exporta todas as IDs de segmento para uma única ID de lote. Um valor &quot;true&quot; exporta uma ID de segmento para uma ID de lote. Observe que definir o valor como &quot;true&quot; pode afetar o desempenho de exportação em lote.</li></ul> |
 | `schema.name` | **(Obrigatório)** O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
-| `evaluationInfo.segmentation` | *(Opcional)* Um valor booliano que, se não fornecido, assumirá o padrão `false`. Um valor de `true` indica que a segmentação precisa ser feita no trabalho de exportação. |
+| `evaluationInfo.segmentation` | *(Opcional)* Um valor booliano que, se não fornecido, assumirá o padrão  `false`. Um valor de `true` indica que a segmentação precisa ser feita no trabalho de exportação. |
 
 **Resposta**
 
@@ -359,7 +359,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 | -------- | ----------- |
 | `id` | Um valor somente leitura gerado pelo sistema que identifica o trabalho de exportação que acabou de ser criado. |
 
-Como alternativa, se `destination.segmentPerBatch` tivesse sido definido como `true`, o `destination` objeto acima teria uma `batches` matriz, como mostrado abaixo:
+Como alternativa, se `destination.segmentPerBatch` tivesse sido definido como `true`, o objeto `destination` acima teria uma matriz `batches`, como mostrado abaixo:
 
 ```json
     "destination": {
@@ -384,7 +384,7 @@ Como alternativa, se `destination.segmentPerBatch` tivesse sido definido como `t
 
 ## Recuperar um trabalho de exportação específico {#get}
 
-Você pode recuperar informações detalhadas sobre um trabalho de exportação específico, fazendo uma solicitação de GET para o ponto final e fornecendo a ID do trabalho de exportação que deseja recuperar no caminho da solicitação. `/export/jobs`
+Você pode recuperar informações detalhadas sobre um trabalho de exportação específico, fazendo uma solicitação de GET para o terminal `/export/jobs` e fornecendo a ID do trabalho de exportação que deseja recuperar no caminho da solicitação.
 
 **Formato da API**
 
@@ -394,7 +394,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | O `id` da tarefa de exportação que você deseja acessar. |
+| `{EXPORT_JOB_ID}` | O `id` do trabalho de exportação que você deseja acessar. |
 
 **Solicitação**
 
@@ -472,7 +472,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | `destination` | Informações de destino para os dados exportados:<ul><li>`datasetId`: A ID do conjunto de dados no qual os dados foram exportados.</li><li>`segmentPerBatch`: Um valor booliano que mostra se as IDs de segmento estão ou não consolidadas. Um valor de `false` significa que todas as IDs de segmento estavam em uma única ID de lote. Um valor de `true` significa que uma ID de segmento é exportada para uma ID de lote.</li></ul> |
 | `fields` | Uma lista dos campos exportados, separada por vírgulas. |
 | `schema.name` | O nome do schema associado ao conjunto de dados no qual os dados devem ser exportados. |
-| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: ID do segmento para perfis a serem exportados.</li><li>`segmentNs`: Namespace do segmento para o determinado `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;.  O valor &quot;realizado&quot; significa que o perfil está a entrar no segmento. Um valor de &quot;existente&quot; significa que o perfil continua a estar no segmento. Um valor de &quot;existente&quot; significa que o perfil está saindo do segmento.</li></ul> |
+| `filter.segments` | Os segmentos que são exportados. Os seguintes campos estão incluídos:<ul><li>`segmentId`: ID do segmento para perfis a serem exportados.</li><li>`segmentNs`: Namespace do segmento para o determinado  `segmentID`.</li><li>`status`: Uma matriz de strings que fornece um filtro de status para o  `segmentID`. Por padrão, `status` terá o valor `["realized", "existing"]` que representa todos os perfis que se encaixam no segmento no momento atual. Os valores possíveis incluem: &quot;realizado&quot;, &quot;existente&quot; e &quot;encerrado&quot;.  O valor &quot;realizado&quot; significa que o perfil está a entrar no segmento. Um valor de &quot;existente&quot; significa que o perfil continua a estar no segmento. Um valor de &quot;existente&quot; significa que o perfil está saindo do segmento.</li></ul> |
 | `mergePolicy` | Mesclar informações de política para os dados exportados. |
 | `metrics.totalTime` | Um campo que indica o tempo total que o trabalho de exportação levou para ser executado. |
 | `metrics.profileExportTime` | Um campo que indica o tempo que os perfis levaram para exportar. |
@@ -480,7 +480,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Cancelar ou excluir um trabalho de exportação específico {#delete}
 
-Você pode solicitar a exclusão do trabalho de exportação especificado, fazendo uma solicitação de DELETE para o `/export/jobs` ponto final e fornecendo a ID do trabalho de exportação que deseja excluir no caminho da solicitação.
+Você pode solicitar a exclusão do trabalho de exportação especificado, fazendo uma solicitação de DELETE ao terminal `/export/jobs` e fornecendo a ID do trabalho de exportação que deseja excluir no caminho da solicitação.
 
 **Formato da API**
 
@@ -490,7 +490,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | O `id` da tarefa de exportação que você deseja excluir. |
+| `{EXPORT_JOB_ID}` | O `id` do trabalho de exportação que você deseja excluir. |
 
 **Solicitação**
 

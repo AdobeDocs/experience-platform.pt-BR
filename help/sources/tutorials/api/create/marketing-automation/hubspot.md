@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot;;home;popular topics;hubspot;Hubspot;Hubspot;Hubspot;Hubspot;hubspot;hubspot;hubspot
 solution: Experience Platform
-title: Criar um conector HubSpot usando a API de Serviço de Fluxo
+title: Criar uma conexão de origem HubSpot usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform ao HubSpot.
+description: Saiba como conectar o Adobe Experience Platform ao HubSpot usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
 
 
-# Crie um conector [!DNL HubSpot] usando a API [!DNL Flow Service]
+# Criar uma conexão de origem [!DNL HubSpot] usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >

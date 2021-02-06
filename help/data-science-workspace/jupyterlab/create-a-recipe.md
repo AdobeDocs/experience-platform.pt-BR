@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
+keywords: Experience Platform;JupyterLab;fórmula;cadernos;Data Science Workspace;populares tópicos;criar fórmula
 solution: Experience Platform
-title: Crie uma receita usando notebooks em Júpiter
+title: Crie uma receita usando notebooks de Júpiter
 topic: tutorial
 type: Tutorial
 description: Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo no Notebook JupyterLab. Em seguida, você exercerá o fluxo de trabalho do notebook para receber receitas dentro do JupyterLab para criar uma receita dentro da Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2362'
 ht-degree: 0%
 
 ---
 
 
-# Crie uma receita usando notebooks em Júpiter
+# Criar uma receita usando notebooks Júpiter
 
-Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo em [!DNL JupyterLab Notebook]. Em seguida, você exercitará o notebook para obter o fluxo de trabalho da receita dentro [!DNL JupyterLab] para criar uma receita dentro [!DNL Data Science Workspace].
+Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo em [!DNL JupyterLab Notebook]. Em seguida, você exercerá o fluxo de trabalho do bloco de anotações para receber receitas dentro de [!DNL JupyterLab] para criar uma receita dentro de [!DNL Data Science Workspace].
 
 ## Conceitos introduzidos:
 
-- **Receitas:** Uma receita é um termo para uma especificação de modelo e um container de nível superior que representa um aprendizado de máquina específico, algoritmo AI ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo e, portanto, ajudar a resolver problemas específicos de negócios.
+- **Receitas: uma receita é um termo** para uma especificação de modelo e um container de nível superior que representa um aprendizado de máquina específico, algoritmo AI ou conjunto de algoritmos, lógica de processamento e configuração necessários para criar e executar um modelo treinado e, portanto, ajudar a resolver problemas específicos de negócios.
 - **Modelo:** Um modelo é uma instância de uma fórmula de aprendizado de máquina treinada usando dados históricos e configurações para solucionar um caso de uso comercial.
-- **Treinamento:** Treinamento é o processo de aprendizado de padrões e insights de dados rotulados.
-- **Pontuação:** A pontuação é o processo de gerar insights a partir de dados usando um modelo treinado.
+- **Treinamento:** treinamento é o processo de aprendizado de padrões e insights de dados rotulados.
+- **Pontuação:** Pontuação é o processo de geração de insights a partir de dados usando um modelo treinado.
 
-## Introdução ao ambiente [!DNL JupyterLab] notebook
+## Introdução ao ambiente notebook[!DNL JupyterLab]
 
-Criar uma receita do zero pode ser feito dentro [!DNL Data Science Workspace]. Para start, navegue até o [Adobe Experience Platform](https://platform.adobe.com) e clique na guia **[!UICONTROL Notebooks]** à esquerda. Crie um novo bloco de anotações selecionando o modelo do Construtor de receitas no [!DNL JupyterLab Launcher].
+Criar uma fórmula do zero pode ser feito em [!DNL Data Science Workspace]. Para start, navegue até [Adobe Experience Platform](https://platform.adobe.com) e clique na guia **[!UICONTROL Notebooks]** à esquerda. Crie um novo bloco de anotações selecionando o modelo do Construtor de receitas em [!DNL JupyterLab Launcher].
 
-O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer mudanças em seus métodos `train()` e `score()` métodos entre experiências de execução no treinamento e dados de pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma receita para ser usada no [!DNL Data Science Workspace] uso do notebook para obter a funcionalidade integrada ao notebook Construtor de receita.
+O notebook [!UICONTROL Construtor de receitas] permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer alterações nos métodos `train()` e `score()` entre executar experimentos nos dados de treinamento e pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma fórmula a ser usada em [!DNL Data Science Workspace] usando o notebook para a funcionalidade de receita incorporada ao notebook do Recipe Builder.
 
 >[!NOTE]
 >
@@ -37,17 +37,17 @@ O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e 
 
 ![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-Quando você clica no notebook do Recipe Builder no lançador, o notebook é aberto na guia. O modelo usado no notebook é a Receita de Previsão de Vendas de Retalho Python, que também pode ser encontrada [neste repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
+Quando você clica no notebook do Recipe Builder no lançador, o notebook é aberto na guia. O modelo usado no notebook é a Receita de Previsão de Vendas de Retalho Python, que também pode ser encontrada em [este repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Você observará que na barra de ferramentas existem três ações adicionais, a saber: **[!UICONTROL Treinamento]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criar receita]**. Esses ícones só aparecem no notebook [!UICONTROL Recipe Builder] . Mais informações sobre essas ações serão discutidas [na seção](#training-and-scoring) Treinamento e pontuação depois de criar a Receita no notebook.
+Você observará que na barra de ferramentas existem três ações adicionais, a saber - **[!UICONTROL Trem]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criar Receita]**. Esses ícones só aparecem no bloco de anotações [!UICONTROL Construtor de receitas]. Para obter mais informações sobre essas ações, consulte [na seção Treinamento e pontuação](#training-and-scoring) depois de criar a Receita no notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
 ## Fazer edições em arquivos de receita
 
-Para fazer edições nos arquivos de receita, navegue até a célula em Júpiter correspondente ao caminho do arquivo. Por exemplo, se você deseja fazer alterações em `evaluator.py`, procure por `%%writefile demo-recipe/evaluator.py`.
+Para fazer edições nos arquivos de receita, navegue até a célula em Júpiter correspondente ao caminho do arquivo. Por exemplo, se você deseja fazer alterações em `evaluator.py`, procure `%%writefile demo-recipe/evaluator.py`.
 
-Start fazendo as alterações necessárias na célula e, quando terminar, simplesmente execute a célula. O `%%writefile filename.py` comando gravará o conteúdo da célula no `filename.py`. Será necessário executar manualmente a célula para cada arquivo com alterações.
+Start fazendo as alterações necessárias na célula e, quando terminar, simplesmente execute a célula. O comando `%%writefile filename.py` gravará o conteúdo da célula em `filename.py`. Será necessário executar manualmente a célula para cada arquivo com alterações.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Start fazendo as alterações necessárias na célula e, quando terminar, simple
 
 ## Introdução ao notebook Recipe Builder
 
-Agora que você sabe as noções básicas para o ambiente de [!DNL JupyterLab] notebook, você pode começar a olhar para os arquivos que compõem uma receita de modelo de aprendizado de máquina. Os arquivos sobre os quais falaremos são mostrados aqui:
+Agora que você sabe as noções básicas para o ambiente notebook, você pode começar a olhar para os arquivos que compõem uma fórmula de modelo de aprendizado de máquina. [!DNL JupyterLab] Os arquivos sobre os quais falaremos são mostrados aqui:
 
 - [Arquivo de requisitos](#requirements-file)
 - [Arquivos de configuração](#configuration-files)
@@ -79,11 +79,11 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->As bibliotecas ou versões específicas que você adicionar podem ser incompatíveis com as bibliotecas acima. Além disso, se você optar por criar um arquivo de ambiente manualmente, o `name` campo não poderá ser substituído.
+>As bibliotecas ou versões específicas que você adicionar podem ser incompatíveis com as bibliotecas acima. Além disso, se você optar por criar um arquivo de ambiente manualmente, o campo `name` não poderá ser substituído.
 
 ### Arquivos de configuração {#configuration-files}
 
-Os arquivos de configuração `training.conf` e `scoring.conf`, são usados para especificar os conjuntos de dados que você deseja usar para treinamento e pontuação, bem como para adicionar hiperparâmetros. Há configurações separadas para treinamento e pontuação.
+Os arquivos de configuração, `training.conf` e `scoring.conf`, são usados para especificar os conjuntos de dados que você deseja usar para treinamento e pontuação, bem como para adicionar hiperparâmetros. Há configurações separadas para treinamento e pontuação.
 
 Os usuários devem preencher as seguintes variáveis antes de executar o treinamento e a pontuação:
 - `trainingDataSetId`
@@ -96,7 +96,7 @@ Para localizar o conjunto de dados e as IDs de schema, vá para a guia Dados den
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-As mesmas informações podem ser encontradas no [Adobe Experience Platform](https://platform.adobe.com/) nas guias **[Schema](https://platform.adobe.com/schema)** e **[Conjuntos de dados](https://platform.adobe.com/dataset/overview)** .
+As mesmas informações podem ser encontradas nas guias [Adobe Experience Platform](https://platform.adobe.com/) **[Schema](https://platform.adobe.com/schema)** e **[Conjuntos de dados](https://platform.adobe.com/dataset/overview)**.
 
 Por padrão, os seguintes parâmetros de configuração são definidos para você ao acessar os dados:
 
@@ -115,18 +115,18 @@ As duas seções a seguir abordarão o carregamento de dados e a preparação de
 
 ### Carregando dados {#loading-data}
 
-Esta etapa usa os dados [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos no [!DNL Adobe Experience Platform] SDK ( [!DNL Platform] SDK) ou de fontes externas usando as funções dos pandas`platform_sdk`ou `read_csv()` `read_json()` .
+Esta etapa usa [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Os dados podem ser carregados de arquivos em [!DNL Adobe Experience Platform] usando o SDK [!DNL Platform] (`platform_sdk`) ou de fontes externas usando as funções `read_csv()` ou `read_json()` dos painéis.
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [Fontes externas](#external-sources)
 
 >[!NOTE]
 >
->No notebook do Recipe Builder, os dados são carregados pelo carregador de `platform_sdk` dados.
+>No notebook do Recipe Builder, os dados são carregados pelo `platform_sdk` carregador de dados.
 
 ### [!DNL Platform] SDK {#platform-sdk}
 
-Para obter um tutorial detalhado sobre como usar o carregador de `platform_sdk` dados, visite o guia [do SDK da](../authoring/platform-sdk.md)plataforma. Este tutorial fornece informações sobre autenticação de compilação, leitura básica de dados e escrita básica de dados.
+Para obter um tutorial detalhado sobre como usar o `platform_sdk` carregador de dados, visite o [guia do SDK da plataforma](../authoring/platform-sdk.md). Este tutorial fornece informações sobre autenticação de compilação, leitura básica de dados e escrita básica de dados.
 
 ### Fontes externas {#external-sources}
 
@@ -134,19 +134,19 @@ Esta seção mostra como importar um arquivo JSON ou CSV para um objeto de panda
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
-Primeiro, veja um exemplo de importação de um arquivo CSV. O `data` argumento é o caminho para o arquivo CSV. Essa variável foi importada do `configProperties` na seção [](#configuration-files)anterior.
+Primeiro, veja um exemplo de importação de um arquivo CSV. O argumento `data` é o caminho para o arquivo CSV. Essa variável foi importada de `configProperties` na seção [anterior](#configuration-files).
 
 ```PYTHON
 df = pd.read_csv(data)
 ```
 
-Também é possível importar de um arquivo JSON. O `data` argumento é o caminho para o arquivo CSV. Essa variável foi importada do `configProperties` na seção [](#configuration-files)anterior.
+Também é possível importar de um arquivo JSON. O argumento `data` é o caminho para o arquivo CSV. Essa variável foi importada de `configProperties` na seção [anterior](#configuration-files).
 
 ```PYTHON
 df = pd.read_json(data)
 ```
 
-Agora seus dados estão no objeto dataframe e podem ser analisados e manipulados na [próxima seção](#data-preparation-and-feature-engineering).
+Agora seus dados estão no objeto dataframe e podem ser analisados e manipulados na próxima seção [a1/>.](#data-preparation-and-feature-engineering)
 
 ### Do SDK da plataforma
 
@@ -154,7 +154,7 @@ Você pode carregar dados usando o SDK da plataforma. A biblioteca pode ser impo
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-Em seguida, usamos o `load()` método para capturar o conjunto de dados de treinamento do `trainingDataSetId` como definido em nosso arquivo de configuração (`recipe.conf`).
+Em seguida, usamos o método `load()` para capturar o conjunto de dados de treinamento de `trainingDataSetId` como definido em nosso arquivo de configuração (`recipe.conf`).
 
 ```PYTHON
 def load(config_properties):
@@ -173,7 +173,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->Conforme mencionado na seção [Arquivo de](#configuration-files)configuração, os seguintes parâmetros de configuração são definidos para você ao acessar dados do Experience Platform usando `client_context`:
+>Conforme mencionado na seção [Arquivo de Configuração](#configuration-files), os seguintes parâmetros de configuração são definidos para você ao acessar dados do Experience Platform usando `client_context`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -184,7 +184,7 @@ Agora que você tem seus dados, você pode começar com preparação de dados e 
 
 ### Preparação de dados e engenharia de recursos {#data-preparation-and-feature-engineering}
 
-Depois que os dados são carregados, os dados sofrem preparação e são divididos nos conjuntos de dados `train` e `val` . O código de amostra é visto abaixo:
+Depois que os dados são carregados, os dados passam pela preparação e são divididos nos conjuntos de dados `train` e `val`. O código de amostra é visto abaixo:
 
 ```PYTHON
 #########################################
@@ -208,25 +208,25 @@ dataframe.drop('date', axis=1, inplace=True)
 ```
 
 Neste exemplo, há cinco coisas sendo feitas no conjunto de dados original:
-- adicionar `week` e `year` colunas
+- adicionar colunas `week` e `year`
 - converter `storeType` em uma variável de indicador
 - converter `isHoliday` em uma variável numérica
-- compensação `weeklySales` para obter valor de vendas futuras e passadas
+- offset `weeklySales` para obter valor de vendas futuras e passadas
 - dividir dados, por data, em `train` e `val` conjunto de dados
 
-Primeiro, `week` e as `year` colunas são criadas e a `date` coluna original é convertida em [!DNL Python] datetime [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Os valores de semana e ano são extraídos do objeto datetime.
+Primeiro, as colunas `week` e `year` são criadas e a coluna original `date` é convertida em [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Os valores de semana e ano são extraídos do objeto datetime.
 
-Em seguida, `storeType` é convertido em três colunas que representam os três tipos diferentes de armazenamento (`A`, `B`e `C`). Cada um conterá um valor booliano para indicar o que `storeType` é verdadeiro. A `storeType` coluna será solta.
+Em seguida, `storeType` é convertido em três colunas representando os três tipos diferentes de armazenamento, (`A`, `B` e `C`). Cada um conterá um valor booliano para indicar qual `storeType` é verdadeiro. A coluna `storeType` será ignorada.
 
-Da mesma forma, `weeklySales` altera o `isHoliday` booliano para uma representação numérica, um ou zero.
+Da mesma forma, `weeklySales` altera o booliano `isHoliday` para uma representação numérica, um ou zero.
 
-Esses dados são divididos entre `train` e o conjunto de dados `val` .
+Esses dados são divididos entre os conjuntos de dados `train` e `val`.
 
-A `load()` função deve ser concluída com o conjunto de dados `train` e `val` como saída.
+A função `load()` deve ser concluída com o conjunto de dados `train` e `val` como saída.
 
-### Carregador de dados de pontuação {#scoring-data-loader}
+### Pontuação do carregador de dados {#scoring-data-loader}
 
-O procedimento para carregar dados de pontuação é semelhante aos dados de treinamento de carregamento na `split()` função. Usamos o SDK de acesso a dados para carregar dados do `scoringDataSetId` encontrado em nosso `recipe.conf` arquivo.
+O procedimento para carregar dados para pontuação é semelhante aos dados de treinamento de carregamento na função `split()`. Usamos o SDK de acesso a dados para carregar dados do `scoringDataSetId` encontrado em nosso arquivo `recipe.conf`.
 
 ```PYTHON
 def load(config_properties):
@@ -278,30 +278,30 @@ Após carregar os dados, a preparação de dados e a engenharia de recursos são
 
 Como o objetivo do nosso modelo é prever vendas semanais futuras, será necessário criar um conjunto de dados de pontuação usado para avaliar o desempenho da previsão do modelo.
 
-Este notebook do Recipe Builder faz isso compensando nossas vendas semanais daqui a 7 dias. Observe que existem medidas para 45 armazenamentos todas as semanas para que você possa direcionar os `weeklySales` valores para 45 conjuntos de dados para frente em uma nova coluna chamada `weeklySalesAhead`.
+Este notebook do Recipe Builder faz isso compensando nossas vendas semanais daqui a 7 dias. Observe que há medidas para 45 armazenamentos toda semana, para que você possa direcionar os valores `weeklySales` para 45 conjuntos de dados para uma nova coluna chamada `weeklySalesAhead`.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
 ```
 
-Da mesma forma, é possível criar uma coluna `weeklySalesLag` alterando 45 para trás. Com isso, também é possível calcular a diferença nas vendas semanais e armazená-las na coluna `weeklySalesDiff`.
+Da mesma forma, você pode criar uma coluna `weeklySalesLag` alterando 45 para trás. Com isso, você também pode calcular a diferença nas vendas semanais e armazená-las na coluna `weeklySalesDiff`.
 
 ```PYTHON
 df['weeklySalesLag'] = df.shift(45)['weeklySales']
 df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
 ```
 
-Como você está desconfigurando os conjuntos de dados 45 para frente e 45 para trás para criar novas colunas, o primeiro e o último 45 pontos de dados terão valores NaN. `weeklySales` Você pode remover esses pontos do nosso conjunto de dados usando a `df.dropna()` função que remove todas as linhas que têm valores NaN.
+Como você está compensando os conjuntos de dados `weeklySales` 45 para frente e 45 para trás para criar novas colunas, o primeiro e o último 45 pontos de dados terão valores NaN. Você pode remover esses pontos de nosso conjunto de dados usando a função `df.dropna()` que remove todas as linhas que têm valores NaN.
 
 ```PYTHON
 df.dropna(0, inplace=True)
 ```
 
-A `load()` função no carregador de dados de pontuação deve ser concluída com o conjunto de dados de pontuação como saída.
+A função `load()` no carregador de dados de pontuação deve ser concluída com o conjunto de dados de pontuação como saída.
 
-### Arquivo Pipeline {#pipeline-file}
+### Arquivo de pipeline {#pipeline-file}
 
-O `pipeline.py` arquivo inclui lógica para treinamento e pontuação.
+O arquivo `pipeline.py` inclui lógica para treinamento e pontuação.
 
 ### Treinamento {#training}
 
@@ -311,7 +311,7 @@ O objetivo do treinamento é criar um modelo usando recursos e etiquetas no conj
 > 
 >Os recursos se referem à variável de entrada usada pelo modelo de aprendizado da máquina para prever os rótulos.
 
-A `train()` função deve incluir o modelo de treinamento e devolver o modelo treinado. Alguns exemplos de diferentes modelos podem ser encontrados na documentação [do guia do usuário](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
+A função `train()` deve incluir o modelo de treinamento e retornar o modelo treinado. Alguns exemplos de modelos diferentes podem ser encontrados na [scikit-learn user guide documentation](https://scikit-learn.org/stable/user_guide.html).
 
 Após escolher o modelo de treinamento, você ajustará o conjunto de dados de treinamento x e y ao modelo e a função retornará o modelo treinado. Um exemplo que mostra isso é o seguinte:
 
@@ -347,11 +347,11 @@ def train(configProperties, data):
     return model
 ```
 
-Observe que, dependendo de seu aplicativo, você terá argumentos em sua `GradientBoostingRegressor()` função. `xTrainingDataset` deve conter seus recursos usados para treinamento e `yTrainingDataset` conter suas etiquetas.
+Observe que, dependendo do aplicativo, você terá argumentos na função `GradientBoostingRegressor()`. `xTrainingDataset` deve conter seus recursos usados para treinamento e  `yTrainingDataset` deve conter suas etiquetas.
 
 ### Pontuação {#scoring}
 
-A `score()` função deve conter o algoritmo de pontuação e retornar uma medida para indicar o sucesso do modelo. A `score()` função usa os rótulos de conjunto de dados de pontuação e o modelo treinado para gerar um conjunto de recursos previstos. Esses valores previstos são comparados aos recursos reais no conjunto de dados de pontuação. Neste exemplo, a `score()` função usa o modelo treinado para prever recursos usando os rótulos do conjunto de dados de pontuação. Os recursos previstos são retornados.
+A função `score()` deve conter o algoritmo de pontuação e retornar uma medida para indicar o sucesso do modelo. A função `score()` usa os rótulos do conjunto de dados de pontuação e o modelo treinado para gerar um conjunto de recursos previstos. Esses valores previstos são comparados aos recursos reais no conjunto de dados de pontuação. Neste exemplo, a função `score()` usa o modelo treinado para prever recursos usando os rótulos do conjunto de dados de pontuação. Os recursos previstos são retornados.
 
 ```PYTHON
 def score(configProperties, data, model):
@@ -373,15 +373,15 @@ def score(configProperties, data, model):
 
 ### Arquivo do avaliador {#evaluator-file}
 
-O `evaluator.py` arquivo contém uma lógica para avaliar sua fórmula treinada, bem como como seus dados de treinamento devem ser divididos. No exemplo de vendas de varejo, a lógica para carregar e preparar os dados de treinamento será incluída. Iremos analisar as duas seções que se seguem.
+O arquivo `evaluator.py` contém uma lógica de como você deseja avaliar sua fórmula treinada, bem como como seus dados de treinamento devem ser divididos. No exemplo de vendas de varejo, a lógica para carregar e preparar os dados de treinamento será incluída. Iremos analisar as duas seções que se seguem.
 
 ### Dividir o conjunto de dados {#split-the-dataset}
 
-A fase de preparação de dados para treinamento requer a divisão do conjunto de dados a ser usado para treinamento e teste. Esses `val` dados serão usados implicitamente para avaliar o modelo depois que ele for treinado. Esse processo é separado da pontuação.
+A fase de preparação de dados para treinamento requer a divisão do conjunto de dados a ser usado para treinamento e teste. Esses dados `val` serão usados implicitamente para avaliar o modelo depois que ele for treinado. Esse processo é separado da pontuação.
 
-Esta seção mostrará a `split()` função que primeiro carregará dados no bloco de anotações e, em seguida, limpará os dados removendo colunas não relacionadas no conjunto de dados. A partir daí, você poderá executar a engenharia de recursos, que é o processo para criar recursos relevantes adicionais a partir dos recursos brutos existentes nos dados. Um exemplo desse processo pode ser visto abaixo, juntamente com uma explicação.
+Esta seção mostrará a função `split()` que primeiro carregará dados no bloco de anotações e, em seguida, limpará os dados removendo colunas não relacionadas no conjunto de dados. A partir daí, você poderá executar a engenharia de recursos, que é o processo para criar recursos relevantes adicionais a partir dos recursos brutos existentes nos dados. Um exemplo desse processo pode ser visto abaixo, juntamente com uma explicação.
 
-A `split()` função é mostrada abaixo. Os dados fornecidos no argumento serão divididos nas variáveis `train` e `val` a serem retornadas.
+A função `split()` é mostrada abaixo. O dataframe fornecido no argumento será dividido nas variáveis `train` e `val` a serem retornadas.
 
 ```PYTHON
 def split(self, configProperties={}, dataframe=None):
@@ -396,13 +396,13 @@ def split(self, configProperties={}, dataframe=None):
 
 ### Avaliar o modelo treinado {#evaluate-the-trained-model}
 
-A `evaluate()` função é executada após o modelo ser treinado e retornará uma métrica para indicar o sucesso do modelo. A `evaluate()` função usa as etiquetas do conjunto de dados de teste e o modelo Treinado para prever um conjunto de recursos. Esses valores previstos são comparados aos recursos reais no conjunto de dados de teste. Algoritmos de pontuação comuns incluem:
+A função `evaluate()` é executada depois que o modelo é treinado e retornará uma métrica para indicar o sucesso do modelo. A função `evaluate()` usa os rótulos do conjunto de dados de teste e o modelo Treinado para prever um conjunto de recursos. Esses valores previstos são comparados aos recursos reais no conjunto de dados de teste. Algoritmos de pontuação comuns incluem:
 - [Erro percentual médio absoluto (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
 - [Erro absoluto médio (MAE)](https://en.wikipedia.org/wiki/Mean_absolute_error)
 - [Erro quadrado médio raiz (RMSE)](https://en.wikipedia.org/wiki/Root-mean-square_deviation)
 
 
-A `evaluate()` função na amostra de vendas a retalho é mostrada abaixo:
+A função `evaluate()` na amostra de vendas de varejo é mostrada abaixo:
 
 ```PYTHON
 def evaluate(self, data=[], model={}, configProperties={}):
@@ -421,13 +421,13 @@ def evaluate(self, data=[], model={}, configProperties={}):
     return metric
 ```
 
-Observe que a função retorna um `metric` objeto que contém uma matriz de métricas de avaliação. Essas métricas serão usadas para avaliar o desempenho do modelo treinado.
+Observe que a função retorna um objeto `metric` contendo uma matriz de métricas de avaliação. Essas métricas serão usadas para avaliar o desempenho do modelo treinado.
 
 ### Arquivo de Proteção de Dados {#data-saver-file}
 
-O `datasaver.py` arquivo contém a `save()` função de salvar sua previsão ao testar a pontuação. A `save()` função usará sua previsão e [!DNL Experience Platform Catalog] as APIs, gravará os dados no `scoringResultsDataSetId` que você especificou no seu `scoring.conf` arquivo.
+O arquivo `datasaver.py` contém a função `save()` para salvar sua previsão ao testar a pontuação. A função `save()` aceitará sua previsão e, usando [!DNL Experience Platform Catalog] APIs, gravará os dados no `scoringResultsDataSetId` especificado no arquivo `scoring.conf`.
 
-O exemplo usado na receita de amostra de vendas para venda a varejo é visto aqui. Observe o uso da `DataSetWriter` biblioteca para gravar dados na Plataforma:
+O exemplo usado na receita de amostra de vendas para venda a varejo é visto aqui. Observe o uso da biblioteca `DataSetWriter` para gravar dados na Plataforma:
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -458,9 +458,9 @@ def save(configProperties, prediction):
 
 ## Treinamento e pontuação {#training-and-scoring}
 
-Quando terminar de fazer alterações no seu notebook e quiser treinar sua receita, clique nos botões associados na parte superior da barra para criar uma execução de treinamento na célula. Ao clicar no botão, um registro de comandos e saídas do script de treinamento aparecerá no bloco de anotações (sob a `evaluator.py` célula). Primeiro, o Conda instala todas as dependências e, em seguida, o treinamento é iniciado.
+Quando terminar de fazer alterações no seu notebook e quiser treinar sua receita, clique nos botões associados na parte superior da barra para criar uma execução de treinamento na célula. Ao clicar no botão, um registro de comandos e saídas do script de treinamento aparecerá no bloco de anotações (sob a célula `evaluator.py`). Primeiro, o Conda instala todas as dependências e, em seguida, o treinamento é iniciado.
 
-Observe que você deve executar o treinamento pelo menos uma vez antes de executar a pontuação. Clicar no botão **[!UICONTROL Executar pontuação]** pontuará no modelo treinado que foi gerado durante o treinamento. O script de pontuação será exibido em `datasaver.py`.
+Observe que você deve executar o treinamento pelo menos uma vez antes de executar a pontuação. Clicar no botão **[!UICONTROL Executar Pontuação]** vai pontuar no modelo treinado que foi gerado durante o treinamento. O script de pontuação será exibido em `datasaver.py`.
 
 Para fins de depuração, se você quiser ver a saída oculta, adicione `debug` ao final da célula de saída e execute-a novamente.
 
@@ -470,11 +470,11 @@ Quando terminar de editar a receita e estiver satisfeito com a saída de treinam
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Depois de pressionar o botão, você será solicitado a inserir um nome de fórmula. Esse nome representa a receita real criada em [!DNL Platform].
+Depois de pressionar o botão, você será solicitado a inserir um nome de fórmula. Este nome representa a fórmula real criada em [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Depois de pressionar **[!UICONTROL Ok]** , você poderá navegar até a nova fórmula no [Adobe Experience Platform](https://platform.adobe.com/). Você pode clicar no botão Receitas **[!UICONTROL de]** Visualização para levar você até a guia **[!UICONTROL Receitas]** em Modelos **[!UICONTROL ML]**
+Depois de pressionar **[!UICONTROL Ok]**, você poderá navegar até a nova fórmula em [Adobe Experience Platform](https://platform.adobe.com/). Você pode clicar no botão **[!UICONTROL Fórmulas de Visualização]** para levá-lo até a guia **[!UICONTROL Fórmulas]** em **[!UICONTROL Modelos ML]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -485,15 +485,15 @@ Quando o processo estiver concluído, a receita ficará parecida com isso:
 >[!CAUTION]
 >
 > - Não excluir nenhuma das células de arquivo
-> - Não edite a `%%writefile` linha na parte superior das células do arquivo
+> - Não edite a linha `%%writefile` na parte superior das células de arquivo
 > - Não crie receitas em diferentes blocos de anotações ao mesmo tempo
 
 
 ## Próximas etapas {#next-steps}
 
-Ao concluir este tutorial, você aprendeu a criar um modelo de aprendizado de máquina no notebook Construtor de receitas. Você também aprendeu a exercitar o notebook para obter o fluxo de trabalho da receita dentro do notebook para criar uma receita dentro do notebook [!DNL Data Science Workspace].
+Ao concluir este tutorial, você aprendeu a criar um modelo de aprendizado de máquina no notebook Construtor de receitas. Você também aprendeu a exercitar o notebook para obter o fluxo de trabalho da receita dentro do notebook para criar uma receita dentro de [!DNL Data Science Workspace].
 
-Para continuar aprendendo como trabalhar com recursos dentro [!DNL Data Science Workspace], visite a lista suspensa [!DNL Data Science Workspace] receitas e modelos.
+Para continuar aprendendo como trabalhar com recursos em [!DNL Data Science Workspace], visite a lista suspensa [!DNL Data Science Workspace] receitas e modelos.
 
 ## Recursos adicionais {#additional-resources}
 

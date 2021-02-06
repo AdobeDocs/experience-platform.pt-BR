@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;
 solution: Experience Platform
-title: Visão geral da área de trabalho schemas
+title: Visão geral da interface do usuário de schemas
 description: Esta visão geral aborda os principais recursos da área de trabalho dos Schemas no Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Visão geral do ] Schemasworkspace
+# [!UICONTROL Visão geral ] de SchemasUI
 
 A área de trabalho [!UICONTROL Schemas] na interface de usuário do Adobe Experience Platform permite gerenciar os recursos do Modelo de Dados de Experiência (XDM), incluindo schemas, classes, mixins e tipos de dados. Você pode visualização e explorar os recursos principais fornecidos pelo Adobe e criar recursos e schemas personalizados para sua organização.
 

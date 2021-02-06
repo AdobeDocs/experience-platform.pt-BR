@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Aplicação automática;Aplicação baseada em API;controle de dados
 solution: Experience Platform
-title: Visão geral da aplicação de políticas
+title: Visão geral de imposição de política
 topic: guide
 description: Depois que os rótulos de uso de dados forem aplicados aos conjuntos de dados da Adobe Experience Platform e as políticas de uso de dados tiverem sido definidas para ações de marketing contra esses rótulos, os recursos de controle de dados permitirão que você aplique essas políticas e evite operações de dados que constituam violações de política. Há dois métodos de aplicação de política fornecidos pelos recursos de controle de dados na Plataforma, aplicação baseada em API e imposição automática.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Visão geral da aplicação de políticas
 
-Depois que os rótulos de uso de dados forem aplicados a [!DNL Platform] conjuntos de dados e as políticas de uso de dados tiverem sido definidas para ações de marketing contra esses rótulos, os recursos [!DNL Data Governance] permitirão que você aplique essas políticas e evite operações de dados que constituam violações de política.
+Depois que os rótulos de uso de dados forem aplicados a conjuntos de dados e as políticas de uso de dados tiverem sido definidas para ações de marketing contra esses rótulos, os recursos do Adobe Experience Platform Data Governance permitirão que você aplique essas políticas e previna operações de dados que constituam violações de política.
 
 Há dois métodos de imposição de política fornecidos pelos recursos [!DNL Data Governance] em [!DNL Platform]: Aplicação baseada em API e aplicação automática.
 

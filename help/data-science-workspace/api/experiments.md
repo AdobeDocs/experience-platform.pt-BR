@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;topics;experience;sensei machine learning api
 solution: Experience Platform
-title: Experimentos
+title: Ponto de extremidade da API de experimentos
 topic: Developer guide
 description: O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, onde um Experimento consiste em uma instância MLI, execuções de treinamento e execuções de pontuação.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '783'
 ht-degree: 4%
 
 ---
 
 
-# Experimentos
+# Ponto de extremidade de experimentos
 
 O desenvolvimento e o treinamento do modelo ocorrem no nível do Experimento, onde um Experimento consiste em uma instância MLI, execuções de treinamento e execuções de pontuação.
 
-## Criar um experimento {#create-an-experiment}
+## Criar um Experimento {#create-an-experiment}
 
 Você pode criar um Experimento executando uma solicitação de POST ao fornecer um nome e uma ID de instância MLI válida na carga da solicitação.
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução recém-criada, incluindo os parâmetros de treinamento ou pontuação padrão herdados e a ID exclusiva (`{RUN_ID}`) da execução.
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução recém-criada, incluindo os parâmetros de treinamento ou pontuação padrão herdados, e a ID exclusiva da execução (`{RUN_ID}`).
 
 ```json
 {
@@ -134,7 +134,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da execução r
 
 ## Recuperar uma lista de experiências
 
-Você pode recuperar uma lista de Experimentos pertencentes a uma determinada MLInposition, executando uma única solicitação de GET e fornecendo uma ID de instância MLI válida como parâmetro de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de Experimentos pertencentes a uma determinada MLInposition, executando uma única solicitação de GET e fornecendo uma ID de instância MLI válida como parâmetro de query. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 
 **Formato da API**
@@ -198,7 +198,7 @@ Uma resposta bem-sucedida retorna uma lista de Experimentos compartilhando a mes
 }
 ```
 
-## Recuperar um experimento específico {#retrieve-specific}
+## Recuperar um Experimento específico {#retrieve-specific}
 
 Você pode recuperar os detalhes de um Experimento específico executando uma solicitação de GET que inclui a ID do Experimento desejada no caminho da solicitação.
 
@@ -243,7 +243,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento 
 
 ## Recuperar uma lista de execuções de Experimento
 
-Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um determinado Experimento, executando uma única solicitação de GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de execuções de treinamento ou pontuação pertencentes a um determinado Experimento, executando uma única solicitação de GET e fornecendo uma ID de Experimento válida. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista completa dos parâmetros de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parâmetro | Descrição |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Uma ID de Experimento válida. |
-| `{QUERY_PARAMETER}` | Um dos parâmetros [de query](./appendix.md#query) disponíveis usados para filtrar os resultados. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de query disponíveis](./appendix.md#query) usados para filtrar os resultados. |
 | `{VALUE}` | O valor do parâmetro de query anterior. |
 
 **Solicitação**
@@ -308,7 +308,7 @@ Você pode atualizar um Experimento existente substituindo suas propriedades por
 
 >[!TIP]
 >
->Para garantir o sucesso dessa solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
+>Para garantir o sucesso desta solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o Experimento por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 A amostra de chamada de API a seguir atualiza o nome de um Experimento ao ter essas propriedades inicialmente:
 

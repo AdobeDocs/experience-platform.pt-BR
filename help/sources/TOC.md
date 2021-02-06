@@ -5,10 +5,10 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 4%
+source-wordcount: '551'
+ht-degree: 13%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 4%
       - [Conector de dados do Analytics](connectors/adobe-applications/analytics.md)
       - [conector Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
-      - Mapeamento de campos do aplicativo Adobe {#mapping}
-         - [Campos de mapeamento do Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [campos de mapeamento de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Campos de target mapping](connectors/adobe-applications/mapping/target.md)
+      - Mapeamentos de campo de aplicativo Adobe {#mapping}
+         - [Mapeamentos de campos do Analytics](connectors/adobe-applications/mapping/analytics.md)
+         - [Mapeamentos de campos Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Mapeamentos de campos de público alvo](connectors/adobe-applications/mapping/target.md)
    - Publicidade {#advertising}
       - [Conector Google AdWords](connectors/advertising/ads.md)
    - Armazenamento em nuvem {#cloud-storage}
@@ -72,51 +72,51 @@ ht-degree: 4%
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
 - Tutoriais de API {#api-tutorials}
-   - Criar um conector de origem {#create}
+   - Criar uma conexão de origem {#create}
       - Publicidade {#advertising}
-         - [Conector Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Armazenamento em nuvem {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
-         - [Conector HDFS Apache](tutorials/api/create/cloud-storage/hdfs.md)
-         - [Conector Blob do Azure](tutorials/api/create/cloud-storage/blob.md)
-         - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Conector Hubs de Evento do Azure](tutorials/api/create/cloud-storage/eventhub.md)
-         - [Conector do Armazenamento de Arquivo do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [Conector FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Conector de Armazenamento do Google Cloud](tutorials/api/create/cloud-storage/google.md)
-         - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
+         - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
+         - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
+         - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
+         - [Armazenamento Gen2 do Azure Data Lake](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Hubs de Evento do Azure](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Armazenamento de Arquivo do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTP](tutorials/api/create/cloud-storage/ftp.md)
+         - [Armazenamento da Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Conector do Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-         - [Conector Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - Êxito do cliente {#customer-success}
-         - [Conector da Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
-         - [Conector ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+         - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bancos de dados {#databases}
-         - [Conector Amazon Redshift](tutorials/api/create/databases/redshift.md)
-         - [Apache Hive no conector Azure HDInsights](tutorials/api/create/databases/hive.md)
-         - [Apache Spark no conector Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Conector de Data Explorer do Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Conector do azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
-         - [Conector de Armazenamento de Tabela do Azure](tutorials/api/create/databases/ats.md)
-         - [Conector Couchbase](tutorials/api/create/databases/couchbase.md)
-         - [Conector Google BigQuery](tutorials/api/create/databases/bigquery.md)
-         - [Conector GreenPlum](tutorials/api/create/databases/greenplum.md)
-         - [Conector HP Vertica](tutorials/api/create/databases/hp-vertica.md)
-         - [Conector IBM DB2](tutorials/api/create/databases/ibm-db2.md)
-         - [Conector MySQL](tutorials/api/create/databases/mysql.md)
-         - [Conector oracle](tutorials/api/create/databases/oracle.md)
-         - [Conector Phoenix](tutorials/api/create/databases/phoenix.md)
-         - [Conector PostgreSQL](tutorials/api/create/databases/postgres.md)
-         - [Conector do SQL Server](tutorials/api/create/databases/sql-server.md)
+         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive no Azure HDInsights](tutorials/api/create/databases/hive.md)
+         - [Apache Spark no Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Data Explorer do Azure](tutorials/api/create/databases/data-explorer.md)
+         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Armazenamento de Tabela do Azure](tutorials/api/create/databases/ats.md)
+         - [Couchbase](tutorials/api/create/databases/couchbase.md)
+         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
+         - [GreenPlum](tutorials/api/create/databases/greenplum.md)
+         - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
+         - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MySQL](tutorials/api/create/databases/mysql.md)
+         - [Oracle](tutorials/api/create/databases/oracle.md)
+         - [Phoenix](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
-         - [Conector Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Automação de marketing {#marketing-automation}
-         - [Conector HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - Pagamentos {#payments}
-         - [Conector PayPal](tutorials/api/create/payments/paypal.md)
+         - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
-         - [Conector OData genérico](tutorials/api/create/protocols/odata.md)
+         - [OData genérico](tutorials/api/create/protocols/odata.md)
    - Explorar dados {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
       - [Explorar dados de armazenamento em nuvem](tutorials/api/explore/cloud-storage.md)
@@ -145,68 +145,68 @@ ht-degree: 4%
    - [Excluir conexões](tutorials/api/delete.md)
    - [Excluir fluxos de dados](tutorials/api/delete-dataflows.md)
 - Tutoriais da interface {#ui-tutorials}
-   - Criar um conector de origem {#create}
+   - Criar uma conexão de origem {#create}
       - Aplicativos Adobe {#adobe-applications}
-         - [Conector de dados de classificações Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
-         - [Conector Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Conector Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Conector de atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Adobe Analytics (dados do conjunto de relatórios)](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Analytics (dados de classificações)](tutorials/ui/create/adobe-applications/classifications.md)
+         - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicidade {#create}
-         - [Conector Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Armazenamento em nuvem {#cloud-storage}
-         - [Conector Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [Conector Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
-         - [Conector HDFS Apache](tutorials/ui/create/cloud-storage/hdfs.md)
-         - [Conector Gen2 do Armazenamento Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Conector Blob do Azure](tutorials/ui/create/cloud-storage/blob.md)
-         - [Conector Hubs de Evento do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Conector do Armazenamento de Arquivo do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Conector FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Conector de Armazenamento do Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-         - [Conector SFTP](tutorials/ui/create/cloud-storage/sftp.md)
-         - [Conector Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
+         - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
+         - [Armazenamento Gen2 do Azure Data Lake](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Blob do Azure](tutorials/ui/create/cloud-storage/blob.md)
+         - [Hubs de Evento do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Armazenamento de Arquivo do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
+         - [Armazenamento da Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
+         - [Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
-         - [Conector do Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-         - [Conector Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - Sucesso do cliente {#customer-success}
-         - [Conector da Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-         - [Conector ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+         - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Bancos de dados {#databases}
-         - [Conector Amazon Redshift](tutorials/ui/create/databases/redshift.md)
-         - [Apache Hive no conector Azure HDInsights](tutorials/ui/create/databases/hive.md)
-         - [Apache Spark no conector Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Conector de Data Explorer do Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Conector do azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Conector de Armazenamento de Tabela do Azure](tutorials/ui/create/databases/ats.md)
-         - [Conector Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Conector do Google Big Query](tutorials/ui/create/databases/bigquery.md)
-         - [Conector GreenPlum](tutorials/ui/create/databases/greenplum.md)
-         - [Conector HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
-         - [Conector IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
-         - [Conector do Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
-         - [Conector MySQL](tutorials/ui/create/databases/mysql.md)
-         - [Conector oracle](tutorials/ui/create/databases/oracle.md)
-         - [Conector Phoenix](tutorials/ui/create/databases/phoenix.md)
-         - [Conector PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive no Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark no Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Data Explorer do Azure](tutorials/ui/create/databases/data-explorer.md)
+         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Armazenamento de Tabela do Azure](tutorials/ui/create/databases/ats.md)
+         - [Couchbase](tutorials/ui/create/databases/couchbase.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
+         - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
+         - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
+         - [MySQL](tutorials/ui/create/databases/mysql.md)
+         - [Oracle](tutorials/ui/create/databases/oracle.md)
+         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
+         - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
-         - [Conector Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Automação de marketing {#marketing-automation}
-         - [Conector HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Pagamentos {#payments}
-         - [Conector PayPal](tutorials/ui/create/payments/paypal.md)
+         - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocolos {#protocols}
-         - [Conector OData genérico](tutorials/ui/create/protocols/odata.md)
+         - [OData genérico](tutorials/ui/create/protocols/odata.md)
    - Configurar um fluxo de dados {#dataflow}
-      - [Configurar um fluxo de dados para um conector de publicidade](tutorials/ui/dataflow/advertising.md)
-      - [Configurar um fluxo de dados para um conector de armazenamento de nuvem em lote](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configurar um fluxo de dados para um conector de armazenamento de nuvem de streaming](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Configurar um fluxo de dados para um conector CRM](tutorials/ui/dataflow/crm.md)
-      - [Configurar um fluxo de dados para um conector bem-sucedido do cliente](tutorials/ui/dataflow/customer-success.md)
-      - [Configurar um fluxo de dados para um conector de banco de dados](tutorials/ui/dataflow/databases.md)
-      - [Configurar um fluxo de dados para um conector de comércio eletrônico](tutorials/ui/dataflow/ecommerce.md)
-      - [Configurar um fluxo de dados para um conector de automação de marketing](tutorials/ui/dataflow/marketing-automation.md)
-      - [Configurar um fluxo de dados para um conector de pagamento](tutorials/ui/dataflow/payments.md)
-      - [Configurar um fluxo de dados para um conector de protocolo](tutorials/ui/dataflow/protocols.md)
+      - [Fluxo de dados de conexão de publicidade](tutorials/ui/dataflow/advertising.md)
+      - [Fluxo de dados de conexão de armazenamento em lote](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Fluxo de dados de conexão de armazenamento em nuvem](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Fluxo de dados de conexão CRM](tutorials/ui/dataflow/crm.md)
+      - [Fluxo de dados de conexão de sucesso do cliente](tutorials/ui/dataflow/customer-success.md)
+      - [Fluxo de dados de conexão de banco de dados](tutorials/ui/dataflow/databases.md)
+      - [Fluxo de dados de conexão de comércio eletrônico](tutorials/ui/dataflow/ecommerce.md)
+      - [Fluxo de dados da conexão da automação de marketing](tutorials/ui/dataflow/marketing-automation.md)
+      - [Fluxo de dados da conexão de pagamento](tutorials/ui/dataflow/payments.md)
+      - [Fluxo de dados de conexão de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Ativar dados de entrada para preencher perfis do cliente](tutorials/ui/profile.md)
    - [Monitorar fluxos de dados](tutorials/ui/monitor.md)
    - [Atualizar contas](tutorials/ui/update.md)

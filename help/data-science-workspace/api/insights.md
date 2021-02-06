@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;topics;insights;sensei machine learning api
 solution: Experience Platform
-title: Insights
+title: Endpoint da API do Insights
 topic: Developer guide
 description: Os insights contêm métricas que são usadas para permitir que um cientista de dados avalie e escolha modelos ML ideais exibindo métricas de avaliação relevantes.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 
-# Insights
+# Ponto de extremidade do Insights
 
 Os insights contêm métricas que são usadas para permitir que um cientista de dados avalie e escolha modelos ML ideais exibindo métricas de avaliação relevantes.
 
 ## Recuperar uma lista de insights
 
-Você pode recuperar uma lista de Insights executando uma única solicitação de GET para o endpoint de insights.  Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de Insights executando uma única solicitação de GET para o endpoint de insights.  Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e cada insight tem um identificador exclusivo ( `id` ). Além disso, você receberá `context` os identificadores exclusivos associados a esse insight específico, seguindo os dados de eventos e métricas do Insights.
+Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e cada insight tem um identificador exclusivo ( `id` ). Além disso, você receberá `context` que contém os identificadores exclusivos associados a esse insight específico, seguindo os eventos do Insights e os dados de métricas.
 
 ```json
 {
@@ -109,7 +109,7 @@ Uma resposta bem-sucedida retorna uma carga que inclui uma lista de insights e c
 
 ## Recuperar um insight específico
 
-Para procurar um insight específico, faça uma solicitação de GET e forneça um valor válido `{INSIGHT_ID}` no caminho da solicitação. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Para procurar um insight específico, faça uma solicitação de GET e forneça um `{INSIGHT_ID}` válido no caminho da solicitação. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga que inclui o identificador único (`id`) do insights. Além disso, você receberá `context` os identificadores exclusivos que estão associados ao insight específico após os dados de eventos e métricas do Insights.
+Uma resposta bem-sucedida retorna uma carga que inclui o identificador exclusivo do insights (`id`). Além disso, você receberá `context` que contém os identificadores exclusivos associados ao insight específico após os eventos do Insights e os dados de métricas.
 
 ```json
 {
@@ -230,7 +230,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retornará uma carga que tem um `{INSIGHT_ID}` e quaisquer parâmetros que você forneceu na solicitação inicial.
+Uma resposta bem-sucedida retornará uma carga que tem `{INSIGHT_ID}` e quaisquer parâmetros que você forneceu na solicitação inicial.
 
 ```json
 {
@@ -265,7 +265,7 @@ Uma resposta bem-sucedida retornará uma carga que tem um `{INSIGHT_ID}` e quais
 
 ## Recuperar uma lista de métricas padrão para algoritmos
 
-Você pode recuperar uma lista de todas as métricas padrão e do algoritmo executando uma única solicitação de GET para o terminal de métricas. Para query de uma métrica específica, faça uma solicitação de GET e forneça um valor válido `{ALGORITHM}` no caminho da solicitação.
+Você pode recuperar uma lista de todas as métricas padrão e do algoritmo executando uma única solicitação de GET para o terminal de métricas. Para query de uma métrica específica faça uma solicitação de GET e forneça um `{ALGORITHM}` válido no caminho da solicitação.
 
 **Formato da API**
 

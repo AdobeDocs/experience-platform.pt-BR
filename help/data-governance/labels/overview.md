@@ -5,7 +5,7 @@ title: Visão geral dos rótulos de uso de dados
 topic: labels
 description: O Adobe Experience Platform Data Governance permite que você aplique rótulos de uso de dados a conjuntos de dados e campos, categorizando cada um de acordo com as políticas de uso de dados relacionadas. Este documento fornece uma visão geral das etiquetas de uso de dados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%

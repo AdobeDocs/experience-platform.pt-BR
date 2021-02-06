@@ -1,21 +1,17 @@
 ---
 keywords: Extensões Flashspeak OneTag;Extensão Flashspeak OneTag;Destinos Flashtalk OneTag;Flashtalk OneTag;flashspeak onetag
-title: Extensão Flashspeak OneTag
-seo-title: Extensão Flashspeak OneTag
+title: Destino da extensão Flashspeak OneTag
 description: A extensão Flashspeak OneTag é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Flashspeak OneTag é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Flashtalking OneTag] extensão {#flashtalking-extension}
-
-## Visão geral {#overview}
 
 A extensão [!DNL Flashtalking OneTag] do Experience Platform Launch facilita o atributo de ações do site para exibição, vídeo e atividade de anúncios móveis. Implante o [!DNL Flashtalking OneTag] nas propriedades da Web usando o Launch.
 

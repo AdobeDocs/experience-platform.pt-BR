@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular tópicos;conjunto de dados;criar um conjunto de dados;criar conjunto de dados;ativar conjunto de dados;;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
-title: Criar um conjunto de dados
+title: Criar um conjunto de dados na API
 topic: developer guide
-description: Este documento aborda como criar um objeto de conjunto de dados no Catálogo.
+description: Este documento aborda como criar um objeto de conjunto de dados na API do serviço de catálogo.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conjunto de dados
+# Criar um conjunto de dados na API
 
 Para criar um conjunto de dados usando a API [!DNL Catalog], é necessário saber o valor `$id` do schema [!DNL Experience Data Model] (XDM) no qual o conjunto de dados será baseado. Depois de ter a ID do schema, você pode criar um conjunto de dados, fazendo uma solicitação POST para o ponto final `/datasets` na API [!DNL Catalog].
 

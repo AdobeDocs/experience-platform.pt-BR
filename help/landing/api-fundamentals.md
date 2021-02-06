@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
-title: Fundamentos da API Adobe Experience Platform
+title: Fundamentos da API do Experience Platform
 topic: getting started
 description: Este documento fornece uma breve visão geral de algumas tecnologias e sintaxes subjacentes envolvidas com APIs de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
 
 
-# Fundamentos da API Adobe Experience Platform
+# Fundamentos da API do Experience Platform
 
 As APIs da Adobe Experience Platform empregam várias tecnologias e sintaxes subjacentes que são importantes de entender para gerenciar eficientemente os recursos [!DNL Platform] baseados em JSON. Este documento fornece uma breve visão geral dessas tecnologias, além de links para a documentação externa para obter mais informações.
 

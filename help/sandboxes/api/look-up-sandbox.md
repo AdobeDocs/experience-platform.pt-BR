@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform;home;popular topics;localizar sandbox;procurar uma sandbox
 solution: Experience Platform
-title: Procurar uma caixa de areia
+title: Procurar uma caixa de proteção na API
 topic: developer guide
 description: Você pode procurar uma caixa de proteção individual fazendo uma solicitação de GET que inclua a propriedade name da caixa de proteção no caminho da solicitação.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# Procurar uma caixa de areia
+# Procure uma caixa de proteção na API
 
-Você pode procurar uma caixa de proteção individual fazendo uma solicitação de GET que inclua a propriedade da caixa de proteção `name` no caminho da solicitação.
+Você pode procurar uma caixa de proteção individual fazendo uma solicitação de GET que inclua a propriedade `name` da caixa de proteção no caminho da solicitação.
 
 **Formato da API**
 
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SANDBOX_NAME}` | A `name` propriedade da caixa de proteção que você deseja procurar. |
+| `{SANDBOX_NAME}` | A propriedade `name` da caixa de proteção que deseja procurar. |
 
 **Solicitação**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da caixa de proteção, incluindo suas `name`informações, `title`, `state`e `type`.
+Uma resposta bem-sucedida retorna os detalhes da caixa de proteção, incluindo `name`, `title`, `state` e `type`.
 
 ```json
 {

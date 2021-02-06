@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;conexão da fonte de dados
 solution: Experience Platform
-title: Ingressar dados do Parquet de um sistema de armazenamento na nuvem de terceiros usando a API de Serviço de Fluxo
+title: Ingressar dados de parâmetro de um sistema de Armazenamento da Cloud de terceiros usando a API de serviço de fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para assimilar dados do Parquet de um sistema de armazenamento em nuvem de terceiros.
+description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para assimilar dados do Apache Parquet de um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---

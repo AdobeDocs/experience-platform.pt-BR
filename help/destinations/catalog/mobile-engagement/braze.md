@@ -1,25 +1,21 @@
 ---
 keywords: móvel; brasa; Mensagens;
-title: Destino da brasileira
-seo-title: Destino da brasileira
+title: Destino da conexão Braze
 description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
-seo-description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Braze] destino
+# (Beta) [!DNL Braze] conexão
 
 >[!IMPORTANT]
 >
 >O destino brasileiro no Adobe Experience Platform está atualmente em Beta. A documentação e a funcionalidade estão sujeitas a alterações.
-
-## Visão geral {#overview}
 
 O destino [!DNL Braze] ajuda a enviar dados de perfil para [!DNL Braze].
 

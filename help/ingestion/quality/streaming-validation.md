@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: A ingestão de streaming permite carregar seus dados para a Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%

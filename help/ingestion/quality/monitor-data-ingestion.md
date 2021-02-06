@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
+keywords: Experience Platform;lar;tópicos populares;monitorar;monitorar;fluxos de dados;monitorar ingestão;ingestão de dados;ingestão de dados;registros de visualização;lotes de visualização;
 solution: Experience Platform
-title: Monitoramento da ingestão de dados
+title: Monitorando a ingestão de dados
 topic: overview
 description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer um Adobe ID e acesso ao Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # Monitoramento da ingestão de dados
 
-A ingestão de dados permite que você ingira seus dados para a Adobe Experience Platform. Você pode usar a ingestão em lote, o que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite assimilar seus dados para [!DNL Platform] usar pontos de extremidade de streaming em tempo real.
+A ingestão de dados permite que você ingira seus dados para a Adobe Experience Platform. Você pode usar a ingestão em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite a você assimilar seus dados a [!DNL Platform] usando pontos de extremidade de streaming em tempo real.
 
 Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer um Adobe ID e acesso ao Adobe Experience Platform.
 
 ## Monitorar a assimilação de dados de streaming end-to-end
 
-Na interface do usuário [do](https://platform.adobe.com)Experience Platform, clique em **[!UICONTROL Monitoramento]** no menu de navegação esquerdo e clique em **[!UICONTROL Streaming end-to-end]**.
+Na [interface do Experience Platform](https://platform.adobe.com), clique em **[!UICONTROL Monitoramento]** no menu de navegação esquerdo e, em seguida, clique em **[!UICONTROL Transmissão completa]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-A página **[!UICONTROL Streaming end-to-end]** de monitoramento é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados recebidos.
+A página de monitoramento **[!UICONTROL Streaming end-to-end]** é exibida. Este espaço de trabalho fornece um gráfico que exibe a taxa de eventos transmitidos recebidos por [!DNL Platform], um gráfico que exibe a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-time Customer Profile]](../../profile/home.md), bem como uma lista detalhada dos dados recebidos.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -33,11 +33,11 @@ Por padrão, o gráfico superior mostra a taxa de ingestão nos últimos sete di
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-O gráfico inferior mostra a taxa de eventos em streaming processados com êxito [!DNL Profile] nos últimos sete dias. Esse intervalo de datas pode ser ajustado para mostrar vários períodos de tempo clicando no botão realçado.
+O gráfico inferior mostra a taxa de eventos em streaming processados com êxito em [!DNL Profile] nos últimos sete dias. Esse intervalo de datas pode ser ajustado para mostrar vários períodos de tempo clicando no botão realçado.
 
 >[!NOTE]
 >
->Para que os dados sejam exibidos neste gráfico, os dados devem estar **explicitamente** habilitados para [!DNL Profile]. Para saber como ativar os dados de transmissão para [!DNL Profile], leia o guia [do usuário dos](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)conjuntos de dados.
+>Para que os dados sejam exibidos neste gráfico, os dados devem estar **explicitamente** habilitados para [!DNL Profile]. Para saber como habilitar dados de transmissão para [!DNL Profile], leia o [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -65,7 +65,7 @@ No [[!DNL Experience Platform UI]](https://platform.adobe.com), clique em **[!UI
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-A página de monitoramento de **[!UICONTROL lote completo]** é exibida, exibindo uma lista dos lotes ingeridos anteriormente. Você pode clicar em qualquer um dos lotes para obter informações mais detalhadas sobre esse registro.
+A página de monitoramento **[!UICONTROL Batch end-to-end]** é exibida, exibindo uma lista dos lotes ingeridos anteriormente. Você pode clicar em qualquer um dos lotes para obter informações mais detalhadas sobre esse registro.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 

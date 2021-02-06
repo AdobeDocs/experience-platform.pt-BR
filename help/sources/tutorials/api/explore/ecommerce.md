@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;ecommerce;eCommerce
 solution: Experience Platform
-title: Explore uma conexão de eCommerce usando a API de Serviço de Fluxo
+title: Explore uma conexão de comércio eletrônico usando a API de serviços de fluxo
 topic: overview
 description: Este tutorial usa a API de Serviço de Fluxo para explorar conexões de eCommerce.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 2%

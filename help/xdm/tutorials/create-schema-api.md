@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;schema;Schema;schemas;Schemas;criar
 solution: Experience Platform
-title: Criar um schema usando a API de registro do Schema
+title: Criar um Schema usando a API de registro do Schema
 topic: tutorial
 type: Tutorial
 description: Este tutorial usa a API do Registro do Schema para orientá-lo pelas etapas de composição de um schema usando uma classe padrão.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%

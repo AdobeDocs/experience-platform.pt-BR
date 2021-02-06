@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Idioma do Query do Perfil;funções de comparação;comparação;
 solution: Experience Platform
-title: Funções de comparação
+title: Funções de comparação de PQL
 topic: developer guide
 description: As funções de comparação são usadas para comparar entre expressões e valores diferentes, retornando "true" ou "false" de acordo.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 10%
+source-wordcount: '326'
+ht-degree: 9%
 
 ---
 
 
 # Funções de comparação
 
-As funções de comparação são usadas para comparar expressões e valores diferentes, retornando `true` ou `false` de acordo. Para obter mais informações sobre outras funções PQL, consulte a [[!DNL Profile Query Language] visão geral](./overview.md).
+As funções de comparação são usadas para comparar entre expressões e valores diferentes, retornando `true` ou `false` de acordo. Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Igual a
 
@@ -37,7 +37,7 @@ homeAddress.countryISO = "CA"
 
 ## Diferente de
 
-A função `!=` (não igual) verifica se um valor ou expressão **não** é igual a outro valor ou expressão.
+A função `!=` (não igual) verifica se um valor ou expressão é **não** igual a outro valor ou expressão.
 
 **Formato**
 
@@ -73,7 +73,7 @@ person.birthMonth > 2
 
 ## Greater than or equal to
 
-A função `>=` (maior que ou igual a) é usada para verificar se o primeiro valor é maior ou igual ao segundo valor.
+A função `>=` (maior que ou igual a) é usada para verificar se o primeiro valor é maior que ou igual ao segundo valor.
 
 **Formato**
 
@@ -127,4 +127,4 @@ person.birthMonth <= 2
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre as funções de comparação, é possível usá-las nos query PQL. Para obter mais informações sobre outras funções PQL, leia a visão geral [do Idioma do Query do](./overview.md)Perfil.
+Agora que você aprendeu sobre as funções de comparação, é possível usá-las nos query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).

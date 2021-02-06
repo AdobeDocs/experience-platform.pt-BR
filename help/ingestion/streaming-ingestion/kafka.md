@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;kafka;kafka connector;Kafka;
+keywords: Experience Platform;casa;tópicos populares;kafka;conector kafka;Kafka;
 solution: Experience Platform
 title: Conector Kafka
 topic: overview
 description: O conector de fluxo para Adobe Experience Platform é baseado no Apache Kafka Connect. Essa biblioteca pode ser usada para transmitir eventos JSON de tópicos Kafka em seu data center diretamente para Experience Platform em tempo real.
 translation-type: tm+mt
-source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 O conector de fluxo para Adobe Experience Platform é baseado em [!DNL Apache Kafka Connect]. Essa biblioteca pode ser usada para transmitir eventos JSON de [!DNL Kafka] tópicos em seu data center diretamente para [!DNL Experience Platform] em tempo real.
 
-O conector de fluxo é um conector de pia (unidirecional), que fornece dados de [!DNL Kafka] tópicos para um terminal registrado em [!DNL Experience Platform]. Para usar esse conector, você deve baixar a biblioteca, adicioná-la à sua [!DNL Kafka] implantação existente e configurar o(s) [!DNL Kafka] tópico(s) no URL HTTP de transmissão de Adobe. Código adicional **não** é necessário. O conector suporta os seguintes recursos:
+O conector de fluxo é um conector de dissipador (unidirecional), que fornece dados de [!DNL Kafka] tópicos para um terminal registrado em [!DNL Experience Platform]. Para usar esse conector, você deve baixar a biblioteca, adicioná-la à sua implantação [!DNL Kafka] existente e configurar o(s) tópico(s) [!DNL Kafka] para o URL HTTP Adobe Streaming. O código adicional é **não** necessário. O conector suporta os seguintes recursos:
 
 - Coleta de dados autenticada
 - Colocação de mensagens em lote para reduzir chamadas de rede e aumentar a throughput
 
-Para obter mais informações sobre o [!DNL Kafka] conector, incluindo instruções sobre como configurar o conector, leia o guia [de](https://github.com/adobe/experience-platform-streaming-connect)introdução. Para obter um fluxo de trabalho mais detalhado, leia o guia [do](https://www.adobe.com/go/kafka-connector-developer-guide)desenvolvedor.
+Para obter mais informações sobre o conector [!DNL Kafka], incluindo instruções sobre como configurar o conector, leia o [guia de introdução](https://github.com/adobe/experience-platform-streaming-connect). Para obter um fluxo de trabalho mais detalhado, leia o [guia do desenvolvedor](https://www.adobe.com/go/kafka-connector-developer-guide).

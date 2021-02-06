@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identities;cluster history
+keywords: Experience Platform;home;popular tópicos;identidades;histórico do cluster;;home;popular topics;identities;cluster history
 solution: Experience Platform
 title: Obter histórico de cluster de uma identidade
 topic: API guide
 description: As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. O Serviço de identidade fornece visibilidade para as associações de cluster de uma determinada identidade ao longo do tempo.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. [!DNL Identity Service] fornece visibilidade às associações de cluster de uma determinada identidade ao longo do tempo.
 
-Use o `graph-type` parâmetro opcional para indicar o tipo de saída do qual o cluster será obtido. As opções são:
+Use o parâmetro opcional `graph-type` para indicar o tipo de saída do qual o cluster será obtido. As opções são:
 
 - `None` - Não execute nenhum ajuste de identidade.
 - `Private Graph` - Realize a identificação com base no gráfico de identidade particular. Se nenhum `graph-type` for fornecido, esse será o padrão.
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento que cobre a [obtenção do XID para uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção desse documento cobrindo [obter o XID de uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -67,7 +67,7 @@ curl -X GET \
 
 ## Obter o histórico de cluster de várias identidades
 
-Use o `POST` método como um equivalente em lote do `GET` método descrito acima para retornar os históricos de cluster de várias identidades.
+Use o método `POST` como um equivalente em lote do método `GET` descrito acima para retornar os históricos de cluster de várias identidades.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Opção 2: Forneça uma lista de identidades como IDs compostas, em que cada uma
 
 **Solicitação de Stub**
 
-O uso do `x-uis-cst-ctx: stub` cabeçalho retornará uma resposta com bloqueio. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão sendo concluídos. Isso será substituído quando não for mais necessário.
+O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta com bloqueio. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão sendo concluídos. Isso será substituído quando não for mais necessário.
 
 ```shell
 curl -X POST \
@@ -219,4 +219,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para mapeamentos de identidade de [lista](./list-identity-mappings.md)
+Vá para o próximo tutorial para [mapeamentos de identidade de lista](./list-identity-mappings.md)

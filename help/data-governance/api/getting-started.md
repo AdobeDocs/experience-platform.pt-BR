@@ -5,7 +5,7 @@ title: Introdução à API do Serviço de Política
 topic: developer guide
 description: A API do Serviço de Política permite que você crie e gerencie vários recursos relacionados ao Adobe Experience Platform Data Governance. Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API de serviço de política.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%

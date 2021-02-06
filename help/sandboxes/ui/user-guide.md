@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
-title: Guia do usuário do Sandbox
+title: Guia da interface do usuário da caixa de proteção
 topic: user guide
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2d1a9699866bd39de7251731e9f0cd2f753a5083
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
 
 
-# Guia do usuário do Sandbox
+# Guia da interface do usuário da caixa de proteção
 
 Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário do Adobe Experience Platform.
 
 ## Caixas de proteção de visualização
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Caixas]** de proteção na navegação esquerda para abrir o painel **[!UICONTROL Caixas de proteção]** . O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Caixas de proteção]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Caixas de proteção]**. O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
 
 ![](../images/ui/view-sandboxes.png)
 
 ## Alternar entre caixas de proteção
 
-O controle do alternador **de** sandbox na parte superior esquerda da tela exibe a caixa de proteção ativa no momento.
+O controle **sandbox Switcher** na parte superior esquerda da tela exibe a caixa de proteção ativa no momento.
 
 ![](../images/ui/sandbox-switcher.png)
 
@@ -53,7 +53,7 @@ Para criar uma nova caixa de proteção na interface do usuário, selecione o bo
 
 ![](../images/ui/create-sandbox.png)
 
-A caixa de diálogo **[!UICONTROL Criar caixa de proteção]** é exibida, solicitando que você forneça um título de exibição e um nome para a caixa de proteção. O título **de** exibição deve ser legível por humanos e deve ser suficientemente descritivo para ser facilmente identificável. O **[!UICONTROL Nome]** da caixa de proteção é um identificador em letras minúsculas para uso em chamadas de API e, portanto, deve ser exclusivo e conciso. O **[!UICONTROL Nome]** da caixa de proteção deve consistir apenas em caracteres alfanuméricos e hífens **(-)**, deve começar com uma letra e ter no máximo 256 caracteres.
+A caixa de diálogo **[!UICONTROL Criar caixa de proteção]** é exibida, solicitando que você forneça um título de exibição e um nome para a caixa de proteção. O **título de exibição** deve ser legível por humanos e deve ser descritivo o suficiente para ser facilmente identificável. A caixa de proteção **[!UICONTROL Name]** é um identificador em letras minúsculas para uso em chamadas de API e, portanto, deve ser exclusiva e concisa. A caixa de proteção **[!UICONTROL Name]** deve consistir apenas em caracteres alfanuméricos e hífens **(-)**, deve começar com uma letra e tem um máximo de 256 caracteres.
 
 Quando terminar, selecione **[!UICONTROL Criar]**.
 
@@ -61,9 +61,9 @@ Quando terminar, selecione **[!UICONTROL Criar]**.
 
 >[!NOTE]
 >
->Como você está restrito à criação de tipos de caixa de proteção que não sejam de produção, a opção de **[!UICONTROL tipo]** está bloqueada em &quot;Não-produção&quot; e não pode ser manipulada.
+>Como você está restrito a criar apenas tipos de caixa de proteção que não sejam de produção, a opção **[!UICONTROL type]** está bloqueada em &quot;Não-produção&quot; e não pode ser manipulada.
 
-Quando terminar de criar a caixa de proteção, atualize a página e a nova caixa de proteção será exibida no painel **[!UICONTROL Sandboxes]** com um status de &quot;[!UICONTROL Criação]&quot;. As novas caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seu status muda para &quot;[!UICONTROL Ativo]&quot;.
+Quando terminar de criar a caixa de proteção, atualize a página e a nova caixa de proteção aparecerá no painel **[!UICONTROL Caixas de proteção]** com o status &quot;[!UICONTROL Criando]&quot;. As novas caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seu status muda para &quot;[!UICONTROL Ative]&quot;.
 
 ![](../images/ui/creating.png)
 
@@ -83,7 +83,7 @@ Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Sel
 
 ![](../images/ui/reset-confirm.png)
 
-Uma mensagem de confirmação é exibida e o estado da caixa de proteção muda para &quot;**[!UICONTROL Redefinindo]&quot;**. Depois de provisionado pelo sistema, seu estado será atualizado para **&quot;[!UICONTROL Ativo]&quot;** ou **&quot;[!UICONTROL Falha]&quot;**.
+Uma mensagem de confirmação é exibida e o estado da caixa de proteção muda para &quot;**[!UICONTROL Redefinindo]&quot;**. Depois de provisionado pelo sistema, seu estado será atualizado para **&quot;[!UICONTROL Ative]&quot;** ou **&quot;[!UICONTROL Falha]&quot;**.
 
 ![](../images/ui/resetting.png)
 
@@ -99,12 +99,12 @@ Para excluir uma caixa de proteção na interface do usuário, selecione **[!UIC
 
 ![](../images/ui/delete-sandbox.png)
 
-Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Selecione **[!UICONTROL Excluir]** para continuar.
+Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Selecione **[!UICONTROL Eliminar]** para continuar.
 
 ![](../images/ui/delete-confirm.png)
 
-Uma mensagem de confirmação é exibida e a caixa de proteção é removida da área de trabalho **[!UICONTROL Caixas de proteção]** .
+Uma mensagem de confirmação é exibida e a caixa de proteção é removida da área de trabalho **[!UICONTROL Caixas de proteção]**.
 
 ## Próximas etapas
 
-Este documento demonstrou como gerenciar caixas de proteção na interface do usuário do Experience Platform. Para obter informações sobre como gerenciar caixas de proteção usando a API Sandbox, consulte o guia [do desenvolvedor da](../api/getting-started.md)caixa de proteção.
+Este documento demonstrou como gerenciar caixas de proteção na interface do usuário do Experience Platform. Para obter informações sobre como gerenciar caixas de proteção usando a API do Sandbox, consulte o [guia do desenvolvedor do sandbox](../api/getting-started.md).

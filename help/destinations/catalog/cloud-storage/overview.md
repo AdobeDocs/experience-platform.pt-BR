@@ -1,19 +1,17 @@
 ---
 keywords: destino do armazenamento em nuvem;armazenamento em nuvem
-title: Destinos de armazenamentos na nuvem
-seo-title: Destinos de armazenamentos na nuvem
-description: A plataforma pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamentos em nuvem Amazon S3, AWS Kinesis, Azure Evento Hubs ou SFTP.
-seo-description: A plataforma pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamentos em nuvem Amazon S3, AWS Kinesis, Azure Evento Hubs ou SFTP.
+title: Visão geral dos destinos de Armazenamentos na nuvem
+description: A Adobe Experience Platform pode fornecer seus segmentos como arquivos de dados para seus locais de armazenamentos em nuvem Amazon S3, AWS Kinesis, Azure Evento Hubs ou SFTP.
 translation-type: tm+mt
-source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 
-# Destinos do armazenamento na nuvem {#cloud-storage-destinations}
+# Visão geral dos destinos de armazenamentos na nuvem {#cloud-storage-destinations}
 
 A Adobe Experience Platform pode fornecer seus segmentos como arquivos de dados para os locais do armazenamento na nuvem. Isso permite que você envie audiências e seus atributos de perfil para seus sistemas internos, via CSV ou arquivos delimitados por tabulação para [!DNL Amazon S3] e SFTP. Para destinos [!DNL AWS Kinesis] e [!DNL Azure Event Hubs], os dados são transmitidos para fora do Experience Platform no formato JSON.
 

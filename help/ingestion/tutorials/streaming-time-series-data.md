@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;transmissão de ingestão;ingestão;dados de série de tempo;transmitir dados de série de tempo;
 solution: Experience Platform
-title: Transmissão de dados de séries temporais
+title: Transmitir dados da série de tempo usando APIs de ingestão de fluxo contínuo
 topic: tutorial
 type: Tutorial
 description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1236'
 ht-degree: 2%
 
 ---
 
 
-# Transmitir dados de séries de tempo para o Adobe Experience Platform
+# Transmitir dados da série de tempo usando APIs de ingestão de transmissão contínua
 
 Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform [!DNL Data Ingestion Service].
 

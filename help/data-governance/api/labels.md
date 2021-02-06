@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
-title: Ponto de extremidade de etiquetas
+title: Ponto final da API de etiquetas
 topic: developer guide
 description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API do Serviço de política.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---

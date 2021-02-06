@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;map;map fields;map funções de mapeamento;
 solution: Experience Platform
-title: Funções de preparação de dados
+title: Funções de mapeamento de preparo de dados
 topic: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 3%
 
 ---
 
 
-# Funções de preparação de dados
+# Funções de mapeamento da preparação de dados
 
 As funções de Prep de dados podem ser usadas para calcular e calcular valores com base no que é inserido nos campos de origem.
 

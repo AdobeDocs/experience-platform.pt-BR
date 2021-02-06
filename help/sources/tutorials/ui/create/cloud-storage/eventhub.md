@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;azure event hubs
+keywords: Experience Platform;home;popular topics;Hubs de Evento do Azure;Hubs de Evento;hubs de evento do Azure
 solution: Experience Platform
-title: Criar um conector de origem de Hubs de Evento do Azure na interface do usuário
+title: Criar uma conexão de origem de hubs de Evento do Azure na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para autenticação de um conector de origem do Hubs de Evento do Azure (a seguir denominado "Hubs de Evento") usando a interface de usuário da Plataforma.
+description: Saiba como criar uma conexão de origem de Hubs de Evento do Azure usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conector [!DNL Azure Event Hubs] de origem na interface do usuário
+# Criar uma conexão de origem [!DNL Azure Event Hubs] na interface do usuário
 
 >[!NOTE]
 >
-> O [!DNL Azure Event Hubs] conector está em beta. Consulte a visão geral [das](../../../../home.md#terms-and-conditions) Fontes para obter mais informações sobre o uso de conectores com rótulo beta.
+> O conector [!DNL Azure Event Hubs] está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
 
-Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para autenticação de um conector de origem [!DNL Azure Event Hubs] (a seguir denominado &quot;[!DNL Event Hubs]&quot;) usando a interface do [!DNL Platform] usuário.
+Os conectores de origem na Adobe Experience Platform fornecem a capacidade de assimilar dados de origem externa de forma programada. Este tutorial fornece etapas para autenticação de um [!DNL Azure Event Hubs] (a seguir denominado &quot;[!DNL Event Hubs]&quot;) conector de origem usando a interface do usuário [!DNL Platform].
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   - [Noções básicas da composição](../../../../../xdm/schema/composition.md)do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
+   - [Noções básicas da composição](../../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) do Editor de schemas: Saiba como criar schemas personalizados usando a interface do editor de Schemas.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 
-Se você já tiver uma [!DNL Event Hubs] conexão válida, poderá ignorar o restante desse documento e prosseguir para o tutorial sobre como [configurar um fluxo de dados](../../dataflow/streaming/cloud-storage-streaming.md).
+Se você já tiver uma conexão válida [!DNL Event Hubs], poderá ignorar o restante desse documento e prosseguir para o tutorial em [configurar um fluxo de dados](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Reunir credenciais obrigatórias
 
-Para autenticar seu conector [!DNL Event Hubs] de origem, é necessário fornecer valores para as seguintes propriedades de conexão:
+Para autenticar seu conector de origem [!DNL Event Hubs], você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -43,34 +43,34 @@ Para autenticar seu conector [!DNL Event Hubs] de origem, é necessário fornece
 | `sasKey` | A assinatura de acesso compartilhado gerada. |
 | `namespace` | A namespace do [!DNL Event Hubs] que você está acessando. |
 
-Para obter mais informações sobre esses valores, consulte [ [!DNL Event Hubs] este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Para obter mais informações sobre esses valores, consulte [this [!DNL Event Hubs] documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-## Conectar sua [!DNL Event Hubs] conta
+## Conectar sua conta [!DNL Event Hubs]
 
-Depois de reunir as credenciais necessárias, siga as etapas abaixo para vincular sua [!DNL Event Hubs] conta a [!DNL Platform].
+Depois de reunir as credenciais necessárias, siga as etapas abaixo para vincular sua conta [!DNL Event Hubs] a [!DNL Platform].
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]** . A guia **[!UICONTROL Catálogo]** exibe várias fontes com as quais você pode criar uma conta.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho **[!UICONTROL Fontes]**. A guia **[!UICONTROL Catalog]** exibe várias fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria do Armazenamento **[!UICONTROL da]** nuvem, selecione Hubs **[!UICONTROL do Evento]** do Azure. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector de Hubs de Evento.
+Na categoria **[!UICONTROL Armazenamento de nuvem]**, selecione **[!UICONTROL Hubs de Evento do Azure]**. Se esta for a sua primeira vez usando este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector de Hubs de Evento.
 
 ![](../../../../images/tutorials/create/eventhub/catalog.png)
 
-A caixa de diálogo **[!UICONTROL Conectar-se aos Hubs]** de Eventos do Azure é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A caixa de diálogo **[!UICONTROL Ligar aos Hubs de Eventos do Azure]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Nova conta
 
-Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas [!DNL Event Hubs] credenciais. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
+Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais [!DNL Event Hubs]. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
 ![](../../../../images/tutorials/create/eventhub/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a [!DNL Event Hubs] conta à qual deseja se conectar e, em seguida, selecione **[!UICONTROL Avançar]** para continuar.
+Para conectar uma conta existente, selecione a conta [!DNL Event Hubs] com a qual você deseja se conectar e selecione **[!UICONTROL Próximo]** para prosseguir.
 
 ![](../../../../images/tutorials/create/eventhub/existing.png)
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você conectou sua [!DNL Event Hubs] conta a [!DNL Platform]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md)dentro.
+Ao seguir este tutorial, você conectou sua conta [!DNL Event Hubs] a [!DNL Platform]. Agora você pode continuar para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

@@ -1,21 +1,17 @@
 ---
 keywords: Rastreamento de conversão de texto;Yext;yext;rastreamento de conversão de texto
-title: Extensão de rastreamento de conversão de texto
-seo-title: Extensão de rastreamento de conversão de texto
+title: Destino da Extensão de Rastreamento de Conversão de Texto
 description: A extensão de rastreamento de conversão de texto é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão de rastreamento de conversão de texto é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '527'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Yext Conversion Tracking] Extensão {#yext-extension}
-
-## Visão geral {#overview}
+# [!DNL Yext Conversion Tracking] extensão {#yext-extension}
 
 A extensão [!DNL Yext Conversion Tracking] permite medir conversões que podem ser atribuídas ao seu uso de produtos Yext.
 

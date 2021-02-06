@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
-title: Conectar com o PSQL
+title: Conectar o PSQL ao Serviço de Query
 topic: connect
 description: 'O PSQL é uma interface de linha de comando que aparece quando você instala o PostgreSQL em sua máquina. Você pode instalá-lo seguindo estas instruções. '
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
 
 
-# PSQL
+# Conectar o PSQL ao Serviço de Query
 
 O PSQL é uma interface de linha de comando que é instalada quando você instala [!DNL PostgreSQL] em seu computador. Este documento aborda as etapas para conectar o PSQL com o Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Este guia supõe que você já tenha acesso a [!DNL PSQL] e esteja familiarizado com como usá-lo. Mais informações sobre [!DNL PSQL] podem ser encontradas na [documentação oficial [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html.
-
-## Connect PSQL e [!DNL Query Service]
 
 Depois de instalar o PSQL no computador, você está pronto para conectar o PSQL ao Serviço de Query. Retorne à interface de usuário [!DNL Platform] e selecione **[!UICONTROL Query]**, seguido por **[!UICONTROL Credenciais]**.
 

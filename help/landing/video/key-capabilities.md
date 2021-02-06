@@ -1,5 +1,5 @@
 ---
-title: Principais recursos do Adobe Experience Platform
+title: Principais recursos do Experience Platform
 description: Este vídeo analisa os principais recursos do Adobe Experience Platform&mdash;Criar perfis acionáveis, inteligentes e em tempo real do cliente; Enriquecer os dados e obter mais informações com os modelos AI/ML e os query de dados; Inovar com componentes abertos e compósitos; Aumentar o delivery e a personalização das experiências em tempo real; e conquiste confiança com controle de governança, segurança e privacidade.
 feature: null
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32502.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---

@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;conformidade de uso de dados;impor;impor conformidade de uso de dados;Serviço de segmentação;segmentação;Segmentação;
 solution: Experience Platform
-title: Impor conformidade de uso de dados para segmentos de audiência
+title: Impor conformidade com o uso de dados para um segmento de Audiência usando APIs
 topic: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para impor a conformidade de uso de dados para segmentos de audiência de Perfis de clientes em tempo real usando APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1362'
 ht-degree: 1%
 
 ---

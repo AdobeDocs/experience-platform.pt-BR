@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
+keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;ingestão;ingestão em lote;ingestão em lote;;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestão;batch ingestão;
 solution: Experience Platform
 title: Guia de solução de problemas de ingestão em lote
 topic: troubleshooting
 description: 'Esta documentação ajudará a responder a perguntas frequentes sobre APIs de ingestão de dados em lote da Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 # Guia de solução de problemas de ingestão em lote
 
-Esta documentação ajudará a responder a perguntas frequentes sobre [!DNL Batch Data Ingestion] APIs da Adobe Experience Platform.
+Esta documentação ajudará a responder a perguntas frequentes sobre as APIs do Adobe Experience Platform [!DNL Batch Data Ingestion].
 
 ## Chamadas de API em lote
 
 ### Os lotes estão imediatamente ativos após receber um HTTP 200 OK da API CompleteBatch?
 
-A `200 OK` resposta da API significa que o lote foi aceito para processamento - ele não está ativo até que seja transição para seu estado final, como Ativo ou Falha.
+A resposta `200 OK` da API significa que o lote foi aceito para processamento - ele não estará ativo até que seja transição ao seu estado final, como Ativo ou Falha.
 
 ### É seguro repetir a chamada CompleteBatch da API depois que ela falhar?
 
@@ -29,7 +29,7 @@ Sim - é seguro repetir a chamada da API. Apesar do fracasso, é possível que a
 
 ### Quando a API de Upload de Arquivo Grande deve ser usada?
 
-O tamanho de arquivo recomendado para usar a API de Upload de Arquivo Grande é de 256 MB ou maior. Mais informações sobre como usar a API de carregamento de arquivo grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
+O tamanho de arquivo recomendado para usar a API de Upload de Arquivo Grande é de 256 MB ou maior. Mais informações sobre como usar a API de Carregamento de Arquivo Grande podem ser encontradas [aqui](./api-overview.md#ingest-large-parquet-files).
 
 ### Por que a chamada API Large File Complete está falhando?
 
@@ -140,7 +140,7 @@ Há três níveis de validação executados nos dados:
 
 ### Como substituir um lote já ingerido?
 
-Um lote já ingerido pode ser substituído usando o recurso Repetição em lote. Mais informações sobre a Repetição em lote podem ser encontradas [aqui](./api-overview.md#replay-a-batch).
+Um lote já ingerido pode ser substituído usando o recurso Repetição em lote. Para obter mais informações sobre a Reprodução em lote, consulte [here](./api-overview.md#replay-a-batch).
 
 ### Como é monitorizada a ingestão em lote?
 
@@ -185,11 +185,11 @@ Um lote pode, em seu ciclo de vida, passar pelos seguintes estados:
 | ------ | ---------------------- | ----------- |
 | Abandonado |  | O cliente não conseguiu concluir o lote no período de tempo esperado. |
 | Abortado |  | O cliente chamou explicitamente, por meio das [!DNL Batch Data Ingestion] APIs, uma operação de anulação para o lote especificado. Quando um lote está no estado Carregado, o lote não pode ser abortado. |
-| Ativo/Sucesso | x | O lote foi promovido com sucesso do estágio para o principal e agora está disponível para consumo a jusante. **Observação:** Ativo e bem-sucedido são usados alternadamente. |
+| Ativo/Sucesso | x | O lote foi promovido com sucesso do estágio para o principal e agora está disponível para consumo a jusante. **Observação:** Ativo e Sucesso são usados de forma intercambiável. |
 | Arquivado |  | O lote foi arquivado em armazenamento frio. |
-| Falha/falha |  | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Um erro acionável é registrado, juntamente com o lote, para permitir que os clientes corrijam e reenviem os dados. **Observação:** Falha e Falha são usadas alternadamente. |
+| Falha/falha |  | Um estado de terminal que resulta de uma configuração incorreta e/ou de dados inválidos. Um erro acionável é registrado, juntamente com o lote, para permitir que os clientes corrijam e reenviem os dados. **Observação:** falha e falha são usadas alternadamente. |
 | Inativo | x | O lote foi promovido com êxito, mas foi revertido ou expirou. O lote não estará mais disponível para consumo downstream, mas os dados subjacentes permanecerão Principais até que tenham sido retidos, arquivados ou excluídos de outra forma. |
-| Carregando |  | O cliente está gravando dados para o lote no momento. O lote **não** está pronto para promoção nesse momento. |
+| Carregando |  | O cliente está gravando dados para o lote no momento. O lote está **não** pronto para promoção, neste momento. |
 | Carregado |  | O cliente concluiu a gravação de dados para o lote. O lote está pronto para promoção. |
 | Retenção |  | Os dados foram retirados do Principal e em um arquivo designado no Adobe Data Lake. |
 | Armazenamento temporário |  | O cliente assinou com êxito o lote para promoção, e os dados estão sendo preparados para consumo a jusante. |
@@ -206,7 +206,7 @@ Quando um lote está em &quot;Tentando novamente&quot;, isso significa que a ing
 
 ### O que significa quando um lote está &quot;parado&quot;?
 
-Quando um lote está em &quot;Parado&quot;, isso significa que [!DNL Data Ingestion Services] há dificuldade em ingerir o lote e todas as tentativas estão esgotadas.
+Quando um lote está em &quot;Parado&quot;, isso significa que [!DNL Data Ingestion Services] está com dificuldade para ingerir o lote e todas as tentativas estão esgotadas.
 
 ### O que significa se um lote ainda estiver &quot;Carregando&quot;?
 
@@ -214,11 +214,11 @@ Quando um lote está em &quot;Carregamento&quot;, isso significa que a API Compl
 
 ### Existe alguma forma de saber se um lote foi ingerido com êxito?
 
-Quando o status do lote for &quot;Ativo&quot;, o lote será ingerido com êxito. Para descobrir o status do lote, siga as etapas detalhadas [anteriormente](#how-is-batch-ingestion-monitored).
+Quando o status do lote for &quot;Ativo&quot;, o lote será ingerido com êxito. Para descobrir o status do lote, siga as etapas detalhadas [previous](#how-is-batch-ingestion-monitored).
 
 ### O que acontece depois de um lote falhar?
 
-Quando um lote falha, o motivo da falha pode ser identificado na `errors` seção da carga. Exemplos de erros podem ser vistos abaixo:
+Quando um lote falha, o motivo da falha pode ser identificado na seção `errors` da carga. Exemplos de erros podem ser vistos abaixo:
 
 ```json
     "errors":[
@@ -241,7 +241,7 @@ Depois que os erros forem corrigidos, o lote poderá ser carregado novamente.
 
 ### Como os lotes devem ser excluídos?
 
-Em vez de eliminar diretamente do [!DNL Catalog], os lotes devem ser removidos utilizando um dos métodos abaixo indicados:
+Em vez de excluir diretamente de [!DNL Catalog], os lotes devem ser removidos usando um dos métodos fornecidos abaixo:
 
 1. Se o lote estiver em andamento, o lote deve ser abortado.
 2. Se o lote for dominado com êxito, o lote deve ser revertido.
@@ -252,10 +252,10 @@ As seguintes métricas em nível de lote estão disponíveis para lotes no estad
 
 | Métrica | Descrição |
 | ------ | ----------- |
-| inputByteSize | O número total de bytes preparados para [!DNL Data Ingestion Services] processamento. |
-| inputRecordSize | O número total de linhas preparadas para [!DNL Data Ingestion Services] processamento. |
-| outputByteSize | O número total de bytes gerados por [!DNL Data Ingestion Services] até [!DNL Data Lake]. |
-| outputRecordSize | O número total de linhas distribuídas por [!DNL Data Ingestion Services] até [!DNL Data Lake]. |
+| inputByteSize | O número total de bytes preparados para [!DNL Data Ingestion Services] processar. |
+| inputRecordSize | O número total de linhas preparadas para [!DNL Data Ingestion Services] processar. |
+| outputByteSize | O número total de bytes gerados por [!DNL Data Ingestion Services] para [!DNL Data Lake]. |
+| outputRecordSize | O número total de linhas geradas por [!DNL Data Ingestion Services] para [!DNL Data Lake]. |
 | partitionCount | O número total de partições gravadas em [!DNL Data Lake]. |
 
 ### Por que as métricas não estão disponíveis em alguns lotes?
@@ -271,7 +271,7 @@ Há dois motivos para as métricas não estarem disponíveis no lote:
 | ----------- | ----------- |
 | 106 | O arquivo de conjunto de dados está vazio. |
 | 118 | O arquivo CSV contém uma linha de cabeçalho vazia. |
-| 200 | O lote foi aceito para processamento e será transição para um estado final, como Ativo ou Falha. Depois de submetido, o lote pode ser monitorizado usando o `GetBatch` endpoint. |
+| 200 | O lote foi aceito para processamento e será transição para um estado final, como Ativo ou Falha. Depois de submetido, o lote pode ser monitorado usando o endpoint `GetBatch`. |
 | 400 | Solicitação inválida. Retornado se houver partes ausentes ou sobrepostas em um lote. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

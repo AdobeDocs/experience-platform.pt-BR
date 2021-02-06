@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
+keywords: Experience Platform;guia do desenvolvedor;Data Science Workspace;topics;Real-time Machine Learning;referência do nó;
 solution: Experience Platform
-title: Guia de referência dos nós de aprendizado de máquina em tempo real
+title: Referência de nó de aprendizado de máquina em tempo real
 topic: Nodes reference
 description: Um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
-# Guia de referência dos nós de aprendizado de máquina em tempo real (Alpha)
+# Referência do nó Aprendizado de máquina em tempo real (Alpha)
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ O guia a seguir descreve as bibliotecas de nós compatíveis para o aprendizado 
 
 ## Descobrindo nós para uso em seu pipeline ML
 
-Copie o seguinte código em um [!DNL Python] notebook para visualização de todos os nós disponíveis para uso.
+Copie o código a seguir em um notebook [!DNL Python] para visualização de todos os nós disponíveis para uso.
 
 ```python
 from pprint import pprint
@@ -81,11 +81,11 @@ O ONNXNode é um nó Adobe interno que utiliza uma ID de modelo para obter o mod
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
 ```
 
-### Pandas {#pandas}
+### Paindas {#pandas}
 
-O nó Paindas a seguir permite importar qualquer `pd.DataFrame` método ou qualquer função de nível superior de painéis gerais. Para saber mais sobre os métodos do Pandas, visite a documentação [dos métodos do](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)Pandas. Para obter mais informações sobre as funções de nível superior, visite o guia de referência da API [Pandas para obter funções](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)gerais.
+O nó de Paindas a seguir permite importar qualquer método `pd.DataFrame` ou qualquer função de nível superior de painéis gerais. Para saber mais sobre os métodos dos Paindas, visite a documentação dos métodos [Paindas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [Guia de referência da API dos painéis para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguido de inserir os parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base em se deseja aplicar a transformação no local ou não. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo, `device` é especificado.
+O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguido pela inserção dos parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base no fato de você desejar aplicar a transformação no local ou não. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo, `device` é especificado.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -133,7 +133,7 @@ msg6 = model_train.process(msg5)
 
 ### Dividir
 
-Use o nó a seguir para dividir seu dataframe em um trem e teste, passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar os dados do trem e do teste usando o exemplo a seguir `msg5.data.xs(“train”)`.
+Use o nó a seguir para dividir seu dataframe em trem e teste, passando por `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar os dados do trem e do teste usando o seguinte exemplo, `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +142,4 @@ msg5 = splitter.process(msg4)
 
 ## Próximas etapas
 
-A próxima etapa é criar nós para uso na pontuação de um modelo de aprendizado de máquina em tempo real. Para obter mais informações, visite o guia [do usuário do notebook Aprendizagem de máquina em tempo](./rtml-authoring-notebook.md)real.
+A próxima etapa é criar nós para uso na pontuação de um modelo de aprendizado de máquina em tempo real. Para obter mais informações, visite o [Guia do usuário do notebook de aprendizado de máquina em tempo real](./rtml-authoring-notebook.md).

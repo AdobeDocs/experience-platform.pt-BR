@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
+keywords: Experience Platform;insights;atendimento ao cliente;tópicos populares;insights do atendimento ao cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Descobrindo insights com a IA do cliente
+title: Insights do Discover com a IA do cliente
 topic: Discovering insights
 description: Este documento serve como um guia para interagir com as informações da instância do serviço na interface do usuário da API do cliente do Intelligent Services.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1399'
 ht-degree: 1%
 
 ---
 
 
-# Descobrindo insights com a IA do cliente
+# Descubra insights com a IA do cliente
 
 A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes o poder de aproveitar a Adobe Sensei para antecipar qual será a próxima ação dos clientes. o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado em máquina, escolher um algoritmo, treinamento ou implantação.
 
@@ -21,11 +21,11 @@ Este documento serve como um guia para interagir com as informações da instân
 
 ## Introdução
 
-Para utilizar insights para a IA do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configuração de uma instância](./configure.md)do AI do cliente. Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
+Para utilizar insights para a IA do cliente, é necessário ter uma instância de serviço com um status de execução bem-sucedida disponível. Para criar uma nova instância de serviço, visite [Configurar uma instância do AI do cliente](./configure.md). Se você criou recentemente uma instância de serviço e ela ainda está treinando e marcando, aguarde 24 horas para que ela termine de ser executada.
 
 ## Visão geral da instância do serviço
 
-Na [!DNL Adobe Experience Platform] interface do usuário, clique em **[!UICONTROL Serviços]** na navegação à esquerda. O navegador *Serviços* é exibido e exibe os Serviços inteligentes disponíveis. No container para API do cliente, clique em **[!UICONTROL Abrir]**.
+Na interface do usuário [!DNL Adobe Experience Platform], clique em **[!UICONTROL Serviços]** no painel de navegação esquerdo. O navegador *Services* é exibido e exibe os Serviços inteligentes disponíveis. No container para a API do cliente, clique em **[!UICONTROL Abrir]**.
 
 ![Acessar sua instância](../images/insights/navigate-to-service.png)
 
@@ -52,8 +52,8 @@ Há duas maneiras de visualização detalhes da instância do serviço: do paine
 
 Para visualização de uma visão geral dos detalhes da instância do serviço no painel, selecione um container de instância do serviço, evitando o hiperlink anexado ao nome. Isso abre um painel direito que fornece detalhes adicionais. Os controles contêm o seguinte:
 
-- **[!UICONTROL Editar]**: Selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. Você pode editar o nome, a descrição e a frequência de pontuação da instância.
-- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
+- **[!UICONTROL Editar]**: Selecionar  **** Edição permite modificar uma instância de serviço existente. Você pode editar o nome, a descrição e a frequência de pontuação da instância.
+- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopia a configuração da instância de serviço atualmente selecionada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: Você pode excluir uma instância de serviço, incluindo quaisquer execuções históricas.
 - **[!UICONTROL Fonte]** de dados: Um link para o conjunto de dados usado por esta instância.
 - **[!UICONTROL Frequência]** de execução: Com que frequência uma execução de pontuação ocorre e quando.
@@ -63,11 +63,11 @@ Para visualização de uma visão geral dos detalhes da instância do serviço n
 
 >[!NOTE]
 >
->No evento de que uma execução de pontuação falhe, uma mensagem de erro é fornecida. A mensagem de erro é listada em Detalhes **da** última execução no painel direito, que está visível apenas para execução com falha.
+>No evento de que uma execução de pontuação falhe, uma mensagem de erro é fornecida. A mensagem de erro está listada em **Detalhes da última execução** no painel direito, que está visível apenas para execução com falha.
 
 ![falha ao executar mensagem](../images/insights/failed-run.png)
 
-A segunda maneira de visualização de detalhes adicionais para uma instância de serviço está localizada na página de insights. Você pode clicar em **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados como a definição da pontuação, quando ela foi criada e o tipo de propensão. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configuração de uma instância](./configure.md)do AI do cliente.
+A segunda maneira de visualização de detalhes adicionais para uma instância de serviço está localizada na página de insights. Você pode clicar em **[!UICONTROL Mostrar mais]** no canto superior direito para preencher uma lista suspensa. Os detalhes são listados como a definição da pontuação, quando ela foi criada e o tipo de propensão. Para obter mais informações sobre qualquer uma das propriedades listadas, visite [Configurando uma instância do AI do cliente](./configure.md).
 
 ![mostrar mais](../images/insights/landing-show-more.png)
 
@@ -87,9 +87,9 @@ A caixa de diálogo de edição é exibida, permitindo que você edite o nome, a
 
 O botão **[!UICONTROL Mais ações]** está localizado na navegação superior direita ao lado de **[!UICONTROL Editar]**. Clicar em **[!UICONTROL Mais ações]** abre uma lista suspensa que permite selecionar uma das seguintes operações:
 
-- **[!UICONTROL Clonar]**: Selecionar **[!UICONTROL Clonar]** copia a instância de serviço configurada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
+- **[!UICONTROL Clonar]**: Selecionar  **** Clonecopia a instância do serviço configurada. Em seguida, você pode modificar o fluxo de trabalho para fazer ajustes secundários e renomeá-lo como uma nova instância.
 - **[!UICONTROL Excluir]**: Exclui a instância.
-- **[!UICONTROL Pontuações]** de acesso: Selecionar pontuações **[!UICONTROL de]** acesso abre uma caixa de diálogo que fornece um link para as pontuações de [download do tutorial de IA](./download-scores.md) do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
+- **[!UICONTROL Pontuações]** de acesso: A seleção de  **[!UICONTROL pontuações de]** acesso abre uma caixa de diálogo que fornece um link para as pontuações de  [download do ](./download-scores.md) AItutorial do cliente, a caixa de diálogo também fornece a ID do conjunto de dados necessária para fazer chamadas de API.
 - **[!UICONTROL Histórico]** de execução da visualização: Uma caixa de diálogo contendo uma lista de todas as execuções de pontuação associadas à instância do serviço é exibida.
 
 ![mais ações](../images/insights/more-actions.png)
@@ -110,7 +110,7 @@ O resumo de pontuação exibe o número total de perfis pontuados e os categoriz
 
 ## Distribuição das pontuações
 
-O cartão de **[!UICONTROL distribuição de pontuações]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão [!UICONTROL Distribuição de pontuações] representam o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer distribuição de pontuação fornece a contagem exata pertencente a essa distribuição.
+O cartão **[!UICONTROL Distribuição de pontuações]** fornece um resumo visual da população com base na pontuação. As cores que você vê no cartão [!UICONTROL Distribuição de pontuações] representam o tipo de pontuação de propensão gerada. Passar o mouse sobre qualquer distribuição de pontuação fornece a contagem exata pertencente a essa distribuição.
 
 ![distribuição das pontuações](../images/insights/distribution-of-scores.png)
 
@@ -138,13 +138,13 @@ Selecionar o botão **[!UICONTROL Criar segmento]** em qualquer um dos compartim
 
 >[!NOTE]
 >
->O botão **[!UICONTROL Criar segmento]** só estará disponível se o Perfil do cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite a visão geral [do Perfil do cliente em tempo](../../../rtcdp/overview.md)real.
+>O botão **[!UICONTROL Criar segmento]** só estará disponível se o Perfil Cliente em tempo real estiver ativado para o conjunto de dados. Para obter mais informações sobre como ativar o Perfil do cliente em tempo real, visite a [Visão geral do Perfil do cliente em tempo real](../../../rtcdp/overview.md).
 
 ![Clique em criar segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Criar um segmento](../images/insights/create-segment.png)
 
-O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights, a API do cliente adiciona automaticamente as informações dos buckets selecionados ao segmento. Para concluir a criação do segmento, basta preencher os container *Nome* e *Descrição* localizados no painel direito da interface do usuário do construtor de segmentos. Depois de fornecer um nome e uma descrição ao segmento, clique em **[!UICONTROL Salvar]** no canto superior direito.
+O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!UICONTROL Criar segmento]** na página Insights, o AI do cliente adiciona automaticamente as informações dos compartimentos selecionados ao segmento. Para terminar de criar seu segmento, basta preencher os container *Name* e *Description* localizados no painel direito da interface do usuário do construtor de segmentos. Depois de fornecer um nome e uma descrição ao segmento, clique em **[!UICONTROL Salvar]** no canto superior direito.
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Para visualização do novo segmento na interface do usuário da plataforma, cli
 
 ## Próximas etapas
 
-Este documento descreveu os insights fornecidos por uma instância de serviço de IA do cliente. Agora você pode continuar com o tutorial sobre como [baixar pontuações no AI](./download-scores.md) do cliente ou navegar pelos outros guias de Serviços [inteligentes do](../../home.md) Adobe que são oferecidos.
+Este documento descreveu os insights fornecidos por uma instância de serviço de IA do cliente. Agora você pode continuar com o tutorial em [baixando as pontuações no AI](./download-scores.md) do cliente ou navegar pelos outros guias [Adobe Intelligent Services](../../home.md) oferecidos.
 
 ## Recursos adicionais
 

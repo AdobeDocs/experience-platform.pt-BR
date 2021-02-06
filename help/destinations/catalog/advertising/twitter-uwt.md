@@ -1,21 +1,17 @@
 ---
 keywords: twitter;Twitter;twitter universal website tag;tag do Twitter universal website tag;tag do Twitter universal;tag do Twitter UWT;Twitter uwt;twitter uwt
-title: Extensão de tag do Twitter Universal Website
-seo-title: Extensão de tag do Twitter Universal Website
+title: Destino da extensão de tag do Twitter Universal Website
 description: A extensão da tag do site universal do Twitter é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão da tag do site universal do Twitter é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Twitter Universal Website Tag] Extensão {#twitter-uwt-extension}
-
-## Visão geral {#overview}
+# [!DNL Twitter Universal Website Tag] extensão {#twitter-uwt-extension}
 
 [!DNL Twitter Universal Website Tag] fornece ações para enviar beacons para a Tag UWT do Twitter.
 

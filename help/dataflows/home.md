@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;data flows;dataflows;data;monitoring;monitor dataflows;monitor data flows;monitor;monitoring dataflows;monitoring data flows;flow;flow service;
+keywords: Experience Platform;home;popular topics;fluxo de dados;data;data;monitor;fluxo de dados;monitorar fluxos de dados;monitorar fluxos de dados;monitorar;monitorar fluxos de dados;monitorar fluxos de dados;fluxo;serviço de fluxo;
 solution: Experience Platform
-title: Visão geral do Adobe Experience Platform dataflow
+title: Visão geral dos fluxos de dados
 topic: overview
 description: Este documento apresenta fluxos de dados, expressando como eles são usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 791ad61f2f28da03ef3e5cb5efdd89154e9b1a0b
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 0%
+source-wordcount: '178'
+ht-degree: 6%
 
 ---
 
@@ -21,4 +21,4 @@ Os fluxos de dados são uma representação de trabalhos de dados que movem os d
 
 ## Monitoramento de fluxos de dados
 
-O monitoramento de fluxos de dados pode ser feito usando as APIs da plataforma ou a interface do usuário da plataforma. Para saber como monitorar os fluxos de dados usando a API, leia o tutorial [da API de fluxo de dados de](./api/monitor.md)monitoramento. Para saber como monitorar os fluxos de dados na interface do usuário da plataforma, leia o tutorial [de fontes ou os fluxos de dados de](./ui/monitor-sources.md) monitoramento para os destinos [](./ui/monitor-destinations.md).
+O monitoramento de fluxos de dados pode ser feito usando as APIs da plataforma ou a interface do usuário da plataforma. Para saber como monitorar os fluxos de dados usando a API, leia o tutorial [monitoramento da API de fluxo de dados](./api/monitor.md). Para saber como monitorar os fluxos de dados na interface do usuário da plataforma, leia o [fluxo de dados de monitoramento para o tutorial de fontes](./ui/monitor-sources.md) ou o [fluxo de dados de monitoramento para destinos tutorial](./ui/monitor-destinations.md).

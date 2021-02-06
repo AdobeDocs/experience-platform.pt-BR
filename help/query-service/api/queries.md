@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform;home;popular topics;query service;api guide;query;query;Query service;
 solution: Experience Platform
-title: Guia do desenvolvedor do Query Service
+title: Ponto Final da API de query
 topic: queries
 description: As seções a seguir percorrem as chamadas que você pode fazer usando o terminal /query na API de serviço do Query.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '676'
 ht-degree: 2%
 
 ---
 
 
-# Queries
+# Ponto de extremidade de query
 
 ## Chamadas de API de exemplo
 
-As seções a seguir percorrem as chamadas que você pode fazer usando o `/queries` terminal na [!DNL Query Service] API. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+As seções a seguir percorrem as chamadas que você pode fazer usando o terminal `/queries` na API [!DNL Query Service]. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
 
 ### Recuperar uma lista de query
 
-Você pode recuperar uma lista de todos os query para a Organização IMS, fazendo uma solicitação de GET para o `/queries` endpoint.
+Você pode recuperar uma lista de todos os query para sua Organização IMS fazendo uma solicitação de GET para o terminal `/queries`.
 
 **Formato da API**
 
@@ -38,12 +38,12 @@ A seguir está uma lista de parâmetros de query disponíveis para listar query.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados em ordem crescente. A adição de um item `-` antes de criado (`orderby=-created`) classificará os itens em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Default value: 20*) |
-| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Default value: 0*) |
-| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `updated`, `state`e `id`. A lista dos operadores suportados é `>` (maior que), `<` (menor que), `>=` (maior que ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todos os query com a ID especificada. |
-| `excludeSoftDeleted` | Indica se um query que tenha sido excluído de forma suave deve ser incluído. Por exemplo, `excludeSoftDeleted=false` incluirá **** query suaves excluídos. (*Booliano, valor padrão: true*) |
-| `excludeHidden` | Indica se query não controlados pelo usuário devem ser exibidos. Ter esse valor definido como falso **incluirá** query não controlados pelo usuário, como definições CURSOR, FETCH ou query de metadados. (*Booliano, valor padrão: true*) |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. A adição de `-` antes de criado (`orderby=-created`) classificará os itens por meio de itens criados em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Valor padrão: 0*) |
+| `property` | Filtrar resultados com base em campos. Os filtros **must** devem ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `updated`, `state` e `id`. A lista dos operadores suportados é `>` (maior que), `<` (menor que), `>=` (maior que ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todos os query com a ID especificada. |
+| `excludeSoftDeleted` | Indica se um query que tenha sido excluído de forma suave deve ser incluído. Por exemplo, `excludeSoftDeleted=false` **incluirá** query excluídos por software. (*Booliano, valor padrão: true*) |
+| `excludeHidden` | Indica se query não controlados pelo usuário devem ser exibidos. Ter esse valor definido como false **incluirá** query não orientados pelo usuário, como definições CURSOR, FETCH ou query de metadados. (*Booliano, valor padrão: true*) |
 
 **Solicitação**
 
@@ -120,7 +120,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de query para 
 
 ### Criar um query
 
-Você pode criar um novo query, fazendo uma solicitação de POST para o `/queries` terminal.
+Você pode criar um novo query fazendo uma solicitação POST para o terminal `/queries`.
 
 **Formato da API**
 
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do query recém-criado. Quando o query terminar de ser ativado e for executado com êxito, ele `state` será alterado de `SUBMITTED` para `SUCCESS`.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do query recém-criado. Quando o query terminar de ser ativado e for executado com êxito, o `state` mudará de `SUBMITTED` para `SUCCESS`.
 
 ```json
 {
@@ -199,11 +199,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.cancel` para [cancelar o query](#cancel-a-query)criado.
+>Você pode usar o valor de `_links.cancel` para [cancelar o query criado](#cancel-a-query).
 
 ### Recuperar um query por ID
 
-Você pode recuperar informações detalhadas sobre um query específico, fazendo uma solicitação de GET para o ponto final e fornecendo o `/queries` `id` valor do query no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre um query específico, fazendo uma solicitação de GET para o terminal `/queries` e fornecendo o valor `id` do query no caminho da solicitação.
 
 **Formato da API**
 
@@ -213,7 +213,7 @@ GET /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | O `id` valor do query que você deseja recuperar. |
+| `{QUERY_ID}` | O valor `id` do query que você deseja recuperar. |
 
 **Solicitação**
 
@@ -270,11 +270,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.cancel` para [cancelar o query](#cancel-a-query)criado.
+>Você pode usar o valor de `_links.cancel` para [cancelar o query criado](#cancel-a-query).
 
 ### Cancelar um query
 
-Você pode solicitar a exclusão de um query especificado, fazendo uma solicitação de PATCH para o `/queries` endpoint e fornecendo o valor do query `id` no caminho da solicitação.
+Você pode solicitar a exclusão de um query especificado, fazendo uma solicitação de PATCH para o terminal `/queries` e fornecendo o valor `id` do query no caminho da solicitação.
 
 **Formato da API**
 
@@ -284,7 +284,7 @@ PATCH /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | O `id` valor do query que você deseja cancelar. |
+| `{QUERY_ID}` | O valor `id` do query que você deseja cancelar. |
 
 
 **Solicitação**
@@ -305,7 +305,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `op` | Para cancelar o query, é necessário definir o parâmetro op com o valor `cancel `. |
+| `op` | Para cancelar o query, você deve definir o parâmetro op com o valor `cancel `. |
 
 **Resposta**
 

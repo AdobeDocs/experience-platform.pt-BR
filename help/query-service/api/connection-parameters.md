@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
 solution: Experience Platform
-title: Guia do desenvolvedor do Query Service
+title: Endpoint da API Parâmetros de Conexão
 topic: connection parameters
 description: Você pode recuperar seus parâmetros de conexão para usar o serviço interativo, fazendo uma solicitação de GET para o terminal /connection_parameters.
 translation-type: tm+mt
-source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '148'
 ht-degree: 1%
 
 ---
 
 
-# Parâmetros de conexão
+# Ponto final dos parâmetros de conexão
 
 ## Chamadas de API de exemplo
 

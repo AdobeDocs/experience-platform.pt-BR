@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;nuvem armazenamento data;streaming data;streaming data;streaming data;streaming
 solution: Experience Platform
-title: Coletar dados de transmissão por meio de conectores de origem e APIs
+title: Coletar dados de transmissão usando conectores de origem e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de fluxo e trazê-los para a Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de fluxo e trazê-los para a plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Coletar dados de transmissão por meio de conectores de origem e APIs
+# Coletar dados de transmissão usando conectores de origem e APIs
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 

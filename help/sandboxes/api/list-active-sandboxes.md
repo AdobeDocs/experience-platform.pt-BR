@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform;home;popular topics;lista ative sandboxes;lista sandboxes;home;popular topics; ative sandboxes;sandboxes
 solution: Experience Platform
-title: Lista de caixas de proteção ativas para o usuário atual
+title: Lista de caixas de proteção ativas para o usuário atual na API
 topic: developer guide
 description: Você pode lista as caixas de proteção que estão ativas para o usuário atual, fazendo uma solicitação de GET para o terminal raiz.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '361'
 ht-degree: 2%
 
 ---
 
 
-# Lista de caixas de proteção ativas para o usuário atual
+# Lista de caixas de proteção ativas para o usuário atual na API
 
 >[!NOTE]
 >
 >Diferentemente de outros pontos de extremidade fornecidos na API do Sandbox, esse ponto de extremidade está disponível para todos os usuários, incluindo aqueles sem permissões de acesso à Administração do Sandbox.
 
-Você pode lista as caixas de proteção que estão ativas para o usuário atual, fazendo uma solicitação de GET para o ponto de extremidade raiz (`/`).
+Você pode lista as caixas de proteção ativas para o usuário atual, fazendo uma solicitação de GET para o ponto de extremidade raiz (`/`).
 
 **Formato da API**
 
@@ -29,7 +29,7 @@ GET /{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre parâmetros [de](#query) query para obter mais informações. |
+| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre [parâmetros de query](#query) para obter mais informações. |
 
 **Solicitação**
 
@@ -44,7 +44,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de caixas de proteção ativas para o usuário atual, incluindo detalhes como `name`, `title`, `state`e `type`.
+Uma resposta bem-sucedida retorna uma lista de caixas de proteção ativas para o usuário atual, incluindo detalhes como `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -111,13 +111,13 @@ Uma resposta bem-sucedida retorna uma lista de caixas de proteção ativas para 
 | `isDefault` | Uma propriedade booleana que indica se essa caixa de proteção é a caixa de proteção padrão da organização. Normalmente, essa é a caixa de proteção de produção. |
 | `eTag` | Um identificador para uma versão específica da caixa de proteção. Usado para controle de versão e eficiência de cache, esse valor é atualizado sempre que uma alteração é feita na caixa de proteção. |
 
-## Uso de parâmetros de query {#query}
+## Usando parâmetros de query {#query}
 
-A [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API suporta o uso de parâmetros de query para a página e filtrar resultados ao listar caixas de proteção.
+A API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) oferece suporte ao uso de parâmetros de query para a página e filtrar os resultados ao listar caixas de proteção.
 
 >[!NOTE]
 >
->Os parâmetros `limit` e `offset` query devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão será 50 e o deslocamento será 0.
+>Os parâmetros de query `limit` e `offset` devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão será 50 e o deslocamento será 0.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |

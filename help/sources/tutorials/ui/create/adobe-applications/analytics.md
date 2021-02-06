@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
+keywords: Experience Platform;home;popular topics;Conector de origem do Analytics;Conector do Analytics;Fonte do Analytics;analytics
 solution: Experience Platform
-title: Criar um conector de origem Adobe Analytics na interface do usuário
+title: Criar uma conexão de origem Adobe Analytics na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para a criação de um conector de origem Adobe Analytics na interface do usuário para trazer dados de consumidor para o Adobe Experience Platform.
+description: Saiba como criar uma conexão de origem Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
 
 
-# Criar um conector de origem Adobe Analytics na interface do usuário
+# Criar uma conexão de origem Adobe Analytics na interface do usuário
 
-Este tutorial fornece etapas para a criação de um conector de origem Adobe Analytics na interface do usuário para trazer dados de consumidor para o Adobe Experience Platform.
+Este tutorial fornece etapas para a criação de uma conexão de origem Adobe Analytics na interface do usuário para trazer dados de consumidor para o Adobe Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-* [Perfil](../../../../../profile/home.md)do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
+* [Sistema](../../../../../xdm/home.md) do Experience Data Model (XDM): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [Perfil](../../../../../profile/home.md) do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
 * [Caixas de proteção](../../../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 ## Criar uma conexão de origem com o Adobe Analytics
 
-Faça logon no [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela **Catálogo** exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela **Catálogo** exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de contas e fluxos de conjunto de dados associados a elas.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria de aplicativos **[!UICONTROL de]** Adobe, selecione **[!UICONTROL Adobe Analytics]** para exibir uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para visualização de contas existentes, selecione **[!UICONTROL Contas]**.
+Na categoria **[!UICONTROL aplicativos do Adobe]**, selecione **[!UICONTROL Adobe Analytics]** para expor uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição para a fonte selecionada, bem como opções para se conectar à fonte ou à sua documentação de visualização. Para visualização de contas existentes, selecione **[!UICONTROL Contas]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -54,7 +54,7 @@ Na lista dos conjuntos de relatórios disponíveis, selecione o que deseja traze
 
 ### Nomear o fluxo do conjunto de dados
 
-A etapa de detalhes **[!UICONTROL do fluxo do conjunto de]** dados é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Selecione **[!UICONTROL Próximo]** ao terminar.
+A etapa **[!UICONTROL Detalhe do fluxo do conjunto de dados]** é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Selecione **[!UICONTROL Next]** quando terminar.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -69,31 +69,31 @@ A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você reveja seu nov
 
 ### Monitorar o fluxo do conjunto de dados
 
-Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Na tela **[!UICONTROL Catálogo]** , selecione Fluxos **[!UICONTROL de]** conjunto de dados para visualização de uma lista de fluxos estabelecidos associados à sua conta do Analytics.
+Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por ele. Na tela **[!UICONTROL Catálogo]**, selecione **[!UICONTROL Fluxos do conjunto de dados]** para visualização de uma lista de fluxos estabelecidos associados à sua conta do Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-A tela Fluxos **do** Conjunto de Dados é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, tempo de criação e status.
+A tela **Fluxo do conjunto de dados** é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, tempo de criação e status.
 
 O conector instancia dois fluxos de conjunto de dados. Um fluxo representa dados de preenchimento retroativo e o outro é para dados em tempo real. Os dados de preenchimento retroativo não estão configurados para o Perfil, mas são enviados para o lago de dados para casos de uso analíticos e de ciência de dados.
 
-Para obter mais informações sobre preenchimento retroativo, dados ao vivo e suas respectivas latências, consulte a visão geral [do Conector de dados do](../../../../connectors/adobe-applications/analytics.md)Analytics.
+Para obter mais informações sobre preenchimento retroativo, dados ao vivo e suas respectivas latências, consulte a [visão geral do Conector de dados do Analytics](../../../../connectors/adobe-applications/analytics.md).
 
 Selecione o fluxo do conjunto de dados que deseja visualização na lista.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-A página atividade **do** Conjunto de Dados é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico. Selecione *Controle* de dados no cabeçalho superior para acessar os campos de rotulagem.
+A página **atividade do conjunto de dados** é exibida. Esta página exibe a taxa de mensagens que estão sendo consumidas na forma de um gráfico. Selecione *Gerenciamento de dados* no cabeçalho superior para acessar os campos de rotulagem.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
-Você pode visualização rótulos herdados de um fluxo de conjunto de dados da tela de controle *de* dados. Para acessar rótulos específicos, selecione o botão de edição na parte superior direita.
+Você pode visualização rótulos herdados de um fluxo de conjunto de dados da tela *Data governance*. Para acessar rótulos específicos, selecione o botão de edição na parte superior direita.
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-O painel **Editar rótulos** de controle é exibido. Essa tela permite acessar e editar o contrato, a identidade e os rótulos confidenciais de um fluxo de conjunto de dados.
+O painel **Editar rótulos de governança** é exibido. Essa tela permite acessar e editar o contrato, a identidade e os rótulos confidenciais de um fluxo de conjunto de dados.
 
-Para obter mais informações sobre como rotular dados provenientes do Analytics, visite o guia [de uso de](../../../../../data-governance/labels/user-guide.md)dados.
+Para obter mais informações sobre como rotular dados provenientes do Analytics, visite o [guia de rótulos de uso de dados](../../../../../data-governance/labels/user-guide.md).
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
@@ -110,7 +110,7 @@ O vídeo a seguir é destinado a suportar sua compreensão da assimilação de d
 
 >[!WARNING]
 >
-> A [!DNL Platform] interface do usuário exibida no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
+> A interface do usuário [!DNL Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 

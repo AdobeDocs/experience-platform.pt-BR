@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;banco de dados;banco de dados de terceiros
 solution: Experience Platform
-title: Coletar dados de um banco de dados por meio de conectores de origem e APIs
+title: Coletar dados de um banco de dados usando conectores de origem e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los na Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los na Plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Coletar dados de um banco de dados por meio de conectores de origem e APIs
+# Coletar dados de um banco de dados usando conectores de origem e APIs
 
 Este tutorial aborda as etapas para recuperar dados de um banco de dados de terceiros e assimilá-los na Plataforma por meio dos conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

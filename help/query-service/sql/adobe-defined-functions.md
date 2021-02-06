@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
 solution: Experience Platform
-title: funções definidas pelo Adobe
+title: Funções SQL Definidas pelo Adobe no Query Service
 topic: functions
-description: Este documento fornece informações para as funções definidas pelo Adobe, disponíveis no Serviço de Query.
+description: Este documento fornece informações para as funções definidas pelo Adobe, disponíveis no Serviço de Query Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2913'
 ht-degree: 2%
 
 ---
 
 
-# funções definidas pelo Adobe
+# Funções SQL definidas pelo Adobe no Query Service
 
 As funções definidas pelo Adobe, aqui chamadas de ADFs, são funções pré-criadas no Adobe Experience Platform Query Service que ajudam a executar tarefas comuns relacionadas aos negócios em [!DNL Experience Event] dados. Incluem funções para [Sessões](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) e [Atribuição](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como as encontradas no Adobe Analytics.
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;coletar sucesso do cliente;sucesso do cliente;;home;popular topics;collect customer success;customer success;
 solution: Experience Platform
-title: Coletar dados de um sistema de sucesso do cliente por meio de conectores de origem e APIs
+title: Coletar dados de um sistema de sucesso do cliente usando conectores de fonte e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente e assimilá-los na Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente e assimilá-los à Plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Coletar dados de um sistema de sucesso do cliente por meio de conectores de origem e APIs
+# Coletar dados de um sistema de sucesso do cliente usando conectores de origem e APIs
 
 Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente de terceiros e assimilá-los em [!DNL Platform] por meio dos conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

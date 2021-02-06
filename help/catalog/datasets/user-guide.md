@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;habilitar conjunto de dados;conjunto de dados;conjunto de dados;dataset
 solution: Experience Platform
-title: Guia do usuário de conjuntos de dados
+title: Guia da interface do usuário de conjuntos de dados
 topic: datasets
-description: Este guia do usuário de conjuntos de dados fornece instruções sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
+description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
 
 
-# Guia do usuário de conjuntos de dados
+# Guia da interface do usuário de conjuntos de dados
 
 Este guia do usuário fornece instruções sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 

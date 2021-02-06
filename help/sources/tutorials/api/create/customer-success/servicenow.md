@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
-title: Criar um conector ServiceNow usando a API de Serviço de Fluxo
+title: Criar uma conexão de origem ServiceNow usando a API de serviço de fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a um servidor ServiceNow.
+description: Saiba como conectar a Adobe Experience Platform a um servidor ServiceNow usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 2%
 
 ---
 
 
-# Crie um conector [!DNL ServiceNow] usando a API [!DNL Flow Service]
+# Criar uma conexão de origem [!DNL ServiceNow] usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >

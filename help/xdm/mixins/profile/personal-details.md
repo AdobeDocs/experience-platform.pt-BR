@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;perfil individual;campos;schemas;Schemas;detalhes pessoais;design de Schema;mixin;Mixin;
 solution: Experience Platform
-title: Mistura Detalhes do Contato Pessoal
+title: Mistura de Detalhes de Contato Pessoal
 topic: overview
 description: Este documento fornece uma visão geral da combinação Detalhes do contato pessoal.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 7%
+source-wordcount: '152'
+ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Mistura de Detalhes] de Contato Pessoal
+# [!UICONTROL Contato pessoal ] Detailsmixin
 
 >[!NOTE]
 >
->Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../name-updates.md) mixin para obter mais informações.
+>Os nomes de várias misturas mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes] de contato pessoal é uma combinação padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que descreve as informações de contato de uma pessoa individual.
+[!UICONTROL Contato pessoal ] Detalhes de uma combinação padrão para a  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe que descreve as informações de contato de uma pessoa individual.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 

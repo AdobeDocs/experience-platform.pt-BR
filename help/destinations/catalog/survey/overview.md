@@ -1,19 +1,17 @@
 ---
 keywords: Pesquisa destinos;pesquisa;prever;momento;pesquisas de interceptação na Web;qualidade
-title: Destinos da pesquisa
-seo-title: Destinos da pesquisa
-description: As plataformas Pesquisa detectam eventos de pesquisas, capturam feedback dos clientes em tempo real por meio de elementos de dados e compartilham dados com a Plataforma.
-seo-description: As plataformas Pesquisa detectam eventos de pesquisas, capturam feedback dos clientes em tempo real por meio de elementos de dados e compartilham dados com a Plataforma.
+title: Visão geral dos destinos de pesquisa
+description: As plataformas Pesquisa detectam eventos de pesquisas, capturam feedback dos clientes em tempo real por meio de elementos de dados e compartilham dados com a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
 
-# Destinos de pesquisa {#survey-destinations}
+# Visão geral dos destinos de pesquisa {#survey-destinations}
 
 As plataformas Pesquisa detectam eventos de pesquisas, capturam feedback dos clientes em tempo real por meio de elementos de dados e compartilham dados com a Adobe Experience Platform.
 

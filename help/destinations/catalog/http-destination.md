@@ -1,25 +1,21 @@
 ---
 keywords: transmissão contínua;
-title: O destino HTTP é um destino Adobe Experience Platform que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
-seo-title: O destino HTTP é um destino Adobe Experience Platform que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
-description: O destino HTTP é um destino Adobe Experience Platform que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
-seo-description: O destino HTTP é um destino Adobe Experience Platform que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
+title: Destino da conexão HTTP
+description: O destino HTTP no Adobe Experience Platform permite enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 2%
 
 ---
 
 
-# (Alfa) [!DNL HTTP] Destino
+# (Alfa) [!DNL HTTP] conexão
 
 >[!IMPORTANT]
 >
 >O destino [!DNL HTTP] na Plataforma está atualmente em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
-
-## Visão geral {#overview}
 
 O destino [!DNL HTTP] é um [!DNL Adobe Experience Platform] destino de transmissão que ajuda a enviar dados de perfil para pontos de extremidade [!DNL HTTP] de terceiros.
 

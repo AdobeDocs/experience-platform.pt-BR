@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
+keywords: Experience Platform;apresentação;Data Science Workspace;tópicos populares
 solution: Experience Platform
-title: Apresentação da Data Science Workspace
+title: Passo a passo da área de trabalho de análise de dados
 topic: Walkthrough
 description: Este documento fornece uma apresentação para a Adobe Experience Platform Data Science Workspace. Especificamente o fluxo de trabalho geral que um cientista de dados passaria para resolver um problema usando o aprendizado de máquina.
 translation-type: tm+mt
-source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] passagem
 
-Este documento fornece uma apresentação para o Adobe Experience Platform [!DNL Data Science Workspace]. Este tutorial descreve um fluxo de trabalho geral do cientista de dados e como eles podem abordar e resolver um problema usando o aprendizado da máquina.
+Este documento fornece uma apresentação para Adobe Experience Platform [!DNL Data Science Workspace]. Este tutorial descreve um fluxo de trabalho geral do cientista de dados e como eles podem abordar e resolver um problema usando o aprendizado da máquina.
 
 ## Pré-requisitos
 
 - Uma conta Adobe ID registrada
-   - A conta Adobe ID deve ter sido adicionada a uma organização com acesso ao Adobe Experience Platform e [!DNL Data Science Workspace].
+   - A conta do Adobe ID deve ter sido adicionada a uma organização com acesso ao Adobe Experience Platform e [!DNL Data Science Workspace].
 
 ## Caso de uso de varejo
 
@@ -30,7 +30,7 @@ Um varejista enfrenta muitos desafios para se manter competitivo no mercado atua
 
 A solução de um cientista de dados é aproveitar a riqueza de informações históricas fornecidas por um varejista, prever tendências futuras e otimizar as decisões de preços. Esta apresentação usa dados de vendas passadas para treinar um modelo de aprendizado de máquina e usa o modelo para prever tendências futuras de venda. Com isso, você pode gerar insights para ajudar a fazer alterações ideais nos preços.
 
-Esta visão geral reflete os passos que um cientista de dados iria seguir para pegar um conjunto de dados e criar um modelo para prever vendas semanais. Este tutorial aborda as seguintes seções no Notebook de amostra de vendas a varejo no Adobe Experience Platform [!DNL Data Science Workspace]:
+Esta visão geral reflete os passos que um cientista de dados iria seguir para pegar um conjunto de dados e criar um modelo para prever vendas semanais. Este tutorial aborda as seguintes seções no Bloco de Notas de Amostra de Vendas a Varejo no Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configuração](#setup)
 - [Como explorar dados](#exploring-data)
@@ -39,13 +39,13 @@ Esta visão geral reflete os passos que um cientista de dados iria seguir para p
 
 ### Notebooks em [!DNL Data Science Workspace]
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Notebooks]** na guia **[!UICONTROL Data Science]** para trazê-lo à página de visão geral [!UICONTROL Notebooks] . Nesta página, selecione a [!DNL JupyterLab] guia para iniciar seu [!DNL JupyterLab] ambiente. A landing page padrão para [!DNL JupyterLab] é o **[!UICONTROL Iniciador]**.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Notebooks]** na guia **[!UICONTROL Data Science]** para trazer você para a página [!UICONTROL Notebooks] de visão geral. Nesta página, selecione a guia [!DNL JupyterLab] para iniciar o ambiente [!DNL JupyterLab]. A landing page padrão para [!DNL JupyterLab] é **[!UICONTROL Iniciador]**.
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Este tutorial usa [!DNL Python] 3 em [!DNL JupyterLab Notebooks] para mostrar como acessar e explorar os dados. Na página Iniciador, há exemplos de notebooks fornecidos. O notebook de amostra **[!UICONTROL de vendas]** de varejo é usado nos exemplos fornecidos abaixo.
+Este tutorial usa [!DNL Python] 3 em [!DNL JupyterLab Notebooks] para mostrar como acessar e explorar os dados. Na página Iniciador, há exemplos de notebooks fornecidos. O bloco de anotações de **[!UICONTROL Vendas a varejo]** é usado nos exemplos fornecidos abaixo.
 
 ### Configuração {#setup}
 
@@ -62,7 +62,7 @@ Com o notebook de vendas de varejo aberto, a primeira coisa que você deve fazer
 
 #### Carregar dados
 
-Depois que as bibliotecas são carregadas, você pode start observando os dados. O [!DNL Python] código a seguir usa a estrutura `DataFrame` de dados dos pandas e a função [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para ler o CSV hospedado [!DNL Github] nos pandas DataFrame:
+Depois que as bibliotecas são carregadas, você pode start observando os dados. O código a seguir [!DNL Python] usa a estrutura de dados dos pandas `DataFrame` e a função [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para ler o CSV hospedado em [!DNL Github] nos pandas DataFrame:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -86,7 +86,7 @@ df.info()
 
 Essas informações são úteis, pois conhecer o tipo de dados para cada coluna permitirá que saibamos como tratar os dados.
 
-Agora vamos olhar para o resumo estatístico. Somente os tipos de dados numéricos serão exibidos `date`, `storeType`e não `isHoliday` serão enviados:
+Agora vamos olhar para o resumo estatístico. Somente os tipos de dados numéricos serão exibidos, de modo que `date`, `storeType` e `isHoliday` não serão exibidos como saída:
 
 ```PYTHON
 df.describe()
@@ -96,11 +96,11 @@ df.describe()
 
 Com isso, você pode ver que existem 6.435 instâncias para cada característica. Além disso, são fornecidas informações estatísticas como média, desvio padrão (std), mín., máx. e interquartis. Isso nos fornece informações sobre o desvio dos dados. Na próxima seção, você vai visualizar o que funciona junto com essas informações para nos dar uma compreensão completa dos seus dados.
 
-Analisando os valores mínimo e máximo para `store`, você pode ver que existem 45 armazenamentos exclusivos que os dados representam. Há também `storeTypes` que diferenciam o que é uma loja. você pode ver a distribuição do `storeTypes` ao fazer o seguinte:
+Analisando os valores mínimo e máximo para `store`, você pode ver que há 45 armazenamentos exclusivos que os dados representam. Há também `storeTypes` que diferenciam o que é uma loja. você pode ver a distribuição de `storeTypes` fazendo o seguinte:
 
 ![](./images/walkthrough/df_groupby.png)
 
-Isso significa que 22 lojas são de `storeType A` , 17 são `storeType B`e 6 são `storeType C`.
+Isso significa que 22 lojas são de `storeType A`, 17 são `storeType B` e 6 são `storeType C`.
 
 #### Visualizar dados
 
@@ -110,7 +110,7 @@ Agora que você sabe seus valores de quadro de dados, você quer complementá-lo
 
 Gráficos de variação única são gráficos de uma variável individual. Um gráfico univariado comum usado para visualizar seus dados são gráficos de caixa e de uísque.
 
-Usando seu conjunto de dados de varejo de antes, você pode gerar a caixa e o gráfico de uísque para cada uma das 45 lojas e suas vendas semanais. O gráfico é gerado usando a `seaborn.boxplot` função.
+Usando seu conjunto de dados de varejo de antes, você pode gerar a caixa e o gráfico de uísque para cada uma das 45 lojas e suas vendas semanais. O gráfico é gerado usando a função `seaborn.boxplot`.
 
 ![](./images/walkthrough/box_whisker.png)
 
@@ -143,7 +143,7 @@ Nesta seção, a engenharia de recursos é usada para fazer modificações no se
 
 #### Adicionar colunas de semana e ano
 
-O formato atual para a data (`2010-02-05`) pode dificultar a diferenciação dos dados para cada semana. Por isso, você deve converter a data para conter semana e ano.
+O formato atual para a data (`2010-02-05`) pode tornar difícil diferenciar que os dados sejam para cada semana. Por isso, você deve converter a data para conter semana e ano.
 
 ![](./images/walkthrough/date_to_week_year.png)
 
@@ -153,25 +153,25 @@ Agora, a semana e a data são as seguintes:
 
 #### Converter storeType em variável de indicador
 
-Em seguida, converta a coluna storeType em colunas representando cada uma `storeType`. Há três tipos de armazenamento (`A`, `B`, `C`), a partir dos quais você está criando três novas colunas. O valor definido em cada é um valor booliano no qual um &quot;1&quot; é definido dependendo do que `storeType` era e `0` das outras 2 colunas.
+Em seguida, converta a coluna storeType em colunas que representam cada `storeType`. Há três tipos de armazenamento (`A`, `B`, `C`), dos quais você está criando três novas colunas. O valor definido em cada é um valor booliano no qual um &#39;1&#39; é definido dependendo do que `storeType` era e `0` para as outras 2 colunas.
 
 ![](./images/walkthrough/storeType.png)
 
-A `storeType` coluna atual é solta.
+A coluna `storeType` atual é ignorada.
 
 #### Converter isHoliday em tipo numérico
 
-A próxima modificação é transformar o `isHoliday` booliano em uma representação numérica.
+A próxima modificação é alterar o booliano `isHoliday` para uma representação numérica.
 
 ![](./images/walkthrough/isHoliday.png)
 
 #### Prever vendas semanais da próxima semana
 
-Agora você deseja adicionar vendas semanais anteriores e futuras a cada um dos seus conjuntos de dados. Você pode fazer isso compensando o seu `weeklySales`. Além disso, a `weeklySales` diferença é calculada. Isso é feito subtraindo `weeklySales` com a semana anterior `weeklySales`.
+Agora você deseja adicionar vendas semanais anteriores e futuras a cada um dos seus conjuntos de dados. Você pode fazer isso compensando seu `weeklySales`. Além disso, a diferença `weeklySales` é calculada. Isso é feito subtraindo `weeklySales` ao `weeklySales` da semana anterior.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Como você está compensando os conjuntos de dados 45 para frente e 45 para trás para criar novas colunas, o primeiro e o último 45 pontos de dados têm valores NaN. `weeklySales` É possível remover esses pontos do conjunto de dados usando a `df.dropna()` função que remove todas as linhas que têm valores NaN.
+Como você está compensando os conjuntos de dados 45 de `weeklySales` para frente e 45 conjuntos de dados para trás para criar novas colunas, o primeiro e o último 45 pontos de dados têm valores NaN. Você pode remover esses pontos do conjunto de dados usando a função `df.dropna()` que remove todas as linhas que têm valores NaN.
 
 ![](./images/walkthrough/dropna.png)
 
@@ -179,7 +179,7 @@ Um resumo do conjunto de dados após suas modificações é mostrado abaixo:
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Formação e verificação {#training-and-verification}
+### Treinamento e verificação {#training-and-verification}
 
 Agora, é hora de criar alguns modelos de dados e selecionar qual modelo é o melhor desempenho para prever vendas futuras. Você avaliará os 5 algoritmos a seguir:
 
@@ -191,19 +191,19 @@ Agora, é hora de criar alguns modelos de dados e selecionar qual modelo é o me
 
 #### Dividir conjunto de dados em subconjuntos de treinamento e teste
 
-Você precisa de uma maneira de saber quão preciso seu modelo será capaz de prever valores. Essa avaliação pode ser feita alocando parte do conjunto de dados para ser usado como validação e o restante como dados de treinamento. Como `weeklySalesAhead` são os valores futuros reais de `weeklySales`, você pode usar isso para avaliar a precisão do modelo na previsão do valor. A divisão é feita abaixo:
+Você precisa de uma maneira de saber quão preciso seu modelo será capaz de prever valores. Essa avaliação pode ser feita alocando parte do conjunto de dados para ser usado como validação e o restante como dados de treinamento. Como `weeklySalesAhead` é o valor real futuro de `weeklySales`, você pode usar isso para avaliar a precisão do modelo na previsão do valor. A divisão é feita abaixo:
 
 ![](./images/walkthrough/split_data.png)
 
-Agora você tem `X_train` e `y_train` para preparar os modelos e `X_test` e `y_test` para avaliação mais tarde.
+Agora você tem `X_train` e `y_train` para preparar os modelos e `X_test` e `y_test` para avaliação posterior.
 
 #### Algoritmos de verificação de manchas
 
-Nesta seção, você declara todos os algoritmos em uma matriz chamada `model`. Em seguida, você repete por esse storage e, para cada algoritmo, insira seus dados de treinamento com os `model.fit()` quais cria um modelo `mdl`. Usando este modelo, você pode prever `weeklySalesAhead` com seus `X_test` dados.
+Nesta seção, você declara todos os algoritmos em uma matriz chamada `model`. Em seguida, você repete por esse storage e, para cada algoritmo, insira seus dados de treinamento com `model.fit()`, que cria um modelo `mdl`. Usando esse modelo, você pode prever `weeklySalesAhead` com seus dados `X_test`.
 
 ![](./images/walkthrough/training_scoring.png)
 
-Para a pontuação, você está assumindo a diferença percentual média entre os valores previstos `weeklySalesAhead` e reais nos `y_test` dados. Como você deseja minimizar a diferença entre sua previsão e o resultado real, o Gradient Boosting Regressor é o modelo de melhor desempenho.
+Para a pontuação, você está obtendo a diferença percentual média entre o previsto `weeklySalesAhead` e os valores reais nos dados `y_test`. Como você deseja minimizar a diferença entre sua previsão e o resultado real, o Gradient Boosting Regressor é o modelo de melhor desempenho.
 
 #### Visualizar previsões
 
@@ -220,4 +220,4 @@ Este documento cobriu um fluxo de trabalho geral de cientista de dados para reso
 - Em seguida, a engenharia de recursos é usada para fazer modificações no seu conjunto de dados de varejo.
 - Por fim, crie modelos de dados e selecione qual modelo é o melhor desempenho para prever vendas futuras.
 
-Quando estiver pronto, leia o guia [do usuário do](./jupyterlab/overview.md) JupyterLab para obter uma rápida visão geral dos notebooks na Adobe Experience Platform Data Science Workspace. Além disso, se você estiver interessado em aprender sobre Modelos e receitas, leia o schema de vendas de [varejo e o tutorial de conjunto de dados](./models-recipes/create-retails-sales-dataset.md) . Este tutorial o prepara para tutoriais subsequentes da Data Science Workspace que podem ser exibidos na página [de](../tutorials/data-science-workspace.md)tutoriais da Data Science Workspace.
+Quando estiver pronto, leia o [Guia do usuário do JupyterLab](./jupyterlab/overview.md) para obter uma visão geral rápida dos notebooks na Adobe Experience Platform Data Science Workspace. Além disso, se você estiver interessado em saber mais sobre Modelos e receitas, leia o tutorial [schema de vendas de varejo e conjunto de dados](./models-recipes/create-retails-sales-dataset.md). Este tutorial o prepara para tutoriais subsequentes da Data Science Workspace que podem ser exibidos na página [tutoriais](../tutorials/data-science-workspace.md) da Data Science Workspace.

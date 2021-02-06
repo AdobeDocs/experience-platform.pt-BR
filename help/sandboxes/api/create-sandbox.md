@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
-title: Criar uma caixa de proteção
+title: Criar uma caixa de proteção na API
 topic: developer guide
 description: Você pode criar uma nova caixa de proteção fazendo uma solicitação de POST para o ponto de extremidade '/sandboxes'.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
 
-# Criar uma caixa de proteção
+# Criar uma caixa de proteção na API
 
-Você pode criar uma nova caixa de proteção, fazendo uma solicitação de POST para o `/sandboxes` endpoint.
+Você pode criar uma nova caixa de proteção, fazendo uma solicitação POST para o ponto de extremidade `/sandboxes`.
 
 **Formato da API**
 
@@ -50,7 +50,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da caixa de proteção recém-criada, mostrando que ela `state` está &quot;criando&quot;.
+Uma resposta bem-sucedida retorna os detalhes da caixa de proteção recém-criada, mostrando que seu `state` está &quot;criando&quot;.
 
 ```json
 {
@@ -64,4 +64,4 @@ Uma resposta bem-sucedida retorna os detalhes da caixa de proteção recém-cria
 
 >[!NOTE]
 >
->As caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que elas `state` se tornarão &quot;ativas&quot; ou &quot;com falha&quot;.
+>As caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seus `state` se tornarão &quot;ativos&quot; ou &quot;falharam&quot;.

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
-title: Configurar um fluxo de dados para um conector em lote de armazenamentos na nuvem na interface do usuário
+title: Configurar um fluxo de dados para um conector de lote de Armazenamentos na nuvem na interface do usuário
 topic: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Configurar um fluxo de dados para um conector em lote de armazenamentos na nuvem na interface do usuário
+# Configurar um fluxo de dados para uma conexão em lote de armazenamentos na nuvem na interface do usuário
 
 Um fluxo de dados é uma tarefa programada que recupera e ingere dados de uma fonte para um conjunto de dados [!DNL Platform]. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 

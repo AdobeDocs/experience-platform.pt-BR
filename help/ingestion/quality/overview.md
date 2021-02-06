@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
+keywords: Experience Platform;home;popular topics;Qualidade;Validação com suporte;Validação;validação com suporte;;home;popular topics;Data quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
-title: Qualidade de ingestão de dados
+title: Qualidade dos dados
 topic: overview
 description: O documento a seguir fornece um resumo das verificações e comportamentos de validação suportados para a ingestão em lote e streaming no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 5%
+source-wordcount: '317'
+ht-degree: 6%
 
 ---
 
@@ -32,23 +32,23 @@ A Adobe Experience Platform oferece garantias bem definidas de integridade, prec
 
 A ingestão em lote e em streaming evita que os dados com falha sejam enviados para downstream movendo dados incorretos para recuperação e análise em [!DNL Data Lake]. A ingestão de dados fornece as seguintes validações para a ingestão em lote e streaming.
 
-### Ingestão em lote
+### Assimilação em lote
 
 As validações a seguir são feitas para a ingestão em lote:
 
 | Área de validação | Descrição |
 | --------------- | ----------- |
-| Esquema | Certifique-se de que o schema **não** esteja vazio e contenha uma referência ao schema da união, da seguinte forma: `"meta:immutableTags": ["union"]` |
+| Esquema | Certifique-se de que o schema esteja **e não** vazio e contenha uma referência ao schema da união, da seguinte forma: `"meta:immutableTags": ["union"]` |
 | `identityField` | Garante que todos os descritores de identidade válidos sejam definidos. |
 | `createdUser` | Certifique-se de que o usuário que ingeriu o lote tenha permissão para ingerir o lote. |
 
-### Inclusão de transmissão
+### Assimilação por streaming
 
 As validações a seguir são feitas para a ingestão de streaming:
 
 | Área de validação | Descrição |
 | --------------- | ----------- |
-| Esquema | Certifique-se de que o schema **não** esteja vazio e contenha uma referência ao schema da união, da seguinte forma: `"meta:immutableTags": ["union"]` |
+| Esquema | Certifique-se de que o schema esteja **e não** vazio e contenha uma referência ao schema da união, da seguinte forma: `"meta:immutableTags": ["union"]` |
 | `identityField` | Garante que todos os descritores de identidade válidos sejam definidos. |
 | JSON | Certifique-se de que o JSON seja válido. |
 | Organização IMS | Certifique-se de que a Organização IMS listada é uma organização válida. |
@@ -56,4 +56,4 @@ As validações a seguir são feitas para a ingestão de streaming:
 | Conjunto de dados | Garante que o conjunto de dados seja especificado, ativado e não tenha sido removido. |
 | Header | Garante que o cabeçalho seja especificado e seja válido. |
 
-Mais informações sobre como [!DNL Platform] monitores e validações de dados podem ser encontradas na documentação [de fluxos de dados de](./monitor-data-ingestion.md)monitoramento.
+Mais informações sobre como [!DNL Platform] monitora e valida dados podem ser encontradas na [documentação de fluxo de dados de monitoramento](./monitor-data-ingestion.md).

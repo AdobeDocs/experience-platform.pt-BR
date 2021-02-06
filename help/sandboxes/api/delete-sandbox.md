@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;delete sandbox
 solution: Experience Platform
-title: Excluir uma caixa de proteção
+title: Excluir uma caixa de proteção na API
 topic: developer guide
 description: É possível excluir uma caixa de proteção fazendo uma solicitação de DELETE que inclua o nome da caixa de proteção no caminho da solicitação.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '116'
 ht-degree: 3%
 
 ---
 
 
-# Excluir uma caixa de proteção
+# Excluir uma caixa de proteção na API
 
-É possível excluir uma caixa de proteção fazendo uma solicitação de DELETE que inclua a caixa de proteção `name` no caminho da solicitação.
+É possível excluir uma caixa de proteção fazendo uma solicitação de DELETE que inclua `name` da caixa de proteção no caminho da solicitação.
 
 >[!NOTE]
 >
->Fazer esta chamada de API atualiza a propriedade da caixa de proteção para &quot; `status` excluída&quot; e a desativa. As solicitações do GET ainda podem recuperar os detalhes da caixa de proteção depois que ela for excluída.
+>Fazer essa chamada de API atualiza a propriedade `status` da caixa de proteção para &quot;deletada&quot; e a desativa. As solicitações do GET ainda podem recuperar os detalhes da caixa de proteção depois que ela for excluída.
 
 **Formato da API**
 
@@ -29,7 +29,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SANDBOX_NAME}` | A `name` da caixa de proteção que deseja excluir. |
+| `{SANDBOX_NAME}` | O `name` da caixa de proteção que deseja excluir. |
 
 **Solicitação**
 
@@ -46,7 +46,7 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes atualizados da caixa de proteção, mostrando que ela `state` é &quot;excluída&quot;.
+Uma resposta bem-sucedida retorna os detalhes atualizados da caixa de proteção, mostrando que seu `state` é &quot;excluído&quot;.
 
 ```json
 {

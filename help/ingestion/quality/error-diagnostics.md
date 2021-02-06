@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;ingestão em lote;ingestão parcial;ingestão parcial;ingestão parcial;Retrive erro;recuperar erro;ingestão em lote parcial;ingestão em lote parcial;parcial;ingestão;erro diagnostics;recuperar erro diagnostics;obter erro diagnostics;obter erro diagnostics;obter erros;obter erros;recuperar erros;recuperar erros;
 solution: Experience Platform
-title: Visão geral da ingestão parcial de lote Adobe Experience Platform
+title: Recuperando Diagnóstico de Erro de Ingestão de Dados
 topic: overview
 description: Este documento fornece informações sobre como monitorar a ingestão em lote, gerenciar erros de ingestão em lote parcial, bem como uma referência para tipos de ingestão em lote parcial.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Recuperando diagnósticos de erro
+# Recuperando diagnósticos de erro de ingestão de dados
 
 A Adobe Experience Platform fornece dois métodos para fazer upload e ingestão de dados. Você pode usar a ingestão em lote, que permite inserir dados usando vários tipos de arquivos (como CSVs), ou a ingestão em streaming, que permite inserir seus dados em [!DNL Platform] usando pontos finais de streaming em tempo real.
 

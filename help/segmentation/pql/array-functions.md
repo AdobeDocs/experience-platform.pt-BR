@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;array functions;array;
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Perfil Query Language;array functions;array;
 solution: Experience Platform
-title: Funções de storage, lista e definição
+title: Array, Lista e definição das funções PQL
 topic: developer guide
 description: O PQL (Perfil Query Language) oferta funciona para facilitar a interação com arrays, listas e strings.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '767'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 5%
 
 # Funções de storage, lista e definição
 
-[!DNL Profile Query Language] (PQL) O oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte a [[!DNL Profile Query Language] visão geral](./overview.md).
+[!DNL Profile Query Language] (PQL) O oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Em
 
-A `in` função é usada para determinar se um item é membro de uma matriz ou lista.
+A função `in` é usada para determinar se um item é membro de uma matriz ou lista.
 
 **Formato**
 
@@ -37,11 +37,11 @@ person.birthMonth in [3, 6, 9]
 
 ## Não está em
 
-A `notIn` função é usada para determinar se um item não é membro de uma matriz ou lista.
+A função `notIn` é usada para determinar se um item não é membro de uma matriz ou lista.
 
 >[!NOTE]
 >
->A `notIn` função *também* garante que nenhum dos valores seja igual a nulo. Portanto, os resultados não são uma negação exata da `in` função.
+>A função `notIn` *também* garante que nenhum dos valores seja igual a nulo. Portanto, os resultados não são uma negação exata da função `in`.
 
 **Formato**
 
@@ -59,7 +59,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersecções
 
-A `intersects` função é usada para determinar se duas matrizes ou listas têm pelo menos um membro comum.
+A função `intersects` é usada para determinar se duas matrizes ou listas têm pelo menos um membro comum.
 
 **Formato**
 
@@ -77,7 +77,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Interseção
 
-A `intersection` função é usada para determinar os membros comuns de duas matrizes ou listas.
+A função `intersection` é usada para determinar os membros comuns de duas matrizes ou listas.
 
 **Formato**
 
@@ -95,7 +95,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subconjunto de
 
-A `subsetOf` função é usada para determinar se uma matriz específica (matriz A) é um subconjunto de outra matriz (matriz B). Em outras palavras, todos os elementos na matriz A são elementos da matriz B.
+A função `subsetOf` é usada para determinar se uma matriz específica (matriz A) é um subconjunto de outra matriz (matriz B). Em outras palavras, todos os elementos na matriz A são elementos da matriz B.
 
 **Formato**
 
@@ -113,7 +113,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superconjunto de
 
-A `supersetOf` função é usada para determinar se uma matriz específica (matriz A) é um superconjunto de outra matriz (matriz B). Em outras palavras, a matriz A contém todos os elementos na matriz B.
+A função `supersetOf` é usada para determinar se uma matriz específica (matriz A) é um superconjunto de outra matriz (matriz B). Em outras palavras, a matriz A contém todos os elementos na matriz B.
 
 **Formato**
 
@@ -131,7 +131,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Inclui
 
-A `includes` função é usada para determinar se uma matriz ou lista contém um determinado item.
+A função `includes` é usada para determinar se uma matriz ou lista contém um determinado item.
 
 **Formato**
 
@@ -149,7 +149,7 @@ person.favoriteColors.includes("red")
 
 ## Distinto
 
-A `distinct` função é usada para remover valores de duplicado de uma matriz ou lista.
+A função `distinct` é usada para remover valores de duplicado de uma matriz ou lista.
 
 **Formato**
 
@@ -167,7 +167,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Agrupar por
 
-A `groupBy` função é usada para particionar valores de uma matriz ou lista em um grupo com base no valor da expressão.
+A função `groupBy` é usada para particionar valores de uma matriz ou lista em um grupo com base no valor da expressão.
 
 **Formato**
 
@@ -190,7 +190,7 @@ orders.groupBy(storeId)
 
 ## Filtro
 
-A `filter` função é usada para filtrar uma matriz ou lista com base em uma expressão.
+A função `filter` é usada para filtrar uma matriz ou lista com base em uma expressão.
 
 **Formato**
 
@@ -213,7 +213,7 @@ person.filter(age >= 21)
 
 ## Mapa
 
-A `map` função é usada para criar uma nova matriz aplicando uma expressão a cada item em uma matriz específica.
+A função `map` é usada para criar uma nova matriz aplicando uma expressão a cada item em uma matriz específica.
 
 **Formato**
 
@@ -229,9 +229,9 @@ O query PQL a seguir cria uma nova matriz de números e quadra o valor dos núme
 numbers.map(square)
 ```
 
-## Primeiro `n` no array {#first-n}
+## Primeiro `n` na matriz {#first-n}
 
-A `topN` função é usada para retornar os primeiros `N` itens em uma matriz, quando classificada em ordem crescente com base na expressão numérica fornecida.
+A função `topN` é usada para retornar os primeiros `N` itens em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida.
 
 **Formato**
 
@@ -253,9 +253,9 @@ O seguinte query PQL retorna os cinco pedidos principais com o preço mais alto.
 orders.topN(price, 5)
 ```
 
-## Últimos `n` na matriz
+## Último `n` na matriz
 
-A `bottomN` função é usada para retornar os últimos `N` itens em uma matriz, quando classificada em ordem crescente com base na expressão numérica fornecida.
+A função `bottomN` é usada para retornar os últimos `N` itens em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida.
 
 **Formato**
 
@@ -279,7 +279,7 @@ orders.bottomN(price, 5)
 
 ## Primeiro item
 
-A `head` função é usada para retornar o primeiro item na matriz ou na lista.
+A função `head` é usada para retornar o primeiro item na matriz ou lista.
 
 **Formato**
 
@@ -289,7 +289,7 @@ A `head` função é usada para retornar o primeiro item na matriz ou na lista.
 
 **Exemplo**
 
-O seguinte query PQL retorna o primeiro dos cinco pedidos principais com o preço mais alto. Mais informações sobre a `topN` função podem ser encontradas na [primeira `n` seção da matriz](#first-n) .
+O seguinte query PQL retorna o primeiro dos cinco pedidos principais com o preço mais alto. Para obter mais informações sobre a função `topN`, consulte a seção [first `n` no array](#first-n).
 
 ```sql
 orders.topN(price, 5).head()
@@ -297,4 +297,4 @@ orders.topN(price, 5).head()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre o array, a lista e as funções definidas, é possível usá-las nos query PQL. Para obter mais informações sobre outras funções PQL, leia a visão geral [do Idioma do Query do](./overview.md)Perfil.
+Agora que você aprendeu sobre o array, a lista e as funções definidas, é possível usá-las nos query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).

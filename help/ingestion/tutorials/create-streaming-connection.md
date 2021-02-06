@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;conexão de transmissão;criar conexão de transmissão;guia de API;tutorial;criar uma conexão de transmissão;ingestão de transmissão;;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestão;ingestão;
 solution: Experience Platform
-title: Criar uma conexão de streaming usando a API
+title: Criar uma conexão de fluxo usando a API
 topic: tutorial
 type: Tutorial
 description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%

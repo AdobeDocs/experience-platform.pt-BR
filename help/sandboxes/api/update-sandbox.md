@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: Experience Platform;home;popular topics;atualizar caixa de proteção
 solution: Experience Platform
-title: Atualizar uma caixa de proteção
+title: Atualizar uma caixa de proteção na API
 topic: developer guide
 description: É possível atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua o nome da caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '133'
 ht-degree: 3%
 
 ---
 
 
-# Atualizar uma caixa de proteção
+# Atualizar uma caixa de proteção na API
 
-É possível atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua os campos `name` na caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
+Você pode atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua o `name` da caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
 
 >[!NOTE]
 >
->Atualmente, apenas a propriedade de uma caixa de proteção pode ser atualizada. `title`
+>Atualmente, somente a propriedade `title` de uma caixa de proteção pode ser atualizada.
 
 **Formato da API**
 
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SANDBOX_NAME}` | A `name` propriedade da caixa de proteção que você deseja atualizar. |
+| `{SANDBOX_NAME}` | A propriedade `name` da caixa de proteção que deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza a `title` propriedade da caixa de proteção chamada &quot;dev-2&quot;.
+A solicitação a seguir atualiza a propriedade `title` da caixa de proteção chamada &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \

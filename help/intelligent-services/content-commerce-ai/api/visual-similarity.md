@@ -1,13 +1,13 @@
 ---
-keywords: Visual similarity;visual similarity;ccai api
+keywords: semelhança visual;semelhança visual;ccai api
 solution: Experience Platform, Intelligent Services
-title: Similaridade visual
+title: Semelhança visual na API AI de conteúdo e comércio
 topic: Developer guide
 description: O serviço de semelhança visual, quando recebe uma imagem, encontra automaticamente imagens visualmente semelhantes de um catálogo.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ A solicitação a seguir recupera imagens visualmente semelhantes de um catálog
 
 >[!CAUTION]
 >
->`analyzer_id` determina qual [!DNL Sensei Content Framework] é usado. Verifique se você tem o direito `analyzer_id` antes de fazer sua solicitação. Entre em contato com a equipe beta do AI do Content and Commerce para receber seu serviço `analyzer_id` para este serviço.
+>`analyzer_id` determina qual  [!DNL Sensei Content Framework] é usado. Verifique se você tem o `analyzer_id` correto antes de fazer sua solicitação. Entre em contato com a equipe beta do AI de Conteúdo e Comércio para receber seu `analyzer_id` para este serviço.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,21 +76,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriedade | Descrição | Obrigatório |
 | --- | --- | --- |
-| `analyzer_id` | A ID de [!DNL Sensei] serviço em que sua solicitação é implantada. Essa ID determina qual dos [!DNL Sensei Content Frameworks] é usada. Para serviços personalizados, entre em contato com a equipe do AI de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
+| `analyzer_id` | A ID do serviço [!DNL Sensei] em que sua solicitação foi implantada. Essa ID determina qual dos [!DNL Sensei Content Frameworks] são usados. Para serviços personalizados, entre em contato com a equipe do AI de Conteúdo e Comércio para configurar uma ID personalizada. | Sim |
 | `application-id` | A ID do aplicativo criado. | Sim |
-| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa uma imagem. Todos os parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da `data` matriz. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída de dentro `data`. | Sim |
+| `data` | Uma matriz que contém um objeto JSON com cada objeto na matriz que representa uma imagem. Todos os parâmetros transmitidos como parte dessa matriz substituem os parâmetros globais especificados fora da matriz `data`. Qualquer uma das propriedades restantes descritas abaixo nesta tabela pode ser substituída de dentro de `data`. | Sim |
 | `content-id` | A ID exclusiva do elemento de dados retornado na resposta. Se isso não for passado, uma ID gerada automaticamente será atribuída. | Não |
-| `content` | O conteúdo a ser analisado pelo serviço de semelhança visual. No evento de que a imagem faça parte do corpo da solicitação, use `-F file=@<filename>` o comando curl para passar a imagem, deixando esse parâmetro como uma string vazia. <br> Se a imagem for um arquivo no S3, passe o url assinado. Quando o conteúdo faz parte do corpo da solicitação, a lista de elementos de dados deve ter apenas um objeto. Se mais de um objeto for transmitido, somente o primeiro objeto será processado. | Sim |
+| `content` | O conteúdo a ser analisado pelo serviço de semelhança visual. No evento de que a imagem faça parte do corpo da solicitação, use `-F file=@<filename>` no comando curl para passar a imagem, deixando esse parâmetro como uma string vazia. <br> Se a imagem for um arquivo no S3, passe o url assinado. Quando o conteúdo faz parte do corpo da solicitação, a lista de elementos de dados deve ter apenas um objeto. Se mais de um objeto for transmitido, somente o primeiro objeto será processado. | Sim |
 | `content-type` | Usado para indicar se a entrada é parte do corpo da solicitação ou um url assinado para um bucket S3. O padrão para essa propriedade é `inline`. | Não |
 | `encoding` | O formato de arquivo da imagem de entrada. Atualmente, somente imagens JPEG e PNG podem ser processadas. O padrão para essa propriedade é `jpeg`. | Não |
 | `threshold` | O limite de pontuação (0 a 1) acima do qual os resultados precisam ser retornados. Use o valor `0` para retornar todos os resultados. O padrão para essa propriedade é `0`. | Não |
-| `top-N` | O número de resultados a serem retornados (não pode ser um número inteiro negativo). Use o valor `0` para retornar todos os resultados. Quando usado em conjunto com `threshold`, o número de resultados retornados é o menor dos dois limites definidos. O padrão para essa propriedade é `0`. | Não |
+| `top-N` | O número de resultados a serem retornados (não pode ser um número inteiro negativo). Use o valor `0` para retornar todos os resultados. Quando usado em conjunto com `threshold`, o número de resultados retornados é o menor de qualquer um dos limites definidos. O padrão para essa propriedade é `0`. | Não |
 | `custom` | Quaisquer parâmetros personalizados a serem transmitidos. | Não |
 | `historic-metadata` | Uma matriz que pode ser passada para metadados. | Não |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um `response` storage que contém um `feature_value` e `feature_name` para cada uma das imagens visualmente semelhantes encontradas no catálogo.
+Uma resposta bem-sucedida retorna uma matriz `response` que contém `feature_value` e `feature_name` para cada uma das imagens visualmente semelhantes encontradas no catálogo.
 
 As seguintes imagens visualmente semelhantes foram retornadas na resposta de exemplo mostrada abaixo:
 

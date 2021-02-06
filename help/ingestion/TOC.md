@@ -5,22 +5,22 @@ user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
 breadcrumb-title: Guia da Ingestão de dados
 user-guide-description: Traga seus dados para o Platform por meio de uma assimilação em lote ou streaming.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 21%
+source-wordcount: '121'
+ht-degree: 25%
 
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Ingestão de dados da Adobe Experience Platform {#ingestion}
 
 - [Visão geral da ingestão de dados](home.md)
-- Streaming ingestion {#streaming}
+- Assimilação por streaming {#streaming}
    - [Visão geral](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Solução de problemas](streaming-ingestion/troubleshooting.md)
-- Ingestão em lote{#batch}
+- Assimilação em lote{#batch}
    - [Visão geral](batch-ingestion/overview.md)
    - [API de ingestão em lote](batch-ingestion/api-overview.md)
    - [Ingestão parcial em lote](batch-ingestion/partial.md)
@@ -34,13 +34,13 @@ ht-degree: 21%
    - [Transmissão de dados de registro](tutorials/streaming-record-data.md)
    - [Transmissão de dados de séries temporais](tutorials/streaming-time-series-data.md)
    - [Transmissão de várias mensagens](tutorials/streaming-multiple-messages.md)
-- Qualidade e monitorização da ingestão de dados{#quality}
+- Qualidade e monitoramento de dados{#quality}
    - [Visão geral](quality/overview.md)
    - [Monitorar ingestão de dados](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de erro](quality/error-diagnostics.md)
    - [Recuperar lotes com falha](quality/retrieve-failed-batches.md)
    - [Validação de ingestão de fluxo](quality/streaming-validation.md)
-   - [Assinar eventos de ingestão de dados](quality/subscribe-events.md)
+   - [Notificações de ingestão de dados](quality/subscribe-events.md)
 - [Conectores de origem](source-connectors.md)
 - [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

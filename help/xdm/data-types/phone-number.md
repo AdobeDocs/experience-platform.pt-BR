@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;campos;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data type;
 solution: Experience Platform
 title: Tipo de dados do número de telefone
 topic: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do número de telefone.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 1%
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Tipo de dados de número] de telefone
+# [!UICONTROL Tipo ] de dados de número de telefone
 
-[!UICONTROL O número] de telefone é um tipo de dados XDM padrão que descreve os detalhes de um número de telefone.
+[!UICONTROL O ] número de telefone é um tipo de dados XDM padrão que descreve os detalhes de um número de telefone.
 
 <img src="../images/data-types/phone-number.png" width="600" /><br />
 
 | Propriedade | Descrição |
 | --- | --- |
 | `extension` | O número de discagem interno usado para chamar de um intercâmbio privado, operador ou central telefônica. |
-| `number` | O número de telefone. Observe que o número de telefone é uma string e pode incluir caracteres significativos, como colchetes `()`, hífens `-`ou caracteres, para indicar identificadores de subdiscagem, como extensões `x` por exemplo, `1-353(0)18391111` ou `+613 9403600x1234`. |
-| `primary` | Um valor booliano que indica se este é o número de telefone principal do indivíduo. Diferentemente do endereço ou endereço de email, pode haver vários números de telefone primários; um por canal de comunicação. O canal de comunicação é definido pelo tipo (indicado pelo nome da propriedade pai): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`, e `fax`. |
+| `number` | O número de telefone. Observe que o número de telefone é uma string e pode incluir caracteres significativos, como colchetes `()`, hífens `-` ou caracteres para indicar identificadores de sub-discagem, como extensões `x`, por exemplo, `1-353(0)18391111` ou `+613 9403600x1234`. |
+| `primary` | Um valor booliano que indica se este é o número de telefone principal do indivíduo. Diferentemente do endereço ou endereço de email, pode haver vários números de telefone primários; um por canal de comunicação. O canal de comunicação é definido pelo tipo (indicado pelo nome da propriedade pai): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` e `fax`. |
 | `status` | Indica se o número de telefone pode ser usado no momento. |
 | `statusReason` | Uma descrição do status atual. |
 | `validity` | Um nível de correção técnica do número de telefone. |

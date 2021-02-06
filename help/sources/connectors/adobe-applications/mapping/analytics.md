@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
+keywords: Experience Platform;home;popular topics;Mapeamento de campos do Analytics;mapeamento analítico
 solution: Experience Platform
-title: Campos de mapeamento do Analytics
+title: Mapeamento de campos para o Adobe Analytics Source Connector
 topic: overview
 description: A Adobe Experience Platform permite que você ingira dados da Adobe Analytics por meio do ADC (Analytics Data Connector). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos do Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '3378'
+source-wordcount: '3393'
 ht-degree: 11%
 
 ---
 
 
-# Campos de mapeamento do Analytics
+# Mapeamentos de campos do Analytics
 
 A Adobe Experience Platform permite que você ingira dados da Adobe Analytics por meio do ADC (Analytics Data Connector). Alguns dos dados ingeridos por meio do ADC podem ser mapeados diretamente dos campos do Analytics para os campos do Modelo de dados de experiência (XDM), enquanto outros dados exigem transformações e funções específicas para serem mapeados com êxito.
 
@@ -23,7 +23,7 @@ A Adobe Experience Platform permite que você ingira dados da Adobe Analytics po
 
 Os campos selecionados são mapeados diretamente do Adobe Analytics para o Experience Data Model (XDM).
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*campo do Analytics*), o campo XDM correspondente (*campo XDM*) e seu tipo (*Tipo XDM*), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 | mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | número | Beacon do Mobile Services menor. |
 | mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | UUID de beacon do Mobile Services. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | string | ID da sessão de vídeo. |
-| videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | matriz | Gênero de vídeo. | {title (Object), descrição (Object), tipo (Object), meta:xdmType (Object), itens (string), meta:xdmField (Object)} |
+| videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Gênero | matriz | Gênero de vídeo. | {title (Object), descrição (Object), tipo (Object), meta:xdmType (Object), itens (string), meta:xdmField (Object)} |
 | mobileinstalls | application.firstLaunches | Objeto | Isso é acionado na primeira execução após a instalação ou reinstalação | {id (cadeia), valor (número)} |
 | mobileupgrades | application.upgrades | Objeto | Relata o número de atualizações do aplicativo. Acionadores na primeira execução após a atualização ou a qualquer momento em que o número da versão for alterado. | {id (cadeia), valor (número)} |
 | mobilelaunches | application.launches | Objeto | O número de vezes que o aplicativo foi iniciado. | {id (cadeia), valor (número)} |
@@ -126,7 +126,7 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 
 ## Dividir campos de mapeamento
 
-Esses campos têm uma única fonte, mas mapeiam para **várias** localizações XDM.
+Esses campos têm uma única fonte, mas mapeiam para **vários** locais XDM.
 
 | Campo do Analytics | Campo XDM | Tipo XDM | Descrição |
 | --------------- | --------- | -------- | ---------- |
@@ -138,7 +138,7 @@ Esses campos têm uma única fonte, mas mapeiam para **várias** localizações 
 
 Para serem gerados no XDM, é necessário transformar campos selecionados provenientes do ADC, exigindo lógica além de uma cópia direta da Adobe Analytics.
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*campo do Analytics*), o campo XDM correspondente (*campo XDM*) e seu tipo (*Tipo XDM*), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >
@@ -196,9 +196,9 @@ A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo
 
 Os campos selecionados (conhecidos como &quot;pós-valores&quot;) exigem transformações mais avançadas antes de serem mapeados com êxito dos campos Adobe Analytics para o Experience Data Model (XDM). A execução dessas transformações avançadas envolve o uso do Serviço de Query do Adobe Experience Platfrom e funções pré-criadas (chamadas funções definidas pelo Adobe) para sessões, atribuições e desduplicação-duplicadas.
 
-Para saber mais sobre como executar essas transformações usando o Serviço de Query, visite a documentação de funções [definidas pelo](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
+Para saber mais sobre como executar essas transformações usando o Serviço de Query, visite a documentação [funções definidas pelo Adobe](../../../../query-service/sql/adobe-defined-functions.md).
 
-A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (campo *do* Analytics), o campo XDM correspondente (campo ** XDM) e seu tipo (tipo ** XDM), bem como uma descrição do campo (*Descrição*).
+A tabela a seguir inclui colunas que mostram o nome do campo do Analytics (*campo do Analytics*), o campo XDM correspondente (*campo XDM*) e seu tipo (*Tipo XDM*), bem como uma descrição do campo (*Descrição*).
 
 >[!NOTE]
 >

@@ -1,21 +1,17 @@
 ---
 keywords: livefyre;livefyre extension
-title: extensão Adobe Livefyre
-seo-title: extensão Adobe Livefyre
+title: Destino da Extensão Adobe Livefyre
 description: A extensão Adobe Livefyre é um destino social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Adobe Livefyre é um destino social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 4%
+source-wordcount: '498'
+ht-degree: 5%
 
 ---
 
 
 # Adobe Livefyre extension {#adobe-livefyre-extension}
-
-## Visão geral {#overview}
 
 O Adobe Livefyre permite que você descubra, organize e publique um fluxo constante de conteúdo gerado pelo usuário no seu site para criar experiências autênticas e altamente personalizadas.
 

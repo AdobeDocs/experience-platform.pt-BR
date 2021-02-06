@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;exportar;importar;rpc;
 solution: Experience Platform
-title: Guia de ponto de extremidade Exportar/Importar
+title: Pontos finais da API de exportação/importação
 description: Os pontos finais /export e /import na API do Registro de Schemas permitem que você compartilhe recursos XDM entre organizações IMS e caixas de proteção.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: dfa91e387b6fcd0d528a523a06d2516bc8befc20
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%

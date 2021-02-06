@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identidade namespace;identidade namespace;identidade;identidade;identidade
 solution: Experience Platform
-title: Criar uma namespace personalizada
+title: Criar uma Namespace personalizada na API do serviço de identidade
 topic: API guide
 description: Usando a API de Namespace de identidade, você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
 
-# Criação de uma namespace personalizada
+# Criar uma namespace personalizada na API do serviço de identidade
 
-Usando a [!DNL Identity Namespace] API, você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
+Usando a API [!DNL Identity Namespace], você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
 
-Para obter recomendações sobre como criar namespaces personalizadas, consulte [a documentação](../troubleshooting-guide.md)de Perguntas frequentes do Serviço de identidade.
+Para obter recomendações sobre como criar namespaces personalizadas, consulte [a documentação de Perguntas frequentes do Serviço de Identidade](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para [lista da ID nativa de uma identidade](./list-native-id.md)
+Vá para o próximo tutorial para [lista a ID nativa de uma identidade](./list-native-id.md)

@@ -1,19 +1,17 @@
 ---
 keywords: destinos de dmp;DIL;extensão dmp do gerenciador de audiências;extensão dmp;plataforma de gestão de dados;destinos da plataforma de gestão de dados
-title: Destinos da plataforma de gestão de dados (DMP)
-seo-title: Destinos da plataforma de gestão de dados (DMP)
+title: Visão geral dos destinos da plataforma de gestão de dados (DMP)
 description: As Plataformas de gestão de dados (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
-seo-description: As Plataformas de gestão de dados (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Data Management Platform] Destinos (DMP)  {#dmp-destinations}
+# [!DNL Data Management Platform] Visão geral dos destinos (DMP)  {#dmp-destinations}
 
 [!DNL Data Management Platforms] (DMPs) permitem que anunciantes, editores e agências criem perfis de audiência exclusivos, identifiquem seus segmentos mais valiosos e os usem em qualquer canal digital. Isso permite criar uma visualização 360 real de um perfil do consumidor, criar e ativar audiências significativas.
 

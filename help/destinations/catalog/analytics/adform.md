@@ -1,21 +1,17 @@
 ---
 keywords: adform extension;adform
-title: Adicionar extensão
-seo-title: Adicionar extensão
+title: Adicionar destino de extensão
 description: A extensão Adform é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Adform é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '483'
 ht-degree: 3%
 
 ---
 
 
 # Adicionar extensão {#adform-extension}
-
-## Visão geral {#overview}
 
 A extensão de Rastreamento de site da Adobe permite que os anunciantes implementem Pontos de rastreamento de formulário sem esforço em seus sites usando a plataforma [!DNL Experience Platform Launch].
 

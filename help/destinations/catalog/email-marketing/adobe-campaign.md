@@ -1,21 +1,17 @@
 ---
 keywords: email;Email;email;email;email destinos;adobe campanha;campanha
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Destino da conexão Adobe Campaign
 description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
-seo-description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 translation-type: tm+mt
-source-git-commit: cf2d76799c03a2ea0414aedd83b35f3ce2ca3cb5
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 1%
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Campaign
-
-## Visão geral
+# Conexão Adobe Campaign
 
 A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline. Consulte [Sobre o Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obter mais informações.
 

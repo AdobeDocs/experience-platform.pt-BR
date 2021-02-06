@@ -1,21 +1,17 @@
 ---
 keywords: bizível;extensão bizível;destino bizível;bizible;extension;bizible
-title: Extensão bizível
-seo-title: Extensão bizível
+title: Destino da extensão bizíblica
 description: A extensão Bizible é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Bizible é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '488'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Bizible] Extensão {#bizible-extension}
-
-## Visão geral {#overview}
+# [!DNL Bizible] extensão {#bizible-extension}
 
 [!DNL Bizible] é a solução de atribuição B2B líder do setor que oferece visibilidade sem paralelos aos seus dados, para que você possa tomar decisões inteligentes que potencializem o crescimento.
 

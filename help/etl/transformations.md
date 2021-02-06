@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformações
 solution: Experience Platform
 title: Amostra de transformações de ETL
 topic: overview
 description: Este artigo demonstra as seguintes transformações de exemplo que um desenvolvedor de extração, transformação, carregamento (ETL) pode encontrar.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este artigo demonstra as seguintes transformações de exemplo que um desenvolve
 
 ### Arquivos de exemplo
 
-Arquivos CSV e JSON de amostra estão disponíveis no [!DNL GitHub] acordo de referência ETL público mantido pelo Adobe:
+Os arquivos CSV e JSON de amostra estão disponíveis no acordo de referência ETL público [!DNL GitHub] mantido pelo Adobe:
 
 - [CRM_perfis.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_perfis.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -44,7 +44,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mapeamento
 
 Os requisitos de mapeamento para os dados do CRM são descritos na tabela a seguir e incluem as seguintes transformações:
-- Colunas de identidade para `identityMap` propriedades
+- Colunas de identidade para propriedades `identityMap`
 - Data de nascimento (DOB) ao Ano e ao Mês
 - Strings para Duplos ou números inteiros curtos.
 
@@ -54,7 +54,7 @@ Os requisitos de mapeamento para os dados do CRM são descritos na tabela a segu
 | F_NAME | person.name.firstName | Copiar como string |
 | L_NAME | person.name.lastName | Copiar como string |
 | GÊNERO | person.gender | Transformar gênero como valor de enumeração pessoal correspondente.gênero |
-| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>people.bornData: &quot;AAAA-MM-DD&quot;<br/>pessoa.nascimentoAno: YYYY | Transforme bornDayAndMonth como<br/>stringTransform bornDate como<br/>stringTransform bornYear como short int |
+| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>pessoa.nascimentoData: &quot;AAAA-MM-DD&quot;<br/>pessoa.nascimentoAno: YYYY | Transforme bornDayAndMonth como string<br/>Transforme bornDate como string<br/>Transformar bornYear como short int |
 | EMAIL | personalEmail.address | Copiar como string |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primário:false}] | Copiar como string para a matriz CRMID no identityMap e definir Primary como false |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copiar como string para a primeira entrada na matriz ECID no identityMap e definir Primary como false |
@@ -178,7 +178,7 @@ A hierarquia de um dataframe (como um arquivo Parquet) deve corresponder à do s
 
 ### Exemplo de dataframe
 
-A estrutura do exemplo de dataframe a seguir foi mapeada para um schema que implementa a [!DNL XDM Individual Profile] classe e contém os campos mais comuns associados aos schemas desse tipo.
+A estrutura do exemplo de dataframe a seguir foi mapeada para um schema que implementa a classe [!DNL XDM Individual Profile] e contém os campos mais comuns associados a schemas desse tipo.
 
 ```python
 [
@@ -286,9 +286,9 @@ Os requisitos de mapeamento para a matriz de identidades estão descritos na tab
 
 | Campo de identidade | campo IdentityMap | Tipo de dados |
 | -------------- | ----------------- | --------- |
-| identities[0].id | [identityMapEmail][{"id"}] | copiar como string |
-| identities[1].id | [identityMapCRMID][{"id"}] | copiar como string |
-| identities[2].id | [identityMapLOYALTYID][{"id"}] | copiar como string |
+| identities[0].id | identityMap[Email][{"id"}] | copiar como string |
+| identities[1].id | identityMap[CRMID][{"id"}] | copiar como string |
+| identities[2].id | identityMap[LOYALTYID][{"id"}] | copiar como string |
 
 ### Saída XDM
 

@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
-title: Extensão do DoubleClick Floodlight (Beta)
-seo-title: Extensão do DoubleClick Floodlight (Beta)
+title: Destino de Extensão do DoubleClick Floodlight (Beta)
 description: A extensão DoubleClick Floodlight (Beta) é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão DoubleClick Floodlight (Beta) é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '517'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL DoubleClick Floodlight] Extensão (Beta)
-
-## Visão geral {#overview}
 
 Essa extensão permite a implantação rápida e fácil de [!DNL DoubleClick Floodlight] tags usando o formato tradicional de Floodlight (não a tag global do site). Observação: Esta extensão está em beta.
 

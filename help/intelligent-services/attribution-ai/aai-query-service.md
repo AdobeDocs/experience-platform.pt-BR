@@ -1,19 +1,19 @@
 ---
 keywords: insights;atribuição ai;atribuição ai insights;serviço de query AAI;query de atribuição;pontuações de atribuição
 solution: Intelligent Services, Experience Platform
-title: Guia de start rápido do Serviço de Query AAI
+title: Analisando Pontuações de Atribuição Usando o Serviço de Query
 topic: Attribution AI queries
-description: Este documento fornece um guia e modelos para usar o Serviço de Query para analisar suas pontuações de atribuição.
+description: Saiba como usar o Serviço de Query Adobe Experience Platform para analisar as pontuações dos Attribution AI.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Guia de start rápido do Serviço de Query Adobe Experience Platform para analisar as pontuações de atribuição
+# Analisando as pontuações de atribuição usando o Serviço de Query
 
 Cada linha nos dados representa uma conversão, na qual as informações para pontos de contato relacionados são armazenadas como uma matriz de estruturas na coluna `touchpointsDetail`.
 
@@ -21,7 +21,7 @@ Cada linha nos dados representa uma conversão, na qual as informações para po
 | ---------------------- | ------ |
 | Nome do ponto de contato | `touchpointsDetail. touchpointName` |
 | Canal de ponto de contato | `touchpointsDetail.touchPoint.mediaChannel` |
-| Pontuações algorítmicas AAI de ponto de contato | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Pontuações algorítmicas do Attribution AI de ponto de contato | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Como localizar seus caminhos de dados
 

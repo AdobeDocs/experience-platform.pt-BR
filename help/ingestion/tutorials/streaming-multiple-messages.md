@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;populares tópicos;ingestão de transmissão;ingestão;transmissão de várias mensagens;múltiplas mensagens;
 solution: Experience Platform
-title: Transmissão de várias mensagens em uma única solicitação HTTP
+title: Enviar várias mensagens em uma única solicitação HTTP
 topic: tutorial
 type: Tutorial
 description: Este documento fornece um tutorial para enviar várias mensagens para a Adobe Experience Platform dentro de uma única solicitação HTTP usando a assimilação de streaming.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Envio de várias mensagens em uma única solicitação HTTP
+# Enviar várias mensagens em uma única solicitação HTTP
 
 Ao transmitir dados para o Adobe Experience Platform, fazer várias chamadas HTTP pode ser caro. Por exemplo, em vez de criar 200 solicitações HTTP com cargas de 1 KB, é muito mais eficiente criar 1 solicitação HTTP com 200 mensagens de 1 KB cada, com uma única carga de 200 KB. Quando usado corretamente, agrupar várias mensagens em uma única solicitação é uma excelente maneira de otimizar os dados que estão sendo enviados para [!DNL Experience Platform].
 

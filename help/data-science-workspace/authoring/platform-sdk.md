@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
+keywords: Experience Platform;guia do desenvolvedor;SDK;SDK;Data Access SDK;Data Science Workspace;topics populares
 solution: Experience Platform
-title: Guia do SDK da plataforma
+title: Criação de modelos usando o SDK da plataforma Adobe Experience Platform
 topic: SDK authoring
 description: Este tutorial fornece informações sobre a conversão de data_access_sdk_python para a nova plataforma Python_sdk em Python e R.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL Platform] Guia do SDK
+# Criação de modelos usando o SDK do Adobe Experience Platform [!DNL Platform]
 
 Este tutorial fornece informações sobre como converter `data_access_sdk_python` para o novo Python `platform_sdk` em Python e R. Este tutorial fornece informações sobre as seguintes operações:
 
@@ -23,11 +23,11 @@ Este tutorial fornece informações sobre como converter `data_access_sdk_python
 
 ## Autenticação de compilação {#build-authentication}
 
-A autenticação é necessária para fazer chamadas e é composta por chave de API, ID de organização IMS, um token de usuário e um token de serviço. [!DNL Adobe Experience Platform]
+A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform] e é composta de chave de API, ID de organização IMS, um token de usuário e um token de serviço.
 
 ### Python
 
-Se estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
+Se você estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -45,7 +45,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Se estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
+Se você estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
 
 ```r
 library(reticulate)
@@ -68,9 +68,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Leitura básica dos dados {#basic-reading-of-data}
+## Leitura básica de dados {#basic-reading-of-data}
 
-Com o novo [!DNL Platform] SDK, o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
+Com o novo SDK [!DNL Platform], o tamanho máximo de leitura é de 32 GB, com um tempo máximo de leitura de 10 minutos.
 
 Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opções de filtragem:
 
@@ -81,7 +81,7 @@ Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opç
 
 >[!NOTE]
 >
->A Organização IMS está definida dentro da `client_context`.
+>A Organização IMS está definida em `client_context`.
 
 ### Python
 
@@ -105,7 +105,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrar por deslocamento e limite {#filter-by-offset-and-limit}
+## Filtrar por deslocamento e limitar {#filter-by-offset-and-limit}
 
 Como a filtragem por ID de lote não é mais suportada, para a leitura de dados no escopo, é necessário usar `offset` e `limit`.
 
@@ -147,7 +147,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-O novo [!DNL Platform] SDK oferece suporte às seguintes operações:
+O novo SDK [!DNL Platform] oferece suporte às seguintes operações:
 
 | Operação | Função |
 | --------- | -------- |
@@ -156,7 +156,7 @@ O novo [!DNL Platform] SDK oferece suporte às seguintes operações:
 | Greater than or equal to (`>=`) | `ge()` |
 | Less than (`<`) | `lt()` |
 | Less than or equal to (`<=`) | `le()` |
-| And (`&`) | `And()` |
+| E (`&`) | `And()` |
 | Ou (`|`) | `Or()` |
 
 ## Filtrar por colunas selecionadas {#filter-by-selected-columns}
@@ -193,11 +193,11 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Escrita básica dos dados {#basic-writing-of-data}
+## Escrita básica de dados {#basic-writing-of-data}
 
 >[!NOTE]
 >
->A Organização IMS está definida dentro da `client_context`.
+>A Organização IMS está definida em `client_context`.
 
 Para gravar dados em Python e R, use um dos seguintes exemplos:
 
@@ -222,4 +222,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Próximas etapas
 
-Depois de configurar o carregador de `platform_sdk` dados, os dados passam por preparação e são divididos para os conjuntos de dados `train` e `val` . Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção sobre preparação de [dados e engenharia](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) de recursos no tutorial para criar uma fórmula usando [!DNL JupyterLab] notebooks.
+Depois de configurar o carregador de dados `platform_sdk`, os dados passam pela preparação e são divididos nos conjuntos de dados `train` e `val`. Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção [preparação de dados e engenharia de recursos](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) no tutorial para criar uma fórmula usando notebooks [!DNL JupyterLab].

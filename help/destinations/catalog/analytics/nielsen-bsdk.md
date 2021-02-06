@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
-title: extensão Nielsen BSDK
-seo-title: extensão Nielsen BSDK
+title: Destino da extensão do BSDK Nielsen
 description: A extensão Nielsen BSDK é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Nielsen BSDK é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '591'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Nielsen BSDK] Extensão {#nielsen-bsdk-extension}
-
-## Visão geral {#overview}
+# [!DNL Nielsen BSDK] extensão {#nielsen-bsdk-extension}
 
 [!DNL Nielsen Digital SDK] ofertas de audiência de extensão de lançamento por meio dos seguintes produtos de medição digital:
 

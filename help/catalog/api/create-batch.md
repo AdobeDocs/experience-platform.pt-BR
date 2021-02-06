@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform;home;popular topics;criar lote;serviço de catálogo;api
 solution: Experience Platform
-title: Criar um conjunto de dados
+title: Criar um lote na API
 topic: developer guide
-description: Para que um conjunto de dados ingira dados, ele deve ter um lote associado a ele. Usando o valor de id de um conjunto de dados existente, é possível criar um lote, fazendo uma solicitação de POST para o ponto de extremidade /lotes na API de catálogo.
+description: Você pode criar um lote fazendo uma solicitação de POST para o terminal /lotes na API de catálogo.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '117'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Criar um lote
 
-Para que um conjunto de dados ingira dados, ele deve ter um lote associado a ele. Usando o `id` valor de um conjunto de dados existente, é possível criar um lote, fazendo uma solicitação de POST para o `/batches` endpoint na [!DNL Catalog] API.
+Para que um conjunto de dados ingira dados, ele deve ter um lote associado a ele. Usando o valor `id` de um conjunto de dados existente, é possível criar um lote, fazendo uma solicitação POST para o ponto de extremidade `/batches` na API [!DNL Catalog].
 
 **Formato da API**
 
@@ -40,11 +40,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `datasetId` | O conjunto `id` de dados ao qual o lote será associado. |
+| `datasetId` | O `id` do conjunto de dados ao qual o lote será associado. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta que contém detalhes do lote recém-criado, incluindo `id`uma sequência de caracteres gerada pelo sistema, somente leitura.
+Uma resposta bem-sucedida retorna o Status HTTP 201 (Criado) e um objeto de resposta que contém detalhes do lote recém-criado, incluindo `id`, uma sequência de caracteres gerada pelo sistema somente leitura.
 
 ```JSON
 {

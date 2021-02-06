@@ -5,17 +5,17 @@ seo-title: Catálogo de destinos
 description: O Catálogo de destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 seo-description: O Catálogo de destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '174'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Destinations Catalog]
+# Catálogo de destinos
 
-O **[!DNL Destinations Catalog]** fornece uma lista de plataformas de destino disponíveis que estão prontas para receber dados. Essas plataformas de destino incluem soluções de Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email, extensões de Experience Platform.
+O catálogo de destinos fornece uma lista de plataformas de destino disponíveis que estão prontas para receber dados. Essas plataformas de destino incluem soluções de Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email, extensões de Experience Platform.
 
 Navegue pelo catálogo para determinar quais plataformas de destino são as melhores para seus casos de uso de publicidade e personalização e configure os fluxos para ativar seus segmentos para destinos.
 

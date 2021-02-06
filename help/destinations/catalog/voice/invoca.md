@@ -1,21 +1,17 @@
 ---
 keywords: Invoca;invoca
-title: Extensão Tags Invoca
-seo-title: Extensão Tags Invoca
+title: Destino da Extensão de Tags Invoca
 description: A extensão Tags Invoca é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Tags Invoca é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Invoca Tags] extensão {#invoca-extension}
-
-## Visão geral {#overview}
 
 [!DNL Invoca] traz insights de voz e dados de chamadas para a jornada do cliente digital. Com a [!DNL Invoca’s] plataforma de inteligência de chamada, os profissionais de marketing finalmente têm análises para medir os resultados das chamadas e vincular as conversões offline de volta ao gasto digital.
 

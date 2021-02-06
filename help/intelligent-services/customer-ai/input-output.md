@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform;introdução;atendimento ao cliente;tópicos populares;entrada de atendimento ao cliente;saída de atendimento ao cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Entrada e saída de IA do cliente
+title: Entrada e saída no AI do cliente
 topic: Getting started
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas na IA do cliente.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
 
 
-# Entrada e saída de IA do cliente
+# Entrada e saída na IA do cliente
 
 O documento a seguir descreve as diferentes entradas e saídas utilizadas na IA do cliente.
 
 ## Dados de entrada de IA do cliente
 
-A IA do cliente usa os dados do Evento de experiência do consumidor para calcular as pontuações de propensão. Para obter mais detalhes sobre o Evento de experiência do consumidor, consulte [Preparar dados para uso na documentação](../data-preparation.md)dos Serviços inteligentes.
+A IA do cliente usa os dados do Evento de experiência do consumidor para calcular as pontuações de propensão. Para obter mais detalhes sobre o Evento de experiência do consumidor, consulte [Preparar dados para uso na documentação do Intelligent Services](../data-preparation.md).
 
 ### Dados históricos
 
@@ -68,4 +68,4 @@ A tabela abaixo descreve os vários atributos encontrados na saída da IA do cli
 
 ## Próximas etapas {#next-steps}
 
-Depois de preparar seus dados e ter todas as suas credenciais e schemas no lugar, siga o guia [Configurar uma instância](./user-guide/configure.md) do AI do cliente. Este guia o orienta a criar uma instância para a IA do cliente.
+Depois de preparar seus dados e ter todas as suas credenciais e schemas no lugar, start seguindo o guia [Configurar uma instância do AI do cliente](./user-guide/configure.md). Este guia o orienta a criar uma instância para a IA do cliente.

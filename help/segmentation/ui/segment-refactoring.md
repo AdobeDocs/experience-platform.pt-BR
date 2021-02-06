@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform;home;popular topics;segmentação;Segmentação;construtor de segmentos;Construtor de segmentos
 solution: Experience Platform
-title: Guia de alterações do Construtor de segmentos do serviço de segmentação
+title: Guia da interface do usuário de restrições de tempo de segmentação refatorizadas
 topic: ui guide
 description: 'O Construtor de segmentos fornece uma área de trabalho avançada que permite interagir com elementos de dados do Perfil. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Anteriormente, um evento individual podia ter várias regras de restrição de t
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Como você pode ver, este segmento tem duas restrições no nível da regra: Um para &quot;[!UICONTROL Hoje]&quot; e outro para &quot;[!UICONTROL Ontem]&quot;.
+Como você pode ver, este segmento tem duas restrições no nível da regra: Um para &quot;[!UICONTROL Today]&quot; e outro para &quot;[!UICONTROL Ontem]&quot;.
 
 O segmento anterior é equivalente ao seguinte segmento. ambas as restrições de tempo no nível do evento foram conectadas usando um operador E. A primeira restrição de tempo no nível do evento faz referência a um evento de clique cujo nome é &quot;Treinamento&quot; e está ocorrendo hoje, enquanto a segunda restrição de tempo no nível do evento faz referência a um evento de clique cujo nome é &quot;Pets&quot; e aconteceu ontem.
 

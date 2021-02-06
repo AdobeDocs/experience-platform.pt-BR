@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
-title: Guia do desenvolvedor da API Sensei Machine Learning
+title: Guia da API de aprendizado de máquina do Sensei
 topic: Developer guide
-description: Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a API Sensei Machine Learning e demonstra chamadas de API para executar operações CRUD em vários recursos da Data Science Workspace.
+description: A API Sensei Machine Learning permite que desenvolvedores executem operações CRUD em vários recursos da Data Science Workspace. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] Guia do desenvolvedor da API
+# [!DNL Sensei Machine Learning] Guia de API
 
 A API [!DNL Sensei Machine Learning] fornece um mecanismo para que os cientistas de dados organizem e gerenciem serviços de aprendizado de máquina, desde a integração de algoritmos por experimentação e implantação de serviços.
 

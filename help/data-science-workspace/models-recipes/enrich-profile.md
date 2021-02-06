@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina
 topic: tutorial
 type: Tutorial
-description: Este documento fornece um guia sobre como enriquecer o Perfil do cliente em tempo real com informações aprendidas pela máquina.
+description: Este documento fornece um guia sobre como enriquecer o Perfil do cliente em tempo real com informações sobre o aprendizado da máquina.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 # Enriqueça [!DNL Real-time Customer Profile] com insights de aprendizado de máquina
 
-A Adobe Experience Platform [!DNL Data Science Workspace] fornece as ferramentas e os recursos para criar, avaliar e utilizar modelos de aprendizado automatizado para gerar previsões e insights de dados. Quando insights de aprendizado de máquina são ingeridos em um conjunto de dados habilitado para [!DNL Profile], esses mesmos dados também são ingeridos como [!DNL Profile] registros que podem ser segmentados usando [!DNL Adobe Experience Platform Segmentation Service]. À medida que os dados de perfil e de série cronológica são ingeridos, o Perfil de cliente em tempo real decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado de segmentação de fluxo contínuo, antes de mesclá-los com os dados existentes e atualizar a visualização da união. Como resultado, você pode executar instantaneamente computações e tomar decisões para oferecer experiências aprimoradas e individualizadas aos clientes à medida que eles interagem com sua marca.
+A Adobe Experience Platform [!DNL Data Science Workspace] fornece as ferramentas e os recursos para criar, avaliar e utilizar modelos de aprendizado de máquina para gerar previsões e insights de dados. Quando os insights de aprendizado da máquina são ingeridos em um conjunto de dados habilitado para [!DNL Profile], esses mesmos dados também são ingeridos como [!DNL Profile] registros que podem ser segmentados usando [!DNL Adobe Experience Platform Segmentation Service]. À medida que os dados de perfil e de série cronológica são ingeridos, o Perfil de cliente em tempo real decide automaticamente incluir ou excluir esses dados dos segmentos por meio de um processo contínuo chamado de segmentação de fluxo contínuo, antes de mesclá-los com os dados existentes e atualizar a visualização da união. Como resultado, você pode executar instantaneamente computações e tomar decisões para oferecer experiências aprimoradas e individualizadas aos clientes à medida que eles interagem com sua marca.
 
-Este documento fornece links para tutoriais que permitem enriquecer [!DNL Real-time Customer Profile] com seus insights aprendidos pela máquina.
+Este documento fornece links para tutoriais que permitem enriquecer [!DNL Real-time Customer Profile] com seus insights de aprendizado da máquina.
 
 ## Introdução
 

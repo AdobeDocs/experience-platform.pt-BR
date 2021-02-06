@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: 'Experience Platform;home;popular topics;perfil do produto;home;popular topics;product '
 solution: Experience Platform
-title: Gerenciar usuários de um perfil de produto
+title: Gerenciar usuários de um Perfil de produto
 topic: user guide
 description: Este documento mostra como gerenciar usuários de um perfil de produto na interface do usuário para Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 1%
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
 # Gerenciar usuários de um perfil de produto
 
-Para atribuir ou remover usuários de um perfil de produto, abra a página de detalhes do perfil e navegue até a guia **[!UICONTROL Usuários]** . Aqui, clique em **[!UICONTROL Adicionar usuário]**.
+Para atribuir ou remover usuários de um perfil de produto, abra a página de detalhes do perfil e navegue até a guia **[!UICONTROL Usuários]**. Aqui, clique em **[!UICONTROL Adicionar usuário]**.
 
 ![add-users-button](../images/add-users-button.png)
 
@@ -31,10 +31,10 @@ Depois de selecionar um usuário, clique em **[!UICONTROL Salvar]** para adicion
 
 ![add-user-save](../images/add-user-save.png)
 
-A guia **[!UICONTROL Usuários]** do perfil do produto é exibida novamente, onde o usuário adicionado agora é listado.
+A guia **[!UICONTROL Usuários]** para o perfil do produto é exibida novamente, onde o usuário adicionado agora é listado.
 
 ![adicionado pelo usuário](../images/user-added.png)
 
 ## Próximas etapas
 
-Agora que você aprendeu a controlar o acesso aos [!DNL Platform] recursos por meio do [!DNL Admin Console], consulte a seção de apêndice na visão geral [do](../home.md) controle de acesso para saber mais sobre cada permissão individual e as [!DNL Platform] funcionalidades às quais eles concedem acesso.
+Agora que você aprendeu a controlar o acesso aos recursos [!DNL Platform] por meio de [!DNL Admin Console], consulte a seção de apêndice na [visão geral do controle de acesso](../home.md) para saber mais sobre cada permissão individual e as funcionalidades [!DNL Platform] às quais eles concedem acesso.

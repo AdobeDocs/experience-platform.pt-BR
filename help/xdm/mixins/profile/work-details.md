@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;perfil individual;campos;schemas;Schemas;design de Schema;mixin;mixins;detalhes;trabalho do perfil;
 solution: Experience Platform
-title: Mistura Detalhes do contato de trabalho
+title: Mistura de Detalhes do Contato de Trabalho
 topic: overview
 description: Este documento fornece uma visão geral da combinação Detalhes do contato de trabalho.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '177'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Mistura de Detalhes] do Contato de Trabalho
+# [!UICONTROL Detalhes do contato de trabalho ] Detailsmixin
 
 >[!NOTE]
 >
->Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../name-updates.md) mixin para obter mais informações.
+>Os nomes de várias misturas mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes] do contato de trabalho é uma combinação padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece vários campos que capturam informações profissionais relacionadas a uma pessoa individual, como endereço de trabalho, email de trabalho, número de telefone de trabalho e organizações às quais a pessoa pertence.
+[!UICONTROL O contato de trabalho ] detalha uma combinação padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece vários campos que capturam informações profissionais relacionadas a uma pessoa individual, como endereço de trabalho, email de trabalho, número de telefone de trabalho e organizações às quais a pessoa pertence.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 

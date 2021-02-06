@@ -1,19 +1,19 @@
 ---
 keywords: destinos rtcdp;destinos rtcdp;destinos da plataforma de dados do cliente em tempo real
-title: Visão geral dos destinos
+title: Destinos na plataforma de dados do cliente em tempo real
 seo-title: Destinos no Adobe Experience Platform
 description: Este documento fornece uma visão geral dos Destinos no Adobe Experience Platform
 seo-description: Este documento fornece uma visão geral dos Destinos no Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 3%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# Visão geral dos destinos
+# Destinos na plataforma de dados do cliente em tempo real
 
 Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 

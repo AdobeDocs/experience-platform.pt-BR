@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;experimentar modelo de dados;modelo de dados;ui;espaço de trabalho;objeto;campo;
 solution: Experience Platform
-title: Definir um campo de objeto na interface do usuário
+title: Definir campos de objeto na interface do usuário
 description: Saiba como definir um campo de tipo de objeto na interface do usuário do Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
 
-# Definir um campo de objeto na interface do usuário
+# Definir campos de objetos na interface do usuário
 
 A Adobe Experience Platform permite que você personalize completamente a estrutura de suas classes personalizadas do Experience Data Model (XDM), combinações e tipos de dados. Para organizar e aninhar campos relacionados em recursos XDM personalizados, é possível definir campos de tipo de objeto que podem conter subcampos adicionais.
 

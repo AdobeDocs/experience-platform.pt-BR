@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;análise de jornada;análise de jornada do cliente;orquestração de campanha;orquestração;jornada do cliente;jornada;orquestração de jornada;capacidade;fluxo de trabalho
 solution: Experience Platform
-title: Visão geral da documentação do Adobe Experience Platform
+title: Visão geral da documentação do Experience Platform
 topic: overview
 description: A documentação da Adobe Experience Platform é fornecida em vários formatos, incluindo visões gerais, tutoriais e guias para a interface do usuário e a API. Esta é uma breve descrição dos tipos mais comuns de documentação disponíveis para os serviços de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---

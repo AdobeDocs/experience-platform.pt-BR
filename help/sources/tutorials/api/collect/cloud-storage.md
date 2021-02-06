@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;nuvem armazenamento data
 solution: Experience Platform
-title: Coletar dados de armazenamento em nuvem por meio de conectores de origem e APIs
+title: Coletar dados de Armazenamento da Cloud usando conectores de origem e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Coletar dados de armazenamento em nuvem por meio de conectores de origem e APIs
+# Coletar dados de armazenamento em nuvem usando conectores de origem e APIs
 
 Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Plataforma por meio dos conectores de origem e da [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

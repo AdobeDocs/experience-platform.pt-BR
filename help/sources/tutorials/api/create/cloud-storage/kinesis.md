@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;Kinesis;cinesis;Amazon Kinesis;amazon cinesis
 solution: Experience Platform
-title: Criar um conector Amazon Kinesis usando a API de Serviço de Fluxo
+title: Criar uma conexão de origem Amazon Kinesis usando a API de serviço de fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar o Experience Platform a uma conta Amazon Kinesis.
+description: Saiba como conectar o Adobe Experience Platform a uma conta Amazon Kinesis usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
 
 
-# Crie um conector [!DNL Amazon Kinesis] usando a API de Serviço de Fluxo
+# Criar uma conexão de origem [!DNL Amazon Kinesis] usando a API de Serviço de Fluxo
 
 >[!NOTE]
 >

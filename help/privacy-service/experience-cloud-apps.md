@@ -5,7 +5,7 @@ title: Aplicativos Privacy Service e Experience Cloud
 topic: overview
 description: Este documento fornece uma referência para como configurar diferentes aplicativos de Experience Cloud para operações relacionadas à privacidade.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 21%

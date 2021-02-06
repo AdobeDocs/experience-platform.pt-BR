@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;importar fórmula empacotada;Data Science Workspace;popular topics;recipes;api;sensei machine learning;criar mecanismo
 solution: Experience Platform
-title: Importar uma fórmula empacotada (API)
+title: Importe uma receita empacotada usando a API Sensei Machine Learning
 topic: tutorial
 type: Tutorial
 description: 'Este tutorial usa a API Sensei Machine Learning para criar um Mecanismo, também conhecido como Receita na interface do usuário. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
 
-# Importar uma fórmula empacotada (API)
+# Importe uma receita empacotada usando a API de aprendizado de máquina do Sensei
 
 Este tutorial usa o [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para criar um [Mecanismo](../api/engines.md), também conhecido como Receita na interface do usuário.
 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;
 solution: Experience Platform
-title: Guia do desenvolvedor da API de Registro do schema
-description: 'A API de Registro de Schemas permite gerenciar programaticamente todos os schemas e os recursos XDM relacionados disponíveis para você no Experience Platform. '
+title: Guia da API do Registro do schema
+description: A API de Registro de Schemas permite que os desenvolvedores gerenciem programaticamente todos os schemas e os recursos relacionados ao Modelo de Dados de Experiência (XDM) no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Schema Registry] Guia do desenvolvedor da API
+# [!DNL Schema Registry] Guia de API
 
 O [!DNL Schema Registry] é usado para acessar a Biblioteca de Schemas no Adobe Experience Platform, fornecendo uma interface do usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
 

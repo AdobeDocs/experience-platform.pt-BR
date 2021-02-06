@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics;Feedback do site da Qualtrics;feedback do site da Qualtrics;feedback do site da Qualtricks;Feedback do site da Qualtrics;Qualtrics;qualtrics;qualtrics;Qualtrics;qualtrics;qualtrics;qualtrics;Qualtrics;Qualtrics;qualtrics;Qualtrics;Qualtrics;feedback do site da Web da Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;Qualtrics;
-title: Extensão de Comentários do Site Qualtrics
-seo-title: Extensão de Comentários do Site Qualtrics
+title: Destino da Extensão de Comentários do Site Qualtrics
 description: A extensão Comentários do site Qualtrics é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Comentários do site Qualtrics é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '590'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Qualtrics Website Feedback] Extensão {#qualtrics-extension}
-
-## Visão geral {#overview}
+# [!DNL Qualtrics Website Feedback] extensão {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] permite que você envolva visitantes de seu site com a mensagem certa, no momento certo. Se você deseja melhorar a experiência do visitante com pesquisas de feedback do site ou aumentar a conversão, [!DNL Qualtrics Website Feedback] você foi abordado.
 

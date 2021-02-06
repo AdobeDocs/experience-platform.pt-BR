@@ -1,21 +1,17 @@
 ---
 keywords: Google Global Site Tag;gtag;google gtag;google extension;google gtag extension;google gtag extension;GTAG
-title: Extensão da tag do site global do Google
-seo-title: Extensão da tag do site global do Google
+title: Destino da Extensão Global de Marcação de Site do Google
 description: A extensão da Google Global Site Tag é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão da Google Global Site Tag é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '527'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Google Global Site Tag] Extensão {#gtag-analytics-extension}
-
-## Visão geral {#overview}
+# [!DNL Google Global Site Tag] extensão {#gtag-analytics-extension}
 
 Envie dados para [!DNL Google Analytics], [!DNL Google Ads] e [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag], ou gtag.js. É possível configurar várias contas por produto.
 

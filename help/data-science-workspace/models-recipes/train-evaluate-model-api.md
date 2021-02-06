@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;treinamento e avaliação;Data Science Workspace;topics;Sensei Machine Learning API
 solution: Experience Platform
-title: Treinar e avaliar um modelo (API)
+title: Treinar e avaliar um modelo usando a API Sensei Machine Learning
 topic: tutorial
 type: Tutorial
 description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas à API de aprendizado de máquina do Sensei.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
 
 
-# Treinar e avaliar um modelo (API)
+# Preparar e avaliar um modelo utilizando a API [!DNL Sensei Machine Learning]
 
 
 Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas de API. Consulte [este documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obter uma lista detalhada da documentação da API.

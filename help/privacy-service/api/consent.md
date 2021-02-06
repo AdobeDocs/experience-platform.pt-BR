@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
-title: Ponto de extremidade de consentimento
+title: Ponto de extremidade da API de consentimento
 topic: developer guide
 description: Saiba como gerenciar solicitações de consentimento do cliente para aplicativos Experience Cloud usando a API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 1%
 
 ---

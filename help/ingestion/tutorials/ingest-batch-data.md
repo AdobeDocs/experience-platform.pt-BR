@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;ingest batch data;tutorial;ingestão em lote;tutorial;utorial;guia ui;
 solution: Experience Platform
-title: Ingressar dados no Adobe Experience Platform
+title: Inserir dados no Experience Platform
 topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform permite importar facilmente dados como arquivos em lote na forma de arquivos ou dados do Parquet que estejam em conformidade com um schema conhecido do Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---

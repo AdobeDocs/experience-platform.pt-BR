@@ -1,13 +1,13 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud;introdução;conteúdo e comércio ai;tópicos populares;Serviços inteligentes;cai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: Visão geral do AI de conteúdo e comércio
 topic: Content and Commerce AI
 description: O AI de conteúdo e comércio é um conjunto de serviços de AI que permite extrair recursos inteligentes de seu conteúdo, organizar, simplificar o fluxo de conteúdo e fornecer experiências personalizadas mais impactantes para seus clientes.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ O conteúdo é um componente essencial dessas experiências. Para responder melh
 | Tipo de conteúdo | Recursos | Visão geral da funcionalidade |
 | --- | --- | --- |
 | Texto | - extração de palavra-chave e entidade <br>- Classificadores personalizados | - Extraia automaticamente palavras-chave e tags de documentos corporativos e páginas da Web usando um serviço pronto para uso do AI. <br> - Rotule automaticamente documentos ou páginas da Web de uma empresa por taxonomia corporativa usando um serviço criado em modelos de AI personalizados. |
-| Imagens | - Recomendações visuais <br> - extração colorida | - Fornecer aos consumidores recomendações de produtos visualmente semelhantes, alimentadas por um modelo AI desenvolvido com base em recursos intuitivos do produto (design, cor, forma). <br> - Extrair com precisão as cores dominantes (rótulos e valores hexadecimais) e o seu peso a partir de uma imagem do produto. |
+| Imagens | - Recomendações visuais <br> - extração de cores | - Fornecer aos consumidores recomendações de produtos visualmente semelhantes, alimentadas por um modelo AI desenvolvido com base em recursos intuitivos do produto (design, cor, forma). <br> - Extrair com precisão as cores dominantes (rótulos e valores hexadecimais) e o seu peso a partir de uma imagem do produto. |
 
 ## Compreensão do AI de conteúdo e comércio
 
@@ -38,7 +38,7 @@ A visão geral da IA de conteúdo e comércio é dividida em três etapas para o
 
 >[!NOTE]
 >
->Para Beta, a API de conteúdo e comércio está focada em testar a etapa de base da jornada (etapa 1). As etapas 2 e 3 devem ser documentadas em uma versão subsequente e não são ampliadas na documentação atual.
+>Para Beta, o Content and Commerce AI está se concentrando em testar a etapa de base na jornada (etapa 1). As etapas 2 e 3 devem ser documentadas em uma versão subsequente e não são ampliadas na documentação atual.
 
 **Etapa 1: Compreensão do conteúdo**
 - Extraia recursos inteligentes e metadados.

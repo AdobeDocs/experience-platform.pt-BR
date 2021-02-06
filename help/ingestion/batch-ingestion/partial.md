@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;ingestão em lote;ingestão parcial;ingestão parcial;Erro de recuperação;erro de recuperação;ingestão em lote parcial;ingestão em lote parcial;parcial;ingestão;ingestão;ingestão;ingestão;ingestão;ingestão;
 solution: Experience Platform
-title: Visão geral da ingestão parcial em lote
+title: Visão Geral da Ingestão de Lote Parcial
 topic: overview
 description: Este documento fornece um tutorial para gerenciar a ingestão parcial em lote.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%

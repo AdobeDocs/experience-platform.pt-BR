@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: Experience Platform;home;popular tópicos;efetiva policy;controle de acesso api;home;popular topics;effective policy;effective policy;api
 solution: Experience Platform
-title: Políticas eficazes de visualização
+title: Endpoint da API de políticas eficazes
 topic: developer guide
 description: O controle de acesso no Adobe Experience Platform permite gerenciar funções e permissões para vários recursos da plataforma usando o Adobe Admin Console. Este documento serve como um guia para a visualização de políticas eficazes usando a API do controle de acesso para Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 1%
 
 ---
 
 
-# Políticas eficazes de visualização
+# Ponto final de políticas efetivas
 
-Para visualização de políticas eficazes para o usuário atual, faça uma solicitação de POST para o `/acl/effective-policies` endpoint na [!DNL Access Control] API. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação na forma de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
+Para visualização de políticas eficazes para o usuário atual, faça uma solicitação POST para o terminal `/acl/effective-policies` na API [!DNL Access Control]. As permissões e os tipos de recursos que você deseja recuperar devem ser fornecidos na carga da solicitação na forma de um storage. Isso é demonstrado na chamada de API de exemplo abaixo.
 
 **Formato da API**
 
@@ -43,7 +43,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Para obter uma lista completa de permissões e tipos de recursos que podem ser fornecidos no storage de carga, consulte a seção do apêndice sobre permissões e tipos [de recursos](#accepted-permissions-and-resource-types)aceitos.
+>Para obter uma lista completa de permissões e tipos de recursos que podem ser fornecidos na matriz de carga, consulte a seção do apêndice em [permissões aceitas e tipos de recursos](#accepted-permissions-and-resource-types).
 
 **Resposta**
 
@@ -66,15 +66,15 @@ Uma resposta bem-sucedida retorna informações sobre as permissões e os tipos 
 
 ## Próximas etapas
 
-Este documento abordou como fazer chamadas para a [!DNL Access Control] API para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso for [!DNL Experience Platform], consulte a visão geral [do](../home.md)controle de acesso.
+Este documento abordou como fazer chamadas para a API [!DNL Access Control] para retornar informações sobre permissões ativas e políticas relacionadas para tipos de recursos. Para obter mais informações sobre o controle de acesso para [!DNL Experience Platform], consulte a [visão geral do controle de acesso](../home.md).
 
 ## Apêndice
 
-Esta seção fornece informações adicionais para o uso da [!DNL Access Control] API.
+Esta seção fornece informações adicionais para o uso da API [!DNL Access Control].
 
 ### Permissões aceitas e tipos de recursos
 
-A seguir está uma lista de permissões e tipos de recursos que podem ser incluídos na carga de uma solicitação de POST para o `/acl/active-permissions` ponto de extremidade.
+A seguir está uma lista de permissões e tipos de recursos que você pode incluir na carga de uma solicitação de POST para o terminal `/acl/active-permissions`.
 
 **Permissões**
 

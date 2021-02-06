@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: 'Experience Platform;home;popular topics;namespace lista;lista namespace;home;popular topics;; '
 solution: Experience Platform
-title: Lista disponível namespace
+title: Lista de Namespaces de identidade disponíveis
 topic: API guide
 description: Lista todas as namespaces disponíveis.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 5%
+source-wordcount: '83'
+ht-degree: 4%
 
 ---
 
 
-# Lista disponível namespace
+# Lista de namespaces de identidade disponíveis
 
 **Formato da API**
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Resposta**
 
-A resposta inclui uma matriz de objetos, com cada objeto representando uma namespace disponível. Namespaces com um valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL falso]&quot; são namespaces padrão, enquanto aquelas com um valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL verdadeiro]&quot; são namespaces que sua organização criou.
+A resposta inclui uma matriz de objetos, com cada objeto representando uma namespace disponível. Namespaces com um valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; são namespaces padrão, enquanto aquelas com um valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; são namespaces que sua organização criou.
 
 >[!NOTE]
 >

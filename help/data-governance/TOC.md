@@ -5,10 +5,10 @@ user-guide-title: Ajuda do Adobe Experience Platform Data Governance
 breadcrumb-title: Guia do Data Governance
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas.
 translation-type: tm+mt
-source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 25%
+source-wordcount: '98'
+ht-degree: 33%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 25%
 
 * [Visão geral do controle de dados](home.md)
 * Rótulos de uso de dados {#labels}
-   * [Visão geral dos rótulos de uso de dados](labels/overview.md)
-   * [Rótulos principais de uso de dados](labels/reference.md)
-   * [Gerenciar rótulos de uso de dados na interface do usuário](labels/user-guide.md)
-   * [Gerenciar rótulos para conjuntos de dados e campos usando APIs](labels/dataset-api.md)
+   * [Visão geral](labels/overview.md)
+   * [Glossário de etiquetas](labels/reference.md)
+   * [Gerenciar rótulos na interface do usuário](labels/user-guide.md)
+   * [Gerenciar rótulos para conjuntos de dados usando APIs](labels/dataset-api.md)
 * Políticas de uso de dados {#policies}
-   * [Visão geral das políticas de uso de dados](policies/overview.md)
-   * [Guia do usuário das políticas de uso de dados](policies/user-guide.md)
-   * [Criar uma política de uso de dados usando a API do Serviço de Política](policies/create.md)
+   * [Visão geral](policies/overview.md)
+   * [Gerenciar políticas na interface do usuário](policies/user-guide.md)
+   * [Criar uma política na API](policies/create.md)
 * Aplicação de política {#enforcement}
-   * [Visão geral da aplicação de políticas](enforcement/overview.md)
+   * [Visão geral](enforcement/overview.md)
    * [Aplicação automática](enforcement/auto-enforcement.md)
    * [Aplicação baseada em API](enforcement/api-enforcement.md)
-* Guia do desenvolvedor da API do Serviço de Política {#api}
+* API do Serviço de Política {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Rótulos](api/labels.md)

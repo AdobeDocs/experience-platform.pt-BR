@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform;home;popular topics;acesso aos dados;python sdk;spark sdk;data access api;export;Export;;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export;Export
 solution: Experience Platform
-title: Guia do desenvolvedor do Data Access
+title: Guia da API de acesso a dados
 topic: developer guide
-description: A API de acesso a dados oferece suporte à Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados ingeridos no Experience Platform.
+description: A API de acesso a dados oferece suporte à Adobe Experience Platform, fornecendo aos desenvolvedores uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados assimilados no Experience Platform.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
 
-# Guia do desenvolvedor do Data Access
+# Guia da API de acesso aos dados
 
-A API de acesso a dados oferece suporte à Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados ingeridos no [!DNL Experience Platform].
+A API de acesso a dados oferece suporte à Adobe Experience Platform, fornecendo aos usuários uma interface RESTful focada na descoberta e acessibilidade de conjuntos de dados assimilados em [!DNL Experience Platform].
 
 ![Acesso aos dados no Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -95,7 +95,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-A `"data"` matriz contém uma lista de todos os arquivos dentro do lote especificado. Cada arquivo retornado tem sua própria ID exclusiva (`{FILE_ID}`) contida no `"dataSetFileId"` campo. Essa ID exclusiva pode ser usada para acessar ou baixar o arquivo.
+A matriz `"data"` contém uma lista de todos os arquivos dentro do lote especificado. Cada arquivo retornado tem sua própria ID exclusiva (`{FILE_ID}`) contida no campo `"dataSetFileId"`. Essa ID exclusiva pode ser usada para acessar ou baixar o arquivo.
 
 | Propriedade | Descrição |
 | -------- | ----------- |
@@ -116,7 +116,7 @@ GET /files/{FILE_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{FILE_ID}` | Igual à ID `"dataSetFileId"`do arquivo a ser acessado. |
+| `{FILE_ID}` | Igual a `"dataSetFileId"`, a ID do arquivo a ser acessado. |
 
 **Solicitação**
 
@@ -204,7 +204,7 @@ Quando um diretório é retornado, ele contém uma matriz de todos os arquivos d
 
 ## Acessar o conteúdo de um arquivo
 
-A [!DNL Data Access] API também pode ser usada para acessar o conteúdo de um arquivo. Isso pode ser usado para baixar o conteúdo em uma fonte externa.
+A API [!DNL Data Access] também pode ser usada para acessar o conteúdo de um arquivo. Isso pode ser usado para baixar o conteúdo em uma fonte externa.
 
 **Formato da API**
 
@@ -237,8 +237,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Amostras de código adicionais
 
-Para obter exemplos adicionais, consulte o tutorial [de acesso a](tutorials/dataset-data.md)dados.
+Para obter exemplos adicionais, consulte o [tutorial de acesso aos dados](tutorials/dataset-data.md).
 
 ## Assinar eventos de ingestão de dados
 
-[!DNL Platform] disponibiliza eventos específicos de alto valor para subscrição por meio do Console [do desenvolvedor do](https://www.adobe.com/go/devs_console_ui)Adobe. Por exemplo, você pode assinar eventos de ingestão de dados para receber notificações de possíveis atrasos e falhas. Consulte o tutorial sobre como [assinar notificações](../ingestion/quality/subscribe-events.md) de ingestão de dados para obter mais informações.
+[!DNL Platform] disponibiliza eventos específicos de alto valor para subscrição por meio do Console [ do desenvolvedor do ](https://www.adobe.com/go/devs_console_ui)Adobe. Por exemplo, você pode assinar eventos de ingestão de dados para receber notificações de possíveis atrasos e falhas. Consulte o tutorial em [inscrição em notificações de ingestão de dados](../ingestion/quality/subscribe-events.md) para obter mais informações.

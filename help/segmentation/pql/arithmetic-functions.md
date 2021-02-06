@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
+keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Idioma do Query do Perfil;funções aritméticas;;
 solution: Experience Platform
-title: Funções aritméticas
+title: Funções aritméticas PAL
 topic: developer guide
 description: As funções aritméticas são usadas para executar cálculos básicos em valores em Linguagem do Query do Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '260'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 # Funções aritméticas
 
-As funções aritméticas são usadas para executar cálculos básicos em valores em [!DNL Profile Query Language] (PQL). Para obter mais informações sobre outras funções PQL, consulte a [[!DNL Profile Query Language] visão geral](./overview.md).
+As funções aritméticas são usadas para executar cálculos básicos em valores em [!DNL Profile Query Language] (PQL). Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Add
 
@@ -109,4 +109,4 @@ person.age % 5 = 0
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções aritméticas, é possível usá-las em seus query PQL. Para obter mais informações sobre outras funções PQL, leia a visão geral [do Idioma do Query do](./overview.md)Perfil.
+Agora que você aprendeu sobre funções aritméticas, é possível usá-las em seus query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).

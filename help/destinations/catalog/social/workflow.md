@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;facebook;rede social;rede social;autenticação de rede social;autenticação de rede social
-title: Fluxo de trabalho de destinos de rede social
+title: Criar um destino de rede social
 type: Tutorial
-seo-title: Fluxo de trabalho de destinos de rede social
-description: Instruções para conectar-se à sua rede social e contas
-seo-description: Instruções para conectar-se à sua rede social e contas
+description: Saiba como se conectar à sua rede social e às suas contas de anúncio no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
 
 
-# Fluxo de trabalho de autenticação de destinos de rede social {#social-network-destinations-workflow}
-
-## Fluxo de trabalho para criar destinos de rede social
+# Criar um destino de rede social {#social-network-destinations-workflow}
 
 Este tutorial usa [!DNL Facebook] como exemplo, mas o fluxo de trabalho no Adobe Experience Platform será o mesmo para todos os destinos de rede social, uma vez mais, é adicionado ao produto.
 

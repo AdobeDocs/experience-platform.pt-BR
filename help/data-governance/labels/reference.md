@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular tópicos;controle de dados;etiqueta de uso de dados api;api de serviço de política;etiquetas de uso de dados suportadas;etiquetas de contrato;etiquetas de identidade;etiquetas sensíveis
 solution: Experience Platform
-title: Rótulos principais de uso de dados
+title: Glossário de rótulos de uso de dados
 topic: labels
 description: Este documento descreve todas as etiquetas de uso de dados atualmente suportadas pela Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Rótulos principais de uso de dados
+# Glossário de rótulos de uso de dados
 
 Rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. O Adobe Experience Platform Data Governance fornece vários rótulos principais de uso de dados prontos para uso que você pode usar para classificar seus dados por start.
 

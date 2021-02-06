@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Coletar dados de protocolo;protocolos
 solution: Experience Platform
-title: Coletar dados de protocolos por meio de conectores de origem e APIs
+title: Coletar dados de protocolos usando conectores de origem e APIs
 topic: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na Plataforma por meio de conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los à Plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Coletar dados de protocolos por meio de conectores de origem e APIs
+# Coletar dados de protocolos usando conectores de origem e APIs
 
 Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolo de terceiros e assimilá-los ao Adobe Experience Platform por meio de conectores de origem e da API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

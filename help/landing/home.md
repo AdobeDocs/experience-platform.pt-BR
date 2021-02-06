@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;análise de jornada;análise de jornada do cliente;orquestração de campanha;orquestração;jornada do cliente;jornada;orquestração de jornada;capacidade;região
 solution: Experience Platform
-title: Visão geral do Adobe Experience Platform
+title: Visão geral da Adobe Experience Platform
 topic: getting started
 description: A Adobe Experience Platform permite que as organizações centralizem e padronizem os dados do cliente antes de aplicar a ciência de dados e o aprendizado de máquina para melhorar drasticamente o design e o delivery de experiências ricas e personalizadas.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '459'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 

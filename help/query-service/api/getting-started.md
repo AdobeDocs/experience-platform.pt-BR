@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular tópicos;serviço de query;serviço de Query;query;home;popular topics;serviço de ;serviço de ;;home;popular topics;serviço;;
 solution: Experience Platform
-title: Guia do desenvolvedor do Query Service
+title: Guia da API do Serviço de query
 topic: query templates
-description: Este guia do desenvolvedor fornece etapas para executar várias operações na API de serviço do Query Adobe Experience Platform.
+description: A API de serviço de Query permite que os desenvolvedores query seus dados Adobe Experience Platform usando SQL padrão. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '395'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Service] guia do desenvolvedor
+# [!DNL Query Service] Guia de API
 
 Este guia do desenvolvedor fornece etapas para executar várias operações na API do Adobe Experience Platform [!DNL Query Service].
 

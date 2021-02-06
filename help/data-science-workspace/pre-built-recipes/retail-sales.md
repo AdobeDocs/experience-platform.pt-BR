@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform;fórmula de vendas de varejo;Data Science Workspace;tópicos populares;receitas;pré-criar fórmula
 solution: Experience Platform
-title: Fórmula de vendas de varejo
+title: Receita de vendas de varejo
 topic: overview
 description: A receita de Vendas de Varejo permite prever a previsão de vendas para todas as lojas semeadas por um determinado período. Com um modelo preciso de previsão, o varejista poderia encontrar a relação entre as políticas de demanda e de preços e tomar decisões otimizadas de preços para maximizar as vendas e a receita.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -34,11 +34,11 @@ A receita de Previsão de Vendas de Varejo usa o aprendizado da máquina para pr
 
 Você pode começar seguindo este [tutorial](../jupyterlab/create-a-recipe.md).
 
-Este tutorial vai além da criação da receita de Vendas de varejo em um notebook de Júpiter e do uso do notebook para obter o fluxo de trabalho da receita para criar a receita no Adobe Experience Platform.
+Este tutorial vai além da criação da receita de vendas de varejo em um notebook de Júpiter e do fluxo de trabalho do notebook para a receita para criar a receita no Adobe Experience Platform.
 
 ## Schema de dados
 
-Essa fórmula usa schemas [](../../xdm/schema/field-dictionary.md) XDM para modelar os dados. O schema usado para esta fórmula é mostrado abaixo:
+Esta fórmula usa [schemas XDM](../../xdm/schema/field-dictionary.md) para modelar os dados. O schema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 --- | ---
@@ -57,7 +57,7 @@ Essa fórmula usa schemas [](../../xdm/schema/field-dictionary.md) XDM para mode
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no schema *DSWRetailSales* é carregado. Daqui, o modelo é treinado usando um algoritmo [de regressor de](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)gradiente. O aumento de gradiente usa a ideia de que os alunos fracos (que é pelo menos um pouco melhor que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
+Primeiro, o conjunto de dados de treinamento no schema *DSWRetailSales* é carregado. A partir daqui, o modelo é treinado usando um algoritmo [regravador de gradiente que impulsiona o regressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). O aumento de gradiente usa a ideia de que os alunos fracos (que é pelo menos um pouco melhor que o acaso aleatório) podem formar uma sucessão de alunos focados em melhorar as fraquezas do aluno anterior. Juntos, eles podem ser usados para criar um modelo preditivo poderoso.
 
 O processo envolve três elementos: uma função de perda, um aluno fraco e um modelo aditivo.
 

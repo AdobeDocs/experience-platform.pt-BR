@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
-title: Serviços
+title: Ponto Final da API do MLServices
 topic: Developer guide
 description: Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso essencial do MLServices é a capacidade de automatizar o treinamento e a pontuação de acordo com o agendamento. As execuções de treinamento programadas podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
 
 
-# MLServices
+# Ponto de extremidade MLServices
 
 Um MLService é um modelo treinado publicado que fornece à sua organização a capacidade de acessar e reutilizar modelos desenvolvidos anteriormente. Um recurso essencial do MLServices é a capacidade de automatizar o treinamento e a pontuação de acordo com o agendamento. As execuções de treinamento programadas podem ajudar a manter a eficiência e a precisão de um modelo, enquanto as execuções de pontuação programadas podem garantir que novos insights sejam gerados de forma consistente.
 
-As programações de treinamento e pontuação automatizadas são definidas com um carimbo de data e hora inicial, um carimbo de data e hora final e uma frequência representada como uma expressão [](https://en.wikipedia.org/wiki/Cron)cron. As programações podem ser definidas ao [criar um MLService](#create-an-mlservice) ou aplicadas ao [atualizar um MLService](#update-an-mlservice)existente.
+As programações de treinamento e pontuação automatizadas são definidas com um carimbo de data e hora inicial, um carimbo de data e hora final e uma frequência representada como uma [expressão cron](https://en.wikipedia.org/wiki/Cron). As programações podem ser definidas ao [criar um MLService](#create-an-mlservice) ou aplicadas ao [atualizar um MLService](#update-an-mlservice) existente.
 
 ## Criar um MLService {#create-an-mlservice}
 
@@ -78,7 +78,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService recém-criado, incluindo seu identificador exclusivo (`id`), ID de Experimento para treinamento (`trainingExperimentId`), ID de Experimento para pontuação (`scoringExperimentId`) e a ID do conjunto de dados de treinamento de entrada (`trainingDataSetId`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService recém-criado, incluindo seu identificador exclusivo (`id`), ID do Experimento para treinamento (`trainingExperimentId`), ID do Experimento para pontuação (`scoringExperimentId`) e a ID do conjunto de dados de treinamento de entrada (`trainingDataSetId`).
 
 ```json
 {
@@ -109,7 +109,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do MLService re
 
 ## Recuperar uma lista de MLServices {#retrieve-a-list-of-mlservices}
 
-Você pode recuperar uma lista de MLServices executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de MLServices executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -121,7 +121,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Um dos parâmetros [de query](./appendix.md#query) disponíveis usados para filtrar os resultados. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de query disponíveis](./appendix.md#query) usados para filtrar os resultados. |
 | `{VALUE}` | O valor do parâmetro de query anterior. |
 
 **Solicitação**
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, incluindo a ID do serviço MLS (`{MLSERVICE_ID}`), a ID do experimento para treinamento (`{TRAINING_ID}`), a ID do experimento para pontuação (`{SCORING_ID}`) e a ID do conjunto de dados de treinamento de entrada (`{DATASET_ID}`).
+Uma resposta bem-sucedida retorna uma lista de MLServices e seus detalhes, incluindo a ID do MLService (`{MLSERVICE_ID}`), a ID do Experimento para treinamento (`{TRAINING_ID}`), a ID do Experimento para pontuação (`{SCORING_ID}`) e a ID do conjunto de dados de treinamento de entrada (`{DATASET_ID}`).
 
 ```json
 {
@@ -216,7 +216,7 @@ Você pode atualizar um MLService existente sobrescrevendo suas propriedades por
 
 >[!TIP]
 >
->Para garantir o sucesso dessa solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
+>Para garantir o sucesso desta solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o MLService por ID](#retrieve-a-specific-mlservice). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 **Formato da API**
 

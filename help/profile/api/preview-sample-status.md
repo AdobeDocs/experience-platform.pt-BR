@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;pré-visualização;exemplo
-title: Pré-visualização do perfil - API do Perfil do cliente em tempo real
+title: Endpoint da API de status de amostra de perfil
 description: Usando os pontos de extremidade da API de Perfil do cliente em tempo real, você pode pré-visualização a última amostra bem-sucedida de seus dados de Perfil, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade dentro da Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---

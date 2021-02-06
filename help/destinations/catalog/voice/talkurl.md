@@ -1,21 +1,17 @@
 ---
 keywords: Caixa de entrada do URL de conversa;Caixa de entrada do url de conversa;Caixa de entrada do URL de conversa;caixa de entrada do URL de conversa;URL de conversa;URL de conversa;URL de conversa
-title: Extensão da Caixa de Entrada do URL de Conversação
-seo-title: Caixa de entrada do URL de conversa
+title: Destino da Extensão da Caixa de Entrada do URL de Conversação
 description: A extensão Caixa de entrada do URL de conversa é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Caixa de entrada do URL de conversa é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '550'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Talk URL Inbox] Extensão {#talk-url-extension}
-
-## Visão geral {#overview}
+# [!DNL Talk URL Inbox] extensão {#talk-url-extension}
 
 Receba mensagens de voz de seus visitantes de página da Web. Inclui a interface hospedada e o aprendizado de máquina baseado em nuvem para transcrever suas mensagens de voz em insights de texto instantaneamente.
 

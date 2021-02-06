@@ -1,21 +1,17 @@
 ---
 keywords: publicidade; o serviço de comércio;
-title: O Destino do Trade Desk
-seo-title: O Destino do Trade Desk
+title: O destino da conexão do Trade Desk
 description: 'O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel. '
-seo-description: O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '550'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL The Trade Desk] destino
-
-## Visão geral {#overview}
+# [!DNL The Trade Desk] conexão
 
 [!DNL The Trade Desk] o Destino ajuda a enviar dados do perfil para  [!DNL The Trade Desk].
 

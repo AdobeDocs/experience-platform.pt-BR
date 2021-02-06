@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;popular topics;mlinnesse;sensei machine learning api
 solution: Experience Platform
-title: MLInentons
+title: Ponto Final da API de MLInances
 topic: Developer guide
 description: Uma instância MLI é um emparelhamento de um Mecanismo existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
 
-# MLInentons
+# Ponto de extremidade MLInances
 
-Uma instância MLI é um emparelhamento de um [Mecanismo](./engines.md) existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
+Uma instância MLI é um emparelhamento de um [Engine](./engines.md) existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
 
 ## Criar uma instância MLI {#create-an-mlinstance}
 
-Você pode criar uma instância MLI executando uma solicitação de POST ao fornecer uma carga de solicitação que consiste em uma ID de mecanismo (`{ENGINE_ID}`) válida e um conjunto apropriado de configurações padrão.
+Você pode criar uma instância MLI executando uma solicitação de POST ao fornecer uma carga de solicitação que consiste em uma ID de mecanismo válida (`{ENGINE_ID}`) e um conjunto apropriado de configurações padrão.
 
-Se a ID do mecanismo fizer referência a um PySpark ou Spark Engine, você terá a capacidade de configurar a quantidade de recursos de computação, como o número de núcleos ou a quantidade de memória. Se um Mecanismo Python for referenciado, você poderá escolher entre usar uma CPU ou uma GPU para fins de treinamento e pontuação. Consulte as seções do apêndice nas configurações [de recursos](./appendix.md#resource-config) PySpark e Spark e nas configurações [de CPU e GPU](./appendix.md#cpu-gpu-config) Python para obter mais informações.
+Se a ID do mecanismo fizer referência a um PySpark ou Spark Engine, você terá a capacidade de configurar a quantidade de recursos de computação, como o número de núcleos ou a quantidade de memória. Se um Mecanismo Python for referenciado, você poderá escolher entre usar uma CPU ou uma GPU para fins de treinamento e pontuação. Consulte as seções do apêndice em [Configurações de recursos PySpark e Spark](./appendix.md#resource-config) e [Configurações de CPU e GPU Python](./appendix.md#cpu-gpu-config) para obter mais informações.
 
 **Formato da API**
 
@@ -84,7 +84,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLI recém-criada, incluindo seu identificador exclusivo (`id`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`).
 
 ```json
 {
@@ -131,7 +131,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLI recém-c
 
 ## Recuperar uma lista de MLInentons
 
-Você pode recuperar uma lista de MLInentons executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de MLInentons executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -143,7 +143,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Um dos parâmetros [de query](./appendix.md#query) disponíveis usados para filtrar os resultados. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de query disponíveis](./appendix.md#query) usados para filtrar os resultados. |
 | `{VALUE}` | O valor do parâmetro de query anterior. |
 
 **Solicitação**
@@ -276,7 +276,7 @@ Você pode atualizar uma instância MLI existente substituindo suas propriedades
 
 >[!TIP]
 >
->Para garantir o sucesso desta solicitação de PUT, recomenda-se que você execute primeiro uma solicitação de GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
+>Para garantir o sucesso desta solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 A chamada de API de exemplo a seguir atualizará os parâmetros de treinamento e pontuação de uma MLInpresence ao ter essas propriedades inicialmente:
 

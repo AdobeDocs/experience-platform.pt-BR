@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics;Microsoft Dynamics;dinâmica;dinâmica;Dynamics;;home;popular topics;Microsoft Dynamics;Dynamics
 solution: Experience Platform
-title: Criar um conector do Microsoft Dynamics usando a API de Serviço de Fluxo
+title: Criar uma conexão de origem do Microsoft Dynamics usando a API de Serviço de Fluxo
 topic: overview
 type: Tutorial
-description: Este tutorial usa a API de Serviço de Fluxo para guiá-lo pelas etapas para conectar a Plataforma a uma conta do Microsoft Dynamics (a seguir denominada "Dinâmica") para coletar dados do CRM.
+description: Saiba como conectar a Plataforma a uma conta do Microsoft Dynamics usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 75566ef0dc45f59b47af0b85f4692c2496e53f29
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '739'
 ht-degree: 2%
 
 ---
 
 
-# Crie um conector [!DNL Microsoft Dynamics] usando a API [!DNL Flow Service]
+# Criar uma conexão de origem [!DNL Microsoft Dynamics] usando a API [!DNL Flow Service]
 
 [!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para conectar a Plataforma a uma conta [!DNL Microsoft Dynamics] (a seguir denominada &quot;Dinâmica&quot;) para coletar dados do CRM.
+Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para conectar a Plataforma a uma conta [!DNL Microsoft Dynamics] (a seguir denominada &quot;Dinâmica&quot;) usando a API de Serviço de Fluxo.
 
 ## Introdução
 

@@ -1,21 +1,17 @@
 ---
 keywords: extensões de pixel do Facebook;extensão de pixel do facebook;destinos de pixel do facebook;pixel do facebook
-title: Extensão de pixel do Facebook
-seo-title: Extensão de pixel do Facebook
+title: Destino da Extensão de Pixel do Facebook
 description: A extensão de Pixel do Facebook é um destino publicitário no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão de Pixel do Facebook é um destino publicitário no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '509'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook Pixel] extensão {#facebook-pixel-extension}
-
-## Visão geral {#overview}
 
 O [!DNL Facebook Pixel] é uma ferramenta de análise que permite medir a eficácia de sua publicidade ao compreender as ações que as pessoas executam em seu site.
 

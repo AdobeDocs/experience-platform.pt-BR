@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
-title: Visão geral das notificações de observabilidade
+title: Visão Geral das Notificações de Observabilidade
 topic: overview
 description: Os Insights de Observabilidade permitem que você assine notificações de eventos relacionadas a atividades Adobe Experience Platform. Eles reduzem ou eliminam a necessidade de pesquisar a API de Insights de Observabilidade para verificar se um trabalho foi concluído ou se um determinado marco em um fluxo de trabalho foi atingido.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
@@ -19,4 +19,4 @@ ht-degree: 0%
 
 [!DNL Observability] no momento, as notificações aproveitam Eventos Adobe I/O, que podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. No entanto, os recursos de notificação eventualmente incluirão notificações por e-mail e por interface do usuário.
 
-Para começar a usar [!DNL Observability] notificações, continue com o tutorial sobre como [assinar notificações](./subscribe.md)de Evento de E/S.
+Para começar a usar as notificações [!DNL Observability], continue com o tutorial em [inscrevendo-se nas notificações de Evento de E/S](./subscribe.md).

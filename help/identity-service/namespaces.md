@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular tópicos;namespace;Namespace;Namespaces;namespaces;namespace de identidade;namespace de identidade;identidade;identidade;serviço de identidade;serviço de identidade
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Visão geral da Namespace de identidade
 topic: overview
 description: 'Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---

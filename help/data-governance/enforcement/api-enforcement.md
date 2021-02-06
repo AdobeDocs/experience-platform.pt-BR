@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Aplicação de política;Aplicação automática;Aplicação baseada em API;controle de dados;teste
 solution: Experience Platform
-title: Impor políticas de uso de dados usando a API do Serviço de Política
+title: Impor políticas de uso de dados usando a API de serviço de política
 topic: guide
 type: Tutorial
 description: Depois de criar rótulos de uso de dados para seus dados e criar políticas de uso para ações de marketing contra esses rótulos, você pode usar a API de serviço de política para avaliar se uma ação de marketing executada em um conjunto de dados ou em um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 1%

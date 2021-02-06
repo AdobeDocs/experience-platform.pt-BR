@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
+keywords: Experience Platform;home;popular topics;segmentação;segmentação;serviço de segmento;segmentos;segmentos;multi-entidade;segmentação de várias entidades;segmentos de várias entidades;
 solution: Experience Platform
-title: Segmentação de várias entidades
+title: Visão geral da segmentação de várias entidades
 topic: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais baseados em produtos, lojas ou outras classes que não sejam perfis. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos para o schema do Perfil.
 translation-type: tm+mt
-source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
 
 
-# Segmentação de várias entidades
+# Visão geral da segmentação de várias entidades
 
-A segmentação de várias entidades é um recurso avançado disponível como parte do Adobe Experience Platform [!DNL Segmentation Service]. Esse recurso permite estender [!DNL Real-time Customer Profile] dados com dados adicionais &quot;não-pessoas&quot; (também conhecidos como &quot;entidades de dimensão&quot;) que sua organização pode definir, como dados relacionados a produtos ou lojas. A segmentação de várias entidades proporciona flexibilidade ao definir segmentos de audiência com base em dados relevantes às suas necessidades comerciais exclusivas e pode ser executada sem que haja experiência em consultar bancos de dados. Com a segmentação de várias entidades, você pode adicionar dados principais aos seus segmentos sem precisar fazer alterações dispendiosas nos fluxos de dados ou aguardar uma união de dados back-end.
+A segmentação de várias entidades é um recurso avançado disponível como parte do Adobe Experience Platform [!DNL Segmentation Service]. Esse recurso permite estender [!DNL Real-time Customer Profile] dados com dados adicionais &quot;não-pessoais&quot; (também conhecidos como &quot;entidades de dimensão&quot;) que sua organização pode definir, como dados relacionados a produtos ou lojas. A segmentação de várias entidades proporciona flexibilidade ao definir segmentos de audiência com base em dados relevantes às suas necessidades comerciais exclusivas e pode ser executada sem que haja experiência em consultar bancos de dados. Com a segmentação de várias entidades, você pode adicionar dados principais aos seus segmentos sem precisar fazer alterações dispendiosas nos fluxos de dados ou aguardar uma união de dados back-end.
 
 ## Introdução
 
 A segmentação de várias entidades requer uma compreensão funcional dos vários serviços da Adobe Experience Platform envolvidos na segmentação. Antes de continuar com este guia, reveja a seguinte documentação:
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil unificado do consumidor em tempo real, com base em dados agregados de várias fontes.
-   * [Perfis](../profile/guardrails.md): Práticas recomendadas para a criação de modelos de dados compatíveis com [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite que você crie segmentos a partir de [!DNL Real-time Customer Profile] dados.
+   * [Perfis](../profile/guardrails.md): Práticas recomendadas para a criação de modelos de dados compatíveis com  [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos a partir de  [!DNL Real-time Customer Profile] dados.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../xdm/schema/composition.md#union)do schema: Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform.
+   * [Noções básicas da composição](../xdm/schema/composition.md#union) do schema: Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform.
 
 ## Casos de uso
 
@@ -41,7 +41,7 @@ Geralmente, é complexo criar e qualificar usuários em segmentos direcionados a
 
 ## Criação de segmentos multientidades
 
-A criação de um segmento de várias entidades requer primeiro a definição de relações entre schemas antes de usar a [!DNL Segmentation] API ou a interface do usuário do Construtor de segmentos para criar a definição de segmentos.
+A criação de um segmento de várias entidades requer, primeiro, a definição de relações entre schemas antes de usar a API [!DNL Segmentation] ou a interface do usuário do Construtor de segmentos para criar a definição do segmento.
 
 ### Definir relacionamentos
 
@@ -61,4 +61,4 @@ Depois de definir os relacionamentos XDM necessários, você pode começar a cri
 
 ## Avaliar e acessar segmentos de várias entidades
 
-Depois de criar um segmento, você pode avaliar e acessar os resultados do segmento usando a API de segmentação. A avaliação de um segmento de várias entidades é muito semelhante à avaliação de um segmento padrão. Esse processo só pode ser feito usando a API de segmentação. Para obter um guia detalhado que mostra como usar a API para avaliar e acessar segmentos, leia o tutorial de [avaliação e acesso a segmentos](./tutorials/evaluate-a-segment.md) .
+Depois de criar um segmento, você pode avaliar e acessar os resultados do segmento usando a API de segmentação. A avaliação de um segmento de várias entidades é muito semelhante à avaliação de um segmento padrão. Esse processo só pode ser feito usando a API de segmentação. Para obter um guia detalhado que mostra como usar a API para avaliar e acessar segmentos, leia o tutorial [avaliar e acessar segmentos](./tutorials/evaluate-a-segment.md).

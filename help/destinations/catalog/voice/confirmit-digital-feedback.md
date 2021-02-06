@@ -1,21 +1,17 @@
 ---
 keywords: Confirmar Feedback Digital;confirmar extensão;confirmar
-title: Confirmar extensão de Comentários Digitais
-seo-title: Confirmar extensão de Comentários Digitais
+title: Confirmar destino da extensão de feedback digital
 description: A extensão Confirmar feedback digital é uma voz do destino do Cliente na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Confirmar feedback digital é uma voz do destino do Cliente na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '563'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Confirmit Digital Feedback] Extensão
-
-## Visão geral {#overview}
+# [!DNL Confirmit Digital Feedback] extensão
 
 [!DNL Confirmit Digital Feedback] ajuda você a transformar o tráfego de seu site em insights em tempo real. Com [!DNL Confirmit], pesquisas discretas e altamente direcionadas podem ser exibidas de acordo com seus requisitos, incentivando os visitantes a fornecer feedback, como:
 

@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;recuperar lotes com falha;lotes com falha;ingestão em lote;lote ingestão;Lotes com falha;Obter lotes com falha;Obter lotes com falha;Baixar lotes com falha;baixar lotes com falha;baixar lotes com falha;
 solution: Experience Platform
-title: Recuperar lotes com falha
+title: Recuperando Lotes com Falha Usando a API de Acesso a Dados
 topic: tutorial
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar informações sobre um lote com falha usando APIs de ingestão de dados.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '652'
 ht-degree: 2%
 
 ---
 
 
-# Recuperando lotes com falha usando a API
+# Recuperando lotes com falha usando a API de acesso a dados
 
 A Adobe Experience Platform fornece dois métodos para fazer upload e ingestão de dados. Você pode usar a ingestão em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a ingestão em streaming, que permite inserir seus dados em [!DNL Platform] usando pontos finais de streaming em tempo real.
 

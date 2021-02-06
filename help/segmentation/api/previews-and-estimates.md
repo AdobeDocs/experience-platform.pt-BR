@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Serviço de segmentação;pré-visualizações;estimativas;pré-visualizações e estimativas;estimativas e pré-visualizações;api;API;
 solution: Experience Platform
-title: Pré-visualizações e endpoints de estimativas
+title: Pontos finais da API de pré-visualizações e estimativas
 topic: developer guide
-description: À medida que você desenvolve a definição do segmento, você pode usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para visualização de informações de nível de resumo, a fim de ajudar a garantir que você esteja isolando a audiência esperada.
+description: As pré-visualizações e estimativas da API do Adobe Experience Platform Segmentation Service permitem que você visualização informações de nível de resumo para ajudar a garantir que você esteja isolando a audiência esperada em seus segmentos.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Pré-visualizações e endpoints de estimativas
 
-À medida que você desenvolve a definição do segmento, você pode usar as ferramentas de estimativa e pré-visualização dentro das informações de nível de resumo da visualização para ajudar a garantir que você esteja isolando a audiência esperada. [!DNL Adobe Experience Platform] **As pré-visualizações** fornecem listas paginadas de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado. **As estimativas** fornecem informações estatísticas sobre uma definição de segmento, como o tamanho da audiência projetada, o intervalo de confiança e o desvio padrão do erro.
+À medida que você desenvolve a definição do segmento, você pode usar as ferramentas de estimativa e pré-visualização em [!DNL Adobe Experience Platform] para visualização de informações de nível de resumo para ajudar a garantir que você esteja isolando a audiência esperada. **As** visualizações fornecem listas paginadas de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado. **As** estimativas fornecem informações estatísticas sobre uma definição de segmento, como o tamanho da audiência projetada, o intervalo de confiança e o desvio padrão do erro.
 
 ## Introdução
 
-Os pontos de extremidade usados neste guia fazem parte da [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte o guia [de](./getting-started.md) introdução para obter informações importantes que você precisa saber para fazer chamadas à API com sucesso, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
+Os pontos de extremidade usados neste guia fazem parte da API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas à API com êxito, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
 ## Como as estimativas são geradas
 
@@ -41,9 +41,9 @@ O tamanho da amostra da verificação depende do número geral de entidades na l
 >
 >As estimativas geralmente levam de 10 a 15 segundos para serem executadas, começando com uma estimativa aproximada e refinando à medida que mais registros são lidos.
 
-## Create a new preview {#create-preview}
+## Criar uma nova pré-visualização {#create-preview}
 
-Você pode criar uma nova pré-visualização, enviando uma solicitação de POST para o `/preview` terminal.
+Você pode criar uma nova pré-visualização, fazendo uma solicitação POST para o terminal `/preview`.
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) com detalhes da sua
 
 ## Recuperar os resultados de uma pré-visualização específica {#get-preview}
 
-Você pode recuperar informações detalhadas sobre uma pré-visualização específica, fazendo uma solicitação de GET para o `/preview` terminal e fornecendo a ID da pré-visualização no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma pré-visualização específica fazendo uma solicitação de GET para o terminal `/preview` e fornecendo a ID da pré-visualização no caminho da solicitação.
 
 **Formato da API**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | O `previewId` valor da pré-visualização que você deseja recuperar. |
+| `{PREVIEW_ID}` | O valor `previewId` da pré-visualização que você deseja recuperar. |
 
 **Solicitação**
 
@@ -172,11 +172,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando o [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
-## Recuperar os resultados de uma ordem de produção de estimativa específica {#get-estimate}
+## Recuperar os resultados de um trabalho de estimativa específico {#get-estimate}
 
-Depois de criar um trabalho de pré-visualização, você pode usá-lo `previewId` no caminho de uma solicitação de GET para o `/estimate` terminal para visualização de informações estatísticas sobre a definição do segmento, incluindo o tamanho de audiência projetado, o intervalo de confiança e o desvio padrão do erro.
+Depois de criar um trabalho de pré-visualização, você pode usar seu `previewId` no caminho de uma solicitação de GET para o terminal `/estimate` para visualização de informações estatísticas sobre a definição do segmento, incluindo tamanho de audiência projetado, intervalo de confiança e desvio padrão do erro.
 
 **Formato da API**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Um trabalho de estimativa só é acionado quando um trabalho de pré-visualização é criado e os dois trabalhos compartilham o mesmo valor de ID para fins de pesquisa. Especificamente, esse é o `previewId` valor retornado quando o trabalho de pré-visualização foi criado. |
+| `{PREVIEW_ID}` | Um trabalho de estimativa só é acionado quando um trabalho de pré-visualização é criado e os dois trabalhos compartilham o mesmo valor de ID para fins de pesquisa. Especificamente, esse é o valor `previewId` retornado quando o trabalho de pré-visualização foi criado. |
 
 **Solicitação**
 
@@ -231,4 +231,4 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 
 ## Próximas etapas
 
-Depois de ler esse guia, agora você tem um melhor entendimento de como trabalhar com pré-visualizações e estimativas. Para saber mais sobre os outros pontos de extremidade da [!DNL Segmentation Service] API, leia a visão geral [do guia do desenvolvedor do Serviço de](./overview.md)segmentação.
+Depois de ler esse guia, agora você tem um melhor entendimento de como trabalhar com pré-visualizações e estimativas. Para saber mais sobre os outros [!DNL Segmentation Service] pontos de extremidade da API, leia a [visão geral do guia do desenvolvedor do Serviço de segmentação](./overview.md).

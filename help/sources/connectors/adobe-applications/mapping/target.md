@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform;home;popular topics;target mapping;Target mapping;home;popular topics;;
 solution: Experience Platform
-title: campo target mapping
+title: Mapeamento de dados do Evento Adobe Target para XDM
 topic: overview
-description: A tabela a seguir descreve os campos de um schema Experience Evento (*campo XDM ExperienceEvent*) e os campos correspondentes do Público alvo para os quais eles devem ser mapeados (campo Solicitação de Público alvo). Também são fornecidas notas adicionais para alguns mapeamentos.
+description: Saiba como mapear os campos do evento Adobe Target para um schema do Experience Data Model (XDM) para uso no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Campos de target mapping
+# Mapeamentos de campos de target mapping
 
-A Adobe Experience Platform permite que você ingira dados da Adobe Target pelo conector de origem do Público alvo. Ao usar o conector, todos os dados dos campos do Público alvo devem ser mapeados para os campos do Modelo de dados de [experiência (XDM)](../../../../xdm/home.md) associados à classe XDM ExperienceEvent.
+A Adobe Experience Platform permite que você ingira dados da Adobe Target pelo conector de origem do Público alvo. Ao usar o conector, todos os dados dos campos do Público alvo devem ser mapeados para os campos [Modelo de dados de experiência (XDM)](../../../../xdm/home.md) associados à classe XDM ExperienceEvent.
 
-A tabela a seguir descreve os campos de um schema do Evento de experiência (campo *XDM ExperienceEvent) e os campos correspondentes do Público alvo para os quais eles devem ser mapeados (campo* Solicitação de ** Público alvo). Também são fornecidas notas adicionais para alguns mapeamentos.
+A tabela a seguir descreve os campos de um schema do Evento de experiência (*campo ExperienceEvent do XDM*) e os campos correspondentes do Público alvo para os quais eles devem ser mapeados (*campo Solicitação de Público alvo*). Também são fornecidas notas adicionais para alguns mapeamentos.
 
 >[!NOTE]
 >

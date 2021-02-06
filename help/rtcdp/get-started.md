@@ -1,9 +1,9 @@
 ---
 keywords: RTCDP;CDP;Plataforma de dados do cliente em tempo real;plataforma de dados do cliente em tempo real;cdp;cdp;rtcdp em tempo real
-title: Introdução à Plataforma de dados do cliente em tempo real
+title: Introdução à plataforma de dados do cliente em tempo real
 description: Use esse cenário como exemplo ao configurar sua implementação da Plataforma de dados do cliente em tempo real.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 1%

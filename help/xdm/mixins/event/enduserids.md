@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;design de Schema;mixin;enduserids;usuário final;ids;
 solution: Experience Platform
-title: Mistura Detalhes da ID do usuário final
+title: Mistura de detalhes da ID de usuário final
 topic: overview
 description: Este documento fornece uma visão geral do mixin Detalhes da ID de usuário final.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mistura Detalhes] da ID do usuário final
+# [!UICONTROL Detalhamento da ID de usuário final ] Detailsmixin
 
 >[!NOTE]
 >
->Os nomes de várias misturas mudaram. Consulte o documento sobre atualizações [de nome de](../name-updates.md) mixin para obter mais informações.
+>Os nomes de várias misturas mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes] da ID de usuário final é uma combinação padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), usada para descrever as informações de identidade de um indivíduo em vários aplicativos de Adobe. O mixin fornece um `endUserIDs` objeto de nível raiz, que contém um campo somente leitura `_experience` cujos valores são automaticamente atualizados à medida que os dados são assimilados.
+[!UICONTROL ID do usuário final ] detalha uma combinação padrão para a  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), usada para descrever as informações de identidade de um indivíduo em vários aplicativos de Adobe. O mixin fornece um objeto `endUserIDs` de nível raiz, que contém um campo somente leitura `_experience` cujos valores são automaticamente atualizados à medida que os dados são assimilados.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 

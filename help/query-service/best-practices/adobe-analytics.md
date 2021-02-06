@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;exemplo de query;exemplo de query;adobe analytics;
 solution: Experience Platform
-title: Query de amostra
+title: Query de amostra para dados Adobe Analytics
 topic: queries
 description: Os dados de conjuntos de relatórios selecionados da Adobe Analytics são transformados em XDM ExperienceEvents e ingeridos no Adobe Experience Platform como conjuntos de dados para você. Este documento descreve vários casos de uso em que o Adobe Experience Platform Query Service usa esses dados e os query de amostra incluídos devem funcionar com seus conjuntos de dados Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1021'
 ht-degree: 1%
 
 ---
@@ -215,8 +215,8 @@ No relatórios, os pedidos, a receita, as visualizações de produtos e as adiç
 
 | eVar6 (método de descoberta de produtos) | receita | ordens | visualizações de produtos | adição ao carrinho |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| pesquisa interna:camisa de verão | 19,99 | 1 | 1 | 3 |
-| pesquisa interna:chapéu de inverno | 12,99 | 1 | 3 | 3 |
+| pesquisa interna:camisa de verão | 19,99 | 1 | 1 | 1 |
+| pesquisa interna:chapéu de inverno | 12,99 | 3 | 1 | 1 |
 
 Para saber mais sobre como usar a sintaxe de conversão, leia a documentação da Adobe Analytics em [implementar eVars usando a sintaxe de conversão](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 

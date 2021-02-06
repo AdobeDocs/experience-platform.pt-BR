@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;lar;tópicos populares;ingestão em lote;ingestão em lote;ingestão;guia do desenvolvedor;guia da api;carregar;ingerir parquet;ingest json;
 solution: Experience Platform
-title: Guia do desenvolvedor de ingestão em lote
+title: Guia da API de ingestão em lote
 topic: developer guide
 description: Este documento fornece uma visão geral abrangente do uso de APIs de ingestão em lote.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 ---
 
 
-# Guia do desenvolvedor de ingestão em lote
+# Guia da API de ingestão em lote
 
 Este documento fornece uma visão geral abrangente do uso de [APIs de ingestão em lote](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 

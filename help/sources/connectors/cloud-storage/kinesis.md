@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;lar;tópicos populares;Amazon Kinesis;amazon cinesis;Kinesis;cinesis
 solution: Experience Platform
-title: Conector Amazon Kinesis
+title: Visão geral do Amazon Kinesis Source Connector
 topic: overview
-description: A documentação abaixo fornece informações sobre como conectar o Amazon Kinesis à plataforma usando APIs ou a interface do usuário.
+description: Saiba como conectar o Amazon Kinesis ao Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -33,10 +33,10 @@ A documentação abaixo fornece informações sobre como conectar [!DNL Amazon K
 
 ### Uso de APIs
 
-- [Criar um conector Amazon Kinesis usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Criar uma conexão de origem Amazon Kinesis usando a API de Serviço de Fluxo](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Coletar dados de fluxo usando a API de Serviço de Fluxo](../../tutorials/api/collect/streaming.md)
 
 ### Uso da interface
 
-- [Criar um conector de origem Amazon Kinesis na interface do usuário](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configurar um fluxo de dados para um conector de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Criar uma conexão de origem Amazon Kinesis na interface do usuário](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;modelo de dados;auditoria;registro de auditoria;changelog;change log;rpc;
 solution: Experience Platform
-title: Guia de ponto de extremidade do registro de auditoria
+title: Ponto Final da API de Log de Auditoria
 description: O endpoint /auditlog na API do Registro de Schemas permite recuperar uma lista cronológica de alterações que foram feitas em um recurso XDM existente.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 2%

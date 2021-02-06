@@ -1,19 +1,18 @@
 ---
 keywords: conectar destino;destino connect;como conectar destino
 title: Conectar-se a um destino no Adobe Experience Platform
-seo-title: Conectar-se a um destino no Adobe Experience Platform
 type: Tutorial
 description: Este tutorial lista as etapas para conectar um destino no Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
 
-# Como conectar um destino
+# Conectar-se a um destino
 
 Siga as etapas abaixo para se conectar a um destino no Adobe Experience Platform:
 

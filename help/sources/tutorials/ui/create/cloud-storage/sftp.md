@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
-title: Criar um conector de origem SFTP na interface do usuário
+title: Criar uma conexão de origem SFTP na interface do usuário
 topic: overview
 type: Tutorial
-description: Este tutorial fornece etapas para a criação de um conector de origem SFTP usando a interface do usuário da plataforma.
+description: Saiba como criar uma conexão de origem SFTP usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
 
-# Criar um conector de origem SFTP na interface do usuário
+# Criar uma conexão de origem SFTP na interface do usuário
 
 >[!NOTE]
 >
 >O conector SFTP está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
 
-Este tutorial fornece etapas para a criação de um conector de origem SFTP usando a interface do usuário da plataforma.
+Este tutorial fornece etapas para criar uma conexão de origem SFTP usando a interface do usuário do Adobe Experience Platform.
 
 ## Introdução
 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular tópicos;serviço de catálogo;catálogo;serviço de catálogo;Catálogo;Catálogo
 solution: Experience Platform
-title: Guia do desenvolvedor do serviço de catálogo
+title: Guia da API do serviço de catálogo
 topic: developer guide
-description: Este guia do desenvolvedor fornece etapas para ajudá-lo a start usando a API de catálogo. O guia então fornece exemplos de chamadas de API para executar operações principais usando o Catálogo.
+description: A API do serviço de catálogo permite que os desenvolvedores gerenciem metadados do conjunto de dados no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Catalog Service] guia do desenvolvedor
+# [!DNL Catalog Service] Guia de API
 
 [!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. [!DNL Catalog] atua como um armazenamento de metadados ou &quot;catálogo&quot; no qual você pode encontrar informações sobre seus dados  [!DNL Experience Platform], sem precisar acessar os próprios dados. Consulte a [[!DNL Catalog] visão geral](../home.md) para obter mais informações.
 

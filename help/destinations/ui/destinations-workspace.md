@@ -1,11 +1,10 @@
 ---
 keywords: plataforma;destinos;área de trabalho de destinos;área de trabalho;ui;destinos ui;catálogo;catálogo de destinos;
-title: Área de trabalho Destinos
-seo-title: Área de trabalho Destinos
+title: Visão geral da área de trabalho de destinos
 description: A área de trabalho Destinos consiste em quatro seções, Catálogo, Procurar, Contas e Visualização do sistema, descritas nas seções abaixo.
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar a área de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 2%
@@ -13,7 +12,7 @@ ht-degree: 2%
 ---
 
 
-# Área de trabalho de destinos {#destinations-workspace}
+# Visão geral do espaço de trabalho de destinos {#destinations-workspace}
 
 No Adobe Experience Platform, selecione **[!UICONTROL Destinos]** na barra de navegação esquerda para acessar a área de trabalho [!UICONTROL Destinos].
 

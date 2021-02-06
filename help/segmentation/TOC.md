@@ -1,23 +1,23 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda do Serviço de segmentação da Adobe Experience Platform
+user-guide-title: Serviço de segmentação do Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie segmentos e gere públicos a partir dos dados do Real-time Customer Profile.
 translation-type: tm+mt
-source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 25%
+source-wordcount: '135'
+ht-degree: 17%
 
 ---
 
 
-# Ajuda do Serviço de segmentação da Adobe Experience Platform {#segmentation}
+# Serviço de segmentação do Adobe Experience Platform {#segmentation}
 
-- [Visão geral](home.md)
+- [Visão geral do Serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- Guia do desenvolvedor da API de segmentação {#api}
+- API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
    - [Exportar trabalhos](api/export-jobs.md)
@@ -27,8 +27,8 @@ ht-degree: 25%
    - [Trabalhos de segmento](api/segment-jobs.md)
    - [Pesquisa de segmento](api/segment-search.md)
    - [Segmentação em streaming](api/streaming-segmentation.md)
-- IU de segmentação {#ui}
-   - [Guia da interface de segmentação](ui/overview.md)
+- Interface de usuário de segmentação {#ui}
+   - [Visão geral](ui/overview.md)
    - [Painel do segmento](ui/segment-dashboard.md)
    - [Construtor de segmentos](ui/segment-builder.md)
    - [Segmentação em streaming](ui/streaming-segmentation.md)

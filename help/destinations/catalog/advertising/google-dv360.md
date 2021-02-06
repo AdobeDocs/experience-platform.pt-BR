@@ -1,21 +1,17 @@
 ---
 keywords: Gerenciador de lances do DoubleClick;Gerenciador de lances do DoubleClick;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
-title: Destino do Google Display & Video 360
-seo-title: Destino do Google Display & Video 360
+title: Destino da conexão Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel.
-seo-description: 'O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel. '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Display & Video 360] Destino
-
-## Visão geral
+# [!DNL Google Display & Video 360] conexão
 
 [!DNL Display & Video 360], anteriormente conhecida como  [!DNL DoubleClick Bid Manager], é uma ferramenta usada para executar redirecionamento e campanhas digitais direcionadas para audiência em fontes de inventário de Vídeo, Vídeo e Móvel.
 

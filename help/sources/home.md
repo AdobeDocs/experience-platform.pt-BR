@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;início;tópicos populares;conectores de origem;conector de origem;fontes;fontes de dados;fonte de dados;conexão de fonte de dados
 solution: Experience Platform
-title: Visão geral dos Conectores de origem Adobe Experience Platform
+title: Visão geral dos conectores de origem
 topic: overview
 description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,12 @@ As fontes no Experience Platform são agrupadas nas seguintes categorias:
 O Experience Platform permite que os dados sejam assimilados de outros aplicativos Adobe, incluindo Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Criar um conector de origem Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Criar uma conexão de origem Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Visão geral do conector de dados de classificações Adobe Analytics](connectors/adobe-applications/classifications.md)
-- [Criar um conector de fonte de dados de classificações da Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Criar uma conexão de fonte de dados de classificações da Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Visão geral do conector de dados Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Criar um conector de origem Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Criar um conector de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Criar uma conexão de origem Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Criar uma conexão de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Publicidade
 

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 3%
@@ -37,48 +37,48 @@ Atualizações dos recursos existentes:
 
 Enquanto a Adobe estiver migrando o Data Lake da Gen1 para a Gen2, os usuários poderão ler a partir do Data Lake, mas todos os recursos que forem gravados no Data Lake serão afetados. O Adobe entrará em contato com os administradores de sistema para discutir o impacto da migração em detalhes e confirmar as datas e horas da migração para organizações IMS específicas.
 
-Para obter mais informações, leia o guia [de migração do](../../landing/adls2-gen2-migration.md)Data Lake.
+Para obter mais informações, leia o [Guia de migração do Data Lake](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] aproveita perfis de produtos [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos da plataforma, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
+[!DNL Experience Platform] aproveita perfis de  [Adobe Admin ](https://adminconsole.adobe.com) Consoleproduct para vincular usuários com permissões e caixas de proteção. As permissões controlam o acesso a uma variedade de recursos da plataforma, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Permissões | Na guia [!DNL Admin Console], dentro de um perfil de [!DNL Platform] produto, você pode personalizar quais [!DNL Platform] recursos estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: **[!UICONTROL Modelagem]** de dados, **[!UICONTROL Gestão de dados]**, Gerenciamento **[!UICONTROL de]** Perfis, **[!UICONTROL Identity Management]**, Monitoramento **[!UICONTROL de]** dados, Administração, Administração do ************************ Sandbox, Destinos, Ingestão de dados,Data Science Workspace, Serviço de Query, e Governação de dados. |
-| Acesso a caixas de proteção | A guia **[!UICONTROL Permissões]** em um perfil de [!DNL Platform] produto pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção sobre [caixas de proteção](#sandboxes) abaixo para obter mais informações. |
+| Permissões | Em [!DNL Admin Console], a guia dentro de um perfil de produto [!DNL Platform] permite personalizar quais recursos [!DNL Platform] estão disponíveis para os usuários conectados a esse perfil. As categorias de permissão disponíveis incluem: **[!UICONTROL Modelagem de Dados]**, **[!UICONTROL Gestão de dados]**, **[!UICONTROL Gestão de Perfis]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Monitorização de Dados]**, **[!UICONTROL Administração de Sandbox]**, **[!UICONTROL Destinos 3/>,**[!UICONTROL  Ingestão de dados ]**,**[!UICONTROL &#x200B;Área de trabalho da Data Science ]**,**[!UICONTROL  Serviço de Query ]**e**[!UICONTROL  Gestão de dados ]**.]** |
+| Acesso a caixas de proteção | A guia **[!UICONTROL Permissões]** em um perfil de produto [!DNL Platform] pode conceder aos usuários acesso a caixas de proteção específicas. Consulte a seção [caixas de proteção](#sandboxes) abaixo para obter mais informações. |
 
-Para obter mais informações, consulte a visão geral [do](../../access-control/home.md)controle de acesso.
+Para obter mais informações, consulte a [visão geral do controle de acesso](../../access-control/home.md).
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
-[!DNL Offer Decisioning] é um Serviço de Aplicativo integrado ao [!DNL Experience Platform]. Ele permite que você aproveite [!DNL Platform] para oferecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato no momento certo.
+[!DNL Offer Decisioning] é um Serviço de Aplicativo integrado ao  [!DNL Experience Platform]. Ele permite que você aproveite [!DNL Platform] para oferecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato no momento certo.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Biblioteca de ofertas centralizada | A interface na qual você cria e gerencia os diferentes elementos que compõem suas ofertas e define suas regras e restrições. |
-| Mecanismo de decisão de oferta | O Mecanismo de decisão de Oferta aproveita [!DNL Platform] os dados e, [!DNL Real-time Customer Profiles]junto com a Biblioteca de Ofertas, para selecionar o momento certo, os clientes e canais aos quais as ofertas serão entregues. |
+| Mecanismo de decisão de oferta | O Mecanismo de decisão de Oferta aproveita [!DNL Platform] os dados e [!DNL Real-time Customer Profiles], juntamente com a Biblioteca de Ofertas, para selecionar o horário certo, os clientes e canais aos quais as ofertas serão entregues. |
 
-Para obter mais informações, consulte a [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentação.
+Para obter mais informações, consulte a documentação [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en).
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional. Para atender a essa necessidade, [!DNL Experience Platform] fornece caixas de proteção que dividem uma única [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+[!DNL Experience Platform] foi criada para enriquecer aplicativos de experiência digital em escala global. O Empresa geralmente executa vários aplicativos de experiência digital em paralelo e precisa atender ao desenvolvimento, teste e implantação desses aplicativos, garantindo a conformidade operacional. Para atender a essa necessidade, [!DNL Experience Platform] fornece caixas de proteção que particionam uma única instância [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Caixa de proteção de produção | [!DNL Experience Platform] fornece uma única caixa de proteção de produção, que não pode ser excluída ou redefinida. O número total de caixas de proteção disponíveis, produção e não produção, é determinado pela licença adquirida. |
-| Caixas de proteção de não produção | É possível criar várias caixas de proteção de não produção para uma única [!DNL Platform] instância, permitindo testar recursos, executar experiências e fazer configurações personalizadas sem afetar a caixa de proteção de produção. |
-| Comutador Sandbox | Na interface do [!DNL Experience Platform] usuário, o alternador da caixa de proteção no canto superior esquerdo da tela permite alternar entre as caixas de proteção disponíveis por meio de um menu suspenso. O alternador de sandbox também fornece uma função de pesquisa que permite filtrar por meio de caixas de proteção disponíveis. |
-| `x-sandbox-name` header | Todas as chamadas para [!DNL Experience Platform] APIs agora devem incluir o novo `x-sandbox-name` cabeçalho, cujo valor faz referência ao `name` atributo da caixa de proteção em que a operação ocorrerá. |
+| Caixas de proteção de não produção | É possível criar várias caixas de proteção que não sejam de produção para uma única instância [!DNL Platform], permitindo testar recursos, executar experiências e fazer configurações personalizadas sem afetar a caixa de proteção de produção. |
+| Comutador Sandbox | Na interface do usuário [!DNL Experience Platform], o alternador de caixa de proteção no canto superior esquerdo da tela permite alternar entre as caixas de proteção disponíveis por meio de um menu suspenso. O alternador de sandbox também fornece uma função de pesquisa que permite filtrar por meio de caixas de proteção disponíveis. |
+| `x-sandbox-name` header | Todas as chamadas para [!DNL Experience Platform] APIs agora devem incluir o novo cabeçalho `x-sandbox-name`, cujo valor faz referência ao atributo `name` da caixa de proteção em que a operação ocorrerá. |
 
-Para obter mais informações, consulte a visão geral [das](../../sandboxes/home.md)caixas de proteção.
+Para obter mais informações, consulte a [visão geral das caixas de proteção](../../sandboxes/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -89,25 +89,25 @@ Para obter mais informações, consulte a visão geral [das](../../sandboxes/hom
 | Recurso | Descrição |
 | ------- | ----------- |
 | Operações iterativas | [!DNL Data Prep] O mapeador agora oferece suporte para a execução de operações iterativas em uma hierarquia. |
-| Função do mapeador | [!DNL Data Prep] O mapeador agora tem a capacidade de **não** copiar um atributo da origem para o XDM do público alvo. |
+| Função do mapeador | [!DNL Data Prep] O mapeador agora tem a capacidade de  **** não copiar um atributo da origem para o XDM do público alvo. |
 
-Para obter mais informações, consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+Para obter mais informações, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## Data Science Workspace {#dsw}
 
-A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe. Uma das maneiras de fazer isso é usar a Data Science Workspace [!DNL JupyterLab]. [!DNL JupyterLab] é uma interface de usuário baseada na Web para [[!DNL Project Jupyter]](https://jupyter.org/) e é totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com [!DNL Jupyter] notebooks, códigos e dados.
+A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe. Uma das maneiras de realizar isso na Data Science Workspace é usando [!DNL JupyterLab]. [!DNL JupyterLab] é uma interface de usuário baseada na Web para  [[!DNL Project Jupyter]](https://jupyter.org/) e é totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para que os cientistas de dados trabalhem com [!DNL Jupyter] notebooks, códigos e dados.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| [!DNL JupyterLab] Modelo do Recipe Builder | Uso de notebooks para atender aos requisitos de receita e atualização de versões. [!DNL Python] A imagem básica de tempo de execução ML foi atualizada para usar [!DNL Python] 3.6.7 e um [!DNL Conda] ambiente exclusivamente. |
+| [!DNL JupyterLab] Modelo do Recipe Builder | Uso de notebooks para atender aos requisitos de receita e atualização de versões. [!DNL Python] A imagem básica de tempo de execução ML foi atualizada para usar  [!DNL Python] 3.6.7 e um  [!DNL Conda] ambiente exclusivamente. |
 
-Para obter mais informações, leia o documento sobre como [criar uma receita usando notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md)de Júpiter.
+Para obter mais informações, leia o documento em [criar uma receita usando Notebooks de Júpiter](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Serviço de {#destinations}
 
-Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
+Em [Plataforma de dados do cliente em tempo real](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam os dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 
@@ -126,7 +126,7 @@ Na Plataforma [de dados do cliente em tempo](../../rtcdp/overview.md)real, os de
 | Agendamento de arquivos | Para os destinos de armazenamentos baseados em email e em nuvem, os usuários podem criar uma exportação única ou instantâneos diários. |
 | Campos obrigatórios | Os usuários podem marcar campos como obrigatórios, garantindo que somente os campos que contêm o campo obrigatório sejam exportados. |
 
-Para obter mais informações, consulte a visão geral [de](../../destinations/home.md)Destinos.
+Para obter mais informações, consulte [Visão geral de destinos](../../destinations/home.md).
 
 ## Serviços inteligentes {#intelligent-services}
 
@@ -138,7 +138,7 @@ Os Serviços inteligentes capacitam analistas e profissionais de marketing a apr
 | ------- | ----------- |
 | Conjunto de dados de Eventos de experiência do consumidor (CEE) | A criação de um conjunto de dados CEE agora oferece suporte à adição de campos de identidade ao conjunto de dados com o Editor de Schemas. A IA do cliente e do Attribution AI usam a identidade principal para combinar eventos. |
 
-Para obter mais informações, leia a seção sobre como [adicionar campos de identidade a um conjunto de dados](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) no guia de preparação de dados do Intelligent Services.
+Para obter mais informações, leia a seção sobre [adicionar campos de identidade a um conjunto de dados](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) no guia de preparação de dados do Intelligent Services.
 
 ### Attribution AI
 
@@ -160,7 +160,7 @@ Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribui
 | Caminhos de conversão principais | Um novo gráfico de insights localizado na guia Análise de caminho. O gráfico contém uma lista dos cinco principais caminhos de conversão que mostram a sequência de pontos de contato do canal de marketing que resultaram em mais conversões. |
 | Eficácia do ponto de contato | Fornece insights detalhados das três variáveis mais importantes pelas quais seu modelo avalia a eficácia do ponto de contato. As variáveis são a proporção de caminhos positivos e negativos tocados, a eficiência do ponto de contato e o volume do ponto de contato. |
 
-Para obter mais informações, leia a visão geral [do](../../intelligent-services/attribution-ai/overview.md)Attribution AI.
+Para obter mais informações, leia a [visão geral do Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
 ### AI do cliente
 
@@ -178,7 +178,7 @@ A IA do cliente, como parte dos Serviços inteligentes, fornece aos comerciantes
 | Objetivo de previsão | A flexibilidade na criação de uma meta de previsão foi aumentada com novas opções para prever se algo &quot;ocorrerá&quot; ou &quot;não ocorrerá&quot;. Além disso, as opções para prever se &quot;todos&quot; os eventos ocorrem ou &quot;qualquer um&quot; dos eventos ocorrem quando vários eventos são usados foram adicionadas. |
 | Derivação de fator influente | Os principais compartimentos de fatores influentes de propensão agora contêm detalhamentos. Os detalhamentos são um resumo de nível mais profundo dos valores para cada um dos principais fatores influentes dentro de um bucket de propensão. |
 
-Para obter mais informações, leia a visão geral [da API do](../../intelligent-services/customer-ai/overview.md)cliente.
+Para obter mais informações, leia a [visão geral do AI do cliente](../../intelligent-services/customer-ai/overview.md).
 
 ## Perfil do cliente em tempo real {#profile}
 
@@ -191,11 +191,11 @@ A Adobe Experience Platform permite que você direcione experiências coordenada
 | Fluxo de trabalho de políticas de mesclagem atualizado | A plataforma atualizou a configuração da política de mesclagem para um novo fluxo de trabalho gradual. Esse fluxo de trabalho permite que os usuários reúnam fragmentos de dados de vários conjuntos de dados de Perfis e definam prioridade para como os dados são unidos nesses conjuntos de dados, a fim de criar uma visualização abrangente de cada indivíduo. Os usuários podem unir conjuntos de dados de Perfil individual XDM selecionados selecionando o método de mesclagem apropriado (ordem de data e hora ou precedência de conjunto de dados) e anexando conjuntos de dados ExperienceEvent aos conjuntos de dados de Perfil. |
 | Visualização schema união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações relacionadas a todos os schemas e conjuntos de dados que contribuem para o schema da união, bem como os principais atributos da superfície, como campos de identidade e relacionamento. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, se as identidades estão corretamente agrupadas e se os dados foram assimilados com êxito. |
 
-Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com [!DNL Profile] dados, leia a visão geral [do Perfil do cliente em tempo](../../profile/home.md)real.
+Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com [!DNL Profile] dados, leia a [visão geral do Perfil do cliente em tempo real](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando [!DNL Platform] serviços. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
+A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando os serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 
 [!DNL Experience Platform] fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem que você se autentique e se conecte a sistemas de armazenamentos externos e serviços CRM, defina horários para execuções de ingestão e gerencie a throughput de ingestão de dados.
 
@@ -203,18 +203,18 @@ A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo 
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| [!DNL Shopify] | Agora você pode se conectar [!DNL Shopify] a [!DNL Experience Platform] usar a [!DNL Flow Service] API ou a interface do usuário. Consulte a visão geral [do conector](../../sources/connectors/ecommerce/shopify.md) Shopify para obter mais informações. |
+| [!DNL Shopify] | Agora é possível conectar [!DNL Shopify] a [!DNL Experience Platform] usando a API [!DNL Flow Service] ou a interface do usuário. Consulte [Visão geral do conector Shopify](../../sources/connectors/ecommerce/shopify.md) para obter mais informações. |
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Atualizar informações de conexão | Agora você pode atualizar os nomes, as descrições e as credenciais das conexões em lote existentes usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [atualizar conexões usando a API](../../sources/tutorials/api/update.md) do Serviço de Fluxo e [editar detalhes da conta usando a interface do usuário](../../sources/tutorials/ui/monitor.md). |
-| Excluir conexões | As conexões em lote que contêm erros ou se tornaram desnecessárias agora podem ser excluídas usando a [!DNL Flow Service] API e a interface do usuário. Para obter mais informações, consulte o tutorial sobre como [excluir conexões usando a API](../../sources/tutorials/api/delete.md) do Serviço de Fluxo e [excluir contas usando a interface do usuário](../../sources/tutorials/ui/delete-accounts.md). |
-| Mapeamento hierárquico | Você pode pré-visualização um arquivo de origem hierárquico, como JSON ou Parquet, durante o processo de ingestão de dados. Consulte o tutorial sobre como [configurar um fluxo de dados para conectores de armazenamento em nuvem na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
+| Atualizar informações de conexão | Agora você pode atualizar os nomes, as descrições e as credenciais das conexões em lote existentes usando a API [!DNL Flow Service] e a interface do usuário. Para obter mais informações, consulte o tutorial sobre [como atualizar conexões usando a API do Serviço de Fluxo](../../sources/tutorials/api/update.md) e [editar detalhes da conta usando a interface do usuário](../../sources/tutorials/ui/monitor.md). |
+| Excluir conexões | As conexões em lote que contêm erros ou se tornaram desnecessárias agora podem ser excluídas usando a API [!DNL Flow Service] e a interface do usuário. Para obter mais informações, consulte o tutorial em [excluir conexões usando a API de Serviço de Fluxo](../../sources/tutorials/api/delete.md) e [excluir contas usando a interface do usuário](../../sources/tutorials/ui/delete-accounts.md). |
+| Mapeamento hierárquico | Você pode pré-visualização um arquivo de origem hierárquico, como JSON ou Parquet, durante o processo de ingestão de dados. Consulte o tutorial em [configurar um fluxo de dados para conectores de armazenamento em nuvem na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
 | Suporte a API para mapeamento em fontes de transmissão | Agora você pode usar as APIs para executar funções de mapeamento com fontes de transmissão. |
 | Suporte de API para delimitadores personalizados para fontes de armazenamentos na nuvem | Agora é possível coletar arquivos não delimitados por CSV usando fontes de armazenamentos em nuvem. Você pode usar qualquer delimitador de coluna único, como tabulação, vírgula, barra vertical, ponto-e-vírgula ou hash, para coletar arquivos simples em qualquer formato. |
 | Suporte a sandbox para conector Adobe Audience Manager | O conector Audience Manager está agora habilitado para a caixa de proteção. Os usuários podem permitir que o conector roteie conjuntos de dados de Audience Manager para a caixa de proteção de sua escolha (incluindo caixas de proteção de não produção). A configuração é limitada a uma caixa de proteção por Organização IMS. |
 | Melhorias no UX | A ingestão baseada em arquivo agora está acessível pelo catálogo de fontes. |
 
-Para saber mais sobre fontes, consulte a visão geral [das](../../sources/home.md)fontes.
+Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

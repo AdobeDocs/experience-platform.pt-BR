@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
+keywords: Experience Platform;introdução;Atribuição ai;tópicos populares;Atribuição ai input;Atribuição ai output;
 solution: Experience Platform, Intelligent Services
-title: Entrada e saída de Attribution AI
+title: Entrada e saída no Attribution AI
 topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2075'
+source-wordcount: '2091'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Attribution AI] entrada e saída
+# Entrada e saída em [!DNL Attribution AI]
 
 O documento a seguir descreve as diferentes entradas e saídas utilizadas em [!DNL Attribution AI].
 
 ## [!DNL Attribution AI] dados de entrada
 
-[!DNL Attribution AI] usa [!DNL Consumer Experience Event] dados para calcular pontuações algorítmicas. Para obter mais detalhes sobre [!DNL Consumer Experience Event], consulte [Preparar dados para uso na documentação](../data-preparation.md)dos Serviços inteligentes.
+[!DNL Attribution AI] usa  [!DNL Consumer Experience Event] dados para calcular pontuações algorítmicas. Para obter mais detalhes sobre [!DNL Consumer Experience Event], consulte [Preparar dados para uso na documentação do Intelligent Services](../data-preparation.md).
 
 Nem todas as colunas no schema [!DNL Consumer Experience Event] (CEE) são obrigatórias para o Attribution AI.
 
@@ -31,7 +31,7 @@ Nem todas as colunas no schema [!DNL Consumer Experience Event] (CEE) são obrig
 | --- | --- |
 | Campo de identidade principal | Ponto de contato / Conversão |
 | Carimbo de data e hora | Ponto de contato / Conversão |
-| Channel._type | Ponto de contato |
+| Canal._type | Ponto de contato |
 | Channel.mediaAction | Ponto de contato |
 | Channel.mediaType | Ponto de contato |
 | Marketing.trackingCode | Ponto de contato |
@@ -60,7 +60,7 @@ As colunas abaixo não são obrigatórias, mas é recomendável incluí-las no s
 
 O Attribution AI requer dados históricos como entrada para treinamento de modelo. A duração dos dados exigidos é principalmente determinada por dois fatores chave: janela de treinamento e janela de retrospectiva. As entradas com janelas de treinamento mais curtas são mais sensíveis às tendências recentes, enquanto janelas de treinamento mais longas ajudam a produzir modelos mais estáveis e precisos. É importante modelar o objetivo com dados históricos que melhor representem suas metas de negócios.
 
-Os eventos de conversão de filtros de configuração [da janela de](./user-guide.md#training-window) treinamento estão definidos para serem incluídos no treinamento de modelo com base no tempo de ocorrência. Atualmente, a janela mínima de treinamento é de 1 trimestre (90 dias). A janela [de](./user-guide.md#lookback-window) pesquisa fornece um período que indica quantos dias antes dos pontos de contato do evento de conversão relacionados a esse evento de conversão devem ser incluídos. Esses dois conceitos juntos determinam a quantidade de dados de entrada (medidos por dias) necessária para um aplicativo.
+Os eventos de conversão [da janela de treinamento](./user-guide.md#training-window) filtros estão definidos para serem incluídos no treinamento do modelo com base no tempo de ocorrência. Atualmente, a janela mínima de treinamento é de 1 trimestre (90 dias). A [janela de pesquisa](./user-guide.md#lookback-window) fornece um período que indica quantos dias antes dos pontos de contato do evento de conversão relacionados a este evento de conversão devem ser incluídos. Esses dois conceitos juntos determinam a quantidade de dados de entrada (medidos por dias) necessária para um aplicativo.
 
 Por padrão, o Attribution AI define a janela de treinamento como os 2 trimestres mais recentes (6 meses) e a janela de retrospectiva como 56 dias. Em outras palavras, o modelo levará em consideração todos os eventos de conversão definidos que ocorreram nos últimos 2 trimestres e procurará todos os pontos de contato que ocorreram dentro de 56 dias antes dos eventos de conversão associados.
 
@@ -89,7 +89,7 @@ O Attribution AI gera o seguinte:
 
 ### Pontuações granulares brutas {#raw-granular-scores}
 
-O Attribution AI gera pontuações de atribuição no nível mais granular possível para que você possa dividir e cortar as pontuações por qualquer coluna de pontuação. Para visualização dessas pontuações na interface do usuário, leia a seção sobre a [exibição de caminhos](#raw-score-path)de pontuação brutos. Para baixar as pontuações usando a API, visite o [download das pontuações no documento do Attribution AI](./download-scores.md) .
+O Attribution AI gera pontuações de atribuição no nível mais granular possível para que você possa dividir e cortar as pontuações por qualquer coluna de pontuação. Para visualização dessas pontuações na interface do usuário, leia a seção em [exibindo caminhos de pontuação brutos](#raw-score-path). Para baixar as pontuações usando a API, acesse [baixando as pontuações no documento Attribution AI](./download-scores.md).
 
 >[!NOTE]
 >
@@ -105,18 +105,18 @@ A tabela a seguir descreve os campos de schema na saída de exemplo de pontuaç�
 | timestamp (DateTime) | Falso | A hora em que ocorreu um evento de conversão ou observação. <br> **Exemplo:** 2020-06-09T00:01:51.000Z |
 | identityMap (Map) | Verdadeiro | identityMap do usuário semelhante ao formato XDM CEE. |
 | eventType (String) | Verdadeiro | O tipo de evento principal para este registro de série de tempo. <br> **Exemplo:** &quot;Pedido&quot;, &quot;Compra&quot;, &quot;Visita&quot; |
-| eventMergeId (String) | Verdadeiro | Uma ID para correlacionar ou mesclar vários [!DNL Experience Events] juntos que são essencialmente o mesmo evento ou devem ser mesclados. Este deve ser preenchido pelo produtor de dados antes da ingestão. <br> **Exemplo:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| eventMergeId (String) | Verdadeiro | Uma ID para correlacionar ou unir vários [!DNL Experience Events] que são essencialmente o mesmo evento ou devem ser unidos. Este deve ser preenchido pelo produtor de dados antes da ingestão. <br> **Exemplo:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (String) | Falso | Um identificador exclusivo para o evento da série de tempo. <br> **Exemplo:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _locatárioId (Objeto) | Falso | O container de objeto de nível superior correspondente à sua ID do tentant. <br> **Exemplo:** _atsdsnrmsv2 |
-| your_schema_name (Objeto) | Falso | Ponha a linha com o evento de conversão em todos os eventos de ponto de contato associados a ela e seus metadados. <br> **Exemplo:** Pontuações do Attribution AI - Nome do modelo__2020 |
+| your_schema_name (Objeto) | Falso | Ponha a linha com o evento de conversão em todos os eventos de ponto de contato associados a ela e seus metadados. <br> **Exemplo:Pontuações de** Attribution AI - Nome do Modelo__2020 |
 | segmentação (string) | Verdadeiro | Segmento de conversão, como a segmentação geográfica, contra a qual o modelo foi criado. Em caso de ausência de segmentos, o segmento é igual a conversionName. <br> **Exemplo:** ORDER_US |
-| conversionName (String) | Verdadeiro | Nome da conversão configurada durante a configuração. <br> **Exemplo:** Pedido, cliente potencial, visita |
+| conversionName (String) | Verdadeiro | Nome da conversão configurada durante a configuração. <br> **Exemplo:** Pedido, Oportunidade Potencial, Visita |
 | conversão (Objeto) | Falso | Colunas de metadados de conversão. |
 | dataSource (String) | Verdadeiro | Identificação global exclusiva de uma fonte de dados. <br> **Exemplo:** Adobe Analytics |
 | eventSource (String) | Verdadeiro | A fonte quando o evento real aconteceu. <br> **Exemplo:** Adobe.com |
 | eventType (String) | Verdadeiro | O tipo de evento principal para este registro de série de tempo. <br> **Exemplo:** Pedido |
 | geo (String) | Verdadeiro | A localização geográfica onde a conversão foi entregue `placeContext.geo.countryCode`. <br> **Exemplo:** EUA |
-| priceTotal (Duplo) | Verdadeiro | Receitas obtidas através da conversão <br> **Exemplo:** 99,9 |
+| priceTotal (Duplo) | Verdadeiro | Receita obtida por meio da conversão <br> **Exemplo:** 99.9 |
 | product (String) | Verdadeiro | O identificador XDM do próprio produto. <br> **Exemplo:** RX 1080 ti |
 | productType (String) | Verdadeiro | O nome de exibição do produto conforme apresentado ao usuário para esta visualização de produto. <br> **Exemplo:** Gpus |
 | quantidade (número inteiro) | Verdadeiro | Quantidade comprada durante a conversão. <br> **Exemplo:** 1 1080 ti |
@@ -128,19 +128,19 @@ A tabela a seguir descreve os campos de schema na saída de exemplo de pontuaç�
 | customerProfile (Object) | Falso | Detalhes de identificação do usuário usado para criar o modelo. |
 | identity (Object) | Falso | Contém os detalhes do usuário usado para criar o modelo, como `id` e `namespace`. |
 | id (String) | Verdadeiro | ID de identificação do usuário, como ID de cookie ou AAID ou MCID etc. <br> **Exemplo:** 17348762725408656344688320891369597404 |
-| namespace (string) | Verdadeiro | Namespace de identidade usada para criar os caminhos e, consequentemente, o modelo. <br> **Exemplo:** auxílio |
+| namespace (string) | Verdadeiro | Namespace de identidade usada para criar os caminhos e, consequentemente, o modelo. <br> **Exemplo:** aaid |
 | touchpointsDetail (Object Array) | Verdadeiro | A lista dos detalhes do ponto de contato que levam à conversão ordenada pela ocorrência do ponto de contato ou pelo carimbo de data e hora. |
 | touchpointName (String) | Verdadeiro | Nome do ponto de contato configurado durante a configuração. <br> **Exemplo:** PAID_SEARCH_CLICK |
-| pontuações (Objeto) | Verdadeiro | Contribuição do ponto de contato para essa conversão como pontuação. Para obter mais informações sobre as pontuações produzidas dentro desse objeto, consulte a seção Pontuações [de atribuição](#aggregated-attribution-scores) agregadas. |
-| touchPoint (Objeto) | Verdadeiro | Metadados de ponto de contato. Para obter mais informações sobre as pontuações produzidas dentro desse objeto, consulte a seção Pontuações [](#aggregated-scores) agregadas. |
+| pontuações (Objeto) | Verdadeiro | Contribuição do ponto de contato para essa conversão como pontuação. Para obter mais informações sobre as pontuações produzidas dentro desse objeto, consulte a seção [pontuações de atribuição agregadas](#aggregated-attribution-scores). |
+| touchPoint (Objeto) | Verdadeiro | Metadados de ponto de contato. Para obter mais informações sobre as pontuações produzidas dentro desse objeto, consulte a seção [pontuações agregadas](#aggregated-scores). |
 
-### Exibição de caminhos de pontuação brutos (IU) {#raw-score-path}
+### Exibindo caminhos de pontuação bruta (UI) {#raw-score-path}
 
-Você pode visualização o caminho para suas pontuações brutas na interface do usuário. Start selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e, em seguida, procure e selecione o schema de pontuações AI de sua atribuição na guia **[!UICONTROL Procurar]** .
+Você pode visualização o caminho para suas pontuações brutas na interface do usuário. Start selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e, em seguida, procure e selecione o schema de pontuações do AI de atribuição na guia **[!UICONTROL Procurar]**.
 
 ![Escolha seu schema](./images/input-output/schemas_browse.png)
 
-Em seguida, selecione um campo na janela **[!UICONTROL Estrutura]** da interface do usuário, a guia Propriedades **[!UICONTROL de]** campo será aberta. Dentro das propriedades **[!UICONTROL de]** campo é o campo de caminho que mapeia para suas pontuações brutas.
+Em seguida, selecione um campo na janela **[!UICONTROL Estrutura]** da interface do usuário, a guia **[!UICONTROL Propriedades do campo]** será aberta. Dentro de **[!UICONTROL Propriedades de campo]** é o campo de caminho que mapeia para suas pontuações brutas.
 
 ![Escolha um Schema](./images/input-output/field_properties.png)
 
@@ -171,7 +171,7 @@ Consulte a tabela abaixo para obter mais detalhes sobre cada uma dessas pontuaç
 
 **Referência de pontuação bruta (pontuações de atribuição)**
 
-A tabela abaixo mapeia as pontuações de atribuição para as pontuações brutas. Se você quiser baixar suas pontuações brutas, visite as pontuações de [download na documentação do Attribution AI](./download-scores.md) .
+A tabela abaixo mapeia as pontuações de atribuição para as pontuações brutas. Se você quiser baixar suas pontuações brutas, visite a [documentação de download no Attribution AI](./download-scores.md).
 
 | Pontuações de atribuição | Coluna de referência de pontuação bruta |
 | --- | --- |
@@ -190,23 +190,23 @@ As pontuações agregadas podem ser baixadas no formato CSV da interface do usu�
 | Nome da coluna | Restrição | Nulo | Descrição |
 | --- | --- | --- | --- |
 | customerevents_date (DateTime) | Formato definido pelo usuário e fixo | Falso | Data do Evento do cliente no formato AAAA-MM-DD. <br> **Exemplo**: 02/05/2016 |
-| mediatouchpoints_date (DateTime) | Formato definido pelo usuário e fixo | Verdadeiro | Data do ponto de contato da mídia no formato AAAA-MM-DD <br> **Exemplo**: 2017-04-21 |
+| mediatouchpoints_date (DateTime) | Formato definido pelo usuário e fixo | Verdadeiro | Data do ponto de contato de mídia no formato AAAA-MM-DD <br> **Exemplo**: 2017-04-21 |
 | segment (String) | Calculado | Falso | Segmento de conversão, como a segmentação geográfica, contra a qual o modelo foi criado. Em caso de ausência de segmentos, o segmento é o mesmo que conversion_scope. <br> **Exemplo**: ORDER_AMER |
 | conversion_scope (String) | Definido pelo usuário | Falso | Nome da Conversão conforme configurado pelo usuário. <br> **Exemplo**: PEDIDO |
-| touchpoint_scope (String) | Definido pelo usuário | Verdadeiro | Nome do ponto de contato como configurado pelo usuário <br> **Exemplo**: PAID_SEARCH_CLICK |
+| touchpoint_scope (String) | Definido pelo usuário | Verdadeiro | Nome do ponto de contato conforme configurado pelo usuário <br> **Exemplo**: PAID_SEARCH_CLICK |
 | product (String) | Definido pelo usuário | Verdadeiro | O identificador XDM do produto. <br> **Exemplo**: CC |
 | product_type (String) | Definido pelo usuário | Verdadeiro | O nome de exibição do produto conforme apresentado ao usuário para esta visualização de produto. <br> **Exemplo**: gpus, laptops |
 | geo (String) | Definido pelo usuário | Verdadeiro | A localização geográfica onde a conversão foi entregue (placeContext.geo.countryCode) <br> **Exemplo**: EUA |
 | evento_type (String) | Definido pelo usuário | Verdadeiro | O tipo de evento principal para este registro de série de tempo <br> **Exemplo**: Conversão paga |
 | media_type (String) | ENUM | Falso | Descreve se o tipo de mídia é pago, de propriedade ou ganho. <br> **Exemplo**: PAGO, PROPRIEDADE |
-| canal (String) | ENUM | Falso | A `channel._type` propriedade usada para fornecer uma classificação aproximada de canais com propriedades semelhantes no [!DNL Consumer Experience Event] XDM. <br> **Exemplo**: PESQUISA |
-| action (String) | ENUM | Falso | A `mediaAction` propriedade é usada para fornecer um tipo de ação de mídia de evento de experiência. <br> **Exemplo**: CLIQUE EM |
+| canal (String) | ENUM | Falso | A propriedade `channel._type` que é usada para fornecer uma classificação aproximada de canais com propriedades semelhantes em [!DNL Consumer Experience Event] XDM. <br> **Exemplo**: PESQUISA |
+| action (String) | ENUM | Falso | A propriedade `mediaAction` é usada para fornecer um tipo de ação de mídia de evento de experiência. <br> **Exemplo**: CLIQUE EM |
 | campanha_group (String) | Definido pelo usuário | Verdadeiro | Nome do grupo de campanhas no qual várias campanhas são agrupadas como &#39;50%_DISCOUNT&#39;. <br> **Exemplo**: COMERCIAL |
 | campanha_name (String) | Definido pelo usuário | Verdadeiro | Nome da campanha usada para identificar a campanha de marketing como &#39;50%_DISCOUNT_USA&#39; ou &#39;50%_DISCOUNT_ASIA&#39;. <br> **Exemplo**: Venda de Ação de Graças |
 
 **Referência de pontuação bruta (agregada)**
 
-A tabela abaixo mapeia as pontuações agregadas para as pontuações brutas. Se você quiser baixar suas pontuações brutas, visite as pontuações de [download na documentação do Attribution AI](./download-scores.md) . Para visualização dos caminhos de pontuação bruta na interface do usuário, visite a seção sobre como [visualizar caminhos](#raw-score-path) de pontuação bruta nesse documento.
+A tabela abaixo mapeia as pontuações agregadas para as pontuações brutas. Se você quiser baixar suas pontuações brutas, visite a [documentação de download no Attribution AI](./download-scores.md). Para visualização dos caminhos de pontuação bruta na interface do usuário, visite a seção [exibindo caminhos de pontuação brutos](#raw-score-path) neste documento.
 
 | Nome da coluna | Coluna de referência de Pontuação Bruta |
 | --- | --- |
@@ -228,4 +228,4 @@ A tabela abaixo mapeia as pontuações agregadas para as pontuações brutas. Se
 
 ## Próximas etapas {#next-steps}
 
-Depois de preparar seus dados e ter todas as suas credenciais e schemas no lugar, start seguindo o guia [do usuário do](./user-guide.md)Attribution AI. Este guia o orienta a criar uma instância para o Attribution AI.
+Depois de preparar seus dados e ter todas as suas credenciais e schemas no lugar, start seguindo o [guia do usuário do Attribution AI](./user-guide.md). Este guia o orienta a criar uma instância para o Attribution AI.

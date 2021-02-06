@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
-title: Guia do desenvolvedor da API do Serviço de Política
+title: Guia da API do Serviço de Política
 topic: developer guide
-description: Saiba como usar a API do Serviço de política para gerenciar rótulos e políticas de uso de dados no Experience Platform.
+description: A API de serviço de política permite que os desenvolvedores gerenciem as etiquetas e políticas de uso de dados no Experience Platform. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL Policy Service] Guia do desenvolvedor da API
+# [!DNL Policy Service] Guia de API
 
 A Adobe Experience Platform [!DNL Data Governance] permite gerenciar dados do cliente e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha um papel fundamental em [!DNL Experience Platform] em vários níveis, incluindo a catalogação, a linhagem de dados, a rotulagem de uso de dados, as políticas de uso de dados e o controle do uso de dados para ações de marketing.
 

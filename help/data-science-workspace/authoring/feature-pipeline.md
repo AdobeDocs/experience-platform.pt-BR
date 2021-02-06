@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-title: Criar um pipeline de recursos
+keywords: Experience Platform;Tutorial;pipeline de recurso;Data Science Workspace;tópicos populares
+title: Criar um pipeline de recurso usando o SDK de criação de modelo
 topic: tutorial
 type: Tutorial
 description: A Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de execução da Sensei Machine Learning Framework. Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizado usando o SDK de criação de modelos no PySpark.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
 
 
-# Criar um pipeline de recursos
+# Criar um pipeline de recursos usando o SDK de criação de modelo
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 A Adobe Experience Platform permite que você crie e crie pipelines de recursos personalizados para executar engenharia de recursos em escala por meio do Tempo de Execução da Sensei Machine Learning Framework (a seguir denominado &quot;Tempo de execução&quot;).
 
-Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizado usando o SDK [de criação de](./sdk.md) modelo no PySpark.
+Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para criar um pipeline de recursos personalizado usando o [SDK de criação de modelo](./sdk.md) no PySpark.
 
 O fluxo de trabalho a seguir ocorre quando um pipeline de recursos é executado:
 
@@ -31,7 +31,7 @@ O fluxo de trabalho a seguir ocorre quando um pipeline de recursos é executado:
 4. O pipeline do recurso define os estágios com o Gradient Boosting Regressor como o modelo escolhido.
 5. O pipeline é usado para ajustar os dados de treinamento e o modelo treinado é criado.
 6. O modelo é transformado com o conjunto de dados de pontuação.
-7. Colunas interessantes da saída são então selecionadas e salvas de volta [!DNL Experience Platform] com os dados associados.
+7. Colunas interessantes da saída são então selecionadas e salvas em [!DNL Experience Platform] com os dados associados.
 
 ## Introdução
 
@@ -41,7 +41,7 @@ Para executar uma fórmula em qualquer organização, é necessário o seguinte:
 - Um schema transformado e um conjunto de dados vazio com base nesse schema.
 - Um schema de saída e um conjunto de dados vazio com base nesse schema.
 
-Todos os conjuntos de dados acima precisam ser carregados na [!DNL Platform] interface do usuário. Para configurar isso, use o script [de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)inicialização fornecido pelo Adobe.
+Todos os conjuntos de dados acima precisam ser carregados na interface do usuário [!DNL Platform]. Para configurar isso, use o script [bootstrap](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) fornecido pelo Adobe.
 
 ## Classes de pipeline de recurso
 
@@ -61,7 +61,7 @@ O diagrama a seguir mostra a ordem de execução do Tempo de execução:
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implemente suas classes Feature Pipeline {#implement-your-feature-pipeline-classes}
+## Implemente as classes do Feature Pipeline {#implement-your-feature-pipeline-classes}
 
 As seções a seguir fornecem detalhes e exemplos sobre a implementação das classes necessárias para um Recurso Pipeline.
 
@@ -95,7 +95,7 @@ O exemplo a seguir demonstra os pares de valores chave encontrados em um arquivo
 ]
 ```
 
-Você pode acessar o JSON de configuração por meio de qualquer método de classe que defina `config_properties` como parâmetro. Por exemplo:
+Você pode acessar o JSON de configuração por meio de qualquer método de classe que defina `config_properties` como um parâmetro. Por exemplo:
 
 **PySpark**
 
@@ -109,7 +109,7 @@ Consulte o arquivo [pipeline.json](https://github.com/adobe/experience-platform-
 
 O DataLoader é responsável pela recuperação e filtragem de dados de entrada. Sua implementação do DataLoader deve estender a classe abstrata `DataLoader` e substituir o método abstrato `load`.
 
-O exemplo a seguir recupera um [!DNL Platform] conjunto de dados por ID e o retorna como um DataFrame, onde a ID do conjunto de dados (`dataset_id`) é uma propriedade definida no arquivo de configuração.
+O exemplo a seguir recupera um conjunto de dados [!DNL Platform] por ID e o retorna como um DataFrame, onde a ID do conjunto de dados (`dataset_id`) é uma propriedade definida no arquivo de configuração.
 
 **Exemplo de PySpark**
 
@@ -288,7 +288,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 O DataSaver é responsável por armazenar seus conjuntos de dados de recursos resultantes em um local de armazenamento. Sua implementação do DataSaver deve estender a classe abstrata `DataSaver` e substituir o método abstrato `save`.
 
-O exemplo a seguir estende a classe DataSaver que armazena dados para um [!DNL Platform] conjunto de dados por ID, onde a ID do conjunto de dados (`featureDatasetId`) e a ID do locatário (`tenantId`) são propriedades definidas na configuração.
+O exemplo a seguir estende a classe DataSaver que armazena dados para um conjunto de dados [!DNL Platform] por ID, onde a ID do conjunto de dados (`featureDatasetId`) e a ID do locatário (`tenantId`) são propriedades definidas na configuração.
 
 **Exemplo de PySpark**
 
@@ -352,7 +352,7 @@ class MyDataSaver(DataSaver):
 ```
 
 
-### Especifique os nomes de classe implementados no arquivo do aplicativo {#specify-your-implemented-class-names-in-the-application-file}
+### Especifique os nomes de classe implementados no arquivo de aplicativo {#specify-your-implemented-class-names-in-the-application-file}
 
 Agora que suas classes de pipeline de recursos estão definidas e implementadas, você deve especificar os nomes de suas classes no arquivo YAML do aplicativo.
 
@@ -387,13 +387,13 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Crie seu mecanismo de pipeline de recursos usando a API {#create-feature-pipeline-engine-api}
+## Crie seu Mecanismo de pipeline de recursos usando a API {#create-feature-pipeline-engine-api}
 
-Agora que você criou seu pipeline de recursos, é necessário criar uma imagem Docker para fazer uma chamada para os pontos finais do pipeline de recursos na [!DNL Sensei Machine Learning] API. Você precisa de um URL de imagem do Docker para fazer uma chamada para os pontos finais do pipeline de recursos.
+Agora que você criou seu pipeline de recursos, é necessário criar uma imagem Docker para fazer uma chamada para os pontos finais do pipeline de recursos na API [!DNL Sensei Machine Learning]. Você precisa de um URL de imagem do Docker para fazer uma chamada para os pontos finais do pipeline de recursos.
 
 >[!TIP]
 >
->Se você não tiver um URL do Docker, visite os arquivos de origem do [pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma explicação passo a passo sobre como criar um URL de host do Docker.
+>Se você não tiver um URL do Docker, visite os [arquivos de origem do pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma apresentação passo a passo sobre como criar um URL de host do Docker.
 
 Opcionalmente, você também pode usar a seguinte coleção Postman para ajudar a concluir o fluxo de trabalho da API do pipeline de recursos:
 
@@ -401,37 +401,37 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Criar um mecanismo de pipeline de recursos {#create-engine-api}
 
-Depois de ter a localização da imagem do Docker, você pode [criar um mecanismo](../api/engines.md#feature-pipeline-docker) de pipeline de recursos usando a [!DNL Sensei Machine Learning] API executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
+Depois de ter a localização da imagem do Docker, você pode [criar um mecanismo de pipeline de recursos](../api/engines.md#feature-pipeline-docker) usando a API [!DNL Sensei Machine Learning] executando um POST para `/engines`. A criação bem-sucedida de um mecanismo de pipeline de recursos fornece um identificador exclusivo do Mecanismo (`id`). Salve esse valor antes de continuar.
 
 ### Criar uma instância MLI {#create-mlinstance}
 
-Usando a sua criação recém-criada `engineID`, é necessário [criar uma postura](../api/mlinstances.md#create-an-mlinstance) MLI fazendo uma solicitação POST para o `/mlInstance` endpoint. Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
+Usando seu `engineID` recém-criado, é necessário [criar um MLIposition](../api/mlinstances.md#create-an-mlinstance), fazendo uma solicitação de POST para o terminal `/mlInstance`. Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`) usado na próxima chamada da API.
 
-### Criar um experimento {#create-experiment}
+### Criar um Experimento {#create-experiment}
 
-Em seguida, é necessário [criar um Experimento](../api/experiments.md#create-an-experiment). Para criar um Experimento, é necessário ter seu identificador exclusivo (`id`) MLIposition e fazer uma solicitação POST ao `/experiment` terminal. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento recém-criado, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
+Em seguida, é necessário [criar um Experimento](../api/experiments.md#create-an-experiment). Para criar um Experimento, é necessário ter seu identificador exclusivo MLIposition (`id`) e fazer uma solicitação POST ao terminal `/experiment`. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento recém-criado, incluindo seu identificador exclusivo (`id`) usado na próxima chamada de API.
 
 ### Especificar a tarefa do pipeline do recurso de execução de Experimento {#specify-feature-pipeline-task}
 
-Depois de criar um Experimento, é necessário alterar o modo do Experimento para `featurePipeline`. Para alterar o modo, faça com que um POST adicional seja enviado [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) com seu `EXPERIMENT_ID` `{ "mode":"featurePipeline"}` e no corpo para especificar uma execução de teste de pipeline de recursos.
+Depois de criar um Experimento, é necessário alterar o modo do Experimento para `featurePipeline`. Para alterar o modo, faça um POST adicional para [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) com seu `EXPERIMENT_ID` e, no corpo, envie `{ "mode":"featurePipeline"}` para especificar uma execução de teste do pipeline de recursos.
 
-Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` recuperar o status [](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
+Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` para [recuperar o status do experimento](../api/experiments.md#retrieve-specific) e aguarde a atualização do status do Experimento ser concluída.
 
-### Especificar a tarefa de treinamento de execução de Experimento {#training}
+### Especificar a tarefa de treinamento de execução do Experimento {#training}
 
-Em seguida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução do treinamento. Faça uma POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o modo como `train` e envie uma matriz de tarefas que contenha seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento solicitado.
+Em seguida, você precisa [especificar a tarefa de execução de treinamento](../api/experiments.md#experiment-training-scoring). Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e, no corpo, defina o modo para `train` e envie uma matriz de tarefas que contenha seus parâmetros de treinamento. Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Experimento solicitado.
 
-Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` recuperar o status [](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
+Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` para [recuperar o status do experimento](../api/experiments.md#retrieve-specific) e aguarde a atualização do status do Experimento ser concluída.
 
-### Especificar a tarefa de pontuação da execução do Experimento {#scoring}
+### Especificar a tarefa de pontuação de execução do Experimento {#scoring}
 
 >[!NOTE]
 >
 > Para concluir esta etapa, é necessário ter pelo menos uma execução de treinamento bem-sucedida associada ao seu Experimento.
 
-Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa](../api/experiments.md#experiment-training-scoring)de execução da pontuação. Faça uma POST para `experiments/{EXPERIMENT_ID}/runs` e no corpo defina o `mode` atributo como &quot;pontuação&quot;. Isso start a execução do seu Experimento de pontuação.
+Após uma execução de treinamento bem-sucedida, é necessário [especificar a tarefa de execução de pontuação](../api/experiments.md#experiment-training-scoring). Faça um POST para `experiments/{EXPERIMENT_ID}/runs` e, no corpo, defina o atributo `mode` como &quot;score&quot;. Isso start a execução do seu Experimento de pontuação.
 
-Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` recuperar o status [](../api/experiments.md#retrieve-specific) do experimento e aguarde a atualização do status do Experimento ser concluída.
+Depois de concluído, faça uma solicitação de GET para `/experiments/{EXPERIMENT_ID}` para [recuperar o status do experimento](../api/experiments.md#retrieve-specific) e aguarde a atualização do status do Experimento ser concluída.
 
 Quando a pontuação for concluída, o pipeline do recurso deverá estar operacional.
 
@@ -439,4 +439,4 @@ Quando a pontuação for concluída, o pipeline do recurso deverá estar operaci
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a [!DNL Sensei Machine Learning] API. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando o [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Ao ler esse documento, você criou um pipeline de recursos usando o SDK de criação de modelo, criou uma imagem do Docker e usou o URL de imagem do Docker para criar um Modelo de pipeline de recursos usando a API [!DNL Sensei Machine Learning]. Agora você está pronto para continuar a transformar conjuntos de dados e extrair recursos de dados em escala usando [[!DNL Sensei Machine Learning API]](../api/getting-started.md).

@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;dispositivo;datatype;data-type;data type;Schema;home;popular topics;;XDM;fields;processors;device;datatype;data-type;data type;data type;
 solution: Experience Platform
 title: Tipo de dados do dispositivo
 topic: overview
 description: Este documento fornece uma visão geral do tipo de dados do Device XDM.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '325'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Tipo de dados do dispositivo]
+# [!UICONTROL Tipo ] Devicedata
 
-[!UICONTROL O dispositivo] é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é uma instância de aplicativo ou navegador rastreável em sessões, normalmente por cookies.
+ Dispositivos é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é uma instância de aplicativo ou navegador rastreável em sessões, normalmente por cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -39,7 +39,7 @@ Para obter mais detalhes sobre a mistura, consulte o repositório XDM público:
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados do [!UICONTROL Dispositivo] .
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device].
 
 ## Valores aceitos para typeIDService {#typeIDService}
 

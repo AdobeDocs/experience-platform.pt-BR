@@ -1,5 +1,5 @@
 ---
-title: Arquitetura básica da Adobe Experience Platform
+title: Visão geral da arquitetura do Experience Platform
 description: Este vídeo apresenta um diagrama de visão geral e explica os componentes principais do Adobe Experience Platform.
 feature: platform
 topics: null
@@ -9,16 +9,16 @@ doc-type: video
 activity: understand
 thumbnail: 32456.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 35%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
 
 
-# Arquitetura básica do Experience Platform
+# Visão geral da arquitetura Experience Platform
 
-Este vídeo apresenta um diagrama de visão geral e explica os componentes principais da Experience Platform.
+Este vídeo apresenta um diagrama de arquitetura de alto nível que explica os componentes principais do Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)

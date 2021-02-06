@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;popular topics;mecanismos;sensei machine learning api
 solution: Experience Platform
-title: Motores
+title: Endpoint da API de mecanismos
 topic: Developer guide
 description: Os mecanismos são a base para Modelos de aprendizado de máquina na Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos, ou ambos.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1165'
 ht-degree: 3%
 
 ---
 
 
-# Motores
+# Ponto de extremidade de mecanismos
 
 Os mecanismos são a base para Modelos de aprendizado de máquina na Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos, ou ambos.
 
@@ -21,7 +21,7 @@ Os mecanismos são a base para Modelos de aprendizado de máquina na Data Scienc
 
 >[!TIP]
 >
->Se você não tiver um URL do Docker, visite os arquivos de origem do [pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma explicação passo a passo sobre como criar um URL de host do Docker.
+>Se você não tiver um URL do Docker, visite os [arquivos de origem do pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma apresentação passo a passo sobre como criar um URL de host do Docker.
 
 Suas credenciais de registro do Docker são necessárias para carregar um arquivo de Receita empacotado, incluindo o URL do host do Docker, nome de usuário e senha. Você pode pesquisar essas informações executando a seguinte solicitação de GET:
 
@@ -43,11 +43,11 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do registro do Docker, incluindo o URL do Docker (`host`), nome de usuário (`username`) e senha (`password`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do registro do Docker, incluindo o URL do Docker (`host`), o nome de usuário (`username`) e a senha (`password`).
 
 >[!NOTE]
 >
->Sua senha do Docker muda sempre que `{ACCESS_TOKEN}` é atualizada.
+>Sua senha do Docker muda sempre que seu `{ACCESS_TOKEN}` é atualizado.
 
 ```json
 {
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Solicitar PySpark/Scala**
 
-Ao fazer uma solicitação de receitas do PySpark, o e `executionType` é `type` &quot;PySpark&quot;. Ao solicitar receitas Scala, o e `executionType` `type` é &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
+Ao fazer uma solicitação de receitas do PySpark, `executionType` e `type` são &quot;PySpark&quot;. Ao fazer uma solicitação para fórmulas Scala, `executionType` e `type` são &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
 
 ```shell
 curl -X POST \
@@ -171,7 +171,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo re
 }
 ```
 
-## Criar um mecanismo de pipeline de recursos usando URLs Docker {#feature-pipeline-docker}
+## Criar um mecanismo de pipeline de recursos usando URLs do Docker {#feature-pipeline-docker}
 
 Você pode criar um mecanismo de pipeline de recursos executando uma solicitação de POST ao fornecer seus metadados e um URL do Docker que faz referência a uma imagem do Docker.
 
@@ -222,7 +222,7 @@ curl -X POST \
 | `artifacts.default.image.location` | O local da imagem do Docker. Somente o ACR do Azure ou o Dockerhub Público (não autenticado) são suportados. |
 | `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | O tipo de empacotamento do Mecanismo. Esse valor deve ser definido como `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Parâmetros `pipeline.json` do arquivo de configuração. |
+| `artifacts.default.defaultMLInstanceConfigs` | Seus parâmetros de arquivo de configuração `pipeline.json`. |
 
 **Resposta**
 
@@ -255,7 +255,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo de
 
 ## Recuperar uma lista de mecanismos
 
-Você pode recuperar uma lista de mecanismos executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre parâmetros de [query para recuperação](./appendix.md#query)de ativos.
+Você pode recuperar uma lista de mecanismos executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -388,7 +388,7 @@ Você pode modificar e atualizar um Mecanismo existente sobrescrevendo suas prop
 
 >[!NOTE]
 >
->Para garantir o sucesso dessa solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
+>Para garantir o sucesso desta solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
 
 A chamada de exemplo de API a seguir atualizará o nome e a descrição de um Mecanismo ao ter essas propriedades inicialmente:
 

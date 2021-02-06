@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;map csv guide;ui guide;mapper;map;date;funções de data;date;
 solution: Experience Platform
-title: Funções de data
+title: Funções de data de preparação de dados
 topic: overview
 description: Este documento apresenta as funções de data usadas com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 16%
 
 ---
 
 
-# Funções de data
+# Funções de data da preparação de dados
 
 A Preparação de dados suporta funções de data, tanto como strings quanto como objetos datetime.
 

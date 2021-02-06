@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;controle de dados;guia do usuário da política de uso de dados
 solution: Experience Platform
-title: Guia do usuário das políticas de uso de dados
+title: Gerenciar políticas de uso de dados na interface do usuário
 topic: policies
 description: O Adobe Experience Platform Data Governance fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho Políticas na interface do usuário do Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
 
-# Guia do usuário das políticas de uso de dados
+# Gerenciar políticas de uso de dados na interface do usuário
 
 O Adobe Experience Platform [!DNL Data Governance] fornece uma interface de usuário que permite criar e gerenciar políticas de uso de dados. Este documento fornece uma visão geral das ações que você pode executar na área de trabalho **Policies** na interface do usuário [!DNL Experience Platform].
 
@@ -28,7 +28,7 @@ Este guia exige uma compreensão funcional dos seguintes conceitos [!DNL Experie
 - [[!DNL Data Governance]](../home.md)
 - [Políticas de uso de dados](./overview.md)
 
-## Políticas de uso de dados de visualização {#view-policies}
+## Visualização de políticas existentes {#view-policies}
 
 Na interface do usuário [!DNL Experience Platform], selecione **[!UICONTROL Políticas]** para abrir a área de trabalho **[!UICONTROL Políticas]**. Na guia **[!UICONTROL Procurar]**, é possível visualizar uma lista de políticas disponíveis, incluindo rótulos associados, ações de marketing e status.
 
@@ -38,7 +38,7 @@ Selecione uma política listada para visualização sua descrição e tipo. Se u
 
 ![](../images/policies/policy-details.png)
 
-## Criar uma política de uso de dados personalizada {#create-policy}
+## Criar uma política personalizada {#create-policy}
 
 Para criar uma nova política personalizada de uso de dados, selecione **[!UICONTROL Criar política]** no canto superior direito da guia **[!UICONTROL Procurar]** na área de trabalho **[!UICONTROL Políticas]**.
 
@@ -68,7 +68,7 @@ A guia **[!UICONTROL Procurar]** reaparece, que agora lista a política recém-c
 
 ![](../images/policies/created-policy.png)
 
-## Habilitar ou desabilitar uma política de uso de dados {#enable}
+## Ativar ou desativar uma política {#enable}
 
 Todas as políticas de uso de dados (incluindo as políticas principais fornecidas pelo Adobe) são desativadas por padrão. Para que uma política individual seja considerada para aplicação, é necessário ativar essa política manualmente por meio da API ou da interface do usuário.
 

@@ -1,21 +1,17 @@
 ---
 keywords: ramificação;extensão de ramificação;destino de ramificação
-title: Extensão de ramificação
-seo-title: Extensão de ramificação
+title: Destino da extensão de ramificação
 description: A extensão Branch é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-seo-description: A extensão Branch é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '498'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Branch] extensão {#branch-extension}
-
-## Visão geral {#overview}
 
 O Branch fornece links e soluções eficientes que ajudam a adquirir, envolver e avaliar todos os dispositivos, canais e plataformas.
 

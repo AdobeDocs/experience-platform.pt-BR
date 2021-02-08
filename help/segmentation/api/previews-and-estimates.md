@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Se
 solution: Experience Platform
 title: Pontos finais da API de pré-visualizações e estimativas
 topic: developer guide
-description: As pré-visualizações e estimativas da API do Adobe Experience Platform Segmentation Service permitem que você visualização informações de nível de resumo para ajudar a garantir que você esteja isolando a audiência esperada em seus segmentos.
+description: À medida que a definição do segmento é desenvolvida, você pode usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para visualização de informações de nível de resumo, a fim de ajudar a garantir que você esteja isolando a audiência esperada.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '949'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,15 @@ ht-degree: 2%
 
 # Pré-visualizações e endpoints de estimativas
 
-À medida que você desenvolve a definição do segmento, você pode usar as ferramentas de estimativa e pré-visualização em [!DNL Adobe Experience Platform] para visualização de informações de nível de resumo para ajudar a garantir que você esteja isolando a audiência esperada. **As** visualizações fornecem listas paginadas de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado. **As** estimativas fornecem informações estatísticas sobre uma definição de segmento, como o tamanho da audiência projetada, o intervalo de confiança e o desvio padrão do erro.
+À medida que você desenvolve uma definição de segmento, você pode usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para visualização de informações de nível de resumo para ajudar a garantir que você esteja isolando a audiência que espera.
+
+* **As** visualizações fornecem listas paginadas de perfis qualificados para uma definição de segmento, permitindo que você compare os resultados com o esperado.
+
+* **As** estimativas fornecem informações estatísticas sobre uma definição de segmento, como o tamanho da audiência projetada, o intervalo de confiança e o desvio padrão do erro.
+
+>[!NOTE]
+>
+>Para acessar métricas semelhantes relacionadas aos dados do Perfil do cliente em tempo real, como o número total de fragmentos do perfil e perfis mesclados em namespaces específicas ou o armazenamento de dados do Perfil como um todo, consulte o guia de ponto final [pré-visualização (status da amostra da pré-visualização)](../../profile/api/preview-sample-status.md), parte do guia do desenvolvedor da API do Perfil.
 
 ## Introdução
 
@@ -23,11 +31,10 @@ Os pontos de extremidade usados neste guia fazem parte da API [!DNL Adobe Experi
 
 ## Como as estimativas são geradas
 
-A forma como a amostragem de dados é acionada depende do método de ingestão.
+Quando a ingestão de registros no repositório de Perfis aumenta ou diminui a contagem total de perfis em mais de 5%, uma tarefa de amostragem é acionada para atualizar a contagem. A forma como a amostragem de dados é acionada depende do método de ingestão:
 
-Para a ingestão em lote, o armazenamento de perfis é verificado automaticamente a cada quinze minutos para ver se um novo lote foi ingerido com êxito desde a execução do último trabalho de amostragem. Se for esse o caso, a loja de perfis é analisada posteriormente para verificar se houve pelo menos uma mudança de 5% no número de registros. Se essas condições forem atendidas, um novo trabalho de amostragem será acionado.
-
-Para a ingestão em streaming, a loja de perfis é automaticamente verificada a cada hora para ver se houve pelo menos uma mudança de 5% no número de registros. Se essa condição for cumprida, um novo trabalho de amostragem será acionado.
+* **Inclusão em lote:** para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no repositório de Perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem.
+* **Inclusão de transmissão:** Para workflows de dados de transmissão, é feita uma verificação de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se houver, uma tarefa será acionada automaticamente para atualizar a contagem.
 
 O tamanho da amostra da verificação depende do número geral de entidades na loja de perfis. Esses tamanhos de amostra são representados na tabela a seguir:
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | A expressão PQL para query dos dados. |
 | `predicateType` | O tipo de predicado para a expressão do query em `predicateExpression`. Atualmente, o único valor aceito para essa propriedade é `pql/text`. |
-| `predicateModel` | O nome do schema [!DNL Experience Data Model] (XDM) no qual os dados do perfil se baseiam. |
+| `predicateModel` | O nome da classe de schema [!DNL Experience Data Model] (XDM) na qual os dados do perfil se baseiam. |
 
 **Resposta**
 
@@ -172,7 +179,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Uma lista de IDs de entidade, juntamente com suas identidades relacionadas. Os links fornecidos podem ser usados para procurar as entidades especificadas, usando o [terminal da API de acesso ao perfil](../../profile/api/entities.md). |
 
 ## Recuperar os resultados de um trabalho de estimativa específico {#get-estimate}
 
@@ -206,17 +213,27 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do trabalho de 
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `state` | O estado atual do trabalho de pré-visualização. Será &quot;EM EXECUÇÃO&quot; até que o processamento seja concluído, e nesse momento ele se tornará &quot;RESULT_READY&quot; ou &quot;FALHA&quot;. |
-| `_links.preview` | Quando o estado atual da tarefa de pré-visualização é &quot;RESULT_READY&quot;, este atributo fornece um URL para visualização da estimativa. |
+| `estimatedNamespaceDistribution` | Uma matriz de objetos que mostra o número de perfis dentro do segmento detalhado por namespace de identidade. O número total de perfis por namespace (somando os valores mostrados para cada namespace) pode ser maior que a métrica de contagem de perfis porque um perfil pode estar associado a várias namespaces. Por exemplo, se um cliente interagir com sua marca em mais de um canal, várias namespaces serão associadas a esse cliente individual. |
+| `state` | O estado atual do trabalho de pré-visualização. O estado será &quot;EM EXECUÇÃO&quot; até que o processamento seja concluído, e nesse momento ele se tornará &quot;RESULT_READY&quot; ou &quot;FALHA&quot;. |
+| `_links.preview` | Quando `state` for &quot;RESULT_READY&quot;, esse campo fornecerá um URL para a visualização da estimativa. |
 
 ## Próximas etapas
 
-Depois de ler esse guia, agora você tem um melhor entendimento de como trabalhar com pré-visualizações e estimativas. Para saber mais sobre os outros [!DNL Segmentation Service] pontos de extremidade da API, leia a [visão geral do guia do desenvolvedor do Serviço de segmentação](./overview.md).
+Depois de ler este guia, você deve conhecer melhor como trabalhar com pré-visualizações e estimativas usando a API de segmentação. Para saber como acessar métricas relacionadas aos dados do Perfil do cliente em tempo real, como o número total de fragmentos do perfil e perfis mesclados em namespaces específicos ou o armazenamento de dados do Perfil como um todo, visite o guia de ponto final [pré-visualização do perfil (`/previewsamplestatus`)](../../profile/api/preview-sample-status.md).

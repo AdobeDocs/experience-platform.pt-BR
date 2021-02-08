@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 description: 'O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece uma área de trabalho avançada que permite interagir com elementos de dados do Perfil. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1928'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,22 @@ Como alternativa, você pode visualização uma versão baseada em código de um
 A visualização de código fornece um botão que permite copiar o valor do segmento a ser usado em chamadas de API. Para obter a versão mais recente do segmento, certifique-se de ter salvo as alterações mais recentes no segmento.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Funções de agregação
+
+Uma agregação em [!DNL Segment Builder] é um cálculo em um grupo de atributos XDM cujo tipo de dados é um número (um duplo ou um número inteiro). As quatro funções de agregação compatíveis no Construtor de segmentos são SUM, MÉDIA, MIN e MAX.
+
+Para criar uma função de agregação, selecione um evento no painel esquerdo e insira-o no container [!UICONTROL Eventos].
+
+![](../images/ui/segment-builder/select-event.png)
+
+Depois de colocar o evento dentro do container Eventos, selecione o ícone de elipses (...), seguido por **[!UICONTROL Agregação]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+O agregado agora é adicionado. Agora você pode selecionar a função de agregação, escolher qual atributo deve ser agregação, a função de igualdade e o valor. Para o exemplo abaixo, esse segmento qualificaria qualquer perfil que tivesse uma soma de valores comprados superior a $100, mesmo se cada compra individual fosse inferior a $100.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Contêineres
 

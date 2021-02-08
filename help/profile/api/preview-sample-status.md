@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;pré-visualização;exemplo
-title: Endpoint da API de status de amostra de perfil
-description: Usando os pontos de extremidade da API de Perfil do cliente em tempo real, você pode pré-visualização a última amostra bem-sucedida de seus dados de Perfil, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade dentro da Adobe Experience Platform.
+title: Ponto de extremidade da API de status de amostra de pré-visualização (Pré-visualização de Perfil)
+description: Usando o endpoint de status de amostra de pré-visualização, parte da API Perfil do cliente em tempo real, você pode pré-visualização a amostra mais bem-sucedida dos dados do Perfil, bem como a distribuição do perfil de lista por conjunto de dados e por namespace de identidade dentro da Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1655'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,20 @@ ht-degree: 1%
 
 A Adobe Experience Platform permite que você ingira dados do cliente de várias fontes para criar perfis unificados robustos para clientes individuais. Como os dados ativados para o Perfil do cliente em tempo real são ingeridos em [!DNL Platform], eles são armazenados no armazenamento de dados do Perfil.
 
-Quando a ingestão de registros no repositório de Perfis aumenta ou diminui a contagem total de perfis em mais de 5%, uma tarefa é acionada para atualizar a contagem. Para workflows de dados de fluxo contínuo, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se houver, uma tarefa será acionada automaticamente para atualizar a contagem. Para ingestão em lote, em 15 minutos após a ingestão bem-sucedida de um lote no repositório de Perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de Perfil, você pode pré-visualização o trabalho de amostra mais recente e bem-sucedido, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade.
+Quando a ingestão de registros no repositório de Perfis aumenta ou diminui a contagem total de perfis em mais de 5%, uma tarefa de amostragem é acionada para atualizar a contagem. A forma como a amostra é acionada depende do tipo de ingestão que está sendo usada:
+
+* Para **workflows de dados de transmissão**, é feita uma verificação de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi cumprido. Se tiver, um trabalho de amostra será automaticamente acionado para atualizar a contagem.
+* Para **ingestão em lote**, dentro de 15 minutos após a ingestão bem-sucedida de um lote no repositório de Perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de Perfil, você pode pré-visualização o trabalho de amostra mais recente e bem-sucedido, bem como a distribuição de perfis por conjunto de dados e por namespace de identidade.
 
 Essas métricas também estão disponíveis na seção [!UICONTROL Perfis] da interface do usuário do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, visite o [[!DNL Profile] guia do usuário](../ui/user-guide.md).
 
+>[!NOTE]
+>
+>Há estimativas e pontos de extremidade de pré-visualização disponíveis como parte da API do Adobe Experience Platform Segmentation Service que permitem a visualização de informações de nível de resumo relacionadas às definições de segmento para ajudar a garantir que você esteja isolando a audiência esperada. Para encontrar etapas detalhadas para trabalhar com pré-visualização de segmentos e pontos de extremidade de estimativa, visite o [guia de pré-visualizações e pontos de extremidade de estimativas](../../segmentation/api/previews-and-estimates.md), parte do [!DNL Segmentation] guia do desenvolvedor da API.
+
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
+O endpoint da API usado neste guia faz parte da [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
 ## Fragmentos de perfil vs perfis mesclados
 
@@ -89,7 +96,7 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 | `totalFragmentCount` | O número total de fragmentos de perfil no repositório de Perfis. |
 | `lastSuccessfulBatchTimestamp` | Carimbo de data e hora da última ingestão em lote bem-sucedida. |
 | `streamingDriven` | *Este campo foi descontinuado e não contém significância para a resposta.* |
-| `totalRows` | O número total de perfis unidos na plataforma Experience, também conhecidos como a &quot;contagem de perfis&quot;. |
+| `totalRows` | O número total de perfis unidos no Experience Platform, também conhecidos como &quot;contagem de perfis&quot;. |
 | `lastBatchId` | ID de ingestão do último lote. |
 | `status` | Status da última amostra. |
 | `samplingRatio` | Proporção de perfis unidos amostrados (`numRowsToRead`) para o total de perfis unidos (`totalRows`), expressa como uma porcentagem em formato decimal. |
@@ -189,8 +196,6 @@ A resposta inclui uma matriz `data`, que contém uma lista de objetos de conjunt
 | `createdUser` | A ID de usuário do usuário que criou o conjunto de dados. |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` tiver sido fornecido durante a solicitação, o relatório retornado será da data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 
-
-
 ## Distribuição de perfis de lista por namespace
 
 Você pode executar uma solicitação de GET para o ponto de extremidade `/previewsamplestatus/report/namespace` para visualização do detalhamento por namespace de identidade em todos os perfis unidos em sua loja de Perfis. As namespaces de identidade são um componente importante do Adobe Experience Platform Identity Service que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, visite a [visão geral da namespace de identidade](../../identity-service/namespaces.md).
@@ -288,5 +293,4 @@ A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhe
 
 ## Próximas etapas
 
-Você também pode usar estimativas e pré-visualizações semelhantes para obter informações de nível de resumo da visualização relacionadas às definições de segmento, para ajudar a garantir que você esteja isolando a audiência esperada. Para encontrar etapas detalhadas para trabalhar com pré-visualizações de segmentos e estimativas usando a API [!DNL Adobe Experience Platform Segmentation Service], visite o [guia de pré-visualizações e estimativas de pontos finais](../../segmentation/api/previews-and-estimates.md), parte do [!DNL Segmentation] guia do desenvolvedor da API.
-
+Agora que você sabe como pré-visualização dados de amostra na loja de Perfis, também pode usar os pontos de extremidade de estimativa e pré-visualização da API do Serviço de Segmentação para obter informações de nível de resumo sobre as definições de segmento. Essas informações ajudam a garantir que você esteja isolando a audiência esperada em seu segmento. Para saber mais sobre como trabalhar com pré-visualizações de segmentos e estimativas usando a API de segmentação, visite a [guia de pré-visualização e estimativa de pontos finais](../../segmentation/api/previews-and-estimates.md).

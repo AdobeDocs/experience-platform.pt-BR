@@ -5,7 +5,7 @@ description: Saiba como configurar o SDK da Web do Experience Platform
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configuração;configuração;SDK;borda;Web SDK;configurar;bordaConfigId;contexto;web;dispositivo;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;url DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 11%
@@ -94,7 +94,7 @@ Indica se os dados associados aos cliques em links devem ser coletados automatic
 | -------- | ------------ | ----------------- |
 | Função | Não | () => indefinido |
 
-Configure isso para configurar um retorno de chamada chamado para cada evento antes de ele ser enviado.  Um objeto com o campo `xdm` é enviado para o retorno de chamada.  Modifique o objeto `xdm` para alterar o que é enviado.  Dentro do retorno de chamada, o objeto `xdm` já terá os dados transmitidos no comando do evento e as informações coletadas automaticamente.  Para obter mais informações sobre o tempo desse retorno de chamada e um exemplo, consulte [Modificando Eventos Globalmente](tracking-events.md#modifying-events-globally).
+Configure isso para configurar um retorno de chamada chamado para cada evento antes de ele ser enviado.  Um objeto com o campo `xdm` é enviado para o retorno de chamada.  Modifique o objeto `xdm` para alterar o que é enviado.  Dentro do retorno de chamada, o objeto `xdm` já terá os dados transmitidos no comando do evento e as informações coletadas automaticamente. Para obter mais informações sobre o tempo desse retorno de chamada e um exemplo, consulte [Modificando Eventos Globalmente](tracking-events.md#modifying-events-globally).
 
 ## Opções de privacidade
 

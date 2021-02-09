@@ -5,10 +5,10 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o sumário para destinos do Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 21%
+source-wordcount: '339'
+ht-degree: 20%
 
 ---
 
@@ -129,3 +129,4 @@ ht-degree: 21%
       * [Tags Invoca](./catalog/voice/invoca.md)
       * [Medallia](./catalog/voice/medallia.md)
       * [Caixa de entrada do URL de conversa](./catalog/voice/talkurl.md)
+* [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

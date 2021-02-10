@@ -1,11 +1,11 @@
 ---
 keywords: Pesquisas de interceptação do Questionpro pesquisas;PerguntaPro;perguntaPro;perguntaPro
-title: Destino da Extensão do Pesquisa Intercept do QueryPro
+title: Extensão Pesquisas do Intercept do QuestionPro
 description: A extensão do Pesquisa do Intercepto do QuestionPro é um destino pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 3%
 
 ---

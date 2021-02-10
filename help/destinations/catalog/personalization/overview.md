@@ -3,7 +3,7 @@ keywords: personalização;Personalização
 title: Visão geral dos destinos de personalização
 description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 9%

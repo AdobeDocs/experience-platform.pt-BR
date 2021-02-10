@@ -1,11 +1,11 @@
 ---
 keywords: Marketo Web Personalization;markto web personalization;Marketo Web Personalization extension;markto web personalization extension;markto web personalization extension;marketo;Marketo
-title: Destino da Extensão de Personalização da Web do Marketo
+title: Extensão Marketo Web Personalization
 description: A extensão Marketo Web Personalization é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '579'
 ht-degree: 3%
 
 ---

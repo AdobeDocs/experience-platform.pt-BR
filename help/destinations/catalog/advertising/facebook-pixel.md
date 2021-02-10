@@ -1,11 +1,11 @@
 ---
 keywords: extensões de pixel do Facebook;extensão de pixel do facebook;destinos de pixel do facebook;pixel do facebook
-title: Destino da Extensão de Pixel do Facebook
+title: Extensão de pixel do Facebook
 description: A extensão de Pixel do Facebook é um destino publicitário no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---

@@ -1,11 +1,11 @@
 ---
 keywords: extensões do Facebook;extensão do Facebook;destinos do Facebook;facebook;instagram;mensageiro;facebook Messenger
-title: Destino da extensão do Facebook
+title: Extensão do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '951'
 ht-degree: 3%
 
 ---

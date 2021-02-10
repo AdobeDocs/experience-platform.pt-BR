@@ -1,14 +1,14 @@
 ---
 keywords: destinos de publicidade;destinos;destinos de plataforma
-title: Destinos de publicidade
-seo-title: Visão geral dos destinos de publicidade
+title: Visão geral de destinos de publicidade
+seo-title: Visão geral de destinos de publicidade
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 seo-description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de anúncios, SSP) e compartilhe audiências pseudônimas nessas plataformas.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -25,12 +25,12 @@ Atualmente, a Plataforma suporta os destinos de publicidade listados abaixo. Par
 
 Para entender a diferença entre conexões e extensões, consulte [Conexões](../../destination-types.md#connections) na página Tipos de destino e Categorias.
 
-- [Google Display &amp; Video 360](./google-dv360.md)
-- [Google Ads](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Correspondência de cliente do Google](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [O destino da carteira de negociação](./tradedesk.md)
+- [Conexão com o Google Display &amp; Video 360](./google-dv360.md)
+- [Conexão com o Google Ads](./google-ads-destination.md)
+- [Conexão com o Google Ad Manager](./google-ad-manager.md)
+- [Conexão de correspondência de cliente do Google](./google-customer-match.md)
+- [Conexão do Microsoft Bing](./bing.md)
+- [A conexão com o Trade Desk](./tradedesk.md)
 
 ## Extensões
 

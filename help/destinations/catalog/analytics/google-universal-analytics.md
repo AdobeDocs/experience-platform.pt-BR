@@ -1,11 +1,11 @@
 ---
 keywords: análises universais do Google;Google Universal Analytics;Google Universal Analytics
-title: Destino da extensão do Google Universal Analytics
+title: Extensão do Google Universal Analytics
 description: A extensão do Google Universal Analytics é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '527'
 ht-degree: 3%
 
 ---

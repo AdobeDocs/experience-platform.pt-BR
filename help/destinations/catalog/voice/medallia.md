@@ -1,11 +1,11 @@
 ---
 keywords: Medallia;medallia
-title: Destino da Extensão Medallia
+title: Tensão de Medallia
 description: A extensão Medallia é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '541'
 ht-degree: 3%
 
 ---

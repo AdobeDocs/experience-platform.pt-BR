@@ -1,19 +1,19 @@
 ---
 keywords: Catálogo;catálogo
-title: Catálogo de destinos
-seo-title: Catálogo de destinos
-description: O Catálogo de destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
-seo-description: O Catálogo de destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
+title: Visão geral do catálogo de destinos
+seo-title: Visão geral do catálogo de destinos
+description: O catálogo Destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
+seo-description: O catálogo Destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções de Adobe, plataformas de anúncios, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '177'
 ht-degree: 1%
 
 ---
 
 
-# Catálogo de destinos
+# Visão geral do catálogo de destinos
 
 O catálogo de destinos fornece uma lista de plataformas de destino disponíveis que estão prontas para receber dados. Essas plataformas de destino incluem soluções de Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email, extensões de Experience Platform.
 

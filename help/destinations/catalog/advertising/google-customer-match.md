@@ -1,17 +1,17 @@
 ---
 keywords: correspondência de cliente do Google;Correspondência de cliente do Google;Correspondência de cliente do Google
-title: Destino da conexão de correspondência de cliente do Google
+title: Conexão de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
 
 
-# Conexão de correspondência de cliente do Google
+# [!DNL Google Customer Match] conexão
 
 >[!IMPORTANT]
 >

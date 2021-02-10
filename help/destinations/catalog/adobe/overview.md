@@ -3,10 +3,10 @@ keywords: destinos;soluções da Experience Cloud; público alvo;destino do púb
 title: Visão geral dos destinos de Adobe
 description: Gerencie a experiência do cliente ao conectar seus dados na Plataforma a outras soluções da Adobe Experience Cloud para segmentação de anúncios, personalização, automação de marketing e muito mais
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 13%
+source-wordcount: '220'
+ht-degree: 12%
 
 ---
 
@@ -19,7 +19,7 @@ Gerencie a experiência do cliente ao conectar seus dados no Adobe Experience Pl
 
 Para entender a diferença entre conexões e extensões, consulte [Conexões](../../destination-types.md#connections) na página Tipos de destino e Categorias.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Conexão Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## Extensões
 

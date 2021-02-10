@@ -1,11 +1,11 @@
 ---
 keywords: LinkedIn;linkedin;Linkedin;Tag do LinkedIn Insight;tag do insight;Tag do Insight
-title: Destino da extensão de tag do LinkedIn Insight
+title: Extensão da tag do LinkedIn Insight
 description: A extensão da tag do LinkedIn Insight é um destino publicitário no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---

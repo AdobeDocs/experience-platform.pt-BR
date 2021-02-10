@@ -1,11 +1,11 @@
 ---
 keywords: extensão dialogtech;dialogtech;dialogtech destino;DialogTech;DialogTech;Tech SourceTrak
-title: Destino da Extensão DialogTech
+title: Extensão DialogTech
 description: A extensão DialogTech é um destino analítico no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 3%
 
 ---
@@ -55,9 +55,9 @@ Você pode configurar, atualizar e excluir extensões na interface do Platform L
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Install]** para a extensão. Exclua o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para acessar o Launch da plataforma e configurar ou excluir sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Install]** para a extensão. Retire o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para acessar o Início da plataforma e configurar ou excluir sua extensão.
 
-Para atualizar sua extensão, consulte [Atualização da extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) na documentação do Launch da plataforma.
+Para atualizar sua extensão, consulte [Atualização de extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) na documentação de inicialização da plataforma.
 
 
 

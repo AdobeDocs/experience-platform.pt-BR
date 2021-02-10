@@ -1,11 +1,11 @@
 ---
 keywords: Extensão da métrica quântica;Métrica quântica;métrica quântica;Métrica quântica
-title: Destino da extensão da métrica quântica
+title: Extensão da métrica quântica
 description: A extensão de métrica quântica é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '535'
 ht-degree: 3%
 
 ---

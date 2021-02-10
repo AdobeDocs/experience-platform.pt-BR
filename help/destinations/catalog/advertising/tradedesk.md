@@ -1,11 +1,11 @@
 ---
 keywords: publicidade; o serviço de comércio;
-title: O destino da conexão do Trade Desk
+title: A conexão com o Trade Desk
 description: 'O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel. '
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---

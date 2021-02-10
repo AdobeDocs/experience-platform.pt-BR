@@ -1,11 +1,11 @@
 ---
 keywords: Caixa de entrada do URL de conversa;Caixa de entrada do url de conversa;Caixa de entrada do URL de conversa;caixa de entrada do URL de conversa;URL de conversa;URL de conversa;URL de conversa
-title: Destino da Extensão da Caixa de Entrada do URL de Conversação
+title: Extensão da Caixa de Entrada do URL de Conversação
 description: A extensão Caixa de entrada do URL de conversa é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 4%
 
 ---

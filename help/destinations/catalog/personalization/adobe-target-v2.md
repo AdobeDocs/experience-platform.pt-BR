@@ -1,12 +1,12 @@
 ---
 keywords: extensão do target;público alvo;público alvo v2;extensão público alvo v2
-title: Destino da extensão Adobe Target v2
+title: Extensão do Adobe Target v2
 description: A extensão Adobe Target v2 é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 11%
+source-wordcount: '530'
+ht-degree: 12%
 
 ---
 

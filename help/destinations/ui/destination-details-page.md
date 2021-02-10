@@ -1,18 +1,18 @@
 ---
 keywords: destino;destino;página detalhada destinos;página de detalhes destinos
-title: Visualização dos detalhes de um destino na interface do usuário
+title: Detalhes de destino da visualização
 description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como nome do destino, ID, segmentos mapeados para o destino e controles para editar a ativação e ativar e desativar o fluxo de dados. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '740'
 ht-degree: 1%
 
 ---
 
 
-# Visualização dos detalhes de um destino
+# Detalhes de destino da visualização
 
 Na interface do usuário do Adobe Experience Platform, você pode visualização e monitorar os atributos e atividades de seus destinos. Esses detalhes incluem o nome e a ID do destino, controles para ativar ou desativar os destinos e muito mais. Detalhes para destinos em lote também incluem métricas para registros de perfis ativados e histórico de execuções de fluxo de dados.
 

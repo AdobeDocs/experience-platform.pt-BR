@@ -1,11 +1,11 @@
 ---
 keywords: etiquetas de dirigível;destino de dirigível
-title: Destino da Conexão das Etiquetas de Avião
+title: Ligação de Etiquetas de Avião
 description: Transmita dados de Audiência para o Airship sem problemas como Etiquetas de Audiência para definição de metas dentro do Airship.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1196'
 ht-degree: 1%
 
 ---

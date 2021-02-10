@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;lar;tópicos populares; Tutoriais de API; API de destinos de transmissão contínua; Plataforma
 solution: Experience Platform
-title: Conecte-se a destinos de transmissão e ative dados usando chamadas de API
+title: Conecte-se a destinos de streaming e ative dados usando chamadas de API no Adobe Experience Platform
 description: Este documento cobre a criação de destinos de streaming usando a API do Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Conecte-se a destinos de streaming e ative dados usando chamadas de API no Adobe Experience Platform
+# Conecte-se a destinos de streaming e ative dados usando chamadas de API
 
 >[!NOTE]
 >

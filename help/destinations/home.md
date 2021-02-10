@@ -5,7 +5,7 @@ seo-title: Visão geral dos destinos
 description: Saiba como ativar os dados da Adobe Experience Platform para destinos para campanhas de marketing entre canais, emails, anúncios direcionados e muito mais.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar Destinos no Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -21,12 +21,12 @@ ht-degree: 1%
 
 ## Destinos e origens {#destinations-and-sources}
 
-Uma das principais funcionalidades da Plataforma é assimilar seus dados primários e ativá-los para atender às suas necessidades comerciais. Use fontes para assimilar dados na Plataforma e destinos para exportar dados da Plataforma.
+Uma das principais funcionalidades da Plataforma é assimilar seus dados primários e ativá-los para atender às suas necessidades comerciais. Use [sources](../sources/home.md) para assimilar dados na Plataforma e destinos para exportar dados da Plataforma.
 
 ## Etapas de destinos {#steps}
 
 * Escolha a partir de um [catálogo de autoatendimento](./catalog/overview.md) de todos os destinos disponíveis na Plataforma.
-* Use **[!UICONTROL Destinos]** para [ativar](./ui/activate-destinations.md) e envie perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
+* Use destinos para [ativar](./ui/activate-destinations.md) e envie perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Agende exportações de dados para seus destinos preferenciais em horários regulares.
 
 ## Controles {#controls}

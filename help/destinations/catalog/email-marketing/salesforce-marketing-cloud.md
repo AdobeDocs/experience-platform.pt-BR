@@ -1,11 +1,11 @@
 ---
 keywords: email;Email;email;email destinos;salesforce;salesforce destino
-title: Destino da conexão do Marketing Cloud do Salesforce
+title: Conexão de Marketing Cloud do Salesforce
 seo-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---

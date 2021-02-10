@@ -1,11 +1,11 @@
 ---
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
-title: Destino da Extensão do KickFire
+title: Extensão KickFire
 description: A extensão KickFire é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '506'
 ht-degree: 3%
 
 ---

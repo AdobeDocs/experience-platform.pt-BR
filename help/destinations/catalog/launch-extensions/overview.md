@@ -1,11 +1,11 @@
 ---
 keywords: iniciar extensões;iniciar extensão;iniciar destinos; extensões de inicialização da plataforma;extensão de lançamento da plataforma;destinos de inicialização da plataforma
-title: Destinos de extensão do Adobe Experience Platform Launch
+title: Extensão Adobe Experience Platform Launch
 description: A Adobe Experience Platform Launch é a próxima geração de recursos de gerenciamento de tags da Adobe. O Platform Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '616'
 ht-degree: 12%
 
 ---

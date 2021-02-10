@@ -1,9 +1,9 @@
 ---
-keywords: extensões do Facebook;extensão do Facebook;destinos do Facebook;facebook;instagram;mensageiro;facebook Messenger
-title: Extensão do Facebook
+keywords: conexão do Facebook;conexão do Facebook;destinos do facebook;facebook;instagram;mensageiro;facebook messenger
+title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 ---
 
 
-# [!DNL Facebook] extensão
+# [!DNL Facebook] conexão
 
 >[!IMPORTANT]
 >

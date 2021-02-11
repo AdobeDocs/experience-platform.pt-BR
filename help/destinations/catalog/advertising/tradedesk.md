@@ -3,9 +3,9 @@ keywords: publicidade; o serviço de comércio;
 title: A conexão com o Trade Desk
 description: 'O Trade Desk é uma plataforma de autoatendimento para que os compradores de anúncios executem redirecionamentos e campanhas digitais direcionadas para audiência em fontes de vídeo, vídeo e inventário móvel. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ Na etapa [!UICONTROL Authentication], é necessário inserir [!DNL The Trade Des
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
 * **[!UICONTROL ID]** da conta: ID [!DNL Trade Desk] [!UICONTROL  da sua ]conta.
-* **[!UICONTROL Segredo]** do cliente: O  `clientSecret` parâmetro usado nas credenciais  [!DNL OAuth2] do cliente.
 * **[!UICONTROL Local]** do servidor: Pergunte ao seu  [!DNL The Trade Desk] representante qual servidor regional você deve usar. Estes são os servidores regionais disponíveis que você pode escolher:
 
    * **[!UICONTROL Europa]**

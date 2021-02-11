@@ -6,10 +6,10 @@ title: Atualizar detalhes da conta da conexão de origem na interface do usuári
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 0%
+source-wordcount: '681'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conta de origem existente. A área de trabalho [!UICONTROL Origens] oferece a você a capacidade de adicionar, editar e excluir detalhes de um lote existente ou conexão de fluxo contínuo, incluindo seu nome, descrição e credenciais.
 
-Este tutorial fornece etapas para atualizar os detalhes e as credenciais de uma conta existente da área de trabalho [!UICONTROL Fontes].
+A área de trabalho [!UICONTROL Origens] também oferece a capacidade de editar a programação de fluxos de dados em lote, permitindo que você atualize sua frequência de ingestão e taxa de intervalo.
+
+Este tutorial fornece etapas para atualizar os detalhes e as credenciais de uma conta existente da área de trabalho [!UICONTROL Fontes], bem como para atualizar o agendamento de ingestão de um fluxo de dados.
 
 ## Introdução
 
@@ -53,12 +55,39 @@ A caixa de diálogo **[!UICONTROL Editar detalhes da conta]** permite atualizar 
 
 ![editar detalhes da conta](../../images/tutorials/update/edit-account-details.png)
 
-Após alguns instantes, uma caixa de confirmação verde é exibida na parte inferior da tela para confirmar uma atualização bem-sucedida.
+Após alguns instantes, uma caixa de confirmação será exibida na parte inferior da tela para confirmar uma atualização bem-sucedida.
 
 ![update-confirm](../../images/tutorials/update/update-confirmed.png)
 
+## Editar programação
+
+Você pode editar o agendamento de ingestão de um fluxo de dados na página **[!UICONTROL Contas]**. Na lista de contas, selecione a conta que contém o fluxo de dados que você deseja reprogramar.
+
+![select-account](../../images/tutorials/update/select-account.png)
+
+A página de fluxo de dados é exibida. Esta página contém uma lista de fluxos de dados existentes associados à conta selecionada. Selecione as elipses (`...`) ao lado do fluxo de dados que você deseja reprogramar.
+
+![reprogramação](../../images/tutorials/update/reschedule.png)
+
+Um menu suspenso é exibido, fornecendo opções para **[!UICONTROL Editar programação]**, **[!UICONTROL Ativar fluxo de dados]**, **[!UICONTROL Visualização no monitoramento]** e **[!UICONTROL Excluir]**. Selecione **[!UICONTROL Editar agendamento]** no menu.
+
+![programação de edição](../../images/tutorials/update/edit-schedule.png)
+
+A caixa de diálogo **[!UICONTROL Editar agendamento]** fornece opções para atualizar a frequência de ingestão e a taxa de intervalo do seu fluxo de dados. Depois de definir os valores de frequência e intervalo atualizados, selecione **[!UICONTROL Salvar]**.
+
+![caixa de diálogo agendamento](../../images/tutorials/update/schedule-dialog-box.png)
+
+| Agendamento | Descrição |
+| ---------- | ----------- |
+| Frequência | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis para a programação de frequência de edição de um fluxo de dados já existente incluem: `minute`, `hour`, `day` ou `week`. |
+| Intervalo | O intervalo designa o período entre duas execuções consecutivas de fluxo. O valor do intervalo deve ser um número inteiro diferente de zero e deve ser maior ou igual a `15`. |
+
+Após alguns instantes, uma caixa de confirmação será exibida na parte inferior da tela para confirmar uma atualização bem-sucedida.
+
+![confirmação de agendamento](../../images/tutorials/update/schedule-confirm.png)
+
 ## Próximas etapas
 
-Ao seguir este tutorial, você usou com êxito a área de trabalho [!UICONTROL Fontes] para atualizar as informações da conta.
+Ao seguir este tutorial, você usou com êxito a área de trabalho [!UICONTROL Fontes] para atualizar as informações da conta e editar sua programação de fluxo de dados.
 
 Para obter etapas sobre como executar essas operações de forma programática usando a API [!DNL Flow Service], consulte o tutorial em [atualizando as informações de conexão usando a API de Serviço de Fluxo](../../tutorials/api/update.md).

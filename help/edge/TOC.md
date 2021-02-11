@@ -6,10 +6,10 @@ user-guide-title: Ajuda do Adobe Experience Platform Web SDK
 breadcrumb-title: Guia do Web SDK
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Edge Network.
 translation-type: tm+mt
-source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
+source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 38%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -48,10 +48,14 @@ ht-degree: 38%
       * [Visão geral do Offer Decisioning](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentimento {#consent}
    * [Consentimento de suporte](consent/supporting-consent.md)
-   * Estrutura de Consentimento e Transparência do IAB 2.0 {#iab-tcf}
+   * Estrutura de Consentimento e Transparência IAB 2.0 {#iab-tcf}
       * [Visão geral](consent/iab-tcf/overview.md)
       * [Integrar ao Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Integrar sem Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Extensão SDK da Web para Adobe Experience Platform Launch {#extension}
+   * [Extensão SDK da Web](extension/web-sdk-extension.md)
+   * [Tipos de ação](extension/action-types.md)
+   * [Tipos de elementos de dados](extension/data-element-types.md)
 * [Notas de versão](release-notes.md)
 * [Perguntas frequentes](web-sdk-faq.md)
 * [Publicações no blog](blog-posts.md)

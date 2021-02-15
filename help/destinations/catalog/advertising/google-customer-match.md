@@ -3,9 +3,9 @@ keywords: correspondência de cliente do Google;Correspondência de cliente do G
 title: Conexão de correspondência de cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como Search, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->A migração do cliente para as novas versões de destino está em andamento. Até a migração ser concluída, você verá somente as identidades disponíveis [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] para este destino.
+>No momento, estamos migrando clientes para a nova versão desse destino.
+>
+> As instruções neste artigo se aplicam a ambas as versões, com a seguinte observação: enquanto esta migração estiver em andamento, você verá apenas a versão atual do destino [!DNL Google Customer Match] na interface do usuário, onde você só pode usar as identidades [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] para ativação.
 
 [O Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets permite que você use seus dados online e offline para alcançar e se envolver novamente com seus clientes em todas as propriedades operadas e pertencentes ao Google, como:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]e  [!DNL YouTube].
 

@@ -3,9 +3,9 @@ keywords: conexão do Facebook;conexão do Facebook;destinos do facebook;faceboo
 title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->A migração do cliente para as novas versões de destino está em andamento. Até a migração ser concluída, você verá somente as identidades disponíveis [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] para este destino.
+>No momento, estamos migrando clientes para a nova versão desse destino, [!DNL Facebook Custom Audience].
+>
+> As instruções neste artigo se aplicam a ambas as versões, com a seguinte observação: enquanto esta migração estiver em andamento, você verá apenas a versão atual do destino [!DNL Facebook] na interface do usuário, onde você só pode usar as identidades [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] para ativação.
 
 Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, personalização e supressão de audiências com base em emails com hash.
 
@@ -95,9 +97,12 @@ Se você optar por hash nos endereços de email, certifique-se de cumprir os seg
    - Exemplo: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, não `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Não salve a corda.
 
-Os dados de namespaces sem hash são automaticamente hash por [!DNL Platform] na ativação.
+>[!NOTE]
+>
+>Os dados de namespaces sem hash são automaticamente hash por [!DNL Platform] na ativação.
+> Os dados da fonte do atributo não são automaticamente hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] faça hash automático dos dados na ativação.
+> A opção **[!UICONTROL Aplicar transformação]** só é exibida quando você seleciona atributos como campos de origem. Ele não é exibido quando você escolhe namespaces.
 
-Os dados da fonte do atributo não são automaticamente hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] faça hash automático dos dados na ativação.
 ![Transformação de mapeamento de identidade](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Usando namespaces personalizadas {#custom-namespaces}

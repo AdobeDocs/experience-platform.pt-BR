@@ -5,9 +5,9 @@ title: Guia da interface de usuário de segmentação de fluxo
 topic: ui guide
 description: A segmentação contínua no Adobe Experience Platform permite que você faça a segmentação em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam à Plataforma, o que diminui a necessidade de programar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,9 @@ A segmentação contínua em [!DNL Adobe Experience Platform] permite que os cli
 
 >[!NOTE]
 >
->A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e serão avaliados juntamente com o trabalho segmentado agendado à noite.
+>A segmentação de fluxo só pode ser usada para avaliar dados que são transmitidos para a Plataforma. Em outras palavras, os dados ingeridos por meio da ingestão em lote não serão avaliados por meio da segmentação em streaming e serão avaliados juntamente com o trabalho de segmento agendado à noite.
+>
+>Além disso, os segmentos avaliados com segmentação de fluxo contínuo podem oscilar entre a associação ideal e real se o segmento for baseado em outro segmento avaliado por meio da segmentação de lote. Por exemplo, se o Segmento A for baseado fora do Segmento B e o Segmento B for avaliado usando a segmentação em lote, uma vez que o Segmento B só é atualizado a cada 24 horas, o Segmento A se afastará ainda mais dos dados reais até que seja sincronizado novamente com a atualização do Segmento B.
 
 ## Tipos de query de segmentação de transmissão
 
@@ -64,7 +66,7 @@ Depois de criar um segmento habilitado para streaming, você pode visualização
 
 Especificamente, os detalhes sobre o **[!UICONTROL tamanho total de audiência qualificada]** são mostrados. O **[!UICONTROL Tamanho total da audiência qualificada]** mostra o número total de audiências qualificadas da última execução de tarefa de segmento concluída. Se um trabalho de segmento não tiver sido concluído nas últimas 24 horas, o número de audiências será obtido de uma estimativa.
 
-Embaixo está um gráfico de linhas que mostra o número de segmentos que foram qualificados e desqualificados nas últimas 24 horas. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, semana passada ou últimos 30 dias.
+Embaixo está um gráfico de linhas que mostra o número de segmentos que foram qualificados e desqualificados nas últimas 24 horas. A lista suspensa pode ser ajustada para mostrar as últimas 24 horas, a semana passada ou os últimos 30 dias.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

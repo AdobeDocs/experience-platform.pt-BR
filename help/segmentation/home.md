@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentação;Segmentação;serviço de segmento;segmento;Segmento;Segmentos;segmentos;segmentos;;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;Segments;Segments;Segments;Segments;Segments;Segments;Segments;Segments
+keywords: Experience Platform;home;popular topics;segmentação;Segmentação;serviço de segmento;segmento;Segmento;Segmentos;segmentos;segmentos;;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;Segments;Segments;Segments;Segments;Segments;Segments;Segments;segment
 solution: Experience Platform
 title: Visão geral do serviço de segmentação
 topic: overview
 description: Saiba mais sobre o Adobe Experience Platform Segmentation Service e o papel que ele desempenha no ecossistema da plataforma.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Para obter informações sobre como criar definições de segmentos usando a API
 >No evento em que um schema é estendido, todos os uploads futuros devem atualizar os campos recém-adicionados de acordo. Para obter mais informações sobre como personalizar [!DNL Experience Data Model] (XDM), visite o [tutorial do Editor de Schemas](../xdm/tutorials/create-schema-ui.md).
 
 ## Avaliar segmentos
+
+Atualmente, a plataforma suporta dois métodos de avaliação de segmentos: segmentação em streaming e segmentação em lote.
 
 ### Segmentação em streaming
 
@@ -121,7 +123,7 @@ Para ilustrar o valor desse recurso de segmentação avançada, considere a cola
 
 A segmentação estática exige que você defina segmentos individuais com um atributo de estado inicial exclusivo, antes de filtrar eventos de compra que não sejam iguais ao estado inicial. Um segmento explícito desse tipo diria &quot;Estou procurando pessoas de Utah onde o estado de sua compra não é Utah&quot;. A criação de uma audiência usando esse método exige a definição de um segmento para cada estado dos EUA, para um total de 50 segmentos.
 
-Como resultado das diferentes combinações de segmentos que inevitavelmente surgem à medida que você dimensiona, o processo manual necessário para a segmentação estática se torna mais demorado, reduzindo a eficiência geral.
+Como resultado das diferentes combinações de segmentos que inevitavelmente surgem à medida que você dimensiona, o processo manual necessário para a segmentação estática torna-se mais demorado, reduzindo a eficiência geral.
 
 **A solução**
 

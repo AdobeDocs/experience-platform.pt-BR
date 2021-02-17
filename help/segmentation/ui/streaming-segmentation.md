@@ -5,9 +5,9 @@ title: Guia da interface de usuário de segmentação de fluxo
 topic: ui guide
 description: A segmentação contínua no Adobe Experience Platform permite que você faça a segmentação em tempo quase real, enquanto se concentra na riqueza de dados. Com a segmentação de fluxo contínuo, a qualificação de segmentos acontece à medida que os dados chegam à Plataforma, o que diminui a necessidade de programar e executar tarefas de segmentação. Com esse recurso, a maioria das regras de segmento pode ser avaliada à medida que os dados são passados para a Plataforma, o que significa que a associação de segmento será mantida atualizada sem executar trabalhos de segmentação programados.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -75,12 +75,6 @@ Informações adicionais sobre a última avaliação do segmento podem ser encon
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 Para obter mais informações sobre definições de segmentos, leia a seção anterior sobre [detalhes de definição de segmentos](#segment-details).
-
-## Demonstração de vídeo de segmentação contínua
-
-O vídeo a seguir é destinado a suportar sua compreensão da segmentação de streaming. Ele mostra um exemplo de experiência do cliente seguido por um rápido tour dos principais recursos na interface [!DNL Platform].
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## Próximas etapas
 

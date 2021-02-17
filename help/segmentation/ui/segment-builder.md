@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Construtor de segmentos
 topic: ui guide
 description: 'O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece uma área de trabalho avançada que permite interagir com elementos de dados do Perfil. A área de trabalho fornece controles intuitivos para criar e editar regras, como os blocos de arrastar e soltar usados para representar propriedades de dados. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ A seção **[!UICONTROL Propriedades do segmento]** também é onde você pode e
 >
 >As estimativas de audiência são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em sua loja de perfis, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmentos podem ser encontradas na [seção de geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de segmentos.
 
-## Próximos passos e recursos adicionais {#next-steps}
+## Próximas etapas {#next-steps}
 
 O Construtor de segmentos fornece um fluxo de trabalho avançado que permite isolar audiências comercializáveis dos dados [!DNL Real-time Customer Profile]. Depois de ler este guia, você pode:
 
@@ -173,16 +173,4 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Ative todas as definições de segmento para segmentação programada.
 - Ative definições de segmento especificadas para a segmentação de streaming.
 
-Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente sua aprendizagem assistindo aos vídeos abaixo. Para saber mais sobre as outras partes da interface do usuário [!DNL Segmentation Service], leia o [[!DNL Segmentation Service] guia do usuário](./overview.md)
-
->[!WARNING]
->
-> A interface do usuário [!DNL Platform] mostrada nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface do usuário.
-
-**Criar um segmento:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Criar um segmento dinâmico:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente sua aprendizagem assistindo aos vídeos relacionados. Para saber mais sobre as outras partes da interface do usuário [!DNL Segmentation Service], leia o [[!DNL Segmentation Service] guia do usuário](./overview.md)

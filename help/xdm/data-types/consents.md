@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;consentimento;Consentimento;preferências;Preferências;privacidadeOptOuts;marketingPreferences;optOutType;basedOfProcessing;consentimento;Consent
 title: Tipo de dados de consentimento e preferências
-description: O tipo de dados Preferências de privacidade/marketing (Consentimento) é destinado a suportar a coleta de permissões e preferências do cliente geradas pelas Plataformas de gerenciamento de consentimento (CMPs) e outras fontes das operações de dados.
+description: O tipo de dados Consent for Privacy, Personalization and Marketing Preferences tem como objetivo oferecer suporte à coleta de permissões e preferências do cliente geradas pelas CMPs (Plataformas de gerenciamento de consentimento) e outras fontes de suas operações de dados.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2067'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Consents & Preferences] tipo de dados
 
-O tipo de dados [!DNL Privacy/Marketing Preferences (Consent)] (a seguir denominado &quot;[!DNL Consents & Preferences] tipo de dados&quot;) é um tipo de dados [!DNL Experience Data Model] (XDM) destinado a suportar a coleta de permissões e preferências do cliente geradas pelas Plataformas de Gerenciamento de Consentimento (CMPs) e outras fontes de suas operações de dados.
+O tipo de dados [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (a seguir, o tipo de dados &quot;[!DNL Consents & Preferences]&quot;) é um [!DNL Experience Data Model] (XDM) tipo de dados destinado a suportar a coleta de permissões e preferências do cliente geradas pelas CMPs (Plataformas de Gerenciamento de Consentimento) e outras fontes de suas operações de dados.
 
 Este documento cobre a estrutura e o uso pretendido dos campos fornecidos pelo tipo de dados [!DNL Consents & Preferences].
 
@@ -40,234 +40,246 @@ Uma preferência é uma opção que permite ao cliente especificar como diferent
 * **Preferências** de personalização: Preferências sobre como a marca deve personalizar as experiências entregues a um cliente.
 * **Preferências** de marketing: Preferências relativas à permissão de uma marca para entrar em contato com um cliente por meio de vários canais.
 
+A seguinte captura de tela mostra como a estrutura do tipo de dados é representada na interface do usuário da plataforma:
+
+![](../images/data-types/consents.png)
+
+>[!TIP]
+>
+>Consulte o guia em [exploração de recursos XDM](../ui/explore.md) para obter etapas sobre como procurar qualquer recurso XDM e inspecionar sua estrutura na interface do usuário da plataforma.
+
 O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Consents & Preferences] pode processar. As informações sobre o uso específico de cada um desses campos são fornecidas nas seções a seguir.
 
 ```json
 {
-  "xdm:consents": {
-    "xdm:collect": {
-      "xdm:val": "y",
+  "consents": {
+    "collect": {
+      "val": "y",
     },
-    "xdm:adID": {
-      "xdm:val": "VI"
+    "adID": {
+      "val": "VI"
     },
-    "xdm:share": {
-      "xdm:val": "y",
+    "share": {
+      "val": "y",
     },
-    "xdm:personalize": {
-      "xdm:content": {
-        "xdm:val": "y"
+    "personalize": {
+      "content": {
+        "val": "y"
       }
     },
-    "xdm:marketing": {
-      "xdm:preferred": "email",
-      "xdm:any": {
-        "xdm:val": "u"
+    "marketing": {
+      "preferred": "email",
+      "any": {
+        "val": "u"
       },
-      "xdm:push": {
-        "xdm:val": "n",
-        "xdm:reason": "Too Frequent",
-        "xdm:time": "2019-01-01T15:52:25+00:00"
+      "push": {
+        "val": "n",
+        "reason": "Too Frequent",
+        "time": "2019-01-01T15:52:25+00:00"
       }
     },
-    "xdm:idSpecific": {
+    "metadata": {
+      "time": "2019-01-01T15:52:25+00:00"
+    },
+    "idSpecific": {
       "email": {
         "jdoe@example.com": {
-          "xdm:marketing": {
-            "xdm:email": {
-              "xdm:val": "n"
+          "marketing": {
+            "email": {
+              "val": "n"
             }
           }
         }
       }
     }
-  },
-  "xdm:metadata": {
-    "xdm:time": "2019-01-01T15:52:25+00:00"
   }
 }
 ```
 
->[!NOTE]
+>[!TIP]
 >
->O exemplo acima serve para ilustrar a estrutura dos dados enviados para [!DNL Platform] por meio do tipo de dados [!DNL Consents & Preferences], a fim de contextualizar o restante desse documento, o que explica os principais campos fornecidos pelo tipo de dados. O schema completo da estrutura do tipo de dados pode ser encontrado no [apêndice](#full-schema) para fins de referência.
+>Você pode gerar dados JSON de amostra para qualquer schema XDM que você definir no Experience Platform para ajudar a visualizar como seus dados de consentimento e preferência do cliente devem ser mapeados. Consulte a documentação a seguir para obter mais informações:
+>
+>* [Gerar dados de amostra na interface do usuário](../ui/sample.md)
+>* [Gerar dados de amostra na API](../api/sample-data.md)
 
-## xdm:consents {#choices}
 
-`xdm:consents` contém vários campos que descrevem os consentimentos e preferências de um cliente. Esses campos são descritos com mais detalhes nas subseções abaixo.
+## `consents` {#choices}
+
+`consents` contém vários campos que descrevem os consentimentos e preferências de um cliente. Esses campos são descritos com mais detalhes nas subseções abaixo.
 
 ```json
-"xdm:consents": {
-  "xdm:collect": {
-    "xdm:val": "y",
+"consents": {
+  "collect": {
+    "val": "y",
   },
-  "xdm:adID": {
-    "xdm:val": "VI"
+  "adID": {
+    "val": "VI"
   },
-  "xdm:share": {
-    "xdm:val": "y",
+  "share": {
+    "val": "y",
   },
-  "xdm:personalize": {
-    "xdm:content": {
-      "xdm:val": "y"
+  "personalize": {
+    "content": {
+      "val": "y"
     }
   },
-  "xdm:marketing": {
-    "xdm:preferred": "email",
-    "xdm:any": {
-      "xdm:val": "u"
+  "marketing": {
+    "preferred": "email",
+    "any": {
+      "val": "u"
     },
-    "xdm:email": {
-      "xdm:val": "n",
-      "xdm:reason": "Too Frequent",
-      "xdm:time": "2019-01-01T15:52:25+00:00"
+    "email": {
+      "val": "n",
+      "reason": "Too Frequent",
+      "time": "2019-01-01T15:52:25+00:00"
     }
   }
 }
 ```
 
-### xdm:collect
+### `collect`
 
-`xdm:collect` representa o consentimento do cliente em ter seus dados coletados.
+`collect` representa o consentimento do cliente em ter seus dados coletados.
 
 ```json
-"xdm:collect" : {
-  "xdm:val": "y"
+"collect" : {
+  "val": "y"
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdm:val` | A opção de consentimento fornecida pelo cliente para este caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+| `val` | A opção de consentimento fornecida pelo cliente para este caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
-### xdm:adID
+### `adID`
 
-`xdm:adID` representa o consentimento do cliente para saber se uma ID do anunciante (IDFA ou GAID) pode ser usada para vincular o cliente aos aplicativos neste dispositivo.
+`adID` representa o consentimento do cliente para saber se uma ID do anunciante (IDFA ou GAID) pode ser usada para vincular o cliente aos aplicativos neste dispositivo.
 
 ```json
-"xdm:adID" : {
-  "xdm:val": "y"
+"adID" : {
+  "val": "y"
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdm:val` | A opção de consentimento fornecida pelo cliente para este caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+| `val` | A opção de consentimento fornecida pelo cliente para este caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
-### xdm:share
+### `share`
 
-`xdm:share` representa o consentimento do cliente para saber se os dados podem ser compartilhados com (ou vendidos a) terceiros.
+`share` representa o consentimento do cliente para saber se os dados podem ser compartilhados com (ou vendidos a) terceiros.
 
 ```json
-"xdm:share" : {
-  "xdm:val": "y"
+"share" : {
+  "val": "y"
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdm:val` | A opção de consentimento fornecida pelo cliente para este caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+| `val` | A opção de consentimento fornecida pelo cliente para este caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
-### xdm:personalize {#personalize}
+### `personalize` {#personalize}
 
-`xdm:personalize` captura as preferências do cliente em relação às maneiras pelas quais seus dados podem ser usados para personalização. Os clientes podem opt out casos de uso de personalização específicos ou opt out totalmente a personalização.
+`personalize` captura as preferências do cliente em relação às maneiras pelas quais seus dados podem ser usados para personalização. Os clientes podem opt out casos de uso de personalização específicos ou opt out totalmente a personalização.
 
 >[!IMPORTANT]
 >
->`xdm:personalize` não abrange os casos de utilização da comercialização. Por exemplo, se um cliente opt out da personalização para todos os canais, ele não deve parar de receber comunicações através desses canais. Em vez disso, as mensagens que recebem devem ser genéricas e não baseadas no seu perfil.
+>`personalize` não abrange os casos de utilização da comercialização. Por exemplo, se um cliente opt out de personalização para todos os canais, ele não deve parar de receber comunicações através desses canais. Em vez disso, as mensagens que recebem devem ser genéricas e não baseadas no seu perfil.
 >
->Pelo mesmo exemplo, se um cliente opt out do marketing direto para todos os canais (por meio de `xdm:marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber nenhuma mensagem, mesmo que a personalização seja permitida.
+>Pelo mesmo exemplo, se um cliente opt out do marketing direto para todos os canais (por meio de `marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber nenhuma mensagem, mesmo que a personalização seja permitida.
 
 ```json
-"xdm:personalize": {
-  "xdm:content": {
-    "xdm:val": "y",
+"personalize": {
+  "content": {
+    "val": "y",
   }
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdm:content` | Representa as preferências do cliente para conteúdo personalizado em seu site ou aplicativo. |
-| `xdm:val` | A preferência de personalização fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não tenha que ser solicitado a fornecer o consentimento, o valor deste campo deve indicar a base em que a personalização deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+| `content` | Representa as preferências do cliente para conteúdo personalizado em seu site ou aplicativo. |
+| `val` | A preferência de personalização fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não tenha que ser solicitado a fornecer o consentimento, o valor deste campo deve indicar a base em que a personalização deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
-### xdm:marketing {#marketing}
+### `marketing` {#marketing}
 
-`xdm:marketing` captura as preferências do cliente em relação a quais fins de marketing seus dados podem ser usados. Os clientes podem opt out casos específicos de uso de marketing ou opt out totalmente o marketing direto.
+`marketing` captura as preferências do cliente em relação a quais fins de marketing seus dados podem ser usados. Os clientes podem opt out casos específicos de uso de marketing ou opt out totalmente o marketing direto.
 
 ```json
-"xdm:marketing": {
-  "xdm:preferred": "email",
-  "xdm:any": {
-    "xdm:val": "u"
+"marketing": {
+  "preferred": "email",
+  "any": {
+    "val": "u"
   },
-  "xdm:email": {
-    "xdm:val": "n",
-    "xdm:reason": "Too Frequent"
+  "email": {
+    "val": "n",
+    "reason": "Too Frequent"
   },
-  "xdm:push": {
-    "xdm:val": "y"
+  "push": {
+    "val": "y"
   },
-  "xdm:sms": {
-    "xdm:val": "y"
+  "sms": {
+    "val": "y"
   }
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `xdm:preferred` | Indica o canal preferencial do cliente para receber comunicações. Consulte o [apêndice](#preferred-values) para obter os valores aceitos. |
-| `xdm:any` | Representa as preferências do cliente para marketing direto como um todo. A preferência de consentimento fornecida neste campo é considerada a preferência &quot;padrão&quot; para qualquer canal de marketing, a menos que seja substituída por subcampos adicionais fornecidos em `xdm:marketing`. Se você planeja usar opções de consentimento mais granulares, é recomendável excluir esse campo.<br><br>Se o valor estiver definido como  `n`, então todas as configurações de personalização mais específicas devem ser ignoradas. Se o valor for definido como `y`, todas as opções de personalização de granulação fina também deverão ser tratadas como `y`, a menos que explicitamente definidas como `n`. Se o valor não estiver definido, então os valores para cada opção de personalização devem ser respeitados conforme especificado. |
-| `xdm:email` | Indica se o cliente concorda em receber mensagens de email. |
-| `xdm:push` | Indica se o cliente permite receber notificações por push. |
-| `xdm:sms` | Indica se o cliente concorda em receber mensagens de texto. |
-| `xdm:val` | A preferência fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não tenha de ser solicitado a dar o seu consentimento, o valor deste campo deve indicar a base em que o caso de utilização para comercialização deve ter lugar. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
-| `xdm:time` | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing mudou, se aplicável. Observe que se o carimbo de data e hora de qualquer preferência individual for igual ao fornecido em `xdm:metadata`, esse campo não precisará ser definido para essa preferência. |
-| `xdm:reason` | Quando um cliente opt out de um caso de uso de marketing, esse campo de string representa o motivo pelo qual o cliente opt out. |
+| `preferred` | Indica o canal preferencial do cliente para receber comunicações. Consulte o [apêndice](#preferred-values) para obter os valores aceitos. |
+| `any` | Representa as preferências do cliente para marketing direto como um todo. A preferência de consentimento fornecida neste campo é considerada a preferência &quot;padrão&quot; para qualquer canal de marketing, a menos que seja substituída por subcampos adicionais fornecidos em `marketing`. Se você planeja usar opções de consentimento mais granulares, é recomendável excluir esse campo.<br><br>Se o valor estiver definido como  `n`, então todas as configurações de personalização mais específicas devem ser ignoradas. Se o valor for definido como `y`, todas as opções de personalização de granulação fina também deverão ser tratadas como `y`, a menos que explicitamente definidas como `n`. Se o valor não estiver definido, então os valores para cada opção de personalização devem ser respeitados conforme especificado. |
+| `email` | Indica se o cliente concorda em receber mensagens de email. |
+| `push` | Indica se o cliente permite receber notificações por push. |
+| `sms` | Indica se o cliente concorda em receber mensagens de texto. |
+| `val` | A preferência fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não tenha de ser solicitado a dar o seu consentimento, o valor deste campo deve indicar a base em que o caso de utilização para comercialização deve ter lugar. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+| `time` | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing mudou, se aplicável. Observe que se o carimbo de data e hora de qualquer preferência individual for igual ao fornecido em `metadata`, esse campo não precisará ser definido para essa preferência. |
+| `reason` | Quando um cliente opt out de um caso de uso de marketing, esse campo de string representa o motivo pelo qual o cliente opt out. |
 
-### xdm:idSpecific
+### `metadata`
 
-`xdm:idSpecific` pode ser usado quando um consentimento ou preferência específica não se aplica universalmente a um cliente, mas está restrito a um único dispositivo ou ID. Por exemplo, um cliente pode opt out de receber emails para um endereço, ao mesmo tempo que pode permitir emails em outro.
+`metadata` captura metadados gerais sobre os consentimentos e preferências do cliente sempre que foram atualizados pela última vez.
+
+```json
+"metadata": {
+  "time": "2019-01-01T15:52:25+00:00",
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `time` | Um carimbo de data e hora ISO 8601 para a última vez que qualquer um dos consentimentos e preferências do cliente foi atualizado. Esse campo pode ser usado em vez de aplicar carimbos de data e hora às preferências individuais para reduzir a carga e a complexidade. Fornecer um valor `time` sob uma preferência individual substitui o carimbo de data e hora `metadata` dessa preferência específica. |
+
+### `idSpecific`
+
+`idSpecific` pode ser usado quando um consentimento ou preferência específica não se aplica universalmente a um cliente, mas está restrito a um único dispositivo ou ID. Por exemplo, um cliente pode opt out de receber emails para um endereço, ao mesmo tempo que pode permitir emails em outro.
 
 >[!IMPORTANT]
 >
->Os consentimentos e preferências de nível de canal (ou seja, aqueles fornecidos em `xdm:consents` fora de `xdm:idSpecific`) se aplicam às IDs dentro desse canal. Portanto, todos os consentimentos e preferências em nível de canal afetam diretamente se configurações equivalentes específicas de ID ou dispositivo são respeitadas:
+>Os consentimentos e preferências de nível de canal (ou seja, aqueles fornecidos em `consents` fora de `idSpecific`) se aplicam às IDs dentro desse canal. Portanto, todos os consentimentos e preferências em nível de canal afetam diretamente se configurações equivalentes específicas de ID ou dispositivo são respeitadas:
 >
->* Se o cliente tiver opt out no nível do canal, quaisquer consentimentos ou preferências equivalentes em `xdm:idSpecific` serão ignorados.
->* Se o consentimento ou preferência em nível de canal não estiver definido, ou o cliente tiver opt in, os consentimentos ou preferências equivalentes em `xdm:idSpecific` serão respeitados.
+>* Se o cliente tiver opt out no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` serão ignorados.
+>* Se o consentimento ou preferência em nível de canal não estiver definido, ou o cliente tiver opt in, os consentimentos ou preferências equivalentes em `idSpecific` serão respeitados.
 
 
-Cada chave no objeto `xdm:idSpecific` representa uma namespace de identidade específica reconhecida pelo Adobe Experience Platform Identity Service. Embora você possa definir suas próprias namespaces personalizadas para categorizar identificadores diferentes, recomenda-se usar uma das namespaces padrão fornecidas pelo Serviço de identidade para reduzir os tamanhos dos armazenamentos para o Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte [visão geral da namespace de identidade](../../identity-service/namespaces.md) na documentação do Serviço de identidade.
+Cada chave no objeto `idSpecific` representa uma namespace de identidade específica reconhecida pelo Adobe Experience Platform Identity Service. Embora você possa definir suas próprias namespaces personalizadas para categorizar identificadores diferentes, recomenda-se usar uma das namespaces padrão fornecidas pelo Serviço de identidade para reduzir os tamanhos dos armazenamentos para o Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte [visão geral da namespace de identidade](../../identity-service/namespaces.md) na documentação do Serviço de identidade.
 
-As chaves para cada objeto de namespace representam os valores de identidade exclusivos para os quais o cliente definiu preferências. Cada valor de identidade pode conter um conjunto completo de consentimentos e preferências, formatados da mesma forma que `xdm:consents`.
+As chaves para cada objeto de namespace representam os valores de identidade exclusivos para os quais o cliente definiu preferências. Cada valor de identidade pode conter um conjunto completo de consentimentos e preferências, formatados da mesma forma que `consents`.
 
 ```json
-"xdm:idSpecific": {
+"idSpecific": {
   "email": {
     "jdoe@example.com": {
-      "xdm:marketing": {
-        "xdm:email": {
-          "xdm:val": "n"
+      "marketing": {
+        "email": {
+          "val": "n"
         }
       }
     }
   }
 }
 ```
-
-## xdm:metadados
-
-`xdm:metadata` captura metadados gerais sobre os consentimentos e preferências do cliente sempre que foram atualizados pela última vez.
-
-```json
-"xdm:metadata": {
-  "xdm:time": "2019-01-01T15:52:25+00:00",
-}
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `xdm:time` | Um carimbo de data e hora da última vez que qualquer um dos consentimentos e preferências do cliente foi atualizado. Esse campo pode ser usado em vez de aplicar carimbos de data e hora às preferências individuais para reduzir a carga e a complexidade. Fornecer um valor `xdm:time` sob uma preferência individual substitui o carimbo de data e hora `xdm:metadata` dessa preferência específica. |
 
 ## Como inserir dados usando o tipo de dados {#ingest}
 
@@ -289,9 +301,9 @@ Quando um cliente altera seus consentimentos ou preferências em seu site, essas
 
 As seções abaixo fornecem informações de referência adicionais relacionadas ao tipo de dados [!DNL Consents & Preferences].
 
-### Valores aceitos para xdm:val {#choice-values}
+### Valores aceitos para `val` {#choice-values}
 
-A tabela a seguir descreve os valores aceitos para `xdm:val`:
+A tabela a seguir descreve os valores aceitos para `val`:
 
 | Valor | Title | Descrição |
 | --- | --- | --- |
@@ -305,9 +317,9 @@ A tabela a seguir descreve os valores aceitos para `xdm:val`:
 | `VI` | Interesse vital do indivíduo | A recolha de dados para a finalidade especificada é necessária para proteger os interesses vitais do indivíduo. |
 | `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para efetuar uma tarefa do interesse público ou para o exercício da autoridade pública. |
 
-### Valores aceitos para xdm:preferencial {#preferred-values}
+### Valores aceitos para `preferred` {#preferred-values}
 
-A tabela a seguir descreve os valores aceitos para `xdm:preferred`:
+A tabela a seguir descreve os valores aceitos para `preferred`:
 
 | Valor | Descrição |
 | --- | --- |

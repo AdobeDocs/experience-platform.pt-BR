@@ -1,14 +1,12 @@
 ---
-title: Envio de dados para a Adobe Analytics
-seo-title: Envio de dados para o Adobe Analytics com o Adobe Experience Platform Web SDK
-description: Saiba como enviar dados para a Adobe Analytics com o Experience Platform Web SDK
-seo-description: Saiba como enviar dados para a Adobe Analytics com o Experience Platform Web SDK
+title: Envio de dados para o Adobe Analytics usando o Adobe Experience Platform Web SDK
+description: Saiba como enviar dados para a Adobe Analytics com o SDK da Adobe Experience Platform Web.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 6%
+source-wordcount: '192'
+ht-degree: 7%
 
 ---
 

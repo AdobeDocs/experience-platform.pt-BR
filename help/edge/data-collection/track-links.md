@@ -1,11 +1,9 @@
 ---
-title: Rastreamento de links com Adobe Analytics
-seo-title: Rastreamento de links para Adobe Analytics com Adobe Experience Platform Web SDK
+title: Rastrear links usando o Adobe Experience Platform Web SDK
 description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
-seo-description: Saiba como enviar dados de link para a Adobe Analytics com o Experience Platform Web SDK
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+keywords: adobe analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;page visualização;link tracking;links;track links;click links;clickCollection;click collection;collection;click collection;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # Rastrear links
 
-Os links podem ser definidos manualmente ou acompanhados [automaticamente](#automaticLinkTracking). O rastreamento manual é feito adicionando os detalhes sob a `web.webInteraction` parte do schema. Há três variáveis obrigatórias:
+Os links podem ser definidos manualmente ou rastreados [automaticamente](#automaticLinkTracking). O rastreamento manual é feito adicionando os detalhes na parte `web.webInteraction` do schema. Há três variáveis obrigatórias:
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -44,19 +42,19 @@ O tipo de link pode ser um dos três valores:
 * **`download`:** Um link de download
 * **`exit`:** Um link de saída
 
-## Rastreamento automático de links {#automaticLinkTracking}
+## Rastreamento automático de link {#automaticLinkTracking}
 
-Por padrão, o SDK da Web captura, rotula e registra cliques em tags de link qualificadas. Os cliques são capturados com um ouvinte de evento de [captura](https://www.w3.org/TR/uievents/#capture-phase) que é anexado ao documento.
+Por padrão, o SDK da Web captura, rotula e registra cliques em tags de link qualificadas. Os cliques são capturados com um [capture](https://www.w3.org/TR/uievents/#capture-phase) ouvinte de evento de clique que está anexado ao documento.
 
-O rastreamento automático de links pode ser desativado pela [configuração](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) do SDK da Web.
+O rastreamento automático de links pode ser desativado por [configurar](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) o SDK da Web.
 
 ```javascript
 clickCollectionEnabled: false
 ```
 
-### Quais tags se qualificam para o rastreamento de links?{#qualifyingLinks}
+### Quais tags se qualificam para rastreamento de link?{#qualifyingLinks}
 
-O rastreamento automático de link é feito para âncora `A` e `AREA` tags. No entanto, essas tags não são consideradas para rastreamento de link se tiverem um manipulador anexado `onclick` .
+O rastreamento automático de link é feito para as tags âncora `A` e `AREA`. No entanto, essas tags não são consideradas para rastreamento de link se tiverem um manipulador `onclick` anexado.
 
 ### Como os links são rotulados?{#labelingLinks}
 
@@ -66,6 +64,6 @@ Os links são rotulados como um link de download se a tag da âncora incluir um 
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-Os links são rotulados como um link de saída se o domínio do público alvo do link for diferente do atual `window.location.hostname`.
+Os links são rotulados como um link de saída se o domínio do público alvo do link for diferente do `window.location.hostname` atual.
 
 Os links que não se qualificam como link de download ou saída são rotulados como &quot;outros&quot;.

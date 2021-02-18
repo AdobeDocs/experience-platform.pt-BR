@@ -1,31 +1,29 @@
 ---
-title: 'Adobe Target e Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK e uso do Adobe Target
-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
-seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web Experience Platform usando o Adobe Target
+title: Implementação de aplicativo de página única para o Adobe Experience Platform Web SDK
+description: Saiba como criar uma implementação de aplicativo de página única (SPA) do Adobe Experience Platform Web SDK usando o Adobe Target.
 keywords: público alvo;adobe público alvo;xdm visualização; visualização;aplicativos de página única;SPA;SPA ciclo de vida;lado do cliente;teste AB;AB;direcionamento de experiência;XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
 
 
-# Implementação do aplicativo de página única
+# Implementação de aplicativo de página única
 
 O Adobe Experience Platform Web SDK fornece recursos avançados que equipam sua empresa para executar personalização em tecnologias de cliente da próxima geração, como aplicativos de página única (SPA).
 
 Os sites tradicionais funcionavam em modelos de navegação de &quot;página para página&quot;, conhecidos como Aplicativos de várias páginas, em que os designs de site eram totalmente combinados com URLs e as transições de uma página da Web para outra exigiam um carregamento de página.
 
-Aplicativos da Web modernos, como Aplicativos de página única, adotaram em vez disso um modelo que impulsiona o uso rápido da renderização da interface do navegador, que geralmente é independente dos recarregamentos de página. Essas experiências podem ser acionadas por interações do cliente, como rolagens, cliques e movimentos do cursor. À medida que os paradigmas da Web moderna evoluíram, a relevância dos eventos genéricos tradicionais, como uma carga de página, para implantar personalização e experimentação não funciona mais.
+Aplicativos da Web modernos, como aplicativos de página única, adotaram um modelo que impulsiona o uso rápido da renderização da interface do navegador, que geralmente é independente dos recarregamentos de página. Essas experiências podem ser acionadas por interações do cliente, como rolagens, cliques e movimentos do cursor. À medida que os paradigmas da Web moderna evoluíram, a relevância dos eventos genéricos tradicionais, como uma carga de página, para implantar personalização e experimentação não funciona mais.
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
 ## Benefícios do SDK da Web da plataforma para SPA
 
-Estes são alguns benefícios do uso do Adobe Experience Platform Web SDK para aplicativos de página única:
+Estes são alguns benefícios de usar o Adobe Experience Platform Web SDK para seus aplicativos de página única:
 
 * Capacidade de armazenar em cache todas as ofertas no carregamento da página para reduzir várias chamadas do servidor a uma única chamada de servidor.
 * Melhore tremendamente a experiência do usuário em seu site, pois as ofertas são mostradas imediatamente pelo cache, sem o atraso de tempo introduzido pelas chamadas tradicionais do servidor.
@@ -64,7 +62,7 @@ O conceito de Visualizações pode ser muito mais alargado do que isso. Estes s�
 As Visualizações XDM podem ser aproveitadas no Adobe Target para permitir que os profissionais de marketing executem testes A/B e XT no SPA por meio do Visual Experience Composer. Isso requer a execução das seguintes etapas para concluir uma configuração única do desenvolvedor:
 
 1. Instalar [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
-2. Determine todas as Visualizações XDM no aplicativo de página única que você deseja personalizar.
+2. Determine todas as Visualizações XDM em seu aplicativo de página única que você deseja personalizar.
 3. Depois de definir as Visualizações XDM, para fornecer atividades AB ou XT VEC, implemente a função `sendEvent()` com `renderDecisions` definida como `true` e a Visualização XDM correspondente em seu Aplicativo de Página Única. A Visualização XDM deve ser transmitida em `xdm.web.webPageDetails.viewName`. Essa etapa permite que os profissionais de marketing aproveitem o Visual Experience Composer para iniciar testes A/B e XT para esses XDM.
 
    ```javascript

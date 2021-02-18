@@ -1,25 +1,23 @@
 ---
-title: Renderização de conteúdo personalizado
-seo-title: Adobe Experience Platform Web SDK Renderização de conteúdo personalizado
-description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
-seo-description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform
-keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
+title: Renderizar conteúdo personalizado usando o Adobe Experience Platform Web SDK
+description: Saiba como renderizar conteúdo personalizado com o Adobe Experience Platform Web SDK.
+keywords: personalização;renderDecisions;sendEvent;DecisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
-# Visão geral das opções de personalização
+# Renderizar conteúdo personalizado
 
-A Adobe Experience Platform [!DNL Web SDK] oferece suporte para consultar as soluções de personalização no Adobe, incluindo a Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar oscilações](../personalization/manage-flicker.md).
+A Adobe Experience Platform [!DNL Web SDK] oferece suporte à consulta das soluções de personalização no Adobe, incluindo a Adobe Target. Há dois modos para personalização: recuperar conteúdo que pode ser renderizado automaticamente e conteúdo que o desenvolvedor deve renderizar. O SDK também fornece recursos para [gerenciar o flicker](../personalization/manage-flicker.md).
 
 ## Renderização automática de conteúdo
 
-O SDK renderiza automaticamente o conteúdo personalizado quando você envia um evento para o servidor e define `renderDecisions` como uma opção `true` no evento.
+O SDK renderiza automaticamente o conteúdo personalizado quando você envia um evento para o servidor e define `renderDecisions` como `true` como uma opção no evento.
 
 ```javascript
 alloy("sendEvent", {
@@ -41,7 +39,7 @@ A renderização de conteúdo personalizado é assíncrona, portanto, não deve 
 
 ## Renderização manual do conteúdo
 
-Você pode solicitar que a lista de decisões seja retornada como uma promessa no `sendEvent` comando, especificando a `decisionScopes` opção. Um escopo é uma string que permite que a solução de personalização saiba qual decisão você deseja.
+Você pode solicitar que a lista de decisões seja retornada como uma promessa no comando `sendEvent` especificando a opção `decisionScopes`. Um escopo é uma string que permite que a solução de personalização saiba qual decisão você deseja.
 
 ```javascript
 alloy("sendEvent",{
@@ -97,4 +95,4 @@ Isso retornará uma lista de decisões como um objeto JSON para cada decisão.
 
 ### Recuperar conteúdo automático
 
-Se você quiser que `result.decisions` as decisões de renderização automática sejam incluídas e NÃO tiver a opção Permitir a renderização automática, você poderá definir `renderDecisions` como `false`e incluir o escopo especial `__view__`.
+Se você deseja que `result.decisions` inclua as decisões que podem ser renderizadas automaticamente e NÃO tenha a Ativação para renderizá-las automaticamente, você pode definir `renderDecisions` como `false` e incluir o escopo especial `__view__`.

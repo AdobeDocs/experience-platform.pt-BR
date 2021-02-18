@@ -1,21 +1,19 @@
 ---
-title: Visão geral do IAB Transparency & Consent Framework 2.0
-seo-title: Suporte às preferências de consentimento do Adobe Experience Platform Web SDK do Interative Advertising Bureau Transparency & Consent Framework 2.0
-description: Saiba como suportar as preferências de consentimento do IAB TCF 2.0 com o SDK da Web do Experience Platform
-seo-description: Saiba como suportar as preferências de consentimento do IAB TCF 2.0 com o SDK da Web do Experience Platform
+title: Suporte a IAB TCF 2.0 no SDK da Web da Adobe Experience Platform
+description: Saiba como suportar as preferências de consentimento do IAB TCF 2.0 usando o Adobe Experience Platform Web SDK
 keywords: consentimento;setConsent;Mixin de privacidade do Perfil;Mixin de privacidade do Evento de experiência;Mixin de privacidade;IAB TCF 2.0;CDP em tempo real;Perfil de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
 
-# Visão geral do IAB Transparency &amp; Consent Framework 2.0
+# Suporte a IAB TCF 2.0 no Adobe Experience Platform Web SDK
 
-O SDK da Web da Adobe Experience Platform tem suporte para a Estrutura de Transparência e Consentimento do Interative Advertising Bureau, versão 2.0 (IAB TCF 2.0). Este guia mostra os requisitos para suportar o IAB TCF 2.0 por meio do Adobe Experience Platform Web SDK, integrando-se à Plataforma de dados do cliente em tempo real, Audience Manager, Eventos da experiência, Adobe Analytics e Experience Edge.
+O SDK da Web da Adobe Experience Platform tem suporte para o Interative Advertising Bureau Transparency &amp; Consent Framework, versão 2.0 (IAB TCF 2.0). Este guia mostra os requisitos para suportar o IAB TCF 2.0 por meio do Adobe Experience Platform Web SDK, integrando-se à Plataforma de dados do cliente em tempo real, Audience Manager, Eventos da experiência, Adobe Analytics e Experience Edge.
 
 Além disso, os seguintes guias estão disponíveis para ajudar a aprender como integrar o IAB TCF 2.0 com e sem a Adobe Experience Platform Launch.
 

@@ -1,20 +1,19 @@
 ---
-title: Extensão SDK da Web da Adobe Experience Platform
-seo-title: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
+title: Notas de versão do Adobe Experience Platform Web SDK Extension
 description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
 seo-description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 56f0b3abd859a6b27f0117fb6ec4c312ca93ba5d
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 100%
+source-wordcount: '988'
+ht-degree: 94%
 
 ---
 
 
-# Notas de versão do SDK da Web da Adobe Experience Platform
+# Notas de versão de extensão do Adobe Experience Platform Web SDK
 
-[Saiba mais: notas de versão do SDK da Web da Adobe Experience Platform](https://docs.adobe.com/content/help/pt-BR/experience-platform/edge/release-notes.html)
+Este documento aborda as notas de versão da extensão Adobe Experience Platform Web SDK para Adobe Experience Platform Launch. Para obter as notas de versão mais recentes do próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://docs.adobe.com/content/help/pt-BR/experience-platform/edge/release-notes.html).
 
 ## 4 de novembro de 2020
 

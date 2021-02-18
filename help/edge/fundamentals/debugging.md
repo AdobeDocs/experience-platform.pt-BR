@@ -1,13 +1,11 @@
 ---
-title: Depuração
-seo-title: Depuração do Adobe Experience Platform Web SDK
-description: Saiba como alternar a depuração do SDK da Web do Experience Platform
-seo-description: Saiba como alternar a depuração do SDK da Web do Experience Platform
-keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
+title: Depuração no Adobe Experience Platform Web SDK
+description: Saiba como alternar os recursos de depuração no SDK da Web do Experience Platform.
+keywords: depurar o sdk da Web;depurar;configurar;configurar comando;depurar comando;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -25,7 +23,7 @@ A depuração está desativada por padrão, mas pode ser ativada de três maneir
 
 ## Alternar a depuração com o comando Configurar
 
-Ao configurar o SDK usando o `configure` comando, ative a depuração definindo a opção `debugEnabled` como `true`.
+Ao configurar o SDK usando o comando `configure`, ative a depuração definindo a opção `debugEnabled` como `true`.
 
 ```javascript
 alloy("configure", {
@@ -41,7 +39,7 @@ alloy("configure", {
 
 ## Alternar a depuração com o comando Depurar
 
-Alterne a depuração com um `debug` comando separado da seguinte maneira:
+Alterne a depuração com um comando `debug` separado da seguinte forma:
 
 ```javascript
 alloy("setDebug", {
@@ -49,29 +47,29 @@ alloy("setDebug", {
 });
 ```
 
-Se você preferir não alterar o código na sua página da Web ou não quiser que as mensagens de registro sejam produzidas para todos os usuários do seu site, isso é particularmente útil, pois você pode executar o `debug` comando no console JavaScript do seu navegador a qualquer momento.
+Se você preferir não alterar o código na sua página da Web ou não quiser que as mensagens de registro sejam produzidas para todos os usuários do seu site, isso é particularmente útil, pois você pode executar o comando `debug` no console JavaScript do seu navegador a qualquer momento.
 
 ## Alternar a depuração com um parâmetro de string de query
 
-Alterne a depuração definindo um parâmetro de string de `alloy_debug` query para `true` ou `false` como segue:
+Alterne a depuração definindo um parâmetro de sequência de query `alloy_debug` para `true` ou `false` da seguinte forma:
 
 ```HTTP
 http://example.com/?alloy_debug=true
 ```
 
-Semelhante ao `debug` comando, se você preferir não alterar o código em sua página da Web ou não quiser que as mensagens de registro sejam produzidas para todos os usuários do seu site, isso é particularmente útil, pois é possível definir o parâmetro da string de query ao carregar a página da Web dentro do navegador.
+Semelhante ao comando `debug`, se você preferir não alterar o código em sua página da Web ou não quiser que as mensagens de registro sejam produzidas para todos os usuários do seu site, isso é particularmente útil, pois você pode definir o parâmetro da string de query ao carregar a página da Web dentro do seu navegador.
 
 ## Prioridade e duração
 
-Quando a depuração é definida pelo parâmetro de string de query ou comando, ela substitui qualquer `debug` opção definida no `debug` `configure` comando. Nesses dois casos, a depuração também permanece ativada durante a sessão. Em outras palavras, se você ativar a depuração usando o comando debug ou o parâmetro da string de query, ela permanecerá ativada até uma das seguintes opções:
+Quando a depuração é definida pelo parâmetro `debug` de comando ou string de query, ela substitui qualquer opção `debug` definida no comando `configure`. Nesses dois casos, a depuração também permanece ativada durante a sessão. Em outras palavras, se você ativar a depuração usando o comando debug ou o parâmetro da string de query, ela permanecerá ativada até uma das seguintes opções:
 
 * O fim da sessão
-* Execute o `debug` comando
+* Execute o comando `debug`
 * Você define o parâmetro da string de query novamente
 
 ## Recuperando informações da biblioteca
 
-Geralmente, é útil acessar alguns detalhes por trás da biblioteca que você carregou em seu site. Para fazer isso, execute o `getLibraryInfo` comando da seguinte maneira:
+Geralmente, é útil acessar alguns detalhes por trás da biblioteca que você carregou em seu site. Para fazer isso, execute o comando `getLibraryInfo` da seguinte maneira:
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -79,6 +77,6 @@ alloy("getLibraryInfo").then(function(result) {
 });
 ```
 
-Atualmente, o objeto fornecido `libraryInfo` contém as seguintes propriedades:
+Atualmente, o objeto `libraryInfo` fornecido contém as seguintes propriedades:
 
 * `version` Esta é a versão da biblioteca carregada. Por exemplo, se a versão da biblioteca que está sendo carregada fosse 1.0.0, o valor seria `1.0.0`.

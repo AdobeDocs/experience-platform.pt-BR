@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: painéis Experience Platform
+title: Introdução aos Painéis Experience Platform
 topic: overview
 type: Documentation
-description: 'A Adobe Experience Platform fornece vários painéis através dos quais você pode visualização informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários. '
+description: 'Explore vários painéis no Adobe Experience Platform para visualização de informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários. '
 translation-type: tm+mt
-source-git-commit: 5d33b8db91491ec5d7f45b3ebe3067cd382d9d46
+source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%

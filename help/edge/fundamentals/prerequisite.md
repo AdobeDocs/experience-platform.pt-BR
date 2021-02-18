@@ -1,13 +1,11 @@
 ---
 title: Pré-requisitos para usar o Adobe Experience Platform Web SDK
-seo-title: Pré-requisitos para usar o Adobe Experience Platform Web SDK
-description: Pré-requisitos para usar o Adobe Experience Platform Web SDK
-seo-description: Pré-requisitos para usar o Adobe Experience Platform Web SDK
+description: Saiba mais sobre os pré-requisitos para usar o Adobe Experience Platform Web SDK.
 keywords: domínio próprio;CNAME;schema;criar schema;iniciar;extensão sdk da Web;extensão;extensão;id de configuração;ferramenta de configuração;elemento de dados;criar elemento de dados;Objeto XDM;sendEvent;send Evento;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---

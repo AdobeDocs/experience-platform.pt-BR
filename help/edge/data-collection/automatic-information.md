@@ -1,21 +1,19 @@
 ---
-title: Informações coletadas automaticamente
-seo-title: Informações coletadas automaticamente pelo Adobe Experience Platform Web SDK
-description: Descrição de cada informação que o Adobe Experience Cloud SDK coleta automaticamente
-seo-description: Descrição de cada informação que o Adobe Experience Cloud SDK coleta automaticamente
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+title: Coleta automática de informações no Adobe Experience Platform Web SDK
+description: Uma visão geral de cada informação que o SDK do Adobe Experience Platform coleta automaticamente.
+keywords: coletar informações;contexto;configurar;dispositivo;screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;screenWidth;screen;screenHeight;viewportHeight;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementationDetails;nome;version;localTime;localOfffzone set;local Deslocamento do fuso horário;carimbo de data e hora;web;url;webPageDetails;web Page Details;webReferrer;web Quem indicou;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 9%
+source-wordcount: '422'
+ht-degree: 8%
 
 ---
 
 
-# Informações coletadas automaticamente
+# Informações automaticamente coletadas
 
-O Adobe Experience Platform Web SDK coleta várias informações automaticamente sem nenhuma configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a `context` opção no `configure` comando. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
+O Adobe Experience Platform Web SDK coleta várias informações automaticamente sem nenhuma configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a opção `context` no comando `configure`. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
 
 ## Dispositivo (`device`)
 
@@ -57,7 +55,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-O tipo de ambiente pelo qual a experiência surgiu. O Adobe Experience Platform Web SDK sempre define como `browser`.
+O tipo de ambiente pelo qual a experiência surgiu. O Adobe Experience Platform Web SDK sempre define para `browser`.
 
 ### Altura do visor
 
@@ -110,7 +108,7 @@ Informações sobre a localização do usuário final.
 | ------------------------------------- | ------------------------------- |
 | `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
 
-Carimbo de data e hora local para o usuário final no formato ISO estendido simplificado [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
+Carimbo de data e hora local para o usuário final em formato ISO simplificado e estendido [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ### Deslocamento do fuso horário local
 
@@ -128,7 +126,7 @@ Número de minutos em que o usuário é deslocado do GMT.
 
 O carimbo de data e hora do evento.  Esta parte do contexto não pode ser removida.
 
-Carimbo de data e hora UTC para o usuário final no formato ISO estendido simplificado [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
+Carimbo de data e hora UTC para o usuário final em formato ISO simplificado e estendido [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ## Detalhes da Web (`web`)
 

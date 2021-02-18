@@ -1,13 +1,11 @@
 ---
-title: Gerenciar cintilação para experiências personalizadas
-seo-title: Adobe Experience Platform Web SDK gerenciando o flicker
-description: Saiba como gerenciar oscilações nas experiências do usuário
-seo-description: Saiba como gerenciar oscilações com as propriedades do SDK da Web do Experience Platform
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
+title: Gerenciar o Flicker para experiências personalizadas usando o Adobe Experience Platform Web SDK
+description: Saiba como usar o Adobe Experience Platform Web SDK para gerenciar oscilações nas experiências do usuário.
+keywords: público alvo;flicker;prehideStyle;assíncrono;assíncrono;
 translation-type: tm+mt
-source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -25,9 +23,9 @@ A funcionalidade de gerenciamento de oscilação tem algumas fases:
 
 ## Pré-ocultar
 
-Durante a fase de pré-ocultação, o SDK usa a opção de `prehidingStyle` configuração para criar uma tag de estilo HTML e anexá-la ao DOM para garantir que partes grandes da página estejam ocultas. Se não tiver certeza de quais partes da página serão personalizadas, é recomendável definir `prehidingStyle` como `body { opacity: 0 !important }`. Isso garante que a página inteira esteja oculta. No entanto, isso tem o lado negativo de levar a um desempenho pior de renderização de página relatado por ferramentas como Lighthouse, Testes de página da Web etc. Para ter o melhor desempenho de renderização de página, é recomendável definir `prehidingStyle` para uma lista de elementos de container que contenham as partes da página que serão personalizadas.
+Durante a fase de pré-ocultação, o SDK usa a opção de configuração `prehidingStyle` para criar uma tag de estilo HTML e anexá-la ao DOM para garantir que partes grandes da página estejam ocultas. Se não tiver certeza de quais partes da página serão personalizadas, é recomendável definir `prehidingStyle` como `body { opacity: 0 !important }`. Isso garante que a página inteira esteja oculta. No entanto, isso tem o lado negativo de levar a um desempenho pior de renderização de página relatado por ferramentas como Lighthouse, Testes de página da Web etc. Para ter o melhor desempenho de renderização de página, é recomendável definir `prehidingStyle` como uma lista de elementos de container que contêm as partes da página que serão personalizadas.
 
-Supondo que você tenha uma página HTML como a abaixo e saiba que somente os elementos `bar` e `bazz` container serão personalizados:
+Supondo que você tenha uma página HTML como a abaixo e que somente os elementos de container `bar` e `bazz` serão sempre personalizados:
 
 ```html
 <html>
@@ -49,11 +47,11 @@ Supondo que você tenha uma página HTML como a abaixo e saiba que somente os el
 </html>
 ```
 
-Então, `prehidingStyle` deveria ser definido como algo como `#bar, #bazz { opacity: 0 !important }`.
+Em seguida, `prehidingStyle` deve ser definido para algo como `#bar, #bazz { opacity: 0 !important }`.
 
 ## Pré-processamento
 
-A fase de pré-processamento é iniciada assim que o SDK recebe o conteúdo personalizado do servidor. Durante essa fase, a resposta é pré-processada, garantindo que os elementos que precisam conter conteúdo personalizado estejam ocultos. Depois que esses elementos estiverem ocultos, a tag de estilo HTML que foi criada com base na opção de `prehidingStyle` configuração será removida e o corpo HTML ou os elementos de container ocultos serão exibidos.
+A fase de pré-processamento é iniciada assim que o SDK recebe o conteúdo personalizado do servidor. Durante essa fase, a resposta é pré-processada, garantindo que os elementos que precisam conter conteúdo personalizado estejam ocultos. Depois que esses elementos estiverem ocultos, a tag de estilo HTML que foi criada com base na opção de configuração `prehidingStyle` será removida e o corpo HTML ou os elementos de container ocultos serão exibidos.
 
 ## Renderização
 
@@ -75,4 +73,4 @@ A recomendação é sempre carregar o SDK de forma assíncrona para obter o melh
 </script>
 ```
 
-Para garantir que o corpo HTML ou os elementos do container não fiquem ocultos por um longo período de tempo, o trecho de pré-ocultação usa um timer que, por padrão, remove o trecho após `3000` milissegundos. Os `3000` milissegundos são o tempo máximo de espera. Se a resposta do servidor tiver sido recebida e processada antes, a tag de estilo HTML pré-ocultada será removida assim que possível.
+Para garantir que o corpo HTML ou os elementos do container não fiquem ocultos por um longo período de tempo, o trecho de pré-ocultação usa um timer que, por padrão, remove o trecho após `3000` milissegundos. Os milissegundos `3000` são o tempo máximo de espera. Se a resposta do servidor tiver sido recebida e processada antes, a tag de estilo HTML pré-ocultada será removida assim que possível.

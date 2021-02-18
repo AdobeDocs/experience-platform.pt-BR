@@ -1,13 +1,11 @@
 ---
-title: Interagir com várias propriedades
-seo-title: Adobe Experience Platform Web SDK Interagindo com várias propriedades
-description: Saiba como interagir com várias propriedades do SDK da Web do Experience Platform
-seo-description: Saiba como interagir com várias propriedades do SDK da Web do Experience Platform
-keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
+title: Interagir com várias propriedades no Adobe Experience Platform Web SDK
+description: Saiba como interagir com várias propriedades do SDK da Web do Experience Platform.
+keywords: várias propriedades;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -33,7 +31,7 @@ O SDK permite que você crie uma instância separada para cada propriedade adici
 <script src="alloy.js" async></script>
 ```
 
-Como resultado, o script cria duas instâncias do SDK. A função global para interagir com a primeira instância é nomeada `mycustomname1` e a função global para interagir com a segunda instância é nomeada `mycustomname2`.
+Como resultado, o script cria duas instâncias do SDK. A função global para interagir com a primeira instância é chamada de `mycustomname1` e a função global para interagir com a segunda instância é chamada de `mycustomname2`.
 
 Ao criar duas instâncias separadas, cada uma pode ser configurada para uma propriedade diferente. Qualquer comunicação ou persistência de dados que ocorre devido à interação com `mycustomname1` é mantida isolada de `mycustomname2` e vice-versa.
 
@@ -63,8 +61,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Certifique-se de executar o `configure` comando para cada instância antes de executar outros comandos na mesma instância.
+Certifique-se de executar o comando `configure` para cada instância antes de executar outros comandos na mesma instância.
 
 ## Limitações
 
-Para evitar conflitos com cookies, somente uma instância do Adobe Experience Platform [!DNL Web SDK] em uma página pode ter uma instância específica `edgeConfigId`.  Da mesma forma, somente uma instância do Adobe Experience Platform [!DNL Web SDK] pode ter um particular `orgId`.
+Para evitar conflitos com cookies, somente uma instância do Adobe Experience Platform [!DNL Web SDK] em uma página pode ter um `edgeConfigId` específico.  Da mesma forma, somente uma instância do Adobe Experience Platform [!DNL Web SDK] pode ter um `orgId` específico.

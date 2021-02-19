@@ -5,10 +5,10 @@ title: Visão geral dos fluxos de dados
 topic: overview
 description: Este documento apresenta fluxos de dados, expressando como eles são usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 6%
+source-wordcount: '238'
+ht-degree: 5%
 
 ---
 
@@ -17,8 +17,19 @@ ht-degree: 6%
 
 No Adobe Experience Platform, os dados são ingeridos de uma grande variedade de fontes, analisados dentro do Experience Platform e ativados para uma grande variedade de destinos. A plataforma facilita o processo de rastreamento desse fluxo potencialmente não linear de dados ao fornecer transparência com fluxos de dados.
 
-Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de público alvo, para Serviço de identidade e Perfil e para destinos.
+## Uso de dataflows
+
+Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de público alvo, onde são utilizados pelo Serviço de identidade e pelo Perfil do cliente em tempo real antes de serem ativados para destinos.
+
+Para saber mais sobre o uso de fluxos de dados em conectores de origem, leia a [visão geral das fontes](../sources/home.md).
+
+## Preparação de dados
+
+O Data Prep permite que os engenheiros de dados mapeiem, transformem e validem dados para e do Experience Data Model (XDM).
+
+Para saber mais sobre como preparar os dados depois de ingeridos, leia a [visão geral do Data Prep](../data-prep/home.md).
 
 ## Monitoramento de fluxos de dados
 
-O monitoramento de fluxos de dados pode ser feito usando as APIs da plataforma ou a interface do usuário da plataforma. Para saber como monitorar os fluxos de dados usando a API, leia o tutorial [monitoramento da API de fluxo de dados](./api/monitor.md). Para saber como monitorar os fluxos de dados na interface do usuário da plataforma, leia o [fluxo de dados de monitoramento para o tutorial de fontes](./ui/monitor-sources.md) ou o [fluxo de dados de monitoramento para destinos tutorial](./ui/monitor-destinations.md).
+O monitoramento de fluxos de dados pode ser feito usando APIs de plataforma ou a interface do usuário da plataforma. Para saber como monitorar os fluxos de dados usando a API, leia o tutorial [monitoramento da API de fluxo de dados](./api/monitor.md). Para saber como monitorar fluxos de dados na interface do usuário da plataforma, leia os tutoriais em [fluxos de dados de monitoramento para fontes](./ui/monitor-sources.md) e [fluxos de dados de monitoramento para destinos](./ui/monitor-destinations.md).
+

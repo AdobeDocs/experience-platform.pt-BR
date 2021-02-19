@@ -3,9 +3,9 @@ keywords: Gerenciador de lances do DoubleClick;Gerenciador de lances do DoubleCl
 title: Conexão com o Google Display & Video 360
 description: O Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar o redirecionamento e a audiência de campanhas digitais direcionadas em fontes de inventário de Vídeo e Móvel.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Googl
 >
 >Se já existir uma conexão com esse destino, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre [!UICONTROL Ativate] e [!UICONTROL Configure], consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação da área de trabalho de destino.
 
-Na etapa **Setup** do fluxo de trabalho de criação de destino, preencha as [!UICONTROL Informações Básicas] para o destino, bem como os casos de uso de marketing que devem se aplicar a este destino.
+Na etapa **Setup** do fluxo de trabalho de criação de destino, preencha as [!UICONTROL Informações básicas] para o destino, bem como as ações de marketing que devem ser aplicadas a este destino.
 
 ![Informações básicas sobre o Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
 
@@ -66,7 +66,7 @@ Na etapa **Setup** do fluxo de trabalho de criação de destino, preencha as [!U
    * Use `Invite Advertiser` para permitir que as audiências sejam compartilhadas somente com uma marca específica na sua conta de Vídeo e Vídeo 360.
    * Use `Invite Partner` para permitir que as audiências sejam compartilhadas com todas as marcas em sua conta de Vídeo e Vídeo 360.
 * **[!UICONTROL ID]** da conta: Preencha sua ID  **[!DNL Invite partner]** ou  **[!DNL Invite advertiser]** conta com o Google. Normalmente, essa é uma ID de seis ou sete dígitos.
-* **[!UICONTROL Caso]** de uso de marketing: Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >

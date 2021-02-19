@@ -4,9 +4,9 @@ title: Criar um destino de rede social
 type: Tutorial
 description: Saiba como se conectar à sua rede social e às suas contas de anúncio no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Depois que suas credenciais forem confirmadas e o Adobe Experience Cloud estiver
 
 Na etapa **[!UICONTROL Setup]**, digite um [!UICONTROL Nome] e um [!UICONTROL Descrição] para o fluxo de ativação e preencha a [!UICONTROL ID da conta] da sua conta de anúncio de rede social.
 
-Também nesta etapa, você pode selecionar qualquer **[!UICONTROL caso de uso de marketing]** que deve se aplicar a este destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+Também nesta etapa, você pode selecionar qualquer **[!UICONTROL ação de marketing]** que deve se aplicar a este destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 

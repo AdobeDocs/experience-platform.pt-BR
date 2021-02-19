@@ -5,9 +5,9 @@ seo-title: Visão geral dos destinos
 description: Saiba como ativar os dados da Adobe Experience Platform para destinos para campanhas de marketing entre canais, emails, anúncios direcionados e muito mais.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar Destinos no Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -53,12 +53,12 @@ Para obter mais informações sobre controles de acesso, consulte o [guia do usu
 
 O controle de dados é aplicado para destinos da plataforma por meio de:
 
-* *Casos de uso de marketing* que você pode selecionar no fluxo de trabalho de criação de destinos;
-* *As* políticas de uso de dados que restringem a ativação de determinados rótulos de uso para destinos com determinados casos de uso de marketing.
+* *Ações de marketing* que você pode selecionar no fluxo de trabalho de criação de destinos;
+* *As* políticas de uso de dados que restringem a ativação de determinados rótulos de uso para destinos com determinadas ações de marketing.
 
-Consulte [!DNL Data Governance] na documentação da plataforma para obter mais informações sobre [casos de uso de marketing](../data-governance/policies/overview.md) e [resolução de violações de política de dados](../data-governance/enforcement/auto-enforcement.md).
+Consulte [!DNL Data Governance] na documentação da plataforma para obter mais informações sobre [ações de marketing](../data-governance/policies/overview.md) e [resolução de violações de política de dados](../data-governance/enforcement/auto-enforcement.md).
 
-Para obter mais informações sobre a seleção de casos de uso de marketing no fluxo de trabalho de criação de destino, consulte as seguintes páginas para os diferentes tipos de destino na Plataforma:
+Para obter mais informações sobre a seleção de ações de marketing no fluxo de trabalho de criação de destino, consulte as seguintes páginas para os diferentes tipos de destino na Plataforma:
 
 * [Destinos de publicidade - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Destinos de publicidade - Google Ads](./catalog/advertising/google-ads-destination.md)

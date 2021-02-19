@@ -4,9 +4,9 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Provedores de serviço de email (ESPs) permitem gerenciar suas atividades de marketing de email, como para enviar campanhas de email promocionais.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Na etapa **[!UICONTROL Setup]**, digite um nome e uma descrição para o novo de
 
 Se você selecionou Amazon S3 como opção de armazenamento na etapa anterior, insira o nome do bucket e o caminho da pasta no destino do armazenamento na nuvem onde os arquivos serão entregues. Para a opção armazenamento SFTP, insira o caminho da pasta onde os arquivos serão entregues.
 
-Também nesta etapa, você pode selecionar qualquer caso de uso de marketing que deve se aplicar a esse destino. Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+Também nesta etapa, é possível selecionar qualquer ação de marketing que deve ser aplicada a esse destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Etapa de configuração de email](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 

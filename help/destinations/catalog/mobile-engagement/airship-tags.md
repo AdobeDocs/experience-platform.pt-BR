@@ -3,9 +3,9 @@ keywords: etiquetas de dirigível;destino de dirigível
 title: Ligação de Etiquetas de Avião
 description: Transmita dados de Audiência para o Airship sem problemas como Etiquetas de Audiência para definição de metas dentro do Airship.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ Depois que suas credenciais forem confirmadas e a Adobe Experience Platform esti
 
 Na etapa **[!UICONTROL Authentication]**, digite um **[!UICONTROL Name]** e um **[!UICONTROL Description]** para o fluxo de ativação.
 
-Também nesta etapa, você pode selecionar data center dos EUA ou da UE, dependendo de qual data center [!DNL Airship] se aplica a esse destino. Por fim, selecione um ou mais casos de uso de marketing para os quais os dados serão exportados para o destino. Você pode selecionar entre casos de uso de marketing definidos pelo Adobe ou criar os seus próprios. Para obter mais informações sobre casos de uso de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+Também nesta etapa, você pode selecionar data center dos EUA ou da UE, dependendo de qual data center [!DNL Airship] se aplica a esse destino. Finalmente, selecione uma ou mais **[!UICONTROL Ações de marketing]** para as quais os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar as suas próprias ações. Para obter mais informações sobre ações de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 Selecione **[!UICONTROL Criar destino]** depois de preencher os campos acima.
 

@@ -4,9 +4,9 @@ title: Tipos de destino e categorias
 seo-title: Tipos de destino e categorias
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ As extensões são úteis quando os dados do evento são usados para acionar uma
 
 ## Categorias de destino
 
-As conexões e extensões no catálogo de [destinos](https://platform.adobe.com/destination/catalog) são agrupadas por categoria de destino (**Publicidade**, **armazenamento da nuvem**, **plataformas de Pesquisa**, **Marketing por email**, etc.), dependendo do caso de uso de marketing que eles ajudam a realizar. Para obter mais informações sobre cada uma das categorias, bem como sobre os destinos incluídos em cada categoria, consulte a [Documentação do catálogo de destinos](./catalog/overview.md).
+As conexões e extensões no catálogo de [destinos](https://platform.adobe.com/destination/catalog) são agrupadas por categoria de destino (**Publicidade**, **armazenamento da nuvem**, **plataformas de Pesquisa**, **Marketing por email**, etc.), dependendo da ação de marketing que ajudam a realizar. Para obter mais informações sobre cada uma das categorias, bem como sobre os destinos incluídos em cada categoria, consulte a [Documentação do catálogo de destinos](./catalog/overview.md).
 
 ![Categorias de destino](./assets/destination-types/destination-categories-menu.png)
 

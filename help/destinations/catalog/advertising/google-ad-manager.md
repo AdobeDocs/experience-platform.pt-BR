@@ -3,9 +3,9 @@ keywords: gerenciador de publicidade do google;google ad;doubleclick;DoubleClick
 title: Conexão com o Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de serviço de anúncios do Google que oferece aos editores os meios para gerenciar a exibição de anúncios em seus sites, por meio de vídeos e em aplicativos móveis.  '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Na etapa **Setup** do fluxo de trabalho de criação de destino, preencha [!UICO
    * Usar `DFP by Google` para [!DNL DoubleClick] para editores
    * Use `AdX buyer` para [!DNL Google AdX]
 * **[!UICONTROL ID]** da conta: Preencha a ID da conta com  [!DNL Google]. Essa pode ser sua ID de rede ou sua ID do link de Audiência. Normalmente, essa é uma ID de oito dígitos.
-* **[!UICONTROL Caso]** de uso de marketing: Os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >

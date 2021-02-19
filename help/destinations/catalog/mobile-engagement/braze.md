@@ -3,9 +3,9 @@ keywords: móvel; brasa; Mensagens;
 title: Conexão com o Braze
 description: O Brasil é uma plataforma abrangente de envolvimento do cliente que potencializa experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Clique em **[!UICONTROL Próximo]**. Na etapa [!UICONTROL Authentication], é ne
 * **[!UICONTROL Nome]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: insira uma descrição que o ajudará a identificar esse destino no futuro.
 * **[!UICONTROL Instância]** do Ponto de Extremidade: pergunte ao seu  [!DNL Braze] representante qual instância de endpoint você deve usar.
-* **[!UICONTROL Caso]** de uso de marketing: os casos de uso de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar de casos de uso de marketing definidos pelo Adobe ou criar seu próprio caso de uso de marketing. Para obter mais informações sobre casos de uso de marketing, consulte a página [Data Governance no Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obter informações sobre casos individuais de uso de marketing definidos pelo Adobe, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Ação]** de marketing: as ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Data Governance no Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Etapa de autenticação do site](../../assets/catalog/mobile-engagement/braze/authentication.png)
 

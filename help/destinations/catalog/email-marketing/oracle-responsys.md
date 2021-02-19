@@ -3,9 +3,9 @@ keywords: email;email;email;email;destinos de email;oracle responsys destino
 title: Conexão oracle Responsys
 description: A Responsys é uma ferramenta de marketing por email empresarial para campanhas de marketing entre canais oferecida pela Oracle para personalizar interações entre email, dispositivos móveis, vídeos e redes sociais.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,10 @@ Para conexões **[!UICONTROL SFTP com chave SSH]**, você deve fornecer Domínio
 Na etapa **[!UICONTROL Setup]**, preencha as informações relevantes para seu destino, conforme mostrado abaixo:
 - **[!UICONTROL Nome]**: Escolha um nome relevante para o seu destino.
 - **[!UICONTROL Descrição]**: Insira uma descrição para o seu destino.
+- **[!UICONTROL Nome]** do grupo: Seu bucket Amazon S3, onde a Platform depositará a exportação de dados. Sua entrada deve ter entre 3 e 63 caracteres. Deve começar e terminar com uma letra ou número. Deve conter apenas letras minúsculas, números ou hífens ( - ). Não deve ser formatado como um endereço IP (por exemplo, 192.100.1.1).
 - **[!UICONTROL Caminho]** da pasta: Forneça o caminho no local do armazenamento onde a Plataforma depositará seus dados de exportação como CSV ou arquivos delimitados por tabulação.
 - **[!UICONTROL Formato]** de arquivo:  **** CSV ou  **TAB_DELIMITED**. Selecione o formato de arquivo a ser exportado para o local do armazenamento.
+- **[!UICONTROL Ações]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Data Governance no Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Informações básicas sobre a resposta](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
@@ -55,7 +57,7 @@ Quando [ativar segmentos](../../ui/activate-destinations.md) no destino [!DNL Or
 
 ## Dados exportados {#exported-data}
 
-Para destinos [!DNL Oracle Responsys], a plataforma cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
+Para destinos [!DNL Oracle Responsys], a Platform cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
 
 ## Configurar importação de dados para [!DNL Oracle Responsys] {#import-data-into-responsys}
 

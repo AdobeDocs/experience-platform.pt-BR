@@ -3,9 +3,9 @@ keywords: email;Email;email;email;email destinos;adobe campanha;campanha
 title: Conexão Adobe Campaign
 description: A Adobe Campaign é um conjunto de soluções que ajudam a personalizar e fornecer campanhas em todos os seus canais online e offline.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,7 @@ Em **[!UICONTROL Informações básicas]**, preencha as informações relevantes
 - **[!UICONTROL Caminho]** da pasta: Forneça o caminho no local do armazenamento onde a Plataforma depositará seus dados de exportação como CSV ou arquivos delimitados por tabulação.
 - **[!UICONTROL Container]**:  *Para conexões* Blob. O container que armazena o Blob no caminho da sua pasta.
 - **[!UICONTROL Formato]** de arquivo:  **** CSV ou  **TAB_DELIMITED**. Selecione o formato de arquivo a ser exportado para o local do armazenamento.
+- **[!UICONTROL Ações]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. É possível selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Data Governance no Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Informações básicas sobre campanhas](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -62,7 +63,7 @@ Quando [ativar segmentos](../../ui/activate-destinations.md) no destino Adobe Ca
 
 ## Dados exportados {#exported-data}
 
-Para destinos [!DNL Adobe Campaign], a plataforma cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
+Para destinos [!DNL Adobe Campaign], a Platform cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
 
 ## Configurar importação de dados para o Adobe Campaign {#import-data-into-campaign}
 

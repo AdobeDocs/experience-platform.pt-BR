@@ -4,7 +4,7 @@ description: Saiba como configurar o Adobe Experience Platform Web SDK.
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;url Destinations ationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 11%
@@ -60,7 +60,7 @@ Indica se a depuração deve ser ativada. A configuração para `true` ativa os 
 | Validação síncrona | Valida os dados que estão sendo coletados em relação ao schema e retorna um erro na resposta sob o seguinte rótulo: `collect:error OR success` |
 | Registro do console | Permite que mensagens de depuração sejam exibidas no console JavaScript do navegador |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ------------------ |
@@ -141,7 +141,7 @@ Habilita [!DNL Audience Manager] destinos de URL, o que permite o acionamento de
 
 ## Opções de identidade
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |

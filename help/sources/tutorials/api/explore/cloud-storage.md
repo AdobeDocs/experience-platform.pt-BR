@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;nuvem armazenamento;armazenamento na nuvem
 solution: Experience Platform
 title: Explore um sistema de Armazenamento cLoud usando a API de serviço de fluxo
-topic: overview
+topic: visão geral
 description: Este tutorial usa a API de Serviço de Fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -30,14 +30,15 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 Para explorar um armazenamento em nuvem de terceiros usando [!DNL Platform] APIs, é necessário ter uma ID de conexão válida. Se você ainda não tiver uma conexão para o armazenamento com o qual deseja trabalhar, poderá criar uma através dos seguintes tutoriais:
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Armazenamento Gen2 do Azure Data Lake](../create/cloud-storage/adls-gen2.md)
-* [Armazenamento de Arquivo do Azure](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google Cloud Store](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Lendo chamadas de exemplo da API
 
@@ -175,4 +176,4 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo n
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja inserir em [!DNL Platform] e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu armazenamento em nuvem e trazê-los para a plataforma](../collect/cloud-storage.md).
+Ao seguir este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja inserir em [!DNL Platform] e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu armazenamento em nuvem e trazê-los para a Plataforma](../collect/cloud-storage.md).

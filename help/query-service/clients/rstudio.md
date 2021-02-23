@@ -5,10 +5,10 @@ title: Conectar o RStudio ao serviço de Query
 topic: connect
 description: Este documento percorre as etapas para conectar o R Studio ao Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 2%
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -20,39 +20,40 @@ Este documento percorre as etapas para conectar [!DNL RStudio] ao Adobe Experien
 >[!NOTE]
 >
 > Este guia supõe que você já tenha acesso a [!DNL RStudio] e esteja familiarizado com como usá-lo. Mais informações sobre [!DNL RStudio] podem ser encontradas na [oficial [!DNL RStudio] documentação](https://rstudio.com/products/rstudio/).
+> 
+> Além disso, para usar o RStudio com o Serviço de Query, é necessário instalar o Driver PostgreSQL JDBC 4.2. Você pode baixar o driver JDBC do [site oficial do PostgreSQL](https://jdbc.postgresql.org/download.html).
 
 ## Criar uma conexão [!DNL Query Service] na interface [!DNL RStudio]
 
-Depois de instalar [!DNL RStudio], na tela **[!DNL Console]** que é exibida, primeiro você precisará preparar seu script R para usar [!DNL PostgreSQL].
+Depois de instalar [!DNL RStudio], é necessário instalar o pacote RJDBC. Vá para o painel **[!DNL Packages]** e selecione **[!DNL Install]**.
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+Um pop-up é exibido, mostrando a tela **[!DNL Install Packages]**. Certifique-se de que **[!DNL Repository (CRAN)]** esteja selecionado para a seção **[!DNL Install from]**. O valor para **[!DNL Packages]** deve ser `RJDBC`. Verifique se **[!DNL Install dependencies]** está selecionado. Depois de confirmar se todos os valores estão corretos, selecione **[!DNL Install]** para instalar os pacotes.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+Agora que o pacote RJDBC foi instalado, reinicie o RStudio para concluir o processo de instalação.
+
+Depois que o RStudio for reiniciado, você poderá se conectar ao Serviço de Query. Selecione o pacote **[!DNL RJDBC]** no painel **[!DNL Packages]** e insira o seguinte comando no console:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Depois de preparar seu script R para usar [!DNL PostgreSQL], agora é possível conectar [!DNL RStudio] a [!DNL Query Service] carregando o driver [!DNL PostgreSQL].
+Onde {PATH TO THE POSTGRESQL JDBC JAR} representa o caminho para o JAR JDBC PostgreSQL que foi instalado no computador.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+Agora, você pode criar sua conexão com o Query Service inserindo o seguinte comando no console:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | O nome do banco de dados que será usado. |
-| `{HOST_NUMBER` e `{PORT_NUMBER}` | O terminal do host e sua porta para o Serviço de Query. |
-| `{USERNAME}` e `{PASSWORD}` | As credenciais de logon que serão usadas. O nome de usuário assume a forma de `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
 >Para obter mais informações sobre como localizar seu nome de banco de dados, host, porta e credenciais de logon, visite a página [credenciais em Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform] e selecione **[!UICONTROL Query]**, seguido por **[!UICONTROL Credenciais]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Gravando query
 

@@ -5,9 +5,9 @@ user-guide-title: Ajuda do Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Guia do Data Science Workspace
 user-guide-description: Use o aprendizado de máquina para desenvolver, treinar e pontuar modelos e receitas com Adobe Sensei e notebooks JupyterLab.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: fe2872519cfeda8024a5ad62f6a71e854822f858
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '237'
 ht-degree: 17%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 17%
    * [Acesso aos dados](jupyterlab/access-notebook-data.md)
    * [Analisar seus dados](jupyterlab/analyze-your-data.md)
    * [serviço query](jupyterlab/query-service.md)
+   * [Análise de dados exploratórios (EDA)](jupyterlab/eda-notebook.md)
    * [Criar uma fórmula](jupyterlab/create-a-recipe.md)
    * [Colaborar no JupyterLab usando Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizado de máquina do Sensei {#api}

@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;popular topics;nuvem armazenamento data;streaming data;streaming data;streaming data;streaming
 solution: Experience Platform
 title: Coletar dados de transmissão usando conectores de origem e APIs
-topic: overview
+topic: visão geral
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de fluxo e trazê-los para a plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,8 @@ Este tutorial requer que você tenha uma ID de conexão válida para um conector
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 

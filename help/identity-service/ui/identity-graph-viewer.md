@@ -5,23 +5,25 @@ title: Visão geral do visualizador do gráfico de identidade
 topic: tutorial
 description: Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com sua marca em diferentes canais.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
 
-# (Beta) Visão geral do visualizador do gráfico de identidade
-
->[!NOTE]
->
->O visualizador de gráficos de identidade está atualmente em beta. Seus recursos estão sujeitos a mudanças.
+# Visão geral do visualizador de gráficos de identidade
 
 Um gráfico de identidade é um mapa de relacionamentos entre diferentes identidades para um cliente específico, fornecendo uma representação visual de como o cliente interage com sua marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo Adobe Experience Platform Identity Service em tempo quase real, em resposta à atividade do cliente.
 
 O visualizador de gráficos de identidade na interface do usuário da Plataforma permite visualizar e entender melhor quais identidades de clientes são agrupadas e de que maneiras. O visualizador permite que você arraste e interaja com diferentes partes do gráfico, permitindo que você examine relações de identidade complexas, depure com mais eficiência e se beneficie de maior transparência com a forma como as informações estão sendo utilizadas.
+
+## Vídeo tutorial
+
+O vídeo a seguir é destinado a suportar sua compreensão do visualizador de gráficos de identidade.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Introdução
 
@@ -50,6 +52,20 @@ Selecione a namespace que pretende utilizar e clique em **[!UICONTROL Selecione]
 Depois de selecionar uma namespace, digite o valor correspondente para um cliente específico na caixa de texto **[!UICONTROL Valor de identidade]** e selecione **[!UICONTROL Visualização]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Acessar o visualizador de gráficos de identidade a partir de conjuntos de dados
+
+Você também pode acessar o visualizador de gráficos de identidade usando a interface de conjuntos de dados. Na página de conjuntos de dados [!UICONTROL Procurar], selecione um conjunto de dados com o qual deseja interagir e selecione **[!UICONTROL conjunto de dados de Pré-visualização]**
+
+![Conjunto de dados de pré-visualização](../images/identity-graph-viewer/preview-dataset.png)
+
+Na janela pré-visualização, selecione um ícone de impressão digital para ver as identidades representadas pelo visualizador de gráficos de identidade.
+
+>[!TIP]
+>
+>O ícone de impressão digital só será exibido se o conjunto de dados tiver duas ou mais identidades.
+
+![impressão digital](../images/identity-graph-viewer/fingerprint.png)
 
 O visualizador de gráficos de identidade é exibido. No lado esquerdo da tela está o gráfico de identidade que exibe todas as identidades vinculadas à namespace selecionada e o valor de identidade inserido. Cada nó de identidade consiste em uma namespace e seu valor de ID correspondente. Você pode selecionar e manter qualquer identidade para arrastar e interagir com o gráfico. Como alternativa, você pode passar o mouse sobre uma identidade para ver informações sobre seu valor de ID. A saída do gráfico também é exibida como uma lista com guias no centro da tela.
 
@@ -109,8 +125,9 @@ Erros podem ocorrer ao acessar o visualizador de gráficos de identidade. A segu
 
 Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da plataforma. Para obter mais informações sobre identidades na Plataforma, consulte a [visão geral do Serviço de Identidade](../home.md)
 
-## Recursos adicionais
+## Changelog
 
-O vídeo a seguir é destinado a suportar sua compreensão do visualizador de gráficos de identidade.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Data | Ação |
+| ---- | ------ |
+| 2021-01 | <ul><li>Adicionado suporte para streaming de dados ingeridos e caixa de proteção de não produção.</li><li>Correção de erros secundários.</li></ul> |
+| 2021-02 | <ul><li>O visualizador de gráficos de identidade é tornado acessível por meio da pré-visualização do conjunto de dados.</li><li>Correção de erros secundários.</li><li>O visualizador de gráficos de identidade é disponibilizado Geralmente.</li></ul> |

@@ -4,9 +4,9 @@ description: Saiba como configurar o Adobe Experience Platform Web SDK.
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;url Destinations ationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 11%
 
 ---
@@ -147,7 +147,7 @@ Habilita [!DNL Audience Manager] destinos de URL, o que permite o acionamento de
 | -------- | ------------ | ----------------- |
 | Booleano | Não | true |
 
-Se verdadeiro, o SDK lerá e definirá cookies AMCV antigos. Isso ajuda na transição para o uso do SDK da Web do Adobe Experience Platform enquanto algumas partes do site ainda podem estar usando o Visitante.js. Além disso, se a API do Visitante estiver definida na página, o SDK irá a API do Visitante do query para a ECID. Isso permite que você adicione tags duplas às páginas com o SDK da Web AEP e ainda tenha o mesmo ECID.
+Se verdadeiro, o SDK lerá e definirá cookies AMCV antigos. Isso ajuda na transição para o uso do SDK da Web do Adobe Experience Platform enquanto algumas partes do site ainda podem estar usando o Visitante.js. Além disso, se a API do Visitante estiver definida na página, o SDK irá a API do Visitante do query para a ECID. Isso permite que você adicione tags duplas às páginas com o SDK da Web da Adobe Experience Platform e ainda tenha o mesmo ECID.
 
 ### `thirdPartyCookiesEnabled`
 

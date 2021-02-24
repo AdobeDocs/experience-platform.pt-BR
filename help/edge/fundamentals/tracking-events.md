@@ -3,9 +3,9 @@ title: Rastrear Eventos usando o Adobe Experience Platform Web SDK
 seo-description: Saiba como rastrear eventos Adobe Experience Platform Web SDK.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;documento Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-Neste exemplo, a camada de dados é clonada serializando-a para JSON e, em seguida, desserializando-a. Em seguida, o resultado clonado é passado para o comando `sendEvent`. Isso garante que o comando `sendEvent` tenha um instantâneo da camada de dados como ela existia quando o comando `sendEvent` foi executado para que as modificações posteriores no objeto da camada de dados original não sejam refletidas nos dados enviados para o servidor. Se você estiver usando uma camada de dados orientada por evento, a clonagem dos dados provavelmente já será feita automaticamente. Por exemplo, se você estiver usando a [Camada de Dados do Cliente Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), o método `getState()` fornecerá um instantâneo computado e clonado de todas as alterações anteriores. Isso também é feito para você automaticamente se você estiver usando a extensão AEP Web SDK Launch.
+Neste exemplo, a camada de dados é clonada serializando-a para JSON e, em seguida, desserializando-a. Em seguida, o resultado clonado é passado para o comando `sendEvent`. Isso garante que o comando `sendEvent` tenha um instantâneo da camada de dados como ela existia quando o comando `sendEvent` foi executado para que as modificações posteriores no objeto da camada de dados original não sejam refletidas nos dados enviados para o servidor. Se você estiver usando uma camada de dados orientada por evento, a clonagem dos dados provavelmente já será feita automaticamente. Por exemplo, se você estiver usando a [Camada de Dados do Cliente Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), o método `getState()` fornecerá um instantâneo computado e clonado de todas as alterações anteriores. Isso também é feito para você automaticamente se estiver usando a extensão do Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 
 >[!NOTE]
 >

@@ -3,7 +3,7 @@ keywords: conexão do Facebook;conexão do Facebook;destinos do facebook;faceboo
 title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
+source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 3%
@@ -86,7 +86,7 @@ Existem dois métodos para ativar números de telefone em [!DNL Facebook]:
 
 Você pode optar por hash de endereços de email antes de ingressá-los no Adobe Experience Platform ou pode optar por trabalhar com endereços de email claramente no Experience Platform e fazer com que nosso algoritmo os coloque em hash na ativação.
 
-Para saber mais sobre como ingerir endereços de email no Experience Platform, consulte [visão geral de ingestão em lote](/help/ingestion/batch-ingestion/overview.md) e [visão geral de ingestão em vapor](/help/ingestion/streaming-ingestion/overview.md).
+Para saber mais sobre como ingerir endereços de email no Experience Platform, consulte [visão geral de ingestão em lote](/help/ingestion/batch-ingestion/overview.md) e a [visão geral de ingestão em streaming](/help/ingestion/streaming-ingestion/overview.md).
 
 Se você optar por hash nos endereços de email, certifique-se de cumprir os seguintes requisitos:
 

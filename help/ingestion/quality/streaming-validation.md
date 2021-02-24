@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: A ingestão de streaming permite carregar seus dados para a Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -66,6 +66,10 @@ A validação síncrona é um método de validação que fornece feedback imedia
 Por padrão, a validação síncrona não está ativada. Para ativá-lo, você deve passar o parâmetro opcional de query `synchronousValidation=true` ao fazer chamadas de API. Além disso, a validação síncrona só está disponível no momento se o terminal de fluxo estiver no data center VA7.
 
 Se uma mensagem falhar durante a validação síncrona, ela não será gravada na fila de saída, o que fornece feedback imediato para os usuários.
+
+>[!NOTE]
+>
+>As alterações no schema podem não estar disponíveis imediatamente, pois as alterações são armazenadas em cache. Aguarde até quinze minutos para que o cache seja atualizado.
 
 **Formato da API**
 

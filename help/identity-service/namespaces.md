@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular tópicos;namespace;Namespace;Namespaces;namespaces;namespace de identidade;namespace de identidade;identidade;identidade;serviço de identidade;serviço de identidade
 solution: Experience Platform
 title: Visão geral da Namespace de identidade
-topic: overview
+topic: visão geral
 description: 'Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID CRM numérica. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ Selecione uma namespace para ver informações mais específicas no painel direi
 
 ![](./images/browse-namespaces.png)
 
-## Gerenciamento de namespaces personalizadas
+## Gerenciando namespaces personalizadas {#manage-namespaces}
 
 Dependendo dos dados organizacionais e dos casos de uso, você pode precisar de namespaces personalizadas. Namespaces personalizadas podem ser criadas usando a API [[!DNL Identity Service]](./api/create-custom-namespace.md) ou por meio da interface do usuário.
 

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
+source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 6%
 
 ---
 
@@ -19,12 +19,25 @@ ht-degree: 8%
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [Fluxos de dados](#dataflows)
-- [Sistema do Experience Data Model (XDM)](#xdm)
-- [Serviço de identidade](#identity)
-- [Fontes](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-## Fluxos de dados {#dataflows}
+## [!DNL Data Science Workspace] {#dsw}
+
+A Data Science Workspace usa o aprendizado de máquina e a inteligência artificial para criar insights de seus dados. Integrado ao Adobe Experience Platform, o Data Science Workspace ajuda você a fazer previsões usando seu conteúdo e ativos de dados nas soluções de Adobe.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| Notebook JupyterLab EDA | O notebook da análise de dados exploratórios (EDA) Python agora está disponível em Jupyterlab. Este notebook foi projetado para ajudá-lo a descobrir padrões nos dados, verificar a integridade dos dados e resumir os dados relevantes para modelos preditivos. Consulte o tutorial em [exploração de dados baseados na Web para modelos preditivos](../../data-science-workspace/jupyterlab/eda-notebook.md) para obter mais informações. |
+
+Para obter informações mais gerais sobre a Data Science Workspace, consulte a [visão geral da Data Science Workspace](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
 
 No Adobe Experience Platform, os dados são ingeridos de uma grande variedade de fontes, analisados dentro do Experience Platform e ativados para uma grande variedade de destinos. A plataforma facilita o processo de rastreamento desse fluxo potencialmente não linear de dados ao fornecer transparência com fluxos de dados.
 
@@ -38,7 +51,7 @@ Os fluxos de dados são uma representação de trabalhos de dados que movem os d
 
 Para obter informações mais gerais sobre fluxos de dados, consulte a [visão geral dos fluxos de dados](../../dataflows/home.md).
 
-## Sistema do Modelo de Dados de Experiência (XDM) {#xdm}
+## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 A normalização e a interoperabilidade são conceitos-chave por trás [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
 
@@ -52,7 +65,7 @@ A XDM é uma especificação publicamente documentada projetada para melhorar o 
 
 Para obter informações mais gerais sobre o XDM, consulte a [visão geral do sistema XDM](../../xdm/home.md).
 
-## Identity Service {#identity}
+## [!DNL Identity Service] {#identity}
 
 Fornecer experiências digitais relevantes requer uma compreensão completa do cliente. Isso fica mais difícil quando os dados do cliente são fragmentados em sistemas diferentes, fazendo com que cada cliente individual pareça ter várias &quot;identidades&quot;.
 
@@ -66,7 +79,7 @@ A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melh
 
 Para obter informações mais gerais sobre [!DNL Identity Service], consulte a [visão geral do serviço de identidade](../../identity-service/home.md).
 
-## Fontes {#sources}
+## [!DNL Sources] {#sources}
 
 A Adobe Experience Platform pode assimilar dados de fontes externas, permitindo que você estruture, rotule e aprimore esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos de Adobe, armazenamentos baseados em nuvem, software de terceiros e seu sistema de CRM.
 

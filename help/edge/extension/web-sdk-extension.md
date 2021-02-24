@@ -2,10 +2,10 @@
 title: Extensão SDK da Web da Adobe Experience Platform Visão geral
 description: Saiba mais sobre o Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 55%
+source-wordcount: '640'
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 O Adobe Experience Platform Web SDK Extension envia dados para a Adobe Experience Cloud a partir de propriedades da Web, por meio do Adobe Experience Platform Edge Network. A extensão SDK da Web da Adobe Experience Platform permite a transmissão de dados na plataforma, a sincronização de identidades, a aceitação e a coleta automática de dados de contexto.
 
-## Configurar a extensão SDK da Web da AEP
+## Configurar a extensão
 
 Esta seção fornece uma referência para as opções disponíveis ao configurar a extensão SDK da Web da Adobe Experience Platform.
 
@@ -47,11 +47,11 @@ Por padrão, se houver um erro com a extensão, ele será registrado no console.
 
 ### **[!UICONTROL Ativar aceitação]**
 
-Se **[!UICONTROL Habilitar aceitação]** estiver habilitado, a extensão AEP Web SDK pode conter ocorrências até que a aceitação seja recebida. A extensão expõe uma ação para definir as preferências de aceitação.
+Se **[!UICONTROL Ativar aceitação]** estiver ativado, a extensão pode conter ocorrências até que a aceitação seja recebida. A extensão expõe uma ação para definir as preferências de aceitação.
 
 ### **[!UICONTROL Ativar Migrar ECID]**
 
-A extensão SDK da Web da AEP usa um novo cookie para armazenar a ECID. Essa configuração permite a compatibilidade entre o novo cookie e o cookie antigo para fins de migração. A Adobe recomenda que isso esteja ativado, a menos que você não tenha visitantes com uma ECID.
+A extensão SDK da Web da plataforma usa um novo cookie para armazenar o ECID. Essa configuração permite a compatibilidade entre o novo cookie e o cookie antigo para fins de migração. A Adobe recomenda que isso esteja ativado, a menos que você não tenha visitantes com uma ECID.
 
 ### **[!UICONTROL Usar cookies de terceiros]**
 

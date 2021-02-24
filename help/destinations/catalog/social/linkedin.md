@@ -1,9 +1,9 @@
 ---
 keywords: link-in-connection;linkedin connection;linkedin targets;linkedin;
-title: Conexão de Audiência correspondente do LinkedIn
+title: Conexão Audiência Correspondente do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para definição de metas, personalização e supressão de audiências, com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: d51de1ab4b2d4e91232166657466e597093f22ef
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%

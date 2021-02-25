@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 7%
+source-wordcount: '712'
+ht-degree: 6%
 
 ---
 
@@ -21,6 +21,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -52,6 +53,19 @@ Para obter mais informações, consulte [[!DNL Data Prep] overview](../../data-p
 | Correspondência avançada de ID | Melhorias nos recursos de taxa de correspondência de audiência em [!DNL Facebook Custom Audiences] e [!DNL Google Customer Match], adicionando suporte para correspondência de identidade adicional, como IDs externas, números de telefone e IDs de dispositivo móvel. Consulte a documentação a seguir para obter mais detalhes: <ul><li>[Destino do Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destino de Correspondência de Cliente do Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Ativar perfis e segmentos em um destino](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 Para saber mais, visite a [visão geral de destinos](../../destinations/home.md).
+
+## Perfil do cliente em tempo real {#profile}
+
+A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, você pode ver uma visualização holística de cada cliente individual que combina dados de vários canais, incluindo dados online, offline, CRM e de terceiros. [!DNL Profile] permite consolidar os dados do cliente em uma visualização unificada que oferece uma conta acionável e com carimbos de data e hora de cada interação do cliente.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Excluir conjunto de dados do repositório de Perfis | Quando você exclui um conjunto de dados do Experience Platform Data Lake, ele também será automaticamente excluído do armazenamento de Perfis. Não é mais necessário usar o terminal da API de trabalhos do Sistema de Perfis para fazer uma solicitação de exclusão para excluir o conjunto de dados do repositório de Perfis explicitamente. Para obter mais informações, consulte o [guia de endpoint API de tarefas do sistema de perfis](../../profile/api/profile-system-jobs.md). |
+| Contagem estimada de namespace de ID para um determinado segmento | Para contar os perfis estimados, a API de pré-visualização agora relata:<ul><li>Contagem total de perfis estimados em um segmento para uma determinada namespace.</li><li>Contagem total de perfis estimados no Schema da União do Perfil para uma determinada namespace.</li></ul>Para saber mais, consulte o [guia de ponto final da API de pré-visualização do perfil](../../profile/api/preview-sample-status.md). |
+
+Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com [!DNL Profile] dados, comece lendo a [visão geral do Perfil do cliente em tempo real](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

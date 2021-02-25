@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;gráficos XDM
 title: Visão geral do Perfil do cliente em tempo real
-topic: guide
+topic: guia
 description: O Perfil de cliente em tempo real é um repositório de entidade de pesquisa genérico que reúne dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis individuais de clientes e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com suas audiências em vários canais.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 1%
+source-wordcount: '1825'
+ht-degree: 0%
 
 ---
 
@@ -36,11 +36,11 @@ O repositório de Perfis usa uma infraestrutura de BD do Microsoft Azure Cosmos 
 
 O Experience Platform fornece uma série de garantias para ajudá-lo a evitar a criação de [schemas do Modelo de Dados de Experiência (XDM)](../xdm/home.md) que o Perfil do Cliente em tempo real não suporta. Isso inclui limites suaves que resultarão na degradação do desempenho, além de limites rígidos que resultarão em erros e quebras do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação [guardrails](guardrails.md) do Perfil.
 
-### (Alfa) painel do Perfil {#profile-dashboard}
+### (Beta) painel do Perfil {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->A funcionalidade do painel está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+>A funcionalidade do painel está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
 A interface do usuário do Experience Platform fornece um painel através do qual você pode visualização informações importantes sobre os dados do Perfil do cliente em tempo real, conforme capturado durante um instantâneo diário. Para saber como acessar e trabalhar com o painel [!DNL Profile] na interface do usuário, e informações detalhadas sobre as métricas exibidas no painel, consulte o [guia da interface do painel do Perfil](ui/profile-dashboard.md).
 
@@ -78,9 +78,9 @@ Para saber mais sobre schemas de união, incluindo como acessar schemas de uniã
 
 >[!IMPORTANT]
 >
->A funcionalidade do atributo calculado está em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
+>A funcionalidade de atributo calculado está em alfa. A documentação e a funcionalidade estão sujeitas a alterações.
 
-Os atributos calculados permitem calcular automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil, o que significa que você pode agregação valores em todos os registros e eventos. Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil ou em um evento. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Para obter mais informações sobre atributos calculados e instruções passo a passo para trabalhar com eles usando a API [!DNL Real-time Customer Profile], consulte o [guia de ponto final de atributos calculados](api/computed-attributes.md). Este guia o ajudará a entender melhor a função dos atributos calculados no Adobe Experience Platform e inclui exemplos de chamadas de API para executar operações CRUD básicas.
+Atributos calculados são funções usadas para agregação de dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas em segmentação, ativação e personalização. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Para obter mais informações sobre atributos calculados, incluindo entender a função que os atributos calculados desempenham no Adobe Experience Platform, comece lendo a [visão geral dos atributos calculados](computed-attributes/overview.md).
 
 ## Perfis e segmentos
 

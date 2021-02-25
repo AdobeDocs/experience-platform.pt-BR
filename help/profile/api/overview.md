@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado; unificado;Perfil;rtcp;ativar perfil;Ativar perfil
 title: Guia da API do Perfil do cliente em tempo real
-topic: guide
+topic: guia
 description: A API Perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados do Perfil, incluindo perfis de visualização, criem e atualizem políticas de mesclagem, exportem ou façam amostras de dados do Perfil e excluam dados do Perfil que não são mais necessários ou foram adicionados por engano. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,11 @@ Para obter um guia para trabalhar com [!DNL Real-time Customer Profile] dados na
 >
 >A funcionalidade de atributo calculado está em alfa e não está disponível para todos os usuários. A documentação e funcionalidade estão sujeitas a alterações.
 
-Os atributos calculados permitem calcular automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil, o que significa que você pode agregação valores em todos os registros e eventos. Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil ou em um evento. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Você pode criar, visualização, editar e excluir atributos calculados usando o endpoint `config/computedAttributes`. Para saber como usar esse terminal, visite o [guia de ponto final de atributos calculados](computed-attributes.md).
+Atributos calculados são funções usadas para agregação de dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas em segmentação, ativação e personalização.
+
+Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia os dados recebidos e armazena o valor resultante em um atributo de perfil. Esses cálculos ajudam você a responder facilmente perguntas relacionadas a coisas como valor de compra vitalícia, tempo entre compras ou número de aberturas de aplicativos, sem exigir a execução manual de cálculos complexos sempre que as informações forem necessárias. Esses valores de atributos calculados podem ser exibidos em um perfil, usados para criar um segmento ou acessados por meio de vários padrões de acesso diferentes.
+
+Você pode criar, visualização, editar e excluir atributos calculados usando o endpoint `config/computedAttributes`. Para saber como usar atributos calculados, consulte a [visão geral dos atributos calculados](../computed-attributes/overview.md). Para operações de API, visite o [guia de ponto final da API de atributos calculados](../computed-attributes/ca-api.md).
 
 ## Projeções de borda {#edge-projections}
 

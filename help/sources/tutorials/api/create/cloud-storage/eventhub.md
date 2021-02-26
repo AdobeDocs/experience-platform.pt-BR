@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;popular topics;hub de evento;hub de evento do Azure;hub de Evento;hub de ;topics;hub de ;hub de  do Azure
 solution: Experience Platform
 title: Criar uma conexão de origem de hubs de Evento do Azure usando a API de Serviço de Fluxo
-topic: overview
+topic: visão geral
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Evento Hubs do Azure usando a API de Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -90,7 +90,7 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
                 "sasKeyName": "sasKeyName",
                 "sasKey": "sasKey",

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: 2eea954217a8f0cca605cd0435bace59200cacda
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 7%
 
 ---
@@ -25,6 +25,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -65,6 +66,16 @@ Os fluxos de dados são uma representação de trabalhos de dados que movem os d
 | Novo painel de monitoramento | Agora você pode usar o painel de monitoramento para transparência entre serviços e insights acionáveis para ingestões de dados de origem. O novo painel de monitoramento fornece uma visualização abrangente dos dados processados de [!DNL Data Lake] para [!DNL Identity Service] e para [!DNL Profile], ao mesmo tempo em que permite que você monitore taxas de ingestão, sucessos e falhas. Consulte o tutorial em [fluxos de dados de origem de monitoramento na interface do usuário](../../dataflows/ui/monitor-sources.md) para obter mais informações. |
 
 Para obter informações mais gerais sobre fluxos de dados, consulte a [visão geral dos fluxos de dados](../../dataflows/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+
+**Novos destinos**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | A conexão [!DNL LinkedIn Matched Audiences] permite ativar o audiência na plataforma social [!DNL LinkedIn]. |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 

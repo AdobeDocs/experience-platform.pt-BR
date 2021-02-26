@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;map;map fields;map funções de mapeamento;
 solution: Experience Platform
 title: Funções de mapeamento de preparo de dados
-topic: overview
+topic: visão geral
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: 49124d58fffa3670b332fab07843f2ef3db65f79
+source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3625'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Um nome de campo pode ser qualquer identificador legal - uma sequência ilimitad
 
 Se um nome de campo não seguir esta convenção, o nome do campo deve estar vinculado a `${}`. Portanto, por exemplo, se o nome do campo for &quot;Nome&quot; ou &quot;Nome.Nome&quot;, o nome deverá ser vinculado como `${First Name}` ou `${First.Name}` respectivamente.
 
-Além disso, os nomes de campo são **any** das seguintes palavras-chave reservadas, devem estar vinculados a `${}`:
+Além disso, se um nome de campo for **any** das seguintes palavras-chave reservadas, ele deverá estar vinculado a `${}`:
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -103,7 +103,7 @@ As tabelas a seguir listas todas as funções de mapeamento suportadas, incluind
 
 >[!NOTE]
 >
->Role para a esquerda/direita para visualização do conteúdo completo da tabela.
+>Role para a esquerda/direita para visualização do conteúdo completo da tabela. Mais informações sobre a função `date` podem ser encontradas no [guia de função de data](./dates.md).
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Exemplo de saída |
 -------- | ----------- | ---------- | -------| ---------- | -------------

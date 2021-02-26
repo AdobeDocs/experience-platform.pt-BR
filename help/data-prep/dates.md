@@ -1,25 +1,43 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;map csv guide;ui guide;mapper;map;date;funções de data;date;
+keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;map csv guide;ui guide;mapper;map;date;funções de data;date função;date;date
 solution: Experience Platform
 title: Funções de data de preparação de dados
-topic: overview
-description: Este documento apresenta as funções de data usadas com a Preparação de dados.
+topic: visão geral
+description: Este documento apresenta a função de data usada com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# Funções de data da preparação de dados
+# função Date
 
 A Preparação de dados suporta funções de data, tanto como strings quanto como objetos datetime.
 
+## Formato da função de data
+
+A função date converte sequências de caracteres e objetos datetime para se tornar um objeto ZoningDateTime formatado em ISO 8601.
+
+**Formato**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| `{DATE}` | Obrigatório. A string que representa a data. |
+| `{FORMAT}` | Opcional. A string que representa o formato da data. Mais informações sobre a formatação de sequência de caracteres podem ser encontradas na seção [string de formato de data/hora](#format). |
+| `{DEFAULT_DATE}` | Opcional. A data padrão a ser retornada se a data fornecida for nula. |
+
+Por exemplo, a expressão `date(orderDate, "yyyy-MM-dd")` converterá um valor `orderDate` de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;2020-12-31&quot;.
+
 ## Conversões da função de data
 
-Quando os campos de string de dados recebidos são mapeados para campos de data em schemas usando o Modelo de dados de experiência (XDM), o formato de data deve ser mencionado explicitamente. Se não for mencionado explicitamente, o Data Prep tentará converter os dados de entrada ao equipará-los aos seguintes formatos. Quando um formato correspondente for encontrado, ele deixará de avaliar quaisquer formatos subsequentes.
+Quando os campos de string de dados recebidos são mapeados para campos de data em schemas usando o Modelo de dados de experiência (XDM), o formato de data deve ser mencionado explicitamente. Se não for mencionado explicitamente, o Data Prep tentará converter os dados de entrada ao equipará-los aos seguintes formatos. Quando um formato correspondente for encontrado, ele parará de avaliar quaisquer formatos subsequentes.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -46,7 +64,7 @@ Quando os campos de string de dados recebidos são mapeados para campos de data 
 >
 > A Preparação de dados tentará converter sequências de caracteres em datas o melhor possível. No entanto, essas conversões podem levar a resultados indesejáveis. Por exemplo, o valor da string &quot;12112020&quot; corresponde ao padrão &quot;MMddyyyy&quot;, mas o usuário pode ter pretendido que a data seja lida com o padrão &quot;ddaaaa&quot;. Como resultado, os usuários devem mencionar explicitamente o formato de data para strings.
 
-## Sequências de caracteres de formato de data/hora
+## Sequências de caracteres de formato de data/hora {#format}
 
 A tabela a seguir mostra quais letras de padrão estão definidas para strings de formato. Observe que as letras fazem distinção entre maiúsculas e minúsculas.
 
@@ -77,7 +95,3 @@ A tabela a seguir mostra quais letras de padrão estão definidas para strings d
 | V | ID de fuso horário | Texto | América/Los_Angeles |
 | O | Deslocamento do fuso horário | Texto | GMT+8 |
 | Q/q | Trimestre do ano | Número/Texto | 3; 03; Q3; terceiro trimestre |
-
-**Exemplo**
-
-A expressão `date(orderDate, "yyyy-MM-dd")` converterá um valor `orderDate` de &quot;31 de dezembro de 2020&quot; em um valor datetime de &quot;2020-12-31&quot;.

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: c1fed1ff4be5f32a93b41a74bb4c541813907354
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 7%
 
 ---
@@ -66,6 +66,16 @@ Os fluxos de dados são uma representação de trabalhos de dados que movem os d
 
 Para obter informações mais gerais sobre fluxos de dados, consulte a [visão geral dos fluxos de dados](../../dataflows/home.md).
 
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
+
+**Novos destinos**
+
+| Destino | Descrição |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | A conexão [!DNL LinkedIn Matched Audiences] permite ativar o audiência na plataforma social [!DNL LinkedIn]. |
+
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 A normalização e a interoperabilidade são conceitos-chave por trás [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir schemas para o gerenciamento da experiência do cliente.
@@ -92,7 +102,7 @@ A Adobe Experience Platform [!DNL Identity Service] ajuda você a obter uma melh
 | --- | --- |
 | Visualizador de gráfico de identidade | O visualizador de gráficos de identidade permite que você valide e visualize identidades que são unidas na interface do usuário, permitindo uma depuração e transparência aprimoradas. Consulte [documento do visualizador de gráficos de identidade](../../identity-service/ui/identity-graph-viewer.md) para obter mais informações. |
 
-Para obter informações mais gerais sobre [!DNL Identity Service], consulte a [visão geral do Serviço de Identidade](../../identity-service/home.md).
+Para obter informações mais gerais sobre [!DNL Identity Service], consulte a [visão geral do serviço de identidade](../../identity-service/home.md).
 
 ## Perfil do cliente em tempo real {#profile}
 

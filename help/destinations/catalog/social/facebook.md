@@ -3,21 +3,15 @@ keywords: conexão do Facebook;conexão do Facebook;destinos do facebook;faceboo
 title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para definição de metas, personalização e supressão de audiências com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '942'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook] conexão
-
->[!IMPORTANT]
->
->No momento, estamos migrando clientes para a nova versão desse destino, [!DNL Facebook Custom Audience].
->
-> As instruções neste artigo se aplicam a ambas as versões, com a seguinte observação: enquanto esta migração estiver em andamento, você verá apenas a versão atual do destino [!DNL Facebook] na interface do usuário, onde você só pode usar as identidades [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] para ativação.
 
 Ative perfis para suas [!DNL Facebook] campanhas para definição de metas, personalização e supressão de audiências com base em emails com hash.
 

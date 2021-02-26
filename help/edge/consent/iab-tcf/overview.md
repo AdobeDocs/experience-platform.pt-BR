@@ -3,7 +3,7 @@ title: Suporte a IAB TCF 2.0 no SDK da Web da Adobe Experience Platform
 description: Saiba como suportar as preferências de consentimento do IAB TCF 2.0 usando o Adobe Experience Platform Web SDK
 keywords: consentimento;setConsent;Mixin de privacidade do Perfil;Mixin de privacidade do Evento de experiência;Mixin de privacidade;IAB TCF 2.0;CDP em tempo real;Perfil de dados do cliente em tempo real
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,7 +66,7 @@ As seções abaixo descrevem os principais pontos de integração entre o IAB TC
 
 O consentimento padrão é usado quando não há preferência de consentimento já salva para um cliente. Isso significa que as opções de consentimento padrão podem controlar o comportamento do Adobe Experience Platform Web SDK e alterar com base na região do cliente.
 
-Por exemplo, se você tiver um cliente que não esteja na jurisdição do Regulamento Geral de Proteção de Dados (RGPD), o consentimento padrão poderá ser definido como `in`, mas dentro da jurisdição do RGPD, o consentimento padrão poderá ser definido como `pending`. Sua plataforma de gerenciamento de nuvem (CMP) pode detectar a região do cliente e fornecer o sinalizador `gdprApplies` para IAB TCF 2.0. Esse sinalizador pode ser usado para definir o consentimento padrão.
+Por exemplo, se você tiver um cliente que não esteja na jurisdição do Regulamento Geral de Proteção de Dados (RGPD), o consentimento padrão poderá ser definido como `in`, mas dentro da jurisdição do RGPD, o consentimento padrão poderá ser definido como `pending`. Sua Plataforma de gerenciamento de consentimento (CMP) pode detectar a região do cliente e fornecer o sinalizador `gdprApplies` para o IAB TCF 2.0. Esse sinalizador pode ser usado para definir o consentimento padrão.
 
 Para obter mais informações sobre o consentimento padrão, consulte a [seção de consentimento padrão](../../fundamentals/configuring-the-sdk.md#default-consent) na documentação de configuração do SDK.
 

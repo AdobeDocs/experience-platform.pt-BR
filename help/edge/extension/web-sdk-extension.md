@@ -2,71 +2,64 @@
 title: Extensão SDK da Web da Adobe Experience Platform Visão geral
 description: Saiba mais sobre o Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 53%
+source-wordcount: '560'
+ht-degree: 19%
 
 ---
 
 
 # Visão geral da extensão do Adobe Experience Platform Web SDK
 
-O Adobe Experience Platform Web SDK Extension envia dados para a Adobe Experience Cloud a partir de propriedades da Web, por meio do Adobe Experience Platform Edge Network. A extensão SDK da Web da Adobe Experience Platform permite a transmissão de dados na plataforma, a sincronização de identidades, a aceitação e a coleta automática de dados de contexto.
+A extensão Adobe Experience Platform Web SDK envia dados para a Adobe Experience Cloud de propriedades da Web por meio da Adobe Experience Platform Edge Network. A extensão permite que você faça o stream de dados para a Plataforma, sincronize identidades, processe sinais de consentimento do cliente e colete dados de contexto automaticamente.
+
+Este documento aborda como configurar a extensão na interface do usuário do Adobe Experience Platform Launch.
 
 ## Configurar a extensão
 
-Esta seção fornece uma referência para as opções disponíveis ao configurar a extensão SDK da Web da Adobe Experience Platform.
+Se a extensão SDK da Web da plataforma já tiver sido instalada para uma propriedade, abra a propriedade na interface do usuário do Platform launch e selecione a guia **[!UICONTROL Extensões]**. Em Plataforma Web SDK, selecione **[!UICONTROL Configurar]**.
 
-Se a extensão do Adobe Experience Platform Web SDK ainda não estiver instalada, abra sua propriedade, selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão do Adobe Experience Platform Web SDK e selecione **[!UICONTROL Instalar]**.
+![](../images/extension/overview/configure.png)
 
-Para configurar a extensão, abra a guia **[!UICONTROL Extensões]**, passe o cursor do mouse sobre a extensão e selecione **[!UICONTROL Configurar]**.
+Se ainda não tiver instalado a extensão, selecione a guia **[!UICONTROL Catálogo]**. Na lista de extensões disponíveis, localize a extensão SDK da Web da plataforma e selecione **[!UICONTROL Instalar]**.
 
-![](./assets/ext-aep-config.png)
+![](../images/extension/overview/install.png)
 
-### Nome da instância
+Em ambos os casos, você chega à página de configuração do SDK da Web da plataforma. As seções abaixo explicam as opções de configuração da extensão.
 
-A extensão Adobe Experience Platform Web SDK suporta várias instâncias na página. Isso é usado para enviar dados para várias organizações com uma única configuração do Adobe Experience Platform Launch. O padrão **[!UICONTROL Name]** é liga. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido. A extensão do Adobe Experience Platform exige que cada instância tenha uma **[!UICONTROL ID de configuração]** diferente e uma **[!UICONTROL ID de organização]** diferente.
+![](../images/extension/overview/config-screen.png)
 
-## **[!UICONTROL ID de configuração]**
+## Opções gerais de configuração
 
-O **[!UICONTROL Config ID]** é o que informa à Adobe Experience Platform onde os dados devem ser roteados e quais configurações devem ser usadas no servidor. Isso é necessário para que a extensão Adobe Experience Platform funcione. Você pode obter uma ID de configuração entrando em contato com o Atendimento ao cliente.
+As opções de configuração na parte superior da página informam à Adobe Experience Platform onde rotear os dados e quais configurações devem ser usadas no servidor.
 
+### [!UICONTROL Nome]
 
-### **[!UICONTROL ID da organização]**
+A extensão Adobe Experience Platform Web SDK suporta várias instâncias na página. Isso é usado para enviar dados para várias organizações com uma única configuração do Platform Launch.
 
-A **[!UICONTROL ID da organização]** é a organização para a qual você gostaria que os dados fossem enviados no Adobe. Na maioria das vezes, você deve usar o valor padrão preenchido automaticamente. Quando houver várias instâncias na página, preencha com o valor da segunda organização para a qual deseja enviar dados.
+O nome da extensão padroniza &quot;[!DNL alloy]&quot;. No entanto, é possível alterar o nome da instância para qualquer nome de objeto JavaScript válido.
+
+### **[!UICONTROL ID da organização IMS]**
+
+A [!UICONTROL ID de organização IMS] é a organização para a qual você gostaria que os dados fossem enviados no Adobe. Na maioria das vezes, você deve usar o valor padrão preenchido automaticamente. Quando você tiver várias instâncias na página, preencha esse campo com o valor da segunda organização para a qual deseja enviar dados.
 
 ### **[!UICONTROL Domínio de borda]**
 
-O **[!UICONTROL Domínio de Borda]** é o domínio do qual a extensão Adobe Experience Platform envia e recebe dados. A extensão requer o uso de um CNAME próprio para o tráfego de produção. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html).
+O [!UICONTROL Domínio de Borda] é o domínio do qual a extensão Adobe Experience Platform envia e recebe dados. A extensão requer o uso de um CNAME próprio para o tráfego de produção. O domínio padrão de terceiros funciona em ambientes de desenvolvimento, mas não é adequado para ambientes de produção. As instruções sobre como configurar um CNAME primário estão listadas [aqui](https://docs.adobe.com/content/help/pt-BR/core-services/interface/ec-cookies/cookies-first-party.html).
 
-### **[!UICONTROL Ativar erros]**
+## [!UICONTROL Configurações do Edge]
 
-Por padrão, se houver um erro com a extensão, ele será registrado no console. Se quiser ocultar os erros em um ambiente de produção, desmarque a caixa de seleção **[!UICONTROL Ativar erros]**. Os erros ainda são impressos quando a depuração está ativada no Platform Launch.
+Quando uma solicitação é enviada para a Adobe Experience Platform Edge Network, uma ID de configuração de borda é usada para fazer referência à configuração do servidor. Isso permite que você atualize a configuração sem precisar fazer alterações de código em seu site.
 
-### **[!UICONTROL Ativar aceitação]**
+Consulte o guia em [configurações de borda](../fundamentals/edge-configuration.md) para obter mais informações.
 
-Se **[!UICONTROL Ativar aceitação]** estiver ativado, a extensão pode conter ocorrências até que a aceitação seja recebida. A extensão expõe uma ação para definir as preferências de aceitação.
+## [!UICONTROL Privacidade]
 
-### **[!UICONTROL Ativar Migrar ECID]**
+A seção [!UICONTROL Privacy] permite que você configure como o SDK lida com os sinais de consentimento do cliente em seu site. Especificamente, permite selecionar o nível padrão de consentimento que é assumido de um cliente se nenhuma outra preferência de consentimento explícita tiver sido fornecida. A tabela a seguir detalha o que cada opção implica:
 
-A extensão SDK da Web da plataforma usa um novo cookie para armazenar o ECID. Essa configuração permite a compatibilidade entre o novo cookie e o cookie antigo para fins de migração. A Adobe recomenda que isso esteja ativado, a menos que você não tenha visitantes com uma ECID.
-
-### **[!UICONTROL Usar cookies de terceiros]**
-
-A Adobe Experience Platform sempre armazenará um cookie no domínio primário. Esta opção permite usar um cookie de terceiros definido em demdex.net, além do cookie no domínio primário. Isso pode ser útil quando você tem usuários que se movem entre vários domínios. Isso desativará as chamadas com demdex.net.
-
-### **[!UICONTROL Contexto]**
-
-A extensão coleta informações automaticamente sobre o contexto da solicitação (por exemplo, detalhes sobre o URL e o navegador). Isso pode ser desativado ao desmarcar contextos específicos.
-
-- **[!UICONTROL web]**  - Detalhes sobre a página da Web, como url, quem indicou etc.
-- **[!UICONTROL device]** - Detalhes sobre o dispositivo, como a orientação da tela, a altura da tela e a largura da tela.
-- **[!UICONTROL ambiente]**  - Informações sobre o ambiente de computação (navegador, conexão e assim por diante)
-- **[!UICONTROL localização]**  - Informações limitadas sobre a localização do usuário
-
-## O que vem a seguir
-
-1. Defina [tipos de ação](action-types.md).
-2. Defina [os tipos de elementos de dados](data-element-types.md).
+| [!UICONTROL Nível de Consentimento Padrão] | Descrição |
+| --- | --- |
+| [!UICONTROL Em] | Aceitar. Use essa opção se você assumir o consentimento do cliente por padrão e apenas seguir os sinais de recusa. |
+| [!UICONTROL Pending] | Pressupõe-se que os clientes com consentimento &quot;pendente&quot; sejam opt out até que um sinal de aceitação seja enviado. Use essa opção se você precisar de consentimento explícito do cliente para suas operações comerciais. |
+| [!UICONTROL Fornecido pelo elemento de dados] | O nível de consentimento padrão é determinado por um elemento de dados separado que você define. Ao usar essa opção, você deve especificar o elemento de dados usando o menu suspenso fornecido. |

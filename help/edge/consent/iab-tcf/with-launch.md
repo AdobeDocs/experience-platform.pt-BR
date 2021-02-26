@@ -2,9 +2,9 @@
 title: Integrar o suporte IAB TCF 2.0 usando o Platform launch e a extensão SDK da Web da plataforma
 description: Saiba como configurar o consentimento do IAB TCF 2.0 com a Adobe Experience Platform Launch e a extensão do Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ Além disso, este guia exige que você tenha uma compreensão funcional do Adobe
 
 ## Configuração do consentimento padrão
 
-Na configuração da extensão, há uma configuração para o consentimento padrão. Isso controla o comportamento dos clientes que não têm um cookie de consentimento. Se você quiser colocar Eventos de experiência na fila para clientes que não têm um cookie de consentimento, defina para `pending`.
+Na configuração da extensão, há uma configuração para o consentimento padrão. Isso controla o comportamento dos clientes que não têm um cookie de consentimento. Se você quiser colocar Eventos de experiência na fila para clientes que não têm um cookie de consentimento, defina para `pending`. Você também pode usar um elemento de dados para definir dinamicamente o valor de consentimento padrão.
 
->[!NOTE]
->
->Atualmente, não há como definir isso dinamicamente pela extensão Experience Platform Launch.
-
-Para obter mais informações sobre o consentimento padrão, consulte a [seção de consentimento padrão](../../fundamentals/configuring-the-sdk.md#default-consent) na documentação de configuração do SDK.
+Para obter mais informações sobre como configurar o consentimento padrão, consulte a [seção de consentimento padrão](../../fundamentals/configuring-the-sdk.md#default-consent) no guia de configuração do SDK.
 
 ## Atualizando o Perfil com informações de consentimento {#consent-code-1}
 
@@ -69,7 +65,7 @@ Este código personalizado faz duas coisas:
 * Valor: &quot;%IAB TCF Cadeia de Consentimento %1&quot;
 * RGPD Aplica-se: &quot;%IAB TCF Consentimento GDPR%&quot;
 
-![Ação de consentimento do conjunto IAB](../../../assets/iab_set_consent_action.png)
+![Ação de consentimento do conjunto IAB](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >

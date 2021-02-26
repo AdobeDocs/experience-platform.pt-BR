@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -316,9 +316,11 @@ A inserção de dados de séries de tempo em uma conexão de streaming pode ser 
 
 A solicitação de exemplo abaixo ingere dados de séries de tempo com um nome de origem ausente na Plataforma. Se o nome de origem estiver ausente nos dados, ele adicionará a ID de origem da definição de conexão de streaming.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Você precisará gerar seus próprios `xdmEntity._id` e `xdmEntity.timestamp`. Uma boa maneira de gerar uma ID é usar uma UUID. Além disso, a chamada de API a seguir **not** requer cabeçalhos de autenticação.
+>Você precisará gerar seus próprios `xdmEntity._id` e `xdmEntity.timestamp`. Uma boa maneira de gerar uma ID é usar a função UUID na preparação de dados. Para obter mais informações sobre a função UUID, consulte o [Guia de funções do Data Prep](../../data-prep/functions.md). O atributo `xdmEntity._id` representa um identificador exclusivo para o próprio registro, **e não** uma ID exclusiva da pessoa ou dispositivo cujo registro é. A ID da pessoa ou do dispositivo será específica em qualquer atributo atribuído como uma pessoa ou identificador do dispositivo do schema.
+>
+>Os campos `xdmEntity._id` e `xdmEntity.timestamp` são os únicos necessários para dados da série de tempo. Além disso, a chamada de API a seguir **not** requer cabeçalhos de autenticação.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \

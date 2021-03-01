@@ -8,7 +8,7 @@ description: Este tutorial aborda as etapas para a criação de um esquema usand
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 0%
 
 ---
@@ -218,7 +218,7 @@ Depois de concluir todas as propriedades do campo, selecione **[!UICONTROL Aplic
 
 ## Converter um objeto de vários campos em um tipo de dados {#datatype}
 
-O objeto `loyalty` agora contém vários campos específicos de fidelidade e representa uma estrutura de dados comum que pode ser útil em outros schemas. O [!DNL Schema Editor] permite que você aplique objetos de vários campos reutilizáveis rapidamente, convertendo a estrutura desses objetos em tipos de dados.
+O objeto `loyalty` agora contém vários campos específicos de fidelidade e representa uma estrutura de dados comum que pode ser útil em outros schemas. O [!DNL Schema Editor] permite que você aplique prontamente objetos de vários campos reutilizáveis convertendo a estrutura desses objetos em tipos de dados.
 
 Os tipos de dados permitem o uso consistente de estruturas de vários campos e proporcionam mais flexibilidade do que uma combinação, pois podem ser usados em qualquer lugar dentro de um schema. Isso é feito configurando o valor **[!UICONTROL Type]** do campo para o valor de qualquer tipo de dados definido em [!DNL Schema Registry].
 

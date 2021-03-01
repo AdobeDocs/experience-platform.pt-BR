@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ajuda dos Painéis Adobe Experience Platform
-breadcrumb-title: Guia de painéis
-user-guide-description: Visualize dados de Experience Platform em painéis personalizáveis.
+user-guide-title: Ajuda de painéis da Adobe Experience Platform
+breadcrumb-title: Manual de painéis
+user-guide-description: Visualize dados da Experience Platform em painéis personalizáveis.
 translation-type: tm+mt
 source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
 workflow-type: tm+mt
 source-wordcount: '34'
-ht-degree: 8%
+ht-degree: 50%
 
 ---
 

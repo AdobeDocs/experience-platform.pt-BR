@@ -1,12 +1,12 @@
 ---
 title: Notas de versão do SDK da Web da Adobe Experience Platform
-description: As notas de versão mais recentes do Adobe Experience Platform Web SDK.
+description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Plataforma Web SDK;Web SDK;notas de versão;
 translation-type: tm+mt
 source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 

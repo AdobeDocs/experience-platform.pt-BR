@@ -19,7 +19,7 @@ ht-degree: 30%
 * Interface do usuário da caixa de proteção {#ui}
    * [Visão geral da interface do usuário da caixa de proteção](ui/overview.md)
    * [Guia do usuário do Sandbox](ui/user-guide.md)
-* API do Sandbox {#api}
+* API Sandbox {#api}
    * [Introdução](api/getting-started.md)
    * [Tipos de sandbox suportados pela lista](api/list-sandbox-types.md)
    * [Lista de todas as caixas de proteção](api/list-all-sandboxes.md)

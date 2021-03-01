@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
 title: Glossário do Adobe Experience Platform
-topic: getting started
+topic: introdução
 description: Um glossário de terminologia importante na Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '7137'
-ht-degree: 0%
+source-wordcount: '7139'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 **Serviços** inteligentes Adobe: Serviços inteligentes, como Attribution AI e IA do cliente, são modelos baseados em inteligência artificial, com aprendizado de máquina, criados especificamente e que exigem Experience Platform para funcionar e operar.
 
-**Adobe I/O**: A Adobe I/O faz parte do Experience Platform e fornece acesso a tudo que os desenvolvedores precisam para integrar, estender e personalizar a Plataforma, incluindo APIs, eventos, console do desenvolvedor e ferramentas úteis.
+**Adobe I/O**: O Adobe I/O faz parte do Experience Platform e fornece acesso a tudo que os desenvolvedores precisam para integrar, estender e personalizar a Plataforma, incluindo APIs, eventos, console do desenvolvedor e ferramentas úteis.
 
 **Adobe Sensei**: A Adobe Sensei é a estrutura de inteligência que alimenta o Experience Platform. Ele também fornece um conjunto de serviços de IA que capacita as marcas a melhorar sua capacidade de fornecer experiências personalizadas e em tempo real aos clientes.
 
@@ -355,7 +355,7 @@ ht-degree: 0%
 
 **Ofertas** personalizadas: Uma oferta personalizada é uma mensagem de marketing personalizável baseada em regras de elegibilidade e restrições.
 
-**Disposições**: Uma disposição é o local e/ou contexto em que uma oferta é exibida para um usuário final.
+**Inserções**: uma inserção é o local e/ou contexto em que uma oferta é exibida para um usuário final.
 
 **Área de trabalho** Políticas: Um espaço de trabalho na interface do usuário da plataforma que permite que os administradores de dados visualizações e gerenciem as etiquetas e políticas de uso de dados para sua organização.
 

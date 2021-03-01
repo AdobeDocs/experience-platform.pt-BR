@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Guia de solução de problemas e perguntas frequentes da Adobe Experience Platform
 description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 landing-page-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
-topic: getting started
-type: Documentation
+topic: introdução
+type: Documentação
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 3%
 
 ---
@@ -175,7 +175,7 @@ Esta mensagem de erro é exibida quando um cabeçalho `Authorization` está ause
 }
 ```
 
-Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho `Authorization` não é válido. Verifique se o token foi inserido corretamente ou [gere um novo token](https://www.adobe.com/go/platform-api-authentication-en) no Adobe I/O Console.
+Esta mensagem de erro é exibida quando o token de acesso fornecido no cabeçalho `Authorization` não é válido. Verifique se o token foi inserido corretamente ou [gere um novo token](https://www.adobe.com/go/platform-api-authentication-en) no Console de Adobe I/O.
 
 ### A chave da API é obrigatória
 
@@ -197,7 +197,7 @@ Esta mensagem de erro é exibida quando um cabeçalho de chave da API (`x-api-ke
 }
 ```
 
-Esta mensagem de erro é exibida quando o valor do cabeçalho da chave da API (`x-api-key`) fornecido é inválido. Verifique se você inseriu a chave corretamente antes de tentar novamente. Se você não souber sua chave da API, poderá encontrá-la no [Adobe I/O Console](https://console.adobe.io): na guia **Integrations**, navegue até a seção **Overview** para obter uma integração específica e encontre a chave da API em **Client Credentials**.
+Esta mensagem de erro é exibida quando o valor do cabeçalho da chave da API (`x-api-key`) fornecido é inválido. Verifique se você inseriu a chave corretamente antes de tentar novamente. Se você não souber sua chave da API, poderá encontrá-la no [Console do Adobe I/O](https://console.adobe.io): na guia **Integrations**, navegue até a seção **Overview** para obter uma integração específica e encontre a chave da API em **Client Credentials**.
 
 
 ### Cabeçalho ausente
@@ -220,7 +220,7 @@ Esta mensagem de erro é exibida quando um cabeçalho org IMS (`x-gw-ims-org-id`
 }
 ```
 
-Esta mensagem de erro é exibida quando a integração do usuário ou do Adobe I/O (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no cabeçalho `Authorization`) não está autorizada a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no cabeçalho `x-gw-ims-org-id`. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no [Adobe I/O Console](https://console.adobe.io): na guia **Integrations**, navegue até a seção **Overview** para obter uma integração específica para encontrar a ID em **Client Credentials**.
+Esta mensagem de erro é exibida quando a integração de usuário ou Adobe I/O (identificada pelo [token de acesso](#how-do-i-get-an-access-token) no cabeçalho `Authorization`) não tem direito a fazer chamadas para [!DNL Experience Platform] APIs para a Organização IMS fornecida no cabeçalho `x-gw-ims-org-id`. Verifique se você forneceu a ID correta para sua organização IMS no cabeçalho antes de tentar novamente. Se você não souber a ID da organização, poderá encontrá-la no [Console do Adobe I/O](https://console.adobe.io): na guia **Integrations**, navegue até a seção **Overview** para obter uma integração específica para encontrar a ID em **Client Credentials**.
 
 ### Tipo de conteúdo válido não especificado
 

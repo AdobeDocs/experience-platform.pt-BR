@@ -116,7 +116,7 @@ Para obter mais informações sobre conjuntos de dados, consulte a [visão geral
 
 O cartão de métrica **[!UICONTROL Fontes recentes]** mostra as cinco fontes mais recentes criadas na organização. Essa lista é atualizada quando uma nova fonte é criada.
 
-Selecione uma fonte para visualização dos detalhes desse item ou **[!UICONTROL Visualização all]** para ver a lista das fontes. Daí, você pode selecionar uma fonte específica para obter detalhes.
+Selecione uma fonte para visualização dos detalhes desse item, ou **[!UICONTROL Visualização all]** para ver a lista das fontes. Daí, você pode selecionar uma fonte específica para obter detalhes.
 
 Para obter mais informações sobre fontes, consulte [Visão geral das fontes](sources/sources-overview.md).
 

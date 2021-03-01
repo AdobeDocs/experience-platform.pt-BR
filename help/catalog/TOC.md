@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '106'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 20%
 # Catálogo e conjuntos de dados {#catalog}
 
 * [Visão geral do serviço de catálogo](home.md)
-* API de Serviço de Catálogo {#api}
+* API do Serviço de Catálogo {#api}
    * [Introdução](api/getting-started.md)
    * [Filtrar dados do catálogo usando parâmetros de query](api/filter-data.md)
    * [objetos de lista](api/list-objects.md)

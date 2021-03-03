@@ -4,30 +4,31 @@ audience: user
 user-guide-title: Ajuda do Serviço de privacidade da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de privacidade
 user-guide-description: Gerencie solicitações de dados do cliente para cumprir com as normas legais de privacidade, como o GDPR e o CCPA.
+feature: Privacidade
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 41%
+source-wordcount: '87'
+ht-degree: 42%
 
 ---
 
 
-# Adobe Experience Platform Privacy Service {#privacy}
+# Serviço de privacidade da Adobe Experience Platform {#privacy}
 
 * [Visão geral do Privacy Service](home.md)
-* [Aplicativos Privacy Service e Experience Cloud](experience-cloud-apps.md)
+* [Privacy Service e aplicativos da Experience Cloud](experience-cloud-apps.md)
 * [Dados de identidade para solicitações de privacidade](identity-data.md)
-* [Visão geral da Biblioteca JS de privacidade](js-library.md)
-* API Privacy Service {#api}
+* [Visão geral da biblioteca JS de privacidade](js-library.md)
+* API do Serviço de privacidade {#api}
    * [Introdução](api/getting-started.md)
-   * [Tarefas de privacidade](api/privacy-jobs.md)
+   * [Trabalhos de privacidade](api/privacy-jobs.md)
    * [Consentimento](api/consent.md)
    * [Apêndice](api/appendix.md)
-* UI Privacy Service {#ui}
+* Interface do usuário do Privacy Service {#ui}
    * [Visão geral](ui/overview.md)
-   * [Gerenciar trabalhos de privacidade](ui/user-guide.md)
-* [Inscrever-se em Eventos de privacidade](privacy-events.md)
+   * [Gerenciar tarefas de privacidade](ui/user-guide.md)
+* [Assinar eventos de privacidade](privacy-events.md)
 * Regras de privacidade {#regulations}
    * [Visão geral](regulations/overview.md)
    * [Perguntas frequentes](regulations/faq.md)

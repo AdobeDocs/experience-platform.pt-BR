@@ -4,16 +4,17 @@ audience: user
 user-guide-title: Ajuda de painéis da Adobe Experience Platform
 breadcrumb-title: Manual de painéis
 user-guide-description: Visualize dados da Experience Platform em painéis personalizáveis.
+feature: Gerenciamento de dados
 translation-type: tm+mt
-source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '34'
-ht-degree: 50%
+source-wordcount: '36'
+ht-degree: 52%
 
 ---
 
 
-# painéis Adobe Experience Platform {#dashboards}
+# Painéis da Adobe Experience Platform {#dashboards}
 
 * [Visão geral dos painéis](home.md)
 * Painéis disponíveis {#guides}

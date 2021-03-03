@@ -1,11 +1,11 @@
 ---
-title: Interagir com várias propriedades no Adobe Experience Platform Web SDK
-description: Saiba como interagir com várias propriedades do SDK da Web do Experience Platform.
-keywords: várias propriedades;configure;sendEvent;edgeConfigId;orgId;
+title: Interagir com várias propriedades no SDK da Web da Adobe Experience Platform
+description: Saiba como interagir com várias propriedades do SDK da Web da Experience Platform.
+keywords: várias propriedades; configurar; sendEvent; edgeConfigId; orgId;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: b865b7fb940ca2d5f8b44f71eb58e62e3473f52d
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Interagir com várias propriedades
 
-Há alguns casos em que você pode interagir com duas propriedades diferentes na mesma página. Eles incluem:
+Há determinados casos em que você pode interagir com duas propriedades diferentes na mesma página. Esses casos incluem:
 
-* Empresas adquiridas e que estão trabalhando na integração de seus sites
+* Empresas que foram adquiridas e estão trabalhando na integração de seus sites
 * Relações de compartilhamento de dados entre várias empresas
-* Clientes que estão testando novas soluções de Adobe e não querem interromper sua implementação atual
+* Clientes que estão testando novas soluções da Adobe e não desejam interromper a implementação existente
 
-O SDK permite que você crie uma instância separada para cada propriedade adicionando outro nome à matriz no código base. No exemplo a seguir, fornecemos dois nomes, `mycustomname1` e `mycustomname2`.
+O SDK permite criar uma instância separada para cada propriedade, adicionando outro nome à matriz no código base. O exemplo a seguir fornece dois nomes, `mycustomname1` e `mycustomname2`.
 
 ```markup
 <script>
@@ -33,9 +33,9 @@ O SDK permite que você crie uma instância separada para cada propriedade adici
 
 Como resultado, o script cria duas instâncias do SDK. A função global para interagir com a primeira instância é chamada de `mycustomname1` e a função global para interagir com a segunda instância é chamada de `mycustomname2`.
 
-Ao criar duas instâncias separadas, cada uma pode ser configurada para uma propriedade diferente. Qualquer comunicação ou persistência de dados que ocorre devido à interação com `mycustomname1` é mantida isolada de `mycustomname2` e vice-versa.
+Ao criar duas instâncias separadas, cada uma pode ser configurada para uma propriedade diferente. Qualquer comunicação ou persistência de dados que ocorre devido à interação com `mycustomname1` é mantida isolada de `mycustomname2`.
 
-A seguir ao exemplo acima, você pode executar comandos usando cada uma das instâncias, como segue:
+A seguir ao exemplo acima, você pode executar comandos usando cada uma das instâncias, da seguinte maneira:
 
 ```javascript
 mycustomname1("configure", {
@@ -65,4 +65,4 @@ Certifique-se de executar o comando `configure` para cada instância antes de ex
 
 ## Limitações
 
-Para evitar conflitos com cookies, somente uma instância do Adobe Experience Platform [!DNL Web SDK] em uma página pode ter um `edgeConfigId` específico.  Da mesma forma, somente uma instância do Adobe Experience Platform [!DNL Web SDK] pode ter um `orgId` específico.
+Para evitar conflitos com cookies, somente uma instância da Adobe Experience Platform [!DNL Web SDK] em uma página pode ter um `edgeConfigId` específico. Da mesma forma, somente uma instância da Adobe Experience Platform [!DNL Web SDK] pode ter um `orgId` específico.

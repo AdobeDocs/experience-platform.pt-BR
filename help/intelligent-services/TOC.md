@@ -1,47 +1,47 @@
 ---
-product: experience-platform
 solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
+feature: Data Science Workspace
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 23%
+source-wordcount: '122'
+ht-degree: 25%
 
 ---
 
 
-# Adobe Intelligent Services {#intelligent-services}
+# Serviços inteligentes da Adobe {#intelligent-services}
 
-- [Visão geral dos serviços inteligentes](home.md)
-- [Preparar dados para uso no Intelligent Services](data-preparation.md)
+- [Visão geral dos Serviços inteligentes](home.md)
+- [Preparar dados para uso nos Serviços inteligentes](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Visão geral](attribution-ai/overview.md)
    - [Introdução ao Attribution AI](attribution-ai/getting-started.md)
    - [Entrada e saída](attribution-ai/input-output.md)
    - [Guia da interface do usuário](attribution-ai/user-guide.md)
-   - [Saiba mais](attribution-ai/discover-insights.md)
-   - [Download das pontuações](attribution-ai/download-scores.md)
-   - [Analisar pontuações usando o Serviço de Query](attribution-ai/aai-query-service.md)
-- AI de conteúdo e comércio (beta) {#content-commerce-ai}
+   - [Informações do Discover](attribution-ai/discover-insights.md)
+   - [Fazer download das pontuações](attribution-ai/download-scores.md)
+   - [Analisar pontuações usando o Serviço de query](attribution-ai/aai-query-service.md)
+- Content and Commerce AI (beta) {#content-commerce-ai}
    - [Visão geral](content-commerce-ai/overview.md)
    - [Introdução](content-commerce-ai/getting-started.md)
-   - API AI de conteúdo e comércio{#api}
+   - API da API do Content and Commerce AI{#api}
       - [Extração de cores](content-commerce-ai/api/color-extraction.md)
       - [Extração de palavra-chave](content-commerce-ai/api/keyword-extraction.md)
       - [Classificação de texto](content-commerce-ai/api/text-classification.md)
       - [Similaridade visual](content-commerce-ai/api/visual-similarity.md)
-      - [Presença de texto e reconhecimento ótico de caracteres](content-commerce-ai/api/optical-character-recognition.md)
-- AI do cliente {#customer-ai}
+      - [Presença de texto e reconhecimento óptico de caracteres](content-commerce-ai/api/optical-character-recognition.md)
+- Customer AI {#customer-ai}
    - [Visão geral](customer-ai/overview.md)
-   - [Introdução à IA do cliente](customer-ai/getting-started.md)
+   - [Introdução ao Customer AI](customer-ai/getting-started.md)
    - [Entrada e saída](customer-ai/input-output.md)
-   - Guias da interface{#user-guide}
+   - Guias da interface do usuário{#user-guide}
       - [Configurar uma instância](customer-ai/user-guide/configure.md)
-      - [Saiba mais](customer-ai/user-guide/discover-insights.md)
-      - [Criar segmentos usando as pontuações do AI do cliente](customer-ai/user-guide/create-segment.md)
-      - [Download das pontuações](customer-ai/user-guide/download-scores.md)
+      - [Informações do Discover](customer-ai/user-guide/discover-insights.md)
+      - [Criar segmentos usando pontuações do Customer AI](customer-ai/user-guide/create-segment.md)
+      - [Fazer download das pontuações](customer-ai/user-guide/download-scores.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

@@ -1,35 +1,36 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Guia do Data Science Workspace
 user-guide-description: Use o aprendizado de máquina para desenvolver, treinar e pontuar modelos e receitas com Adobe Sensei e notebooks JupyterLab.
+feature: Data Science Workspace
+solution: Experience Platform, Intelligent Services
 translation-type: tm+mt
-source-git-commit: fe2872519cfeda8024a5ad62f6a71e854822f858
+source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 17%
+source-wordcount: '240'
+ht-degree: 18%
 
 ---
 
 
 # Data Science Workspace {#data-science-workspace}
 
-* [Visão geral da Análise do espaço de trabalho da Data Science](home.md)
+* [Visão geral do Data Science Workspace](home.md)
 * [Acesso e recursos da Data Science Workspace](access-features-dsw.md)
-* [Apresentação da Data Science Workspace](walkthrough.md)
-* Notebooks JupyterLab {#jupyterlab}
+* [Apresentação do Data Science Workspace](walkthrough.md)
+* Blocos de anotações do JupyterLab {#jupyterlab}
    * [Visão geral](jupyterlab/overview.md)
    * [Acesso aos dados](jupyterlab/access-notebook-data.md)
    * [Analisar seus dados](jupyterlab/analyze-your-data.md)
-   * [serviço query](jupyterlab/query-service.md)
-   * [Análise de dados exploratórios (EDA)](jupyterlab/eda-notebook.md)
-   * [Criar uma fórmula](jupyterlab/create-a-recipe.md)
+   * [Serviço de query](jupyterlab/query-service.md)
+   * [Análise de dados exploratória (EDA)](jupyterlab/eda-notebook.md)
+   * [Criar uma receita](jupyterlab/create-a-recipe.md)
    * [Colaborar no JupyterLab usando Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizado de máquina do Sensei {#api}
    * [Introdução](api/getting-started.md)
    * [Motores](api/engines.md)
-   * [MLInentons (receitas)](api/mlinstances.md)
+   * [MLIntent (receitas)](api/mlinstances.md)
    * [Experimentos](api/experiments.md)
    * [Modelos](api/models.md)
    * [MLServices](api/mlservices.md)
@@ -38,28 +39,28 @@ ht-degree: 17%
 * Aprendizagem de máquina em tempo real (Alpha) {#real-time-machine-learning}
    * [Visão geral](real-time-machine-learning/home.md)
    * [Introdução](real-time-machine-learning/getting-started.md)
-   * [Gerenciar notebooks](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Gerenciar blocos de anotações](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Guia de referência de nó](real-time-machine-learning/node-reference.md)
-* Fórmulas pré-criadas {#pre-built-recipes}
-   * [Fórmula de recomendação de produto](pre-built-recipes/product-recommendations.md)
-   * [Previsão de compra de produto](pre-built-recipes/product-purchase-prediction.md)
-   * [Fórmula de vendas de varejo](pre-built-recipes/retail-sales.md)
-* Criação de modelos {#authoring}
+* Receitas pré-criadas {#pre-built-recipes}
+   * [Fórmula de recomendação do produto](pre-built-recipes/product-recommendations.md)
+   * [Previsão de compra do produto](pre-built-recipes/product-purchase-prediction.md)
+   * [Receita de vendas de varejo](pre-built-recipes/retail-sales.md)
+* Criação de modelo {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
-   * [Criação de modelos usando o SDK da plataforma (Python)](authoring/platform-sdk.md)
-   * [Acesso aos dados Python](authoring/python.md)
+   * [Criação de modelo usando o SDK da plataforma (Python)](authoring/platform-sdk.md)
+   * [Acesso aos dados do Python](authoring/python.md)
    * [Acesso aos dados do Spark](authoring/spark.md)
-* Tutoriais de modelo e fórmula {#models-recipes}
+* Tutoriais de modelo e receita {#models-recipes}
    * [Criar e publicar um modelo de aprendizado de máquina](models-recipes/create-publish-model.md)
-   * [Criar o schema de vendas de varejo e o conjunto de dados](models-recipes/create-retails-sales-dataset.md)
-   * [Schemas de pré-visualização e conjuntos de dados](models-recipes/preview-schema-data.md)
-   * [Empacotar arquivos de origem em uma fórmula](models-recipes/package-source-files-recipe.md)
+   * [Criar o esquema de vendas de varejo e o conjunto de dados](models-recipes/create-retails-sales-dataset.md)
+   * [Visualizar esquemas e conjuntos de dados](models-recipes/preview-schema-data.md)
+   * [Compactar arquivos de origem em uma receita](models-recipes/package-source-files-recipe.md)
    * [Importar uma receita empacotada (IU)](models-recipes/import-packaged-recipe-ui.md)
-   * [Importar uma fórmula empacotada (API)](models-recipes/import-packaged-recipe-api.md)
-   * [Treinar e avaliar um modelo (IU)](models-recipes/train-evaluate-model-ui.md)
+   * [Importar uma receita empacotada (API)](models-recipes/import-packaged-recipe-api.md)
+   * [Treine e avalie um modelo (IU)](models-recipes/train-evaluate-model-ui.md)
    * [Treinar e avaliar um modelo (API)](models-recipes/train-evaluate-model-api.md)
-   * [Pontuação de um modelo (IU)](models-recipes/score-model-ui.md)
+   * [Pontuação de um modelo (interface do usuário)](models-recipes/score-model-ui.md)
    * [Pontuação de um modelo (API)](models-recipes/score-model-api.md)
    * [Otimizar um modelo](models-recipes/optimize-model.md)
    * [Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina](models-recipes/enrich-profile.md)

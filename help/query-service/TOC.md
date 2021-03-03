@@ -4,44 +4,45 @@ audience: user
 user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
+feature: Queries
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '136'
 ht-degree: 19%
 
 ---
 
 
-# Serviço de Query Adobe Experience Platform {#query}
+# Serviço de query da Adobe Experience Platform {#query}
 
 - [Visão geral do Serviço de query](home.md)
 - [Guia de início rápido](quickstart.md)
-- API do Serviço de query {#api}
+- API do Serviço de Consulta {#api}
    - [Introdução](api/getting-started.md)
    - [Queries](api/queries.md)
    - [Parâmetros de conexão](api/connection-parameters.md)
-   - [Query agendados](api/scheduled-queries.md)
-   - [É executado para query agendados](api/runs-scheduled-queries.md)
-   - [Modelos de query](api/query-templates.md)
-- UI do Serviço de query {#ui}
+   - [Consultas agendadas](api/scheduled-queries.md)
+   - [É executado para consultas agendadas](api/runs-scheduled-queries.md)
+   - [Templates de query](api/query-templates.md)
+- Interface do usuário do serviço de query {#ui}
    - [Visão geral da interface do usuário](ui/overview.md)
-   - [Guia do usuário do Editor de query](ui/user-guide.md)
-   - [Geração de conjuntos de dados a partir dos resultados do query](ui/create-datasets.md)
+   - [Guia do usuário do Editor de consultas](ui/user-guide.md)
+   - [Geração de conjuntos de dados a partir de resultados de query](ui/create-datasets.md)
 - Práticas recomendadas {#best-practices}
-   - [Orientações gerais para a execução de query](best-practices/writing-queries.md)
-   - [Dados desduplicação-duplicados](best-practices/deduplication.md)
-   - [Query de Evento de experiência de amostra](best-practices/experience-event-queries.md)
-   - [Query Adobe Analytics de amostra](best-practices/adobe-analytics.md)
-   - [Query Adobe Target de amostra](best-practices/adobe-target.md)
+   - [Orientações gerais para a execução de consultas](best-practices/writing-queries.md)
+   - [Desduplicação de dados](best-practices/deduplication.md)
+   - [Exemplos de consultas de eventos de experiência](best-practices/experience-event-queries.md)
+   - [Exemplos de consultas do Adobe Analytics](best-practices/adobe-analytics.md)
+   - [Exemplos de consultas do Adobe Target](best-practices/adobe-target.md)
 - Referência SQL {#sql}
    - [Visão geral do SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)
-   - [funções definidas pelo Adobe](sql/adobe-defined-functions.md)
+   - [Funções definidas pela Adobe](sql/adobe-defined-functions.md)
    - [Funções SQL Spark](sql/spark-sql-functions.md)
    - [Comandos de metadados](sql/metadata.md)
-   - [Declarações preparadas](sql/prepared-statements.md)
-- Conectar clientes ao Serviço de Query {#clients}
+   - [Instruções preparadas](sql/prepared-statements.md)
+- Conectar clientes ao Serviço de consulta {#clients}
    - [Visão geral das conexões do cliente](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)

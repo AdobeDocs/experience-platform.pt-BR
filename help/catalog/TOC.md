@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Guia de catálogo e conjuntos de dados
 user-guide-description: Explore a linhagem de dados, os metadados, as descrições dos arquivos, os diretórios e os conjuntos de dados no Data Lake.
+feature: Gerenciamento de dados
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 21%
+source-wordcount: '108'
+ht-degree: 23%
 
 ---
 
@@ -17,8 +18,8 @@ ht-degree: 21%
 * [Visão geral do serviço de catálogo](home.md)
 * API do Serviço de Catálogo {#api}
    * [Introdução](api/getting-started.md)
-   * [Filtrar dados do catálogo usando parâmetros de query](api/filter-data.md)
-   * [objetos de lista](api/list-objects.md)
+   * [Filtrar dados do catálogo usando parâmetros de consulta](api/filter-data.md)
+   * [Listar objetos](api/list-objects.md)
    * [Pesquisar um objeto](api/look-up-object.md)
    * [Pesquisar vários objetos](api/look-up-multiple-objects.md)
    * [Atualizar um objeto](api/update-object.md)
@@ -33,6 +34,6 @@ ht-degree: 21%
    * [Guia do usuário de conjuntos de dados](datasets/user-guide.md)
    * [Criar e preencher um conjunto de dados usando APIs](datasets/create.md)
 * [Processamento de solicitação de privacidade no Data Lake](privacy.md)
-* [Proteção de dados no Experience Platform](data-protection.md)
+* [Proteção de dados na Experience Platform](data-protection.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

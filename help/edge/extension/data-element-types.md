@@ -1,18 +1,18 @@
 ---
-title: Tipos de elementos de dados na extensão do Adobe Experience Platform Web SDK
+title: Tipos de elementos de dados na extensão do SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 78%
+source-wordcount: '305'
+ht-degree: 47%
 
 ---
 
 
 # Tipos de elementos de dados
 
-Depois de definir seus [tipos de ação](action-types.md) na [extensão do Adobe Experience Platform Web SDK](web-sdk-extension.md) para [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure os tipos de elementos de dados.
+Depois de definir seus [tipos de ação](action-types.md) no [extensão do SDK da Web da Adobe Experience Platform](web-sdk-extension.md) para [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure os tipos de elemento de dados.
 
 Esta página descreve os tipos de elementos de dados disponíveis.
 
@@ -22,18 +22,18 @@ Quando usado, esse elemento de dados fornece uma ID de mesclagem de eventos. Nen
 
 ## Mapa de identidade
 
-O elemento de dados do mapa de identidade permite criar identidades com base em outros elementos de dados ou outros valores especificados. Todas as identidades que você criar deverão estar associadas a um namespace correspondente. Esse elemento de dados fornece uma lista suspensa que mostra todos os namespaces padrão, bem como todos os que você criou.
+O elemento de dados do mapa de identidade permite criar identidades com base em outros elementos de dados ou outros valores especificados. Todas as identidades que você criar deverão estar associadas a um namespace correspondente. Esse elemento de dados fornece uma lista suspensa que mostra todos os namespaces padrão e qualquer um que você criou.
 
 ![](./assets/identity-map-data-element.png)
 
 ## Objeto XDM
 
-Todos os dados enviados para o SDK da Web da Adobe Experience Platform devem estar no formato XDM. A formatação dos dados é mais fácil com o elemento de dados do objeto XDM. Ao abrir esse elemento de dados pela primeira vez, selecione a sandbox e o esquema corretos da Adobe Experience Platform. Depois de selecionar o esquema, você verá a estrutura dele, que pode ser facilmente preenchida.
+Use o formato XDM para enviar dados para o SDK da Web da Adobe Experience Platform. A formatação dos dados é mais fácil com o elemento de dados do objeto XDM. Ao abrir esse elemento de dados pela primeira vez, selecione a sandbox e o esquema corretos da Adobe Experience Platform. Após selecionar o esquema, é possível ver a estrutura do esquema, que pode ser facilmente preenchida.
 
 ![](./assets/XDM-object.png)
 
-Observe que quando você abre determinados campos do esquema, como `web.webPageDetails.URL`, alguns itens são coletados automaticamente. Embora vários itens sejam coletados automaticamente, você tem a opção de substituir qualquer item, se necessário. Todos os valores podem ser preenchidos manualmente ou usando outros elementos de dados.
+Observe que quando você abre determinados campos do esquema, como `web.webPageDetails.URL`, alguns itens são coletados automaticamente. Mesmo que vários itens sejam coletados automaticamente, você pode substituir qualquer item, se necessário. Todos os valores podem ser preenchidos manualmente ou usando outros elementos de dados.
 
 >[!NOTE]
 >
->Basta preencher as informações que você está interessado em coletar. Tudo o que não for preenchido será omitido quando os dados forem enviados para as soluções.
+>Preencha apenas as informações que você está interessado em coletar. Qualquer coisa que não for preenchida é omitida quando os dados forem enviados para as soluções.

@@ -4,11 +4,12 @@ audience: user
 user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Guia do Serviço de identidade do Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
+feature: Identidades
 translation-type: tm+mt
-source-git-commit: 6cee9331acde303951718a5be6f5aeaa18a458f6
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 31%
+source-wordcount: '97'
+ht-degree: 30%
 
 ---
 
@@ -16,17 +17,17 @@ ht-degree: 31%
 # Adobe Experience Platform Identity Service {#identity}
 
 - [Visão geral do Serviço de identidade](home.md)
-- [Visão geral da namespace de identidade](namespaces.md)
-- API do Serviço de Identidade {#api}
+- [Visão geral do namespace de identidade](namespaces.md)
+- API do Serviço de identidade {#api}
    - [Introdução](api/getting-started.md)
    - [Rotular um campo como identidade](api/label-identities.md)
-   - [Identidades de cluster de lista](api/list-cluster-identites.md)
-   - [Histórico de cluster de listas de uma identidade](api/list-cluster-history.md)
-   - [Mapeamentos de identidade de lista](api/list-identity-mappings.md)
-   - [Lista disponível namespace](api/list-namespaces.md)
-   - [Criar uma namespace personalizada](api/create-custom-namespace.md)
-   - [Lista da ID nativa para uma identidade](api/list-native-id.md)
-- Interface do usuário do Serviço de Identidade {#ui}
+   - [Listar identidades de cluster](api/list-cluster-identites.md)
+   - [Listar histórico de cluster de uma identidade](api/list-cluster-history.md)
+   - [Listar mapeamentos de identidade](api/list-identity-mappings.md)
+   - [Listar namespaces disponíveis](api/list-namespaces.md)
+   - [Criar um namespace personalizado](api/create-custom-namespace.md)
+   - [Listar a ID nativa de uma identidade](api/list-native-id.md)
+- Interface do usuário do serviço de identidade {#ui}
    - [Visualizador de gráfico de identidade](ui/identity-graph-viewer.md)
 - [Visão geral da ECID](ecid.md)
 - [Guia de solução de problemas](troubleshooting-guide.md)

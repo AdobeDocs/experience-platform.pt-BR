@@ -3,12 +3,13 @@ product: experience-platform
 audience: user
 user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
-description: Este documento lista o sumário para destinos do Adobe Experience Platform
+description: Este documento lista o índice dos destinos da Adobe Experience Platform
+feature: Destinos
 translation-type: tm+mt
-source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 10%
+source-wordcount: '456'
+ht-degree: 11%
 
 ---
 
@@ -16,40 +17,40 @@ ht-degree: 10%
 # Destinos {#destinations}
 
 * [Visão geral dos destinos](./home.md)
-* [Tipos de destino e categorias](./destination-types.md)
-* Tutoriais de API {#api}
-   * [Conecte-se a destinos de streaming e ative dados usando chamadas de API](./api/streaming-destinations.md)
-   * [Conectar-se aos destinos de marketing de email e ativar dados usando chamadas de API](./api/email-marketing.md)
+* [Tipos e categorias de destino](./destination-types.md)
+* Tutoriais da API {#api}
+   * [Conecte-se a destinos de transmissão e ative dados usando chamadas de API](./api/streaming-destinations.md)
+   * [Conecte-se a destinos de marketing por email e ative dados usando chamadas de API](./api/email-marketing.md)
 * Guias da interface {#ui}
-   * [Visão geral da área de trabalho Destinos](./ui/destinations-workspace.md)
-   * [Detalhes de destino da visualização](./ui/destination-details-page.md)
+   * [Visão geral do espaço de trabalho Destinos](./ui/destinations-workspace.md)
+   * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Conectar-se a um destino](./ui/connect-destination.md)
-   * [Ativar perfis e segmentos em um destino](./ui/activate-destinations.md)
+   * [Ativar perfis e segmentos para um destino](./ui/activate-destinations.md)
 * Catálogo de destinos {#catalog}
    * [Visão geral do catálogo de destinos](./catalog/overview.md)
-   * [ (Alfa) Conexão HTTP](./catalog/http-destination.md)
-   * destinos de Adobe{#adobe}
-      * [Visão geral dos destinos de Adobe](./catalog/adobe/overview.md)
-      * [compartilhamento de segmentos Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+   * [ Conexão HTTP (alfa)](./catalog/http-destination.md)
+   * Destinos da Adobe{#adobe}
+      * [Visão geral dos destinos da Adobe](./catalog/adobe/overview.md)
+      * [Compartilhamento de segmentos da Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos de publicidade{#advertising}
       * [Visão geral de destinos de publicidade](./catalog/advertising/overview.md)
-      * [Extensão Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Extensão da tag de conversão do anunciante Awin](./catalog/advertising/awin-conversiontag.md)
-      * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
-      * [Extensão UET (Rastreamento Universal de Eventos) do Bing Ads](./catalog/advertising/bing-ads.md)
+      * [Extensão do Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Extensão de tag de conversão do Awin Advertiser](./catalog/advertising/awin-conversiontag.md)
+      * [Extensão Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
+      * [Extensão Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extensão de ramificação](./catalog/advertising/branch.md)
-      * [Extensão do DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
-      * [Extensão de pixel do Facebook](./catalog/advertising/facebook-pixel.md)
-      * [Extensão Flashspeak OneTag](./catalog/advertising/flashtalking.md)
+      * [Extensão DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
+      * [Extensão Pixel do Facebook](./catalog/advertising/facebook-pixel.md)
+      * [Extensão Flashtalk OneTag](./catalog/advertising/flashtalking.md)
       * [Conexão com o Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensão do Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Conexão com o Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [Conexão de correspondência de cliente do Google](./catalog/advertising/google-customer-match.md)
-      * [Conexão com o Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
-      * [Extensão do Google gtag](./catalog/advertising/gtag-advertising.md)
-      * [Extensão da tag do LinkedIn Insight](./catalog/advertising/linkedin.md)
+      * [Conexão de correspondência do cliente do Google](./catalog/advertising/google-customer-match.md)
+      * [Conexão Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+      * [Extensão gtag do Google](./catalog/advertising/gtag-advertising.md)
+      * [Extensão de tag do LinkedIn Insight](./catalog/advertising/linkedin.md)
       * [Conexão do Microsoft Bing](./catalog/advertising/bing.md)
-      * [Extensão de rastreamento de conversão do Pinterest](./catalog/advertising/pinterest.md)
+      * [Extensão de rastreamento de conversão Pinterest](./catalog/advertising/pinterest.md)
       * [A conexão com o Trade Desk](./catalog/advertising/tradedesk.md)
       * [Extensão de tag do Twitter Universal Website](./catalog/advertising/twitter-uwt.md)
    * Destinos do Analytics {#analytics}
@@ -58,76 +59,76 @@ ht-degree: 10%
       * [Extensão do Adobe Analytics](./catalog/analytics/adobe-analytics.md)
       * [Extensão Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
       * [Extensão Clicktale](./catalog/analytics/clicktale.md)
-      * [Extensão Contentsquare](./catalog/analytics/contentsquare.md)
-      * [Extensão decibel](./catalog/analytics/decibel.md)
-      * [Extensão Demandbase](./catalog/analytics/demandbase.md)
+      * [Extensão do Contentsquare](./catalog/analytics/contentsquare.md)
+      * [Extensão Decibel](./catalog/analytics/decibel.md)
+      * [Extensão do Demandbase](./catalog/analytics/demandbase.md)
       * [Extensão DialogTech](./catalog/analytics/dialogtech.md)
-      * [Extensão da tag do site global do Google](./catalog/analytics/gtag-analytics.md)
+      * [Extensão de tag do Google Global Site](./catalog/analytics/gtag-analytics.md)
       * [Extensão do Google Universal Analytics](./catalog/analytics/google-universal-analytics.md)
-      * [Extensão do JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)
-      * [extensão Nielsen BSDK](./catalog/analytics/nielsen-bsdk.md)
-      * [extensão Nielsen IMA Handler](./catalog/analytics/nielsen-ima.md)
-      * [Extensão do manipulador Nielsen VideoJS Player](./catalog/analytics/nielsen-videojs.md)
+      * [Extensão JW Player Analytics (Beta)](./catalog/analytics/jw-player-analytics.md)
+      * [Extensão BSDK da Nielsen](./catalog/analytics/nielsen-bsdk.md)
+      * [Extensão Nielsen IMA Handler](./catalog/analytics/nielsen-ima.md)
+      * [Extensão Nielsen VideoJS Player Handler](./catalog/analytics/nielsen-videojs.md)
       * [Extensão do Parse.ly Analytics](./catalog/analytics/parsely.md)
-      * [Extensão da métrica quântica](./catalog/analytics/quantum-metric.md)
+      * [Extensão de métrica quântica](./catalog/analytics/quantum-metric.md)
       * [Extensão SessionCam](./catalog/analytics/sessioncam.md)
       * [Extensão TMMData](./catalog/analytics/tmmdata.md)
       * [Extensão de rastreamento de conversão de texto](./catalog/analytics/yext.md)
-   * Destinos do armazenamento na nuvem {#cloud-storage}
-      * [Visão geral dos destinos de Armazenamentos na nuvem](./catalog/cloud-storage/overview.md)
+   * Destinos de armazenamento em nuvem {#cloud-storage}
+      * [Visão geral dos destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
       * [Criar um destino de armazenamento em nuvem](./catalog/cloud-storage/workflow.md)
       * [Conexão Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexão Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexão Blob do Azure](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Conexão de Hubs de Evento do Azure](./catalog/cloud-storage/azure-event-hubs.md)
+      * [(Beta) Conexão de Hubs de Eventos do Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexão SFTP](./catalog/cloud-storage/sftp.md)
-   * Destinos da plataforma de gestão de dados {#data-management}
-      * [Visão geral dos destinos da Plataforma de gestão de dados (DMP)](./catalog/data-management/overview.md)
-      * [extensão Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
+   * Destinos da Plataforma de gerenciamento de dados {#data-management}
+      * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
+      * [Extensão DIL do Audience Manager](./catalog/data-management/aam-dil-extension.md)
    * Destinos de email {#email}
-      * [Extensão bizível](./catalog/email/bizible.md)
-      * [Extensão de marketing](./catalog/email/marketo.md)
+      * [Extensão Bizible](./catalog/email/bizible.md)
+      * [Extensão do Marketo](./catalog/email/marketo.md)
       * [Extensão do Marketo Munchkin](./catalog/email/marketo-munchkin.md)
       * [Extensão PebblePost](./catalog/email/pebblepost.md)
    * Destinos de marketing de email {#email-marketing}
       * [Visão geral dos destinos de marketing por email](./catalog/email-marketing/overview.md)
-      * [Conexão Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [Conexão Eloqua oracle](./catalog/email-marketing/oracle-eloqua.md)
-      * [Conexão com a resposta do oracle](./catalog/email-marketing/oracle-responsys.md)
-      * [Conexão de Marketing Cloud do Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * extensões de Experience Platform Launch {#launch-extensions}
-      * [Visão geral da extensão Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
+      * [Conexão com o Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
+      * [Conexão Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Conexão do Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
+      * [Conexão Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
+   * Extensões do Experience Platform Launch {#launch-extensions}
+      * [Visão geral da extensão do Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinos de envolvimento móvel {#mobile-engagement}
       * [Visão geral dos destinos de envolvimento móvel](./catalog/mobile-engagement/overview.md)
-      * [Ligação de atributos de dirigível](./catalog/mobile-engagement/airship-attributes.md)
+      * [Conexão de atributos de aeróstato](./catalog/mobile-engagement/airship-attributes.md)
       * [Ligação de Etiquetas de Avião](./catalog/mobile-engagement/airship-tags.md)
-      * [Conexão com o Braze](./catalog/mobile-engagement/braze.md)
+      * [Ligação de brasa](./catalog/mobile-engagement/braze.md)
    * Destinos de personalização {#personalization}
       * [Visão geral dos destinos de personalização](./catalog/personalization/overview.md)
       * [Extensão do Adobe Target](./catalog/personalization/adobe-target.md)
       * [Extensão do Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
-      * [Extensão de Beemray](./catalog/personalization/beemray.md)
-      * [Extensão Inteligência do Visitante D&amp;B](./catalog/personalization/dnb.md)
+      * [Extensão do Beemray](./catalog/personalization/beemray.md)
+      * [Extensão Inteligência do visitante D&amp;B](./catalog/personalization/dnb.md)
       * [Extensão do Experience Cloud ID Service](./catalog/personalization/adobe-ecid.md)
-      * [Extensão de gansight](./catalog/personalization/gainsight.md)
+      * [Extensão do Gainsight](./catalog/personalization/gainsight.md)
       * [Extensão KickFire](./catalog/personalization/kickfire.md)
       * [Extensão Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
    * Destinos de rede social{#social}
       * [Visão geral dos destinos de rede social](./catalog/social/overview.md)
       * [Criar um destino de rede social](./catalog/social/workflow.md)
-      * [extensão Adobe Livefyre](./catalog/social/adobe-livefyre.md)
+      * [Extensão do Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Conexão do Facebook](./catalog/social/facebook.md)
-      * [Conexão Audiência Correspondente do Linkedin](./catalog/social/linkedin.md)
-   * Destinos de pesquisa {#survey}
-      * [Visão geral dos destinos de pesquisa](./catalog/survey/overview.md)
-      * [Destino da extensão anterior](./catalog/survey/foresee.md)
+      * [Conexão de públicos-alvo correspondentes do Linkedin](./catalog/social/linkedin.md)
+   * Destinos da pesquisa {#survey}
+      * [Visão geral dos destinos da pesquisa](./catalog/survey/overview.md)
+      * [Destino da extensão da Foresee](./catalog/survey/foresee.md)
       * [Extensão InMoment](./catalog/survey/inmoment.md)
-      * [Extensão de Comentários do Site Qualtrics](./catalog/survey/qualtrics.md)
-      * [Extensão Pesquisas do Intercept do QuestionPro](./catalog/survey/web-intercept-surveys.md)
+      * [Extensão de feedback do site do Qualtrics](./catalog/survey/qualtrics.md)
+      * [Extensão Surveys do QuestionPro Intercept](./catalog/survey/web-intercept-surveys.md)
    * Voz dos destinos do cliente {#voice}
-      * [Visão geral da voz dos destinos do Cliente](./catalog/voice/overview.md)
-      * [Confirmar extensão de Comentários Digitais](./catalog/voice/confirmit-digital-feedback.md)
-      * [Extensão Tags Invoca](./catalog/voice/invoca.md)
-      * [Tensão de Medallia](./catalog/voice/medallia.md)
-      * [Extensão da Caixa de Entrada do URL de Conversação](./catalog/voice/talkurl.md)
+      * [Visão geral da voz dos destinos do cliente](./catalog/voice/overview.md)
+      * [Confirmar extensão de Feedback digital](./catalog/voice/confirmit-digital-feedback.md)
+      * [Extensão de Tags Invoca](./catalog/voice/invoca.md)
+      * [Medallia etension](./catalog/voice/medallia.md)
+      * [Extensão da Caixa de entrada do URL de conversa](./catalog/voice/talkurl.md)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

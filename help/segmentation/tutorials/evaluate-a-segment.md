@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;avaliação de segmento;Serviço de segmentação;segmentação;segmentação;avaliar um segmento;acessar resultados do segmento;avaliar e acessar segmento;
+keywords: Experience Platform, home, tópicos populares, avaliação de segmentos, Serviço de segmentação, Segmentação, avaliar um segmento, acessar resultados do segmento, avaliar e acessar segmento;
 solution: Experience Platform
 title: Avaliar e acessar os resultados do segmento
 topic: tutorial
 type: Tutorial
-description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Adobe Experience Platform Segmentation Service.
+description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -16,95 +16,95 @@ ht-degree: 0%
 
 # Avaliar e acessar os resultados do segmento
 
-Este documento fornece um tutorial para avaliar segmentos e acessar resultados de segmentos usando [[!DNL Segmentation API]](../api/getting-started.md).
+Este documento fornece um tutorial para avaliar segmentos e acessar resultados de segmentos usando o [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de audiência. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
+Este tutorial requer uma compreensão funcional dos vários [!DNL Adobe Experience Platform] serviços envolvidos na criação de segmentos de público-alvo. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite que você crie segmentos de audiência a partir de  [!DNL Real-time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [Caixas de proteção](../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite criar segmentos de público-alvo a partir de  [!DNL Real-time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [Sandboxes](../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Cabeçalhos obrigatórios
 
-Este tutorial também exige que você tenha concluído o tutorial de autenticação [](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para [!DNL Platform] APIs. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Este tutorial também requer que você tenha concluído o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para APIs [!DNL Platform]. A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform] são isolados para caixas de proteção virtuais específicas. As solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes virtuais específicas. As solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
+Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
 ## Avaliar um segmento
 
-Depois de desenvolver, testar e salvar sua definição de segmento, você pode avaliar o segmento por meio de avaliação programada ou por demanda.
+Depois de desenvolver, testar e salvar a definição de segmento, você pode avaliar o segmento por meio de avaliação programada ou sob demanda.
 
-[A avaliação](#scheduled-evaluation)  agendada (também conhecida como &quot;segmentação agendada&quot;) permite criar uma programação recorrente para executar uma tarefa de exportação em um horário específico, enquanto a avaliação  [sob demanda ](#on-demand-evaluation) envolve a criação de uma tarefa de segmento para criar a audiência imediatamente. As etapas para cada um são descritas abaixo.
+[A avaliação agendada](#scheduled-evaluation)  (também conhecida como &quot;segmentação agendada&quot;) permite criar uma programação recorrente para executar um trabalho de exportação em um horário específico, enquanto a  [avaliação ](#on-demand-evaluation) sob demanda envolve a criação de um trabalho de segmento para criar o público-alvo imediatamente. As etapas para cada um são descritas abaixo.
 
-Se você ainda não concluiu o [crie um segmento usando o tutorial da API de segmentação](./create-a-segment.md) ou criou uma definição de segmento usando [Construtor de segmentos](../ui/overview.md), faça isso antes de prosseguir com este tutorial.
+Se ainda não tiver concluído o [criar um segmento usando o tutorial da API de segmentação](./create-a-segment.md) ou criado uma definição de segmento usando [Construtor de segmentos](../ui/overview.md), faça isso antes de prosseguir com este tutorial.
 
 ## Avaliação agendada {#scheduled-evaluation}
 
-Por meio da avaliação programada, sua Organização IMS pode criar uma programação recorrente para executar automaticamente as tarefas de exportação.
+Por meio da avaliação agendada, a Organização IMS pode criar um agendamento recorrente para executar automaticamente tarefas de exportação.
 
 >[!NOTE]
 >
->A avaliação agendada pode ser ativada para caixas de proteção com um máximo de cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] em um único ambiente de caixa de proteção, você não poderá usar a avaliação programada.
+>A avaliação agendada pode ser ativada para sandboxes com no máximo cinco (5) políticas de mesclagem para [!DNL XDM Individual Profile]. Se sua organização tiver mais de cinco políticas de mesclagem para [!DNL XDM Individual Profile] em um único ambiente de sandbox, você não poderá usar a avaliação agendada.
 
 ### Criar um agendamento
 
-Ao fazer uma solicitação POST para o terminal `/config/schedules`, você pode criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
+Ao fazer uma solicitação POST para o endpoint `/config/schedules`, é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
 
-Informações mais detalhadas sobre o uso desse terminal podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#create)
+Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#create)
 
-### Ativar um agendamento
+### Habilitar um agendamento
 
-Por padrão, uma programação fica inativa quando criada, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação create (POST). Você pode habilitar um agendamento (defina `state` como `active`), fazendo uma solicitação de PATCH para o terminal `/config/schedules` e incluindo a ID do agendamento no caminho.
+Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (defina `state` como `active`) fazendo uma solicitação PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
 
-Informações mais detalhadas sobre o uso desse terminal podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#update-state)
+Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#update-state)
 
-### Atualizar o horário agendado
+### Atualizar a hora da programação
 
-O cronograma pode ser atualizado fazendo uma solicitação de PATCH ao terminal `/config/schedules` e incluindo a ID do agendamento no caminho.
+O cronograma pode ser atualizado fazendo uma solicitação PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
 
-Informações mais detalhadas sobre o uso desse terminal podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#update-schedule)
+Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#update-schedule)
 
-## Avaliação a pedido
+## Avaliação por demanda
 
-A avaliação sob demanda permite criar um trabalho de segmento para gerar um segmento de audiência sempre que necessário. Ao contrário da avaliação agendada, isso ocorrerá somente quando solicitado e não é recorrente.
+A avaliação sob demanda permite criar um trabalho de segmento para gerar um segmento de público-alvo sempre que necessário. Ao contrário da avaliação agendada, isso só acontecerá quando solicitado e não é recorrente.
 
 ### Criar um trabalho de segmento
 
-Um trabalho de segmento é um processo assíncrono que cria um novo segmento de audiência. Ele faz referência a uma definição de segmento, bem como a qualquer política de mesclagem que controle como [!DNL Real-time Customer Profile] mescla atributos sobrepostos em seus fragmentos de perfil. Quando uma tarefa de segmento é concluída com êxito, você pode coletar várias informações sobre o segmento, como quaisquer erros que possam ter ocorrido durante o processamento e o tamanho final da sua audiência.
+Um trabalho de segmento é um processo assíncrono que cria um novo segmento de público-alvo. Ele faz referência a uma definição de segmento, bem como a quaisquer políticas de mesclagem que controlam como [!DNL Real-time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
 
 Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o terminal `/segment/jobs` na API [!DNL Real-time Customer Profile].
 
-Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia de ponto de extremidade de jobs de segmento](../api/segment-jobs.md#create)
+Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia do ponto de extremidade de tarefas do segmento](../api/segment-jobs.md#create)
 
 
 ### Pesquisar o status do trabalho do segmento
 
-Você pode usar `id` para um trabalho de segmento específico para executar uma solicitação de pesquisa (GET) para visualização do status atual do trabalho.
+Você pode usar o `id` para um trabalho de segmento específico para executar uma solicitação de pesquisa (GET) para visualizar o status atual do trabalho.
 
-Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia de ponto de extremidade de jobs de segmento](../api/segment-jobs.md#get)
+Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia do ponto de extremidade de tarefas do segmento](../api/segment-jobs.md#get)
 
 ## Interpretar os resultados do segmento
 
-Quando os trabalhos de segmento são executados com êxito, o mapa `segmentMembership` é atualizado para cada perfil incluído no segmento. `segmentMembership` também armazena quaisquer segmentos de audiência pré-avaliados que sejam ingeridos  [!DNL Platform], permitindo a integração com outras soluções como  [!DNL Adobe Audience Manager].
+Quando as tarefas de segmento são executadas com êxito, o mapa `segmentMembership` é atualizado para cada perfil incluído no segmento. `segmentMembership` O também armazena todos os segmentos de público-alvo pré-avaliados que são assimilados no  [!DNL Platform], permitindo a integração com outras soluções como o  [!DNL Adobe Audience Manager].
 
-O exemplo a seguir mostra a aparência do atributo `segmentMembership` para cada registro de perfil individual:
+O exemplo a seguir mostra como o atributo `segmentMembership` se parece para cada registro de perfil individual:
 
 ```json
 {
@@ -136,37 +136,37 @@ O exemplo a seguir mostra a aparência do atributo `segmentMembership` para cada
 
 ## Acessar resultados do segmento
 
-Os resultados de um trabalho de segmento podem ser acessados de uma das duas maneiras: você pode acessar perfis individuais ou exportar uma audiência inteira para um conjunto de dados.
+Os resultados de um trabalho de segmento podem ser acessados de uma das duas formas a seguir: você pode acessar perfis individuais ou exportar um público-alvo inteiro para um conjunto de dados.
 
 As seções a seguir descrevem essas opções com mais detalhes.
 
-## Procure um perfil
+## Pesquisar um perfil
 
-Se você souber o perfil específico que gostaria de acessar, poderá fazê-lo usando a API [!DNL Real-time Customer Profile]. As etapas completas para acessar perfis individuais estão disponíveis no tutorial [Acessar os dados do Perfil do cliente em tempo real usando a API do Perfil](../../profile/api/entities.md).
+Se você souber o perfil específico que gostaria de acessar, poderá fazer isso usando a API [!DNL Real-time Customer Profile]. As etapas completas para acessar perfis individuais estão disponíveis no tutorial do [Acessar Perfil do cliente em tempo real usando a API de perfil](../../profile/api/entities.md) .
 
 ## Exportar um segmento {#export}
 
-Depois que um trabalho de segmentação for concluído com êxito (o valor do atributo `status` for &quot;SUCEDIDO&quot;), você poderá exportar sua audiência para um conjunto de dados no qual ele possa ser acessado e executado.
+Após concluir com êxito um trabalho de segmentação (o valor do atributo `status` é &quot;SUCCEEDED&quot;), você pode exportar o público para um conjunto de dados, onde ele pode ser acessado e tratado.
 
-As etapas a seguir são necessárias para exportar sua audiência:
+As etapas a seguir são necessárias para exportar seu público-alvo:
 
-- [Criar um conjunto de dados](#create-a-target-dataset)  de público alvo - Crie o conjunto de dados para manter membros de audiência.
-- [Gerar perfis de audiência no conjunto de dados](#generate-profiles-for-audience-members)  - Preencha o conjunto de dados com Perfis individuais XDM com base nos resultados de um trabalho de segmento.
-- [Monitorar o progresso](#monitor-export-progress)  da exportação - Verifique o andamento atual do processo de exportação.
-- [Ler dados](#next-steps)  de audiência - recupere os Perfis individuais XDM resultantes que representam os membros da audiência.
+- [Criar um conjunto de dados de destino](#create-a-target-dataset)  - Crie o conjunto de dados para manter membros do público-alvo.
+- [Gerar perfis de público-alvo no conjunto de dados](#generate-profiles-for-audience-members)  - Preencha o conjunto de dados com perfis individuais do XDM com base nos resultados de um trabalho de segmento.
+- [Monitorar o progresso da exportação](#monitor-export-progress)  - Verifique o progresso atual do processo de exportação.
+- [Ler dados do público-alvo](#next-steps)  - Recupere os perfis individuais XDM resultantes que representam os membros do seu público-alvo.
 
-### Criar um conjunto de dados de público alvo
+### Criar um conjunto de dados de destino
 
-Ao exportar uma audiência, um conjunto de dados de público alvo deve ser criado primeiro. É importante que o conjunto de dados seja configurado corretamente para garantir que a exportação seja bem-sucedida.
+Ao exportar um público-alvo, um conjunto de dados de destino deve ser criado primeiro. É importante que o conjunto de dados seja configurado corretamente para garantir que a exportação seja bem-sucedida.
 
-Uma das principais considerações é o schema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar um segmento, o conjunto de dados deve ter por base [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Um schema união é um schema gerado pelo sistema e somente leitura que agregação os campos de schemas que compartilham a mesma classe, neste caso, que é a classe de Perfil Individual XDM. Para obter mais informações sobre schemas de visualização de união, consulte a seção [Perfil do cliente em tempo real do guia do desenvolvedor do Registro do Schema](../../xdm/api/getting-started.md).
+Uma das principais considerações é o esquema no qual o conjunto de dados é baseado (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar um segmento, o conjunto de dados deve ser baseado no [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Um schema de união é um schema gerado pelo sistema e somente leitura que agrega os campos de esquemas que compartilham a mesma classe, neste caso, que é a classe de Perfil individual XDM. Para obter mais informações sobre schemas de exibição de união, consulte a seção [Real-time Customer Profile do Schema Registry developer guide](../../xdm/api/getting-started.md).
 
 Há duas maneiras de criar o conjunto de dados necessário:
 
-- **Usando APIs:** as etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faz referência ao  [!DNL XDM Individual Profile Union Schema] uso da  [!DNL Catalog] API.
-- **Uso da interface do usuário:** Para usar a interface do  [!DNL Adobe Experience Platform] usuário para criar um conjunto de dados que referencie o schema da união, siga as etapas no  [tutorial da ](../ui/overview.md) interface do usuário e retorne a este tutorial para prosseguir com as etapas de  [geração de perfis](#generate-xdm-profiles-for-audience-members) da audiência.
+- **Uso de APIs:** as etapas a seguir neste tutorial descrevem como criar um conjunto de dados que faça referência ao  [!DNL XDM Individual Profile Union Schema] usando a  [!DNL Catalog] API.
+- **Uso da interface do usuário:** para usar a interface do  [!DNL Adobe Experience Platform] usuário para criar um conjunto de dados que faça referência ao schema de união, siga as etapas no  [tutorial da interface do usuário e retorne a este tutorial para prosseguir com as etapas para a ](../ui/overview.md) geração de perfis [ ](#generate-xdm-profiles-for-audience-members) de público-alvo.
 
-Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa para [gerar perfis audiências](#generate-xdm-profiles-for-audience-members).
+Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa para [gerar perfis de público-alvo](#generate-xdm-profiles-for-audience-members).
 
 **Formato da API**
 
@@ -176,7 +176,7 @@ POST /dataSets
 
 **Solicitação**
 
-A solicitação a seguir cria um novo conjunto de dados, fornecendo parâmetros de configuração na carga.
+A solicitação a seguir cria um novo conjunto de dados, fornecendo parâmetros de configuração no payload.
 
 ```shell
 curl -X POST \
@@ -203,12 +203,12 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `name` | Um nome descritivo para o conjunto de dados. |
-| `schemaRef.id` | A ID da visualização de união (schema) à qual o conjunto de dados será associado. |
-| `fileDescription.persisted` | Um valor booliano que, quando definido como `true`, permite que o conjunto de dados persista na visualização da união. |
+| `schemaRef.id` | A ID da exibição de união (schema) à qual o conjunto de dados será associado. |
+| `fileDescription.persisted` | Um valor booleano que, quando definido como `true`, permite que o conjunto de dados persista na exibição de união. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva somente leitura gerada pelo sistema do conjunto de dados recém-criado. Uma ID de conjunto de dados configurada corretamente é necessária para exportar membros da audiência com êxito.
+Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva gerada pelo sistema e somente leitura do conjunto de dados recém-criado. É necessária uma ID de conjunto de dados devidamente configurada para exportar os membros do público-alvo com êxito.
 
 ```json
 [
@@ -216,24 +216,24 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID exclusiva somente lei
 ] 
 ```
 
-### Gerar perfis para membros da audiência {#generate-profiles}
+### Gerar perfis para membros do público-alvo {#generate-profiles}
 
-Depois que você tiver um conjunto de dados que persiste na união, poderá criar um trabalho de exportação para persistir os membros da audiência no conjunto de dados, solicitando POST para o ponto final `/export/jobs` na API [!DNL Real-time Customer Profile] e fornecendo a ID do conjunto de dados e as informações do segmento para os segmentos que deseja exportar.
+Depois de ter um conjunto de dados que persiste em união, você pode criar um trabalho de exportação para manter os membros do público-alvo no conjunto de dados, fazendo uma solicitação POST para o endpoint `/export/jobs` na API [!DNL Real-time Customer Profile] e fornecendo a ID do conjunto de dados e as informações do segmento para os segmentos que você deseja exportar.
 
-Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia do ponto de extremidade de jobs de exportação](../api/export-jobs.md#create)
+Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia do endpoint de tarefas de exportação](../api/export-jobs.md#create)
 
-### Monitorar progresso de exportação
+### Monitorar progresso da exportação
 
-Como um trabalho de exportação processa, você pode monitorar seu status fazendo uma solicitação de GET para o ponto de extremidade `/export/jobs` e incluindo o `id` do trabalho de exportação no caminho. O trabalho de exportação é concluído assim que o campo `status` retorna o valor &quot;SUCEDIDO&quot;.
+Como um trabalho de exportação processa, você pode monitorar seu status fazendo uma solicitação GET para o endpoint `/export/jobs` e incluindo o `id` do trabalho de exportação no caminho. O trabalho de exportação é concluído assim que o campo `status` retorna o valor &quot;SUCCEEDED&quot;.
 
-Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia do ponto de extremidade de jobs de exportação](../api/export-jobs.md#get)
+Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia do endpoint de tarefas de exportação](../api/export-jobs.md#get)
 
 ## Próximas etapas
 
-Depois que a exportação for concluída com êxito, seus dados estarão disponíveis em [!DNL Data Lake] em [!DNL Experience Platform]. Você pode usar [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acessar os dados usando o `batchId` associado à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
+Depois que a exportação for concluída com êxito, seus dados estarão disponíveis no [!DNL Data Lake] em [!DNL Experience Platform]. Em seguida, você pode usar o [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acessar os dados usando o `batchId` associado à exportação. Dependendo do tamanho do segmento, os dados podem estar em partes e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar a API [!DNL Data Access] para acessar e baixar arquivos em lote, siga o [tutorial de Acesso a Dados](../../data-access/tutorials/dataset-data.md).
 
-Você também pode acessar dados de segmento exportados com êxito usando [!DNL Adobe Experience Platform Query Service]. Usando a interface do usuário ou RESTful API, [!DNL Query Service] permite que você grave, valide e execute query em dados dentro de [!DNL Data Lake].
+Você também pode acessar dados de segmentos exportados com êxito usando [!DNL Adobe Experience Platform Query Service]. Usando a interface do usuário ou a API RESTful, [!DNL Query Service] permite gravar, validar e executar consultas em dados dentro do [!DNL Data Lake].
 
-Para obter mais informações sobre como query dados de audiência, consulte a documentação em [[!DNL Query Service]](../../query-service/home.md).
+Para obter mais informações sobre como consultar dados do público-alvo, consulte a documentação em [[!DNL Query Service]](../../query-service/home.md).

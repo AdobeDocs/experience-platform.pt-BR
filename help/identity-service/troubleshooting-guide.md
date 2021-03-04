@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identidade namespace;Identity namespace;home;popular topics;identity
+keywords: Experience Platform, home, tópicos populares, namespace de identidade, namespace de identidade
 solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
-topic: troubleshooting
-description: Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
+topic: solução de problemas
+description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -15,93 +15,93 @@ ht-degree: 0%
 
 # Guia de solução de problemas do Serviço de identidade
 
-Este documento fornece respostas para perguntas frequentes sobre o Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Para perguntas e solução de problemas relacionados às [!DNL Platform] APIs em geral, consulte o [Guia de solução de problemas da API da Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre a Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Em caso de dúvidas e solução de problemas relacionados às APIs [!DNL Platform] em geral, consulte o [Guia de solução de problemas da API da Adobe Experience Platform](../landing/troubleshooting.md).
 
-Os dados que identificam um único cliente são frequentemente fragmentados em vários dispositivos e sistemas que ele usa para se relacionar com sua marca. [!DNL Identity Service] reúne essas identidades fragmentadas, facilitando uma compreensão completa do comportamento do cliente para que você possa oferecer experiências digitais de impacto em tempo real. Para obter mais informações, consulte a [visão geral do serviço de identidade](./home.md).
+Os dados que identificam um único cliente geralmente são fragmentados em vários dispositivos e sistemas que eles usam para interagir com sua marca. [!DNL Identity Service] O reúne essas identidades fragmentadas, facilitando uma compreensão completa do comportamento do cliente para que você possa oferecer experiências digitais impactantes em tempo real. Para obter mais informações, consulte a [Visão geral do Serviço de identidade](./home.md).
 
 ## Perguntas frequentes
 
-A seguir, uma lista de respostas para perguntas frequentes sobre [!DNL Identity Service].
+Veja a seguir uma lista de respostas para perguntas frequentes sobre [!DNL Identity Service].
 
 ## O que são dados de identidade?
 
-Dados de identidade são todos os dados que podem ser usados para identificar uma pessoa. Dependendo do contexto de como os dados são usados em sua organização, os dados de identidade podem incluir nomes de usuário, endereços de email e IDs de sistemas CRM. Os dados de identidade não estão limitados a usuários registrados de seu site ou serviço, pois os usuários anônimos também podem ser identificados por seu dispositivo ou ID de cookie.
+Dados de identidade são quaisquer dados que podem ser usados para identificar uma pessoa. Dependendo do contexto de como os dados são usados em sua organização, os dados de identidade podem incluir nomes de usuário, endereços de email e IDs de sistemas CRM. Os dados de identidade não estão limitados a usuários registrados do seu site ou serviço, pois usuários anônimos também podem ser identificados por seu dispositivo ou ID do cookie.
 
-## Qual é o benefício de rotular os campos de dados como identidades?
+## Qual é o benefício de rotular campos de dados como identidades?
 
-Rotular determinados campos de dados como identidades nos dados de registro e série de tempo permite mapear relações de identidade dentro da estrutura natural dos dados e reconciliar canais cruzados de dados do duplicado. Consulte [Visão geral do Serviço de Identidade](./home.md) para obter mais informações.
+Rotular determinados campos de dados como identidades em seu registro e dados de séries de tempo permite mapear relações de identidade dentro da estrutura natural de seus dados e reconciliar dados duplicados entre canais. Consulte a [Visão geral do Serviço de identidade](./home.md) para obter mais informações.
 
 ## O que são identidades conhecidas e anônimas?
 
-Uma identidade conhecida refere-se a um valor de identidade que pode ser usado sozinho ou com outras informações para identificar, entrar em contato ou localizar uma pessoa individual. Exemplos de identidades conhecidas podem incluir endereços de email, números de telefone e IDs de CRM.
+Uma identidade conhecida refere-se a um valor de identidade que pode ser usado isoladamente ou junto a outras informações para identificar, contactar ou localizar uma pessoa individual. Exemplos de identidades conhecidas podem incluir endereços de email, números de telefone e IDs de CRM.
 
-Uma identidade anônima refere-se a um valor de identidade que não pode ser usado sozinho ou com outras informações para identificar, contatar ou localizar uma pessoa individual (como uma ID de cookie).
+Uma identidade anônima refere-se a um valor de identidade que não pode ser usado isoladamente ou junto a outras informações para identificar, contactar ou localizar uma pessoa individual (como uma ID de cookie).
 
-## O que é um Gráfico de identidade particular?
+## O que é um Gráfico de identidade privada?
 
-Um Gráfico de identidade privada é um mapa privado de relações entre identidades pontilhadas e ligadas, visível apenas para a sua organização.
+Um Gráfico de identidade privada é um mapa privado de relações entre identidades vinculadas e unidas, visível somente para a sua organização.
 
-Quando mais de uma identidade é incluída em qualquer dado assimilado a partir de um terminal de transmissão ou enviado para um conjunto de dados habilitado para [!DNL Identity Service], essas identidades são vinculadas no Gráfico de identidade privada. [!DNL Identity Service] aproveita esse gráfico para obter identidades de um determinado consumidor ou entidade, permitindo a identificação e a união de perfis.
+Quando mais de uma identidade é incluída em qualquer dado assimilado de um endpoint de transmissão ou enviado para um conjunto de dados habilitado para [!DNL Identity Service], essas identidades são vinculadas no Gráfico de identidade privada. [!DNL Identity Service] usam esse gráfico para obter identidades de um determinado consumidor ou entidade, permitindo a identificação e a mesclagem de perfis.
 
-## Como faço para criar vários campos de identidade em um schema XDM?
+## Como faço para criar vários campos de identidade dentro de um esquema XDM?
 
-[Os ](../xdm/home.md) schemas do Modelo de Dados de Experiência (XDM) suportam vários campos de identidade. Qualquer campo de dados do tipo `string` em um schema que implemente o Perfil individual XDM ou a classe ExperienceEvent XDM pode ser rotulado como um campo de identidade. Depois de rotulados, todos os dados contidos nesses campos são adicionados ao mapa de identidade do perfil.
+[Os esquemas do Experience Data Model (XDM)](../xdm/home.md)  suportam vários campos de identidade. Qualquer campo de dados do tipo `string` em um esquema que implemente o Perfil individual XDM ou a classe ExperienceEvent XDM pode ser rotulado como um campo de identidade. Depois de rotulados, os dados contidos nesses campos são adicionados ao mapa de identidade do perfil.
 
-Para obter etapas sobre como rotular um campo XDM como um campo de identidade usando a interface do usuário, consulte a [seção Identidade](../xdm/tutorials/create-schema-ui.md) no tutorial do Editor de Schemas. Se você estiver usando a API, consulte a seção [Descritor de identidade](../xdm/tutorials/create-schema-api.md) no tutorial da API do Registro do Schema.
+Para obter etapas sobre como rotular um campo XDM como um campo de identidade usando a interface do usuário, consulte a [seção Identidade](../xdm/tutorials/create-schema-ui.md) no tutorial do Editor de esquemas. Se estiver usando a API, consulte a seção [Descritor de identidade](../xdm/tutorials/create-schema-api.md) no tutorial da API do Registro de esquema.
 
 ## Há contextos em que alguns campos não devem ser rotulados como identidades?
 
-Os campos de identidade devem ser reservados para valores exclusivos para cada indivíduo. Por exemplo, considere um conjunto de dados para um programa de fidelidade do cliente. O campo de &quot;nível de fidelidade&quot; (ouro, prata, bronze) não seria um campo de identidade útil, ao passo que a ID de fidelidade — um valor único — seria.
+Os campos de identidade devem ser reservados para valores exclusivos de cada indivíduo. Por exemplo, considere um conjunto de dados para um programa de fidelidade do cliente. O campo de &quot;nível de fidelidade&quot; (ouro, prata, bronze) não seria um campo de identidade útil, enquanto a ID de fidelidade - um valor exclusivo - seria.
 
-Campos como CEP e endereços IP não devem ser rotulados como identidades para indivíduos, pois esses valores podem se aplicar a mais de uma pessoa individual. Estes tipos de campos só devem ser rotulados como identidades para as estratégias de comercialização a nível do agregado familiar.
+Campos como CEPs e endereços IP não devem ser rotulados como identidades de indivíduos, pois esses valores podem se aplicar a mais de uma pessoa individual. Estes tipos de campos só devem ser rotulados como identidades para as estratégias de comercialização ao nível do agregado familiar.
 
-## Por que meus campos de identidade não estão vinculando da maneira que eu espero?
+## Por que meus campos de identidade não estão vinculando da maneira esperada?
 
-Usando o endpoint [`/cluster/members`](./api/list-cluster-identites.md) na API do Serviço de Identidade, você pode visualização as identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, verifique se você está fornecendo as informações de identidade apropriadas nos dados XDM. Consulte a seção sobre [fornecendo dados XDM ao Serviço de Identidade](./home.md) na visão geral do Serviço de Identidade para obter mais informações.
+Usando o ponto de extremidade [`/cluster/members`](./api/list-cluster-identites.md) na API do Serviço de identidade, é possível exibir as identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, forneça as informações de identidade apropriadas nos dados XDM. Consulte a seção [fornecendo dados XDM ao Serviço de identidade](./home.md) na visão geral do Serviço de identidade para obter mais informações.
 
-## O que é uma namespace de identidade?
+## O que é um namespace de identidade?
 
-Uma namespace de identidade fornece contexto sobre como os campos de identidade se relacionam à identidade de um cliente. Por exemplo, os campos de identidade na namespace &quot;Email&quot; devem estar em conformidade com um formato do email padrão (nome<span>@emailprovider.com), enquanto os campos que usam a namespace &quot;Telefone&quot; devem estar em conformidade com um número de telefone padrão (como 987-555-1234 na América do Norte).
+Um namespace de identidade fornece contexto para como os campos de identidade estão relacionados à identidade de um cliente. Por exemplo, os campos de identidade no namespace &quot;Email&quot; devem estar em conformidade com um formato de email padrão (name<span>@emailprovider.com), enquanto os campos que usam o namespace &quot;Telefone&quot; devem estar em conformidade com um número de telefone padrão (como 987-555-1234 na América do Norte).
 
-As namespaces distinguem valores de identidade similares entre sistemas CRM diferentes. Por exemplo, considere um perfil que contenha uma ID de Fidelidade numérica associada ao programa redirecionado do empresa. Uma namespace de &quot;Fidelidade&quot; separaria esse valor de uma ID numérica semelhante para seu sistema de comércio eletrônico que também aparece no mesmo perfil.
+Os namespaces distinguem valores de identidade semelhantes entre diferentes sistemas CRM. Por exemplo, considere um perfil que contém uma ID de fidelidade numérica associada ao programa de recompensas da empresa. Um namespace de &quot;Fidelidade&quot; separaria esse valor de uma ID numérica semelhante para seu sistema de eCommerce, que também aparece no mesmo perfil.
 
-Consulte [visão geral da namespace de identidade](./home.md) para obter mais informações.
+Consulte a [visão geral do namespace de identidade](./home.md) para obter mais informações.
 
-## Como associar uma identidade a uma namespace de identidade?
+## Como associo uma identidade a um namespace de identidade?
 
-Os campos de identidade devem ser associados a uma namespace de identidade existente quando são criados. Qualquer nova namespace deve ser [criada usando a API](#how-do-i-create-a-custom-namespace-for-my-organization) antes de associá-la aos campos de identidade.
+Os campos de identidade devem ser associados a um namespace de identidade existente ao serem criados. Qualquer novo namespace deve ser [criado usando a API](#how-do-i-create-a-custom-namespace-for-my-organization) antes de associá-lo aos campos de identidade.
 
-Para obter instruções passo a passo sobre como definir uma namespace ao criar um descritor de identidade usando a API, consulte a seção em [criar um descritor](../xdm/tutorials/create-schema-ui.md) no guia do desenvolvedor do Registro de Schemas. Para marcar um campo de schema como uma identidade na interface do usuário, siga as etapas no [tutorial do Editor de Schemas](../xdm/tutorials/create-schema-api.md).
+Para obter instruções passo a passo para definir um namespace ao criar um descritor de identidade usando a API, consulte a seção sobre [criar um descritor](../xdm/tutorials/create-schema-ui.md) no guia do desenvolvedor do Registro de Schema. Para marcar um campo de esquema como uma identidade na interface do usuário, siga as etapas no [Tutorial do Editor de esquemas](../xdm/tutorials/create-schema-api.md).
 
-## Quais são as namespaces de identidade padrão fornecidas pela Experience Platform? {#standard-namespaces}
+## Quais são os namespaces de identidade padrão fornecidos pela Experience Platform? {#standard-namespaces}
 
-Namespaces de identidade padrão são namespaces disponíveis para todas as organizações. Consulte [Visão geral das namespaces de identidade](./namespaces.md) para obter uma lista completa das namespaces padrão disponíveis.
+Os namespaces de identidade padrão são namespaces disponíveis para todas as organizações. Consulte a [Visão geral dos namespaces de identidade](./namespaces.md) para obter uma lista completa dos namespaces padrão disponíveis.
 
-## Onde posso encontrar a lista de namespaces de identidade disponível para minha organização?
+## Onde posso encontrar a lista de namespaces de identidade disponíveis para minha organização?
 
-Usando a [API do Serviço de Identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode lista todas as namespaces de identidade disponíveis para sua organização, fazendo uma solicitação de GET para o terminal `/idnamespace/identities`. Consulte a seção sobre [listando namespace](./api/list-namespaces.md) disponíveis na visão geral da API do Serviço de Identidade para obter mais informações.
+Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode listar todos os namespaces de identidade disponíveis para sua organização, fazendo uma solicitação GET para o endpoint `/idnamespace/identities`. Consulte a seção [listando namespaces disponíveis](./api/list-namespaces.md) na visão geral da API do Serviço de identidade para obter mais informações.
 
-## Como faço para criar uma namespace personalizada para minha organização?
+## Como criar um namespace personalizado para minha organização?
 
-Usando a [API do Serviço de Identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode criar uma namespace de identidade personalizada para sua organização, fazendo uma solicitação de POST para o terminal `/idnamespace/identities`. Consulte a seção sobre [como criar uma namespace personalizada](./api/create-custom-namespace.md) na visão geral da API do Serviço de Identidade para obter mais informações.
+Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode criar um namespace de identidade personalizado para sua organização, fazendo uma solicitação POST para o endpoint `/idnamespace/identities`. Consulte a seção [criar um namespace personalizado](./api/create-custom-namespace.md) na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## O que são identidades compostas e XIDs?
 
-As identidades são referenciadas em chamadas de API pela identidade composta ou por XID. Uma identidade composta é uma representação de uma identidade que contém um valor de ID e uma namespace. Um XID é um identificador de valor único que representa a mesma construção que uma identidade composta (uma ID e uma namespace) e é automaticamente atribuído a novas identidades quando persistido pelo Serviço de identidade. Consulte [Visão geral da API do Serviço de Identidade](./home.md) para obter mais informações.
+As identidades são referenciadas em chamadas de API por sua identidade composta ou XID. Uma identidade composta é uma representação de uma identidade que contém um valor de ID e um namespace. Um XID é um identificador de valor único que representa a mesma construção de uma identidade composta (uma ID e um namespace) e é automaticamente atribuído a novas identidades quando persistido pelo Serviço de identidade. Consulte a [Visão geral da API do serviço de identidade](./home.md) para obter mais informações.
 
-## Como o Serviço de Identidade lida com informações de identificação pessoal (PII)?
+## Como o Serviço de identidade lida com informações de identificação pessoal (PII)?
 
-O Serviço de identidade cria um hash criptográfico de PII forte e unidirecional antes dos valores persistentes. Os dados de identidade nas namespaces &quot;Telefone&quot; e &quot;Email&quot; são automaticamente hash usando SHA-256, com valores de &quot;Email&quot; automaticamente convertidos em minúsculas antes de hash.
+O Serviço de identidade cria um hash criptográfico de PII forte e unidirecional antes dos valores persistentes. Os dados de identidade nos namespaces &quot;Telefone&quot; e &quot;Email&quot; são automaticamente atribuídos a hash usando SHA-256, com valores de &quot;Email&quot; convertidos automaticamente em minúsculas antes do hash.
 
 ## Devo criptografar todas as PII antes de enviar para a Plataforma?
 
-Não é necessário criptografar manualmente os dados de PII antes de assimilá-los na Plataforma. Ao aplicar o rótulo de uso de dados `I1` a todos os campos de dados aplicáveis, a Plataforma converte esses campos automaticamente em valores de ID com hash após a ingestão.
+Não é necessário criptografar manualmente os dados de PII antes de assimilá-los na plataforma. Ao aplicar o rótulo de uso de dados `I1` a todos os campos de dados aplicáveis, a Platform converte automaticamente esses campos em valores de ID com hash após a assimilação.
 
-Para obter etapas sobre como aplicar e gerenciar rótulos de uso de dados, consulte o tutorial [rótulos de uso de dados](../data-governance/labels/user-guide.md).
+Para obter etapas sobre como aplicar e gerenciar rótulos de uso de dados, consulte o [tutorial de rótulos de uso de dados](../data-governance/labels/user-guide.md).
 
-## Existem considerações ao hash identidades baseadas em PII?
+## Existem considerações ao fazer o hash de identidades baseadas em PII?
 
-Se você estiver enviando valores de PII com hash para o Serviço de identidade, deverá usar o mesmo método de criptografia nos conjuntos de dados. Isso garante que o mesmo valor de identidade nos conjuntos de dados gere os mesmos valores com hash e seja capaz de ser corretamente correspondido e vinculado no gráfico de identidade.
+Se você estiver enviando valores PII com hash para o Serviço de identidade, deverá usar o mesmo método de criptografia em seus conjuntos de dados. Isso garante que o mesmo valor de identidade entre conjuntos de dados gere os mesmos valores com hash e possa ser correspondido e vinculado corretamente no gráfico de identidade.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
 <!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
@@ -127,9 +127,9 @@ A seção a seguir fornece sugestões de solução de problemas para códigos de
 
 ## [!DNL Identity Service] mensagens de erro
 
-A seguir está uma lista de mensagens de erro que podem ser encontradas ao usar a API [!DNL Identity Service].
+Veja a seguir uma lista de mensagens de erro que podem ser encontradas ao usar a API [!DNL Identity Service].
 
-### Parâmetro de query obrigatório ausente
+### Parâmetro de consulta necessário ausente
 
 ```json
 {
@@ -139,13 +139,13 @@ A seguir está uma lista de mensagens de erro que podem ser encontradas ao usar 
 }
 ```
 
-Esse erro é exibido quando um parâmetro de query obrigatório não foi incluído no caminho da solicitação. O `detail` da mensagem de erro fornece o nome do parâmetro ausente. As variações dessa mensagem de erro incluem:
+Este erro é exibido quando um parâmetro de consulta obrigatório não foi incluído no caminho da solicitação. O `detail` da mensagem de erro fornece o nome do parâmetro ausente. As variações dessa mensagem de erro incluem:
 
-- Parâmetro de query obrigatório ausente - nsId
-- Parâmetro de query obrigatório ausente - id
-- Parâmetro de query obrigatório ausente - xid ou (nsid,id)
-- Parâmetro de query obrigatório ausente - targetNs
-- Parâmetro de query obrigatório ausente - xids ou compostoXids
+- Parâmetro de consulta necessário ausente - nsId
+- Parâmetro de consulta necessário ausente - id
+- Parâmetro de consulta necessário ausente - xid ou (nsid,id)
+- Parâmetro de consulta necessário ausente - targetNs
+- Parâmetro de consulta necessário ausente - xids ou compostoXids
 
 Verifique se você está incluindo corretamente o parâmetro indicado no caminho da solicitação antes de tentar novamente.
 
@@ -159,7 +159,7 @@ Verifique se você está incluindo corretamente o parâmetro indicado no caminho
 }
 ```
 
-[!DNL Identity Service] elimina dados com mais de 180 dias. Esta mensagem de erro é exibida quando você tenta acessar dados mais antigos do que isso.
+[!DNL Identity Service] limpa os dados com mais de 180 dias. Essa mensagem de erro é exibida quando você tenta acessar dados mais antigos que este.
 
 ### Existe um limite de 1000 XIDs em uma única chamada
 
@@ -171,10 +171,10 @@ Verifique se você está incluindo corretamente o parâmetro indicado no caminho
 }
 ```
 
-Esta mensagem de erro é exibida quando você tenta recuperar informações de identidade para mais do que o número máximo de [XIDs](#what-are-composite-identities-and-xids) permitidos em uma única chamada de API. Reduza o número de XIDs em sua solicitação para abaixo do limite exibido para resolver esse problema.
+Esta mensagem de erro é exibida ao tentar recuperar informações de identidade para mais do que o número máximo de [XIDs](#what-are-composite-identities-and-xids) permitido em uma única chamada de API. Reduza o número de XIDs em sua solicitação para abaixo do limite exibido para resolver esse problema.
 
 
-### Existe um limite para 1000 compostosXids em uma única chamada
+### Existe um limite para 1000 compostoXids em uma única chamada
 
 ```json
 {
@@ -184,7 +184,7 @@ Esta mensagem de erro é exibida quando você tenta recuperar informações de i
 }
 ```
 
-Esta mensagem de erro é exibida quando você tenta recuperar informações de identidade para mais do que o número máximo de [identidades compostas](#what-are-composite-identities-and-xids) permitido em uma única chamada de API. Reduza o número de identidades compostas na solicitação para abaixo do limite exibido para resolver esse problema.
+Essa mensagem de erro é exibida ao tentar recuperar informações de identidade para mais do que o número máximo de [identidades compostas](#what-are-composite-identities-and-xids) permitidas em uma única chamada de API. Reduza o número de identidades compostas na solicitação para abaixo do limite exibido para resolver esse problema.
 
 ### O tipo de gráfico especificado é inválido
 
@@ -196,7 +196,7 @@ Esta mensagem de erro é exibida quando você tenta recuperar informações de i
 }
 ```
 
-Esta mensagem de erro é exibida quando um parâmetro de query `graph-type` recebe um valor inválido no caminho da solicitação. Consulte a seção [gráficos de identidade](./home.md) na visão geral [!DNL Identity Service] para saber quais tipos de gráficos são suportados.
+Esta mensagem de erro é exibida quando um parâmetro de consulta `graph-type` recebe um valor inválido no caminho da solicitação. Consulte a seção sobre [gráficos de identidade](./home.md) na visão geral [!DNL Identity Service] para saber quais tipos de gráficos são suportados.
 
 ### O token de serviço não tem um escopo válido
 
@@ -208,7 +208,7 @@ Esta mensagem de erro é exibida quando um parâmetro de query `graph-type` rece
 }
 ```
 
-Esta mensagem de erro é exibida quando a Organização IMS não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
+Essa mensagem de erro é exibida quando a Organização IMS não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
 
 ### O token de serviço de gateway não é válido
 
@@ -220,9 +220,9 @@ Esta mensagem de erro é exibida quando a Organização IMS não foi provisionad
 }
 ```
 
-No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial de autenticação [para obter instruções sobre como gerar novos tokens de acesso.](https://www.adobe.com/go/platform-api-authentication-en)
+No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso.
 
-### O token do serviço de autorização não é válido
+### O token de serviço de autorização não é válido
 
 ```json
 {
@@ -232,9 +232,9 @@ No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expira
 }
 ```
 
-No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o tutorial de autenticação [para obter instruções sobre como gerar novos tokens de acesso.](https://www.adobe.com/go/platform-api-authentication-en)
+No caso deste erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser regenerados para continuar usando [!DNL Platform] APIs. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso.
 
-### O token de usuário não tem um contexto de produto válido
+### O token de usuário não tem contexto de produto válido
 
 ```json
 {
@@ -244,7 +244,7 @@ No caso deste erro, seu token de acesso é inválido. Os tokens de acesso expira
 }
 ```
 
-Esta mensagem de erro é exibida quando seu token de acesso não foi gerado de uma integração [!DNL Experience Platform]. Consulte o tutorial de autenticação [a1/> para obter instruções sobre como gerar novos tokens de acesso para uma integração [!DNL Experience Platform].](https://www.adobe.com/go/platform-api-authentication-en)
+Esta mensagem de erro é exibida quando o token de acesso não foi gerado a partir de uma integração [!DNL Experience Platform]. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso para uma integração [!DNL Experience Platform].
 
 ### Erro interno ao obter o XID nativo do código de identidade e namespace
 
@@ -256,9 +256,9 @@ Esta mensagem de erro é exibida quando seu token de acesso não foi gerado de u
 }
 ```
 
-Quando [!DNL Identity Service] persistir em uma identidade, a ID da identidade e a ID da namespace associada são atribuídas a um identificador exclusivo chamado XID. Essa mensagem é exibida quando ocorre um erro durante o processo de localizar o XID para um determinado valor de ID e namespace.
+Quando [!DNL Identity Service] mantém uma identidade, a ID da identidade e a ID de namespace associada são atribuídas a um identificador exclusivo chamado XID. Essa mensagem é exibida quando ocorre um erro durante o processo de localização do XID para um determinado valor de ID e namespace.
 
-### A Organização IMS não está provisionada para o uso de [!DNL Identity Service]
+### A Organização IMS não está provisionada para uso [!DNL Identity Service]
 
 ```json
 {
@@ -268,9 +268,9 @@ Quando [!DNL Identity Service] persistir em uma identidade, a ID da identidade e
 }
 ```
 
-Esta mensagem de erro é exibida quando a Organização IMS não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
+Essa mensagem de erro é exibida quando a Organização IMS não foi provisionada com as permissões apropriadas para [!DNL Identity Service]. Entre em contato com o administrador do sistema para resolver esse problema.
 
-### Erro de servidor interno
+### Erro interno do servidor
 
 ```json
 {
@@ -280,15 +280,15 @@ Esta mensagem de erro é exibida quando a Organização IMS não foi provisionad
 }
 ```
 
-Este erro é exibido quando ocorre uma exceção inesperada na execução de uma chamada de serviço [!DNL Platform]. A prática recomendada é programa de suas chamadas automatizadas para repetir as solicitações algumas vezes em um intervalo de tempo ao receber esse erro. Se o problema persistir, entre em contato com o administrador do sistema.
+Este erro é exibido quando uma exceção inesperada ocorre na execução de uma chamada de serviço [!DNL Platform]. A prática recomendada é programar suas chamadas automatizadas para repetir as solicitações algumas vezes em um intervalo de tempo ao receber esse erro. Se o problema persistir, entre em contato com o administrador do sistema.
 
-## Códigos de erro de ingestão em lote
+## Códigos de erro de assimilação em lote
 
-[!DNL Identity Service] assimila dados de identidade de dados de registro e de série de tempo que são carregados para  [!DNL Platform] usar a assimilação em lote. Como a ingestão em lote é um processo assíncrono, é necessário visualização os detalhes de um lote para erros de visualização. Os erros acumular-se-ão à medida que o lote avança até à conclusão do mesmo.
+[!DNL Identity Service] assimila dados de identidade de dados de registro e de séries de tempo que são carregados para  [!DNL Platform] usar a Assimilação em lote. Como a assimilação em lote é um processo assíncrono, é necessário visualizar os detalhes de um lote para exibir erros. Os erros acumular-se-ão à medida que o lote avança até à conclusão do mesmo.
 
-A seguir está uma lista de mensagens de erro relacionadas a [!DNL Identity Service] que você pode encontrar ao usar a [API de ingestão de dados](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Esta é uma lista de mensagens de erro relacionadas a [!DNL Identity Service] que podem ser encontradas ao usar a [API de assimilação de dados](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-### Schema XDM desconhecido
+### Esquema XDM desconhecido
 
 ```json
 {
@@ -298,9 +298,9 @@ A seguir está uma lista de mensagens de erro relacionadas a [!DNL Identity Serv
 }
 ```
 
-[!DNL Identity Service] consome apenas identidades para dados de registro ou de série cronológica que estejam em conformidade com as  [!DNL Profile] ou  [!DNL ExperienceEvent] classes, respectivamente. A tentativa de assimilar dados para [!DNL Identity Service] que não aderem a nenhuma das classes acionará este erro.
+[!DNL Identity Service] O consome somente identidades para dados de registro ou de série de tempo que estejam em conformidade com as classes  [!DNL Profile] ou  [!DNL ExperienceEvent] , respectivamente. Tentar assimilar dados para [!DNL Identity Service] que não adere a nenhuma das classes acionará esse erro.
 
-### Houve 0 identidades válidas nas primeiras 100 linhas do lote processado
+### Havia 0 identidades válidas nas primeiras 100 linhas do lote processado
 
 ```json
 {
@@ -310,9 +310,9 @@ A seguir está uma lista de mensagens de erro relacionadas a [!DNL Identity Serv
 }
 ```
 
-Esse erro é exibido quando as primeiras 100 linhas de um lote não apresentam identidades. No entanto, este erro não indica de forma conclusiva que não foram encontradas identidades em registros subsequentes.
+Esse erro é exibido quando as primeiras 100 linhas de um lote não apresentaram identidades. Contudo, este erro não indica de forma conclusiva que não foram detectadas identidades em registros subsequentes.
 
-### Registros ignorados, pois eles tinham apenas 1 identidade por registro XDM
+### Registros ignorados, pois tinham apenas 1 identidade por registro XDM
 
 ```json
 {
@@ -322,9 +322,9 @@ Esse erro é exibido quando as primeiras 100 linhas de um lote não apresentam i
 }
 ```
 
-[!DNL Identity Service] somente vincula identidades quando registros únicos apresentam dois ou mais valores de identidade. Esta mensagem de erro ocorre uma vez para cada lote ingerido e exibe o número de registros em que apenas uma identidade foi encontrada e não resultou em nenhuma alteração no gráfico de identidade.
+[!DNL Identity Service] somente vincula identidades quando registros únicos apresentam dois ou mais valores de identidade. Essa mensagem de erro ocorre uma vez para cada lote assimilado e exibe o número de registros nos quais apenas uma identidade pôde ser encontrada e não resultou em nenhuma alteração no gráfico de identidade.
 
-### O Código de namespace não está registrado para esta Organização IMS
+### O Código de Namespace não está registrado para esta Organização IMS
 
 ```json
 {
@@ -334,9 +334,9 @@ Esse erro é exibido quando as primeiras 100 linhas de um lote não apresentam i
 }
 ```
 
-Este erro é exibido quando um registro ingerido apresenta uma identidade cuja namespace associada não existe ou está inacessível para a sua Organização IMS.
+Esse erro é exibido quando um registro assimilado apresenta uma identidade cujo namespace associado não existe ou está inacessível pela Organização IMS.
 
-### Ignorar ingestão em lote, pois a Organização IMS não está provisionada para o Gráfico de identidade privada
+### Ignorar a assimilação em lote, pois a Organização IMS não está provisionada para o Gráfico de identidade privada
 
 ```json
 {
@@ -358,4 +358,4 @@ Ao assimilar dados em lote, essa mensagem de erro é exibida quando a Organizaç
 }
 ```
 
-Este erro é exibido quando ocorre uma exceção inesperada durante uma ingestão em lote. A prática recomendada é programa de suas chamadas automatizadas para repetir as solicitações algumas vezes em um intervalo de tempo ao receber esse erro. Se o problema persistir, entre em contato com o administrador do sistema.
+Esse erro é exibido quando ocorre uma exceção inesperada durante uma assimilação em lote. A prática recomendada é programar suas chamadas automatizadas para repetir as solicitações algumas vezes em um intervalo de tempo ao receber esse erro. Se o problema persistir, entre em contato com o administrador do sistema.

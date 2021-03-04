@@ -6,9 +6,9 @@ description: Este documento aborda a criação de destinos de marketing por emai
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1701'
 ht-degree: 1%
 
 ---
@@ -366,6 +366,8 @@ Uma resposta bem-sucedida contém o identificador exclusivo da conexão base (`i
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] divide automaticamente os arquivos de exportação em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil.
+>
+>Nomes de arquivos divididos são anexados com um número que indica que o arquivo faz parte de uma exportação maior, desta forma: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **Formato da API**
 

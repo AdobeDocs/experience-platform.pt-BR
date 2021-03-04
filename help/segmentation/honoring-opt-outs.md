@@ -1,90 +1,90 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Serviço de segmentação;serviço de segmentação;opt-outs;opt-outs;opt out;opt-outs;
+keywords: Experience Platform, home, tópicos populares, recusar, segmentação, serviço de segmentação, serviço de segmentação, opções de honra, recusas, rejeitar, excluir;
 solution: Experience Platform
-title: Respeito às solicitações de não participação em segmentos
-topic: overview
-description: 'A Adobe Experience Platform permite que seus clientes enviem solicitações de não participação relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de cancelamento fazem parte da California Consumer Privacy Act (CCPA), que dá aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais foram vendidos ou divulgados (e a quem). '
+title: Respeito das solicitações de recusa em segmentos
+topic: visão geral
+description: 'A Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de recusa fazem parte da California Consumer Privacy Act (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem). '
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
 
 
-# Aceitar solicitações de não participação em segmentos
+# Respeito às solicitações de recusa em segmentos
 
-A Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados em [!DNL Real-time Customer Profile]. Essas solicitações de cancelamento fazem parte do [!DNL California Consumer Privacy Act] (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais foram vendidos ou divulgados (e a quem).
+A Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados em [!DNL Real-time Customer Profile]. Essas solicitações de recusa fazem parte da [!DNL California Consumer Privacy Act] (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem).
 
-Depois que um cliente optar por não participar, é importante que sua organização cumpra essas opções ao gerar audiências para atividades de marketing. Este documento descreve detalhes importantes relacionados ao cumprimento de solicitações de não participação.
+Depois que um cliente optar por não participar, é importante que sua organização honre essas opções ao gerar públicos-alvo para atividades de marketing. Este documento descreve detalhes importantes sobre o cumprimento de solicitações de recusa.
 
 ## Introdução
 
-O cumprimento de solicitações de recusa requer uma compreensão dos vários [!DNL Adobe Experience Platform] serviços envolvidos. Antes de trabalhar com solicitações de recusa, consulte a documentação dos seguintes serviços:
+O cumprimento de solicitações de recusa requer uma compreensão dos vários serviços [!DNL Adobe Experience Platform] envolvidos. Antes de trabalhar com solicitações de recusa, revise a documentação dos seguintes serviços:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil unificado e em tempo real para o cliente, com base em dados agregados de várias fontes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite que você crie segmentos de audiência a partir de  [!DNL Real-time Customer Profile] dados.
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Ajuda as organizações a automatizar a conformidade com as regulamentações de privacidade de dados que envolvem dados de clientes dentro  [!DNL Platform].
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos de público-alvo a partir de  [!DNL Real-time Customer Profile] dados.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Ajuda as organizações a automatizar a conformidade com as regulamentações de privacidade de dados que envolvem dados de clientes no  [!DNL Platform].
 
-## Misturas de não participação
+## Misturas de rejeição
 
-Para atender às solicitações de recusa do CCPA, um dos schemas que faz parte do schema da união deve conter os campos [!DNL Experience Data Model] (XDM) de opção de não participação necessários. Há duas combinações que podem ser usadas para adicionar campos de opção de não participação a um schema, cada uma é abordada com mais detalhes nas seções a seguir:
+Para honrar as solicitações de recusa do CCPA, um dos esquemas que fazem parte do schema da união deve conter os campos de recusa [!DNL Experience Data Model] (XDM) necessários. Há duas combinações que podem ser usadas para adicionar campos de opção de não participação a um schema, cada uma é abordada com mais detalhes nas seções a seguir:
 
-- [Privacidade](#profile-privacy) do perfil: Usado para capturar tipos diferentes de opção de não participação (geral ou vendas/compartilhamento).
-- [Detalhes](#profile-preferences-details) das preferências do perfil: Usado para capturar solicitações de recusa para canais XDM específicos.
+- [Privacidade](#profile-privacy) do perfil: Usado para capturar diferentes tipos de recusa (geral ou vendas/compartilhamento).
+- [Detalhes](#profile-preferences-details) das preferências de perfil: Usado para capturar solicitações de recusa para canais XDM específicos.
 
-Para obter instruções passo a passo sobre como adicionar uma mistura a um schema, consulte a seção &quot;Adicionar uma mistura&quot; na seguinte documentação XDM:
-- [Tutorial](../xdm/api/getting-started.md) da API do Registro do schema.: Criação de um schema usando a API de registro do Schema.
-- [Tutorial](../xdm/tutorials/create-schema-ui.md) do Editor de schemas: Criação de um schema usando a interface do usuário da Plataforma.
+Para obter instruções passo a passo sobre como adicionar uma mixin a um schema, consulte a seção &quot;Adicionar uma mixin&quot; na seguinte documentação XDM:
+- [Tutorial da API do Registro de Esquema](../xdm/api/getting-started.md).: Criação de um esquema usando a API do Registro de esquema.
+- [Tutorial](../xdm/tutorials/create-schema-ui.md) do Editor de esquema: Criar um schema usando a interface do usuário da plataforma .
 
-Esta é uma imagem de exemplo mostrando as combinações de opção de não participação adicionadas a um schema na interface do usuário:
+Esta é uma imagem de exemplo mostrando as combinações de opt out adicionadas a um schema na interface do usuário:
 
 ![](images/opt-outs/opt-out-mixins-user-interface.png)
 
-A estrutura de cada mistura, bem como uma descrição dos campos que contribuem para o schema, são descritos com mais detalhes nas seções a seguir.
+A estrutura de cada mixin, bem como uma descrição dos campos que contribuem para o schema, são descritos mais detalhadamente nas seções a seguir.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-A combinação [!DNL Profile Privacy] permite capturar dois tipos de solicitações de cancelamento CCPA dos clientes:
+A combinação [!DNL Profile Privacy] permite capturar dois tipos de solicitações de recusa do CCPA dos clientes:
 
-1. Recusa geral
-2. Opção de não participação de vendas/compartilhamento
+1. Opt out geral
+2. Opção de rejeição de vendas/compartilhamento
 
 ![](images/opt-outs/profile-privacy.png)
 
-A combinação [!DNL Profile Privacy] contém os seguintes campos:
+O mixin [!DNL Profile Privacy] contém os seguintes campos:
 
-- Opções de privacidade (`privacyOptOuts`): Uma matriz que contém uma lista de objetos de opção de não participação.
-- Tipo de Recusa (`optOutType`): O tipo de opção de não participação. Este campo é um enum com dois valores possíveis:
-   - Recusa geral (`general_opt_out`)
-   - Recusa de compartilhamento de vendas (`sales_sharing_opt_out`)
-- Valor de Recusa (`optOutValue`): O estado ativo da opção de não participação, também conhecido como o valor do sinal de não participação, com base no tipo de opção de não participação especificado. Este campo é um enum com quatro valores possíveis:
-   - Não fornecido (`not_provided`): Uma solicitação de opção de não participação não foi fornecida.
-   - Verificação pendente (`pending`): A solicitação de não participação está aguardando verificação.
-   - Recusa (`out`): O cliente optou por não participar.
-   - Inclusão (`in`): O cliente aceitou.
-- Carimbo de data e hora de recusa (`timestamp`): Carimbo de data e hora do sinal de não participação recebido.
+- Opções de não participação de privacidade (`privacyOptOuts`): Uma matriz contendo uma lista de objetos de opção de não participação.
+- Tipo de rejeição (`optOutType`): O tipo de recusa. Este campo é um enum com dois valores possíveis:
+   - Opção de rejeição geral (`general_opt_out`)
+   - Rejeição de compartilhamento de vendas (`sales_sharing_opt_out`)
+- Valor de rejeição (`optOutValue`): O estado ativo da recusa, também conhecido como o valor do sinal de recusa, com base no tipo de rejeição especificado. Este campo é um enum com quatro valores possíveis:
+   - Não fornecido (`not_provided`): Não foi fornecida uma solicitação de recusa.
+   - Verificação pendente (`pending`): A solicitação de recusa está pendente da verificação.
+   - Opção de rejeição (`out`): O cliente recusou a participação.
+   - Opt-In (`in`): O cliente aceitou.
+- Carimbo de data e hora de rejeição (`timestamp`): Carimbo de data e hora do sinal de recusa recebido.
 
-Para visualização da estrutura completa da combinação [!DNL Profile Privacy], consulte o [repositório GitHub público XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ou pré-visualização a combinação usando a interface do usuário da plataforma.
+Para visualizar a estrutura completa da mixin [!DNL Profile Privacy], consulte o [repositório GitHub público XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ou visualize o mixin usando a interface do usuário da plataforma.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-A combinação [!DNL Profile Preferences Details] fornece vários campos que representam preferências para perfis do cliente (como formato do email, idioma preferencial e fuso horário). Um dos campos incluídos nesta combinação, OptInOut (`optInOut`), permite que valores de opção de não participação sejam definidos para canais individuais.
+O mixin [!DNL Profile Preferences Details] fornece vários campos que representam preferências para perfis do cliente (como formato do email, idioma preferencial e fuso horário). Um dos campos incluídos nesse mixin, OptInOut (`optInOut`), permite que valores de opt out sejam definidos para canais individuais.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-A combinação [!DNL Profile Preferences Details] contém os seguintes campos relacionados a opções de não participação:
+O mixin [!DNL Profile Preferences Details] contém os seguintes campos relacionados às opções de não participação:
 
-- OptInOut (`optInOut`): Um objeto em que cada chave representa um URI válido e conhecido para um canal de comunicação e o estado ativo da opção de não participação para cada canal. Cada canal pode ter um de quatro valores possíveis:
-   - Não fornecido (`not_provided`): Não foi fornecida uma solicitação de opção de não participação para este canal.
-   - Verificação pendente (`pending`): A solicitação de não participação para este canal está pendente de verificação.
-   - Recusa (`out`): O cliente optou por não participar deste canal.
-   - Inclusão (`in`): O cliente optou por este canal.
-- Recusa global (`globalOptout`): Um valor booliano que, quando definido como true, define uma substituição global de não participação para o perfil. O valor padrão para esse campo é falso.
+- OptInOut (`optInOut`): Um objeto em que cada chave representa um URI válido e conhecido para um canal de comunicação e o estado ativo da recusa para cada canal. Cada canal pode ter um dos quatro valores possíveis:
+   - Não fornecido (`not_provided`): Não foi fornecida uma solicitação de recusa para este canal.
+   - Verificação pendente (`pending`): A solicitação de recusa para este canal está pendente de verificação.
+   - Opção de rejeição (`out`): O cliente optou por não participar deste canal.
+   - Opt-In (`in`): O cliente optou por participar deste canal.
+- Opção de rejeição global (`globalOptout`): Um valor booleano que, quando definido como true, define uma substituição de recusa global para o perfil. O valor padrão para esse campo é false.
 
-O exemplo JSON abaixo destaca como o objeto OptInOut pode capturar vários sinais de recusa para diferentes canais de comunicação:
+O exemplo JSON abaixo destaca como o objeto OptInOut pode capturar vários sinais de opt out para diferentes canais de comunicação:
 
 ```json
 {
@@ -100,27 +100,27 @@ O exemplo JSON abaixo destaca como o objeto OptInOut pode capturar vários sinai
 }
 ```
 
-Para visualização da estrutura completa da combinação Detalhes das preferências do Perfil, visite o repositório [XDM public GitHub](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ou pré-visualização a combinação usando a interface do usuário [!DNL Platform].
+Para visualizar a estrutura completa da mesclagem Detalhes das preferências de perfil , visite o [repositório GitHub público XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ou visualize a mesclagem usando a interface [!DNL Platform].
 
-## Tratamento de opções na segmentação
+## Tratamento de recusas na segmentação
 
-Para garantir que os perfis marcados com sinalizadores de recusa CCPA não sejam incluídos nos segmentos, os campos especiais devem ser adicionados aos segmentos existentes ou incluídos durante a criação do segmento.
+Para garantir que os perfis marcados com sinalizadores de recusa do CCPA não sejam incluídos em segmentos, campos especiais devem ser adicionados a segmentos existentes ou incluídos durante a criação do segmento.
 
-As seções abaixo demonstram como adicionar os campos apropriados para os dois tipos de sinalizadores de opção de não participação:
-1. Recusa geral
-2. Opção de não participação de vendas/compartilhamento
+As seções abaixo demonstram como adicionar os campos apropriados para os dois tipos de sinalizadores de opt out:
+1. Opt out geral
+2. Opção de rejeição de vendas/compartilhamento
 
-### Recusa geral
+### Opt out geral
 
-[!DNL Segmentation] atende automaticamente a todos os perfis que contêm o sinalizador &quot;Recusa geral&quot;, o que significa que esses perfis não serão incluídos no audiência ou nas exportações por padrão. No entanto, é prática recomendada adicionar os campos apropriados para garantir que os perfis que não foram incluídos nas audiências e atividades de marketing.
+[!DNL Segmentation] O atende automaticamente a todos os perfis que contêm o sinalizador de &quot;[!UICONTROL recusa geral]&quot;, o que significa que esses perfis não serão incluídos em públicos-alvo ou exportações por padrão. No entanto, é uma prática recomendada adicionar os campos apropriados para garantir que os perfis de não participação não sejam incluídos em públicos-alvo e atividades de marketing.
 
-Isso pode ser feito usando a interface do usuário adicionando atributos **[!UICONTROL Privacy Opt-Outs]**. Nesse caso, o segmento é definido para incluir somente aqueles que opt in (o que significa que eles não têm um sinalizador de opção de não participação geral em seus perfis). Isso é feito declarando que o &quot;[!UICONTROL Tipo de Recusa]&quot; é igual a &quot;[!UICONTROL Recusa Geral]&quot; e o &quot;[!UICONTROL Valor de Recusa]&quot; é igual a &quot;[!UICONTROL Aceitação]&quot;.
+Isso pode ser feito usando a interface do usuário adicionando atributos **[!UICONTROL Privacy Opt-Outs]**. Nesse caso, o segmento é definido para incluir apenas aqueles que optaram por participar (o que significa que não têm um sinalizador de opt out geral em seu perfil). Isso é feito declarando que o &quot;[!UICONTROL Opt-Out Type]&quot; é igual a &quot;[!UICONTROL General Opt-Out]&quot; e o &quot;[!UICONTROL Opt-Out Value]&quot; é igual a &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
-### Opção de não participação de vendas/compartilhamento
+### Opção de rejeição de vendas/compartilhamento
 
-Se um usuário tiver um sinalizador de recusa de vendas/compartilhamento definido em seu perfil, esse perfil não deverá mais ser usado para nenhuma criação de segmento ou atividades de marketing. Para garantir que esse sinalizador seja respeitado, &quot;[!UICONTROL Tipo de Recusa]&quot; deve ser igual a &quot;[!UICONTROL Saída de Compartilhamento de Vendas]&quot; e &quot;[!UICONTROL Valor de Recusa]&quot; deve ser igual a &quot;[!UICONTROL Aceitação]&quot;.
+Se um usuário tiver um sinalizador de recusa de vendas/compartilhamento definido em seu perfil, esse perfil não deverá mais ser usado para nenhuma criação de segmento ou atividade de marketing. Para garantir que esse sinalizador seja cumprido, o &quot;[!UICONTROL Opt-Out Type]&quot; deve ser igual a &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; e o &quot;[!UICONTROL Opt-Out Value]&quot; deve ser igual a &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
@@ -130,6 +130,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## Próximas etapas
 
-Para obter mais informações sobre segmentação, inclusive trabalhar com definições de segmentos e audiências por meio da API e da interface do usuário, comece lendo a [visão geral da segmentação](./home.md).
+Para obter mais informações sobre segmentação, incluindo o trabalho com definições de segmento e públicos-alvo por meio da API e interface do usuário, comece lendo a [visão geral da segmentação](./home.md).
 
-Para saber mais sobre a privacidade dos dados em [!DNL Platform], incluindo como [!DNL Privacy Service] ajuda a facilitar a conformidade automatizada com as regulamentações legais e organizacionais de privacidade, consulte a documentação em [[!DNL Privacy Service]](../privacy-service/home.md).
+Para saber mais sobre a privacidade de dados dentro de [!DNL Platform], incluindo como [!DNL Privacy Service] ajuda a facilitar a conformidade automatizada com as regulamentações legais e organizacionais de privacidade, consulte a documentação em [[!DNL Privacy Service]](../privacy-service/home.md).

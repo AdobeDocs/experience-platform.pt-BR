@@ -1,58 +1,58 @@
 ---
-keywords: Experience Platform;home;popular topics;nuvem armazenamento data;streaming data;streaming data;streaming data;streaming
+keywords: Experience Platform, home, tópicos populares, dados de armazenamento em nuvem, dados de streaming, streaming
 solution: Experience Platform
-title: Coletar dados de transmissão usando conectores de origem e APIs
+title: Colete dados de transmissão usando conectores de origem e APIs
 topic: visão geral
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de fluxo e trazê-los para a plataforma usando conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a plataforma usando conectores de origem e APIs.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1306'
 ht-degree: 2%
 
 ---
 
 
-# Coletar dados de transmissão usando conectores de origem e APIs
+# Colete dados de transmissão usando conectores de origem e APIs
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial aborda as etapas para recuperar dados de um conector de fonte de fluxo e trazê-los para [!DNL Experience Platform] usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para recuperar dados de um conector de origem de fluxo e trazê-los para [!DNL Experience Platform] usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
-Este tutorial requer que você tenha uma ID de conexão válida para um conector de transmissão. Se você não tiver essas informações, consulte os seguintes tutoriais sobre como criar uma conexão de origem de streaming antes de tentar este tutorial:
+Este tutorial requer uma ID de conexão válida para um conector de transmissão. Se não tiver essas informações, consulte os seguintes tutoriais sobre como criar uma conexão de origem de transmissão antes de tentar este tutorial:
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL HTTP API]](../create/streaming/http.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial também requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   - [Noções básicas da composição](../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   - [Guia](../../../../xdm/api/getting-started.md) do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados dentro  [!DNL Experience Platform].
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): A assimilação de fluxo para  [!DNL Platform] fornece aos usuários um método para enviar dados de dispositivos cliente e servidor para  [!DNL Experience Platform] em tempo real.
-- [Caixas de proteção](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): A estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
+   - [Noções básicas da composição](../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   - [Guia](../../../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Inclui informações importantes que você precisa saber para executar com sucesso chamadas para a API do Registro de Esquema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no  [!DNL Experience Platform].
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): A assimilação de streaming para  [!DNL Platform] fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o  [!DNL Experience Platform] em tempo real.
+- [Sandboxes](../../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para coletar dados de transmissão com êxito usando a API [!DNL Flow Service].
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -62,13 +62,13 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Criar uma conexão de origem {#source}
 
-Você pode criar uma conexão de origem, fazendo uma solicitação POST para a API [!DNL Flow Service]. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
+Você pode criar uma conexão de origem fazendo uma solicitação POST para a API [!DNL Flow Service]. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
 
 Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
 
 Use os seguintes valores enum para conectores baseados em arquivo:
 
-| Formato dos dados | Valor Enum |
+| Formato dos dados | Valor de enumeração |
 | ----------- | ---------- |
 | Delimitado | `delimited` |
 | JSON | `json` |
@@ -110,8 +110,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `providerId` | A ID do provedor do seu conector de transmissão. |
-| `connectionId` | A ID exclusiva de conexão do seu conector de streaming. |
-| `connectionSpec.id` | A ID de especificação da conexão associada ao seu conector de streaming específico. |
+| `connectionId` | A ID de conexão exclusiva do seu conector de transmissão. |
+| `connectionSpec.id` | A ID de especificação de conexão associada ao seu conector de transmissão específico. |
 
 **Resposta**
 
@@ -124,11 +124,11 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 }
 ```
 
-## Criar um schema XDM de público alvo {#target-schema}
+## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados em [!DNL Platform], um schema de público alvo deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema do público alvo é então usado para criar um conjunto de dados [!DNL Platform] no qual os dados de origem estão contidos. Esse schema XDM do público alvo também estende a classe XDM [!DNL Individual Profile].
+Para que os dados de origem sejam usados em [!DNL Platform], um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de target é usado para criar um conjunto de dados [!DNL Platform] no qual os dados de origem estão contidos. Esse esquema XDM de destino também estende a classe XDM [!DNL Individual Profile].
 
-Um schema XDM de público alvo pode ser criado executando-se uma solicitação POST para a [API do Registro de Schemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Um esquema XDM de destino pode ser criado executando-se uma solicitação POST para a [API do Registro de Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **Formato da API**
 
@@ -138,7 +138,7 @@ POST /tenant/schemas
 
 **Solicitação**
 
-A solicitação de exemplo a seguir cria um schema XDM que estende a classe XDM [!DNL Individual Profile].
+A solicitação de exemplo a seguir cria um esquema XDM que estende a classe XDM [!DNL Individual Profile].
 
 ```shell
 curl -X POST \
@@ -172,7 +172,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo seu identificador exclusivo (`$id`). Essa ID é necessária em etapas posteriores para criar um conjunto de dados de público alvo, mapeamento e fluxo de dados.
+Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo seu identificador exclusivo (`$id`). Essa ID é necessária em etapas posteriores para criar um conjunto de dados de destino, mapeamento e fluxo de dados.
 
 ```json
 {
@@ -234,9 +234,9 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 }
 ```
 
-## Criar um conjunto de dados de público alvo
+## Criar um conjunto de dados de destino
 
-Um conjunto de dados de público alvo pode ser criado executando-se uma solicitação POST para a [API do serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do schema de público alvo dentro da carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API do Serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino dentro da carga útil.
 
 **Formato da API**
 
@@ -276,11 +276,11 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `schemaRef.id` | A ID do schema XDM do público alvo. |
+| `schemaRef.id` | A ID do esquema XDM de destino. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dados recém-criado no formato `"@/datasets/{DATASET_ID}"`. A ID do conjunto de dados é uma sequência de caracteres somente leitura, gerada pelo sistema, usada para fazer referência ao conjunto de dados em chamadas de API. A ID do conjunto de dados do público alvo é necessária em etapas posteriores para criar uma conexão de público alvo e um fluxo de dados.
+Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados recém-criado no formato `"@/datasets/{DATASET_ID}"`. A ID do conjunto de dados é uma string gerada pelo sistema e somente leitura, usada para fazer referência ao conjunto de dados nas chamadas de API. A ID do conjunto de dados de destino é necessária em etapas posteriores para criar uma conexão de destino e um fluxo de dados.
 
 ```json
 [
@@ -288,11 +288,11 @@ Uma resposta bem-sucedida retorna uma matriz que contém a ID do conjunto de dad
 ]
 ```
 
-## Criar uma conexão de público alvo {#target-connection}
+## Criar uma conexão de destino {#target-connection}
 
-Uma conexão de público alvo representa a conexão com o destino onde os dados ingeridos chegam. Para criar uma conexão de público alvo, é necessário fornecer a ID de especificação de conexão fixa associada ao registro de dados. Esta ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão target representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa associada ao data lake. Essa ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Agora você tem os identificadores exclusivos de um schema de público alvo de um conjunto de dados de público alvo e a ID de especificação de conexão para o registro de dados. Usando esses identificadores, você pode criar uma conexão de público alvo usando a API [!DNL Flow Service] para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Agora você tem os identificadores exclusivos em um esquema de destino em um conjunto de dados de destino e a ID de especificação de conexão em um lago de dados. Usando esses identificadores, você pode criar uma conexão de destino usando a API [!DNL Flow Service] para especificar o conjunto de dados que conterá os dados de origem de entrada.
 
 **Formato da API**
 
@@ -328,12 +328,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `params.dataSetId` | A ID do conjunto de dados do público alvo. |
-| `connectionSpec.id` | A ID de especificação de conexão usada para conexão com o Data Lake. Esta ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | A ID do conjunto de dados de destino. |
+| `connectionSpec.id` | A ID de especificação de conexão usada para conexão com o Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de público alvo (`id`). Essa ID é necessária em etapas posteriores.
+Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de destino (`id`). Essa ID é necessária em etapas posteriores.
 
 ```json
 {
@@ -344,7 +344,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 
 ## Criar um mapeamento {#mapping}
 
-Para que os dados de origem sejam ingeridos em um conjunto de dados de público alvo, eles devem primeiro ser mapeados para o schema de público alvo ao qual o conjunto de dados de público alvo adere. Isso é feito executando uma solicitação POST para o Serviço de conversão com mapeamentos de dados definidos na carga da solicitação.
+Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o schema de destino ao qual o conjunto de dados de destino adere. Isso é feito executando-se uma solicitação POST para o Serviço de conversão com mapeamentos de dados definidos na carga da solicitação.
 
 **Formato da API**
 
@@ -385,7 +385,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `xdmSchema` | O `$id` do schema XDM do público alvo. |
+| `xdmSchema` | O `$id` do esquema XDM de destino. |
 
 **Resposta**
 
@@ -402,9 +402,9 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 }
 ```
 
-## Pesquisar especificações de fluxo de dados {#specs}
+## Pesquisar especificações do fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para [!DNL Platform]. Para criar um fluxo de dados, primeiro você deve obter as especificações do fluxo de dados executando uma solicitação de GET para a API [!DNL Flow Service]. As especificações de fluxo de dados são responsáveis por coletar dados de um conector de fluxo contínuo.
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para [!DNL Platform]. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação GET para a API [!DNL Flow Service]. As especificações de fluxo de dados são responsáveis pela coleta de dados de um conector de transmissão.
 **Formato da API**
 
 ```http
@@ -423,7 +423,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados responsável por trazer os dados do seu conector de fluxo para [!DNL Platform]. Essa ID é necessária na próxima etapa para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados responsável por trazer os dados do seu conector de transmissão para [!DNL Platform]. Essa ID é necessária na próxima etapa para criar um novo fluxo de dados.
 
 ```json
 {
@@ -495,14 +495,14 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dad
 
 ## Criar um fluxo de dados
 
-A última etapa para coletar dados de fluxo contínuo é criar um fluxo de dados. Agora, você tem os seguintes valores obrigatórios preparados:
+A última etapa para coletar dados de transmissão é criar um fluxo de dados. Por enquanto, você terá os seguintes valores obrigatórios preparados:
 
-- [ID da conexão de origem](#source)
-- [ID de conexão do público alvo](#target)
+- [ID de conexão de origem](#source)
+- [ID de conexão do Target](#target)
 - [ID de mapeamento](#mapping)
 - [ID de especificação do fluxo de dados](#specs)
 
-Um fluxo de dados é responsável por programar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação de POST ao fornecer os valores mencionados anteriormente dentro da carga.
+Um fluxo de dados é responsável por agendar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST e fornecendo os valores mencionados anteriormente dentro da carga útil.
 
 **Formato da API**
 
@@ -546,10 +546,10 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `flowSpec.id` | A [ID de especificação de fluxo](#specs) recuperada na etapa anterior. |
-| `sourceConnectionIds` | A [ID de conexão de origem](#source) recuperada em uma etapa anterior. |
-| `targetConnectionIds` | A [ID de conexão do público alvo](#target-connection) recuperada em uma etapa anterior. |
-| `transformations.params.mappingId` | A [ID de mapeamento](#mapping) recuperada numa etapa anterior. |
+| `flowSpec.id` | O [ID de especificação do fluxo](#specs) recuperado na etapa anterior. |
+| `sourceConnectionIds` | A [ID da conexão de origem](#source) recuperada em uma etapa anterior. |
+| `targetConnectionIds` | A [ID da conexão de destino](#target-connection) recuperada em uma etapa anterior. |
+| `transformations.params.mappingId` | O [ID de mapeamento](#mapping) recuperado em uma etapa anterior. |
 
 **Resposta**
 
@@ -564,7 +564,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um fluxo de dados para coletar dados de transmissão do seu conector de transmissão. Os dados recebidos agora podem ser usados por serviços downstream [!DNL Platform], como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou um fluxo de dados para coletar dados de transmissão do seu conector de transmissão . Os dados recebidos agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-- [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
-- [Visão geral da Análise do espaço de trabalho da Data Science](../../../../data-science-workspace/home.md)
+- [Visão geral do perfil do cliente em tempo real](../../../../profile/home.md)
+- [Visão geral do Data Science Workspace](../../../../data-science-workspace/home.md)

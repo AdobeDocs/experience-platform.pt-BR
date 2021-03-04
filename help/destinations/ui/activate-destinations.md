@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem na Adobe Experience Platform, mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem na Adobe Experience Platform, mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -147,6 +147,9 @@ Aplica-se a: Destinos de marketing por email e destinos de armazenamento em nuve
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] divide automaticamente os arquivos de exportação em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil.
+>
+>Nomes de arquivos divididos são anexados com um número que indica que o arquivo faz parte de uma exportação maior, desta forma: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 
 Para adicionar um agendamento ao segmento, selecione **[!UICONTROL Criar agendamento]**.
 

@@ -1,65 +1,65 @@
 ---
-keywords: Experience Platform;home;popular topics;conexão de transmissão;criar conexão de transmissão;guia de API;tutorial;criar uma conexão de transmissão;ingestão de transmissão;;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestão;ingestão;
+keywords: Experience Platform, home, tópicos populares, conexão de transmissão, criar conexão de transmissão, guia de api, tutorial, criar uma conexão de transmissão, assimilação de transmissão, ingestão;
 solution: Experience Platform
-title: Criar uma conexão de fluxo usando a API
+title: Criar uma conexão de transmissão usando a API
 topic: tutorial
 type: Tutorial
-description: Este tutorial o ajudará a começar a usar APIs de ingestão de streaming, parte das APIs do Adobe Experience Platform Data Ingestion Service.
+description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do Serviço de assimilação de dados da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5932d63820dd0e50acccd18573746061232e099e
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
 
 
-# Criação de uma conexão de streaming usando a API
+# Criação de uma conexão de transmissão usando a API
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para criar uma conexão de streaming usando a API de Serviço de Fluxo.
+Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para criar uma conexão de transmissão usando a API do Serviço de fluxo.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): O quadro normalizado através do qual  [!DNL Platform] organiza os dados da experiência.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil unificado e de consumidor em tempo real, com base em dados agregados de várias fontes.
+- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): O quadro normalizado pelo qual  [!DNL Platform] organiza os dados de experiência.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de ingestão de streaming.
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de assimilação de streaming.
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../../../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../../../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
 ## Criar uma conexão
 
-Uma conexão especifica a fonte e contém as informações necessárias para tornar o fluxo compatível com as APIs de ingestão de streaming. Ao criar uma conexão, você tem a opção de criar uma conexão não autenticada e autenticada.
+Uma conexão especifica a fonte e contém as informações necessárias para tornar o fluxo compatível com as APIs de assimilação de streaming. Ao criar uma conexão, você tem a opção de criar uma conexão não autenticada e autenticada.
 
 ### Conexão não autenticada
 
-As conexões não autenticadas são a conexão de streaming padrão que você pode criar quando quiser transmitir dados na Plataforma.
+As conexões não autenticadas são a conexão de transmissão padrão que pode ser criada quando você deseja transmitir dados na Plataforma.
 
 **Formato da API**
 
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 **Solicitação**
 
-Para criar uma conexão de fluxo contínuo, a ID do provedor e a ID da especificação da conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para criar uma conexão de transmissão, a ID do provedor e a ID da especificação da conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -99,10 +99,10 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.sourceId` | A ID da conexão de streaming que você deseja criar. |
-| `auth.params.dataType` | O tipo de dados para a conexão de streaming. Esse valor deve ser `xdm`. |
-| `auth.params.name` | O nome da conexão de streaming que você deseja criar. |
-| `connectionSpec.id` | A especificação de conexão `id` para conexões de streaming. |
+| `auth.params.sourceId` | A ID da conexão de transmissão que você deseja criar. |
+| `auth.params.dataType` | O tipo de dados para a conexão de transmissão. Esse valor deve ser `xdm`. |
+| `auth.params.name` | O nome da conexão de transmissão que deseja criar. |
+| `connectionSpec.id` | A especificação de conexão `id` para conexões de transmissão. |
 
 **Resposta**
 
@@ -122,7 +122,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão rec
 
 ### Conexão autenticada
 
-As conexões autenticadas devem ser usadas quando for necessário diferenciar entre registros provenientes de fontes confiáveis e não confiáveis. Os usuários que desejam enviar informações com PII (Personally Identifier Information, Informações pessoais identificáveis) devem criar uma conexão autenticada ao transmitir as informações à plataforma.
+As conexões autenticadas devem ser usadas quando for necessário diferenciar entre registros provenientes de fontes confiáveis e não confiáveis. Os usuários que desejam enviar informações com informações de identificação pessoal (PII) devem criar uma conexão autenticada ao transmitir informações para a plataforma.
 
 **Formato da API**
 
@@ -132,7 +132,7 @@ POST /flowservice/connections
 
 **Solicitação**
 
-Para criar uma conexão de fluxo contínuo, a ID do provedor e a ID da especificação da conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para criar uma conexão de transmissão, a ID do provedor e a ID da especificação da conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -164,11 +164,11 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.sourceId` | A ID da conexão de streaming que você deseja criar. |
-| `auth.params.dataType` | O tipo de dados para a conexão de streaming. Esse valor deve ser `xdm`. |
-| `auth.params.name` | O nome da conexão de streaming que você deseja criar. |
-| `auth.params.authenticationRequired` | O parâmetro que especifica a conexão de streaming criada |
-| `connectionSpec.id` | A especificação de conexão `id` para conexões de streaming. |
+| `auth.params.sourceId` | A ID da conexão de transmissão que você deseja criar. |
+| `auth.params.dataType` | O tipo de dados para a conexão de transmissão. Esse valor deve ser `xdm`. |
+| `auth.params.name` | O nome da conexão de transmissão que deseja criar. |
+| `auth.params.authenticationRequired` | O parâmetro que especifica a conexão de transmissão criada |
+| `connectionSpec.id` | A especificação de conexão `id` para conexões de transmissão. |
 
 **Resposta**
 
@@ -186,9 +186,9 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão rec
 | `id` | O `id` da conexão recém-criada. Isso será chamado de `{CONNECTION_ID}`. |
 | `etag` | Um identificador atribuído à conexão, especificando a revisão da conexão. |
 
-## Obter URL de ponto de extremidade de streaming
+## Obter URL de ponto de extremidade de fluxo
 
-Com a conexão criada, agora é possível recuperar o URL do ponto de extremidade de streaming.
+Com a conexão criada, agora é possível recuperar o URL do terminal de transmissão.
 
 **Formato da API**
 
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a conexão solicitada. O URL do ponto de extremidade de streaming é criado automaticamente com a conexão e pode ser recuperado usando o valor `inletUrl`.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a conexão solicitada. O URL do ponto de extremidade de transmissão é criado automaticamente com a conexão e pode ser recuperado usando o valor `inletUrl` .
 
 ```json
 {
@@ -251,19 +251,19 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão HTTP de streaming, permitindo que você use o terminal de streaming para assimilar dados na Plataforma. Para obter instruções sobre como criar uma conexão de streaming na interface do usuário, leia o tutorial [criação de uma conexão de streaming](../../../ui/create/streaming/http.md).
+Ao seguir este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o endpoint de transmissão para assimilar dados na plataforma. Para obter instruções para criar uma conexão de transmissão na interface do usuário, leia o [tutorial de conexão de transmissão](../../../ui/create/streaming/http.md).
 
-Para saber como transmitir dados para a Plataforma, leia o tutorial em [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial em [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para saber como transmitir dados para a Platform, leia o tutorial em [dados da série de tempo de transmissão](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Apêndice
 
-Esta seção fornece informações complementares sobre a criação de conexões de fluxo contínuo usando a API.
+Esta seção fornece informações complementares sobre como criar conexões de transmissão usando a API.
 
-### Envio de mensagens para uma conexão de streaming autenticada
+### Envio de mensagens para uma conexão de transmissão autenticada
 
-Se uma conexão de streaming tiver a autenticação ativada, o cliente será solicitado a adicionar o cabeçalho `Authorization` à solicitação.
+Se uma conexão de transmissão tiver a autenticação ativada, o cliente deverá adicionar o cabeçalho `Authorization` à solicitação.
 
-Se o cabeçalho `Authorization` não estiver presente, ou um token de acesso inválido/expirado for enviado, uma resposta HTTP 401 Não autorizado será retornada, com uma resposta semelhante como a seguir:
+Se o cabeçalho `Authorization` não estiver presente ou um token de acesso inválido/expirado for enviado, uma resposta HTTP 401 Não autorizado será retornada, com uma resposta semelhante como abaixo:
 
 **Resposta**
 

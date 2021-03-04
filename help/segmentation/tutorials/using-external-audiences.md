@@ -1,64 +1,64 @@
 ---
-keywords: Experience Platform;home;populares tópicos
+keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
-title: Impor conformidade de uso de dados para segmentos de audiência
+title: Impor conformidade de uso de dados para segmentos de público-alvo
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2ca0768c951cf67a775fdfc2c1f9440596d118bf
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# Importação e uso de audiências externas
+# Importação e uso de públicos externos
 
-A Adobe Experience Platform suporta a capacidade de importar audiências externas, que podem ser usadas subsequentemente como componentes para uma nova definição de segmento. Este documento fornece um tutorial para configurar o Experience Platform para importar e usar audiências externas.
+A Adobe Experience Platform é compatível com a capacidade de importar público externo, que pode ser usado posteriormente como componentes para uma nova definição de segmento. Este documento fornece um tutorial para configurar a Experience Platform para importar e usar públicos externos.
 
 ## Introdução
 
-- [Serviço](../home.md) de segmentação: Permite criar segmentos de audiência a partir de dados de Perfil do cliente em tempo real.
-- [Perfil](../../profile/home.md) do cliente em tempo real: Fornece um perfil unificado e em tempo real para o consumidor, com base em dados agregados de várias fontes.
-- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Plataforma organiza os dados de experiência do cliente.
-- [Conjuntos de dados](../../catalog/datasets/overview.md): A construção de armazenamento e gerenciamento para a persistência de dados no Experience Platform.
-- [Inclusão](../../ingestion/streaming-ingestion/overview.md) de transmissão: Como o Experience Platform ingere e armazena dados de dispositivos do cliente e do servidor em tempo real.
+- [Serviço](../home.md) de segmentação: Permite criar segmentos de público-alvo a partir de dados do Perfil do cliente em tempo real.
+- [Perfil](../../profile/home.md) do cliente em tempo real: Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+- [Modelo de dados de experiência (XDM)](../../xdm/home.md): A estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [Conjuntos de dados](../../catalog/datasets/overview.md): A construção de armazenamento e gerenciamento para a persistência de dados na Experience Platform.
+- [Assimilação](../../ingestion/streaming-ingestion/overview.md) de fluxo: Como a Experience Platform assimila e armazena dados de dispositivos cliente e servidor em tempo real.
 
-## Criar uma namespace de identidade para a audiência externa
+## Criar um namespace de identidade para o público externo
 
-A primeira etapa para usar audiências externas é criar uma namespace de identidade. Namespaces de identidade permitem que a Plataforma associe de onde um segmento se origina.
+A primeira etapa para usar públicos externos é criar um namespace de identidade. Os namespaces de identidade permitem que a Platform associe o local de origem de um segmento.
 
-Para criar uma namespace de identidade, siga as instruções no [guia de namespace de identidade](../../identity-service/namespaces.md#manage-namespaces). Ao criar sua namespace de identidade, adicione os detalhes da fonte à namespace de identidade e marque seu [!UICONTROL Type] como um **[!UICONTROL identificador de não pessoas]**.
+Para criar um namespace de identidade, siga as instruções no [guia do namespace de identidade](../../identity-service/namespaces.md#manage-namespaces). Ao criar seu namespace de identidade, adicione os detalhes da origem ao namespace de identidade e marque seu [!UICONTROL Type] como um **[!UICONTROL Identificador de não pessoas]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
-## Criar um schema para os metadados do segmento
+## Criar um esquema para os metadados do segmento
 
-Depois de criar uma namespace de identidade, é necessário criar um novo schema para o segmento que será criado.
+Depois de criar um namespace de identidade, é necessário criar um novo schema para o segmento que você criará.
 
-Para começar a compor um schema, primeiro selecione **[!UICONTROL Schemas]** na barra de navegação esquerda, seguido por **[!UICONTROL Criar schema]** no canto superior direito da área de trabalho dos Schemas. Aqui, selecione **[!UICONTROL Procurar]** para ver uma seleção completa dos tipos de Schemas disponíveis.
+Para começar a compor um schema, primeiro selecione **[!UICONTROL Schemas]** na barra de navegação esquerda, seguido pelo **[!UICONTROL Create schema]** no canto superior direito do espaço de trabalho Schemas. Aqui, selecione **[!UICONTROL Browse]** para ver uma seleção completa dos tipos de Esquema disponíveis.
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Como você está criando uma definição de segmento, que é uma classe predefinida, selecione **[!UICONTROL Usar classe existente]**. Agora, selecione a classe **[!UICONTROL Definição de segmento]**, seguida por **[!UICONTROL Atribuir classe]**.
+Como você está criando uma definição de segmento, que é uma classe predefinida, selecione **[!UICONTROL Use existing class]**. Agora, selecione a classe **[!UICONTROL Segment definition]**, seguida de **[!UICONTROL Assign class]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
-Agora que seu schema foi criado, será necessário especificar qual campo conterá a ID do segmento. Esse campo deve ser marcado como a identidade principal e atribuído às namespaces que você criou anteriormente.
+Agora que o esquema foi criado, será necessário especificar qual campo conterá a ID do segmento. Esse campo deve ser marcado como a identidade primária e atribuído aos namespaces criados anteriormente.
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Depois de marcar o campo `_id` como a identidade primária, selecione o título do schema, seguido da alternância chamada **[!UICONTROL Perfil]**. Selecione **[!UICONTROL Ativar]** para ativar o schema para [!DNL Real-time Customer Profile].
+Depois de marcar o campo `_id` como a identidade primária, selecione o título do esquema, seguido pelo botão rotulado **[!UICONTROL Profile]**. Selecione **[!UICONTROL Ativar]** para ativar o esquema para [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
-Agora, esse schema está ativado para Perfil, com a identificação principal atribuída à namespace de identidade pessoal que você criou. Como resultado, isso significa que os metadados de segmento importados para a Plataforma usando esse schema serão ingeridos no Perfil sem serem unidos aos dados de Perfis relacionados a outras pessoas.
+Agora, esse esquema é ativado para o Perfil, com a identificação primária atribuída ao namespace de identidade de não pessoa que você criou. Como resultado, isso significa que os metadados de segmento importados para a Plataforma usando esse esquema serão assimilados no Perfil sem serem unidos aos dados de Perfil relacionados a pessoas.
 
-## Criar um conjunto de dados para o schema
+## Criar um conjunto de dados para o esquema
 
-Após configurar o schema, será necessário criar um conjunto de dados para os metadados do segmento.
+Após configurar o esquema, será necessário criar um conjunto de dados para os metadados do segmento.
 
-Para criar um conjunto de dados, siga as instruções no [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#create). Siga a opção **[!UICONTROL Criar conjunto de dados a partir do schema]**, usando o schema criado anteriormente.
+Para criar um conjunto de dados, siga as instruções no [guia do usuário do conjunto de dados](../../catalog/datasets/user-guide.md#create). Siga a opção **[!UICONTROL Criar conjunto de dados do schema]**, usando o esquema criado anteriormente.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -66,22 +66,22 @@ Depois de criar o conjunto de dados, continue seguindo as instruções no [guia 
 
 ![](../images/tutorials/external-audiences/dataset-profile.png)
 
-## Configurar e importar dados de audiência
+## Configurar e importar dados do público
 
-Com o conjunto de dados ativado, os dados agora podem ser enviados para a Plataforma por meio da interface do usuário ou usando as APIs do Experience Platform. Para assimilar esses dados na Plataforma, será necessário criar uma conexão de streaming.
+Com o conjunto de dados ativado, agora os dados podem ser enviados para a Platform por meio da interface do usuário ou usando as APIs da Experience Platform. Para assimilar esses dados na Platform, será necessário criar uma conexão de transmissão.
 
-Para criar uma conexão de transmissão, siga as instruções no [tutorial da API](../../sources/tutorials/api/create/streaming/http.md) ou no tutorial da interface [a3/>.](../../sources/tutorials/ui/create/streaming/http.md)
+Para criar uma conexão de transmissão, siga as instruções no [tutorial de API](../../sources/tutorials/api/create/streaming/http.md) ou no [tutorial de interface do usuário](../../sources/tutorials/ui/create/streaming/http.md).
 
-Depois de criar sua conexão de streaming, você terá acesso ao seu terminal de streaming exclusivo para o qual pode enviar seus dados. Para saber como enviar dados para esses pontos de extremidade, leia o tutorial [em streaming record data](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+Depois de criar a conexão de transmissão, você terá acesso ao seu endpoint de transmissão exclusivo para o qual poderá enviar seus dados. Para saber como enviar dados para esses endpoints, leia o tutorial [sobre dados de registro de transmissão](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
-## Criação de segmentos usando audiências importadas
+## Criação de segmentos usando públicos importados
 
-Depois que as audiências importadas forem configuradas, elas poderão ser usadas como parte do processo de segmentação. Para localizar audiências externas, vá para o Construtor de segmentos e selecione a guia **[!UICONTROL Audiência]** na seção **[!UICONTROL Campos]**.
+Depois que os públicos importados forem configurados, eles poderão ser usados como parte do processo de segmentação. Para encontrar públicos externos, vá para o Construtor de segmentos e selecione a guia **[!UICONTROL Públicos-alvo]** na seção **[!UICONTROL Campos]**.
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Próximas etapas
 
-Agora que você pode usar audiências externas em seus segmentos, pode usar o Construtor de segmentos para criar segmentos. Para saber como criar segmentos, leia o tutorial [sobre como criar segmentos](./create-a-segment.md).
+Agora que você pode usar públicos externos em seus segmentos, pode usar o Construtor de segmentos para criar segmentos. Para saber como criar segmentos, leia o tutorial [sobre como criar segmentos](./create-a-segment.md).

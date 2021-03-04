@@ -1,55 +1,55 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;transmissão em fluxo;transmissão em sequência de ingestão validation;validation;Transmissão de ingestão validation;validate;validação;validação síncrona;validação assíncrona;validação assíncrona;validação assíncrona;
+keywords: Experience Platform; home; tópicos populares; streaming; ingestão de streaming; validação de assimilação de streaming; validação; validação de assimilação de streaming; validação; validação síncrona; validação síncrona; validação assíncrona; validação assíncrona;
 solution: Experience Platform
-title: Validação de ingestão de fluxo
+title: Validação de Assimilação de Fluxo
 topic: tutorial
 type: Tutorial
-description: A ingestão de streaming permite carregar seus dados para a Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
+description: A assimilação de streaming permite carregar seus dados na Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
 translation-type: tm+mt
-source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '900'
 ht-degree: 3%
 
 ---
 
 
-# Validação de ingestão de fluxo
+# Validação da assimilação de fluxo
 
-A ingestão de streaming permite carregar seus dados para a Adobe Experience Platform usando pontos de extremidade de streaming em tempo real. As APIs de ingestão de fluxo oferecem suporte a dois modos de validação - síncrona e assíncrona.
+A assimilação de streaming permite carregar seus dados na Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados  [!DNL Experience Platform].
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados para o  [!DNL Experience Platform].
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Schema Registry], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Schema Registry], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção em [!DNL Platform], consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: `application/json`
 
-### Cobertura de validação
+### Cobertura da validação
 
 [!DNL Streaming Validation Service] abrange a validação nos seguintes domínios:
 - Intervalo
@@ -61,15 +61,15 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Validação síncrona
 
-A validação síncrona é um método de validação que fornece feedback imediato sobre por que uma ingestão falhou. No entanto, após falha, os registros que falham na validação são descartados e impedidos de serem enviados para downstream. Como resultado, a validação síncrona só deve ser utilizada durante o processo de desenvolvimento. Ao fazer a validação síncrona, os chamadores são informados do resultado da validação XDM e, se falhar, do motivo da falha.
+A validação síncrona é um método de validação que fornece feedback imediato sobre por que uma assimilação falhou. No entanto, após uma falha, os registros que falham na validação são descartados e impedidos de serem enviados downstream. Como resultado, a validação síncrona só deve ser usada durante o processo de desenvolvimento. Ao fazer a validação síncrona, os chamadores são informados do resultado da validação XDM e, se ele falhar, do motivo da falha.
 
-Por padrão, a validação síncrona não está ativada. Para ativá-lo, você deve passar o parâmetro opcional de query `synchronousValidation=true` ao fazer chamadas de API. Além disso, a validação síncrona só está disponível no momento se o terminal de fluxo estiver no data center VA7.
+Por padrão, a validação síncrona não está ativada. Para habilitá-lo, você deve transmitir o parâmetro de consulta opcional `synchronousValidation=true` ao fazer chamadas de API. Além disso, a validação síncrona só está disponível no momento se o terminal de fluxo estiver no data center do VA7.
 
 Se uma mensagem falhar durante a validação síncrona, ela não será gravada na fila de saída, o que fornece feedback imediato para os usuários.
 
 >[!NOTE]
 >
->As alterações no schema podem não estar disponíveis imediatamente, pois as alterações são armazenadas em cache. Aguarde até quinze minutos para que o cache seja atualizado.
+>As alterações no esquema podem não estar imediatamente disponíveis, pois as alterações são armazenadas em cache. Aguarde até quinze minutos para que o cache seja atualizado.
 
 **Formato da API**
 
@@ -79,11 +79,11 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O valor `id` da conexão de streaming criada anteriormente. |
+| `{CONNECTION_ID}` | O valor `id` da conexão de transmissão criada anteriormente. |
 
 **Solicitação**
 
-Envie a seguinte solicitação para assimilar dados à entrada de dados com validação síncrona:
+Envie a seguinte solicitação para assimilar dados na entrada de dados com validação síncrona:
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -97,7 +97,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **Resposta**
 
-Com a validação síncrona ativada, uma resposta bem-sucedida inclui todos os erros de validação encontrados em sua carga:
+Com a validação síncrona ativada, uma resposta bem-sucedida inclui todos os erros de validação encontrados em sua carga útil:
 
 ```json
 {
@@ -142,11 +142,11 @@ Com a validação síncrona ativada, uma resposta bem-sucedida inclui todos os e
 }
 ```
 
-A resposta acima lista quantas violações de schemas foram encontradas e quais foram as violações. Por exemplo, essa resposta afirma que as chaves `workEmail` e `person` não foram definidas no schema e, portanto, não são permitidas. Ele também sinaliza o valor de `_id` como incorreto, já que o schema esperava um `string`, mas um `long` foi inserido. Observe que, uma vez encontrados cinco erros, o serviço de validação **parará** processando essa mensagem. No entanto, outras mensagens continuarão a ser analisadas.
+A resposta acima lista quantas violações de esquema foram encontradas e quais foram as violações. Por exemplo, essa resposta afirma que as chaves `workEmail` e `person` não foram definidas no schema e, portanto, não são permitidas. Ela também sinaliza o valor de `_id` como incorreto, já que o schema esperava um `string`, mas um `long` foi inserido. Observe que, uma vez que cinco erros são encontrados, o serviço de validação **stop** processará essa mensagem. No entanto, outras mensagens continuarão a ser analisadas.
 
 ## Validação assíncrona
 
-A validação assíncrona é um método de validação que não fornece feedback imediato. Em vez disso, os dados são enviados para um lote com falha em [!DNL Data Lake] para evitar perda de dados. Esses dados com falha podem ser recuperados posteriormente para análise e repetição adicionais. Este método deve ser utilizado na produção. Salvo solicitação em contrário, a ingestão de streaming opera em modos de validação assíncronos.
+A validação assíncrona é um método de validação que não fornece feedback imediato. Em vez disso, os dados são enviados para um lote com falha em [!DNL Data Lake] para evitar perda de dados. Esses dados com falha podem ser recuperados posteriormente para análise e repetição adicionais. Esse método deve ser usado na produção. Salvo solicitação em contrário, a assimilação de streaming opera no modo de validação assíncrona.
 
 **Formato da API**
 
@@ -156,11 +156,11 @@ POST /collection/{CONNECTION_ID}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O valor `id` da conexão de streaming criada anteriormente. |
+| `{CONNECTION_ID}` | O valor `id` da conexão de transmissão criada anteriormente. |
 
 **Solicitação**
 
-Envie a seguinte solicitação para assimilar dados à entrada de dados com validação assíncrona:
+Envie a seguinte solicitação para assimilar dados na entrada de dados com validação assíncrona:
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
@@ -174,7 +174,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 
 >[!NOTE]
 >
->Nenhum parâmetro de query extra é necessário, pois a validação assíncrona é ativada por padrão.
+>Nenhum parâmetro de consulta extra é necessário, pois a validação assíncrona é habilitada por padrão.
 
 **Resposta**
 
@@ -195,15 +195,15 @@ Observe como a resposta declara que a validação síncrona foi ignorada, pois n
 
 ## Apêndice
 
-Esta seção contém informações sobre o que os vários códigos de status significam para respostas para assimilação de dados.
+Esta seção contém informações sobre o que significam os vários códigos de status para respostas para assimilação de dados.
 
 ### Códigos de status
 
 | Código de status | O que significa |
 | ----------- | ------------- |
-| 200 | Sucesso. Para a validação síncrona, significa que ela passou nas verificações de validação. Para validação assíncrona, significa que somente recebeu a mensagem com êxito. Os usuários podem descobrir o status de uma eventual mensagem observando o conjunto de dados. |
-| 400 | Erro. Há algo errado com seu pedido. Uma mensagem de erro com mais detalhes é recebida dos Serviços de validação de fluxo contínuo. |
-| 401 | Erro. Sua solicitação não está autorizada - você precisará solicitar com um token do portador. Para obter mais informações sobre como solicitar acesso, consulte este [tutorial](https://www.adobe.com/go/platform-api-authentication-en) ou esta [postagem do blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
-| 500 | Erro. Erro interno do sistema. |
-| 501 | Erro. Isso significa que a validação síncrona **não** é suportada para este local. |
-| 503 | Erro. O serviço está indisponível no momento. Os clientes devem tentar novamente pelo menos três vezes usando uma estratégia de back-off exponencial. |
+| 200 | Sucesso. Para validação síncrona, significa que ela passou nas verificações de validação. Para validação assíncrona, significa que somente recebeu a mensagem com êxito. Os usuários podem descobrir o status de uma eventual mensagem observando o conjunto de dados. |
+| 400 | Erro. Há algo errado com seu pedido. Uma mensagem de erro com mais detalhes é recebida dos Serviços de validação de fluxo. |
+| 401° | Erro. Sua solicitação não está autorizada - será necessário solicitar com um token portador. Para obter mais informações sobre como solicitar acesso, confira este [tutorial](https://www.adobe.com/go/platform-api-authentication-en) ou este [post do blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 500 | Erro. Há um erro interno do sistema. |
+| 501° | Erro. Isso significa que a validação síncrona é **não** compatível com este local. |
+| 503 | Erro. O serviço está indisponível no momento. Os clientes devem tentar novamente pelo menos três vezes usando uma estratégia exponencial de recuo. |

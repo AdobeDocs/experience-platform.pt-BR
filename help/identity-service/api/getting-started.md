@@ -5,9 +5,9 @@ title: Guia da API do Serviço de identidade
 topic: Guia da API
 description: A API do Serviço de identidade permite que os desenvolvedores gerenciem a identificação entre dispositivos, entre canais e quase em tempo real dos clientes usando gráficos de identidade na Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---

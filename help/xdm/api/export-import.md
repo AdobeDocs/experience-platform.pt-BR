@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;exportar;importar;rpc;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados da experiência, modelo de dados, Modelo de dados, exportação, importação, rpc;
 solution: Experience Platform
-title: Pontos finais da API de exportação/importação
-description: Os pontos finais /export e /import na API do Registro de Schemas permitem que você compartilhe recursos XDM entre organizações IMS e caixas de proteção.
-topic: developer guide
+title: Endpoints da API de exportação/importação
+description: Os endpoints /export e /import na API do Registro de Schema permitem compartilhar recursos XDM entre as Organizações do IMS e as sandboxes.
+topic: guia do desenvolvedor
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
 
-# Exportar/Importar pontos finais
+# Exportar/importar endpoints
 
-Todos os recursos dentro de [!DNL Schema Library] estão contidos em uma caixa de proteção específica dentro de uma Organização IMS. Em alguns casos, você pode compartilhar recursos do Experience Data Model (XDM) entre caixas de proteção e Organizações IMS. A API [!DNL Schema Registry] fornece dois pontos de extremidade que permitem gerar uma carga de exportação para qualquer schema, combinação ou tipo de dados na [!DNL  Schema Library] e, em seguida, usar essa carga para importar esse recurso (e todos os recursos dependentes) para uma caixa de proteção de público alvo e uma Organização IMS.
+Todos os recursos no [!DNL Schema Library] estão contidos em uma sandbox específica em uma Organização IMS. Em alguns casos, você pode compartilhar recursos do Experience Data Model (XDM) entre sandboxes e Orgs do IMS. A API [!DNL Schema Registry] fornece dois endpoints que permitem gerar uma carga de exportação para qualquer schema, mixin ou tipo de dados no[!DNL  Schema Library] e usar essa carga para importar esse recurso (e todos os recursos dependentes) em uma sandbox de destino e na Organização IMS.
 
 ## Introdução
 
-Os pontos de extremidade usados neste guia fazem parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+Os endpoints usados neste guia fazem parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
 
-Os pontos finais de exportação/importação fazem parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros pontos de extremidade na API [!DNL Schema Registry], os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar a namespace `/rpc`, como demonstrado nas chamadas de API abaixo.
+Os endpoints de exportação/importação fazem parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints na API [!DNL Schema Registry], os endpoints RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado nas chamadas de API abaixo.
 
 ## Recuperar uma carga de exportação para um recurso {#export}
 
-Para qualquer schema, combinação ou tipo de dados existente no [!DNL Schema Library], você pode gerar uma carga de exportação, fazendo uma solicitação de GET para o terminal `/export`, fornecendo a ID do recurso no caminho.
+Para qualquer schema, mixin ou tipo de dados existente no [!DNL Schema Library], é possível gerar uma carga de exportação fazendo uma solicitação GET para o endpoint `/export`, fornecendo a ID do recurso no caminho.
 
 **Formato da API**
 
@@ -53,9 +53,9 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de objetos, que representam o recurso XDM do público alvo e todos os seus recursos dependentes. Neste exemplo, o primeiro objeto na matriz é um tipo de dados `Property` criado pelo locatário que a combinação `Restaurant` emprega, enquanto o segundo objeto é a própria mistura `Restaurant`. Esta carga pode ser usada para [importar o recurso](#import) para uma caixa de proteção ou Organização IMS diferente.
+Uma resposta bem-sucedida retorna uma matriz de objetos, que representam o recurso XDM de destino e todos os seus recursos dependentes. Neste exemplo, o primeiro objeto na matriz é um tipo de dados `Property` criado pelo locatário que a mistura `Restaurant` emprega, enquanto o segundo objeto é a própria mistura `Restaurant`. Essa carga pode ser usada para [importar o recurso](#import) para uma sandbox ou Organização IMS diferente.
 
-Observe que todas as instâncias da ID de locatário do recurso são substituídas por `<XDM_TENANTID_PLACEHOLDER>`. Isso permite que o Registro do Schema aplique automaticamente a ID do locatário correta aos recursos, dependendo de onde eles são enviados na chamada de importação subsequente.
+Observe que todas as instâncias da ID de locatário do recurso são substituídas por `<XDM_TENANTID_PLACEHOLDER>`. Isso permite que o Registro de esquema aplique automaticamente a ID de locatário correta aos recursos, dependendo de onde eles são enviados na chamada de importação subsequente.
 
 ```json
 [
@@ -197,7 +197,7 @@ Observe que todas as instâncias da ID de locatário do recurso são substituíd
 
 ## Importar um recurso {#import}
 
-Depois que [tiver gerado uma carga de exportação](#export) para um recurso XDM, você poderá usar essa carga em uma solicitação de POST para o terminal `/import` para importar esse recurso para uma Organização IMS de público alvo e uma caixa de proteção.
+Depois que você tiver [gerado uma carga de exportação](#export) para um recurso XDM, poderá usar essa carga em uma solicitação POST para o endpoint `/import` para importar esse recurso para uma Org e sandbox IMS de destino.
 
 **Formato da API**
 
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Solicitação**
 
-A solicitação a seguir pega a carga retornada no exemplo [export](#export) anterior para importar a combinação `Restaurant` para uma nova Organização IMS e caixa de proteção, conforme determinado pelos cabeçalhos `x-gw-ims-org-id` e `x-sandbox-name`, respectivamente.
+A solicitação a seguir pega a carga retornada no exemplo de exportação [anterior](#export) para importar a mistura `Restaurant` para uma nova Org e sandbox IMS, conforme determinado pelos cabeçalhos `x-gw-ims-org-id` e `x-sandbox-name`, respectivamente.
 
 ```shell
 curl -X POST \

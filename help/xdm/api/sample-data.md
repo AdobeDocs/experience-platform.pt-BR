@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;modelo de dados;sampledata;exemplo de dados;rpc;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, modelo de dados de experiência, Modelo de dados da experiência, modelo de dados, Modelo de dados, sampledata, dados de amostra, rpc;
 solution: Experience Platform
-title: Ponto final da API de dados de amostra
-description: O endpoint /sampledata na API do Registro do Schema permite gerar dados de amostra mapeados para a estrutura de qualquer schema XDM existente.
-topic: developer guide
+title: Endpoint da API de dados de exemplo
+description: O endpoint /sampledata na API do Registro de Schema permite gerar dados de amostra mapeados para a estrutura de qualquer esquema XDM existente.
+topic: guia do desenvolvedor
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '321'
 ht-degree: 1%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 # Ponto de extremidade de dados de amostra
 
-Para assimilar dados no Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um schema do Modelo de Dados de Experiência (XDM) existente. Dependendo da complexidade do schema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera ao ingerir.
+Para assimilar dados na Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um esquema do Experience Data Model (XDM) existente. Dependendo da complexidade do esquema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera ao assimilar.
 
-Usando o endpoint `/sampledata` na API [!DNL Schema Registry], você pode gerar um objeto de ingestão de exemplo para qualquer schema criado anteriormente.
+Usando o endpoint `/sampledata` na API [!DNL Schema Registry], é possível gerar um objeto de assimilação de exemplo para qualquer schema criado anteriormente.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
 
-O terminal de dados de amostra faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros pontos de extremidade na API [!DNL Schema Registry], os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar a namespace `/rpc`, como demonstrado na chamada de API abaixo.
+O ponto de extremidade de dados de amostra faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints na API [!DNL Schema Registry], os endpoints RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado na chamada de API abaixo.
 
-## Recuperar dados de amostra de um schema
+## Recuperar dados de amostra de um esquema
 
-Você pode recuperar dados de amostra de qualquer schema na Biblioteca de Schemas especificando a ID do schema no caminho de uma solicitação de GET para o terminal.
+Você pode recuperar dados de amostra de qualquer esquema na Biblioteca de esquemas especificando a ID do esquema no caminho de uma solicitação GET para o endpoint.
 
 **Formato da API**
 
@@ -37,11 +37,11 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SCHEMA_ID}` | O `meta:altId` ou `$id` codificado por URL do schema para o qual você deseja gerar dados de amostra. |
+| `{SCHEMA_ID}` | O `meta:altId` ou `$id` codificado por URL do esquema para o qual você deseja gerar dados de amostra. |
 
 **Solicitação**
 
-A solicitação a seguir gera dados de amostra para um schema de Membros de Fidelidade.
+A solicitação a seguir gera dados de amostra para um esquema de Membros de Fidelidade.
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um objeto de dados de amostra para o schema especificado.
+Uma resposta bem-sucedida retorna um objeto de dados de amostra para o esquema especificado.
 
 ```json
 {

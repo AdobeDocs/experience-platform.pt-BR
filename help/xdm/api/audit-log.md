@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;modelo de dados;auditoria;registro de auditoria;changelog;change log;rpc;
+keywords: Experience Platform; home; tópicos populares; api; API; XDM; sistema XDM; modelo de dados de experiência; Modelo de dados de experiência; Modelo de dados da experiência; Modelo de dados; Modelo de dados; auditoria; log de auditoria; log de alterações; log de alterações; rpc;
 solution: Experience Platform
-title: Ponto Final da API de Log de Auditoria
-description: O endpoint /auditlog na API do Registro de Schemas permite recuperar uma lista cronológica de alterações que foram feitas em um recurso XDM existente.
-topic: developer guide
+title: Ponto de extremidade da API de log de auditoria
+description: O endpoint /auditlog na API do Registro de Schema permite recuperar uma lista cronológica de alterações feitas em um recurso XDM existente.
+topic: guia do desenvolvedor
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
 
 
-# Ponto de extremidade do log de auditoria
+# Ponto de extremidade de log de auditoria
 
-Para cada recurso do Experience Data Model (XDM), o [!DNL Schema Registry] mantém um log de todas as alterações que ocorreram entre diferentes atualizações. O terminal `/auditlog` na API [!DNL Schema Registry] permite recuperar um log de auditoria para qualquer classe, combinação, tipo de dados ou schema especificado pela ID.
+Para cada recurso do Experience Data Model (XDM), o [!DNL Schema Registry] mantém um log de todas as alterações que ocorreram entre diferentes atualizações. O endpoint `/auditlog` na API [!DNL Schema Registry] permite recuperar um log de auditoria para qualquer classe, mixin, tipo de dados ou schema especificado pela ID.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
 
-O terminal `/auditlog` faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros pontos de extremidade na API [!DNL Schema Registry], os pontos de extremidade RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar a namespace `/rpc`, como demonstrado na chamada de API abaixo.
+O ponto de extremidade `/auditlog` faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints na API [!DNL Schema Registry], os endpoints RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado na chamada de API abaixo.
 
-## Recuperar um log de auditoria para um recurso
+## Recuperar um log de auditoria de um recurso
 
-Você pode recuperar um log de auditoria para qualquer classe, combinação, tipo de dados ou schema na Biblioteca de Schemas especificando a ID do recurso no caminho de uma solicitação de GET para o terminal `/auditlog`.
+Você pode recuperar um log de auditoria para qualquer classe, mixin, tipo de dados ou schema na Biblioteca de Esquemas especificando a ID do recurso no caminho de uma solicitação GET para o endpoint `/auditlog`.
 
 **Formato da API**
 
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{RESOURCE_ID}` | O `meta:altId` ou o URL codificado `$id` do recurso cujo log de auditoria você deseja recuperar. |
+| `{RESOURCE_ID}` | O `meta:altId` ou `$id` codificado por URL do recurso cujo log de auditoria você deseja recuperar. |
 
 **Solicitação**
 
@@ -52,7 +52,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista cronológica das alterações feitas no recurso, da mais recente para a menos recente.
+Uma resposta bem-sucedida retorna uma lista cronológica de alterações feitas no recurso, da mais recente para a menos recente.
 
 ```json
 [
@@ -92,7 +92,7 @@ Uma resposta bem-sucedida retorna uma lista cronológica das alterações feitas
 | Propriedade | Descrição |
 | --- | --- |
 | `auditTrails` | Uma matriz de objetos, com cada objeto representando uma alteração feita no recurso especificado ou um de seus recursos dependentes. |
-| `id` | O `$id` do recurso que foi alterado. Normalmente, esse valor representará o recurso especificado no caminho da solicitação, mas poderá representar um recurso dependente se essa for a fonte da alteração. |
+| `id` | O `$id` do recurso que foi alterado. Normalmente, esse valor representa o recurso especificado no caminho da solicitação, mas pode representar um recurso dependente se essa for a fonte da alteração. |
 | `action` | O tipo de mudança que foi feita. |
-| `path` | Uma string [Ponteiro JSON](../../landing/api-fundamentals.md#json-pointer) que indica o caminho para o campo específico que foi alterado ou adicionado. |
-| `value` | O valor que foi atribuído ao campo novo ou atualizado. |
+| `path` | Uma string [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) indicando o caminho para o campo específico que foi alterado ou adicionado. |
+| `value` | O valor atribuído ao campo novo ou atualizado. |

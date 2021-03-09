@@ -2,10 +2,10 @@
 title: Extensão SDK da Web da Adobe Experience Platform Visão geral
 description: Saiba mais sobre a extensão SDK da Web da Adobe Experience Platform para o Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 14%
+source-wordcount: '584'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,13 @@ Consulte o guia em [configurações de borda](../fundamentals/edge-configuration
 
 ## [!UICONTROL Privacidade]
 
-A seção [!UICONTROL Privacy] permite configurar como o SDK lida com sinais de consentimento do cliente em seu site. Especificamente, permite selecionar o nível padrão de consentimento que é assumido de um cliente se nenhuma outra preferência de consentimento explícita tiver sido fornecida. O quadro a seguir detalha o que cada opção implica:
+A seção [!UICONTROL Privacy] permite configurar como o SDK lida com sinais de consentimento do usuário em seu site. Especificamente, permite selecionar o nível padrão de consentimento que é presumido de um usuário se nenhuma outra preferência de consentimento explícita tiver sido fornecida. O nível de consentimento padrão não é salvo no perfil do usuário. O quadro a seguir detalha o que cada opção implica:
 
 | [!UICONTROL Nível de consentimento padrão] | Descrição |
 | --- | --- |
-| [!UICONTROL Em] | Opt-in. Use essa opção se supor que o consentimento do cliente é feito por padrão e só honre os sinais de recusa. |
-| [!UICONTROL Pending] | Os clientes com consentimento &quot;pendente&quot; são excluídos até que um sinal de aceitação seja enviado. Use essa opção se você precisar de consentimento explícito do cliente para suas operações comerciais. |
+| [!UICONTROL Em] | Colete eventos que ocorrem antes que o usuário forneça as preferências de consentimento. |
+| [!UICONTROL Out] | Descarte os eventos que ocorrem antes que o usuário forneça as preferências de consentimento. |
+| [!UICONTROL Pending] | Enfileirar eventos que ocorrem antes que o usuário forneça as preferências de consentimento. Quando as preferências de consentimento são fornecidas, os eventos são coletados ou descartados, dependendo das preferências fornecidas. |
 | [!UICONTROL Fornecido pelo elemento de dados] | O nível de consentimento padrão é determinado por um elemento de dados separado que você define. Ao usar essa opção, você deve especificar o elemento de dados usando o menu suspenso fornecido. |
+
+Use Fora ou Pendente se precisar de consentimento explícito do usuário para suas operações comerciais.

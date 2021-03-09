@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
-title: Conecte-se a destinos de marketing por email e ative dados usando chamadas de API
+title: Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo
 description: Este documento aborda a criação de destinos de marketing por email usando a API da Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
 
 
-# Conecte-se a destinos de marketing por email e ative dados usando chamadas de API
+# Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo
 
 Este tutorial demonstra como usar chamadas de API para se conectar aos dados da Adobe Experience Platform, criar um [destino de marketing de email](../catalog/email-marketing/overview.md), criar um fluxo de dados para o novo destino criado e ativar dados para o novo destino criado.
 
@@ -67,7 +67,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ### Documentação do Swagger
 
-Você pode encontrar a documentação de referência complementar para todas as chamadas de API neste tutorial no Swagger. Consulte a documentação da [API do Serviço de Fluxo no Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Recomendamos que você use este tutorial e a página de documentação do Swagger em paralelo.
+Você pode encontrar a documentação de referência complementar para todas as chamadas de API neste tutorial no Swagger. Consulte a documentação da [API do Serviço de Fluxo no Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Recomendamos que você use este tutorial e a página de documentação do Swagger em paralelo.
 
 ## Obtenha a lista de destinos disponíveis {#get-the-list-of-available-destinations}
 

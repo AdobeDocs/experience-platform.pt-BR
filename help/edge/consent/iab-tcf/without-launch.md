@@ -1,41 +1,41 @@
 ---
-title: Integrar suporte IAB TCF 2.0 usando o SDK da Web da Adobe Experience Platform
-description: Saiba como configurar o suporte do IAB TCF 2.0 para seu site sem usar o Adobe Experience Platform Launch.
-seo-description: Saiba como configurar o consentimento do IAB TCF 2.0 com o Adobe Experience Platform Web SDK
+title: Integrar o suporte da TCF 2.0 do IAB usando o SDK da Web da Adobe Experience Platform
+description: Saiba como configurar o suporte do IAB TCF 2.0 para o seu site sem usar o Adobe Experience Platform Launch.
+seo-description: Saiba como configurar o consentimento do IAB TCF 2.0 com o SDK da Web da Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
 
-# Integrar o suporte IAB TCF 2.0 ao SDK da Web da plataforma
+# Integrar o suporte do IAB TCF 2.0 ao SDK da Web da plataforma
 
-Este guia mostra como integrar o Interative Advertising Bureau Transparency &amp; Consent Framework, versão 2.0 (IAB TCF 2.0) com o Adobe Experience Platform Web SDK sem usar o Experience Platform Launch. Para obter uma visão geral da integração com IAB TCF 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como se integrar ao Experience Platform Launch, leia o guia [IAB TCF 2.0 para Experience Platform Launch](./with-launch.md).
+Este guia mostra como integrar a Estrutura de transparência e consentimento do Interative Advertising Bureau, versão 2.0 (IAB TCF 2.0) com o SDK da Web da Adobe Experience Platform sem usar o Experience Platform Launch. Para obter uma visão geral da integração com o IAB TCF 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como fazer a integração com o Experience Platform Launch, leia o [Guia TCF do IAB 2.0 para o Experience Platform Launch](./with-launch.md).
 
 ## Introdução
 
-Este guia usa a interface `__tcfapi` para acessar as informações de consentimento. Pode ser mais fácil para você se integrar diretamente ao seu provedor de gerenciamento de nuvem (CMP). No entanto, as informações neste guia ainda podem ser úteis porque os CMPs geralmente fornecem funcionalidade semelhante à API TCF.
+Este guia usa a interface `__tcfapi` para acessar as informações de consentimento. Pode ser mais fácil para você se integrar diretamente ao seu provedor de gerenciamento de nuvem (CMP). No entanto, as informações neste guia ainda podem ser úteis porque as CMPs geralmente fornecem funcionalidade semelhante à API TCF.
 
 >[!NOTE]
 >
->Estes exemplos presumem que quando o código é executado, `window.__tcfapi` é definido na página. Os CMPs podem fornecer um gancho onde você pode executar essas funções quando o objeto `__tcfapi` estiver pronto.
+>Esses exemplos presumem que, quando o código é executado, `window.__tcfapi` é definido na página. As CMPs podem fornecer um gancho onde você pode executar essas funções quando o objeto `__tcfapi` estiver pronto.
 
-Para usar o IAB TCF 2.0 com Experience Platform Launch e a extensão Adobe Experience Platform Web SDK, é necessário ter um schema XDM disponível. Se você não configurou nenhum desses, start exibindo esta página antes de continuar.
+Para usar o IAB TCF 2.0 com o Experience Platform Launch e a extensão Adobe Experience Platform Web SDK, é necessário ter um esquema XDM disponível. Se você não tiver definido qualquer um desses itens, comece visualizando esta página antes de continuar.
 
-Além disso, este guia exige que você tenha uma compreensão funcional do Adobe Experience Platform Web SDK. Para obter uma atualização rápida, leia a [visão geral do Adobe Experience Platform Web SDK](../../home.md) e a documentação [Perguntas frequentes](../../web-sdk-faq.md).
+Além disso, este guia requer que você tenha uma compreensão funcional do SDK da Web da Adobe Experience Platform. Para obter um atualizado rápido, leia a [Visão geral do SDK da Web da Adobe Experience Platform](../../home.md) e a documentação de [Perguntas frequentes](../../web-sdk-faq.md).
 
 ## Ativação do consentimento padrão
 
-Se quiser tratar todos os usuários desconhecidos da mesma forma, você pode definir o consentimento padrão para `pending`. Isso enfileira Eventos de experiência até que as preferências de consentimento sejam recebidas.
+Se quiser tratar todos os usuários desconhecidos da mesma maneira, você pode definir o consentimento padrão como `pending` ou `out`. Isso enfileira ou descarta os Eventos de experiência até que as preferências de consentimento sejam recebidas.
 
 Para obter mais informações sobre o consentimento padrão, consulte a [seção de consentimento padrão](../../fundamentals/configuring-the-sdk.md#default-consent) na documentação de configuração do SDK da Web da plataforma.
 
 ### Definir o consentimento padrão com base em `gdprApplies`
 
-Alguns CMPs fornecem a capacidade de determinar se o Regulamento Geral de Proteção de Dados (RGPD) se aplica ao cliente. Se você quiser supor consentimento para clientes nos quais o RGPD não se aplica, você pode usar o sinalizador `gdprApplies` na chamada da API TCF.
+Algumas CMPs fornecem a capacidade de determinar se o Regulamento Geral sobre a Proteção de Dados (GDPR) se aplica ao cliente. Se desejar supor o consentimento para clientes onde o GDPR não se aplica, você pode usar o sinalizador `gdprApplies` na chamada da API TCF.
 
 O exemplo a seguir mostra uma maneira de fazer isso:
 
@@ -53,11 +53,11 @@ Neste exemplo, o comando `configure` é chamado depois que `tcData` é obtido da
 
 >[!NOTE]
 >
->Quando o consentimento padrão é definido como `in`, o comando `setConsent` ainda pode ser usado para registrar suas preferências de consentimento do cliente.
+>Quando o consentimento padrão é definido como `in`, o comando `setConsent` ainda pode ser usado para registrar as preferências de consentimento dos clientes.
 
 ## Uso do evento setConsent
 
-A API TCF 2.0 da IAB fornece uma evento para quando o consentimento é atualizado pelo cliente. Isso ocorre quando o cliente define inicialmente suas preferências e quando atualiza suas preferências.
+A API TCF 2.0 do IAB fornece um evento para quando o consentimento é atualizado pelo cliente. Isso ocorre quando o cliente define inicialmente suas preferências e quando atualiza suas preferências.
 
 O exemplo a seguir mostra uma maneira de fazer isso:
 
@@ -80,13 +80,13 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Este bloco de código escuta o evento `useractioncomplete` e, em seguida, define o consentimento, transmitindo a cadeia de caracteres de consentimento e o sinalizador `gdprApplies`. Se você tiver identidades personalizadas para seus clientes, certifique-se de preencher a variável `identityMap`. Consulte o guia em [support agreement](../../consent/supporting-consent.md) para obter mais informações sobre como chamar `setConsent`.
+Esse bloco de código escuta o evento `useractioncomplete` e, em seguida, define o consentimento, transmitindo a cadeia de consentimento e o sinalizador `gdprApplies`. Se você tiver identidades personalizadas para seus clientes, preencha a variável `identityMap`. Consulte o guia em [consentimento de suporte](../../consent/supporting-consent.md) para obter mais informações sobre como chamar `setConsent`.
 
-## Incluindo informações de consentimento em sendEvent
+## Inclusão de informações de consentimento em sendEvent
 
-Em schemas XDM, você pode armazenar informações de preferência de consentimento dos Eventos de experiência. Há duas maneiras de adicionar essas informações a cada evento.
+Em esquemas XDM, você pode armazenar informações de preferência de consentimento dos Eventos de experiência. Há duas maneiras de adicionar essas informações a cada evento.
 
-Primeiro, você pode fornecer o schema XDM relevante em cada chamada `sendEvent`. O exemplo a seguir mostra uma maneira de fazer isso:
+Primeiro, você pode fornecer o esquema XDM relevante em cada chamada `sendEvent`. O exemplo a seguir mostra uma maneira de fazer isso:
 
 ```javascript
 var sendEventOptions = { ... };
@@ -103,10 +103,10 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-Este exemplo obtém as informações de consentimento para a API TCF e envia um evento com as informações de consentimento adicionadas ao schema XDM. Consulte o guia [eventos de rastreamento](../../fundamentals/tracking-events.md) para entender o que deve estar nas opções de comando `sendEvent`.
+Esse exemplo obtém as informações de consentimento da API TCF e envia um evento com as informações de consentimento adicionadas ao esquema XDM. Consulte o guia [eventos de rastreamento](../../fundamentals/tracking-events.md) para entender o que deve estar nas opções de comando `sendEvent`.
 
-A outra maneira de adicionar as informações de consentimento a cada solicitação é com o retorno de chamada `onBeforeEventSend`. Leia a seção sobre [modificar eventos globalmente](../../fundamentals/tracking-events.md#modifying-events-globally) na documentação dos eventos de rastreamento para obter mais informações sobre como fazer isso.
+A outra maneira de adicionar as informações de consentimento a cada solicitação é com o retorno de chamada `onBeforeEventSend`. Leia a seção sobre [modificar eventos globalmente](../../fundamentals/tracking-events.md#modifying-events-globally) na documentação de eventos de rastreamento para obter mais informações sobre como fazer isso.
 
 ## Próximas etapas
 
-Agora que você aprendeu a usar o IAB TCF 2.0 com a extensão do SDK da Web da plataforma, também pode optar por integrar com outras soluções de Adobe, como a Adobe Analytics ou a plataforma Dados do cliente em tempo real. Consulte a [visão geral do IAB Transparency &amp; Consent Framework 2.0](./overview.md) para obter mais informações.
+Agora que você aprendeu a usar o IAB TCF 2.0 com a extensão SDK da Web da plataforma, também pode optar por integrar com outras soluções da Adobe, como o Adobe Analytics ou a Plataforma de dados do cliente em tempo real. Consulte a [Visão geral da Estrutura de transparência e consentimento 2.0 do IAB](./overview.md) para obter mais informações.

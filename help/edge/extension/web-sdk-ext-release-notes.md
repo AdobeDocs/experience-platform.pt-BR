@@ -1,19 +1,32 @@
 ---
-title: Notas de versão do Adobe Experience Platform Web SDK Extension
+title: Notas de versão da extensão do SDK da Web da Adobe Experience Platform
 description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
 seo-description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 89%
+source-wordcount: '1134'
+ht-degree: 79%
 
 ---
 
 
-# Notas de versão de extensão do Adobe Experience Platform Web SDK
+# Notas de versão da extensão do SDK da Web da Adobe Experience Platform
 
-Este documento aborda as notas de versão da extensão Adobe Experience Platform Web SDK para Adobe Experience Platform Launch. Para obter as notas de versão mais recentes do próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://docs.adobe.com/content/help/pt-BR/experience-platform/edge/release-notes.html).
+Este documento aborda as notas de versão da extensão Adobe Experience Platform Web SDK para o Adobe Experience Platform Launch. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://docs.adobe.com/content/help/pt-BR/experience-platform/edge/release-notes.html).
+
+## 9 de março de 2020
+
+### SDK da Web 2.4.0 da Adobe Experience Platform
+
+Contém a versão 2.4.0 da biblioteca de SDK da Web da Adobe Experience Platform.
+
+* Adição da caixa de seleção [&quot;descarregamento de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para Enviar interface do usuário de ação de evento.
+* Adição de suporte para uma opção `out` quando [configurar o consentimento padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que descarta todos os eventos até que o consentimento seja recebido (a opção `pending` existente enfileira os eventos e os envia depois que o consentimento é recebido).
+* Adição de uma dica de ferramenta ao campo de consentimento padrão.
+* Adição de suporte para [Padrão de Consentimento 2.0 da Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Um erro melhor agora é exibido na interface do usuário do elemento de dados Objeto XDM se o token de acesso do usuário for inválido ou provisionado incorretamente.
+* Correção de um erro de origem cruzada (que não afeta a operação da extensão) que era exibido no console do desenvolvedor do navegador ao visualizar um elemento de dados Objeto XDM.
 
 ## 4 de novembro de 2020
 
@@ -33,7 +46,7 @@ Contém a versão 2.3.0 da biblioteca de SDK da Web da Adobe Experience Platform
 
 #### Correções de erros
 
-* Quando tentavam criar um objeto XDM a partir de esquemas da sandbox, os clientes tinham problemas de autenticação. A API que chama a Platform agora está ciente dos ambientes, de modo que os usuários só são apresentados com os schemas que eles têm acesso para editar.
+* Quando tentavam criar um objeto XDM a partir de esquemas da sandbox, os clientes tinham problemas de autenticação. A API que chama a Platform agora reconhece os ambientes, de modo que os usuários somente são apresentados aos esquemas que eles têm acesso para editar.
 
 #### Recursos
 
@@ -62,7 +75,7 @@ Contém a versão 2.3.0 da biblioteca de SDK da Web da Adobe Experience Platform
 * Suporte à substituição da ID do conjunto de dados na ação `sendEvent`.
 * Adiciona um novo Elemento de dados do tipo `IdentityMap`, que pode ser usado para preencher a entrada `identityMap` no Elemento de dados do objeto XDM (agora ativado) e na ação `setConsent`.
 * Suporte à transmissão de um mapa de identidade na ação `setConsent`.
-* Suporte para escolher uma caixa de proteção Plataforma no Elemento de dados de objeto XDM.
+* Suporte à escolha de uma sandbox de plataforma no Elemento de dados do objeto XDM.
 
 
 ## 26 de maio de 2020
@@ -92,7 +105,7 @@ Essas decisões retornam do comando `sendEvent` somente se `renderDecisions` est
 * Correção do problema na ID de mesclagem de evento em que ele era redefinido sempre que o elemento de dados era referenciado.
 * A ação `setCustomerIds` foi renomeada para `syncIdentity`.
 * Adição de um comando `getIdentity`. Isso pode ser consumido somente por código personalizado por enquanto.
-* Ativar a depuração usando `_satellite` agora ativa a depuração no Adobe Experience Platform Web SDK.
+* Ativar a depuração usando `_satellite` agora ativa a depuração no SDK da Web da Adobe Experience Platform.
 * Adição de suporte para valores digitados no Objeto XDM: Booleanos, números e decimais.
 
 ## 16 de março de 2020
@@ -169,7 +182,7 @@ Essas decisões retornam do comando `sendEvent` somente se `renderDecisions` est
 * Extensão iniciada.
 * Suporte a ECID sem bibliotecas ou chamadas de rede adicionais.
 * Suporte para aceitação.
-* Suporte para enviar XDM para a plataforma
+* Suporte ao envio de XDM para a plataforma
 * Suporte a domínio próprio.
 * Coletar automaticamente o contexto do navegador.
 * Fonte totalmente aberta ([extensão](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy)).

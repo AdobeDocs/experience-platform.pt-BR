@@ -2,11 +2,11 @@
 keywords: plataforma; destinos; espaço de trabalho de destinos; espaço de trabalho; interface do usuário; destinos; interface do usuário; catálogo; catálogo de destinos;
 title: Visão geral do espaço de trabalho Destinos
 description: O espaço de trabalho Destinos consiste em quatro seções, Catálogo, Navegação, Contas e Visualização do sistema, descritas nas seções abaixo.
-seo-description: Na Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
+seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Visão geral do espaço de trabalho Destinos {#destinations-workspace}
 
-Na Adobe Experience Platform, selecione **[!UICONTROL Destinations]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Destinations].
+No Adobe Experience Platform, selecione **[!UICONTROL Destinations]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Destinations].
 
 O espaço de trabalho [!UICONTROL Destinos] consiste em quatro seções, [!UICONTROL Catálogo], [!UICONTROL Procurar], [!UICONTROL Contas] e [!UICONTROL Vista do Sistema], que estão descritas nas seções abaixo.
 
@@ -64,7 +64,7 @@ Na guia **[!UICONTROL Accounts]**, você pode saber mais sobre as conexões esta
 | Elemento | Descrição |
 ---------|----------
 | [!UICONTROL Plataforma] | O destino para o qual você configurou a conexão. |
-| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3 ou FTP.</li><li>Para destinos de anúncios em tempo real: Servidor para servidor</li><li>Para destinos de armazenamento em nuvem do Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li></ul> |
+| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3 ou FTP.</li><li>Para destinos de anúncios em tempo real: Servidor para servidor</li><li>Para destinos de armazenamento em nuvem Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li></ul> |
 | [!UICONTROL Nome do usuário] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinos] | Representa o número de fluxos de destino únicos bem-sucedidos conectados às informações básicas criadas para um destino. |
 | [!UICONTROL Autorizado] | A data em que a conexão com esse destino foi autorizada. |
@@ -87,15 +87,19 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 
 >[!TIP]
 >
->Use o botão ![Add data button](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Name]** para ativar segmentos adicionais para esse destino.
+> * Use o botão ![Add segments](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Name]** para ativar segmentos adicionais para esse destino.
+> * Use o botão ![Delete destination](../assets/ui/workspace/delete-destination-symbol.png) na coluna **[!UICONTROL Name]** para excluir uma conexão existente a um destino.
+
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descrição |
 ---------|----------
-| Nome | O nome fornecido para o fluxo de ativação para este destino. |
+| Nome | O nome fornecido para o fluxo de ativação para este destino. A mesma coluna inclui dois controles: [!UICONTROL Ativar ] e [!UICONTROL Eliminar destino]. |
+| Status da Execução do Último Fluxo | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| Data de Execução do Último Fluxo | Hora e data da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Destino] | A plataforma de destino selecionada para o fluxo de ativação. |
-| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3 ou FTP.</li><li>Para destinos de anúncios em tempo real: Servidor para servidor</li></ul> |
+| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: Servidor para servidor.</li><li>Para destinos de transmissão: Pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nome do usuário] | As credenciais de conta que você selecionou para o fluxo de destino. |
 | [!UICONTROL Dados de ativação] | Indica o número de segmentos que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os segmentos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os segmentos ativados. |
 | [!UICONTROL Criado] | A data e a hora UTC em que o fluxo de ativação para o destino foi criado. |
@@ -109,7 +113,7 @@ Selecione o nome do destino para ver informações sobre os segmentos ativados p
 
 ## [!UICONTROL Exibição do sistema] {#system-view}
 
-A guia **[!UICONTROL Exibição do sistema]** exibe uma representação gráfica dos fluxos de ativação que você configurou na Adobe Experience Platform.
+A guia **[!UICONTROL Exibição do sistema]** exibe uma representação gráfica dos fluxos de ativação que você configurou no Adobe Experience Platform.
 
 ![Fluxos de dados1](../assets/ui/workspace/data-flows1.png)
 

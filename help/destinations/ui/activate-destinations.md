@@ -6,7 +6,7 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 0%
@@ -30,7 +30,7 @@ As etapas no fluxo de trabalho de ativação variam um pouco entre os tipos de d
 
 Aplica-se a: Todos os destinos
 
-Na interface do usuário do Adobe Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e pressione o botão **[!UICONTROL Ativate]** correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
+Na interface do usuário do Adobe Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e clique no botão **[!UICONTROL Ativate]** correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
 
 ![ativar para destino](../assets/ui/activate-destinations/browse-tab-activate.png)
 

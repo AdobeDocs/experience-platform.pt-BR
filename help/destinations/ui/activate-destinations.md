@@ -3,12 +3,12 @@ keywords: ativar destino; ativar destinos; ativar dados
 title: Ativar perfis e segmentos para um destino
 type: Tutorial
 seo-title: Ativar perfis e segmentos para um destino
-description: Ative os dados que você tem na Adobe Experience Platform, mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
-seo-description: Ative os dados que você tem na Adobe Experience Platform, mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
+seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,11 @@ As etapas no fluxo de trabalho de ativação variam um pouco entre os tipos de d
 
 Aplica-se a: Todos os destinos
 
-Na interface do usuário da Adobe Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e selecione o destino onde deseja ativar seus segmentos.
+Na interface do usuário do Adobe Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e pressione o botão **[!UICONTROL Ativate]** correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
 
-![navegar até o destino](../assets/ui/activate-destinations/connect.png)
+![ativar para destino](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-Selecione o nome do destino para navegar até o workflow de ativação.
-
-![fluxo de ativação](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->Se um workflow de ativação já existir para um destino, você poderá ver os segmentos que estão sendo ativados no momento para o destino. Selecione **[!UICONTROL Editar ativação]** no painel direito e siga as etapas abaixo para modificar os detalhes de ativação.
-
-Depois de selecionar um destino, selecione **[!UICONTROL Ativar]**.
+Siga as etapas na próxima seção para selecionar os segmentos que deseja ativar.
 
 ### [!UICONTROL Etapa Selecionar ] segmentos  {#select-segments}
 
@@ -223,7 +215,7 @@ Na página **[!UICONTROL Select attributes]**, selecione **[!UICONTROL Add new f
 
 >[!NOTE]
 >
-> A Adobe Experience Platform preenche sua seleção com quatro atributos recomendados e comumente usados do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados e comumente usados do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 As exportações de arquivo variam das seguintes maneiras, dependendo se `segmentMembership.status` estiver selecionado:
 * Se o campo `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL membros Ativos]** no instantâneo completo inicial e **[!UICONTROL membros Ativos]** e **[!UICONTROL Expirados]** nas exportações incrementais subsequentes.
@@ -243,7 +235,7 @@ Recomenda-se que um dos atributos seja um [identificador exclusivo](../../destin
 
 >
 > 
-Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que entrem em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados na Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que entrem em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **** Etapa de revisão  {#review}
 
@@ -255,7 +247,7 @@ Na página **[!UICONTROL Revisar]**, você pode ver um resumo da sua seleção. 
 
 >[!IMPORTANT]
 >
->Nesta etapa, a Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação de política](../../rtcdp/privacy/data-governance-overview.md#enforcement) na seção Documentação de governança de dados.
+>Nesta etapa, o Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação de política](../../rtcdp/privacy/data-governance-overview.md#enforcement) na seção Documentação de governança de dados.
 
 ![violação da política de dados](../assets/common/data-policy-violation.png)
 
@@ -265,7 +257,7 @@ Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL
 
 ## Editar ativação {#edit-activation}
 
-Siga as etapas abaixo para editar os fluxos de ativação existentes na Adobe Experience Platform:
+Siga as etapas abaixo para editar os fluxos de ativação existentes no Adobe Experience Platform:
 
 1. Selecione **[!UICONTROL Destinations]** na barra de navegação esquerda, clique na guia **[!UICONTROL Browse]** e clique no nome do destino.
 2. Selecione **[!UICONTROL Edit ativation]** no painel direito para alterar quais segmentos enviar para o destino.
@@ -274,7 +266,7 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes na Adobe Ex
 
 ### Destinos de marketing por email e destinos de armazenamento em nuvem {#esp-and-cloud-storage}
 
-Para destinos de marketing por email e destinos de armazenamento em nuvem, a Adobe Experience Platform cria um arquivo `.csv` ou `.txt` delimitado por tabulação no local de armazenamento fornecido. Espera que um novo arquivo seja criado no seu local de armazenamento todos os dias. O formato de arquivo padrão é:
+Para destinos de marketing por email e destinos de armazenamento em nuvem, o Adobe Experience Platform cria um arquivo `.csv` ou `.txt` delimitado por tabulação no local de armazenamento fornecido. Espera que um novo arquivo seja criado no seu local de armazenamento todos os dias. O formato de arquivo padrão é:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Observe que é possível editar o formato de arquivo. Para obter mais informações, vá para a etapa [Configure](#configure) para destinos de armazenamento em nuvem e destinos de marketing de email.
@@ -299,7 +291,7 @@ Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo
 
 >[!TIP]
 >
->A integração entre a Adobe Experience Platform e [!DNL Facebook] oferece suporte a preenchimentos retroativos de público-alvo histórico. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
+>A integração entre o Adobe Experience Platform e [!DNL Facebook] oferece suporte a preenchimentos retroativos de público-alvo históricos. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
 
 ## Desativar ativação {#disable-activation}
 

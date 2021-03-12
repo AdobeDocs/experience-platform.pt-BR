@@ -1,78 +1,87 @@
 ---
-keywords: Experience Platform;interface de usuário;UI;personalização;painel de uso de licença;painel;uso de licença;direito;consumo;;user interface;UI;customization;license usage ;license usage;license usage;entitlement;entitlement;use;
+keywords: Experience Platform, interface do usuário, interface do usuário, personalização, painel de uso de licença, painel, uso de licença, direito, consumo
 title: Painel de uso de licença
-description: A Adobe Experience Platform fornece um painel através do qual você pode visualização informações importantes sobre o uso de licenças de sua organização.
-topic: guide
-type: Documentation
+description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da sua organização.
+topic: guia
+type: Documentação
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 1%
+source-wordcount: '656'
+ht-degree: 3%
 
 ---
 
 
-# (Beta) [!UICONTROL Uso da licença] painel {#license-usage-dashboard}
+# (Beta) Painel de uso de licença {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
 >A funcionalidade do painel descrita neste documento está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
-A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualização informações importantes sobre o uso de licenças de sua organização, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de uso de licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
+A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre o uso de licenças de sua organização, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de uso da licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
-Para obter uma visão geral da interface do usuário da plataforma, visite o [guia da interface do usuário do Experience Platform](../../landing/ui-guide.md).
+Para obter uma visão geral da interface do usuário da plataforma, visite o [Guia da interface do usuário do Experience Platform](../../landing/ui-guide.md).
 
 ## Dados do painel de uso da licença
 
-O painel de uso da licença exibe um instantâneo dos dados relacionados à licença da sua organização para o Experience Platform. Os dados no painel são exibidos exatamente como aparecem no momento específico em que o instantâneo foi realizado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados e o painel não está sendo atualizado em tempo real.
+O painel de uso da licença exibe um instantâneo dos dados relacionados à licença de sua organização para o Experience Platform. Os dados no painel são exibidos exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel não está sendo atualizado em tempo real.
 
 >[!NOTE]
 >
->Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi realizado não serão refletidas no painel até que o próximo instantâneo seja realizado.
+>Quaisquer alterações ou atualizações feitas nos dados desde que o instantâneo foi tirado não serão refletidas no painel até que o próximo instantâneo seja tirado.
 
 ## Explorar o painel de uso de licença
 
-Para navegar até o painel de uso de licença na interface do usuário da plataforma, selecione **[!UICONTROL Uso de licença]** no painel esquerdo. Isso é aberto com a guia **[!UICONTROL Visão geral]** exibindo o painel.
+Para navegar até o painel de uso da licença na interface do usuário da plataforma, selecione **[!UICONTROL License usage]** no painel esquerdo. Isso é aberto com a guia **[!UICONTROL Visão geral]** exibindo o painel.
 
 ![](../images/license-usage/dashboard-overview.png)
 
-### Selecionar uma caixa de proteção
+### Selecionar uma sandbox
 
-Para escolher uma caixa de proteção para visualização no painel, selecione [!UICONTROL Production] ou [!UICONTROL Development]. A caixa de proteção selecionada é indicada pelo botão de opção ao lado do nome da caixa de proteção.
+Para escolher uma sandbox para exibir no painel, selecione [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento]. A sandbox selecionada é indicada pelo botão de opção ao lado do nome da sandbox.
 
 >[!NOTE]
 >
->O relatórios de consumo para caixas de proteção é cumulativo para todas as caixas de proteção do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] reportará todas as caixas de proteção de produção ou desenvolvimento, respectivamente.
+>O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
 ### Selecionar um intervalo de datas
 
-Depois de selecionar uma caixa de proteção, você pode usar o intervalo de datas suspenso para selecionar o período de tempo a ser exibido no painel. Há três opções disponíveis: [!UICONTROL Últimos 30 dias], [!UICONTROL Últimos 90 dias] e [!UICONTROL Últimos 12 meses]. Os últimos 30 dias são selecionados por padrão.
+Depois de selecionar uma sandbox, você pode usar a lista suspensa intervalo de datas para selecionar o período de tempo a ser exibido no painel. Há três opções disponíveis: [!UICONTROL Últimos 30 dias], [!UICONTROL Últimos 90 dias] e [!UICONTROL Últimos 12 meses]. Os últimos 30 dias são selecionados por padrão.
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widgets e métricas
+## Widgets
 
-O painel de uso da licença é composto de widgets, que exibem métricas somente leitura, fornecendo informações importantes sobre o uso da licença de sua organização. Para saber mais sobre esses widgets, consulte a seção de widgets disponíveis neste guia.
+O painel de uso da licença é composto de widgets, que exibem métricas somente leitura, fornecendo informações importantes sobre o uso da licença de sua organização. As métricas visíveis dependem do licenciamento específico de sua organização (consulte a seção [métricas disponíveis](#available-metrics) para obter detalhes).
 
-## Widgets disponíveis {#available-widgets}
+Cada widget exibe gráficos de linha que comparam os números reais de sua organização ao total disponível com o licenciamento de sua organização e fornecem uma porcentagem do uso total.
 
-Atualmente, o Experience Platform fornece um widget que você pode usar para visualizar o uso de licenças, com mais widgets sendo lançados em breve.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL Audiências endereçáveis] {#addressable-audiences}
+## Métricas disponíveis
 
-O widget **[!UICONTROL audiências endereçáveis]** exibe o número total de perfis unidos no armazenamento de dados do Perfil, após aplicar uma política de mesclagem gerada pelo sistema para combinar fragmentos de perfil de todos os conjuntos de dados atuais usando um algoritmo de gráfico determinístico (privado).
+No momento, há quatro métricas disponíveis no painel de uso da licença:
 
-Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a seção *fragmentos de Perfil vs perfis mesclados* da [visão geral do Perfil](../../profile/home.md).
+* [!UICONTROL Público-alvo endereçável]  (medido pelo número de perfis)
+* [!UICONTROL Riqueza média do perfil]
+* [!UICONTROL Total de armazenamento consumido]
+* [!UICONTROL Dados digitalizados por proporção de segmentação]
 
->[!NOTE]
->
->A política de mesclagem usada para calcular essa métrica é gerada por Experience Platform e não pode ser editada, nem uma política de mesclagem diferente pode ser selecionada. Essa política de mesclagem gerada pelo sistema não é a mesma que a política de mesclagem padrão usada para calcular [!UICONTROL o tamanho da Audiência] no painel [!DNL Profile], portanto, é improvável que a contagem de audiências nos painéis [!UICONTROL License usage] e [!DNL Profile] seja exatamente a mesma.
+A definição de cada uma dessas métricas varia de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada da Descrição do produto:
 
-![](../images/license-usage/addressable-audiences.png)
+| Licença | Descrição do produto |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>PLATAFORMA DE DADOS DO CLIENTE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 50 M</li></ul> | [Plataforma de dados do cliente em tempo real](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:ATIVAÇÃO DE OD</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL DE ATÉ 50 M</li></ul> | [Adobe Experience Platform Ativation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:INTELIGÊNCIA DE OD</li></ul> | [Inteligência Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## Próximas etapas
 
-Ao seguir este documento, você deve agora ser capaz de localizar o painel de uso de licença e selecionar uma caixa de proteção para visualização. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre a interface do usuário do Experience Platform, consulte o [guia da interface do usuário da plataforma](../../landing/ui-guide.md).
+Após ler este documento, é possível localizar o painel de uso da licença e selecionar uma sandbox para exibir. Você também pode encontrar mais informações sobre as métricas disponíveis para a sua organização, com base no licenciamento que sua organização adquiriu.
+
+Para saber mais sobre outros recursos disponíveis na interface do usuário do Experience Platform, consulte o [Guia da interface do usuário da plataforma](../../landing/ui-guide.md).

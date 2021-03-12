@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
-user-guide-description: Saiba como a Experience Platform permite entregar experiências personalizadas aos clientes em tempo real.
+user-guide-description: Saiba como o Experience Platform possibilita entregar experiências personalizadas aos clientes em tempo real.
 translation-type: tm+mt
 source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
 workflow-type: tm+mt
@@ -24,12 +24,12 @@ ht-degree: 14%
    * [Principais casos de uso (Vídeo)](video/platform-use-cases.md)
    * [Arquitetura da plataforma (Vídeo)](video/platform-architecture.md)
    * [Funções e fases do projeto (Vídeo)](video/roles-project-phases.md)
-* Interface do usuário da Experience Platform {#platform-ui}
+* Interface do usuário do Experience Platform {#platform-ui}
    * [Guia da interface do usuário da plataforma](ui-guide.md)
    * [Tour pela interface do usuário da plataforma (Vídeo)](video/platform-ui.md)
    * [Guia da interface do usuário de fluxos de trabalho](workflows.md)
    * [Suporte a navegador e idioma](browser-language-support.md)
-* APIs da Experience Platform {#platform-apis}
+* APIs do Experience Platform {#platform-apis}
    * [Introdução às APIs da plataforma](api-guide.md)
    * [Autenticar e acessar APIs da Platform](api-authentication.md)
    * [Fundamentos da API](api-fundamentals.md)
@@ -38,10 +38,10 @@ ht-degree: 14%
 * Documentação da plataforma {#documentation}
    * [Visão geral](documentation/overview.md)
    * [Suporte de idiomas](documentation/language-support.md)
-* Plataforma no ecossistema da Adobe {#ecosystem}
+* Plataforma no ecossistema do Adobe {#ecosystem}
    * [Serviços de aplicativos](application-services.md)
    * [Aplicativos e serviços inteligentes (Vídeo)](video/application-intelligent-services.md)
-   * [Integrações da plataforma com a Experience Cloud (Vídeo)](video/experience-cloud-integrations.md)
+   * [Integrações da plataforma com o Experience Cloud (Vídeo)](video/experience-cloud-integrations.md)
 * Governança, privacidade e segurança {#governance-privacy-security}
    * [Visão geral](./governance-privacy-security/overview.md)
    * Gerenciamento de consentimento {#consent}

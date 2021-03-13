@@ -1,26 +1,34 @@
 ---
 title: Tipos de ação na extensão SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
+solution: Experience Platform
+feature: Web SDK
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 6%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
 
 # Tipos de ação
 
-Depois de configurar a [extensão do SDK da Web da Adobe Experience Platform](web-sdk-extension.md) para [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure os tipos de ação.
+Depois de configurar a [extensão Adobe Experience Platform Web SDK](web-sdk-extension.md) para [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure os tipos de ação.
 
 Esta página descreve os tipos de ação disponíveis.
 
 ## Enviar evento
 
-Envia um evento para a Adobe [!DNL Experience Platform] para que a Adobe Experience Platform possa coletar os dados enviados e agir de acordo com essas informações. Selecione uma instância (caso tenha mais de uma). Se o evento ocorrer no início de um carregamento de página ou durante uma alteração de exibição em um aplicativo de página única, selecione **[!UICONTROL Ocorre no início de uma exibição]**.
+Envia um evento para Adobe [!DNL Experience Platform] para que o Adobe Experience Platform possa coletar os dados enviados e agir de acordo com essas informações. Selecione uma instância (caso tenha mais de uma). Todos os dados que deseja enviar podem ser enviados no campo **[!UICONTROL Dados XDM]**. Use um objeto JSON que esteja em conformidade com a estrutura do esquema XDM. Esse objeto pode ser criado na página ou por meio de um **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
 
-Todos os dados que deseja enviar podem ser enviados no campo **[!UICONTROL Dados XDM]**. Use um objeto JSON que esteja em conformidade com a estrutura do esquema XDM. Esse objeto pode ser criado na página ou por meio de um **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+Há alguns outros campos no tipo de ação Enviar evento que também podem ser úteis dependendo de sua implementação. Observe que esses campos são todos opcionais.
+
+- **Tipo:** este campo permite que você especifique um tipo de evento que será gravado no esquema XDM. Consulte a [documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para obter mais informações sobre os tipos de evento padrão.
+- **ID da mesclagem:** se você quiser especificar uma  [ID ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) de mesclagem para o evento, poderá fazer isso neste campo. Observe que as soluções downstream não podem unir os dados do evento no momento.
+- **ID do conjunto de dados:**  se precisar enviar dados para um conjunto de dados diferente daquele especificado na configuração de borda, especifique a ID do conjunto de dados aqui.
+- **O documento será descarregado:** se você quiser garantir que os eventos alcancem o servidor mesmo que o usuário saia da página, marque a caixa de seleção  **[!UICONTROL Documento será]** descarregada. Isso permite que os eventos cheguem ao servidor, mas as respostas são ignoradas.
+- **Renderizar decisões de personalização visual:** se você deseja renderizar o conteúdo personalizado na página, marque a caixa de seleção  **[!UICONTROL Renderizar personalização visual]** do . Você também pode especificar escopos de decisão, se necessário. Consulte a [documentação de personalização](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) para obter mais informações sobre como renderizar conteúdo personalizado.
 
 ## Definir consentimento
 
@@ -34,4 +42,4 @@ Se você quiser redefinir a ID da mesclagem de eventos na página, é possível 
 
 ## O que vem a seguir
 
-Depois de definir os tipos de ação, [configure os tipos de elemento de dados](data-element-types.md).
+Depois de definir suas ações, [configure seus tipos de elemento de dados](data-element-types.md).

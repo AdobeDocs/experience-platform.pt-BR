@@ -6,9 +6,9 @@ topic: visão geral
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -41,38 +41,52 @@ Além disso, este tutorial requer uma conta de armazenamento em nuvem estabeleci
 
 Depois de criar a conta de armazenamento em nuvem, a etapa **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para explorar a hierarquia de arquivos de armazenamento em nuvem.
 
-* A metade esquerda da interface é um navegador de diretório, que exibe os arquivos e diretórios do seu servidor.
-* A metade direita da interface permite visualizar até 100 linhas de dados de um arquivo compatível.
+* A parte esquerda da interface é um navegador de diretório, exibindo seus arquivos e diretórios de armazenamento em nuvem.
+* A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo compatível.
 
-Selecionar uma pasta listada permite atravessar a hierarquia de pastas em pastas mais profundas. Depois que um arquivo ou pasta compatível é selecionado, a lista suspensa **[!UICONTROL Select data format]** é exibida, onde é possível escolher um formato para exibir os dados na janela de visualização.
+![interface](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+Selecionar uma pasta listada permite atravessar a hierarquia de pastas em pastas mais profundas. Você pode selecionar uma única pasta para assimilar todos os arquivos na pasta recursivamente. Ao assimilar uma pasta inteira, você deve garantir que todos os arquivos na pasta compartilhem o mesmo esquema.
 
-Selecione o formato de dados apropriado para o arquivo que deseja assimilar e aguarde alguns segundos para que a janela de visualização seja preenchida.
+Depois de selecionar um arquivo ou pasta compatível, selecione o formato de dados correspondente no menu suspenso [!UICONTROL Select data format].
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+A tabela a seguir exibe o formato de dados apropriado para os tipos de arquivos suportados:
 
-Você pode definir um delimitador personalizado ao assimilar arquivos delimitados. Selecione a opção **[!UICONTROL Delimitador]** e selecione um delimitador no menu suspenso. O menu exibe as opções mais usadas para delimitadores, incluindo uma vírgula (`,`), uma guia (`\t`) e uma barra vertical (`|`). Como alternativa, você pode selecionar **[!UICONTROL Personalizado]** e inserir um delimitador personalizado de sua escolha na barra de entrada pop-up.
+| Tipo de arquivo | Formato dos dados |
+| --- | --- |
+| CSV | [!UICONTROL Delimitado] |
+| JSON | [!UICONTROL JSON] |
+| Parquet | [!UICONTROL Parqueta XDM] |
+
+Selecione **[!UICONTROL JSON]** e aguarde alguns segundos até que a interface de visualização seja preenchida.
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>Diferentemente dos tipos de arquivos delimitados e JSON, os arquivos formatados em Parquet não estão disponíveis para visualização.
+
+A interface de visualização permite inspecionar o conteúdo e a estrutura de um arquivo. Por padrão, a interface de visualização exibe o primeiro arquivo na pasta selecionada.
+
+Para visualizar um arquivo diferente, selecione o ícone de visualização ao lado do nome do arquivo que deseja inspecionar.
+
+![visualização padrão](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+Após inspecionar o conteúdo e a estrutura dos arquivos na pasta, selecione **[!UICONTROL Next]** para assimilar todos os arquivos na pasta recursivamente.
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+Se preferir selecionar um arquivo específico, selecione o arquivo que deseja assimilar e selecione **[!UICONTROL Next]**.
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### Definir um delimitador personalizado para arquivos delimitados
+
+Você pode definir um delimitador personalizado ao assimilar arquivos delimitados. Selecione a opção **[!UICONTROL Delimitador]** e selecione um delimitador no menu suspenso. O menu exibe as opções mais usadas para delimitadores, incluindo uma vírgula (`,`), uma guia (`\t`) e uma barra vertical (`|`). Se preferir usar um delimitador personalizado, selecione **[!UICONTROL Personalizado]** e insira um delimitador de caractere único de sua escolha na barra de entrada pop-up.
 
 Depois de selecionar seu formato de dados e definir seu delimitador, selecione **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### Assimilar arquivos Parquet ou JSON
-
-As contas de armazenamento em nuvem também oferecem suporte a arquivos JSON e Parquet. Os arquivos de parâmetro devem ser compatíveis com XDM, enquanto os arquivos JSON não precisam ser reclamados com XDM. Para assimilar arquivos JSON ou Parquet, selecione o formato de arquivo apropriado no navegador de diretório e aplique o formato de dados compatível na interface correta.
-
-Se o formato de dados estiver no JSON, uma visualização será exibida, mostrando informações sobre os dados no arquivo. Na tela de visualização, você pode selecionar se o JSON é compatível com XDM usando a lista suspensa **[!UICONTROL XDM compatível]**.
-
-Selecione **[!UICONTROL Next]** para continuar.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->Diferentemente dos tipos de arquivos delimitados e JSON, os arquivos formatados em Parquet não estão disponíveis para visualização.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Mapear campos de dados para um esquema XDM
 

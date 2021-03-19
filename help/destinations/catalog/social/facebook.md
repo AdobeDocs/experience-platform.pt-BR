@@ -3,10 +3,10 @@ keywords: conexão do facebook, conexão do facebook, destinos do facebook, face
 title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 3%
+source-wordcount: '1118'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Você pode usar esse destino para segmentação de público-alvo em [!DNL Facebo
 
 ## Casos de uso
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Facebook], aqui estão dois casos de uso de exemplo que os clientes do Adobe Experience Platform podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Facebook], aqui estão dois casos de uso de exemplo que os clientes do Adobe Experience Platform podem resolver usando esse recurso.
 
 ### Caso de uso nº 1
 
@@ -39,7 +39,7 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 
 >[!IMPORTANT]
 >
->Os dados enviados para [!DNL Facebook] não devem incluir identidades compiladas. Você é responsável por cumprir essa obrigação e pode fazer isso garantindo que os segmentos selecionados para ativação não usem uma opção de compilação em sua política de mesclagem. Saiba mais sobre [políticas de mesclagem](/help/profile/ui/merge-policies.md).
+>Os dados enviados para [!DNL Facebook] não podem incluir identidades compiladas. Você é responsável por cumprir essa obrigação e pode fazer isso garantindo que os segmentos selecionados para ativação não usem uma opção de compilação em sua política de mesclagem. Saiba mais sobre [políticas de mesclagem](/help/profile/ui/merge-policies.md).
 
 ## Identidades suportadas {#supported-identities}
 
@@ -47,15 +47,15 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 
 | Identidade do Target | Descrição | Considerações |
 |---|---|---|
-| GAID | ID de publicidade do Google | Selecione essa identidade de destino quando sua identidade de origem for um namespace GAID. |
-| IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
+| GAID | ID de publicidade do Google | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
+| IDFA | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando sua identidade de origem for um namespace do IDFA. |
 | phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e números de telefone com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
 | external_id | IDs de usuário personalizadas | Selecione essa identidade de destino quando sua identidade de origem for um namespace personalizado. |
 
 ## Tipo de exportação {#export-type}
 
-**Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone etc.) usado no destino do Facebook.
+**Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook.
 
 ## Pré-requisitos da conta do Facebook {#facebook-account-prerequisites}
 
@@ -65,8 +65,8 @@ Antes de enviar seus segmentos de público-alvo para [!DNL Facebook], verifique 
 - A conta comercial **Adobe Experience Cloud** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
    >[!IMPORTANT]
    >
-   > Ao configurar as permissões para o Adobe Experience Cloud, você deve habilitar a permissão **Gerenciar campanhas**. Isso é necessário para a integração de [!DNL Adobe Experience Platform].
-- Leia e assine os [!DNL Facebook Custom Audiences] Termos de serviço. Para fazer isso, acesse `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, onde `accountID` é a sua [!DNL Facebook Ad Account ID].
+   > Ao configurar as permissões para o Adobe Experience Cloud, você deve habilitar a permissão **Gerenciar campanhas**. A permissão é necessária para a integração [!DNL Adobe Experience Platform].
+- Leia e assine os [!DNL Facebook Custom Audiences] Termos de serviço. Para fazer isso, vá para `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, onde `accountID` é seu [!DNL Facebook Ad Account ID].
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
@@ -78,7 +78,7 @@ Dependendo do tipo de IDs assimiladas no Adobe Experience Platform, é necessár
 
 Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 
-- **Inserir números** de telefone brutos: você pode assimilar números de telefone brutos no  [!DNL E.164] formato  [!DNL Platform], que serão automaticamente atribuídos a hash na ativação. Se você escolher essa opção, certifique-se sempre de assimilar seus números de telefone brutos no namespace `Phone_E.164`.
+- **Inserir números** de telefone brutos: você pode assimilar números de telefone brutos no  [!DNL E.164] formato  [!DNL Platform]. Eles passam automaticamente por hash na ativação. Se você escolher essa opção, certifique-se sempre de assimilar seus números de telefone brutos no namespace `Phone_E.164`.
 - **Inserir números** de telefone com hash: você pode fazer o hash prévio dos números de telefone antes da ingestão no  [!DNL Platform]. Se você escolher essa opção, certifique-se sempre de assimilar seus números de telefone com hash no namespace `Phone_SHA256`.
 
 >[!NOTE]
@@ -88,7 +88,7 @@ Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 
 ### Requisitos de hash de email {#email-hashing-requirements}
 
-Você pode optar por hash de endereços de email antes de assimilá-los no Adobe Experience Platform, ou pode optar por trabalhar com endereços de email em claro no Experience Platform e fazer com que nosso algoritmo os coloque em hash na ativação.
+Você pode fazer hash de endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email limpos no Experience Platform e fazer com que [!DNL Platform] faça hash na ativação.
 
 Para saber mais sobre como assimilar endereços de email no Experience Platform, consulte a [visão geral de assimilação de lote](/help/ingestion/batch-ingestion/overview.md) e a [visão geral de assimilação de streaming](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -97,7 +97,7 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 - Cortar todos os espaços à esquerda e à direita da string de email; exemplo: `johndoe@example.com`, não `<space>johndoe@example.com<space>`;
 - Ao fazer o hash das cadeias de caracteres de email, certifique-se de fazer hash na cadeia de caracteres de minúsculas;
    - Exemplo: `example@email.com`, não `EXAMPLE@EMAIL.COM`;
-- Certifique-se de que a sequência de hash esteja toda em minúsculas
+- Certifique-se de que a cadeia de caracteres com hash esteja em letras minúsculas
    - Exemplo: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, não `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Não salve a corda.
 

@@ -6,9 +6,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '579'
 ht-degree: 13%
 
 ---
@@ -18,14 +18,14 @@ ht-degree: 13%
 
 - [Visão geral dos conectores de origem](home.md)
 - Conectores de origem disponíveis {#connectors}
-   - Aplicativos da Adobe {#adobe-applications}
+   - Aplicativos Adobe {#adobe-applications}
       - [Conector de dados de classificações do Analytics](connectors/adobe-applications/classifications.md)
       - [Conector de dados do Analytics](connectors/adobe-applications/analytics.md)
-      - [Conector do Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [conector Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
-      - Mapeamentos de campos do aplicativo da Adobe {#mapping}
+      - Mapeamentos de campo do aplicativo Adobe {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [Mapeamentos de campos do Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de destino](connectors/adobe-applications/mapping/target.md)
    - Publicidade {#advertising}
       - [Conector do Google AdWords](connectors/advertising/ads.md)
@@ -40,7 +40,7 @@ ht-degree: 13%
       - [Conector FTP](connectors/cloud-storage/ftp.md)
       - [Conector de armazenamento do Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
-      - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
+      - [Armazenamento de objetos de oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Conector SFTP](connectors/cloud-storage/sftp.md)
       - [Conector Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -50,11 +50,11 @@ ht-degree: 13%
       - [Conector da Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
    - Bancos de dados {#databases}
-      - [Conector Redshift da Amazon](connectors/databases/redshift.md)
+      - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive no conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector Azure HDInsights](connectors/databases/spark.md)
       - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
-      - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Conector do Azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Armazenamento de Tabela do Azure](connectors/databases/ats.md)
       - [Conector Couchbase](connectors/databases/couchbase.md)
       - [Conector do Google BigQuery](connectors/databases/bigquery.md)
@@ -63,7 +63,7 @@ ht-degree: 13%
       - [Conector IBM DB2](connectors/databases/ibm-db2.md)
       - [Conector do Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
-      - [Conector Oracle](connectors/databases/oracle.md)
+      - [Conector do oracle](connectors/databases/oracle.md)
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
@@ -89,7 +89,7 @@ ht-degree: 13%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Armazenamento no Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Armazenamento de objetos de oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -101,7 +101,7 @@ ht-degree: 13%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive no Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
+         - [Data Explorer do Azure](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Armazenamento de Tabela do Azure](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
@@ -148,13 +148,13 @@ ht-degree: 13%
    - [Assimilar dados do Parquet de um sistema de armazenamento em nuvem de terceiros](tutorials/api/cloud-storage-parquet.md)
    - [Criar uma conexão de conjunto de dados](tutorials/api/create-dataset-base-connection.md)
    - [Monitorar fluxos de dados](tutorials/api/monitor.md)
-   - [Atualizar conexões](tutorials/api/update.md)
+   - [Atualizar contas](tutorials/api/update.md)
    - [Atualizar fluxos de dados](tutorials/api/update-dataflows.md)
-   - [Excluir conexões](tutorials/api/delete.md)
+   - [Excluir contas](tutorials/api/delete.md)
    - [Excluir fluxos de dados](tutorials/api/delete-dataflows.md)
 - Tutoriais da interface do usuário {#ui-tutorials}
    - Criar uma conexão de origem {#create}
-      - Aplicativos da Adobe {#adobe-applications}
+      - Aplicativos Adobe {#adobe-applications}
          - [Adobe Analytics (dados do conjunto de relatórios)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (dados de classificações)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -172,7 +172,7 @@ ht-degree: 13%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Armazenamento no Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Armazenamento de objetos de oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
@@ -185,8 +185,8 @@ ht-degree: 13%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive no Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Análise do Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Data Explorer do Azure](tutorials/ui/create/databases/data-explorer.md)
+         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Armazenamento de Tabela do Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -222,8 +222,9 @@ ht-degree: 13%
    - [Ativar dados de entrada para preencher perfis de cliente](tutorials/ui/profile.md)
    - [Monitorar fluxos de dados](tutorials/ui/monitor.md)
    - [Atualizar contas](tutorials/ui/update.md)
+   - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
 - [Notificações de execução de fluxo](notifications.md)
-- [Lista de permissões de endereço IP](ip-address-allow-list.md)
+- [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

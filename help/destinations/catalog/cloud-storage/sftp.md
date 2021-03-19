@@ -1,11 +1,11 @@
 ---
-keywords: SFTP;sftp
+keywords: SFTP; sftp
 title: Conexão SFTP
-description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Experience Platform.
+description: Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -13,24 +13,32 @@ ht-degree: 0%
 
 # Conexão SFTP
 
-Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Experience Platform.
+Crie uma conexão de saída ao vivo com seu servidor SFTP para exportar periodicamente arquivos de dados delimitados do Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+> Embora o Adobe seja compatível com exportações de dados para servidores SFTP, os locais de armazenamento em nuvem recomendados para exportar dados são [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Tipo de exportação {#export-type}
 
-**Baseado**  em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [ da ativação de ](../../ui/activate-destinations.md#select-attributes)destino.
+**Baseado em perfil**  - você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do fluxo de trabalho de ativação de  [destino](../../ui/activate-destinations.md#select-attributes).
 
-![Tipo de exportação baseado em perfil SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![Tipo de exportação com base em perfil SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Destino do Connect {#connect-destination}
+## Conectar destino {#connect-destination}
 
-Consulte [Fluxo de trabalho de destinos do armazenamento da nuvem ](./workflow.md)para obter instruções sobre como se conectar aos destinos do armazenamento da nuvem, incluindo SFTP.
+Consulte o [Fluxo de trabalho de destinos de armazenamento na nuvem ](./workflow.md) para obter instruções sobre como se conectar aos destinos de armazenamento na nuvem, incluindo SFTP.
 
-Para destinos SFTP, insira as seguintes informações no fluxo de trabalho de criação de destino, na etapa **Autenticação**:
+Para destinos SFTP, insira as seguintes informações no workflow criar destino , na etapa **Authentication** :
 
-* **Host**: O endereço do local do armazenamento SFTP
-* **Nome de usuário**: O nome de usuário para fazer logon no local do armazenamento SFTP
-* **Senha**: A senha para efetuar login no local do armazenamento SFTP
+* **Host**: O endereço do local de armazenamento SFTP
+* **Nome de usuário**: O nome de usuário para fazer logon no local de armazenamento SFTP
+* **Senha**: A senha para fazer logon no local de armazenamento SFTP
 
 ## Dados exportados {#exported-data}
 
-Para destinos SFTP, a Platform cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
+Para destinos SFTP, a Platform cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de marketing por email e destinos de armazenamento na nuvem](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmento.
+
+## LISTA DE PERMISSÕES de endereço IP
+
+Consulte [lista de permissões de endereço IP para destinos de armazenamento em nuvem](./ip-address-allow-list.md) se precisar adicionar IPs Adobe a uma lista de permissões.

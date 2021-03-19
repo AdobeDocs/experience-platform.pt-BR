@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário; mapear; mapear; campos de mapeamento; funções de mapeamento;
+keywords: Experience Platform, home, tópicos populares, mapear csv, mapear arquivo csv, mapear arquivo csv para xdm, mapear csv para xdm, guia da interface do usuário, mapear, mapear campos, mapear funções de mapeamento;
 solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 topic: visão geral
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 3%
@@ -35,7 +35,7 @@ Os dados nos subcampos podem ser acessados usando a notação de pontos. Por exe
 
 As tabelas a seguir listam todas as funções de mapeamento compatíveis, incluindo expressões de amostra e suas saídas resultantes.
 
-### Funções da string
+### Funções de string {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | extract_regex | Extrai grupos da string de entrada, com base em uma expressão regular. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres da qual você está extraindo os grupos.</li><li>REGEX: **Obrigatório** A expressão regular à qual você deseja que o grupo corresponda.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Verifica se a string corresponde à expressão regular inserida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que você está verificando corresponde à expressão regular.</li><li>REGEX: **Obrigatório** A expressão regular com a qual você está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-### Funções de hash
+### Funções de hash {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | md5 | Obtém uma entrada e um valor de hash usando MD5. | <ul><li>ENTRADA: **Necessário** O texto sem formatação a ser submetido a hash.</li><li>CARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Utiliza uma entrada para usar um algoritmo CRC (Cyclic Redundancy Check, verificação de redundância cíclica) para produzir um código cíclico de 32 bits. | <ul><li>ENTRADA: **Necessário** O texto sem formatação a ser submetido a hash.</li><li>CARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;meu texto&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### Funções de URL
+### Funções de URL {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | get_url_path | Retorna o caminho de determinada URL. Por padrão, o caminho completo é retornado. | <ul><li>URL: **Obrigatório** O URL do qual o caminho precisa ser extraído.</li><li>FULL_PATH: *Opcional* Um valor booleano que determina se o caminho completo é retornado. Se definido como false, somente o final do caminho será retornado.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_query_str | Retorna a string de consulta de um determinado URL. | <ul><li>URL: **Obrigatório** O URL do qual você está tentando obter a string de consulta.</li><li>ÂNCORA: **Obrigatório** Determina o que será feito com a âncora na cadeia de caracteres de consulta. Pode ser um dos três valores: &quot;manter&quot;, &quot;remover&quot; ou &quot;anexar&quot;.<br><br>Se o valor for &quot;reter&quot;, a âncora será anexada ao valor retornado.<br>Se o valor for &quot;remove&quot;, a âncora será removida do valor retornado.<br>Se o valor for &quot;append&quot;, a âncora será retornada como um valor separado.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/3?name= &#x200B; ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/3?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042/over/then?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### Funções de data e hora
+### Funções de data e hora {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 &#x200B;
 
-### Hierarquias - Objetos
+### Hierarquias - Objetos {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | is_set | Verifica se o objeto existe nos dados de origem. | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se existir nos dados de origem.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | true |
 | nula | Define o valor do atributo para `null`. Isso deve ser usado quando você não deseja copiar o campo para o schema de destino. |  | nullify() | nullify() | `null` |
 
-### Hierarquias - Matrizes
+### Hierarquias - Matrizes {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | join_arrays | Combina os arrays uns com os outros. | <ul><li>MATRIZ: **Obrigatório** A matriz à qual você está adicionando elementos.</li><li>VALORES: As matrizes que você deseja anexar à matriz principal.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Obtém uma lista de entradas e a converte em uma matriz. | <ul><li>INCLUDE_NULLS: **Obrigatório** Um valor booleano para indicar se deve ou não incluir valores nulos na matriz de resposta.</li><li>VALORES: **Obrigatório** Os elementos que devem ser convertidos em uma matriz.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### Operadores lógicos
+### Operadores lógicos {#logical-operators}
 
 >[!NOTE]
 >
@@ -161,10 +161,10 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| decodificação | Dada uma chave e uma lista de pares de valores chave nivelados como uma matriz, a função retornará o valor se a chave for encontrada ou retornará um valor padrão se estiver presente na matriz. | <ul><li>CHAVE: **Obrigatório** A chave a ser correspondida.</li><li>OPÇÕES: **Necessário** Uma matriz nivelada de pares de chave/valor. Opcionalmente, um valor padrão pode ser colocado no final.</li></ul> | decodificação (CHAVE, OPÇÕES) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pensilvânia&quot;, &quot;N/A&quot;) | Se o stateCode fornecido for &quot;ca&quot;, &quot;Califórnia&quot;.<br>Se o stateCode fornecido for &quot;pa&quot;, &quot;Pensilvânia&quot;.<br>Se o stateCode não corresponder ao seguinte, &quot;N/A&quot;. |
+| decodificação | Dada uma chave e uma lista de pares de valores chave nivelados como uma matriz, a função retornará o valor se a chave for encontrada ou retornará um valor padrão se estiver presente na matriz. | <ul><li>CHAVE: **Obrigatório** A chave a ser correspondida.</li><li>OPTIONS: **Necessário** Uma matriz nivelada de pares de chave/valor. Opcionalmente, um valor padrão pode ser colocado no final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pensilvânia&quot;, &quot;N/A&quot;) | Se o stateCode fornecido for &quot;ca&quot;, &quot;Califórnia&quot;.<br>Se o stateCode fornecido for &quot;pa&quot;, &quot;Pensilvânia&quot;.<br>Se o stateCode não corresponder ao seguinte, &quot;N/A&quot;. |
 | iif | Avalia uma determinada expressão booleana e retorna o valor especificado com base no resultado. | <ul><li>EXPRESSÃO: **Obrigatório** A expressão booleana que está sendo avaliada.</li><li>TRUE_VALUE: **Obrigatório** O valor que é retornado se a expressão for avaliada como true.</li><li>FALSE_VALUE: **Obrigatório** O valor que é retornado se a expressão for avaliada como false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Verdadeiro&quot; |
 
-### Agregação
+### Agregação {#aggregation}
 
 >[!NOTE]
 >
@@ -172,10 +172,10 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| min | Retorna o mínimo dos argumentos fornecidos. Usa ordenação natural. | <ul><li>OPÇÕES: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | min(OPÇÕES) | min(3, 1, 4) | 1 |
-| max | Retorna o máximo dos argumentos fornecidos. Usa ordenação natural. | <ul><li>OPÇÕES: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
+| min | Retorna o mínimo dos argumentos fornecidos. Usa ordenação natural. | <ul><li>OPTIONS: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
+| max | Retorna o máximo dos argumentos fornecidos. Usa ordenação natural. | <ul><li>OPTIONS: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### Tipo de conversões
+### Digite conversões {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | to_float | Converte uma string em um Flutuante. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que deve ser convertida em um Flutuante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Converte uma cadeia de caracteres em um número inteiro. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que deve ser convertida em um Número inteiro.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### Funções JSON
+### Funções JSON {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Desserialize o conteúdo JSON da string especificada. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres JSON a ser desserializada.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Um objeto que representa o JSON. |
 
-### Operações especiais
+### Operações especiais {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Gera uma ID pseudo-aleatória. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### Funções do agente do usuário
+### Funções do agente do usuário {#user-agent}
 
 >[!NOTE]
 >

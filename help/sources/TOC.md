@@ -6,9 +6,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '582'
 ht-degree: 13%
 
 ---
@@ -227,4 +227,5 @@ ht-degree: 13%
    - [Excluir fluxos de dados](tutorials/ui/delete.md)
 - [Notificações de execução de fluxo](notifications.md)
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
+- [Perguntas frequentes](./troubleshooting.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

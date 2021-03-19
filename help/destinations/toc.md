@@ -6,7 +6,7 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 10%
@@ -130,6 +130,6 @@ ht-degree: 10%
       * [Visão geral da voz dos destinos do cliente](./catalog/voice/overview.md)
       * [Confirmar extensão de Feedback digital](./catalog/voice/confirmit-digital-feedback.md)
       * [Extensão de Tags Invoca](./catalog/voice/invoca.md)
-      * [Medallia etension](./catalog/voice/medallia.md)
+      * [Extensão Medallia](./catalog/voice/medallia.md)
       * [Extensão da Caixa de entrada do URL de conversa](./catalog/voice/talkurl.md)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

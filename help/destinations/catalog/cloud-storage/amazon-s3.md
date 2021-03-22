@@ -1,11 +1,11 @@
 ---
-keywords: Amazon S3;destino S3;s3;amazon s3
+keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
-description: Crie uma conexão de saída ao vivo com seu armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV da Adobe Experience Platform para seus próprios compartimentos S3.
+description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios buckets do S3.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -13,26 +13,28 @@ ht-degree: 0%
 
 # [!DNL Amazon S3] conexão  {#s3-connection}
 
-Crie uma conexão de saída ao vivo com seu [!DNL Amazon Web Services] (AWS) armazenamento S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV da Adobe Experience Platform para seus próprios compartimentos S3.
+## Visão geral {#overview}
+
+Crie uma conexão de saída em tempo real com seu armazenamento [!DNL Amazon Web Services] (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios buckets do S3.
 
 ## Tipo de exportação {#export-type}
 
-**Baseado**  em perfis - você está exportando todos os membros de um segmento, juntamente com os campos de schema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de atributos selecionados do fluxo de trabalho [ da ativação de ](../../ui/activate-destinations.md#select-attributes)destino.
+**Baseado em perfil**  - você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do fluxo de trabalho de ativação de  [destino](../../ui/activate-destinations.md#select-attributes).
 
-![Tipo de exportação baseado no perfil Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Tipo de exportação com base em perfil do Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## Destino do Connect {#connect-destination}
+## Conectar destino {#connect-destination}
 
-Consulte [Fluxo de trabalho de destinos do armazenamento da nuvem ](./workflow.md) para obter instruções sobre como se conectar aos destinos do armazenamento da nuvem, incluindo [!DNL Amazon S3].
+Consulte [Fluxo de trabalho de destinos de armazenamento na nuvem ](./workflow.md) para obter instruções sobre como se conectar aos destinos de armazenamento na nuvem, incluindo [!DNL Amazon S3].
 
-Para destinos [!DNL Amazon S3], insira as seguintes informações no fluxo de trabalho de criação de destino:
+Para destinos [!DNL Amazon S3], insira as seguintes informações no workflow criar destino:
 
-* **[!DNL Amazon S3]chave de acesso e chave [!DNL Amazon S3]** secreta: Em  [!DNL Amazon S3], gere um  `access key - secret access key` par para conceder acesso à Plataforma à sua  [!DNL Amazon S3] conta. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]chave de acesso e chave  [!DNL Amazon S3] secreta**: No  [!DNL Amazon S3], gere um  `access key - secret access key` par para conceder à Platform acesso à sua  [!DNL Amazon S3] conta. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 >[!IMPORTANT]
 >
->A plataforma precisa de `write` permissões no objeto bucket onde os arquivos de exportação serão entregues.
+>A plataforma precisa de `write` permissões no objeto de compartimento, onde os arquivos de exportação serão entregues.
 
 ## Dados exportados {#exported-data}
 
-Para destinos [!DNL Amazon S3], a plataforma cria um arquivo `.txt` ou `.csv` delimitado por tabulação no local do armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de e-mail Marketing e destinos do armazenamento Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmentos.
+Para destinos [!DNL Amazon S3], a Platform cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de marketing por email e destinos de armazenamento na nuvem](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmento.

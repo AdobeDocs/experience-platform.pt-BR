@@ -3,9 +3,9 @@ keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >O destino da brasileira no Adobe Experience Platform está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+
+## Visão geral {#overview}
 
 O destino [!DNL Braze] ajuda a enviar os dados do perfil para [!DNL Braze].
 

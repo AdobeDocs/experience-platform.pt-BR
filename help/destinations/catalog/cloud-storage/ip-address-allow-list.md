@@ -4,10 +4,10 @@ title: 'LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em n
 type: Documentação
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar com segurança os dados do Experience Platform para o servidor SFTP, o Amazon S3 ou o armazenamento do Azure Blob.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 7d7568de57cf79843a833a05b9bdfa6eb048bdbc
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 1%
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +18,19 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> O Adobe recomenda marcar esta página e retorná-la a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
+> * O Adobe recomenda marcar esta página e retorná-la a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
+> * Embora o Adobe seja compatível com exportações de dados para servidores SFTP, os locais de armazenamento em nuvem recomendados para exportar dados são [!DNL Amazon S3] e [!DNL Azure Blob].
+
 
 Esta página fornece intervalos IP que você pode adicionar à sua lista de permissões, para exportar com segurança os dados do Experience Platform para seu armazenamento [SFTP server](./sftp.md), [Amazon S3](./amazon-s3.md) ou [Azure Blob](./azure-blob.md).
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, é possível permitir o tráfego para o serviço de transferência de dados.
 
-Você pode adicionar os seguintes intervalos IP a uma lista de permissões antes de trabalhar com conexões de destino de armazenamento em nuvem. A não adição do intervalo IP específico da região à lista de permissões pode causar erros ou não desempenho ao usar as conexões de destino de armazenamento na nuvem.
+O Adobe recomenda adicionar os seguintes intervalos IP a uma lista de permissões antes de trabalhar com conexões de destino de armazenamento em nuvem. A não adição do intervalo IP específico da região à lista de permissões pode causar erros ou não desempenho ao usar as conexões de destino de armazenamento na nuvem.
+
+## Obrigatório para todos os clientes
+
+* `52.247.108.70`
 
 ## Clientes dos EUA
 

@@ -3,15 +3,17 @@ keywords: conexão do facebook, conexão do facebook, destinos do facebook, face
 title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1119'
 ht-degree: 2%
 
 ---
 
 
 # [!DNL Facebook] conexão
+
+## Visão geral {#overview}
 
 Ative perfis para suas campanhas [!DNL Facebook] para segmentação, personalização e supressão de público-alvo com base em emails com hash.
 

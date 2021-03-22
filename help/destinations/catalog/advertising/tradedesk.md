@@ -3,15 +3,17 @@ keywords: publicidade; o serviço de comércio;
 title: A conexão com o Trade Desk
 description: 'O Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar redirecionamento e campanhas digitais direcionadas ao público-alvo em fontes de exibição, vídeo e inventário móvel. '
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL The Trade Desk] conexão
+
+## Visão geral {#overview}
 
 [!DNL The Trade Desk] ajuda a enviar dados do perfil para o  [!DNL The Trade Desk].
 
@@ -39,35 +41,35 @@ Como profissional de marketing, desejo poder usar segmentos criados a partir de 
 
 ## Conecte-se ao destino {#connect-destination}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL The Trade Desk] e selecione **[!UICONTROL Configurar]**.
+Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione [!DNL The Trade Desk] e selecione **[!UICONTROL Configure]**.
 
 ![Configurar O Destino Do Trade Desk](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+>Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 >
 >![Ativar O Destino Do Trade Desk](../../assets/catalog/advertising/tradedesk/activate.png)
 
-Na etapa [!UICONTROL Authentication], é necessário inserir [!DNL The Trade Desk] detalhes da conexão:
+Na etapa [!UICONTROL Authentication], é necessário inserir os detalhes da conexão [!DNL The Trade Desk]:
 
-* **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID]** da conta: Sua ID  [!DNL Trade Desk] [!UICONTROL de conta].
-* **[!UICONTROL Local]** do servidor: Pergunte ao seu  [!DNL Trade Desk] representante qual servidor regional você deve usar. Esses são os servidores regionais disponíveis que você pode escolher:
+* **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá esse destino no futuro.
+* **[!UICONTROL Description]**: Uma descrição que ajudará a identificar esse destino no futuro.
+* **[!UICONTROL Account ID]**: Seu [!DNL Trade Desk] [!UICONTROL Account ID].
+* **[!UICONTROL Server Location]**: Pergunte ao seu  [!DNL Trade Desk] representante qual servidor regional você deve usar. Esses são os servidores regionais disponíveis que você pode escolher:
 
-   * **[!UICONTROL Europa]**
-   * **[!UICONTROL Singapura]**
-   * **[!UICONTROL Tóquio]**
-   * **[!UICONTROL América do Norte - Leste]**
-   * **[!UICONTROL América do Norte - Oeste]**
-   * **[!UICONTROL América Latina]**
+   * **[!UICONTROL Europe]**
+   * **[!UICONTROL Singapore]**
+   * **[!UICONTROL Tokyo]**
+   * **[!UICONTROL North America East]**
+   * **[!UICONTROL North America West]**
+   * **[!UICONTROL Latin America]**
 
-* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Marketing action]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Etapa de Autenticação do Trade Desk](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-Clique em **[!UICONTROL Criar destino]**. Seu destino foi criado. Você pode clicar em [!UICONTROL Salvar e sair] se desejar ativar segmentos posteriormente, ou selecionar [!UICONTROL Próximo] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
+Clique em **[!UICONTROL Create destination]**. Seu destino foi criado. Você pode clicar em [!UICONTROL Save & Exit] se desejar ativar segmentos posteriormente, ou selecionar [!UICONTROL Next] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
 
 ## Ativar segmentos {#activate-segments}
 

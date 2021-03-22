@@ -3,15 +3,17 @@ keywords: 'publicidade; bing; '
 title: Conexão do Microsoft Bing
 description: Com o destino de conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas ao público-alvo em todo o Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 0%
+source-wordcount: '508'
+ht-degree: 1%
 
 ---
 
 
 # [!DNL Microsoft Bing] conexão  {#bing-destination}
+
+## Visão geral {#overview}
 
 O destino [!DNL Microsoft Bing] ajuda a enviar os dados do perfil para [!DNL Microsoft Display Advertising].
 
@@ -39,30 +41,30 @@ Como profissional de marketing, eu desejo poder usar segmentos criados a partir 
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 
-* [!UICONTROL ID] da conta: este é seu  [!DNL Bing Ads CID], no formato inteiro.
+* [!UICONTROL Account ID]: este é seu  [!DNL Bing Ads CID], no formato inteiro.
 
 ## Conecte-se ao destino {#connect-destination}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Microsoft Bing] e selecione **[!UICONTROL Configurar]**.
+Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione [!DNL Microsoft Bing] e selecione **[!UICONTROL Configure]**.
 
 ![Configurar o destino do Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
 
 >[!NOTE]
 >
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+>Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 >
 >![Ativar Destino do Microsoft Bing](../../assets/catalog/advertising/bing/activate.png)
 
 Na etapa [!UICONTROL Authentication], você deve inserir os detalhes da conexão de destino:
 
-* **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL ID]** da conta: Seu  [!DNL Bing Ads CID].
-* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá esse destino no futuro.
+* **[!UICONTROL Description]**: Uma descrição que ajudará a identificar esse destino no futuro.
+* **[!UICONTROL Account ID]**: Seu [!DNL Bing Ads CID].
+* **[!UICONTROL Marketing action]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Autenticação de Destino do Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
 
-Clique em **[!UICONTROL Criar destino]**. Seu destino foi criado. Você pode clicar em [!UICONTROL Salvar e sair] se desejar ativar segmentos posteriormente, ou clicar em [!UICONTROL Próximo] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
+Clique em **[!UICONTROL Create destination]**. Seu destino foi criado. Você pode clicar em [!UICONTROL Save & Exit] se desejar ativar segmentos posteriormente, ou clicar em [!UICONTROL Next] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
 
 ## Ativar segmentos {#activate-segments}
 

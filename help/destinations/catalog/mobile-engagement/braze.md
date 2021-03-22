@@ -3,7 +3,7 @@ keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 1%
@@ -25,7 +25,7 @@ O destino [!DNL Braze] ajuda a enviar os dados do perfil para [!DNL Braze].
 
 Para enviar dados de perfil para [!DNL Braze], primeiro você deve se conectar ao destino.
 
-## Especificações de destino {#destination-specs}
+## Especificações de destino {#specifics}
 
 Observe os seguintes detalhes que são específicos ao destino [!DNL Braze]:
 

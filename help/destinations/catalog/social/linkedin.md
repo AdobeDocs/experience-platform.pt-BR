@@ -3,9 +3,9 @@ keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; link
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,7 @@ Para ajudá-lo a entender melhor como e quando usar o destino [!DNL LinkedIn Mat
 
 Uma empresa de software organiza uma conferência e deseja manter contato com os participantes e mostrar a eles ofertas personalizadas com base em seu status de presença em conferência. A empresa pode assimilar endereços de email ou IDs de dispositivo móvel de seu próprio [!DNL CRM] para o Adobe Experience Platform. Em seguida, eles podem criar segmentos a partir de seus próprios dados offline e enviar esses segmentos para a [!DNL LinkedIn] plataforma social, otimizando seus gastos com publicidade.
 
-## Especificações de destino {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] O suporta a ativação das seguintes identidades: emails com hash  [!DNL GAID], e  [!DNL IDFA].
-
-### Identidades suportadas {#supported-identities}
+## Identidades suportadas {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] O suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
 
@@ -35,26 +31,26 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 |---|---|---|
 | GAID | ID de publicidade do Google | Selecione essa identidade de destino quando sua identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e emails com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e e-mails com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
 
 
-### Tipo de exportação {#export-type}
+## Tipo de exportação {#export-type}
 
 **Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone e outros) usados no  [!DNL LinkedIn Matched Audiences] destino.
 
-### Pré-requisitos da conta do LinkedIn {#LinkedIn-account-prerequisites}
+## Pré-requisitos da conta do LinkedIn {#LinkedIn-account-prerequisites}
 
 Antes de usar o destino [!UICONTROL LinkedIn Matched Audience], verifique se a conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
 
 Para saber como editar suas permissões de usuário [!DNL LinkedIn Campaign Manager], consulte [Adicionar, editar e remover permissões de usuário em contas publicitárias](https://www.linkedin.com/help/lms/answer/5753) na documentação do LinkedIn.
 
-### Requisitos de correspondência de ID {#id-matching-requirements}
+## Requisitos de correspondência de ID {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] exige que nenhuma informação pessoal identificável (PII) seja enviada de forma clara. Portanto, os públicos-alvo ativados para [!DNL LinkedIn Matched Audiences] podem ser desmarcados com identificadores *com hash*, como endereços de email ou IDs de dispositivo móvel.
 
 Dependendo do tipo de IDs assimiladas no Adobe Experience Platform, é necessário seguir os requisitos correspondentes.
 
-#### Requisitos de hash de email {#email-hashing-requirements}
+## Requisitos de hash de email {#email-hashing-requirements}
 
 Você pode fazer hash de endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email limpos no Experience Platform e fazer com que [!DNL Platform] faça hash na ativação.
 

@@ -3,7 +3,7 @@ keywords: conexão do facebook, conexão do facebook, destinos do facebook, face
 title: Conexão do Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 2%
@@ -74,7 +74,7 @@ Antes de enviar seus segmentos de público-alvo para [!DNL Facebook], verifique 
 
 Dependendo do tipo de IDs assimiladas no Adobe Experience Platform, é necessário seguir os requisitos correspondentes.
 
-### Requisitos de hash do número de telefone {#phone-number-hashing-requirements}
+## Requisitos de hash do número de telefone {#phone-number-hashing-requirements}
 
 Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 
@@ -86,7 +86,7 @@ Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 >Os números de telefone assimilados no namespace `Phone` não podem ser ativados em [!DNL Facebook].
 
 
-### Requisitos de hash de email {#email-hashing-requirements}
+## Requisitos de hash de email {#email-hashing-requirements}
 
 Você pode fazer hash de endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email limpos no Experience Platform e fazer com que [!DNL Platform] faça hash na ativação.
 
@@ -109,7 +109,7 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 
 ![Transformação de mapeamento de identidade](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Uso de namespaces personalizados {#custom-namespaces}
+## Uso de namespaces personalizados {#custom-namespaces}
 
 Antes de usar o namespace `Extern_ID` para enviar dados a [!DNL Facebook], sincronize seus próprios identificadores usando [!DNL Facebook Pixel]. Consulte a [documentação oficial](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obter informações detalhadas.
 

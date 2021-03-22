@@ -1,11 +1,11 @@
 ---
 keywords: PebblePost; pebblepost; PebblePost Correspondência direta programática; pedblpost direto programática
 title: Extensão PebblePost
-description: A extensão PebblePost é um destino de email na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+description: A extensão PebblePost é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '541'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 3%
 
 # [!DNL PebblePost] extensão {#pebblepost-extension}
 
-[!DNL PebblePost's Programmatic Direct Mail®] ajuda os profissionais de marketing digital a se conectarem ao interesse online e à intenção de fazer conversões de mídia offline e tangível. Os profissionais de marketing podem aproveitar os segmentos de dados personalizados que criaram na Adobe para agora direcionar os consumidores com uma impressão de mídia interna relevante e duradoura. Analise o desempenho em tempo real com base na atividade do caminho de resposta e nas conversões no site.
+## Visão geral {#overview}
 
-[!DNL PebblePost] O é uma extensão de email na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost's Programmatic Direct Mail®] ajuda os profissionais de marketing digital a se conectarem ao interesse online e à intenção de fazer conversões de mídia offline e tangível. Os profissionais de marketing podem aproveitar os segmentos de dados personalizados que criaram no Adobe para agora direcionar os consumidores com uma impressão de mídia interna relevante e duradoura. Analise o desempenho em tempo real com base na atividade do caminho de resposta e nas conversões no site.
 
-Esse destino é uma extensão do Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões do Platform Launch funcionam na Platform, consulte a [Visão geral das extensões do Adobe Experience Platform Launch](../launch-extensions/overview.md).
+[!DNL PebblePost] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+
+Esse destino é uma extensão do Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões do Platform launch funcionam na plataforma, consulte [Visão geral das extensões do Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
 ![Extensão PebblePost](../../assets/catalog/email/pebblepost/catalog.png)
 
@@ -25,38 +27,38 @@ Esse destino é uma extensão do Adobe Experience Platform Launch. Para obter ma
 
 Essa extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar o Adobe Experience Platform Launch. O Platform Launch é oferecido aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso ao Platform Launch e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar o Adobe Experience Platform Launch. O Platform launch é oferecido aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso ao Platform launch e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar as extensões.
 
 ## Instalar extensão {#install-extension}
 
 Para instalar a extensão [!DNL PebblePost]:
 
-Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 
-Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configurar]** estiver esmaecido, você não terá a permissão **[!UICONTROL manage_properties]**. Consulte [Pré-requisitos](#prerequisites).
+Clique no destino para realçá-lo e selecione **[!UICONTROL Configure]** no painel direito. Se o controle **[!UICONTROL Configure]** estiver esmaecido, a permissão **[!UICONTROL manage_properties]** não será exibida. Consulte [Pré-requisitos](#prerequisites).
 
-Na janela **[!UICONTROL Select available Platform Launch property]**, selecione a propriedade do Platform Launch na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Platform Launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) da documentação do Platform Launch.
+Na janela **[!UICONTROL Select available Platform Launch property]**, selecione a propriedade Platform launch na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Platform launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) da documentação do Platform launch.
 
-O fluxo de trabalho leva você ao Platform Launch para concluir a instalação.
+O fluxo de trabalho leva você ao Platform launch para concluir a instalação.
 
 Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a página [PebblePost no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
-Você também pode instalar a extensão diretamente na [interface do Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Adicionar uma nova extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) na documentação do Platform Launch.
+Você também pode instalar a extensão diretamente na [interface do Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Adicionar uma nova extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) na documentação do Platform launch.
 
 ## Como usar a extensão {#how-to-use}
 
-Depois de instalar a extensão, você pode iniciar a configuração de regras para ela diretamente no Platform Launch.
+Depois de instalar a extensão, você pode iniciar a configuração das regras diretamente no Platform launch.
 
-No Platform Launch, você pode configurar regras para as extensões instaladas para enviar dados de evento para o destino da extensão somente em determinadas situações. Para obter mais informações sobre como configurar regras para suas extensões, consulte a [Documentação de regras](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+No Platform launch, você pode configurar regras para suas extensões instaladas para enviar dados de evento para o destino da extensão somente em determinadas situações. Para obter mais informações sobre como configurar regras para suas extensões, consulte a [Documentação de regras](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
 
 ## Configurar, atualizar e excluir a extensão {#configure-upgrade-delete}
 
-Você pode configurar, atualizar e excluir extensões na interface do Platform Launch.
+Você pode configurar, atualizar e excluir extensões na interface do Platform launch.
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Instalar]** para a extensão. Exclua o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para acessar o Platform Launch e configurar ou excluir sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Install]** para a extensão. Desative o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para chegar ao Platform launch e configure ou exclua sua extensão.
 
-Para atualizar sua extensão, consulte [Atualização de extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) na documentação do Platform Launch.
+Para atualizar sua extensão, consulte [Atualização de extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) na documentação do Platform launch.

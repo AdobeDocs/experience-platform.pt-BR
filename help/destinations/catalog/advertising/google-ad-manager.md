@@ -3,9 +3,9 @@ keywords: google ad manager, google ad, doubleclick, DoubleClick AdX, DoubleClic
 title: Conexão com o Google Ad Manager
 description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios do Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.  '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,12 @@ ht-degree: 0%
 
 [!DNL Google Ad Manager], anteriormente conhecida como  [!DNL DoubleClick] por Publishers ou  [!DNL DoubleClick AdX], é uma plataforma de veiculação de anúncios da  [!DNL Google] que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 
-## Especificações de destino
+## Especificações de destino {#specifics}
 
 Observe os seguintes detalhes que são específicos para os destinos [!DNL Google Ad Manager]:
 
 * Os públicos-alvo ativados são criados programaticamente na plataforma [!DNL Google] .
-* No momento, a plataforma não inclui uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público-alvo no Google para validar a integração e entender o tamanho do direcionamento de público-alvo.
-
->[!IMPORTANT]
->
->Se você deseja criar seu primeiro destino com [!DNL Google Ad Manager] e não ativou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de Experience Cloud ID no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já havia configurado [!DNL Google] integrações no Audience Manager, as sincronizações de ID que você havia configurado continuam para a Platform.
+* [!DNL Platform] atualmente não inclui uma métrica de medição para validar a ativação bem-sucedida. Consulte as contagens de público-alvo no Google para validar a integração e entender o tamanho do direcionamento de público-alvo.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -48,7 +44,9 @@ Observe os seguintes detalhes que são específicos para os destinos [!DNL Googl
 
 ## Pré-requisitos
 
-### Lista de permissões
+Se você deseja criar seu primeiro destino com [!DNL Google Ad Manager] e não ativou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço de Experience Cloud ID no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para ativar as sincronizações de ID. Se você já havia configurado [!DNL Google] integrações no Audience Manager, as sincronizações de ID que você havia configurado continuam para a Platform.
+
+## Lista de permissões
 
 >[!NOTE]
 >

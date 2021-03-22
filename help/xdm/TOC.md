@@ -6,10 +6,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Esquemas
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 24%
+source-wordcount: '259'
+ht-degree: 23%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 24%
    * [Práticas recomendadas para modelagem de dados](schema/best-practices.md)
    * [Restrições do tipo de campo XDM](schema/field-constraints.md)
    * [Dicionário de campo XDM](schema/field-dictionary.md)
+   * Modelos de dados do setor {#industries}
+      * [Visão geral](./schema/industries/overview.md)
+      * [ERD do modelo de dados de varejo](./schema/industries/retail.md)
+      * [ERD do modelo de dados dos serviços financeiros](./schema/industries/financial.md)
+      * [Modelo de dados de viagem e hospitalidade](./schema/industries/travel-hospitality.md)
+      * [ERD do modelo de dados de telecomunicações](./schema/industries/telecom.md)
 * Classes {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [ExperiênciaEvento XDM](./classes/experienceevent.md)
@@ -65,7 +71,7 @@ ht-degree: 24%
    * [Assinatura](./data-types/subscription.md)
    * [Interação da Web](./data-types/web-interactions.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)
-*  SchemasUI  {#ui}
+* [!UICONTROL Schemas] Interface {#ui}
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}

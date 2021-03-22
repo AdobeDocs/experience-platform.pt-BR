@@ -3,15 +3,17 @@ keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; link
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 0%
+source-wordcount: '655'
+ht-degree: 1%
 
 ---
 
 
 # [!DNL LinkedIn Matched Audiences] conexão
+
+## Visão geral {#overview}
 
 Ative perfis para suas campanhas [!DNL LinkedIn] para segmentação, personalização e supressão de público-alvo, com base em emails com hash e IDs móveis.
 
@@ -31,7 +33,7 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 |---|---|---|
 | GAID | ID de publicidade do Google | Selecione essa identidade de destino quando sua identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e e-mails com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte para texto sem formatação e endereços de email com hash SHA256. Siga as instruções na seção [ID correspondente a requirements](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e emails com hash, respectivamente. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação. |
 
 
 ## Tipo de exportação {#export-type}

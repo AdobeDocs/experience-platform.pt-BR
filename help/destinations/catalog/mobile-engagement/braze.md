@@ -3,10 +3,10 @@ keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 2%
+source-wordcount: '900'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Observe os seguintes detalhes que são específicos ao destino [!DNL Braze]:
 
 Como comerciante, desejo direcionar usuários em um destino de envolvimento móvel, com segmentos criados em [!DNL Adobe Experience Platform]. Além disso, desejo fornecer experiências personalizadas a elas, com base em atributos de seus perfis [!DNL Adobe Experience Platform], assim que os segmentos e perfis forem atualizados em [!DNL Adobe Experience Platform].
 
-### Identidades suportadas {#supported-identities}
+## Identidades suportadas {#supported-identities}
 
 [!DNL Google Ad Manager] O suporta a ativação de identidades descritas na tabela abaixo.
 
@@ -49,7 +49,6 @@ Como comerciante, desejo direcionar usuários em um destino de envolvimento móv
 
 **[!DNL Profile-based]** - estiver exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campo.
 [!DNL Adobe Experience Platform] segmentos são exportados para o  [!DNL Braze] sob o  `AdobeExperiencePlatformSegments` atributo .
-
 
 ## Conecte-se ao destino {#connect-destination}
 
@@ -128,7 +127,7 @@ Agora, você deve ver o mapeamento de campo na lista.
 
 Para adicionar mais mapeamentos, repita as etapas anteriores.
 
-### Exemplo {#mapping-example}
+## Exemplo de mapeamento {#mapping-example}
 
 Digamos que seu esquema de perfil XDM e sua instância [!DNL Braze] contenham os seguintes atributos e identidades:
 

@@ -4,7 +4,7 @@ title: 'LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em n
 type: Documentação
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar com segurança os dados do Experience Platform para o servidor SFTP, o Amazon S3 ou o armazenamento do Azure Blob.
 translation-type: tm+mt
-source-git-commit: 7d7568de57cf79843a833a05b9bdfa6eb048bdbc
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em nuvem {#ip-address-allow-list}
 
-## Visão geral {#overview}
-
 >[!IMPORTANT]
 >
 > * O Adobe recomenda marcar esta página e retorná-la a cada três meses para verificar os endereços IP mais recentes. O Adobe não fornece notificação de novos intervalos IP.
 > * Embora o Adobe seja compatível com exportações de dados para servidores SFTP, os locais de armazenamento em nuvem recomendados para exportar dados são [!DNL Amazon S3] e [!DNL Azure Blob].
 
+
+## Visão geral {#overview}
 
 Esta página fornece intervalos IP que você pode adicionar à sua lista de permissões, para exportar com segurança os dados do Experience Platform para seu armazenamento [SFTP server](./sftp.md), [Amazon S3](./amazon-s3.md) ou [Azure Blob](./azure-blob.md).
 

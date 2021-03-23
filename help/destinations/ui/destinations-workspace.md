@@ -4,9 +4,9 @@ title: Área de trabalho Destinos
 description: O espaço de trabalho Destinos consiste em quatro seções, Catálogo, Navegação, Contas e Visualização do sistema, descritas nas seções abaixo.
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '934'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ A interface do usuário da Plataforma fornece várias opções de pesquisa e fil
 
 ![filtragem de destinos e demonstração de pesquisa](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-Os cartões de destino contêm **[!UICONTROL Configure]** ou **[!UICONTROL Activate]** controle e um controle secundário que exibe mais opções. Todos eles estão descritos abaixo:
+Os cartões de destino contêm **[!UICONTROL Configure]** ou **[!UICONTROL Activate]** controle e um controle secundário que exibe mais opções. Esses controles estão descritos abaixo:
 
 | Controle | Descrição |
 ---------|----------
@@ -47,7 +47,7 @@ Os cartões de destino contêm **[!UICONTROL Configure]** ou **[!UICONTROL Activ
 
 ![Controles no cartão de destinos](../assets/ui/workspace/destination-card-options.png)
 
-Selecione um cartão de destino no catálogo para abrir o painel direito.  Aqui, você pode ver uma descrição do destino. O painel direito fornece os mesmos controles descritos na tabela acima, bem como uma descrição do destino e uma indicação da categoria e do tipo de destino.
+Selecione um cartão de destino no catálogo para abrir o painel direito. Aqui, você pode ver uma descrição do destino. O painel direito fornece os mesmos controles descritos na tabela acima, bem como uma descrição do destino e uma indicação da categoria e do tipo de destino.
 
 ![Opções de catálogo de destino](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 | Elemento | Descrição |
 ---------|----------
 | Nome | O nome fornecido para o fluxo de ativação para este destino. A mesma coluna inclui dois controles: [!UICONTROL Activate ] e [!UICONTROL Delete destination]. |
-| Status da Execução do Último Fluxo | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
-| Data de Execução do Último Fluxo | Hora e data da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| [!UICONTROL Last Flow Run Status] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| [!UICONTROL Last Flow Run Date] | Hora e data da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Destination] | A plataforma de destino selecionada para o fluxo de ativação. |
 | [!UICONTROL Connection Type] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: Servidor para servidor.</li><li>Para destinos de transmissão: Pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Username] | As credenciais de conta que você selecionou para o fluxo de destino. |
 | [!UICONTROL Activation Data] | Indica o número de segmentos que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os segmentos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os segmentos ativados. |
 | [!UICONTROL Created] | A data e a hora UTC em que o fluxo de ativação para o destino foi criado. |
-| [!UICONTROL Status] | `Active` ou `Inactive`. Indica se os dados estão sendo ativados no momento para esse destino. Para editar o status, consulte [Desativar ativação](./activate-destinations.md#disable-activation). |
+| [!UICONTROL Status] | `Active` ou `Inactive`. Indica se os dados estão sendo ativados para esse destino. Para editar o status, consulte [Desativar ativação](./activate-destinations.md#disable-activation). |
 
 Clique em uma linha de destino para exibir mais informações sobre o destino no painel direito.
 

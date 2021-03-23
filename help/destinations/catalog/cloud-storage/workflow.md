@@ -5,9 +5,9 @@ type: Tutorial
 description: Instruções para conectar-se aos locais de armazenamento na nuvem
 seo-description: Instruções para conectar-se aos locais de armazenamento na nuvem
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione o des
 
 ## Etapa de autenticação {#authentication}
 
-Na etapa **[!UICONTROL Authentication]**, se você tiver configurado anteriormente uma conexão com o destino de armazenamento na nuvem, selecione **[!UICONTROL Existing Account]** e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL New Account]** para configurar uma nova conexão com o destino de armazenamento na nuvem. Preencha as credenciais de autenticação da conta e selecione **[!UICONTROL Connect to destination]**. Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Observe que essa chave pública **must** deve ser gravada como uma string codificada em Base64.
+Na etapa **[!UICONTROL Authentication]**, se você tiver configurado anteriormente uma conexão com o destino de armazenamento na nuvem, selecione **[!UICONTROL Existing Account]** e selecione a conexão existente. Ou você pode selecionar **[!UICONTROL New Account]** para configurar uma nova conexão com o destino de armazenamento na nuvem. Preencha as credenciais de autenticação da conta e selecione **[!UICONTROL Connect to destination]**. Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser gravada como uma sequência de caracteres [!DNL Base64] codificada.
 
 Consulte [destino Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-kinesis.md) destino, [[!DNL Azure Event Hubs]](./azure-event-hubs.md) destino e [destino SFTP](./sftp.md) para obter detalhes sobre a entrada de credenciais na etapa **Autenticação**.
 
@@ -43,7 +43,7 @@ Consulte [destino Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-k
 
 Na etapa **[!UICONTROL Setup]** , digite um **[!UICONTROL Name]** e um **[!UICONTROL Description]** para o fluxo de ativação.
 
-Além disso, nesta etapa, você pode selecionar qualquer **[!UICONTROL Marketing action]** que deve se aplicar a esse destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+Nesta etapa, você também pode selecionar qualquer **[!UICONTROL Marketing action]** que deve se aplicar a esse destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 Para destinos Amazon S3, insira o **[!UICONTROL Bucket name]** e o **[!UICONTROL Folder path]** no destino de armazenamento na nuvem onde os arquivos serão entregues. Selecione **[!UICONTROL Create Destination]** depois de preencher os campos acima.
 

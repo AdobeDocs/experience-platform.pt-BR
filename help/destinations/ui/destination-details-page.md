@@ -1,12 +1,12 @@
 ---
 keywords: destinos, destino, página de detalhes de destinos, página de detalhes de destinos
 title: Exibir detalhes do destino
-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados. '
-seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino, como o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados. '
+description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados. '
+seo-description: 'A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os segmentos mapeados para o destino e os controles para editar a ativação e ativar e desativar o fluxo de dados. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ O quadro seguinte cobre os controlos e os pormenores fornecidos pelo painel dire
 | Item do painel direito | Descrição |
 | --- | --- |
 | [!UICONTROL Activate] | Selecione esse controle para editar quais segmentos são mapeados para o destino. Consulte o guia em [ativar segmentos em um destino](./activate-destinations.md) para obter mais informações. |
-| [!UICONTROL Delete] | Permite excluir esse fluxo de dados e desmapear os segmentos que foram ativados anteriormente, caso existam. |
+| [!UICONTROL Delete] | Permite excluir esse fluxo de dados e desmapeia os segmentos que foram ativados anteriormente, caso existam. |
 | [!UICONTROL Destination name] | Este campo pode ser editado para atualizar o nome do destino. |
 | [!UICONTROL Description] | Este campo pode ser editado para atualizar ou adicionar uma descrição opcional ao destino. |
 | [!UICONTROL Destination] | Representa a plataforma de destino para a qual os públicos-alvo são enviados. Consulte o [catálogo de destinos](../catalog/overview.md) para obter mais informações. |

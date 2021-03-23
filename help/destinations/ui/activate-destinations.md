@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2069'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Uma caixa de diálogo é exibida mostrando opções para criar a programação d
 
 Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para ter o tempo de exportação de dados anexado aos arquivos.
 
-Selecione o ícone de lápis para abrir uma janela modal e editar os nomes dos arquivos. Observe que os nomes de arquivo são limitados a 255 caracteres.
+Selecione o ícone de lápis para abrir uma janela modal e editar os nomes dos arquivos. Os nomes de arquivo são limitados a 255 caracteres.
 
 ![configurar nome do arquivo](../assets/ui/activate-destinations/configure-name.png)
 
@@ -161,7 +161,7 @@ Selecione **[!UICONTROL Apply changes]** para confirmar a seleção.
 
 ![editar opções de nome de arquivo](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Depois de concluir a configuração de todos os segmentos, selecione **[!UICONTROL Next]** para continuar.
+Após concluir a configuração de todos os segmentos, selecione **[!UICONTROL Next]** para continuar.
 
 ## **[!UICONTROL Segment schedule]** step  {#segment-schedule}
 

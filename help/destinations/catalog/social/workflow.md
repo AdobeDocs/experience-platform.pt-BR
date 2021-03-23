@@ -4,7 +4,7 @@ title: Criar um destino de rede social
 type: Tutorial
 description: Saiba como se conectar à sua rede social e às suas contas no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Na etapa **[!UICONTROL Setup]** , insira um [!UICONTROL Name] e um [!UICONTROL D
 >
 > Para destinos [!DNL LinkedIn], **[!UICONTROL Account ID]** é seu [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID no [!DNL LinkedIn Campaign Manager].
 
-Além disso, nesta etapa, você pode selecionar qualquer **[!UICONTROL Marketing action]** que deve se aplicar a esse destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+Nesta etapa, você também pode selecionar qualquer **[!UICONTROL Marketing action]** que deve se aplicar a esse destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 Selecione **[!UICONTROL Create Destination]** depois de preencher os campos acima.
 

@@ -1,21 +1,21 @@
 ---
-keywords: insights;atribuição ai;atribuição ai insights;serviço de query AAI;query de atribuição;pontuações de atribuição
+keywords: insights, ajuda da atribuição, insights do ai da atribuição, serviço de consulta AAI, consultas de atribuição, pontuações de atribuição
 solution: Intelligent Services, Experience Platform
-title: Analisando Pontuações de Atribuição Usando o Serviço de Query
-topic: Attribution AI queries
-description: Saiba como usar o Serviço de Query Adobe Experience Platform para analisar as pontuações dos Attribution AI.
+title: Analisando Pontuações de Atribuição Usando O Serviço De Query
+topic: Consultas do Attribution AI
+description: Saiba como usar o Serviço de query da Adobe Experience Platform para analisar pontuações do Attribution AI.
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
 
 
-# Analisando as pontuações de atribuição usando o Serviço de Query
+# Análise de pontuações de atribuição usando o Serviço de query
 
-Cada linha nos dados representa uma conversão, na qual as informações para pontos de contato relacionados são armazenadas como uma matriz de estruturas na coluna `touchpointsDetail`.
+Cada linha nos dados representa uma conversão, na qual as informações dos pontos de contato relacionados são armazenadas como uma matriz de estruturas na coluna `touchpointsDetail`.
 
 | Informações do ponto de contato | Coluna |
 | ---------------------- | ------ |
@@ -23,47 +23,47 @@ Cada linha nos dados representa uma conversão, na qual as informações para po
 | Canal de ponto de contato | `touchpointsDetail.touchPoint.mediaChannel` |
 | Pontuações algorítmicas do Attribution AI de ponto de contato | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
-## Como localizar seus caminhos de dados
+## Encontrar os caminhos de dados
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda. A página **[!UICONTROL Conjuntos de Dados]** é exibida. Em seguida, selecione a guia **[!UICONTROL Procurar]** e localize o conjunto de dados de saída para suas pontuações de Attribution AI.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo. A página **[!UICONTROL Datasets]** é exibida. Em seguida, selecione a guia **[!UICONTROL Browse]** e localize o conjunto de dados de saída para suas pontuações do Attribution AI.
 
 ![Acessar sua instância](./images/aai-query/datasets_browse.png)
 
-Selecione seu conjunto de dados de saída. A página atividade do conjunto de dados é exibida.
+Selecione o conjunto de dados de saída. A página de atividade do conjunto de dados é exibida.
 
-![página atividade do conjunto de dados](./images/aai-query/select_preview.png)
+![página de atividade do conjunto de dados](./images/aai-query/select_preview.png)
 
-Na página atividade do conjunto de dados, selecione **[!UICONTROL conjunto de dados de Pré-visualização]** no canto superior direito para pré-visualização dos dados e verificar se eles foram assimilados conforme esperado.
+Na página de atividade do conjunto de dados, selecione **[!UICONTROL Preview dataset]** no canto superior direito para visualizar seus dados e garantir que eles foram assimilados conforme esperado.
 
-![Conjunto de dados de pré-visualização](./images/aai-query/preview_dataset.JPG)
+![visualizar conjunto de dados](./images/aai-query/preview_dataset.JPG)
 
-Depois de visualizar seus dados, selecione o schema no painel direito. Um schema é exibido com o nome e a descrição do mesmo. Selecione o hiperlink do nome do schema para redirecionar para o schema de pontuação.
+Após visualizar seus dados, selecione o schema no painel direito. Um provedor é exibido com o nome e a descrição do schema. Selecione o hiperlink do nome do schema para redirecionar para o schema de pontuação.
 
-![selecione o schema](./images/aai-query/select_schema.png)
+![selecionar o esquema](./images/aai-query/select_schema.png)
 
-Usando o schema de pontuação, você pode selecionar ou procurar um valor. Depois de selecionado, o painel lateral **[!UICONTROL Propriedades do campo]** é aberto, permitindo que você copie o caminho para uso na criação de query.
+Usando o esquema de pontuação, você pode selecionar ou pesquisar um valor. Depois de selecionado, o painel lateral **[!UICONTROL Field properties]** é aberto, permitindo copiar o caminho para uso na criação de consultas.
 
 ![copiar o caminho](./images/aai-query/copy_path.png)
 
-## Serviço de Query de acesso
+## Acessar Serviço de Query
 
-Para acessar o Serviço de Query na interface do usuário da plataforma, selecione **[!UICONTROL Query]** no painel de navegação esquerdo e selecione a guia **[!UICONTROL Procurar]**. Uma lista dos query salvos anteriormente é carregada.
+Para acessar o Serviço de query na interface do usuário da plataforma, comece selecionando **[!UICONTROL Queries]** na navegação à esquerda e selecione a guia **[!UICONTROL Browse]**. Uma lista de suas consultas salvas anteriormente é carregada.
 
-![Navegação pelo serviço de query](./images/aai-query/query_tab.png)
+![navegação do serviço de query](./images/aai-query/query_tab.png)
 
-Em seguida, selecione **[!UICONTROL Criar query]** no canto superior direito. O Editor de Query é carregado. Usando o Editor de Query, você pode começar a criar query usando seus dados de pontuação.
+Em seguida, selecione **[!UICONTROL Create query]** no canto superior direito. O Editor de consultas é carregado. Usando o Editor de consultas, você pode começar a criar consultas usando seus dados de pontuação.
 
-![editor de query](./images/aai-query/query_example.png)
+![editor de consultas](./images/aai-query/query_example.png)
 
-Para obter mais informações sobre o Editor de Query, visite o [guia do usuário do Editor de Query](../../query-service/ui/user-guide.md).
+Para obter mais informações sobre o Editor de consultas, visite o [Guia do usuário do Editor de consultas](../../query-service/ui/user-guide.md).
 
 ## Modelos de query para análise de pontuação de atribuição
 
-Os query abaixo podem ser usados como modelo para diferentes cenários de análise de pontuação. É necessário substituir `_tenantId` e `your_score_output_dataset` pelos valores corretos encontrados no schema de saída de pontuação.
+As consultas abaixo podem ser usadas como um modelo para diferentes cenários de análise de pontuação. Você precisa substituir os `_tenantId` e `your_score_output_dataset` pelos valores adequados encontrados no esquema de saída de pontuação.
 
 >[!NOTE]
 >
-> Dependendo de como seus dados foram ingeridos, os valores usados abaixo, como `timestamp`, podem estar em um formato diferente.
+> Dependendo de como seus dados foram assimilados, os valores usados abaixo, como `timestamp`, podem estar em um formato diferente.
 
 ### Exemplos de validação
 
@@ -106,7 +106,7 @@ Os query abaixo podem ser usados como modelo para diferentes cenários de análi
         conversionName
 ```
 
-### Exemplos de análise de tendência
+### Exemplo de análise de tendência
 
 **Número de conversões por dia**
 
@@ -129,9 +129,9 @@ Os query abaixo podem ser usados como modelo para diferentes cenários de análi
     LIMIT 20
 ```
 
-### Exemplos de análise de distribuição
+### Exemplo de análise de distribuição
 
-**Quantidade de pontos de contato nos caminhos de conversão por tipo definido (em uma janela de conversão)**
+**Quantidade de pontos de contato em caminhos de conversão por tipo definido (em uma janela de conversão)**
 
 ```sql
     SELECT conversionName,
@@ -299,4 +299,58 @@ Obtenha a distribuição do número de pontos de contato distintos em um caminho
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### Schema flatten e exemplo de explosão
+
+Esse query nivela a coluna struct em várias colunas do singular e explora matrizes em várias linhas. Isso ajuda a transformar as pontuações de atribuição em um formato CSV. A saída deste query tem uma conversão e um dos pontos de contato correspondentes a essa conversão em cada linha.
+
+>[!TIP]
+>
+> Neste exemplo, você precisa substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. A variável `COLUMN_NAME` pode obter os valores de passagens opcionais pelos nomes das colunas (colunas de relatórios) que foram adicionados durante a configuração da sua instância do Attribution AI. Revise seu esquema de saída de pontuação para localizar os valores `{COLUMN_NAME}` necessários para concluir esta consulta.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```

@@ -5,9 +5,9 @@ title: Restrições de Tipo de Campo XDM
 topic: visão geral
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -212,7 +212,7 @@ A tabela a seguir descreve a formatação apropriada para definir tipos de campo
 
 Para começar, encontre o tipo de campo desejado e use o código de amostra fornecido para criar sua solicitação de API para [criar um mixin](../api/mixins.md#create) ou [criar um tipo de dados](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>Tipo XDM</th>
     <th>Propriedades opcionais</th>
@@ -448,5 +448,3 @@ Para começar, encontre o tipo de campo desejado e use o código de amostra forn
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}

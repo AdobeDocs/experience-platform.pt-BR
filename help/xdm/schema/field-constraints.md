@@ -5,9 +5,9 @@ title: Restrições de Tipo de Campo XDM
 topic: visão geral
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ O XDM é criado sobre o Esquema JSON e, portanto, os campos XDM herdam uma sinta
 
 A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON, juntamente com um exemplo de valor que está em conformidade com o tipo :
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>Tipo XDM</th>
@@ -185,6 +185,8 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N/D) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB, Aerospike e Protobuf 2 {#mongo}
 
 | Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
@@ -199,6 +201,8 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Definição de tipos de campo XDM na API {#define-fields}
 

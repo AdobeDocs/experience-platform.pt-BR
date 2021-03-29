@@ -4,9 +4,9 @@ title: Área de trabalho Destinos
 description: O espaço de trabalho Destinos consiste em quatro seções, Catálogo, Navegação, Contas e Visualização do sistema, descritas nas seções abaixo.
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,8 @@ Os cartões de destino contêm **[!UICONTROL Configure]** ou **[!UICONTROL Activ
 | [!UICONTROL View dataflows] | Visualize os fluxos de ativação de dados que existem para um destino. |
 | [!UICONTROL View documentation] | Abre um link para a página de documentação desse destino específico, para obter mais informações e para ajudar a configurá-lo. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![Controles no cartão de destinos](../assets/ui/workspace/destination-card-options.png)
 
 Selecione um cartão de destino no catálogo para abrir o painel direito. Aqui, você pode ver uma descrição do destino. O painel direito fornece os mesmos controles descritos na tabela acima, bem como uma descrição do destino e uma indicação da categoria e do tipo de destino.
@@ -70,6 +72,8 @@ Na guia **[!UICONTROL Accounts]**, você pode saber mais sobre as conexões esta
 | [!UICONTROL Username] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinations] | Representa o número de fluxos de destino únicos bem-sucedidos conectados às informações básicas criadas para um destino. |
 | [!UICONTROL Authorized] | A data em que a conexão com esse destino foi autorizada. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Além disso, você pode editar ou atualizar suas informações de conta. Selecione o ![Edit account button](../assets/ui/workspace/pencil-icon.png) na coluna **[!UICONTROL Platform]** para editar as informações da conta.
 

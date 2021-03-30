@@ -1,35 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;shopify;Shopify;
+keywords: Experience Platform, home, tópicos populares, shopify, Shopify;
 solution: Experience Platform
-title: Visão Geral do Conector de Origem do Shopify
-topic: overview
-description: Saiba como conectar o Shopify à Adobe Experience Platform usando APIs ou a interface do usuário.
+title: Visão geral do Conector de origem de compra
+topic: visão geral
+description: Saiba como conectar o Shopify ao Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
 
-# Conector (Beta) [!DNL Shopify]
+# [!DNL Shopify] conector
 
->[!NOTE]
->
->O conector [!DNL Shopify] está em beta. Consulte a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+[!DNL Experience Platform] O oferece suporte para assimilar dados de um  **[!UICONTROL eCommerce]** provedor de terceiros. O suporte para provedores **[!UICONTROL eCommerce]** inclui [!DNL Shopify].
 
-[!DNL Experience Platform] fornece suporte para assimilar dados de um provedor de  **** comércio eletrônico de terceiros. O suporte para provedores **[!UICONTROL eCommerce]** inclui [!DNL Shopify].
-
-A documentação abaixo fornece informações sobre como conectar [!DNL Shopify] a [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Shopify] a [!DNL Platform] usando APIs ou a interface do usuário:
 
 ## Conecte [!DNL Shopify] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem do Shopify usando a API de Serviço de Fluxo](../../tutorials/api/create/ecommerce/shopify.md)
-- [Explore uma conexão de eCommerce usando a API de Serviço de Fluxo](../../tutorials/api/explore/ecommerce.md)
-- [Coletar dados de eCommerce usando a API de Serviço de Fluxo](../../tutorials/api/collect/ecommerce.md)
+- [Criar uma conexão de origem do Shopify usando a API do Serviço de Fluxo](../../tutorials/api/create/ecommerce/shopify.md)
+- [Explore uma conexão do eCommerce usando a API do Serviço de Fluxo](../../tutorials/api/explore/ecommerce.md)
+- [Coletar dados de comércio eletrônico usando a API de Serviço de Fluxo](../../tutorials/api/collect/ecommerce.md)
 
 ## Conecte [!DNL Shopify] a [!DNL Platform] usando a interface do usuário
 

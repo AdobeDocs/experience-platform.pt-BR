@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;MySQL;mysql
+keywords: Experience Platform, home, tópicos populares, MySQL, mysql
 solution: Experience Platform
-title: Criar uma conexão de origem MySQL usando a API do Serviço de Fluxo
-topic: overview
+title: Criar uma conexão de origem MySQL usando a API do Serviço de fluxo
+topic: visão geral
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao MySQL usando a API do Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '565'
 ht-degree: 2%
 
 ---
@@ -16,51 +16,47 @@ ht-degree: 2%
 
 # Criar uma conexão de origem MySQL usando a API [!DNL Flow Service]
 
->[!NOTE]
->
->O conector MySQL está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
-
-Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para conectar [!DNL Experience Platform] ao MySQL.
+Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para se conectar [!DNL Experience Platform] ao MySQL.
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Sandboxes](../../../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao MySQL usando a API [!DNL Flow Service].
 
-### Reunir credenciais obrigatórias
+### Obter credenciais necessárias
 
-Para que [!DNL Flow Service] se conecte ao seu armazenamento MySQL, é necessário fornecer o valor da seguinte propriedade de conexão:
+Para que [!DNL Flow Service] se conecte ao armazenamento MySQL, você deve fornecer o valor da seguinte propriedade de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `connectionString` | A cadeia de conexão MySQL associada à sua conta. O padrão da cadeia de conexão MySQL é: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionString` | A cadeia de conexão MySQL associada à sua conta. O padrão da cadeia de caracteres de conexão MySQL é: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | A ID usada para gerar uma conexão. A ID de especificação de conexão fixa para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 Para obter mais informações sobre como obter uma cadeia de conexão, consulte [este documento MySQL](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
@@ -76,7 +72,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma conexão MySQL, sua ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`.
+Para criar uma conexão MySQL, a ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para MySQL é `26d738e0-8963-47ea-aadf-c60de735468a`.
 
 ```shell
 curl -X POST \
@@ -104,12 +100,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.connectionString` | A cadeia de conexão MySQL associada à sua conta. O padrão da cadeia de conexão MySQL é: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | A ID de especificação de conexão fixa para MySQL: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `auth.params.connectionString` | A cadeia de conexão MySQL associada à sua conta. O padrão da cadeia de caracteres de conexão MySQL é: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | A ID de especificação de conexão fixa para o MySQL: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu banco de dados no próximo tutorial.
+Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu banco de dados no próximo tutorial.
 
 ```json
 {
@@ -120,4 +116,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, in
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão MySQL usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API de Serviço de Fluxo](../../explore/database-nosql.md).
+Ao seguir este tutorial, você criou uma conexão MySQL usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID de conexão no próximo tutorial à medida que aprende a [explorar bancos de dados ou sistemas NoSQL usando a API do Serviço de Fluxo](../../explore/database-nosql.md).

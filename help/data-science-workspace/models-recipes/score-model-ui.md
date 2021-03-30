@@ -1,68 +1,100 @@
 ---
-keywords: Experience Platform;marcar um modelo;Data Science Workspace;popular topics;ui;pontuação executar;pontuar resultados
+keywords: Experience Platform; pontuar um modelo; Data Science Workspace; tópicos populares; interface do usuário; execução de pontuação; resultados de pontuação
 solution: Experience Platform
-title: Pontuação de um modelo na interface do usuário da Data Science Workspace
+title: Pontuar um modelo na interface do usuário do Data Science Workspace
 topic: tutorial
 type: Tutorial
-description: 'A pontuação na Adobe Experience Platform Data Science Workspace pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote. '
+description: 'A pontuação no Adobe Experience Platform Data Science Workspace pode ser obtida ao alimentar os dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizados em um conjunto de dados de saída especificado como um novo lote. '
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 0%
+source-wordcount: '621'
+ht-degree: 1%
 
 ---
 
 
-# Pontuação de um modelo na interface do usuário da Data Science Workspace
+# Pontuar um modelo na interface do usuário do Data Science Workspace
 
-A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser alcançada ao alimentar dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizáveis em um conjunto de dados de saída especificado como um novo lote.
+A pontuação no Adobe Experience Platform [!DNL Data Science Workspace] pode ser alcançada ao alimentar os dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizados em um conjunto de dados de saída especificado como um novo lote.
 
-Este tutorial demonstra as etapas necessárias para marcar um Modelo na interface do usuário [!DNL Data Science Workspace].
+Este tutorial demonstra as etapas necessárias para pontuar um Modelo na interface do usuário [!DNL Data Science Workspace].
 
 ## Introdução
 
-Para concluir este tutorial, é necessário ter acesso a [!DNL Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de continuar.
+Para concluir este tutorial, você deve ter acesso a [!DNL Experience Platform]. Se você não tiver acesso a uma Organização IMS em [!DNL Experience Platform], fale com o administrador do sistema antes de continuar.
 
-Este tutorial requer um Modelo treinado. Se você não tiver um Modelo treinado, siga o treinamento [e avalie um Modelo no tutorial da interface do usuário](./train-evaluate-model-ui.md) antes de continuar.
+Este tutorial requer um Modelo treinado. Se você não tiver um Modelo treinado, siga o [trem e avalie um Modelo no tutorial da interface do usuário](./train-evaluate-model-ui.md) antes de continuar.
 
 ## Criar uma nova execução de pontuação
 
-Uma execução de pontuação é criada usando configurações otimizadas de uma execução de treinamento previamente concluída e avaliada. O conjunto de configurações ideais para um Modelo geralmente é determinado pela análise das métricas de avaliação da execução do treinamento.
+Uma execução de pontuação é criada usando configurações otimizadas de uma execução de treinamento previamente concluída e avaliada. O conjunto de configurações ideais para um Modelo normalmente é determinado pela análise de métricas de avaliação de execução de treinamento.
 
-1. Encontre a execução de treinamento mais ideal para usar suas configurações para pontuação. Abra a execução de treinamento desejada clicando em seu nome.
+Encontre a execução de treinamento mais ideal para usar suas configurações para pontuação. Em seguida, abra a execução de treinamento desejada selecionando o hiperlink anexado ao seu nome.
 
-2. Na guia Execução de treinamento **[!UICONTROL Avaliação]**, clique no botão **[!UICONTROL Pontuação]** no canto superior direito da tela. Isso iniciará um novo fluxo de trabalho **Executar Pontuação**.
-   ![](../images/models-recipes/score/training_run_overview.png)
+![Selecionar execução de treinamento](../images/models-recipes/score/select-run.png)
 
-3. Selecione o conjunto de dados de pontuação de entrada e clique em **[!UICONTROL Próximo]**.
-   ![](../images/models-recipes/score/scoring_input.png)
+Na guia de execução de treinamento **[!UICONTROL Evaluation]**, selecione **[!UICONTROL Score]** localizada na parte superior direita da tela. Um novo fluxo de trabalho de pontuação é iniciado.
 
-4. Selecione o conjunto de dados de pontuação de saída, este é o conjunto de dados de saída dedicado no qual os resultados de pontuação são armazenados. Confirme sua seleção e clique em **[!UICONTROL Próximo]**.
-   ![](../images/models-recipes/score/scoring_results.png)
+![](../images/models-recipes/score/training_run_overview.png)
 
-5. A etapa final do fluxo de trabalho solicita que você configure sua execução de pontuação. Essas configurações são usadas pelo Modelo para a execução de pontuação.
-Observe que não será possível remover parâmetros herdados que foram definidos durante a criação do Modelo. Você pode editar ou reverter parâmetros não herdados clicando no duplo ou clicando no ícone reverter ao passar o mouse sobre a entrada.
-   ![](../images/models-recipes/score/configuration.png)
-Revise e confirme as configurações de pontuação e clique em  ****  Concluir para criar e executar a execução da pontuação. Você será direcionado para a guia **[!UICONTROL Execuções de Pontuação]** e a nova execução de pontuação mostrará um status.
-   ![](../images/models-recipes/score/scoring_runs_tab.png)
-Uma execução de pontuação exibirá um dos quatro status a seguir: Pendente, Concluído, Falha ou Em Execução e são atualizados automaticamente. Vá para a próxima etapa se o status for &quot;Concluído&quot; ou &quot;Falha&quot;.
+Selecione o conjunto de dados de pontuação de entrada e selecione **[!UICONTROL Next]**.
 
-## Resultados da pontuação da visualização
+![](../images/models-recipes/score/scoring_input.png)
 
-1. Encontre a execução de treinamento que foi usada para a execução de pontuação e clique no nome para visualização sua página **[!UICONTROL Avaliação]**.
+Selecione o conjunto de dados de pontuação de saída, esse é o conjunto de dados de saída dedicado no qual os resultados da pontuação são armazenados. Confirme sua seleção e selecione **[!UICONTROL Next]**.
 
-2. Próximo à parte superior da página de avaliação da execução de treinamento, clique na guia **[!UICONTROL Execuções de Pontuação]** para visualização de uma lista de execuções de pontuação existentes. Clique na lista de pontuação para visualização dos detalhes na coluna direita.
-   ![](../images/models-recipes/score/view_details.png)
+![](../images/models-recipes/score/scoring_results.png)
 
-3. Se a execução de pontuação selecionada tiver um status &quot;Concluído&quot; ou &quot;Falha&quot;, o link **[!UICONTROL Logs de Atividade de Visualização]** encontrado na coluna direita estará ativo. Clique no link para visualização ou baixe os registros de execução. Se uma execução de pontuação falhou, os logs de execução podem fornecer informações úteis para determinar o motivo da falha.
-   ![](../images/models-recipes/score/activity_logs.png)
+A etapa final no fluxo de trabalho solicita configurar a execução da pontuação. Essas configurações são usadas pelo modelo para a execução de pontuação.
+Observe que não é possível remover parâmetros herdados que foram definidos durante a criação dos modelos. Você pode editar ou reverter parâmetros não herdados clicando duas vezes no valor ou selecionando o ícone reverter ao passar o mouse sobre a entrada.
 
-4. Clique no link **[!UICONTROL Conjunto de Dados de Resultados de Pontuação de Pré-visualização]** encontrado na coluna direita. Você poderá ver uma pré-visualização do conjunto de dados de saída da execução de pontuação.
-   ![](../images/models-recipes/score/preview_results.png)
+![configuração](../images/models-recipes/score/configuration.png)
 
-5. Para obter o conjunto completo de resultados de pontuação, clique no link **[!UICONTROL Conjunto de Dados de Resultados de Pontuação]** encontrado na coluna direita.
+Revise e confirme as configurações de pontuação e selecione **[!UICONTROL Finish]** para criar e executar a execução da pontuação. Você é direcionado para a guia **[!UICONTROL Scoring Runs]** e a nova execução da pontuação com o status **[!UICONTROL Pending]** é mostrada.
+
+![guia execução de pontuação](../images/models-recipes/score/scoring_runs_tab.png)
+
+Uma execução de pontuação pode ser exibida com um dos seguintes status:
+- Pending
+- Concluído
+- Falha
+- Em execução
+
+Os status são atualizados automaticamente. Prossiga para a próxima etapa se o status for **[!UICONTROL Complete]** ou **[!UICONTROL Failed]**.
+
+## Exibir resultados de pontuação
+
+Para visualizar os resultados da pontuação, comece selecionando uma execução de treinamento.
+
+![Selecionar execução de treinamento](../images/models-recipes/score/select-run.png)
+
+Você é redirecionado para a página de execuções de treinamento **[!UICONTROL Evaluation]**. Próximo à parte superior da página de avaliação da execução do treinamento, selecione a guia **[!UICONTROL Scoring Runs]** para exibir uma lista de execuções de pontuação existentes.
+
+![página avaliação](../images/models-recipes/score/view_scoring_runs.png)
+
+Em seguida, selecione uma execução de pontuação para exibir os detalhes da execução.
+
+![executar detalhes](../images/models-recipes/score/view_details.png)
+
+Se a execução de pontuação selecionada tiver um status &quot;Concluído&quot; ou &quot;Falha&quot;, o link **[!UICONTROL View Activity Logs]** será disponibilizado. Se uma execução de pontuação falhar, os logs de execução poderão fornecer informações úteis para determinar o motivo da falha. Para baixar os logs de execução, selecione **[!UICONTROL View Activity Logs]**.
+
+![Selecionar logs de visualização](../images/models-recipes/score/view_logs.png)
+
+A janela **[!UICONTROL View activity logs]** é exibida. Selecione um URL para baixar automaticamente os logs associados.
+
+![](../images/models-recipes/score/activity_logs.png)
+
+Você também tem a opção de exibir seus resultados de pontuação selecionando **[!UICONTROL Preview scoring results dataset]**.
+
+![Selecionar resultados da visualização](../images/models-recipes/score/view_results.png)
+
+É fornecida uma pré-visualização do conjunto de dados de saída.
+
+![resultados da visualização](../images/models-recipes/score/preview_results.png)
+
+Para o conjunto completo de resultados da pontuação, selecione o link **[!UICONTROL Scoring Results Dataset]** encontrado na coluna direita.
 
 ## Próximas etapas
 
-Este tutorial o orientou pelas etapas para pontuar dados usando um Modelo treinado em [!DNL Data Science Workspace]. Siga o tutorial em [publicar um modelo como um serviço na interface do usuário](./publish-model-service-ui.md) para permitir que os usuários em sua organização pontuem dados fornecendo acesso fácil a um serviço de aprendizado da máquina.
+Este tutorial o orientou pelas etapas para pontuar dados usando um Modelo treinado em [!DNL Data Science Workspace]. Siga o tutorial em [publicar um modelo como um serviço na interface do usuário](./publish-model-service-ui.md) para permitir que os usuários em sua organização marquem dados fornecendo acesso fácil a um serviço de aprendizado de máquina.

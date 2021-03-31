@@ -6,10 +6,10 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie segmentos e gere públicos a partir dos dados do Real-time Customer Profile.
 feature: Segmentos
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 22%
+source-wordcount: '162'
+ht-degree: 21%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 22%
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
+   - [Segmentação de borda](api/edge-segmentation.md)
    - [Exportar trabalhos](api/export-jobs.md)
    - [Visualizações e estimativas](api/previews-and-estimates.md)
    - [Agendamentos](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 22%
    - [Visão geral](ui/overview.md)
    - [Painel de segmentos](ui/segment-dashboard.md)
    - [Construtor de segmentos](ui/segment-builder.md)
+   - [Segmentação de borda](ui/edge-segmentation.md)
    - [Segmentação de streaming](ui/streaming-segmentation.md)
    - [Segmentação de transmissão (vídeo)](video/streaming-segmentation-overview.md)
    - [Refatoração das restrições de tempo](ui/segment-refactoring.md)

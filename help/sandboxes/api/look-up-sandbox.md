@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;localizar sandbox;procurar uma sandbox
+keywords: Experience Platform, home, tópicos populares, encontrar sandbox, procurar uma sandbox
 solution: Experience Platform
-title: Procurar uma caixa de proteção na API
-topic: developer guide
-description: Você pode procurar uma caixa de proteção individual fazendo uma solicitação de GET que inclua a propriedade name da caixa de proteção no caminho da solicitação.
+title: Pesquisar uma sandbox na API
+topic: guia do desenvolvedor
+description: Você pode pesquisar uma sandbox individual fazendo uma solicitação do GET que inclui a propriedade name da sandbox no caminho da solicitação.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
 
 
-# Procure uma caixa de proteção na API
+# Pesquisar uma sandbox na API
 
-Você pode procurar uma caixa de proteção individual fazendo uma solicitação de GET que inclua a propriedade `name` da caixa de proteção no caminho da solicitação.
+Você pode pesquisar uma sandbox individual fazendo uma solicitação do GET que inclui a propriedade `name` da sandbox no caminho da solicitação.
 
 **Formato da API**
 
@@ -25,11 +25,11 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SANDBOX_NAME}` | A propriedade `name` da caixa de proteção que deseja procurar. |
+| `{SANDBOX_NAME}` | A propriedade `name` da sandbox que você deseja procurar. |
 
 **Solicitação**
 
-A solicitação a seguir recupera uma caixa de proteção chamada &quot;dev-2&quot;.
+A solicitação a seguir recupera uma sandbox chamada &quot;dev-2&quot;.
 
 ```shell
 curl -X GET \
@@ -37,12 +37,11 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da caixa de proteção, incluindo `name`, `title`, `state` e `type`.
+Uma resposta bem-sucedida retorna os detalhes da sandbox, incluindo `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -62,9 +61,9 @@ Uma resposta bem-sucedida retorna os detalhes da caixa de proteção, incluindo 
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da caixa de proteção. Usada para fins de pesquisa em chamadas de API. |
-| `title` | O nome de exibição da caixa de proteção. |
-| `state` | O estado de processamento atual da caixa de proteção. O estado de uma caixa de proteção pode ser qualquer um dos seguintes: <ul><li>**criação**: A caixa de proteção foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>**ativo**: A caixa de proteção é criada e ativa.</li><li>**falha**: Devido a um erro, a caixa de proteção não pôde ser provisionada pelo sistema e está desativada.</li><li>**suprimido**: A caixa de proteção foi desativada manualmente.</li></ul> |
-| `type` | O tipo de caixa de proteção, &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
-| `isDefault` | Uma propriedade booleana que indica se essa caixa de proteção é a caixa de proteção padrão da organização. Normalmente, essa é a caixa de proteção de produção. |
-| `eTag` | Um identificador para uma versão específica da caixa de proteção. Usado para controle de versão e eficiência de cache, esse valor é atualizado sempre que uma alteração é feita na caixa de proteção. |
+| `name` | O nome da sandbox. Usado para fins de pesquisa em chamadas de API. |
+| `title` | O nome de exibição da sandbox. |
+| `state` | O estado de processamento atual da sandbox. O estado de uma sandbox pode ser qualquer um dos seguintes: <ul><li>**criação**: A sandbox foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>**ativo**: A sandbox é criada e ativa.</li><li>**falhou**: Devido a um erro, a sandbox não pôde ser provisionada pelo sistema e está desativada.</li><li>**suprimido**: A sandbox foi desativada manualmente.</li></ul> |
+| `type` | O tipo de sandbox, seja &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
+| `isDefault` | Uma propriedade booleana que indica se essa sandbox é a sandbox padrão da organização. Normalmente, essa é a sandbox de produção. |
+| `eTag` | Um identificador para uma versão específica da sandbox. Usado para controle de versão e eficiência de armazenamento em cache, esse valor é atualizado sempre que uma alteração é feita na sandbox. |

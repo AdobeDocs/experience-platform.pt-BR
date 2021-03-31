@@ -5,7 +5,7 @@ title: Atualizar uma sandbox na API
 topic: guia do desenvolvedor
 description: Você pode atualizar um ou mais campos em uma sandbox fazendo uma solicitação de PATCH que inclui o nome da sandbox no caminho da solicitação e a propriedade a ser atualizada no payload da solicitação.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 2%
@@ -41,6 +41,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "title": "Development B"

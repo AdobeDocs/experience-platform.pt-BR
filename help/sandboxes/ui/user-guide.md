@@ -1,110 +1,112 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
+keywords: Experience Platform, home, tópicos populares, guia do usuário da sandbox, guia da sandbox
 solution: Experience Platform
-title: Guia da interface do usuário da caixa de proteção
-topic: user guide
-description: Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário do Adobe Experience Platform.
+title: Guia da interface do usuário do Sandbox
+topic: Guia do usuário
+description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
 
 
-# Guia da interface do usuário da caixa de proteção
+# Guia da interface do usuário do Sandbox
 
-Este documento fornece etapas sobre como executar várias operações relacionadas a caixas de proteção na interface do usuário do Adobe Experience Platform.
+Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 
-## Caixas de proteção de visualização
+## Exibir sandboxes
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Caixas de proteção]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Caixas de proteção]**. O painel lista todas as caixas de proteção disponíveis para sua organização, incluindo o tipo e o estado da caixa de proteção (produção ou desenvolvimento) (ativo, criação, excluído ou com falha).
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sandboxes]** na navegação à esquerda para abrir o painel **[!UICONTROL Sandboxes]**. O painel lista todas as sandboxes disponíveis para sua organização, incluindo o tipo de sandbox (produção ou desenvolvimento) e o estado (ativo, criação, excluído ou com falha).
 
 ![](../images/ui/view-sandboxes.png)
 
-## Alternar entre caixas de proteção
+## Alternar entre sandboxes
 
-O controle **sandbox Switcher** na parte superior esquerda da tela exibe a caixa de proteção ativa no momento.
+O controle **sandbox switcher** na parte superior esquerda da tela exibe a sandbox atualmente ativa.
 
 ![](../images/ui/sandbox-switcher.png)
 
-Para alternar entre caixas de proteção, selecione o alternador de caixa de proteção e selecione a caixa de proteção desejada na lista suspensa.
+Para alternar entre sandboxes, selecione o alternador de sandbox e selecione a sandbox desejada na lista suspensa.
 
 ![](../images/ui/switcher-menu.png)
 
-Depois que uma caixa de proteção é selecionada, a tela é atualizada com a caixa de proteção selecionada e agora aparece no alternador da caixa de proteção.
+Depois que uma sandbox é selecionada, a tela é atualizada com a sandbox selecionada e agora aparece no alternador de sandbox.
 
 ![](../images/ui/switched.png)
 
-## Procurar uma caixa de proteção
+## Procurar uma sandbox
 
-Você pode navegar pela lista de caixas de proteção disponíveis para você usando a função de pesquisa do menu alternador de caixa de proteção. Digite o nome da caixa de proteção que deseja acessar para filtrar por todas as caixas de proteção disponíveis para a sua organização.
+Você pode navegar pela lista de sandboxes disponíveis usando a função de pesquisa do menu sandbox switcher. Digite o nome da sandbox que deseja acessar para filtrar por meio de todas as sandboxes disponíveis para a organização.
 
 ![](../images/ui/sandbox-search.png)
 
-## Criar uma nova caixa de proteção
+## Criar uma nova sandbox
 
-Use o vídeo a seguir para obter uma visão geral rápida sobre como usar caixas de proteção no Experience Platform.
+>[!NOTE]
+>
+>O recurso Várias sandboxes de produção está na versão beta.
+
+Use o vídeo a seguir para obter uma visão geral rápida sobre como usar sandboxes no Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Para criar uma nova caixa de proteção na interface do usuário, selecione o botão **[!UICONTROL Criar caixa de proteção]** no lado superior direito da tela.
+Para criar uma nova sandbox, selecione o botão **[!UICONTROL Create Sandbox]** no lado superior direito da tela.
 
 ![](../images/ui/create-sandbox.png)
 
-A caixa de diálogo **[!UICONTROL Criar caixa de proteção]** é exibida, solicitando que você forneça um título de exibição e um nome para a caixa de proteção. O **título de exibição** deve ser legível por humanos e deve ser descritivo o suficiente para ser facilmente identificável. A caixa de proteção **[!UICONTROL Name]** é um identificador em letras minúsculas para uso em chamadas de API e, portanto, deve ser exclusiva e concisa. A caixa de proteção **[!UICONTROL Name]** deve consistir apenas em caracteres alfanuméricos e hífens **(-)**, deve começar com uma letra e tem um máximo de 256 caracteres.
+A caixa de diálogo **[!UICONTROL Create Sandbox]** é exibida, solicitando que você forneça um tipo, um título e um nome para a sandbox. Se estiver criando uma sandbox de desenvolvimento, selecione **[!UICONTROL Development]** no painel suspenso exibido. Se estiver criando uma sandbox de produção, selecione **[!UICONTROL Production]**.
 
-Quando terminar, selecione **[!UICONTROL Criar]**.
+O título destina-se a ser legível por seres humanos e deve ser suficientemente descritivo para ser facilmente identificável. O nome da sandbox é um identificador em letras minúsculas para uso em chamadas de API e, portanto, deve ser exclusivo e conciso. O nome da sandbox deve consistir apenas em caracteres alfanuméricos e hífens (`-`), deve começar com uma letra e tem no máximo 256 caracteres.
+
+Quando terminar, selecione **[!UICONTROL Create]**.
 
 ![](../images/ui/create-dialog.png)
 
->[!NOTE]
->
->Como você está restrito a criar apenas tipos de caixa de proteção que não sejam de produção, a opção **[!UICONTROL type]** está bloqueada em &quot;Não-produção&quot; e não pode ser manipulada.
+Quando terminar de criar a sandbox, atualize a página e a nova sandbox aparecerá no painel **[!UICONTROL Sandboxes]** com o status &quot;[!UICONTROL Creating]&quot;. As novas sandboxes levam aproximadamente 15 minutos para serem provisionadas pelo sistema, depois o status muda para &quot;[!UICONTROL Active]&quot;.
 
-Quando terminar de criar a caixa de proteção, atualize a página e a nova caixa de proteção aparecerá no painel **[!UICONTROL Caixas de proteção]** com o status &quot;[!UICONTROL Criando]&quot;. As novas caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seu status muda para &quot;[!UICONTROL Ative]&quot;.
-
-![](../images/ui/creating.png)
-
-## Redefinir uma caixa de proteção
+## Redefinir uma sandbox
 
 >[!NOTE]
 >
->Essa funcionalidade só está disponível para caixas de proteção que não sejam de produção. As caixas de proteção de produção não podem ser redefinidas.
+>É possível redefinir as sandboxes de produção ou desenvolvimento na organização, exceto a sandbox de produção padrão.
 
-A redefinição de uma caixa de proteção que não seja de produção exclui todos os recursos associados a essa caixa de proteção (schemas, conjuntos de dados etc.), mantendo o nome da caixa de proteção e as permissões associadas. Essa caixa de proteção &quot;limpa&quot; continua disponível com o mesmo nome para usuários que têm acesso a ela.
+A redefinição de uma sandbox de produção ou desenvolvimento exclui todos os recursos associados a ela (esquemas, conjuntos de dados e assim por diante), mantendo o nome da sandbox e as permissões associadas. Essa sandbox &quot;limpa&quot; continua disponível com o mesmo nome para usuários que têm acesso a ela.
 
-Para redefinir uma caixa de proteção na interface do usuário, selecione **[!UICONTROL Caixas de proteção]** no navegador esquerdo e selecione a caixa de proteção que deseja redefinir. Na caixa de diálogo exibida no lado direito da tela, selecione **[!UICONTROL Redefinir caixa de proteção]**.
+Selecione a sandbox que deseja redefinir na lista de sandboxes. No painel de navegação direito exibido, selecione **[!UICONTROL Sandbox reset]**.
 
 ![](../images/ui/reset-sandbox.png)
 
-Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Selecione **[!UICONTROL Redefinir]** para continuar.
+Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Selecione **[!UICONTROL Continue]** para continuar.
 
 ![](../images/ui/reset-confirm.png)
 
-Uma mensagem de confirmação é exibida e o estado da caixa de proteção muda para &quot;**[!UICONTROL Redefinindo]&quot;**. Depois de provisionado pelo sistema, seu estado será atualizado para **&quot;[!UICONTROL Ative]&quot;** ou **&quot;[!UICONTROL Falha]&quot;**.
+Na janela de confirmação final, digite o nome da sandbox na caixa de diálogo e selecione **[!UICONTROL Reset]**
 
-![](../images/ui/resetting.png)
+![](../images/ui/reset-final-confirm.png)
 
-## Excluir uma caixa de proteção
+## Excluir uma sandbox
 
 >[!NOTE]
 >
->Essa funcionalidade só está disponível para caixas de proteção que não sejam de produção. As caixas de proteção de produção não podem ser excluídas.
+>É possível excluir sandboxes de produção ou desenvolvimento na organização, exceto a sandbox de produção padrão.
 
-A exclusão de uma caixa de proteção que não seja de produção remove permanentemente todos os recursos associados a essa caixa de proteção, incluindo permissões.
+A exclusão de uma sandbox de produção ou desenvolvimento remove permanentemente todos os recursos associados a essa sandbox, incluindo permissões.
 
-Para excluir uma caixa de proteção na interface do usuário, selecione **[!UICONTROL Caixas de proteção]** no navegador esquerdo e selecione a caixa de proteção que deseja excluir. Na caixa de diálogo exibida no lado direito da tela, selecione **[!UICONTROL Excluir caixa de proteção]**.
+Selecione a sandbox que deseja excluir da lista de sandboxes. No painel de navegação direito exibido, selecione **[!UICONTROL Delete]**.
 
 ![](../images/ui/delete-sandbox.png)
 
-Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Selecione **[!UICONTROL Eliminar]** para continuar.
+Uma caixa de diálogo é exibida solicitando que você confirme sua escolha. Selecione **[!UICONTROL Continue]** para continuar.
 
 ![](../images/ui/delete-confirm.png)
 
-Uma mensagem de confirmação é exibida e a caixa de proteção é removida da área de trabalho **[!UICONTROL Caixas de proteção]**.
+Na janela de confirmação final, digite o nome da sandbox na caixa de diálogo e selecione **[!UICONTROL Delete]**
+
+![](../images/ui/delete-final-confirm.png)
 
 ## Próximas etapas
 
-Este documento demonstrou como gerenciar caixas de proteção na interface do usuário do Experience Platform. Para obter informações sobre como gerenciar caixas de proteção usando a API do Sandbox, consulte o [guia do desenvolvedor do sandbox](../api/getting-started.md).
+Este documento demonstrou como gerenciar sandboxes na interface do usuário do Experience Platform. Para obter informações sobre como gerenciar sandboxes usando a API Sandbox, consulte o [guia do desenvolvedor sandbox](../api/getting-started.md).

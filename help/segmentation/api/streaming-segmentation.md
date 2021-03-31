@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, segmentação por streaming, segmentação por streaming, avaliação contínua;
+keywords: Experience Platform, página inicial, tópicos populares, segmentação, Segmentação, Serviço de segmentação, segmentação por streaming, segmentação por streaming, avaliação contínua;
 solution: Experience Platform
 title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic: guia do desenvolvedor
-description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do Serviço de segmentação da Adobe Experience Platform.
+description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1342'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,7 @@ Além disso, algumas diretrizes se aplicam ao fazer a segmentação de fluxo:
 
 ## Recuperar todos os segmentos habilitados para a segmentação de streaming
 
-Você pode recuperar uma lista de todos os seus segmentos que são ativados para segmentação de fluxo na sua Organização IMS fazendo uma solicitação GET para o endpoint `/segment/definitions`.
+Você pode recuperar uma lista de todos os seus segmentos que são ativados para segmentação de fluxo na Organização IMS fazendo uma solicitação GET para o terminal `/segment/definitions`.
 
 **Formato da API**
 
@@ -296,7 +296,7 @@ Após habilitar a avaliação do streaming, é necessário criar uma linha de ba
 
 ### Criar um agendamento
 
-Ao fazer uma solicitação POST para o endpoint `/config/schedules`, é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
+Ao fazer uma solicitação de POST para o endpoint `/config/schedules`, é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
 
 **Formato da API**
 
@@ -366,7 +366,7 @@ Uma resposta bem-sucedida retorna os detalhes do agendamento recém-criado.
 
 ### Habilitar um agendamento
 
-Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (defina `state` como `active`) fazendo uma solicitação PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
+Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (defina `state` como `active`) fazendo uma solicitação de PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
 
 **Formato da API**
 
@@ -403,6 +403,6 @@ A mesma operação pode ser usada para desabilitar um agendamento, substituindo 
 
 ## Próximas etapas
 
-Agora que você ativou segmentos novos e existentes para a segmentação de streaming e habilitou a segmentação agendada para desenvolver uma linha de base e executar avaliações recorrentes, você pode começar a criar segmentos para sua organização.
+Agora que você ativou segmentos novos e existentes para a segmentação de streaming e habilitou a segmentação agendada para desenvolver uma linha de base e realizar avaliações recorrentes, você pode começar a criar segmentos ativados para streaming para sua organização.
 
-Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário da Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).
+Para saber como executar ações semelhantes e trabalhar com segmentos usando a interface do usuário do Adobe Experience Platform, visite o [Guia do usuário do Construtor de segmentos](../ui/segment-builder.md).

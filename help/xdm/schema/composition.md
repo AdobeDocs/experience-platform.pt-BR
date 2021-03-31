@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic: visão geral
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
+source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3461'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,9 @@ Um esquema é um conjunto de regras que representam e validam a estrutura e o fo
 
 Além de descrever a estrutura dos dados, os schemas aplicam restrições e expectativas aos dados para que possam ser validados conforme se movem entre os sistemas. Essas definições padrão permitem que os dados sejam interpretados de forma consistente, independentemente da origem, e removem a necessidade de tradução entre aplicativos.
 
-[!DNL Experience Platform] O mantém essa normalização semântica por meio de esquemas. Os esquemas são a maneira padrão de descrever dados em [!DNL Experience Platform], permitindo que todos os dados que estão em conformidade com os esquemas sejam reutilizáveis sem conflitos em uma organização e até mesmo compartilháveis entre várias organizações.
+[!DNL Experience Platform] O mantém essa normalização semântica usando esquemas. Os esquemas são a maneira padrão de descrever dados em [!DNL Experience Platform], permitindo que todos os dados que estão em conformidade com os esquemas sejam reutilizados em uma organização sem conflitos ou até compartilhados entre várias organizações.
 
-### Tabelas relacionais versus objetos incorporados
-
-Ao trabalhar com bancos de dados relacionais, as práticas recomendadas envolvem a normalização de dados ou a divisão de uma entidade em partes discretas que são exibidas em várias tabelas. Para ler os dados como um todo ou atualizar a entidade, as operações de leitura e gravação devem ser realizadas em várias tabelas individuais usando JOIN.
-
-Por meio do uso de objetos incorporados, os esquemas XDM podem representar diretamente dados complexos e armazená-los em documentos autônomos com uma estrutura hierárquica. Um dos principais benefícios dessa estrutura é que ela permite consultar os dados sem precisar reconstruir a entidade por associações caras a várias tabelas desnormalizadas. Não há restrições rígidas para quantos níveis sua hierarquia de esquema pode ter.
-
-### Esquemas e grandes dados
-
-Sistemas digitais modernos geram grandes quantidades de sinais comportamentais (dados de transação, logs da Web, internet de coisas, exibição e assim por diante). Esses grandes dados oferecem oportunidades extraordinárias para otimizar experiências, mas são desafiadores a usá-las devido à escala e variedade dos dados. Para obter valor dos dados, a sua estrutura, formato e definições devem ser padronizados de modo a que possam ser processados de forma consistente e eficiente.
-
-Os esquemas solucionam esse problema ao permitir que os dados sejam integrados de várias fontes, padronizados por meio de estruturas e definições comuns e compartilhados entre soluções. Isso permite que processos e serviços subsequentes respondam a qualquer tipo de pergunta que esteja sendo feita sobre os dados, afastando-se da abordagem tradicional à modelagem de dados, onde todas as perguntas que serão feitas sobre os dados são conhecidas antecipadamente e os dados são modelados de forma a estarem em conformidade com essas expectativas.
+Os esquemas XDM são ideais para armazenar grandes quantidades de dados complexos em um formato autocontido. Consulte as seções em [objetos incorporados](#embedded) e [big data](#big-data) no apêndice a este documento para obter mais informações sobre como o XDM consegue isso.
 
 ### Fluxos de trabalho baseados em esquema em [!DNL Experience Platform]
 
@@ -43,7 +33,7 @@ A normalização é um conceito fundamental por trás de [!DNL Experience Platfo
 
 A infraestrutura na qual [!DNL Experience Platform] é criado, conhecida como [!DNL XDM System], facilita workflows baseados em esquema e inclui os [!DNL Schema Registry], [!DNL Schema Editor], metadados de esquema e padrões de consumo de serviço. Consulte a [Visão geral do sistema XDM](../home.md) para obter mais informações.
 
-Há vários benefícios principais para a criação e utilização de schemas em [!DNL Experience Platform]. Primeiro, os schemas permitem um melhor controle de dados e minimização de dados, o que é especialmente importante com as regras de privacidade. Em segundo lugar, a criação de esquemas com componentes padrão do Adobe permite insights prontos e o uso de serviços de AI/ML com personalizações mínimas. Por último, os schemas fornecem infraestrutura para informações de compartilhamento de dados e orquestração eficiente.
+Há vários benefícios principais para a criação e utilização de schemas em [!DNL Experience Platform]. Primeiro, os esquemas permitem uma melhor governança de dados e minimização de dados, o que é especialmente importante com as regras de privacidade. Em segundo lugar, a criação de esquemas com componentes padrão do Adobe permite insights prontos e o uso de serviços de AI/ML com personalizações mínimas. Por último, os schemas fornecem infraestrutura para informações de compartilhamento de dados e orquestração eficiente.
 
 ## Planejamento do esquema
 
@@ -70,7 +60,7 @@ Os campos comumente marcados como &quot;[!UICONTROL Identity]&quot; incluem: end
 
 É importante pensar nas identidades do cliente durante a fase de planejamento do schema para ajudar a garantir que os dados estejam sendo reunidos para criar o perfil mais robusto possível. Consulte a visão geral em [Adobe Experience Platform Identity Service](../../identity-service/home.md) para saber mais sobre como as informações de identidade podem ajudar você a entregar experiências digitais para seus clientes.
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
 `xdm:identityMap` é um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Este campo pode ser usado para fornecer informações de identidade para seus esquemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
 
@@ -107,7 +97,7 @@ Como mostra o exemplo acima, cada chave no objeto `identityMap` representa um na
 
 >[!NOTE]
 >
->Um valor booleano para determinar se o valor é ou não uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. As identidades primárias só precisam ser definidas para esquemas destinados a serem usados em [!DNL Real-time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
+>Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. As identidades primárias só precisam ser definidas para esquemas destinados a serem usados em [!DNL Real-time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
 
 ### Princípios de evolução do esquema {#evolution}
 
@@ -143,7 +133,13 @@ A composição de um schema começa pela atribuição de uma classe. As classes 
 
 A classe de um schema determina quais mixins serão elegíveis para uso nesse schema. Isso é discutido com mais detalhes na [próxima seção](#mixin).
 
-O Adobe fornece duas classes XDM padrão (&quot;core&quot;): [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent]. Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos da sua organização. As classes personalizadas são definidas por uma organização quando não há classes principais definidas por Adobe disponíveis para descrever um caso de uso exclusivo.
+O Adobe fornece várias classes XDM padrão (&quot;core&quot;). Duas dessas classes, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], são necessárias para quase todos os processos downstream da plataforma. Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos da sua organização. As classes personalizadas são definidas por uma organização quando não há classes principais definidas por Adobe disponíveis para descrever um caso de uso exclusivo.
+
+A captura de tela a seguir demonstra como as classes são representadas na interface do usuário da plataforma. Como o schema de exemplo mostrado não contém nenhuma mesclagem, todos os campos exibidos são fornecidos pela classe do schema ([!UICONTROL XDM Individual Profile]).
+
+![](../images/schema-composition/class.png)
+
+Para obter a lista mais atualizada das classes XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/classes). Como alternativa, consulte o guia em [explorar componentes XDM](../ui/explore.md) se preferir exibir recursos na interface do usuário.
 
 ### Misturar {#mixin}
 
@@ -157,17 +153,23 @@ Por exemplo, para capturar detalhes como &quot;[!UICONTROL First Name]&quot; e &
 
 Lembre-se de que os schemas são compostos de &quot;zero ou mais&quot; mixins, portanto, isso significa que você pode compor um schema válido sem usar mixins.
 
-Para obter uma lista de todas as mixins padrão atuais, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins).
+A captura de tela a seguir demonstra como as combinações são representadas na interface do usuário da plataforma. Um único mixin ([!UICONTROL Demographic Details]) é adicionado a um schema neste exemplo, que fornece um agrupamento de campos para a estrutura do schema.
+
+![](../images/schema-composition/mixin.png)
+
+Para obter a lista mais atualizada de mixins XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins). Como alternativa, consulte o guia em [explorar componentes XDM](../ui/explore.md) se preferir exibir recursos na interface do usuário.
 
 ### Tipo de dados {#data-type}
 
 Os tipos de dados são usados como tipos de campo de referência em classes ou esquemas, da mesma forma que os campos literais básicos. A principal diferença é que os tipos de dados podem definir vários subcampos. Semelhante a um mixin, um tipo de dados permite o uso consistente de uma estrutura de vários campos, mas tem mais flexibilidade do que um mixin, pois um tipo de dados pode ser incluído em qualquer lugar de um schema ao adicioná-lo como o &quot;tipo de dados&quot; de um campo.
 
->[!NOTE]
->
->Consulte o [apêndice](#mixins-v-datatypes) para obter mais informações sobre as diferenças entre mixins e tipos de dados, e os prós e contras de usar um sobre o outro para casos de uso semelhantes.
-
 [!DNL Experience Platform] O fornece vários tipos de dados comuns como parte do  [!DNL Schema Registry] para suportar o uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes nos tutoriais [!DNL Schema Registry], onde ficará mais claro à medida que você percorre as etapas para definir tipos de dados.
+
+A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo mixin ([!UICONTROL Demographic Details]) usa o tipo de dados &quot;[!UICONTROL Person name]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos onde o nome de uma pessoa precisa ser capturado.
+
+![](../images/schema-composition/data-type.png)
+
+Para obter a lista mais atualizada dos tipos de dados XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/datatypes). Como alternativa, consulte o guia em [explorar componentes XDM](../ui/explore.md) se preferir exibir recursos na interface do usuário.
 
 ### Campo
 
@@ -242,6 +244,13 @@ Para obter mais informações sobre como trabalhar com [!DNL Profile], consulte 
 
 Todos os arquivos de dados assimilados em [!DNL Experience Platform] devem estar em conformidade com a estrutura de um esquema XDM. Para obter mais informações sobre como formatar arquivos de dados para estar em conformidade com hierarquias XDM (incluindo arquivos de amostra), consulte o documento em [amostras de transformações ETL](../../etl/transformations.md). Para obter informações gerais sobre como assimilar arquivos de dados em [!DNL Experience Platform], consulte a [visão geral da assimilação de lote](../../ingestion/batch-ingestion/overview.md).
 
+## Esquemas para segmentos externos
+
+Se você estiver trazendo segmentos de sistemas externos para o Platform, deverá usar os seguintes componentes para capturá-los em seus esquemas:
+
+* [[!UICONTROL Segment definition] classe](../classes/segment-definition.md): Use essa classe padrão para capturar atributos-chave de uma definição de segmento externo.
+* [[!UICONTROL Segment Membership Details] mistura](../mixins/profile/segmentation.md): Adicione esse mixin ao seu  [!UICONTROL XDM Individual Profile] schema para associar perfis de clientes a segmentos específicos.
+
 ## Próximas etapas
 
 Agora que você entende as noções básicas da composição do schema, está pronto para começar a explorar e criar schemas usando o [!DNL Schema Registry].
@@ -259,7 +268,19 @@ Para começar a usar a API [!DNL Schema Registry], leia o [Guia do desenvolvedor
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre os princípios da composição do schema.
+As seções a seguir contêm informações adicionais sobre os princípios da composição do schema.
+
+### Tabelas relacionais versus objetos incorporados {#embedded}
+
+Ao trabalhar com bancos de dados relacionais, as práticas recomendadas envolvem a normalização de dados ou a divisão de uma entidade em partes discretas que são exibidas em várias tabelas. Para ler os dados como um todo ou atualizar a entidade, as operações de leitura e gravação devem ser realizadas em várias tabelas individuais usando JOIN.
+
+Por meio do uso de objetos incorporados, os esquemas XDM podem representar diretamente dados complexos e armazená-los em documentos autônomos com uma estrutura hierárquica. Um dos principais benefícios dessa estrutura é que ela permite consultar os dados sem precisar reconstruir a entidade por associações caras a várias tabelas desnormalizadas. Não há restrições rígidas para quantos níveis sua hierarquia de esquema pode ter.
+
+### Esquemas e grandes dados {#big-data}
+
+Sistemas digitais modernos geram grandes quantidades de sinais comportamentais (dados de transação, logs da Web, internet de coisas, exibição e assim por diante). Esses grandes dados oferecem oportunidades extraordinárias para otimizar experiências, mas são desafiadores a usá-las devido à escala e variedade dos dados. Para obter valor dos dados, a sua estrutura, formato e definições devem ser padronizados de modo a que possam ser processados de forma consistente e eficiente.
+
+Os esquemas solucionam esse problema ao permitir que os dados sejam integrados de várias fontes, padronizados por meio de estruturas e definições comuns e compartilhados entre soluções. Isso permite que processos e serviços subsequentes respondam a qualquer tipo de pergunta que esteja sendo feita sobre os dados, afastando-se da abordagem tradicional à modelagem de dados, onde todas as perguntas que serão feitas sobre os dados são conhecidas antecipadamente e os dados são modelados de forma a estarem em conformidade com essas expectativas.
 
 ### Objetos versus campos de forma livre {#objects-v-freeform}
 
@@ -296,4 +317,4 @@ Os prós e contras do uso de campos de forma livre em objetos estão listados ab
 
 **Desvantagens**:
 
-* O local dos campos de forma livre no esquema é ad-hoc, o que significa que eles aparecem em ordem alfabética no Editor de esquemas. Isso pode tornar os esquemas menos estruturados e campos de forma livre semelhantes podem acabar sendo muito separados, dependendo de seus nomes.
+* O local dos campos de forma livre no esquema é ad hoc, o que significa que eles aparecem em ordem alfabética no Editor de esquemas. Isso pode tornar os esquemas menos estruturados e campos de forma livre semelhantes podem acabar sendo muito separados, dependendo de seus nomes.

@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform, home, tópicos populares, excluir sandbox
 solution: Experience Platform
-title: Excluir uma caixa de proteção na API
-topic: developer guide
-description: É possível excluir uma caixa de proteção fazendo uma solicitação de DELETE que inclua o nome da caixa de proteção no caminho da solicitação.
+title: Excluir uma sandbox na API
+topic: guia do desenvolvedor
+description: Você pode excluir uma sandbox fazendo uma solicitação de DELETE que inclui o nome da sandbox no caminho da solicitação.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: e7a80dbfdd2d59e4997f6e227b5c2cf336e5a0f6
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
 
 
-# Excluir uma caixa de proteção na API
+# Excluir uma sandbox na API
 
-É possível excluir uma caixa de proteção fazendo uma solicitação de DELETE que inclua `name` da caixa de proteção no caminho da solicitação.
+Você pode excluir uma sandbox fazendo uma solicitação de DELETE que inclui o `name` da sandbox no caminho da solicitação.
 
 >[!NOTE]
 >
->Fazer essa chamada de API atualiza a propriedade `status` da caixa de proteção para &quot;deletada&quot; e a desativa. As solicitações do GET ainda podem recuperar os detalhes da caixa de proteção depois que ela for excluída.
+>Fazer essa chamada de API atualiza a propriedade `status` da sandbox para &quot;deletada&quot; e a desativa. As solicitações do GET ainda podem recuperar os detalhes da sandbox depois que ela for excluída.
 
 **Formato da API**
 
@@ -29,11 +29,11 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SANDBOX_NAME}` | O `name` da caixa de proteção que deseja excluir. |
+| `{SANDBOX_NAME}` | O `name` da sandbox que você deseja excluir. |
 
 **Solicitação**
 
-A solicitação a seguir exclui uma caixa de proteção chamada &quot;dev-2&quot;.
+A solicitação a seguir exclui uma sandbox chamada &quot;dev-2&quot;.
 
 ```shell
 curl -X DELETE \
@@ -41,12 +41,11 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes atualizados da caixa de proteção, mostrando que seu `state` é &quot;excluído&quot;.
+Uma resposta bem-sucedida retorna os detalhes atualizados da sandbox, mostrando que seu `state` é &quot;excluído&quot;.
 
 ```json
 {

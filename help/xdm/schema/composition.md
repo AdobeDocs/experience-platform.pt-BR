@@ -5,7 +5,7 @@ title: Noções básicas da composição do esquema
 topic: visão geral
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Os tipos de dados são usados como tipos de campo de referência em classes ou e
 
 [!DNL Experience Platform] O fornece vários tipos de dados comuns como parte do  [!DNL Schema Registry] para suportar o uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes nos tutoriais [!DNL Schema Registry], onde ficará mais claro à medida que você percorre as etapas para definir tipos de dados.
 
-A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo mixin ([!UICONTROL Demographic Details]) usa o tipo de dados &quot;[!UICONTROL Person name]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos onde o nome de uma pessoa precisa ser capturado.
+A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo mixin [!UICONTROL Demographic Details] usa o tipo de dados &quot;[!UICONTROL Person name]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos onde o nome de uma pessoa precisa ser capturado.
 
 ![](../images/schema-composition/data-type.png)
 

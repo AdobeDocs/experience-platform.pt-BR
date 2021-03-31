@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 6%
+source-wordcount: '422'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 6%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 | Função `to_array`  | Atualização da funcionalidade para oferecer suporte a objetos como parâmetro. |
 
 Para obter mais informações, consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
-
-## [!DNL Sandboxes] {#sandboxes}
-
-O Adobe Experience Platform foi criado para enriquecer os aplicativos de experiência digital em escala global. Geralmente, as empresas executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, teste e implantação desses aplicativos, além de garantir a conformidade operacional.
-
-Para atender a essa necessidade, o Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
-
-| Recurso | Descrição |
-| ------- | ----------- |
-| (Beta) Várias sandboxes de produção | Agora é possível criar e gerenciar várias sandboxes de produção na sua Organização IMS e dedicar sandboxes de produção específicas a linhas distintas de negócios, marcas, projetos ou regiões. Consulte os tutoriais sobre como criar uma sandbox de produção [na interface do usuário](../../sandboxes/ui/user-guide.md) ou [usando a API](../../sandboxes/api/create-sandbox.md) para obter mais informações. |
-
-Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../../sandboxes/home.md).
 
 ## Serviço de segmentação {#segmentation}
 

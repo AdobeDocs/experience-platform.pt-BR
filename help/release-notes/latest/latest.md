@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 7af082de034166e3a8a3971728d5743eaeec67ae
+source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 6%
 
 ---
@@ -43,7 +43,7 @@ Para atender a essa necessidade, o Experience Platform fornece sandboxes que par
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| (Beta) Várias sandboxes de produção | Agora é possível criar e gerenciar várias sandboxes de produção na sua Organização IMS e dedicar sandboxes de produção específicas a linhas distintas de negócios, marcas, projetos ou regiões. Para obter mais informações, consulte os tutoriais sobre como criar uma sandbox de produção [na interface do usuário](../../sandboxes/ui/user-guide.md) ou [usando a API](../../sandboxes/api/create-sandbox.md) para obter mais informações. |
+| (Beta) Várias sandboxes de produção | Agora é possível criar e gerenciar várias sandboxes de produção na sua Organização IMS e dedicar sandboxes de produção específicas a linhas distintas de negócios, marcas, projetos ou regiões. Consulte os tutoriais sobre como criar uma sandbox de produção [na interface do usuário](../../sandboxes/ui/user-guide.md) ou [usando a API](../../sandboxes/api/create-sandbox.md) para obter mais informações. |
 
 Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../../sandboxes/home.md).
 

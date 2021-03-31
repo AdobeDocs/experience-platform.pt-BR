@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;lista sandboxes;home;popular topics; sandboxes
+keywords: Experience Platform, home, tópicos populares, sandboxes de lista
 solution: Experience Platform
-title: Lista em caixas de proteção na API
-topic: developer guide
-description: Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o ponto de extremidade /sandboxes.
+title: Listar sandboxes na API
+topic: guia do desenvolvedor
+description: Para listar todas as sandboxes pertencentes à sua Organização IMS (ativa ou não), faça uma solicitação do GET ao endpoint /sandboxes .
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '322'
 ht-degree: 2%
 
 ---
 
 
-# Caixas de proteção de lista na API
+# Listar sandboxes na API
 
-Para lista de todas as caixas de proteção pertencentes à Organização IMS (ativa ou não), faça uma solicitação de GET para o ponto de extremidade `/sandboxes`.
+Para listar todas as sandboxes pertencentes à sua Organização IMS (ativa ou não), faça uma solicitação GET ao endpoint `/sandboxes` .
 
 **Formato da API**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parâmetros de query opcionais para filtrar os resultados. Consulte a seção sobre [parâmetros de query](#query) para obter mais informações. |
+| `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte a seção em [parâmetros de consulta](#query) para obter mais informações. |
 
 **Solicitação**
 
@@ -35,12 +35,11 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de caixas de proteção pertencentes à sua organização, incluindo detalhes como `name`, `title`, `state` e `type`.
+Uma resposta bem-sucedida retorna uma lista de sandboxes pertencentes à sua organização, incluindo detalhes como `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -121,22 +120,22 @@ Uma resposta bem-sucedida retorna uma lista de caixas de proteção pertencentes
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da caixa de proteção. Usada para fins de pesquisa em chamadas de API. |
-| `title` | O nome de exibição da caixa de proteção. |
-| `state` | O estado de processamento atual da caixa de proteção. O estado de uma caixa de proteção pode ser qualquer um dos seguintes: <br/><ul><li>**criação**: A caixa de proteção foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>**ativo**: A caixa de proteção é criada e ativa.</li><li>**falha**: Devido a um erro, a caixa de proteção não pôde ser provisionada pelo sistema e está desativada.</li><li>**suprimido**: A caixa de proteção foi desativada manualmente.</li></ul> |
-| `type` | O tipo de caixa de proteção, &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
-| `isDefault` | Uma propriedade booleana que indica se essa caixa de proteção é a caixa de proteção padrão da organização. Normalmente, essa é a caixa de proteção de produção. |
-| `eTag` | Um identificador para uma versão específica da caixa de proteção. Usado para controle de versão e eficiência de cache, esse valor é atualizado sempre que uma alteração é feita na caixa de proteção. |
+| `name` | O nome da sandbox. Usado para fins de pesquisa em chamadas de API. |
+| `title` | O nome de exibição da sandbox. |
+| `state` | O estado de processamento atual da sandbox. O estado de uma sandbox pode ser qualquer um dos seguintes: <br/><ul><li>**criação**: A sandbox foi criada, mas ainda está sendo provisionada pelo sistema.</li><li>**ativo**: A sandbox é criada e ativa.</li><li>**falhou**: Devido a um erro, a sandbox não pôde ser provisionada pelo sistema e está desativada.</li><li>**suprimido**: A sandbox foi desativada manualmente.</li></ul> |
+| `type` | O tipo de sandbox, seja &quot;desenvolvimento&quot; ou &quot;produção&quot;. |
+| `isDefault` | Uma propriedade booleana que indica se essa sandbox é a sandbox padrão da organização. Normalmente, essa é a sandbox de produção. |
+| `eTag` | Um identificador para uma versão específica da sandbox. Usado para controle de versão e eficiência de armazenamento em cache, esse valor é atualizado sempre que uma alteração é feita na sandbox. |
 
-## Usando parâmetros de query {#query}
+## Uso de parâmetros de consulta {#query}
 
-A API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) oferece suporte ao uso de parâmetros de query para a página e filtrar os resultados ao listar caixas de proteção.
+A API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) oferece suporte ao uso de parâmetros de consulta para página e filtrar resultados ao listar sandboxes.
 
 >[!NOTE]
 >
->Os parâmetros de query `limit` e `offset` devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão será 50 e o deslocamento será 0.
+>Os parâmetros de consulta `limit` e `offset` devem ser especificados juntos. Se você especificar apenas um, a API retornará um erro. Se você especificar nenhum, o limite padrão é 50 e o deslocamento é 0.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `limit` | O número máximo de registros a serem retornados na resposta. |
-| `offset` | O número de entidades do primeiro registro para o start (deslocamento) da lista de resposta. |
+| `offset` | O número de entidades do primeiro registro para iniciar (deslocar) a lista de resposta. |

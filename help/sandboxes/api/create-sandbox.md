@@ -1,21 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform, home, tópicos populares, sandbox
 solution: Experience Platform
-title: Criar uma caixa de proteção na API
-topic: developer guide
-description: Você pode criar uma nova caixa de proteção fazendo uma solicitação de POST para o ponto de extremidade '/sandboxes'.
+title: Criar uma sandbox na API
+topic: guia do desenvolvedor
+description: Você pode criar uma nova sandbox fazendo uma solicitação de POST ao endpoint `/sandboxes`.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '306'
 ht-degree: 2%
 
 ---
 
 
-# Criar uma caixa de proteção na API
+# Criar uma sandbox na API
 
-Você pode criar uma nova caixa de proteção, fazendo uma solicitação POST para o ponto de extremidade `/sandboxes`.
+Você pode criar uma sandbox de desenvolvimento ou produção, fazendo uma solicitação de POST para o endpoint `/sandboxes`.
+
+## Criar uma sandbox de desenvolvimento
+
+Para criar uma sandbox de desenvolvimento, faça uma solicitação de POST ao endpoint `/sandboxes` e forneça o valor `development` para a propriedade `type`.
 
 **Formato da API**
 
@@ -25,7 +29,7 @@ POST /sandboxes
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova caixa de proteção de desenvolvimento chamada &quot;dev-3&quot;.
+A solicitação a seguir cria uma nova sandbox de desenvolvimento chamada &quot;dev-3&quot;.
 
 ```shell
 curl -X POST \
@@ -33,7 +37,6 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "dev-3",
@@ -44,13 +47,13 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O identificador que será usado para acessar a caixa de proteção em solicitações futuras. Esse valor deve ser exclusivo e a prática recomendada é torná-lo o mais descritivo possível. Não pode conter espaços nem letras maiúsculas. |
-| `title` | Um nome legível para humanos usado para fins de exibição na interface do usuário da plataforma. |
-| `type` | O tipo de caixa de proteção a ser criada. Atualmente, somente as caixas de proteção do tipo &quot;desenvolvimento&quot; podem ser criadas por uma organização. |
+| `name` | O identificador que será usado para acessar a sandbox em solicitações futuras. Esse valor deve ser exclusivo, e a prática recomendada é torná-lo o mais descritivo possível. Esse valor não pode conter espaços ou caracteres especiais. |
+| `title` | Um nome legível usado para fins de exibição na interface do usuário da plataforma. |
+| `type` | O tipo de sandbox a ser criado. O valor da propriedade `type` pode ser desenvolvimento ou produção. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da caixa de proteção recém-criada, mostrando que seu `state` está &quot;criando&quot;.
+Uma resposta bem-sucedida retorna os detalhes da sandbox recém-criada, mostrando que seu `state` está &quot;criando&quot;.
 
 ```json
 {
@@ -62,6 +65,54 @@ Uma resposta bem-sucedida retorna os detalhes da caixa de proteção recém-cria
 }
 ```
 
+## Criar uma sandbox de produção
+
 >[!NOTE]
 >
->As caixas de proteção levam aproximadamente 15 minutos para serem provisionadas pelo sistema, após o que seus `state` se tornarão &quot;ativos&quot; ou &quot;falharam&quot;.
+>O recurso Várias sandboxes de produção está na versão beta.
+
+Para criar uma sandbox de produção, faça uma solicitação de POST ao endpoint `/sandboxes` e forneça o valor `production` para a propriedade `type`.
+
+**Formato da API**
+
+```http
+POST /sandboxes
+```
+
+**Solicitação**
+
+A solicitação a seguir cria uma nova sandbox de produção chamada &quot;test-prod-sandbox&quot;.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "test-prod-sandbox",
+    "title": "Test Production Sandbox",
+    "type": "production"
+}'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `name` | O identificador que será usado para acessar a sandbox em solicitações futuras. Esse valor deve ser exclusivo, e a prática recomendada é torná-lo o mais descritivo possível. Esse valor não pode conter espaços ou caracteres especiais. |
+| `title` | Um nome legível usado para fins de exibição na interface do usuário da plataforma. |
+| `type` | O tipo de sandbox a ser criado. O valor da propriedade `type` pode ser desenvolvimento ou produção. |
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna os detalhes da sandbox recém-criada, mostrando que seu `state` está &quot;criando&quot;.
+
+```json
+{
+    "name": "test-production-sandbox",
+    "title": "Test Production Sandbox",
+    "state": "creating",
+    "type": "production",
+    "region": "VA7"
+}
+```

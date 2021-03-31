@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
+source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 7%
+source-wordcount: '554'
+ht-degree: 6%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -33,6 +34,18 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 | Função `to_array`  | Atualização da funcionalidade para oferecer suporte a objetos como parâmetro. |
 
 Para obter mais informações, consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+O Adobe Experience Platform foi criado para enriquecer os aplicativos de experiência digital em escala global. Geralmente, as empresas executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, teste e implantação desses aplicativos, além de garantir a conformidade operacional.
+
+Para atender a essa necessidade, o Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| (Beta) Várias sandboxes de produção | Agora é possível criar e gerenciar várias sandboxes de produção na sua Organização IMS e dedicar sandboxes de produção específicas a linhas distintas de negócios, marcas, projetos ou regiões. Para obter mais informações, consulte os tutoriais sobre como criar uma sandbox de produção [na interface do usuário](../../sandboxes/ui/user-guide.md) ou [usando a API](../../sandboxes/api/create-sandbox.md) para obter mais informações. |
+
+Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../../sandboxes/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
@@ -54,8 +67,6 @@ Para obter mais informações sobre [!DNL Segmentation Service], consulte a [Vis
 A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
-
-As seguintes atualizações de fontes estão incluídas na versão de março de 2021 do Experience Platform:
 
 | Recurso | Descrição |
 | ------- | ----------- |

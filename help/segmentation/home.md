@@ -5,9 +5,9 @@ title: Visão geral do serviço de segmentação
 topic: visão geral
 description: Saiba mais sobre o Adobe Experience Platform Segmentation Service e a função que ele desempenha no ecossistema da plataforma.
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Este documento fornece uma visão geral do [!DNL Segmentation Service] e a funç
 
 A segmentação é o processo de definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis do seu armazenamento de perfil para distinguir um grupo comercializável de pessoas da base de clientes. Por exemplo, em uma campanha de email chamada &quot;Você se esqueceu de comprar seus tênis?&quot;, talvez você queira um público-alvo de todos os usuários que procuraram por tênis de corrida nos últimos 30 dias, mas que não concluíram uma compra.
 
-Depois que um segmento é definido conceitualmente, ele é criado em [!DNL Experience Platform]. Normalmente, os segmentos são criados pelo profissional de marketing ou pelo especialista em público-alvo, embora algumas organizações prefiram que sejam criadas pelo departamento de marketing, em colaboração com os analistas de dados. Após analisar os dados que estão sendo enviados para [!DNL Platform], o analista de dados compõe a definição do segmento selecionando quais campos e valores serão usados para criar as regras ou condições do segmento. Isso é feito usando a interface do usuário ou a API.
+Depois que um segmento é definido conceitualmente, ele é incorporado em [!DNL Experience Platform]. Normalmente, os segmentos são criados pelo profissional de marketing ou pelo especialista em público-alvo, embora algumas organizações prefiram que sejam criadas pelo departamento de marketing, em colaboração com os analistas de dados. Após analisar os dados que estão sendo enviados para [!DNL Platform], o analista de dados compõe a definição do segmento selecionando quais campos e valores serão usados para criar as regras ou condições do segmento. Isso é feito usando a interface do usuário ou a API.
 
 ## Criar segmentos
 
@@ -58,6 +58,8 @@ Para saber mais sobre a segmentação de transmissão, leia a [documentação de
 ### Segmentação em lote
 
 Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, esse segmento é salvo e armazenado, para que você possa exportá-lo para uso.
+
+Os segmentos avaliados por meio da segmentação em lote são avaliados a cada 24 horas. No entanto, para segmentos existentes, a segmentação incremental mantém os segmentos avaliados usando a segmentação em lote atualizada por até uma hora. Qualquer segmento novo ou modificado recentemente precisará aguardar até que o próximo trabalho completo de segmentação em lote tenha sido executado para aproveitar a segmentação incremental.
 
 Para saber como avaliar segmentos, consulte o [tutorial de avaliação de segmento](./tutorials/evaluate-a-segment.md).
 
@@ -111,7 +113,7 @@ Esses recursos avançados são discutidos com mais detalhes nas seções a segui
 
 ## Segmentação sequencial {#sequential}
 
-Uma jornada padrão do usuário é sequencial por natureza. O Adobe Experience Platform permite definir uma série ordenada de segmentos para refletir essa jornada, capturando assim sequências de eventos à medida que ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no [!DNL Segment Builder].
+Uma jornada padrão do usuário é sequencial por natureza. O Adobe Experience Platform permite definir uma série ordenada de segmentos para refletir essa jornada, portanto, capturando sequências de eventos à medida que ocorrem. Você pode organizar os eventos na ordem desejada usando a linha do tempo do evento visual no [!DNL Segment Builder].
 
 Um exemplo de uma jornada do cliente que exigiria segmentação sequencial seria exibição de produto > adição de produto > check-out > Nenhuma compra.
 
@@ -137,7 +139,7 @@ Ao atribuir uma variável ao atributo de estado da compra, o segmento dinâmico 
 
 ## Segmentação de várias entidades {#multi-entity}
 
-Com o recurso avançado de segmentação de várias entidades, você tem a capacidade de estender [!DNL Real-time Customer Profile] dados com dados adicionais baseados em produtos, lojas ou outras entidades não pessoais, também conhecidas como entidades &quot;de dimensão&quot;. Como resultado, [!DNL Segmentation Service] pode acessar campos adicionais durante a definição do segmento como se fossem nativos no armazenamento de dados [!DNL Profile]. A segmentação de várias entidades proporciona flexibilidade ao identificar públicos com base em dados relevantes para suas necessidades comerciais exclusivas. Para obter mais informações, incluindo casos de uso e fluxos de trabalho, consulte o [guia de segmentação de várias entidades](multi-entity-segmentation.md).
+Com o recurso avançado de segmentação de várias entidades, é possível estender [!DNL Real-time Customer Profile] dados com dados adicionais baseados em produtos, lojas ou outros não-pessoas, também conhecidos como entidades &quot;de dimensão&quot;. Como resultado, [!DNL Segmentation Service] pode acessar campos adicionais durante a definição do segmento como se fossem nativos no armazenamento de dados [!DNL Profile]. A segmentação de várias entidades proporciona flexibilidade ao identificar públicos com base em dados relevantes para suas necessidades comerciais exclusivas. Para obter mais informações, incluindo casos de uso e fluxos de trabalho, consulte o [guia de segmentação de várias entidades](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipos de dados
 

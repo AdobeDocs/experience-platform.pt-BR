@@ -5,9 +5,9 @@ title: Visão geral das sandboxes
 topic: visão geral
 description: As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,9 @@ Este documento fornece uma visão geral de alto nível das sandboxes no Experien
 
 ## Noções básicas sobre sandboxes
 
->[!NOTE]
->
->O recurso Várias sandboxes de produção está na versão beta.
+As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Uma instância do Experience Platform suporta uma sandbox de produção e várias sandboxes de não produção, com cada sandbox mantendo sua própria biblioteca independente de recursos da plataforma (incluindo esquemas, conjuntos de dados, perfis e assim por diante).  Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox.
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Uma instância do Experience Platform suporta várias sandboxes de produção e não produção, com cada sandbox mantendo sua própria biblioteca independente de recursos da plataforma (incluindo esquemas, conjuntos de dados, perfis e assim por diante). Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox.
-
-As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar a sandbox de produção. Além disso, as sandboxes de produção e não de produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da sandbox. As sandboxes de não produção não podem ser convertidas em sandboxes de produção. Uma licença padrão do Experience Platform concede cinco sandboxes (uma produção e quatro não produção). Você pode adicionar pacotes de dez sandboxes até um máximo de 75 sandboxes no total. Essas sandboxes adicionais podem ser usadas para criar sandboxes de produção e de não produção. Entre em contato com o administrador de organização IMS ou o representante de vendas de Adobe para obter mais detalhes.
+As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar a sandbox de produção. Além disso, as sandboxes de não produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da sandbox. As sandboxes de não produção não podem ser convertidas em sandboxes de produção. Uma licença padrão do Experience Platform concede cinco sandboxes (uma produção e quatro não produção). É possível adicionar pacotes de dez sandboxes de não produção até um máximo de 75 sandboxes no total. Entre em contato com o administrador de organização IMS ou o representante de vendas de Adobe para obter mais detalhes.
 
 >[!NOTE]
 >
@@ -45,7 +41,7 @@ Em resumo, as sandboxes oferecem os seguintes benefícios:
 
 Por padrão, todos os usuários de uma organização têm acesso a uma sandbox de produção. O acesso a sandboxes de não produção deve ser concedido por um administrador de sistema, administrador de produto ou administrador de perfil de produto por meio do [Adobe Admin Console](https://adminconsole.adobe.com).
 
-Para visualizar, criar, atualizar ou excluir sandboxes de produção e não produção, os usuários também devem receber permissões de Administração de sandbox.
+Para visualizar, criar, atualizar ou excluir sandboxes de não produção, os usuários também devem receber permissões de Administração de sandbox.
 
 Para obter mais informações sobre o gerenciamento de funções e permissões para sandboxes, consulte a [visão geral do controle de acesso](../access-control/home.md).
 

@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;atualizar caixa de proteção
+keywords: Experience Platform, home, tópicos populares, atualizar sandbox
 solution: Experience Platform
-title: Atualizar uma caixa de proteção na API
-topic: developer guide
-description: É possível atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua o nome da caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
+title: Atualizar uma sandbox na API
+topic: guia do desenvolvedor
+description: Você pode atualizar um ou mais campos em uma sandbox fazendo uma solicitação de PATCH que inclui o nome da sandbox no caminho da solicitação e a propriedade a ser atualizada no payload da solicitação.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 3%
+source-wordcount: '135'
+ht-degree: 2%
 
 ---
 
 
-# Atualizar uma caixa de proteção na API
+# Atualizar uma sandbox na API
 
-Você pode atualizar um ou mais campos em uma caixa de proteção, fazendo uma solicitação de PATCH que inclua o `name` da caixa de proteção no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
+Você pode atualizar um ou mais campos em uma sandbox fazendo uma solicitação de PATCH que inclui o sandbox `name` no caminho da solicitação e a propriedade a ser atualizada no payload da solicitação.
 
 >[!NOTE]
 >
->Atualmente, somente a propriedade `title` de uma caixa de proteção pode ser atualizada.
+>Atualmente, somente a propriedade `title` de uma sandbox pode ser atualizada.
 
 **Formato da API**
 
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{SANDBOX_NAME}` | A propriedade `name` da caixa de proteção que deseja atualizar. |
+| `{SANDBOX_NAME}` | A propriedade `name` da sandbox que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir atualiza a propriedade `title` da caixa de proteção chamada &quot;dev-2&quot;.
+A solicitação a seguir atualiza a propriedade `title` da sandbox chamada &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \
@@ -41,7 +41,6 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "title": "Development B"
@@ -50,7 +49,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 (OK) com os detalhes da caixa de proteção recém-atualizada.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) com os detalhes da sandbox recém-atualizada.
 
 ```json
 {

@@ -5,9 +5,9 @@ title: Visão geral do serviço de segmentação
 topic: visão geral
 description: Saiba mais sobre o Adobe Experience Platform Segmentation Service e a função que ele desempenha no ecossistema da plataforma.
 translation-type: tm+mt
-source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
+source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Para obter informações sobre como criar definições de segmento usando a API,
 
 ## Avaliar segmentos
 
-Atualmente, a plataforma suporta dois métodos de avaliação de segmentos: segmentação de streaming e segmentação em lote.
+Atualmente, a plataforma suporta três métodos de avaliação de segmentos: segmentação de streaming, segmentação em lote e segmentação de borda.
 
 ### Segmentação de streaming
 
@@ -59,7 +59,15 @@ Para saber mais sobre a segmentação de transmissão, leia a [documentação de
 
 Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, esse segmento é salvo e armazenado, para que você possa exportá-lo para uso.
 
-Os segmentos avaliados por meio da segmentação em lote são avaliados a cada 24 horas. No entanto, para segmentos existentes, a segmentação incremental mantém os segmentos avaliados usando a segmentação em lote atualizada por até uma hora. Qualquer segmento novo ou modificado recentemente precisará aguardar até que o próximo trabalho completo de segmentação em lote tenha sido executado para aproveitar a segmentação incremental.
+**Segmentação incremental (beta)**
+
+Segmentos em lote são avaliados a cada 24 horas. No entanto, para segmentos existentes, a segmentação incremental mantém os segmentos atualizados por até uma hora.
+
+A segmentação incremental é executada em novos dados que entram no armazenamento de perfis. No entanto, os seguintes avisos se aplicam à segmentação incremental:
+
+- Para qualquer segmento novo ou modificado recentemente, os perfis com novos dados começarão a se qualificar na próxima execução incremental. No entanto, os perfis sem alterações aparecerão no próximo trabalho de segmentação de lote completo.
+- Segmentos de várias entidades serão atualizados na segmentação incremental. Se houver atualizações de entidade, todos os perfis com novos dados começarão a usá-los na próxima execução incremental. No entanto, os perfis sem alterações aparecerão no próximo trabalho de segmentação de lote completo.
+- Os eventos que soltarem a janela de tempo de um segmento serão reconciliados no próximo trabalho de segmentação de lote completo.
 
 Para saber como avaliar segmentos, consulte o [tutorial de avaliação de segmento](./tutorials/evaluate-a-segment.md).
 

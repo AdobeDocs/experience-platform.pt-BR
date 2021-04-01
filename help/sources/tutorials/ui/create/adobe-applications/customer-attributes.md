@@ -1,59 +1,65 @@
 ---
-keywords: Experience Platform;home;popular topics;atributos do cliente
+keywords: Experience Platform, home, tópicos populares, atributos do cliente
 solution: Experience Platform
-title: Criar uma conexão de origem de atributos do cliente na interface do usuário
-topic: overview
+title: Criar uma conexão de fonte de atributos do cliente na interface do usuário
+topic: visão geral
 type: Tutorial
 description: Saiba como criar uma conexão de origem na interface do usuário para coletar dados de perfil de atributos do cliente no Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 08a3026e969a8739a8b57226c35a6d1d3150006e
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 5%
+source-wordcount: '399'
+ht-degree: 6%
 
 ---
 
 
 # Criar uma conexão de origem de Atributos do cliente na interface do usuário
 
-Este tutorial fornece etapas para criar uma conexão de origem na interface do usuário para coletar dados de perfil de Atributos do cliente no Adobe Experience Platform. Para obter mais informações sobre Atributos do cliente, consulte o documento de [visão geral](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+Este tutorial fornece etapas para criar uma conexão de origem na interface do usuário para coletar dados de perfil de Atributos do cliente no Adobe Experience Platform. Para obter mais informações sobre Atributos do cliente, consulte a [Visão geral dos Atributos do cliente](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+
+>[!IMPORTANT]
+>
+>No momento, as funcionalidades de desativação, ativação e exclusão de fluxos de dados não são compatíveis com a fonte de atributos do cliente.
 
 ## Criar uma conexão de origem
 
-Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar a área de trabalho de fontes. A tela **[!UICONTROL Catálogo]** exibe as fontes disponíveis para criar conexões de entrada e cada fonte mostra o número de conexões existentes associadas a elas. Selecione a opção para **[!UICONTROL Atributos do cliente]** e selecione **[!UICONTROL Adicionar dados]**. Aguarde até que a conexão seja estabelecida, você será redirecionado se uma conexão for estabelecida com êxito.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. A tela [!UICONTROL Catalog] exibe uma variedade de fontes com as quais você pode criar uma conexão.
+
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
+
+Na categoria [!UICONTROL Adobe applications], selecione **[!UICONTROL Customer Attributes]** e selecione **[!UICONTROL Add data]**.
 
 >[!NOTE]
 >
->Se você já tiver estabelecido um conector de origem para dados de perfil de atributos do cliente, a opção de conexão com a fonte será desativada.
+>Se você já tiver estabelecido uma conexão de origem para os dados de perfil dos Atributos do cliente, a opção para se conectar à fonte será desativada.
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-A tela **atividade de origem** lista todas as conexões estabelecidas anteriormente para os dados de perfil dos atributos do cliente, você pode criar uma nova conexão clicando em **Selecionar dados**.
+A tela [!UICONTROL Add data] lista todas as fontes de dados disponíveis para Atributos do cliente. Para criar uma nova conexão, selecione uma fonte de dados na lista e selecione **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
->Várias conexões de entrada para uma fonte podem ser feitas para inserir dados diferentes.
+>Somente um conjunto de dados pode ser selecionado por conexão de origem dos Atributos do cliente.
 
-![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
+![](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
-Na lista de conjuntos de dados de perfil de atributos do cliente disponíveis, selecione aquele que deseja trazer para [!DNL Platform] e clique em **Próximo**.
+A etapa [!UICONTROL Dataflow detail] é exibida, permitindo nomear e fornecer uma breve descrição para o novo fluxo de dados.
 
->[!NOTE]
->
->Somente um conjunto de dados pode ser selecionado por conexão de origem de atributos do cliente.
+Durante esse processo, também é possível ativar [!UICONTROL Partial ingestion] e [!UICONTROL Error diagnostics]. [!UICONTROL Partial ingestion] O fornece a capacidade de assimilar dados contendo erros, até um determinado limite que pode ser definido, enquanto  [!UICONTROL Error diagnostics] fornece detalhes sobre dados incorretos que são armazenados em lote separadamente. Para obter mais informações, consulte a [visão geral da ingestão parcial de lote](../../../../../ingestion/batch-ingestion/partial.md).
 
-![](../../../../images/tutorials/create/customer-attributes/select_data.png)
+![](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
 
-A etapa **Revisar** é exibida, permitindo que você reveja sua nova conexão de entrada antes de ela ser criada. Os detalhes da conexão são agrupados por categorias, incluindo:
+A etapa [!UICONTROL Review] é exibida, permitindo que você revise o novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-* **Detalhes** da fonte: Mostra o tipo da conexão de origem e os dados de origem selecionados.
-* **Detalhes** do público alvo: Ao criar outros conectores de origem, esse container mostra em qual conjunto de dados os dados de origem estão assimilando, incluindo o schema ao qual o conjunto de dados está aderindo. Os dados do perfil dos atributos do cliente são mapeados e assimilados automaticamente nos Perfis do cliente em tempo real.
+* **[!UICONTROL Connection]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e o número de colunas dentro desse arquivo de origem.
+* **[!UICONTROL Assign dataset & map fields]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Próximas etapas
 
-Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a ingestão inicial for concluída, os dados do perfil dos atributos do cliente poderão ser usados por serviços downstream [!DNL Platform], como [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a assimilação inicial for concluída, os dados de perfil dos atributos do cliente poderão ser usados pelos serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] visão geral](../../../../../segmentation/home.md)

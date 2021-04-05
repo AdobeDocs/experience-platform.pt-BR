@@ -4,14 +4,14 @@ title: Criar um destino de armazenamento em nuvem
 type: Tutorial
 description: Instruções para conectar-se aos locais de armazenamento na nuvem
 seo-description: Instruções para conectar-se aos locais de armazenamento na nuvem
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # Criar um destino de armazenamento em nuvem
 
@@ -37,7 +37,7 @@ Consulte [destino Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-k
 >
 >A Platform oferece suporte à validação de credenciais no processo de autenticação e exibe uma mensagem de erro se você inserir credenciais incorretas no local de armazenamento da nuvem. Isso garante que você não conclua o fluxo de trabalho com credenciais incorretas.
 
-![Conectar-se ao destino de armazenamento na nuvem - etapa de autenticação](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Conectar-se ao destino de armazenamento na nuvem - etapa da conta](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## Etapa de autenticação {#authentication}
 
@@ -61,7 +61,35 @@ Para destinos [!DNL Azure Event Hubs] , forneça o nome do fluxo de dados existe
 
 ![Conectar-se ao destino de armazenamento em nuvem de Hubs de Eventos - etapa de autenticação](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-Seu destino foi criado. Você pode selecionar **[!UICONTROL Save & Exit]** se desejar ativar segmentos posteriormente ou selecionar **[!UICONTROL Next]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativate segments](#activate-segments), para que o restante do workflow exporte dados.
+Seu destino foi criado. Você pode selecionar **[!UICONTROL Save & Exit]** se desejar ativar segmentos posteriormente ou selecionar **[!UICONTROL Next]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Leia a seção [Ativate segments](#activate-segments), para o restante do workflow exportar dados.
+
+## Use macros para criar uma pasta no local de armazenamento{#use-macros}
+
+Para criar uma pasta personalizada por arquivo de segmento no local de armazenamento, você pode usar macros no campo de entrada do caminho da pasta. Insira as macros no final do campo de entrada, conforme mostrado abaixo.
+
+![Como usar macros para criar uma pasta no seu armazenamento](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+Os exemplos abaixo fazem referência a um segmento de amostra `Luxury Audience` com ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+### Macro 1 - `%SEGMENT_NAME%`
+
+Entrada: `acme/campaigns/2021/%SEGMENT_NAME%`
+
+Caminho da pasta no local de armazenamento: `acme/campaigns/2021/Luxury Audience`
+
+### Macro 2 - `%SEGMENT_ID%`
+
+Entrada: `acme/campaigns/2021/%SEGMENT_ID%`
+
+Caminho da pasta no local de armazenamento: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Entrada: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Caminho da pasta no local de armazenamento: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Ativar segmentos {#activate-segments}
 

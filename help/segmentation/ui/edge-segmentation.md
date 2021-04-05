@@ -3,15 +3,15 @@ keywords: Experience Platform, home, tópicos populares, segmentação de borda,
 solution: Experience Platform
 title: Guia da interface do usuário de segmentação de borda
 topic: guia da interface do usuário
-description: 'A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página. '
+description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
-
 
 # Guia da interface do usuário de segmentação de borda
 
@@ -25,8 +25,8 @@ Um query pode ser avaliado com segmentação de borda se atender a qualquer um d
 | ---------- | ------- | ------- |
 | Ocorrência de entrada | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Consulta de frequência | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes. |  |
-| Consulta de frequência que se refere a um perfil | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes e tem um ou mais atributos de perfil. |  |
+| Consulta de frequência | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes. |  |
+| Consulta de frequência que se refere a um perfil | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes e tem um ou mais atributos de perfil. |  |
 
 Se a consulta corresponder a qualquer um dos tipos de consulta acima, você poderá ativá-la para segmentação de borda ativando o **[!UICONTROL Evaluate as streaming segment on the edge]**.
 

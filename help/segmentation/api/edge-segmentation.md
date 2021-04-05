@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Segmentação de borda usando a API '
 topic: guia do desenvolvedor
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
-
 
 # Segmentação de borda
 
@@ -39,8 +39,8 @@ Para que um segmento seja avaliado usando a segmentação de borda, a query deve
 | ---------- | ------- |
 | Ocorrência de entrada | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. |
 | Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. |
-| Consulta de frequência | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes. |
-| Consulta de frequência que se refere a um perfil | Qualquer definição de segmento que se refere a um evento que ocorre um determinado número de vezes e tem um ou mais atributos de perfil. |
+| Consulta de frequência | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes. |
+| Consulta de frequência que se refere a um perfil | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes e tem um ou mais atributos de perfil. |
 
 {style=&quot;table-layout:auto&quot;}
 

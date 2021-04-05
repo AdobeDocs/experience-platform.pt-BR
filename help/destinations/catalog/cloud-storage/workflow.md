@@ -6,9 +6,9 @@ description: Instruções para conectar-se aos locais de armazenamento na nuvem
 seo-description: Instruções para conectar-se aos locais de armazenamento na nuvem
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,10 @@ Para destinos [!DNL Azure Event Hubs] , forneça o nome do fluxo de dados existe
 Seu destino foi criado. Você pode selecionar **[!UICONTROL Save & Exit]** se desejar ativar segmentos posteriormente ou selecionar **[!UICONTROL Next]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Leia a seção [Ativate segments](#activate-segments), para o restante do workflow exportar dados.
 
 ## Use macros para criar uma pasta no local de armazenamento{#use-macros}
+
+>[!NOTE]
+>
+> A funcionalidade descrita nesta seção está disponível somente para destinos [Amazon S3](./amazon-s3.md).
 
 Para criar uma pasta personalizada por arquivo de segmento no local de armazenamento, você pode usar macros no campo de entrada do caminho da pasta. Insira as macros no final do campo de entrada, conforme mostrado abaixo.
 

@@ -6,10 +6,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 11%
+source-wordcount: '473'
+ht-degree: 10%
 
 ---
 
@@ -23,9 +23,13 @@ ht-degree: 11%
    * [Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/email-marketing.md)
 * Guias da interface {#ui}
    * [Área de trabalho Destinos](./ui/destinations-workspace.md)
-   * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Conectar-se a um destino](./ui/connect-destination.md)
+   * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Ativar perfis e segmentos para um destino](./ui/activate-destinations.md)
+   * [Atualizar contas de destino](./ui/update-accounts.md)
+   * [Editar fluxos de ativação](./ui/edit-activation.md)
+   * [Excluir destinos](./ui/delete-destinations.md)
+   * [Monitorar fluxos de dados](./ui/monitor-dataflows.md)
 * Catálogo de destinos {#catalog}
    * [Visão geral do catálogo de destinos](./catalog/overview.md)
    * [ Conexão HTTP (alfa)](./catalog/http-destination.md)

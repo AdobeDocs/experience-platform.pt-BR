@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform, home, tópicos populares, monitorar contas, monitorar fluxos de dados, fluxos de dados; destinos
+keywords: Experience Platform, Início, Tópicos populares, Monitorar contas, Monitorar fluxos de dados, fluxos de dados, destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 solution: Experience Platform
 title: Monitorar Fluxos de Dados
 topic: visão geral
 type: Tutorial
+exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
 
 ---
-
 
 # Monitorar fluxos de dados
 

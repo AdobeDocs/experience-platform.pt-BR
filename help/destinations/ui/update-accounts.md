@@ -1,16 +1,16 @@
 ---
-keywords: atualizar conta de destino, contas de destino, como atualizar contas
+keywords: Atualizar Conta de Destino, Contas de Destino
 title: Atualizar contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para atualizar contas de destino na interface do usuário do Adobe Experience Platform
+exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
-
 
 # Atualizar contas de destino
 

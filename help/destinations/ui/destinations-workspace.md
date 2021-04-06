@@ -1,16 +1,16 @@
 ---
 keywords: plataforma; destinos; espaço de trabalho de destinos; espaço de trabalho; interface do usuário; destinos; interface do usuário; catálogo; catálogo de destinos;
 title: Área de trabalho Destinos
-description: O espaço de trabalho Destinos consiste em quatro seções, Catálogo, Navegação, Contas e Visualização do sistema, descritas nas seções abaixo.
+description: 'O espaço de trabalho Destinos consiste em quatro seções: Catálogo, Navegação, Contas e Visualização do sistema. Elas estão descritas nas seções abaixo.'
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
+exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
-
 
 # Espaço de trabalho Destinos {#destinations-workspace}
 
@@ -20,17 +20,17 @@ No Adobe Experience Platform, selecione **[!UICONTROL Destinations]** na barra d
 
 O espaço de trabalho [!UICONTROL Destinations] consiste em quatro seções, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts] e [!UICONTROL System View], descritas nas seções abaixo.
 
-![Visão geral dos destinos](../assets/ui/workspace/destinations-overview.png)
+![Visão geral dos destinos](../assets/ui/workspace/destinations-workspace.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
-A guia **[!UICONTROL Catalog]** exibe uma lista de todos os destinos disponíveis na Plataforma, para os quais você pode enviar dados.
+A guia **[!UICONTROL Catalog]** exibe uma lista de todos os destinos disponíveis em [!DNL Platform], para os quais você pode enviar dados.
 
-A interface do usuário da Plataforma fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
+A interface do usuário [!DNL Platform] fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
 
 * Use a funcionalidade de pesquisa na página para localizar um destino específico.
 * Filtre destinos usando o controle [!UICONTROL Categories].
-* Alternar entre [!UICONTROL All destinations] e [!UICONTROL My destinations]. Quando **[!UICONTROL All destinations]** é selecionado, todos os destinos disponíveis da Plataforma são exibidos. Quando **[!UICONTROL My destinations]** é selecionado, você só pode ver os destinos com os quais estabeleceu uma conexão.
+* Alternar entre [!UICONTROL All destinations] e [!UICONTROL My destinations]. Quando você seleciona **[!UICONTROL All destinations]**, todos os destinos disponíveis [!DNL Platform] são exibidos. Ao selecionar **[!UICONTROL My destinations]**, você só poderá ver os destinos com os quais estabeleceu uma conexão.
 * Selecione para exibir **[!UICONTROL Connections]** e/ou **[!UICONTROL Extensions]**. Para entender a diferença entre as duas categorias, consulte [Tipos e categorias de destino](../destination-types.md).
 
 ![filtragem de destinos e demonstração de pesquisa](../assets/ui/workspace/destinations-search-and-filter.gif)
@@ -49,52 +49,24 @@ Os cartões de destino contêm **[!UICONTROL Configure]** ou **[!UICONTROL Activ
 
 ![Controles no cartão de destinos](../assets/ui/workspace/destination-card-options.png)
 
-Selecione um cartão de destino no catálogo para abrir o painel direito. Aqui, você pode ver uma descrição do destino. O painel direito fornece os mesmos controles descritos na tabela acima, bem como uma descrição do destino e uma indicação da categoria e do tipo de destino.
+Selecione um cartão de destino no catálogo para abrir o painel direito. Aqui, você pode ver uma descrição do destino. O painel direito fornece os mesmos controles descritos no quadro acima, incluindo uma descrição do destino e uma indicação da categoria e do tipo de destino.
 
 ![Opções de catálogo de destino](../assets/ui/workspace/destination-right-rail.png)
 
-Para obter mais informações sobre categorias de destino e informações sobre cada destino, consulte o [Catálogo de Destino](../catalog/overview.md) e [Tipos e Categorias de Destino](../destination-types.md).
+Para obter mais informações sobre categorias de destino e informações sobre cada destino, consulte o [Catálogo de destino](../catalog/overview.md) e [Tipos e categorias de destino](../destination-types.md).
 
 ## [!UICONTROL Accounts] {#accounts}
 
-Na guia **[!UICONTROL Accounts]**, você pode saber mais sobre as conexões estabelecidas com vários destinos. Consulte a tabela abaixo para obter todas as informações que você pode obter em cada destino:
-
->[!TIP]
->
->Use o botão ![Add data button](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Platform]** para criar uma nova conexão de destino para essa conta.
-
-![Guia Contas](../assets/ui/workspace/edit-account-destinations.png)
-
-| Elemento | Descrição |
----------|----------
-| [!UICONTROL Platform] | O destino para o qual você configurou a conexão. |
-| [!UICONTROL Connection Type] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3 ou FTP.</li><li>Para destinos de anúncios em tempo real: Servidor para servidor</li><li>Para destinos de armazenamento em nuvem Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento em nuvem SFTP: Autenticação básica para SFTP</li></ul> |
-| [!UICONTROL Username] | O nome de usuário selecionado no [assistente de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
-| [!UICONTROL Destinations] | Representa o número de fluxos de destino únicos bem-sucedidos conectados às informações básicas criadas para um destino. |
-| [!UICONTROL Authorized] | A data em que a conexão com esse destino foi autorizada. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Além disso, você pode editar ou atualizar suas informações de conta. Selecione o ![Edit account button](../assets/ui/workspace/pencil-icon.png) na coluna **[!UICONTROL Platform]** para editar as informações da conta.
-
-Para contas que usam um tipo de conexão `OAuth2`, você pode selecionar **[!UICONTROL Reconnect OAuth]** para renovar suas credenciais de conta.
-
-![Imagem de Oauth](../assets/ui/workspace/reconnect-oauth.png)
-
-Para contas que usam um tipo de conexão `Access Key` ou `ConnectionString`, é possível editar as informações de autenticação da conta, incluindo informações como ID de acesso, chaves secretas ou cadeias de conexão.
-
-![Imagem de informações da conta](../assets/ui/workspace/edit-account-details.png)
-
-Quando terminar de editar os detalhes da conta, selecione **[!UICONTROL Save]** para concluir a atualização.
+A guia **[!UICONTROL Accounts]** mostra detalhes sobre as conexões estabelecidas com vários destinos e permite atualizar os detalhes da conexão existente. Consulte [Atualizar contas](update-accounts.md) para obter instruções detalhadas.
 
 ## [!UICONTROL Browse] {#browse}
 
-A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu uma conexão. Destinos com a opção **[!UICONTROL Enabled]** ativada definem o destino como ativo e vice-versa. Também é possível visualizar os destinos nos quais você tem dados fluindo selecionando **[!UICONTROL Segments]** > **[!UICONTROL Browse]** e selecionando um segmento a ser inspecionado. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia Procurar:
+A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu uma conexão. Os destinos com o botão **[!UICONTROL Enabled/Disabled]** ativado definem o destino como ativo ou inativo, respectivamente. Também é possível visualizar os destinos nos quais você tem dados fluindo selecionando **[!UICONTROL Segments]** > **[!UICONTROL Browse]** e selecionando um segmento a ser inspecionado. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia Procurar:
 
 >[!TIP]
 >
-> * Use o botão ![Adicionar segmentos](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Name]** para ativar segmentos adicionais para esse destino.
-> * Use o botão ![Delete destination](../assets/ui/workspace/delete-destination-symbol.png) na coluna **[!UICONTROL Name]** para excluir uma conexão existente com um destino.
+> * Use o botão ![Adicionar segmentos](../assets/ui/workspace/add-data-symbol.png) na coluna **[!UICONTROL Name]** para [ativar](activate-destinations.md) mais segmentos para esse destino.
+> * Use o botão ![Excluir destinos](../assets/ui/workspace/delete-destination-symbol.png) na coluna **[!UICONTROL Name]** para [excluir](delete-destinations.md) uma conexão existente com um destino.
 
 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
@@ -103,7 +75,7 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 ---------|----------
 | Nome | O nome fornecido para o fluxo de ativação para este destino. A mesma coluna inclui dois controles: [!UICONTROL Activate ] e [!UICONTROL Delete destination]. |
 | [!UICONTROL Last Flow Run Status] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
-| [!UICONTROL Last Flow Run Date] | Hora e data da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| [!UICONTROL Last Flow Run Date] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Destination] | A plataforma de destino selecionada para o fluxo de ativação. |
 | [!UICONTROL Connection Type] | Representa o tipo de conexão com seu bucket ou destino de armazenamento. <ul><li>Para destinos de marketing por email: Pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: Servidor para servidor.</li><li>Para destinos de transmissão: Pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Username] | As credenciais de conta que você selecionou para o fluxo de destino. |

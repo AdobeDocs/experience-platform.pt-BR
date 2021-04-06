@@ -1,16 +1,16 @@
 ---
-keywords: Excluir destinos
+keywords: excluir destinos; como excluir destinos
 title: Excluir destinos
 type: Tutorial
 description: Este tutorial lista as etapas para excluir um destino existente na interface do usuário do Adobe Experience Platform
-exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
+
 
 # Excluir destinos {#delete-destinations}
 

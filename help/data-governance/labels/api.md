@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;controle de dados;etiqueta de uso de dados api;api do serviço de política api
+keywords: Experience Platform, home, tópicos populares, governança de dados, api de etiqueta de uso de dados, api de serviço de política
 solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados usando APIs '
-topic: developer guide
-description: A API de Serviço de Conjunto de Dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do serviço de catálogo que gerencia os metadados do conjunto de dados.
+topic: guia do desenvolvedor
+description: A API do Serviço de conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do Serviço de catálogo que gerencia os metadados do conjunto de dados.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 3%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 3%
 
 Este documento fornece etapas sobre como gerenciar rótulos de uso de dados usando a API [!DNL Policy Service] e a API [!DNL Dataset Service].
 
-O [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornece vários pontos de extremidade que permitem criar e gerenciar rótulos de uso de dados para sua organização.
+O [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornece vários endpoints que permitem criar e gerenciar rótulos de uso de dados para sua organização.
 
-A API [!DNL Dataset Service] permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API [!DNL Catalog Service] que gerencia os metadados do conjunto de dados.
+A API [!DNL Dataset Service] permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados do Adobe Experience Platform, mas é separada da API [!DNL Catalog Service] que gerencia os metadados do conjunto de dados.
 
 ## Introdução
 
-Antes de ler este guia, siga as etapas descritas na seção [introdução](../../catalog/api/getting-started.md) no guia do desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para [!DNL Platform] APIs.
+Antes de ler este guia, siga as etapas descritas na seção [introdução](../../catalog/api/getting-started.md) no guia do desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para APIs [!DNL Platform].
 
-Para fazer chamadas para os pontos de extremidade [!DNL Dataset Service] descritos neste documento, você deve ter o valor `id` exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte o guia em [listando objetos de catálogo](../../catalog/api/list-objects.md) para localizar as IDs dos conjuntos de dados existentes.
+Para fazer chamadas para os endpoints [!DNL Dataset Service] descritos neste documento, você deve ter o valor exclusivo `id` para um conjunto de dados específico. Se você não tiver esse valor, consulte o guia em [listando objetos do catálogo](../../catalog/api/list-objects.md) para encontrar as IDs de seus conjuntos de dados existentes.
 
-## Lista de todos os rótulos {#list-labels}
+## Lista todos os rótulos {#list-labels}
 
-Usando a API [!DNL Policy Service], você pode lista todos os rótulos `core` ou `custom`, fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
+Usando a API [!DNL Policy Service], é possível listar todos os rótulos `core` ou `custom` fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
 
 **Formato da API**
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperados do sistema. Como a solicitação de exemplo acima foi feita para `/labels/custom`, a resposta abaixo mostra somente rótulos personalizados.
+Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperados do sistema. Como a solicitação de exemplo acima foi feita para `/labels/custom`, a resposta abaixo mostra apenas rótulos personalizados.
 
 ```json
 {
@@ -111,7 +111,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 
 ## Procure um rótulo {#look-up-label}
 
-Você pode procurar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação de GET para a API [!DNL Policy Service].
+Você pode pesquisar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação GET para a API [!DNL Policy Service].
 
 **Formato da API**
 
@@ -198,14 +198,14 @@ curl -X PUT \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | Um identificador de string exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e aplicação do rótulo a conjuntos de dados e campos, portanto, recomenda-se que seja curto e conciso. |
-| `category` | A categoria da etiqueta. Embora você possa criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se quiser que o rótulo apareça na interface do usuário. |
+| `name` | Um identificador de string exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e aplicação do rótulo a conjuntos de dados e campos, portanto, é recomendável que seja curto e conciso. |
+| `category` | A categoria do rótulo. Embora você possa criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se desejar que o rótulo apareça na interface do usuário. |
 | `friendlyName` | Um nome amigável para o rótulo, usado para fins de exibição. |
-| `description` | (Opcional) Uma descrição do rótulo para fornecer mais contexto. |
+| `description` | (Opcional) Uma descrição do rótulo para fornecer contexto adicional. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o código HTTP 200 (OK) se um rótulo existente foi atualizado, ou 201 (Criado) se um novo rótulo foi criado.
+Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com código HTTP 200 (OK) se um rótulo existente foi atualizado, ou 201 (Criado) se um novo rótulo foi criado.
 
 ```json
 {
@@ -229,9 +229,9 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o c�
 }
 ```
 
-## Procurar etiquetas para um conjunto de dados {#look-up-dataset-labels}
+## Pesquisar rótulos para um conjunto de dados {#look-up-dataset-labels}
 
-Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente, fazendo uma solicitação de GET para a API [!DNL Dataset Service].
+Você pode pesquisar os rótulos de uso de dados que foram aplicados a um conjunto de dados existente fazendo uma solicitação do GET para a API [!DNL Dataset Service].
 
 **Formato da API**
 
@@ -280,11 +280,15 @@ Uma resposta bem-sucedida retorna os rótulos de uso de dados que foram aplicado
 | Propriedade | Descrição |
 | --- | --- |
 | `labels` | Uma lista de rótulos de uso de dados que foram aplicados ao conjunto de dados. |
-| `optionalLabels` | Uma lista de campos individuais no conjunto de dados que têm rótulos de uso de dados aplicados a eles. |
+| `optionalLabels` | Uma lista de campos individuais no conjunto de dados que têm rótulos de uso de dados aplicados a eles. As seguintes subpropriedades são necessárias:<br/><br/>`option`: Um objeto que contém os atributos [!DNL Experience Data Model] (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li>`id`: O  `$id` valor do URI do schema associado ao campo.</li><li>`contentType`: Indica o formato e a versão do esquema. Consulte a seção sobre [controle de versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações.</li><li>`schemaPath`: O caminho para a propriedade de schema em questão, escrito em  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax.</li></ul>`labels`: Uma lista de rótulos de uso de dados que você deseja adicionar ao campo. |
+
+- id: O valor $id de URI para o esquema XDM no qual o conjunto de dados se baseia.
+- contentType: Indica o formato e a versão do esquema. Consulte a seção sobre [controle de versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações.
+- schemaPath: O caminho para a propriedade de esquema em questão, gravado na sintaxe [Ponteiro JSON](../../landing/api-fundamentals.md#json-pointer).
 
 ## Aplicar rótulos a um conjunto de dados {#apply-dataset-labels}
 
-Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-os na carga de uma solicitação POST ou PUT para a API [!DNL Dataset Service]. O uso de qualquer um desses métodos substitui quaisquer rótulos existentes e os substitui pelos fornecidos na carga.
+Você pode criar um conjunto de rótulos para um conjunto de dados, fornecendo-os na carga de uma solicitação POST ou PUT para a API [!DNL Dataset Service]. O uso de qualquer um desses métodos substitui quaisquer rótulos existentes e os substitui pelos fornecidos no payload.
 
 **Formato da API**
 
@@ -299,7 +303,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitação**
 
-A solicitação de POST a seguir adiciona uma série de rótulos ao conjunto de dados, bem como um campo específico nesse conjunto de dados. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação de PUT.
+A solicitação de POST a seguir adiciona uma série de rótulos ao conjunto de dados, bem como um campo específico nesse conjunto de dados. Os campos fornecidos no payload são os mesmos que seriam necessários para uma solicitação de PUT.
 
 ```shell
 curl -X POST \
@@ -327,7 +331,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `labels` | Uma lista de rótulos de uso de dados que você deseja adicionar ao conjunto de dados. |
-| `optionalLabels` | Uma lista de qualquer campo individual no conjunto de dados ao qual você deseja adicionar rótulos. Cada item nesta matriz deve ter as seguintes propriedades: <br/><br/>`option`: Um objeto que contém os atributos [!DNL Experience Data Model] (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li>id</code>: O valor URI $id</code> do schema associado ao campo.</li><li>contentType</code>: O tipo de conteúdo e o número da versão do schema. Isso deve assumir a forma de um dos <a href="../../xdm/api/getting-started.md#accept">cabeçalhos Accept</a> válidos para uma solicitação de pesquisa XDM.</li><li>schemaPath</code>: O caminho para o campo dentro do schema do conjunto de dados.</li></ul>`labels`: Uma lista de rótulos de uso de dados que você deseja adicionar ao campo. |
+| `optionalLabels` | Uma lista de quaisquer campos individuais no conjunto de dados ao qual você deseja adicionar rótulos. Cada item nesta matriz deve ter as seguintes propriedades:<br/><br/>`option`: Um objeto que contém os atributos [!DNL Experience Data Model] (XDM) do campo. As três propriedades a seguir são obrigatórias:<ul><li>`id`: O  `$id` valor do URI do schema associado ao campo.</li><li>`contentType`: Indica o formato e a versão do esquema. Consulte a seção sobre [controle de versão do schema](../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações.</li><li>`schemaPath`: O caminho para a propriedade de schema em questão, escrito em  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax.</li></ul>`labels`: Uma lista de rótulos de uso de dados que você deseja adicionar ao campo. |
 
 **Resposta**
 
@@ -351,7 +355,7 @@ Uma resposta bem-sucedida retorna os rótulos que foram adicionados ao conjunto 
 
 ## Remover rótulos de um conjunto de dados {#remove-dataset-labels}
 
-Você pode remover os rótulos aplicados a um conjunto de dados, fazendo uma solicitação DELETE para a API [!DNL Dataset Service].
+Você pode remover os rótulos aplicados a um conjunto de dados fazendo uma solicitação DELETE para a API [!DNL Dataset Service].
 
 **Formato da API**
 
@@ -376,14 +380,14 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta com êxito HTTP status 200 (OK), indicando que os rótulos foram removidos. Você pode [procurar os rótulos existentes](#look-up-dataset-labels) para o conjunto de dados em uma chamada separada para confirmar isso.
+Uma resposta bem-sucedida HTTP status 200 (OK), indicando que os rótulos foram removidos. Você pode [procurar os rótulos existentes](#look-up-dataset-labels) para o conjunto de dados em uma chamada separada para confirmar isso.
 
 ## Próximas etapas
 
 Ao ler este documento, você aprendeu a gerenciar rótulos de uso de dados usando APIs.
 
-Depois de adicionar rótulos de uso de dados no nível do conjunto de dados e do campo, você pode começar a assimilar dados em [!DNL Experience Platform]. Para saber mais, leia a documentação de [ingestão de dados](../../ingestion/home.md).
+Depois de adicionar rótulos de uso de dados no nível do conjunto de dados e do campo, você pode começar a assimilar dados em [!DNL Experience Platform]. Para saber mais, comece lendo a [documentação de assimilação de dados](../../ingestion/home.md).
 
-Agora você também pode definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte a [visão geral das políticas de uso de dados](../policies/overview.md).
+Agora, também é possível definir políticas de uso de dados com base nos rótulos aplicados. Para obter mais informações, consulte a [visão geral das políticas de uso de dados](../policies/overview.md).
 
-Para obter mais informações sobre como gerenciar conjuntos de dados em [!DNL Experience Platform], consulte [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).
+Para obter mais informações sobre como gerenciar conjuntos de dados em [!DNL Experience Platform], consulte a [visão geral dos conjuntos de dados](../../catalog/datasets/overview.md).

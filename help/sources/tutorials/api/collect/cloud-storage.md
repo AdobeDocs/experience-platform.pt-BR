@@ -5,14 +5,14 @@ title: Colete dados de armazenamento em nuvem usando conectores e APIs de origem
 topic: visão geral
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1806'
 ht-degree: 2%
 
 ---
-
 
 # Colete dados de armazenamento em nuvem usando conectores de origem e APIs
 
@@ -332,6 +332,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `schemaRef.id` | A ID do esquema XDM de destino. |
+| `schemaRef.contentType` | A versão do schema. Esse valor deve ser definido `application/vnd.adobe.xed-full-notext+json;version=1`, que retorna a versão secundária mais recente do schema. |
 
 **Resposta**
 
@@ -371,7 +372,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -387,6 +388,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `data.schema.id` | O `$id` do esquema XDM de destino. |
+| `data.schema.version` | A versão do schema. Esse valor deve ser definido `application/vnd.adobe.xed-full+json;version=1`, que retorna a versão secundária mais recente do schema. |
 | `params.dataSetId` | A ID do conjunto de dados de destino. |
 | `connectionSpec.id` | A ID de especificação de conexão fixa para o Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

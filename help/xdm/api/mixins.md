@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Ponto de extremidade da API Mixins
 description: O endpoint /mixins na API do Registro de Schema permite gerenciar programaticamente mixins XDM no aplicativo de experiência.
 topic: guia do desenvolvedor
+exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 2%
 
 ---
-
 
 # Ponto de extremidade de Mixins
 
@@ -19,7 +19,7 @@ As misturas são componentes reutilizáveis que definem um ou mais campos que re
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de mixins {#list}
 
@@ -37,7 +37,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O contêiner do qual você deseja recuperar mixins de: `global` para mixins criados pela Adobe ou `tenant` para mixins de propriedade de sua organização. |
+| `{CONTAINER_ID}` | O contêiner do qual você deseja recuperar mixins de: `global` para mixins criados por Adobe ou `tenant` para mixins de propriedade de sua organização. |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte o [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 **Solicitação**
@@ -109,7 +109,7 @@ A solicitação acima usou o cabeçalho `application/vnd.adobe.xed-id+json` `Acc
 
 ## Procure um mixin {#lookup}
 
-Você pode pesquisar um mixin específico incluindo a ID do mixin no caminho de uma solicitação GET.
+Você pode pesquisar um mixin específico incluindo a ID do mixin no caminho de uma solicitação do GET.
 
 **Formato da API**
 
@@ -119,7 +119,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O contêiner que contém o mixin que você deseja recuperar: `global` para um mixin criado pela Adobe ou `tenant` para um mixin de propriedade de sua organização. |
+| `{CONTAINER_ID}` | O contêiner que contém o mixin que você deseja recuperar: `global` para um mixin criado por Adobe ou `tenant` para um mixin de propriedade de sua organização. |
 | `{MIXIN_ID}` | O `meta:altId` ou o `$id` codificado por URL do mixin que você deseja procurar. |
 
 **Solicitação**
@@ -140,11 +140,11 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. T
 
 | `Accept` header | Descrição |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Simples com `$ref` e `allOf`, tem títulos e descrições. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidas, tem títulos e descrições. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidas, sem títulos ou descrições. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidos, incluíam descritores. |
+| `application/vnd.adobe.xed+json; version=1` | Simples com `$ref` e `allOf`, tem títulos e descrições. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` e  `allOf` resolvidas, tem títulos e descrições. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` resolvidas, sem títulos ou descrições. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` resolvidos, incluíam descritores. |
 
 **Resposta**
 
@@ -211,7 +211,7 @@ Uma resposta bem-sucedida retorna os detalhes da mistura. Os campos retornados d
 
 ## Criar um mixin {#create}
 
-Você pode definir um mixin personalizado no contêiner `tenant` fazendo uma solicitação POST.
+Você pode definir um mixin personalizado no contêiner `tenant` fazendo uma solicitação de POST.
 
 **Formato da API**
 
@@ -378,11 +378,11 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga contend
 }
 ```
 
-Executar uma solicitação GET para [listar todas as mixins](#list) no contêiner do locatário agora inclui o mixin Detalhes da propriedade ou você pode [executar uma solicitação de pesquisa (GET)](#lookup) usando o URI codificado por URL `$id` para exibir o novo mixin diretamente.
+Executar uma solicitação de GET para [listar todas as mixins](#list) no contêiner do locatário agora inclui o mixin Detalhes da propriedade ou você pode [executar uma solicitação de pesquisa (GET)](#lookup) usando o URI codificado por URL `$id` para exibir o novo mixin diretamente.
 
 ## Atualizar um mixin {#put}
 
-Você pode substituir um mixin inteiro por meio de uma operação PUT, essencialmente regravando o recurso. Ao atualizar um mixin por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao [criar um novo mixin](#create) em uma solicitação POST.
+Você pode substituir um mixin inteiro por uma operação de PUT, essencialmente regravando o recurso. Ao atualizar um mixin por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao [criar um novo mixin](#create) em uma solicitação de POST.
 
 >[!NOTE]
 >
@@ -565,7 +565,7 @@ Uma resposta bem-sucedida retorna os detalhes da mixin atualizada.
 
 ## Atualizar uma parte de uma mistura {#patch}
 
-Você pode atualizar uma parte de um mixin usando uma solicitação PATCH. O [!DNL Schema Registry] suporta todas as operações padrão de Patch JSON, incluindo `add`, `remove` e `replace`. Para obter mais informações sobre o Patch JSON, consulte o [guia de fundamentos da API](../../landing/api-fundamentals.md#json-patch).
+Você pode atualizar uma parte de um mixin usando uma solicitação de PATCH. O [!DNL Schema Registry] suporta todas as operações padrão de Patch JSON, incluindo `add`, `remove` e `replace`. Para obter mais informações sobre o Patch JSON, consulte o [guia de fundamentos da API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >

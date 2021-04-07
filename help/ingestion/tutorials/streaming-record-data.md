@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform, home, tópicos populares, assimilação de streaming, ingestão, dados de registro, dados de registro de fluxo;
+keywords: Experience Platform; home; tópicos populares; assimilação de streaming; ingestão; dados de registro; dados de registro de fluxo;
 solution: Experience Platform
 title: Gravar dados de fluxo usando APIs de assimilação de fluxo
 topic: tutorial
 type: Tutorial
-description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do Serviço de assimilação de dados da Adobe Experience Platform.
+description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
+exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 2%
 
 ---
 
-
 # Transmitir dados de registro usando APIs de assimilação de fluxo
 
-Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs da Adobe Experience Platform [!DNL Data Ingestion Service].
+Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs [!DNL Data Ingestion Service] do Adobe Experience Platform.
 
 ## Introdução
 
@@ -245,7 +245,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "Dataset description",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
-        "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -297,7 +297,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -306,7 +306,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity": {
@@ -336,7 +336,7 @@ Se você quiser incluir um nome de origem, o exemplo a seguir mostra como inclu�
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -364,7 +364,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do recém-trans
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | A ID da conexão de transmissão criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
+| `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 | `synchronousValidation.status` | Como o parâmetro de consulta `synchronousValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
 
@@ -392,7 +392,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Solicitação**
 
-Você pode revisar os dados de registro assimilados anteriormente com a seguinte solicitação GET.
+Você pode revisar os dados de registro assimilados anteriormente com a seguinte solicitação do GET.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
@@ -456,5 +456,3 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 Ao ler este documento, agora você entende como assimilar dados de registro em [!DNL Platform] usando conexões de transmissão. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar seus dados assimilados por meio da interface do usuário [!DNL Platform]. Para obter mais informações, leia o guia [de monitoramento da assimilação de dados](../quality/monitor-data-ingestion.md).
 
 Para obter mais informações sobre a assimilação de streaming em geral, leia a [visão geral da assimilação de streaming](../streaming-ingestion/overview.md).
-
-

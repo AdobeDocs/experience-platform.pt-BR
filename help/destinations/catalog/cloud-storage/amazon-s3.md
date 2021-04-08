@@ -2,14 +2,14 @@
 keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios buckets do S3.
+exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: d77cd063e61118631b757d9821267b2fd6ab0148
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Amazon S3] conexão  {#s3-connection}
 
@@ -31,10 +31,34 @@ Para destinos [!DNL Amazon S3], insira as seguintes informações no workflow cr
 
 * **[!DNL Amazon S3]chave de acesso e chave  [!DNL Amazon S3] secreta**: No  [!DNL Amazon S3], gere um  `access key - secret access key` par para conceder à Platform acesso à sua  [!DNL Amazon S3] conta. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
+## Permissões [!DNL Amazon S3] necessárias {#required-s3-permission}
+
+Para se conectar e exportar dados com êxito para o local de armazenamento [!DNL Amazon S3], crie um usuário IAM para [!DNL Platform] em [!DNL Amazon S3] e atribua permissões para as seguintes ações:
+
+* `s3:DeleteObject`
+* `s3:DeleteObjectVersion`
+* `s3:GetBucketLocation`
+* `s3:GetObject`
+* `s3:GetObjectVersion`
+* `s3:ListBucket`
+* `s3:ListBuckets`
+* `s3:PutBucketVersioning`
+* `s3:PutObject`
+* `s3:ReplicateObject`
+* `s3:RestoreObject`
+
+
+<!--
+
+Commenting out this note, as write permissions are assigned through the s3:PutObject permission.
+
 >[!IMPORTANT]
 >
->A plataforma precisa de `write` permissões no objeto de compartimento, onde os arquivos de exportação serão entregues.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
+
+-->
+
 
 ## Dados exportados {#exported-data}
 
-Para destinos [!DNL Amazon S3], a Platform cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de marketing por email e destinos de armazenamento na nuvem](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmento.
+Para destinos [!DNL Amazon S3], [!DNL Platform] cria um arquivo delimitado por tabulação `.txt` ou `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [Destinos de marketing por email e destinos de armazenamento na nuvem](../../ui/activate-destinations.md#esp-and-cloud-storage) no tutorial de ativação de segmento.

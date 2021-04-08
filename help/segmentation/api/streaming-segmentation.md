@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
 topic: guia do desenvolvedor
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
+exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1377'
 ht-degree: 1%
 
 ---
-
 
 # Avaliar eventos em tempo quase real com a segmentação de fluxo
 
@@ -75,9 +75,11 @@ Para que um segmento seja avaliado usando a segmentação de transmissão, a con
 | ---------- | ------- |
 | Ocorrência de entrada | Qualquer definição de segmento que se refere a um único evento de entrada sem restrição de tempo. |
 | Ocorrência recebida em uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada. |
+| Ocorrência recebida com uma janela de tempo | Qualquer definição de segmento que se refere a um único evento de entrada com uma janela de tempo. |
 | Somente perfil | Qualquer definição de segmento que se refere somente a um atributo de perfil. |
 | Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. |
 | Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada e um ou mais atributos de perfil. |
+| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. |
 | Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
 Uma definição de segmento **não** será ativada para a segmentação de fluxo nos seguintes cenários:

@@ -6,7 +6,7 @@ topic: visão geral
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
+source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
 workflow-type: tm+mt
 source-wordcount: '3793'
 ht-degree: 3%
@@ -42,7 +42,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatena as strings fornecidas. | <ul><li>CADEIA DE CARACTERES: As cadeias de caracteres que serão concatenadas.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Olá, &quot;, &quot;lá&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explodido | Divida a string com base em um regex e retorna uma matriz de partes. Opcionalmente, pode incluir regex para dividir a cadeia de caracteres. Por padrão, a divisão resolve para &quot;,&quot;. Os seguintes delimitadores **precisam de** para serem escapados com `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` Se você incluir vários caracteres como delimitador, o delimitador será tratado como um delimitador de vários caracteres. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que precisa ser dividida.</li><li>REGEX: *Opcional* A expressão regular que pode ser usada para dividir a cadeia de caracteres.</li></ul> | explode(STRING, REGEX) | explode(&quot;Olá, lá!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | Retorna o local/índice de uma substring. | <ul><li>ENTRADA: **Obrigatório** A cadeia de caracteres que está sendo pesquisada.</li><li>SUBSTRING: **Obrigatório** A subcadeia de caracteres que está sendo pesquisada dentro da cadeia de caracteres.</li><li>START_POSITION: *Opcional* O local onde começar a procurar na cadeia de caracteres.</li><li>OCORRÊNCIA: *Opcional* A nona ocorrência a ser procurada a partir da posição inicial. Por padrão, é definido como 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCORRÊNCIA) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
@@ -67,7 +67,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 ### Funções de expressão regular
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Extrai grupos da string de entrada, com base em uma expressão regular. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres da qual você está extraindo os grupos.</li><li>REGEX: **Obrigatório** A expressão regular à qual você deseja que o grupo corresponda.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Verifica se a string corresponde à expressão regular inserida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que você está verificando corresponde à expressão regular.</li><li>REGEX: **Obrigatório** A expressão regular com a qual você está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
@@ -80,7 +80,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | Obtém uma entrada e um valor de hash usando o Algoritmo de Hash Seguro 1 (SHA-1). | <ul><li>ENTRADA: **Necessário** O texto sem formatação a ser submetido a hash.</li><li>CARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha1(ENTRADA, CARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Obtém uma entrada e um valor de hash usando o Algoritmo de Hash Seguro 256 (SHA-256). | <ul><li>ENTRADA: **Necessário** O texto sem formatação a ser submetido a hash.</li><li>CARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha256(ENTRADA, CARSET) | sha256(&quot;meu texto&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
 | sha512 | Obtém uma entrada e um valor de hash usando o Algoritmo de Hash Seguro 512 (SHA-512). | <ul><li>ENTRADA: **Necessário** O texto sem formatação a ser submetido a hash.</li><li>CARSET: *Opcional* O nome do conjunto de caracteres. Os valores possíveis incluem UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha512(ENTRADA, CARSET) | sha512(&quot;meu texto&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -96,7 +96,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | Retorna o protocolo do URL especificado. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** O URL do qual o protocolo precisa ser extraído.</li></ul> | get_url_protocol &#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | Retorna o host do URL especificado. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** O URL do qual o host precisa ser extraído.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Retorna a porta do URL especificado. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** O URL do qual a porta precisa ser extraída.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
@@ -112,7 +112,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela. Mais informações sobre a função `date` podem ser encontradas no [guia de função de data](./dates.md).
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera a hora atual. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | carimbo de data e hora | Recupera o horário Unix atual. |  | carimbo de data e hora() | carimbo de data e hora() | 1571850624571 |
 | format | Formata a data de entrada de acordo com um formato especificado. | <ul><li>DATA: **Obrigatório** A data de entrada, como um objeto ZoningDateTime, que você deseja formatar.</li><li>FORMATO: **Obrigatório** O formato para o qual você deseja alterar a data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -136,7 +136,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Retorna o tamanho da entrada. | <ul><li>ENTRADA: **Obrigatório** O objeto do qual você está tentando encontrar o tamanho.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Verifica se um objeto está vazio ou não. | <ul><li>ENTRADA: **Obrigatório** O objeto que você está tentando verificar está vazio.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | Cria uma lista de objetos. | <ul><li>ENTRADA: **Obrigatório** Um agrupamento de pares de chave e matriz.</li></ul> | arrays_to_object(INPUT) | amostra necessária | amostra necessária |
@@ -154,7 +154,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Retorna o primeiro objeto não nulo em uma matriz específica. | <ul><li>ENTRADA: **Obrigatório** A matriz na qual você deseja encontrar o primeiro objeto não nulo.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;Second&quot;) | &quot;first&quot; |
 | first | Recupera o primeiro elemento da matriz em questão. | <ul><li>ENTRADA: **Obrigatório** A matriz na qual você deseja encontrar o primeiro elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Recupera o último elemento da matriz. | <ul><li>ENTRADA: **Obrigatório** A matriz na qual você deseja encontrar o último elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -171,7 +171,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decodificação | Dada uma chave e uma lista de pares de valores chave nivelados como uma matriz, a função retornará o valor se a chave for encontrada ou retornará um valor padrão se estiver presente na matriz. | <ul><li>CHAVE: **Obrigatório** A chave a ser correspondida.</li><li>OPTIONS: **Necessário** Uma matriz nivelada de pares de chave/valor. Opcionalmente, um valor padrão pode ser colocado no final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pensilvânia&quot;, &quot;N/A&quot;) | Se o stateCode fornecido for &quot;ca&quot;, &quot;Califórnia&quot;.<br>Se o stateCode fornecido for &quot;pa&quot;, &quot;Pensilvânia&quot;.<br>Se o stateCode não corresponder ao seguinte, &quot;N/A&quot;. |
 | iif | Avalia uma determinada expressão booleana e retorna o valor especificado com base no resultado. | <ul><li>EXPRESSÃO: **Obrigatório** A expressão booleana que está sendo avaliada.</li><li>TRUE_VALUE: **Obrigatório** O valor que é retornado se a expressão for avaliada como true.</li><li>FALSE_VALUE: **Obrigatório** O valor que é retornado se a expressão for avaliada como false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Verdadeiro&quot; |
 
@@ -184,7 +184,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Retorna o mínimo dos argumentos fornecidos. Usa ordenação natural. | <ul><li>OPTIONS: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Retorna o máximo dos argumentos fornecidos. Usa ordenação natural. | <ul><li>OPTIONS: **Obrigatório** Um ou mais objetos que podem ser comparados entre si.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -197,7 +197,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | Converte uma cadeia de caracteres em um BigInteger. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que deve ser convertida em um BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 1000000,34 |
 | to_decimal | Converte uma cadeia de caracteres em um Double. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres a ser convertida em um Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
 | to_float | Converte uma string em um Flutuante. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que deve ser convertida em um Flutuante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
@@ -212,7 +212,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Desserialize o conteúdo JSON da string especificada. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres JSON a ser desserializada.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Um objeto que representa o JSON. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -224,7 +224,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Gera uma ID pseudo-aleatória. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -236,7 +236,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 >Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela.
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extrai o nome do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versão/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Extrai a versão principal do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versão/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | Extrai a versão do sistema operacional da sequência de agente do usuário. | <ul><li>USER_AGENT: **Obrigatório** A sequência de agente do usuário.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versão/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |

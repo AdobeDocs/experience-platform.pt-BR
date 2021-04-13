@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Visão geral da preparação de dados
 topic: visão geral
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de fun
 
 Um conjunto de mapeamentos que transformam um schema em outro é conhecido coletivamente como um conjunto de mapeamentos. Um único conjunto de mapeamento é criado como parte de cada fluxo de dados. Um conjunto de mapeamento é parte integrante dos fluxos de dados e é criado, editado e monitorado como parte dos fluxos de dados.
 
+## Tratamento do formato de dados
+
+A Preparação de dados pode lidar de forma robusta com diferentes formatos de dados assimilados na Plataforma. Para saber mais sobre como a Preparação de dados lê os diferentes tipos de dados, leia a [visão geral do manuseio do formato de dados](./data-handling.md).
+
 ## Próximas etapas
 
-Este documento cobriu as noções básicas sobre Preparação de dados no Adobe Experience Platform. Para saber mais sobre diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md). Para saber mais sobre as diferentes sequências de data e hora, leia o [guia de sequências de data](./dates.md). Para saber como usar a API de preparação de dados, leia o [Guia do desenvolvedor de preparação de dados](api/overview.md).
+Este documento cobriu as noções básicas sobre Preparação de dados no Adobe Experience Platform. Para saber mais sobre diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md). Para saber mais sobre como a Preparação de dados lê os diferentes tipos de dados, leia o [guia de manipulação do formato de dados](./data-handling.md#dates). Para saber como usar a API de preparação de dados, leia o [Guia do desenvolvedor de preparação de dados](api/overview.md).

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Solução de problemas de fontes
 topic: solução de problemas
 description: Este documento fornece respostas a perguntas frequentes sobre fontes no Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Guia de solução de problemas de fontes
 
@@ -57,7 +57,7 @@ Os tipos de dados suportados incluem números inteiros, strings, booleanos, obje
 
 ### Quais formatos de data e hora são compatíveis?
 
-As fontes são compatíveis com uma grande variedade de formatos de data e hora ao assimilar dados. Mais informações sobre formatos datetime compatíveis podem ser encontradas no [guia de funções de data prep de dados](../data-prep/dates.md).
+As fontes são compatíveis com uma grande variedade de formatos de data e hora ao assimilar dados. Mais informações sobre formatos datetime compatíveis podem ser encontradas na seção de datas do [guia de manipulação do formato de dados](../data-prep/data-handling.md#dates) na documentação Preparação de dados.
 
 ### Como formatar arrays em arquivos CSV, JSON e Parquet?
 

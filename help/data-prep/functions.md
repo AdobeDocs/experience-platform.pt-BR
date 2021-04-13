@@ -6,9 +6,9 @@ topic: visão geral
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 3%
 
 ---
@@ -109,7 +109,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 >[!NOTE]
 >
->Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela. Mais informações sobre a função `date` podem ser encontradas no [guia de função de data](./dates.md).
+>Role a tela para a esquerda/direita para exibir o conteúdo completo da tabela. Mais informações sobre a função `date` podem ser encontradas na seção de datas do [guia de manipulação do formato de dados](./data-handling.md#dates).
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |

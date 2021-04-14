@@ -6,10 +6,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
 feature: Esquemas
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 23%
+source-wordcount: '279'
+ht-degree: 21%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 23%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Detalhes demográficos](./mixins/profile/person-details.md)
       * [Detalhes de contato pessoal](./mixins/profile/personal-details.md)
+      * [Privacidade/Personalização/Preferências de marketing (Consentimentos)](./mixins/profile/consents.md)
       * [Detalhes da associação ao segmento](./mixins/profile/segmentation.md)
       * [Detalhes do Contato do Trabalho](./mixins/profile/work-details.md)
    * Misturas de eventos {#event}
@@ -51,6 +52,10 @@ ht-degree: 23%
    * [Dispositivo](./data-types/device.md)
    * [Endereço de email](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
+   * [Campo de consentimento genérico](./data-types/consent-field.md)
+   * [Campo de Preferência de Marketing Genérico](./data-types/marketing-field.md)
+   * [Campo de preferência de marketing genérico com assinaturas](./data-types/marketing-field-subscriptions.md)
+   * [Campo de preferência Personalização genérica](./data-types/personalization-field.md)
    * [Geografia](./data-types/geo.md)
    * [Círculo geográfico](./data-types/geo-circle.md)
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)

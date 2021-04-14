@@ -4,7 +4,7 @@ title: Visão geral dos modelos de dados do setor
 topic: visão geral
 description: Saiba mais sobre os modelos de dados padronizados para vários ramos do setor que podem ser construídos com os componentes padrão do Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 6a7aebb64a533158f7ab17af0cd28243aeda0eca
+source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -52,7 +52,6 @@ Os perfumes são fornecidos para os seguintes setores industriais:
 * [[!UICONTROL Retail]](./retail.md)
 * [[!UICONTROL Financial services]](./financial.md)
 * [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
-* [[!UICONTROL Telecommunications]](./telecom.md)
 
 ## Próximas etapas
 

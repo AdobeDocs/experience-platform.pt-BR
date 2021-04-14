@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Criar uma conexão de transmissão usando a API
 topic: tutorial
 type: Tutorial
-description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do Serviço de assimilação de dados da Adobe Experience Platform.
+description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -16,13 +17,13 @@ ht-degree: 2%
 
 # Criação de uma conexão de transmissão usando a API
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
+O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
 Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para criar uma conexão de transmissão usando a API do Serviço de fluxo.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): O quadro normalizado pelo qual  [!DNL Platform] organiza os dados de experiência.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
@@ -69,7 +70,7 @@ POST /flowservice/connections
 
 **Solicitação**
 
-Para criar uma conexão de transmissão, a ID do provedor e a ID da especificação da conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para criar uma conexão de transmissão, a ID do provedor e a ID de especificação de conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -132,7 +133,7 @@ POST /flowservice/connections
 
 **Solicitação**
 
-Para criar uma conexão de transmissão, a ID do provedor e a ID da especificação da conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para criar uma conexão de transmissão, a ID do provedor e a ID de especificação de conexão devem ser fornecidas como parte da solicitação do POST. A ID do provedor é `521eee4d-8cbe-4906-bb48-fb6bd4450033` e a ID da especificação da conexão é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \

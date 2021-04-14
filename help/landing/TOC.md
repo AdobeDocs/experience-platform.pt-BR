@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
-user-guide-description: Saiba como o Experience Platform possibilita entregar experiências personalizadas aos clientes em tempo real.
+user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a seus clientes em tempo real.
 translation-type: tm+mt
-source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 14%
+source-wordcount: '193'
+ht-degree: 21%
 
 ---
 
@@ -45,6 +45,10 @@ ht-degree: 14%
 * Governança, privacidade e segurança {#governance-privacy-security}
    * [Visão geral](./governance-privacy-security/overview.md)
    * Gerenciamento de consentimento {#consent}
+      * Adobe standard {#adobe}
+         * [Visão geral](./governance-privacy-security/consent/adobe/overview.md)
+         * [Configurar um conjunto de dados para capturar dados de consentimento e preferência](./governance-privacy-security/consent/adobe/dataset.md)
+         * [Integre o SDK da Web da plataforma para processar dados de consentimento e preferência](./governance-privacy-security/consent/adobe/sdk.md)
       * TCF do IAB 2.0 {#iab}
          * [Visão geral](./governance-privacy-security/consent/iab/overview.md)
          * [Configurar um conjunto de dados para capturar dados de consentimento e preferência](./governance-privacy-security/consent/iab/dataset.md)

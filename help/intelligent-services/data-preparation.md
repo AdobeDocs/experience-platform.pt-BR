@@ -3,21 +3,21 @@ keywords: Experience Platform, home, Serviços inteligentes, tópicos populares,
 solution: Experience Platform, Intelligent Services
 title: Preparar dados para uso em serviços inteligentes
 topic: Serviços inteligentes
-description: Para que os Serviços inteligentes descubram insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes usam os esquemas do Experience Data Model (XDM) para fazer isso. Especificamente, todos os conjuntos de dados que são usados nos Serviços inteligentes] devem estar em conformidade com o esquema XDM Consumer ExperienceEvent (CEE).
+description: Para que os Serviços inteligentes descubram insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes usam esquemas do Experience Data Model (XDM) para fazer isso.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
+source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2387'
 ht-degree: 1%
 
 ---
 
 # Preparar dados para usar em [!DNL Intelligent Services]
 
-Para que [!DNL Intelligent Services] descubra insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. [!DNL Intelligent Services] utilize os esquemas  [!DNL Experience Data Model] (XDM) para fazer isso. Especificamente, todos os conjuntos de dados que são usados em [!DNL Intelligent Services] devem estar em conformidade com o esquema XDM Consumer ExperienceEvent (CEE).
+Para que [!DNL Intelligent Services] descubra insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. [!DNL Intelligent Services] utilize os esquemas  [!DNL Experience Data Model] (XDM) para fazer isso. Especificamente, todos os conjuntos de dados que são usados em [!DNL Intelligent Services] devem estar em conformidade com o esquema XDM Consumer ExperienceEvent (CEE) ou usar o conector do Adobe Analytics. Além disso, o Customer AI é compatível com o conector do Adobe Audience Manager.
 
-Este documento fornece orientação geral sobre como mapear os dados de eventos de marketing de vários canais para esse esquema, destacando informações sobre campos importantes no esquema para ajudar a determinar como mapear os dados de maneira eficaz para sua estrutura.
+Este documento fornece orientação geral sobre como mapear os dados de eventos de marketing de vários canais para o esquema CEE, destacando informações sobre campos importantes no esquema para ajudá-lo a determinar como mapear os dados de maneira eficaz para sua estrutura. Se você planeja usar dados do Adobe Analytics, visualize a seção para [Preparação de dados do Adobe Analytics](#analytics-data). Se você planeja usar os dados do Adobe Audience Manager (somente o Customer AI), visualize a seção para [Preparação de dados do Adobe Audience Manager](#AAM-data).
 
 ## Resumo do workflow
 
@@ -31,12 +31,32 @@ Se os dados forem armazenados fora de [!DNL Experience Platform], siga as etapas
 1. Usando suas credenciais de acesso, faça upload de seus dados para o contêiner de Blob.
 1. Trabalhe com os Serviços de consultoria do Adobe para obter seus dados mapeados para o [schema ExperienceEvent do consumidor](#cee-schema) e assimilados em [!DNL Intelligent Services].
 
+### Preparação de dados do Adobe Analytics {#analytics-data}
+
+O Customer AI e o Attribution AI oferecem suporte nativo aos dados da Adobe Analytics. Para usar os dados do Adobe Analytics, siga as etapas descritas na documentação para configurar um [conector de origem do Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+
+Depois que o conector de origem estiver transmitindo seus dados para o Experience Platform, você poderá selecionar o Adobe Analytics como fonte de dados, seguido por um conjunto de dados durante a configuração da sua instância. Todos os campos e combinações de esquema necessários são criados automaticamente durante a configuração da conexão. Não é necessário extrair, transformar, carregar (ETL) os conjuntos de dados no formato CEE.
+
+>[!IMPORTANT]
+>
+>O conector Adobe Analytics leva até quatro semanas para preencher dados. Se você tiver configurado uma conexão recentemente, verifique se o conjunto de dados tem o comprimento mínimo de dados necessário para o Cliente ou o Attribution AI. Revise as seções de dados históricos em [Customer AI](./customer-ai/input-output.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements), e verifique se você tem dados suficientes para sua meta de previsão.
+
+### Preparação de dados do Adobe Audience Manager (somente para o Customer AI) {#AAM-data}
+
+O Customer AI oferece suporte nativo aos dados do Adobe Audience Manager. Para usar os dados do Audience Manager, siga as etapas descritas na documentação para configurar um [conector de origem do Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+
+Depois que o conector de origem estiver transmitindo seus dados para o Experience Platform, você poderá selecionar o Adobe Audience Manager como fonte de dados, seguido por um conjunto de dados durante a configuração do Customer AI. Todos os campos e combinações de esquema necessários são criados automaticamente durante a configuração da conexão. Não é necessário extrair, transformar, carregar (ETL) os conjuntos de dados no formato CEE.
+
+>[!IMPORTANT]
+>
+>Se você tiver configurado um conector recentemente, verifique se o conjunto de dados tem o comprimento mínimo de dados necessário. Revise a seção de dados históricos na [documentação de entrada/saída](./customer-ai/input-output.md) para o Customer AI e verifique se você tem dados suficientes para o seu objetivo de previsão.
+
 ### [!DNL Experience Platform] preparação de dados
 
-Se os dados já estiverem armazenados em [!DNL Platform], siga as etapas abaixo:
+Se os dados já estiverem armazenados em [!DNL Platform] e não forem transmitidos por meio dos conectores de origem Adobe Analytics ou Adobe Audience Manager (somente no Customer AI), siga as etapas abaixo. Ainda é recomendável entender o esquema CEE se planeja trabalhar com a API do cliente.
 
 1. Revise a estrutura do [Consumer ExperienceEvent schema](#cee-schema) e determine se os dados podem ser mapeados para seus campos.
-1. Entre em contato com os Serviços de consultoria do Adobe para ajudar a mapear seus dados para o esquema e assimilá-los em [!DNL Intelligent Services] ou [siga as etapas deste guia](#mapping) se desejar mapear os dados por conta própria.
+2. Entre em contato com os Serviços de consultoria do Adobe para ajudar a mapear seus dados para o esquema e assimilá-los em [!DNL Intelligent Services] ou [siga as etapas deste guia](#mapping) se desejar mapear os dados por conta própria.
 
 ## Noções básicas sobre o esquema CEE {#cee-schema}
 

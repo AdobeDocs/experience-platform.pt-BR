@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform, home, tópicos populares, avaliação de segmentos, Serviço de segmentação, Segmentação, avaliar um segmento, acessar resultados do segmento, avaliar e acessar segmento;
+keywords: Experience Platform, home, tópicos populares, avaliação de segmento, Serviço de segmentação, segmentação, Segmentação, avaliar um segmento, acessar resultados do segmento, avaliar e acessar segmento;
 solution: Experience Platform
 title: Avaliar e acessar os resultados do segmento
 topic: tutorial
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
+exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
-
 
 # Avaliar e acessar os resultados do segmento
 
@@ -43,7 +43,7 @@ Todos os recursos em [!DNL Experience Platform] são isolados para sandboxes vir
 >
 >Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-Todas as solicitações POST, PUT e PATCH exigem um cabeçalho adicional:
+Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
 
 - Tipo de conteúdo: application/json
 
@@ -65,19 +65,19 @@ Por meio da avaliação agendada, a Organização IMS pode criar um agendamento 
 
 ### Criar um agendamento
 
-Ao fazer uma solicitação POST para o endpoint `/config/schedules`, é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
+Ao fazer uma solicitação de POST para o endpoint `/config/schedules`, é possível criar um agendamento e incluir o horário específico em que o agendamento deve ser acionado.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#create)
 
 ### Habilitar um agendamento
 
-Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (defina `state` como `active`) fazendo uma solicitação PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
+Por padrão, um agendamento fica inativo quando criado, a menos que a propriedade `state` esteja definida como `active` no corpo da solicitação de criação (POST). Você pode habilitar um agendamento (defina `state` como `active`) fazendo uma solicitação de PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#update-state)
 
 ### Atualizar a hora da programação
 
-O cronograma pode ser atualizado fazendo uma solicitação PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
+O tempo de agendamento pode ser atualizado fazendo uma solicitação PATCH para o endpoint `/config/schedules` e incluindo a ID do agendamento no caminho.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia de endpoint de agendamentos](../api/schedules.md#update-schedule)
 
@@ -89,7 +89,7 @@ A avaliação sob demanda permite criar um trabalho de segmento para gerar um se
 
 Um trabalho de segmento é um processo assíncrono que cria um novo segmento de público-alvo. Ele faz referência a uma definição de segmento, bem como a quaisquer políticas de mesclagem que controlam como [!DNL Real-time Customer Profile] mescla atributos sobrepostos nos fragmentos de perfil. Quando um trabalho de segmento é concluído com êxito, você pode coletar várias informações sobre o segmento, como erros que possam ter ocorrido durante o processamento e o tamanho final do público-alvo.
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o terminal `/segment/jobs` na API [!DNL Real-time Customer Profile].
+Você pode criar um novo trabalho de segmento fazendo uma solicitação de POST para o endpoint `/segment/jobs` na API [!DNL Real-time Customer Profile].
 
 Informações mais detalhadas sobre o uso desse ponto de extremidade podem ser encontradas no [guia do ponto de extremidade de tarefas do segmento](../api/segment-jobs.md#create)
 
@@ -193,9 +193,7 @@ curl -X POST \
         "contentType": "application/vnd.adobe.xed+json;version=1"
     },
     "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     }
 }'
 ```
@@ -224,7 +222,7 @@ Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas n
 
 ### Monitorar progresso da exportação
 
-Como um trabalho de exportação processa, você pode monitorar seu status fazendo uma solicitação GET para o endpoint `/export/jobs` e incluindo o `id` do trabalho de exportação no caminho. O trabalho de exportação é concluído assim que o campo `status` retorna o valor &quot;SUCCEEDED&quot;.
+Como um trabalho de exportação processa, você pode monitorar seu status fazendo uma solicitação de GET para o endpoint `/export/jobs` e incluindo o `id` do trabalho de exportação no caminho. O trabalho de exportação é concluído assim que o campo `status` retorna o valor &quot;SUCCEEDED&quot;.
 
 Informações mais detalhadas sobre o uso desse endpoint podem ser encontradas no [guia do endpoint de tarefas de exportação](../api/export-jobs.md#get)
 

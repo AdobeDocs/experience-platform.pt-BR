@@ -6,9 +6,9 @@ topic: Dados de entrada e saída do Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2182'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,16 @@ O documento a seguir descreve as diferentes entradas e saídas utilizadas em [!D
 
 ## [!DNL Attribution AI] dados de entrada
 
-[!DNL Attribution AI] O usa  [!DNL Consumer Experience Event] dados para calcular pontuações algorítmicas. Para obter mais detalhes sobre [!DNL Consumer Experience Event], consulte [Prepare data for use in Intelligent Services documentation](../data-preparation.md).
+O Attribution AI funciona analisando um dos seguintes conjuntos de dados para calcular pontuações algorítmicas:
+
+- Conjunto de dados CEE (Evento de experiência do consumidor)
+- Conjuntos de dados do Adobe Analytics usando o [conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>O conector de origem do Adobe Analytics pode levar até quatro semanas para preencher dados. Se você configurar um conector recentemente, deve verificar se o conjunto de dados tem o comprimento mínimo de dados necessário para o Attribution AI. Revise a seção [history data](#data-requirements) para verificar se você tem dados suficientes para calcular pontuações algorítmicas precisas.
+
+Para obter mais detalhes sobre como configurar o esquema [!DNL Consumer Experience Event] (CEE), consulte o guia [Preparação de dados dos Serviços inteligentes](../data-preparation.md) . Para obter mais informações sobre como mapear dados do Adobe Analytics, visite a documentação [Mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/analytics.md) .
 
 Nem todas as colunas no esquema [!DNL Consumer Experience Event] (CEE) são obrigatórias para o Attribution AI.
 

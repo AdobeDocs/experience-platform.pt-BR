@@ -2,14 +2,14 @@
 keywords: correspondência de cliente do google, correspondência de cliente do Google, Correspondência de cliente do Google
 title: Conexão de correspondência do cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas do Google, como Pesquisa, Compras, Gmail e YouTube.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Customer Match] conexão
 
@@ -37,7 +37,7 @@ Para promover a versão, eles carregam endereços de email do banco de dados do 
 
 Alguns destinos no Experience Platform têm certas regras e obrigações para os dados enviados para a plataforma de destino ou recebidos dela. Você é responsável por entender as limitações e obrigações dos dados e como usá-los no Adobe Experience Platform e na plataforma de destino. O Adobe Experience Platform fornece ferramentas de governança de dados para ajudá-lo a gerenciar algumas dessas obrigações de uso de dados. [Saiba ](../../..//data-governance/labels/overview.md) mais sobre as ferramentas e as políticas de governança de dados.
 
-## Identidades suportadas {#supported-identities}
+## Identidades compatíveis {#supported-identities}
 
 [!DNL Google Customer Match] O suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
 
@@ -108,6 +108,12 @@ Antes de usar o namespace `User_ID` para enviar dados ao Google, sincronize seus
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## Configurar destino - apresentação de vídeo {#video}
+
+O vídeo abaixo demonstra as etapas para configurar um destino [!DNL Google Customer Match] e ativar segmentos. As etapas também são apresentadas sequencialmente nas próximas seções.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Conecte-se ao destino {#connect-destination}
 

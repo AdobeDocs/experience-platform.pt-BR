@@ -1,41 +1,43 @@
 ---
-keywords: Experience Platform;início;tópicos populares;conectores de origem;conector de origem;fontes;fontes de dados;fonte de dados;conexão de fonte de dados
+keywords: Experience Platform, home, tópicos populares, conectores de origem, conector de origem, fontes, fontes de dados, fonte de dados, conexão da fonte de dados
 solution: Experience Platform
 title: Visão geral dos conectores de origem
-topic: overview
-description: A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+topic-legacy: overview
+description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral dos conectores de origem
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes na Plataforma. O serviço fornece uma interface de usuário e uma RESTful API que permite configurar conexões de origem com facilidade para vários provedores de dados. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de ingestão e gerenciar o throughput de ingestão de dados.
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Platform. O serviço fornece uma interface de usuário e uma RESTful API que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar sistemas de terceiros, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
-Com o Experience Platform, você pode centralizar os dados coletados de fontes diferentes e usar os insights obtidos com ele para fazer mais.
+Com o Experience Platform, você pode centralizar dados coletados de fontes diferentes e usar os insights obtidos com ele para fazer mais.
 
 ## Tipos de fontes
 
 As fontes no Experience Platform são agrupadas nas seguintes categorias:
 
-### aplicativos Adobe
+### Aplicativos Adobe
 
-O Experience Platform permite que os dados sejam assimilados de outros aplicativos Adobe, incluindo Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
+O Experience Platform permite que os dados sejam assimilados de outros aplicativos do Adobe, incluindo Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Criar uma conexão de origem Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Criar uma conexão de origem do Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Visão geral do conector de dados de classificações Adobe Analytics](connectors/adobe-applications/classifications.md)
-- [Criar uma conexão de fonte de dados de classificações da Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Visão geral do conector de dados Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Criar uma conexão de origem Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Criar uma conexão de fonte de dados de classificações do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Visão geral do conector de dados do Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Criar uma conexão de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Criar uma conexão de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
+- [Criar conexão  [!DNL Marketo Engage] de recurso na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Publicidade
 
@@ -43,9 +45,9 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de publ
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) conector
 
-### Armazenamento em nuvem
+### Armazenamento na nuvem
 
-As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados ingeridos podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
+As fontes de armazenamento em nuvem podem trazer seus próprios dados para a plataforma sem precisar baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Fontes por meio da interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Azure Data Lake Storage Gen2] conector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] conector](connectors/cloud-storage/blob.md)
@@ -62,14 +64,14 @@ As fontes de armazenamentos na nuvem podem trazer seus próprios dados para a Pl
 
 ### Gerenciamento de Relacionamento com o Cliente (CRM)
 
-Os sistemas CRM fornecem dados que podem ajudar a construir relações com os clientes, o que, por sua vez, cria fidelidade e impulsiona a retenção dos clientes. O Experience Platform oferece suporte para a assimilação de dados CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
+Os sistemas CRM fornecem dados que podem ajudar a criar relações com o cliente, o que, por sua vez, cria fidelidade e impulsiona a retenção do cliente. O Experience Platform fornece suporte para assimilar dados do CRM de [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Microsoft Dynamics] conector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] conector](connectors/crm/salesforce.md)
 
 ### Sucesso do cliente
 
-O Experience Platform oferece suporte para a assimilação de dados de um aplicativo de terceiros com sucesso. Consulte os seguintes documentos relacionados para obter mais informações:
+O Experience Platform oferece suporte para assimilar dados de um aplicativo de terceiros com sucesso do cliente. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Salesforce Service Cloud] conector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] conector](connectors/customer-success/servicenow.md)
@@ -109,36 +111,36 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de auto
 
 ### Pagamentos
 
-O Experience Platform oferece suporte para assimilar dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform fornece suporte para assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL PayPal] conector](connectors/payments/paypal.md)
 
 ### Protocolos
 
-O Experience Platform oferece suporte para assimilar dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+O Experience Platform oferece suporte para assimilação de dados de um sistema de protocolos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL Generic OData] conector](connectors/protocols/odata.md)
 
-## Controle de acesso para fontes na ingestão de dados
+## Controle de acesso para fontes na assimilação de dados
 
-As permissões para fontes na ingestão de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissões]** em um perfil de produto específico. No painel **[!UICONTROL Editar permissões]**, você pode acessar as permissões pertencentes às fontes por meio da entrada de menu **[!UICONTROL ingestão de dados]**. A permissão **[!UICONTROL Fontes de Visualização]** concede acesso somente leitura às fontes disponíveis na guia **[!UICONTROL Catálogo]** e às fontes autenticadas na guia **[!UICONTROL Procurar]**, enquanto a permissão **[!UICONTROL Gerenciar fontes]** concede acesso total às fontes de leitura, criação, edição e desativação.
+As permissões para fontes na assimilação de dados podem ser gerenciadas na Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissions]** em um perfil de produto específico. No painel **[!UICONTROL Edit Permissions]**, você pode acessar as permissões pertencentes às fontes por meio da entrada de menu **[!UICONTROL data ingestion]**. A permissão **[!UICONTROL View Sources]** concede acesso somente leitura às fontes disponíveis na guia **[!UICONTROL Catalog]** e às fontes autenticadas na guia **[!UICONTROL Browse]**, enquanto a permissão **[!UICONTROL Manage Sources]** concede acesso total a fontes de leitura, criação, edição e desativação.
 
-A tabela a seguir descreve como a interface se comporta com base em diferentes combinações dessas permissões:
+A tabela a seguir descreve como a interface do usuário se comporta com base em diferentes combinações dessas permissões:
 
 | Nível de permissão | Descrição |
 | ---- | ----|
-| **[!UICONTROL Fontes]** de visualização ativadas | Conceda acesso somente leitura às fontes em cada tipo de fonte na guia Catálogo, bem como nas guias Navegar, Contas e Fluxo de dados. |
-| **[!UICONTROL Gerenciar]** fontesOn | Além das funções incluídas em **[!UICONTROL Fontes de Visualização]**, concede acesso à opção **[!UICONTROL Origem do Connect]** em **[!UICONTROL Catálogo]** e à opção **[!UICONTROL Selecionar Dados]** em **[!UICONTROL Procurar]**. **[!UICONTROL Gerenciar]** fontes também permite ativar ou desativar  **** DataFlowes e editar seus agendamentos. |
-| **[!UICONTROL Fontes]** de visualização Desligadas e  **[!UICONTROL Gerenciar]** fontes Desligadas | Revogar todo o acesso às fontes. |
+| **[!UICONTROL View Sources]** Ligado | Conceda acesso somente leitura a fontes em cada tipo-fonte na guia Catálogo , bem como nas guias Procurar, Contas e Fluxo de dados. |
+| **[!UICONTROL Manage Sources]** Ligado | Além das funções incluídas em **[!UICONTROL View Sources]**, concede acesso à opção **[!UICONTROL Connect Source]** em **[!UICONTROL Catalog]** e à opção **[!UICONTROL Select Data]** em **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** O também permite ativar ou desativar  **[!UICONTROL DataFlows]** e editar suas programações. |
+| **[!UICONTROL View Sources]** Desligado e  **[!UICONTROL Manage Sources]** desligado | Revogar todo o acesso às fontes. |
 
-Para obter mais informações sobre as permissões disponíveis concedidas pelo Admin Console, incluindo essas quatro fontes, consulte a [visão geral do controle de acesso](../access-control/home.md).
+Para obter mais informações sobre as permissões disponíveis concedidas por meio do Admin Console, incluindo essas quatro fontes, consulte a [visão geral do controle de acesso](../access-control/home.md).
 
 ## Termos e condições {#terms-and-conditions}
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), Você reconhece que o Beta é fornecido ***&quot;no estado em que se encontra&quot; sem garantia de qualquer tipo***.
 
-O Adobe não tem a obrigação de manter, corrigir, atualizar, alterar, modificar ou suportar o Beta. Recomenda-se que tenha cuidado e que não se baseie de forma alguma no funcionamento ou desempenho corretos desses materiais Beta e/ou associados. O Beta é considerado Informações Confidenciais do Adobe.
+O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. É aconselhável ter cuidado e não depender de forma alguma do correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
 
-Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta incluindo, mas não se limitando a, problemas ou defeitos encontrados durante a utilização do Beta, sugestões, melhorias e recomendações) fornecido por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
+Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta, incluindo, mas não se limitando a problemas ou defeitos que você encontra ao usar o Beta, sugestões, melhorias e recomendações) fornecidas por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
 
-Enviar feedback em aberto ou criar um tíquete de suporte para compartilhar suas sugestões ou relatar um erro, busque um aprimoramento de recurso.
+Envie Feedback aberto ou crie um Tíquete de suporte para compartilhar suas sugestões ou relatar um erro, e procure um aprimoramento de recurso.

@@ -2,14 +2,14 @@
 keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; linkedin;
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] conexão
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Ative perfis para suas campanhas [!DNL LinkedIn] para segmentação, personalização e supressão de público-alvo, com base em emails com hash e IDs móveis.
 
-![Destino do LinkedIn na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
+![Destino do linkedIn na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Casos de uso
 
@@ -25,7 +25,7 @@ Para ajudá-lo a entender melhor como e quando usar o destino [!DNL LinkedIn Mat
 
 Uma empresa de software organiza uma conferência e deseja manter contato com os participantes e mostrar a eles ofertas personalizadas com base em seu status de presença em conferência. A empresa pode assimilar endereços de email ou IDs de dispositivo móvel de seu próprio [!DNL CRM] para o Adobe Experience Platform. Em seguida, eles podem criar segmentos a partir de seus próprios dados offline e enviar esses segmentos para a [!DNL LinkedIn] plataforma social, otimizando seus gastos com publicidade.
 
-## Identidades suportadas {#supported-identities}
+## Identidades compatíveis {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] O suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
 
@@ -40,7 +40,7 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 **Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone e outros) usados no  [!DNL LinkedIn Matched Audiences] destino.
 
-## Pré-requisitos da conta do LinkedIn {#LinkedIn-account-prerequisites}
+## Pré-requisitos da conta do linkedIn {#LinkedIn-account-prerequisites}
 
 Antes de usar o destino [!UICONTROL LinkedIn Matched Audience], verifique se a conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
 
@@ -81,6 +81,10 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 ## Conecte-se ao destino {#connect-destination}
 
 Para se conectar ao destino [!DNL LinkedIn Matched Audiences], consulte [Fluxo de trabalho de autenticação de destinos de rede social](./workflow.md).
+
+O vídeo abaixo também demonstra as etapas para configurar um destino [!DNL LinkedIn Matched Audiences] e ativar segmentos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Ativar segmentos para [!DNL LinkedIn Matched Audiences] {#activate-segments}
 

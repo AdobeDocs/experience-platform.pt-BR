@@ -1,15 +1,15 @@
 ---
-keywords: conexão do facebook, conexão do facebook, destinos do facebook, facebook, instagram, mensageiro, facebook messenger
-title: Conexão do Facebook
+keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; instagram; mensageiro; facebook Messenger
+title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Facebook] conexão
 
@@ -19,7 +19,7 @@ Ative perfis para suas campanhas [!DNL Facebook] para segmentação, personaliza
 
 Você pode usar esse destino para segmentação de público-alvo em [!DNL Facebook’s] família de aplicativos compatíveis com [!DNL Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. A seleção do aplicativo no qual você deseja executar a campanha é indicada no nível de posicionamento no [!DNL Facebook Ads Manager].
 
-![Destino do Facebook na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destino do facebook na interface do usuário do Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casos de uso
 
@@ -43,7 +43,7 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 >
 >Os dados enviados para [!DNL Facebook] não podem incluir identidades compiladas. Você é responsável por cumprir essa obrigação e pode fazer isso garantindo que os segmentos selecionados para ativação não usem uma opção de compilação em sua política de mesclagem. Saiba mais sobre [políticas de mesclagem](/help/profile/ui/merge-policies.md).
 
-## Identidades suportadas {#supported-identities}
+## Identidades compatíveis {#supported-identities}
 
 [!DNL Facebook Custom Audiences] O suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
 
@@ -59,7 +59,7 @@ Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação
 
 **Exportar segmento**  - você está exportando todos os membros de um segmento (público-alvo) com os identificadores (nome, número de telefone ou outros) usados no destino do Facebook.
 
-## Pré-requisitos da conta do Facebook {#facebook-account-prerequisites}
+## Pré-requisitos da conta do facebook {#facebook-account-prerequisites}
 
 Antes de enviar seus segmentos de público-alvo para [!DNL Facebook], verifique se você atende aos seguintes requisitos:
 
@@ -113,11 +113,15 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 
 ## Uso de namespaces personalizados {#custom-namespaces}
 
-Antes de usar o namespace `Extern_ID` para enviar dados a [!DNL Facebook], sincronize seus próprios identificadores usando [!DNL Facebook Pixel]. Consulte a [documentação oficial](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obter informações detalhadas.
+Antes de usar o namespace `Extern_ID` para enviar dados a [!DNL Facebook], sincronize seus próprios identificadores usando [!DNL Facebook Pixel]. Consulte a [documentação oficial do Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obter informações detalhadas.
 
 ## Conecte-se ao destino {#connect-destination}
 
 Para se conectar ao destino [!DNL Facebook], consulte [Fluxo de trabalho de autenticação de destinos de rede social](./workflow.md).
+
+O vídeo abaixo também demonstra as etapas para configurar um destino [!DNL Facebook] e ativar segmentos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Ativar segmentos para [!DNL Facebook] {#activate-segments}
 
@@ -125,7 +129,7 @@ Para obter instruções sobre como ativar segmentos para [!DNL Facebook], consul
 
 Na etapa **[!UICONTROL Segment schedule]**, você deve fornecer o [!UICONTROL Origin of audience] ao enviar segmentos para [!DNL Facebook Custom Audiences].
 
-![Origem do público-alvo do Facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origem do público-alvo do facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Dados exportados {#exported-data}
 

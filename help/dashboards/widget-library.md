@@ -2,7 +2,7 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, painéis, painel, perfis, segmentos, destinos, uso de licença
 title: Utilização da biblioteca de widgets para adicionar e criar widgets de painel
 description: 'Este guia fornece instruções passo a passo para adicionar widgets padrão e criar widgets personalizados para visualizar dados de painel no Adobe Experience Platform. '
-topic: guia
+topic: guide
 translation-type: tm+mt
 source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
 workflow-type: tm+mt

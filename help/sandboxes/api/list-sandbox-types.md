@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, sandboxes de lista
 solution: Experience Platform
 title: Listar tipos de sandbox compatíveis na API
-topic: guia do desenvolvedor
+topic: developer guide
 description: Você pode recuperar uma lista dos tipos de sandbox suportados para sua organização fazendo uma solicitação do GET para o endpoint /sandboxTypes .
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

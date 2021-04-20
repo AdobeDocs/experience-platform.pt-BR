@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: ERD do Modelo de dados do setor de varejo
-topic: visão geral
+topic: overview
 description: Visualize um ERD (entity relacionamento diagrama) que descreve um modelo de dados padronizado para o setor de varejo, compatível com o Experience Data Model (XDM) para uso no Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

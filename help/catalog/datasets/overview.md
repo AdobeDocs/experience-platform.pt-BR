@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, local de dados, Localização de dados, Gerenciamento de dados, Lineage, linhagem, tipo de dados, tipos de dados, Tipos de dados, Tipo de dados
 solution: Experience Platform
 title: Visão geral dos conjuntos de dados
-topic: conjuntos de dados
+topic: datasets
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

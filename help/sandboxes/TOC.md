@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Ajuda do Sandoboxes na Adobe Experience Platform
 breadcrumb-title: Guia de Sandoxes
 user-guide-description: Particionamento de uma instância do Platform em ambientes virtuais para desenvolvimento, teste e implantação de aplicativos.
-feature: Gerenciamento de dados
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

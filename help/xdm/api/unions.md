@@ -3,7 +3,7 @@ keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema 
 solution: Experience Platform
 title: Ponto de Extremidade da API Unions
 description: O endpoint /unips na API do Registro de Schema permite gerenciar programaticamente esquemas de união XDM em seu aplicativo de experiência.
-topic: guia do desenvolvedor
+topic: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

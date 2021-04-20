@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, fluxo de dados, fluxo de dados
 solution: Experience Platform
 title: Configurar um fluxo de dados para um conector de lote de armazenamento em nuvem na interface do usuário
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem em um conjunto de dados da plataforma. Este tutorial fornece etapas para configurar um novo fluxo de dados usando sua conta de armazenamento em nuvem.
 translation-type: tm+mt

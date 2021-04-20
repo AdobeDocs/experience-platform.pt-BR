@@ -2,7 +2,7 @@
 keywords: Experience Platform, introdução, Attribution ai, tópicos populares, Attribution ai input, Attribution ai output,
 solution: Experience Platform, Intelligent Services
 title: Entrada e saída no Attribution AI
-topic: Dados de entrada e saída do Attribution AI
+topic: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt

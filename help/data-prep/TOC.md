@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guia de preparação de dados
 user-guide-description: Prepare seus dados para assimilação na Adobe Experience Platform.
-feature: Gerenciamento de dados, assimilação de dados
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt

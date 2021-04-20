@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Visão geral de governança, privacidade e segurança
-topic: visão geral
+topic: overview
 description: A Adobe Experience Platform fornece vários serviços e ferramentas que permitem controlar com segurança seus dados de experiência coletados para cumprir suas práticas comerciais, obrigações legais e processo de desenvolvimento.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt

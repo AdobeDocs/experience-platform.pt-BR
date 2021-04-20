@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Coletar dados de comércio eletrônico, dados de comércio eletrônico
 solution: Experience Platform
 title: Coletar dados de comércio eletrônico usando conectores de origem e APIs
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de comércio eletrônico de terceiros e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5

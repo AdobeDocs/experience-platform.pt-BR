@@ -2,7 +2,7 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, painéis, painel, perfis, segmentos, destinos, uso de licença
 title: Modificar painéis da plataforma na interface do usuário
 description: 'Este guia fornece instruções passo a passo para personalizar como os dados do Adobe Experience Platform de sua organização são exibidos nos painéis. '
-topic: guia
+topic: guide
 translation-type: tm+mt
 source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
 workflow-type: tm+mt

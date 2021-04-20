@@ -2,7 +2,7 @@
 keywords: Experience Platform, visão geral, atendimento ao cliente, tópicos populares, visão geral do atendimento ao cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Visão geral do Customer AI
-topic: Visão geral do Customer AI
+topic: Customer AI Overview
 description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 landing-page-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd

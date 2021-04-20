@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Azure Data Explorer, azure data explorer
 solution: Experience Platform
 title: Visão Geral do Conector de Origem do Azure Data Explorer
-topic: visão geral
+topic: overview
 description: Saiba como conectar o Azure Data Explorer à Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

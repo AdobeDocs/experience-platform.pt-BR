@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, armazenamento na nuvem, armazenamento na nuvem
 solution: Experience Platform
 title: Explore um sistema de armazenamento em alto volume usando a API do Serviço de fluxo
-topic: visão geral
+topic: overview
 description: Este tutorial usa a API do Serviço de fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 translation-type: tm+mt
 source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8

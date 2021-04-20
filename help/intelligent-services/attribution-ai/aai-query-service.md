@@ -2,7 +2,7 @@
 keywords: insights, ajuda da atribuição, insights do ai da atribuição, serviço de consulta AAI, consultas de atribuição, pontuações de atribuição
 solution: Intelligent Services, Experience Platform
 title: Analisando Pontuações de Atribuição Usando O Serviço De Query
-topic: Consultas do Attribution AI
+topic: Attribution AI queries
 description: Saiba como usar o Serviço de query da Adobe Experience Platform para analisar pontuações do Attribution AI.
 translation-type: tm+mt
 source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9

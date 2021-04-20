@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, preparação de dados, guia da api, esquemas;
 solution: Experience Platform
 title: Ponto de Extremidade da API de Esquemas
-topic: esquemas
+topic: schemas
 description: 'Você pode usar o endpoint `/functions` na API do Adobe Experience Platform para validar as expressões de mapeamento e listar as funções do conjunto de mapeamentos disponíveis. '
 translation-type: tm+mt
 source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3

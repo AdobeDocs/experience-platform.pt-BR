@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, shopify, Shopify;
 solution: Experience Platform
 title: Visão geral do Conector de origem de compra
-topic: visão geral
+topic: overview
 description: Saiba como conectar o Shopify ao Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

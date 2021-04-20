@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, MySQL, mysql
 solution: Experience Platform
 title: Criar uma conexão de origem MySQL usando a API do Serviço de fluxo
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao MySQL usando a API do Serviço de Fluxo.
 translation-type: tm+mt

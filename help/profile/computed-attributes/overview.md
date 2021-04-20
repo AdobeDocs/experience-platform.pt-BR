@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
 title: Introdução aos atributos calculados
-topic: guia
-type: Documentação
+topic: guide
+type: Documentation
 description: Atributos calculados são funções para agregação de dados no nível do evento em atributos no nível do perfil. Essas funções são computadas automaticamente para que possam ser usadas em segmentação, ativação e personalização.
 translation-type: tm+mt
 source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210

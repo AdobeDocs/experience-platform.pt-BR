@@ -2,7 +2,7 @@
 keywords: Experience Platform; home; tópicos populares; fontes; ingestão; solução de problemas; solução de problemas de fontes; perguntas frequentes sobre fontes; perguntas frequentes; conectores de origem; conector de origem; perguntas frequentes sobre conectores de origem; solução de problemas dos conectores de origem;
 solution: Experience Platform
 title: Solução de problemas de fontes
-topic: solução de problemas
+topic: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre fontes no Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt

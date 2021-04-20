@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Serviço de segmentação, segmentação, serviço de segmentação, guia do usuário, guia da interface do usuário, guia da interface de segmentação, construtor de segmentos, construtor de segmentos, realizado, existente, existente, sair;
 solution: Experience Platform
 title: Guia da interface do usuário do serviço de segmentação
-topic: guia da interface do usuário
+topic: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 translation-type: tm+mt
 source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3

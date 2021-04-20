@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform, preparação de dados, api de preparação de dados, solução de problemas, API
 title: Visão geral da API de preparação de dados
-topic: guia
+topic: guide
 description: A API de preparação de dados permite criar programaticamente conjuntos e funções de mapeamento, permitindo transformar seus dados entre esquemas de origem e de destino.
 translation-type: tm+mt
 source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498

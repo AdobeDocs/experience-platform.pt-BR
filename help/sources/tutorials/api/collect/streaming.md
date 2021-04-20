@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, dados de armazenamento em nuvem, dados de transmissão, streaming
 solution: Experience Platform
 title: Colete dados de transmissão usando conectores de origem e APIs
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4

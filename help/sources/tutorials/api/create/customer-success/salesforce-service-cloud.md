@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, ssc, SSC, Salesforce Service Cloud, salesforce service cloud
 solution: Experience Platform
 title: Criar uma conexão de origem da nuvem do Salesforce Service usando a API do Serviço de fluxo
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform à Salesforce Service Cloud usando a API de Serviço de Fluxo.
 translation-type: tm+mt

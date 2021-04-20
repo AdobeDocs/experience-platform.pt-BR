@@ -2,7 +2,7 @@
 keywords: Experience Platform; JupyterLab; notebooks; Data Science Workspace; tópicos populares; jupyterlab
 solution: Experience Platform
 title: Visão geral da interface do usuário do JupyterLab
-topic: Visão geral
+topic: Overview
 description: O JupyterLab é uma interface de usuário baseada na Web para o Project Jupyter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para os cientistas de dados trabalharem com notebooks, códigos e dados do Júpiter. Este documento fornece uma visão geral do JupyterLab e seus recursos, bem como instruções para executar ações comuns.
 translation-type: tm+mt
 source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de

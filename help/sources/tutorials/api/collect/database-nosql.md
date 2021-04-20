@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, banco de dados, banco de dados de terceiros
 solution: Experience Platform
 title: Coletar dados de um banco de dados usando conectores e APIs de origem
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los no Platform usando conectores de origem e APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683

@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Processamento de consentimento no Adobe Experience Platform
-topic: introdução
+topic: getting started
 description: Saiba como processar sinais de consentimento do cliente no Adobe Experience Platform usando o padrão Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt

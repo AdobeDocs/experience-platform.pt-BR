@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, IAB, IAB 2.0, consentimento, Consentimento
 solution: Experience Platform
 title: Criar conjuntos de dados para capturar dados de consentimento do IAB TCF 2.0
-topic: eventos de privacidade
+topic: privacy events
 description: Este documento fornece etapas para configurar os dois conjuntos de dados necessários para coletar dados de consentimento do IAB TCF 2.0.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

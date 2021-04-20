@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado; unificado;Perfil;rtcp;ativar perfil;Ativar perfil
 title: Guia da API do Perfil do cliente em tempo real
-topic: guia
+topic: guide
 description: A API Perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados do Perfil, incluindo perfis de visualização, criem e atualizem políticas de mesclagem, exportem ou façam amostras de dados do Perfil e excluam dados do Perfil que não são mais necessários ou foram adicionados por engano. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
 source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8

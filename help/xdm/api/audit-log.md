@@ -3,7 +3,7 @@ keywords: Experience Platform; home; tópicos populares; api; API; XDM; sistema 
 solution: Experience Platform
 title: Ponto de extremidade da API de log de auditoria
 description: O endpoint /auditlog na API do Registro de Schema permite recuperar uma lista cronológica de alterações feitas em um recurso XDM existente.
-topic: guia do desenvolvedor
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

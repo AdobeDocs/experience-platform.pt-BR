@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, sistema de automação de marketing, coletar dados de automação de marketing
 solution: Experience Platform
 title: Colete dados da automação de marketing usando conectores de origem e APIs
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de automação de marketing e trazê-los para o Adobe Experience Platform usando conectores de origem e APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076

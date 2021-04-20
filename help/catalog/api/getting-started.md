@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, serviço de catálogo, serviço de catálogo, Catálogo
 solution: Experience Platform
 title: Guia da API do Serviço de catálogo
-topic: guia do desenvolvedor
+topic: developer guide
 description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem os metadados do conjunto de dados na Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

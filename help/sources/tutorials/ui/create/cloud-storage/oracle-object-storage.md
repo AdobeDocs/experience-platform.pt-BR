@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Oracle Object Armazenamento;oracle object armazenamento
 solution: Experience Platform
 title: Criar uma conexão de origem de Armazenamento de objeto Oracle na interface do usuário
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem de Armazenamento Object usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, recusar, segmentação, serviço de segmentação, serviço de segmentação, opções de honra, recusas, rejeitar, excluir;
 solution: Experience Platform
 title: Respeito das solicitações de recusa em segmentos
-topic: visão geral
+topic: overview
 description: 'A Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de recusa fazem parte da California Consumer Privacy Act (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem). '
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

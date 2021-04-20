@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, serviço de segmento, segmento, Segmento, Segmentos, segmentos
 solution: Experience Platform
 title: Visão geral do serviço de segmentação
-topic: visão geral
+topic: overview
 description: Saiba mais sobre o Adobe Experience Platform Segmentation Service e a função que ele desempenha no ecossistema da plataforma.
 translation-type: tm+mt
 source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef

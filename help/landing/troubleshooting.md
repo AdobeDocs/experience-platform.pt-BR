@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Perguntas frequentes e Guia de solução de problemas da Adobe Experience Platform
 description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
 landing-page-description: Encontre respostas para perguntas frequentes e um guia para solucionar erros comuns na Experience Platform.
-topic: introdução
-type: Documentação
+topic: getting started
+type: Documentation
 translation-type: tm+mt
 source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt

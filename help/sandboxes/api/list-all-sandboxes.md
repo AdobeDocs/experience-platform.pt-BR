@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, sandboxes de lista
 solution: Experience Platform
 title: Listar sandboxes na API
-topic: guia do desenvolvedor
+topic: developer guide
 description: Para listar todas as sandboxes pertencentes à sua Organização IMS (ativa ou não), faça uma solicitação do GET ao endpoint /sandboxes .
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -2,7 +2,7 @@
 keywords: Experience Platform, guia do desenvolvedor, Data Science Workspace, tópicos populares, aprendizado de máquina em tempo real;
 solution: Experience Platform
 title: Visão geral do aprendizado de máquina em tempo real
-topic: Visão geral
+topic: Overview
 description: O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do conteúdo de experiência digital para os usuários finais. Isso é possibilitado aproveitando a inferência em tempo real e o aprendizado contínuo no Experience Edge.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, serviço de fluxo, excluir contas, excluir, api
 solution: Experience Platform
 title: Excluir uma conta usando a API do Serviço de fluxo
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Saiba como excluir uma conta usando a API do Serviço de fluxo.
 translation-type: tm+mt

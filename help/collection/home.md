@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, coleta de dados, launch, sdk da web
 solution: Experience Platform
 title: Visão geral da coleta de dados
-topic: visão geral
+topic: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6

@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, conexão de fonte de dados
 solution: Experience Platform
 title: Assimilar dados do parâmetro de um sistema de armazenamento em nuvem de terceiros usando a API do serviço de fluxo
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial usa a API do Serviço de fluxo para orientá-lo pelas etapas para assimilar dados do Apache Parquet de um sistema de armazenamento em nuvem de terceiros.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041

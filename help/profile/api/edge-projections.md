@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API
 title: Endpoints da API de projeção de borda
-topic: guia
-type: Documentação
+topic: guide
+type: Documentation
 description: A Adobe Experience Platform permite que você direcione experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, disponibilizando os dados corretos prontamente e sendo atualizados continuamente à medida que as alterações acontecem. Isso é feito com o uso de bordas, um servidor localizado geograficamente que armazena dados e os torna facilmente acessíveis para os aplicativos.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

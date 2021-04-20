@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, sandboxes ativas de lista, sandboxes de lista
 solution: Experience Platform
 title: Listar sandboxes ativas para o usuário atual na API
-topic: guia do desenvolvedor
+topic: developer guide
 description: Você pode listar as sandboxes que estão ativas para o usuário atual fazendo uma solicitação do GET para o endpoint da raiz.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, SFTP, sftp
 solution: Experience Platform
 title: Criar uma conexão de fonte SFTP na interface do usuário
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem SFTP usando a interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt

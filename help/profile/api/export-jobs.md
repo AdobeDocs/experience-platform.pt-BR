@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API
 title: Exporte o Ponto de Extremidade da API de Tarefas
-topic: guia
+topic: guide
 type: Documentation
 description: O Perfil do cliente em tempo real permite criar uma única visualização de clientes individuais no Adobe Experience Platform, reunindo dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67

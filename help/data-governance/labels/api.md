@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, governança de dados, api de etiqueta de uso de dados, api de serviço de política
 solution: Experience Platform
 title: 'Gerenciar rótulos de uso de dados usando APIs '
-topic: guia do desenvolvedor
+topic: developer guide
 description: A API do Serviço de conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API do Serviço de catálogo que gerencia os metadados do conjunto de dados.
 translation-type: tm+mt
 source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42

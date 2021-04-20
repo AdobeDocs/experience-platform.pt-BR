@@ -2,7 +2,7 @@
 keywords: Experience Platform;introdução;conteúdo ai;comércio ai;conteúdo e comércio ai;;getting started;content ai;commerce ai;content e commerce ai
 solution: Experience Platform, Intelligent Services
 title: Introdução ao AI de conteúdo e comércio
-topic: Getting started
+topic: Getting started 
 description: A API de conteúdo e comércio utiliza APIs da Adobe I/O. Para fazer chamadas para as APIs da Adobe I/O e a integração do console de E/S, você deve primeiro concluir o tutorial de autenticação.
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f

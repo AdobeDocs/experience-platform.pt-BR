@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, ECID, ecid
 solution: Experience Platform
 title: Visão geral da ECID
-topic: visão geral
+topic: overview
 description: O ECID (Experience Cloud Identifier) é o módulo do lado do cliente que fornece acesso ao gerenciamento de identidade, atendendo a três funções principais.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt

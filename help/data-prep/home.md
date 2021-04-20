@@ -2,7 +2,7 @@
 keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário; mapeador; mapeamento; preparação de dados; preparação de dados;
 solution: Experience Platform
 title: Visão geral da preparação de dados
-topic: visão geral
+topic: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt

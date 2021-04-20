@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Kinesis, cinesis, Amazon Kinesis, amazon cinesis
 solution: Experience Platform
 title: Criar uma conexão de origem do Amazon Kinesis usando a API do Serviço de fluxo
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Saiba como conectar a Adobe Experience Platform a uma conta da Amazon Kinesis usando a API do Serviço de Fluxo.
 translation-type: tm+mt

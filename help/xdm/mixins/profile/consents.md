@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Privacidade/Personalização/Mistura de preferências de marketing (Consentimentos)
-topic: visão geral
+topic: overview
 description: Este documento fornece uma visão geral da combinação Privacidade/Personalização/Preferências de marketing (Consentimentos).
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Visão geral dos modelos de dados do setor
-topic: visão geral
+topic: overview
 description: Saiba mais sobre os modelos de dados padronizados para vários ramos do setor que podem ser construídos com os componentes padrão do Experience Data Model (XDM).
 translation-type: tm+mt
 source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populares tópicos
 solution: Experience Platform
 title: Glossário do Adobe Experience Platform
-topic: introdução
+topic: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c

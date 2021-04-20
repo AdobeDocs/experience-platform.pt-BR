@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Classe de definição de segmento
-topic: visão geral
+topic: overview
 description: Este documento fornece uma visão geral da classe de definição de segmento no Experience Data Model (XDM).
 translation-type: tm+mt
 source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53

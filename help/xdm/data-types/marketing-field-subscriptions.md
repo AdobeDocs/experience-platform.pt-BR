@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Campo de preferência de marketing genérico com tipo de dados de assinaturas
-topic: visão geral
+topic: overview
 description: Este documento fornece uma visão geral do Campo de Preferência de Marketing Genérico com o tipo de dados XDM de Assinaturas.
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

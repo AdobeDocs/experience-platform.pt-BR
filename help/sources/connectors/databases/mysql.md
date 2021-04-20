@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, MySQL, mysql, My sql, My SQL
 solution: Experience Platform
 title: Visão Geral do Conector de Origem MySQL
-topic: visão geral
+topic: overview
 description: Saiba como conectar o MySQL ao Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

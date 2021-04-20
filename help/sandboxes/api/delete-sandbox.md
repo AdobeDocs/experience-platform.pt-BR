@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, excluir sandbox
 solution: Experience Platform
 title: Excluir uma sandbox na API
-topic: guia do desenvolvedor
+topic: developer guide
 description: Você pode excluir uma sandbox fazendo uma solicitação de DELETE que inclui o nome da sandbox no caminho da solicitação.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

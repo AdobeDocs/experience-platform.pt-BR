@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, assimilação de dados, dados assimilados, streaming, visão geral, assimilação de streaming, latência, latência de streaming;
 solution: Experience Platform
 title: Visão geral da assimilação de fluxo
-topic: visão geral
+topic: overview
 description: A assimilação de streaming para a Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para a Experience Platform em tempo real.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

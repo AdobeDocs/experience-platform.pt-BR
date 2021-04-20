@@ -3,7 +3,7 @@ keywords: Experience Platform, home, tópicos populares, atualizar fluxos de dad
 description: Este tutorial aborda as etapas para atualizar uma programação de fluxo de dados, incluindo sua frequência de assimilação e taxa de intervalo, usando a área de trabalho Fontes .
 solution: Experience Platform
 title: Atualizar um fluxo de dados da conexão de origem na interface do usuário
-topic: visão geral
+topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt

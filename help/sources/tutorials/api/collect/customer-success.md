@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, coletar o sucesso do cliente, sucesso do cliente
 solution: Experience Platform
 title: Colete dados de um sistema bem-sucedido do cliente usando conectores e APIs de origem
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema bem-sucedido do cliente e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5

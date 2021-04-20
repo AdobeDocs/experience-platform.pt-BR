@@ -2,7 +2,7 @@
 keywords: Experience Platform, página inicial, tópicos populares, segmentação, Segmentação, Serviço de segmentação, segmentação por streaming, segmentação por streaming, avaliação contínua;
 solution: Experience Platform
 title: 'Avaliar eventos em quase tempo real com a segmentação de streaming '
-topic: guia do desenvolvedor
+topic: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt

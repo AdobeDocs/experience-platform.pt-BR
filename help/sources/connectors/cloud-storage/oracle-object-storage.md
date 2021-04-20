@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Oracle Object Armazenamento;oracle object armazenamento
 solution: Experience Platform
 title: Visão geral do conector de origem do Armazenamento do objeto Oracle
-topic: visão geral
+topic: overview
 description: Saiba como conectar o Armazenamento Oracle Object à Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
 source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9

@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Conector de dados do Analytics, analytics, Analytics
 solution: Experience Platform
 title: Conector de fonte do Adobe Analytics para dados do conjunto de relatórios
-topic: visão geral
+topic: overview
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

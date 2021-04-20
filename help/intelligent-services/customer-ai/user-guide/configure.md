@@ -2,7 +2,7 @@
 keywords: Experience Platform, guia do usuário, atendimento ao cliente, tópicos populares, configurar instância, criar instância;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Configurar uma instância do Customer AI
-topic: Criação da instância
+topic: Instance creation
 description: Os Serviços inteligentes fornecem a API do cliente como um serviço de Adobe Sensei simples de usar que pode ser configurado para diferentes casos de uso. As seções a seguir fornecem etapas para configurar uma instância do Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt

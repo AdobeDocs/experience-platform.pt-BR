@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Armazenamento de arquivos do Azure, armazenamento de arquivos do azure
 solution: Experience Platform
 title: Visão Geral do Conector de Origem de Armazenamento de Ficheiros do Azure
-topic: visão geral
+topic: overview
 description: Saiba como conectar o Armazenamento de Arquivos do Azure à Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

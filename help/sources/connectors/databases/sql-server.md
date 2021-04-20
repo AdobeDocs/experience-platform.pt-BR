@@ -2,7 +2,7 @@
 keywords: Experience Platform; home; tópicos populares; Microsoft SQL; microsoft sql; SQL; sql
 solution: Experience Platform
 title: Visão Geral do Conector de Origem do SQL Server
-topic: visão geral
+topic: overview
 description: Saiba como conectar o Microsoft SQL Server à Adobe Experience Platform usando APIs ou a interface do usuário.
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

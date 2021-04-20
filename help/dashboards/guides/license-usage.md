@@ -2,8 +2,8 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, personalização, painel de uso de licença, painel, uso de licença, direito, consumo
 title: Painel de uso de licença
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da sua organização.
-topic: guia
-type: Documentação
+topic: guide
+type: Documentation
 translation-type: tm+mt
 source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt

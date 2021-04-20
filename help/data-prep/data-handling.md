@@ -2,7 +2,7 @@
 keywords: Experience Platform; home; tópicos populares; mapear csv; mapear arquivo csv; mapear arquivo csv para xdm; mapear csv para xdm; guia da interface do usuário; mapeador; mapeamento; preparação de dados; preparação de dados;
 solution: Experience Platform
 title: Manuseio de formatos de dados com Preparação de dados
-topic: visão geral
+topic: overview
 description: Este documento fornece uma visão geral de como diferentes tipos de dados são tratados na Preparação de dados.
 translation-type: tm+mt
 source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f

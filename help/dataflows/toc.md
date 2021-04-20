@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guia de fluxos de dados
 user-guide-description: Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma.
-feature: Gerenciamento de dados, assimilação de dados
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

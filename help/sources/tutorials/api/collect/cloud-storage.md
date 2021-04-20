@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, dados de armazenamento na nuvem
 solution: Experience Platform
 title: Colete dados de armazenamento em nuvem usando conectores e APIs de origem
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f

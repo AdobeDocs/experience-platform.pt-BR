@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, guia do usuário da sandbox, guia da sandbox
 solution: Experience Platform
 title: Guia da interface do usuário do Sandbox
-topic: Guia do usuário
+topic: user guide
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

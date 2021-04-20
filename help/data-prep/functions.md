@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, mapear csv, mapear arquivo csv, mapear arquivo csv para xdm, mapear csv para xdm, guia da interface do usuário, mapear, mapear campos, mapear funções de mapeamento;
 solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
-topic: visão geral
+topic: overview
 description: Este documento apresenta as funções de mapeamento usadas com a Preparação de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt

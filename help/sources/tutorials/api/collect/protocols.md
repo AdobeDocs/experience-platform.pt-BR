@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, Coletar dados do protocolo, dados do protocolo
 solution: Experience Platform
 title: Coletar dados de protocolos usando conectores de origem e APIs
-topic: visão geral
+topic: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de protocolos e assimilá-los na plataforma usando conectores de origem e APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d

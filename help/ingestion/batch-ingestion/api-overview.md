@@ -2,7 +2,7 @@
 keywords: Experience Platform, home, tópicos populares, ingestão em lote, ingestão em lote, ingestão, guia do desenvolvedor, guia da api, carregar, assimilar parquet, assimilar json;
 solution: Experience Platform
 title: Guia da API de assimilação em lote
-topic: guia do desenvolvedor
+topic: developer guide
 description: Este documento fornece uma visão geral abrangente do uso de APIs de ingestão em lote.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt

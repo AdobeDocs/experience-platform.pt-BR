@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
 title: Expressões PQL de amostra para atributos calculados
-topic: guia
-type: Documentação
+topic: guide
+type: Documentation
 description: Atributos calculados são funções usadas para agregação de dados no nível do evento em atributos no nível do perfil. Essas funções exigem o uso de expressões válidas de Linguagem de Query de Perfil (PQL). Este guia descreve algumas das expressões PQL mais usadas para atributos calculados.
 translation-type: tm+mt
 source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04

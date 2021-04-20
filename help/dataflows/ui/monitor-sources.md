@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular tópicos;monitorar contas;monitorar f
 description: Este tutorial fornece etapas para monitorar seu fluxo de dados, usando visualização de monitoramento agregado e monitoramento entre serviços.
 solution: Experience Platform
 title: Monitorar fluxos de dados para fontes na interface do usuário
-topic: visão geral
+topic: overview
 type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356

@@ -1,14 +1,13 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
-feature: Data Ingestion, Sources
+feature: Assimilação de dados, Fontes
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '602'
 ht-degree: 13%
 
 ---
@@ -27,6 +26,11 @@ ht-degree: 13%
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo de destino](connectors/adobe-applications/mapping/target.md)
+         - [Mapeamentos de campo Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage {#marketo}
+         - [conector Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
+         - [Guia de autenticação de Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage namespaces e schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Publicidade {#advertising}
       - [Conector do Google AdWords](connectors/advertising/ads.md)
    - Armazenamento em nuvem {#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 13%
          - [Adobe Analytics (dados de classificações)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Atributos do cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Publicidade {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Armazenamento em nuvem {#cloud-storage}

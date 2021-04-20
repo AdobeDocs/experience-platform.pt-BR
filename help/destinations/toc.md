@@ -6,9 +6,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '470'
 ht-degree: 10%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 10%
       * [Extensão Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extensão de ramificação](./catalog/advertising/branch.md)
       * [Extensão DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
-      * [Extensão Pixel do Facebook](./catalog/advertising/facebook-pixel.md)
+      * [Extensão facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Extensão Flashtalk OneTag](./catalog/advertising/flashtalking.md)
       * [Conexão com o Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensão do Google Ads](./catalog/advertising/google-ads-extension.md)
@@ -52,11 +52,11 @@ ht-degree: 10%
       * [Conexão de correspondência do cliente do Google](./catalog/advertising/google-customer-match.md)
       * [Conexão Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extensão gtag do Google](./catalog/advertising/gtag-advertising.md)
-      * [Extensão de tag do LinkedIn Insight](./catalog/advertising/linkedin.md)
+      * [Extensão de tag do linkedIn Insight](./catalog/advertising/linkedin.md)
       * [Conexão do Microsoft Bing](./catalog/advertising/bing.md)
-      * [Extensão de rastreamento de conversão Pinterest](./catalog/advertising/pinterest.md)
+      * [Extensão de rastreamento de conversão do pinterest](./catalog/advertising/pinterest.md)
       * [A conexão com o Trade Desk](./catalog/advertising/tradedesk.md)
-      * [Extensão de tag do Twitter Universal Website](./catalog/advertising/twitter-uwt.md)
+      * [Extensão de tag do site universal do twitter](./catalog/advertising/twitter-uwt.md)
    * Destinos do Analytics {#analytics}
       * [Visão geral dos destinos do Analytics](./catalog/analytics/overview.md)
       * [Adicionar extensão de rastreamento de site](./catalog/analytics/adform.md)
@@ -118,11 +118,11 @@ ht-degree: 10%
       * [Extensão do Gainsight](./catalog/personalization/gainsight.md)
       * [Extensão KickFire](./catalog/personalization/kickfire.md)
       * [Extensão Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-   * Destinos de rede social{#social}
-      * [Visão geral dos destinos de rede social](./catalog/social/overview.md)
-      * [Criar um destino de rede social](./catalog/social/workflow.md)
+   * Destinos sociais{#social}
+      * [Visão geral dos destinos sociais](./catalog/social/overview.md)
+      * [Criar um destino social](./catalog/social/workflow.md)
       * [Extensão do Adobe Livefyre](./catalog/social/adobe-livefyre.md)
-      * [Conexão do Facebook](./catalog/social/facebook.md)
+      * [Conexão facebook](./catalog/social/facebook.md)
       * [Conexão de públicos-alvo correspondentes do Linkedin](./catalog/social/linkedin.md)
    * Destinos da pesquisa {#survey}
       * [Visão geral dos destinos da pesquisa](./catalog/survey/overview.md)

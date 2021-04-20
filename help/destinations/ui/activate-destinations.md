@@ -7,9 +7,9 @@ description: Ative os dados que você tem no Adobe Experience Platform mapeando 
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Na página **[!UICONTROL Segment schedule]** , é possível definir a data de in
 >
 >Para destinos sociais, você deve selecionar a origem do público nesta etapa. Você pode prosseguir para a próxima etapa somente após selecionar uma das opções na imagem abaixo.
 
-![Origem do público-alvo do Facebook](../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origem do público-alvo do facebook](../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 >[!IMPORTANT]
 >
@@ -264,7 +264,7 @@ A presença desses arquivos no local de armazenamento é a confirmação de uma 
 
 Verifique sua conta no respectivo destino de publicidade para o qual você está ativando seus dados. Se a ativação foi bem-sucedida, os públicos-alvo são preenchidos em sua plataforma de publicidade.
 
-## Destinos da rede social
+## Destinos sociais
 
 Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo personalizado [!DNL Facebook] seria criado programaticamente em [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento no público-alvo seria adicionada e removida, pois os usuários eram qualificados ou desqualificados para os segmentos ativados.
 

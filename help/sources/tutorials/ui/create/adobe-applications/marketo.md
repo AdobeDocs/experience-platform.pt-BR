@@ -1,0 +1,187 @@
+---
+keywords: Experience Platform, home, tópicos populares, conector de origem do Marketo, conector do Marketo, fonte do Marketo, Marketo
+solution: Experience Platform
+title: Crie um conector de origem do Marketo Engage na interface do usuário
+topic: visão geral
+type: Tutorial
+description: Este tutorial fornece etapas para criar um conector de fonte Marketo Engage na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
+translation-type: tm+mt
+source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+workflow-type: tm+mt
+source-wordcount: '1318'
+ht-degree: 0%
+
+---
+
+
+# (Beta) Crie um conector de origem [!DNL Marketo Engage] na interface do usuário
+
+>[!IMPORTANT]
+>
+>A fonte [!DNL Marketo Engage] está atualmente em beta. O recurso e a documentação estão sujeitos a alterações. Além disso, é necessário garantir que você esteja usando uma sandbox de não produção ao usar o conector durante o programa beta. Para obter mais informações sobre sandboxes, consulte a [documentação sobre sandboxes](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
+
+Este tutorial fornece etapas para criar um conector de origem [!DNL Marketo Engage] (a seguir chamado &quot;[!DNL Marketo]&quot;) na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
+
+## Introdução
+
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+
+* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Modelo de dados de experiência (XDM)](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+   * [Criar e editar esquemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md): Saiba como criar e editar esquemas na interface do usuário.
+* [Namespaces](../../../../../identity-service/namespaces.md) de identidade: Os namespaces de identidade são um componente do  [!DNL Identity Service] que serve como indicadores do contexto ao qual uma identidade está relacionada. Uma identidade totalmente qualificada inclui um valor de ID e um namespace.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+
+### Obter credenciais necessárias
+
+Para acessar sua conta [!DNL Marketo] no Platform, você deve fornecer os seguintes valores:
+
+| Credencial | Descrição |
+| ---------- | ----------- |
+| `munchkinId` | A ID do Munchkin é o identificador exclusivo de uma instância [!DNL Marketo] específica. |
+| `clientId` | A ID de cliente exclusiva da sua instância [!DNL Marketo]. |
+| `clientSecret` | O segredo de cliente exclusivo da sua instância [!DNL Marketo]. |
+
+Para obter mais informações sobre a aquisição desses valores, consulte o [[!DNL Marketo] guia de autenticação](../../../../connectors/adobe-applications/marketo/marketo-auth.md).
+
+Depois de coletar suas credenciais necessárias, siga as etapas da próxima seção.
+
+## Conecte sua conta [!DNL Marketo]
+
+Na interface do usuário da plataforma, selecione **[!UICONTROL Sources]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. A tela [!UICONTROL Catalog] exibe uma variedade de fontes com as quais você pode criar uma conta.
+
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
+
+Na categoria [!UICONTROL Adobe applications], selecione **[!UICONTROL Marketo Engage]**. Em seguida, selecione **[!UICONTROL Add data]** para criar um novo fluxo de dados [!DNL Marketo].
+
+![catálogo](../../../../images/tutorials/create/marketo/catalog.png)
+
+A página **[!UICONTROL Connect to Marketo Engage]** é exibida. Nesta página, você pode usar uma nova conta ou acessar uma conta existente.
+
+### Nova conta
+
+Se estiver criando uma nova conta, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome de conta, uma descrição opcional e suas credenciais de autenticação [!DNL Marketo]. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+
+![nova conta](../../../../images/tutorials/create/marketo/new.png)
+
+### Conta existente
+
+Para criar um fluxo de dados com uma conta existente, selecione **[!UICONTROL Existing account]** e selecione a conta [!DNL Marketo] que deseja usar. Selecione **[!UICONTROL Next]** para continuar.
+
+![existente](../../../../images/tutorials/create/marketo/existing.png)
+
+## Selecionar um conjunto de dados
+
+Depois de criar sua conta [!DNL Marketo], a próxima etapa fornece uma interface para você explorar [!DNL Marketo] conjuntos de dados.
+
+A metade esquerda da interface é um navegador de diretório, exibindo os 10 conjuntos de dados [!DNL Marketo]. Uma conexão de origem [!DNL Marketo] que funcione totalmente requer a assimilação dos nove conjuntos de dados diferentes. Se você também estiver usando o recurso de [!DNL Marketo's] marketing baseado em conta (ABM), também deverá criar um 10º fluxo de dados para assimilar o conjunto de dados [!UICONTROL Named Accounts].
+
+>[!NOTE]
+>
+>Por motivos de brevidade, o tutorial a seguir usa [!UICONTROL Named Acccounts] como exemplo, mas as etapas descritas abaixo se aplicam a qualquer um dos 10 conjuntos de dados [!DNL Marketo].
+
+Selecione o conjunto de dados que deseja assimilar primeiro e selecione **[!UICONTROL Next]**.
+
+![select-data](../../../../images/tutorials/create/marketo/select-data.png)
+
+## Mapear campos de dados para um esquema XDM
+
+A etapa [!UICONTROL Mapping] é exibida, fornecendo uma interface para mapear o conjunto de dados [!DNL Marketo] para um conjunto de dados da plataforma.
+
+Escolha um conjunto de dados para os dados de entrada que serão assimilados. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
+
+### Usar um conjunto de dados existente
+
+Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Use existing dataset]** e selecione o ícone do conjunto de dados.
+
+![conjunto de dados existente](../../../../images/tutorials/create/marketo/existing-dataset.png)
+
+A caixa de diálogo **[!UICONTROL Select dataset]** é exibida. Encontre o conjunto de dados com o schema apropriado que deseja usar, selecione-o e, em seguida, selecione **[!UICONTROL Confirm]**.
+
+![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
+
+### Usar um novo conjunto de dados
+
+Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL Create new dataset]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
+
+Você pode procurar um esquema inserindo seu nome na barra de pesquisa **[!UICONTROL Select schema]**. Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar **[!UICONTROL Advanced search]** para acessar a página de esquemas existentes, incluindo seus respectivos detalhes.
+
+Alterne o botão **[!UICONTROL Profile dataset]** para ativar o conjunto de dados de destino para [!DNL Profile], permitindo criar uma exibição holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados para [!DNL Profile] serão incluídos em [!DNL Profile] e as alterações serão aplicadas quando você salvar o fluxo de dados.
+
+![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
+
+Depois de selecionar um esquema, role para baixo para exibir a caixa de diálogo de mapeamento para começar a mapear os campos do conjunto de dados [!DNL Marketo] para os campos XDM de destino apropriados.
+
+### Mapear os campos de origem do conjunto de dados [!DNL Marketo] para campos XDM de destino
+
+Cada conjunto de dados [!DNL Marketo] tem suas próprias regras de mapeamento específicas a serem seguidas. Consulte o seguinte para obter mais informações sobre como mapear conjuntos de dados [!DNL Marketo] para XDM:
+
+* [Atividades](../../../../connectors/adobe-applications/mapping/marketo.md#activities)
+* [Programas](../../../../connectors/adobe-applications/mapping/marketo.md#programs)
+* [Associações do programa](../../../../connectors/adobe-applications/mapping/marketo.md#program-memberships)
+* [Empresas](../../../../connectors/adobe-applications/mapping/marketo.md#companies)
+* [Listas estáticas](../../../../connectors/adobe-applications/mapping/marketo.md#static-lists)
+* [Associações da lista estática](../../../../connectors/adobe-applications/mapping/marketo.md#static-list-memberships)
+* [Contas Nomeadas](../../../../connectors/adobe-applications/mapping/marketo.md#named-accounts)
+* [Oportunidades](../../../../connectors/adobe-applications/mapping/marketo.md#opportunities)
+* [Funções de contato da oportunidade](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
+* [Pessoas](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
+
+Selecione **[!UICONTROL Preview data]** para ver os resultados do mapeamento com base no conjunto de dados selecionado.
+
+![mapeamento](../../../../images/tutorials/create/marketo/mapping.png)
+
+A [!UICONTROL Preview] janela fornece uma interface para explorar os resultados do mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+
+![visualização](../../../../images/tutorials/create/marketo/mapping-preview.png)
+
+Depois que os campos de origem forem mapeados para os campos de destino apropriados, selecione **[!UICONTROL Close]**.
+
+## Fornecer detalhes do fluxo de dados
+
+A etapa [!UICONTROL Dataflow detail] é exibida, permitindo que você forneça um nome e uma breve descrição sobre o novo fluxo de dados.
+
+![detalhe do fluxo de dados](../../../../images/tutorials/create/marketo/dataflow-detail.png)
+
+Ative a opção **[!UICONTROL Error diagnostics]** para permitir a geração detalhada de mensagens de erro para lotes recém-assimilados, que pode ser baixada usando a API .
+
+![erros](../../../../images/tutorials/create/marketo/errors.png)
+
+O conector [!DNL Marketo] usa a assimilação em lote para assimilar todos os registros históricos e usa a assimilação de streaming para atualizações em tempo real. Isso permite que o conector continue o streaming ao assimilar qualquer registro incorreto. Ative o botão **[!UICONTROL Partial ingestion]** e defina o [!UICONTROL Error threshold %] como máximo para impedir que o fluxo de dados falhe.
+
+**[!UICONTROL Partial ingestion]** O oferece a capacidade de assimilar dados que contenham erros até um determinado limite. Para obter mais informações, consulte a [visão geral da ingestão parcial de lote](../../../../../ingestion/batch-ingestion/partial.md).
+
+Depois de fornecer os detalhes do fluxo de dados e definir o limite de erro como máximo, selecione **[!UICONTROL Next]**.
+
+![ingestão parcial](../../../../images/tutorials/create/marketo/partial-ingestion.png)
+
+## Revisar o fluxo de dados
+
+A etapa **[!UICONTROL Review]** é exibida, permitindo que você revise o novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
+
+* **[!UICONTROL Connection]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas dentro desse arquivo de origem.
+* **[!UICONTROL Assign dataset & map fields]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
+
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Finish]** e aguarde algum tempo para que o fluxo de dados seja criado.
+
+![revisão](../../../../images/tutorials/create/marketo/review.png)
+
+## Monitorar o fluxo de dados
+
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre taxas de ingestão, sucesso e erros. Para obter mais informações sobre como monitorar fluxos de dados, consulte o tutorial em [monitorando fluxos de dados na interface do usuário](../../../../../dataflows/ui/monitor-sources.md).
+
+## Excluir seus atributos
+
+Os atributos personalizados em conjuntos de dados não podem ser ocultos ou removidos retroativamente. Se quiser ocultar ou remover um atributo personalizado de um conjunto de dados existente, será necessário criar um novo conjunto de dados sem esse atributo personalizado, um novo esquema XDM e configurar um novo fluxo de dados para o novo conjunto de dados que você criar. Você também deve desativar ou excluir o fluxo de dados original que consiste no conjunto de dados com o atributo personalizado que deseja ocultar ou remover.
+
+## Excluir seu fluxo de dados
+
+Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho [!UICONTROL Dataflows]. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [excluir fluxos de dados na interface do usuário](../../delete.md).
+
+## Próximas etapas
+
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer [!DNL Marketo] dados. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+
+* [[!DNL Real-time Customer Profile] visão geral](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] visão geral](../../../../data-science-workspace/home.md)

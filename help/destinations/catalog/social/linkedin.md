@@ -4,9 +4,9 @@ title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 
 ## Conecte-se ao destino {#connect-destination}
 
-Para se conectar ao destino [!DNL LinkedIn Matched Audiences], consulte [Fluxo de trabalho de autenticação de destinos de rede social](./workflow.md).
+Para se conectar ao destino [!DNL LinkedIn Matched Audiences], consulte [Fluxo de trabalho de autenticação de destinos sociais](./workflow.md).
 
 O vídeo abaixo também demonstra as etapas para configurar um destino [!DNL LinkedIn Matched Audiences] e ativar segmentos.
 

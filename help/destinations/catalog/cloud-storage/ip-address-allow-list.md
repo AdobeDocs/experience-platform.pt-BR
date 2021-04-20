@@ -1,16 +1,16 @@
 ---
-keywords: Endereço IP, intervalo de IP, destinos de lista de permissões
+keywords: Endereço IP, intervalo de IP, destinos de lista de permissões, lista de permissões
 title: 'LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em nuvem '
-type: Documentação
+type: Documentation
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar com segurança os dados do Experience Platform para o servidor SFTP, o Amazon S3 ou o armazenamento do Azure Blob.
+exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
-
 
 # LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento em nuvem {#ip-address-allow-list}
 

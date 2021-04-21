@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;home;popular topics;identidades de lista;cluster de listas;home;popular topics;identities;
+keywords: Experience Platform, home, tópicos populares, identidades de lista, cluster de lista
 solution: Experience Platform
-title: Lista de todas as identidades em um cluster
-topic: API guide
-description: As identidades que estão relacionadas em um gráfico de identidade, independentemente da namespace, são consideradas parte do mesmo "cluster" nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
+title: Listar todas as identidades em um cluster
+topic-legacy: API guide
+description: As identidades relacionadas em um gráfico de identidade, independentemente do namespace, são consideradas parte do mesmo "cluster" nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
+exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 1%
 
 ---
 
+# Listar todas as identidades em um cluster
 
-# Lista de todas as identidades em um cluster
-
-As identidades que estão relacionadas em um gráfico de identidade, independentemente da namespace, são consideradas parte do mesmo &quot;cluster&quot; nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
+As identidades relacionadas em um gráfico de identidade, independentemente do namespace, são consideradas parte do mesmo &quot;cluster&quot; nesse gráfico de identidade. As opções abaixo fornecem os meios para acessar todos os membros do cluster.
 
 ## Obter identidades associadas para uma única identidade
 
 Recupere todos os membros do cluster para obter uma única identidade.
 
-Você pode usar o parâmetro opcional `graph-type` para indicar o gráfico de identidade do qual o cluster será obtido. As opções são:
+Você pode usar o parâmetro opcional `graph-type` para indicar o gráfico de identidade do qual obter o cluster. As opções são:
 
-- Nenhum - Não execute nenhum ajuste de identidade.
-- Gráfico privado - Realize a identificação com base no seu gráfico de identidade particular. Se nenhum `graph-type` for fornecido, esse será o padrão.
+- Nenhum - Não execute nenhum agrupamento de identidade.
+- Gráfico privado - Execute a compilação de identidade com base no seu gráfico de identidade privado. Se nenhum `graph-type` for fornecido, esse será o padrão.
 
 **Formato da API**
 
@@ -56,7 +56,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção desse documento cobrindo [obter o XID de uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento cobrindo [obter o XID para uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -73,7 +73,7 @@ Use `POST` como um equivalente em lote do método `GET` descrito acima para reto
 
 >[!NOTE]
 >
->O pedido deve indicar no máximo 1000 identidades. As solicitações que excederem 1000 identidades resultarão em um código de status 400.
+>A solicitação deve indicar no máximo 1000 identidades. Solicitações que excedem 1000 identidades resultarão em um código de status 400.
 
 **Formato da API**
 
@@ -83,11 +83,11 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **Solicitação**
 
-A solicitação a seguir demonstra o fornecimento de uma lista de XIDs para a qual recuperar membros do cluster.
+A solicitação a seguir demonstra o fornecimento de uma lista de XIDs para os quais recuperar membros do cluster.
 
 **Solicitação de Stub**
 
-O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta com bloqueio. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão sendo concluídos. Isso será substituído quando não for mais necessário.
+O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta sobreposta. Trata-se de uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão a ser concluídos. Isso será substituído quando não for mais necessário.
 
 ```shell
 curl -X POST \
@@ -239,8 +239,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->A resposta sempre terá uma entrada para cada XID fornecido na solicitação, independentemente de os XIDs de uma solicitação pertencerem ao mesmo cluster ou se um ou mais têm algum cluster associado.
+>A resposta sempre terá uma entrada para cada XID fornecido na solicitação independentemente de os XIDs de uma solicitação pertencerem ao mesmo cluster ou se um ou mais têm um cluster associado.
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para [lista do histórico de cluster de uma identidade](./list-cluster-history.md)
+Prossiga para o próximo tutorial para [listar o histórico do cluster de uma identidade](./list-cluster-history.md)

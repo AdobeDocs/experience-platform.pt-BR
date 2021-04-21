@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, Google PubSub, google pubsub
 solution: Experience Platform
 title: Visão geral do Google PubSub Source Connector
-topic: overview
-description: Saiba como conectar o Google PubSub à Adobe Experience Platform usando APIs ou a interface do usuário.
+topic-legacy: overview
+description: Saiba como conectar o Google PubSub ao Adobe Experience Platform usando APIs ou a interface do usuário.
+exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
-
 
 # Conector (Beta) [!DNL Google PubSub]
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >O conector [!DNL Google PubSub] está em beta. Consulte a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
-A Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], permitindo que você traga dados desses sistemas para a Platform para uso em serviços e destinos de downstream.
+A Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], permitindo que você traga dados desses sistemas para a Plataforma para uso em serviços e destinos de downstream.
 
 As fontes de armazenamento em nuvem podem trazer seus dados para a plataforma sem a necessidade de baixar, formatar ou fazer upload. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de fontes. A Platform permite trazer dados de [!DNL Azure Event Hubs] em tempo real.
 
-## Lista de permissões de endereço IP
+## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [Lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Conectar [!DNL Google PubSub] à plataforma
 

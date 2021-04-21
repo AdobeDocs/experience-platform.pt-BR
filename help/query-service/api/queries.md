@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;query;query;Query service;
+keywords: Experience Platform, home, tópicos populares, serviço de consulta, guia de api, consultas, query, serviço de query;
 solution: Experience Platform
-title: Ponto Final da API de query
-topic: queries
-description: As seções a seguir percorrem as chamadas que você pode fazer usando o terminal /query na API de serviço do Query.
+title: Ponto de Extremidade da API de Consultas
+topic-legacy: queries
+description: As seções a seguir abordam as chamadas que você pode fazer usando o endpoint /queries na API do Serviço de query.
+exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 2%
 
 ---
 
+# Ponto de extremidade de consultas
 
-# Ponto de extremidade de query
+## Exemplos de chamadas à API
 
-## Chamadas de API de exemplo
+As seções a seguir percorrem as chamadas que você pode fazer usando o terminal `/queries` na API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra que mostra os cabeçalhos necessários e uma resposta de amostra.
 
-As seções a seguir percorrem as chamadas que você pode fazer usando o terminal `/queries` na API [!DNL Query Service]. Cada chamada inclui o formato de API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+### Recuperar uma lista de consultas
 
-### Recuperar uma lista de query
-
-Você pode recuperar uma lista de todos os query para sua Organização IMS fazendo uma solicitação de GET para o terminal `/queries`.
+Você pode recuperar uma lista de todas as consultas da Organização IMS fazendo uma solicitação GET para o endpoint `/queries`.
 
 **Formato da API**
 
@@ -30,24 +30,24 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por E comercial (`&`). Os parâmetros disponíveis estão listados abaixo.
+- `{QUERY_PARAMETERS}`: (*Opcional*) Parâmetros adicionados ao caminho da solicitação que configuram os resultados retornados na resposta. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`). Os parâmetros disponíveis estão listados abaixo.
 
-**Parâmetros do query**
+**Parâmetros de consulta**
 
-A seguir está uma lista de parâmetros de query disponíveis para listar query. Todos esses parâmetros são opcionais. Efetuar uma chamada para este terminal sem parâmetros recuperará todos os query disponíveis para a sua organização.
+Veja a seguir uma lista de parâmetros de query disponíveis para listar queries. Todos esses parâmetros são opcionais. Fazer uma chamada para esse terminal sem parâmetros recuperará todas as consultas disponíveis para sua organização.
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos suportados são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. A adição de `-` antes de criado (`orderby=-created`) classificará os itens por meio de itens criados em ordem decrescente. |
-| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados que são incluídos em uma página. (*Valor padrão: 20*) |
-| `start` | Desloca a lista de resposta, usando a numeração com base em zero. Por exemplo, `start=2` retornará uma lista a partir do query listado. (*Valor padrão: 0*) |
-| `property` | Filtrar resultados com base em campos. Os filtros **must** devem ter escape de HTML. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos suportados são `created`, `updated`, `state` e `id`. A lista dos operadores suportados é `>` (maior que), `<` (menor que), `>=` (maior que ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todos os query com a ID especificada. |
-| `excludeSoftDeleted` | Indica se um query que tenha sido excluído de forma suave deve ser incluído. Por exemplo, `excludeSoftDeleted=false` **incluirá** query excluídos por software. (*Booliano, valor padrão: true*) |
-| `excludeHidden` | Indica se query não controlados pelo usuário devem ser exibidos. Ter esse valor definido como false **incluirá** query não orientados pelo usuário, como definições CURSOR, FETCH ou query de metadados. (*Booliano, valor padrão: true*) |
+| `orderby` | Especifica o campo pelo qual ordenar os resultados. Os campos compatíveis são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por criados em ordem crescente. Adicionar um `-` antes de criado (`orderby=-created`) classificará os itens por criado em ordem decrescente. |
+| `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
+| `start` | Desloca a lista de resposta usando a numeração baseada em zero. Por exemplo, `start=2` retornará uma lista a partir da terceira query listada. (*Valor padrão: 0*) |
+| `property` | Filtre os resultados com base nos campos. Os filtros **devem** ter escape de HTML. Vírgulas são usadas para combinar vários conjuntos de filtros. Os campos compatíveis são `created`, `updated`, `state` e `id`. A lista de operadores suportados é `>` (maior que), `<` (menor que), `>=` (maior que ou igual a), `<=` (menor que ou igual a), `==` (igual a), `!=` (não igual a) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
+| `excludeSoftDeleted` | Indica se uma consulta que foi excluída de forma flexível deve ser incluída. Por exemplo, `excludeSoftDeleted=false` incluirá **consultas excluídas por software.** (*Booliano, valor padrão: true*) |
+| `excludeHidden` | Indica se consultas não orientadas por usuários devem ser exibidas. Ter esse valor definido como falso incluirá **consultas não orientadas por usuário, como definições CURSOR, FETCH ou consultas de metadados.** (*Booliano, valor padrão: true*) |
 
 **Solicitação**
 
-A solicitação a seguir recupera o query mais recente criado para sua organização IMS.
+A solicitação a seguir recupera a consulta mais recente criada para a organização IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de query para a Organização IMS especificada como JSON. A resposta a seguir retorna o query mais recente criado para sua organização IMS.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas para a Organização IMS especificada como JSON. A resposta a seguir retorna a consulta mais recente criada para a organização IMS.
 
 ```json
 {
@@ -120,7 +120,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de query para 
 
 ### Criar um query
 
-Você pode criar um novo query fazendo uma solicitação POST para o terminal `/queries`.
+Você pode criar um novo query fazendo uma solicitação POST ao endpoint `/queries`.
 
 **Formato da API**
 
@@ -130,7 +130,7 @@ POST /queries
 
 **Solicitação**
 
-A solicitação a seguir cria um novo query, configurado pelos valores fornecidos na carga:
+A solicitação a seguir cria um novo query, configurado pelos valores fornecidos no payload:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -149,14 +149,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `dbName` | O nome do banco de dados para o qual você está criando um query SQL. |
-| `sql` | O query SQL que você deseja criar. |
-| `name` | O nome do seu query SQL. |
-| `description` | A descrição do seu query SQL. |
+| `dbName` | O nome do banco de dados para o qual você está criando uma consulta SQL. |
+| `sql` | A consulta SQL que você deseja criar. |
+| `name` | O nome da sua consulta SQL. |
+| `description` | A descrição da sua consulta SQL. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do query recém-criado. Quando o query terminar de ser ativado e for executado com êxito, o `state` mudará de `SUBMITTED` para `SUCCESS`.
+Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com detalhes da sua query recém-criada. Quando o query terminar de ativar e for executado com êxito, o `state` será alterado de `SUBMITTED` para `SUCCESS`.
 
 ```json
 {
@@ -199,11 +199,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do que
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.cancel` para [cancelar o query criado](#cancel-a-query).
+>Você pode usar o valor de `_links.cancel` para [cancelar a consulta criada](#cancel-a-query).
 
-### Recuperar um query por ID
+### Recuperar uma consulta por ID
 
-Você pode recuperar informações detalhadas sobre um query específico, fazendo uma solicitação de GET para o terminal `/queries` e fornecendo o valor `id` do query no caminho da solicitação.
+Você pode recuperar informações detalhadas sobre uma consulta específica fazendo uma solicitação do GET para o endpoint `/queries` e fornecendo o valor `id` da consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -213,7 +213,7 @@ GET /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | O valor `id` do query que você deseja recuperar. |
+| `{QUERY_ID}` | O valor `id` da consulta que você deseja recuperar. |
 
 **Solicitação**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre o query especificado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a consulta especificada.
 
 ```json
 {
@@ -270,11 +270,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 >[!NOTE]
 >
->Você pode usar o valor de `_links.cancel` para [cancelar o query criado](#cancel-a-query).
+>Você pode usar o valor de `_links.cancel` para [cancelar a consulta criada](#cancel-a-query).
 
-### Cancelar um query
+### Cancelar uma consulta
 
-Você pode solicitar a exclusão de um query especificado, fazendo uma solicitação de PATCH para o terminal `/queries` e fornecendo o valor `id` do query no caminho da solicitação.
+Você pode solicitar a exclusão de uma consulta especificada, fazendo uma solicitação de PATCH ao endpoint `/queries` e fornecendo o valor `id` da consulta no caminho da solicitação.
 
 **Formato da API**
 
@@ -284,12 +284,12 @@ PATCH /queries/{QUERY_ID}
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{QUERY_ID}` | O valor `id` do query que você deseja cancelar. |
+| `{QUERY_ID}` | O valor `id` da consulta que você deseja cancelar. |
 
 
 **Solicitação**
 
-Essa solicitação de API usa a sintaxe do Patch JSON para sua carga. Para obter mais informações sobre como a correção JSON funciona, leia o documento de fundamentos da API.
+Essa solicitação de API usa a sintaxe do Patch JSON para sua carga útil. Para obter mais informações sobre como o patch JSON funciona, leia o documento de fundamentos da API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -305,11 +305,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `op` | Para cancelar o query, você deve definir o parâmetro op com o valor `cancel `. |
+| `op` | Para cancelar a consulta, você deve definir o parâmetro op com o valor `cancel `. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com a seguinte mensagem:
+Uma resposta bem-sucedida retorna o status HTTP 202 (Accepted) com a seguinte mensagem:
 
 ```json
 {

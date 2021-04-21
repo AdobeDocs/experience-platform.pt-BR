@@ -1,61 +1,61 @@
 ---
-keywords: Experience Platform;lar;tópicos populares; notificações
-description: Ao assinar Eventos Adobe I/O, você pode usar webhooks para receber notificações relacionadas aos status de execução de fluxo de suas conexões de origem. Essas notificações contêm informações sobre o sucesso de sua execução de fluxo ou erros que contribuíram para a falha de uma execução.
+keywords: Experience Platform; home; tópicos populares; notificações
+description: Ao se inscrever em Adobe I/O Events, você pode usar webhooks para receber notificações sobre os status de execução de fluxo das conexões de origem. Essas notificações contêm informações sobre o sucesso de sua execução de fluxo ou erros que contribuíram para uma falha de execução.
 solution: Experience Platform
 title: Notificações de Execução de Fluxo
-topic: overview
+topic-legacy: overview
+exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
 
-
 # Notificações de execução de fluxo
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) é usada para coletar e centralizar dados do cliente de várias fontes diferentes dentro  [!DNL Platform]. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no  [!DNL Platform]. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-Com os Eventos Adobe I/O, você pode assinar eventos e usar webhooks para receber notificações sobre o status de suas execuções de fluxo. Essas notificações contêm informações sobre o sucesso de sua execução de fluxo ou erros que contribuíram para a falha de uma execução.
+Com Adobe I/O Events, você pode assinar eventos e usar webhooks para receber notificações sobre o status de suas execuções de fluxo. Essas notificações contêm informações sobre o sucesso de sua execução de fluxo ou erros que contribuíram para uma falha de execução.
 
-Este documento fornece etapas sobre como assinar eventos, registrar webhooks e receber notificações contendo informações sobre o status de suas execuções de fluxo.
+Este documento fornece etapas sobre como se inscrever em eventos, registrar webhooks e receber notificações contendo informações sobre o status de suas execuções de fluxo.
 
 ## Introdução
 
-Este tutorial presume que você já criou pelo menos uma conexão de origem cujo fluxo é executado e que você deseja monitorar. Se você ainda não tiver configurado uma conexão de origem, start visitando a [visão geral das fontes](./home.md) para configurar a fonte de sua escolha antes de retornar a este guia.
+Este tutorial pressupõe que você já criou pelo menos uma conexão de origem cujo fluxo é executado e deseja monitorar. Se você ainda não tiver configurado uma conexão de origem, comece visitando a [visão geral das fontes](./home.md) para configurar a fonte de sua escolha antes de retornar a este guia.
 
-Este documento também requer um entendimento prático dos webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [[!DNL I/O Events] documentação](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obter uma introdução aos webhooks.
+Este documento também requer uma compreensão funcional de webhooks e como conectar um webhook de um aplicativo a outro. Consulte a [[!DNL I/O Events] documentação](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obter uma introdução aos webhooks.
 
 ## Registrar um webhook para notificações de execução de fluxo
 
-Para receber notificações de execução de fluxo, você deve usar o Console do desenvolvedor do Adobe para registrar um webhook na integração [!DNL Experience Platform].
+Para receber notificações de execução de fluxo, você deve usar o Console do desenvolvedor do Adobe para registrar um webhook em sua integração [!DNL Experience Platform].
 
-Siga o tutorial em [inscrevendo-se em [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
+Siga o tutorial em [assinar [!DNL I/O Event] notificações](../observability/notifications/subscribe.md) para obter etapas detalhadas sobre como fazer isso.
 
 >[!IMPORTANT]
 >
->Durante o processo de subscrição, selecione **[!UICONTROL Notificações da plataforma]** como o provedor do evento e selecione as seguintes subscrições do evento:
+>Durante o processo de assinatura, selecione **[!UICONTROL Platform notifications]** como o provedor de eventos e selecione as seguintes assinaturas de eventos:
 >
->* **[!UICONTROL Execução de Fluxo da Fonte de Experience Platform com Êxito]**
->* **[!UICONTROL Falha na Execução de Fluxo da Fonte de Experience Platform]**
+>* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
+>* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
 
 
 ## Receber notificações de execução de fluxo
 
-Com o webhook conectado e a subscrição do evento concluída, você pode start recebendo notificações de fluxo pelo painel do webhook.
+Com seu webhook conectado e sua assinatura de evento concluída, você pode começar a receber notificações de execução de fluxo pelo painel do webhook.
 
-Uma notificação retorna informações como o número de trabalhos de ingestão executados, o tamanho do arquivo e os erros. Uma notificação também retorna uma carga associada à execução do fluxo no formato JSON. A carga da resposta pode ser classificada como `sources_flow_run_success` ou `sources_flow_run_failure`.
+Uma notificação retorna informações como o número de trabalhos de assimilação executados, o tamanho do arquivo e erros. Uma notificação também retorna uma carga associada à execução do fluxo no formato JSON. A carga de resposta pode ser classificada como `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
->Se a ingestão parcial estiver ativada durante o processo de criação de fluxo, um fluxo que contenha as ingestões bem-sucedidas e com falha será marcado como `sources_flow_run_success` somente se o número de erros estiver abaixo da porcentagem limite de erro definida durante o processo de criação de fluxo. Se uma execução de fluxo bem-sucedida contiver erros, esses erros ainda serão incluídos como parte da carga de retorno.
+>Se a assimilação parcial estiver ativada durante o processo de criação do fluxo, um fluxo que contém assimilações bem-sucedidas e com falha será marcado como `sources_flow_run_success` somente se o número de erros estiver abaixo da porcentagem de limite de erro definida durante o processo de criação do fluxo. Se uma execução de fluxo bem-sucedida contiver erros, esses erros ainda serão incluídos como parte da carga útil de retorno.
 
 ### Sucesso
 
-Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem características de uma execução de fluxo específica e `activities` que descrevem como os dados são transformados.
+Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem as características de uma execução de fluxo específica e `activities` que descrevem como os dados são transformados.
 
 ```json
 {
@@ -186,9 +186,9 @@ Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem caracter�
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `metrics` | Define as características dos dados na execução de fluxo. |
-| `activities` | Define as diferentes etapas e atividades executadas para transformar os dados. |
-| `durationSummary` | Define o start e a hora de término da execução do fluxo. |
+| `metrics` | Define características dos dados na execução do fluxo. |
+| `activities` | Define as diferentes etapas e atividades que são executadas para transformar os dados. |
+| `durationSummary` | Define a hora inicial e final da execução do fluxo. |
 | `sizeSummary` | Define o volume dos dados em bytes. |
 | `recordSummary` | Define a contagem de registros dos dados. |
 | `fileSummary` | Define a contagem de arquivos dos dados. |
@@ -197,7 +197,7 @@ Uma resposta bem-sucedida retorna um conjunto de `metrics` que definem caracter�
 
 ### Falha
 
-A resposta a seguir é um exemplo de falha na execução do fluxo, com um erro ocorrendo à medida que os dados copiados são processados. Os erros também podem ocorrer enquanto os dados são copiados da fonte. Uma execução de fluxo com falha inclui informações sobre os erros que contribuíram para a falha da execução, incluindo seu erro e descrição.
+A resposta a seguir é um exemplo de falha na execução do fluxo, com um erro ocorrendo à medida que os dados copiados são processados. Erros também podem ocorrer enquanto os dados estão sendo copiados da fonte. Uma execução de fluxo com falha inclui informações sobre os erros que contribuíram para a falha da execução, incluindo seu erro e descrição.
 
 ```json
 [
@@ -318,7 +318,7 @@ A resposta a seguir é um exemplo de falha na execução do fluxo, com um erro o
 
 ## Próximas etapas
 
-Agora você pode se inscrever em eventos que permitem receber notificações em tempo real nos status de execução de fluxo. Para obter mais informações sobre execuções e fontes de fluxo, consulte a [visão geral das fontes](./home.md).
+Agora é possível assinar eventos que permitem receber notificações em tempo real nos status de execução de fluxo. Para obter mais informações sobre execuções e fontes de fluxo, consulte a [visão geral das fontes](./home.md).
 
 ## Apêndice
 
@@ -326,9 +326,9 @@ As seções a seguir fornecem informações adicionais para trabalhar com notifi
 
 ### Noções básicas sobre mensagens de erro {#errors}
 
-Erros de ingestão podem ocorrer quando os dados estão sendo copiados da fonte ou quando os dados copiados estão sendo processados para [!DNL Platform]. Consulte a tabela abaixo para obter mais informações sobre erros específicos.
+Erros de assimilação podem ocorrer quando os dados estão sendo copiados da fonte ou quando os dados copiados estão sendo processados para [!DNL Platform]. Consulte a tabela abaixo para obter mais informações sobre erros específicos.
 
 | Erro | Descrição |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | Erro ao copiar dados de uma fonte. |
-| `CONNECTOR-2001-500` | Ocorreu um erro enquanto os dados copiados estão sendo processados para [!DNL Platform]. Esse erro pode ser relacionado à análise, validação ou transformação. |
+| `CONNECTOR-1001-500` | Ocorreu um erro ao copiar dados de uma origem. |
+| `CONNECTOR-2001-500` | Ocorreu um erro ao processar dados copiados para [!DNL Platform]. Esse erro pode ser relacionado à análise, validação ou transformação. |

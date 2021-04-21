@@ -2,16 +2,16 @@
 keywords: Experience Platform, guia do desenvolvedor, Data Science Workspace, tópicos populares, aprendizado de máquina em tempo real;
 solution: Experience Platform
 title: Visão geral do aprendizado de máquina em tempo real
-topic: Overview
+topic-legacy: Overview
 description: O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do conteúdo de experiência digital para os usuários finais. Isso é possibilitado aproveitando a inferência em tempo real e o aprendizado contínuo no Experience Edge.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 2%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
-
 
 # Visão geral do aprendizado de máquina em tempo real (Alpha)
 
@@ -37,15 +37,15 @@ O fluxo de trabalho a seguir descreve as etapas e resultados típicos envolvidos
 
 ### Assimilação de dados e preparações
 
-Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) na Adobe Experience Platform. Esses dados são usados para treinamento em modelo. Para saber mais sobre o XDM, visite a [Visão geral do XDM](../../xdm/home.md).
+Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) no Adobe Experience Platform. Esses dados são usados para treinamento em modelo. Para saber mais sobre o XDM, visite a [Visão geral do XDM](../../xdm/home.md).
 
 ### Criação
 
-Crie um modelo de aprendizado de máquina em tempo real criando-o do zero ou trazendo-o como um modelo ONNX serializado pré-treinado em notebooks Jupyter da Adobe Experience Platform.
+Crie um modelo de aprendizado de máquina em tempo real criando-o do zero ou trazendo-o como um modelo ONNX serializado pré-treinado em notebooks Adobe Experience Platform Jupyter.
 
 ### Implantação
 
-Implante o modelo em [!DNL Experience Edge] para criar um serviço de Aprendizagem de Máquina em Tempo Real na [!UICONTROL Galeria de Serviços] usando o endpoint da API de Previsão.
+Implante o modelo em [!DNL Experience Edge] para criar um serviço de Aprendizagem de máquina em tempo real no [!UICONTROL Service Gallery] usando o endpoint da API de previsão.
 
 ### Inferência
 
@@ -81,4 +81,3 @@ No momento, o Aprendizado de máquina em tempo real está em alfa. A funcionalid
 ## Próximas etapas
 
 Você pode começar seguindo o guia [introdução](./getting-started.md). Este guia aborda a configuração de todos os pré-requisitos necessários para criar um modelo de aprendizado de máquina em tempo real.
-

@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados da experiência, modelo de dados, Modelo de dados, exportação, importação, rpc;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, exportar, importar, rpc;
 solution: Experience Platform
 title: Endpoints da API de exportação/importação
 description: Os endpoints /export e /import na API do Registro de Schema permitem compartilhar recursos XDM entre as Organizações do IMS e as sandboxes.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
-
 
 # Exportar/importar endpoints
 
@@ -19,13 +19,13 @@ Todos os recursos no [!DNL Schema Library] estão contidos em uma sandbox espec�
 
 ## Introdução
 
-Os endpoints usados neste guia fazem parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
+Os endpoints usados neste guia fazem parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 Os endpoints de exportação/importação fazem parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints na API [!DNL Schema Registry], os endpoints RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado nas chamadas de API abaixo.
 
 ## Recuperar uma carga de exportação para um recurso {#export}
 
-Para qualquer schema, mixin ou tipo de dados existente no [!DNL Schema Library], é possível gerar uma carga de exportação fazendo uma solicitação GET para o endpoint `/export`, fornecendo a ID do recurso no caminho.
+Para qualquer schema, mixin ou tipo de dados existente no [!DNL Schema Library], é possível gerar uma carga de exportação fazendo uma solicitação de GET para o endpoint `/export`, fornecendo a ID do recurso no caminho.
 
 **Formato da API**
 
@@ -197,7 +197,7 @@ Observe que todas as instâncias da ID de locatário do recurso são substituíd
 
 ## Importar um recurso {#import}
 
-Depois que você tiver [gerado uma carga de exportação](#export) para um recurso XDM, poderá usar essa carga em uma solicitação POST para o endpoint `/import` para importar esse recurso para uma Org e sandbox IMS de destino.
+Depois de [gerar uma carga útil de exportação](#export) para um recurso XDM, você pode usar essa carga em uma solicitação POST para o endpoint `/import` para importar esse recurso para uma Org e sandbox IMS de destino.
 
 **Formato da API**
 

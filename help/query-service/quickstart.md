@@ -1,24 +1,23 @@
 ---
-keywords: Experience Platform;home;popular tópicos;serviço de query;serviço de Query;query;home;popular topics;serviço de ;serviço de ;;home;popular topics;serviço;;
+keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, query
 solution: Experience Platform
-title: Guia de início rápido do serviço de Query Adobe Experience Platform
-topic: quickstart
-description: Guia de início rápido para o Serviço de Query Adobe Experience Platform.
+title: Guia de início rápido do serviço de consulta da Adobe Experience Platform
+topic-legacy: quickstart
+description: Guia de início rápido para o Serviço de consulta da Adobe Experience Platform.
+exl-id: 77941755-8292-43ee-8ae3-09065f39ace7
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-
-# Guia de início rápido
+# Manual de início rápido
 
 1. Para usar [!DNL Query Service], sua organização deve ser provisionada para a Adobe Experience Platform e seu administrador precisa conceder acesso a ela.
-2. Se você ainda não ingeriu seus dados no Adobe Experience Platform, então é onde você deve start. Consulte a documentação de ingestão de dados.
-3. Depois de ingerir seus dados no Adobe Experience Platform, você pode começar a trabalhar com [!DNL Query Service] usando [Interface do usuário da plataforma](ui/overview.md). Por exemplo, você pode usar o navegador baseado no Adobe Experience Platform [[!DNL Query Editor]](ui/user-guide.md) para gravar, validar e executar query.
+2. Se você ainda não assimilou seus dados no Adobe Experience Platform, é aí que você deve começar. Consulte a documentação de assimilação de dados.
+3. Depois de assimilar seus dados no Adobe Experience Platform, você pode começar a trabalhar com [!DNL Query Service] usando [Interface do usuário da plataforma](ui/overview.md). Por exemplo, você pode usar o navegador Adobe Experience Platform baseado [[!DNL Query Editor]](ui/user-guide.md) para gravar, validar e executar consultas.
 
 
-[!DNL Query Service] também fornece uma maneira de conectar ferramentas externas para emitir query. Para obter instruções sobre como conectar uma ferramenta, como uma ferramenta Business Intelligence ou uma interface de linha de comando, leia [conectar uma ferramenta](clients/overview.md).
-
+[!DNL Query Service] também fornece uma maneira de conectar ferramentas externas para emitir consultas. Para obter instruções sobre como conectar uma ferramenta, como uma ferramenta Business Intelligence ou uma interface de linha de comando, leia [connect a tool](clients/overview.md).

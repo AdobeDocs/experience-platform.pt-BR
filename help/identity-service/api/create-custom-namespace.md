@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identidade namespace;identidade namespace;identidade;identidade;identidade
+keywords: Experience Platform, home, tópicos populares, namespace, namespace, namespaces, namespaces, namespace de identidade, namespace de identidade, identidade, identidade
 solution: Experience Platform
-title: Criar uma Namespace personalizada na API do serviço de identidade
-topic: API guide
-description: Usando a API de Namespace de identidade, você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
+title: Criar um namespace personalizado na API do serviço de identidade
+topic-legacy: API guide
+description: Usando a API de Namespace de identidade, você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
+exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
 
 ---
 
+# Criar um namespace personalizado na API do serviço de identidade
 
-# Criar uma namespace personalizada na API do serviço de identidade
+Usando a API [!DNL Identity Namespace], você pode criar um namespace de identidade personalizado que estará disponível somente para sua organização.
 
-Usando a API [!DNL Identity Namespace], você pode criar uma namespace de identidade personalizada que estará disponível somente para sua organização.
-
-Para obter recomendações sobre como criar namespaces personalizadas, consulte [a documentação de Perguntas frequentes do Serviço de Identidade](../troubleshooting-guide.md).
+Para obter recomendações sobre como criar namespaces personalizados, consulte [a documentação de Perguntas frequentes do serviço de identidade](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
->Namespaces são qualificadores de identidades. Como tal, uma namespace criada não pode ser excluída.
+>Namespaces são um qualificador para identidades. Dessa forma, depois que um namespace é criado, ele não pode ser excluído.
 
 **Formato da API**
 
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para [lista a ID nativa de uma identidade](./list-native-id.md)
+Prossiga para o próximo tutorial para [listar a ID nativa de uma identidade](./list-native-id.md)

@@ -2,17 +2,17 @@
 keywords: Experience Platform, home, tópicos populares, mysql, MySQL
 solution: Experience Platform
 title: Criar uma conexão de origem MySQL na interface do usuário
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem MySQL usando a interface do usuário do Adobe Experience Platform.
+exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '402'
 ht-degree: 1%
 
 ---
-
 
 # Criar uma conexão de origem [!DNL MySQL] na interface do usuário
 

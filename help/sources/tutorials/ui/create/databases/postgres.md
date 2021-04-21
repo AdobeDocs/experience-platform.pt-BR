@@ -2,17 +2,17 @@
 keywords: Experience Platform, home, tópicos populares, PSQL, psql, PostgreSQL
 solution: Experience Platform
 title: Criar uma conexão de origem PostgreSQL na interface do usuário
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem PostgreSQL usando a interface do usuário do Adobe Experience Platform.
+exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
-
 
 # Criar uma conexão de origem [!DNL PostgreSQL] na interface do usuário
 

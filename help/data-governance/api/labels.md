@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home;populares tópicos
+keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
-title: Ponto final da API de etiquetas
-topic: developer guide
-description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API do Serviço de política.
+title: Rótulos do ponto de extremidade da API
+topic-legacy: developer guide
+description: Saiba como gerenciar rótulos de uso de dados no Experience Platform usando a API do serviço de política.
+exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
 
+# Ponto de extremidade de rótulos
 
-# Ponto de extremidade de etiquetas
-
-Os rótulos de uso de dados permitem que você categorize dados de acordo com as políticas de uso que podem se aplicar a esses dados. O endpoint `/labels` no [!DNL Policy Service API] permite que você gerencie programaticamente os rótulos de uso de dados no aplicativo de experiência.
+Os rótulos de uso de dados permitem categorizar os dados de acordo com as políticas de uso que podem se aplicar a esses dados. O endpoint `/labels` no [!DNL Policy Service API] permite gerenciar programaticamente os rótulos de uso de dados no aplicativo de experiência.
 
 >[!NOTE]
 >
->O ponto de extremidade `/labels` é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o guia em [gerenciar rótulos de conjuntos de dados](../labels/dataset-api.md).
+>O endpoint `/labels` é usado apenas para recuperar, criar e atualizar rótulos de uso de dados. Para obter etapas sobre como adicionar rótulos a conjuntos de dados e campos usando chamadas de API, consulte o guia em [gerenciar rótulos de conjunto de dados](../labels/dataset-api.md).
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte do [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
+O endpoint da API usado neste guia faz parte do [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API [!DNL Experience Platform].
 
 ## Recuperar uma lista de rótulos {#list}
 
-Você pode lista todos os rótulos `core` ou `custom` fazendo uma solicitação de GET para `/labels/core` ou `/labels/custom`, respectivamente.
+Você pode listar todos os rótulos `core` ou `custom` fazendo uma solicitação GET para `/labels/core` ou `/labels/custom`, respectivamente.
 
 **Formato da API**
 
@@ -51,7 +51,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperados do sistema. Como a solicitação de exemplo acima foi feita para `/labels/custom`, a resposta abaixo mostra somente rótulos personalizados.
+Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperados do sistema. Como a solicitação de exemplo acima foi feita para `/labels/custom`, a resposta abaixo mostra apenas rótulos personalizados.
 
 ```json
 {
@@ -109,7 +109,7 @@ Uma resposta bem-sucedida retorna uma lista de rótulos personalizados recuperad
 
 ## Procure um rótulo {#look-up}
 
-Você pode procurar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação de GET para a API [!DNL Policy Service].
+Você pode pesquisar um rótulo específico incluindo a propriedade `name` desse rótulo no caminho de uma solicitação GET para a API [!DNL Policy Service].
 
 **Formato da API**
 
@@ -196,14 +196,14 @@ curl -X PUT \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | Um identificador de string exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e aplicação do rótulo a conjuntos de dados e campos, portanto, recomenda-se que seja curto e conciso. |
-| `category` | A categoria da etiqueta. Embora você possa criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se quiser que o rótulo apareça na interface do usuário. |
+| `name` | Um identificador de string exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e aplicação do rótulo a conjuntos de dados e campos, portanto, é recomendável que seja curto e conciso. |
+| `category` | A categoria do rótulo. Embora você possa criar suas próprias categorias para rótulos personalizados, é altamente recomendável usar `Custom` se desejar que o rótulo apareça na interface do usuário. |
 | `friendlyName` | Um nome amigável para o rótulo, usado para fins de exibição. |
-| `description` | (Opcional) Uma descrição do rótulo para fornecer mais contexto. |
+| `description` | (Opcional) Uma descrição do rótulo para fornecer contexto adicional. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o código HTTP 200 (OK) se um rótulo existente foi atualizado, ou 201 (Criado) se um novo rótulo foi criado.
+Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com código HTTP 200 (OK) se um rótulo existente foi atualizado, ou 201 (Criado) se um novo rótulo foi criado.
 
 ```json
 {
@@ -229,4 +229,4 @@ Uma resposta bem-sucedida retorna os detalhes do rótulo personalizado, com o c�
 
 ## Próximas etapas
 
-Este guia cobriu o uso do terminal `/labels` na API do Serviço de Política. Para obter etapas sobre como aplicar rótulos a conjuntos de dados e campos, consulte o [guia da API de etiquetas de conjuntos de dados](../labels/dataset-api.md).
+Este guia cobriu o uso do ponto de extremidade `/labels` na API do Serviço de política . Para obter etapas sobre como aplicar rótulos a conjuntos de dados e campos, consulte o [guia da API de rótulos de conjunto de dados](../labels/dataset-api.md).

@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform, home, tópicos populares, hub de eventos, Hub de eventos do Azure, Hub de eventos
+keywords: Experience Platform, home, tópicos populares, hub de eventos, hub de eventos do Azure, Hub de eventos
 solution: Experience Platform
 title: Criar uma conexão de origem de Hubs de Eventos do Azure usando a API do Serviço de Fluxo
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Saiba como conectar a Adobe Experience Platform a uma conta de Hubs de Eventos do Azure usando a API do Serviço de Fluxo.
+description: Saiba como conectar o Adobe Experience Platform a uma conta de Hubs de Eventos do Azure usando a API do Serviço de Fluxo.
+exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 643da0981b3c955a9f66b6542ddaf2bda7398a2e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
-
 
 # Crie uma conexão de origem [!DNL Azure Event Hubs] usando a API [!DNL Flow Service]
 
@@ -20,13 +20,13 @@ ht-degree: 2%
 >
 > O conector [!DNL Azure Event Hubs] está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
 Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para se conectar [!DNL Experience Platform] a uma conta [!DNL Azure Event Hubs].
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [Fontes](../../../../home.md):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
 - [Sandboxes](../../../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
@@ -62,7 +62,7 @@ Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes 
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 - `Content-Type: application/json`
 

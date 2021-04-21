@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;acesso aos dados;python sdk;acesso aos dados api;read python;write python;;home;popular topics;data access;python sdk;data access api;read python;write python;write python;write python
+keywords: Experience Platform, home, tópicos populares, acesso a dados, python sdk, api de acesso a dados, ler python, escrever python
 solution: Experience Platform
-title: Acessar dados usando Python na Data Science Workspace
-topic: tutorial
+title: Acesso a dados usando o Python no Data Science Workspace
+topic-legacy: tutorial
 type: Tutorial
-description: O documento a seguir contém exemplos de como acessar dados no Python para uso na Data Science Workspace.
+description: O documento a seguir contém exemplos de como acessar dados no Python para uso no Data Science Workspace.
+exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
+# Acesso a dados usando Python no Data Science Workspace
 
-# Acessar dados usando Python na Data Science Workspace
+O documento a seguir contém exemplos de como acessar dados usando o Python para uso no Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite a documentação [Acesso a dados dos blocos de anotações JupyterLab](../jupyterlab/access-notebook-data.md).
 
-O documento a seguir contém exemplos de como acessar dados usando o Python para uso na Data Science Workspace. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visite a documentação [Acesso aos notebooks JupyterLab](../jupyterlab/access-notebook-data.md).
+## Leitura de um conjunto de dados
 
-## Lendo um conjunto de dados
-
-Depois de definir as variáveis de ambiente e concluir a instalação, seu conjunto de dados pode ser lido no dataframe dos pandas.
+Após definir as variáveis de ambiente e concluir a instalação, seu conjunto de dados agora pode ser lido no dataframe do painel.
 
 ```python
 import pandas as pd
@@ -53,7 +53,7 @@ partitions = dataset.get_partitions_info()
 
 ### Cláusula DISTINCT
 
-A cláusula DISTINCT permite buscar todos os valores distintos em um nível de linha/coluna, removendo todos os valores de duplicado da resposta.
+A cláusula DISTINCT permite buscar todos os valores distintos em um nível de linha/coluna, removendo todos os valores duplicados da resposta.
 
 Um exemplo de uso da função `distinct()` pode ser visto abaixo:
 
@@ -63,7 +63,7 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 ### cláusula WHERE
 
-Você pode usar determinados operadores no Python para ajudar a filtrar seu conjunto de dados.
+Você pode usar determinados operadores no Python para ajudar a filtrar o conjunto de dados.
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Cláusula ORDER BY
 
-A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando a função `sort()`.
+A cláusula ORDER BY permite que os resultados recebidos sejam classificados por uma coluna especificada em uma ordem específica (crescente ou decrescente). Isso é feito usando a função `sort()` .
 
 Um exemplo de uso da função `sort()` pode ser visto abaixo:
 
@@ -107,7 +107,7 @@ df = dataset_reader.limit(100).read()
 
 ### Cláusula OFFSET
 
-A cláusula OFFSET permite ignorar linhas, do início, para start de linhas que retornam de um ponto posterior. Em combinação com LIMIT, isso pode ser usado para iterar linhas em blocos.
+A cláusula OFFSET permite ignorar linhas, desde o início, para começar a retornar linhas a partir de um ponto posterior. Em combinação com LIMIT, pode ser usado para iterar linhas em blocos.
 
 Um exemplo de uso da função `offset()` pode ser visto abaixo:
 
@@ -115,11 +115,11 @@ Um exemplo de uso da função `offset()` pode ser visto abaixo:
 df = dataset_reader.offset(100).read()
 ```
 
-## Gravando um conjunto de dados
+## Gravação de um conjunto de dados
 
-Para gravar em um conjunto de dados, é necessário fornecer os dados dos pandas ao conjunto de dados.
+Para gravar em um conjunto de dados, é necessário fornecer o dataframe do painel ao conjunto de dados.
 
-### Gravando os dados dos pandas
+### Escrever o pandas dataframe
 
 ```python
 client_context = get_client_context(config_properties)
@@ -134,11 +134,11 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 ## Diretório do espaço de usuário (Ponto de verificação)
 
-Para trabalhos em execução mais longa, talvez seja necessário armazenar etapas intermediárias. Em instâncias como esta, você pode ler e gravar em um espaço de usuário.
+Para tarefas em execução mais longa, talvez seja necessário armazenar etapas intermediárias. Em instâncias como essa, você pode ler e gravar em um espaço de usuário.
 
 >[!NOTE]
 >
->Os caminhos para os dados estão **armazenados não**. É necessário armazenar o caminho correspondente para seus respectivos dados.
+>Os caminhos para os dados são **e não** armazenados. Você precisa armazenar o caminho correspondente para seus respectivos dados.
 
 ### Gravar no espaço do usuário
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Próximas etapas
 
-A Adobe Experience Platform Data Science Workspace fornece uma amostra de fórmula que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, consulte [Repositório do Data Science Workspace Python GitHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+O Adobe Experience Platform Data Science Workspace fornece uma amostra de receita que usa as amostras de código acima para ler e gravar dados. Se quiser saber mais sobre como usar o Python para acessar seus dados, consulte o [Repositório GitHub Python do Data Science&lt;/a1/>.](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)

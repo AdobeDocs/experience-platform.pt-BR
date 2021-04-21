@@ -1,52 +1,52 @@
 ---
-keywords: Experience Platform;treinamento e avaliação;Data Science Workspace;topics;Sensei Machine Learning API
+keywords: Experience Platform, treinar e avaliar, Data Science Workspace, tópicos populares, API de aprendizado de máquina do Sensei
 solution: Experience Platform
-title: Treinar e avaliar um modelo usando a API Sensei Machine Learning
-topic: tutorial
+title: Treine e avalie um modelo usando a API Sensei Machine Learning
+topic-legacy: tutorial
 type: Tutorial
-description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas à API de aprendizado de máquina do Sensei.
+description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas da API de aprendizado de máquina do Sensei.
+exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%
 
 ---
 
-
-# Preparar e avaliar um modelo utilizando a API [!DNL Sensei Machine Learning]
+# Treine e avalie um modelo usando a API [!DNL Sensei Machine Learning]
 
 
 Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas de API. Consulte [este documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obter uma lista detalhada da documentação da API.
 
 ## Pré-requisitos
 
-Siga [Importe uma Receita empacotada usando a API](./import-packaged-recipe-api.md) para criar um Mecanismo, que é necessário para treinar e avaliar um Modelo usando a API.
+Siga o [Importar uma Receita em Pacote usando a API](./import-packaged-recipe-api.md) para criar um Mecanismo, que é necessário para treinar e avaliar um Modelo usando a API.
 
-Siga o tutorial de autenticação da API de [Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas de API de start.
+Siga o [tutorial de autenticação da API do Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para começar a fazer chamadas de API.
 
 No tutorial, agora você deve ter os seguintes valores:
 
-- `{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.
-- `{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.
-- `{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.
+- `{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.
+- `{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.
+- `{API_KEY}`: Seu valor específico da chave de API encontrado na integração exclusiva do Adobe Experience Platform.
 
-- Link para uma imagem do Docker de um serviço inteligente
+- Vincular a uma imagem do Docker de um serviço inteligente
 
 ## Fluxo de trabalho da API
 
-Estaremos consumindo as APIs para criar uma Execução de Experimento para treinamento. Para este tutorial, estaremos focados nos pontos finais Mecanismos, MLInensões e Experimentos. O gráfico a seguir descreve a relação entre os três e também introduz a ideia de uma Execução e um Modelo.
+Estaremos consumindo as APIs para criar uma Execução de experiência para treinamento. Neste tutorial, o foco será nos endpoints Mecanismos, MLInances e Experimentos. O gráfico a seguir descreve a relação entre os três e também introduz a ideia de uma Execução e um Modelo.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->Os termos &quot;Mecanismo&quot;, &quot;MLInposition&quot;, &quot;MLService&quot;, &quot;Experimento&quot; e &quot;Modelo&quot; são chamados de termos diferentes na interface do usuário. Se você for da interface do usuário, a tabela a seguir mapeará as diferenças.
+>Os termos &quot;Mecanismo&quot;, &quot;Instância MLI&quot;, &quot;MLService&quot;, &quot;Experimento&quot; e &quot;Modelo&quot; são chamados de termos diferentes na interface do usuário. Se você for da interface do usuário, a tabela a seguir mapeará as diferenças.
 > 
 > | Termo da interface do usuário | Termo da API |
 > --- | ---
 > | Receita | Mecanismo |
-> | Modelo | Instância MLI |
+> | Modelo | InstânciaMLI |
 > | Execuções de treinamento | Experimento |
 > | Serviço de | MLService |
 
@@ -54,7 +54,7 @@ Estaremos consumindo as APIs para criar uma Execução de Experimento para trein
 
 ### Criar uma instância MLI
 
-A criação de uma instância MLI pode ser feita usando a seguinte solicitação. Você usará o `{ENGINE_ID}` que foi retornado ao criar um Mecanismo a partir do tutorial [Importar uma Receita empacotada usando a API](./import-packaged-recipe-ui.md).
+A criação de uma instância MLI pode ser feita usando a seguinte solicitação. Você estará usando o `{ENGINE_ID}` que foi retornado ao criar um Mecanismo pelo tutorial [Importar uma Receita em Pacote usando a API](./import-packaged-recipe-ui.md) .
 
 **Solicitação**
 
@@ -68,10 +68,10 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.\
-`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: A configuração da nossa instância MLI. O exemplo que usamos em nosso tutorial é mostrado aqui:
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.\
+`{API_KEY}`: Seu valor específico da chave de API encontrado na integração exclusiva do Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: A configuração da nossa instância MLI. O exemplo usado em nosso tutorial é mostrado aqui:
 
 ```JSON
 {
@@ -126,9 +126,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->Na `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação na matriz `tasks`. `{ENGINE_ID}` é a ID do Mecanismo que você deseja usar e o campo `tag` é um parâmetro opcional usado para identificar a Instância.
+>No `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação na matriz `tasks`. O `{ENGINE_ID}` é a ID do Mecanismo que você deseja usar e o campo `tag` é um parâmetro opcional usado para identificar a Instância.
 
-A resposta conterá a `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInentes de modelo com configurações diferentes.
+A resposta conterá o `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInstâncias de modelo com configurações diferentes.
 
 **Resposta**
 
@@ -161,12 +161,12 @@ A resposta conterá a `{INSTANCE_ID}` que representa a instância MLI criada. É
 }
 ```
 
-`{ENGINE_ID}`: Essa ID que representa o mecanismo no qual a MLInposition é criada.\
+`{ENGINE_ID}`: Essa ID que representa o mecanismo no qual a instância MLI é criada.\
 `{INSTANCE_ID}`: A ID que representa a instância MLI.
 
 ### Criar um experimento
 
-Um Experimento é usado por um cientista de dados para chegar a um modelo de alto desempenho durante o treinamento. Vários experimentos incluem alteração de conjuntos de dados, recursos, parâmetros de aprendizado e hardware. A seguir está um exemplo de criação de um Experimento.
+Um Experimento é usado por um cientista de dados para chegar a um modelo de alto desempenho durante o treinamento. Vários experimentos incluem a alteração de conjuntos de dados, recursos, parâmetros de aprendizagem e hardware. Este é um exemplo de criação de um Experimento.
 
 **Solicitação**
 
@@ -180,10 +180,10 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: Objeto de experimento criado. O exemplo que usamos em nosso tutorial é mostrado aqui:
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{API_KEY}`: Seu valor específico da chave de API encontrado na integração exclusiva do Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: Objeto de experimento criado. O exemplo usado em nosso tutorial é mostrado aqui:
 
 ```JSON
 {
@@ -220,9 +220,9 @@ A resposta da criação do Experimento é assim.
 
 ### Criar um Experimento programado para treinamento
 
-Experimentos programados são usados para que não seja necessário criar cada Execução de experimento por meio de uma chamada de API. Em vez disso, fornecemos todos os parâmetros necessários durante a criação do Experimento e cada execução será criada periodicamente.
+Os Experimentos programados são usados para que não seja necessário criar cada Execução de experiência por meio de uma chamada de API. Em vez disso, fornecemos todos os parâmetros necessários durante a criação do Experimento e cada execução será criada periodicamente.
 
-Para indicar a criação de um Experimento programado, é necessário adicionar uma seção `template` no corpo da solicitação. Em `template`, todos os parâmetros necessários para as execuções de agendamento são incluídos, como `tasks`, que indicam a ação, e `schedule`, que indica o tempo das execuções agendadas.
+Para indicar a criação de um Experimento agendado, devemos adicionar uma seção `template` no corpo da solicitação. Em `template`, todos os parâmetros necessários para as execuções de agendamento são incluídos, como `tasks`, que indicam qual ação, e `schedule`, que indica o tempo das execuções agendadas.
 
 **Solicitação**
 
@@ -236,10 +236,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: Dados a serem publicados. O exemplo que usamos em nosso tutorial é mostrado aqui:
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{API_KEY}`: Seu valor específico da chave de API encontrado na integração exclusiva do Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: Conjunto de dados a serem publicados. O exemplo usado em nosso tutorial é mostrado aqui:
 
 ```JSON
 {
@@ -269,7 +269,7 @@ curl -X POST \
 }
 ```
 
-Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmetro `mlInstanceId` ou `mlInstanceQuery`. Neste exemplo, um Experimento programado chamará uma execução a cada 20 minutos, definido no parâmetro `cron`, começando de `startTime` até `endTime`.
+Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmetro `mlInstanceId` ou `mlInstanceQuery`. Neste exemplo, um Experimento programado chamará uma execução a cada 20 minutos, definido no parâmetro `cron`, começando do `startTime` até o `endTime`.
 
 **Resposta**
 
@@ -307,9 +307,9 @@ Quando criamos um Experimento, o corpo, `{JSON_PAYLOAD}`, deve conter o parâmet
 `{INSTANCE_ID}`: A ID que representa a instância MLI.
 
 
-### Criar uma Execução de Experimento para treinamento
+### Criar um Experimento Executar para treinamento
 
-Com uma entidade do Experimento criada, uma execução de treinamento pode ser criada e executada usando a chamada abaixo. Você precisará do `{EXPERIMENT_ID}` e indicará `mode` que você deseja acionar no corpo da solicitação.
+Com uma entidade de Experimento criada, uma execução de treinamento pode ser criada e executada usando a chamada abaixo. Você precisará do `{EXPERIMENT_ID}` e indicará que `mode` deseja acionar no corpo da solicitação.
 
 **Solicitação**
 
@@ -323,10 +323,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{EXPERIMENT_ID}`: A ID correspondente ao Experimento que você deseja público alvo. Isso pode ser encontrado na resposta ao criar seu Experimento.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.\
+`{EXPERIMENT_ID}`: A ID correspondente ao Experimento que você deseja direcionar. Isso pode ser encontrado na resposta ao criar seu Experimento.\
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{API_KEY}`: Seu valor específico da chave de API encontrado na integração exclusiva do Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: Para criar uma execução de treinamento, é necessário incluir o seguinte no corpo:
 
 ```JSON
@@ -354,7 +354,7 @@ Você também pode substituir os parâmetros de configuração incluindo uma mat
 }
 ```
 
-Você obterá a seguinte resposta, que permitirá que você conheça `{EXPERIMENT_RUN_ID}` e a configuração em `tasks`.
+Você receberá a seguinte resposta, que permitirá conhecer o `{EXPERIMENT_RUN_ID}` e a configuração em `tasks`.
 
 **Resposta**
 
@@ -375,8 +375,8 @@ Você obterá a seguinte resposta, que permitirá que você conheça `{EXPERIMEN
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do Experimento.\
-`{EXPERIMENT_ID}`: A ID que representa o Experimento em que a Execução de Experimento está.
+`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do experimento.\
+`{EXPERIMENT_ID}`: A ID que representa o Experimento no qual a Execução do Experimento está.
 
 ### Recuperar um status de Execução de Experimento
 
@@ -393,14 +393,14 @@ curl -X GET \
 ```
 
 `{EXPERIMENT_ID}`: A ID que representa o Experimento.\
-`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do Experimento.\
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.\
-`{API_KEY}`: O valor da sua chave de API específica foi encontrado na sua integração exclusiva ao Adobe Experience Platform.
+`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do experimento.\
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.\
+`{API_KEY}`: Seu valor específico da chave de API encontrado na integração exclusiva do Adobe Experience Platform.
 
 **Resposta**
 
-A chamada do GET fornecerá o status no parâmetro `state`, conforme mostrado abaixo:
+A chamada de GET fornecerá o status no parâmetro `state` , conforme mostrado abaixo:
 
 ```JSON
 {
@@ -433,19 +433,19 @@ A chamada do GET fornecerá o status no parâmetro `state`, conforme mostrado ab
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do Experimento.\
-`{EXPERIMENT_ID}`: A ID que representa o Experimento em que a Execução de Experimento está.
+`{EXPERIMENT_RUN_ID}`: A ID que representa a Execução do experimento.\
+`{EXPERIMENT_ID}`: A ID que representa o Experimento no qual a Execução do Experimento está.
 
 Além do estado `DONE`, outros estados incluem:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Para obter mais informações, os registros detalhados podem ser encontrados no parâmetro `tasklogs`.
+Para obter mais informações, os logs detalhados podem ser encontrados no parâmetro `tasklogs` .
 
 ### Recuperar o modelo treinado
 
-Para que o Modelo treinado seja criado acima durante o treinamento, fazemos a seguinte solicitação:
+Para obter o modelo treinado criado acima durante o treinamento, fazemos o seguinte pedido:
 
 **Solicitação**
 
@@ -456,9 +456,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_RUN_ID}`: A ID correspondente à Execução do experimento que você deseja público alvo. Isso pode ser encontrado na resposta ao criar sua Execução de Experimento.\
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.
+`{EXPERIMENT_RUN_ID}`: A ID correspondente à Execução do experimento que você deseja direcionar. Isso pode ser encontrado na resposta ao criar sua Execução de experiência.\
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.
 
 A resposta representa o Modelo treinado que foi criado.
 
@@ -487,12 +487,12 @@ A resposta representa o Modelo treinado que foi criado.
 ```
 
 `{MODEL_ID}`: A ID correspondente ao Modelo.\
-`{EXPERIMENT_ID}`: A ID correspondente ao Experimento em que a Execução do Experimento está localizada.\
-`{EXPERIMENT_RUN_ID}`: A ID correspondente à execução do experimento.
+`{EXPERIMENT_ID}`: A ID correspondente ao Experimento em que a Execução do experimento está localizada.\
+`{EXPERIMENT_RUN_ID}`: A ID correspondente à Execução do experimento.
 
-### Parar e excluir um Experimento programado
+### Parar e excluir um experimento programado
 
-Se você deseja interromper a execução de um Experimento programado antes de seu `endTime`, isso pode ser feito consultando uma solicitação de DELETE para o `{EXPERIMENT_ID}`
+Se você quiser interromper a execução de um Experimento agendado antes de seu `endTime`, isso pode ser feito consultando uma solicitação de DELETE para o `{EXPERIMENT_ID}`
 
 **Solicitação**
 
@@ -504,14 +504,14 @@ curl -X DELETE \
 ```
 
 `{EXPERIMENT_ID}`: A ID correspondente ao Experimento.\
-`{ACCESS_TOKEN}`: O valor do token do portador específico fornecido após a autenticação.\
-`{IMS_ORG}`: Suas credenciais organizacionais IMS encontradas na sua integração exclusiva ao Adobe Experience Platform.
+`{ACCESS_TOKEN}`: O valor do token portador específico fornecido após a autenticação.\
+`{IMS_ORG}`: Suas credenciais da organização IMS encontradas na integração exclusiva do Adobe Experience Platform.
 
 >[!NOTE]
 >
->A chamada da API desativará a criação de novas execuções do Experimento. No entanto, não interromperá a execução de Execuções de Experimento já em execução.
+>A chamada da API desativará a criação de novas execuções de Experimento. No entanto, não interromperá a execução de Execuções de Experimento já em execução.
 
-A seguir está a Resposta notificando que o Experimento foi excluído com êxito.
+Veja a seguir a Resposta notificando que o Experimento foi excluído com êxito.
 
 **Resposta**
 
@@ -525,4 +525,4 @@ A seguir está a Resposta notificando que o Experimento foi excluído com êxito
 
 ## Próximas etapas
 
-Este tutorial mostra como consumir as APIs para criar um Mecanismo, um Experimento, Execuções de Experimento programadas e Modelos treinados. No próximo exercício [a1/>, você fará previsões marcando um novo conjunto de dados usando o modelo treinado de melhor desempenho.](./score-model-api.md)
+Este tutorial aborda como consumir as APIs para criar um Mecanismo, um Experimento, Execuções de Experimento Programadas e Modelos Treinados. No [próximo exercício](./score-model-api.md), você fará previsões marcando um novo conjunto de dados usando o modelo treinado de melhor desempenho.

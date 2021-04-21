@@ -3,12 +3,12 @@ keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema 
 solution: Experience Platform
 title: Ponto de extremidade da API Mixins
 description: O endpoint /mixins na API do Registro de Schema permite gerenciar programaticamente mixins XDM no aplicativo de experiência.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---

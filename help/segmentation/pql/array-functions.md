@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Perfil Query Language;array functions;array;
+keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, pql, PQL, Linguagem de consulta de perfil, funções de matriz, matriz;
 solution: Experience Platform
-title: Array, Lista e definição das funções PQL
-topic: developer guide
-description: O PQL (Perfil Query Language) oferta funciona para facilitar a interação com arrays, listas e strings.
+title: Array, List e defina funções PQL
+topic-legacy: developer guide
+description: A Linguagem de consulta de perfil (PQL) oferece funções para facilitar a interação com arrays, listas e strings.
+exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 5%
 
 ---
 
+# Array, list e defina funções
 
-# Funções de storage, lista e definição
-
-[!DNL Profile Query Language] (PQL) O oferta funciona para facilitar a interação com arrays, listas e strings. Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) oferece funções para facilitar a interação com arrays, listas e strings. Mais informações sobre outras funções PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## Em
 
@@ -29,7 +29,7 @@ A função `in` é usada para determinar se um item é membro de uma matriz ou l
 
 **Exemplo**
 
-O seguinte query PQL define pessoas com aniversários em março, junho ou setembro.
+A consulta PQL a seguir define as pessoas com aniversários em março, junho ou setembro.
 
 ```sql
 person.birthMonth in [3, 6, 9]
@@ -51,13 +51,13 @@ A função `notIn` é usada para determinar se um item não é membro de uma mat
 
 **Exemplo**
 
-O seguinte query PQL define pessoas com aniversários que não estejam em março, junho ou setembro.
+A consulta PQL a seguir define pessoas com aniversários que não estejam em março, junho ou setembro.
 
 ```sql
 person.birthMonth notIn [3, 6, 9]
 ```
 
-## Intersecções
+## Intersetos
 
 A função `intersects` é usada para determinar se duas matrizes ou listas têm pelo menos um membro comum.
 
@@ -69,7 +69,7 @@ A função `intersects` é usada para determinar se duas matrizes ou listas têm
 
 **Exemplo**
 
-O query PQL a seguir define as pessoas cujas cores favoritas incluem pelo menos um de vermelho, azul ou verde.
+A consulta PQL a seguir define as pessoas cujas cores favoritas incluem pelo menos um vermelho, azul ou verde.
 
 ```sql
 person.favoriteColors.intersects(["red", "blue", "green"])
@@ -87,7 +87,7 @@ A função `intersection` é usada para determinar os membros comuns de duas mat
 
 **Exemplo**
 
-O seguinte query PQL define se a pessoa 1 e a pessoa 2 têm cores favoritas de vermelho, azul e verde.
+A consulta PQL a seguir define se a pessoa 1 e a pessoa 2 têm cores favoritas de vermelho, azul e verde.
 
 ```sql
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
@@ -105,7 +105,7 @@ A função `subsetOf` é usada para determinar se uma matriz específica (matriz
 
 **Exemplo**
 
-O query PQL a seguir define as pessoas que visitaram todas as cidades favoritas.
+A consulta PQL a seguir define as pessoas que visitaram todas as cidades favoritas.
 
 ```sql
 person.favoriteCities.subsetOf(person.visitedCities)
@@ -113,7 +113,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superconjunto de
 
-A função `supersetOf` é usada para determinar se uma matriz específica (matriz A) é um superconjunto de outra matriz (matriz B). Em outras palavras, a matriz A contém todos os elementos na matriz B.
+A função `supersetOf` é usada para determinar se uma matriz específica (matriz A) é um superconjunto de outra matriz (matriz B). Em outras palavras, essa matriz A contém todos os elementos na matriz B.
 
 **Formato**
 
@@ -123,7 +123,7 @@ A função `supersetOf` é usada para determinar se uma matriz específica (matr
 
 **Exemplo**
 
-O query PQL a seguir define as pessoas que comeram sushi e pizza pelo menos uma vez.
+A consulta PQL a seguir define as pessoas que comeram sushi e pizza pelo menos uma vez.
 
 ```sql
 person.eatenFoods.supersetOf(["sushi", "pizza"])
@@ -141,15 +141,15 @@ A função `includes` é usada para determinar se uma matriz ou lista contém um
 
 **Exemplo**
 
-O query PQL a seguir define as pessoas cuja cor favorita inclui o vermelho.
+A consulta PQL a seguir define as pessoas cuja cor favorita inclui o vermelho.
 
 ```sql
 person.favoriteColors.includes("red")
 ```
 
-## Distinto
+## Distinct
 
-A função `distinct` é usada para remover valores de duplicado de uma matriz ou lista.
+A função `distinct` é usada para remover valores duplicados de uma matriz ou lista.
 
 **Formato**
 
@@ -159,7 +159,7 @@ A função `distinct` é usada para remover valores de duplicado de uma matriz o
 
 **Exemplo**
 
-O seguinte query PQL especifica pessoas que fizeram pedidos em mais de uma loja.
+A consulta PQL a seguir especifica pessoas que fizeram pedidos em mais de um armazenamento.
 
 ```sql
 person.orders.storeId.distinct().count() > 1
@@ -178,11 +178,11 @@ A função `groupBy` é usada para particionar valores de uma matriz ou lista em
 | Argumento | Descrição |
 | --------- | ----------- |
 | `{ARRAY}` | A matriz ou lista que deve ser agrupada. |
-| `{EXPRESSION}` | Uma expressão que mapeia cada item na matriz ou na lista retornada. |
+| `{EXPRESSION}` | Uma expressão que mapeia cada item na matriz ou lista retornada. |
 
 **Exemplo**
 
-O query PQL a seguir agrupa todos os pedidos nos quais o pedido foi armazenado.
+A consulta PQL a seguir agrupa todos os pedidos pelos quais o pedido foi colocado no armazenamento.
 
 ```sql
 orders.groupBy(storeId)
@@ -201,11 +201,11 @@ A função `filter` é usada para filtrar uma matriz ou lista com base em uma ex
 | Argumento | Descrição |
 | --------- | ----------- |
 | `{ARRAY}` | A matriz ou lista que deve ser filtrada. |
-| `{EXPRESSION}` | Uma expressão para filtrar. |
+| `{EXPRESSION}` | Uma expressão para filtrar por. |
 
 **Exemplo**
 
-O seguinte query PQL define todas as pessoas com 21 anos ou mais.
+A consulta PQL a seguir define todas as pessoas com 21 anos ou mais.
 
 ```sql
 person.filter(age >= 21)
@@ -223,7 +223,7 @@ array.map(expression)
 
 **Exemplo**
 
-O query PQL a seguir cria uma nova matriz de números e quadra o valor dos números originais.
+A consulta PQL a seguir cria uma nova matriz de números e quadrados do valor dos números originais.
 
 ```sql
 numbers.map(square)
@@ -231,7 +231,7 @@ numbers.map(square)
 
 ## Primeiro `n` na matriz {#first-n}
 
-A função `topN` é usada para retornar os primeiros `N` itens em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida.
+A função `topN` é usada para retornar os primeiros `N` itens em uma matriz, quando classificada em ordem crescente com base na expressão numérica fornecida.
 
 **Formato**
 
@@ -242,12 +242,12 @@ A função `topN` é usada para retornar os primeiros `N` itens em uma matriz, q
 | Argumento | Descrição |
 | --------- | ----------- |
 | `{ARRAY}` | A matriz ou lista que deve ser classificada. |
-| `{VALUE}` | A propriedade na qual classificar a matriz ou a lista. |
+| `{VALUE}` | A propriedade na qual classificar a matriz ou lista. |
 | `{AMOUNT}` | O número de itens a serem retornados. |
 
 **Exemplo**
 
-O seguinte query PQL retorna os cinco pedidos principais com o preço mais alto.
+A consulta PQL a seguir retorna os cinco principais pedidos com o preço mais alto.
 
 ```sql
 orders.topN(price, 5)
@@ -255,7 +255,7 @@ orders.topN(price, 5)
 
 ## Último `n` na matriz
 
-A função `bottomN` é usada para retornar os últimos `N` itens em uma matriz, quando classificados em ordem crescente com base na expressão numérica fornecida.
+A função `bottomN` é usada para retornar os últimos `N` itens em uma matriz, quando classificada em ordem crescente com base na expressão numérica fornecida.
 
 **Formato**
 
@@ -266,12 +266,12 @@ A função `bottomN` é usada para retornar os últimos `N` itens em uma matriz,
 | Argumento | Descrição |
 | --------- | ----------- | 
 | `{ARRAY}` | A matriz ou lista que deve ser classificada. |
-| `{VALUE}` | A propriedade na qual classificar a matriz ou a lista. |
+| `{VALUE}` | A propriedade na qual classificar a matriz ou lista. |
 | `{AMOUNT}` | O número de itens a serem retornados. |
 
 **Exemplo**
 
-O seguinte query PQL retorna os cinco pedidos principais com o preço mais baixo.
+A consulta PQL a seguir retorna os cinco principais pedidos com o preço mais baixo.
 
 ```sql
 orders.bottomN(price, 5)
@@ -289,7 +289,7 @@ A função `head` é usada para retornar o primeiro item na matriz ou lista.
 
 **Exemplo**
 
-O seguinte query PQL retorna o primeiro dos cinco pedidos principais com o preço mais alto. Para obter mais informações sobre a função `topN`, consulte a seção [first `n` no array](#first-n).
+A consulta PQL a seguir retorna o primeiro dos cinco principais pedidos com o preço mais alto. Mais informações sobre a função `topN` podem ser encontradas na seção [first `n` no array](#first-n).
 
 ```sql
 orders.topN(price, 5).head()
@@ -297,4 +297,4 @@ orders.topN(price, 5).head()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre o array, a lista e as funções definidas, é possível usá-las nos query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).
+Agora que você aprendeu sobre funções de array, lista e conjunto, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia a [Visão geral da linguagem de consulta de perfil](./overview.md).

@@ -1,13 +1,12 @@
 ---
-product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Web SDK
 breadcrumb-title: Guia do Web SDK
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Edge Network.
-feature: Data Management
+feature: Gerenciamento de dados
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 34%
@@ -53,8 +52,8 @@ ht-degree: 34%
    * Estrutura de transparência e consentimento 2.0 do IAB {#iab-tcf}
       * [Visão geral](consent/iab-tcf/overview.md)
       * [Integração com o Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-      * [Integração sem o Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
-* Extensão do SDK da Web para o Adobe Experience Platform Launch {#extension}
+      * [Integrar sem Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Extensão do SDK da Web para Adobe Experience Platform Launch {#extension}
    * [Extensão do SDK da Web](extension/web-sdk-extension.md)
    * [Tipos de ação](extension/action-types.md)
    * [Tipos de elementos de dados](extension/data-element-types.md)

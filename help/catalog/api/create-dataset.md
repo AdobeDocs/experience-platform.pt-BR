@@ -2,13 +2,13 @@
 keywords: Experience Platform, home, tópicos populares, conjunto de dados, conjunto de dados, criar um conjunto de dados, criar conjunto de dados, ativar conjunto de dados
 solution: Experience Platform
 title: Criar um conjunto de dados na API
-topic: developer guide
+topic-legacy: developer guide
 description: Este documento aborda como criar um objeto de conjunto de dados na API do Serviço de catálogo.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---

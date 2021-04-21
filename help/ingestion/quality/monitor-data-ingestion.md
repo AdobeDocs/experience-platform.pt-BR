@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform, home, tópicos populares, monitoramento, monitoramento, fluxos de dados, ingestão de monitor, assimilação de dados, assimilação de dados, exibir registros, exibir lotes;
+keywords: Experience Platform, home, tópicos populares, monitoramento, monitoramento, fluxos de dados, ingestão de monitor, assimilação de dados, ingestão de dados, exibir registros, exibir lotes;
 solution: Experience Platform
 title: Monitoramento da assimilação de dados
-topic: overview
-description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário da Adobe Experience Platform. Este guia requer uma Adobe ID e acesso à Adobe Experience Platform.
+topic-legacy: overview
+description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
+exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
-
 
 # Monitoramento da assimilação de dados
 
 A assimilação de dados permite assimilar seus dados na Adobe Experience Platform. Você pode usar a assimilação em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a assimilação de streaming, que permite assimilar seus dados em [!DNL Platform] usando endpoints de streaming em tempo real.
 
-Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário da Adobe Experience Platform. Este guia requer uma Adobe ID e acesso à Adobe Experience Platform.
+Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
 
 ## Monitore a assimilação de dados de ponta a ponta de fluxo
 
-Na [Interface do usuário da Experience Platform](https://platform.adobe.com), clique em **[!UICONTROL Monitoring]** no menu de navegação esquerdo e, em seguida, clique em **[!UICONTROL Streaming end-to-end]**.
+No [Experience Platform UI](https://platform.adobe.com), clique em **[!UICONTROL Monitoring]** no menu de navegação esquerdo e, em seguida, clique em **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,13 @@ O Experience Platform oferece suporte para assimilar dados de um sistema de auto
 O Experience Platform fornece suporte para assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL PayPal] conector](connectors/payments/paypal.md)
+
+### Streaming
+
+O Experience Platform oferece suporte para assimilar dados de fontes de transmissão. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocolos
 

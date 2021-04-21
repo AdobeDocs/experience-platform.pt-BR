@@ -3,16 +3,16 @@ keywords: Experience Platform, home, tópicos populares, atualizar contas
 description: Em algumas circunstâncias, pode ser necessário atualizar os detalhes de uma conta de fontes existente. A área de trabalho Fontes oferece a capacidade de adicionar, editar e excluir detalhes de um lote ou conexão de transmissão existente, incluindo o nome, a descrição e as credenciais.
 solution: Experience Platform
 title: Atualizar detalhes da conta da conexão de origem na interface do usuário
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 translation-type: tm+mt
-source-git-commit: 4a7405e2c8c97442d2781295dd827c6940aa33eb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 1%
+source-wordcount: '435'
+ht-degree: 0%
 
 ---
-
 
 # Atualizar detalhes da conta na interface do usuário
 

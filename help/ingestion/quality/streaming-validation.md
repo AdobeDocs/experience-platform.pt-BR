@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform; home; tópicos populares; streaming; ingestão de streaming; validação de assimilação de streaming; validação; validação de assimilação de streaming; validação; validação síncrona; validação síncrona; validação assíncrona; validação assíncrona;
+keywords: Experience Platform, home, tópicos populares, streaming, assimilação de streaming, validação de assimilação de streaming, validação, validação de assimilação de streaming, validar, validação síncrona, validação síncrona, validação assíncrona, validação assíncrona;
 solution: Experience Platform
 title: Validação de Assimilação de Fluxo
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: A assimilação de streaming permite carregar seus dados na Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
+description: A assimilação de streaming permite carregar seus dados no Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
 
-
 # Validação da assimilação de fluxo
 
-A assimilação de streaming permite carregar seus dados na Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
+A assimilação de streaming permite carregar seus dados no Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Um dos métodos pelos quais os dados podem ser enviados para o  [!DNL Experience Platform].

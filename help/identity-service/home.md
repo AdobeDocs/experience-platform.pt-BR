@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, identidade, identidade, gráficos XDM, serviço de identidade, serviço de identidade
 solution: Experience Platform
 title: Visão geral do serviço de identidade
-topic: overview
+topic-legacy: overview
 description: O serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visão de seu cliente e de seu comportamento ao unir identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
+exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 translation-type: tm+mt
-source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Identity Service]visão geral
 

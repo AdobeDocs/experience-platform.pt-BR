@@ -2,17 +2,17 @@
 keywords: Experience Platform, home, tópicos populares, Armazenamento no Google Cloud, armazenamento na nuvem do google, google, Google
 solution: Experience Platform
 title: Criar uma conexão de fonte de armazenamento do Google Cloud usando a API do Serviço de fluxo
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Google Cloud Storage usando a API do Serviço de fluxo.
+exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
-
 
 # Crie uma conexão de origem [!DNL Google Cloud Storage] usando a API [!DNL Flow Service]
 

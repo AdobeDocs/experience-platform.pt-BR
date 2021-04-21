@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;identity xid;XID
+keywords: Experience Platform, home, tópicos populares, identificação xid, XID
 solution: Experience Platform
-title: Obter a ID nativa para uma identidade
-topic: API guide
-description: Os dados de identidade normalmente são fornecidos como um valor de sequência de ID e namespace de identidade nos dados XDM ingeridos e ao fornecer uma identidade para uso em uma chamada de API. Quando as identidades são persistentes no Serviço de identidade, uma ID é gerada e atribuída a essa identidade, chamada de XID nativo. APIs de plataforma que exigem suporte a dados de identidade usando esse formulário mais compacto para a ID agregada e a namespace. XID é uma string codificada em base64.
+title: Obter a ID nativa de uma identidade
+topic-legacy: API guide
+description: Os dados de identidade geralmente são fornecidos como um valor de sequência de ID e namespace de identidade em dados XDM assimilados e ao fornecer uma identidade para uso em uma chamada de API. Quando as identidades são persistentes no Serviço de identidade, uma ID é gerada e atribuída a essa identidade, chamada de XID nativa. APIs da plataforma que exigem suporte a dados de identidade usando esse formulário mais compacto para a ID agregada e o namespace. XID é uma string codificada em base64.
+exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
 
-
 # Obter a ID nativa de uma identidade
 
-Os dados de identidade normalmente são fornecidos como um valor de sequência de ID e namespace de identidade nos dados XDM ingeridos e ao fornecer uma identidade para uso em uma chamada de API. Quando as identidades são persistentes em [!DNL Identity Service], uma ID é gerada e atribuída a essa identidade, chamada de XID nativo. [!DNL Platform] As APIs que exigem suporte a dados de identidade usando esse formulário mais compacto para a ID agregada e a namespace. XID é uma string codificada em base64.
+Os dados de identidade geralmente são fornecidos como um valor de sequência de ID e namespace de identidade em dados XDM assimilados e ao fornecer uma identidade para uso em uma chamada de API. Quando as identidades são persistentes em [!DNL Identity Service], uma ID é gerada e atribuída a essa identidade, chamada de XID nativo. [!DNL Platform] As APIs que exigem suporte a dados de identidade usando esse formulário mais compacto para a ID agregada e o namespace. XID é uma string codificada em base64.
 
 >[!NOTE]
 >
->Esse formato é usado principalmente para Adobe interno. O XID nativo como um valor singular é mais eficiente em termos de espaço e é o que é usado internamente nas soluções [!DNL Platform] para armazenamento e serialização. No entanto, ele não é legível pelo ser humano, é opaco e requer uma chamada separada para obtê-lo para uso.
+>Esse formato é usado principalmente para Adobe interno. O XID nativo como um valor singular é mais eficiente em termos de espaço e é o que é usado internamente nas soluções [!DNL Platform] para armazenamento e serialização. No entanto, não é legível por seres humanos, é opaco e requer uma chamada separada para obter o uso.
 
-Adquira o XID para obter um determinado valor de ID e namespace usando o serviço descrito nesta seção.
+Adquira o XID para um determinado valor de ID e namespace usando o serviço descrito nesta seção.
 
 **Formato da API**
 

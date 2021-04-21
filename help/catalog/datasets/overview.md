@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, local de dados, Localização de dados, Gerenciamento de dados, Lineage, linhagem, tipo de dados, tipos de dados, Tipos de dados, Tipo de dados
+keywords: Experience Platform, página inicial, tópicos populares, local dos dados, Localização dos dados, Gerenciamento de dados, Gerenciamento de dados, Linhagem, linhagem, tipo de dados, tipos de dados, Tipos de dados, Tipo de dados
 solution: Experience Platform
 title: Visão geral dos conjuntos de dados
-topic: datasets
-description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
+topic-legacy: datasets
+description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados no Experience Platform.
+exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
 
-
 # Visão geral dos conjuntos de dados
 
-Todos os dados assimilados com êxito na Adobe Experience Platform são mantidos no [!DNL Data Lake] como conjuntos de dados. Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os conjuntos de dados também contêm metadados que descrevem vários aspectos dos dados armazenados.
+Todos os dados assimilados com êxito no Adobe Experience Platform são mantidos no [!DNL Data Lake] como conjuntos de dados. Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os conjuntos de dados também contêm metadados que descrevem vários aspectos dos dados armazenados.
 
 Este documento fornece uma visão geral de alto nível dos conjuntos de dados em [!DNL Experience Platform].
 
@@ -35,13 +35,13 @@ Para obter mais informações sobre XDM, consulte a [Visão geral do sistema XDM
 
 ## Inserção de dados em conjuntos de dados
 
-A assimilação de dados da Adobe Experience Platform representa os vários métodos pelos quais [!DNL Platform] assimila dados de várias fontes. Independentemente do método de assimilação, todos os dados assimilados com êxito são convertidos em arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade. Esses arquivos em lote são adicionados aos conjuntos de dados dedicados e mantidos dentro do [!DNL Data Lake].
+A Assimilação de dados do Adobe Experience Platform representa os vários métodos pelos quais [!DNL Platform] assimila dados de várias fontes. Independentemente do método de assimilação, todos os dados assimilados com êxito são convertidos em arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade. Esses arquivos em lote são adicionados aos conjuntos de dados dedicados e mantidos dentro do [!DNL Data Lake].
 
 Consulte a [Visão geral da assimilação de dados](../../ingestion/home.md) para obter mais informações.
 
 ## Aplicar rótulos de uso a conjuntos de dados
 
-A Adobe Experience Platform [!DNL Data Governance] permite gerenciar os dados do cliente para garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. A estrutura [!DNL Data Governance] permite aplicar rótulos de uso para categorizar dados de acordo com as políticas de uso que se aplicam a esses dados.
+O Adobe Experience Platform [!DNL Data Governance] permite gerenciar os dados do cliente para garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. A estrutura [!DNL Data Governance] permite aplicar rótulos de uso para categorizar dados de acordo com as políticas de uso que se aplicam a esses dados.
 
 Os rótulos de uso de dados podem ser aplicados a conjuntos de dados inteiros ou a campos individuais do conjunto de dados. Os rótulos adicionados no nível do conjunto de dados são herdados por todos os campos nesse conjunto de dados.
 
@@ -57,11 +57,11 @@ Depois que os conjuntos de dados tiverem sido usados para armazenar dados assimi
 Veja a seguir uma lista de serviços downstream que usam conjuntos de dados para várias operações. Consulte a documentação de cada serviço para obter mais informações.
 
 * [[!DNL Data Access API]](../../data-access/home.md): Permite acessar e baixar o conteúdo dos arquivos armazenados em conjuntos de dados.
-* [Serviço de identidade da Adobe Experience Platform](../../identity-service/home.md): Corresponde identidades entre dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais eles estão em conformidade.
+* [Serviço](../../identity-service/home.md) de identidade da Adobe Experience Platform: Corresponde identidades entre dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais eles estão em conformidade.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Aproveitamento  [!DNL Identity Service] para criar perfis detalhados do cliente a partir de seus conjuntos de dados em tempo real. [!DNL Real-time Customer Profile] extrai dados do  [!DNL Data Lake] e mantém os perfis do cliente em seu próprio armazenamento de dados separado.
-* [Serviço de segmentação da Adobe Experience Platform](../../segmentation/home.md): Permite criar segmentos e gerar públicos-alvo a partir de seus  [!DNL Real-time Customer Profile] dados. Esses públicos podem ser exportados para seus próprios conjuntos de dados no [!DNL Data Lake].
+* [Serviço](../../segmentation/home.md) de segmentação do Adobe Experience Platform: Permite criar segmentos e gerar públicos-alvo a partir de seus  [!DNL Real-time Customer Profile] dados. Esses públicos podem ser exportados para seus próprios conjuntos de dados no [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Usa aprendizado de máquina e inteligência artificial para descobrir insights em grandes conjuntos de dados.
-* [Serviço](../../query-service/home.md) de query da Adobe Experience Platform: Permite usar o SQL padrão para consultar dados no  [!DNL Experience Platform], unindo quaisquer conjuntos de dados no  [!DNL Data Lake] e capturando resultados de query como um novo conjunto de dados para uso em relatórios,  [!DNL Data Science Workspace]ou  [!DNL Real-time Customer Profile].
+* [Serviço](../../query-service/home.md) de query do Adobe Experience Platform: Permite usar o SQL padrão para consultar dados no  [!DNL Experience Platform], unindo quaisquer conjuntos de dados no  [!DNL Data Lake] e capturando resultados de query como um novo conjunto de dados para uso em relatórios,  [!DNL Data Science Workspace]ou  [!DNL Real-time Customer Profile].
 
 ## Próximas etapas
 

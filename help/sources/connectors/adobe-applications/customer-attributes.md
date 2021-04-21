@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;Conector de atributos do cliente
+keywords: Experience Platform, home, tópicos populares, conector de atributos do cliente
 solution: Experience Platform
-title: Visão Geral do Conector de Origem de Atributos do Cliente
-topic: overview
-description: Saiba como conectar Atributos do cliente à Adobe Experience Platform usando APIs ou a interface do usuário
+title: Visão geral do conector de origem dos atributos do cliente
+topic-legacy: overview
+description: Saiba como conectar atributos do cliente ao Adobe Experience Platform usando APIs ou a interface do usuário
+exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
+# Conector de atributos do cliente
 
-# Conector Atributos do cliente
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Experience Platform oferece suporte para assimilar dados de perfil dos Atributos do cliente no Adobe Experience Platform.
 
-O Experience Platform oferece suporte para a inclusão de dados de perfil de Atributos do cliente no Adobe Experience Platform.
+A documentação abaixo fornece informações sobre como conectar atributos do cliente à Adobe Experience Platform usando APIs ou a interface do usuário:
 
-A documentação abaixo fornece informações sobre como conectar Atributos do cliente à Adobe Experience Platform usando APIs ou a interface do usuário:
-
-## Conecte os atributos do cliente à plataforma usando a interface do usuário
+## Conectar atributos do cliente à plataforma usando a interface do usuário
 
 - [Criar uma conexão de origem de Atributos do cliente na interface do usuário](../../tutorials/ui/create/adobe-applications/customer-attributes.md)

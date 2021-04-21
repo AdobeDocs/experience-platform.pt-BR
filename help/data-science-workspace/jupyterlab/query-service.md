@@ -2,17 +2,17 @@
 keywords: Experience Platform; JupyterLab; notebooks; Data Science Workspace; tópicos populares; serviço de consulta
 solution: Experience Platform
 title: Serviço de query no notebook Júpiter
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform permite usar a Linguagem de consulta estruturada (SQL) no Data Science Workspace ao integrar o Serviço de consulta ao JupyterLab como um recurso padrão. Este tutorial demonstra exemplos de consultas SQL para casos de uso comuns para explorar, transformar e analisar dados do Adobe Analytics.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
-
 
 # Serviço de query no notebook Júpiter
 
@@ -42,9 +42,9 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
    >[!NOTE]
    >
-   >Se uma nova guia Iniciador não for exibida automaticamente, abra uma nova guia Iniciador clicando em **[!UICONTROL Arquivo]** e selecione **[!UICONTROL Novo Iniciador]**.
+   >Se uma nova guia do Iniciador não for exibida automaticamente, abra uma nova guia do Iniciador clicando em **[!UICONTROL File]** e selecione **[!UICONTROL New Launcher]**.
 
-2. Na guia Iniciador, clique no ícone **[!UICONTROL Em branco]** em um ambiente Python 3 para abrir um bloco de anotações vazio.
+2. Na guia Iniciador, clique no ícone **[!UICONTROL Blank]** em um ambiente Python 3 para abrir um bloco de anotações vazio.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -56,7 +56,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Encontre um conjunto de dados [!DNL Adobe Analytics] para explorar e clique com o botão direito do mouse na listagem, clique em **[!UICONTROL Dados de consulta no notebook]** para gerar consultas SQL no notebook vazio.
+4. Encontre um conjunto de dados [!DNL Adobe Analytics] para explorar e clique com o botão direito do mouse na listagem. Clique em **[!UICONTROL Query Data in Notebook]** para gerar consultas SQL no notebook vazio.
 
 5. Clique na primeira célula gerada que contém a função `qs_connect()` e execute-a clicando no botão Reproduzir. Essa função cria uma conexão entre a instância do notebook e o [!DNL Query Service].
 
@@ -98,7 +98,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
 
 ## Consulte seus dados {#query-your-data}
 
-Insira as seguintes consultas SQL em células de bloco de notas individuais. Execute uma query selecionando na célula seguida selecionando o botão **[!UICONTROL play]**. Resultados de query bem-sucedidos ou registros de erro são exibidos abaixo da célula executada.
+Insira as seguintes consultas SQL em células de bloco de notas individuais. Execute um query selecionando em sua célula seguida selecionando o botão **[!UICONTROL play]**. Resultados de query bem-sucedidos ou registros de erro são exibidos abaixo da célula executada.
 
 Quando um notebook está inativo por um longo período de tempo, a conexão entre o notebook e [!DNL Query Service] pode se romper. Nesses casos, reinicie [!DNL JupyterLab] selecionando o botão **Restart** ![restart button](../images/jupyterlab/user-guide/restart_button.png) localizado no canto superior direito próximo ao botão liga/desliga.
 

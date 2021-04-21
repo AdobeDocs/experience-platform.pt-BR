@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catálogo;pesquisa de vários objetos;api
+keywords: Experience Platform, home, tópicos populares, catálogo, pesquisa de vários objetos, api
 solution: Experience Platform
-title: Pesquisar vários objetos de catálogo
-topic: developer guide
-description: Se você desejar visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornecerá um atalho simples para solicitar vários objetos do mesmo tipo. É possível usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista de IDs separada por vírgulas.
+title: Pesquisar vários objetos do catálogo
+topic-legacy: developer guide
+description: Se você deseja exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, o Catálogo fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
-
 # Pesquisar vários objetos do catálogo
 
-Se você quiser visualização em vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] fornece um atalho simples para solicitar vários objetos do mesmo tipo. É possível usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista de IDs separada por vírgulas.
+Se você quiser exibir vários objetos específicos, em vez de fazer uma solicitação por objeto, [!DNL Catalog] fornece um atalho simples para solicitar vários objetos do mesmo tipo. Você pode usar uma única solicitação de GET para retornar vários objetos específicos, incluindo uma lista separada por vírgulas de IDs.
 
 >[!NOTE]
 >
->Mesmo ao solicitar objetos [!DNL Catalog] específicos, a prática recomendada para o parâmetro de query `properties` é retornar somente as propriedades de que você precisa.
+>Mesmo ao solicitar objetos [!DNL Catalog] específicos, ainda é uma prática recomendada retornar o parâmetro de consulta `properties` somente as propriedades necessárias.
 
 **Formato da API**
 
@@ -30,12 +30,12 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parâmetro | Descrição |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser recuperado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Um identificador para um dos objetos específicos que você deseja recuperar. |
 
 **Solicitação**
 
-A solicitação a seguir inclui uma lista separada por vírgulas de IDs de conjunto de dados, bem como uma lista separada por vírgulas de propriedades a serem retornadas para cada conjunto de dados.
+A solicitação a seguir inclui uma lista separada por vírgulas de IDs de conjuntos de dados, bem como uma lista separada por vírgulas de propriedades a serem retornadas para cada conjunto de dados.
 
 ```shell
 curl -X GET \
@@ -52,7 +52,7 @@ Uma resposta bem-sucedida retorna uma lista dos conjuntos de dados especificados
 
 >[!NOTE]
 >
->Se um objeto retornado não contiver mais uma das propriedades solicitadas indicadas pelo query `properties`, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
+>Se um objeto retornado não contiver mais uma das propriedades solicitadas indicadas pela query `properties`, a resposta retornará apenas as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
 
 ```json
 {

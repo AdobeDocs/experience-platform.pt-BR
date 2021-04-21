@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Perfil Query Language;object functions;object;
+keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, pql, PQL, Linguagem de consulta de perfil, funções de objeto, objeto;
 solution: Experience Platform
 title: Funções de objeto PQL
-topic: developer guide
-description: A Linguagem de Query do perfil (PQL) oferta funções para simplificar a interação com objetos.
+topic-legacy: developer guide
+description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com objetos.
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 4%
 
 ---
 
-
 # Funções do objeto
 
-[!DNL Profile Query Language] (PQL) oferta funções para tornar a interação com objetos mais simples. Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) oferece funções para simplificar a interação com objetos. Mais informações sobre outras funções PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## É nulo
 
@@ -29,7 +29,7 @@ A função `isNull` determina se uma referência de objeto não existe.
 
 **Exemplo**
 
-O query PQL a seguir verifica se o endereço residencial da pessoa não existe.
+A consulta PQL a seguir verifica se o endereço residencial da pessoa não existe.
 
 ```sql
 person.homeAddress.isNull()
@@ -47,7 +47,7 @@ A função `isNotNull` determina se existe uma referência de objeto.
 
 **Exemplo**
 
-O query PQL a seguir verifica se o endereço residencial da pessoa existe.
+A consulta PQL a seguir verifica se o endereço residencial da pessoa existe.
 
 ```sql
 person.homeAddress.isNotNull()
@@ -55,4 +55,4 @@ person.homeAddress.isNotNull()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de objeto, é possível usá-las em seus query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).
+Agora que você aprendeu sobre as funções do objeto, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia a [Visão geral da linguagem de consulta de perfil](./overview.md).

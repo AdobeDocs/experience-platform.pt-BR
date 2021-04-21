@@ -1,57 +1,57 @@
 ---
-keywords: Experience Platform;home;popular topics;serviço de fluxo;atualizar fluxos de dados
+keywords: Experience Platform, home, tópicos populares, serviço de fluxo, atualizar fluxos de dados
 solution: Experience Platform
 title: Atualizar fluxos de dados usando a API de serviço de fluxo
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e programação, usando a API de Serviço de Fluxo.
+description: Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e programação, usando a API do Serviço de Fluxo.
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 2%
+source-wordcount: '615'
+ht-degree: 1%
 
 ---
 
+# Atualizar fluxos de dados usando a API do Serviço de Fluxo
 
-# Atualizar fluxos de dados usando a API de Serviço de Fluxo
-
-Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e programação usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para atualizar um fluxo de dados, incluindo seu nome, descrição e agendamento usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
-Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione seu conector de escolha na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
+Este tutorial requer uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione o conector de escolha na [visão geral das fontes](../../home.md) e siga as etapas descritas antes de tentar este tutorial.
 
-Este tutorial também exige que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Caixas de proteção](../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Sandboxes](../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para atualizar com êxito seu fluxo de dados usando a API [!DNL Flow Service].
+As seções a seguir fornecem informações adicionais que você precisará saber para atualizar com êxito o fluxo de dados usando a API [!DNL Flow Service].
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para APIs da plataforma, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos no Experience Platform, incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform, incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para APIs da plataforma exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
-## Procurar detalhes do fluxo de dados
+## Pesquisar detalhes do fluxo de dados
 
-A primeira etapa na atualização do seu fluxo de dados é recuperar os detalhes do fluxo de dados usando sua ID de fluxo. Você pode visualização os detalhes atuais de um fluxo de dados existente, fazendo uma solicitação de GET para o terminal `/flows`.
+A primeira etapa na atualização do fluxo de dados é recuperar os detalhes do fluxo de dados usando a ID do fluxo. Você pode visualizar os detalhes atuais de um fluxo de dados existente fazendo uma solicitação de GET para o endpoint `/flows`.
 
 **Formato da API**
 
@@ -65,7 +65,7 @@ GET /flows/{FLOW_ID}
 
 **Solicitação**
 
-A solicitação a seguir recupera informações atualizadas sobre sua ID de fluxo.
+A solicitação a seguir recupera informações atualizadas em relação à ID do fluxo.
 
 ```shell
 curl -X GET \
@@ -78,7 +78,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes atuais do seu fluxo de dados, incluindo sua versão, programação e identificador exclusivo (`id`).
+Uma resposta bem-sucedida retorna os detalhes atuais do fluxo de dados, incluindo a versão, o agendamento e o identificador exclusivo (`id`).
 
 ```json
 {
@@ -190,13 +190,13 @@ Uma resposta bem-sucedida retorna os detalhes atuais do seu fluxo de dados, incl
 }
 ```
 
-## Atualizar o fluxo de dados
+## Atualizar fluxo de dados
 
-Para atualizar o cronograma de execução, nome e descrição do seu fluxo de dados, execute uma solicitação de PATCH para a API [!DNL Flow Service], fornecendo a ID do fluxo, a versão e o novo cronograma que deseja usar.
+Para atualizar o cronograma de execução, nome e descrição do fluxo de dados, execute uma solicitação de PATCH para a API [!DNL Flow Service], fornecendo o ID do fluxo, a versão e o novo agendamento que deseja usar.
 
 >[!IMPORTANT]
 >
->O cabeçalho `If-Match` é necessário ao fazer uma solicitação de PATCH. O valor deste cabeçalho é a versão exclusiva da conexão que você deseja atualizar.
+>O cabeçalho `If-Match` é necessário ao fazer uma solicitação de PATCH. O valor desse cabeçalho é a versão exclusiva da conexão que você deseja atualizar.
 
 **Formato da API**
 
@@ -206,7 +206,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitação**
 
-A solicitação a seguir atualiza sua programação de execução de fluxo, bem como o nome e a descrição do seu fluxo de dados.
+A solicitação a seguir atualiza o agendamento da execução do fluxo, bem como o nome e a descrição do seu fluxo de dados.
 
 ```shell
 curl -X PATCH \
@@ -243,7 +243,7 @@ curl -X PATCH \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna sua ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação de GET para a API [!DNL Flow Service], fornecendo a ID do fluxo.
+Uma resposta bem-sucedida retorna a ID do fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação do GET para a API [!DNL Flow Service], fornecendo a ID do fluxo.
 
 ```json
 {
@@ -254,4 +254,4 @@ Uma resposta bem-sucedida retorna sua ID de fluxo e uma tag atualizada. Você po
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você atualizou o cronograma de execução, o nome e a descrição do seu fluxo de dados usando a API [!DNL Flow Service]. Para obter mais informações sobre como usar conectores de origem, consulte a [visão geral das fontes](../../home.md).
+Ao seguir este tutorial, você atualizou o cronograma de execução, o nome e a descrição do fluxo de dados usando a API [!DNL Flow Service]. Para obter mais informações sobre como usar conectores de origem, consulte a [visão geral das fontes](../../home.md).

@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;popular topics;mecanismos;sensei machine learning api
+keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, mecanismos, api de aprendizado de máquina do sensei
 solution: Experience Platform
 title: Endpoint da API de mecanismos
-topic: Developer guide
-description: Os mecanismos são a base para Modelos de aprendizado de máquina na Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos, ou ambos.
+topic-legacy: Developer guide
+description: Os mecanismos são a base dos Modelos de aprendizado de máquina no Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos ou ambos.
+exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
 
 ---
 
-
 # Ponto de extremidade de mecanismos
 
-Os mecanismos são a base para Modelos de aprendizado de máquina na Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos, ou ambos.
+Os mecanismos são a base dos Modelos de aprendizado de máquina no Data Science Workspace. Eles contêm algoritmos de aprendizado de máquina que resolvem problemas específicos, pipelines de recursos para executar engenharia de recursos ou ambos.
 
-## Procure seu registro do Docker
+## Procure o registro do Docker
 
 >[!TIP]
 >
->Se você não tiver um URL do Docker, visite os [arquivos de origem do pacote em um tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obter uma apresentação passo a passo sobre como criar um URL de host do Docker.
+>Se você não tiver um URL Docker, visite o [Tutorial Package source em uma fórmula](../models-recipes/package-source-files-recipe.md) para obter uma apresentação passo a passo sobre como criar um URL de host Docker.
 
-Suas credenciais de registro do Docker são necessárias para carregar um arquivo de Receita empacotado, incluindo o URL do host do Docker, nome de usuário e senha. Você pode pesquisar essas informações executando a seguinte solicitação de GET:
+Suas credenciais do Registro do Docker são necessárias para fazer upload de um arquivo de Receita empacotado, incluindo o URL do host do Docker, nome de usuário e senha. Você pode pesquisar essas informações executando a seguinte solicitação do GET:
 
 **Formato da API**
 
@@ -43,7 +43,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do registro do Docker, incluindo o URL do Docker (`host`), o nome de usuário (`username`) e a senha (`password`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do seu Registro Docker, incluindo o URL Docker (`host`), o nome de usuário (`username`) e a senha (`password`).
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do registro do 
 
 ## Criar um mecanismo usando URLs do Docker {#docker-image}
 
-Você pode criar um Mecanismo executando uma solicitação de POST ao fornecer seus metadados e um URL do Docker que faz referência a uma imagem do Docker em formulários de várias partes.
+Você pode criar um mecanismo executando uma solicitação POST e, ao mesmo tempo, fornecendo seus metadados e um URL Docker que faz referência a uma imagem Docker em formulários de várias partes.
 
 **Formato da API**
 
@@ -67,7 +67,7 @@ Você pode criar um Mecanismo executando uma solicitação de POST ao fornecer s
 POST /engines
 ```
 
-**Python/R de solicitação**
+**Solicitar Python/R**
 
 ```shell
 curl -X POST \
@@ -96,16 +96,16 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da Receita. |
-| `description` | Uma descrição opcional para o mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
-| `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker é criada e pode ser &quot;Python&quot;, &quot;R&quot; ou &quot;Tensorflow&quot;. |
-| `algorithm` | Uma string que especifica o tipo de algoritmo de aprendizado da máquina. Os tipos de algoritmos suportados incluem &quot;Classificação&quot;, &quot;Regressão&quot; ou &quot;Personalizado&quot;. |
-| `artifacts.default.image.location` | O local da imagem do Docker vinculada por um URL do Docker. |
-| `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker é criada e pode ser &quot;Python&quot;, &quot;R&quot; ou &quot;Tensorflow&quot;. |
+| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido na interface do usuário como o nome da Receita. |
+| `description` | Uma descrição opcional do mecanismo. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
+| `type` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada e pode ser &quot;Python&quot;, &quot;R&quot; ou &quot;Tensorflow&quot;. |
+| `algorithm` | Uma string que especifica o tipo de algoritmo de aprendizado de máquina. Os tipos de algoritmos suportados incluem &quot;Classificação&quot;, &quot;Regressão&quot; ou &quot;Personalizado&quot;. |
+| `artifacts.default.image.location` | O local da imagem do Docker vinculada a um URL do Docker. |
+| `artifacts.default.image.executionType` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada e pode ser &quot;Python&quot;, &quot;R&quot; ou &quot;Tensorflow&quot;. |
 
 **Solicitar PySpark/Scala**
 
-Ao fazer uma solicitação de receitas do PySpark, `executionType` e `type` são &quot;PySpark&quot;. Ao fazer uma solicitação para fórmulas Scala, `executionType` e `type` são &quot;Spark&quot;. O exemplo de fórmula Scala a seguir usa o Spark:
+Ao fazer uma solicitação para fórmulas do PySpark, `executionType` e `type` são &quot;PySpark&quot;. Ao fazer uma solicitação para fórmulas Scala, `executionType` e `type` são &quot;Spark&quot;. O exemplo de fórmula do Scala a seguir usa Spark:
 
 ```shell
 curl -X POST \
@@ -135,16 +135,16 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da Receita. |
-| `description` | Uma descrição opcional para o mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
-| `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. O valor pode ser definido como Spark ou PySpark. |
-| `mlLibrary` | Um campo que é necessário ao criar mecanismos para fórmulas PySpark e Scala. Esse campo deve ser definido como `databricks-spark`. |
-| `artifacts.default.image.location` | O local da imagem do Docker. Somente o ACR do Azure ou o Dockerhub Público (não autenticado) são suportados. |
-| `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
+| `name` | O nome desejado para o Mecanismo. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido na interface do usuário como o nome da Receita. |
+| `description` | Uma descrição opcional do mecanismo. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
+| `type` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada. O valor pode ser definido como Spark ou PySpark. |
+| `mlLibrary` | Um campo necessário ao criar mecanismos para fórmulas PySpark e Scala. Este campo deve ser definido como `databricks-spark`. |
+| `artifacts.default.image.location` | O local da imagem Docker. Somente o Azure ACR ou o Dockerhub Público (não autenticado) são suportados. |
+| `artifacts.default.image.executionType` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo recém-criado, incluindo seu identificador exclusivo (`id`). A seguinte resposta de exemplo é para um Mecanismo Python. Todas as respostas do mecanismo seguem este formato:
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um Mecanismo Python. Todas as respostas do mecanismo seguem este formato:
 
 ```json
 {
@@ -171,9 +171,9 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo re
 }
 ```
 
-## Criar um mecanismo de pipeline de recursos usando URLs do Docker {#feature-pipeline-docker}
+## Crie um mecanismo de pipeline de recurso usando URLs do Docker {#feature-pipeline-docker}
 
-Você pode criar um mecanismo de pipeline de recursos executando uma solicitação de POST ao fornecer seus metadados e um URL do Docker que faz referência a uma imagem do Docker.
+Você pode criar um mecanismo de pipeline de recursos executando uma solicitação POST e fornecendo seus metadados e um URL Docker que faz referência a uma imagem Docker.
 
 **Formato da API**
 
@@ -214,19 +214,19 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `type` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. O valor pode ser definido como Spark ou PySpark. |
-| `algorithm` | O algoritmo que está sendo usado define esse valor como `fp` (pipeline de recursos). |
-| `name` | O nome desejado para o Mecanismo de pipeline de recursos. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como o nome da Receita. |
-| `description` | Uma descrição opcional para o mecanismo. A Receita correspondente a este Mecanismo herdará esse valor para ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
-| `mlLibrary` | Um campo que é necessário ao criar mecanismos para fórmulas PySpark e Scala. Esse campo deve ser definido como `databricks-spark`. |
-| `artifacts.default.image.location` | O local da imagem do Docker. Somente o ACR do Azure ou o Dockerhub Público (não autenticado) são suportados. |
-| `artifacts.default.image.executionType` | O tipo de execução do Mecanismo. Esse valor corresponde ao idioma no qual a imagem do Docker foi criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
-| `artifacts.default.image.packagingType` | O tipo de empacotamento do Mecanismo. Esse valor deve ser definido como `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Seus parâmetros de arquivo de configuração `pipeline.json`. |
+| `type` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada. O valor pode ser definido como Spark ou PySpark. |
+| `algorithm` | O algoritmo que está sendo usado, defina esse valor como `fp` (pipeline de recursos). |
+| `name` | O nome desejado para o Mecanismo de pipeline de recursos. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido na interface do usuário como o nome da Receita. |
+| `description` | Uma descrição opcional do mecanismo. A Receita correspondente a este Mecanismo herdará esse valor a ser exibido na interface do usuário como a descrição da Receita. Esta propriedade é obrigatória. Se não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
+| `mlLibrary` | Um campo necessário ao criar mecanismos para fórmulas PySpark e Scala. Este campo deve ser definido como `databricks-spark`. |
+| `artifacts.default.image.location` | O local da imagem Docker. Somente o Azure ACR ou o Dockerhub Público (não autenticado) são suportados. |
+| `artifacts.default.image.executionType` | O tipo de execução do mecanismo. Esse valor corresponde ao idioma em que a imagem do Docker é criada. Pode ser &quot;Spark&quot; ou &quot;PySpark&quot;. |
+| `artifacts.default.image.packagingType` | O tipo de embalagem do motor. Esse valor deve ser definido como `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Seus parâmetros do arquivo de configuração `pipeline.json`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo de pipeline de recursos recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um Mecanismo de pipeline de recurso PySpark.
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo de pipeline de recursos recém-criado, incluindo seu identificador exclusivo (`id`). O exemplo de resposta a seguir é para um mecanismo de pipeline de recursos PySpark.
 
 ```json
 {
@@ -255,7 +255,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do mecanismo de
 
 ## Recuperar uma lista de mecanismos
 
-Você pode recuperar uma lista de mecanismos executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
+Você pode recuperar uma lista de Mecanismos executando uma única solicitação do GET. Para ajudar a filtrar resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de queries disponíveis, consulte a seção Apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -278,7 +278,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de mecanismos e seus detalhes.
+Uma resposta bem-sucedida retorna uma lista de Mecanismos e seus detalhes.
 
 ```json
 {
@@ -330,7 +330,7 @@ Uma resposta bem-sucedida retorna uma lista de mecanismos e seus detalhes.
 
 ### Recuperar um mecanismo específico {#retrieve-specific}
 
-Você pode recuperar os detalhes de um Mecanismo específico executando uma solicitação de GET que inclui a ID do Mecanismo desejado no caminho da solicitação.
+Você pode recuperar os detalhes de um mecanismo específico executando uma solicitação de GET que inclui a ID do mecanismo desejado no caminho da solicitação.
 
 **Formato da API**
 
@@ -384,13 +384,13 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes do Mecanismo de
 
 ## Atualizar um mecanismo
 
-Você pode modificar e atualizar um Mecanismo existente sobrescrevendo suas propriedades por meio de uma solicitação de PUT que inclua a ID do Mecanismo de público alvo no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
+Você pode modificar e atualizar um Mecanismo existente, sobrescrevendo suas propriedades por meio de uma solicitação de PUT que inclua a ID do Mecanismo de Direcionamento no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
 >[!NOTE]
 >
->Para garantir o sucesso desta solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
+>Para garantir o sucesso dessa solicitação do PUT, sugerimos que primeiro você execute uma solicitação do GET para [recuperar o Mecanismo por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga para a solicitação PUT.
 
-A chamada de exemplo de API a seguir atualizará o nome e a descrição de um Mecanismo ao ter essas propriedades inicialmente:
+O exemplo de chamada de API a seguir atualizará o nome e a descrição de um Mecanismo enquanto tiver essas propriedades inicialmente:
 
 ```json
 {
@@ -475,7 +475,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados do 
 
 ## Excluir um mecanismo
 
-Você pode excluir um Mecanismo executando uma solicitação de DELETE ao especificar a ID do Mecanismo de público alvo no caminho da solicitação. A exclusão de um mecanismo fará com que todas as MLInensões que fazem referência a esse mecanismo sejam excluídas em cascata, incluindo todas as execuções de Experimentos e Experimentos pertencentes a essas MLInSubstituições.
+Você pode excluir um mecanismo executando uma solicitação de DELETE ao especificar a ID do mecanismo de direcionamento no caminho da solicitação. A exclusão de um mecanismo excluirá em cascata todas as MLInentações que fazem referência a esse mecanismo, incluindo quaisquer Experimentos e execuções de Experimento pertencentes a essas MLInentons.
 
 **Formato da API**
 

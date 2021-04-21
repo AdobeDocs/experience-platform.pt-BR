@@ -2,12 +2,12 @@
 keywords: Experience Platform, home, tópicos populares, Marketo Engage, marketing, engajamento, Marketo, mapeamento
 solution: Experience Platform
 title: Mapeamento de campos para a fonte de Marketo Engage
-topic: visão geral
+topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---

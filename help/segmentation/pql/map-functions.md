@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Idioma do Query do Perfil;funções do mapa;map;
+keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, pql, PQL, Linguagem de consulta de perfil, funções de mapa, mapa;
 solution: Experience Platform
 title: Funções do Mapa PQL
-topic: developer guide
-description: A Linguagem do Query do perfil (PQL) oferta funções para facilitar a interação com mapas.
+topic-legacy: developer guide
+description: A Linguagem de consulta de perfil (PQL) oferece funções para facilitar a interação com mapas.
+exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 5%
 
 ---
 
+# Funções do mapa
 
-# Funções de mapa
-
-[!DNL Profile Query Language] (PQL) oferta funções para facilitar a interação com mapas. Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) oferece funções para facilitar a interação com mapas. Mais informações sobre outras funções PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## Obtenha
 
@@ -29,7 +29,7 @@ A função `get` é usada para recuperar o valor de um mapa para uma determinada
 
 **Exemplo**
 
-O seguinte query PQL obtém o valor do mapa de identidade para a chave `example@example.com`.
+A consulta PQL a seguir obtém o valor do mapa de identidade da chave `example@example.com`.
 
 ```sql
 identityMap.get("example@example.com")
@@ -47,7 +47,7 @@ A função `keys` é usada para recuperar todas as chaves de um determinado mapa
 
 **Exemplo**
 
-O seguinte query PQL obtém todas as chaves do mapa `identityMap`.
+A consulta PQL a seguir obtém todas as chaves do mapa `identityMap`.
 
 ```sql
 identityMap.keys()
@@ -65,7 +65,7 @@ A função `values` é usada para recuperar todos os valores de um determinado m
 
 **Exemplo**
 
-O seguinte query PQL obtém todos os valores do mapa `identityMap`.
+A consulta PQL a seguir obtém todos os valores para o mapa `identityMap`.
 
 ```sql
 identityMap.values()
@@ -73,4 +73,4 @@ identityMap.values()
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de mapa, é possível usá-las em seus query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).
+Agora que você aprendeu sobre as funções do mapa, é possível usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia a [Visão geral da linguagem de consulta de perfil](./overview.md).

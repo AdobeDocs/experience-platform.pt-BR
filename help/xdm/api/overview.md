@@ -1,82 +1,82 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados da experiência;Modelo de dados da experiência;Modelo de dados da experiência;modelo de dados;Modelo de dados;Registro do schema;Registro do Schema;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, Registro do esquema, Registro do esquema;
 solution: Experience Platform
-title: Guia da API do Registro do schema
-description: A API de Registro de Schemas permite que os desenvolvedores gerenciem programaticamente todos os schemas e os recursos relacionados ao Modelo de Dados de Experiência (XDM) no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
-topic: developer guide
+title: Guia da API do Registro de Schema
+description: A API do Registro de Esquema permite aos desenvolvedores gerenciar programaticamente todos os esquemas e recursos relacionados do Experience Data Model (XDM) no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+topic-legacy: developer guide
+exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
+# [!DNL Schema Registry] Guia da API
 
-# [!DNL Schema Registry] Guia de API
+O [!DNL Schema Registry] é usado para acessar a Biblioteca de schemas no Adobe Experience Platform, fornecendo uma interface do usuário e a API RESTful da qual todos os recursos de biblioteca disponíveis são acessíveis.
 
-O [!DNL Schema Registry] é usado para acessar a Biblioteca de Schemas no Adobe Experience Platform, fornecendo uma interface do usuário e uma RESTful API a partir da qual todos os recursos disponíveis da biblioteca estão acessíveis.
+A API do Registro de Esquema fornece vários endpoints que permitem gerenciar programaticamente todos os esquemas e recursos relacionados do Experience Data Model (XDM) disponíveis para você na Platform. Isso inclui aqueles definidos pelo Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa.
 
-A API de Registro do Schema fornece vários pontos de extremidade que permitem gerenciar programaticamente todos os schemas e os recursos relacionados do Modelo de Dados de Experiência (XDM) disponíveis para você na Plataforma. Isso inclui aqueles definidos por Adobe, [!DNL Experience Platform] parceiros e fornecedores cujos aplicativos você usa.
-
-Esses pontos finais são descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler amostras de chamadas de API e muito mais.
+Esses endpoints são descritos abaixo. Visite os guias de ponto de extremidade individuais para obter detalhes e consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 
 >[!IMPORTANT]
 >
->O XDM usa a formatação do Schema JSON para descrever e validar a estrutura dos dados de experiência do cliente assimilados. Antes de trabalhar com a API do Registro do Schema, recomenda-se que você leia a [documentação oficial do Schema JSON](https://json-schema.org/) para obter uma melhor compreensão dessa tecnologia subjacente.
+>O XDM usa a formatação Esquema JSON para descrever e validar a estrutura dos dados de experiência do cliente assimilados. Antes de trabalhar com a API do Registro de Schema, é altamente recomendável revisar a [documentação oficial do Esquema JSON](https://json-schema.org/) para obter uma melhor compreensão dessa tecnologia subjacente.
 
-Para visualização de todos os pontos de extremidade e operações CRUD disponíveis, visite a [referência da API do Registro do Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Para exibir todos os pontos de extremidade disponíveis e operações CRUD, visite a [Referência da API do Registro de Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Esquemas
 
-Os schemas XDM representam e validam a estrutura e o formato dos dados ingeridos na Plataforma. Um schema é composto de uma classe e zero ou mais combinações. Você pode criar, visualização, editar e excluir schemas usando o terminal `/schemas`. Para saber como usar esse terminal, consulte o [guia de ponto de extremidade de schemas](./schemas.md).
+Os esquemas XDM representam e validam a estrutura e o formato dos dados assimilados no Platform. Um schema é composto de uma classe e zero ou mais mixins. Você pode criar, exibir, editar e excluir esquemas usando o terminal `/schemas`. Para saber como usar esse endpoint, consulte o [guia do endpoint de schemas](./schemas.md).
 
-Para obter um guia passo a passo sobre como criar um schema completo na API do Registro do Schema, incluindo a criação e adição de mixins e tipos de dados, consulte o tutorial de [criação do schema da API](../tutorials/create-schema-api.md).
+Para obter um guia passo a passo sobre como criar um esquema completo na API do Registro de Schema, incluindo a criação e adição de mixins e tipos de dados, consulte o [tutorial de criação de esquema de API](../tutorials/create-schema-api.md).
 
 ## Comportamentos
 
-Os comportamentos definem a natureza dos dados que um schema descreve. Cada classe XDM deve fazer referência a um comportamento específico, que todos os schemas que empregam essa classe herdarão. Consulte o guia de ponto de extremidade [comportamentos](./behaviors.md) para saber como visualização os comportamentos disponíveis na API.
+Os comportamentos definem a natureza dos dados descritos por um schema. Cada classe XDM deve referenciar um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Consulte o [guia do ponto de extremidade de comportamentos](./behaviors.md) para saber como visualizar os comportamentos disponíveis na API.
 
 ## Classes
 
-Uma classe define a estrutura básica das propriedades comuns que todos os schemas baseados nessa classe devem conter e determina quais combinações são elegíveis para uso nesses schemas. Cada classe deve estar associada a um comportamento existente. Consulte o guia de ponto de extremidade [classes](./classes.md) para obter detalhes sobre como trabalhar com classes na API.
+Uma classe define a estrutura base das propriedades comuns que todos os schemas baseados nessa classe devem conter e determina quais mixins estão qualificados para uso nesses schemas. Cada classe deve ser associada a um comportamento existente. Consulte o [guia de ponto de extremidade de classes](./classes.md) para obter detalhes sobre como trabalhar com classes na API.
 
 ## Misturas
 
-As misturas são componentes reutilizáveis que definem um ou mais campos que representam um conceito específico, como uma pessoa individual, um endereço de correspondência ou um ambiente de navegador da Web. As misturas devem ser incluídas como parte de um schema que implementa uma classe compatível, dependendo do comportamento dos dados que representam (registro ou série cronológica). Consulte o [guia de ponto de extremidade do mixins](./mixins.md) para saber como trabalhar com mixins na API.
+As misturas são componentes reutilizáveis que definem um ou mais campos que representam um conceito específico, como uma pessoa individual, um endereço de correspondência ou um ambiente de navegador da Web. As misturas devem ser incluídas como parte de um schema que implementa uma classe compatível, dependendo do comportamento dos dados que representam (registro ou série de tempo). Consulte o [guia de ponto de extremidade mixins](./mixins.md) para saber como trabalhar com mixins na API.
 
 ## Tipos de dados
 
-Os tipos de dados são usados como campos do tipo de referência em classes ou combinações da mesma forma que os campos literais básicos, com a principal diferença de que os tipos de dados podem definir vários subcampos. Embora semelhantes às misturas, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis porque podem ser incluídos em qualquer lugar na estrutura do schema, enquanto as combinações só podem ser adicionadas no nível raiz. Consulte o [guia de ponto de extremidade de tipos de dados](./data-types.md) para obter mais informações sobre como trabalhar com tipos de dados na API.
+Os tipos de dados são usados como campos do tipo de referência em classes ou combinações da mesma forma que campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a mixins, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis, pois podem ser incluídos em qualquer lugar na estrutura do schema, enquanto mixins só podem ser adicionados no nível raiz. Consulte o [guia de ponto de extremidade de tipos de dados](./data-types.md) para obter mais informações sobre como trabalhar com tipos de dados na API.
 
 ## Descritores
 
-Descritores são conjuntos de metadados que são atribuídos a campos específicos em um schema, fornecendo vários detalhes contextuais, incluindo como esses campos (e o próprio schema) são relacionados a outros schemas. Cada schema pode ter uma ou mais entidades de descritor aplicadas a ele, e existem vários tipos diferentes de descritor para servir a finalidades diferentes. Consulte o [guia de ponto de extremidade dos descritores](./descriptors.md) para obter mais informações sobre como trabalhar com descritores na API e uma visão geral dos diferentes tipos de descritores e seus casos de uso.
+Os descritores são conjuntos de metadados que são atribuídos a campos específicos em um esquema, fornecendo vários detalhes contextuais, incluindo como esses campos (e o próprio schema) estão relacionados a outros esquemas. Cada esquema pode ter uma ou mais entidades de descritor aplicadas a ele, e há vários tipos diferentes de descritor para servir fins diferentes. Consulte o [guia do ponto de extremidade dos descritores](./descriptors.md) para obter mais informações sobre como trabalhar com descritores na API e uma visão geral dos diferentes tipos de descritores e seus casos de uso.
 
 ## Uniões
 
-Embora a Plataforma permita que você componha schemas para casos de uso específicos, ela também permite que você componha uma &quot;união&quot; de schemas pertencentes a uma classe específica. Uma schema união agregação os campos de todos os schemas que compartilham a mesma classe em uma única representação. Ao habilitar um schema para uso com [Perfil do cliente em tempo real](../../profile/home.md), esse schema é incluído na união de sua classe específica. Dessa forma, os schemas de união não podem ser editados diretamente e só podem ser afetados pela inclusão ou exclusão de schemas para uso no Perfil.
+Embora a Platform permita compor esquemas para casos de uso específicos, também permite compor uma &quot;união&quot; de esquemas pertencentes a uma classe específica. Um schema de união agrega os campos de todos os schemas que compartilham a mesma classe em uma única representação. Ao ativar um schema para uso com [Real-time Customer Profile](../../profile/home.md), esse schema é incluído na união para sua classe específica. Dessa forma, os schemas de união não podem ser editados diretamente e só podem ser afetados pela inclusão ou exclusão de schemas para uso no Perfil.
 
-Para saber como visualização uniões na API do Registro do Schema, consulte o [guia do ponto de extremidade do união](./unions.md).
+Para saber como visualizar sindicatos na API do Registro de Schema, consulte o [Guia de ponto de extremidade de sindicatos](./unions.md).
 
-## Exportar/Importar
+## Exportar/importar
 
-A API do Registro de Schemas permite que você transfira e compartilhe recursos XDM entre caixas de proteção e organizações IMS. Para qualquer schema, combinação ou tipo de dados, é possível gerar uma carga de exportação que contenha a estrutura do recurso e quaisquer recursos dependentes. Essa carga pode ser usada para importar o recurso para uma caixa de proteção de destino e uma Organização IMS.
+A API do Registro de Schema permite transferir e compartilhar recursos XDM entre sandboxes e organizações IMS. Para qualquer schema, mixin ou tipo de dados, é possível gerar uma carga de exportação contendo a estrutura do recurso e quaisquer recursos dependentes. Essa carga pode ser usada para importar o recurso para uma sandbox de destino e a IMS Org.
 
-Consulte o guia [exportar/importar endpoints](./export-import.md) para obter mais informações sobre como usar esses endpoints.
+Consulte o [guia de endpoints de exportação/importação](./export-import.md) para obter mais informações sobre como usar esses endpoints.
 
-## Dados de amostra
+## Dados de exemplo
 
-Você pode gerar dados de amostra para qualquer schema especificado na Biblioteca de Schemas. O objeto de resposta retornado pode ser usado como uma fonte de ingestão de dados.
+Você pode gerar dados de amostra para qualquer esquema especificado na Biblioteca de Esquemas. O objeto de resposta retornado pode ser usado como uma fonte de assimilação de dados.
 
-Consulte o [guia de ponto final de dados de amostra](./sample-data.md) para obter mais informações sobre o uso desse ponto final.
+Consulte o [guia de ponto de extremidade de dados de amostra](./sample-data.md) para obter mais informações sobre o uso desse ponto de extremidade.
 
 ## Log de auditoria
 
-O Registro de Schemas mantém um log de todas as alterações que ocorreram em um recurso (classe, mixagem, tipo de dados ou schema) entre diferentes atualizações. Você pode recuperar o log de um recurso específico fornecendo seu `$id` ou `meta:altId` no caminho de uma solicitação de GET para esse terminal.
+O Registro de Esquema mantém um log de todas as alterações que ocorreram em um recurso (classe, mixin, tipo de dados ou esquema) entre diferentes atualizações. Você pode recuperar o log de um recurso específico fornecendo seu `$id` ou `meta:altId` no caminho de uma solicitação GET para esse terminal.
 
-Consulte o [guia de ponto de extremidade de registro de auditoria](./audit-log.md) para obter mais informações sobre o uso desse ponto de extremidade.
+Consulte o [guia de ponto de extremidade do log de auditoria](./audit-log.md) para obter mais informações sobre o uso desse ponto de extremidade.
 
 ## Próximas etapas
 
-Para começar a fazer chamadas usando a API do Registro do Schema, leia o [guia de introdução](./getting-started.md) e selecione um dos guias de ponto de extremidade para saber como usar pontos de extremidade específicos.
+Para começar a fazer chamadas usando a API do Registro de Schema, leia o [guia de introdução](./getting-started.md) e selecione um dos guias de ponto de extremidade para saber como usar endpoints específicos.

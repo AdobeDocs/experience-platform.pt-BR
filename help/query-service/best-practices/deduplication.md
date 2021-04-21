@@ -1,48 +1,48 @@
 ---
-keywords: Experience Platform;home;popular tópicos;serviço de query;serviço de Query;dados desduplicação-duplicados;desduplicação-duplicado;
+keywords: Experience Platform, home, tópicos populares, serviço de query, serviço de query, desduplicação de dados, desduplicação;
 solution: Experience Platform
-title: Dados Desduplicação-duplicados no serviço de Query
-topic: queries
+title: Desduplicação de dados no serviço de query
+topic-legacy: queries
 type: Tutorial
-description: Este documento descreve exemplos completos e de subseleção de query para desduplicar três casos de uso comuns de Eventos de experiência, compras e métricas.
+description: 'Este documento descreve exemplos de consulta de amostra completa e de subseleção para desduplicação de três casos de uso comuns: Eventos de experiência, compras e métricas.'
+exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
+# Desduplicação de dados em [!DNL Query Service]
 
-# Dados desduplicação-duplicados em [!DNL Query Service]
+O Adobe Experience Platform [!DNL Query Service] oferece suporte à desduplicação de dados. A desduplicação de dados pode ser feita quando é necessário remover uma linha inteira de um cálculo ou ignorar um conjunto específico de campos porque apenas parte dos dados na linha são informações duplicadas.
 
-O Adobe Experience Platform [!DNL Query Service] suporta dados desduplicação-duplicados. Os dados desduplicação-duplicados podem ser feitos quando é necessário remover uma linha inteira de um cálculo ou ignorar um conjunto específico de campos, pois apenas parte dos dados na linha são informações de duplicado.
+A desduplicação geralmente envolve o uso da função `ROW_NUMBER()` em uma janela para uma ID (ou um par de IDs) durante o tempo solicitado, que retorna um novo campo que representa o número de vezes que uma duplicata foi detectada. O tempo é frequentemente representado usando o campo [!DNL Experience Data Model] (XDM) `timestamp`.
 
-Desduplicação-duplicado geralmente envolve o uso da função `ROW_NUMBER()` em uma janela para uma ID (ou um par de IDs) durante o tempo solicitado, que retorna um novo campo que representa o número de vezes que um duplicado foi detectado. A hora é frequentemente representada usando o campo [!DNL Experience Data Model] (XDM) `timestamp`.
+Quando o valor de `ROW_NUMBER()` é `1`, ele se refere à instância original. Geralmente, essa é a instância que você deseja usar. Isso será feito com mais frequência dentro de uma subseleção em que a desduplicação é feita em um `SELECT` nível superior, como executar uma contagem agregada.
 
-Quando o valor de `ROW_NUMBER()` é `1`, ele se refere à instância original. Geralmente, essa é a instância que você gostaria de usar. Isso será feito com mais frequência dentro de uma subseleção em que o desduplicação-duplicado é feito em um nível mais alto `SELECT`, como executar uma contagem de agregações.
+Os casos de uso de desduplicação podem ser globais ou restritas a um único usuário ou ID de usuário final dentro do `identityMap`.
 
-Casos de uso desduplicação-duplicados podem ser globais ou restritos a uma única ID de usuário ou usuário final dentro de `identityMap`.
+Este documento descreve como executar a desduplicação em três casos de uso comuns: Eventos de experiência, compras e métricas.
 
-Este documento descreve o desempenho desduplicação-duplicado para três casos de uso comuns: Experimente Eventos, compras e métricas.
-
-Cada exemplo inclui o escopo, a chave da janela, um outline do método desduplicação-duplicado, bem como o query SQL completo.
+Cada exemplo inclui o escopo, a chave da janela e um outline do método de desduplicação, bem como a consulta SQL completa.
 
 ## Eventos de experiência {#experience-events}
 
-No caso de Eventos de experiência de duplicado, você provavelmente desejará ignorar a linha inteira.
+No caso de Eventos de experiência duplicados, você provavelmente desejará ignorar a linha inteira.
 
 >[!CAUTION]
 >
->Muitos conjuntos de dados em [!DNL Experience Platform], incluindo os produzidos pelo Adobe Analytics Data Connector, já têm desduplicação-duplicado nível de Evento da experiência aplicado. Portanto, reaplicar esse nível de desduplicação-duplicado é desnecessário e vai retardar seu query.
+>Muitos conjuntos de dados em [!DNL Experience Platform], incluindo os produzidos pelo Conector de dados do Adobe Analytics, já têm a desduplicação no nível do evento de experiência aplicada. Portanto, reaplicar esse nível de desduplicação é desnecessário e retardará sua query.
 >
->É importante entender a fonte de seus conjuntos de dados e saber se o desduplicação-duplicado no nível do Evento da experiência já foi aplicado. Para qualquer conjunto de dados que seja transmitido (por exemplo, os da Adobe Target), você **** precisará aplicar o nível de Evento de experiência desduplicação-duplicado, já que essas fontes de dados têm semântica &quot;pelo menos uma vez&quot;.
+>É importante entender a fonte de seus conjuntos de dados e saber se a desduplicação no nível do evento de experiência já foi aplicada. Para todos os conjuntos de dados que são transmitidos (por exemplo, os do Adobe Target), você **precisará** aplicar a desduplicação no nível do Evento da Experiência, pois essas fontes de dados têm uma semântica &quot;pelo menos uma vez&quot;.
 
-**Escopo:** Global
+**Escopo:** global
 
 **Chave da janela:** `id`
 
-### exemplo desduplicação-duplicado
+### Exemplo de desduplicação
 
 ```sql
 SELECT *,
@@ -68,13 +68,13 @@ SELECT COUNT(*) AS num_events FROM (
 
 ## Compras {#purchases}
 
-Se você tiver compras de duplicado, provavelmente desejará manter a maioria da linha Evento de experiência, mas ignorará os campos vinculados à compra (como a métrica `commerce.orders`). As compras contêm um campo especial para a ID de compra, que é `commerce.order.purchaseID`.
+Se você tiver compras duplicadas, provavelmente desejará manter a maior parte da linha Evento de experiência , mas ignorar os campos vinculados à compra (como a métrica `commerce.orders` ). As compras contêm um campo especial para a ID de compra, que é `commerce.order.purchaseID`.
 
 **Escopo:** Visitante
 
-**Chave de janela:** identityMap[$NAMESPACE].id &amp; commerce.order.purchaseID
+**Chave da janela:** identityMap[$NAMESPACE].id &amp; commerce.order.purchaseID
 
-### exemplo desduplicação-duplicado
+### Exemplo de desduplicação
 
 ```sql
 SELECT *,
@@ -108,15 +108,15 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 ## Métricas {#metrics}
 
-Se você tiver uma métrica que esteja usando a ID exclusiva opcional e um duplicado dessa ID for exibido, você provavelmente desejará ignorar esse valor métrico e manter o restante do Evento da experiência.
+Se você tiver uma métrica que esteja usando a ID exclusiva opcional e uma duplicata dessa ID for exibida, provavelmente desejará ignorar esse valor métrico e manter o restante do evento de experiência.
 
-No XDM, quase todas as métricas usam o tipo de dados `Measure` que inclui um campo opcional `id` que você pode usar para desduplicação-duplicado.
+No XDM, quase todas as métricas usam o tipo de dados `Measure` que inclui um campo opcional `id` que pode ser usado para desduplicação.
 
 **Escopo:** Visitante
 
-**Chave de janela:** identityMap[$NAMESPACE].id e id do objeto de Medida
+**Chave da janela:** identityMap[$NAMESPACE].id e id do objeto Measure
 
-### exemplo desduplicação-duplicado
+### Exemplo de desduplicação
 
 ```sql
 SELECT *,
@@ -150,4 +150,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Próximas etapas
 
-Este documento descreveu como executar dados desduplicação-duplicados dentro do Serviço de Query, bem como exemplos de dados desduplicação-duplicados. Para obter mais práticas recomendadas ao gravar query usando o Query Service, leia o [guia query de gravação](./writing-queries.md).
+Este documento descrevia como executar a desduplicação de dados no Serviço de query, bem como exemplos de desduplicação de dados. Para obter mais práticas recomendadas ao gravar consultas usando o Serviço de query, leia o [guia de consultas de gravação](./writing-queries.md).

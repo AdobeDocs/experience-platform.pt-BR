@@ -1,63 +1,63 @@
 ---
-keywords: Experience Platform;home;popular topics;Oracle Object Armazenamento;oracle object armazenamento
+keywords: Experience Platform, home, tópicos populares, Armazenamento de objetos do Oracle, Armazenamento de objetos do oracle
 solution: Experience Platform
-title: Criar uma conexão de origem de Armazenamento de objeto de Oracle usando a API de serviço de fluxo
-topic: overview
+title: Criar uma conexão de fonte de armazenamento de objeto do Oracle usando a API do Serviço de fluxo
+topic-legacy: overview
 type: Tutorial
-description: Saiba como conectar o Adobe Experience Platform ao Armazenamento Oracle Object usando a API de Serviço de Fluxo.
+description: Saiba como conectar o Adobe Experience Platform ao Oracle Object Storage usando a API do Serviço de Fluxo.
+exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 2%
+source-wordcount: '623'
+ht-degree: 1%
 
 ---
 
+# Crie uma conexão de origem [!DNL Oracle Object Storage] usando a API [!DNL Flow Service]
 
-# Criar uma conexão de origem [!DNL Oracle Object Storage] usando a API [!DNL Flow Service]
-
-Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para guiá-lo pelas etapas para conectar o Adobe Experience Platform a [!DNL Oracle Object Storage].
+Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para orientá-lo pelas etapas para conectar o Adobe Experience Platform a [!DNL Oracle Object Storage].
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, ao mesmo tempo em que lhe fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Caixas de proteção](../../../../../sandboxes/home.md): O Experience Platform fornece caixas de proteção virtuais que particionam uma única instância da Plataforma em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a [!DNL Oracle Object Storage] usando a API [!DNL Flow Service].
 
-### Reunir credenciais obrigatórias
+### Obter credenciais necessárias
 
-Para que [!DNL Flow Service] se conecte a [!DNL Oracle Object Storage], é necessário fornecer valores para as seguintes propriedades de conexão:
+Para que [!DNL Flow Service] se conecte a [!DNL Oracle Object Storage], você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `serviceUrl` | O terminal [!DNL Oracle Object Storage] necessário para autenticação. O formato do ponto de extremidade é: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `serviceUrl` | O endpoint [!DNL Oracle Object Storage] necessário para autenticação. O formato do ponto de extremidade é: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
 | `accessKey` | A ID da chave de acesso [!DNL Oracle Object Storage] necessária para autenticação. |
 | `secretKey` | A senha [!DNL Oracle Object Storage] necessária para autenticação. |
-| `bucketName` | O nome do bucket permitido é necessário se o usuário tiver acesso restrito. O nome do bucket deve ter entre três e 63 caracteres, deve começar e terminar com uma letra ou um número e só pode conter letras minúsculas, números ou hífens (`-`). O nome do bucket não pode ser formatado como um endereço IP. |
+| `bucketName` | O nome do bucket permitido é necessário se o usuário tiver acesso restrito. O nome do bucket deve ter entre três e 63 caracteres, deve começar e terminar com uma letra ou um número e pode conter somente letras minúsculas, números ou hífens (`-`). O nome do bucket não pode ser formatado como um endereço IP. |
 | `folderPath` | O caminho de pasta permitido é necessário se o usuário tiver acesso restrito. |
 
-Para obter mais informações sobre como obter esses valores, consulte o [guia de autenticação do Armazenamento de objeto de Oracle](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Para obter mais informações sobre como obter esses valores, consulte o [Guia de autenticação do Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+Para fazer chamadas para APIs da plataforma, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitação**
 
-Para criar uma conexão [!DNL Oracle Object Storage], sua ID exclusiva de especificação de conexão deve ser fornecida como parte da solicitação de POST. A ID de especificação de conexão para [!DNL Oracle Object Storage] é `c85f9425-fb21-426c-ad0b-405e9bd8a46c`.
+Para criar uma conexão [!DNL Oracle Object Storage], a ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL Oracle Object Storage] é `c85f9425-fb21-426c-ad0b-405e9bd8a46c`.
 
 ```shell
 curl -X POST \
@@ -105,16 +105,16 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `auth.params.serviceUrl` | O terminal [!DNL Oracle Object Storage] necessário para autenticação. |
+| `auth.params.serviceUrl` | O endpoint [!DNL Oracle Object Storage] necessário para autenticação. |
 | `auth.params.accessKey` | A ID da chave de acesso [!DNL Oracle Object Storage] necessária para autenticação. |
 | `auth.params.secretKey` | A senha [!DNL Oracle Object Storage] necessária para autenticação. |
 | `auth.params.bucketName` | O nome do bucket permitido é necessário se o usuário tiver acesso restrito. |
 | `auth.params.folderPath` | O caminho de pasta permitido é necessário se o usuário tiver acesso restrito. |
-| `connectionSpec.id` | A ID de especificação de conexão [!DNL Oracle Object Storage]: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | A ID de especificação da conexão [!DNL Oracle Object Storage]: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna a ID de conexão da conexão recém-criada. Essa ID é necessária para explorar os dados do armazenamento na nuvem no próximo tutorial.
+Uma resposta bem-sucedida retorna a ID de conexão da conexão recém-criada. Essa ID é necessária para explorar seus dados de armazenamento em nuvem no próximo tutorial.
 
 ```json
 {

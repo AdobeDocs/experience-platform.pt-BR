@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;beacon;detalhes de interação;datatype;data-type;data type;Schema;home;popular topics;;social;social;social;topics;data-type;data type;data type;
+keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, beacon, detalhes de interação, tipo de dados, tipo de dados, tipo de dados;
 solution: Experience Platform
-title: Tipo de dados do beacon
-topic: overview
-description: Este documento fornece uma visão geral da classe de Perfil individual XDM.
+title: Tipo de dados do sinal
+topic-legacy: overview
+description: Este documento fornece uma visão geral da classe Perfil individual XDM.
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '245'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Beacon] tipo de dados
 
-# [!UICONTROL Tipo ] Beacondata
-
-[!UICONTROL O ] Beaconis é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis quando dispositivos móveis estão dentro da faixa de alcance.
+[!UICONTROL Beacon] é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis, à medida que os dispositivos móveis estão dentro do alcance.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 | `beaconMajor` | Duplo | Os valores principais identificam e distinguem um grupo e valores inteiros não assinados entre 1 e 65.535. |
 | `beaconMinor` | Duplo | Valores menores identificam e distinguem valores inteiros individuais e não assinados entre 1 e 65.535. |
 | `proximity` | String | Distância estimada do sinal. Consulte o [apêndice](#proximity) para obter os valores e as definições aceitos. |
-| `proximityUUID` | String | Um UUID de proximidade (Universally Unique Identifier) é um tipo especial de identificador usado para diferenciar os beacons em sua rede de todos os outros beacons em redes fora do seu controle. A UUID de proximidade é configurada em um beacon, para ser transmitida a dispositivos móveis no intervalo para identificar os beacons de uma organização. |
+| `proximityUUID` | String | Um UUID de proximidade (Identificador universal exclusivo) é um tipo especial de identificador usado para distinguir beacons em sua rede de todos os outros beacons em redes fora de seu controle. A UUID de proximidade é configurada em um beacon, para ser transmitida a dispositivos móveis no intervalo para identificar os beacons de uma organização. |
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
@@ -33,7 +33,7 @@ Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM púb
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Beacon].
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Beacon] .
 
 ## Valores aceitos para proximidade {#proximity}
 
@@ -43,5 +43,5 @@ A tabela a seguir descreve os valores aceitos para `proximity` e seus significad
 | --- | --- |
 | `immediate` | Dentro de alguns centímetros. |
 | `near` | A menos de 10 metros de distância. |
-| `far` | A mais de 10 metros de distância. |
+| `far` | Mais de 10 metros de distância. |
 | `unknown` | A distância não pôde ser determinada, provavelmente devido a um sinal fraco. |

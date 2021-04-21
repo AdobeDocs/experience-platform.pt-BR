@@ -2,15 +2,15 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, painéis, painel, perfis, segmentos, destinos, uso de licença
 title: Utilização da biblioteca de widgets para adicionar e criar widgets de painel
 description: 'Este guia fornece instruções passo a passo para adicionar widgets padrão e criar widgets personalizados para visualizar dados de painel no Adobe Experience Platform. '
-topic: guide
+topic-legacy: guide
+exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 translation-type: tm+mt
-source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '974'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) Biblioteca de widgets {#widget-library}
 
@@ -20,30 +20,30 @@ ht-degree: 1%
 
 Na interface do usuário do Adobe Experience Platform, você pode visualizar e interagir com os dados de sua organização usando vários painéis. Você também pode atualizar alguns desses painéis adicionando novos widgets à visualização do painel. Além dos widgets padrão fornecidos pelo Adobe, você pode criar widgets personalizados e compartilhá-los em toda a organização.
 
-Este guia fornece instruções passo a passo para adicionar widgets padrão e criar widgets personalizados para personalizar as informações exibidas na interface do usuário de plataforma [!UICONTROL Profiles] e [!UICONTROL Segments].
+Este guia fornece instruções passo a passo para adicionar widgets padrão e criar widgets personalizados para personalizar as informações exibidas nos painéis [!UICONTROL Profiles] e [!UICONTROL Segments] na interface do usuário da plataforma.
 
 Para obter informações sobre como modificar o local e o tamanho dos widgets nos painéis [!UICONTROL Profiles], [!UICONTROL Destinations] e [!UICONTROL Segments], consulte o [guia modificar painéis](modify.md).
 
 >[!NOTE]
 >
->Os widgets mostrados no painel de uso da licença [!UICONTROL Não podem ser personalizados. ] Para saber mais sobre esse painel exclusivo, leia a [documentação do painel de uso da licença](guides/license-usage.md).
+>Os widgets mostrados no painel [!UICONTROL License usage] não podem ser personalizados. Para saber mais sobre esse painel exclusivo, leia a [documentação do painel de uso da licença](guides/license-usage.md).
 
 ## Acessar a biblioteca de widgets
 
-Em qualquer painel (por exemplo, no painel Perfis ), você pode selecionar **[!UICONTROL Modificar painel]** seguido por **[!UICONTROL Biblioteca de widgets]** para acessar a biblioteca de widgets.
+Em qualquer painel (por exemplo, no painel Perfis ), você pode selecionar **[!UICONTROL Modify dashboard]** seguido por **[!UICONTROL Widget library]** para acessar a biblioteca de widgets.
 
 >[!NOTE]
 >
->O botão [!UICONTROL Biblioteca de widgets] só aparece depois que [!UICONTROL Modificar painel] é selecionado.
+>O botão [!UICONTROL Widget library] só aparece depois que [!UICONTROL Modify dashboard] é selecionado.
 
 ![](images/customization/modify-dashboard.png)
 
 ![](images/customization/widget-library-button.png)
 
-A [!UICONTROL biblioteca de widget] contém duas guias, [!UICONTROL Standard] e [!UICONTROL Custom].
+O [!UICONTROL Widget library] contém duas guias, [!UICONTROL Standard] e [!UICONTROL Custom].
 
 * A guia **[!UICONTROL Standard]** contém widgets criados pelo Adobe e permite atualizar seu painel usando essas métricas padrão. Para saber mais sobre como adicionar widgets padrão ao painel, consulte a seção [widgets padrão](#standard-widgets) neste guia.
-* A guia **[!UICONTROL Personalizado]** permite criar e compartilhar widgets em sua organização. Para obter as etapas completas para criar seus próprios widgets, consulte a seção [widgets personalizados](#custom-widgets) neste guia.
+* A guia **[!UICONTROL Custom]** permite criar e compartilhar widgets em sua organização. Para obter as etapas completas para criar seus próprios widgets, consulte a seção [widgets personalizados](#custom-widgets) neste guia.
 
 ![](images/customization/widget-library.png)
 
@@ -57,13 +57,13 @@ A guia **[!UICONTROL Standard]** contém widgets criados pelo Adobe, divididos e
 
 ![](images/customization/standard-widgets.png)
 
-Para escolher um widget padrão para adicionar ao painel, realce o widget e marque a caixa de seleção do widget. Com pelo menos um widget selecionado, o botão **[!UICONTROL Adicionar widget]** é iluminado.
+Para escolher um widget padrão para adicionar ao painel, realce o widget e marque a caixa de seleção do widget. Com pelo menos um widget selecionado, o botão **[!UICONTROL Add widget]** é iluminado.
 
 >[!NOTE]
 >
 >O contador no canto superior direito da biblioteca de widgets mostra o número total de widgets selecionados.
 
-Selecione **[!UICONTROL Adicionar widget]** para adicionar widgets selecionados ao painel.
+Selecione **[!UICONTROL Add widget]** para adicionar os widgets selecionados ao painel.
 
 ![](images/customization/add-widget.png)
 
@@ -73,15 +73,15 @@ Selecione **[!UICONTROL Adicionar widget]** para adicionar widgets selecionados 
 >
 >Sua organização pode criar no máximo 20 widgets personalizados na biblioteca de widgets.
 
-Para personalizar ainda mais a aparência dos painéis no Experience Platform, você pode criar widgets e compartilhá-los com outros usuários em sua organização. Na biblioteca de widgets, selecione a guia **[!UICONTROL Personalizado]** para começar a criar widgets personalizados. Na guia [!UICONTROL Personalizado], todos os widgets criados por sua organização ficam visíveis. Neste exemplo, nenhum widget personalizado foi criado ainda.
+Para personalizar ainda mais a aparência dos painéis no Experience Platform, você pode criar widgets e compartilhá-los com outros usuários em sua organização. Na biblioteca de widgets, selecione a guia **[!UICONTROL Custom]** para começar a criar widgets personalizados. Na guia [!UICONTROL Custom] , todos os widgets criados pela organização ficam visíveis. Neste exemplo, nenhum widget personalizado foi criado ainda.
 
 ![](images/customization/custom-widgets.png)
 
 ### Selecionar atributos
 
-Para criar widgets personalizados, os atributos de Perfil do cliente em tempo real devem ser identificados para garantir que os dados sejam incluídos como parte do instantâneo diário. Se sua organização não selecionou atributos de perfil, o botão [!UICONTROL Configurar esquema] aparece no canto superior direito da biblioteca de widgets.
+Para criar widgets personalizados, os atributos de Perfil do cliente em tempo real devem ser identificados para garantir que os dados sejam incluídos como parte do instantâneo diário. Se sua organização não tiver selecionado nenhum atributo de perfil, o botão [!UICONTROL Configure schema] aparecerá no canto superior direito da biblioteca de widgets.
 
-Quando pelo menos um atributo personalizado foi selecionado, o botão [!UICONTROL Editar esquema] aparece no canto superior direito da biblioteca de widgets. Selecione **[!UICONTROL Edit schema]** para abrir a caixa de diálogo **[!UICONTROL Select union schema field]** para exibir os atributos selecionados e adicionar mais atributos.
+Quando pelo menos um atributo personalizado foi selecionado, o botão [!UICONTROL Edit schema] aparece no canto superior direito da biblioteca de widgets. Selecione **[!UICONTROL Edit schema]** para abrir a caixa de diálogo **[!UICONTROL Select union schema field]** para visualizar os atributos selecionados e adicionar mais atributos.
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ Quando pelo menos um atributo personalizado foi selecionado, o botão [!UICONTRO
 
 ![](images/customization/edit-schema.png)
 
-Para selecionar um atributo, navegue até o atributo no esquema de união (ou use pesquisa) e marque a caixa de seleção ao lado do atributo. Marcar a caixa de seleção também adiciona o atributo à lista **[!UICONTROL Atributos selecionados]** no lado direito da caixa de diálogo.
+Para selecionar um atributo, navegue até o atributo no esquema de união (ou use pesquisa) e marque a caixa de seleção ao lado do atributo. Selecionar a caixa de seleção também adiciona o atributo à lista **[!UICONTROL Selected Attributes]** no lado direito da caixa de diálogo.
 
 >[!NOTE]
 >
@@ -103,11 +103,11 @@ Os atributos recém-selecionados estão disponíveis após o instantâneo diári
 
 ### Criar um widget personalizado
 
-Para criar um widget personalizado, selecione **[!UICONTROL Criar]** no centro da biblioteca de widgets ou, se os widgets personalizados já tiverem sido criados, selecione **[!UICONTROL Criar widget]** no canto superior direito da biblioteca de widgets.
+Para criar um widget personalizado, selecione **[!UICONTROL Create]** no centro da biblioteca de widgets ou, se os widgets personalizados já tiverem sido criados, selecione **[!UICONTROL Create widget]** no canto superior direito da biblioteca de widgets.
 
 ![](images/customization/create-widget.png)
 
-Na caixa de diálogo **[!UICONTROL Criar widget]**, você pode fornecer um título e uma descrição para o novo widget e escolher o atributo que deseja que o widget exiba. Para escolher um atributo, selecione o botão de opção ao lado do atributo que deseja adicionar.
+Na caixa de diálogo **[!UICONTROL Create widget]**, você pode fornecer um título e uma descrição para o novo widget e escolher o atributo que deseja que o widget exiba. Para escolher um atributo, selecione o botão de opção ao lado do atributo que deseja adicionar.
 
 >[!NOTE]
 >
@@ -125,12 +125,12 @@ Uma visualização do novo widget é exibida na caixa de diálogo, mostrando um 
 
 ![](images/customization/create-widget-select-attribute.png)
 
-Para salvar seu novo widget e retornar à guia [!UICONTROL Personalizado], selecione **[!UICONTROL Criar]**. O novo widget agora está disponível para ser adicionado a um painel ao escolher o widget da biblioteca e selecionar **[!UICONTROL Adicionar widget]**.
+Para salvar seu novo widget e retornar à guia [!UICONTROL Custom], selecione **[!UICONTROL Create]**. O novo widget agora está disponível para ser adicionado a um painel, escolhendo o widget na biblioteca e selecionando **[!UICONTROL Add widget]**.
 
 ### Arquivar um widget personalizado
 
-Depois que um widget é adicionado à biblioteca, ele pode ser arquivado usando o botão **[!UICONTROL Arquivar]**. Também é possível editar o widget para atualizar o título ou os campos de descrição.
+Depois que um widget é adicionado à biblioteca, ele pode ser arquivado usando o botão **[!UICONTROL Archive]**. Também é possível editar o widget para atualizar o título ou os campos de descrição.
 
 ## Próximas etapas
 
-Após a leitura deste documento, agora é possível acessar a [!UICONTROL biblioteca de widgets] e usá-la para adicionar widgets a um painel ou criar widgets personalizados para sua organização. Para modificar o tamanho e o local dos widgets no painel, consulte o [guia modificar painéis](modify.md).
+Após a leitura deste documento, você agora pode acessar o [!UICONTROL Widget library] e usá-lo para adicionar widgets a um painel ou criar widgets personalizados para sua organização. Para modificar o tamanho e o local dos widgets no painel, consulte o [guia modificar painéis](modify.md).

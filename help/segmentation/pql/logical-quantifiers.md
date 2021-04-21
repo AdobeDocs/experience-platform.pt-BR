@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Idioma do Query do Perfil;quantificadores lógicos;quantificador lógico;
+keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de Segmentação; pql; PQL; Linguagem de Consulta de Perfil; quantificadores lógicos; quantificador lógico;
 solution: Experience Platform
-title: Quantificadores Lógicos da PQL
-topic: developer guide
-description: Os quantificadores lógicos podem ser usados para afirmar as condições com matrizes na Linguagem do Query do Perfil (PQL).
+title: Quantificadores Lógicos PQL
+topic-legacy: developer guide
+description: Os quantificadores lógicos podem ser usados para asserção de condições com matrizes na linguagem de consulta de perfil (PQL).
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 4%
 
 ---
 
-
 # Funções quantificadoras lógicas
 
-Os quantificadores lógicos podem ser usados para afirmar condições com matrizes em [!DNL Profile Query Language] (PQL). Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
+Os quantificadores lógicos podem ser usados para asserção de condições com matrizes em [!DNL Profile Query Language] (PQL). Mais informações sobre outras funções PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
 ## Existe
 
-A função `exists` determina a existência de um item em uma matriz, desde que ela atenda à condição fornecida.
+A função `exists` determina a existência de um item em uma matriz, desde que satisfaça a condição fornecida.
 
 **Formato**
 
@@ -30,13 +30,13 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 | Argumento | Descrição |
 | ---------- | ----------- |
-| `{VARIABLE}` | O nome de uma variável. |
+| `{VARIABLE}` | Um nome de uma variável. |
 | `{EXPRESSION}` | A matriz que está sendo verificada. |
-| `{CONDITION}` | Uma expressão opcional que filtros os valores na matriz retornados. |
+| `{CONDITION}` | Uma expressão opcional que filtra os valores na matriz retornada. |
 
 **Exemplo**
 
-O seguinte query PQL obtém todos os eventos que têm um preço maior que US$ 50 ou têm um SKU de &quot;PS&quot;.
+A consulta PQL a seguir obtém todos os eventos que têm um preço maior que US$ 50 ou têm um SKU de &quot;PS&quot;.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -44,7 +44,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Para todos
 
-A função `forall` determina todos os itens em um storage que satisfazem todas as condições fornecidas.
+A função `forall` determina todos os itens em uma matriz que satisfazem todas as condições fornecidas.
 
 **Formato**
 
@@ -55,13 +55,13 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 | Argumento | Descrição |
 | ---------- | ----------- |
-| `{VARIABLE}` | O nome de uma variável. |
+| `{VARIABLE}` | Um nome de uma variável. |
 | `{EXPRESSION}` | A matriz que está sendo verificada. |
-| `{CONDITION}` | Uma expressão opcional que filtros os valores na matriz retornados. |
+| `{CONDITION}` | Uma expressão opcional que filtra os valores na matriz retornada. |
 
 **Exemplo**
 
-O query PQL a seguir obtém todos os eventos que têm um preço maior que US$ 50 e um SKU de &quot;PS&quot;.
+A consulta PQL a seguir obtém todos os eventos que têm um preço maior que US$ 50 e um SKU de &quot;PS&quot;.
 
 ```sql
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -69,4 +69,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre quantificadores lógicos, é possível usá-los nos query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).
+Agora que você aprendeu sobre quantificadores lógicos, é possível usá-los em queries PQL. Para obter mais informações sobre outras funções PQL, leia a [Visão geral da linguagem de consulta de perfil](./overview.md).

@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;Data Science Workspace;topics;Real-time Machine Learning;referência do nó;
+keywords: Experience Platform, guia do desenvolvedor, Data Science Workspace, tópicos populares, Aprendizagem de máquina em tempo real, referência do nó;
 solution: Experience Platform
 title: Referência de nó de aprendizado de máquina em tempo real
-topic: Nodes reference
-description: Um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
+topic-legacy: Nodes reference
+description: Um nó é a unidade fundamental da formação dos gráficos. Cada nó executa uma tarefa específica e pode ser encadeado usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou esquema ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para o(s) próximo(s) nó(s).
+exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
-
-# Referência do nó Aprendizado de máquina em tempo real (Alpha)
+# Referência do nó de aprendizado de máquina em tempo real (Alpha)
 
 >[!IMPORTANT]
 >
->O aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a mudanças.
+>O Aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a alterações.
 
-Um nó é a unidade fundamental da qual os gráficos são formados. Cada nó executa uma tarefa específica e eles podem ser encadeados juntos usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou schema, ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para os próximos nós.
+Um nó é a unidade fundamental da formação dos gráficos. Cada nó executa uma tarefa específica e pode ser encadeado usando links para formar um gráfico que representa um pipeline ML. A tarefa executada por um nó representa uma operação em dados de entrada, como uma transformação de dados ou esquema ou uma inferência de aprendizado de máquina. O nó gera o valor transformado ou inferido para o(s) próximo(s) nó(s).
 
-O guia a seguir descreve as bibliotecas de nós compatíveis para o aprendizado de máquina em tempo real.
+O guia a seguir descreve as bibliotecas de nós compatíveis para o Aprendizado de máquina em tempo real.
 
-## Descobrindo nós para uso em seu pipeline ML
+## Descobrir nós para uso em seu pipeline ML
 
-Copie o código a seguir em um notebook [!DNL Python] para visualização de todos os nós disponíveis para uso.
+Copie o código a seguir em um bloco de anotações [!DNL Python] para exibir todos os nós disponíveis para uso.
 
 ```python
 from pprint import pprint
@@ -55,11 +55,11 @@ pprint(nf.discover_nodes())
 
 ## Nós padrão
 
-Os nós padrão baseiam-se em bibliotecas de dados de código aberto, como Pandas e ScikitLearn.
+Nós padrão criados em bibliotecas de dados de código aberto como Pandas e ScikitLearn.
 
 ### ModelUpload
 
-O nó ModelUpload é um nó Adobe interno que pega um model_path e carrega o modelo do caminho do modelo local para a loja de blob de aprendizado de máquina em tempo real.
+O nó ModelUpload é um nó Adobe interno que pega um model_path e carrega o modelo do caminho do modelo local para o repositório de blob de aprendizado de máquina em tempo real.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -81,11 +81,11 @@ O ONNXNode é um nó Adobe interno que utiliza uma ID de modelo para obter o mod
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
 ```
 
-### Paindas {#pandas}
+### Pandas {#pandas}
 
-O nó de Paindas a seguir permite importar qualquer método `pd.DataFrame` ou qualquer função de nível superior de painéis gerais. Para saber mais sobre os métodos dos Paindas, visite a documentação dos métodos [Paindas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [Guia de referência da API dos painéis para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+O nó Paindas a seguir permite importar qualquer método `pd.DataFrame` ou qualquer função de nível superior de painéis gerais. Para saber mais sobre os métodos do Pandas, visite a [documentação sobre métodos dos Paindas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obter mais informações sobre funções de nível superior, visite o [Guia de referência da API dos painéis para funções gerais](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguido pela inserção dos parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base no fato de você desejar aplicar a transformação no local ou não. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna está definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas nas quais deseja aplicar a transformação. Neste exemplo, `device` é especificado.
+O nó abaixo usa `"import": "map"` para importar o nome do método como uma string nos parâmetros, seguida por inserir os parâmetros como uma função de mapa. O exemplo abaixo faz isso usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Depois de colocar o mapa no lugar, você tem a opção de definir `inplace` como `True` ou `False`. Defina `inplace` como `True` ou `False` com base em se deseja aplicar transformação no local ou não. Por padrão, `"inplace": False` cria uma nova coluna. O suporte para fornecer um novo nome de coluna é definido para ser adicionado em uma versão subsequente. A última linha `cols` pode ser um nome de coluna único ou uma lista de colunas. Especifique as colunas em que deseja aplicar a transformação. Neste exemplo, `device` é especificado.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -123,17 +123,17 @@ msg6 = model_train.process(msg5)
 
 | Valor | Descrição |
 | --- | --- |
-| feições | Recursos de entrada no modelo (lista de strings). <br> Por exemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nome da coluna do público alvo (string). |
+| recursos | Insira recursos no modelo (lista de cadeias de caracteres). <br> Por exemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| label | Nome da coluna de destino (sequência de caracteres). |
 | modo | Comboio/ensaio (corda). |
 | model_path | Caminho para o modelo salvo localmente no formato onnx. |
-| params.model | Caminho de importação absoluto para o modelo (string), por exemplo: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modelos de hiperparâmetros, consulte a documentação da API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obter mais informações. |
-| node_instance.process(data_message_from_previous_node) | O método `process()` pega DataMsg do nó anterior e aplica a transformação. Isso depende do nó atual que está sendo usado. |
+| params.model | Caminho de importação absoluto para o modelo (cadeia de caracteres) por exemplo: `sklearn.linear_model.LogisticRegression`. |
+| params.model_params | Modelos de hiperparâmetros, consulte a documentação da [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obter mais informações. |
+| node_instance.process(data_message_from_previous_node) | O método `process()` pega DataMsg do nó anterior e aplica a transformação. Depende do nó atual que está sendo usado. |
 
 ### Dividir
 
-Use o nó a seguir para dividir seu dataframe em trem e teste, passando por `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar os dados do trem e do teste usando o seguinte exemplo, `msg5.data.xs(“train”)`.
+Use o seguinte nó para dividir o dataframe em um trem e testar passando `train_size` ou `test_size`. Isso retorna um dataframe com um índice múltiplo. Você pode acessar dados de trem e teste usando o exemplo a seguir, `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +142,4 @@ msg5 = splitter.process(msg4)
 
 ## Próximas etapas
 
-A próxima etapa é criar nós para uso na pontuação de um modelo de aprendizado de máquina em tempo real. Para obter mais informações, visite o [Guia do usuário do notebook de aprendizado de máquina em tempo real](./rtml-authoring-notebook.md).
+A próxima etapa é criar nós para uso na classificação de um modelo de Aprendizagem de máquina em tempo real. Para obter mais informações, visite o [Guia do usuário do notebook Aprendizagem de máquina em tempo real](./rtml-authoring-notebook.md).

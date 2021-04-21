@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;perfil individual;campos;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;união schema;união
+keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, perfil individual, campos, esquemas, esquemas, Esquemas, identityMap, mapa de identidade, mapa de identidade, design de esquema, mapa, mapa, mapa, esquema de união, união
 solution: Experience Platform
-title: Mixin do IdentityMap
-topic: overview
-description: Este documento fornece uma visão geral da classe de Perfil individual XDM.
+title: Mistura do Mapa de identidade
+topic-legacy: overview
+description: Este documento fornece uma visão geral da classe Perfil individual XDM.
+exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-
-# [!UICONTROL mixin ] IdentityMapin
+# [!UICONTROL IdentityMap] mistura
 
 >[!NOTE]
 >
->Os nomes de várias misturas mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
+>Os nomes de várias mixins mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
 
- IdentityMapis é uma combinação padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece um único campo de mapa, que contém um conjunto de identidades de usuário digitadas pela namespace.
+[!UICONTROL IdentityMap] é uma mixin padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) . O mixin fornece um único campo de mapa, que contém um conjunto de identidades de usuário chaveadas por namespace.
 
 >[!WARNING]
 >
->O campo `IdentityMap` é atualizado automaticamente pelo sistema à medida que os dados de identidade são assimilados. Para utilizar adequadamente este campo para [Perfil do cliente em tempo real](../../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.
+>O campo `IdentityMap` é atualizado automaticamente pelo sistema conforme os dados de identidade são assimilados. Para utilizar corretamente este campo para [Real-time Customer Profile](../../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.
 
 <img src="../../images/mixins/identitymap.png" width="600" /><br />
 
-Consulte a seção sobre mapas de identidade nos [fundamentos da composição do schema](../../schema/composition.md#identityMap) para obter mais informações sobre o caso de uso.
+Consulte a seção sobre mapas de identidade no [básico da composição do schema](../../schema/composition.md#identityMap) para obter mais informações sobre seu caso de uso.

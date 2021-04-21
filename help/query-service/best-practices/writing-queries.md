@@ -1,54 +1,54 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;write query;writing query;
+keywords: Experience Platform, home, tópicos populares, serviço de consultas, serviço de consultas, gravação de consultas, gravação de consultas;
 solution: Experience Platform
-title: Orientação Geral para Execução de Query no Query Service
-topic: queries
+title: Orientações gerais para a execução de query no serviço de query
+topic-legacy: queries
 type: Tutorial
-description: Este documento detalha detalhes importantes a serem conhecidos ao escrever query no Adobe Experience Platform Query Service.
+description: Este documento detalha detalhes importantes a saber ao gravar consultas no Adobe Experience Platform Query Service.
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 3%
 
 ---
 
+# Orientações gerais para a execução da consulta em [!DNL Query Service]
 
-# Orientações gerais para a execução de query em [!DNL Query Service]
-
-Este documento detalha detalhes importantes a serem conhecidos ao gravar query no Adobe Experience Platform [!DNL Query Service].
+Este documento detalha detalhes importantes a saber ao gravar consultas no Adobe Experience Platform [!DNL Query Service].
 
 Para obter informações detalhadas sobre a sintaxe SQL usada em [!DNL Query Service], leia a [documentação da sintaxe SQL](../sql/syntax.md).
 
 ## Modelos de execução de query
 
-O Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução de query: interativo e não interativo. A execução interativa é usada para desenvolvimento de query e geração de relatórios em ferramentas de inteligência empresarial, enquanto a não interativa é usada para trabalhos maiores e query operacionais como parte de um fluxo de trabalho de processamento de dados.
+Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução de consulta: interativa e não interativa. A execução interativa é usada para desenvolvimento de consultas e geração de relatórios em ferramentas de business intelligence, enquanto a não interativa é usada para tarefas e consultas operacionais maiores como parte de um fluxo de trabalho de processamento de dados.
 
-### Execução interativa de query
+### Execução de query interativa
 
-Os query podem ser executados interativamente enviando-os por meio da interface de usuário [!DNL Query Service] ou [por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que o query enviado retorne ou atinja o tempo limite.
+As consultas podem ser executadas interativamente enviando-as por meio da interface do usuário [!DNL Query Service] ou [por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou expire.
 
-A execução de query interativos tem as seguintes limitações:
+A execução de query interativa tem as seguintes limitações:
 
 | Parâmetro | Limitação |
 | --------- | ---------- |
-| Tempo limite do query | 10 minutos |
-| Máximo de linhas retornadas | 50 000 |
-| Máximo de query simultâneos | 5 |
+| Tempo limite da consulta | 10 minutos |
+| Máximo de linhas retornadas | 50.000 |
+| Máximo de consultas simultâneas | 5 |
 
 >[!NOTE]
 >
->Para substituir a limitação máxima de linhas, inclua `LIMIT 0` no seu query. O tempo limite de 10 minutos do query ainda se aplica.
+>Para substituir a limitação máxima de linhas, inclua `LIMIT 0` em sua query. O tempo limite da consulta de 10 minutos ainda é aplicado.
 
-Por padrão, os resultados de query interativos são retornados para o cliente e **não** são persistentes. Para persistir nos resultados como um conjunto de dados em [!DNL Experience Platform], o query deve usar a sintaxe `CREATE TABLE AS SELECT`.
+Por padrão, os resultados de consultas interativas são retornados ao cliente e **not** são persistentes. Para persistir os resultados como um conjunto de dados em [!DNL Experience Platform], a query deve usar a sintaxe `CREATE TABLE AS SELECT`.
 
-### Execução de query não interativos
+### Execução de consulta não interativa
 
-Query enviados pela API [!DNL Query Service] são executados de forma não interativa. Execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa o query na ordem em que é recebido. Query não interativos sempre resultam na geração de um novo conjunto de dados em [!DNL Experience Platform] para receber os resultados, ou na inserção de novas linhas em um conjunto de dados existente.
+Consultas enviadas por meio da API [!DNL Query Service] são executadas de forma não interativa. Execução não interativa significa que [!DNL Query Service] recebe a chamada da API e executa a consulta na ordem em que é recebida. As consultas não interativas sempre resultam na geração de um novo conjunto de dados em [!DNL Experience Platform] para receber os resultados ou na inserção de novas linhas em um conjunto de dados existente.
 
-## Acessar um campo específico em um objeto
+## Acesso a um campo específico em um objeto
 
-Para acessar um campo dentro de um objeto em seu query, você pode usar a notação de pontos (`.`) ou a notação de colchetes (`[]`). A instrução SQL a seguir usa notação de pontos para atravessar o objeto `endUserIds` até o objeto `mcid`.
+Para acessar um campo dentro de um objeto em sua query, você pode usar a notação de pontos (`.`) ou a notação de colchetes (`[]`). A instrução SQL a seguir usa a notação de pontos para atravessar o objeto `endUserIds` até o objeto `mcid`.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -59,9 +59,9 @@ LIMIT 1
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | O nome da sua tabela de análise. |
+| `{ANALYTICS_TABLE_NAME}` | O nome da tabela de análise. |
 
-A instrução SQL a seguir usa a notação de colchetes para atravessar o objeto `endUserIds` até o objeto `mcid`.
+A instrução SQL a seguir usa a notação de colchete para atravessar o objeto `endUserIds` até o objeto `mcid`.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -72,13 +72,13 @@ LIMIT 1
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | O nome da sua tabela de análise. |
+| `{ANALYTICS_TABLE_NAME}` | O nome da tabela de análise. |
 
 >[!NOTE]
 >
 >Como cada tipo de notação retorna os mesmos resultados, o que você escolhe usar é de sua preferência.
 
-Ambos os query de exemplo acima retornam um objeto nivelado, em vez de um único valor:
+Ambas as consultas de exemplo acima retornam um objeto nivelado, em vez de um único valor:
 
 ```console
               endUserIds._experience.mcid   
@@ -93,7 +93,7 @@ O objeto `endUserIds._experience.mcid` retornado contém os valores corresponden
 - `namespace`
 - `primary`
 
-Quando a coluna é declarada somente para baixo no objeto, ela retorna o objeto inteiro como uma string. Para visualização somente da ID, use:
+Quando a coluna é declarada apenas para o objeto, ela retorna o objeto inteiro como uma string. Para exibir somente a ID, use:
 
 ```sql
 SELECT endUserIds._experience.mcid.id
@@ -111,13 +111,13 @@ LIMIT 1
 
 ## Aspas
 
-Aspas simples, aspas de duplo e aspas traseiras têm usos diferentes nos query de serviço do Query.
+Aspas simples, aspas duplas e aspas traseiras têm usos diferentes em consultas do Serviço de query.
 
-### Aspas únicas
+### Aspas simples
 
-A aspa única (`'`) é usada para criar strings de texto. Por exemplo, ele pode ser usado na instrução `SELECT` para retornar um valor de texto estático no resultado e na cláusula `WHERE` para avaliar o conteúdo de uma coluna.
+A aspa simples (`'`) é usada para criar cadeias de texto. Por exemplo, ele pode ser usado na instrução `SELECT` para retornar um valor de texto estático no resultado e na cláusula `WHERE` para avaliar o conteúdo de uma coluna.
 
-O query a seguir declara um valor de texto estático (`'datasetA'`) para uma coluna:
+A consulta a seguir declara um valor de texto estático (`'datasetA'`) para uma coluna:
 
 ```sql
 SELECT 
@@ -128,7 +128,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-O query a seguir usa uma string entre aspas simples (`'homepage'`) em sua cláusula WHERE para retornar eventos para uma página específica.
+A consulta a seguir usa uma sequência de caracteres de aspas simples (`'homepage'`) em sua cláusula WHERE para retornar eventos de uma página específica.
 
 ```sql
 SELECT 
@@ -139,11 +139,11 @@ WHERE web.webPageDetails.name = 'homepage'
 LIMIT 10
 ```
 
-### citações de duplo
+### Aspas duplas
 
-A citação do duplo (`"`) é usada para declarar um identificador com espaços.
+A aspa dupla (`"`) é usada para declarar um identificador com espaços.
 
-O query a seguir usa aspas de duplo para retornar valores de colunas especificadas quando uma coluna contém um espaço em seu identificador:
+A consulta a seguir usa aspas duplas para retornar valores de colunas especificadas quando uma coluna contém um espaço em seu identificador:
 
 ```sql
 SELECT
@@ -158,11 +158,11 @@ FROM
 
 >[!NOTE]
 >
->As aspas de duplo **não podem** ser usadas com acesso ao campo de notação de pontos.
+>Aspas duplas **não podem** ser usadas com acesso ao campo de notação de pontos.
 
-### Aspas anteriores
+### Aspas atrás
 
-A citação retroativa `` ` `` é usada para escapar de nomes de colunas reservados **somente** ao usar a sintaxe de notação de pontos. Por exemplo, como `order` é uma palavra reservada no SQL, você deve usar aspas retroativas para acessar o campo `commerce.order`:
+A aspa traseira `` ` `` é usada para omitir nomes de colunas reservados **somente** ao usar sintaxe de notação de pontos. Por exemplo, como `order` é uma palavra reservada no SQL, você deve usar aspas retroativas para acessar o campo `commerce.order`:
 
 ```sql
 SELECT 
@@ -171,7 +171,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-As aspas anteriores também são usadas para acessar um campo que start com um número. Por exemplo, para acessar o campo `30_day_value`, é necessário usar a notação de aspas.
+Aspas antigas também são usadas para acessar um campo que começa com um número. Por exemplo, para acessar o campo `30_day_value`, seria necessário usar a notação de aspas.
 
 ```SQL
 SELECT
@@ -180,7 +180,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-As aspas traseiras são **não** necessárias se você estiver usando a notação entre colchetes.
+As aspas traseiras são **não** necessárias se você estiver usando a notação de colchetes.
 
 ```sql
  SELECT
@@ -189,13 +189,13 @@ As aspas traseiras são **não** necessárias se você estiver usando a notaçã
  LIMIT 10
 ```
 
-## Exibição de informações da tabela
+## Exibindo informações da tabela
 
-Depois de se conectar ao Query Service, você pode ver todas as tabelas disponíveis na Plataforma usando os comandos `\d` ou `SHOW TABLES`.
+Depois de se conectar ao Serviço de query, você pode ver todas as tabelas disponíveis no Platform usando os comandos `\d` ou `SHOW TABLES`.
 
-### Visualização de mesa padrão
+### Exibição de tabela padrão
 
-O comando `\d` mostra a visualização PostgreSQL padrão para listar tabelas. Um exemplo da saída deste comando pode ser visto abaixo:
+O comando `\d` mostra a exibição padrão do PostgreSQL para listar tabelas. Um exemplo da saída deste comando pode ser visto abaixo:
 
 ```sql
              List of relations
@@ -206,7 +206,7 @@ O comando `\d` mostra a visualização PostgreSQL padrão para listar tabelas. U
 (2 rows)
 ```
 
-### Visualização detalhada da tabela
+### Exibição detalhada da tabela
 
 `SHOW TABLES` é um comando personalizado que fornece informações mais detalhadas sobre as tabelas. Um exemplo da saída deste comando pode ser visto abaixo:
 
@@ -218,9 +218,9 @@ O comando `\d` mostra a visualização PostgreSQL padrão para listar tabelas. U
 (2 rows)
 ```
 
-### Informações sobre o schema
+### Informações do esquema
 
-Para visualização de informações mais detalhadas sobre os schemas dentro da tabela, você pode usar o comando `\d {TABLE_NAME}`, onde `{TABLE_NAME}` é o nome da tabela cujas informações de schema você deseja visualização.
+Para exibir informações mais detalhadas sobre os schemas na tabela, você pode usar o comando `\d {TABLE_NAME}`, onde `{TABLE_NAME}` é o nome da tabela cujas informações de schema deseja exibir.
 
 O exemplo a seguir mostra as informações do schema para a tabela `luma_midvalues`, que seria vista usando `\d luma_midvalues`:
 
@@ -245,7 +245,7 @@ O exemplo a seguir mostra as informações do schema para a tabela `luma_midvalu
  search            | search                      |           |          | 
 ```
 
-Além disso, você pode obter mais informações sobre uma coluna específica ao anexar o nome da coluna ao nome da tabela. Isso seria escrito no formato `\d {TABLE_NAME}_{COLUMN}`.
+Além disso, é possível obter mais informações sobre uma coluna específica ao anexar o nome da coluna ao nome da tabela. Isso seria gravado no formato `\d {TABLE_NAME}_{COLUMN}`.
 
 O exemplo a seguir mostra informações adicionais para a coluna `web` e seria chamado usando o seguinte comando: `\d luma_midvalues_web`:
 
@@ -257,11 +257,11 @@ O exemplo a seguir mostra informações adicionais para a coluna `web` e seria c
  webreferrer    | web_webreferrer                   |           |          | 
 ```
 
-## Como participar de conjuntos de dados
+## Associar conjuntos de dados
 
-É possível unir vários conjuntos de dados para incluir dados de outros conjuntos de dados no query.
+É possível unir vários conjuntos de dados para incluir dados de outros conjuntos de dados em sua query.
 
-O exemplo a seguir uniria os dois conjuntos de dados a seguir (`your_analytics_table` e `custom_operating_system_lookup`) e cria uma instrução `SELECT` para os 50 principais sistemas operacionais por número de visualizações de página.
+O exemplo a seguir uniria os dois conjuntos de dados a seguir (`your_analytics_table` e `custom_operating_system_lookup`) e criará uma instrução `SELECT` para os 50 principais sistemas operacionais por número de exibições de página.
 
 **Query**
 
@@ -292,7 +292,7 @@ LIMIT 50;
 | OSX 10.6.8 | 53652,0 |
 | Android 4.0.4 | 46167,0 |
 | Android 4.0.3 | 31852,0 |
-| Windows Server 2003 e XP x64 Edition | 2883,0 |
+| Windows Server 2003 e XP x64 Edition | 28883,0 |
 | Android 4.1.1 | 24336,0 |
 | Android 2.3.6 | 15735,0 |
 | OSX 10.6 | 13357,0 |
@@ -301,10 +301,10 @@ LIMIT 50;
 
 ## Desduplicação
 
-O Serviço de query oferece suporte a dados desduplicação-duplicados ou à remoção de linhas de duplicado dos dados. Para obter mais informações sobre o desduplicação-duplicado, leia o [Guia desduplicação-duplicado do Serviço de Query](./deduplication.md).
+O Serviço de query oferece suporte à desduplicação de dados ou à remoção de linhas duplicadas dos dados. Para obter mais informações sobre desduplicação, leia o [Guia de desduplicação do serviço de consulta](./deduplication.md).
 
 ## Próximas etapas
 
-Ao ler este documento, você recebeu algumas considerações importantes ao escrever query usando [!DNL Query Service]. Para obter mais informações sobre como usar a sintaxe SQL para gravar seus próprios query, leia a [documentação da sintaxe SQL](../sql/syntax.md).
+Ao ler este documento, você foi apresentado a algumas considerações importantes ao gravar consultas usando [!DNL Query Service]. Para obter mais informações sobre como usar a sintaxe SQL para gravar suas próprias consultas, leia a [documentação da sintaxe SQL](../sql/syntax.md).
 
-Para obter mais exemplos de query que podem ser usados no Query Service, leia os guias em [query de amostra Adobe Analytics](./adobe-analytics.md), [query de amostra Adobe Target](./adobe-target.md) ou [query de amostra ExperienceEvent](./experience-event-queries.md).
+Para obter mais amostras de queries que podem ser usadas no Serviço de query, leia os guias em [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md) ou [ExperienceEvent sample queries](./experience-event-queries.md).

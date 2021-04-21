@@ -2,17 +2,17 @@
 keywords: Experience Platform, agendar um modelo, Data Science Workspace, tópicos populares, pontuação de agendamento, agendar treinamento
 solution: Experience Platform
 title: Programar um modelo na interface do usuário do Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform Data Science Workspace permite que você configure execuções programadas de pontuação e treinamento em um serviço de aprendizado de máquina. A automatização do processo de treinamento e pontuação pode ajudar a manter e melhorar a eficiência de um Serviço ao longo do tempo, acompanhando os padrões em seus dados.
+exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
 translation-type: tm+mt
-source-git-commit: 8f5b7018a52d4c5860e03cec3108435ede8815f1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
-
 
 # Programar um modelo na interface do usuário do Data Science Workspace
 

@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;serviço de catálogo;api de catálogo;apêndice
+keywords: Experience Platform, home, tópicos populares, serviço de catálogo, api de catálogo, apêndice
 solution: Experience Platform
-title: Apêndice do Guia API do Serviço de Catálogo
-topic: developer guide
-description: Este documento contém informações adicionais para ajudá-lo a trabalhar com a API de catálogo no Adobe Experience Platform.
+title: Apêndice da API do Serviço de Catálogo
+topic-legacy: developer guide
+description: Este documento contém informações adicionais para ajudá-lo a trabalhar com a API do catálogo no Adobe Experience Platform.
+exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 1%
 
 ---
 
-
-# [!DNL Catalog Service] Apêndice do guia API
+# [!DNL Catalog Service] Apêndice do guia de API
 
 Este documento contém informações adicionais para ajudá-lo a trabalhar com a API [!DNL Catalog].
 
-## Visualização de objetos interrelacionados {#view-interrelated-objects}
+## Exibir objetos interrelacionados {#view-interrelated-objects}
 
-Alguns objetos [!DNL Catalog] podem ser interrelacionados com outros objetos [!DNL Catalog]. Quaisquer campos prefixados por `@` em cargas de resposta denotam objetos relacionados. Os valores desses campos assumem a forma de um URI, que pode ser usado em uma solicitação de GET separada para recuperar os objetos relacionados que representam.
+Alguns objetos [!DNL Catalog] podem ser interrelacionados com outros objetos [!DNL Catalog]. Quaisquer campos com o prefixo `@` em cargas de resposta denotam objetos relacionados. Os valores desses campos assumem a forma de um URI, que pode ser usado em uma solicitação de GET separada para recuperar os objetos relacionados que representam.
 
 O conjunto de dados de exemplo retornado no documento em [procurando um conjunto de dados específico](look-up-object.md) contém um campo `files` com o seguinte valor de URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. O conteúdo do campo `files` pode ser visualizado usando esse URI como o caminho para uma nova solicitação de GET.
 
@@ -31,11 +31,11 @@ GET {OBJECT_URI}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_URI}` | O URI fornecido pelo campo de objeto inter-relacionado (exceto o símbolo `@`). |
+| `{OBJECT_URI}` | O URI fornecido pelo campo de objeto inter-relacionado (excluindo o símbolo `@`). |
 
 **Solicitação**
 
-A solicitação a seguir usa o URI fornecido como a propriedade `files` do conjunto de dados de exemplo para recuperar uma lista dos arquivos associados do conjunto de dados.
+A solicitação a seguir usa o URI fornecido pela propriedade `files` do conjunto de dados de exemplo para recuperar uma lista dos arquivos associados do conjunto de dados.
 
 ```shell
 curl -X GET \
@@ -93,7 +93,7 @@ Uma resposta bem-sucedida retorna uma lista de objetos relacionados. Neste exemp
 
 ## Fazer várias solicitações em uma única chamada
 
-O endpoint raiz da API [!DNL Catalog] permite que várias solicitações sejam feitas em uma única chamada. A carga da solicitação contém uma matriz de objetos que representam o que normalmente seriam solicitações individuais, que são então executadas em ordem.
+O endpoint raiz da API [!DNL Catalog] permite que várias solicitações sejam feitas em uma única chamada. A carga da solicitação contém uma matriz de objetos que representam o que normalmente seriam solicitações individuais, que são executadas em ordem.
 
 Se essas solicitações forem modificações ou adições a [!DNL Catalog] e qualquer uma das alterações falhar, todas as alterações serão revertidas.
 
@@ -105,13 +105,13 @@ POST /
 
 **Solicitação**
 
-A solicitação a seguir cria um novo conjunto de dados e, em seguida, cria visualizações relacionadas para esse conjunto de dados. Este exemplo demonstra o uso de linguagem de modelo para acessar valores retornados em chamadas anteriores para uso em chamadas subsequentes.
+A solicitação a seguir cria um novo conjunto de dados e, em seguida, cria exibições relacionadas para esse conjunto de dados. Este exemplo demonstra o uso da linguagem de modelo para acessar valores retornados em chamadas anteriores para uso em chamadas subsequentes.
 
-Por exemplo, se você deseja fazer referência a um valor que foi retornado de uma subsolicitação anterior, é possível criar uma referência no formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, como demonstrado abaixo). É possível fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de subsolicitação anterior usando esses modelos.
+Por exemplo, se você quiser fazer referência a um valor que foi retornado de uma subsolicitação anterior, é possível criar uma referência no formato : `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (onde `{REQUEST_ID}` é a ID fornecida pelo usuário para a subsolicitação, conforme demonstrado abaixo). Você pode fazer referência a qualquer atributo disponível no corpo de um objeto de resposta de subsolicitação anterior usando esses modelos.
 
 >[!NOTE]
 >
->Quando uma subsolicitação executada retorna somente a referência a um objeto (como é o padrão para a maioria das solicitações de POST e PUT na API de catálogo), essa referência recebe o alias `id` e pode ser usada como `<<{OBJECT_ID}.id>>`.
+>Quando uma subsolicitação executada retorna somente a referência a um objeto (como é o padrão para a maioria das solicitações de POST e PUT na API do catálogo), essa referência é aliada ao valor `id` e pode ser usada como `<<{OBJECT_ID}.id>>`.
 
 ```shell
 curl -X POST \
@@ -145,14 +145,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `id` | ID fornecida pelo usuário que está anexada ao objeto de resposta para que você possa corresponder solicitações a respostas. [!DNL Catalog] não armazena esse valor e simplesmente o retorna na resposta para fins de referência. |
-| `resource` | O caminho do recurso relativo à raiz da API [!DNL Catalog]. O protocolo e o domínio não devem fazer parte deste valor e devem receber o prefixo &quot;/&quot;. <br/><br/> Ao usar PATCH ou DELETE como a ID da subsolicitação  `method`, inclua a ID do objeto no caminho do recurso. Para não ser confundido com o `id` fornecido pelo usuário, o caminho do recurso usa a ID do próprio objeto [!DNL Catalog] (por exemplo, `resource: "/dataSets/1234567890"`). |
-| `method` | O nome do método (GET, PUT, POST, PATCH ou DELETE) relacionado à ação realizada na solicitação. |
-| `body` | O documento JSON que normalmente seria transmitido como carga em uma solicitação POST, PUT ou PATCH. Essa propriedade não é necessária para solicitações de GET ou DELETE. |
+| `id` | A ID fornecida pelo usuário que é anexada ao objeto de resposta para que você possa corresponder solicitações a respostas. [!DNL Catalog] O não armazena esse valor e simplesmente o retorna na resposta para fins de referência. |
+| `resource` | O caminho do recurso relativo à raiz da API [!DNL Catalog]. O protocolo e o domínio não devem fazer parte desse valor e ele deve ter o prefixo &quot;/&quot;. <br/><br/> Ao usar PATCH ou DELETE como o da subsolicitação  `method`, inclua a ID do objeto no caminho do recurso. Para não ser confundido com o `id` fornecido pelo usuário, o caminho do recurso usa a ID do próprio objeto [!DNL Catalog] (por exemplo, `resource: "/dataSets/1234567890"`). |
+| `method` | O nome do método (GET, PUT, POST, PATCH ou DELETE) relacionado à ação que ocorre na solicitação. |
+| `body` | O documento JSON que normalmente seria passado como carga em uma solicitação POST, PUT ou PATCH. Essa propriedade não é necessária para solicitações GET ou DELETE. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de objetos contendo `id` que você atribuiu a cada solicitação, o código de status HTTP para a solicitação individual e a resposta `body`. Como as três solicitações de amostra foram todas para criar novos objetos, `body` de cada objeto é uma matriz que contém apenas a ID do objeto recém-criado, como é o padrão com as respostas de POST mais bem-sucedidas em [!DNL Catalog].
+Uma resposta bem-sucedida retorna uma matriz de objetos contendo o `id` que você atribuiu a cada solicitação, o código de status HTTP para a solicitação individual e a resposta `body`. Como as três solicitações de amostra eram todas para criar novos objetos, o `body` de cada objeto é uma matriz que contém apenas a ID do objeto recém-criado, como é o padrão com as respostas de POST mais bem-sucedidas em [!DNL Catalog].
 
 ```json
 [
@@ -173,26 +173,26 @@ Uma resposta bem-sucedida retorna uma matriz de objetos contendo `id` que você 
 ]
 ```
 
-Tenha cuidado ao inspecionar a resposta a uma solicitação múltipla, pois será necessário verificar o código de cada subsolicitação individual e não depender apenas do código de status HTTP da solicitação de POST pai.  É possível que uma única subsolicitação retorne um 404 (como uma solicitação de GET em um recurso inválido) enquanto a solicitação geral retorna 200.
+Tenha cuidado ao inspecionar a resposta a uma várias solicitações, pois será necessário verificar o código de cada subsolicitação individual e não depender exclusivamente do código de status HTTP da solicitação POST pai.  É possível que uma única subsolicitação retorne um 404 (como uma solicitação GET em um recurso inválido), enquanto a solicitação geral retorna 200.
 
 ## Cabeçalhos de solicitação adicionais
 
-[!DNL Catalog] fornece várias convenções de cabeçalho para ajudar a manter a integridade dos seus dados durante as atualizações.
+[!DNL Catalog] O fornece várias convenções de cabeçalho para ajudar você a manter a integridade dos dados durante as atualizações.
 
 ### Se-Correspondência
 
-É uma boa prática usar o controle de versão de objetos para evitar o tipo de corrupção de dados que ocorre quando um objeto é salvo por vários usuários quase simultaneamente.
+Convém usar o controle de versão de objetos para evitar o tipo de corrupção de dados que ocorre quando um objeto é salvo por vários usuários quase simultaneamente.
 
-A prática recomendada ao atualizar um objeto envolve primeiro fazer uma chamada de API para a visualização (GET) do objeto a ser atualizado. Contido na resposta (e em qualquer chamada em que a resposta contenha um único objeto) é um cabeçalho `E-Tag` contendo a versão do objeto. Adicionar a versão do objeto como um cabeçalho de solicitação chamado `If-Match` em suas chamadas de atualização (PUT ou PATCH) resultará na atualização somente se a versão ainda for a mesma, ajudando a evitar a colisão de dados.
+A prática recomendada ao atualizar um objeto envolve primeiro fazer uma chamada de API para exibir (GET) o objeto a ser atualizado. Contido na resposta (e em qualquer chamada em que a resposta contenha um único objeto) é um cabeçalho `E-Tag` contendo a versão do objeto. Adicionar a versão do objeto como um cabeçalho de solicitação chamado `If-Match` em suas chamadas de atualização (PUT ou PATCH) resultará na atualização somente se a versão ainda for a mesma, ajudando a evitar a colisão de dados.
 
-Se as versões não corresponderem (o objeto foi modificado por outro processo desde que foi recuperado), você receberá o status HTTP 412 (Falha na pré-condição) indicando que o acesso ao recurso do público alvo foi negado.
+Se as versões não corresponderem (o objeto foi modificado por outro processo desde que foi recuperado), você receberá o status HTTP 412 (Falha na pré-condição) indicando que o acesso ao recurso de destino foi negado.
 
 ### Pragma
 
-Ocasionalmente, talvez você queira validar um objeto sem salvar as informações. Usar o cabeçalho `Pragma` com um valor de `validate-only` permite enviar solicitações de POST ou PUT apenas para fins de validação, impedindo que quaisquer alterações nos dados sejam persistentes.
+Ocasionalmente, é possível validar um objeto sem salvar as informações. Usar o cabeçalho `Pragma` com um valor `validate-only` permite enviar solicitações de POST ou PUT somente para fins de validação, impedindo que qualquer alteração nos dados seja persistente.
 
-## compactação de dados
+## Compactação de dados
 
-A compactação é um serviço [!DNL Experience Platform] que une dados de arquivos pequenos em arquivos maiores sem alterar dados. Por motivos de desempenho, às vezes é benéfico combinar um conjunto de arquivos pequenos em arquivos maiores para fornecer acesso mais rápido aos dados ao ser consultado.
+A compactação é um serviço [!DNL Experience Platform] que mescla dados de arquivos pequenos em arquivos maiores sem alterar dados. Por motivos de desempenho, às vezes é útil combinar um conjunto de arquivos pequenos em arquivos maiores para fornecer acesso mais rápido aos dados ao ser consultado.
 
-Quando os arquivos em um lote ingerido forem compactados, seu objeto [!DNL Catalog] associado será atualizado para fins de monitoramento.
+Quando os arquivos em um lote assimilado foram compactados, seu objeto [!DNL Catalog] associado é atualizado para fins de monitoramento.

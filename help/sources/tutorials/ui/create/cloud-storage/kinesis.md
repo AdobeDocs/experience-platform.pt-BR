@@ -7,18 +7,14 @@ type: Tutorial
 description: Saiba como criar uma conexão de origem do Amazon Kinesis usando a interface do usuário do Adobe Experience Platform.
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # Criar uma conexão de origem [!DNL Amazon Kinesis] na interface do usuário
-
->[!NOTE]
->
->O conector [!DNL Amazon Kinesis] está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
 Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para autenticar um conector de origem [!DNL Amazon Kinesis] (a seguir conhecido como [!DNL "Kinesis"]) usando a interface do usuário [!DNL Platform].
 

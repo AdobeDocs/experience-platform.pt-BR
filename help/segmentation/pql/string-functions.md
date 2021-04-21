@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentação;Segmentação;Serviço de segmentação;pql;PQL;Idioma do Query do Perfil;funções de string;string;
+keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, Serviço de segmentação, pql, PQL, Linguagem de consulta de perfil, funções de string, string;
 solution: Experience Platform
-title: Funções de string PQL
-topic: developer guide
-description: Linguagem do Query do perfil (PQL) oferta funciona para simplificar a interação com strings.
+title: Funções de sequência de caracteres PQL
+topic-legacy: developer guide
+description: A Linguagem de consulta de perfil (PQL) oferece funções para simplificar a interação com strings.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 7%
 
 ---
 
+# Funções da string
 
-# Funções de string
+[!DNL Profile Query Language] (PQL) oferece funções para simplificar a interação com strings. Mais informações sobre outras funções PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
-[!DNL Profile Query Language] (PQL) oferta funções para tornar a interação com strings mais simples. Para obter mais informações sobre outras funções PQL, consulte [[!DNL Profile Query Language] overview](./overview.md).
-
-## Curtir
+## Like
 
 A função `like` é usada para determinar se uma string corresponde a um padrão especificado.
 
@@ -29,12 +29,12 @@ A função `like` é usada para determinar se uma string corresponde a um padrã
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
-| `{STRING_2}` | A expressão para corresponder à primeira string. Há dois caracteres especiais suportados para criar uma expressão: `%` e `_`. <ul><li>`%` é usada para representar zero ou mais caracteres.</li><li>`_` é usada para representar exatamente um caractere.</li></ul> |
+| `{STRING_1}` | A string na qual executar a verificação. |
+| `{STRING_2}` | A expressão a ser comparada com a primeira string. Há dois caracteres especiais compatíveis para criar uma expressão: `%` e `_`. <ul><li>`%` é usada para representar zero ou mais caracteres.</li><li>`_` é usada para representar exatamente um caractere.</li></ul> |
 
 **Exemplo**
 
-O seguinte query PQL recupera todas as cidades que contêm o padrão &quot;es&quot;.
+A consulta PQL a seguir recupera todas as cidades que contêm o padrão &quot;es&quot;.
 
 ```sql
 city like "%es%"
@@ -42,7 +42,7 @@ city like "%es%"
 
 ## Começa com
 
-A função `startsWith` é usada para determinar se uma string start com uma substring especificada.
+A função `startsWith` é usada para determinar se uma string começa com uma substring especificada.
 
 **Formato**
 
@@ -52,13 +52,13 @@ A função `startsWith` é usada para determinar se uma string start com uma sub
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser procurada na primeira string. |
-| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação faz distinção entre maiúsculas e minúsculas. Por padrão, isso é definido como true. |
+| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação diferencia maiúsculas de minúsculas. Por padrão, isso é definido como true. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o nome da pessoa start com &quot;Joe&quot;.
+A consulta PQL a seguir determina, com diferenciação entre maiúsculas e minúsculas, se o nome da pessoa começa com &quot;Joe&quot;.
 
 ```sql
 person.name.startsWith("Joe")
@@ -66,7 +66,7 @@ person.name.startsWith("Joe")
 
 ## Does not start with
 
-A função `doesNotStartWith` é usada para determinar se uma sequência de caracteres não é start com uma subsequência de caracteres especificada.
+A função `doesNotStartWith` é usada para determinar se uma string não inicia com uma substring especificada.
 
 **Formato**
 
@@ -76,13 +76,13 @@ A função `doesNotStartWith` é usada para determinar se uma sequência de cara
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser procurada na primeira string. |
-| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação faz distinção entre maiúsculas e minúsculas. Por padrão, isso é definido como true. |
+| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação diferencia maiúsculas de minúsculas. Por padrão, isso é definido como true. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o nome da pessoa não start com &quot;Joe&quot;.
+A consulta PQL a seguir determina, com diferenciação entre maiúsculas e minúsculas, se o nome da pessoa não inicia com &quot;Joe&quot;.
 
 ```sql
 person.name.doesNotStartWith("Joe")
@@ -100,13 +100,13 @@ A função `endsWith` é usada para determinar se uma string termina com uma sub
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser procurada na primeira string. |
-| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação faz distinção entre maiúsculas e minúsculas. Por padrão, isso é definido como true. |
+| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação diferencia maiúsculas de minúsculas. Por padrão, isso é definido como true. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa termina com &quot;.com&quot;.
+A consulta PQL a seguir determina, com diferenciação de maiúsculas e minúsculas, se o endereço de email da pessoa termina com &quot;.com&quot;.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -124,13 +124,13 @@ A função `doesNotEndWith` é usada para determinar se uma string não termina 
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser procurada na primeira string. |
-| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação faz distinção entre maiúsculas e minúsculas. Por padrão, isso é definido como true. |
+| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação diferencia maiúsculas de minúsculas. Por padrão, isso é definido como true. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa não termina com &quot;.com&quot;.
+A consulta PQL a seguir determina, com diferenciação de maiúsculas e minúsculas, se o endereço de email da pessoa não termina com &quot;.com&quot;.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -148,13 +148,13 @@ A função `contains` é usada para determinar se uma string contém uma substri
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser procurada na primeira string. |
-| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação faz distinção entre maiúsculas e minúsculas. Por padrão, isso é definido como true. |
+| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação diferencia maiúsculas de minúsculas. Por padrão, isso é definido como true. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa contém a string &quot;2010@gm&quot;.
+A consulta PQL a seguir determina, com diferenciação entre maiúsculas e minúsculas, se o endereço de email da pessoa contém a string &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -172,13 +172,13 @@ A função `doesNotContain` é usada para determinar se uma string não contém 
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser procurada na primeira string. |
-| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação faz distinção entre maiúsculas e minúsculas. Por padrão, isso é definido como true. |
+| `{BOOLEAN}` | Um parâmetro opcional para determinar se a verificação diferencia maiúsculas de minúsculas. Por padrão, isso é definido como true. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o endereço de email da pessoa não contém a string &quot;2010@gm&quot;.
+A consulta PQL a seguir determina, com diferenciação entre maiúsculas e minúsculas, se o endereço de email da pessoa não contém a string &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -196,12 +196,12 @@ A função `equals` é usada para determinar se uma string é igual à string es
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser comparada com a primeira string. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o nome da pessoa é &quot;John&quot;.
+A consulta PQL a seguir determina, com diferenciação entre maiúsculas e minúsculas, se o nome da pessoa é &quot;John&quot;.
 
 ```sql
 person.name.equals("John")
@@ -219,12 +219,12 @@ A função `notEqualTo` é usada para determinar se uma string não é igual à 
 
 | Argumento | Descrição |
 | --------- | ----------- |
-| `{STRING_1}` | A string para executar a verificação. |
+| `{STRING_1}` | A string na qual executar a verificação. |
 | `{STRING_2}` | A string a ser comparada com a primeira string. |
 
 **Exemplo**
 
-O seguinte query PQL determina, com distinção entre maiúsculas e minúsculas, se o nome da pessoa não é &quot;John&quot;.
+A consulta PQL a seguir determina, com diferenciação entre maiúsculas e minúsculas, se o nome da pessoa não é &quot;John&quot;.
 
 ```sql
 person.name.notEqualTo("John")
@@ -242,13 +242,13 @@ A função `matches` é usada para determinar se uma string corresponde a uma ex
 
 **Exemplo**
 
-O seguinte query PQL determina, sem distinção entre maiúsculas e minúsculas, se o nome da pessoa start com &quot;John&quot;.
+A consulta PQL a seguir determina, sem distinção entre maiúsculas e minúsculas, se o nome da pessoa começa com &quot;John&quot;.
 
 ```sql
 person.name.matches("(?i)^John")
 ```
 
-## Grupo de expressões regular
+## Grupo de expressões regulares
 
 A função `regexGroup` é usada para extrair informações específicas, com base na expressão regular fornecida.
 
@@ -260,7 +260,7 @@ A função `regexGroup` é usada para extrair informações específicas, com ba
 
 **Exemplo**
 
-O seguinte query PQL é usado para extrair o nome do domínio de um endereço de email.
+A consulta PQL a seguir é usada para extrair o nome de domínio de um endereço de email.
 
 ```sql
 emailAddress.regexGroup("@(\w+)", 1)
@@ -268,5 +268,4 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Próximas etapas
 
-Agora que você aprendeu sobre funções de sequência de caracteres, é possível usá-las em seus query PQL. Para obter mais informações sobre outras funções PQL, leia a [visão geral da linguagem do Query do Perfil](./overview.md).
-
+Agora que você aprendeu sobre funções de string, pode usá-las em consultas PQL. Para obter mais informações sobre outras funções PQL, leia a [Visão geral da linguagem de consulta de perfil](./overview.md).

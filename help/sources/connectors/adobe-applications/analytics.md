@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Conector de dados do Analytics, analytics, Analytics
+keywords: Experience Platform, home, tópicos populares, Conector de dados do Analytics, análise, Analytics
 solution: Experience Platform
-title: Conector de fonte do Adobe Analytics para dados do conjunto de relatórios
-topic: overview
+title: Conector de origem do Adobe Analytics para dados do conjunto de relatórios
+topic-legacy: overview
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
+exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '503'
 ht-degree: 3%
 
 ---
 
+# Conector Adobe Analytics para dados do conjunto de relatórios
 
-# Conector do Adobe Analytics para dados do conjunto de relatórios
-
-A Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio do ADC (Conector de dados do Analytics). O ADC envia dados coletados por [!DNL Analytics] para [!DNL Platform] em tempo real, convertendo dados [!DNL Analytics] formatados em SCDS em [!DNL Experience Data Model] (XDM) campos para consumo por [!DNL Platform].
+O Adobe Experience Platform permite assimilar dados do Adobe Analytics por meio do ADC (Conector de dados do Analytics). O ADC envia dados coletados por [!DNL Analytics] para [!DNL Platform] em tempo real, convertendo dados [!DNL Analytics] formatados em SCDS em [!DNL Experience Data Model] (XDM) campos para consumo por [!DNL Platform].
 
 Este documento fornece uma visão geral de [!DNL Analytics] e descreve os casos de uso para dados [!DNL Analytics].
 
@@ -41,7 +41,7 @@ Para saber mais sobre o XDM, consulte a [Visão geral do sistema XDM](../../../x
 
 Quando uma conexão de origem é estabelecida para trazer [!DNL Analytics] dados para [!DNL Experience Platform] usando a interface do usuário [!DNL Platform], os campos de dados são mapeados automaticamente e assimilados em [!DNL Real-time Customer Profile] em minutos. Para obter instruções sobre como criar uma conexão de origem com [!DNL Analytics] usando a interface do usuário [!DNL Platform], consulte o [tutorial do conector de dados do Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Para obter informações detalhadas sobre o mapeamento de campo que ocorre entre [!DNL Analytics] e [!DNL Experience Platform], visite o guia [Mapeamento de campo do Adobe Analytics](./mapping/analytics.md).
+Para obter informações detalhadas sobre o mapeamento de campo que ocorre entre [!DNL Analytics] e [!DNL Experience Platform], visite o guia [Adobe Analytics field mapping](./mapping/analytics.md).
 
 ## Qual é a latência esperada para os dados do Analytics na plataforma?
 

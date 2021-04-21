@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;catálogo;api;substituir um objeto
+keywords: Experience Platform, home, tópicos populares, catálogo, api, substituir um objeto
 solution: Experience Platform
 title: Substituir um objeto de catálogo
-topic: developer guide
-description: É possível substituir o conteúdo de um objeto de Catálogo usando uma solicitação PUT, onde todo o recurso é substituído pela carga da solicitação.
+topic-legacy: developer guide
+description: Você pode substituir o conteúdo de um objeto de Catálogo usando uma solicitação de PUT, onde todo o recurso é substituído pela carga da solicitação.
+exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 2%
 
 ---
-
 
 # Substituir um objeto de catálogo
 
@@ -19,7 +19,7 @@ Você pode substituir o conteúdo de um objeto [!DNL Catalog] usando uma solicit
 
 >[!NOTE]
 >
->Se você precisar apenas atualizar alguns campos específicos em um objeto [!DNL Catalog], o uso de uma solicitação de PATCH pode ser mais eficiente.
+>Se você precisar atualizar apenas alguns campos específicos em um objeto [!DNL Catalog] , usar uma solicitação de PATCH pode ser mais eficiente.
 
 **Formato da API**
 
@@ -29,12 +29,12 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser substituído. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser substituído. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja atualizar. |
 
 **Solicitação**
 
-A solicitação a seguir substitui um conjunto de dados pelos valores fornecidos na carga.
+A solicitação a seguir substitui um conjunto de dados pelos valores fornecidos no payload.
 
 ```shell
 curl -X PUT \
@@ -59,7 +59,7 @@ curl -X PUT \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz que contém a ID do objeto substituído. Essa ID deve corresponder àquela enviada na solicitação de PUT. Executar uma solicitação de GET para esse objeto agora mostra que seus detalhes foram substituídos pelos fornecidos na carga da solicitação de PUT anterior.
+Uma resposta bem-sucedida retorna uma matriz contendo a ID do objeto substituído. Essa ID deve corresponder à enviada na solicitação PUT. Executar uma solicitação de GET para esse objeto agora mostra que seus detalhes foram substituídos pelos fornecidos na carga da solicitação de PUT anterior.
 
 ```json
 [

@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;perfil individual;campos;schemas;Schemas;design de Schema;mixin;mixins;detalhes;trabalho do perfil;
+keywords: Experience Platform, home, tópicos populares, schema, esquema, XDM, perfil individual, campos, esquemas, esquemas, design de esquema, mixin, mixins, detalhes de trabalho, trabalho de perfil;
 solution: Experience Platform
 title: Mistura de Detalhes do Contato de Trabalho
-topic: overview
-description: Este documento fornece uma visão geral da combinação Detalhes do contato de trabalho.
+topic-legacy: overview
+description: Este documento fornece uma visão geral da combinação de Detalhes do contato de trabalho .
+exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '171'
 ht-degree: 3%
 
 ---
 
-
-# [!UICONTROL Detalhes do contato de trabalho ] Detailsmixin
+# [!UICONTROL Work Contact Details] mistura
 
 >[!NOTE]
 >
->Os nomes de várias misturas mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
+>Os nomes de várias mixins mudaram. Consulte o documento em [mixin name updates](../name-updates.md) para obter mais informações.
 
-[!UICONTROL O contato de trabalho ] detalha uma combinação padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O mixin fornece vários campos que capturam informações profissionais relacionadas a uma pessoa individual, como endereço de trabalho, email de trabalho, número de telefone de trabalho e organizações às quais a pessoa pertence.
+[!UICONTROL Work Contact Details] é uma mixin padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) . O mixin fornece vários campos que capturam informações profissionais relacionadas a uma pessoa, como endereço de trabalho, email de trabalho, número de telefone de trabalho e organizações às quais a pessoa pertence.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `workAddress` | [Endereço postal](../../data-types/postal-address.md) | Descreve o endereço de trabalho da pessoa. |
-| `workEmail` | [Endereço de email](../../data-types/email-address.md) | Descreve o endereço de email da pessoa. |
-| `workPhone` | [Número de telefone](../../data-types/phone-number.md) | Descreve o número de telefone do trabalho da pessoa. |
-| `organizations` | String (Array) | Uma matriz de strings de forma livre que representam as organizações das quais a pessoa é membro. |
+| `workEmail` | [Endereço de email](../../data-types/email-address.md) | Descreve o endereço de email de trabalho da pessoa. |
+| `workPhone` | [Número de telefone](../../data-types/phone-number.md) | Descreve o número de telefone de trabalho da pessoa. |
+| `organizations` | Sequência (Matriz) | Uma matriz de strings de forma livre que representam as organizações das quais a pessoa é membro. |
 
-Para obter mais detalhes sobre a mistura, consulte o repositório XDM público:
+Para obter mais detalhes sobre o mixin, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)

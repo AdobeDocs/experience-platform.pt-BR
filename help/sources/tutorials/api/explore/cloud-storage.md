@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, armazenamento na nuvem, armazenamento na nuvem
 solution: Experience Platform
 title: Explore um sistema de armazenamento em alto volume usando a API do Serviço de fluxo
-topic: overview
+topic-legacy: overview
 description: Este tutorial usa a API do Serviço de fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
-
 
 # Explore um sistema de armazenamento em nuvem usando a API [!DNL Flow Service]
 

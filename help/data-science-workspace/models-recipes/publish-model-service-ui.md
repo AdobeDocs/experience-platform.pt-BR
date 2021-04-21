@@ -2,17 +2,17 @@
 keywords: Experience Platform, publicar um modelo, Data Science Workspace, tópicos populares, pontuar um serviço
 solution: Experience Platform
 title: Publicar um modelo como um serviço na interface do usuário do Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: O Adobe Experience Platform Data Science Workspace permite publicar seu Modelo como um Serviço treinado e avaliado, permitindo que os usuários em sua organização IMS marquem dados sem a necessidade de criar seus próprios Modelos.
+exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '483'
+ht-degree: 0%
 
 ---
-
 
 # Publicar um modelo como um serviço na interface do usuário do Data Science Workspace
 

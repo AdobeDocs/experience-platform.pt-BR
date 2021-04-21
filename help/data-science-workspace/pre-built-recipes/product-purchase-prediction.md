@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform;fórmula de compra do produto;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform, receita de compra do produto, Data Science Workspace, tópicos populares, receitas, receita de pré-criação
 solution: Experience Platform
 title: Receita de previsão de compra do produto
-topic: overview
-description: A fórmula Predição de compra de produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
+topic-legacy: overview
+description: A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
+exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 7%
 
 ---
 
+# Receita de previsão de compra do produto
 
-# Fórmula de previsão de compra de produto
-
-A fórmula Predição de compra de produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
+A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 O documento a seguir responderá perguntas como:
-* Para quem esta receita foi construída?
+* Para quem esta receita foi criada?
 * O que esta receita faz?
 
-## Para quem esta receita foi construída?
+## Para quem esta receita foi criada?
 
-Sua marca busca impulsionar as vendas trimestrais para sua linha de produtos através de promoções eficazes e direcionadas aos seus clientes. No entanto, nem todos os clientes são iguais e você quer o seu dinheiro. Quem você público alvo? Quais de seus clientes têm maior probabilidade de responder sem achar sua promoção intrusiva? Como você personaliza suas promoções para cada cliente? Em que canais você deve confiar e quando deve enviar promoções?
+Sua marca busca impulsionar as vendas trimestrais de sua linha de produtos por meio de promoções eficazes e direcionadas para seus clientes. No entanto, nem todos os clientes são iguais e você quer o seu dinheiro. Quem você quer? Quais dos seus clientes têm maior probabilidade de responder sem achar sua promoção intrusiva? Como personalizar suas promoções para cada cliente? Em quais canais você deve confiar e quando você deve enviar as promoções?
 
 ## O que esta receita faz?
 
-A fórmula Predição de compra de produto utiliza o aprendizado da máquina para prever o comportamento de compra do cliente. Isso é feito aplicando um classificador de floresta aleatório personalizado e um XDM (Modelo de Dados de Experiência em Duas camadas) para prever a probabilidade de um evento de compra. O modelo utiliza dados de entrada que incorporam informações de perfil do cliente e histórico de compras passadas, além de padrões para parâmetros de configuração predeterminados determinados determinados pelos nossos Cientistas de Dados para aprimorar a precisão preditiva.
+A fórmula Previsão de compra do produto utiliza o aprendizado de máquina para prever o comportamento de compra do cliente. Ele faz isso aplicando um classificador de floresta aleatória personalizado e um Modelo de Dados de Experiência em Duas Pontas (XDM) para prever a probabilidade de um evento de compra. O modelo utiliza dados de entrada que incorporam informações de perfil do cliente e histórico de compras anteriores, além de padrões para parâmetros de configuração predeterminados determinados determinados pelos nossos cientistas de dados para aprimorar a precisão preditiva.
 
 ## Schema de dados
 
-Esta fórmula usa [schemas XDM](../../xdm/home.md) para modelar os dados. O schema usado para esta fórmula é mostrado abaixo:
+Essa fórmula usa [esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
 --- | ---
@@ -45,7 +45,7 @@ Esta fórmula usa [schemas XDM](../../xdm/home.md) para modelar os dados. O sche
 | optinMobile | Booleano |
 | optinAddress | Booleano |
 | criado | Número inteiro |
-| totalOrder | Número |
+| totalOrders | Número |
 | totalItems | Número |
 | orderDate1 | Número |
 | ShippingDate1 | Número |
@@ -58,6 +58,6 @@ Esta fórmula usa [schemas XDM](../../xdm/home.md) para modelar os dados. O sche
 
 ## Algoritmo
 
-Primeiro, o conjunto de dados de treinamento no schema *ProductPredição* é carregado. Aqui, o modelo é treinado usando um [classificador aleatório de floresta](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador de floresta aleatória é um tipo de algoritmo agrupado que se refere a um algoritmo que combina vários algoritmos para obter melhor desempenho preditivo. A ideia por trás do algoritmo é que o classificador aleatório de floresta constrói várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
+Primeiro, o conjunto de dados de treinamento no schema *ProductPredição* é carregado. A partir daqui, o modelo é treinado usando um [random forest classificfier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificador Random forest é um tipo de algoritmo conjunto que se refere a um algoritmo que combina vários algoritmos para obter um desempenho preditivo aprimorado. A ideia por trás do algoritmo é que o classificador random forest cria várias árvores de decisão e as mescla para criar uma previsão mais precisa e estável.
 
-Esse processo se start com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois é feita a média dos resultados de cada árvore decisória.
+Esse processo começa com a criação de um conjunto de árvores de decisão que seleciona aleatoriamente subconjuntos de dados de treinamento. Depois, calcula-se a média dos resultados de cada árvore de decisão.

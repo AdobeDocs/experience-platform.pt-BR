@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, serviço de catálogo, serviço de catálogo, Catálogo
+keywords: Experience Platform, home, tópicos populares, serviço de catálogo, catálogo, serviço de catálogo, Catálogo
 solution: Experience Platform
 title: Guia da API do Serviço de catálogo
-topic: developer guide
-description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem os metadados do conjunto de dados na Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+topic-legacy: developer guide
+description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem os metadados do conjunto de dados no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Catalog Service] Guia da API
 
-[!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados na Adobe Experience Platform. [!DNL Catalog] O atua como um armazenamento de metadados ou &quot;catálogo&quot;, onde é possível encontrar informações sobre seus dados no  [!DNL Experience Platform], sem precisar acessar os dados propriamente ditos. Consulte a [[!DNL Catalog] visão geral](../home.md) para obter mais informações.
+[!DNL Catalog Service] é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. [!DNL Catalog] O atua como um armazenamento de metadados ou &quot;catálogo&quot;, onde é possível encontrar informações sobre seus dados no  [!DNL Experience Platform], sem precisar acessar os dados propriamente ditos. Consulte a [[!DNL Catalog] visão geral](../home.md) para obter mais informações.
 
 Este guia do desenvolvedor fornece etapas para ajudá-lo a começar a usar a API [!DNL Catalog]. O guia fornece exemplos de chamadas de API para executar operações principais usando [!DNL Catalog].
 

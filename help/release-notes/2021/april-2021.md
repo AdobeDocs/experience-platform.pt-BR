@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 1072b95469fac19a2e03ca4eacaae05250e11be8
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 12%
+source-wordcount: '868'
+ht-degree: 10%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 12%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -36,6 +37,14 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 | Suporte para assimilação de streaming | Agora é possível usar funções de preparação de dados ao criar uma conexão de origem de fluxo. Para obter mais informações, consulte o tutorial em [criar uma conexão de origem de transmissão na interface do usuário](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Para obter mais informações, consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+O Experience Data Model (XDM) é uma especificação de código aberto criada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para qualquer aplicativo se comunicar com serviços no Adobe Experience Platform. Ao seguir os padrões XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de uma maneira mais rápida e integrada. Você pode obter informações valiosas das ações do cliente, definir públicos-alvo do cliente por meio de segmentos e usar atributos do cliente para fins de personalização.
+
+| Recurso | Descrição |
+| --- | --- |
+| Recomendações de schema por setor | Ao selecionar classes e mixins na interface do Editor de esquemas, você pode usar um novo filtro para exibir os componentes padrão recomendados com base em seu setor específico. Consulte a documentação sobre [modelos de dados do setor](https://www.adobe.com/go/xdm-industry-erds-en) para obter mais informações sobre como esses componentes se relacionam entre si para diferentes casos de uso do setor. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 

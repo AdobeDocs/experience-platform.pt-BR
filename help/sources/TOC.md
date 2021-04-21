@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '606'
 ht-degree: 13%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 13%
       - [Conector GreenPlum](connectors/databases/greenplum.md)
       - [Conector HP Vertica](connectors/databases/hp-vertica.md)
       - [Conector IBM DB2](connectors/databases/ibm-db2.md)
+      - [Conector MariaDB](connectors/databases/mariadb.md)
       - [Conector do Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
       - [Conector do oracle](connectors/databases/oracle.md)
@@ -113,6 +114,7 @@ ht-degree: 13%
          - [VerdePlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
@@ -198,6 +200,7 @@ ht-degree: 13%
          - [VerdePlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)

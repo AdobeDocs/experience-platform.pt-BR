@@ -2,20 +2,20 @@
 keywords: Experience Platform, home, tópicos populares, namespace de identidade, namespace de identidade
 solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
+exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
 
-
 # Guia de solução de problemas do Serviço de identidade
 
-Este documento fornece respostas a perguntas frequentes sobre a Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Em caso de dúvidas e solução de problemas relacionados às APIs [!DNL Platform] em geral, consulte o [Guia de solução de problemas da API da Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Em caso de dúvidas e solução de problemas relacionados às APIs [!DNL Platform] em geral, consulte o [Guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
 
 Os dados que identificam um único cliente geralmente são fragmentados em vários dispositivos e sistemas que eles usam para interagir com sua marca. [!DNL Identity Service] O reúne essas identidades fragmentadas, facilitando uma compreensão completa do comportamento do cliente para que você possa oferecer experiências digitais impactantes em tempo real. Para obter mais informações, consulte a [Visão geral do Serviço de identidade](./home.md).
 
@@ -73,17 +73,17 @@ Os campos de identidade devem ser associados a um namespace de identidade existe
 
 Para obter instruções passo a passo para definir um namespace ao criar um descritor de identidade usando a API, consulte a seção sobre [criar um descritor](../xdm/tutorials/create-schema-ui.md) no guia do desenvolvedor do Registro de Schema. Para marcar um campo de esquema como uma identidade na interface do usuário, siga as etapas no [Tutorial do Editor de esquemas](../xdm/tutorials/create-schema-api.md).
 
-## Quais são os namespaces de identidade padrão fornecidos pela Experience Platform? {#standard-namespaces}
+## Quais são os namespaces de identidade padrão fornecidos pelo Experience Platform? {#standard-namespaces}
 
 Os namespaces de identidade padrão são namespaces disponíveis para todas as organizações. Consulte a [Visão geral dos namespaces de identidade](./namespaces.md) para obter uma lista completa dos namespaces padrão disponíveis.
 
 ## Onde posso encontrar a lista de namespaces de identidade disponíveis para minha organização?
 
-Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode listar todos os namespaces de identidade disponíveis para sua organização, fazendo uma solicitação GET para o endpoint `/idnamespace/identities`. Consulte a seção [listando namespaces disponíveis](./api/list-namespaces.md) na visão geral da API do Serviço de identidade para obter mais informações.
+Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode listar todos os namespaces de identidade disponíveis para sua organização, fazendo uma solicitação de GET para o endpoint `/idnamespace/identities`. Consulte a seção [listando namespaces disponíveis](./api/list-namespaces.md) na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## Como criar um namespace personalizado para minha organização?
 
-Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode criar um namespace de identidade personalizado para sua organização, fazendo uma solicitação POST para o endpoint `/idnamespace/identities`. Consulte a seção [criar um namespace personalizado](./api/create-custom-namespace.md) na visão geral da API do Serviço de identidade para obter mais informações.
+Usando a [API do Serviço de identidade](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), você pode criar um namespace de identidade personalizado para sua organização, fazendo uma solicitação de POST para o endpoint `/idnamespace/identities`. Consulte a seção [criar um namespace personalizado](./api/create-custom-namespace.md) na visão geral da API do Serviço de identidade para obter mais informações.
 
 ## O que são identidades compostas e XIDs?
 

@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
+keywords: Experience Platform, home, tópicos populares, serviço de consulta, serviço de consulta, Looker, looker, conectar ao serviço de consulta;
 solution: Experience Platform
-title: Conectar Looker ao Serviço de Query
-topic: connect
-description: Este documento percorre as etapas para conectar o Looker ao Adobe Experience Platform Query Service.
+title: Conectar Looker ao Serviço de Consulta
+topic-legacy: connect
+description: Este documento aborda as etapas para conectar o Looker ao Adobe Experience Platform Query Service.
+exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# Conectar [!DNL Looker] ao Serviço de Consulta
 
-# Conectar [!DNL Looker] ao Serviço de Query
-
-Este documento cobre as etapas para conectar [!DNL Looker] ao Adobe Experience Platform [!DNL Query Service].
+Este documento aborda as etapas para conectar [!DNL Looker] com Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Este guia supõe que você já tenha acesso a [!DNL Looker] e esteja familiarizado com como navegar em sua interface. Mais informações sobre [!DNL Looker] podem ser encontradas na [oficial [!DNL Looker] documentação](https://docs.looker.com/).
+> Este guia pressupõe que você já tenha acesso a [!DNL Looker] e esteja familiarizado com como navegar em sua interface. Mais informações sobre [!DNL Looker] podem ser encontradas na documentação [oficial [!DNL Looker] documentação](https://docs.looker.com/).
 
 Depois de fazer logon em [!DNL Looker], selecione **[!DNL Admin]**, seguido por **[!DNL Connections]**.
 
@@ -33,20 +33,20 @@ Aqui, você pode preencher os detalhes das configurações de conexão.
 
 ![](../images/clients/looker/new-connection.png)
 
-- **[!DNL Name]:** O nome da sua conexão.
-- **[!DNL Dialect]:** O dialeto usado para o banco de dados SQL. [!DNL Query Service] usa  **[!DNL PostgreSQL]**.
-- **[!DNL Host and Port]:** O terminal do host e sua porta para  [!DNL Query Service].
-- **[!DNL Database]:** O banco de dados que será usado.
-- **[!DNL Username and Password]:** As credenciais de logon que serão usadas. O nome de usuário estará na forma de `ORG_ID@AdobeOrg`.
+- **[!DNL Name]:** o nome da sua conexão.
+- **[!DNL Dialect]:** o dialeto usado para o banco de dados SQL. [!DNL Query Service] usa  **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** o terminal do host e sua porta para  [!DNL Query Service].
+- **[!DNL Database]:** o banco de dados que será usado.
+- **[!DNL Username and Password]:** As credenciais de logon que serão usadas. O nome de usuário estará no formato `ORG_ID@AdobeOrg`.
 
 >[!NOTE]
 >
->Para obter mais informações sobre como localizar seu host e porta, nome do banco de dados e credenciais de logon, visite a página [credenciais em Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform] e selecione **[!UICONTROL Query]**, seguido por **[!UICONTROL Credenciais]**.
+>Para obter mais informações sobre como encontrar o host e a porta, o nome do banco de dados e as credenciais de logon, visite a página [credenciais no Platform](https://platform.adobe.com/query/configuration). Para localizar suas credenciais, faça logon em [!DNL Platform], selecione **[!UICONTROL Queries]**, seguido por **[!UICONTROL Credentials]**.
 
-Depois de inserir os detalhes da conexão, selecione **[!DNL Test These Settings]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem indicando que você pode se conectar será exibida abaixo. Se sua conexão for realmente bem-sucedida, selecione **[!DNL Add Connection]** para criar sua conexão.
+Depois de inserir os detalhes da conexão, selecione **[!DNL Test These Settings]** para garantir que suas credenciais funcionem corretamente. Se o fizerem, uma mensagem indicando que você pode se conectar será exibida abaixo. Se a conexão for realmente bem-sucedida, selecione **[!DNL Add Connection]** para criar a conexão.
 
 ![](../images/clients/looker/click-test-connection.png)
 
 ## Próximas etapas
 
-Agora que você se conectou a [!DNL Query Service], é possível usar [!DNL Looker] para gravar query. Para obter mais informações sobre como gravar e executar query, leia o [guia de query em execução](../best-practices/writing-queries.md).
+Agora que você se conectou a [!DNL Query Service], é possível usar [!DNL Looker] para gravar consultas. Para obter mais informações sobre como gravar e executar consultas, leia o [guia de consultas em execução](../best-practices/writing-queries.md).

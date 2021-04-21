@@ -1,42 +1,42 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;topics populares;
+keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares;
 solution: Experience Platform
-title: Apêndice do Guia API de Aprendizagem de Máquinas do Sensei
-topic: Developer guide
-description: As seções a seguir fornecem informações de referência para vários recursos da API Sensei Machine Learning.
+title: Apêndice da API do Sensei Machine Learning
+topic-legacy: Developer guide
+description: As seções a seguir fornecem informações de referência para vários recursos da API de aprendizado de máquina do Sensei.
+exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 3%
 
 ---
 
-
-# [!DNL Sensei Machine Learning] Apêndice do guia API
+# [!DNL Sensei Machine Learning] Apêndice do guia de API
 
 As seções a seguir fornecem informações de referência para vários recursos da API [!DNL Sensei Machine Learning].
 
-## Parâmetros de query para recuperação de ativos {#query}
+## Parâmetros de consulta para recuperação de ativos {#query}
 
-A API [!DNL Sensei Machine Learning] fornece suporte para parâmetros de query com a recuperação de ativos. Os parâmetros de query disponíveis e seus usos estão descritos na tabela a seguir:
+A API [!DNL Sensei Machine Learning] fornece suporte para parâmetros de consulta com a recuperação de ativos. Os parâmetros de consulta disponíveis e seus usos estão descritos na tabela a seguir:
 
 | Parâmetro de consulta | Descrição | Valor padrão |
 | --------------- | ----------- | ------- |
 | `start` | Indica o índice inicial para paginação. | `start=0` |
 | `limit` | Indica o número máximo de resultados a serem retornados. | `limit=25` |
-| `orderby` | Indica as propriedades a serem usadas para classificação na ordem de prioridade. Inclua um traço (**-**) antes de um nome de propriedade para classificar em ordem decrescente; caso contrário, os resultados são classificados em ordem crescente. | `orderby=created` |
-| `property` | Indica a expressão de comparação que um objeto deve satisfazer para ser retornado. | `property=deleted==false` |
+| `orderby` | Indica as propriedades a serem usadas para classificação em ordem de prioridade. Inclua um traço (**-**) antes de um nome de propriedade para classificar em ordem decrescente; caso contrário, os resultados são classificados em ordem crescente. | `orderby=created` |
+| `property` | Indica a expressão de comparação que um objeto deve atender para ser retornado. | `property=deleted==false` |
 
 >[!NOTE]
 >
->Ao combinar vários parâmetros de query, eles devem ser separados por E comercial (**&amp;**).
+>Ao combinar vários parâmetros de consulta, eles devem ser separados por &quot;E&quot; comercial (**&amp;**).
 
-## Configurações de CPU Python e GPU {#cpu-gpu-config}
+## Configurações Python CPU e GPU {#cpu-gpu-config}
 
-Os mecanismos Python têm a capacidade de escolher entre uma CPU ou uma GPU para seus propósitos de treinamento ou pontuação, e são definidos em uma [MLIntent](./mlinstances.md) como uma especificação de tarefa (`tasks.specification`).
+Os Mecanismos de Python têm a capacidade de escolher entre uma CPU ou uma GPU para seus propósitos de treinamento ou pontuação, e são definidos em [MLIntent](./mlinstances.md) como uma especificação de tarefa (`tasks.specification`).
 
-A seguir está um exemplo de configuração que especifica o uso de uma CPU para treinamento e uma GPU para pontuação:
+A seguir, um exemplo de configuração que especifica o uso de uma CPU para treinamento e uma GPU para pontuação:
 
 ```json
 [
@@ -75,17 +75,17 @@ A seguir está um exemplo de configuração que especifica o uso de uma CPU para
 
 ## Configurações de recursos PySpark e Spark {#resource-config}
 
-Os mecanismos Spark têm a capacidade de modificar recursos computacionais para fins de treinamento e pontuação. Esses recursos estão descritos na tabela a seguir:
+Os Mecanismos Spark têm a capacidade de modificar recursos tecnológicos para fins de treinamento e pontuação. Esses recursos estão descritos na tabela a seguir:
 
 | Recurso | Descrição | Tipo |
 | -------- | ----------- | ---- |
 | driverMemory | Memória para driver em megabytes | int |
 | driverCores | Número de núcleos usados pelo driver | int |
-| executeMemory | Memória para executor em megabytes | int |
+| executorMemory | Memória para executor em megabytes | int |
 | executorCores | Número de núcleos usados pelo executor | int |
 | numExecutors | Número de executores | int |
 
-Os recursos podem ser especificados em [MLIntent](./mlinstances.md) como (A) parâmetros individuais de treinamento ou pontuação, ou (B) em um objeto de especificações adicionais (`specification`). Por exemplo, as seguintes configurações de recursos são as mesmas para treinamento e pontuação:
+Os recursos podem ser especificados em uma [MLInposition](./mlinstances.md) como (A) treinamento individual ou parâmetros de pontuação, ou (B) em um objeto de especificações adicionais (`specification`). Por exemplo, as seguintes configurações de recursos são as mesmas para treinamento e pontuação:
 
 ```json
 [

@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, recusar, segmentação, serviço de segmentação, serviço de segmentação, opções de honra, recusas, rejeitar, excluir;
+keywords: Experience Platform, home, tópicos populares, opt-out, segmentação, serviço de segmentação, serviço de segmentação, opt-outs, opt-outs,, opt-outs;
 solution: Experience Platform
 title: Respeito das solicitações de recusa em segmentos
-topic: overview
-description: 'A Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de recusa fazem parte da California Consumer Privacy Act (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem). '
+topic-legacy: overview
+description: O Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no Perfil do cliente em tempo real]. Essas solicitações de recusa fazem parte da California Consumer Privacy Act (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem).
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
 
-
 # Respeito às solicitações de recusa em segmentos
 
-A Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados em [!DNL Real-time Customer Profile]. Essas solicitações de recusa fazem parte da [!DNL California Consumer Privacy Act] (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem).
+O Adobe Experience Platform permite que seus clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados em [!DNL Real-time Customer Profile]. Essas solicitações de recusa fazem parte da [!DNL California Consumer Privacy Act] (CCPA), que fornece aos residentes da Califórnia o direito de acessar e excluir seus dados pessoais e saber se seus dados pessoais são vendidos ou divulgados (e para quem).
 
 Depois que um cliente optar por não participar, é importante que sua organização honre essas opções ao gerar públicos-alvo para atividades de marketing. Este documento descreve detalhes importantes sobre o cumprimento de solicitações de recusa.
 
@@ -112,15 +112,15 @@ As seções abaixo demonstram como adicionar os campos apropriados para os dois 
 
 ### Opt out geral
 
-[!DNL Segmentation] O atende automaticamente a todos os perfis que contêm o sinalizador de &quot;[!UICONTROL recusa geral]&quot;, o que significa que esses perfis não serão incluídos em públicos-alvo ou exportações por padrão. No entanto, é uma prática recomendada adicionar os campos apropriados para garantir que os perfis de não participação não sejam incluídos em públicos-alvo e atividades de marketing.
+[!DNL Segmentation] respeita automaticamente todos os perfis que contêm o sinalizador &quot;[!UICONTROL General Opt-Out]&quot;, o que significa que esses perfis não serão incluídos em públicos-alvo ou exportações por padrão. No entanto, é uma prática recomendada adicionar os campos apropriados para garantir que os perfis de não participação não sejam incluídos em públicos-alvo e atividades de marketing.
 
-Isso pode ser feito usando a interface do usuário adicionando atributos **[!UICONTROL Privacy Opt-Outs]**. Nesse caso, o segmento é definido para incluir apenas aqueles que optaram por participar (o que significa que não têm um sinalizador de opt out geral em seu perfil). Isso é feito declarando que o &quot;[!UICONTROL Opt-Out Type]&quot; é igual a &quot;[!UICONTROL General Opt-Out]&quot; e o &quot;[!UICONTROL Opt-Out Value]&quot; é igual a &quot;[!UICONTROL Opt-in]&quot;.
+Isso pode ser feito usando a interface do usuário adicionando atributos **[!UICONTROL Privacy Opt-Outs]**. Nesse caso, o segmento é definido para incluir apenas aqueles que optaram por participar (o que significa que não têm um sinalizador de opt out geral em seu perfil). Isso é feito declarando que &quot;[!UICONTROL Opt-Out Type]&quot; é igual a &quot;[!UICONTROL General Opt-Out]&quot; e que &quot;[!UICONTROL Opt-Out Value]&quot; é igual a &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### Opção de rejeição de vendas/compartilhamento
 
-Se um usuário tiver um sinalizador de recusa de vendas/compartilhamento definido em seu perfil, esse perfil não deverá mais ser usado para nenhuma criação de segmento ou atividade de marketing. Para garantir que esse sinalizador seja cumprido, o &quot;[!UICONTROL Opt-Out Type]&quot; deve ser igual a &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; e o &quot;[!UICONTROL Opt-Out Value]&quot; deve ser igual a &quot;[!UICONTROL Opt-in]&quot;.
+Se um usuário tiver um sinalizador de recusa de vendas/compartilhamento definido em seu perfil, esse perfil não deverá mais ser usado para nenhuma criação de segmento ou atividade de marketing. Para garantir que esse sinalizador seja cumprido, &quot;[!UICONTROL Opt-Out Type]&quot; deve ser igual a &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; e &quot;[!UICONTROL Opt-Out Value]&quot; deve ser igual a &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 

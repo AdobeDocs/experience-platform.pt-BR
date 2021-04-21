@@ -2,17 +2,17 @@
 keywords: Experience Platform, home, tópicos populares, Perfil do cliente em tempo real, Serviço de identidade;
 solution: Experience Platform
 title: Tutoriais de perfil do cliente em tempo real
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este documento descreve as etapas envolvidas e fornece links para tutoriais para concluir cada fluxo de trabalho individual.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
-
 
 # Configurar [!DNL Real-time Customer Profile]
 
@@ -25,7 +25,7 @@ Para saber mais sobre [!DNL Real-time Customer Profile], comece lendo a [Visão 
 O Perfil do cliente em tempo real cria uma visualização holística de cada cliente individual, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros.
 
 **Este guia ajudará você a:**
-- Entenda a interface [!UICONTROL Perfis] e os recursos disponíveis.
+- Entenda a interface do usuário [!UICONTROL Profiles] e os recursos disponíveis.
 - Visualize e gerencie os dados do seu perfil.
 
 Para saber mais, visite o [Guia do usuário do Perfil do cliente em tempo real](../profile/ui/user-guide.md)
@@ -38,7 +38,7 @@ Para saber mais e obter os valores necessários para executar operações CRUD c
 
 ## Ativar um esquema para [!DNL Profile] e [!DNL Identity] Serviço
 
-Para que os dados possam ser assimilados na Adobe Experience Platform e usados na criação de [!DNL Real-time Customer Profiles], um schema deve ser criado para fornecer a estrutura dos dados que serão assimilados e esse schema deve ser habilitado para uso na [!DNL Profile] e na Adobe Experience Platform [!DNL Identity Service].
+Para que os dados possam ser assimilados no Adobe Experience Platform e usados na criação de [!DNL Real-time Customer Profiles], um schema deve ser criado para fornecer a estrutura dos dados que serão assimilados e esse schema deve ser habilitado para uso em [!DNL Profile] e Adobe Experience Platform [!DNL Identity Service].
 
 **Este guia ajudará você a:**
 - Procurar esquemas existentes.
@@ -63,7 +63,7 @@ Para começar, siga o tutorial de API para [configurar um conjunto de dados para
 
 ## Configurar políticas de mesclagem
 
-A Adobe Experience Platform permite reunir dados de várias fontes e combiná-los para ver uma exibição completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa exibição unificada.
+O Adobe Experience Platform permite reunir dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa exibição unificada.
 
 **Este guia ajudará você a:**
 - Crie novas políticas de mesclagem.
@@ -75,7 +75,7 @@ Para trabalhar com políticas de mesclagem na interface do usuário [!DNL Platfo
 
 ## Configurar projeções de borda
 
-Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente conforme as mudanças acontecem. O Adobe [!DNL Experience Platform] permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como . Uma borda é um servidor localizado geograficamente que armazena dados e a torna acessível para os aplicativos. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo as informações específicas que serão disponibilizadas na borda.
+Para direcionar experiências coordenadas, consistentes e personalizadas para seus clientes em vários canais em tempo real, os dados certos precisam estar prontamente disponíveis e atualizados continuamente conforme as mudanças acontecem. Adobe [!DNL Experience Platform] permite esse acesso em tempo real aos dados por meio do uso de bordas conhecidas como . Uma borda é um servidor localizado geograficamente que armazena dados e a torna acessível para os aplicativos. Os dados são roteados para uma borda por uma projeção, com um destino de projeção definindo a borda para a qual os dados serão enviados e uma configuração de projeção definindo as informações específicas que serão disponibilizadas na borda.
 
 **Este guia ajudará você a:**
 - Liste, crie, exiba, atualize e exclua um destino de projeção de borda.
@@ -86,7 +86,7 @@ Para obter mais informações e começar a trabalhar com bordas, consulte o [!DN
 
 ## Personalizar como os dados do Perfil são exibidos na interface do usuário
 
-Na interface do usuário da Experience Platform, é possível visualizar e interagir com os dados do Perfil do cliente em tempo real na forma de perfis do cliente. As informações de perfil exibidas na interface do usuário foram unidas de vários fragmentos de perfil para formar uma única visualização de cada cliente individual. Isso inclui detalhes como atributos básicos, identidades vinculadas e preferências de canal. Os campos padrão mostrados nos perfis também podem ser alterados em um nível organizacional para exibir os atributos preferenciais do perfil.
+Na interface do usuário do Experience Platform, é possível visualizar e interagir com os dados do Perfil do cliente em tempo real na forma de perfis do cliente. As informações de perfil exibidas na interface do usuário foram unidas de vários fragmentos de perfil para formar uma única visualização de cada cliente individual. Isso inclui detalhes como atributos básicos, identidades vinculadas e preferências de canal. Os campos padrão mostrados nos perfis também podem ser alterados em um nível organizacional para exibir os atributos preferenciais do perfil.
 
 **Este guia ajudará você a:**
 - Reordenar, redimensionar, editar e remover cartões.

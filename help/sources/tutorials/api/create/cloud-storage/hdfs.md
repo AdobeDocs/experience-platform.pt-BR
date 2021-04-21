@@ -1,68 +1,68 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
+keywords: Experience Platform, home, tópicos populares, Sistema de Arquivos Distribuído do Apache Hadoop, hadoop Apache, hdfs, HDFS
 solution: Experience Platform
-title: Criar uma conexão de origem do Apache HDFS usando a API do Serviço de Fluxo
-topic: overview
+title: Criar uma conexão de origem Apache HDFS usando a API do Serviço de fluxo
+topic-legacy: overview
 type: Tutorial
-description: Saiba como conectar um Apache Hadoop Distributed File System à Adobe Experience Platform usando a API de Serviço de Fluxo.
+description: Saiba como conectar um sistema de arquivos distribuído do Apache Hadoop ao Adobe Experience Platform usando a API do Serviço de fluxo.
+exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 2%
 
 ---
 
-
 # Crie uma conexão de origem [!DNL Apache] HDFS usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >
->O conector HDFS Apache está em beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
+>O conector HDFS do Apache está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes para serem trazidas para o Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes para trazer para o Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas para conectar um Apache Hadoop Distributed File System (a seguir denominado &quot;HDFS&quot;) a [!DNL Experience Platform].
+Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para conectar um Sistema de Arquivos Distribuído do Apache Hadoop (a seguir denominado &quot;HDFS&quot;) a [!DNL Experience Platform].
 
 ## Introdução
 
-Este guia exige uma compreensão prática dos seguintes componentes do Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md):  [!DNL Experience Platform] permite que os dados sejam ingeridos de várias fontes e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
-* [Caixas de proteção](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Sandboxes](../../../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao HDFS usando a API [!DNL Flow Service].
 
-### Reunir credenciais obrigatórias
+### Obter credenciais necessárias
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `url` | O URL define os parâmetros de autenticação necessários para a conexão anônima com o HDFS. Para obter mais informações sobre como obter este valor, consulte [este documento HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | O identificador necessário para criar uma conexão. A ID de especificação de conexão fixa para HDFS é `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `url` | O URL define os parâmetros de autenticação necessários para a conexão com o HDFS anonimamente. Para obter mais informações sobre como obter esse valor, consulte [este documento HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `connectionSpec.id` | O identificador é necessário para criar uma conexão. A ID de especificação de conexão fixa para HDFS é `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
 ## Criar uma conexão
 
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Apenas uma conexão é necessária por conta HDFS, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta HDFS, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -72,7 +72,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova conexão HDFS, configurada pelas propriedades fornecidas na carga:
+A solicitação a seguir cria uma nova conexão HDFS, configurada pelas propriedades fornecidas no payload:
 
 ```shell
 curl -X POST \
@@ -100,8 +100,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.url` | O URL que define os parâmetros de autenticação necessários para conectar-se ao HDFS anonimamente |
-| `connectionSpec.id` | A ID de especificação de conexão HDFS: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | O URL que define os parâmetros de autenticação necessários para se conectar ao HDFS anonimamente |
+| `connectionSpec.id` | A ID de especificação da conexão HDFS: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Resposta**
 

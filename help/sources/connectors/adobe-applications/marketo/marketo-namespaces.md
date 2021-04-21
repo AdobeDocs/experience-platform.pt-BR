@@ -2,12 +2,12 @@
 keywords: Experience Platform, home, tópicos populares, conector de origem do Marketo, namespaces, esquemas
 solution: Experience Platform
 title: 'Namespaces do Marketo '
-topic: visão geral
+topic-legacy: overview
 description: Este documento fornece uma visão geral de namespaces personalizados necessários ao criar um conector de origem de Marketo Engage.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1176'
 ht-degree: 6%
 
 ---

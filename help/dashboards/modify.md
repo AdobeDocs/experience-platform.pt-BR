@@ -2,15 +2,15 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, painéis, painel, perfis, segmentos, destinos, uso de licença
 title: Modificar painéis da plataforma na interface do usuário
 description: 'Este guia fornece instruções passo a passo para personalizar como os dados do Adobe Experience Platform de sua organização são exibidos nos painéis. '
-topic: guide
+topic-legacy: guide
+exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 translation-type: tm+mt
-source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '455'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Modificar painéis {#modify-dashboards}
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Na interface do usuário do Adobe Experience Platform (UI), você pode visualizar e interagir com os dados de sua organização usando vários painéis. Os widgets e métricas padrão mostrados nos painéis podem ser ajustados em um nível de usuário individual para exibir dados e widgets preferenciais podem ser criados e compartilhados entre usuários na mesma organização.
 
-Este guia fornece instruções passo a passo para personalizar como os dados do painel são exibidos nos painéis [!UICONTROL Perfis], [!UICONTROL Segmentos] e [!UICONTROL Destinos] na interface do usuário da plataforma.
+Este guia fornece instruções passo a passo para personalizar como os dados do painel são exibidos na interface do usuário da plataforma [!UICONTROL Profiles], [!UICONTROL Segments] e [!UICONTROL Destinations].
 
 >[!NOTE]
 >
@@ -28,13 +28,13 @@ Este guia fornece instruções passo a passo para personalizar como os dados do 
 
 ## Introdução
 
-Em qualquer painel (por exemplo, no painel [!UICONTROL Profiles]), é possível selecionar **[!UICONTROL Modificar painel]** para redimensionar e reordenar os widgets existentes.
+Em qualquer painel (por exemplo, no painel [!UICONTROL Profiles]), é possível selecionar **[!UICONTROL Modify dashboard]** para redimensionar e reordenar os widgets existentes.
 
 ![](images/customization/modify-dashboard.png)
 
 ## Reordenar widgets
 
-Depois de escolher modificar o painel, você pode reordenar os widgets selecionando o título do widget e arrastando e soltando os widgets na ordem desejada. Neste exemplo, o widget **[!UICONTROL Perfis por namespace de identidade]** é movido para a linha superior e o widget [!UICONTROL Contagem de perfis] agora aparece na segunda linha.
+Depois de escolher modificar o painel, você pode reordenar os widgets selecionando o título do widget e arrastando e soltando os widgets na ordem desejada. Neste exemplo, o widget **[!UICONTROL Profiles by identity namespace]** é movido para a linha superior e o widget [!UICONTROL Profile Count] agora aparece na segunda linha.
 
 ![](images/customization/move-widget.png)
 
@@ -50,15 +50,15 @@ Você também pode redimensionar um widget selecionando o símbolo de ângulo no
 
 ## Salvar atualizações do painel
 
-Após concluir a movimentação e o redimensionamento de widgets, selecione **[!UICONTROL Salvar]** para salvar suas alterações e retornar à exibição do painel principal. Se não quiser manter as alterações, selecione **[!UICONTROL Cancelar]** para redefinir o painel e retornar à exibição do painel principal.
+Após concluir a movimentação e o redimensionamento de widgets, selecione **[!UICONTROL Save]** para salvar suas alterações e retornar à exibição do painel principal. Se não quiser manter as alterações, selecione **[!UICONTROL Cancel]** para redefinir o painel e retornar à exibição do painel principal.
 
 ![](images/customization/save-changes.png)
 
 ## Biblioteca de widgets
 
-Além de redimensionar e reorganizar widgets, nos painéis [!UICONTROL Profiles] e [!UICONTROL Segments], é possível selecionar mais widgets para exibir ou criar widgets usando a **[!UICONTROL Biblioteca de widgets]**.
+Além de redimensionar e reorganizar widgets, nos painéis [!UICONTROL Profiles] e [!UICONTROL Segments] é possível selecionar mais widgets para exibir ou criar widgets usando o **[!UICONTROL Widget library]**.
 
-Para obter instruções passo a passo sobre como acessar e trabalhar com a [!UICONTROL biblioteca de widgets], consulte o [guia da biblioteca de widgets](widget-library.md).
+Para obter instruções passo a passo sobre como acessar e trabalhar com o [!UICONTROL Widget library], consulte o [guia da biblioteca de widgets](widget-library.md).
 
 ## Próximas etapas
 

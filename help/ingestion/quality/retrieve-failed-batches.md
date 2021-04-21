@@ -2,27 +2,27 @@
 keywords: Experience Platform, home, tópicos populares, recuperar lotes com falha, lotes com falha, assimilação em lote, assimilação em lote, lotes com falha, obter lotes com falha, obter lotes com falha, baixar lotes com falha, baixar lotes com falha, baixar lotes com falha;
 solution: Experience Platform
 title: Recuperação de Lotes com Falha Usando a API de Acesso a Dados
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial aborda etapas para recuperar informações sobre um lote com falha usando APIs de assimilação de dados.
+exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '653'
 ht-degree: 2%
 
 ---
 
-
 # Recuperação de lotes com falha usando a API de acesso a dados
 
-A Adobe Experience Platform fornece dois métodos para carregar e assimilar dados. Você pode usar a assimilação em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a assimilação de streaming, que permite inserir seus dados em [!DNL Platform] usando endpoints de streaming em tempo real.
+O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir seus dados usando vários tipos de arquivo (como CSVs), ou a assimilação de streaming, que permite inserir seus dados em [!DNL Platform] usando endpoints de streaming em tempo real.
 
 Este tutorial aborda etapas para recuperar informações sobre um lote com falha usando [!DNL Data Ingestion] APIs.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
 - [[!DNL Data Ingestion]](../home.md): Os métodos pelos quais os dados podem ser enviados para o  [!DNL Experience Platform].

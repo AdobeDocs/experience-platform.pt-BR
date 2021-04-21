@@ -3,12 +3,12 @@ keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema 
 solution: Experience Platform
 title: Introdução à API do Registro de Schema
 description: Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do Registro de Schema.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---

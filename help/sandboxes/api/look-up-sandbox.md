@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, encontrar sandbox, procurar uma sandbox
 solution: Experience Platform
 title: Pesquisar uma sandbox na API
-topic: developer guide
+topic-legacy: developer guide
 description: Você pode pesquisar uma sandbox individual fazendo uma solicitação do GET que inclui a propriedade name da sandbox no caminho da solicitação.
+exl-id: de8d965c-ca58-436e-b5b1-05a492de70f5
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
-
 
 # Pesquisar uma sandbox na API
 

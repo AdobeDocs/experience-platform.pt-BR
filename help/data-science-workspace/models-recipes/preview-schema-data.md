@@ -2,23 +2,23 @@
 keywords: Experience Platform, visualização de dados do esquema, Data Science Workspace, tópicos populares
 solution: Experience Platform
 title: Visualizar o esquema de vendas de varejo e o conjunto de dados
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: O documento a seguir descreve a visualização de esquemas e conjuntos de dados na Adobe Experience Platform.
+description: O documento a seguir descreve a visualização de esquemas e conjuntos de dados no Adobe Experience Platform.
+exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 translation-type: tm+mt
-source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 1%
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
-
 
 # Visualizar o esquema de vendas de varejo e o conjunto de dados
 
 Após a conclusão bem-sucedida do script de bootstrap do tutorial [retail sales schema e conjunto de dados](./create-retails-sales-dataset.md). Esquemas de saída e conjuntos de dados podem ser visualizados em [!DNL Experience Platform]. Para exibir os esquemas e conjuntos de dados, siga as etapas abaixo:
 
-Selecione a guia **[!UICONTROL Schemas]** localizada na navegação à esquerda e localize o schema de entrada criado pelo script de inicialização. O nome do schema corresponderá ao que foi definido em `config.yaml` na etapa anterior. Visualize os detalhes do esquema e sua composição clicando nele.
+Selecione a guia **[!UICONTROL Schemas]** localizada na navegação à esquerda e localize o schema de entrada criado pelo script do bootstrap. O nome do schema corresponderá ao que foi definido em `config.yaml` na etapa anterior. Visualize os detalhes do esquema e sua composição clicando nele.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 

@@ -1,25 +1,27 @@
 ---
 title: Notas de versão da Adobe Experience Platform
-description: Notas de versão do Experience Platform para 31 de março de 2021.
+description: Notas de versão do Experience Platform de 21 de abril de 2021.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 7%
+source-wordcount: '729'
+ht-degree: 12%
 
 ---
 
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 31 de março de 2021**
+**Data de lançamento: 21 de abril de 2021**
 
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -27,16 +29,44 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 
 [!DNL Data Prep] O permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
+**Novos recursos**
+
 | Recurso | Descrição |
 | ------- | ----------- |
-| Função `add_to_array`  | Atualização da funcionalidade para oferecer suporte a arrays como um parâmetro. |
-| Função `to_array`  | Atualização da funcionalidade para oferecer suporte a objetos como parâmetro. |
+| Suporte para edição de mapeamento para fluxos de dados existentes | Agora você pode atualizar os conjuntos de mapeamento de um fluxo de dados existente. Não é possível atualizar conjuntos de mapeamento para fluxos de dados que foram agendados para uma ingestão única. Esse recurso não é compatível com a API HTTP, Adobe Analytics, Adobe Audience Manager e [!DNL Marketo Engage]. Para obter mais informações, consulte o tutorial em [atualizar fluxos de dados de fontes na interface do usuário](../../sources/tutorials/ui/update-dataflows.md). |
+| Suporte para assimilação de streaming | Agora é possível usar funções de preparação de dados ao criar uma conexão de origem de fluxo. Para obter mais informações, consulte o tutorial em [criar uma conexão de origem de transmissão na interface do usuário](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Para obter mais informações, consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso da experiência do cliente. Isso permite que os analistas de marketing configurem previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de experiência em ciência de dados.
+
+### Customer AI
+
+O Customer AI, disponível na Real-time Customer Data Platform, é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Suporte para dados do Adobe Analytics | Atualização da funcionalidade para oferecer suporte aos conjuntos de dados do Adobe Analytics por meio do conector de origem do Analytics, sem a necessidade de ETL aos dados para estar em conformidade com o esquema Evento de experiência do consumidor (CEE). |
+| Suporte para dados do Adobe Audience Manager | Atualização da funcionalidade para oferecer suporte aos conjuntos de dados da Adobe Audience Manager por meio do conector de origem do Audience Manager sem a necessidade de ETL aos dados para estar em conformidade com o esquema Evento de experiência do consumidor (CEE). |
+| Resumo do desempenho do modelo | O Customer AI agora tem uma [guia de resumo do desempenho do modelo](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) na página de insights da instância de serviço. A guia de desempenho do modelo mostra todas as taxas de conversão e de churn reais. Isso permite decifrar e entender o que está acontecendo em cada um dos compartimentos de propensão. |
+
+Para obter mais informações sobre conjuntos de dados compatíveis, consulte a [[!DNL Intelligent Services] documentação sobre preparação de dados](../../intelligent-services/data-preparation.md).
+
+### Attribution AI
+
+O Attribution AI é usado para atribuir créditos a pontos de contato que levam a eventos de conversão. Ele pode ser usado pelos comerciantes para ajudar a quantificar o impacto de marketing de cada ponto de contato de marketing individual em várias jornadas de clientes.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Suporte para dados do Adobe Analytics | Atualização da funcionalidade para oferecer suporte aos conjuntos de dados do Adobe Analytics por meio do conector de origem do Analytics, sem a necessidade de ETL aos dados para estar em conformidade com o esquema Evento de experiência do consumidor (CEE). |
+
+Para obter mais informações sobre conjuntos de dados compatíveis, consulte a [[!DNL Intelligent Services] documentação sobre preparação de dados](../../intelligent-services/data-preparation.md).
+
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir dos dados [!DNL Real-time Customer Profile]. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform], tornando-os acessíveis a qualquer aplicativo do Adobe.
+O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos a partir dos dados [!DNL Real-time Customer Profile]. Esses segmentos são configurados e mantidos centralmente na Platform, tornando-os acessíveis a qualquer aplicativo do Adobe.
 
 [!DNL Segmentation Service] O define um subconjunto específico de perfis ao descrever os critérios que distinguem um grupo comercializável de pessoas dentro da base do cliente. Os segmentos podem se basear em dados de registro (como informações demográficas) ou em eventos de séries cronológicas que representem as interações do cliente com sua marca.
 
@@ -44,8 +74,7 @@ O Serviço de segmentação do Adobe Experience Platform fornece uma interface d
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| (Beta) Segmentação de borda | A segmentação de borda avalia segmentos em tempo real, o que permite casos de uso de personalização de página e próxima. Mais informações sobre a segmentação de borda podem ser encontradas na [Visão geral da interface do usuário de segmentação](../../segmentation/ui/overview.md). |
-| (Beta) Segmentação incremental | Aumenta a atualização das definições de segmento existentes avaliadas na segmentação de lote para até uma hora. |
+| Funções adicionais de agregação | Funções de contagem foram adicionadas no Construtor de segmentos. As funções de contagem permitem contar o número de vezes que o evento especificado foi concluído. Mais informações sobre as funções de contagem podem ser encontradas na seção funções de contagem do [Guia do Construtor de Segmentos](../../segmentation/ui/segment-builder.md#count-functions) |
 
 Para obter mais informações sobre [!DNL Segmentation Service], consulte a [Visão geral da segmentação](../../segmentation/home.md).
 
@@ -57,8 +86,6 @@ O Experience Platform fornece uma RESTful API e uma interface interativa que per
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Fontes beta movendo-se para GA | As seguintes fontes foram promovidas de beta para GA: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| Suporte a API para assimilação de arquivo compactado | Agora você pode visualizar e assimilar arquivos compactados JSON ou delimitados usando fontes de armazenamento em nuvem. Para obter mais informações, consulte o tutorial em [coletar dados de armazenamento em nuvem usando APIs](../../sources/tutorials/api/collect/cloud-storage.md). |
-| Suporte à interface do usuário para upload de arquivo recursivo | Agora é possível assimilar pastas inteiras recursivamente ao usar uma fonte de armazenamento em nuvem. Ao assimilar uma pasta inteira, você deve garantir que seu conteúdo compartilhe o mesmo schema. Para obter mais informações, consulte o tutorial em [configurar um fluxo de dados para conectores de armazenamento em nuvem na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| [!DNL Marketo Engage] (Beta) | Agora você pode criar uma conexão de origem [!DNL Marketo Engage] usando a interface do usuário para trazer dados B2B para a plataforma e manter esses dados atualizados usando aplicativos conectados à plataforma. Para obter mais informações, consulte a [[!DNL Marketo Engage] documentação do conector de origem](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

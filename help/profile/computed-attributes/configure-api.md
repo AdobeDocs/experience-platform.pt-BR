@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
+keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API
 title: Como configurar um campo de atributo calculado
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: Atributos calculados são funções usadas para agregação de dados no nível do evento em atributos no nível do perfil. Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Este campo pode ser criado usando a API do Registro do Schema para definir um schema e uma combinação personalizada que manterá o campo de atributo calculado.
+description: Atributos calculados são funções usadas para agregar dados no nível do evento em atributos no nível do perfil. Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Esse campo pode ser criado usando a API do Registro de Esquema para definir um esquema e um mixin personalizado que manterá o campo de atributo calculado.
+exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 2a4fb8af8cd29254c499bfa6bfb8b316a4834526
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
 
-
-# (Alfa) Configure um campo de atributo calculado usando a API do Registro do Schema
+# (Alfa) Configure um campo de atributo calculado usando a API do Registro de esquema
 
 >[!IMPORTANT]
 >
 >A funcionalidade de atributo calculado está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
 
-Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Este campo pode ser criado usando a API do Registro do Schema para definir um schema e uma combinação personalizada que manterá o campo de atributo calculado. É uma prática recomendada criar um schema separado de &quot;Atributos calculados&quot; e uma combinação na qual sua organização pode adicionar quaisquer atributos a serem usados como atributos calculados. Isso permite que sua organização separe de forma limpa o schema de atributo calculado de outros schemas que estão sendo usados para a ingestão de dados.
+Para configurar um atributo calculado, primeiro é necessário identificar o campo que manterá o valor do atributo calculado. Esse campo pode ser criado usando a API do Registro de Esquema para definir um esquema e um mixin personalizado que manterá o campo de atributo calculado. É uma prática recomendada criar um schema separado de &quot;Atributos calculados&quot; e um mixin no qual sua organização pode adicionar quaisquer atributos a serem usados como atributos calculados. Isso permite que sua organização separe claramente o esquema de atributo calculado de outros esquemas que estão sendo usados para assimilação de dados.
 
-O fluxo de trabalho neste documento descreve como usar a API do Registro de Schemas para criar um schema &quot;Atributo calculado&quot; habilitado para Perfis que faz referência a uma combinação personalizada. Este documento contém um código de amostra específico para atributos calculados, no entanto, consulte o [guia da API do Registro do Schema](../../xdm/api/overview.md) para obter informações detalhadas sobre como definir misturas e schemas usando a API.
+O fluxo de trabalho neste documento descreve como usar a API do Registro de Esquema para criar um esquema de &quot;Atributo Calculado&quot; habilitado para Perfil que faça referência a uma combinação personalizada. Este documento contém código de amostra específico para atributos calculados, no entanto, consulte o [Guia da API do Registro de Schema](../../xdm/api/overview.md) para obter informações detalhadas sobre como definir mixins e schemas usando a API.
 
-## Criar uma combinação de atributos calculados
+## Criar um mixin de atributos calculados
 
-Para criar uma mixin usando a API do Registro do Schema, comece fazendo uma solicitação de POST para o terminal `/tenant/mixins` e fornecendo os detalhes da mixin no corpo da solicitação. Para obter detalhes sobre como trabalhar com misturas usando a API do Registro do Schema, consulte o guia do ponto final da API [mixins](../../xdm/api/mixins.md).
+Para criar um mixin usando a API do Registro de Schema, comece fazendo uma solicitação de POST para o endpoint `/tenant/mixins` e fornecendo os detalhes do mixin no corpo da solicitação. Para obter detalhes sobre como trabalhar com mixins usando a API do Registro de Schema, consulte o [guia do ponto de extremidade da API mixins](../../xdm/api/mixins.md).
 
 **Formato da API**
 
@@ -80,12 +80,12 @@ curl -X POST \
 
 | Propriedade | Descrição |
 |---|---|
-| `title` | O nome da mistura que você está criando. |
-| `meta:intendedToExtend` | A classe XDM com a qual a mistura pode ser usada. |
+| `title` | O nome do mixin que você está criando. |
+| `meta:intendedToExtend` | A classe XDM com a qual a mixin pode ser usada. |
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta que contém os detalhes da combinação recém-criada, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo Registro do Schema.
+Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta contendo os detalhes do mixin recém-criado, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo Registro de Schema.
 
 ```json
 {
@@ -145,11 +145,11 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
 }
 ```
 
-## Atualizar combinação com atributos calculados adicionais
+## Atualizar mesclagem com atributos computados adicionais
 
-À medida que mais atributos calculados são necessários, você pode atualizar a combinação de atributos calculados com atributos adicionais, fazendo uma solicitação PUT ao terminal `/tenant/mixins`. Essa solicitação exige que você inclua a ID exclusiva do mixin criado no caminho e todos os novos campos que deseja adicionar ao corpo.
+À medida que mais atributos calculados forem necessários, você pode atualizar a combinação de atributos calculados com atributos adicionais fazendo uma solicitação PUT ao endpoint `/tenant/mixins`. Essa solicitação requer que você inclua a ID exclusiva da combinação criada no caminho e todos os novos campos que deseja adicionar ao corpo.
 
-Para obter mais informações sobre como atualizar uma mixin usando a API do Registro do Schema, consulte o guia do ponto final da API [mixins](../../xdm/api/mixins.md).
+Para obter mais informações sobre como atualizar um mixin usando a API do Registro de Schema, consulte o [guia do ponto de extremidade da API mixins](../../xdm/api/mixins.md).
 
 **Formato da API**
 
@@ -159,11 +159,11 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 **Solicitação**
 
-Essa solicitação adiciona novos campos relacionados às informações `purchaseSummary`.
+Essa solicitação adiciona novos campos relacionados a informações `purchaseSummary`.
 
 >[!NOTE]
 >
->Ao atualizar uma combinação por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao criar uma nova combinação em uma solicitação de POST.
+>Ao atualizar um mixin por meio de uma solicitação de PUT, o corpo deve incluir todos os campos que seriam necessários ao criar um novo mixin em uma solicitação de POST.
 
 ```shell
 curl -X PUT \
@@ -230,7 +230,7 @@ curl -X PUT \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do mixin atualizado.
+Uma resposta bem-sucedida retorna os detalhes da mixin atualizada.
 
 ```json
 {
@@ -310,11 +310,11 @@ Uma resposta bem-sucedida retorna os detalhes do mixin atualizado.
 }
 ```
 
-## Criar um schema habilitado para Perfis
+## Criar um esquema habilitado para perfil
 
-Para criar um schema usando a API do Registro do Schema, comece fazendo uma solicitação POST para o terminal `/tenant/schemas` e fornecendo os detalhes do schema no corpo da solicitação. O schema também deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe de schema.
+Para criar um schema usando a API do Registro de Schema, comece fazendo uma solicitação de POST para o endpoint `/tenant/schemas` e fornecendo os detalhes do schema no corpo da solicitação. O schema também deve ser ativado para [!DNL Profile] e aparecer como parte do schema de união para a classe de schema.
 
-Para obter mais informações sobre schemas e schemas de união habilitados para [!DNL Profile], consulte o [[!DNL Schema Registry] guia da API](../../xdm/api/overview.md) e a [documentação básica sobre composição de schemas](../../xdm/schema/composition.md).
+Para obter mais informações sobre schemas e schemas de união habilitados para [!DNL Profile], consulte o [[!DNL Schema Registry] guia da API](../../xdm/api/overview.md) e a [documentação básica da composição do schema](../../xdm/schema/composition.md).
 
 **Formato da API**
 
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **Solicitação**
 
-A solicitação a seguir cria um novo schema que faz referência ao `computedAttributesMixin` criado anteriormente nesse documento (usando sua ID exclusiva) e está habilitado para o schema de união do Perfil (usando a matriz `meta:immutableTags`). Para obter instruções detalhadas sobre como criar um schema usando a API do Registro do Schema, consulte o [guia do endpoint da API schemas](../../xdm/api/schemas.md).
+A solicitação a seguir cria um novo schema que faz referência ao `computedAttributesMixin` criado anteriormente neste documento (usando sua ID exclusiva) e está habilitado para o schema de união de perfis (usando a matriz `meta:immutableTags`). Para obter instruções detalhadas sobre como criar um esquema usando a API do Registro de Esquema, consulte o [guia do ponto de extremidade da API de schemas](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -367,7 +367,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que contém os detalhes do schema recém-criado, incluindo `$id`, `meta:altId` e `version`. Esses valores são somente leitura e são atribuídos pelo Registro do Schema.
+Uma resposta bem-sucedida retorna o status HTTP 201 (Created) e uma carga útil contendo os detalhes do schema recém-criado, incluindo `$id`, `meta:altId` e `version`. Esses valores são somente leitura e são atribuídos pelo Registro de Schema.
 
 ```json
 {
@@ -435,4 +435,4 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga que con
 
 ## Próximas etapas
 
-Agora que você criou um schema e uma combinação nos quais seus atributos calculados serão armazenados, é possível criar o atributo calculado usando o endpoint da API `/computedattributes`. Para obter etapas detalhadas para a criação de um atributo calculado na API, siga as etapas fornecidas no [guia do endpoint da API de atributos calculados](ca-api.md).
+Agora que você criou um schema e mesclou em que seus atributos calculados serão armazenados, é possível criar o atributo calculado usando o endpoint da API `/computedattributes` . Para obter etapas detalhadas para criar um atributo calculado na API, siga as etapas fornecidas no [guia do ponto de extremidade da API de atributos calculados](ca-api.md).

@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home;popular tópicos;identidades;histórico do cluster;;home;popular topics;identities;cluster history
+keywords: Experience Platform, home, tópicos populares, identidades, histórico do cluster
 solution: Experience Platform
 title: Obter histórico de cluster de uma identidade
-topic: API guide
-description: As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. O Serviço de identidade fornece visibilidade para as associações de cluster de uma determinada identidade ao longo do tempo.
+topic-legacy: API guide
+description: As identidades podem mover clusters ao longo de várias execuções de gráficos de dispositivos. O Serviço de identidade fornece visibilidade sobre as associações de cluster de uma determinada identidade ao longo do tempo.
+exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 1%
 
 ---
 
+# Obter o histórico do cluster de uma identidade
 
-# Obter o histórico de cluster de uma identidade
+As identidades podem mover clusters ao longo de várias execuções de gráficos de dispositivos. [!DNL Identity Service] fornece visibilidade sobre as associações de cluster de uma determinada identidade ao longo do tempo.
 
-As identidades podem mover clusters durante várias execuções de gráficos de dispositivos. [!DNL Identity Service] fornece visibilidade às associações de cluster de uma determinada identidade ao longo do tempo.
+Use o parâmetro `graph-type` opcional para indicar o tipo de saída do qual obter o cluster. As opções são:
 
-Use o parâmetro opcional `graph-type` para indicar o tipo de saída do qual o cluster será obtido. As opções são:
+- `None` - Não execute nenhum agrupamento de identidade.
+- `Private Graph` - Execute a compilação de identidade com base no gráfico de identidade privado. Se nenhum `graph-type` for fornecido, esse será o padrão.
 
-- `None` - Não execute nenhum ajuste de identidade.
-- `Private Graph` - Realize a identificação com base no gráfico de identidade particular. Se nenhum `graph-type` for fornecido, esse será o padrão.
-
-## Obter o histórico de cluster de uma única identidade
+## Obter o histórico do cluster de uma única identidade
 
 **Formato da API**
 
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção desse documento cobrindo [obter o XID de uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento cobrindo [obter o XID para uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -65,13 +65,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## Obter o histórico de cluster de várias identidades
+## Obter o histórico do cluster de várias identidades
 
 Use o método `POST` como um equivalente em lote do método `GET` descrito acima para retornar os históricos de cluster de várias identidades.
 
 >[!NOTE]
 >
->O pedido deve indicar no máximo 1000 identidades. As solicitações que excederem 1000 identidades resultarão em um código de status 400.
+>A solicitação deve indicar no máximo 1000 identidades. Solicitações que excedem 1000 identidades resultarão em um código de status 400.
 
 **Formato da API**
 
@@ -81,7 +81,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **Corpo da solicitação**
 
-Opção 1: Forneça uma lista de XIDs para a qual recuperar membros do cluster.
+Opção 1: Forneça uma lista de XIDs para as quais recuperar membros do cluster.
 
 ```shell
 {
@@ -90,7 +90,7 @@ Opção 1: Forneça uma lista de XIDs para a qual recuperar membros do cluster.
 }
 ```
 
-Opção 2: Forneça uma lista de identidades como IDs compostas, em que cada uma nomeie o valor da ID e a namespace por código de namespace.
+Opção 2: Forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pelo código do namespace.
 
 ```shell
 {
@@ -110,7 +110,7 @@ Opção 2: Forneça uma lista de identidades como IDs compostas, em que cada uma
 
 **Solicitação de Stub**
 
-O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta com bloqueio. Esta é uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão sendo concluídos. Isso será substituído quando não for mais necessário.
+O uso do cabeçalho `x-uis-cst-ctx: stub` retornará uma resposta sobreposta. Trata-se de uma solução temporária para facilitar o progresso do desenvolvimento da integração precoce, enquanto os serviços estão a ser concluídos. Isso será substituído quando não for mais necessário.
 
 ```shell
 curl -X POST \
@@ -215,8 +215,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->A resposta sempre terá uma entrada para cada XID fornecido na solicitação, independentemente de os XIDs de uma solicitação pertencerem ao mesmo cluster ou se um ou mais têm algum cluster associado.
+>A resposta sempre terá uma entrada para cada XID fornecido na solicitação independentemente de os XIDs de uma solicitação pertencerem ao mesmo cluster ou se um ou mais têm um cluster associado.
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para [mapeamentos de identidade de lista](./list-identity-mappings.md)
+Prossiga para o próximo tutorial para [listar mapeamentos de identidade](./list-identity-mappings.md)

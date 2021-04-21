@@ -2,14 +2,14 @@
 keywords: Experience Platform; home; tópicos populares; assimilação de streaming; ingestão; dados de séries de tempo; dados de séries de tempo de fluxo;
 solution: Experience Platform
 title: Transmitir dados da série de tempo usando APIs de assimilação de fluxo
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1312'
 ht-degree: 2%
 
 ---

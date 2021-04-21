@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho oferece controles intuitivos para criar e editar regras, como blocos de arrastar e soltar usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
 source-wordcount: '1940'
 ht-degree: 0%
@@ -37,7 +37,7 @@ A guia **[!UICONTROL Attributes]** permite navegar pelos atributos [!DNL Profile
 
 A guia **[!UICONTROL Events]** permite criar um público-alvo com base em eventos ou ações que ocorreram usando elementos de dados [!DNL XDM ExperienceEvent]. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Events]** , que são uma coleção de eventos comumente usados para permitir que você crie seus segmentos mais rapidamente.
 
-Além de poder procurar elementos [!DNL ExperienceEvent], você também pode procurar por Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação de [!DNL ExperienceEvents], sem exigir que você pesquise a classe [!DNL XDM ExperienceEvent] procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmento.
+Além de poder procurar elementos [!DNL ExperienceEvent], você também pode procurar por Tipos de evento. Os Tipos de evento usam a mesma lógica de codificação que [!DNL ExperienceEvents], sem exigir que você pesquise a classe [!DNL XDM ExperienceEvent] procurando pelo evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmento.
 
 Qualquer tipo de componente pode ser pesquisado digitando seu nome na barra de pesquisa, que usa a sintaxe de pesquisa de [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Os resultados da pesquisa começam a ser preenchidos à medida que palavras inteiras são inseridas. Por exemplo, para criar uma regra baseada no campo XDM `ExperienceEvent.commerce.productViews`, comece a digitar &quot;visualizações de produto&quot; no campo de pesquisa. Depois que a palavra &quot;produto&quot; é digitada, os resultados da pesquisa começam a aparecer. Cada resultado inclui a hierarquia de objeto à qual pertence.
 
@@ -117,7 +117,7 @@ A agregação agora é adicionada. Agora é possível selecionar a função de a
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Funções de contagem
+### Funções de contagem {#count-functions}
 
 Funções de contagem no Construtor de segmentos são usadas para procurar eventos específicos e contar o número de vezes que foram feitas. As funções de contagem compatíveis no Construtor de segmentos são &quot;No mínimo&quot;, &quot;No máximo&quot;, &quot;Exatamente&quot;, &quot;Entre&quot; e &quot;Todos&quot;.
 

@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, atualizar sandbox
 solution: Experience Platform
 title: Atualizar uma sandbox na API
-topic: developer guide
+topic-legacy: developer guide
 description: Você pode atualizar um ou mais campos em uma sandbox fazendo uma solicitação de PATCH que inclui o nome da sandbox no caminho da solicitação e a propriedade a ser atualizada no payload da solicitação.
+exl-id: a8ef4305-5e0c-4d8f-8663-1933c957f122
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '133'
+ht-degree: 3%
 
 ---
-
 
 # Atualizar uma sandbox na API
 

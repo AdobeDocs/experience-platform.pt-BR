@@ -6,9 +6,9 @@ topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,7 @@ O Experience Platform oferece suporte para assimilar dados de um banco de dados 
 - [[!DNL GreenPlum] conector](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] conector](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] conector](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] conector](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] conector](connectors/databases/sql-server.md)
 - [[!DNL MySQL] conector](connectors/databases/mysql.md)
 - [[!DNL Oracle] conector](connectors/databases/oracle.md)

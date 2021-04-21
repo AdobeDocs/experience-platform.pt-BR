@@ -3,12 +3,12 @@ keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema 
 solution: Experience Platform
 title: Ponto de Extremidade da API de Esquemas
 description: O endpoint /schemas na API do Registro de Schema permite gerenciar programaticamente os esquemas XDM no aplicativo de experiência.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1418'
 ht-degree: 2%
 
 ---

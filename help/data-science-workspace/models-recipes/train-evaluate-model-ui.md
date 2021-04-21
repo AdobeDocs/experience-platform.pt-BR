@@ -2,17 +2,17 @@
 keywords: Experience Platform, treinamento e avaliação, Data Science Workspace, tópicos populares, criar um modelo, criar uma execução de treinamento
 solution: Experience Platform
 title: Treine e avalie um modelo na interface do usuário do Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: No Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado incorporando uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional ajustando seus hiperparâmetros associados. Receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados a fins específicos com uma única Receita.
+exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 2%
+source-wordcount: '1083'
+ht-degree: 1%
 
 ---
-
 
 # Treine e avalie um modelo na interface do usuário do Data Science Workspace
 

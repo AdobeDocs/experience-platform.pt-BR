@@ -2,13 +2,13 @@
 keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; Segmentação de borda; Segmentação de borda; borda de fluxo;
 solution: Experience Platform
 title: 'Segmentação de borda usando a API '
-topic: developer guide
+topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '651'
 ht-degree: 3%
 
 ---

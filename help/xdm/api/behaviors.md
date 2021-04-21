@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;sistema XDM;modelo de dados de experiência;Modelo de dados de experiência;Modelo de dados;Modelo de dados;Modelo de dados;Registro do schema;comportamento;comportamentos;comportamentos;comportamentos;comportamento;comportamentos;comportamento;comportamento;comportamento;comportamento;Schema;home;popular topics;api;API;XDM;system;experience data model;Experience Data Model;data model;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, Registro de esquema, Registro de esquema, comportamento, comportamentos, comportamentos, comportamentos, comportamentos;
 solution: Experience Platform
-title: Comportamento do Ponto Final da API
-description: O endpoint /comporors na API do Registro de Schemas permite recuperar todos os comportamentos disponíveis no container global.
-topic: developer guide
+title: Comportamento do ponto de extremidade da API
+description: O endpoint /comporors na API do Registro de Schema permite recuperar todos os comportamentos disponíveis no contêiner global.
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 2%
 
 ---
 
+# Ponto de extremidade de comportamentos
 
-# Ponto de extremidade de comportamento
+No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve referenciar um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso na Platform, há dois comportamentos disponíveis:
 
-No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um schema descreve. Cada classe XDM deve fazer referência a um comportamento específico, que todos os schemas que empregam essa classe herdarão. Para quase todos os casos de uso na Plataforma, há dois comportamentos disponíveis:
-
-* **[!UICONTROL Registro]**: Fornece informações sobre os atributos de um assunto. Um sujeito pode ser uma organização ou um indivíduo.
-* **[!UICONTROL Séries]** cronológicas: Fornece um instantâneo do sistema no momento em que uma ação foi tomada, direta ou indiretamente, por um participante do registro.
+* **[!UICONTROL Record]**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
+* **[!UICONTROL Time-series]**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
 
 >[!NOTE]
 >
->Há alguns casos de uso na Plataforma que exigem o uso de schema que não emprega nenhum dos comportamentos acima. Para esses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Consulte o tutorial em [criar um schema ad-hoc](../tutorials/ad-hoc.md) para obter mais informações.
+>Há alguns casos de uso na Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Nesses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Consulte o tutorial em [criar um schema ad-hoc](../tutorials/ad-hoc.md) para obter mais informações.
 >
->Para obter informações mais gerais sobre os comportamentos de dados em termos de como eles afetam a composição do schema, consulte o guia sobre [noções básicas de composição do schema](../schema/composition.md).
+>Para obter informações mais gerais sobre comportamentos de dados em termos de como eles afetam a composição do schema, consulte o guia sobre as [noções básicas da composição do schema](../schema/composition.md).
 
-O endpoint `/behaviors` na API [!DNL Schema Registry] permite que você visualização os comportamentos disponíveis no container `global`.
+O endpoint `/behaviors` na API [!DNL Schema Registry] permite visualizar os comportamentos disponíveis no contêiner `global`.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, reveja o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de amostra neste documento e informações importantes sobre os cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API de Experience Platform.
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de comportamentos {#list}
 
-Você pode recuperar uma lista de todos os comportamentos disponíveis, fazendo uma solicitação de GET para o terminal `/behaviors`.
+Você pode recuperar uma lista de todos os comportamentos disponíveis fazendo uma solicitação de GET para o endpoint `/behaviors`.
 
 **Formato da API**
 
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## Procure um comportamento {#lookup}
 
-Você pode procurar um comportamento específico fornecendo sua ID no caminho de uma solicitação de GET para o terminal `/behaviors`.
+Você pode pesquisar um comportamento específico fornecendo a ID no caminho de uma solicitação do GET para o endpoint `/behaviors`.
 
 **Formato da API**
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes do comportamento, incluindo sua versão, descrição e os atributos que o comportamento fornece às classes que o empregam.
+Uma resposta bem-sucedida retorna os detalhes do comportamento, incluindo sua versão, descrição e os atributos que o comportamento fornece às classes que o utilizam.
 
 ```json
 {

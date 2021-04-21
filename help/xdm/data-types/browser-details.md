@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;navegador;detalhes;datatype;data-type;data type;;home;popular topics;;social;social;social;pesquisa;data-type;data type;data type;
+keywords: Experience Platform, home, tópicos populares, esquema, Esquema, XDM, campos, esquemas, esquemas, navegador, detalhes do navegador, tipo de dados, tipo de dados, tipo de dados;
 solution: Experience Platform
 title: Tipo de dados de detalhes do navegador
-topic: overview
+topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de detalhes do navegador.
+exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '258'
 ht-degree: 7%
 
 ---
 
+# [!UICONTROL Browser details] tipo de dados
 
-# [!UICONTROL O navegador ] detalha o tipo de dados
-
-[!UICONTROL Os ] detalhes do navegador são um tipo de dados XDM padrão que descreve os detalhes relacionados a um navegador ou aplicativo.
+[!UICONTROL Browser details] é um tipo de dados XDM padrão que descreve detalhes relacionados a um navegador ou aplicativo.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -23,20 +23,20 @@ ht-degree: 7%
 | --- | --- | --- |
 | `acceptLanguage` | String | Uma tag de idioma IETF ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Booleano | Indica se as configurações do usuário permitem a gravação de cookies. |
-| `javaEnabled` | Booleano | Indica se o Java foi ativado no dispositivo a partir do qual a observação foi feita. |
-| `javaScriptEnabled` | Booleano | Indica se o JavaScript foi ativado no dispositivo a partir do qual a observação foi feita. |
+| `javaEnabled` | Booleano | Indica se o Java foi ativado no dispositivo de onde a observação foi feita. |
+| `javaScriptEnabled` | Booleano | Indica se o JavaScript foi ativado no dispositivo do qual a observação foi feita. |
 | `javaScriptVersion` | String | A versão do JavaScript suportada durante a observação. |
-| `javaVersion` | String | A versão do Java é suportada durante a observação. |
-| `name` | String | O nome do aplicativo ou navegador. |
+| `javaVersion` | String | A versão do Java suportada durante a observação. |
+| `name` | String | O nome do aplicativo ou do navegador. |
 | `quicktimeVersion` | String | A versão do Apple Quicktime é compatível durante a observação. |
 | `thirdPartyCookiesEnabled` | Booleano | Indica se cookies de terceiros foram ativados no dispositivo a partir do qual a observação foi feita. |
-| `userAgent` | String | A sequência HTTP user-agent da solicitação do cliente. |
+| `userAgent` | String | A sequência do agente do usuário HTTP da solicitação do cliente. |
 | `vendor` | String | O fornecedor do aplicativo ou navegador. |
-| `version` | String | A versão do aplicativo ou navegador. |
-| `viewportHeight` | Número inteiro | O tamanho vertical em pixels da janela em que o evento foi exibido. Para um evento de visualização da Web, esta é a altura do visor do navegador. |
-| `viewportWidth` | Número inteiro | O tamanho horizontal em pixels da janela em que o evento foi exibido. Para um evento de visualização da Web, esta é a largura da janela do navegador. |
+| `version` | String | A versão do aplicativo ou do navegador. |
+| `viewportHeight` | Número inteiro | O tamanho vertical em pixels da janela em que o evento foi exibido. Para um evento de exibição da Web, essa é a altura da janela de visualização do navegador. |
+| `viewportWidth` | Número inteiro | O tamanho horizontal em pixels da janela em que o evento foi exibido. Para um evento de exibição da Web, essa é a largura da janela de visualização do navegador. |
 
-Para obter mais detalhes sobre a mistura, consulte o repositório XDM público:
+Para obter mais detalhes sobre o mixin, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)

@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform;home;popular tópicos;schema;Schema;XDM;campos;schemas;Schemas;Detalhes da página da Web;datatype;data-type;data-type;data-type;webpage;;home;popular tópicos;;;campos;campos;;detalhes da página da Web;datatype;data-type;data-type;data type;webpage
+keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, campos, esquemas, esquemas, esquemas, detalhes da página da Web, tipo de dados, tipo de dados, tipo de dados, página da Web
 solution: Experience Platform
 title: Tipo de dados de detalhes da página da Web
-topic: overview
-description: Este documento fornece uma visão geral dos detalhes da página da Web sobre o tipo de dados do Experience Data Model (XDM).
+topic-legacy: overview
+description: Este documento fornece uma visão geral dos detalhes da página da Web Tipo de dados do Experience Data Model (XDM).
+exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '401'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Web page details] tipo de dados
 
-# [!UICONTROL A página da Web ] detalha o tipo de dados
+[!UICONTROL Web page details] é um tipo de dados padrão do Experience Data Model (XDM) que descreve detalhes sobre uma página da Web que acabou de ser carregada e visualizada, conforme registrado por um ExperienceEvent.
 
-[!UICONTROL Os ] detalhes da página da Web são um tipo de dados padrão do Experience Data Model (XDM), que descreve os detalhes sobre uma página da Web que acabou de ser carregada e visualizada, conforme registrado por um ExperienceEvent.
-
-O tipo de dados destina-se a detalhes completos da página e cargas iniciais de página de aplicativos da Web de uma única página (SPA). Para interações que ocorrem em uma página carregada que não acionam um novo carregamento de página, consulte o tipo de dados [interação da Web](./web-interactions.md).
+O tipo de dados destina-se aos detalhes completos da página e aos carregamentos iniciais da página de aplicativos web de página única (SPA). Para interações que estão acontecendo em uma página carregada que não acionam um novo carregamento de página, consulte o tipo de dados [interação da Web](./web-interactions.md) .
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `pageViews` | [[!UICONTROL Medição]](./measure.md) | O número de visualizações em uma página da Web. |
-| `URL` | String | O URL normal ou normativo da página da Web. Esse pode ou não ser o URL real usado para acessar a página. Para gravar o URL usado para acessar a página, use `webLink`. O formato URI deve seguir o padrão [RFC 3986](https://tools.ietf.org/html/rfc3986). |
-| `isErrorPage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página de erro ou não. Esse sinalizador é usado para categorizar amplamente as interações da Web. O erro é definido pelo aplicativo e pode corresponder a uma página fornecida com um código de erro HTTP. |
-| `isHomePage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é um home page ou não. Esse sinalizador é usado para categorizar amplamente as interações da Web. A definição de home page é determinada pelo aplicativo. |
+| `pageViews` | [[!UICONTROL Measure]](./measure.md) | O número de visualizações em uma página da Web. |
+| `URL` | String | O URL normal ou normal da página da Web. Pode ou não ser o URL real usado para acessar a página. Para registrar o URL usado para acessar a página, use `webLink`. O formato URI deve seguir o padrão [RFC 3986](https://tools.ietf.org/html/rfc3986). |
+| `isErrorPage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página de erro ou não. Esse sinalizador é usado para classificar amplamente interações da Web. O erro é definido pelo aplicativo e pode corresponder a uma página servida com um código de erro HTTP. |
+| `isHomePage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página inicial ou não. Esse sinalizador é usado para classificar amplamente interações da Web. A definição de página inicial é determinada pelo aplicativo. |
 | `name` | String | O nome normativo da página da Web. Esse nome não é necessariamente o título da página ou está diretamente associado ao conteúdo da página, mas é usado para organizar as páginas de um site para fins de classificação. |
-| `server` | String | O servidor normal ou normativo que hospeda a página da Web. Pode ser ou não o host ou servidor que serviu a interação da página. |
-| `siteSection` | String | O nome normativo da seção do site onde esta página da Web está. Isso pode ser usado para classificar ou categorizar a interação. |
-| `viewName` | String | O nome da visualização, em uma página. Essa propriedade costuma ser usada com aplicativos de página única ou páginas que têm guias ou controles que alteram a maioria do layout da página. |
+| `server` | String | O servidor normal ou normativo que hospeda a página da Web. Pode ser ou não o host ou servidor que realmente atendeu à interação da página. |
+| `siteSection` | String | O nome normativo da seção do site em que esta página da Web está. Isso pode ser usado para classificar ou categorizar a interação. |
+| `viewName` | String | O nome da exibição em uma página. Essa propriedade geralmente é usada com aplicativos de página única ou páginas que têm guias ou controles que alteram a maioria do layout da página. |
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

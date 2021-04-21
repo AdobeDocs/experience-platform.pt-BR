@@ -2,17 +2,17 @@
 keywords: Experience Platform; JupyterLab; fórmula; blocos de anotações; Data Science Workspace; tópicos populares; criar fórmula
 solution: Experience Platform
 title: Criar uma receita usando notebooks Júpiter
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial percorrerá duas seções principais. Primeiro, você criará um modelo de aprendizado de máquina usando um modelo no Notebook JupyterLab. Em seguida, você exercerá o fluxo de trabalho do notebook para receber receita no JupyterLab para criar uma receita no Data Science Workspace.
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2345'
 ht-degree: 0%
 
 ---
-
 
 # Criar uma receita usando notebooks Júpiter
 
@@ -29,7 +29,7 @@ Este tutorial percorrerá duas seções principais. Primeiro, você criará um m
 
 A criação de uma receita do zero pode ser feita dentro de [!DNL Data Science Workspace]. Para iniciar, navegue até [Adobe Experience Platform](https://platform.adobe.com) e clique na guia **[!UICONTROL Notebooks]** à esquerda. Crie um novo bloco de anotações selecionando o modelo Recipe Builder no [!DNL JupyterLab Launcher].
 
-O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e execuções de pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer alterações em seus métodos `train()` e `score()` entre a execução de experimentos nos dados de treinamento e pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma receita a ser usada em [!DNL Data Science Workspace] usando a funcionalidade notebook para receber incorporada ao notebook do Recipe Builder.
+O notebook [!UICONTROL Recipe Builder] permite executar o treinamento e a pontuação dentro do notebook. Isso proporciona a flexibilidade para fazer alterações em seus métodos `train()` e `score()` entre a execução de experimentos nos dados de treinamento e pontuação. Quando estiver satisfeito com os resultados do treinamento e da pontuação, você poderá criar uma receita a ser usada em [!DNL Data Science Workspace] usando a funcionalidade notebook para receber incorporada ao notebook do Recipe Builder.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ O notebook [!UICONTROL Recipe Builder] permite que você execute treinamentos e 
 
 Quando você clica no notebook Recipe Builder no iniciador, o bloco de notas é aberto na guia . O modelo usado no bloco de notas é a Receita de Previsão de Vendas de Retalho de Python, que também pode ser encontrada em [este repositório público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Você notará que na barra de ferramentas existem três ações adicionais, a saber: **[!UICONTROL Treinamento]**, **[!UICONTROL Pontuação]** e **[!UICONTROL Criar receita]**. Esses ícones só aparecem no bloco de notas [!UICONTROL Recipe Builder]. Mais informações sobre essas ações serão faladas sobre [na seção treinamento e pontuação](#training-and-scoring) depois de criar sua Receita no notebook.
+Você notará que na barra de ferramentas existem três ações adicionais, a saber, - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Esses ícones só aparecem no bloco de anotações [!UICONTROL Recipe Builder]. Mais informações sobre essas ações serão faladas sobre [na seção treinamento e pontuação](#training-and-scoring) depois de criar sua Receita no notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -460,13 +460,13 @@ def save(configProperties, prediction):
 
 Quando terminar de fazer alterações no seu notebook e quiser treinar a receita, clique nos botões associados na parte superior da barra para criar uma execução de treinamento na célula. Ao clicar no botão , um log de comandos e saídas do script de treinamento aparecerá no bloco de notas (na célula `evaluator.py` ). O Conda instala primeiro todas as dependências e, em seguida, o treinamento é iniciado.
 
-Observe que você deve executar o treinamento pelo menos uma vez antes de poder executar a pontuação. Clicar no botão **[!UICONTROL Executar Pontuação]** marcará no modelo treinado que foi gerado durante o treinamento. O script de pontuação será exibido em `datasaver.py`.
+Observe que você deve executar o treinamento pelo menos uma vez antes de poder executar a pontuação. Clicar no botão **[!UICONTROL Run Scoring]** marcará o modelo treinado gerado durante o treinamento. O script de pontuação será exibido em `datasaver.py`.
 
 Para fins de depuração, se quiser ver a saída oculta, adicione `debug` ao final da célula de saída e execute-a novamente.
 
 ## Criar receita {#create-recipe}
 
-Quando terminar de editar a receita e ficar satisfeito com a saída de treinamento/pontuação, você poderá criar uma receita do bloco de notas pressionando **[!UICONTROL Criar receita]** na navegação superior direita.
+Quando terminar de editar a receita e ficar satisfeito com a saída de treinamento/pontuação, você pode criar uma receita do notebook pressionando **[!UICONTROL Create Recipe]** na navegação superior direita.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -474,7 +474,7 @@ Depois de pressionar o botão, você é solicitado a inserir um nome de receita.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Depois de pressionar **[!UICONTROL Ok]**, você poderá navegar até a nova fórmula em [Adobe Experience Platform](https://platform.adobe.com/). Você pode clicar no botão **[!UICONTROL Exibir Receitas]** para levá-lo até a guia **[!UICONTROL Receitas]** em **[!UICONTROL Modelos ML]**
+Depois de pressionar **[!UICONTROL Ok]**, você poderá navegar até a nova fórmula em [Adobe Experience Platform](https://platform.adobe.com/). Você pode clicar no botão **[!UICONTROL View Recipes]** para ir até a guia **[!UICONTROL Recipes]** em **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -500,5 +500,3 @@ Para continuar aprendendo como trabalhar com recursos em [!DNL Data Science Work
 O vídeo a seguir foi criado para oferecer suporte à compreensão da criação e implantação de modelos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-

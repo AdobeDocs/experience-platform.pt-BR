@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
+keywords: Experience Platform, home, tópicos populares, servicenow, ServiceNow
 solution: Experience Platform
 title: Visão geral do ServiceNow Source Connector
-topic: overview
-description: Saiba como conectar o ServiceNow à Adobe Experience Platform usando APIs ou a interface do usuário.
+topic-legacy: overview
+description: Saiba como conectar o ServiceNow ao Adobe Experience Platform usando APIs ou a interface do usuário.
+exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
-
 # Conector (Beta) [!DNL ServiceNow]
 
 >[!NOTE]
 >
->O conector [!DNL ServiceNow] está em beta. Consulte a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores marcados com beta.
+>O conector [!DNL ServiceNow] está em beta. Consulte a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[!DNL Experience Platform] fornece suporte para assimilar dados de um sistema de clientes bem-sucedidos de terceiros. O suporte para provedores bem-sucedidos do cliente inclui [!DNL ServiceNow].
+[!DNL Experience Platform] O oferece suporte para assimilar dados de um sistema bem-sucedido de clientes de terceiros. O suporte para provedores de sucesso do cliente inclui [!DNL ServiceNow].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como conectar [!DNL ServiceNow] a [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL ServiceNow] a [!DNL Platform] usando APIs ou a interface do usuário:
 
 ## Conecte [!DNL ServiceNow] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem ServiceNow usando a API de Serviço de Fluxo](../../tutorials/api/create/customer-success/servicenow.md)
-- [Explore um sistema bem-sucedido do cliente usando a API de Serviço de Fluxo](../../tutorials/api/explore/customer-success.md)
-- [Coletar dados de um sistema bem-sucedido do cliente usando a API de Serviço de Fluxo](../../tutorials/api/collect/customer-success.md)
+- [Criar uma conexão de origem ServiceNow usando a API do Serviço de Fluxo](../../tutorials/api/create/customer-success/servicenow.md)
+- [Explorar um sistema bem-sucedido do cliente usando a API do Serviço de Fluxo](../../tutorials/api/explore/customer-success.md)
+- [Colete dados de um sistema bem-sucedido do cliente usando a API de Serviço de Fluxo](../../tutorials/api/collect/customer-success.md)
 
 ## Conecte [!DNL ServiceNow] a [!DNL Platform] usando a interface do usuário
 

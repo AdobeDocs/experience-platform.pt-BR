@@ -1,23 +1,22 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ajuda do Serviço de consulta da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consulta de dados no Platform Data Lake.
 feature: Queries
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 19%
+ht-degree: 21%
 
 ---
 
 
-# Serviço de query da Adobe Experience Platform {#query}
+# Serviço de consulta da Adobe Experience Platform {#query}
 
 - [Visão geral do Serviço de query](home.md)
-- [Guia de início rápido](quickstart.md)
+- [Manual de início rápido](quickstart.md)
 - API do Serviço de Consulta {#api}
    - [Introdução](api/getting-started.md)
    - [Queries](api/queries.md)
@@ -38,7 +37,7 @@ ht-degree: 19%
 - Referência SQL {#sql}
    - [Visão geral do SQL](sql/overview.md)
    - [Sintaxe SQL](sql/syntax.md)
-   - [Funções definidas pela Adobe](sql/adobe-defined-functions.md)
+   - [Funções definidas por Adobe](sql/adobe-defined-functions.md)
    - [Funções SQL Spark](sql/spark-sql-functions.md)
    - [Comandos de metadados](sql/metadata.md)
    - [Instruções preparadas](sql/prepared-statements.md)

@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;identidade;identidade;;home;popular topics;identity;Identity
+keywords: Experience Platform, home, tópicos populares, identidade, identidade
 solution: Experience Platform
-title: Mapeamentos de identidade de lista
-topic: API guide
-description: Um mapeamento é uma coleção de todas as identidades em um cluster, para uma namespace especificada.
+title: Mapeamentos de identidade da lista
+topic-legacy: API guide
+description: Um mapeamento é uma coleção de todas as identidades em um cluster, para um namespace especificado.
+exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 1%
 
 ---
 
+# Listar mapeamentos de identidade
 
-# Mapeamentos de identidade de lista
-
-Um mapeamento é uma coleção de todas as identidades em um cluster, para uma namespace especificada.
+Um mapeamento é uma coleção de todas as identidades em um cluster, para um namespace especificado.
 
 ## Obter um mapeamento de identidade para uma única identidade
 
-Dada uma identidade, recupere todas as identidades relacionadas da mesma namespace que a representada pela identidade na solicitação.
+Dada uma identidade, recupere todas as identidades relacionadas do mesmo namespace que o representado pela identidade na solicitação.
 
 **Formato da API**
 
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção desse documento cobrindo [obter o XID de uma identidade](./list-native-id.md).
+Opção 3: Forneça a identidade como XID (`xid`). Para obter mais informações sobre como obter um XID de identidade, consulte a seção deste documento cobrindo [obter o XID para uma identidade](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,11 +64,11 @@ curl -X GET \
 
 ### Obter mapeamentos de identidade para várias identidades
 
-Use o método `POST` como um equivalente em lote do método `GET` descrito acima para recuperar os mapeamentos de várias identidades.
+Use o método `POST` como um equivalente em lote do método `GET` descrito acima para recuperar mapeamentos para várias identidades.
 
 >[!NOTE]
 >
->O pedido deve indicar no máximo 1000 identidades. As solicitações que excederem 1000 identidades resultarão em um código de status 400.
+>A solicitação deve indicar no máximo 1000 identidades. Solicitações que excedem 1000 identidades resultarão em um código de status 400.
 
 **Formato da API**
 
@@ -78,7 +78,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **Corpo da solicitação**
 
-Opção 1: Forneça uma lista de XIDs para a qual recuperar mapeamentos.
+Opção 1: Forneça uma lista de XIDs para as quais recuperar mapeamentos.
 
 ```shell
 {
@@ -87,7 +87,7 @@ Opção 1: Forneça uma lista de XIDs para a qual recuperar mapeamentos.
 }
 ```
 
-Opção 2: Forneça uma lista de identidades como IDs compostas, em que cada uma nomeie o valor da ID e a namespace por ID de namespace. Este exemplo demonstra o uso desse método ao substituir o padrão `graph-type` de &quot;Gráfico privado&quot;.
+Opção 2: Forneça uma lista de identidades como IDs compostas, onde cada uma nomeia o valor da ID e o namespace pela ID do namespace. Este exemplo demonstra como usar esse método ao substituir o `graph-type` padrão de &quot;Gráfico privado&quot;.
 
 ```shell
 {
@@ -146,7 +146,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, um código de resposta `HTTP 204` será retornado sem conteúdo.
+Se nenhuma identidade relacionada tiver sido encontrada com a entrada fornecida, um código de resposta `HTTP 204` será retornado sem conteúdo.
 
 **Resposta**
 
@@ -189,4 +189,4 @@ Se nenhuma identidade relacionada foi encontrada com a entrada fornecida, um có
 
 ## Próximas etapas
 
-Vá para o próximo tutorial para [lista disponível namespace](./list-namespaces.md).
+Prossiga para o próximo tutorial para [listar namespaces disponíveis](./list-namespaces.md).

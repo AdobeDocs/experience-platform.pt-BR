@@ -2,17 +2,17 @@
 keywords: Experience Platform; pontuar um modelo; Data Science Workspace; tópicos populares; interface do usuário; execução de pontuação; resultados de pontuação
 solution: Experience Platform
 title: Pontuar um modelo na interface do usuário do Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'A pontuação no Adobe Experience Platform Data Science Workspace pode ser obtida ao alimentar os dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizados em um conjunto de dados de saída especificado como um novo lote. '
+description: A pontuação no Adobe Experience Platform Data Science Workspace pode ser obtida ao alimentar os dados de entrada em um Modelo treinado existente. Os resultados da pontuação são armazenados e visualizados em um conjunto de dados de saída especificado como um novo lote.
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 translation-type: tm+mt
-source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 1%
+source-wordcount: '619'
+ht-degree: 0%
 
 ---
-
 
 # Pontuar um modelo na interface do usuário do Data Science Workspace
 

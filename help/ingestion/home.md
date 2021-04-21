@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, assimilação de dados, local de dados, Localização de dados, Gerenciamento de dados, Lineage, linhagem, lote, lote, dados assimilados
+keywords: Experience Platform, página inicial, tópicos populares, assimilação de dados, local dos dados, Localização de dados, Gerenciamento de dados, Lineage, linhagem, lote, lote, dados assimilados
 solution: Experience Platform
 title: Visão geral da assimilação de dados
-topic: overview
+topic-legacy: overview
 description: Este documento apresenta as três principais maneiras pelas quais os dados são assimilados na Platform, com links para sua respectiva documentação de visão geral para obter informações mais detalhadas.
+exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '461'
 ht-degree: 14%
 
 ---
 
-
 # Visão geral da assimilação de dados
 
-A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A assimilação de dados da Adobe Experience Platform representa os vários métodos pelos quais [!DNL Platform] assimila dados dessas fontes, bem como como esses dados são mantidos no Data Lake para uso pelos serviços de downstream [!DNL Platform].
+A Adobe Experience Platform reúne dados de várias fontes para ajudar os profissionais de marketing a entender melhor o comportamento de seus clientes. A Assimilação de dados do Adobe Experience Platform representa os vários métodos pelos quais [!DNL Platform] assimila dados dessas fontes, bem como como esses dados são mantidos no Data Lake para uso pelos serviços de downstream [!DNL Platform].
 
 Este documento apresenta as três principais maneiras pelas quais os dados são assimilados em [!DNL Platform], com links para sua respectiva documentação de visão geral para obter informações mais detalhadas.
 
@@ -37,7 +37,7 @@ Consulte a [visão geral da assimilação de streaming](./streaming-ingestion/ov
 
 [!DNL Experience Platform] O permite configurar conexões de origem para vários provedores de dados. Essas conexões permitem autenticar em suas fontes de dados externas, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação.
 
-As conexões de origem podem ser configuradas para coletar dados de outros aplicativos da Adobe (como o Adobe Analytics e o Adobe Audience Manager), fontes de armazenamento em nuvem de terceiros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
+As conexões de origem podem ser configuradas para coletar dados de outros aplicativos do Adobe (como Adobe Analytics e Adobe Audience Manager), fontes de armazenamento em nuvem de terceiros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP e servidores SFTP) e sistemas CRM de terceiros (como [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Consulte a [Visão geral das fontes](../sources/home.md) para obter mais informações.
 

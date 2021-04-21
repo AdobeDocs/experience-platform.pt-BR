@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;endpoint;Data Science Workspace;popular topics;mlinnesse;sensei machine learning api
+keywords: Experience Platform, guia do desenvolvedor, endpoint, Data Science Workspace, tópicos populares, circunstâncias, api de aprendizado de máquina do sensei
 solution: Experience Platform
-title: Ponto Final da API de MLInances
-topic: Developer guide
-description: Uma instância MLI é um emparelhamento de um Mecanismo existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
+title: Ponto de Extremidade da API MLInpositions
+topic-legacy: Developer guide
+description: Uma MLInposition é um emparelhamento de um Mecanismo existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
-
 # Ponto de extremidade MLInances
 
-Uma instância MLI é um emparelhamento de um [Engine](./engines.md) existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
+Uma MLInposition é um emparelhamento de um [Engine](./engines.md) existente com um conjunto apropriado de configurações que define quaisquer parâmetros de treinamento, parâmetros de pontuação ou configurações de recursos de hardware.
 
 ## Criar uma instância MLI {#create-an-mlinstance}
 
-Você pode criar uma instância MLI executando uma solicitação de POST ao fornecer uma carga de solicitação que consiste em uma ID de mecanismo válida (`{ENGINE_ID}`) e um conjunto apropriado de configurações padrão.
+Você pode criar uma MLInposition executando uma solicitação de POST ao fornecer uma carga de solicitação consistindo em uma ID de mecanismo válida (`{ENGINE_ID}`) e um conjunto apropriado de configurações padrão.
 
-Se a ID do mecanismo fizer referência a um PySpark ou Spark Engine, você terá a capacidade de configurar a quantidade de recursos de computação, como o número de núcleos ou a quantidade de memória. Se um Mecanismo Python for referenciado, você poderá escolher entre usar uma CPU ou uma GPU para fins de treinamento e pontuação. Consulte as seções do apêndice em [Configurações de recursos PySpark e Spark](./appendix.md#resource-config) e [Configurações de CPU e GPU Python](./appendix.md#cpu-gpu-config) para obter mais informações.
+Se a ID do mecanismo fizer referência a um PySpark ou Spark Engine, você terá a capacidade de configurar a quantidade de recursos de computação, como o número de núcleos ou a quantidade de memória. Se um Mecanismo Python for referenciado, você poderá optar entre usar uma CPU ou GPU para fins de treinamento e pontuação. Consulte as seções do apêndice em [PySpark and Spark resource settings](./appendix.md#resource-config) e [Python CPU and GPU settings](./appendix.md#cpu-gpu-config) para obter mais informações.
 
 **Formato da API**
 
@@ -77,14 +77,14 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome desejado para a instância MLI. O Modelo que corresponde a essa instância MLI herdará esse valor para ser exibido na interface do usuário como o nome do Modelo. |
-| `description` | Uma descrição opcional para a instância MLI. O Modelo que corresponde a essa instância MLI herdará esse valor para ser exibido na interface do usuário como a descrição do Modelo. Esta propriedade é obrigatória. Se você não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
+| `name` | O nome desejado para a instância MLI. O Modelo correspondente a esta instância MLI herdará este valor a ser exibido na interface do usuário como o nome do Modelo. |
+| `description` | Uma descrição opcional para a instância MLI. O Modelo correspondente a esta instância MLI herdará este valor a ser exibido na interface do usuário como a descrição do Modelo. Esta propriedade é obrigatória. Se não quiser fornecer uma descrição, defina seu valor como uma string vazia. |
 | `engineId` | A ID de um mecanismo existente. |
-| `tasks` | Um conjunto de configurações para treinamento, pontuação ou pipeline de recursos. |
+| `tasks` | Um conjunto de configurações para treinamento, pontuação ou pipelines de recursos. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent recém-criada, incluindo seu identificador exclusivo (`id`).
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes da instância MLI recém-criada, incluindo seu identificador exclusivo (`id`).
 
 ```json
 {
@@ -129,9 +129,9 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes da MLIntent rec
 }
 ```
 
-## Recuperar uma lista de MLInentons
+## Recuperar uma lista de MLInpositions
 
-Você pode recuperar uma lista de MLInentons executando uma única solicitação de GET. Para ajudar a filtrar os resultados, você pode especificar parâmetros de query no caminho da solicitação. Para obter uma lista de query disponíveis, consulte a seção do apêndice sobre [parâmetros de query para recuperação de ativos](./appendix.md#query).
+Você pode recuperar uma lista de MLInpositions executando uma única solicitação do GET. Para ajudar a filtrar resultados, você pode especificar parâmetros de consulta no caminho da solicitação. Para obter uma lista de queries disponíveis, consulte a seção Apêndice em [parâmetros de consulta para recuperação de ativos](./appendix.md#query).
 
 **Formato da API**
 
@@ -143,8 +143,8 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Um dos [parâmetros de query disponíveis](./appendix.md#query) usados para filtrar os resultados. |
-| `{VALUE}` | O valor do parâmetro de query anterior. |
+| `{QUERY_PARAMETER}` | Um dos [parâmetros de consulta disponíveis](./appendix.md#query) usados para filtrar resultados. |
+| `{VALUE}` | O valor do parâmetro de consulta anterior. |
 
 **Solicitação**
 
@@ -159,7 +159,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de MLInentons e seus detalhes.
+Uma resposta bem-sucedida retorna uma lista de MLInpositions e seus detalhes.
 
 ```json
 {
@@ -199,7 +199,7 @@ Uma resposta bem-sucedida retorna uma lista de MLInentons e seus detalhes.
 
 ## Recuperar uma instância MLI específica {#retrieve-specific}
 
-Você pode recuperar os detalhes de uma instância MLI específica executando uma solicitação de GET que inclui a ID da instância MLI desejada no caminho da solicitação.
+Você pode recuperar os detalhes de uma instância MLI específica executando uma solicitação do GET que inclui a ID da instância MLI desejada no caminho da solicitação.
 
 **Formato da API**
 
@@ -272,13 +272,13 @@ Uma resposta bem-sucedida retorna os detalhes da instância MLI.
 
 ## Atualizar uma instância MLI
 
-Você pode atualizar uma instância MLI existente substituindo suas propriedades por meio de uma solicitação de PUT que inclua a ID da instância MLI do público alvo no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
+Você pode atualizar uma instância MLI existente, sobrescrevendo suas propriedades por meio de uma solicitação PUT que inclua a ID da instância MLI de destino no caminho da solicitação e fornecendo uma carga JSON contendo propriedades atualizadas.
 
 >[!TIP]
 >
->Para garantir o sucesso desta solicitação de PUT, recomenda-se que primeiro você execute uma solicitação de GET para [recuperar a instância MLI por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como carga para a solicitação de PUT.
+>Para garantir o sucesso dessa solicitação do PUT, sugerimos que primeiro você execute uma solicitação do GET para [recuperar a MLIntent por ID](#retrieve-specific). Em seguida, modifique e atualize o objeto JSON retornado e aplique a totalidade do objeto JSON modificado como a carga para a solicitação PUT.
 
-A chamada de API de exemplo a seguir atualizará os parâmetros de treinamento e pontuação de uma MLInpresence ao ter essas propriedades inicialmente:
+O exemplo de chamada de API a seguir atualizará os parâmetros de treinamento e pontuação de uma instância do MLI com essas propriedades inicialmente:
 
 ```json
 {
@@ -321,7 +321,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Uma ID de instância MLI válida. |
+| `{MLINSTANCE_ID}` | Uma ID de Instância MLI válida. |
 
 **Solicitação**
 
@@ -367,7 +367,7 @@ curl -X PUT \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados da MLInpresence.
+Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados da instância MLI.
 
 ```json
 {
@@ -406,7 +406,7 @@ Uma resposta bem-sucedida retorna uma carga contendo os detalhes atualizados da 
 
 ## Excluir MLInentons por ID do mecanismo
 
-É possível excluir todas as MLInentons que compartilham o mesmo Mecanismo, executando uma solicitação de DELETE que inclui a ID do mecanismo como um parâmetro de query.
+É possível excluir todas as MLInpositions que compartilham o mesmo mecanismo executando uma solicitação de DELETE que inclui a ID do mecanismo como um parâmetro de consulta.
 
 **Formato da API**
 
@@ -441,7 +441,7 @@ curl -X DELETE \
 
 ## Excluir uma instância MLI
 
-É possível excluir uma única instância MLI executando uma solicitação de DELETE que inclua a ID da instância MLI do público alvo no caminho da solicitação.
+Você pode excluir uma única instância MLI executando uma solicitação DELETE que inclui a ID da instância MLI do destino no caminho da solicitação.
 
 **Formato da API**
 
@@ -451,7 +451,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Uma ID de instância MLI válida. |
+| `{MLINSTANCE_ID}` | Uma ID de Instância MLI válida. |
 
 **Solicitação**
 

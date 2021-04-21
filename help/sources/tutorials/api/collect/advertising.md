@@ -2,14 +2,14 @@
 keywords: Experience Platform, home, tópicos populares, serviço de fluxo, publicidade, google adwords, publicidade
 solution: Experience Platform
 title: Colete dados de publicidade usando conectores de origem e APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los na Plataforma usando conectores de origem e a API do Serviço de Fluxo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1551'
 ht-degree: 1%
 
 ---

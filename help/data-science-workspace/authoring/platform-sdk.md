@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform;guia do desenvolvedor;SDK;SDK;Data Access SDK;Data Science Workspace;topics populares
+keywords: Experience Platform, guia do desenvolvedor, SDK, SDK de acesso a dados, Data Science Workspace, tópicos populares
 solution: Experience Platform
 title: Criação de modelos usando o SDK da plataforma Adobe Experience Platform
-topic: SDK authoring
+topic-legacy: SDK authoring
 description: Este tutorial fornece informações sobre a conversão de data_access_sdk_python para a nova plataforma Python_sdk em Python e R.
+exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
+# Criação de modelo usando o SDK [!DNL Platform] do Adobe Experience Platform
 
-# Criação de modelos usando o SDK do Adobe Experience Platform [!DNL Platform]
+Este tutorial fornece informações sobre a conversão de `data_access_sdk_python` para o novo Python `platform_sdk` em Python e R. Este tutorial fornece informações sobre as seguintes operações:
 
-Este tutorial fornece informações sobre como converter `data_access_sdk_python` para o novo Python `platform_sdk` em Python e R. Este tutorial fornece informações sobre as seguintes operações:
-
-- [Autenticação de compilação](#build-authentication)
+- [Autenticação de build](#build-authentication)
 - [Leitura básica dos dados](#basic-reading-of-data)
-- [Escrita básica dos dados](#basic-writing-of-data)
+- [Escrita básica de dados](#basic-writing-of-data)
 
 ## Autenticação de compilação {#build-authentication}
 
-A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform] e é composta de chave de API, ID de organização IMS, um token de usuário e um token de serviço.
+A autenticação é necessária para fazer chamadas para [!DNL Adobe Experience Platform] e é composta de Chave de API, ID de Org de IMS, um token de usuário e um token de serviço.
 
 ### Python
 
-Se você estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
+Se você estiver usando o Bloco de Anotações do Jupyter, use o código abaixo para criar o `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Se você não estiver usando o Notebook Jupyter ou precisar alterar a Organização IMS, use a amostra de código abaixo:
+Se você não estiver usando o Jupyter Notebook ou precisar alterar a IMS Org, use a amostra de código abaixo:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -45,7 +45,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Se você estiver usando o notebook Jupyter, use o código abaixo para criar o `client_context`:
+Se você estiver usando o Bloco de Anotações do Jupyter, use o código abaixo para criar o `client_context`:
 
 ```r
 library(reticulate)
@@ -56,7 +56,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Se você não estiver usando o Notebook Jupyter ou precisar alterar a Organização IMS, use a amostra de código abaixo:
+Se você não estiver usando o Jupyter Notebook ou precisar alterar a IMS Org, use a amostra de código abaixo:
 
 ```r
 library(reticulate)
@@ -77,15 +77,15 @@ Se o tempo de leitura estiver demorando muito, tente usar uma das seguintes opç
 - [Filtrar dados por deslocamento e limite](#filter-by-offset-and-limit)
 - [Filtrar dados por data](#filter-by-date)
 - [Filtrar dados por coluna](#filter-by-selected-columns)
-- [Obtendo resultados classificados](#get-sorted-results)
+- [Obter resultados classificados](#get-sorted-results)
 
 >[!NOTE]
 >
->A Organização IMS está definida em `client_context`.
+>A Organização IMS é definida no `client_context`.
 
 ### Python
 
-Para ler dados no Python, use a amostra de código abaixo:
+Para ler dados em Python, use a amostra de código abaixo:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -96,7 +96,7 @@ df.head()
 
 ### R
 
-Para ler dados em R, use a amostra de código abaixo:
+Para ler os dados em R, use a amostra de código abaixo:
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -107,7 +107,7 @@ df
 
 ## Filtrar por deslocamento e limitar {#filter-by-offset-and-limit}
 
-Como a filtragem por ID de lote não é mais suportada, para a leitura de dados no escopo, é necessário usar `offset` e `limit`.
+Como a filtragem por ID de lote não é mais suportada, para escopo da leitura de dados, é necessário usar `offset` e `limit`.
 
 ### Python
 
@@ -177,9 +177,9 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Obter resultados classificados {#get-sorted-results}
 
-Os resultados recebidos podem ser classificados por colunas especificadas do conjunto de dados do público alvo e em sua ordem (asc/desc), respectivamente.
+Os resultados recebidos podem ser classificados por colunas especificadas do conjunto de dados de destino e em sua ordem (asc/desc), respectivamente.
 
-No exemplo a seguir, dataframe é classificado por &quot;column-a&quot; primeiro em ordem crescente. As linhas com os mesmos valores para &quot;column-a&quot; são classificadas por &quot;column-b&quot; em ordem decrescente.
+No exemplo a seguir, o dataframe é classificado por &quot;coluna-a&quot; primeiro em ordem crescente. As linhas que têm os mesmos valores para &quot;coluna-a&quot; são classificadas por &quot;coluna-b&quot; em ordem decrescente.
 
 ### Python
 
@@ -197,7 +197,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->A Organização IMS está definida em `client_context`.
+>A Organização IMS é definida no `client_context`.
 
 Para gravar dados em Python e R, use um dos seguintes exemplos:
 
@@ -222,4 +222,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Próximas etapas
 
-Depois de configurar o carregador de dados `platform_sdk`, os dados passam pela preparação e são divididos nos conjuntos de dados `train` e `val`. Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção [preparação de dados e engenharia de recursos](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) no tutorial para criar uma fórmula usando notebooks [!DNL JupyterLab].
+Depois de configurar o carregador de dados `platform_sdk`, os dados são preparados e divididos nos conjuntos de dados `train` e `val`. Para saber mais sobre a preparação de dados e a engenharia de recursos, visite a seção sobre [preparação de dados e engenharia de recursos](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) no tutorial para criar uma fórmula usando blocos de anotações [!DNL JupyterLab].

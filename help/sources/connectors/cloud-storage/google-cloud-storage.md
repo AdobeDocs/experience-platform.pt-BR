@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, Armazenamento no Google Cloud, armazenamento na nuvem do google
 solution: Experience Platform
 title: Visão geral do Conector de origem de armazenamento do Google Cloud
-topic: overview
+topic-legacy: overview
 description: Saiba como conectar o Armazenamento do Google Cloud à Adobe Experience Platform usando APIs ou a interface do usuário.
+exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
-
 
 # Conector de armazenamento do Google Cloud
 

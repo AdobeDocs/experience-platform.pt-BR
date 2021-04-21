@@ -1,69 +1,69 @@
 ---
-keywords: Experience Platform;home;popular topics;serviço de fluxo;conexão de conexão de conjunto de dados;conexão de serviço de fluxo;conexão de serviço de fluxo
+keywords: Experience Platform, home, tópicos populares, serviço de fluxo de conexão do conjunto de dados, serviço de fluxo, conexão de serviço de fluxo
 solution: Experience Platform
-title: Criar uma conexão base de conjunto de dados Adobe Experience Platform usando a API de serviço de fluxo
-topic: overview
+title: Criar uma conexão básica do conjunto de dados do Adobe Experience Platform usando a API do Serviço de fluxo
+topic-legacy: overview
 type: Tutorial
-description: Saiba como usar a API de Serviço de Fluxo para criar uma conexão básica de conjunto de dados com a Adobe Experience Platform.
+description: Saiba como usar a API do Serviço de fluxo para criar uma conexão básica do conjunto de dados com o Adobe Experience Platform.
+exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
 
 ---
 
+# Crie uma conexão base do conjunto de dados [!DNL Experience Platform] usando a API [!DNL Flow Service]
 
-# Crie uma conexão básica de conjunto de dados [!DNL Experience Platform] usando a API [!DNL Flow Service]
+[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 
-[!DNL Flow Service] é usada para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API a partir da qual todas as fontes compatíveis são conectáveis.
+Para conectar dados de uma fonte de terceiros a [!DNL Platform], primeiro deve ser estabelecida uma conexão base do conjunto de dados.
 
-Para conectar dados de uma fonte de terceiros a [!DNL Platform], é necessário estabelecer primeiro uma conexão base de conjunto de dados.
-
-Este tutorial usa a API [!DNL Flow Service] para guiá-lo pelas etapas de criação de uma conexão básica de conjunto de dados.
+Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para criar uma conexão base do conjunto de dados.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Sistema](../../../xdm/home.md) do Experience Data Model (XDM): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos schemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
-   * [Guia](../../../xdm/api/getting-started.md) do desenvolvedor do Registro do schema: Inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro do Schema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;container&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Accept e seus possíveis valores).
-* [Serviço](../../../catalog/home.md) de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados dentro  [!DNL Experience Platform].
-* [Ingestão](../../../ingestion/batch-ingestion/overview.md) em lote: A API de ingestão em lote permite que você ingira dados em Experience Platform como arquivos em lote.
-* [Caixas de proteção](../../../sandboxes/home.md):  [!DNL Experience Platform] fornece caixas de proteção virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver e desenvolver aplicativos de experiência digital.
+   * [Noções básicas da composição](../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
+   * [Guia](../../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Inclui informações importantes que você precisa saber para executar com sucesso chamadas para a API do Registro de Esquema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
+* [Serviço](../../../catalog/home.md) de catálogo: Catálogo é o sistema de registro para localização e linhagem de dados no  [!DNL Experience Platform].
+* [Ingestão](../../../ingestion/batch-ingestion/overview.md) em lote: A API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
+* [Sandboxes](../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao Data Lake usando a API [!DNL Flow Service].
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
 
-### Reunir valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para [!DNL Platform] APIs, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], como mostrado abaixo:
+Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo os pertencentes a [!DNL Flow Service], são isolados para caixas de proteção virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
+Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * `Content-Type: application/json`
 
 ## Pesquisar especificações de conexão
 
-A primeira etapa na criação de uma conexão base de conjunto de dados é recuperar um conjunto de especificações de conexão de dentro de [!DNL Flow Service].
+A primeira etapa na criação de uma conexão base do conjunto de dados é recuperar um conjunto de especificações de conexão de dentro de [!DNL Flow Service].
 
 **Formato da API**
 
-Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode procurar especificações de conexão para uma conexão básica de conjunto de dados executando uma solicitação de GET e usando parâmetros de query.
+Cada fonte disponível tem seu próprio conjunto exclusivo de especificações de conexão para descrever propriedades do conector, como requisitos de autenticação. Você pode pesquisar especificações de conexão para uma conexão base do conjunto de dados executando uma solicitação do GET e usando parâmetros de consulta.
 
-Enviar uma solicitação de GET sem parâmetros de query retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir o query `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obter informações sobre a conexão básica do conjunto de dados.
+Enviar uma solicitação de GET sem parâmetros de consulta retornará especificações de conexão para todas as fontes disponíveis. Você pode incluir a consulta `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obter informações para a conexão base do conjunto de dados.
 
 ```http
 GET /connectionSpecs
@@ -72,7 +72,7 @@ GET /connectionSpecs?property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"
 
 **Solicitação**
 
-A solicitação a seguir recupera as especificações de conexão para uma conexão base de conjunto de dados.
+A solicitação a seguir recupera as especificações de conexão de uma conexão base do conjunto de dados.
 
 ```shell
 curl -X GET \
@@ -85,7 +85,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna as especificações de conexão e o identificador exclusivo (`id`) necessário para criar uma conexão básica.
+Uma resposta bem-sucedida retorna as especificações de conexão e o identificador exclusivo (`id`) necessário para criar uma conexão base.
 
 ```json
 {
@@ -137,9 +137,9 @@ Uma resposta bem-sucedida retorna as especificações de conexão e o identifica
 }
 ```
 
-## Criar uma conexão básica de conjunto de dados
+## Criar uma conexão base do conjunto de dados
 
-Uma conexão básica especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão base de conjunto de dados é necessária, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Uma conexão base especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão base do conjunto de dados é necessária, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
 
 **Formato da API**
 
@@ -173,7 +173,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para criar uma conexão de público alvo e assimilar dados de um conector de origem de terceiros.
+Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para criar uma conexão de destino e assimilar dados de um conector de origem de terceiros.
 
 ```json
 {
@@ -184,9 +184,9 @@ Uma resposta bem-sucedida retorna detalhes da conexão básica recém-criada, in
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão básica de conjunto de dados usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa conexão básica para criar uma conexão de público alvo. Os seguintes tutoriais percorrem as etapas de criação de uma conexão de público alvo, dependendo da categoria do conector de origem que você está usando:
+Ao seguir este tutorial, você criou uma conexão básica do conjunto de dados usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa conexão base para criar uma conexão de destino. Os seguintes tutoriais percorrem as etapas da criação de uma conexão de destino, dependendo da categoria do conector de origem que você está usando:
 
-* [Armazenamento em nuvem](./collect/cloud-storage.md)
+* [armazenamento na nuvem](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
 * [Sucesso do cliente](./collect/customer-success.md)
 * [Banco de dados](./collect/database-nosql.md)

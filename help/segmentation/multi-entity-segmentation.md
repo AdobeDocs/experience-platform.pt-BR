@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, tópicos populares, segmentação, Segmentação, serviço de segmento, segmentos, segmentos, várias entidades, segmentação de várias entidades, segmentos de várias entidades;
+keywords: Experience Platform, página inicial, tópicos populares, segmentação, Segmentação, serviço de segmento, segmentos, segmentos, várias entidades, segmentação de várias entidades, segmentos de várias entidades;
 solution: Experience Platform
 title: Visão geral da segmentação de várias entidades
-topic: overview
+topic-legacy: overview
 description: A segmentação de várias entidades é a capacidade de estender os dados do Perfil com dados adicionais com base em produtos, lojas ou outras classes que não sejam de perfil. Depois de conectados, os dados de classes adicionais ficam disponíveis como se fossem nativos no esquema Perfil.
+exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral da segmentação de várias entidades
 
-A segmentação de várias entidades é um recurso avançado disponível como parte da Adobe Experience Platform [!DNL Segmentation Service]. Esse recurso permite estender [!DNL Real-time Customer Profile] dados com dados adicionais de &quot;não pessoas&quot; (também conhecidos como &quot;entidades de dimensão&quot;) que sua organização pode definir, como dados relacionados a produtos ou lojas. A segmentação de várias entidades oferece flexibilidade ao definir segmentos de público-alvo com base em dados relevantes para suas necessidades comerciais exclusivas e pode ser executada sem ter experiência em consultar bancos de dados. Com a segmentação de várias entidades, é possível adicionar dados principais aos seus segmentos sem precisar fazer alterações caras nos fluxos de dados ou esperar uma mesclagem de dados de back-end.
+A segmentação de várias entidades é um recurso avançado disponível como parte do Adobe Experience Platform [!DNL Segmentation Service]. Esse recurso permite estender [!DNL Real-time Customer Profile] dados com dados adicionais de &quot;não pessoas&quot; (também conhecidos como &quot;entidades de dimensão&quot;) que sua organização pode definir, como dados relacionados a produtos ou lojas. A segmentação de várias entidades oferece flexibilidade ao definir segmentos de público-alvo com base em dados relevantes para suas necessidades comerciais exclusivas e pode ser executada sem ter experiência em consultar bancos de dados. Com a segmentação de várias entidades, é possível adicionar dados principais aos seus segmentos sem precisar fazer alterações caras nos fluxos de dados ou esperar uma mesclagem de dados de back-end.
 
 ## Introdução
 
@@ -24,8 +24,8 @@ A segmentação de várias entidades requer uma compreensão funcional dos vári
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado em tempo real, com base em dados agregados de várias fontes.
    * [Medidas de proteção](../profile/guardrails.md) do perfil: Práticas recomendadas para criar modelos de dados compatíveis com o  [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite criar segmentos a partir de  [!DNL Real-time Customer Profile] dados.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
-   * [Noções básicas da composição](../xdm/schema/composition.md#union) do schema: Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados na Experience Platform.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+   * [Noções básicas da composição](../xdm/schema/composition.md#union) do schema: Saiba mais sobre as práticas recomendadas para a composição de schemas a serem usados no Experience Platform.
 
 ## Casos de uso
 

@@ -2,24 +2,24 @@
 keywords: Experience Platform, home, tópicos populares, api do serviço de identidade, guia do desenvolvedor do serviço de identidade, região
 solution: Experience Platform
 title: Guia da API do Serviço de identidade
-topic: API guide
-description: A API do Serviço de identidade permite que os desenvolvedores gerenciem a identificação entre dispositivos, entre canais e quase em tempo real dos clientes usando gráficos de identidade na Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+topic-legacy: API guide
+description: A API do Serviço de identidade permite que os desenvolvedores gerenciem a identificação entre dispositivos, entre canais e quase em tempo real dos clientes usando gráficos de identidade no Adobe Experience Platform. Siga este guia para saber como executar operações principais usando a API.
+exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 translation-type: tm+mt
-source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Identity Service] Guia da API
 
-A Adobe Experience Platform [!DNL Identity Service] gerencia a identificação entre dispositivos, canais e quase em tempo real dos clientes no que é conhecido como um gráfico de identidade na Adobe Experience Platform.
+O Adobe Experience Platform [!DNL Identity Service] gerencia a identificação entre dispositivos, entre canais e quase em tempo real dos clientes no que é conhecido como um gráfico de identidade no Adobe Experience Platform.
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Identity Service]](../home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de perfil do cliente. Ele faz isso através da conexão de identidades entre dispositivos e sistemas, onde os clientes interagem com a sua marca.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.

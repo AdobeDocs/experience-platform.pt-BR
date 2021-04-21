@@ -1,40 +1,40 @@
 ---
-keywords: 'Experience Platform;home;popular topics;perfil do produto;home;popular topics;product '
+keywords: Experience Platform, home, tópicos populares, perfil de produto
 solution: Experience Platform
-title: Gerenciar detalhes e serviços adicionais para um Perfil de produto
-topic: user guide
-description: Este documento cobre as etapas necessárias para gerenciar detalhes e serviços adicionais de um perfil de produto no Adobe Admin Console. Você pode configurar os detalhes de um perfil e acessar serviços adicionais no menu Configurações do Perfil.
+title: Gerenciar detalhes e serviços adicionais para um perfil de produto
+topic-legacy: user guide
+description: Este documento aborda as etapas necessárias para gerenciar detalhes e serviços adicionais para um perfil de produto no Adobe Admin Console. Você pode configurar os detalhes de um perfil e o acesso a serviços adicionais no menu Configurações do perfil .
+exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '199'
 ht-degree: 1%
 
 ---
 
+# Gerenciar detalhes e serviços adicionais para um perfil de produto
 
-# Gerenciar detalhes e serviços adicionais de um perfil de produto
+Você pode configurar os detalhes de um perfil e o acesso a serviços adicionais no menu **[!UICONTROL Profile Settings]**. Para acessar o menu, clique em **[!UICONTROL Settings]** na página **[!UICONTROL Product Profile]**.
 
-Você pode configurar os detalhes de um perfil e acessar serviços adicionais no menu **[!UICONTROL Configurações do Perfil]**. Para acessar o menu, clique em **[!UICONTROL Settings]** na página **[!UICONTROL Perfil do produto]**.
+![profile-settings](../images/profile-settings.png)
 
-![Configurações de perfil](../images/profile-settings.png)
-
-O menu **[!UICONTROL Configurações do Perfil]** é exibido, começando na guia **[!UICONTROL Detalhes]**. Esta guia permite inserir e editar o nome e a descrição do perfil. Você também pode modificar seu nome de exibição, bem como as configurações de notificação por email para sua conta.
+O menu **[!UICONTROL Profile Settings]** é exibido, começando na guia **[!UICONTROL Details]**. Essa guia permite inserir e editar o nome e a descrição do perfil. Você também pode modificar seu nome de exibição, bem como as configurações de notificação por email para sua conta.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
-Clique em **[!UICONTROL Serviços]** para acessar a página **[!UICONTROL Serviços]**.
+Clique em **[!UICONTROL Services]** para acessar a página **[!UICONTROL Services]**.
 
 ![página de serviços](../images/services-page.png)
 
-O menu **[!UICONTROL Serviços]** permite modificar o acesso de um perfil a serviços adicionais [!DNL Platform] que foram inicialmente configurados quando o perfil foi criado. Dependendo da sua subscrição [!DNL Platform], esses serviços podem incluir:
+O menu **[!UICONTROL Services]** permite modificar o acesso de um perfil aos serviços adicionais [!DNL Platform] que foram configurados inicialmente quando o perfil foi criado. Dependendo da sua assinatura [!DNL Platform], esses serviços podem incluir:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
 - [!DNL Real-Time Customer Data Platform] Interface do usuário (somente para CDP em tempo real)
 
-Clique na alternância no lado direito de um serviço específico para ativá-lo ou desativá-lo. Você também pode clicar na caixa de seleção **[!UICONTROL Tudo em]** para ativar ou desativar todos os serviços listados.
+Clique no botão de alternância no lado direito de um serviço específico para ativá-lo ou desativá-lo. Você também pode clicar na caixa de seleção **[!UICONTROL All on]** para ativar ou desativar todos os serviços listados.
 
-Ao terminar, clique em **[!UICONTROL Salvar]**.
+Quando terminar, clique em **[!UICONTROL Save]**.
 
-![editar-serviços adicionais](../images/edit-additional-services.png)
+![serviços adicionais de edição](../images/edit-additional-services.png)

@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform, home, tópicos populares, Adobe Experience Platform, guia da api, guia da api da plataforma, introdução à plataforma, guia do desenvolvedor
+keywords: Experience Platform, home, tópicos populares, Adobe Experience Platform, guia de api, guia de api da plataforma, introdução à plataforma, guia do desenvolvedor
 solution: Experience Platform
-title: Postman na Adobe Experience Platform
-topic: api guide
+title: Postman no Adobe Experience Platform
+topic-legacy: api guide
 description: Este documento contém etapas que descrevem como configurar um ambiente Postman, importar coleções Postman e uma lista de coleções disponíveis para cada serviço da Plataforma.
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 translation-type: tm+mt
-source-git-commit: effc8fef666ffbf62c2e0874d048245f19c12111
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
-
-# Postman na Adobe Experience Platform
+# Postman no Adobe Experience Platform
 
 O Postman é uma plataforma de colaboração para desenvolvimento de API que permite configurar ambientes com variáveis predefinidas, compartilhar coleções de API, simplificar solicitações de CRUD e muito mais. A maioria dos serviços de API da Platform tem coleções Postman que podem ser usadas para ajudar a fazer chamadas de API.
 
-## Como configurar um ambiente Postman para a Experience Platform
+## Como configurar um ambiente Postman para o Experience Platform
 
 O guia de vídeo a seguir descreve a criação e a configuração do ambiente Postman. Um ambiente Postman contém todos os cabeçalhos necessários para fazer chamadas de API para as várias coleções fornecidas abaixo. Depois de configurado, sempre que um valor expirar (como `ACCESS_TOKEN`), você poderá atualizar o valor atual no ambiente e esse novo valor será usado em todas as suas coleções.
 
@@ -25,7 +25,7 @@ O guia de vídeo a seguir descreve a criação e a configuração do ambiente Po
 
 ## Coleções de postman {#collections}
 
-Uma pasta contendo todas as coleções disponíveis do Postman pode ser encontrada ao visitar o [repositório GitHub de amostras do Experience Platform Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Como alternativa, um link de coleção do Postman pode ser encontrado em cada arquivo swagger individual na [API reference documentation](http://www.adobe.com/go/platform-api-reference-en) no Adobe I/O.
+Uma pasta contendo todas as coleções disponíveis do Postman pode ser encontrada ao visitar o [Experience Platform Postman samples do repositório GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Como alternativa, um link de coleção do Postman pode ser encontrado em cada arquivo swagger individual na [API reference documentation](http://www.adobe.com/go/platform-api-reference-en) no Adobe I/O.
 
 Para baixar uma coleção Postman, selecione **[!DNL Raw]** na página GitHub para carregar o arquivo JSON bruto em uma nova guia. Em seguida, clique com o botão direito do mouse e selecione **[!DNL Save as]** para salvar o arquivo em um destino local de sua escolha.
 
@@ -53,9 +53,9 @@ Para saber mais sobre a interface do usuário do Postman e seus recursos dispon�
 
 >[!WARNING]
 >
->Conforme observado na coleção Postman da geração de tokens de acesso do Adobe I/O, os métodos de geração indicados são adequados para **uso não relacionado à produção**. A assinatura local carrega uma biblioteca do JavaScript de um host de terceiros e a assinatura remota envia a chave privada para um serviço da Web que é de propriedade e operado pela Adobe. Embora a Adobe não armazene essa chave privada, as chaves de produção nunca devem ser compartilhadas com ninguém.
+>Conforme observado na coleção Postman de geração de token de acesso ao Adobe I/O, os métodos de geração indicados são adequados para **uso não relacionado à produção**. A assinatura local carrega uma biblioteca do JavaScript de um host de terceiros e a assinatura remota envia a chave privada para um serviço da Web que é de propriedade e operado pelo Adobe. Embora o Adobe não armazene essa chave privada, as chaves de produção nunca devem ser compartilhadas com ninguém.
 
-O vídeo abaixo usa a [coleção de geração de token de acesso do Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) que pode ser baixada do repositório público do GitHub.
+O vídeo abaixo usa a coleção [Adobe I/O access token generation](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) que pode ser baixada do repositório GitHub público.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 

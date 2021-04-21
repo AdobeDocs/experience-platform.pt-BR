@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: ERD do Modelo de Dados do Setor dos Serviços Financeiros
-topic: overview
+topic-legacy: overview
 description: Exibir um diagrama de relacionamento de entidade (ERD) que descreve um modelo de dados padronizado para o setor bancário, de serviços financeiros e de seguros (BFSI). Esse modelo de dados é compatível com o Experience Data Model (XDM) para uso no Adobe Experience Platform.
+exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
 translation-type: tm+mt
-source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 1%
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
-
 
 # [!UICONTROL Financial services] ERD do modelo de dados do setor
 

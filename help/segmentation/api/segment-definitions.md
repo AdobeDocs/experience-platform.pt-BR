@@ -2,16 +2,16 @@
 keywords: Experience Platform; home; tópicos populares; segmentação; Segmentação; Serviço de segmentação; definição de segmento; definições de segmento; api; API;
 solution: Experience Platform
 title: Ponto de extremidade da API de definições de segmentos
-topic: developer guide
+topic-legacy: developer guide
 description: O endpoint de definições de segmento na API do serviço de segmentação do Adobe Experience Platform permite gerenciar programaticamente as definições de segmento da sua organização.
+exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 translation-type: tm+mt
-source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1172'
 ht-degree: 3%
 
 ---
-
 
 # Ponto de extremidade das definições de segmento
 

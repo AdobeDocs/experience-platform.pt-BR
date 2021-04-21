@@ -6,19 +6,15 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao MariaDB usando a API do Serviço de Fluxo.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '542'
 ht-degree: 2%
 
 ---
 
 
 # Crie uma conexão de origem [!DNL MariaDB] usando a API [!DNL Flow Service]
-
->[!NOTE]
->
->O conector [!DNL MariaDB] está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 

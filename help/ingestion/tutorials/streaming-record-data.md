@@ -2,14 +2,14 @@
 keywords: Experience Platform; home; tópicos populares; assimilação de streaming; ingestão; dados de registro; dados de registro de fluxo;
 solution: Experience Platform
 title: Gravar dados de fluxo usando APIs de assimilação de fluxo
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 2%
 
 ---

@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, modelo de dados de experiência, Modelo de dados da experiência, modelo de dados, Modelo de dados, sampledata, dados de amostra, rpc;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, sampledata, dados de amostra, rpc;
 solution: Experience Platform
 title: Endpoint da API de dados de exemplo
 description: O endpoint /sampledata na API do Registro de Schema permite gerar dados de amostra mapeados para a estrutura de qualquer esquema XDM existente.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
 
-
 # Ponto de extremidade de dados de amostra
 
-Para assimilar dados na Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um esquema do Experience Data Model (XDM) existente. Dependendo da complexidade do esquema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera ao assimilar.
+Para assimilar dados no Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um esquema do Experience Data Model (XDM) existente. Dependendo da complexidade do esquema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera ao assimilar.
 
 Usando o endpoint `/sampledata` na API [!DNL Schema Registry], é possível gerar um objeto de assimilação de exemplo para qualquer schema criado anteriormente.
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 O ponto de extremidade de dados de amostra faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints na API [!DNL Schema Registry], os endpoints RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado na chamada de API abaixo.
 
 ## Recuperar dados de amostra de um esquema
 
-Você pode recuperar dados de amostra de qualquer esquema na Biblioteca de esquemas especificando a ID do esquema no caminho de uma solicitação GET para o endpoint.
+Você pode recuperar dados de amostra de qualquer esquema na Biblioteca de esquemas especificando a ID do esquema no caminho de uma solicitação de GET para o endpoint.
 
 **Formato da API**
 

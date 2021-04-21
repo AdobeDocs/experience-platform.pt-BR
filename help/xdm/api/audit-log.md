@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home; tópicos populares; api; API; XDM; sistema XDM; modelo de dados de experiência; Modelo de dados de experiência; Modelo de dados da experiência; Modelo de dados; Modelo de dados; auditoria; log de auditoria; log de alterações; log de alterações; rpc;
+keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema XDM, modelo de dados de experiência, modelo de dados de experiência, Modelo de dados de experiência, Modelo de dados, Modelo de dados, auditoria, log de auditoria, log de alterações, log de alterações, rpc;
 solution: Experience Platform
 title: Ponto de extremidade da API de log de auditoria
 description: O endpoint /auditlog na API do Registro de Schema permite recuperar uma lista cronológica de alterações feitas em um recurso XDM existente.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
-
 
 # Ponto de extremidade de log de auditoria
 
@@ -19,13 +19,13 @@ Para cada recurso do Experience Data Model (XDM), o [!DNL Schema Registry] mant�
 
 ## Introdução
 
-O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API da Experience Platform.
+O endpoint usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre cabeçalhos necessários que são necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 O ponto de extremidade `/auditlog` faz parte das chamadas de procedimento remoto (RPCs) suportadas pelo [!DNL Schema Registry]. Ao contrário de outros endpoints na API [!DNL Schema Registry], os endpoints RPC não exigem cabeçalhos adicionais como `Accept` ou `Content-Type` e não usam um `CONTAINER_ID`. Em vez disso, eles devem usar o namespace `/rpc`, conforme demonstrado na chamada de API abaixo.
 
 ## Recuperar um log de auditoria de um recurso
 
-Você pode recuperar um log de auditoria para qualquer classe, mixin, tipo de dados ou schema na Biblioteca de Esquemas especificando a ID do recurso no caminho de uma solicitação GET para o endpoint `/auditlog`.
+Você pode recuperar um log de auditoria para qualquer classe, mixin, tipo de dados ou schema na Biblioteca de Esquemas especificando a ID do recurso no caminho de uma solicitação de GET para o endpoint `/auditlog`.
 
 **Formato da API**
 

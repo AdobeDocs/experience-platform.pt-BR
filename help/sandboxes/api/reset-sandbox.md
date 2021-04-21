@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, redefinir sandbox
 solution: Experience Platform
 title: Redefinir uma sandbox na API
-topic: developer guide
+topic-legacy: developer guide
 description: As sandboxes de desenvolvimento têm um recurso de "redefinição de fábrica" que exclui todos os recursos não padrão de uma sandbox. Você pode redefinir uma sandbox fazendo uma solicitação de PUT que inclui o nome da sandbox no caminho da solicitação.
+exl-id: 3a82735d-a043-4fe4-9042-1eb373748d35
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
-
 
 # Redefinir uma sandbox na API
 

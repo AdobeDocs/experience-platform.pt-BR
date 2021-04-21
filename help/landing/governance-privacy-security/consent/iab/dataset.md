@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform, home, IAB, IAB 2.0, consentimento, Consentimento
+keywords: Experience Platform; home; IAB; IAB 2.0; consentimento; Consentimento
 solution: Experience Platform
 title: Criar conjuntos de dados para capturar dados de consentimento do IAB TCF 2.0
-topic: privacy events
+topic-legacy: privacy events
 description: Este documento fornece etapas para configurar os dois conjuntos de dados necessários para coletar dados de consentimento do IAB TCF 2.0.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
 
-
 # Criar conjuntos de dados para capturar dados de consentimento do IAB TCF 2.0
 
-Para que a Adobe Experience Platform processe dados de consentimento do cliente de acordo com o IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, esses dados devem ser enviados para conjuntos de dados cujos esquemas contêm campos de consentimento TCF 2.0.
+Para que o Adobe Experience Platform processe dados de consentimento do cliente de acordo com o IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, esses dados devem ser enviados para conjuntos de dados cujos esquemas contêm campos de consentimento TCF 2.0.
 
 Especificamente, dois conjuntos de dados são necessários para capturar dados de consentimento do TCF 2.0:
 
@@ -26,23 +26,23 @@ Este documento fornece etapas para configurar esses dois conjuntos de dados para
 
 ## Pré-requisitos
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Modelo de dados de experiência (XDM)](../../../../xdm/home.md): A estrutura padronizada pela qual  [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas da composição](../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os componentes básicos dos esquemas XDM.
-* [Serviço de identidade da Adobe Experience Platform](../../../../identity-service/home.md): Permite que você conecte identidades de clientes de suas diferentes fontes de dados entre dispositivos e sistemas.
+* [Serviço](../../../../identity-service/home.md) de identidade da Adobe Experience Platform: Permite que você conecte identidades de clientes de suas diferentes fontes de dados entre dispositivos e sistemas.
    * [Namespaces](../../../../identity-service/namespaces.md) de identidade: Os dados de identidade do cliente devem ser fornecidos em um namespace de identidade específico reconhecido pelo Serviço de identidade.
 * [Perfil](../../../../profile/home.md) do cliente em tempo real: Aproveitamento  [!DNL Identity Service] para permitir que você crie perfis de clientes detalhados a partir de seus conjuntos de dados em tempo real. [!DNL Real-time Customer Profile] extrai dados do Data Lake e mantém perfis de clientes em seu próprio armazenamento de dados separado.
 
-## [!UICONTROL Estrutura de ] detalhamento de privacidade  {#structure}
+## [!UICONTROL Privacy Details] estrutura de mistura  {#structure}
 
-A combinação [!UICONTROL Detalhes de privacidade] fornece campos de consentimento do cliente necessários para o suporte ao TCF 2.0. Há duas versões desse mixin: uma é compatível com a classe [!DNL XDM Individual Profile] e a outra com a classe [!DNL XDM ExperienceEvent].
+A combinação [!UICONTROL Privacy Details] fornece campos de consentimento do cliente necessários para o suporte ao TCF 2.0. Há duas versões desse mixin: uma é compatível com a classe [!DNL XDM Individual Profile] e a outra com a classe [!DNL XDM ExperienceEvent].
 
 As seções abaixo explicam a estrutura de cada uma dessas misturas, incluindo os dados que esperam durante a ingestão.
 
 ### Mistura de perfil {#profile-mixin}
 
-Para esquemas baseados em [!DNL XDM Individual Profile], a mesclagem [!UICONTROL Detalhes de privacidade] fornece um único campo do tipo mapa, `xdm:identityPrivacyInfo`, que mapeia as identidades do cliente para suas preferências de consentimento TCF. O JSON a seguir é um exemplo do tipo de dados que `xdm:identityPrivacyInfo` espera ao assimilar dados:
+Para schemas baseados em [!DNL XDM Individual Profile], o mixin [!UICONTROL Privacy Details] fornece um único campo do tipo mapa, `xdm:identityPrivacyInfo`, que mapeia identidades do cliente para suas preferências de consentimento TCF. O JSON a seguir é um exemplo do tipo de dados que `xdm:identityPrivacyInfo` espera ao assimilar dados:
 
 ```json
 {
@@ -65,7 +65,7 @@ Para esquemas baseados em [!DNL XDM Individual Profile], a mesclagem [!UICONTROL
 }
 ```
 
-Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` corresponde a um namespace de identidade reconhecido pelo Serviço de identidade. Por sua vez, cada propriedade de namespace deve ter pelo menos uma subpropriedade cuja chave corresponda ao valor de identidade correspondente do cliente para esse namespace. Neste exemplo, o cliente é identificado com um valor da Experience Cloud ID (`ECID`) de `13782522493631189`.
+Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` corresponde a um namespace de identidade reconhecido pelo Serviço de identidade. Por sua vez, cada propriedade de namespace deve ter pelo menos uma subpropriedade cuja chave corresponda ao valor de identidade correspondente do cliente para esse namespace. Neste exemplo, o cliente é identificado com um valor de Experience Cloud (`ECID`) de `13782522493631189`.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ No objeto de valor de identidade, há um único campo, `xdm:identityIABConsent`.
 
 ### Mistura de eventos {#event-mixin}
 
-Para esquemas baseados em [!DNL XDM ExperienceEvent], a mesclagem [!UICONTROL Detalhes de privacidade] fornece um único campo do tipo matriz: `xdm:consentStrings`. Cada item nessa matriz deve ser um objeto que contenha as propriedades necessárias para uma cadeia de consentimento TCF, semelhante ao campo `xdm:consentString` no mixin do perfil. Para obter mais informações sobre essas subpropriedades, consulte a [próxima seção](#consent-string).
+Para esquemas baseados em [!DNL XDM ExperienceEvent], a mixin [!UICONTROL Privacy Details] fornece um único campo do tipo matriz: `xdm:consentStrings`. Cada item nessa matriz deve ser um objeto que contenha as propriedades necessárias para uma cadeia de consentimento TCF, semelhante ao campo `xdm:consentString` no mixin do perfil. Para obter mais informações sobre essas subpropriedades, consulte a [próxima seção](#consent-string).
 
 ```json
 {
@@ -98,7 +98,7 @@ Para esquemas baseados em [!DNL XDM ExperienceEvent], a mesclagem [!UICONTROL De
 
 ### Propriedades da sequência de consentimento {#consent-string}
 
-Ambas as versões do mixin [!UICONTROL Detalhes de privacidade] exigem pelo menos um objeto que capture os campos necessários que descrevem a cadeia de consentimento TCF para o cliente. Essas propriedades são explicadas abaixo:
+Ambas as versões da mistura [!UICONTROL Privacy Details] exigem pelo menos um objeto que capture os campos necessários que descrevam a cadeia de consentimento da TCF para o cliente. Essas propriedades são explicadas abaixo:
 
 | Propriedade | Descrição |
 | --- | --- |
@@ -122,15 +122,15 @@ Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** na na
 
 ### Criar um esquema de consentimento baseado em registro {#profile-schema}
 
-Na área de trabalho **[!UICONTROL Schemas]**, selecione **[!UICONTROL Criar esquema]** e escolha **[!UICONTROL Perfil individual XDM]** na lista suspensa.
+No espaço de trabalho **[!UICONTROL Schemas]**, selecione **[!UICONTROL Create schema]** e escolha **[!UICONTROL XDM Individual Profile]** no menu suspenso.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-O [!DNL Schema Editor] é exibido, mostrando a estrutura do schema na tela. Use o painel direito para fornecer um nome e uma descrição para o schema e selecione **[!UICONTROL Adicionar]** na seção **[!UICONTROL Mixins]** no lado esquerdo da tela.
+O [!DNL Schema Editor] é exibido, mostrando a estrutura do schema na tela. Use o painel direito para fornecer um nome e uma descrição para o schema e selecione **[!UICONTROL Add]** na seção **[!UICONTROL Mixins]** no lado esquerdo da tela.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
 
-A caixa de diálogo **[!UICONTROL Adicionar mixin]** é exibida. Aqui, selecione **[!UICONTROL Detalhes de privacidade]** na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que o mixin for selecionado, selecione **[!UICONTROL Add mixin]**.
+A caixa de diálogo **[!UICONTROL Add mixin]** é exibida. Aqui, selecione **[!UICONTROL Privacy Details]** na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que o mixin for selecionado, selecione **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -141,13 +141,13 @@ A tela é exibida novamente, mostrando que o campo `identityPrivacyInfo` foi adi
 A partir daqui, repita as etapas acima para adicionar as seguintes combinações adicionais ao schema:
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL Região de captura de dados para o Perfil]
-* [!UICONTROL Detalhes demográficos]
-* [!UICONTROL Detalhes de contato pessoal]
+* [!UICONTROL Data capture region for Profile]
+* [!UICONTROL Demographic Details]
+* [!UICONTROL Personal Contact Details]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
 
-Se você estiver editando um esquema existente que já foi ativado para uso em [!DNL Real-time Customer Profile], selecione **[!UICONTROL Salvar]** para confirmar as alterações antes de pular para a seção em [criar um conjunto de dados com base no esquema de consentimento](#dataset). Se estiver criando um novo schema, continue seguindo as etapas descritas na subseção abaixo.
+Se você estiver editando um esquema existente que já foi ativado para uso em [!DNL Real-time Customer Profile], selecione **[!UICONTROL Save]** para confirmar as alterações antes de pular para a seção em [criar um conjunto de dados com base no seu esquema de consentimento](#dataset). Se estiver criando um novo schema, continue seguindo as etapas descritas na subseção abaixo.
 
 #### Ative o esquema para usar em [!DNL Real-time Customer Profile]
 
@@ -159,7 +159,7 @@ Para que a Platform associe os dados de consentimento que recebe a perfis de cli
 >
 >As etapas sobre como definir um campo de identidade primário para um schema podem ser encontradas no [tutorial de criação de schema](../../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-Para ativar o schema para [!DNL Profile], selecione o nome do schema no painel à esquerda para abrir a caixa de diálogo **[!UICONTROL Schema properties]** no painel à direita. Aqui, selecione o botão de alternância **[!UICONTROL Profile]**.
+Para ativar o schema para [!DNL Profile], selecione o nome do schema no painel à esquerda para abrir a caixa de diálogo **[!UICONTROL Schema properties]** no painel à direita. Aqui, selecione o botão **[!UICONTROL Profile]** de alternância.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-enable-profile.png)
 
@@ -173,15 +173,15 @@ Finalmente, selecione **[!UICONTROL Save]** para confirmar as alterações.
 
 ### Criar um esquema de consentimento baseado em séries de tempo {#event-schema}
 
-No espaço de trabalho **[!UICONTROL Schemas]**, selecione **[!UICONTROL Criar esquema]** e escolha **[!UICONTROL XDM ExperienceEvent]** no menu suspenso.
+No espaço de trabalho **[!UICONTROL Schemas]**, selecione **[!UICONTROL Create schema]** e escolha **[!UICONTROL XDM ExperienceEvent]** no menu suspenso.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-O [!DNL Schema Editor] é exibido, mostrando a estrutura do schema na tela. Use o painel direito para fornecer um nome e uma descrição para o schema e selecione **[!UICONTROL Adicionar]** na seção **[!UICONTROL Mixins]** no lado esquerdo da tela.
+O [!DNL Schema Editor] é exibido, mostrando a estrutura do schema na tela. Use o painel direito para fornecer um nome e uma descrição para o schema e selecione **[!UICONTROL Add]** na seção **[!UICONTROL Mixins]** no lado esquerdo da tela.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
 
-A caixa de diálogo **[!UICONTROL Adicionar mixin]** é exibida. Aqui, selecione **[!UICONTROL Detalhes de privacidade]** na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois de escolher uma mistura, selecione **[!UICONTROL Add mixin]**.
+A caixa de diálogo **[!UICONTROL Add mixin]** é exibida. Aqui, selecione **[!UICONTROL Privacy Details]** na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois de escolher uma mistura, selecione **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -192,11 +192,11 @@ A tela é exibida novamente, mostrando que a matriz `consentStrings` foi adicion
 A partir daqui, repita as etapas acima para adicionar as seguintes combinações adicionais ao schema:
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL Detalhes do ambiente]
-* [!UICONTROL Detalhes da Web]
-* [!UICONTROL Detalhes da implementação]
+* [!UICONTROL Environment Details]
+* [!UICONTROL Web Details]
+* [!UICONTROL Implementation Details]
 
-Depois que as combinações forem adicionadas, conclua selecionando **[!UICONTROL Save]**.
+Depois que as mixins tiverem sido adicionadas, conclua selecionando **[!UICONTROL Save]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
 
@@ -204,25 +204,25 @@ Depois que as combinações forem adicionadas, conclua selecionando **[!UICONTRO
 
 Para cada um dos esquemas obrigatórios descritos acima, você deve criar um conjunto de dados que, em última análise, assimilará os dados de consentimento de seus clientes. O conjunto de dados com base no esquema de registro deve ser habilitado para [!DNL Real-time Customer Profile], enquanto o conjunto de dados com base no esquema de série de tempo **não deve** ser [!DNL Profile] habilitado.
 
-Para começar, selecione **[!UICONTROL Datasets]** na navegação à esquerda e selecione **[!UICONTROL Criar conjunto de dados]** no canto superior direito.
+Para começar, selecione **[!UICONTROL Datasets]** na navegação à esquerda e selecione **[!UICONTROL Create dataset]** no canto superior direito.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create.png)
 
-Na próxima página, selecione **[!UICONTROL Criar conjunto de dados do schema]**.
+Na próxima página, selecione **[!UICONTROL Create dataset from schema]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create-from-schema.png)
 
-O workflow **[!UICONTROL Criar conjunto de dados a partir do schema]** é exibido, começando na etapa **[!UICONTROL Selecionar schema]**. Na lista fornecida, localize um dos esquemas de consentimento criados anteriormente. Como opção, você pode usar a barra de pesquisa para restringir os resultados e localizar o esquema mais fácil. Selecione o botão de opção ao lado do schema desejado e selecione **[!UICONTROL Next]** para continuar.
+O workflow **[!UICONTROL Create dataset from schema]** é exibido, começando na etapa **[!UICONTROL Select schema]**. Na lista fornecida, localize um dos esquemas de consentimento criados anteriormente. Como opção, você pode usar a barra de pesquisa para restringir os resultados e localizar o esquema mais fácil. Selecione o botão de opção ao lado do schema desejado e selecione **[!UICONTROL Next]** para continuar.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-select-schema.png)
 
-A etapa **[!UICONTROL Configurar conjunto de dados]** é exibida. Forneça um nome e uma descrição exclusivos e facilmente identificáveis para o conjunto de dados antes de selecionar **[!UICONTROL Finish]**.
+A etapa **[!UICONTROL Configure dataset]** é exibida. Forneça um nome e uma descrição exclusivos e facilmente identificáveis para o conjunto de dados antes de selecionar **[!UICONTROL Finish]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
 A página de detalhes do conjunto de dados recém-criado é exibida. Se o conjunto de dados se basear no esquema da série de tempo, o processo será concluído. Se o conjunto de dados se baseia no esquema de registro, a etapa final no processo é habilitar o conjunto de dados para uso em [!DNL Real-time Customer Profile].
 
-No painel direito, selecione o botão **[!UICONTROL Profile]** e selecione **[!UICONTROL Enable]** no provedor de confirmação para habilitar o schema para [!DNL Profile].
+No painel direito, selecione a opção **[!UICONTROL Profile]** e selecione **[!UICONTROL Enable]** no provedor de confirmação para habilitar o schema para [!DNL Profile].
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 

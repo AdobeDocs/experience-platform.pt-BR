@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
-title: Fundamentos da API da Experience Platform
-topic: getting started
-description: Este documento fornece uma breve visão geral de algumas tecnologias e sintaxes subjacentes envolvidas com as APIs da Experience Platform.
+title: Fundamentos da API do Experience Platform
+topic-legacy: getting started
+description: Este documento fornece uma breve visão geral de algumas tecnologias e sintaxes subjacentes envolvidas com APIs do Experience Platform.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
 
+# Fundamentos da API do Experience Platform
 
-# Fundamentos da API da Experience Platform
-
-As APIs da Adobe Experience Platform empregam várias tecnologias e sintaxes subjacentes que são importantes para entender a fim de gerenciar com eficácia os recursos [!DNL Platform] baseados em JSON. Este documento fornece uma breve visão geral dessas tecnologias, bem como links para a documentação externa para obter mais informações.
+As APIs do Adobe Experience Platform empregam várias tecnologias e sintaxes subjacentes que são importantes para entender a fim de gerenciar com eficácia os recursos [!DNL Platform] baseados em JSON. Este documento fornece uma breve visão geral dessas tecnologias, bem como links para a documentação externa para obter mais informações.
 
 ## Ponteiro JSON {#json-pointer}
 
@@ -98,7 +98,7 @@ O JSON a seguir representa um esquema XDM simplificado cujos campos podem ser re
 
 ## Patch JSON {#json-patch}
 
-Há muitas operações PATCH para APIs [!DNL Platform] que aceitam objetos de patch JSON para suas cargas de solicitação. O Patch JSON é um formato padronizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para descrever alterações em um documento JSON. Ela permite definir atualizações parciais para o JSON sem precisar enviar o documento inteiro em um corpo da solicitação.
+Há muitas operações do PATCH para APIs [!DNL Platform] que aceitam objetos de patch JSON para suas cargas de solicitação. O Patch JSON é um formato padronizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para descrever alterações em um documento JSON. Ela permite definir atualizações parciais para o JSON sem precisar enviar o documento inteiro em um corpo da solicitação.
 
 ### Exemplo de objeto de patch JSON
 
@@ -109,7 +109,7 @@ Há muitas operações PATCH para APIs [!DNL Platform] que aceitam objetos de pa
 }
 ```
 
-* `op`: O tipo de operação de patch. Embora o Patch JSON seja compatível com vários tipos de operação diferentes, nem todas as operações PATCH nas APIs [!DNL Platform] são compatíveis com cada tipo de operação. Os tipos de operação disponíveis são:
+* `op`: O tipo de operação de patch. Embora o Patch JSON seja compatível com vários tipos de operação diferentes, nem todas as operações do PATCH nas APIs [!DNL Platform] são compatíveis com cada tipo de operação. Os tipos de operação disponíveis são:
    * `add`
    * `remove`
    * `replace`

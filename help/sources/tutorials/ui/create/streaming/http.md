@@ -2,14 +2,14 @@
 keywords: Experience Platform, home, tópicos populares, conexão de transmissão, criar conexão de transmissão, guia da interface do usuário, tutorial, criar uma conexão de transmissão, assimilação de transmissão, ingestão;
 solution: Experience Platform
 title: Criar uma conexão de transmissão usando a interface do usuário
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este guia da interface do usuário ajudará você a criar uma conexão de transmissão usando o Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 translation-type: tm+mt
-source-git-commit: 3b71f1399a770e097cf75827e626d6d4e289ab77
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---

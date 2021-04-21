@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;filtro;filtrar dados;Filtrar dados;Filtrar dados
+keywords: Experience Platform, home, tópicos populares, filtro, filtro, filtrar dados, Filtrar dados
 solution: Experience Platform
-title: Objetos do catálogo de listas
-topic: developer guide
-description: É possível recuperar uma lista de todos os objetos disponíveis de um tipo específico por meio de uma única chamada de API, com a prática recomendada de incluir filtros que limitam o tamanho da resposta.
+title: Listar objetos do catálogo
+topic-legacy: developer guide
+description: Você pode recuperar uma lista de todos os objetos disponíveis de um tipo específico por meio de uma única chamada de API, com a prática recomendada de incluir filtros que limitam o tamanho da resposta.
+exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 1%
 
 ---
 
+# Listar objetos do catálogo
 
-# objetos do Catálogo de listas
-
-É possível recuperar uma lista de todos os objetos disponíveis de um tipo específico por meio de uma única chamada de API, com a prática recomendada de incluir filtros que limitam o tamanho da resposta.
+Você pode recuperar uma lista de todos os objetos disponíveis de um tipo específico por meio de uma única chamada de API, com a prática recomendada de incluir filtros que limitam o tamanho da resposta.
 
 **Formato da API**
 
@@ -26,8 +26,8 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser listado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Um parâmetro de query usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por E comercial (`&`). Consulte o guia em [filtrar dados do catálogo](filter-data.md) para obter mais informações. |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser listado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Um parâmetro de consulta usado para filtrar os resultados retornados na resposta. Vários parâmetros são separados por &quot;E&quot; comercial (`&`). Consulte o guia em [filtrar dados do catálogo](filter-data.md) para obter mais informações. |
 
 **Solicitação**
 
@@ -44,11 +44,11 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma lista de [!DNL Catalog] objetos na forma de pares de valores chave, filtrados pelos parâmetros de query fornecidos na solicitação. Para cada par de chave-valor, a chave representa um identificador exclusivo para o objeto [!DNL Catalog] em questão, que pode ser usado em outra chamada para [visualização desse objeto específico](look-up-object.md) para obter mais detalhes.
+Uma resposta bem-sucedida retorna uma lista de objetos [!DNL Catalog] na forma de pares de valores-chave, filtrados pelos parâmetros de consulta fornecidos na solicitação. Para cada par de valor-chave, a chave representa um identificador exclusivo para o objeto [!DNL Catalog] em questão, que pode ser usado em outra chamada para [exibir esse objeto específico](look-up-object.md) para obter mais detalhes.
 
 >[!NOTE]
 >
->Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pelo query `properties`, a resposta retornará somente as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
+>Se um objeto retornado não contiver uma ou mais das propriedades solicitadas indicadas pela query `properties`, a resposta retornará apenas as propriedades solicitadas que ela inclui, conforme mostrado em ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** abaixo.
 
 ```json
 {

@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, schema, esquema, mixin, Mixin, mixins, mixins, tipo de dados, tipos de dados, tipos de dados, tipo de dados, design de esquema, tipo de dados, tipo de dados, tipo de dados, tipo de dados, esquemas, Esquemas, design de esquema, mapa, Mapa;
 solution: Experience Platform
 title: Restrições de Tipo de Campo XDM
-topic: overview
+topic-legacy: overview
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
+exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1054'
 ht-degree: 1%
 
 ---
-
 
 # Restrições do tipo de campo XDM
 

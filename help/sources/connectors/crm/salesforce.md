@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
+keywords: Experience Platform, home, tópicos populares, esquema de crm, crm, CRM, salesforce, Salesforce
 solution: Experience Platform
-title: Visão Geral do Conector de Origem do Salesforce
-topic: overview
-description: Saiba como conectar o Salesforce à Adobe Experience Platform usando APIs ou a interface do usuário.
+title: Visão geral do conector de origem do Salesforce
+topic-legacy: overview
+description: Saiba como conectar o Salesforce ao Adobe Experience Platform usando APIs ou a interface do usuário.
+exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Salesforce] conector
 
-A Adobe Experience Platform permite que os dados sejam ingeridos de fontes externas e, ao mesmo tempo, fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-[!DNL Experience Platform] fornece suporte para assimilar dados de um sistema CRM de terceiros. O suporte para provedores CRM inclui [!DNL Salesforce].
+[!DNL Experience Platform] O oferece suporte para assimilar dados de um sistema de CRM de terceiros. O suporte para provedores de CRM inclui [!DNL Salesforce].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à sua lista de permissões pode resultar em erros ou em não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como conectar [!DNL Salesforce] a [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Salesforce] a [!DNL Platform] usando APIs ou a interface do usuário:
 
 ## Conecte [!DNL Salesforce] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem do Salesforce usando a API de Serviço de Fluxo](../../tutorials/api/create/crm/salesforce.md)
-- [Explore um sistema CRM usando a API de Serviço de Fluxo](../../tutorials/api/explore/crm.md)
-- [Coletar dados do CRM usando a API de Serviço de Fluxo](../../tutorials/api/collect/crm.md)
+- [Criar uma conexão de origem do Salesforce usando a API do Serviço de Fluxo](../../tutorials/api/create/crm/salesforce.md)
+- [Explorar um sistema CRM usando a API do Serviço de Fluxo](../../tutorials/api/explore/crm.md)
+- [Coletar dados do CRM usando a API do Serviço de Fluxo](../../tutorials/api/collect/crm.md)
 
 ## Conecte [!DNL Salesforce] a [!DNL Platform] usando a interface do usuário
 

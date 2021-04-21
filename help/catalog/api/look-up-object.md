@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catálogo;pesquisa de objetos;api
+keywords: Experience Platform, home, tópicos populares, catálogo, pesquisa de objeto, api
 solution: Experience Platform
 title: Pesquisar um objeto de catálogo
-topic: developer guide
-description: 'Se você souber o identificador exclusivo de um objeto de Catálogo específico, poderá executar uma solicitação de GET para visualização dos detalhes desse objeto. '
+topic-legacy: developer guide
+description: Se você souber o identificador exclusivo de um objeto de Catálogo específico, poderá executar uma solicitação de GET para exibir os detalhes desse objeto.
+exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 2%
 
 ---
 
-
 # Pesquisar um objeto de catálogo
 
-Se você souber o identificador exclusivo de um objeto [!DNL Catalog] específico, poderá executar uma solicitação de GET para visualização dos detalhes desse objeto.
+Se você souber o identificador exclusivo de um objeto [!DNL Catalog] específico, poderá executar uma solicitação GET para exibir os detalhes desse objeto.
 
 >[!NOTE]
 >
->Ao exibir objetos específicos, a prática recomendada é [filtrar por propriedades](filter-data.md) e retornar somente as propriedades em que você está interessado.
+>Ao visualizar objetos específicos, ainda é uma prática recomendada [filtrar por propriedades](filter-data.md) e retornar somente as propriedades em que você está interessado.
 
 **Formato da API**
 
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser recuperado. Objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | O tipo de objeto [!DNL Catalog] a ser recuperado. Os objetos válidos são: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | O identificador do objeto específico que você deseja recuperar. |
 
 **Solicitação**
@@ -68,4 +68,4 @@ Uma resposta bem-sucedida retorna o conjunto de dados especificado com apenas o 
 
 >[!NOTE]
 >
->As propriedades cujos valores recebem o prefixo `@` representam objetos interrelacionados. Consulte a seção do apêndice em [exibição de objetos interrelacionados](appendix.md#view-interrelated-objects) para obter etapas sobre como visualização os detalhes desses objetos.
+>As propriedades cujos valores têm o prefixo `@` representam objetos inter-relacionados. Consulte a seção do apêndice em [visualizar objetos interrelacionados](appendix.md#view-interrelated-objects) para obter etapas sobre como visualizar os detalhes desses objetos.

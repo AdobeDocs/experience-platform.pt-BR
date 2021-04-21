@@ -1,58 +1,58 @@
 ---
-keywords: Experience Platform;introdução;atribuição ai;tópicos populares
+keywords: Experience Platform, introdução, ai de atribuição, tópicos populares
 solution: Experience Platform, Intelligent Services
 title: Introdução ao Attribution AI
-topic: Getting started
-description: Os guias a seguir exigem uma compreensão dos vários serviços da Adobe Experience Platform envolvidos com o uso do Attribution AI. Antes de iniciar os tutoriais, reveja as seguintes documentos.
+topic-legacy: Getting started
+description: Os guias a seguir exigem uma compreensão dos vários serviços da Adobe Experience Platform envolvidos com o uso do Attribution AI. Antes de iniciar os tutoriais, revise os seguintes documentos.
+exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-
 # Introdução ao Attribution AI
 
-Os guias a seguir exigem uma compreensão dos vários [!DNL Adobe Experience Platform] serviços envolvidos com o uso do Attribution AI. Antes de iniciar os tutoriais, reveja as seguintes documentos:
+Os guias a seguir exigem uma compreensão dos vários serviços [!DNL Adobe Experience Platform] envolvidos com o uso do Attribution AI. Antes de iniciar os tutoriais, revise os seguintes documentos:
 
-- [Visão geral](../../xdm/home.md) do sistema do Experience Data Model (XDM): O XDM é a estrutura fundamental que permite,  [!DNL Adobe Experience Cloud]acionado pelo Experience Platform, entregar a mensagem certa para a pessoa certa, no canal certo, no momento exato. A metodologia na qual o Experience Platform é criado, o Sistema XDM, opera schemas do Modelo de Dados da Experiência para uso pelos serviços da plataforma.
-- [Noções básicas da composição](../../xdm/schema/composition.md) do schema: Este documento fornece uma introdução aos schemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados em  [!DNL Adobe Experience Platform].
-- [Construção de schemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial aborda as etapas para a criação de um schema usando o Editor de Schemas no Experience Platform.
+- [Visão geral](../../xdm/home.md) do sistema do Experience Data Model (XDM): O XDM é a estrutura fundamental que permite,  [!DNL Adobe Experience Cloud]viabilizada pelo Experience Platform, enviar a mensagem certa para a pessoa certa, no canal certo, no momento certo. A metodologia na qual o Experience Platform é criado, o Sistema XDM, opera esquemas do Experience Data Model para uso pelos serviços da plataforma.
+- [Noções básicas da composição](../../xdm/schema/composition.md) do schema: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no  [!DNL Adobe Experience Platform].
+- [Criação de schemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial aborda as etapas para criar um esquema usando o Editor de esquemas no Experience Platform.
 
-O Attribution AI exige que os conjuntos de dados estejam em conformidade com o schema Consumer Experience Eventos (CEE), que é uma combinação no [Modelo de Dados de Experiência](../../xdm/home.md) (XDM). Entre em contato com o suporte ao Adobe em attributionai-support@adobe.com para implementar ou fazer alterações nesses dados. Se os dados de gastos de mídia estiverem presentes, você poderá fazer mais análises, como receita incremental e ROI. Se os dados do perfil do cliente estiverem disponíveis, você poderá atribuir créditos adicionais ao nível do perfil do cliente.
+O Attribution AI requer que os conjuntos de dados estejam em conformidade com o esquema Eventos de experiência do consumidor (CEE), que é uma combinação no [Modelo de dados de experiência](../../xdm/home.md) (XDM). Entre em contato com o suporte ao Adobe em attributionai-support@adobe.com para implementar ou fazer alterações nesses dados. Se os dados de gasto de mídia estiverem presentes, você poderá fazer mais análises, como receita incremental e ROI. Se os dados do perfil do cliente estiverem disponíveis, você poderá atribuir mais créditos ao nível do perfil do cliente.
 
 ## Terminologia
 
-- **Evento de conversão:** qualquer evento digital ou interação digital que os clientes fazem para indicar um marco para uma meta, como registros de conferência. Exemplos adicionais incluem conversões pagas, inscrições em conta gratuita ou qualificação para uma característica.
+- **Evento de conversão:** qualquer evento digital ou interação digital que os clientes fazem para indicar um marco em direção a uma meta, como registros de conferência. Exemplos adicionais incluem conversões pagas, inscrições em conta gratuita ou qualificação para uma característica.
 
-- **Touchpoint:** Qualquer evento digital ou interação digital que os clientes fazem no caminho para uma meta. Os exemplos incluem esforços de marketing relacionados à compra, impressões de exibição de anúncios visualizadas e cliques de pesquisa pagos.
+- **Ponto de contato:** qualquer evento digital ou interação digital que os clientes fazem no caminho para uma meta. Os exemplos incluem esforços de marketing relacionados ao antes da compra, impressões de exibição de anúncios visualizadas e cliques de pesquisa paga.
 
-## Download de pontuações de Attribution AI
+## Download de pontuações do Attribution AI
 
 >[!NOTE]
 >
->Se não precisar baixar pontuações brutas, ignore essa etapa e prossiga para as [próximas etapas](#next-steps).
+>Se não precisar baixar pontuações brutas, ignore esta etapa e prossiga para as [próximas etapas](#next-steps).
 
-O download das pontuações do Attribution AI é feito por meio de uma combinação de chamadas de API. Para fazer chamadas para APIs de plataforma, você deve primeiro concluir o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, como mostrado abaixo:
+O download das pontuações do Attribution AI é feito por meio de uma combinação de chamadas de API. Para fazer chamadas para APIs da plataforma, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos os recursos no Experience Platform são isolados para caixas de proteção virtuais específicas. Todas as solicitações para APIs de plataforma exigem um cabeçalho que especifique o nome da caixa de proteção em que a operação ocorrerá:
+Todos os recursos no Experience Platform são isolados para sandboxes virtuais específicas. Todas as solicitações para APIs da plataforma exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre caixas de proteção na Plataforma, consulte a [documentação de visão geral da caixa de proteção](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes na Platform, consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
-### Lendo chamadas de exemplo da API
+### Lendo exemplos de chamadas de API
 
-Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de amostra retornado em respostas de API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de amostra, consulte a seção em [como ler chamadas de API de exemplo](../../landing/troubleshooting.md) no guia de solução de problemas do Experience Platform.
+Este guia fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas {#next-steps}
 
-Quando estiver pronto e tiver todas as suas credenciais e schemas no lugar, start seguindo o [guia da interface do usuário do Attribution AI](./user-guide.md). Este guia aborda a criação de uma instância e o envio para treinamento e pontuação.
+Quando estiver pronto e tiver todas as suas credenciais e esquemas em vigor, comece seguindo o [guia de interface do usuário do Attribution AI](./user-guide.md). Este guia o orienta a criar uma instância e enviá-la para treinamento e pontuação.

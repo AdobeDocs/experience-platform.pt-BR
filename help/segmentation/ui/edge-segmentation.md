@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Os seguintes tipos de query são **não** compatíveis atualmente com a segmenta
 | Tipo de consulta | Detalhes |
 | ---------- | ------- |
 | Janela de tempo relativo | Se uma consulta se refere a uma janela de tempo, ela não pode ser avaliada usando a segmentação de borda. |
-| Negação | Se uma consulta tiver uma negação, ela não poderá ser avaliada usando a segmentação de borda. |
+| Negação | Se uma consulta tiver uma negação ou um evento `not`, ela não poderá ser avaliada usando a segmentação de borda. |
 | Vários eventos | Se uma consulta contiver mais de um evento, ela não poderá ser avaliada usando a segmentação de borda. |
 
 ## Próximas etapas

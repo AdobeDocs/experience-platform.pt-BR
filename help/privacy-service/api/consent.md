@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Saiba como gerenciar solicitações de consentimento do cliente para aplicativos Experience Cloud usando a API do Privacy Service.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,8 @@ curl -X POST \
 | `entities` | Uma matriz de objetos que indica os usuários aos quais a solicitação de consentimento se aplica. Cada objeto contém um `namespace` e uma matriz de `values` para corresponder usuários individuais a esse namespace. |
 | `nameSpace` | Cada objeto na matriz `entities` deve conter um dos [namespaces de identidade padrão](./appendix.md#standard-namespaces) reconhecidos pela API do Privacy Service. |
 | `values` | Uma matriz de valores para cada usuário, correspondente ao `nameSpace` fornecido. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >

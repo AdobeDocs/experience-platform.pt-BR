@@ -7,7 +7,7 @@ type: Tutorial
 description: A Estrutura de insights do modelo fornece ao cientista de dados ferramentas no Data Science Workspace para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 A tabela a seguir indica as métricas padrão para cada classe. Um usuário também pode usar os valores na coluna `evaluation.metric` para ativar uma métrica específica.
 
 | `evaluator.class` | Métricas padrão | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Precisão <br>-Receiver Operating Characteres <br>-Área Sob as Características Operacionais do Receptor | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Precisão <br>-Receiver Operating Characteres <br>-Área Sob as Características Operacionais do Receptor | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` | -Precisão média (MAP) <br>-Ganho cumulativo descontado normalizado <br>-Classificação recíproca média <br>-Métrica K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ Os dados são carregados pela primeira vez em um conjunto de dados de uma fonte,
 O [!DNL Sensei Model Insights Framework] oferecerá suporte a um modelo padrão para cada tipo de algoritmo de aprendizado de máquina. A tabela abaixo mostra as classes comuns de algoritmo de aprendizagem de máquina de alto nível e as métricas e visualizações de avaliação correspondentes.
 
 | Tipo de algoritmo ML | Métricas de avaliação | Visualizações |
---- | --- | ---
+| --- | --- | --- |
 | Regressão | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Curva de sobreposição de valores previstos e reais |
 | Classificação binária | - Matriz de conversão<br>- Precisão-recuperação<br>- Precisão<br>- Pontuação F (especificamente F1,F2)<br>- AUC<br>- ROC | Curva de ROC e matriz de confusão |
 | Classificação multiclasse | -Matriz de conversão <br>- Para cada classe: <br>- precisão de chamada <br>- pontuação F (especificamente F1, F2) | Curva de ROC e matriz de confusão |

@@ -6,7 +6,7 @@ type: Tutorial
 description: O Adobe Experience Platform permite criar e criar pipelines de recursos personalizados para executar engenharia de recursos em escala por meio da Execução da Estrutura de Aprendizagem de Máquinas do Sensei. Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para criar um pipeline de recursos personalizados usando o SDK de criação de modelo no PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
@@ -163,7 +163,6 @@ class MyDataLoader(DataLoader):
 Um DatasetTransformer fornece a lógica para transformar um DataFrame de entrada e retorna um DataFrame derivado novo. Essa classe pode ser implementada para funcionar em conjunto com um FeaturePipelineFactory, funcionar como o único componente de engenharia de recursos ou você pode optar por não implementar essa classe.
 
 O exemplo a seguir estende a classe DatasetTransformer :
-
 
 **Exemplo de PySpark**
 

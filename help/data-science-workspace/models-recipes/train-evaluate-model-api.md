@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas da API de aprendizado de máquina do Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1235'
 ht-degree: 1%
 
 ---
@@ -41,16 +41,14 @@ Estaremos consumindo as APIs para criar uma Execução de experiência para trei
 
 >[!NOTE]
 >
->Os termos &quot;Mecanismo&quot;, &quot;Instância MLI&quot;, &quot;MLService&quot;, &quot;Experimento&quot; e &quot;Modelo&quot; são chamados de termos diferentes na interface do usuário. Se você for da interface do usuário, a tabela a seguir mapeará as diferenças.
-> 
-> | Termo da interface do usuário | Termo da API |
-> --- | ---
-> | Receita | Mecanismo |
-> | Modelo | InstânciaMLI |
-> | Execuções de treinamento | Experimento |
-> | Serviço de | MLService |
+>Os termos &quot;Mecanismo&quot;, &quot;Instância MLI&quot;, &quot;MLService&quot;, &quot;Experimento&quot; e &quot;Modelo&quot; são chamados de termos diferentes na interface do usuário. Se você vem da interface do usuário, a tabela a seguir mapeia as diferenças.
 
-
+| Termo da interface do usuário | Termo da API |
+| --- | --- |
+| Receita | Mecanismo |
+| Modelo | InstânciaMLI |
+| Execuções de treinamento | Experimento |
+| Serviço de | MLService |
 
 ### Criar uma instância MLI
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 >No `{JSON_PAYLOAD}`, definimos parâmetros usados para treinamento e pontuação na matriz `tasks`. O `{ENGINE_ID}` é a ID do Mecanismo que você deseja usar e o campo `tag` é um parâmetro opcional usado para identificar a Instância.
 
-A resposta conterá o `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInstâncias de modelo com configurações diferentes.
+A resposta contém o `{INSTANCE_ID}` que representa a instância MLI criada. É possível criar várias MLInstâncias de modelo com configurações diferentes.
 
 **Resposta**
 

@@ -6,9 +6,9 @@ topic-legacy: datasets
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -32,22 +32,22 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 
 Na interface [!DNL Experience Platform], clique em **[!UICONTROL Datasets]** no painel de navegação esquerdo para abrir o painel **[!UICONTROL Datasets]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo seu nome, o esquema ao qual o conjunto de dados adere e o status da execução de assimilação mais recente.
 
-![](../images/datasets/user-guide/browse_datasets.png)
+![](../images/datasets/user-guide/browse-datasets.png)
 
 Clique no nome de um conjunto de dados para acessar a tela **[!UICONTROL Dataset activity]** e ver os detalhes do conjunto de dados selecionado. A guia activity inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
 
-![](../images/datasets/user-guide/dataset_activity_1.png)
-![](../images/datasets/user-guide/dataset_activity_2.png)
+![](../images/datasets/user-guide/dataset-activity-1.png)
+![](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## Visualizar um conjunto de dados
 
 Na tela **[!UICONTROL Dataset activity]**, clique em **[!UICONTROL Preview dataset]** próximo ao canto superior direito da tela para visualizar até 100 linhas de dados. Se o conjunto de dados estiver vazio, o link de visualização será desativado e, em vez disso, dirá que a visualização não está disponível.
 
-![](../images/datasets/user-guide/click_to_preview.png)
+![](../images/datasets/user-guide/click-to-preview.png)
 
 Na janela de pré-visualização, a exibição hierárquica do esquema do conjunto de dados é mostrada à direita.
 
-![](../images/datasets/user-guide/preview_dataset.png)
+![](../images/datasets/user-guide/preview-dataset.png)
 
 Para métodos mais robustos de acesso aos seus dados, [!DNL Experience Platform] fornece serviços downstream como [!DNL Query Service] e [!DNL JupyterLab] para explorar e analisar dados. Consulte os seguintes documentos para obter mais informações:
 
@@ -58,7 +58,7 @@ Para métodos mais robustos de acesso aos seus dados, [!DNL Experience Platform]
 
 Para criar um novo conjunto de dados, comece clicando em **[!UICONTROL Create dataset]** no painel **[!UICONTROL Datasets]**.
 
-![](../images/datasets/user-guide/click_to_create.png)
+![](../images/datasets/user-guide/click-to-create.png)
 
 Na próxima tela, você verá as duas opções a seguir para criar um novo conjunto de dados:
 
@@ -69,25 +69,25 @@ Na próxima tela, você verá as duas opções a seguir para criar um novo conju
 
 Na tela **[!UICONTROL Create dataset]**, clique em **[!UICONTROL Create dataset from schema]** para criar um novo conjunto de dados vazio.
 
-![](../images/datasets/user-guide/create_dataset_schema.png)
+![](../images/datasets/user-guide/create-dataset-schema.png)
 
 A etapa **[!UICONTROL Select schema]** é exibida. Navegue pela lista de esquema e selecione o esquema que o conjunto de dados seguirá antes de clicar em **[!UICONTROL Next]**.
 
-![](../images/datasets/user-guide/select_schema.png)
+![](../images/datasets/user-guide/select-schema.png)
 
 A etapa **[!UICONTROL Configure dataset]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados, em seguida, clique em **[!UICONTROL Finish]** para criar o conjunto de dados.
 
-![](../images/datasets/user-guide/configure_dataset_schema.png)
+![](../images/datasets/user-guide/configure-dataset-schema.png)
 
 ### Criar um conjunto de dados com um arquivo CSV {#csv}
 
 Quando um conjunto de dados é criado usando um arquivo CSV, um esquema ad hoc é criado para fornecer ao conjunto de dados uma estrutura que corresponda ao arquivo CSV fornecido. Na tela **[!UICONTROL Create dataset]**, clique na caixa que diz **[!UICONTROL Create dataset from CSV file]**.
 
-![](../images/datasets/user-guide/create_dataset_csv.png)
+![](../images/datasets/user-guide/create-dataset-csv.png)
 
 A etapa **[!UICONTROL Configure]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados, em seguida, clique em **[!UICONTROL Next]**.
 
-![](../images/datasets/user-guide/configure_dataset_csv.png)
+![](../images/datasets/user-guide/configure-dataset-csv.png)
 
 A etapa **[!UICONTROL Add data]** é exibida. Faça upload do arquivo CSV arrastando-o e soltando-o no centro da tela ou clique em **[!UICONTROL Browse]** para explorar seu diretório de arquivos. O arquivo pode ter até dez gigabytes de tamanho. Depois que o arquivo CSV for carregado, clique em **[!UICONTROL Save]** para criar o conjunto de dados.
 
@@ -95,7 +95,7 @@ A etapa **[!UICONTROL Add data]** é exibida. Faça upload do arquivo CSV arrast
 >
 >Os nomes das colunas CSV devem começar com caracteres alfanuméricos e podem conter somente letras, números e sublinhados.
 
-![](../images/datasets/user-guide/add_csv_data.png)
+![](../images/datasets/user-guide/add-csv-data.png)
 
 ## Ativar um conjunto de dados para o Perfil do cliente em tempo real {#enable-profile}
 
@@ -112,7 +112,7 @@ Para ativar um conjunto de dados para o Perfil, acesse a tela **[!UICONTROL Data
 >
 >Se um conjunto de dados já contiver dados e estiver ativado para [!DNL Profile], os dados existentes não serão consumidos automaticamente por [!DNL Profile]. Depois que um conjunto de dados for ativado para [!DNL Profile], é recomendável assimilar novamente todos os dados existentes para contribuir com os perfis do cliente.
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+![](../images/datasets/user-guide/enable-dataset-profiles.png)
 
 ## Gerenciar e aplicar o controle de dados em um conjunto de dados
 
@@ -126,11 +126,11 @@ Você pode excluir um conjunto de dados acessando primeiro sua tela **[!UICONTRO
 >
 >Os conjuntos de dados criados e utilizados por aplicativos e serviços do Adobe (como Adobe Analytics, Adobe Audience Manager ou [!DNL Offer Decisioning]) não podem ser excluídos.
 
-![](../images/datasets/user-guide/delete_dataset.png)
+![](../images/datasets/user-guide/delete-dataset.png)
 
 Uma caixa de confirmação é exibida. Clique em **[!UICONTROL Delete]** para confirmar a exclusão do conjunto de dados.
 
-![](../images/datasets/user-guide/confirm_delete.png)
+![](../images/datasets/user-guide/confirm-delete.png)
 
 ## Excluir um conjunto de dados habilitado para perfil
 
@@ -142,15 +142,15 @@ Você pode excluir um conjunto de dados somente do armazenamento [!DNL Profile] 
 
 Na interface do usuário [!DNL Experience Platform], clique em **[!UICONTROL Monitoring]** na navegação à esquerda. O painel **[!UICONTROL Monitoring]** permite visualizar os status dos dados de entrada da assimilação em lote ou streaming. Para exibir os status de lotes individuais, clique em **[!UICONTROL Batch end-to-end]** ou **[!UICONTROL Streaming end-to-end]**. Os painéis listam todas as execuções de assimilação em lote ou streaming, incluindo aquelas que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada listagem fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados de destino e o número de registros assimilados. Se o conjunto de dados de destino estiver ativado para [!DNL Profile], o número de registros de identidade e perfil assimilados também será exibido.
 
-![](../images/datasets/user-guide/batch_listing.png)
+![](../images/datasets/user-guide/batch-listing.png)
 
 Você pode clicar em um **[!UICONTROL Batch ID]** individual para acessar o painel **[!UICONTROL Batch overview]** e ver detalhes do lote, incluindo registros de erros caso o lote não seja assimilado.
 
-![](../images/datasets/user-guide/batch_overview.png)
+![](../images/datasets/user-guide/batch-overview.png)
 
 Se quiser excluir o lote, faça isso clicando em **[!UICONTROL Delete batch]** localizado próximo à parte superior direita do painel. Isso também removerá seus registros do conjunto de dados ao qual o lote foi originalmente assimilado.
 
-![](../images/datasets/user-guide/delete_batch.png)
+![](../images/datasets/user-guide/delete-batch.png)
 
 ## Próximas etapas
 

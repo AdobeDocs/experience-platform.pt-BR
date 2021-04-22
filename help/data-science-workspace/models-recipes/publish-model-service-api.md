@@ -7,7 +7,7 @@ type: Tutorial
 description: Este tutorial aborda o processo de publicação de um modelo como um serviço usando a API de aprendizado de máquina do Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Todas as solicitações de POST, PUT e PATCH exigem um cabeçalho adicional:
 A tabela a seguir descreve alguns termos comuns usados neste tutorial:
 
 | Termo | Definição |
---- | ---
+| --- | --- |
 | **Instância de Aprendizagem de Máquina (Instância ML)** | Uma instância de um mecanismo [!DNL Sensei] para um locatário específico, contendo dados, parâmetros e código [!DNL Sensei] específicos. |
 | **Experimento** | Uma entidade-guarda-chuva para realizar treinamentos Execuções de Experimento, pontuação de Execuções de Experimento, ou ambos. |
 | **Experimento agendado** | Um termo para descrever a automação de treinamentos ou pontuação de Execuções de Experimento, regido por um agendamento definido pelo usuário. |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | Propriedade | Descrição |
---- | ---
+| --- | --- |
 | `mlInstanceId` | Identificação de Instância ML existente, a Execução de Experiência de Treinamento usada para criar o Serviço ML deve corresponder a esta Instância ML específica. |
 | `trainingExperimentId` | Identificação de experimento correspondente à identificação da Instância ML. |
 | `trainingExperimentRunId` | Um Experimento de Treinamento específico a ser usado para publicar o Serviço ML. |

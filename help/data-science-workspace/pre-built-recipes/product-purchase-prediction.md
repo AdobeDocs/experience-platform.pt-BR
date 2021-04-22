@@ -6,7 +6,7 @@ topic-legacy: overview
 description: A fórmula Previsão de compra do produto permite prever a probabilidade de um determinado tipo de evento de compra do cliente - uma compra de produto, por exemplo.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 7%
@@ -36,7 +36,7 @@ A fórmula Previsão de compra do produto utiliza o aprendizado de máquina para
 Essa fórmula usa [esquemas XDM](../../xdm/home.md) para modelar os dados. O esquema usado para esta fórmula é mostrado abaixo:
 
 | Nome do campo | Tipo |
---- | ---
+| --- | --- |
 | userId | String |
 | genderRatio | Número |
 | ageY | Número |

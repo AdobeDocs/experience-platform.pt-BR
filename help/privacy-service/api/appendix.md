@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 5%
 
 ---
 
@@ -25,15 +25,17 @@ A tabela a seguir descreve vários tipos de identidade predefinidos e usados com
 
 | Tipo de identidade | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| Email | Email | 6 |
-| Telefone | Telefone | 7 |
-| Adobe Advertising Cloud ID | AdCloud | 411º |
-| UUID do Adobe Audience Manager | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] ID para anunciantes | IDFA | 20915 |
-| [!DNL Google] ID do anúncio | GAID | 20914 |
-| [!DNL Windows] AID | WAID | 8 |
+| Email | `Email` | `6` |
+| Telefone | `Phone` | `7` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| UUID do Adobe Audience Manager | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Adobe Target ID | `TNTID` | `9` |
+| [!DNL Apple] ID para anunciantes | `IDFA` | `20915` |
+| [!DNL Google] ID do anúncio | `GAID` | `20914` |
+| [!DNL Windows] AID | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ Ao especificar um valor `namespace` na API [!DNL Privacy Service], um **qualific
 
 | Qualificador | Definição |
 | --------- | ---------- |
-| padrão | Um dos namespaces padrão definidos globalmente, não vinculado a um conjunto de dados individual da organização (por exemplo, email, número de telefone etc.). A ID de namespace é fornecida. |
-| custom | Um namespace exclusivo criado no contexto de uma organização, não compartilhado no [!DNL Experience Cloud]. O valor representa o nome amigável (campo &quot;nome&quot;) a ser pesquisado. A ID de namespace é fornecida. |
-| integrationCode | Código de integração - semelhante ao &quot;personalizado&quot;, mas definido especificamente como o código de integração de uma fonte de dados a ser pesquisada. A ID de namespace é fornecida. |
-| namespaceId | Indica que o valor é a ID real do namespace que foi criada ou mapeada pelo serviço de namespace. |
-| não registrado | Uma string de forma livre que não é definida no serviço de namespace e é considerada &quot;como está&quot;. Qualquer aplicativo que manipule esses tipos de namespaces verifica-os e lida, se apropriado, com o contexto da empresa e o conjunto de dados. Nenhuma ID de namespace é fornecida. |
-| analytics | Um namespace personalizado que é mapeado internamente em [!DNL Analytics], não no serviço de namespace. Isso é transmitido diretamente, conforme especificado pela solicitação original, sem uma ID de namespace |
-| target | Um namespace personalizado compreendido internamente por [!DNL Target], não no serviço de namespace. Isso é transmitido diretamente, conforme especificado pela solicitação original, sem uma ID de namespace |
+| `standard` | Um dos namespaces padrão definidos globalmente, não vinculado a um conjunto de dados individual da organização (por exemplo, email, número de telefone etc.). A ID de namespace é fornecida. |
+| `custom` | Um namespace exclusivo criado no contexto de uma organização, não compartilhado no [!DNL Experience Cloud]. O valor representa o nome amigável (campo &quot;nome&quot;) a ser pesquisado. A ID de namespace é fornecida. |
+| `integrationCode` | Código de integração - semelhante ao &quot;personalizado&quot;, mas definido especificamente como o código de integração de uma fonte de dados a ser pesquisada. A ID de namespace é fornecida. |
+| `namespaceId` | Indica que o valor é a ID real do namespace que foi criada ou mapeada pelo serviço de namespace. |
+| `unregistered` | Uma string de forma livre que não é definida no serviço de namespace e é considerada &quot;como está&quot;. Qualquer aplicativo que manipule esses tipos de namespaces verifica-os e lida, se apropriado, com o contexto da empresa e o conjunto de dados. Nenhuma ID de namespace é fornecida. |
+| `analytics` | Um namespace personalizado que é mapeado internamente em [!DNL Analytics], não no serviço de namespace. Isso é transmitido diretamente, conforme especificado pela solicitação original, sem uma ID de namespace |
+| `target` | Um namespace personalizado compreendido internamente por [!DNL Target], não no serviço de namespace. Isso é transmitido diretamente, conforme especificado pela solicitação original, sem uma ID de namespace |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Valores do produto aceitos
 
@@ -70,3 +74,5 @@ A tabela a seguir descreve os valores aceitos para especificar um Adobe product 
 | Adobe Target | `Target` |
 | Serviço de registro do cliente | `CRS` |
 | Perfil do cliente em tempo real | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}

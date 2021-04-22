@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Saiba como gerenciar tarefas de privacidade para aplicativos Experience Cloud usando a API do Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1362'
 ht-degree: 1%
 
 ---
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | O tipo de regulamento a ser procurado. Os valores aceitos incluem: <ul><li>`gdpr` (União Europeia)</li><li>`ccpa` (Califórnia)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nova Zelândia)</li><li>`pdpa_tha` (Tailândia)</li></ul> |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `1` e o máximo é `100`. Exceder o máximo faz com que a API retorne um erro de código 400. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Uma propriedade opcional que especifica como o Adobe Analytics deve lidar com os dados pessoais. Dois valores possíveis são aceitos para este atributo: <ul><li>`anonymize`: Todos os dados referenciados pela coleção de IDs de usuário fornecida são tornados anônimos. Se `analyticsDeleteMethod` for omitido, esse será o comportamento padrão.</li><li>`purge`: Todos os dados são removidos completamente.</li></ul> |
 | `regulation` **(Obrigatório)** | O regulamento para o trabalho de privacidade. Os seguintes valores são aceitos: <ul><li>`gdpr` (União Europeia)</li><li>`ccpa` (Califórnia)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nova Zelândia)</li><li>`pdpa_tha` (Tailândia)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna os detalhes dos trabalhos recém-criados.
@@ -210,6 +214,8 @@ Uma resposta bem-sucedida retorna os detalhes dos trabalhos recém-criados.
 | --- | --- |
 | `jobId` | Uma ID exclusiva gerada pelo sistema e somente leitura para uma tarefa. Esse valor é usado na próxima etapa da pesquisa de um trabalho específico. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Depois de enviar a solicitação de trabalho com êxito, você pode prosseguir para a próxima etapa de [verificar o status da tarefa](#check-status).
 
 ## Verifique o status de um trabalho {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{JOB_ID}` | A ID do trabalho que você deseja pesquisar. Essa ID é retornada em `jobId` em respostas de API bem-sucedidas para [criar um trabalho](#create-job) e [listar todas as tarefas](#list). |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -326,6 +334,8 @@ Uma resposta bem-sucedida retorna os detalhes da tarefa especificada.
 | `productStatusResponse.results` | Para determinados status, alguns produtos podem retornar um objeto `results` que fornece informações adicionais não cobertas por `responseMsgDetail`. |
 | `downloadURL` | Se o status da tarefa for `complete`, esse atributo fornecerá um URL para baixar os resultados da tarefa como um arquivo ZIP. Esse arquivo fica disponível para download por 60 dias após a conclusão do trabalho. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Categorias de status da tarefa {#status-categories}
 
 A tabela a seguir lista as diferentes categorias possíveis de status da tarefa e seu significado correspondente:
@@ -336,6 +346,8 @@ A tabela a seguir lista as diferentes categorias possíveis de status da tarefa 
 | `processing` | As candidaturas reconheceram a tarefa e estão atualmente a ser processadas. |
 | `submitted` | O trabalho é submetido a todos os pedidos aplicáveis. |
 | `error` | Algo falhou no processamento da tarefa - informações mais específicas podem ser obtidas pela recuperação de detalhes de tarefas individuais. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >

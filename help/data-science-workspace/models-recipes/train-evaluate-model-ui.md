@@ -7,9 +7,9 @@ type: Tutorial
 description: No Adobe Experience Platform Data Science Workspace, um Modelo de aprendizado de máquina é criado incorporando uma Receita existente apropriada para a intenção do Modelo. O Modelo é então treinado e avaliado para otimizar sua eficiência e eficácia operacional ajustando seus hiperparâmetros associados. Receitas são reutilizáveis, o que significa que vários Modelos podem ser criados e adaptados a fins específicos com uma única Receita.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -110,10 +110,10 @@ Este tutorial o orientou pela criação, treinamento e avaliação de um Modelo 
 Os hiperparâmetros determinam o comportamento de treinamento do Modelo, modificando Hiperparâmetros afetará a precisão e precisão do Modelo:
 
 | Hiperparâmetro | Descrição | Intervalo recomendado |
---- | --- | ---
-| learning_rate | A taxa de aprendizado reduz a contribuição de cada árvore por learning_rate. Há uma compensação entre learning_rate e n_estimators. | 0,1 | [2 - 10] / número de estimadores |
-| n_estimatadores | O número de estágios de reforço a serem executados. O aumento de gradiente é bastante robusto para se adaptar demais, de modo que um grande número geralmente resulta em melhor desempenho. | 100 | 100 - 1000 |
-| profundidade_máxima | Profundidade máxima dos estimadores de regressão individuais. A profundidade máxima limita o número de nós na árvore. Ajuste este parâmetro para obter o melhor desempenho; o melhor valor depende da interação das variáveis de entrada. | 3 | 4 - 10 |
+| --- | --- | --- |
+| learning_rate | A taxa de aprendizado reduz a contribuição de cada árvore por learning_rate. Há uma compensação entre learning_rate e n_estimators. | 0,1 |
+| n_estimatadores | O número de estágios de reforço a serem executados. O aumento de gradiente é bastante robusto para se adaptar demais, de modo que um grande número geralmente resulta em melhor desempenho. | 100 |
+| profundidade_máxima | Profundidade máxima dos estimadores de regressão individuais. A profundidade máxima limita o número de nós na árvore. Ajuste este parâmetro para obter o melhor desempenho; o melhor valor depende da interação das variáveis de entrada. | 3 |
 
 Parâmetros adicionais determinam as propriedades técnicas do Modelo:
 

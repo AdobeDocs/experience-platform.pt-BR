@@ -2,16 +2,16 @@
 keywords: Experience Platform, home, tópicos populares, esquema, esquema, campos, campos padrão, campos padrão, dicionário, dicionário, mapa, Mapa
 solution: Experience Platform
 title: Dicionário de campos do Experience Data Model (XDM)
-topic: overviews
+topic-legacy: overviews
 description: O Experience Data Model (XDM) define um conjunto de campos padrão que podem ser usados na composição de schemas do Adobe Experience Platform. O uso desses campos resulta em comportamento consistente nos serviços da plataforma, pois todos os serviços que consomem XDM compreenderão explicitamente as definições específicas fornecidas por esses campos.
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '25239'
-ht-degree: 3%
+source-wordcount: '25238'
+ht-degree: 4%
 
 ---
-
 
 # Dicionário de campo XDM
 
@@ -464,7 +464,7 @@ Você pode usar a funcionalidade de pesquisa no [!DNL Schema Editor] para exibir
 | xdm:subCategory | Subcategoria | A subcategorização específica da assinatura. | string |  | string | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
 | xdm:subscriber | Assinante | O proprietário da assinatura. | objeto |  | objeto | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
 | xdm:subscriptionDate | Data de assinatura | Data e hora em que o usuário final assinou um tópico de notificação. Um usuário final é inscrito se ele tiver uma Data de assinatura e `unsubscriptiondetails/unsubscriptionDate` estiver vazio. | string | data e hora | data e hora | https://ns.adobe.com/experience/campaign/notificationsubscription, https://ns.adobe.com/experience/campaign/profile-all |
-| xdm:subscriptions | Subscrições | Assinaturas às quais este perfil tem direito, incluindo assinaturas terminadas, expiradas ou esgotadas. | array |  | array | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
+| xdm:subscriptions | Assinaturas | Assinaturas às quais este perfil tem direito, incluindo assinaturas terminadas, expiradas ou esgotadas. | array |  | array | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:vendorName | Nome do Fornecedor | Distribuidor do produto. | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:syncedRemarketingAudiences | Segmentos sincronizados | Lista de entidades de redirecionamento de pesquisa que foram sincronizadas com o parceiro [!DNL adCloud] para criar públicos na plataforma, como RLSA para [!DNL Google] ou WCA para Facebook | array |  | array | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
 | xdm:tags | Tags | As tags são usadas para indicar como os aliases representados por uma determinada fonte de dados devem ser interpretados por aplicativos que usam esses aliases.Exemplos:* `isAVID`: fontes de dados que representam [!DNL Analytics] IDs de visitante.* `isCRSKey`: as fontes de dados que representam aliases que devem ser usados como chaves em CRS.Tags são definidas quando a fonte de dados é criada, mas também são incluídas em mensagens de pipeline ao referenciar uma determinada fonte de dados. | array |  | array | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |

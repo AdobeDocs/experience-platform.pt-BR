@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Este documento contém informações adicionais para trabalhar com a API do Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '478'
 ht-degree: 5%
 
 ---
@@ -65,14 +65,15 @@ A tabela a seguir descreve os valores aceitos para especificar um Adobe product 
 
 | Produto | Valor para uso no atributo `include` |
 | --- | --- |
-| Adobe Advertising Cloud | `AdCloud` |
-| Adobe Analytics | `Analytics` |
+| Adobe Advertising Cloud | `adCloud` |
+| Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
-| Adobe Campaign | `Campaign` |
-| Adobe Experience Platform | `aepDataLake` |
+| Adobe Campaign | `campaign` |
+| Adobe Experience Platform | `AdobeCloudPlatform` |
 | Autenticação Adobe Primetime | `primetimeAuthentication` |
-| Adobe Target | `Target` |
-| Serviço de registro do cliente | `CRS` |
-| Perfil do cliente em tempo real | `ProfileService` |
+| Adobe Target | `target` |
+| Produto de automação | `automationProduct` |
+| Atributos do cliente (CRS) | `CRS` |
+| Perfil do cliente em tempo real | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}

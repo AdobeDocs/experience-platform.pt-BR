@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Mapeamento de campos para a fonte de Marketo Engage
 topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '453'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) [!DNL Marketo Engage] mapeamentos de campos
 
@@ -158,6 +158,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Identidade principal |
-| `marketingListID` | `staticListID` | Relação |
+| `staticListMemberID` | `marketingListMemberID` | Identidade principal |
+| `staticListID` | `marketingListID` | Relação |
 | `personID` | `personID` | Relação |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Recomendado somente se você usar a integração do Salesforce. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recomendado somente se você usar a integração do Salesforce. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ Como solução alternativa, você pode atualizar o campo de identificação de i
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Identidade secundária |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Identidade secundária |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ Como solução alternativa, você pode atualizar o campo de identificação de i
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>O campo de origem `to_object('ECID',arrays_to_objects('id',explode(ecids)))` é um campo calculado que deve ser adicionado usando a opção [!UICONTROL Add calculated field] na interface do usuário da plataforma. Consulte o tutorial em [adicionar campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obter mais informações.
 
 ## Próximas etapas
 

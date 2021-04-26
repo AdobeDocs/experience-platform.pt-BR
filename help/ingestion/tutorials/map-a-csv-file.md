@@ -7,7 +7,7 @@ type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando a interface do usuário do Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -85,7 +85,7 @@ A janela **[!UICONTROL Map source to target field]** é exibida. Aqui, você pod
 
 Se desejar remover um dos mapeamentos, passe o mouse sobre esse mapeamento e selecione o ícone de menos.
 
-### Adicionar campo calculado
+### Adicionar campo calculado {#add-calculated-field}
 
 Os campos calculados permitem que os valores sejam criados com base nos atributos no schema de entrada. Esses valores podem ser atribuídos aos atributos no schema de destino e receber um nome e uma descrição para permitir uma referência mais fácil.
 

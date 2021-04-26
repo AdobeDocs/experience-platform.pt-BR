@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Também é importante saber dois termos principais que são usados por meio dest
 
 ## Visão geral
 
-Na [[!DNL Experience Platform] UI](http://platform.adobe.com/), selecione **[!UICONTROL Segments]** no painel de navegação esquerdo para abrir a guia **[!UICONTROL Overview]**. Esta guia fornece links para a documentação e vídeos para ajudar você a entender e começar a trabalhar com segmentos.
+Na [[!DNL Experience Platform] UI](https://platform.adobe.com/), selecione **[!UICONTROL Segments]** no painel de navegação esquerdo para abrir a guia **[!UICONTROL Overview]**. Esta guia fornece links para a documentação e vídeos para ajudar você a entender e começar a trabalhar com segmentos.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ Selecione a guia **[!UICONTROL Browse]** para ver uma lista de todas as definiç
 
 Essa exibição lista informações sobre a definição do segmento, incluindo detalhamento, churn, contagem de perfis, método de avaliação, data criada e data da última modificação.
 
-O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Entered], [!UICONTROL Realized] e [!UICONTROL Exiting].
+O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Realized], [!UICONTROL Existing] e [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Status | Descrição |
 | ------ | ----------- |
-| Digitado | Um novo perfil no segmento. |
-| Realizado | Um perfil existente que permaneceu no segmento. |
+| Realizado | Um novo perfil no segmento. |
+| Existente | Um perfil existente que permaneceu no segmento. |
 | Saindo | Um perfil existente que está deixando o segmento. |
 
 O churn representa a porcentagem de perfis que estão mudando em uma definição de segmento em comparação à última vez que o trabalho do segmento foi executado, enquanto a contagem de perfis representa o número total de perfis qualificados para o segmento.

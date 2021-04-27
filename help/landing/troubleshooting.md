@@ -8,9 +8,9 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1768'
 ht-degree: 4%
 
 ---
@@ -179,6 +179,16 @@ Essa mensagem de erro é exibida quando a integração do usuário ou Adobe I/O 
 
 Esta mensagem de erro é exibida quando uma solicitação POST, PUT ou PATCH tem um cabeçalho `Content-Type` inválido ou ausente. Certifique-se de que o cabeçalho esteja incluído na solicitação e que seu valor seja `application/json`.
 
+### Região do usuário ausente
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+Esta mensagem de erro é exibida quando sua conta (representada pelas credenciais de autenticação fornecidas) não está associada a um perfil de produto para o Experience Platform. Siga as etapas em [gerando credenciais de acesso](./api-authentication.md#authentication-for-each-session) no tutorial de autenticação da API da plataforma para adicionar a Platform à sua conta e atualizar suas credenciais de autenticação de acordo.
 
 ## Diretório de solução de problemas de serviço {#service-troubleshooting-directory}
 

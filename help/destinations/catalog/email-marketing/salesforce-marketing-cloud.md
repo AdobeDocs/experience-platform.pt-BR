@@ -2,14 +2,14 @@
 keywords: email; Email; email; destinos de email; salesforce; destino do salesforce
 title: Conexão do Marketing Cloud Salesforce
 seo-description: O Salesforce Marketing Cloud é um conjunto de marketing digital conhecido anteriormente como ExactTarget, que permite criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
+exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Salesforce Marketing Cloud] conexão
 
@@ -22,6 +22,12 @@ Para enviar dados de segmento para [!DNL Salesforce Marketing Cloud], primeiro v
 ## Tipo de exportação {#export-type}
 
 **Baseado em perfil**  - você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do fluxo de trabalho de ativação de  [destino](../../ui/activate-destinations.md#select-attributes).
+
+## LISTA DE PERMISSÕES do endereço IP {#allow-list}
+
+Ao configurar destinos de marketing por email com o armazenamento SFTP, o Adobe recomenda adicionar determinados intervalos IP à lista de permissões.
+
+Consulte [lista de permissões de endereço IP para destinos de armazenamento em nuvem](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs Adobe à lista de permissões.
 
 ## Conectar destino {#connect-destination}
 

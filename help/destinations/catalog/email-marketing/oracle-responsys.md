@@ -2,14 +2,14 @@
 keywords: email; Email; email; destinos de email; destino da responsys do oracle
 title: Conexão Oracle Responsys
 description: O Responsys é uma ferramenta de marketing por email corporativo para campanhas de marketing entre canais oferecidas pelo Oracle para personalizar interações em email, dispositivos móveis, exibição e redes sociais.
+exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Oracle Responsys] conexão
 
@@ -22,6 +22,12 @@ Para enviar dados de segmento para [!DNL Oracle Responsys], primeiro você deve 
 ## Tipo de exportação {#export-type}
 
 **Baseado em perfil**  - você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do fluxo de trabalho de ativação de  [destino](../../ui/activate-destinations.md#select-attributes).
+
+## LISTA DE PERMISSÕES do endereço IP {#allow-list}
+
+Ao configurar destinos de marketing por email com o armazenamento SFTP, o Adobe recomenda adicionar determinados intervalos IP à lista de permissões.
+
+Consulte [lista de permissões de endereço IP para destinos de armazenamento em nuvem](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs Adobe à lista de permissões.
 
 ## Conectar destino {#connect-destination}
 

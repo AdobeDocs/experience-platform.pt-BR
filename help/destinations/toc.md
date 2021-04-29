@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 10%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 10%
    * Destinos de armazenamento em nuvem {#cloud-storage}
       * [Visão geral dos destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
       * [Criar um destino de armazenamento em nuvem](./catalog/cloud-storage/workflow.md)
-      * [Conexão Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [(Beta) Conexão Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexão Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexão Blob do Azure](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Conexão de Hubs de Eventos do Azure](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 10%
       * [Criar um destino social](./catalog/social/workflow.md)
       * [Extensão do Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Conexão facebook](./catalog/social/facebook.md)
-      * [Conexão de públicos-alvo correspondentes do Linkedin](./catalog/social/linkedin.md)
+      * [Conexão de públicos-alvo correspondentes ao linkedIn](./catalog/social/linkedin.md)
    * Destinos da pesquisa {#survey}
       * [Visão geral dos destinos da pesquisa](./catalog/survey/overview.md)
       * [Destino da extensão da Foresee](./catalog/survey/foresee.md)

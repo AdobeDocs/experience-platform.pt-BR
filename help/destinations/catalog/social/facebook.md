@@ -4,9 +4,9 @@ title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,6 @@ Uma companhia aérea tem níveis de clientes diferentes (Bronze, Prata e Ouro) e
 Para direcioná-los em redes sociais, eles podem integrar os dados do cliente do CRM para o Adobe Experience Platform, usando os endereços de email como identificadores.
 
 Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente para criar novos segmentos de público-alvo que podem direcionar por meio do destino [!DNL Facebook].
-
-## Governança de dados para destinos [!DNL Facebook] {#data-governance}
-
->[!IMPORTANT]
->
->Os dados enviados para [!DNL Facebook] não podem incluir identidades compiladas. Você é responsável por cumprir essa obrigação e pode fazer isso garantindo que os segmentos selecionados para ativação não usem uma opção de compilação em sua política de mesclagem. Saiba mais sobre [políticas de mesclagem](/help/profile/ui/merge-policies.md).
 
 ## Identidades compatíveis {#supported-identities}
 

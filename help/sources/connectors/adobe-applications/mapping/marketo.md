@@ -6,10 +6,10 @@ topic-legacy: overview
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e seus campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 
 ## Pessoas {#persons}
 
-No painel [!DNL Profiles] da interface do usuário da plataforma, se o valor da compilação de ID na política de mesclagem usada para navegar estiver definido como `None`, a janela de identidades vinculadas exibirá somente o atributo de identidade principal.
-
-Como solução alternativa, você pode atualizar o campo de identificação de identificação de `None` para `Private graph` para ver todas as identidades vinculadas a um [!DNL Profile]. Como alternativa, você pode criar uma nova política de mesclagem ou usar uma política de mesclagem diferente que contenha um valor de identificação definido como `Private graph`. Se você optar por criar uma nova política de mesclagem ou usar uma política de mesclagem diferente, deverá garantir que a política contenha o mesmo tipo de schema usado para o conjunto de mapeamento [!DNL Marketo] Pessoas. Para obter mais informações, consulte o [guia da interface do usuário de políticas de mesclagem](../../../../profile/ui/merge-policies.md).
-
 | Conjunto de dados de origem | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identidade primária |
@@ -313,7 +309,7 @@ Como solução alternativa, você pode atualizar o campo de identificação de i
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >O campo de origem `to_object('ECID',arrays_to_objects('id',explode(ecids)))` é um campo calculado que deve ser adicionado usando a opção [!UICONTROL Add calculated field] na interface do usuário da plataforma. Consulte o tutorial em [adicionar campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obter mais informações.
 

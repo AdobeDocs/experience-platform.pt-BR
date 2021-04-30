@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de fluxo com a API do serviço de segmentação da Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ Para que um segmento seja avaliado usando a segmentação de transmissão, a con
 | Somente perfil | Qualquer definição de segmento que se refere somente a um atributo de perfil. |
 | Ocorrência recebida que se refere a um perfil | Qualquer definição de segmento que se refere a um único evento de entrada, sem restrição de tempo e um ou mais atributos de perfil. |
 | Ocorrência recebida que se refere a um perfil dentro de uma janela de tempo relativa | Qualquer definição de segmento que se refere a um único evento de entrada e um ou mais atributos de perfil. |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. |
+| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos em lote ou em fluxo. **Observação:** se um segmento de segmentos for usado, a desativação de perfil ocorrerá a  **cada 24 horas**. |
 | Vários eventos que se referem a um perfil | Qualquer definição de segmento que se refere a vários eventos **nas últimas 24 horas** e (opcionalmente) tem um ou mais atributos de perfil. |
 
 Uma definição de segmento **não** será ativada para a segmentação de fluxo nos seguintes cenários:

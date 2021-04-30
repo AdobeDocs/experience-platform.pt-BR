@@ -2,12 +2,11 @@
 keywords: Experience Platform, home, tópicos populares
 solution: Experience Platform
 title: Processamento de solicitação de privacidade no perfil do cliente em tempo real
-topic-legacy: overview
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
@@ -24,9 +23,9 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 É recomendável que você tenha uma compreensão funcional dos seguintes serviços [!DNL Experience Platform] antes de ler este guia:
 
-* [[!DNL Privacy Service]](home.md): Gerencia solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais nos aplicativos Adobe Experience Cloud.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Gerencia solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais nos aplicativos Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir identidades entre dispositivos e sistemas.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 
 ## Noções básicas sobre namespaces de identidade {#namespaces}
 

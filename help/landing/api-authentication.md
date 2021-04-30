@@ -7,120 +7,155 @@ type: Tutorial
 description: Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ef00f50ea2cda2c173208075123b3fe2b2d7ecd4
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 4%
+source-wordcount: '1165'
+ht-degree: 6%
 
 ---
 
-# Autentique e acesse APIs [!DNL Experience Platform]
 
-Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor do Adobe Experience Platform para fazer chamadas para [!DNL Experience Platform] APIs.
+# Autenticar e acessar APIs da Experience Platform
 
-## Autenticar para fazer chamadas de API
+Este documento fornece um tutorial passo a passo para obter acesso a uma conta de desenvolvedor da Adobe Experience Platform para fazer chamadas para APIs da Experience Platform. No final deste tutorial, você gerou as seguintes credenciais necessárias para todas as chamadas de API da plataforma:
 
-Para manter a segurança de seus aplicativos e usuários, todas as solicitações para APIs do Adobe I/O devem ser autenticadas e autorizadas usando padrões como OAuth e JSON Web Tokens (JWT). O JWT é então usado junto com informações específicas do cliente para gerar seu token de acesso pessoal.
+* `{ACCESS_TOKEN}`
+* `{API_KEY}`
+* `{IMS_ORG}`
 
-Este tutorial aborda as etapas de autenticação através da criação de um token de acesso descrito no seguinte fluxograma:
-![](images/api-authentication/authentication-flowchart.png)
+Para manter a segurança de seus aplicativos e usuários, todas as solicitações para APIs do Adobe I/O devem ser autenticadas e autorizadas usando padrões como OAuth e JSON Web Tokens (JWT). Um JWT é usado junto com informações específicas do cliente para gerar seu token de acesso pessoal.
+
+Este tutorial aborda como coletar as credenciais necessárias para autenticar chamadas da API do Platform, conforme descrito no fluxograma a seguir:
+
+![](./images/api-authentication/authentication-flowchart.png)
 
 ## Pré-requisitos
 
-Para fazer chamadas com êxito para APIs [!DNL Experience Platform], você precisa do seguinte:
+Para fazer chamadas com êxito para APIs do Experience Platform, você deve ter o seguinte:
 
-* Uma Organização IMS com acesso à Adobe Experience Platform
-* Uma conta Adobe ID registrada
-* Um administrador do Admin Console para adicioná-lo como um **desenvolvedor** e um **usuário** para um produto.
+* Uma Organização IMS com acesso à Adobe Experience Platform.
+* Um administrador do Admin Console que pode adicioná-lo como desenvolvedor e como usuário para um perfil de produto.
 
-As seções a seguir abordam as etapas para criar uma Adobe ID e se tornar um desenvolvedor e usuário de uma organização.
+Você também deve ter uma Adobe ID para concluir este tutorial. Se você não tiver uma Adobe ID, poderá criar uma usando as seguintes etapas:
 
-### Criar uma Adobe ID
+1. Vá para [Console do Desenvolvedor do Adobe](https://console.adobe.io).
+2. Selecione **[!UICONTROL Create a new account]**.
+3. Conclua o processo de inscrição.
 
-Se você não tiver uma Adobe ID, poderá criar uma usando as seguintes etapas:
+## Obter acesso de desenvolvedor e usuário para o Experience Platform
 
-1. Vá para [Console do Desenvolvedor do Adobe](https://console.adobe.io)
-2. Selecione **[!UICONTROL create a new account]**
-3. Concluir o processo de inscrição
+Antes de criar integrações no Console do desenvolvedor do Adobe, sua conta deve ter permissões de desenvolvedor e de usuário para um perfil de produto do Experience Platform no Adobe Admin Console.
 
-## Torne-se um desenvolvedor e usuário para [!DNL Experience Platform] de uma organização
+### Obter acesso do desenvolvedor
 
-Antes de criar integrações no Adobe I/O, sua conta deve ter permissões de desenvolvedor para um produto em uma Organização IMS. Informações detalhadas sobre contas de desenvolvedores no Admin Console podem ser encontradas no [support document](https://helpx.adobe.com/br/enterprise/using/manage-developers.html) para gerenciar desenvolvedores.
+Entre em contato com um administrador [!DNL Admin Console] em sua organização para adicioná-lo como desenvolvedor a um perfil de produto do Experience Platform usando o [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulte a documentação [!DNL Admin Console] para obter instruções específicas sobre como [gerenciar o acesso do desenvolvedor para perfis de produto](https://helpx.adobe.com/br/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-**Obter acesso do desenvolvedor**
+Depois de ser atribuído como um desenvolvedor, você pode começar a criar integrações em [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para APIs do Adobe.
 
-Entre em contato com um administrador [!DNL Admin Console] em sua organização para adicioná-lo como desenvolvedor de um dos produtos de sua organização usando o [[!DNL Admin Console]](https://adminconsole.adobe.com/).
+### Obter acesso do usuário
 
-![](images/api-authentication/assign-developer.png)
+O administrador [!DNL Admin Console] também deve adicioná-lo como usuário ao mesmo perfil de produto. Consulte o guia em [gerenciar grupos de usuários em [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obter mais informações.
 
-O administrador deve atribuir você como desenvolvedor a pelo menos um perfil de produto para continuar.
-
-![](images/api-authentication/add-developer.png)
-
-Depois de ser atribuído como um desenvolvedor, você terá privilégios de acesso para criar integrações em [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Essas integrações são um pipeline de aplicativos e serviços externos para a API do Adobe.
-
-**Obter acesso do usuário**
-
-O administrador [!DNL Admin Console] também deve adicioná-lo ao produto como usuário.
-
-![](images/api-authentication/assign-users.png)
-
-Semelhante ao processo de adição de desenvolvedor, o administrador deve atribuir você a pelo menos um perfil de produto para prosseguir.
-
-![](images/api-authentication/assign-user-details.png)
-
-## Gerar credenciais de acesso no Console do desenvolvedor do Adobe
+## Gere uma chave de API, ID de organização IMS e segredo do cliente {#api-ims-secret}
 
 >[!NOTE]
 >
 >Se você estiver seguindo este documento do [Guia do desenvolvedor do Privacy Service](../privacy-service/api/getting-started.md), agora poderá retornar a esse guia para gerar as credenciais de acesso exclusivas de [!DNL Privacy Service].
 
-Usando o Console do Desenvolvedor do Adobe, você deve gerar as três credenciais de acesso a seguir:
+Depois de ter recebido acesso de desenvolvedor e usuário à Platform por meio de [!DNL Admin Console], a próxima etapa é gerar suas credenciais `{IMS_ORG}` e `{API_KEY}` no Console do Desenvolvedor do Adobe. Essas credenciais só precisam ser geradas uma vez e podem ser reutilizadas em chamadas futuras da API da plataforma.
 
-* `{IMS_ORG}`
-* `{API_KEY}`
-* `{ACCESS_TOKEN}`
-
-Seu `{IMS_ORG}` e `{API_KEY}` precisam ser gerados apenas uma vez e podem ser reutilizados em futuras chamadas de API [!DNL Platform]. No entanto, seu `{ACCESS_TOKEN}` é temporário e deve ser gerado novamente a cada 24 horas.
-
-As etapas são abordadas detalhadamente abaixo.
-
-### Configuração única
+### Adicionar Experience Platform a um projeto
 
 Vá para [Console do desenvolvedor do Adobe](https://www.adobe.com/go/devs_console_ui) e faça logon com sua Adobe ID. Em seguida, siga as etapas descritas no tutorial em [criar um projeto vazio](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) na documentação do Console do desenvolvedor do Adobe.
 
-Depois de criar um novo projeto, selecione **[!UICONTROL Add API]** na tela **Visão geral do projeto**.
+Depois de criar um novo projeto, selecione **[!UICONTROL Add API]** na tela **[!UICONTROL Project Overview]**.
 
-![](images/api-authentication/add-api-button.png)
+![](./images/api-authentication/add-api.png)
 
-A tela **Adicionar uma API** é exibida. Selecione o ícone do produto para Adobe Experience Platform e escolha **[!UICONTROL Experience Platform API]** antes de selecionar **[!UICONTROL Next]**.
+A tela **[!UICONTROL Add an API]** é exibida. Selecione o ícone do produto para Adobe Experience Platform e escolha **[!UICONTROL Experience Platform API]** antes de selecionar **[!UICONTROL Next]**.
 
-![](images/api-authentication/add-platform-api.png)
+![](./images/api-authentication/platform-api.png)
 
-Depois de selecionar [!DNL Experience Platform] como a API a ser adicionada ao projeto, siga as etapas descritas no tutorial em [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (começando pela etapa &quot;Configurar API&quot;) para concluir o processo.
+A partir daqui, siga as etapas descritas no tutorial em [adicionar uma API a um projeto usando uma conta de serviço (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (começando pela etapa &quot;Configurar API&quot;) para concluir o processo.
 
-Depois que a API tiver sido adicionada ao projeto, a página **Visão geral do projeto** exibirá as credenciais a seguir que são necessárias em todas as chamadas para APIs [!DNL Experience Platform]:
+>[!IMPORTANT]
+>
+>Em uma determinada etapa durante o processo vinculado acima, o navegador baixa automaticamente uma chave privada e um certificado público associado. Observe onde essa chave privada é armazenada em sua máquina, já que é necessária em uma etapa posterior deste tutorial.
 
-* `{API_KEY}` (ID do cliente)
-* `{IMS_ORG}` (ID da organização)
+### Obter credenciais
 
-![](./images/api-authentication/api-key-ims-org.png)
+Depois que a API for adicionada ao projeto, a página **[!UICONTROL Experience Platform API]** do projeto exibirá as seguintes credenciais necessárias em todas as chamadas para APIs do Experience Platform:
 
-### Autenticação para cada sessão
+* `{API_KEY}` ([!UICONTROL Client ID])
+* `{IMS_ORG}` ([!UICONTROL Organization ID])
 
-A credencial final necessária que você deve coletar é seu `{ACCESS_TOKEN}`. Ao contrário dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando [!DNL Platform] APIs.
+![](././images/api-authentication/api-key-ims-org.png)
 
-Para gerar um novo `{ACCESS_TOKEN}`, siga as etapas para [gerar um token JWT](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) no guia de credenciais do Console do Desenvolvedor.
+Além das credenciais acima, você também precisa do **[!UICONTROL Client Secret]** gerado para uma etapa futura. Selecione **[!UICONTROL Retrieve client secret]** para revelar o valor e, em seguida, copie-o para uso posterior.
+
+![](././images/api-authentication/client-secret.png)
+
+## Gerar um JSON Web Token (JWT) {#jwt}
+
+A próxima etapa é gerar um JSON Web Token (JWT) com base em suas credenciais de conta. Esse valor é usado para gerar sua credencial `{ACCESS_TOKEN}` para uso em chamadas da API da plataforma, que deve ser regenerada a cada 24 horas.
+
+Selecione **[!UICONTROL Service Account (JWT)]** no painel de navegação esquerdo e selecione **[!UICONTROL Generate JWT]**.
+
+![](././images/api-authentication/generate-jwt.png)
+
+Na caixa de texto fornecida em **[!UICONTROL Generate custom JWT]**, cole o conteúdo da chave privada gerada anteriormente ao adicionar a API da plataforma à sua conta de serviço. Em seguida, selecione **[!UICONTROL Generate Token]**.
+
+![](././images/api-authentication/paste-key.png)
+
+A página é atualizada para mostrar o JWT gerado, juntamente com um comando cURL de amostra que permite gerar um token de acesso. Para os fins deste tutorial, selecione **[!UICONTROL Copy]** ao lado de **[!UICONTROL Generated JWT]** para copiar o token para a área de transferência.
+
+![](././images/api-authentication/copy-jwt.png)
+
+## Gerar um token de acesso
+
+Depois de gerar um JWT, você pode usá-lo em uma chamada de API para gerar seu `{ACCESS_TOKEN}`. Diferentemente dos valores para `{API_KEY}` e `{IMS_ORG}`, um novo token deve ser gerado a cada 24 horas para continuar usando as APIs da plataforma.
+
+**Solicitação**
+
+A solicitação a seguir gera um novo `{ACCESS_TOKEN}` com base nas credenciais fornecidas no payload. Esse ponto de extremidade aceita apenas dados de formulário como carga útil e, portanto, deve receber um cabeçalho `Content-Type` de `multipart/form-data`.
+
+```shell
+curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'client_id={API_KEY}' \
+  -F 'client_secret={SECRET}' \
+  -F 'jwt_token={JWT}'
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `{API_KEY}` | O `{API_KEY}` ([!UICONTROL Client ID]) que você recuperou em uma [etapa anterior](#api-ims-secret). |
+| `{SECRET}` | O segredo do cliente que você recuperou em uma [etapa anterior](#api-ims-secret). |
+| `{JWT}` | O JWT gerado em uma [etapa anterior](#jwt). |
+
+>[!NOTE]
+>
+>Você pode usar a mesma chave de API, segredo do cliente e JWT para gerar um novo token de acesso para cada sessão. Isso permite automatizar a geração de token de acesso em seus aplicativos.
+
+**Resposta**
+
+```json
+{
+  "token_type": "bearer",
+  "access_token": "{ACCESS_TOKEN}",
+  "expires_in": 86399992
+}
+```
+
+| Propriedade | Descrição |
+| --- | --- |
+| `token_type` | O tipo de token que está sendo retornado. Para tokens de acesso, esse valor é sempre `bearer`. |
+| `access_token` | O `{ACCESS_TOKEN}` gerado. Esse valor, prefixado com a palavra `Bearer`, é necessário como o cabeçalho `Authentication` para todas as chamadas de API da plataforma. |
+| `expires_in` | O número de milissegundos restantes até o token de acesso expirar. Quando esse valor atingir 0, um novo token de acesso deverá ser gerado para continuar usando as APIs da plataforma. |
 
 ## Testar credenciais de acesso
 
-Depois de reunir todas as três credenciais necessárias, tente fazer a seguinte chamada de API. Essa chamada listará todas as classes [!DNL Experience Data Model] (XDM) no contêiner `global` do Registro de Schema:
-
-**Formato da API**
-
-```http
-GET /global/classes
-```
+Depois de reunir todas as três credenciais necessárias, tente fazer a seguinte chamada de API. Essa chamada lista todas as classes [!DNL Experience Data Model] (XDM) padrão disponíveis para sua organização.
 
 **Solicitação**
 
@@ -155,12 +190,12 @@ Se sua resposta for semelhante à mostrada abaixo, suas credenciais serão váli
 }
 ```
 
-## Usar o Postman para autenticação JWT e chamadas de API
+## Use o Postman para autenticar e testar chamadas da API
 
-[](https://www.postman.com/) O Postmanis é uma ferramenta popular para trabalhar com APIs RESTful. Este [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descreve como você pode configurar o postman para executar automaticamente a autenticação JWT e usá-lo para consumir APIs do Adobe Experience Platform.
+[](https://www.postman.com/) O Postmanis é uma ferramenta popular que permite aos desenvolvedores explorar e testar RESTful APIs. Este [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descreve como você pode configurar o Postman para executar automaticamente a autenticação JWT e usá-la para consumir APIs da plataforma.
 
 ## Próximas etapas
 
-Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para [!DNL Platform] APIs. Agora você pode seguir com os exemplos fornecidos no [guia de introdução para APIs da plataforma](api-guide.md). Este guia contém links para os guias de API de cada serviço de plataforma e fornece informações adicionais. sobre erros, Postman e JSON.
+Ao ler este documento, você reuniu e testou com êxito suas credenciais de acesso para APIs da plataforma. Agora você pode seguir com as chamadas de API de exemplo fornecidas em toda a [documentação](../landing/documentation/overview.md).
 
-Além dos valores de autenticação coletados neste tutorial, muitas APIs [!DNL Platform] também exigem que um `{SANDBOX_NAME}` válido seja fornecido como um cabeçalho. Consulte a [visão geral das sandboxes](../sandboxes/home.md) para obter mais informações.
+Além dos valores de autenticação coletados neste tutorial, muitas APIs da plataforma também exigem um `{SANDBOX_NAME}` válido para ser fornecido como um cabeçalho. Consulte a [visão geral das sandboxes](../sandboxes/home.md) para obter mais informações.

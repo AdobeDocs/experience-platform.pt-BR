@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 }
 ```
 
-
 ## Criar um esquema XDM de destino {#target-schema}
 
 Para que os dados de origem sejam usados em [!DNL Platform], um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de target é usado para criar um conjunto de dados [!DNL Platform] no qual os dados de origem estão contidos. Esse esquema XDM de destino também estende a classe XDM [!DNL Individual Profile].
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `schemaRef.id` | A ID do esquema XDM de destino. |
-| `schemaRef.contentType` | A versão do schema. Esse valor deve ser definido `application/vnd.adobe.xed-full-notext+json;version=1`, que retorna a versão secundária mais recente do schema. |
+| `name` | O nome do conjunto de dados a ser criado. |
+| `schemaRef.id` | O URI `$id` para o esquema XDM no qual o conjunto de dados será baseado. |
+| `schemaRef.contentType` | A versão do schema. Esse valor deve ser definido como `application/vnd.adobe.xed-full-notext+json;version=1`, que retorna a versão secundária mais recente do schema. Consulte a seção sobre [controle de versão do schema](../../../../xdm/api/getting-started.md#versioning) no guia da API XDM para obter mais informações. |
 
 **Resposta**
 

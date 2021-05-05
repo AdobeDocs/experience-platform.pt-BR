@@ -5,7 +5,7 @@ description: 'O espaço de trabalho Destinos consiste em quatro seções: Catál
 seo-description: No Adobe Experience Platform, selecione Destinos na barra de navegação esquerda para acessar o espaço de trabalho de destinos.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 1%
@@ -38,7 +38,7 @@ A interface do usuário [!DNL Platform] fornece várias opções de pesquisa e f
 Os cartões de destino contêm **[!UICONTROL Configure]** ou **[!UICONTROL Activate]** controle e um controle secundário que exibe mais opções. Esses controles estão descritos abaixo:
 
 | Controle | Descrição |
----------|----------
+|---------|----------|
 | [!UICONTROL Configure] | Permite criar uma conexão com o destino. |
 | [!UICONTROL Activate] | Depois de estabelecer uma conexão com o destino, é possível ativar segmentos. |
 | [!UICONTROL View account] | Exiba as contas que você conectou para um destino. |
@@ -72,7 +72,7 @@ A guia **[!UICONTROL Browse]** exibe os destinos com os quais você estabeleceu 
 ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descrição |
----------|----------
+|---------|----------|
 | Nome | O nome fornecido para o fluxo de ativação para este destino. A mesma coluna inclui dois controles: [!UICONTROL Activate ] e [!UICONTROL Delete destination]. |
 | [!UICONTROL Last Flow Run Status] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Last Flow Run Date] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |

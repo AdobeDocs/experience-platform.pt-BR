@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 10%
       * [Visão geral da extensão do Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinos de envolvimento móvel {#mobile-engagement}
       * [Visão geral dos destinos de envolvimento móvel](./catalog/mobile-engagement/overview.md)
-      * [Conexão de atributos de aeróstato](./catalog/mobile-engagement/airship-attributes.md)
-      * [Ligação de Etiquetas de Avião](./catalog/mobile-engagement/airship-tags.md)
-      * [Ligação de brasa](./catalog/mobile-engagement/braze.md)
+      * [(Beta) Conexão dos atributos de navegação](./catalog/mobile-engagement/airship-attributes.md)
+      * [(Beta) Ligação de Etiquetas de Avião](./catalog/mobile-engagement/airship-tags.md)
+      * [Conexão (Beta) do Brasil](./catalog/mobile-engagement/braze.md)
    * Destinos de personalização {#personalization}
       * [Visão geral dos destinos de personalização](./catalog/personalization/overview.md)
       * [Extensão do Adobe Target](./catalog/personalization/adobe-target.md)

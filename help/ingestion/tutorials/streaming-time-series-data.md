@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -290,9 +290,16 @@ Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz contendo a ID d
 ]
 ```
 
+
+## Criar uma conexão de transmissão
+
+Depois de criar o esquema e o conjunto de dados, será necessário criar uma conexão de transmissão para assimilar seus dados.
+
+Para obter mais informações sobre como criar uma conexão de transmissão, leia o [tutorial de conexão de transmissão](./create-streaming-connection.md).
+
 ## Assimilar dados da série de tempo à conexão de transmissão
 
-Com o conjunto de dados e a conexão de transmissão no lugar, é possível assimilar registros JSON formatados em XDM para assimilar dados de séries de tempo em [!DNL Platform].
+Com o conjunto de dados, a conexão de transmissão e o fluxo de dados criados, é possível assimilar registros JSON formatados em XDM para assimilar dados de séries de tempo em [!DNL Platform].
 
 **Formato da API**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do recém-trans
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | A ID da conexão de transmissão criada anteriormente. |
+| `{CONNECTION_ID}` | O `inletId` da conexão de transmissão criada anteriormente. |
 | `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
 | `receivedTimeMs`: Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 | `synchronousValidation.status` | Como o parâmetro de consulta `synchronousValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \

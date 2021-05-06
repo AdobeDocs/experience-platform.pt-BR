@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,8 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): O quadro normalizado pelo qual  [!DNL Platform] organiza os dados de experiência.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
+
+Além disso, a criação de uma conexão de transmissão exige um esquema XDM de destino e um conjunto de dados. Para saber como criá-los, leia o tutorial em [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md) ou o tutorial em [dados da série de tempo de transmissão](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de assimilação de streaming.
 
@@ -54,9 +56,9 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 - Tipo de conteúdo: application/json
 
-## Criar uma conexão
+## Criar uma conexão base
 
-Uma conexão especifica a fonte e contém as informações necessárias para tornar o fluxo compatível com as APIs de assimilação de streaming. Ao criar uma conexão, você tem a opção de criar uma conexão não autenticada e autenticada.
+Uma conexão base especifica a fonte e contém as informações necessárias para tornar o fluxo compatível com as APIs de assimilação de streaming. Ao criar uma conexão base, você tem a opção de criar uma conexão não autenticada e autenticada.
 
 ### Conexão não autenticada
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | Propriedade | Descrição |
@@ -189,7 +191,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão rec
 
 ## Obter URL de ponto de extremidade de fluxo
 
-Com a conexão criada, agora é possível recuperar o URL do terminal de transmissão.
+Com a conexão básica criada, agora é possível recuperar o URL do terminal de transmissão.
 
 **Formato da API**
 
@@ -247,6 +249,142 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## Criar uma conexão de origem
+
+Depois de criar a conexão básica, será necessário criar uma conexão de origem. Ao criar uma conexão de origem, você precisará do valor `id` da conexão de base criada.
+
+**Formato da API**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão de origem recém-criada, incluindo seu identificador exclusivo (`id`).
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## Criar uma conexão de destino
+
+Depois de criar a conexão de origem, você pode criar uma conexão de destino. Ao criar a conexão de destino, você precisará do valor `id` do conjunto de dados criado anteriormente.
+
+**Formato da API**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão de destino recém-criada, incluindo seu identificador exclusivo (`id`).
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## Criar um fluxo de dados
+
+Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma fonte. Você pode criar um fluxo de dados executando uma solicitação POST para o ponto de extremidade `/flows`.
+
+**Formato da API**
+
+```http
+POST /flows
+```
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do fluxo de dados recém-criado, incluindo seu identificador exclusivo (`id`).
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 

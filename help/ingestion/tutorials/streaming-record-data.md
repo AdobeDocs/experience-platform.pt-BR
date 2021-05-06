@@ -7,12 +7,13 @@ type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
+
 
 # Transmitir dados de registro usando APIs de assimilação de fluxo
 
@@ -23,10 +24,8 @@ Este tutorial ajudará você a começar a usar APIs de assimilação de streamin
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, reveja a documentação dos seguintes serviços:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): O quadro normalizado pelo qual  [!DNL Platform] organiza os dados de experiência.
+   - [Guia](../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Um guia abrangente que abrange cada um dos endpoints disponíveis da  [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece nas chamadas em todo este tutorial, bem como saber como criar esquemas, que são usados na criação de um conjunto de dados para assimilação.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-- [Guia](../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Um guia abrangente que abrange cada um dos endpoints disponíveis da  [!DNL Schema Registry] API e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece nas chamadas em todo este tutorial, bem como saber como criar esquemas, que são usados na criação de um conjunto de dados para assimilação.
-
-Além disso, este tutorial exige que você já tenha criado uma conexão de transmissão. Para obter mais informações sobre como criar uma conexão de transmissão, leia o [tutorial de conexão de transmissão](./create-streaming-connection.md).
 
 As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs de assimilação de streaming.
 
@@ -264,6 +263,12 @@ Uma resposta bem-sucedida retorna o status HTTP 201 e uma matriz contendo a ID d
 ]
 ```
 
+## Criar uma conexão de transmissão
+
+Depois de criar o esquema e o conjunto de dados, você pode criar uma conexão de transmissão
+
+Para obter mais informações sobre como criar uma conexão de transmissão, leia o [tutorial de conexão de transmissão](./create-streaming-connection.md).
+
 ## Assimilar dados de registro à conexão de transmissão {#ingest-data}
 
 Com o conjunto de dados e a conexão de transmissão no lugar, é possível assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Platform].
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | O valor `id` da conexão de transmissão criada anteriormente. |
+| `{CONNECTION_ID}` | O valor `inletId` da conexão de transmissão criada anteriormente. |
 | `synchronousValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se definido como `true`, ele poderá ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor é definido como `false`. |
 
 **Solicitação**

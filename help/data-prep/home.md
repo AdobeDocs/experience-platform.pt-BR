@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de fun
 ## Conjunto de mapeamentos
 
 Um conjunto de mapeamentos que transformam um schema em outro é conhecido coletivamente como um conjunto de mapeamentos. Um único conjunto de mapeamento é criado como parte de cada fluxo de dados. Um conjunto de mapeamento é parte integrante dos fluxos de dados e é criado, editado e monitorado como parte dos fluxos de dados.
+
+Para saber mais sobre conjuntos de mapeamento, incluindo como usar os campos em um conjunto de mapeamento, leia o [guia de conjunto de mapeamento](./mapping-set.md). Para saber como criar um conjunto de mapeamento e usar outras chamadas de API relacionadas a conjuntos de mapeamento, leia a seção do conjunto de mapeamento no [guia do desenvolvedor](./api/mapping-set.md).
 
 ## Tratamento do formato de dados
 

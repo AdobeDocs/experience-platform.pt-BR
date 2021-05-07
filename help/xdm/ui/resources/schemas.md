@@ -6,9 +6,9 @@ description: Saiba mais sobre as noções básicas de como criar e editar esquem
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Este guia fornece uma visão geral de como criar, editar e gerenciar esquemas do
 
 >[!IMPORTANT]
 >
->Os esquemas XDM são extremamente personalizáveis e, portanto, as etapas envolvidas na criação de um esquema podem variar dependendo do tipo de dados que você deseja que o esquema capture. Como resultado, este documento cobre apenas as interações básicas que você pode fazer com esquemas na interface do usuário e exclui etapas relacionadas, como personalização de classes, mixins, tipos de dados e campos.
+>Os esquemas XDM são extremamente personalizáveis e, portanto, as etapas envolvidas na criação de um esquema podem variar dependendo do tipo de dados que você deseja que o esquema capture. Como resultado, este documento cobre apenas as interações básicas que você pode fazer com esquemas na interface do usuário e exclui etapas relacionadas, como personalização de classes, grupos de campos de esquema, tipos de dados e campos.
 >
 >Para um tour completo do processo de criação do schema, siga o [tutorial de criação de schema](../../tutorials/create-schema-ui.md) para criar um schema de exemplo completo e se familiarizar com os muitos recursos do [!DNL Schema Editor].
 
@@ -37,7 +37,7 @@ Depois de selecionar uma classe, o [!DNL Schema Editor] aparece e a estrutura ba
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-Agora é possível começar a criar a estrutura do schema adicionando mixins](#add-mixins).[
+Agora é possível começar a criar a estrutura do schema adicionando [grupos de campos de esquema](#add-field-groups).
 
 ## Editar um esquema existente {#edit}
 
@@ -53,23 +53,23 @@ Para editar um schema existente, selecione a guia **[!UICONTROL Browse]** e sele
 >
 >Você pode usar os recursos de pesquisa e filtragem do espaço de trabalho para ajudar a encontrar o esquema mais fácil. Consulte o guia sobre [exploração de recursos XDM](../explore.md) para obter mais informações.
 
-Depois de selecionar um schema, o [!DNL Schema Editor] aparece com a estrutura do schema mostrada na tela. Agora é possível [adicionar mixins](#add-mixins) ao schema, [editar nomes de exibição de campo](#display-names) ou [editar mixins personalizados existentes](./mixins.md#edit) se o schema empregar algum.
+Depois de selecionar um schema, o [!DNL Schema Editor] aparece com a estrutura do schema mostrada na tela. Agora é possível [adicionar grupos de campos](#add-field-groups) ao esquema, [editar nomes de exibição de campos](#display-names) ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o esquema empregar algum.
 
-## Adicionar mixins a um schema {#add-mixins}
+## Adicionar grupos de campos a um esquema {#add-field-groups}
 
 >[!NOTE]
 >
->Esta seção aborda como adicionar mixins existentes a um schema. Se quiser criar um novo mixin personalizado, consulte o guia em [criar e editar mixins](./mixins.md#create).
+>Esta seção aborda como adicionar grupos de campos existentes a um schema. Se quiser criar um novo grupo de campos personalizado, consulte o guia em [criar e editar grupos de campos](./field-groups.md#create).
 
-Depois de abrir um schema dentro do [!DNL Schema Editor], você pode adicionar campos ao schema por meio do uso de mixins. Para iniciar, selecione **[!UICONTROL Add]** ao lado de **[!UICONTROL Mixins]** no painel esquerdo.
+Após abrir um schema dentro do [!DNL Schema Editor], é possível adicionar campos ao schema por meio do uso de grupos de campos. Para iniciar, selecione **[!UICONTROL Add]** ao lado de **[!UICONTROL Field groups]** no painel esquerdo.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-Uma caixa de diálogo é exibida mostrando uma lista de mixins que você pode selecionar para o esquema. Como as mixins são compatíveis apenas com uma classe, somente as mixins associadas à classe selecionada do schema serão listadas. Por padrão, as combinações listadas são classificadas com base em sua popularidade de uso na organização.
+Uma caixa de diálogo é exibida mostrando uma lista de grupos de campos que você pode selecionar para o esquema. Como os grupos de campos são compatíveis apenas com uma classe, somente os grupos de campos associados à classe selecionada do esquema serão listados. Por padrão, os grupos de campos listados são classificados com base em sua popularidade de uso em sua organização.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-Se você sabe a atividade geral ou a área comercial dos campos mixin que deseja adicionar, selecione uma ou mais categorias verticais do setor no painel à esquerda para filtrar a lista exibida de mixins.
+Se você souber a atividade geral ou a área comercial dos campos que deseja adicionar, selecione uma ou mais categorias verticais do setor no painel à esquerda para filtrar a lista exibida de grupos de campo.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -77,25 +77,25 @@ Se você sabe a atividade geral ou a área comercial dos campos mixin que deseja
 >
 >Para obter mais informações sobre as práticas recomendadas para modelagem de dados específica do setor no XDM, consulte a documentação sobre [modelos de dados do setor](../../schema/industries/overview.md).
 
-Você também pode usar a barra de pesquisa para ajudar a localizar a mixin desejada. Mixins cujo nome corresponde ao query são exibidas na parte superior da lista. Em **[!UICONTROL Standard Fields]**, as combinações que contêm campos que descrevem os atributos de dados desejados são exibidas.
+Também é possível usar a barra de pesquisa para ajudar a localizar o grupo de campos desejado. Os grupos de campos cujo nome corresponde ao query são exibidos na parte superior da lista. Em **[!UICONTROL Standard Fields]**, grupos de campos contendo campos que descrevem os atributos de dados desejados são exibidos.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
-Marque a caixa de seleção ao lado do nome do mixin que você deseja adicionar ao schema. Você pode selecionar várias mixins na lista, com cada mixin selecionado aparecendo no painel direito.
+Marque a caixa de seleção ao lado do nome do grupo de campos que deseja adicionar ao schema. É possível selecionar vários grupos de campos na lista, com cada grupo de campos selecionado aparecendo no painel direito.
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->Para qualquer mixin listado, você pode passar o mouse ou focar no ícone de informações (![](../../images/ui/resources/schemas/info-icon.png)) para exibir uma breve descrição do tipo de dados que o mixin captura. Você também pode selecionar o ícone de visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para visualizar a estrutura dos campos que o mixin fornece antes de decidir adicioná-lo ao schema.
+>Para qualquer grupo de campos listado, você pode passar o mouse ou focar no ícone de informações (![](../../images/ui/resources/schemas/info-icon.png)) para exibir uma breve descrição do tipo de dados que o grupo de campos captura. Você também pode selecionar o ícone de visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para exibir a estrutura dos campos que o grupo de campos fornece antes de decidir adicioná-lo ao schema.
 
-Depois de escolher as mixins, selecione **[!UICONTROL Add mixin]** para adicioná-las ao schema.
+Depois de escolher os grupos de campos, selecione **[!UICONTROL Add field groups]** para adicioná-los ao schema.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-O [!DNL Schema Editor] reaparece com os campos fornecidos pela mistura representados na tela.
+O [!DNL Schema Editor] é exibido novamente com os campos fornecidos pelo grupo de campos representados na tela.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Ativar um esquema para o Perfil do cliente em tempo real {#profile}
 
@@ -127,11 +127,11 @@ O esquema agora está ativado para uso no Perfil do cliente em tempo real. Quand
 
 ## Editar nomes de exibição para campos de esquema {#display-names}
 
-Depois de atribuir uma classe e adicionar mixins a um esquema, você pode editar os nomes de exibição de qualquer um dos campos do esquema, independentemente desses campos terem sido fornecidos por recursos XDM padrão ou personalizados.
+Depois de atribuir uma classe e adicionar grupos de campos a um esquema, você pode editar os nomes de exibição de qualquer um dos campos do esquema, independentemente desses campos terem sido fornecidos por recursos XDM padrão ou personalizados.
 
 >[!NOTE]
 >
->Lembre-se de que os nomes de exibição dos campos que pertencem a classes ou mixins padrão só podem ser editados no contexto de um schema específico. Em outras palavras, alterar o nome de exibição de um campo padrão em um schema não afeta outros schemas que usam a mesma classe ou mixin associada.
+>Lembre-se de que os nomes de exibição dos campos que pertencem a classes ou grupos de campos padrão só podem ser editados no contexto de um schema específico. Em outras palavras, alterar o nome de exibição de um campo padrão em um schema não afeta outros esquemas que empregam a mesma classe ou grupo de campos associado.
 
 Para editar o nome de exibição de um campo de esquema, selecione o campo na tela. No painel direito, forneça o novo nome em **[!UICONTROL Display name]**.
 
@@ -147,7 +147,7 @@ Você pode alterar a classe de um schema em qualquer ponto durante o processo de
 
 >[!WARNING]
 >
->A reatribuição da classe para um schema deve ser feita com extremo cuidado. Mixins são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
+>A reatribuição da classe para um schema deve ser feita com extremo cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
 
 Para reatribuir uma classe, selecione **[!UICONTROL Assign]** no lado esquerdo da tela.
 
@@ -167,7 +167,7 @@ Após confirmar a alteração de classe, a tela será redefinida e todo o progre
 
 ## Próximas etapas
 
-Este documento abordou as noções básicas para a criação e edição de schemas na interface do usuário da plataforma. É altamente recomendável revisar o [tutorial de criação de esquema](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente para criar um schema completo na interface do usuário, incluindo a criação de mixins e tipos de dados personalizados para casos de uso exclusivos.
+Este documento abordou as noções básicas para a criação e edição de schemas na interface do usuário da plataforma. É altamente recomendável revisar o [tutorial de criação de esquema](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente para criar um schema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados para casos de uso exclusivos.
 
 Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Schemas] visão geral do espaço de trabalho](../overview.md).
 

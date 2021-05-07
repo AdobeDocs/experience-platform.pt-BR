@@ -6,9 +6,9 @@ type: Documentation
 description: Atributos calculados são funções para agregar dados a nível de evento em atributos a nível de perfil. Essas funções são calculadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -55,4 +55,4 @@ Os atributos de esquema que já foram usados em uma expressão de definição de
 
 Devido ao fato de que nenhuma dependência foi detectada, o Experience Platform não avaliará automaticamente o atributo calculado associado sempre que a definição do segmento for avaliada.
 
-Como alternativa, a criação de atributos calculados pode ser gerenciada por meio de uma combinação específica que adiciona novos atributos calculados que não entram em conflito com atributos existentes. Outra alternativa é simplesmente recriar o segmento com o rastreamento de dependência correto para os novos atributos calculados.
+Como alternativa, a criação de atributos calculados pode ser gerenciada por meio de um grupo de campos de esquema específico que adiciona novos atributos calculados que não estão em conflito com atributos existentes. Outra alternativa é simplesmente recriar o segmento com o rastreamento de dependência correto para os novos atributos calculados.

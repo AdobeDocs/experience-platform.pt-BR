@@ -1,15 +1,15 @@
 ---
 title: Suporte às preferências de consentimento do cliente usando o SDK da Web da Adobe Experience Platform
 description: Saiba como oferecer suporte às preferências de consentimento com o SDK da Web da Adobe Experience Platform.
-keywords: consentimento; defaultConsent; consentimento padrão; setConsent; Mistura de privacidade de perfil; Mistura de privacidade de eventos de experiência; Mixin de privacidade;
+keywords: consentimento; defaultConsent; consentimento padrão; setConsent; grupo de campos Privacidade de perfil; grupo de campos Privacidade de eventos de experiência; grupo de campos Privacidade;
+exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 translation-type: tm+mt
-source-git-commit: dd9101079a1093c109f43b268a78c07770221156
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
-
 
 # Suporte às preferências de consentimento do cliente
 
@@ -54,7 +54,7 @@ O SDK oferece suporte às versões 1.0 e 2.0 do padrão de consentimento do Adob
 
 ### Uso da versão padrão do Adobe 2.0
 
-Se você estiver usando o Adobe Experience Platform, precisará incluir uma combinação de privacidade no esquema do perfil. Consulte [Governança, privacidade e segurança no Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obter mais informações sobre a versão padrão do Adobe 2.0. Você pode adicionar dados dentro do objeto de valor abaixo que correspondem ao esquema do campo `consents` do mixin de perfil Consents &amp; Preferences .
+Se estiver usando o Adobe Experience Platform, será necessário incluir um grupo de campos de esquema de privacidade ao esquema do perfil. Consulte [Governança, privacidade e segurança no Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obter mais informações sobre o Adobe standard versão 2.0. Você pode adicionar dados dentro do objeto de valor abaixo que correspondem ao esquema do campo `consents` do grupo de campos de perfil Consents &amp; Preferências .
 
 Se o usuário optar por participar, execute o comando `setConsent` com a preferência de coleta definida como `y` da seguinte maneira:
 
@@ -147,7 +147,7 @@ alloy("setConsent", {
 });
 ```
 
-Quando o consentimento é definido dessa forma, o Perfil do cliente em tempo real é atualizado com as informações de consentimento. Para que isso funcione, o esquema XDM do perfil precisa conter a [Mixin da privacidade do perfil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Ao enviar eventos, as informações de consentimento do IAB precisam ser adicionadas manualmente ao objeto XDM do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento nos eventos, o [Mixin da Privacidade de eventos de experiência](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) precisa ser adicionado ao schema de eventos de experiência.
+Quando o consentimento é definido dessa forma, o Perfil do cliente em tempo real é atualizado com as informações de consentimento. Para que isso funcione, o esquema XDM do perfil precisa conter o [grupo de campos Privacidade de perfil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Ao enviar eventos, as informações de consentimento do IAB precisam ser adicionadas manualmente ao objeto XDM do evento. O SDK não inclui automaticamente as informações de consentimento nos eventos. Para enviar as informações de consentimento nos eventos, o [grupo de campos da Privacidade de eventos de experiência](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) precisa ser adicionado ao esquema Evento de experiência.
 
 ## Enviar vários padrões em uma solicitação
 
@@ -184,4 +184,3 @@ Você precisará armazenar as preferências do usuário de maneira independente 
 ## Sincronização de identidades ao definir o consentimento
 
 Quando o consentimento padrão está pendente ou fora, `setConsent` pode ser a primeira solicitação que sai e estabelece a identidade. Por causa disso, pode ser importante sincronizar identidades na primeira solicitação. O mapa de identidade pode ser adicionado ao comando `setConsent`, como no comando `sendEvent`. Consulte [Recuperar ID de Experience Cloud](../identity/overview.md)
-

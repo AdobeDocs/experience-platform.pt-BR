@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform, home, tópicos populares, schema, esquema, mixin, Mixin, mixins, mixins, tipo de dados, tipos de dados, tipos de dados, tipo de dados, design de esquema, tipo de dados, tipo de dados, tipo de dados, tipo de dados, esquemas, Esquemas, design de esquema, mapa, Mapa;
+keywords: Experience Platform, home, tópicos populares, esquema, esquema, grupo de campos, grupo de campos, grupos de campos, grupos de campos, tipo de dados, tipos de dados, tipo de dados, design de esquema, tipo de dados, tipo de dados, tipo de dados, tipo de dados, esquemas, esquemas, design de esquema, mapa, mapa;
 solution: Experience Platform
 title: Restrições de Tipo de Campo XDM
 topic-legacy: overview
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1063'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ Nos esquemas do Experience Data Model (XDM), o tipo de campo restringe o tipo de
 
 ## Introdução
 
-Antes de usar este guia, revise as [noções básicas da composição do schema](./composition.md) para obter uma introdução a esquemas, classes e mixins do XDM.
+Antes de usar este guia, revise as [noções básicas da composição do schema](./composition.md) para obter uma introdução a esquemas XDM, classes e grupos de campos de esquema.
 
-Se você planeja definir seus próprios tipos de campo na API, é altamente recomendável começar com o [Guia do desenvolvedor do Registro de Schema](../api/getting-started.md) para saber como criar mixins e tipos de dados para incluir seus campos personalizados. Se você estiver usando a interface do usuário do Experience Platform para criar seus esquemas, consulte o guia sobre [definição de campos na interface do usuário](../ui/fields/overview.md) para saber como implementar restrições em campos definidos em mixins e tipos de dados personalizados.
+Se você planeja definir seus próprios tipos de campo na API, é altamente recomendável começar com o [Guia do desenvolvedor do Registro de Schema](../api/getting-started.md) para saber como criar grupos de campo e tipos de dados para incluir seus campos personalizados. Se você estiver usando a interface do usuário do Experience Platform para criar seus esquemas, consulte o guia sobre [definição de campos na interface do usuário](../ui/fields/overview.md) para saber como implementar restrições em campos definidos em grupos de campos personalizados e tipos de dados.
 
 ## Estrutura básica e exemplos
 
@@ -214,7 +214,7 @@ Todos os campos XDM são definidos usando as restrições padrão [JSON Schema](
 
 A tabela a seguir descreve a formatação apropriada para definir tipos de campos diferentes, incluindo aqueles com propriedades opcionais. Mais informações sobre propriedades opcionais e palavras-chave específicas do tipo estão disponíveis na [documentação do Esquema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Para começar, encontre o tipo de campo desejado e use o código de amostra fornecido para criar sua solicitação de API para [criar um mixin](../api/mixins.md#create) ou [criar um tipo de dados](../api/data-types.md#create).
+Para começar, encontre o tipo de campo desejado e use o código de amostra fornecido para criar sua solicitação de API para [criar um grupo de campos](../api/field-groups.md#create) ou [criar um tipo de dados](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>

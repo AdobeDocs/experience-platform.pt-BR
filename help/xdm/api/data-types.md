@@ -5,16 +5,16 @@ title: Ponto de extremidade da API de tipos de dados
 description: O endpoint /datatypes na API do Registro de Schema permite gerenciar programaticamente os tipos de dados XDM no aplicativo de experiência.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
 
 # Ponto de extremidade de tipos de dados
 
-Os tipos de dados são usados como campos do tipo de referência em classes ou combinações da mesma forma que campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a mixins, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis, pois podem ser incluídos em qualquer lugar na estrutura do schema, enquanto mixins só podem ser adicionados no nível raiz. O endpoint `/datatypes` na API [!DNL Schema Registry] permite gerenciar programaticamente os tipos de dados no aplicativo de experiência.
+Os tipos de dados são usados como campos de tipo de referência em classes ou grupos de campos de esquema da mesma forma que os campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a grupos de campos, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis porque podem ser incluídos em qualquer lugar na estrutura do schema, enquanto os grupos de campos só podem ser adicionados no nível raiz. O endpoint `/datatypes` na API [!DNL Schema Registry] permite gerenciar programaticamente os tipos de dados no aplicativo de experiência.
 
 ## Introdução
 

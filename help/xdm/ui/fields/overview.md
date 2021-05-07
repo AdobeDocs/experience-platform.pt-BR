@@ -6,20 +6,20 @@ description: Saiba como definir campos XDM na interface do usuário do Experienc
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1250'
 ht-degree: 3%
 
 ---
 
 # Definir campos XDM na interface do usuário
 
-O [!DNL Schema Editor] na interface do usuário do Adobe Experience Platform permite definir seus próprios campos nas classes e combinações personalizadas do Experience Data Model (XDM). Este guia aborda as etapas para definir campos XDM na interface do usuário, incluindo as opções de configuração disponíveis para cada tipo de campo.
+O [!DNL Schema Editor] na interface do usuário do Adobe Experience Platform permite definir seus próprios campos nas classes personalizadas do Experience Data Model (XDM) e nos grupos de campos do esquema. Este guia aborda as etapas para definir campos XDM na interface do usuário, incluindo as opções de configuração disponíveis para cada tipo de campo.
 
 ## Pré-requisitos
 
-Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema do Experience Platform e as [noções básicas da composição do schema](../../schema/composition.md) para saber como classes e mixins contribuem com campos para esquemas XDM.
+Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema do Experience Platform e as [noções básicas da composição do schema](../../schema/composition.md) para saber como classes e grupos de campos contribuem com campos para esquemas XDM.
 
 Embora não seja necessário para este guia, é recomendável seguir também o tutorial em [composição de um schema na interface do usuário](../../tutorials/create-schema-ui.md) para se familiarizar com os vários recursos do [!DNL Schema Editor].
 
@@ -27,13 +27,13 @@ Embora não seja necessário para este guia, é recomendável seguir também o t
 
 Para definir novos campos XDM na interface do usuário, primeiro você deve abrir um schema dentro do [!DNL Schema Editor]. Dependendo de quais schemas estão disponíveis no momento no [!DNL Schema Library], você pode optar por [criar um novo schema](../resources/schemas.md#create) ou [selecionar um schema existente para editar](../resources/schemas.md#edit).
 
-Depois de abrir o [!DNL Schema Editor], use o painel esquerdo para selecionar a classe ou mixin para a qual deseja definir os campos. Se o recurso for um recurso personalizado definido pela organização, os controles para adicionar ou editar campos serão exibidos na tela. Esses controles são exibidos ao lado do nome do schema, bem como qualquer campo do tipo de objeto que foi definido na classe ou mixin selecionado.
+Depois de abrir o [!DNL Schema Editor], use o painel à esquerda para selecionar a classe ou grupo de campos para o qual deseja definir campos. Se o recurso for um recurso personalizado definido pela organização, os controles para adicionar ou editar campos serão exibidos na tela. Esses controles são exibidos ao lado do nome do schema, bem como quaisquer campos do tipo de objeto que foram definidos na classe ou grupo de campos selecionado.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
 >[!NOTE]
 >
->Se a classe ou mixin selecionado for um recurso principal fornecido pelo Adobe, ele não poderá ser editado e, portanto, os controles mostrados acima não aparecerão. Se o esquema ao qual você deseja adicionar campos for baseado em uma classe XDM principal e não contiver mixins personalizados, você poderá [criar um novo mixin](../resources/mixins.md#create) para adicionar ao esquema.
+>Se a classe ou o grupo de campos selecionado for um recurso principal fornecido pelo Adobe, ele não poderá ser editado e, portanto, os controles mostrados acima não aparecerão. Se o esquema ao qual você deseja adicionar campos for baseado em uma classe XDM principal e não contiver grupos de campos personalizados, você poderá [criar um novo grupo de campos](../resources/field-groups.md#create) para adicionar ao esquema.
 
 Para adicionar um novo campo ao recurso, selecione o ícone de **mais (+)** ao lado do nome do schema na tela ou ao lado do campo do tipo de objeto no qual você deseja definir o campo.
 
@@ -41,7 +41,7 @@ Para adicionar um novo campo ao recurso, selecione o ícone de **mais (+)** ao l
 
 ## Definir um campo para um recurso {#define}
 
-Depois de selecionar o ícone de **mais (+)**, um **[!UICONTROL New field]** aparece na tela, localizada em um objeto de nível raiz que é namespacado para sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos adicionados a um schema por meio de classes e mixins personalizados são colocados automaticamente nesse namespace para evitar conflitos com outros campos a partir de classes e mixins fornecidos pelo Adobe.
+Depois de selecionar o ícone de **mais (+)**, um **[!UICONTROL New field]** aparece na tela, localizada em um objeto de nível raiz que é namespacado para sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos adicionados a um schema por meio de classes personalizadas e grupos de campos são colocados automaticamente dentro desse namespace para evitar conflitos com outros campos a partir de classes fornecidas por Adobe e grupos de campos.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -69,11 +69,11 @@ A tela é atualizada para mostrar o nome e o tipo do campo, e o painel direito a
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-Você pode continuar a seguir as etapas acima para adicionar mais campos ao schema. Depois que o schema é salvo, sua classe base e as combinações também são salvas se alguma alteração for feita a elas.
+Você pode continuar a seguir as etapas acima para adicionar mais campos ao schema. Depois que o schema é salvo, sua classe base e seus grupos de campos também são salvos se alguma alteração for feita neles.
 
 >[!NOTE]
 >
->Quaisquer alterações feitas nas combinações ou na classe de um schema serão refletidas em todos os outros esquemas que as utilizam.
+>Quaisquer alterações feitas nos grupos de campos ou na classe de um schema serão refletidas em todos os outros esquemas que os empregam.
 
 ## Propriedades de campos específicos do tipo {#type-specific-properties}
 
@@ -107,6 +107,6 @@ Embora tecnicamente não seja um tipo de campo especial, também é recomendáve
 
 ## Próximas etapas
 
-Este guia forneceu uma visão geral de como definir campos XDM na interface do usuário. Lembre-se de que os campos só podem ser adicionados a schemas por meio de classes e mixins. Para saber mais sobre como gerenciar esses recursos na interface do usuário, consulte os guias sobre como criar e editar [classes](../resources/classes.md) e [mixins](../resources/mixins.md).
+Este guia forneceu uma visão geral de como definir campos XDM na interface do usuário. Lembre-se de que os campos só podem ser adicionados a schemas por meio de classes e grupos de campos. Para saber mais sobre como gerenciar esses recursos na interface do usuário, consulte os guias sobre como criar e editar [classes](../resources/classes.md) e [grupos de campo](../resources/field-groups.md).
 
 Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Schemas] visão geral do espaço de trabalho](../overview.md).

@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Saiba como configurar um esquema e conjunto de dados do Experience Data Model (XDM) para capturar dados de consentimento e preferência no Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Este documento fornece etapas para configurar um conjunto de dados para processa
 >
 >Os exemplos neste guia usam um conjunto padronizado de campos para representar valores de consentimento do cliente, conforme definido pelo tipo de dados [Consents &amp; Preferences XDM](../../../../xdm/data-types/consents.md). A estrutura desses campos tem como objetivo fornecer um modelo de dados eficiente para abranger muitos casos de uso comuns de coleta de consentimento.
 >
->No entanto, você também pode definir suas próprias combinações para representar o consentimento de acordo com seus próprios modelos de dados. Consulte sua equipe jurídica para obter aprovação de um modelo de dados de consentimento que atenda às suas necessidades comerciais, com base nas seguintes opções:
+>No entanto, também é possível definir seus próprios grupos de campos para representar o consentimento de acordo com seus próprios modelos de dados. Consulte sua equipe jurídica para obter aprovação de um modelo de dados de consentimento que atenda às suas necessidades comerciais, com base nas seguintes opções:
 >
->* A combinação de consentimento padronizada
->* Uma combinação de consentimento personalizado criada pela sua organização
->* Uma combinação da combinação de consentimento padronizado e campos adicionais fornecidos por uma combinação de consentimento personalizado
+>* O grupo de campos de consentimento padronizado
+>* Um grupo de campos de consentimento personalizado criado pela organização
+>* Uma combinação do grupo de campos de consentimento padronizado e campos adicionais fornecidos por um grupo de campos de consentimento personalizado
 
 
 ## Pré-requisitos
@@ -42,11 +42,11 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 >
 >Este tutorial pressupõe que você saiba o schema [!DNL Profile] na Plataforma que deseja usar para capturar informações de atributos do cliente. Independentemente do método usado para coletar dados de consentimento, esse schema deve estar [ativado para o Perfil do cliente em tempo real](../../../../xdm/ui/resources/schemas.md#profile). Além disso, a identidade primária do esquema não pode ser um campo diretamente identificável que é proibido de usar em publicidade com base em interesses, como um endereço de email. Consulte seu consultor jurídico se não tiver certeza de quais campos são restritos.
 
-## Consentimentos e preferências mesclam estrutura {#structure}
+## Estrutura do grupo de campos Consentimentos e Preferências {#structure}
 
-A mistura [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (a seguir chamada de &quot;mistura de Consentes e Preferências&quot;) fornece campos de consentimento padronizados para um esquema. No momento, esse mixin é compatível apenas com schemas baseados na classe [!DNL XDM Individual Profile].
+O grupo de campos [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (a seguir denominado &quot;grupo de campos Consentes e Preferências&quot;) fornece campos de consentimento padronizados para um esquema. No momento, esse grupo de campos é compatível apenas com schemas com base na classe [!DNL XDM Individual Profile].
 
-O mixin fornece um único campo do tipo de objeto, `consents`, cujas subpropriedades capturam um conjunto de campos de consentimento padronizados. O JSON a seguir é um exemplo do tipo de dados que `consents` espera ao assimilar dados:
+O grupo de campos fornece um único campo do tipo de objeto, `consents`, cujas subpropriedades capturam um conjunto de campos de consentimento padronizados. O JSON a seguir é um exemplo do tipo de dados que `consents` espera ao assimilar dados:
 
 ```json
 {
@@ -95,7 +95,7 @@ O mixin fornece um único campo do tipo de objeto, `consents`, cujas subpropried
 >
 >Para obter mais informações sobre a estrutura e o significado das sub-propriedades em `consents`, consulte a visão geral no [Tipo de dados de Consentimentos e Preferências](../../../../xdm/data-types/consents.md).
 
-## Adicione o mixin Consents &amp; Preferences ao seu schema [!DNL Profile] {#add-mixin}
+## Adicione o grupo de campos Consents &amp; Preferências ao esquema [!DNL Profile] {#add-field-group}
 
 Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** na navegação à esquerda e selecione a guia **[!UICONTROL Browse]** para exibir uma lista de esquemas existentes. Aqui, selecione o nome do schema habilitado para [!DNL Profile] ao qual deseja adicionar campos de consentimento. As capturas de tela nesta seção usam o schema &quot;Membros de fidelidade&quot; criado no [tutorial de criação de schema](../../../../xdm/tutorials/create-schema-ui.md) como exemplo.
 
@@ -105,15 +105,15 @@ Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** na na
 >
 >Você pode usar os recursos de pesquisa e filtragem do espaço de trabalho para ajudar a encontrar o esquema mais fácil. Consulte o guia sobre [exploração de recursos XDM](../../../../xdm/ui/explore.md) para obter mais informações.
 
-O [!DNL Schema Editor] é exibido, mostrando a estrutura do schema na tela. No lado esquerdo da tela, selecione **[!UICONTROL Add]** na seção **[!UICONTROL Mixins]**.
+O [!DNL Schema Editor] é exibido, mostrando a estrutura do schema na tela. No lado esquerdo da tela, selecione **[!UICONTROL Add]** na seção **[!UICONTROL Field groups]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-A caixa de diálogo **[!UICONTROL Add mixin]** é exibida. Aqui, selecione **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar a mistura mais fácil. Depois que o mixin for selecionado, selecione **[!UICONTROL Add mixin]**.
+A caixa de diálogo **[!UICONTROL Add field group]** é exibida. Aqui, selecione **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** na lista. Como opção, você pode usar a barra de pesquisa para restringir os resultados para localizar o grupo de campos mais facilmente. Depois que o grupo de campos for selecionado, selecione **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-A tela é exibida novamente, mostrando que o objeto `consents` foi adicionado à estrutura do schema. Se você precisar de mais campos de consentimento e preferência não capturados pelo mixin padrão, consulte a seção de apêndice em [adicionar campos de consentimento e preferência personalizados ao schema](#custom-consent). Caso contrário, selecione **[!UICONTROL Save]** para finalizar as alterações no schema.
+A tela é exibida novamente, mostrando que o objeto `consents` foi adicionado à estrutura do schema. Se você precisar de mais campos de consentimento e preferência não capturados pelo grupo de campos padrão, consulte a seção de apêndice em [adicionar campos de consentimento e preferência personalizados ao schema](#custom-consent). Caso contrário, selecione **[!UICONTROL Save]** para finalizar as alterações no schema.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -165,17 +165,17 @@ A seção a seguir contém informações adicionais sobre como criar um conjunto
 
 ### Adicionar consentimento personalizado e campos de preferência ao esquema {#custom-consent}
 
-Se você precisar capturar sinais de consentimento adicionais fora daqueles representados pela mesclagem padrão [!DNL Consents & Preferences], poderá usar componentes XDM personalizados para aprimorar seu esquema de consentimento para atender às necessidades específicas dos negócios. Esta seção descreve os princípios básicos de como personalizar o esquema de consentimento de uma maneira compatível com os comandos de alteração de consentimento feitos pelos SDKs do Adobe Experience Platform Mobile e da Web.
+Se você precisar capturar sinais de consentimento adicionais fora daqueles representados pelo grupo de campos padrão [!DNL Consents & Preferences] , poderá usar componentes XDM personalizados para aprimorar seu esquema de consentimento para atender às necessidades específicas dos negócios. Esta seção descreve os princípios básicos de como personalizar o esquema de consentimento de uma maneira compatível com os comandos de alteração de consentimento feitos pelos SDKs do Adobe Experience Platform Mobile e da Web.
 
 >[!IMPORTANT]
 >
->Você deve usar o mixin [!DNL Consents & Preferences] como uma linha de base para a estrutura dos dados de consentimento e adicionar campos adicionais, conforme necessário, em vez de tentar criar toda a estrutura do zero.
+>Você deve usar o grupo de campos [!DNL Consents & Preferences] como uma linha de base para a estrutura dos dados de consentimento e adicionar campos adicionais, conforme necessário, em vez de tentar criar toda a estrutura do zero.
 
-Para adicionar campos personalizados à estrutura de um mixin padrão, primeiro crie um mixin personalizado. Depois de adicionar o mixin [!DNL Consents & Preferences] ao schema, selecione o ícone de **mais (+)** na seção **[!UICONTROL Mixins]** e selecione **[!UICONTROL Create new mixin]**. Forneça um nome e uma descrição opcional para o mixin e selecione **[!UICONTROL Add mixin]**.
+Para adicionar campos personalizados à estrutura de um grupo de campos padrão, primeiro crie um grupo de campos personalizado. Depois de adicionar o grupo de campos [!DNL Consents & Preferences] ao schema, selecione o ícone de **mais (+)** na seção **[!UICONTROL Field groups]** e selecione **[!UICONTROL Create new field group]**. Forneça um nome e uma descrição opcional para o grupo de campos e selecione **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-O [!DNL Schema Editor] reaparece com o novo mixin personalizado selecionado no painel esquerdo. Na tela, são exibidos controles que permitem adicionar campos personalizados à estrutura do esquema. Para adicionar um novo consentimento ou campo de preferência, selecione o ícone de adição (+)**ao lado do objeto `consents`.**
+O [!DNL Schema Editor] é exibido novamente com o novo grupo de campos personalizados selecionado no painel à esquerda. Na tela, são exibidos controles que permitem adicionar campos personalizados à estrutura do esquema. Para adicionar um novo consentimento ou campo de preferência, selecione o ícone de adição (+)**ao lado do objeto `consents`.**
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 

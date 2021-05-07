@@ -6,7 +6,7 @@ topic-legacy: overview
 description: A padronização e a interoperabilidade são conceitos-chave por trás do Adobe Experience Platform. O Experience Data Model (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->O termo &quot;mixin&quot; foi atualizado para &quot;schema field group&quot; para promover a compreensão. Grupos de campos são conjuntos reutilizáveis de campos para suportar casos de uso de negócios. Essa alteração agora é refletida na API do Registro de Schema, na interface do usuário do Adobe Experience Platform e em toda a documentação da plataforma.
+>O termo &quot;mixin&quot; foi atualizado para &quot;grupo de campos&quot; do schema para promover a compreensão. Grupos de campos são conjuntos reutilizáveis de campos para suportar casos de uso de negócios. Essa alteração agora é refletida na API do Registro de Schema, na interface do usuário do Adobe Experience Platform e em toda a documentação da plataforma.
 
 A padronização e a interoperabilidade são conceitos-chave por trás do Adobe Experience Platform. [!DNL Experience Data Model] O (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 

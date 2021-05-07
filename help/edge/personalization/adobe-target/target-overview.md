@@ -2,14 +2,14 @@
 title: Uso do Adobe Target com o SDK da Web da plataforma
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform usando o Adobe Target
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema;
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 3%
+source-wordcount: '659'
+ht-degree: 4%
 
 ---
-
 
 # Uso do Adobe Target com o SDK da Web da plataforma
 
@@ -19,7 +19,7 @@ Os seguintes recursos foram testados e atualmente são compatíveis com o Target
 
 * Testes A/B
 * Relatórios de impressão e conversão do A4T
-* Personalização automatizada
+* Automated Personalization
 * Direcionamento de experiência
 * Testes multivariados
 * Relatórios de conversão e impressão do Target nativo
@@ -117,12 +117,12 @@ alloy("sendEvent", {
 
 ## Públicos-alvo no XDM
 
-Ao definir públicos para suas atividades do Target que são entregues por meio do SDK da Web da Adobe Experience Platform, [XDM](https://docs.adobe.com/content/help/pt-BR/experience-platform/xdm/home.html) deve ser definido e usado. Depois de definir esquemas, classes e combinações do XDM, você pode criar uma regra de público-alvo do Target definida pelos dados do XDM para o direcionamento. No Target, os dados do XDM são exibidos no Audience Builder como um parâmetro personalizado. O XDM é serializado usando notação de pontos (por exemplo, `web.webPageDetails.name`).
+Ao definir públicos para suas atividades do Target que são entregues por meio do SDK da Web da Adobe Experience Platform, [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR) deve ser definido e usado. Depois de definir esquemas, classes e grupos de campos de esquema XDM, você pode criar uma regra de público-alvo do Target definida pelos dados XDM para direcionamento. No Target, os dados do XDM são exibidos no Audience Builder como um parâmetro personalizado. O XDM é serializado usando notação de pontos (por exemplo, `web.webPageDetails.name`).
 
 Se você tiver atividades do Target com públicos-alvo predefinidos que usam parâmetros personalizados ou um perfil de usuário, elas não serão entregues corretamente por meio do SDK. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. No entanto, há campos de direcionamento de público-alvo prontos para uso compatíveis com o SDK da Web da Adobe Experience Platform que não exigem XDM. Esses campos estão disponíveis na interface do usuário do Target que não requer XDM:
 
 * Biblioteca do Target
-* Geografia  
+* Geografia 
 * Rede
 * Operating System
 * Páginas do site

@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform; home; tópicos populares; XDM; sistema XDM; perfil individual XDM; XDM ExperienceEvent; Evento de experiência XDM; evento de experiência; evento de experiência; Mixins; mixin; Mixin; Evento de experiência; Evento de experiência XDM; ExperienceEvent XDM; experienceEvent; evento de experiência; XDM ExperienceEvent; modelo de dados de experiência; modelo de dados de experiência; Modelo de dados; Registro de esquema, Registro de esquema, biblioteca de esquema, Biblioteca de esquema, esquema, dados de registro, série de tempo, série de tempo
+keywords: Experience Platform; home; tópicos populares; XDM; sistema XDM; perfil individual XDM; XDM ExperienceEvent; Evento de experiência XDM; evento de experiência; evento de experiência; grupos de campos; grupo de campos; grupo de campos; grupo de campos; evento de experiência; Evento de experiência XDM; ExperienceEvent; evento de experiência; evento de experiência XDM; modelo de dados de experiência; modelo de dados de experiência; modelo de dados; Registro de esquema, Registro de esquema, biblioteca de esquema, Biblioteca de esquema, esquema, dados de registro, série de tempo, série de tempo
 solution: Experience Platform
 title: Visão geral do sistema XDM
 topic-legacy: overview
 description: A padronização e a interoperabilidade são conceitos-chave por trás do Adobe Experience Platform. O Experience Data Model (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 2%
+source-wordcount: '1694'
+ht-degree: 1%
 
 ---
 
 # Visão geral do sistema XDM
+
+>[!NOTE]
+>
+>O termo &quot;mixin&quot; foi atualizado para &quot;schema field group&quot; para promover a compreensão. Grupos de campos são conjuntos reutilizáveis de campos para suportar casos de uso de negócios. Essa alteração agora é refletida na API do Registro de Schema, na interface do usuário do Adobe Experience Platform e em toda a documentação da plataforma.
 
 A padronização e a interoperabilidade são conceitos-chave por trás do Adobe Experience Platform. [!DNL Experience Data Model] O (XDM), impulsionado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
@@ -27,7 +31,7 @@ Este documento fornece uma visão geral da função do Sistema XDM em [!DNL Expe
 
 [!DNL Experience Platform]A utiliza esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Ao definir os dados de forma consistente em todos os sistemas, fica mais fácil manter o significado e, portanto, obter valor dos dados.
 
-Para que os dados possam ser assimilados em [!DNL Platform], um schema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que pode ser contido em cada campo. Os esquemas consistem em uma classe base e zero ou mais mixins.
+Para que os dados possam ser assimilados em [!DNL Platform], um schema deve ser composto para descrever a estrutura dos dados e fornecer restrições ao tipo de dados que pode ser contido em cada campo. Os esquemas consistem em uma classe base e zero ou mais grupos de campos de esquema.
 
 Para obter mais informações sobre o modelo de composição do schema, incluindo princípios de design e práticas recomendadas, consulte as [noções básicas da composição do schema](schema/composition.md).
 

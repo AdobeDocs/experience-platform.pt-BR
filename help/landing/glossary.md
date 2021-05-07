@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '7131'
+source-wordcount: '7147'
 ht-degree: 1%
 
 ---
@@ -239,6 +239,8 @@ ht-degree: 1%
 
 **Campo**: Um campo é o elemento de nível mais baixo de um conjunto de dados, conforme definido pelo esquema XDM do conjunto de dados. Cada campo tem um nome para fins de referência e um tipo para indicar o tipo de dados que ele contém. Os tipos de campo podem incluir (mas não estão limitados a) número inteiro, número, string, booleano e objeto.
 
+**Grupo** de campos: Consulte &quot;Grupo de campos do esquema&quot;.
+
 **Rótulos** de campo: Os rótulos de campo são rótulos de governança de dados que são herdados de um conjunto de dados ou aplicados diretamente a um campo.
 
 **Nome** do campo: Um nome de campo é usado para referenciar o valor de um campo em queries e serviços downstream.
@@ -323,7 +325,7 @@ ht-degree: 1%
 
 **Política** de mesclagem: As políticas de mesclagem são regras que o Experience Platform usa para determinar como os fragmentos de dados do cliente de várias fontes serão combinados para criar um perfil individual. Quando ocorre um conflito de dados, a política de mesclagem determina quais dados devem ser priorizados para inclusão no perfil.
 
-**Mistura**: No Experience Data Model (XDM), um mixin permite que os usuários estendam campos reutilizáveis para definir um ou mais atributos destinados a serem incluídos em um schema.
+**Mistura**: Consulte &quot;Grupo de campos do esquema&quot;.
 
 **Módulo**: No  [!DNL Platform Launch], um módulo é um snippet do JavaScript executável fornecido por uma extensão, que executa ações em um ambiente cliente sem precisar criar uma regra.
 
@@ -355,7 +357,7 @@ ht-degree: 1%
 
 **Ofertas** personalizadas: Uma oferta personalizada é uma mensagem de marketing personalizável com base em regras e restrições de elegibilidade.
 
-**Inserções**: uma inserção é o local e/ou contexto em que uma oferta é exibida para um usuário final.
+**Posicionamentos**: um posicionamento é o local e/ou contexto em que uma oferta é exibida para um usuário final.
 
 **Área de trabalho** de políticas: Um espaço de trabalho na interface do usuário da plataforma que permite aos administradores de dados visualizar e gerenciar rótulos e políticas de uso de dados para sua organização.
 
@@ -437,7 +439,9 @@ ht-degree: 1%
 
 **Pontuação**: A pontuação é o processo de geração de insights de dados usando um modelo treinado.
 
-**Esquema**: Um esquema é um conjunto de regras que representam e validam a estrutura e o formato dos dados. Um schema é composto de uma classe e mixin(s) opcional(s) e é usado para criar conjuntos de dados e datastreams. Um esquema pode incluir atributos comportamentais, carimbos de data e hora, identidades, definições de atributos, relacionamentos e muito mais.
+**Esquema**: Um esquema é um conjunto de regras que representam e validam a estrutura e o formato dos dados. Um esquema é composto por uma classe e grupos de campos opcionais e é usado para criar conjuntos de dados e conjuntos de dados. Um esquema pode incluir atributos comportamentais, carimbos de data e hora, identidades, definições de atributos, relacionamentos e muito mais.
+
+**Grupo** de campos Esquema: No Experience Data Model (XDM), um grupo de campos de esquema permite que os usuários estendam campos reutilizáveis para definir um ou mais atributos destinados a serem incluídos em um esquema.
 
 **Biblioteca** de Esquema: A Biblioteca de esquemas contém recursos XDM padrão do setor disponibilizados pelo Adobe, bem como recursos personalizados definidos pela organização.
 

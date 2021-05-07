@@ -7,16 +7,16 @@ type: Tutorial
 description: Saiba como criar e editar tipos de dados na interface do usuário do Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 # Criar e editar tipos de dados usando a interface do usuário
 
-No Experience Data Model (XDM), os tipos de dados são usados como campos do tipo de referência em classes ou mixins da mesma forma que campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a mixins, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis, pois podem ser incluídos em qualquer lugar na estrutura do schema, enquanto mixins só podem ser adicionados no nível raiz.
+No Experience Data Model (XDM), os tipos de dados são usados como campos de tipo de referência em classes ou grupos de campos de esquema da mesma forma que os campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a grupos de campos, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis porque podem ser incluídos em qualquer lugar na estrutura do schema, enquanto os grupos de campos só podem ser adicionados no nível raiz.
 
 O Adobe Experience Platform fornece muitos tipos de dados padrão que podem ser usados para abranger uma grande variedade de casos de uso comuns do gerenciamento de experiências. No entanto, você também pode definir seus próprios tipos de dados personalizados para atender às suas necessidades comerciais exclusivas.
 
@@ -85,21 +85,21 @@ Isso demonstra como os tipos de dados podem ser flexíveis em termos de descriç
 
 Depois de concluir a adição de campos ao tipo de dados, selecione **[!UICONTROL Save]** para salvar as alterações e adicionar o tipo de dados ao [!DNL Schema Library].
 
-## Adicionar o tipo de dados a uma classe ou mixin
+## Adicionar o tipo de dados a uma classe ou grupo de campos
 
-Depois de criar um tipo de dados, você pode começar a usá-lo em seus esquemas. Como os esquemas XDM são compostos de uma classe e zero ou mais combinações, os campos fornecidos por um tipo de dados não podem ser adicionados a um schema diretamente. Em vez disso, eles devem ser incluídos em uma classe ou mixin.
+Depois de criar um tipo de dados, você pode começar a usá-lo em seus esquemas. Como os esquemas XDM são compostos de uma classe e zero ou mais grupos de campos, os campos fornecidos por um tipo de dados não podem ser adicionados a um schema diretamente. Em vez disso, eles devem ser incluídos em uma classe ou em um grupo de campos.
 
-Comece seguindo as etapas envolvidas com [adicionar um campo a uma classe](./classes.md#add-fields) ou [adicionar um campo a um mixin](./mixins.md#add-fields). Ao escolher **[!UICONTROL Type]** para o novo campo, selecione o nome do tipo de dados no menu suspenso.
+Comece seguindo as etapas envolvidas com [adicionar um campo a uma classe](./classes.md#add-fields) ou [adicionar um campo a um grupo de campos](./field-groups.md#add-fields). Ao escolher **[!UICONTROL Type]** para o novo campo, selecione o nome do tipo de dados no menu suspenso.
 
 ## Converter um objeto de vários campos em um tipo de dados {#convert}
 
-Ao criar um campo do tipo objeto com vários subcampos no [!DNL Schema Editor], você pode converter esse campo em um tipo de dados para usar a mesma estrutura de campo em uma classe ou mixin diferente.
+Ao criar um campo do tipo objeto com vários subcampos no [!DNL Schema Editor], é possível converter esse campo em um tipo de dados para usar a mesma estrutura de campo em uma classe ou grupo de campos diferente.
 
 Para converter um campo do tipo objeto em um tipo de dados, selecione o campo na tela. Antes de converter o campo, verifique se **[!UICONTROL Display name]** é descritivo dos dados que o objeto conterá, pois isso se tornará o nome do tipo de dados. Quando estiver pronto para converter o campo, selecione **[!UICONTROL Convert to new data type]** no painel direito.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-A tela atualiza o tipo de dados do campo de &quot;[!UICONTROL Object]&quot; para o novo tipo de dados. Os subcampos também têm pequenos ícones de bloqueio ao lado, indicando que não são mais campos individuais, mas parte de um tipo de dados de vários campos. Essa estrutura agora pode ser reutilizada em outras classes e combinações ao selecionar esse tipo de dados na lista suspensa **[!UICONTROL Type]** ao definir um novo campo.
+A tela atualiza o tipo de dados do campo de &quot;[!UICONTROL Object]&quot; para o novo tipo de dados. Os subcampos também têm pequenos ícones de bloqueio ao lado, indicando que não são mais campos individuais, mas parte de um tipo de dados de vários campos. Essa estrutura agora pode ser reutilizada em outras classes e grupos de campos selecionando esse tipo de dados na lista suspensa **[!UICONTROL Type]** ao definir um novo campo.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

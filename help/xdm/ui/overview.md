@@ -6,16 +6,16 @@ description: Essa visão geral aborda os principais recursos do espaço de traba
 topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 2%
+source-wordcount: '291'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Schemas] Visão geral da interface do usuário
 
-O espaço de trabalho [!UICONTROL Schemas] na interface do usuário do Adobe Experience Platform permite gerenciar os recursos do Experience Data Model (XDM), incluindo esquemas, classes, mixins e tipos de dados. Você pode visualizar e explorar os recursos principais fornecidos pelo Adobe e criar recursos e esquemas personalizados para sua organização.
+O espaço de trabalho [!UICONTROL Schemas] na interface do usuário do Adobe Experience Platform permite gerenciar os recursos do Experience Data Model (XDM), incluindo esquemas, classes, grupos de campos de esquema e tipos de dados. Você pode visualizar e explorar os recursos principais fornecidos pelo Adobe e criar recursos e esquemas personalizados para sua organização.
 
 Para acessar o espaço de trabalho na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** no painel à esquerda.
 
@@ -33,12 +33,12 @@ O espaço de trabalho [!UICONTROL Schemas] fornece ferramentas poderosas para cr
 
 * [Esquemas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
-* [Misturas](./resources/mixins.md)
+* [Grupos de campos](./resources/field-groups.md)
 * [Tipos de dados](./resources/data-types.md)
 
 ## Definição de campos XDM
 
-Classes, mixins e tipos de dados contribuem com campos para um esquema. É possível escolher de uma lista de tipos de campos padrão ao adicionar campos a esses recursos e também pode definir campos especializados para determinados casos de uso. Consulte o guia em [definindo campos XDM na interface do usuário](./fields/overview.md) para obter mais informações.
+Classes, grupos de campos e tipos de dados contribuem com campos para um esquema. É possível escolher de uma lista de tipos de campos padrão ao adicionar campos a esses recursos e também pode definir campos especializados para determinados casos de uso. Consulte o guia em [definindo campos XDM na interface do usuário](./fields/overview.md) para obter mais informações.
 
 ## Próximas etapas
 

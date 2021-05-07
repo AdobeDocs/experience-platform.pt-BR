@@ -7,9 +7,9 @@ type: Tutorial
 description: Este documento descreve as etapas envolvidas e fornece links para tutoriais para concluir cada fluxo de trabalho individual.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Para que os dados possam ser assimilados no Adobe Experience Platform e usados n
 **Este guia ajudará você a:**
 - Procurar esquemas existentes.
 - Criar e nomear um esquema.
-- Adicione e defina mixins XDM.
+- Adicione e defina grupos de campos de esquema XDM.
 - Defina os campos de esquema como campos de identidade.
 - Ative o Perfil para o esquema.
 

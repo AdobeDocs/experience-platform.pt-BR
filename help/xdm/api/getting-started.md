@@ -6,9 +6,9 @@ description: Este documento fornece uma introdução aos conceitos principais qu
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -85,16 +85,16 @@ Uma resposta bem-sucedida retorna informações sobre o uso do [!DNL Schema Regi
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ Uma resposta bem-sucedida retorna informações sobre o uso do [!DNL Schema Regi
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ As chamadas à API [!DNL Schema Registry] exigem o uso de um `CONTAINER_ID`. Há
 
 ### Contêiner global
 
-O contêiner `global` contém todos os Adobe padrão e [!DNL Experience Platform] classes, mixins, tipos de dados e esquemas fornecidos pelo parceiro. Você só pode executar solicitações de lista e pesquisa (GET) em relação ao contêiner `global`.
+O contêiner `global` contém todos os Adobe padrão e [!DNL Experience Platform] classes fornecidas pelo parceiro, grupos de campos de esquema, tipos de dados e esquemas. Você só pode executar solicitações de lista e pesquisa (GET) em relação ao contêiner `global`.
 
 Um exemplo de chamada que usa o contêiner `global` seria semelhante ao seguinte:
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### Contêiner de locatário
 
-Para não ser confundido com seu `TENANT_ID` exclusivo, o contêiner `tenant` contém todas as classes, mixins, tipos de dados, esquemas e descritores definidos por uma Organização IMS. Elas são exclusivas de cada organização, o que significa que não são visíveis ou gerenciáveis por outras Orgs do IMS. Você pode executar todas as operações CRUD (GET, POST, PUT, PATCH, DELETE) em relação aos recursos que você cria no contêiner `tenant`.
+Para não ser confundido com seu `TENANT_ID` exclusivo, o contêiner `tenant` contém todas as classes, grupos de campos, tipos de dados, esquemas e descritores definidos por uma Organização IMS. Elas são exclusivas de cada organização, o que significa que não são visíveis ou gerenciáveis por outras Orgs do IMS. Você pode executar todas as operações CRUD (GET, POST, PUT, PATCH, DELETE) em relação aos recursos que você cria no contêiner `tenant`.
 
 Um exemplo de chamada que usa o contêiner `tenant` seria semelhante ao seguinte:
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-Ao criar uma classe, mixin, schema ou tipo de dados no contêiner `tenant`, ele é salvo no [!DNL Schema Registry] e recebe um URI `$id` que inclui seu `TENANT_ID`. Esse `$id` é usado em toda a API para fazer referência a recursos específicos. Exemplos de valores `$id` são fornecidos na próxima seção.
+Ao criar uma classe, grupo de campos, esquema ou tipo de dados no contêiner `tenant`, ele é salvo no [!DNL Schema Registry] e recebe um URI `$id` que inclui seu `TENANT_ID`. Esse `$id` é usado em toda a API para fazer referência a recursos específicos. Exemplos de valores `$id` são fornecidos na próxima seção.
 
 ## Identificação do recurso {#resource-identification}
 

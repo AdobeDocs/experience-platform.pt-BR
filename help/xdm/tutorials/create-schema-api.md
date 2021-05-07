@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial usa a API do Registro de esquema para orientá-lo pelas etapas para compor um esquema usando uma classe padrão.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2426'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Este tutorial percorre as etapas da composição de um esquema de Membros de Fid
 
 ## Compor um esquema com uma classe padrão
 
-Um schema pode ser considerado como o blueprint para os dados que você deseja assimilar em [!DNL Experience Platform]. Cada schema é composto de uma classe e zero ou mais mixins. Em outras palavras, não é necessário adicionar uma mesclagem para definir um schema, mas na maioria dos casos, pelo menos uma mixin é usada.
+Um schema pode ser considerado como o blueprint para os dados que você deseja assimilar em [!DNL Experience Platform]. Cada schema é composto de uma classe e zero ou mais grupos de campos de schema. Em outras palavras, não é necessário adicionar um grupo de campos para definir um schema, mas, na maioria dos casos, pelo menos um grupo de campos é usado.
 
 ### Atribuir uma classe
 
@@ -177,13 +177,13 @@ O formato de resposta depende do cabeçalho Accept enviado com a solicitação. 
 }
 ```
 
-### Adicionar uma mistura {#add-a-mixin}
+### Adicionar um grupo de campos {#add-a-field-group}
 
-Agora que o esquema Membros de Fidelidade foi criado e confirmado, é possível adicionar mixins a ele.
+Agora que o schema Membros de fidelidade foi criado e confirmado, os grupos de campos podem ser adicionados a ele.
 
-Há diferentes mixins padrão disponíveis para uso, dependendo da classe de schema selecionada. Cada mixin contém um campo `intendedToExtend` que define a(s) classe(s) com a qual essa mixin é compatível.
+Há diferentes grupos de campos padrão disponíveis para uso, dependendo da classe de schema selecionada. Cada grupo de campos contém um campo `intendedToExtend` que define as classes com as quais esse grupo de campos é compatível.
 
-Mixins definem conceitos, como &quot;nome&quot; ou &quot;endereço&quot;, que podem ser reutilizados em qualquer schema que precise capturar as mesmas informações.
+Os grupos de campos definem conceitos, como &quot;nome&quot; ou &quot;endereço&quot;, que podem ser reutilizados em qualquer schema que precise capturar as mesmas informações.
 
 **Formato da API**
 
@@ -193,9 +193,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Solicitação**
 
-Essa solicitação atualiza (PATCH) o esquema Membros do programa para incluir os campos no mixin &quot;perfil-pessoa-detalhes&quot;.
+Essa solicitação atualiza (PATCH) o schema Membros de Fidelidade para incluir os campos no grupo de campos &quot;perfil-pessoa-detalhes&quot;.
 
-Ao adicionar a combinação &quot;perfil-pessoa-detalhes&quot;, o esquema Membros de Fidelidade agora captura informações sobre membros do programa de fidelidade, como nome, sobrenome e aniversário.
+Ao adicionar o grupo de campo &quot;profile-person-details&quot;, o esquema Membros de fidelidade agora captura informações sobre membros do programa de fidelidade, como nome, sobrenome e aniversário.
 
 ```SHELL
 curl -X PATCH \
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **Resposta**
 
-A resposta mostra o mixin recém-adicionado na matriz `meta:extends` e contém um `$ref` para o mixin no atributo `allOf`.
+A resposta mostra o grupo de campos recém-adicionado na matriz `meta:extends` e contém um `$ref` para o grupo de campos no atributo `allOf`.
 
 ```JSON
 {
@@ -254,17 +254,17 @@ A resposta mostra o mixin recém-adicionado na matriz `meta:extends` e contém u
 }
 ```
 
-### Adicionar outro mixin
+### Adicionar outro grupo de campos
 
-Agora é possível adicionar outro mixin padrão repetindo as etapas usando outro mixin.
+Agora é possível adicionar outro grupo de campos padrão repetindo as etapas usando outro grupo de campos.
 
 >[!TIP]
 >
->Vale a pena rever todas as combinações disponíveis para se familiarizar com os campos incluídos em cada um. Você pode listar (GET) todas as combinações disponíveis para uso com uma classe específica executando uma solicitação em relação a cada um dos contêineres &quot;global&quot; e &quot;locatário&quot;, retornando apenas as combinações nas quais o campo &quot;meta:pretendidoToExtend&quot; corresponde à classe que você está usando. Nesse caso, é a classe [!DNL XDM Individual Profile], então [!DNL XDM Individual Profile] `$id` é usado:
+>Vale a pena revisar todos os grupos de campos disponíveis para se familiarizar com os campos incluídos em cada um. Você pode listar (GET) todos os grupos de campos disponíveis para uso com uma classe específica executando uma solicitação em relação a cada contêiner &quot;global&quot; e &quot;locatário&quot;, retornando somente os grupos de campos em que o campo &quot;meta:pretendidoToExtend&quot; corresponde à classe que você está usando. Nesse caso, é a classe [!DNL XDM Individual Profile], então [!DNL XDM Individual Profile] `$id` é usado:
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **Formato da API**
@@ -275,7 +275,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Solicitação**
 
-Essa solicitação atualiza (PATCH) o schema Membros do Loyalty para incluir os campos no mixin &quot;perfil-pessoal-detalhes&quot;, adicionando os campos &quot;endereço inicial&quot;, &quot;endereço de email&quot; e &quot;telefone inicial&quot; ao schema.
+Essa solicitação atualiza (PATCH) o schema Membros do programa de fidelidade para incluir os campos no grupo de campos &quot;perfil-pessoal-detalhes&quot;, adicionando os campos &quot;endereço inicial&quot;, &quot;endereço de email&quot; e &quot;telefone inicial&quot; ao esquema.
 
 ```SHELL
 curl -X PATCH \
@@ -292,7 +292,7 @@ curl -X PATCH \
 
 **Resposta**
 
-A resposta mostra o mixin recém-adicionado na matriz `meta:extends` e contém um `$ref` para o mixin no atributo `allOf`.
+A resposta mostra o grupo de campos recém-adicionado na matriz `meta:extends` e contém um `$ref` para o grupo de campos no atributo `allOf`.
 
 O schema de membros de fidelidade agora deve conter três valores `$ref` na matriz `allOf`: &quot;perfil&quot;, &quot;perfil-pessoa-detalhes&quot; e &quot;perfil-pessoal-detalhes&quot;, conforme mostrado abaixo.
 
@@ -340,29 +340,29 @@ O schema de membros de fidelidade agora deve conter três valores `$ref` na matr
 }
 ```
 
-### Definir um novo mixin
+### Definir um novo grupo de campos
 
-O esquema Membros de Fidelidade precisa capturar informações exclusivas do programa de fidelidade. Estas informações não estão incluídas em nenhuma das misturas-padrão.
+O esquema Membros de Fidelidade precisa capturar informações exclusivas do programa de fidelidade. Essas informações não são incluídas em nenhum dos grupos de campos padrão.
 
-O [!DNL Schema Registry] leva isso em conta, permitindo que você defina suas próprias combinações no contêiner do locatário. Essas combinações são exclusivas para sua organização e não são visíveis ou editáveis por ninguém fora da sua Organização IMS.
+O [!DNL Schema Registry] é responsável por isso, permitindo que você defina seus próprios grupos de campos no contêiner do locatário. Esses grupos de campos são exclusivos de sua organização e não são visíveis ou editáveis por ninguém fora da sua Organização IMS.
 
-Para criar (POST) um novo mixin, sua solicitação deve incluir um campo `meta:intendedToExtend` contendo o `$id` para a(s) classe(s) base com a qual o mixin é compatível, juntamente com as propriedades que o mixin incluirá.
+Para criar (POST) um novo grupo de campos, sua solicitação deve incluir um campo `meta:intendedToExtend` contendo o `$id` para as classes base com as quais o grupo de campos é compatível, juntamente com as propriedades que o grupo de campos incluirá.
 
-Qualquer propriedade personalizada deve ser aninhada em seu `TENANT_ID` para evitar colisões com outros mixins ou campos.
+Qualquer propriedade personalizada deve ser aninhada em seu `TENANT_ID` para evitar colisões com outros grupos de campos ou campos.
 
 **Formato da API**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Solicitação**
 
-Essa solicitação cria um novo mixin que tem um objeto de &quot;fidelidade&quot; contendo quatro campos específicos do programa de fidelidade: &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; e &quot;memberSince&quot;.
+Essa solicitação cria um novo grupo de campos que tem um objeto de &quot;fidelidade&quot; contendo quatro campos específicos do programa de fidelidade: &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; e &quot;memberSince&quot;.
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -372,7 +372,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -419,7 +419,7 @@ curl -X POST\
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta contendo os detalhes do mixin recém-criado, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
+Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) com um corpo de resposta contendo os detalhes do grupo de campos recém-criado, incluindo `$id`, `meta:altIt` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
 
 ```JSON
 {
@@ -428,7 +428,7 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -482,11 +482,11 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +496,9 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
 }
 ```
 
-### Adicionar mixin personalizado ao schema
+### Adicionar grupo de campos personalizado ao esquema
 
-Agora você pode seguir as mesmas etapas para [adicionar um mixin padrão](#add-a-mixin) para adicionar esse mixin recém-criado ao esquema.
+Agora você pode seguir as mesmas etapas para [adicionar um grupo de campos padrão](#add-a-field-group) para adicionar esse grupo de campos recém-criado ao esquema.
 
 **Formato da API**
 
@@ -508,7 +508,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Solicitação**
 
-Essa solicitação atualiza (PATCH) o schema Membros de Fidelidade para incluir os campos dentro da nova combinação &quot;Detalhes do Membro de Fidelidade&quot;.
+Essa solicitação atualiza (PATCH) o esquema Membros de Fidelidade para incluir os campos no novo grupo de campos &quot;Detalhes do Membro de Fidelidade&quot;.
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +519,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **Resposta**
 
-Você pode ver que o mixin foi adicionado com sucesso porque a resposta agora mostra o mixin recém-adicionado na matriz `meta:extends` e contém um `$ref` para o mixin no atributo `allOf`.
+Você pode ver que o grupo de campos foi adicionado com êxito porque a resposta agora mostra o grupo de campos recém-adicionado na matriz `meta:extends` e contém um `$ref` para o grupo de campos no atributo `allOf`.
 
 ```JSON
 {
@@ -543,7 +543,7 @@ Você pode ver que o mixin foi adicionado com sucesso porque a resposta agora mo
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +557,7 @@ Você pode ver que o mixin foi adicionado com sucesso porque a resposta agora mo
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +577,7 @@ Você pode ver que o mixin foi adicionado com sucesso porque a resposta agora mo
 
 ### Exibir o esquema atual
 
-Agora é possível executar uma solicitação do GET para visualizar o schema atual e ver como as combinações adicionadas contribuíram para a estrutura geral do schema.
+Agora é possível executar uma solicitação do GET para visualizar o schema atual e ver como os grupos de campos adicionados contribuíram para a estrutura geral do schema.
 
 **Formato da API**
 
@@ -599,9 +599,9 @@ curl -X GET \
 
 **Resposta**
 
-Ao usar o cabeçalho `application/vnd.adobe.xed-full+json; version=1` Accept , é possível ver o schema completo mostrando todas as propriedades. Essas propriedades são os campos contribuídos pela classe e as combinações usadas para compor o schema. Neste exemplo de resposta, os atributos de propriedade individuais foram minimizados para o espaço. Você pode exibir o esquema completo, incluindo todas as propriedades e seus atributos, no [apêndice](#appendix) no final deste documento.
+Ao usar o cabeçalho `application/vnd.adobe.xed-full+json; version=1` Accept , é possível ver o schema completo mostrando todas as propriedades. Essas propriedades são os campos contribuídos pela classe e pelos grupos de campos que foram usados para compor o schema. Neste exemplo de resposta, os atributos de propriedade individuais foram minimizados para o espaço. Você pode exibir o esquema completo, incluindo todas as propriedades e seus atributos, no [apêndice](#appendix) no final deste documento.
 
-Em `"properties"`, você pode ver o namespace `_{TENANT_ID}` criado quando adicionou o mixin personalizado. Dentro desse namespace está o objeto &quot;fidelidade&quot; e os campos que foram definidos quando o mixin foi criado.
+Em `"properties"`, é possível ver o namespace `_{TENANT_ID}` criado ao adicionar o grupo de campos personalizados. Dentro desse namespace, há o objeto &quot;fidelidade&quot; e os campos que foram definidos quando o grupo de campos foi criado.
 
 ```JSON
 {
@@ -619,7 +619,7 @@ Em `"properties"`, você pode ver o namespace `_{TENANT_ID}` criado quando adici
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +691,11 @@ Em `"properties"`, você pode ver o namespace `_{TENANT_ID}` criado quando adici
 
 ### Criar um tipo de dados
 
-O mixin de Fidelidade criado contém propriedades de fidelidade específicas que podem ser úteis em outros schemas. Por exemplo, os dados podem ser assimilados como parte de um evento de experiência ou usados por um schema que implementa uma classe diferente. Nesse caso, faz sentido salvar a hierarquia de objetos como um tipo de dados para facilitar a reutilização da definição em outro lugar.
+O grupo de campos Fidelidade criado contém propriedades de fidelidade específicas que podem ser úteis em outros schemas. Por exemplo, os dados podem ser assimilados como parte de um evento de experiência ou usados por um schema que implementa uma classe diferente. Nesse caso, faz sentido salvar a hierarquia de objetos como um tipo de dados para facilitar a reutilização da definição em outro lugar.
 
 Os tipos de dados permitem definir uma hierarquia de objeto uma vez e fazer referência a ela em um campo da mesma forma que faria com qualquer outro tipo escalar.
 
-Em outras palavras, os tipos de dados permitem o uso consistente de estruturas de vários campos, com mais flexibilidade do que combinações, pois podem ser incluídos em qualquer lugar de um schema ao adicioná-los como o &quot;tipo&quot; de um campo.
+Em outras palavras, os tipos de dados permitem o uso consistente de estruturas de vários campos, com mais flexibilidade do que grupos de campos, pois podem ser incluídos em qualquer lugar de um schema, adicionando-os como o &quot;tipo&quot; de um campo.
 
 **Formato da API**
 
@@ -822,19 +822,19 @@ Você pode executar uma solicitação de pesquisa (GET) usando o URL codificado 
 
 ### Usar tipo de dados no schema
 
-Agora que o tipo de dados Detalhes de fidelidade foi criado, você pode atualizar (PATCH) o campo &quot;fidelidade&quot; no mixin criado para fazer referência ao tipo de dados no lugar dos campos que estavam lá anteriormente.
+Agora que o tipo de dados Detalhes de fidelidade foi criado, você pode atualizar (PATCH) o campo &quot;fidelidade&quot; no grupo de campos criado para fazer referência ao tipo de dados no lugar dos campos que estavam lá anteriormente.
 
 **Formato da API**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **Solicitação**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -867,7 +867,7 @@ A resposta agora inclui uma referência (`$ref`) ao tipo de dados no objeto &quo
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -896,11 +896,11 @@ A resposta agora inclui uma referência (`$ref`) ao tipo de dados no objeto &quo
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1068,7 +1068,7 @@ A resposta mostra que a operação foi executada com êxito e o schema agora con
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1082,7 @@ A resposta mostra que a operação foi executada com êxito e o schema agora con
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1171,9 +1171,9 @@ A resposta é uma lista filtrada de schemas, que contém apenas aqueles que aten
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você compôs com sucesso um schema usando mixins padrão e uma mixin que você definiu. Agora é possível usar esse esquema para criar um conjunto de dados e assimilar dados de registro no Adobe Experience Platform.
+Ao seguir este tutorial, você terá composto um schema com êxito usando grupos de campos padrão e um grupo de campos definido. Agora é possível usar esse esquema para criar um conjunto de dados e assimilar dados de registro no Adobe Experience Platform.
 
-O schema de membros de fidelidade completo, conforme criado em todo este tutorial, está disponível no apêndice a seguir. Ao observar o esquema, é possível ver como as combinações contribuem para a estrutura geral e quais campos estão disponíveis para assimilação de dados.
+O schema de membros de fidelidade completo, conforme criado em todo este tutorial, está disponível no apêndice a seguir. Ao observar o esquema, é possível ver como os grupos de campos contribuem para a estrutura geral e quais campos estão disponíveis para assimilação de dados.
 
 Depois de criar mais de um schema, você pode definir relacionamentos entre eles usando descritores de relacionamento. Consulte o tutorial para [definir uma relação entre dois schemas](relationship-api.md) para obter mais informações. Para obter exemplos detalhados de como executar todas as operações (GET, POST, PUT, PATCH e DELETE) no registro, consulte o [Guia do desenvolvedor do Registro de Schema](../api/getting-started.md) enquanto trabalha com a API.
 
@@ -1185,7 +1185,7 @@ As informações a seguir complementam o tutorial da API.
 
 Ao longo deste tutorial, um schema é composto para descrever os membros de um programa de fidelidade de varejo.
 
-O schema implementa a classe [!DNL XDM Individual Profile] e combina várias mixins; trazer informações sobre os membros da fidelidade usando as combinações padrão &quot;Detalhes da pessoa&quot; e &quot;Detalhes pessoais&quot;, bem como por meio de uma combinação &quot;Detalhes de fidelidade&quot; definida durante o tutorial.
+O schema implementa a classe [!DNL XDM Individual Profile] e combina vários grupos de campos; trazer informações sobre os membros da fidelidade usando os grupos de campos padrão &quot;Detalhes da pessoa&quot; e &quot;Detalhes pessoais&quot;, bem como por meio de um grupo de campos &quot;Detalhes de fidelidade&quot; definido durante o tutorial.
 
 A seguir, é exibido o esquema Membros da Fidelidade concluído no formato JSON:
 
@@ -1205,7 +1205,7 @@ A seguir, é exibido o esquema Membros da Fidelidade concluído no formato JSON:
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",

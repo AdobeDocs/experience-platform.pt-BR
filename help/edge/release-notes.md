@@ -4,9 +4,9 @@ description: As notas de versão mais recentes do SDK da Web da Adobe Experience
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 * O SDK agora pode ser [instalado como um pacote npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
 * Adição de suporte para uma opção `out` ao [configurar o consentimento padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que elimina todos os eventos até o recebimento do consentimento (a opção `pending` existente enfileira os eventos e os envia depois que o consentimento é recebido).
 * O retorno de chamada [onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) agora pode ser usado para impedir o envio de um evento.
-* Agora usa um mixin XDM em vez de `meta.personalization` ao enviar eventos sobre o conteúdo personalizado que está sendo renderizado ou clicado.
+* Agora usa um grupo de campos do esquema XDM em vez de `meta.personalization` ao enviar eventos sobre o conteúdo personalizado que está sendo renderizado ou clicado.
 * O [comando getIdentity](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) agora retorna a ID da região de borda ao lado da identidade.
 * Os avisos e erros recebidos do servidor foram aprimorados e são tratados de forma mais apropriada.
 * Adição de suporte para [Adobe Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

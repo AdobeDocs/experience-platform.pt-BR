@@ -6,16 +6,16 @@ description: Os endpoints /export e /import na API do Registro de Schema permite
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 1%
 
 ---
 
 # Exportar/importar endpoints
 
-Todos os recursos no [!DNL Schema Library] estão contidos em uma sandbox específica em uma Organização IMS. Em alguns casos, você pode compartilhar recursos do Experience Data Model (XDM) entre sandboxes e Orgs do IMS. A API [!DNL Schema Registry] fornece dois endpoints que permitem gerar uma carga de exportação para qualquer schema, mixin ou tipo de dados no[!DNL  Schema Library] e usar essa carga para importar esse recurso (e todos os recursos dependentes) em uma sandbox de destino e na Organização IMS.
+Todos os recursos no [!DNL Schema Library] estão contidos em uma sandbox específica em uma Organização IMS. Em alguns casos, você pode compartilhar recursos do Experience Data Model (XDM) entre sandboxes e Orgs do IMS. A API [!DNL Schema Registry] fornece dois endpoints que permitem gerar uma carga de exportação para qualquer schema, grupo de campos de esquema ou tipo de dados no[!DNL  Schema Library] e usar essa carga para importar esse recurso (e todos os recursos dependentes) para uma sandbox de destino e a Organização IMS.
 
 ## Introdução
 
@@ -25,7 +25,7 @@ Os endpoints de exportação/importação fazem parte das chamadas de procedimen
 
 ## Recuperar uma carga de exportação para um recurso {#export}
 
-Para qualquer schema, mixin ou tipo de dados existente no [!DNL Schema Library], é possível gerar uma carga de exportação fazendo uma solicitação de GET para o endpoint `/export`, fornecendo a ID do recurso no caminho.
+Para qualquer esquema, grupo de campos ou tipo de dados existente no [!DNL Schema Library], é possível gerar uma carga de exportação fazendo uma solicitação de GET para o endpoint `/export`, fornecendo a ID do recurso no caminho.
 
 **Formato da API**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Solicitação**
 
-A solicitação a seguir recupera uma carga de exportação para uma combinação `Restaurant`.
+A solicitação a seguir recupera uma carga de exportação para um grupo de campos `Restaurant`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de objetos, que representam o recurso XDM de destino e todos os seus recursos dependentes. Neste exemplo, o primeiro objeto na matriz é um tipo de dados `Property` criado pelo locatário que a mistura `Restaurant` emprega, enquanto o segundo objeto é a própria mistura `Restaurant`. Essa carga pode ser usada para [importar o recurso](#import) para uma sandbox ou Organização IMS diferente.
+Uma resposta bem-sucedida retorna uma matriz de objetos, que representam o recurso XDM de destino e todos os seus recursos dependentes. Neste exemplo, o primeiro objeto na matriz é um tipo de dados `Property` criado pelo locatário que o grupo de campos `Restaurant` emprega, enquanto o segundo objeto é o próprio grupo de campos `Restaurant`. Essa carga pode ser usada para [importar o recurso](#import) para uma sandbox ou Organização IMS diferente.
 
 Observe que todas as instâncias da ID de locatário do recurso são substituídas por `<XDM_TENANTID_PLACEHOLDER>`. Isso permite que o Registro de esquema aplique automaticamente a ID de locatário correta aos recursos, dependendo de onde eles são enviados na chamada de importação subsequente.
 
@@ -129,9 +129,9 @@ Observe que todas as instâncias da ID de locatário do recurso são substituíd
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Solicitação**
 
-A solicitação a seguir pega a carga retornada no exemplo de exportação [anterior](#export) para importar a mistura `Restaurant` para uma nova Org e sandbox IMS, conforme determinado pelos cabeçalhos `x-gw-ims-org-id` e `x-sandbox-name`, respectivamente.
+A solicitação a seguir pega a carga retornada no exemplo de exportação [anterior](#export) para importar o grupo de campos `Restaurant` para uma nova Organização IMS e sandbox, conforme determinado pelos cabeçalhos `x-gw-ims-org-id` e `x-sandbox-name`, respectivamente.
 
 ```shell
 curl -X POST \
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ Uma resposta bem-sucedida retorna uma lista dos recursos importados, com os valo
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",

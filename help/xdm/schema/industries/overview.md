@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Saiba mais sobre os modelos de dados padronizados para vários ramos do setor que podem ser construídos com os componentes padrão do Experience Data Model (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Para ajudar a orientar sua estratégia de modelagem de dados com base em seu set
 Para ler os ERDs referenciados neste guia, você deve ter um entendimento prático de como os componentes XDM interagem para formar esquemas e como os esquemas XDM operam no Experience Platform como um todo. Certifique-se de ter lido a seguinte documentação de visão geral antes de continuar:
 
 * [Visão geral](../../home.md) do sistema XDM: Saiba como o XDM opera no ecossistema da plataforma.
-* [Noções básicas da composição](../../schema/composition.md) do schema: Saiba como os componentes XDM (como mixins, classes e tipos de dados) contribuem para a estrutura de um schema, bem como a função dos campos de identidade.
+* [Noções básicas da composição](../../schema/composition.md) do schema: Saiba como os componentes XDM (como grupos de campos de esquema, classes e tipos de dados) contribuem para a estrutura de um esquema, bem como a função dos campos de identidade.
 
 Também é recomendável revisar o [guia de práticas recomendadas de modelagem de dados](../../schema/best-practices.md) para obter diretrizes gerais sobre como mapear seus dados para XDM.
 
@@ -37,7 +37,7 @@ Também é recomendável revisar o [guia de práticas recomendadas de modelagem 
 
 Os modelos verticais do setor representados por ERDs abaixo são criados intencionalmente de forma desnormalizada e considerando como os dados são armazenados na plataforma.
 
-Para um determinado ERD, cada entidade mostrada em é baseada em uma classe XDM subjacente. Para uma determinada entidade, cada linha marcada em **bold** representa uma mixin ou um tipo de dados, com os campos relevantes que ela fornece listados abaixo em texto sem negrito. Os campos mais importantes para uma determinada entidade são destacados em vermelho.
+Para um determinado ERD, cada entidade mostrada em é baseada em uma classe XDM subjacente. Para uma determinada entidade, cada linha marcada em **bold** representa um grupo de campos ou um tipo de dados, com os campos relevantes que ela fornece listados abaixo em texto sem negrito. Os campos mais importantes para uma determinada entidade são destacados em vermelho.
 
 >[!NOTE]
 >

@@ -6,16 +6,16 @@ description: Saiba como definir um campo do tipo objeto na interface do usuário
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
 # Definir campos de objeto na interface do usuário
 
-O Adobe Experience Platform permite personalizar totalmente a estrutura de suas classes, combinações e tipos de dados personalizados do Experience Data Model (XDM). Para organizar e aninhar campos relacionados em recursos XDM personalizados, você pode definir campos do tipo objeto que podem conter subcampos adicionais.
+O Adobe Experience Platform permite personalizar totalmente a estrutura de suas classes personalizadas do Experience Data Model (XDM), grupos de campos de esquema e tipos de dados. Para organizar e aninhar campos relacionados em recursos XDM personalizados, você pode definir campos do tipo objeto que podem conter subcampos adicionais.
 
 Ao [definir um novo campo](./overview.md#define) na interface do usuário do Adobe Experience Platform, use a lista suspensa **[!UICONTROL Type]** e selecione &quot;[!UICONTROL Object]&quot; na lista.
 
@@ -33,7 +33,7 @@ Depois de configurar o subcampo e selecionar **[!UICONTROL Apply]**, você pode 
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-Uma vez terminado de construir o objeto, você pode descobrir que deseja reutilizar sua estrutura em diferentes classes e mixins. Nesse caso, é possível optar por converter o objeto em um tipo de dados. Consulte a seção sobre [conversão de objetos em tipos de dados](../resources/data-types.md#convert) no guia da interface do usuário de tipos de dados para obter mais informações.
+Depois de concluir a construção do objeto, você pode descobrir que deseja reutilizar sua estrutura em diferentes classes e grupos de campos. Nesse caso, é possível optar por converter o objeto em um tipo de dados. Consulte a seção sobre [conversão de objetos em tipos de dados](../resources/data-types.md#convert) no guia da interface do usuário de tipos de dados para obter mais informações.
 
 ## Próximas etapas
 

@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
-user-guide-description: Use as classes e as combinações do Experience Data Model (XDM) para padronizar os dados de experiência.
+user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Esquemas
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 21%
+source-wordcount: '291'
+ht-degree: 18%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 21%
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [ExperiênciaEvento XDM](./classes/experienceevent.md)
    * [Definição de segmento](./classes/segment-definition.md)
-* Misturas {#mixins}
-   * Misturas de perfil {#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Detalhes demográficos](./mixins/profile/person-details.md)
-      * [Detalhes de contato pessoal](./mixins/profile/personal-details.md)
-      * [Privacidade/Personalização/Preferências de marketing (Consentimentos)](./mixins/profile/consents.md)
-      * [Detalhes da associação ao segmento](./mixins/profile/segmentation.md)
-      * [Detalhes do Contato do Trabalho](./mixins/profile/work-details.md)
-   * Misturas de eventos {#event}
-      * [Detalhes da ID de usuário final](./mixins/event/enduserids.md)
-      * [Detalhes do ambiente](./mixins/event/environment-details.md)
-   * [Misturar atualizações de nomes](./mixins/name-updates.md)
+* Grupos de campos de esquema {#field-groups}
+   * Grupos de campos de perfil {#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Detalhes demográficos](./field-groups/profile/demographic-details.md)
+      * [Detalhes de contato pessoal](./field-groups/profile/personal-contact-details.md)
+      * [Detalhes da associação ao segmento](./field-groups/profile/segmentation.md)
+      * [Detalhes do Contato do Trabalho](./field-groups/profile/work-contact-details.md)
+      * [Privacidade/Personalização/Preferências de marketing (Consentimentos)](./field-groups/profile/consents.md)
+   * Grupos de campos de evento {#event}
+      * [Detalhes da ID de usuário final](./field-groups/event/enduserids.md)
+      * [Detalhes do ambiente](./field-groups/event/environment-details.md)
+   * [Atualizações do nome do grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
    * [aplicação](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
@@ -81,7 +81,7 @@ ht-degree: 21%
    * Criar e editar recursos {#resources}
       * [Esquemas](./ui/resources/schemas.md)
       * [Classes](./ui/resources/classes.md)
-      * [Misturas](./ui/resources/mixins.md)
+      * [Grupos de campos](./ui/resources/field-groups.md)
       * [Tipos de dados](./ui/resources/data-types.md)
    * Definir campos {#fields}
       * [Visão geral](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 21%
    * [Esquemas](api/schemas.md)
    * [Comportamentos](api/behaviors.md)
    * [Classes](api/classes.md)
-   * [Misturas](api/mixins.md)
+   * [Grupos de campos de esquema](api/field-groups.md)
    * [Tipos de dados](api/data-types.md)
    * [Descritores](api/descriptors.md)
    * [Uniões](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 21%
    * [Dados de exemplo](api/sample-data.md)
    * [Log de auditoria](api/audit-log.md)
    * [Esquemas ad-hoc](api/ad-hoc.md)
+   * [Mixins (obsoleto)](api/mixins.md)
    * [Apêndice](api/appendix.md)
 * Tutoriais {#tutorials}
    * [Criar um esquema (interface do usuário)](tutorials/create-schema-ui.md)

@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Este documento fornece uma visão geral da classe de definição de segmento no Experience Data Model (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Essa classe só deve ser usada para capturar informações sobre as próprias definições de segmento. Para capturar informações de associação de segmento nos dados do perfil, você deve usar o mixin[Detalhes da associação de segmento](../mixins/profile/segmentation.md) no esquema [!UICONTROL XDM Individual Profile].
+>Essa classe só deve ser usada para capturar informações sobre as próprias definições de segmento. Para capturar informações de associação de segmento nos dados do perfil, você deve usar o [grupo de campos Detalhes de associação de segmento](../field-groups/profile/segmentation.md) no esquema [!UICONTROL XDM Individual Profile].
 
 ![](../images/classes/segment-definition.png)
 

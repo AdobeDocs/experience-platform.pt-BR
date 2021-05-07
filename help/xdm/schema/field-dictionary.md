@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: O Experience Data Model (XDM) define um conjunto de campos padrão que podem ser usados na composição de schemas do Adobe Experience Platform. O uso desses campos resulta em comportamento consistente nos serviços da plataforma, pois todos os serviços que consomem XDM compreenderão explicitamente as definições específicas fornecidas por esses campos.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 Consulte as [noções básicas da composição do schema](composition.md) para obter mais informações sobre os blocos fundamentais dos schemas, incluindo princípios e práticas recomendadas na definição de schemas para [!DNL Experience Platform].
 
-A tabela abaixo inclui o nome do campo (nem todos os campos XDM são namespacados usando &quot;xdm&quot;) juntamente com seu título e descrição, tipo e formato, quando necessário, bem como seu tipo XDM correspondente e os recursos (mixins, tipos de dados e schemas) nos quais o campo pode ser encontrado.
+A tabela abaixo inclui o nome do campo (nem todos os campos XDM são namespacados usando &quot;xdm&quot;) juntamente com seu título e descrição, tipo e formato, quando necessário, bem como seu tipo XDM correspondente e os recursos (esquemas, grupos de campos de esquema e tipos de dados) nos quais o campo pode ser encontrado.
 
 Você pode usar a funcionalidade de pesquisa no [!DNL Schema Editor] para exibir detalhes desses recursos, conforme mostrado no [Tutorial do Editor de Esquema](../tutorials/create-schema-ui.md#browse).
 
@@ -211,7 +211,7 @@ Você pode usar a funcionalidade de pesquisa no [!DNL Schema Editor] para exibir
 | xdm:from | De | Endereço usado como endereço de remetente/chamador. Dependendo do canal de comunicação, o `address` tem um formato diferente.  * `email`: um endereço de email.  * `textMessage` ou `phone`: um código de atalho ou número de telefone. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:fullName | Nome completo | O nome completo da pessoa, por ordem escrita mais comummente aceite na língua do nome. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/experience/campaign/profile-snapshot, https://ns.adobe.com/xdm/context/profile-person-details, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:gender | Sexo | Identidade de gênero da pessoa. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/experience/campaign/profile-snapshot, https://ns.adobe.com/xdm/context/profile-person-details, https://ns.adobe.com/xdm/context/profile-subscriptions |
-| xdm:geo | Geografia   | A localização geográfica onde a experiência foi entregue. | objeto |  | objeto | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, https://ns.adobe.com/xdm/context/placecontext |
+| xdm:geo | Geografia  | A localização geográfica onde a experiência foi entregue. | objeto |  | objeto | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, https://ns.adobe.com/xdm/context/placecontext |
 | xdm:geoInteractionDetails | Detalhes da interação geográfica | Detalhes geográficos ativos para a interação de POI. | objeto |  | objeto | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, https://ns.adobe.com/xdm/context/placecontext |
 | xdm:geoShape | Forma geográfica | Forma geográfica da geografia com a qual se está interagindo. | objeto |  | objeto | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, https://ns.adobe.com/xdm/context/geo-interaction-details |
 | xdm:geoUnit | Unidade geográfica | A unidade geográfica da organização proprietária do perfil. Isso pode ser usado para fazer referência às informações geográficas mantidas em outro conjunto de dados. | objeto |  | objeto | https://ns.adobe.com/experience/campaign/experienceevent-profile-owning-entities, https://ns.adobe.com/xdm/context/profile-owning-entities |

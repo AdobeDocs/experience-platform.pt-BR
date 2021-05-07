@@ -6,16 +6,16 @@ description: O endpoint /schemas na API do Registro de Schema permite gerenciar 
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1431'
 ht-degree: 2%
 
 ---
 
 # Ponto de extremidade de esquemas
 
-Um schema pode ser considerado como o blueprint para os dados que você deseja assimilar no Adobe Experience Platform. Cada schema é composto de uma classe e zero ou mais mixins. O endpoint `/schemas` na API [!DNL Schema Registry] permite gerenciar esquemas de forma programática no aplicativo de experiência.
+Um schema pode ser considerado como o blueprint para os dados que você deseja assimilar no Adobe Experience Platform. Cada schema é composto de uma classe e zero ou mais grupos de campos de schema. O endpoint `/schemas` na API [!DNL Schema Registry] permite gerenciar esquemas de forma programática no aplicativo de experiência.
 
 ## Introdução
 
@@ -154,7 +154,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema . Os campos retornados d
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema . Os campos retornados d
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ O processo de composição de schema começa pela atribuição de uma classe. A 
 
 >[!NOTE]
 >
->A chamada de exemplo abaixo é apenas um exemplo básico de como criar um schema na API, com os requisitos mínimos de composição de uma classe e sem mixins. Para obter as etapas completas sobre como criar um esquema na API, incluindo como atribuir campos usando mixins e tipos de dados, consulte o [tutorial de criação de esquema](../tutorials/create-schema-api.md).
+>A chamada de exemplo abaixo é apenas um exemplo básico de como criar um schema na API, com os requisitos mínimos de composição de uma classe e nenhum grupo de campo. Para obter as etapas completas sobre como criar um esquema na API, incluindo como atribuir campos usando grupos de campos e tipos de dados, consulte o [tutorial de criação de esquema](../tutorials/create-schema-api.md).
 
 **Formato da API**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou mixin cujos campos o esquema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa `$id` da classe ou mixin o novo schema será implementado. Deve ser fornecida uma classe, com zero ou mais misturas adicionais. No exemplo acima, o único objeto na matriz `allOf` é a classe do esquema. |
+| `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou grupo de campos cujos campos o esquema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa `$id` da classe ou grupo de campos que o novo schema implementará. Uma classe deve ser fornecida, com zero ou mais grupos de campo adicionais. No exemplo acima, o único objeto na matriz `allOf` é a classe do esquema. |
 
 **Resposta**
 
@@ -268,7 +268,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Created) e uma carga útil 
 
 Executar uma solicitação de GET para [listar todos os schemas](#list) no contêiner do locatário agora incluiria o novo schema. Você pode executar uma solicitação de [pesquisa (GET)](#lookup) usando o URL codificado `$id` para exibir o novo schema diretamente.
 
-Para adicionar campos adicionais a um schema, você pode executar uma operação [PATCH](#patch) para adicionar mixins às matrizes `allOf` e `meta:extends` do schema.
+Para adicionar campos adicionais a um schema, você pode executar uma [operação PATCH](#patch) para adicionar grupos de campos às matrizes `allOf` e `meta:extends` do esquema.
 
 ## Atualizar um esquema {#put}
 
@@ -357,7 +357,7 @@ Você pode atualizar uma parte de um schema usando uma solicitação de PATCH. O
 >
 >Se quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte a seção sobre [substituição de um schema usando uma operação PUT](#put).
 
-Uma das operações mais comuns do PATCH envolve adicionar mixins definidos anteriormente a um schema, conforme demonstrado pelo exemplo abaixo.
+Uma das operações de PATCH mais comuns envolve adicionar grupos de campos definidos anteriormente a um schema, conforme demonstrado pelo exemplo abaixo.
 
 **Formato da API**
 
@@ -371,7 +371,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Solicitação**
 
-A solicitação de exemplo abaixo adiciona um novo mixin a um schema adicionando o valor `$id` desse mixin aos arrays `meta:extends` e `allOf`.
+A solicitação de exemplo abaixo adiciona um novo grupo de campos a um schema adicionando o valor `$id` desse grupo de campos aos arrays `meta:extends` e `allOf`.
 
 O corpo da solicitação assume a forma de uma matriz, com cada objeto listado representando uma alteração específica para um campo individual. Cada objeto inclui a operação a ser executada (`op`), em qual campo a operação deve ser executada (`path`), e quais informações devem ser incluídas nessa operação (`value`).
 
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **Resposta**
 
-A resposta mostra que ambas as operações foram executadas com êxito. O mixin `$id` foi adicionado ao array `meta:extends` e uma referência (`$ref`) ao mixin `$id` agora aparece no array `allOf`.
+A resposta mostra que ambas as operações foram executadas com êxito. O grupo de campos `$id` foi adicionado à matriz `meta:extends` e uma referência (`$ref`) ao grupo de campos `$id` agora aparece na matriz `allOf`.
 
 ```JSON
 {
@@ -413,7 +413,7 @@ A resposta mostra que ambas as operações foram executadas com êxito. O mixin 
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ A resposta mostra que ambas as operações foram executadas com êxito. O mixin 
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, mostrando qu
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ Uma resposta bem-sucedida retorna os detalhes do schema atualizado, mostrando qu
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",

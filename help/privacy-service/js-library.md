@@ -6,9 +6,9 @@ topic-legacy: overview
 description: A Biblioteca JavaScript de Privacidade do Adobe permite recuperar identidades de titular de dados para uso no Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '953'
 ht-degree: 6%
 
 ---
@@ -47,7 +47,7 @@ Como todas as três funções representam processos assíncronos, quaisquer iden
 Para começar a usar o [!DNL Privacy JS Library], você deve instalá-lo em sua máquina usando um dos seguintes métodos:
 
 * Instale usando npm executando o seguinte comando: `npm install @adobe/adobe-privacy`
-* Use a Extensão Adobe Launch com o nome `AdobePrivacy`
+* Instale a extensão Adobe Privacy usando [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en) com o nome `AdobePrivacy`
 * Baixe do repositório [Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instancie o [!DNL Privacy JS Library]
@@ -67,7 +67,7 @@ Para obter uma lista completa dos parâmetros suportados para diferentes soluç�
 
 ## Amostras de código
 
-As amostras de código a seguir demonstram como usar o [!DNL Privacy JS Library] para vários cenários comuns, desde que você não esteja usando [!DNL Launch] ou o DTM.
+As amostras de código a seguir demonstram como usar o [!DNL Privacy JS Library] para vários cenários comuns, desde que você não esteja usando [!DNL Platform Launch].
 
 ### Recuperar identidades
 

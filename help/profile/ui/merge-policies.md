@@ -6,9 +6,9 @@ type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2879'
 ht-degree: 0%
 
 ---
@@ -49,15 +49,15 @@ Há dois métodos de mesclagem possíveis disponíveis para políticas de mescla
 
 Ocasionalmente, pode haver casos de uso em que seja necessário fornecer um carimbo de data e hora personalizado e fazer com que a política de mesclagem honre o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema. Exemplos disso incluem o preenchimento retroativo de dados ou a garantia da ordem correta dos eventos se os registros forem assimilados fora de ordem.
 
-Para usar um carimbo de data e hora personalizado, o **[!UICONTROL External Source System Audit Details Mixin]** deve ser adicionado ao esquema Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o campo `lastUpdatedDate` . Quando um registro é assimilado com o campo `lastUpdatedDate` preenchido, o Experience Platform usará esse campo para unir registros em conjuntos de dados. Se `lastUpdatedDate` não estiver presente ou não estiver preenchida, a Platform continuará a usar o carimbo de data e hora do sistema.
+Para usar um carimbo de data e hora personalizado, o **[!UICONTROL External Source System Audit Details]grupo de campos do esquema** deve ser adicionado ao esquema Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o campo `lastUpdatedDate` . Quando um registro é assimilado com o campo `lastUpdatedDate` preenchido, o Experience Platform usará esse campo para unir registros em conjuntos de dados. Se `lastUpdatedDate` não estiver presente ou não estiver preenchida, a Platform continuará a usar o carimbo de data e hora do sistema.
 
 >[!NOTE]
 >
 >Você deve garantir que o carimbo de data e hora `lastUpdatedDate` seja preenchido ao assimilar uma atualização no mesmo registro.
 
-A captura de tela a seguir exibe os campos no [!UICONTROL External Source System Audit Details Mixin]. Para obter instruções passo a passo sobre como trabalhar com esquemas usando a interface do usuário da plataforma, incluindo como adicionar mixins a esquemas, visite o [tutorial para criar um esquema usando a interface do usuário](../../xdm/tutorials/create-schema-ui.md).
+A captura de tela a seguir exibe os campos no grupo de campos [!UICONTROL External Source System Audit Details]. Para obter instruções passo a passo sobre como trabalhar com esquemas usando a interface do usuário da plataforma, incluindo como adicionar grupos de campos a esquemas, visite o [tutorial para criar um esquema usando a interface do usuário](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 Para trabalhar com carimbos de data e hora personalizados usando a API, consulte a seção [guia do ponto de extremidade de políticas de mesclagem sobre o uso de carimbos de data e hora personalizados](../api/merge-policies.md#custom-timestamps).
 

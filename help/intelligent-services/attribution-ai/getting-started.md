@@ -6,7 +6,7 @@ topic-legacy: Getting started
 description: Os guias a seguir exigem uma compreensão dos vários serviços da Adobe Experience Platform envolvidos com o uso do Attribution AI. Antes de iniciar os tutoriais, revise os seguintes documentos.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Os guias a seguir exigem uma compreensão dos vários serviços [!DNL Adobe Expe
 - [Noções básicas da composição](../../xdm/schema/composition.md) do schema: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no  [!DNL Adobe Experience Platform].
 - [Criação de schemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial aborda as etapas para criar um esquema usando o Editor de esquemas no Experience Platform.
 
-O Attribution AI requer que os conjuntos de dados estejam em conformidade com o esquema Eventos de experiência do consumidor (CEE), que é uma combinação no [Modelo de dados de experiência](../../xdm/home.md) (XDM). Entre em contato com o suporte ao Adobe em attributionai-support@adobe.com para implementar ou fazer alterações nesses dados. Se os dados de gasto de mídia estiverem presentes, você poderá fazer mais análises, como receita incremental e ROI. Se os dados do perfil do cliente estiverem disponíveis, você poderá atribuir mais créditos ao nível do perfil do cliente.
+O Attribution AI requer que os conjuntos de dados estejam em conformidade com o esquema Eventos de experiência do consumidor (CEE), que é um grupo de campos de esquema [Experience Data Model (XDM)](../../xdm/home.md). Entre em contato com o suporte ao Adobe em attributionai-support@adobe.com para implementar ou fazer alterações nesses dados. Se os dados de gasto de mídia estiverem presentes, você poderá fazer mais análises, como receita incremental e ROI. Se os dados do perfil do cliente estiverem disponíveis, você poderá atribuir mais créditos ao nível do perfil do cliente.
 
 ## Terminologia
 

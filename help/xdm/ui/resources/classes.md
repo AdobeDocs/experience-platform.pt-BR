@@ -6,9 +6,9 @@ description: Saiba como criar e editar classes na interface do usuário do Exper
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ O [!DNL Schema Editor] é exibido, mostrando um novo schema na tela que é basea
 
 >[!IMPORTANT]
 >
->Ao criar um schema que implementa uma classe definida pela sua organização, lembre-se de que as combinações estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há mixins compatíveis listados na caixa de diálogo **[!UICONTROL Add mixin]**. Em vez disso, será necessário [criar novas mixins](./mixins.md#create) para usar com essa classe. Na próxima vez que você compor um schema que implementa a nova classe, as combinações definidas serão listadas e estarão disponíveis para uso.
+>Ao criar um schema que implementa uma classe definida pela organização, lembre-se de que os grupos de campos de esquema estão disponíveis para uso somente com classes compatíveis. Como a classe definida é nova, não há grupos de campos compatíveis listados na caixa de diálogo **[!UICONTROL Add field group]**. Em vez disso, será necessário [criar novos grupos de campos](./field-groups.md#create) para usar com essa classe. Na próxima vez que você compor um schema que implementa a nova classe, os grupos de campos definidos serão listados e estarão disponíveis para uso.
 
 Agora você pode iniciar [adicionando campos à classe](#add-fields), que será compartilhada por todos os schemas que empregam a classe.
 
@@ -77,7 +77,7 @@ Depois de ter um schema que emprega uma classe personalizada aberta no [!UICONTR
 
 >[!IMPORTANT]
 >
->Lembre-se de que quaisquer campos adicionados a uma classe serão usados em todos os esquemas que empregam essa classe. Portanto, você deve considerar cuidadosamente quais campos serão úteis em todos os casos de uso do schema. Se estiver pensando em adicionar um campo que pode ver o uso somente em alguns schemas sob essa classe, talvez você queira considerar adicioná-lo a esses schemas [criando um mixin](./mixins.md#create) em vez disso.
+>Lembre-se de que quaisquer campos adicionados a uma classe serão usados em todos os esquemas que empregam essa classe. Portanto, você deve considerar cuidadosamente quais campos serão úteis em todos os casos de uso do schema. Se estiver pensando em adicionar um campo que pode ver o uso somente em alguns schemas sob essa classe, talvez você queira considerar adicioná-lo a esses esquemas ao [criar um grupo de campos](./field-groups.md#create).
 
 Um **[!UICONTROL New field]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia em [definindo campos na interface do usuário](../fields/overview.md#define) para obter etapas específicas sobre como configurar e adicionar o campo à classe.
 

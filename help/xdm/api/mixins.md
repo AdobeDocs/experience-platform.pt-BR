@@ -6,14 +6,21 @@ description: O endpoint /mixins na API do Registro de Schema permite gerenciar p
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
 
-# Ponto de extremidade de Mixins
+
+# Ponto de extremidade Mixins (obsoleto)
+
+>[!IMPORTANT]
+>
+>As misturas foram renomeadas para grupos de campos de esquema e, portanto, o ponto de extremidade `/mixins` foi substituído no ponto de extremidade `/fieldgroups`.
+>
+>Embora `/mixins` continue sendo mantido como um endpoint herdado, é altamente recomendável usar `/fieldgroups` para novas implementações da API do Registro de Schema em seus aplicativos de experiência. Consulte o [guia de ponto de extremidade de grupos de campos](./field-groups.md) para obter mais informações.
 
 As misturas são componentes reutilizáveis que definem um ou mais campos que representam um conceito específico, como uma pessoa individual, um endereço de correspondência ou um ambiente de navegador da Web. As misturas devem ser incluídas como parte de um schema que implementa uma classe compatível, dependendo do comportamento dos dados que representam (registro ou série de tempo). O endpoint `/mixins` na API [!DNL Schema Registry] permite gerenciar programaticamente as combinações no aplicativo de experiência.
 
@@ -154,7 +161,7 @@ Uma resposta bem-sucedida retorna os detalhes da mistura. Os campos retornados d
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga contend
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ Uma resposta bem-sucedida retorna os detalhes da mixin atualizada.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ A resposta mostra que ambas as operações foram executadas com êxito. O `descr
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",

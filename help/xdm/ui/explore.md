@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform; home; tópicos populares; interface do usuário; XDM; sistema XDM; modelo de dados de experiência; Modelo de dados de experiência; Modelo de dados de experiência; modelo de dados; Modelo de dados; explorar; classe; mixin; tipo de dados; schema;
+keywords: Experience Platform; home; tópicos populares; interface do usuário; XDM; sistema XDM; modelo de dados de experiência; Modelo de dados de experiência; Modelo de dados de experiência; Modelo de dados; Modelo de dados; explorar; classe; grupo de campos; tipo de dados; esquema;
 solution: Experience Platform
 title: Explore recursos XDM na interface do usuário
-description: Saiba como explorar esquemas, classes, mixins e tipos de dados existentes na interface do usuário do Experience Platform.
+description: Saiba como explorar esquemas, classes, grupos de campos de esquema e tipos de dados existentes na interface do usuário do Experience Platform.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # Explore recursos XDM na interface do usuário
 
-No Adobe Experience Platform, todos os recursos do Experience Data Model (XDM) são armazenados no [!DNL Schema Library], incluindo os recursos padrão fornecidos pelo Adobe e os recursos personalizados definidos pela sua organização. Na interface do usuário do Experience Platform, é possível visualizar a estrutura e os campos de qualquer schema, classe, mixin ou tipo de dados existente no [!DNL Schema Library]. Isso é especialmente útil ao planejar e preparar a assimilação de dados, pois a interface do usuário fornece informações sobre os tipos de dados esperados e casos de uso de cada campo fornecido por esses recursos XDM.
+No Adobe Experience Platform, todos os recursos do Experience Data Model (XDM) são armazenados no [!DNL Schema Library], incluindo os recursos padrão fornecidos pelo Adobe e os recursos personalizados definidos pela sua organização. Na interface do usuário do Experience Platform, é possível visualizar a estrutura e os campos de qualquer esquema, classe, grupo de campos de esquema ou tipo de dados existente no [!DNL Schema Library]. Isso é especialmente útil ao planejar e preparar a assimilação de dados, pois a interface do usuário fornece informações sobre os tipos de dados esperados e casos de uso de cada campo fornecido por esses recursos XDM.
 
-Este tutorial aborda as etapas para explorar esquemas, classes, mixins e tipos de dados existentes na interface do usuário do Experience Platform.
+Este tutorial aborda as etapas para explorar esquemas, classes, grupos de campos e tipos de dados existentes na interface do usuário do Experience Platform.
 
 ## Pesquisar um recurso XDM {#lookup}
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** no painel de navegação esquerdo. O espaço de trabalho [!UICONTROL Schemas] fornece uma guia **[!UICONTROL Browse]** para explorar todos os recursos XDM existentes na organização, juntamente com guias dedicadas adicionais para explorar **[!UICONTROL Classes]**, **[!UICONTROL Mixins]** e **[!UICONTROL Data types]** especificamente.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** no painel de navegação esquerdo. O espaço de trabalho [!UICONTROL Schemas] fornece uma guia **[!UICONTROL Browse]** para explorar todos os recursos XDM existentes na organização, juntamente com guias dedicadas adicionais para explorar **[!UICONTROL Classes]**, **[!UICONTROL Field groups]** e **[!UICONTROL Data types]** especificamente.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Se o campo que você está inspecionando for um campo enum, o painel direito tam
 
 ### Campos de identidade {#identity}
 
-Ao inspecionar esquemas que contêm campos de identidade, esses campos são listados no painel à esquerda, na classe ou mixin que os fornece ao esquema. Selecione o nome do campo de identidade no painel esquerdo para exibir o campo na tela, independentemente de quão profundo ele esteja aninhado.
+Ao inspecionar esquemas que contêm campos de identidade, esses campos são listados no painel à esquerda, na classe ou grupo de campos que os fornece ao esquema. Selecione o nome do campo de identidade no painel esquerdo para exibir o campo na tela, independentemente de quão profundo ele esteja aninhado.
 
 Os campos de identidade são realçados na tela com um ícone de impressão digital (![Imagem do ícone de impressão digital](../images/ui/explore/identity-symbol.png)). Se você selecionar o nome do campo de identidade, poderá exibir informações adicionais, como [identity namespace](../../identity-service/namespaces.md) e se o campo é ou não a identidade primária para o esquema.
 

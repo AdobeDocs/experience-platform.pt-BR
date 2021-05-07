@@ -6,9 +6,9 @@ description: A API do Registro de Esquema permite aos desenvolvedores gerenciar 
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ Para exibir todos os pontos de extremidade disponíveis e operações CRUD, visi
 
 ## Esquemas
 
-Os esquemas XDM representam e validam a estrutura e o formato dos dados assimilados no Platform. Um schema é composto de uma classe e zero ou mais mixins. Você pode criar, exibir, editar e excluir esquemas usando o terminal `/schemas`. Para saber como usar esse endpoint, consulte o [guia do endpoint de schemas](./schemas.md).
+Os esquemas XDM representam e validam a estrutura e o formato dos dados assimilados no Platform. Um schema é composto de uma classe e zero ou mais grupos de campos de schema. Você pode criar, exibir, editar e excluir esquemas usando o terminal `/schemas`. Para saber como usar esse endpoint, consulte o [guia do endpoint de schemas](./schemas.md).
 
-Para obter um guia passo a passo sobre como criar um esquema completo na API do Registro de Schema, incluindo a criação e adição de mixins e tipos de dados, consulte o [tutorial de criação de esquema de API](../tutorials/create-schema-api.md).
+Para obter um guia passo a passo sobre como criar um esquema completo na API do Registro de Schema, incluindo a criação e adição de grupos de campos e tipos de dados, consulte o [tutorial de criação de esquema de API](../tutorials/create-schema-api.md).
 
 ## Comportamentos
 
@@ -39,15 +39,15 @@ Os comportamentos definem a natureza dos dados descritos por um schema. Cada cla
 
 ## Classes
 
-Uma classe define a estrutura base das propriedades comuns que todos os schemas baseados nessa classe devem conter e determina quais mixins estão qualificados para uso nesses schemas. Cada classe deve ser associada a um comportamento existente. Consulte o [guia de ponto de extremidade de classes](./classes.md) para obter detalhes sobre como trabalhar com classes na API.
+Uma classe define a estrutura base das propriedades comuns que todos os schemas baseados nessa classe devem conter e determina quais grupos de campos estão qualificados para uso nesses schemas. Cada classe deve ser associada a um comportamento existente. Consulte o [guia de ponto de extremidade de classes](./classes.md) para obter detalhes sobre como trabalhar com classes na API.
 
-## Misturas
+## Grupos de campos
 
-As misturas são componentes reutilizáveis que definem um ou mais campos que representam um conceito específico, como uma pessoa individual, um endereço de correspondência ou um ambiente de navegador da Web. As misturas devem ser incluídas como parte de um schema que implementa uma classe compatível, dependendo do comportamento dos dados que representam (registro ou série de tempo). Consulte o [guia de ponto de extremidade mixins](./mixins.md) para saber como trabalhar com mixins na API.
+Grupos de campos são componentes reutilizáveis que definem um ou mais campos que representam um conceito específico, como uma pessoa individual, um endereço de correspondência ou um ambiente de navegador da Web. Os grupos de campos devem ser incluídos como parte de um schema que implementa uma classe compatível, dependendo do comportamento dos dados que representam (registro ou série de tempo). Consulte o [guia de ponto de extremidade de grupos de campo](./field-groups.md) para saber como trabalhar com grupos de campo na API.
 
 ## Tipos de dados
 
-Os tipos de dados são usados como campos do tipo de referência em classes ou combinações da mesma forma que campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a mixins, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis, pois podem ser incluídos em qualquer lugar na estrutura do schema, enquanto mixins só podem ser adicionados no nível raiz. Consulte o [guia de ponto de extremidade de tipos de dados](./data-types.md) para obter mais informações sobre como trabalhar com tipos de dados na API.
+Os tipos de dados são usados como campos do tipo referência em classes ou grupos de campos da mesma forma que os campos literais básicos, sendo a principal diferença que os tipos de dados podem definir vários subcampos. Embora semelhantes a grupos de campos, na medida em que permitem o uso consistente de uma estrutura de vários campos, os tipos de dados são mais flexíveis porque podem ser incluídos em qualquer lugar na estrutura do schema, enquanto os grupos de campos só podem ser adicionados no nível raiz. Consulte o [guia de ponto de extremidade de tipos de dados](./data-types.md) para obter mais informações sobre como trabalhar com tipos de dados na API.
 
 ## Descritores
 
@@ -61,7 +61,7 @@ Para saber como visualizar sindicatos na API do Registro de Schema, consulte o [
 
 ## Exportar/importar
 
-A API do Registro de Schema permite transferir e compartilhar recursos XDM entre sandboxes e organizações IMS. Para qualquer schema, mixin ou tipo de dados, é possível gerar uma carga de exportação contendo a estrutura do recurso e quaisquer recursos dependentes. Essa carga pode ser usada para importar o recurso para uma sandbox de destino e a IMS Org.
+A API do Registro de Schema permite transferir e compartilhar recursos XDM entre sandboxes e organizações IMS. Para qualquer esquema, grupo de campos ou tipo de dados, é possível gerar uma carga de exportação contendo a estrutura do recurso e quaisquer recursos dependentes. Essa carga pode ser usada para importar o recurso para uma sandbox de destino e a IMS Org.
 
 Consulte o [guia de endpoints de exportação/importação](./export-import.md) para obter mais informações sobre como usar esses endpoints.
 
@@ -73,7 +73,7 @@ Consulte o [guia de ponto de extremidade de dados de amostra](./sample-data.md) 
 
 ## Log de auditoria
 
-O Registro de Esquema mantém um log de todas as alterações que ocorreram em um recurso (classe, mixin, tipo de dados ou esquema) entre diferentes atualizações. Você pode recuperar o log de um recurso específico fornecendo seu `$id` ou `meta:altId` no caminho de uma solicitação GET para esse terminal.
+O Registro de Esquema mantém um log de todas as alterações que ocorreram em um recurso (classe, grupo de campos, tipo de dados ou esquema) entre diferentes atualizações. Você pode recuperar o log de um recurso específico fornecendo seu `$id` ou `meta:altId` no caminho de uma solicitação GET para esse terminal.
 
 Consulte o [guia de ponto de extremidade do log de auditoria](./audit-log.md) para obter mais informações sobre o uso desse ponto de extremidade.
 

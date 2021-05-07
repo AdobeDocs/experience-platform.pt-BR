@@ -6,9 +6,9 @@ type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -752,19 +752,19 @@ Esta seção fornece informações complementares relacionadas ao trabalho com p
 
 Ocasionalmente, pode haver casos de uso, como preenchimento retroativo de dados ou garantia da ordem correta dos eventos, se os registros forem assimilados fora de ordem, onde é necessário fornecer um carimbo de data e hora personalizado e fazer com que a política de mesclagem honre o carimbo de data e hora personalizado em vez do carimbo de data e hora do sistema.
 
-Para usar um carimbo de data e hora personalizado, o [[!DNL External Source System Audit Details Mixin]](#mixin-details) deve ser adicionado ao esquema Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o campo `xdm:lastUpdatedDate` . Quando um registro é assimilado com o campo `xdm:lastUpdatedDate` preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se `xdm:lastUpdatedDate` não estiver presente ou não estiver preenchida, a Platform continuará a usar o carimbo de data e hora do sistema.
+Para usar um carimbo de data e hora personalizado, o [[!DNL External Source System Audit Details] grupo de campos de esquema](#field-group-details) deve ser adicionado ao esquema Perfil. Depois de adicionado, o carimbo de data e hora personalizado pode ser preenchido usando o campo `xdm:lastUpdatedDate` . Quando um registro é assimilado com o campo `xdm:lastUpdatedDate` preenchido, o Experience Platform usará esse campo para unir registros ou fragmentos de perfil dentro e entre conjuntos de dados. Se `xdm:lastUpdatedDate` não estiver presente ou não estiver preenchida, a Platform continuará a usar o carimbo de data e hora do sistema.
 
 >[!NOTE]
 >
 >Você deve garantir que o carimbo de data e hora `xdm:lastUpdatedDate` seja preenchido ao enviar um PATCH no mesmo registro.
 
-Para obter instruções passo a passo sobre como trabalhar com schemas usando a API do Registro de Schema, incluindo como adicionar mixins a schemas, visite o [tutorial para criar um schema usando a API](../../xdm/tutorials/create-schema-api.md).
+Para obter instruções passo a passo sobre como trabalhar com esquemas usando a API do Registro de Esquemas, incluindo como adicionar grupos de campos a esquemas, visite o [tutorial para criar um esquema usando a API](../../xdm/tutorials/create-schema-api.md).
 
 Para trabalhar com carimbos de data e hora personalizados usando a interface do usuário, consulte a seção [usando carimbos de data e hora personalizados](../ui/merge-policies.md#custom-timestamps) no [guia do usuário de políticas de mesclagem](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] detalhes  {#mixin-details}
+#### [!DNL External Source System Audit Details] detalhes do grupo de campos  {#field-group-details}
 
-O exemplo a seguir mostra campos preenchidos corretamente no [!DNL External Source System Audit Details Mixin]. O mixin JSON completo também pode ser visualizado no [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) no GitHub.
+O exemplo a seguir mostra campos preenchidos corretamente no grupo de campos [!DNL External Source System Audit Details]. O grupo de campos completo JSON também pode ser visualizado no [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) no GitHub.
 
 ```json
 {

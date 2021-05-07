@@ -6,9 +6,9 @@ description: Este documento fornece respostas a perguntas frequentes sobre o Exp
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,19 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Sistema X
 
 ### Como adiciono campos a um esquema?
 
-É possível adicionar campos a um schema usando uma combinação. Cada mixin é compatível com uma ou mais classes, permitindo que a mixin seja usada em qualquer schema que implemente uma dessas classes compatíveis. Embora o Adobe Experience Platform forneça vários mixins do setor com seus próprios campos predefinidos, você pode adicionar seus próprios campos a um schema criando novos mixins usando a API ou a interface do usuário.
+É possível adicionar campos a um schema usando um grupo de campos de esquema. Cada grupo de campos é compatível com uma ou mais classes, permitindo que o grupo de campos seja usado em qualquer schema que implemente uma dessas classes compatíveis. Embora o Adobe Experience Platform forneça vários grupos de campos do setor com seus próprios campos predefinidos, é possível adicionar seus próprios campos a um schema criando novos grupos de campos usando a API ou a interface do usuário.
 
-Para obter detalhes sobre como criar novas combinações na API [!DNL Schema Registry], consulte o [guia de ponto de extremidade mixin](api/mixins.md#create). Se estiver usando a interface do usuário, consulte o [Tutorial do Editor de Esquema](./tutorials/create-schema-ui.md).
+Para obter detalhes sobre como criar novos grupos de campos na API [!DNL Schema Registry], consulte o [guia de ponto de extremidade do grupo de campos](api/field-groups.md#create). Se estiver usando a interface do usuário, consulte o [Tutorial do Editor de Esquema](./tutorials/create-schema-ui.md).
 
-### Quais são os melhores usos para mixins e tipos de dados?
+### Quais são os melhores usos para grupos de campos vs tipos de dados?
 
-[](./schema/composition.md#mixin) Mixinssão componentes que definem um ou mais campos em um schema. As misturas impõem como seus campos aparecem na hierarquia do schema e, portanto, exibem a mesma estrutura em cada schema no qual estão incluídos. As misturas só são compatíveis com classes específicas, conforme identificadas pelo seu atributo `meta:intendedToExtend`.
+[Os ](./schema/composition.md#field-group) grupos de campos são componentes que definem um ou mais campos em um schema. Os grupos de campos impõem como seus campos aparecem na hierarquia do esquema e, portanto, exibem a mesma estrutura em cada esquema em que estão incluídos. Os grupos de campos são compatíveis apenas com classes específicas, conforme identificado pelo atributo `meta:intendedToExtend`.
 
-[Os ](./schema/composition.md#data-type) tipos de dados também podem fornecer um ou mais campos para um esquema. No entanto, ao contrário de mixins, os tipos de dados não são restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes.
+[Os ](./schema/composition.md#data-type) tipos de dados também podem fornecer um ou mais campos para um esquema. No entanto, ao contrário de grupos de campos, os tipos de dados não estão restritos a uma classe específica. Isso torna os tipos de dados uma opção mais flexível para descrever estruturas de dados comuns que são reutilizáveis em vários esquemas com classes potencialmente diferentes.
 
 ### Qual é a ID exclusiva para um esquema?
 
-Todos os recursos [!DNL Schema Registry] (esquemas, mixagens, tipos de dados, classes) têm um URI que atua como uma ID exclusiva para fins de referência e pesquisa. Ao visualizar um esquema na API, ele pode ser encontrado nos atributos de nível superior `$id` e `meta:altId`.
+Todos os recursos [!DNL Schema Registry] (esquemas, grupos de campos, tipos de dados, classes) têm um URI que atua como uma ID exclusiva para fins de referência e pesquisa. Ao visualizar um esquema na API, ele pode ser encontrado nos atributos de nível superior `$id` e `meta:altId`.
 
 Para obter mais informações, consulte a seção [identificação de recursos](api/getting-started.md#resource-identification) no guia do desenvolvedor da API [!DNL Schema Registry].
 
@@ -135,7 +135,7 @@ Para obter mais informações sobre como construir caminhos de pesquisa na API, 
 }
 ```
 
-Essa mensagem de erro é exibida ao tentar criar um recurso com um título que já está sendo usado por outro recurso. Os títulos devem ser exclusivos em todos os tipos de recursos. Por exemplo, se você tentar criar um mixin com um título que já está sendo usado por um schema, você receberá esse erro.
+Essa mensagem de erro é exibida ao tentar criar um recurso com um título que já está sendo usado por outro recurso. Os títulos devem ser exclusivos em todos os tipos de recursos. Por exemplo, se você tentar criar um grupo de campos com um título que já está sendo usado por um esquema, você receberá esse erro.
 
 ### Os campos personalizados devem usar um campo de nível superior
 
@@ -149,7 +149,7 @@ Essa mensagem de erro é exibida ao tentar criar um recurso com um título que j
 }
 ```
 
-Esta mensagem de erro é exibida ao tentar criar uma nova combinação com campos com nomes inadequados. As misturas definidas pela organização IMS devem colocar os campos no nome com um `TENANT_ID` para evitar conflitos com outros recursos do setor e do fornecedor. Exemplos detalhados de estruturas de dados adequadas para mixins podem ser encontrados no [guia de ponto de extremidade mixins](./api/mixins.md#create).
+Essa mensagem de erro é exibida ao tentar criar um novo grupo de campos com campos nomeados incorretamente. Os grupos de campos definidos pela organização IMS devem colocar seus campos em namespace com um `TENANT_ID` para evitar conflitos com outros recursos do setor e do fornecedor. Exemplos detalhados de estruturas de dados apropriadas para grupos de campos podem ser encontrados no [guia de ponto de extremidade de grupos de campos](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] erros

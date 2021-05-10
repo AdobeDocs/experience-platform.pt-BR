@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1450'
-ht-degree: 3%
+source-wordcount: '1526'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +35,7 @@ Por exemplo, dois fragmentos de perfil podem conter IDs primárias diferentes, m
 
 ### Tipos de identidade
 
-Os dados podem ser identificados por vários tipos de identidade diferentes. O tipo de identidade é especificado no momento em que o namespace de identidade é criado e controla se os dados persistem ou não no gráfico de identidade e quaisquer instruções especiais para como esses dados devem ser tratados.
+Os dados podem ser identificados por vários tipos de identidade diferentes. O tipo de identidade é especificado no momento em que o namespace de identidade é criado e controla se os dados persistem ou não no gráfico de identidade e quaisquer instruções especiais para como esses dados devem ser tratados. Todos os tipos de identidade, exceto **Identificador de não pessoas**, seguem o mesmo comportamento de compilar um namespace e seu valor de ID correspondente em um cluster de gráficos de identidade. Os dados não são compilados ao usar **Identificador de não pessoas**.
 
 Os seguintes tipos de identidade estão disponíveis em [!DNL Platform]:
 
@@ -92,7 +92,9 @@ Para criar um namespace personalizado usando a interface do usuário, navegue at
 
 ![](./images/create.png)
 
-A caixa de diálogo **[!UICONTROL Create identity namespace]** é exibida. Forneça um **[!UICONTROL Display name]** e **[!UICONTROL Identity symbol]** exclusivos e selecione o tipo de identidade que deseja criar. Você também pode adicionar uma descrição opcional para obter mais informações sobre o namespace. Quando terminar, selecione **[!UICONTROL Create]**.
+A caixa de diálogo **[!UICONTROL Create identity namespace]** é exibida. Forneça um **[!UICONTROL Display name]** e **[!UICONTROL Identity symbol]** exclusivos e selecione o tipo de identidade que deseja criar. Você também pode adicionar uma descrição opcional para obter mais informações sobre o namespace. Todos os tipos de identidade, exceto **Identificador de não pessoas**, seguem o mesmo comportamento da compilação. Se você selecionar **Identificador de não pessoas** como tipo de identidade ao criar um namespace, a compilação não ocorrerá. Para obter informações específicas sobre cada tipo de identidade, consulte a tabela em [tipos de identidade](#identity-types).
+
+Quando terminar, selecione **[!UICONTROL Create]**.
 
 >[!IMPORTANT]
 >

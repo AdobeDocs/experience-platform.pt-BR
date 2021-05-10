@@ -5,10 +5,10 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 12%
+source-wordcount: '612'
+ht-degree: 13%
 
 ---
 
@@ -18,10 +18,10 @@ ht-degree: 12%
 - [Visão geral dos conectores de origem](home.md)
 - Conectores de origem disponíveis {#connectors}
    - Aplicativos Adobe {#adobe-applications}
-      - [Conector de dados de classificações do Analytics](connectors/adobe-applications/classifications.md)
-      - [Conector de dados do Analytics](connectors/adobe-applications/analytics.md)
-      - [conector Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Conector de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Conector de origem das Classificações do Analytics](connectors/adobe-applications/classifications.md)
+      - [Conector de origem do Analytics](connectors/adobe-applications/analytics.md)
+      - [Conector de fonte Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Conector de origem dos atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - Mapeamentos de campo do aplicativo Adobe {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -38,7 +38,7 @@ ht-degree: 12%
       - [Conector Amazon S3](connectors/cloud-storage/s3.md)
       - [Conector HDFS do Apache](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 do Armazenamento Azure Data Lake](connectors/cloud-storage/adls-gen2.md)
-      - [Conector Azure Blob](connectors/cloud-storage/blob.md)
+      - [Conector de blob do Azure](connectors/cloud-storage/blob.md)
       - [Conector de Hubs de Eventos do Azure](connectors/cloud-storage/eventhub.md)
       - [Conector de Armazenamento de Arquivos do Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP](connectors/cloud-storage/ftp.md)

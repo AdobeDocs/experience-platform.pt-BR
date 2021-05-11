@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ A opção **[!UICONTROL Included in Profile]** permite filtrar resultados para m
 Você também pode usar a barra de pesquisa para limitar mais os resultados. Quando você pesquisa por um termo, os itens principais representam recursos cujos nomes correspondem à consulta de pesquisa. Abaixo desses itens, em **[!UICONTROL Standard Fields]**, quaisquer recursos contendo campos que correspondam ao query serão listados. Isso permite procurar recursos XDM com base no tipo de dados que eles contêm, sem precisar saber o nome do recurso antecipadamente.
 
 ![](../images/ui/explore/search.png)
+
+Os recursos exibidos nos resultados da pesquisa são ordenados primeiro por correspondências de título e, em seguida, por correspondências de descrição. Por sua vez, quanto mais palavras corresponderem em qualquer uma dessas categorias, maior será a exibição do recurso na lista.
+
+>[!NOTE]
+>
+>Para recursos XDM padrão, o recurso de pesquisa retorna apenas campos individuais que contêm um namespace `xdm`. Os campos que estão em um namespace diferente (como a ID do locatário) só são retornados se estiverem contidos em um recurso personalizado.
 
 Quando encontrar o recurso que deseja explorar, selecione o nome na lista para exibir sua estrutura na tela.
 
@@ -100,7 +106,7 @@ Os campos de relacionamento também são destacados exclusivamente na tela, most
 
 >[!NOTE]
 >
->Consulte o tutorial em [criar uma relação na interface do usuário](../tutorials/create-schema-ui.md) para obter mais informações sobre o uso de relações em esquemas XDM.
+>Consulte o tutorial em [criar uma relação na interface do usuário](../tutorials/relationship-ui.md) para obter mais informações sobre o uso de relações em esquemas XDM.
 
 ## Próximas etapas
 

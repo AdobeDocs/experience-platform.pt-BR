@@ -5,10 +5,9 @@ type: Tutorial
 description: Instruções para conectar-se aos locais de armazenamento na nuvem
 seo-description: Instruções para conectar-se aos locais de armazenamento na nuvem
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -63,7 +62,7 @@ Para destinos [!DNL Azure Event Hubs] , forneça o nome do fluxo de dados existe
 
 Seu destino foi criado. Você pode selecionar **[!UICONTROL Save & Exit]** se desejar ativar segmentos posteriormente ou selecionar **[!UICONTROL Next]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Leia a seção [Ativate segments](#activate-segments), para o restante do workflow exportar dados.
 
-## Use macros para criar uma pasta no local de armazenamento{#use-macros}
+## Use macros para criar uma pasta no local de armazenamento {#use-macros}
 
 >[!NOTE]
 >

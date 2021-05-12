@@ -5,10 +5,9 @@ user-guide-title: Ajuda do Adobe Experience Platform Web SDK
 breadcrumb-title: Guia do Web SDK
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Edge Network.
 feature: Gerenciamento de dados
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4ed738b2b71332db1602d5571797ed61214afc2d
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '149'
 ht-degree: 34%
 
 ---
@@ -19,7 +18,7 @@ ht-degree: 34%
 * [Visão geral do SDK da Web da plataforma](home.md)
 * Fundamentos {#fundamentals}
    * [Pré-requisitos](fundamentals/prerequisite.md)
-   * [Criar uma configuração de borda](fundamentals/edge-configuration.md)
+   * [Configurar um conjunto de dados](fundamentals/datastreams.md)
    * [Instalar o SDK](fundamentals/installing-the-sdk.md)
    * [Configurar o SDK](fundamentals/configuring-the-sdk.md)
    * [Executar comandos](fundamentals/executing-commands.md)
@@ -57,6 +56,7 @@ ht-degree: 34%
    * [Extensão do SDK da Web](extension/web-sdk-extension.md)
    * [Tipos de ação](extension/action-types.md)
    * [Tipos de elementos de dados](extension/data-element-types.md)
+   * [Acesso à ECID](extension/accessing-the-ecid.md)
    * [Notas de versão da extensão do SDK da Web](extension/web-sdk-ext-release-notes.md)
 * [Notas de versão](release-notes.md)
 * [Perguntas frequentes](web-sdk-faq.md)

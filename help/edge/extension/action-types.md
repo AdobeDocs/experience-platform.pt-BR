@@ -3,14 +3,13 @@ title: Tipos de ação na extensão SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de ação fornecidos pela extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 solution: Experience Platform
 feature: Web SDK
-translation-type: tm+mt
-source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
+exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
+source-git-commit: 7e87f5b29d388b34681217e392c3f1ae8f2b67ee
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 4%
+source-wordcount: '534'
+ht-degree: 9%
 
 ---
-
 
 # Tipos de ação
 
@@ -20,15 +19,15 @@ Esta página descreve os tipos de ação disponíveis.
 
 ## Enviar evento
 
-Envia um evento para Adobe [!DNL Experience Platform] para que o Adobe Experience Platform possa coletar os dados enviados e agir de acordo com essas informações. Selecione uma instância (caso tenha mais de uma). Todos os dados que deseja enviar podem ser enviados no campo **[!UICONTROL Dados XDM]**. Use um objeto JSON que esteja em conformidade com a estrutura do esquema XDM. Esse objeto pode ser criado na página ou por meio de um **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+Envia um evento para Adobe [!DNL Experience Platform] para que o Adobe Experience Platform possa coletar os dados enviados e agir de acordo com essas informações. Selecione uma instância (caso tenha mais de uma). Todos os dados que deseja enviar podem ser enviados no campo **[!UICONTROL XDM Data]**. Use um objeto JSON que esteja em conformidade com a estrutura do esquema XDM. Esse objeto pode ser criado na sua página ou por meio de um **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
 
 Há alguns outros campos no tipo de ação Enviar evento que também podem ser úteis dependendo de sua implementação. Observe que esses campos são todos opcionais.
 
 - **Tipo:** este campo permite que você especifique um tipo de evento que será gravado no esquema XDM. Consulte a [documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para obter mais informações sobre os tipos de evento padrão.
 - **ID da mesclagem:** se você quiser especificar uma  [ID ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) de mesclagem para o evento, poderá fazer isso neste campo. Observe que as soluções downstream não podem unir os dados do evento no momento.
-- **ID do conjunto de dados:**  se precisar enviar dados para um conjunto de dados diferente daquele especificado na configuração de borda, especifique a ID do conjunto de dados aqui.
-- **O documento será descarregado:** se você quiser garantir que os eventos alcancem o servidor mesmo que o usuário saia da página, marque a caixa de seleção  **[!UICONTROL Documento será]** descarregada. Isso permite que os eventos cheguem ao servidor, mas as respostas são ignoradas.
-- **Renderizar decisões de personalização visual:** se você deseja renderizar o conteúdo personalizado na página, marque a caixa de seleção  **[!UICONTROL Renderizar personalização visual]** do . Você também pode especificar escopos de decisão, se necessário. Consulte a [documentação de personalização](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) para obter mais informações sobre como renderizar conteúdo personalizado.
+- **ID do conjunto de dados:**  se precisar enviar dados para um conjunto de dados diferente daquele especificado no conjunto de dados, especifique essa ID do conjunto de dados aqui.
+- **O documento será descarregado:** se você quiser garantir que os eventos alcancem o servidor, mesmo que o usuário saia da página, marque a caixa de  **[!UICONTROL Document will unload]** seleção. Isso permite que os eventos cheguem ao servidor, mas as respostas são ignoradas.
+- **Renderizar decisões de personalização visual:** se você deseja renderizar o conteúdo personalizado na página, marque a  **[!UICONTROL Render visual personalization decisions]** caixa de seleção. Você também pode especificar escopos de decisão, se necessário. Consulte a [documentação de personalização](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) para obter mais informações sobre como renderizar conteúdo personalizado.
 
 ## Definir consentimento
 

@@ -5,10 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3497'
+source-wordcount: '3621'
 ht-degree: 0%
 
 ---
@@ -50,19 +49,23 @@ Todos os esquemas XDM descrevem dados que podem ser categorizados como registro 
 
 Os esquemas de registro e de série de tempo contêm um mapa de identidades (`xdm:identityMap`). Este campo contém a representação de identidade de um assunto, extraída de campos marcados como &quot;Identidade&quot;, conforme descrito na próxima seção.
 
-### [!UICONTROL Identity] {#identity}
+### [!UICONTROL Identidade] {#identity}
 
 Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados podem ser usados em vários serviços para criar uma única visualização unificada de uma entidade individual. Portanto, é importante pensar em schemas pensar nas identidades do cliente e quais campos podem ser usados para identificar um assunto, independentemente de onde os dados possam vir.
 
-Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Identity Graph]&quot; para esse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma exibição agrupada de cada cliente individual.
+Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Gráfico de identidade]&quot; para esse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma exibição agrupada de cada cliente individual.
 
 Os campos comumente marcados como &quot;[!UICONTROL Identity]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos da organização, pois também podem ser bons campos &quot;[!UICONTROL Identity]&quot;.
 
 É importante pensar nas identidades do cliente durante a fase de planejamento do schema para ajudar a garantir que os dados estejam sendo reunidos para criar o perfil mais robusto possível. Consulte a visão geral em [Adobe Experience Platform Identity Service](../../identity-service/home.md) para saber mais sobre como as informações de identidade podem ajudar você a entregar experiências digitais para seus clientes.
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` é um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Este campo pode ser usado para fornecer informações de identidade para seus esquemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
+`identityMap` é um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Este campo pode ser usado para fornecer informações de identidade para seus esquemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
+
+A principal desvantagem do uso de `identityMap` é que as identidades se tornam incorporadas aos dados e, como resultado, se tornam menos visíveis. Se você estiver assimilando dados brutos, deverá definir campos de identidade individuais dentro da estrutura do schema real.
+
+No entanto, os mapas de identidade podem ser particularmente úteis se você estiver trazendo dados de fontes que armazenam identidades juntas, como [!DNL Airship] ou Adobe Audience Manager. Além disso, os mapas de identidade são necessários se você estiver usando o [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 Um exemplo de um mapa de identidade simples seria semelhante ao seguinte:
 
@@ -99,7 +102,7 @@ Como mostra o exemplo acima, cada chave no objeto `identityMap` representa um na
 >
 >Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. As identidades primárias só precisam ser definidas para esquemas destinados a serem usados em [!DNL Real-time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
 
-### Princípios de evolução do esquema {#evolution}
+### Princípios de evolução do schema {#evolution}
 
 Como a natureza das experiências digitais continua a evoluir, também os esquemas usados para representá-las. Um schema bem projetado é, portanto, capaz de se adaptar e evoluir conforme necessário, sem causar alterações destrutivas nas versões anteriores do schema.
 
@@ -135,7 +138,7 @@ A classe de um esquema determina quais grupos de campos serão qualificados para
 
 O Adobe fornece várias classes XDM padrão (&quot;core&quot;). Duas dessas classes, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], são necessárias para quase todos os processos downstream da plataforma. Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos da sua organização. As classes personalizadas são definidas por uma organização quando não há classes principais definidas por Adobe disponíveis para descrever um caso de uso exclusivo.
 
-A captura de tela a seguir demonstra como as classes são representadas na interface do usuário da plataforma. Como o schema de exemplo mostrado não contém nenhum grupo de campos, todos os campos exibidos são fornecidos pela classe do schema ([!UICONTROL XDM Individual Profile]).
+A captura de tela a seguir demonstra como as classes são representadas na interface do usuário da plataforma. Como o schema de exemplo mostrado não contém nenhum grupo de campos, todos os campos exibidos são fornecidos pela classe do schema ([!UICONTROL Perfil Individual XDM]).
 
 ![](../images/schema-composition/class.png)
 
@@ -149,7 +152,7 @@ Os grupos de campos definem a(s) classe(s) com a qual são compatíveis, com bas
 
 [!DNL Experience Platform] O inclui muitos grupos de campos Adobe padrão, além de permitir que os fornecedores definam grupos de campos para seus usuários e usuários individuais definam grupos de campos para seus próprios conceitos específicos.
 
-Por exemplo, para capturar detalhes como &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; para seu esquema &quot;[!UICONTROL Loyalty Members]&quot;, é possível usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos específicos para casos de uso menos comuns (como &quot;[!UICONTROL Loyalty Program Level]&quot;) geralmente não têm um grupo de campo predefinido. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
+Por exemplo, para capturar detalhes como &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; para o esquema &quot;[!UICONTROL Loyalty Members]&quot;, você poderá usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos específicos para casos de uso menos comuns (como &quot;[!UICONTROL Nível do Programa de Fidelidade]&quot;) geralmente não têm um grupo de campo predefinido. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
 
 Lembre-se de que os esquemas são compostos de grupos de campos &quot;zero ou mais&quot;, portanto, isso significa que você pode compor um schema válido sem usar nenhum grupo de campos.
 
@@ -165,7 +168,7 @@ Os tipos de dados são usados como tipos de campo de referência em classes ou e
 
 [!DNL Experience Platform] O fornece vários tipos de dados comuns como parte do  [!DNL Schema Registry] para suportar o uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes nos tutoriais [!DNL Schema Registry], onde ficará mais claro à medida que você percorre as etapas para definir tipos de dados.
 
-A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo grupo de campos [!UICONTROL Demographic Details] usa o tipo de dados &quot;[!UICONTROL Person name]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos onde o nome de uma pessoa precisa ser capturado.
+A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo grupo de campos [!UICONTROL Detalhes Demográficos] usa o tipo de dados &quot;[!UICONTROL Nome da pessoa]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos onde o nome de uma pessoa precisa ser capturado.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -222,7 +225,7 @@ Consulte o [dicionário de campos XDM](field-dictionary.md) para obter uma lista
 
 Os esquemas representam o formato e a estrutura dos dados que serão assimilados em [!DNL Platform] e são criados usando um modelo de composição. Como mencionado anteriormente, esses esquemas são compostos de uma classe e zero ou mais grupos de campos compatíveis com essa classe.
 
-Por exemplo, um esquema que descreve compras feitas em uma loja de varejo pode ser chamado de &quot;[!UICONTROL Store Transactions]&quot;. O schema implementa a classe [!DNL XDM ExperienceEvent] combinada com o grupo de campos padrão [!UICONTROL Commerce] e um grupo de campos [!UICONTROL Product Info] definido pelo usuário.
+Por exemplo, um esquema que descreve compras feitas em uma loja de varejo pode ser chamado de &quot;[!UICONTROL Transações da loja]&quot;. O schema implementa a classe [!DNL XDM ExperienceEvent] combinada com o grupo de campos padrão [!UICONTROL Commerce] e um grupo de campos [!UICONTROL Informações do produto] definido pelo usuário.
 
 Outro esquema que rastreia o tráfego do site pode ser chamado de &quot;[!UICONTROL Web Visits]&quot;. Ela também implementa a classe [!DNL XDM ExperienceEvent], mas desta vez combina o grupo de campos padrão [!UICONTROL Web].
 
@@ -248,8 +251,8 @@ Todos os arquivos de dados assimilados em [!DNL Experience Platform] devem estar
 
 Se você estiver trazendo segmentos de sistemas externos para o Platform, deverá usar os seguintes componentes para capturá-los em seus esquemas:
 
-* [[!UICONTROL Segment definition] classe](../classes/segment-definition.md): Use essa classe padrão para capturar atributos-chave de uma definição de segmento externo.
-* [[!UICONTROL Segment Membership Details] grupo](../field-groups/profile/segmentation.md) de campos: Adicione esse grupo de campos ao  [!UICONTROL XDM Individual Profile] esquema para associar perfis de clientes a segmentos específicos.
+* [[!UICONTROL Classe de ] definição de segmento](../classes/segment-definition.md): Use essa classe padrão para capturar atributos-chave de uma definição de segmento externo.
+* [[!UICONTROL Grupo de campos ] Detalhes da associação do segmento](../field-groups/profile/segmentation.md): Adicione esse grupo de campos ao seu  [!UICONTROL Esquema de perfis individuais do ] XDM para associar perfis do cliente a segmentos específicos.
 
 ## Próximas etapas
 

@@ -1,23 +1,22 @@
 ---
-title: Coleta automática de informações no Adobe Experience Platform Web SDK
-description: Uma visão geral de cada informação que o SDK do Adobe Experience Platform coleta automaticamente.
-keywords: coletar informações;contexto;configurar;dispositivo;screenHeight;screenHeight;screenOrientation;screenOrientation;screenWidth;screenWidth;screenWidth;screen;screenHeight;viewportHeight;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementationDetails;nome;version;localTime;localOfffzone set;local Deslocamento do fuso horário;carimbo de data e hora;web;url;webPageDetails;web Page Details;webReferrer;web Quem indicou;landscape;portrait;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Coletar automaticamente informações no SDK da Web da Adobe Experience Platform
+description: Uma visão geral de cada parte das informações que o SDK da Adobe Experience Platform coleta automaticamente.
+keywords: coletar informações, contexto, configurar, dispositivo, screenHeight, screen Height, screenOrientation, screenOrientation, screenWidth, screen Width, ambiente, viewportHeight, viewport Height, viewportWidth, viewport Width, crowserDetails, detalhes do navegador, implementationDetails, implementation Details, nome, version, placeContext, localTime, localTimezoneOffset;Deslocamento de fuso horário local;timestamp;web;url;webPageDetails;web Page Details;web Page Reference;web Referrer;web Referrer;landscape;portrait;
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 8%
+source-wordcount: '515'
+ht-degree: 6%
 
 ---
 
+# Informações coletadas automaticamente
 
-# Informações automaticamente coletadas
-
-O Adobe Experience Platform Web SDK coleta várias informações automaticamente sem nenhuma configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a opção `context` no comando `configure`. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
+O SDK da Web da Adobe Experience Platform coleta várias informações automaticamente sem qualquer configuração especial. No entanto, essas informações podem ser desativadas se necessário usando a opção `context` no comando `configure`. [Consulte Configuração do SDK](../fundamentals/configuring-the-sdk.md). Abaixo está uma lista dessas informações. O nome entre parênteses indica a string a ser usada ao configurar o contexto.
 
 ## Dispositivo (`device`)
 
-Informações sobre o dispositivo. Isso não inclui dados que podem ser pesquisados no lado do servidor a partir da string do agente do usuário.
+Informações sobre o dispositivo. Isso não inclui dados que podem ser pesquisados no lado do servidor a partir da sequência de agente do usuário.
 
 ### Altura da tela
 
@@ -25,7 +24,7 @@ Informações sobre o dispositivo. Isso não inclui dados que podem ser pesquisa
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900` |
 
-A altura em pixels da tela.
+A altura da tela (em pixels).
 
 ### Orientação da tela
 
@@ -55,9 +54,9 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-O tipo de ambiente pelo qual a experiência surgiu. O Adobe Experience Platform Web SDK sempre define para `browser`.
+O tipo de ambiente pelo qual a experiência surgiu. O SDK da Web da Adobe Experience Platform sempre define isso como `browser`.
 
-### Altura do visor
+### Altura da janela de visualização
 
 | **Caminho na carga:** | **Exemplo:** |
 | -------------------------------------------------------- | ------------ |
@@ -65,7 +64,7 @@ O tipo de ambiente pelo qual a experiência surgiu. O Adobe Experience Platform 
 
 A altura da área de conteúdo do navegador (em pixels).
 
-### Largura do visor
+### Largura da janela de visualização
 
 | **Caminho na carga:** | **Exemplo:** |
 | ------------------------------------------------------- | ------------ |
@@ -83,7 +82,7 @@ Informações sobre o SDK usado para coletar o evento.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um URI para melhorar a exclusividade entre identificadores fornecidos por diferentes bibliotecas de software.
+O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um URI para melhorar a exclusividade entre identificadores fornecidos por diferentes bibliotecas de software. Quando a biblioteca independente é usada, o valor é `https://ns.adobe.com/experience/alloy`. Quando a biblioteca é usada como parte da extensão do Platform launch, o valor é `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Versão
 
@@ -91,14 +90,17 @@ O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um 
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
+Quando a biblioteca independente é usada, o valor é simplesmente a versão da biblioteca. Quando a biblioteca é usada como parte da extensão do Platform launch, essa é a versão da biblioteca e a versão da extensão do Platform launch unida com um &quot;+&quot;. Por exemplo, se a versão da biblioteca fosse 2.1.0 e a versão da extensão do Platform launch fosse 2.1.3, o valor seria `2.1.0+2.1.3`.
+
 ### Ambiente
 
 | **Caminho na carga:** | **Exemplo:** |
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
+O ambiente em que os dados foram coletados. Isso é sempre definido como `browser`.
 
-## Inserir contexto (`placeContext`)
+## Colocar contexto (`placeContext`)
 
 Informações sobre a localização do usuário final.
 
@@ -140,7 +142,7 @@ Detalhes sobre a página em que o usuário está.
 
 O URL da página atual.
 
-### URL de quem indicou
+### URL do referenciador
 
 | **Caminho na carga:** | **Exemplo:** |
 | ---------------------------------- | ----------------------------------------- |

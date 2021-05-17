@@ -5,31 +5,55 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1466'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] classe
 
-[!DNL XDM ExperienceEvent] é uma classe XDM padrão que permite criar um instantâneo com carimbo de data e hora do sistema quando um evento específico ocorre ou um determinado conjunto de condições foi atingido.
+[!DNL XDM ExperienceEvent] é uma classe padrão do Experience Data Model (XDM) que permite criar um instantâneo com carimbo de data e hora do sistema quando um evento específico ocorre ou um determinado conjunto de condições foi atingido.
 
 Um Evento de experiência é um registro de fatos do que ocorreu, incluindo o ponto no tempo e a identidade do indivíduo envolvido. Os eventos podem ser explícitos (ações humanas diretamente observáveis) ou implícitos (criados sem uma ação humana direta) e são registrados sem agregação ou interpretação. Para obter mais informações de alto nível sobre o uso dessa classe no ecossistema da plataforma, consulte a [Visão geral do XDM](../home.md#data-behaviors).
 
 A própria classe [!DNL XDM ExperienceEvent] fornece vários campos relacionados à série de tempo para um esquema. Os valores de alguns desses campos são automaticamente preenchidos quando os dados são assimilados:
 
-<img src="../images/classes/experienceevent.png" width="650" /><br />
+![](../images/classes/experienceevent/structure.png)
 
 | Propriedade | Descrição |
 | --- | --- |
-| `_id` | Um identificador de string exclusivo gerado pelo sistema para o evento. Este campo é usado para rastrear a exclusividade de um evento individual, evitar a duplicação de dados e buscar esse evento em serviços downstream. Como esse campo é gerado pelo sistema, ele não deve receber um valor explícito durante a assimilação dos dados.<br><br>É importante distinguir que este campo  **não** representa uma identidade relacionada a uma pessoa, mas sim o registro dos dados propriamente ditos. Os dados de identidade relacionados a uma pessoa devem ser relegados para [campos de identidade](../schema/composition.md#identity). |
-| `eventMergeId` | A ID do lote assimilado que fez com que o registro fosse criado. Esse campo é preenchido automaticamente pelo sistema após a assimilação de dados. |
-| `eventType` | Uma string que indica o tipo de evento principal para o registro. Os valores aceitos e suas definições são fornecidos na seção [apêndice](#eventType). |
+| `_id` | Um identificador de string exclusivo para o evento. Este campo é usado para rastrear a exclusividade de um evento individual, evitar a duplicação de dados e buscar esse evento em serviços downstream.<br><br>Em alguns casos,  `_id` pode ser um identificador  [universal único (UUID)](https://tools.ietf.org/html/rfc4122) ou um identificador  [global exclusivo (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0). Na Preparação de dados do Adobe Experience Platform, esse valor pode ser gerado usando as funções de mapeamento [`uuid` ou `guid`](../../data-prep/functions.md#special-operations).<br><br>Se você estiver fazendo streaming de dados de uma conexão de origem ou assimilando diretamente de um arquivo Parquet, deverá gerar esse valor concatenando determinados campos de combinação que tornam o evento único, como uma ID primária, carimbo de data e hora, tipo de evento, e assim por diante.<br><br>É importante distinguir que  **este campo não representa uma identidade relacionada a uma pessoa** individual, mas sim o registro dos dados propriamente dito. Os dados de identidade relacionados a uma pessoa devem ser relegados para [campos de identidade](../schema/composition.md#identity) fornecidos por mixins compatíveis. |
+| `eventMergeId` | Se estiver usando o [Adobe Experience Platform Web SDK](../../edge/home.md) para assimilar dados, isso representa a ID do lote assimilado que fez com que o registro fosse criado. Esse campo é preenchido automaticamente pelo sistema após a assimilação de dados. Não há suporte para o uso desse campo fora do contexto de uma implementação do SDK da Web. |
+| `eventType` | Uma string que indica o tipo ou a categoria do evento. Esse campo pode ser usado se você quiser distinguir tipos de evento diferentes no mesmo esquema e conjunto de dados, como distinguir um evento de exibição de produto de um evento de carrinho de compras de complemento para uma empresa de varejo.<br><br>Os valores-padrão para esta propriedade são fornecidos na seção [ do ](#eventType)apêndice, incluindo descrições do seu caso de uso pretendido. Este campo é um enum extensível, o que significa que você também pode usar suas próprias strings de tipo de evento para categorizar os eventos que você está rastreando. |
+| `producedBy` | Um valor de string que descreve o produtor ou a origem do evento. Esse campo pode ser usado para filtrar determinados produtores de eventos, se necessário para fins de segmentação.<br><br>Alguns valores sugeridos para esta propriedade são fornecidos na seção [ do ](#producedBy)apêndice. Este campo é um enum extensível, o que significa que você também pode usar suas próprias strings para representar produtores de eventos diferentes. |
 | `identityMap` | Campo de mapa que contém um conjunto de identidades namespacadas para o indivíduo ao qual o evento se aplica. Este campo é atualizado automaticamente pelo sistema conforme os dados de identidade são assimilados. Para utilizar corretamente este campo para [Real-time Customer Profile](../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade nas  [noções básicas da ](../schema/composition.md#identityMap) composição do schema para obter mais informações sobre seu caso de uso. |
-| `timestamp` | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com [RFC 3339, Seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Esse carimbo de data e hora  **** só pode representar a observação do evento em si e deve ocorrer no passado. Se os casos de uso de segmentação exigirem o uso de carimbos de data e hora que podem ocorrer no futuro (como uma data de partida), esses valores devem ser restritos em outro lugar do esquema Evento de experiência. |
+| `timestamp` | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com [RFC 3339, Seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Esse carimbo de data e hora deve ocorrer no passado. Consulte a seção abaixo em [timestamps](#timestamps) para obter as práticas recomendadas sobre o uso desse campo. |
+
+## Práticas recomendadas para modelagem de eventos
+
+As seções a seguir abordam as práticas recomendadas para projetar seus esquemas do Experience Data Model (XDM) baseados em eventos no Adobe Experience Platform.
+
+### Carimbos de data e hora {#timestamps}
+
+O campo raiz `timestamp` de um schema de evento pode **somente** representar a observação do próprio evento e deve ocorrer no passado. Se os casos de uso de segmentação exigirem o uso de carimbos de data e hora que podem ocorrer no futuro, esses valores devem ser restritos em outro lugar do esquema Evento de experiência .
+
+Por exemplo, se uma empresa no setor de viagens e hospitalidade estiver modelando um evento de reserva de voo, o campo de nível de classe `timestamp` representa o tempo em que o evento de reserva foi observado. Outros carimbos de data e hora relacionados ao evento, como a data de início da reserva de viagem, devem ser capturados em campos separados fornecidos por mixins padrão ou personalizados.
+
+![](../images/classes/experienceevent/timestamps.png)
+
+Mantendo o carimbo de data e hora em nível de classe separado de outros valores de data e hora relacionados em seus esquemas de evento, é possível implementar casos de uso de segmentação flexível, preservando uma conta com carimbo de data e hora das jornadas do cliente em seu aplicativo de experiência.
+
+### Uso de campos calculados
+
+Determinadas interações nos aplicativos de experiência podem resultar em vários eventos relacionados que compartilham tecnicamente o mesmo carimbo de data e hora do evento e, portanto, podem ser representados como um único registro de evento. Por exemplo, se um cliente visualizar um produto em seu site, isso poderá resultar em um registro de evento que contenha ambos os atributos de &quot;visualização do produto&quot;, bem como alguns atributos de &quot;visualização da página&quot; genéricos sobrepostos. Nesses casos, você pode usar campos calculados para capturar os atributos mais importantes quando vários eventos são capturados em um registro.
+
+[Dados da Adobe Experience Platform ](../../data-prep/home.md) permitem mapear, transformar e validar dados de e para o XDM. Usando as [funções de mapeamento](../../data-prep/functions.md) disponíveis fornecidas pelo serviço, você pode chamar operadores lógicos para priorizar, transformar e/ou consolidar dados de registros de vários eventos ao ser assimilados em Experience Platform.
+
+Se você estiver assimilando dados manualmente na plataforma por meio da interface do usuário, consulte o guia sobre [mapear um arquivo CSV para XDM](../../ingestion/tutorials/map-a-csv-file.md) para obter etapas específicas sobre como criar campos calculados.
+
+Se você estiver transmitindo dados para a Platform usando uma conexão de origem, poderá configurar a fonte para utilizar campos calculados. Consulte a documentação [de sua fonte específica](../../sources/home.md) para obter instruções sobre como implementar campos calculados ao configurar a conexão.
 
 ## Grupos de campos de esquema compatíveis {#field-groups}
 
@@ -39,16 +63,16 @@ A própria classe [!DNL XDM ExperienceEvent] fornece vários campos relacionados
 
 O Adobe fornece vários grupos de campos padrão para uso com a classe [!DNL XDM ExperienceEvent] . Esta é uma lista de alguns grupos de campos comumente usados para a classe :
 
-* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Detalhes da ID de usuário final]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Detalhes do ambiente]](../field-groups/event/environment-details.md)
 
 ## Apêndice
 
 A seção a seguir contém informações adicionais sobre a classe [!UICONTROL XDM ExperienceEvent].
 
-### Valores aceitos para xdm:eventType {#eventType}
+### Valores aceitos para `eventType` {#eventType}
 
-A tabela a seguir descreve os valores aceitos para `xdm:eventType`, juntamente com suas definições:
+A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com suas definições:
 
 | Valor | Definição |
 | --- | --- |
@@ -76,3 +100,14 @@ A tabela a seguir descreve os valores aceitos para `xdm:eventType`, juntamente c
 | `delivery.feedback` | Eventos de feedback para um delivery, como um delivery de email. |
 | `message.feedback` | Eventos de feedback como enviado/rejeição/erro para mensagens enviadas a um cliente. |
 | `message.tracking` | Rastreamento de eventos como ações abertas/click/personalizadas em mensagens enviadas a um cliente. |
+
+### Valores sugeridos para `producedBy` {#producedBy}
+
+A tabela a seguir descreve alguns valores aceitos para `producedBy`:
+
+| Valor | Definição |
+| --- | --- |
+| `self` | Auto |
+| `system` | Sistema |
+| `salesRef` | Representante de vendas |
+| `customerRep` | Representante do cliente |

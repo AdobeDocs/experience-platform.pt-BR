@@ -4,10 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Esquemas
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '295'
 ht-degree: 18%
 
 ---
@@ -20,6 +19,7 @@ ht-degree: 18%
    * [Noções básicas da composição do schema](schema/composition.md)
    * [Práticas recomendadas para modelagem de dados](schema/best-practices.md)
    * [Restrições do tipo de campo XDM](schema/field-constraints.md)
+   * [Namespacing no XDM](./schema/namespaces.md)
    * [Dicionário de campo XDM](schema/field-dictionary.md)
    * Modelos de dados do setor {#industries}
       * [Visão geral](./schema/industries/overview.md)
@@ -55,14 +55,14 @@ ht-degree: 18%
    * [Campo de Preferência de Marketing Genérico](./data-types/marketing-field.md)
    * [Campo de preferência de marketing genérico com assinaturas](./data-types/marketing-field-subscriptions.md)
    * [Campo de preferência Personalização genérica](./data-types/personalization-field.md)
-   * [Geografia](./data-types/geo.md)
+   * [Geografia ](./data-types/geo.md)
    * [Círculo geográfico](./data-types/geo-circle.md)
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Detalhes da interação geográfica](./data-types/geo-interaction-details.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Identidade](./data-types/identity.md)
    * [Medição](./data-types/measure.md)
-   * [Pedido](./data-types/order.md)
+   * [Ordem](./data-types/order.md)
    * [Item de Pagamento](./data-types/payment-item.md)
    * [Pessoa](./data-types/person.md)
    * [Nome da pessoa](./data-types/person-name.md)
@@ -75,7 +75,7 @@ ht-degree: 18%
    * [Assinatura](./data-types/subscription.md)
    * [Interação da Web](./data-types/web-interactions.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] Interface {#ui}
+*  SchemasUI  {#ui}
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}

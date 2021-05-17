@@ -1,27 +1,26 @@
 ---
 title: Instalar o SDK da Web da Adobe Experience Platform
-description: Saiba como instalar o SDK da Web da Experience Platform.
+description: Saiba como instalar o SDK da Web do Experience Platform.
 keywords: instalação do sdk da web; instalação do sdk da web; internet explorer; promessa; pacote npm
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 4%
+source-wordcount: '939'
+ht-degree: 3%
 
 ---
 
-
 # Instalar o SDK {#installing-the-sdk}
 
-Há três maneiras compatíveis de usar o SDK da Web da Adobe Experience Platform:
+Há três maneiras compatíveis de usar o Adobe Experience Platform Web SDK:
 
-1. A maneira preferida de usar o SDK da Web da Adobe Experience Platform é por meio do [Adobe Experience Platform Launch](https://launch.adobe.com/).
+1. A maneira preferida de usar o SDK da Web do Adobe Experience Platform é via [Adobe Experience Platform Launch](https://launch.adobe.com/).
 1. O SDK da Web da Adobe Experience Platform também está disponível em uma rede de entrega de conteúdo (CDN) para você usar.
 1. Use a biblioteca NPM que exporta módulos EcmaScript 5 e EcmaScript 2015 (ES6).
 
 ## Opção 1: Instalação da extensão Adobe Experience Platform Launch
 
-Para obter a documentação sobre a extensão do Adobe Experience Platform Launch, consulte a [documentação de inicialização](https://docs.adobe.com/content/help/pt-BR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+Para obter a documentação sobre a extensão Adobe Experience Platform Launch, consulte a [documentação de inicialização](https://docs.adobe.com/content/help/pt-BR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
 
 ## Opção 2: Instalação da versão independente pré-criada
 
@@ -131,6 +130,10 @@ alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
 
+>[!NOTE]
+>
+>O pacote NPM depende de módulos CommonJS; portanto, ao usar um pacote, verifique se o pacote suporta módulos CommonJS. Alguns pacotes, como [Rollup](https://rollupjs.org), exigem um [plug-in](https://www.npmjs.com/package/@rollup/plugin-commonjs) que fornece suporte a CommonJS.
+
 ### Uso do pacote como um módulo ECMAScript 5
 
 ```javascript
@@ -142,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Suporte ao Internet Explorer
 
-O SDK da Adobe Experience Platform usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+O Adobe Experience Platform SDK usa promessas, que são um método de comunicar a conclusão de tarefas assíncronas. A implementação [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) usada pelo SDK é nativamente compatível com todos os navegadores de destino, exceto [!DNL Internet Explorer]. Para usar o SDK em [!DNL Internet Explorer], você deve ter `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Uma biblioteca que você poderia usar para cumprir a promessa de polyfill é a promessa de polyfill. Consulte a [documentação de promessa-polyfill](https://www.npmjs.com/package/promise-polyfill) para obter mais informações sobre como instalar com o NPM.
 

@@ -5,10 +5,9 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2230'
 ht-degree: 3%
 
 ---
@@ -48,7 +47,11 @@ Nem todas as colunas no esquema [!DNL Consumer Experience Event] (CEE) são obri
 | Marketing.campaigngroup | Ponto de contato |
 | Comércio | Conversão |
 
-Normalmente, a atribuição é executada em colunas de conversão, como pedido, compras e check-outs em &quot;comércio&quot;. As colunas &quot;canal&quot; e &quot;marketing&quot; são altamente recomendadas para definir pontos de contato para obter bons insights. No entanto, é possível incluir qualquer outra coluna adicional junto com as colunas acima para configurar como conversão ou definição de ponto de contato.
+Normalmente, a atribuição é executada em colunas de conversão, como pedido, compras e check-outs em &quot;comércio&quot;. As colunas para &quot;canal&quot; e &quot;marketing&quot; são usadas para definir pontos de contato para o Attribution AI (por exemplo, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Para obter resultados e insights ideais, é altamente recomendável incluir o máximo possível de colunas de conversão e ponto de contato. Além disso, você não está limitado apenas às colunas acima. Você pode incluir qualquer outra coluna recomendada ou personalizada como conversão ou definição de ponto de contato.
+
+>[!TIP]
+>
+>Se você estiver usando dados do Adobe Analytics no esquema CEE, as informações do ponto de contato do Analytics normalmente são armazenadas em `channel.typeAtSource` (por exemplo, `channel.typeAtSource = 'email'`).
 
 As colunas abaixo não são necessárias, mas é recomendável incluí-las no esquema CEE se você tiver as informações disponíveis.
 
@@ -58,7 +61,7 @@ As colunas abaixo não são necessárias, mas é recomendável incluí-las no es
 - web.webPageDetails
 - xdm:productListItems
 
-### Dados históricos {#data-requirements}
+## Dados históricos {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -145,11 +148,11 @@ A tabela a seguir descreve os campos de esquema na saída de exemplo de pontuaç
 
 ### Visualização de caminhos de pontuação bruta (UI) {#raw-score-path}
 
-Você pode visualizar o caminho para suas pontuações brutas na interface do usuário do . Comece selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e depois procure e selecione o esquema de pontuações do AI de atribuição na guia **[!UICONTROL Browse]**.
+Você pode visualizar o caminho para suas pontuações brutas na interface do usuário do . Comece selecionando **[!UICONTROL Schemas]** na interface do usuário da plataforma e pesquise e selecione o esquema de pontuações do AI de atribuição na guia **[!UICONTROL Browse]**.
 
 ![Escolha seu esquema](./images/input-output/schemas_browse.png)
 
-Em seguida, selecione um campo na janela **[!UICONTROL Structure]** da interface do usuário, a guia **[!UICONTROL Field properties]** será aberta. Dentro de **[!UICONTROL Field properties]** é o campo de caminho que mapeia para suas pontuações brutas.
+Em seguida, selecione um campo na janela **[!UICONTROL Structure]** da interface do usuário, a guia **[!UICONTROL Field properties]** será aberta. Dentro de **[!UICONTROL Propriedades do campo]** é o campo de caminho que mapeia suas pontuações brutas.
 
 ![Escolha um esquema](./images/input-output/field_properties.png)
 

@@ -5,9 +5,9 @@ title: Namespaces do Marketo
 topic-legacy: overview
 description: Este documento fornece uma visão geral de namespaces personalizados necessários ao criar um conector de origem de Marketo Engage.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ Este documento fornece informações sobre a configuração subjacente para os n
 
 A primeira etapa no uso do namespace [!DNL Marketo] e do utilitário de geração automática de esquema é configurar o console do desenvolvedor de plataforma e o ambiente [!DNL Postman].
 
-- Você pode baixar o namespace e o ambiente do utilitário de geração automática de esquema deste [repositório GitHub](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility).
+- Você pode baixar o namespace e o ambiente do utilitário de geração automática de esquema deste [repositório GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Para obter informações sobre como usar APIs de plataforma, incluindo detalhes sobre como coletar valores para cabeçalhos necessários e ler chamadas de API de amostra, consulte o guia sobre como [começar a usar APIs de plataforma](../../../../landing/api-guide.md).
 - Para obter informações sobre como gerar suas credenciais para APIs da plataforma, consulte o tutorial em [autenticação e acesso a APIs do Experience Platform](../../../../landing/api-authentication.md).
 - Para obter informações sobre como configurar [!DNL Postman] para APIs da plataforma, consulte o tutorial em [configurar o console do desenvolvedor e [!DNL Postman]](../../../../landing/postman.md).

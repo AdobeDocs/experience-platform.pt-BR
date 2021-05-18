@@ -6,10 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '2566'
 ht-degree: 0%
 
 ---
@@ -32,23 +31,23 @@ As etapas no fluxo de trabalho de ativação variam um pouco entre os tipos de d
 
 Aplica-se a: Todos os destinos
 
-Na interface do usuário do Adobe Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e clique no botão **[!UICONTROL Activate]** correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
+Na interface do usuário do Adobe Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e clique no botão **[!UICONTROL Ativate]** correspondente ao destino onde deseja ativar seus segmentos, conforme mostrado na imagem abaixo.
 
 ![ativar para destino](../assets/ui/activate-destinations/browse-tab-activate.png)
 
 Siga as etapas na próxima seção para selecionar os segmentos que deseja ativar.
 
-## [!UICONTROL Select Segments] step  {#select-segments}
+## [!UICONTROL Etapa Selecionar ] segmentos  {#select-segments}
 
 Aplica-se a: Todos os destinos
 
 ![Selecionar etapa de segmentos](../assets/ui/activate-destinations/select-segments-icon.png)
 
-No workflow **[!UICONTROL Activate destination]**, na página **[!UICONTROL Select Segments]**, selecione um ou mais segmentos para ativar no destino. Selecione **[!UICONTROL Next]** para prosseguir para a próxima etapa.
+No workflow **[!UICONTROL Ativate destination]**, na página **[!UICONTROL Select Segments]**, selecione um ou mais segmentos para ativar no destino. Selecione **[!UICONTROL Next]** para prosseguir para a próxima etapa.
 
 ![segmentos para destino](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Identity mapping] step  {#identity-mapping}
+## [!UICONTROL Etapa do ] mapeamento de identidade  {#identity-mapping}
 
 Aplica-se a: destinos sociais e destino de publicidade da Correspondência de clientes do Google
 
@@ -114,13 +113,13 @@ Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DN
 Os dados da fonte de atributo não são automaticamente transformados em hash. Quando o campo de origem contém atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] hash automaticamente os dados na ativação.
 ![Transformação de mapeamento de identidade](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-## **[!UICONTROL Configure]** step  {#configure}
+## **** Etapa de agendamento {#scheduling}
 
 Aplica-se a: Destinos de marketing por email e destinos de armazenamento em nuvem
 
-![Etapa de configuração](../assets/ui/activate-destinations/configure-icon.png)
+![Etapa de agendamento](../assets/ui/activate-destinations/scheduling-icon.png)
 
-[!DNL Adobe Experience Platform] exporta dados para marketing por email e destinos de armazenamento na nuvem na forma de  [!DNL CSV] arquivos. Na etapa **[!UICONTROL Configure]**, é possível configurar o agendamento e os nomes de arquivo para cada segmento que você está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
+[!DNL Adobe Experience Platform] exporta dados para marketing por email e destinos de armazenamento na nuvem na forma de  [!DNL CSV] arquivos. Na etapa **[!UICONTROL Scheduling]**, é possível configurar o agendamento e os nomes de arquivo para cada segmento que você está exportando. A configuração do agendamento é obrigatória, mas a configuração do nome do arquivo é opcional.
 
 >[!IMPORTANT]
 > 
@@ -128,18 +127,53 @@ Aplica-se a: Destinos de marketing por email e destinos de armazenamento em nuve
 >
 >Nomes de arquivos divididos são anexados com um número que indica que o arquivo faz parte de uma exportação maior, desta forma: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
+Selecione o botão **[!UICONTROL Create schedule]** correspondente ao segmento que você deseja enviar para o destino.
 
-Para adicionar um agendamento ao segmento, selecione **[!UICONTROL Create schedule]**.
+![Botão Criar programação](../assets/ui/activate-destinations/create-schedule-button.png)
 
-![](../assets/ui/activate-destinations/configure-destination-schedule.png)
+### Exportar arquivos completos {#export-full-files}
 
-Uma caixa de diálogo é exibida mostrando opções para criar a programação do segmento.
+Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos exportados contenham um instantâneo completo de todos os perfis qualificados para esse segmento.
 
-* **Exportação** de arquivo: Você tem a opção de exportar arquivos completos ou arquivos incrementais. Exportar um arquivo completo publica um instantâneo completo de todos os perfis qualificados para esse segmento. A exportação de um arquivo incremental publica o delta de perfis qualificados para esse segmento desde a última exportação.
-* **Frequência**: Se  **[!UICONTROL Export full files]** estiver selecionado, você terá a opção de exportar  **[!UICONTROL Once]** ou  **[!UICONTROL Daily]**. Se **[!UICONTROL Export incremental files]** for selecionado, você terá apenas a opção para exportar **[!UICONTROL Daily]**. Exportar um arquivo **[!UICONTROL Once]** exporta o arquivo uma vez. Exportar um arquivo **[!UICONTROL Daily]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 AM UTC (7:00 PM EST) se os arquivos completos estiverem selecionados e 12:00 PM UTC (7:00 AM EST) se os arquivos incrementais estiverem selecionados.
-* **Data**: Se  **[!UICONTROL Once]** estiver selecionado, é possível selecionar a data para a exportação única. Se **[!UICONTROL Daily]** for selecionado, é possível selecionar as datas de início e término das exportações.
+![Exportar arquivos completos](../assets/ui/activate-destinations/export-full-files.png)
 
-![](../assets/ui/activate-destinations/export-full-file.png)
+1. Use o seletor **[!UICONTROL Frequency]** para escolher entre exportações únicas (**[!UICONTROL Once]**) ou **[!UICONTROL Diariamente]**. Exportar um arquivo completo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 AM UTC (7:00 PM EST).
+2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer. Exportar um arquivo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data de início para a data de término no momento selecionado.
+
+   >[!IMPORTANT]
+   >
+   >A opção para exportar arquivos em um determinado momento do dia está atualmente em beta e só está disponível para um número selecionado de clientes.
+
+3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
+4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
+
+### Exportar arquivos incrementais {#export-incremental-files}
+
+Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos exportados contenham apenas os perfis que se qualificaram para esse segmento desde a última exportação.
+
+>[!IMPORTANT]
+>
+>O primeiro arquivo incremental exportado inclui todos os perfis qualificados para um segmento, que funcionam como um preenchimento retroativo.
+
+![Exportar arquivos incrementais](../assets/ui/activate-destinations/export-incremental-files.png)
+
+1. Use o seletor **[!UICONTROL Frequency]** para escolher entre **[!UICONTROL Exportações Diárias]** ou **[!UICONTROL Por hora]**. Exportar um arquivo incremental **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 PM UTC (7:00 AM EST).
+   * Ao selecionar **[!UICONTROL Por hora]**, use o seletor **[!UICONTROL Cada]** para escolher entre as opções **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** por hora.
+
+      >[!IMPORTANT]
+      >
+      >A opção para exportar arquivos incrementais a cada 3, 6, 8 ou 12 horas está atualmente em beta e está disponível somente para um número selecionado de clientes. Os clientes não beta podem exportar arquivos incrementais uma vez por dia.
+
+2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
+
+   >[!IMPORTANT]
+   >
+   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. Os clientes não beta podem exportar arquivos incrementais uma vez por dia, às 12:00 PM UTC (7:00 AM EST).
+
+3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
+4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
+
+### Configurar nomes de arquivo {#file-names}
 
 Os nomes de arquivo padrão consistem em nome de destino, ID de segmento e um indicador de data e hora. Por exemplo, você pode editar os nomes de arquivo exportados para distinguir entre campanhas diferentes ou para ter o tempo de exportação de dados anexado aos arquivos.
 
@@ -147,29 +181,31 @@ Selecione o ícone de lápis para abrir uma janela modal e editar os nomes dos a
 
 ![configurar nome do arquivo](../assets/ui/activate-destinations/configure-name.png)
 
-No editor de nome de arquivo, é possível selecionar componentes diferentes para adicionar ao nome do arquivo. O nome de destino e a ID de segmento não podem ser removidos dos nomes de arquivo. Além disso, você pode adicionar o seguinte:
+No editor de nome de arquivo, é possível selecionar componentes diferentes para adicionar ao nome do arquivo.
 
-* **[!UICONTROL Segment name]**: Você pode anexar o nome do segmento ao nome do arquivo.
-* **[!UICONTROL Date and time]**: Selecione entre adicionar um  `MMDDYYYY_HHMMSS` formato ou um carimbo de data e hora de 10 dígitos do Unix da hora em que os arquivos são gerados. Escolha uma dessas opções se desejar que seus arquivos tenham um nome de arquivo dinâmico gerado com cada exportação incremental.
-* **[!UICONTROL Custom text]**: Adicione texto personalizado aos nomes dos arquivos.
+![editar opções de nome de arquivo](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Selecione **[!UICONTROL Apply changes]** para confirmar a seleção.
+O nome de destino e a ID de segmento não podem ser removidos dos nomes de arquivo. Além disso, você pode adicionar o seguinte:
+
+* **[!UICONTROL Nome]** do segmento: Você pode anexar o nome do segmento ao nome do arquivo.
+* **[!UICONTROL Data e hora]**: Selecione entre adicionar um  `MMDDYYYY_HHMMSS` formato ou um carimbo de data e hora de 10 dígitos do Unix da hora em que os arquivos são gerados. Escolha uma dessas opções se desejar que seus arquivos tenham um nome de arquivo dinâmico gerado com cada exportação incremental.
+* **[!UICONTROL Texto]** personalizado: Adicione texto personalizado aos nomes dos arquivos.
+
+Selecione **[!UICONTROL Aplicar alterações]** para confirmar a seleção.
 
 >[!IMPORTANT]
 > 
 >Se você não selecionar o componente **[!UICONTROL Date and Time]**, os nomes de arquivo serão estáticos e o novo arquivo exportado substituirá o arquivo anterior no local de armazenamento com cada exportação. Ao executar um trabalho de importação recorrente de um local de armazenamento em uma plataforma de marketing por email, essa é a opção recomendada.
 
-![editar opções de nome de arquivo](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
-
 Após concluir a configuração de todos os segmentos, selecione **[!UICONTROL Next]** para continuar.
 
-## **[!UICONTROL Segment schedule]** step  {#segment-schedule}
+## **[!UICONTROL Etapa de]** agendamento do segmento  {#segment-schedule}
 
 Aplica-se a: destinos de publicidade, destinos sociais
 
 ![etapa de agendamento de segmento](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-Na página **[!UICONTROL Segment schedule]** , é possível definir a data de início para o envio de dados para o destino e a frequência do envio de dados para o destino.
+Na página **[!UICONTROL Segment schedule]**, você pode definir a data de início do envio de dados para o destino e a frequência do envio de dados para o destino.
 
 >[!IMPORTANT]
 >
@@ -179,43 +215,174 @@ Na página **[!UICONTROL Segment schedule]** , é possível definir a data de in
 
 >[!IMPORTANT]
 >
->Para Correspondência de clientes do Google, você deve fornecer o [!UICONTROL App ID] nesta etapa, ao ativar os segmentos [!DNL IDFA] ou [!DNL GAID].
+>Para Correspondência de clientes do Google, você deve fornecer a [!UICONTROL ID do aplicativo] nesta etapa, ao ativar os segmentos [!DNL IDFA] ou [!DNL GAID].
 
 ![inserir id do aplicativo](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Scheduling]** step  {#scheduling}
-
-Aplica-se a: destinos de marketing por email e destinos de armazenamento em nuvem
-
-![etapa de agendamento de segmento](../assets/ui/activate-destinations/scheduling-icon.png)
-
-Na página **[!UICONTROL Scheduling]** , é possível visualizar a data de início do envio de dados para o destino, bem como a frequência do envio de dados para o destino. Esses valores não podem ser editados.
-
-## **[!UICONTROL Select attributes]** step  {#select-attributes}
+## **[!UICONTROL Selecionar etapa de]** atribuição  {#select-attributes}
 
 Aplica-se a: destinos de marketing por email e destinos de armazenamento em nuvem
 
 ![etapa selecionar atributos](../assets/ui/activate-destinations/select-attributes-icon.png)
 
-Na página **[!UICONTROL Select attributes]** , selecione **[!UICONTROL Add new field]** e escolha os atributos que deseja enviar para o destino.
+Na página **[!UICONTROL Select attributes]**, selecione **[!UICONTROL Add new field]** e escolha os atributos que deseja enviar para o destino.
 
 >[!NOTE]
 >
 > O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados e comumente usados do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 As exportações de arquivo variam das seguintes maneiras, dependendo se `segmentMembership.status` estiver selecionado:
-* Se o campo `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL Active]** membros no instantâneo completo inicial e os membros **[!UICONTROL Active]** e **[!UICONTROL Expired]** nas exportações incrementais subsequentes.
-* Se o campo `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL Active]** membros no instantâneo completo inicial e nas exportações incrementais subsequentes.
+* Se o campo `segmentMembership.status` for selecionado, os arquivos exportados incluirão **[!UICONTROL membros Ativos]** no instantâneo completo inicial e **[!UICONTROL membros Ativos]** e **[!UICONTROL Expirados]** nas exportações incrementais subsequentes.
+* Se o campo `segmentMembership.status` não estiver selecionado, os arquivos exportados incluirão apenas **[!UICONTROL membros Ativos]** no instantâneo completo inicial e nas exportações incrementais subsequentes.
 
-![atributos recomendados](../assets/ui/activate-destinations/mark-mandatory.png)
+![atributos recomendados](../assets/ui/activate-destinations/mandatory-deduplication.png)
 
-Além disso, é possível marcar atributos diferentes como obrigatórios. Marcar um atributo como obrigatório o torna obrigatório, portanto, o segmento exportado deve conter esse atributo. Como resultado, ele pode ser usado como uma forma adicional de filtragem. Marcar um atributo como obrigatório é **não** necessário.
+### Atributos obrigatórios {#mandatory-attributes}
+
+Você pode marcar atributos como obrigatórios para garantir que [!DNL Platform] exporte apenas os perfis que incluam o atributo específico. Como resultado, ele pode ser usado como uma forma adicional de filtragem. Marcar um atributo como obrigatório é **não** necessário.
+
+A não seleção de um atributo obrigatório exporta todos os perfis qualificados, independentemente de seus atributos.
 
 Recomenda-se que um dos atributos seja um [identificador exclusivo](../../destinations/catalog/email-marketing/overview.md#identity) do esquema. Para obter mais informações sobre atributos obrigatórios, consulte a seção de identidade na documentação [Destinos de marketing de email](../../destinations/catalog/email-marketing/overview.md#identity) .
+
+### Chaves de desduplicação {#deduplication-keys}
+
+>[!IMPORTANT]
+>
+>A opção para usar chaves de desduplicação está atualmente em beta e só está disponível para um número selecionado de clientes.
+
+Chaves de desduplicação eliminam a possibilidade de ter vários registros do mesmo perfil em um arquivo de exportação.
+
+Há três maneiras de usar as chaves de desduplicação em [!DNL Platform]:
+
+* Uso de um único namespace de identidade como uma [!UICONTROL chave de desduplicação]
+* Usar um único atributo de perfil de um perfil [!DNL XDM] como uma [!UICONTROL chave de desduplicação]
+* Uso de uma combinação de dois atributos de perfil de um perfil [!DNL XDM] como uma chave composta
+
+>[!IMPORTANT]
+>
+> Você pode exportar um único namespace de identidade para um destino, e o namespace é automaticamente definido como chave de desduplicação. Não há suporte para o envio de vários namespaces para um destino.
+> 
+> Não é possível usar uma combinação de namespaces de identidade e atributos de perfil como chaves de desduplicação.
+
+### Exemplo de desduplicação {#deduplication-example}
+
+Este exemplo ilustra como a desduplicação funciona, dependendo das chaves de desduplicação selecionadas.
+
+Vamos considerar os dois perfis a seguir.
+
+**Perfil A**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-03-10 10:03:08"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "Doe",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+**Perfil B**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-04-10 11:33:28"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "D",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+### Caso de uso de desduplicação 1: sem desduplicação
+
+Sem desduplicação, o arquivo de exportação conteria as seguintes entradas.
+
+| emailpessoal | firstName | lastName |
+|---|---|---|
+| johndoe@example.com | John | Doe |
+| johndoe@example.com | John | D |
+
+
+### Caso de uso de desduplicação 2: desduplicação com base no namespace de identidade
+
+Considerando a desduplicação pelo namespace [!DNL Email], o arquivo de exportação conteria as seguintes entradas. O Perfil B é o mais recente que se qualificou para o segmento, por isso é o único que está sendo exportado.
+
+| Email* | emailpessoal | firstName | lastName |
+|---|---|---|---|
+| johndoe_1@example.com | johndoe@example.com | John | D |
+| johndoe_2@example.com | johndoe@example.com | John | D |
+
+### Caso de uso de desduplicação 3: desduplicação com base em um único atributo de perfil
+
+Considerando a desduplicação pelo atributo `personal Email`, o arquivo de exportação conteria a seguinte entrada. O Perfil B é o mais recente que se qualificou para o segmento, por isso é o único que está sendo exportado.
+
+| emailpessoal* | firstName | lastName |
+|---|---|---|
+| johndoe@example.com | John | D |
+
+
+### Caso de uso de desduplicação 4: desduplicação com base em dois atributos de perfil (chave de desduplicação composta)
+
+Considerando a desduplicação pela chave composta `personalEmail + lastName`, o arquivo de exportação conteria as seguintes entradas.
+
+| emailpessoal* | lastName* | firstName |
+|---|---|---|
+| johndoe@example.com | D | John |
+| johndoe@example.com | Doe | John |
+
+
+O Adobe recomenda selecionar um namespace de identidade, como [!DNL CRM ID] ou endereço de email como uma chave de desduplicação, para garantir que todos os registros de perfil sejam identificados exclusivamente.
 
 >[!NOTE]
 > 
 >Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez do conjunto de dados inteiro), a imposição desses rótulos em nível de campo na ativação ocorrerá sob as seguintes condições:
+>
 >* Os campos são usados na definição do segmento.
 >* Os campos são configurados como atributos projetados para o destino.
 
@@ -223,13 +390,13 @@ Recomenda-se que um dos atributos seja um [identificador exclusivo](../../destin
 > 
 Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que entrem em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-## **[!UICONTROL Review]** step  {#review}
+## **** Etapa de revisão {#review}
 
 Aplica-se a: todos os destinos
 
 ![etapa de revisão](../assets/ui/activate-destinations/review-icon.png)
 
-Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancel]** para quebrar o fluxo, **[!UICONTROL Back]** para modificar suas configurações ou **[!UICONTROL Finish]** para confirmar sua seleção e começar a enviar dados para o destino.
+Na página **[!UICONTROL Revisar]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para quebrar o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados para o destino.
 
 >[!IMPORTANT]
 >
@@ -245,12 +412,10 @@ Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL
 
 ### Destinos de marketing por email e destinos de armazenamento em nuvem {#esp-and-cloud-storage}
 
-Para destinos de marketing por email e destinos de armazenamento em nuvem, o Adobe Experience Platform cria um arquivo `.csv` ou `.txt` delimitado por tabulação no local de armazenamento fornecido. Espera que um novo arquivo seja criado no seu local de armazenamento todos os dias. O formato de arquivo padrão é:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
+Para destinos de marketing por email e destinos de armazenamento na nuvem, o Adobe Experience Platform cria um arquivo `.csv` delimitado por tabulação no local de armazenamento fornecido. Espera que um novo arquivo seja criado no seu local de armazenamento todos os dias. O formato de arquivo padrão é:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-Observe que é possível editar o formato de arquivo. Para obter mais informações, vá para a etapa [Configure](#configure) para destinos de armazenamento em nuvem e destinos de marketing de email.
-
-Com o formato de arquivo padrão, os arquivos que você receberia em três dias consecutivos podem ter a seguinte aparência:
+Os arquivos que você receberia em três dias consecutivos podem ter a seguinte aparência:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
@@ -266,7 +431,7 @@ Verifique sua conta no respectivo destino de publicidade para o qual você está
 
 ## Destinos sociais
 
-Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo personalizado [!DNL Facebook] seria criado programaticamente em [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento no público-alvo seria adicionada e removida, pois os usuários eram qualificados ou desqualificados para os segmentos ativados.
+Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo personalizado [!DNL Facebook] seria criado programaticamente no [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). A associação de segmento no público-alvo seria adicionada e removida, pois os usuários eram qualificados ou desqualificados para os segmentos ativados.
 
 >[!TIP]
 >

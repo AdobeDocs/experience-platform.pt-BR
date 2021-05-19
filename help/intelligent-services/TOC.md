@@ -5,16 +5,15 @@ user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
 feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '124'
 ht-degree: 25%
 
 ---
 
 
-# Serviços inteligentes da Adobe {#intelligent-services}
+# Serviços inteligentes do Adobe {#intelligent-services}
 
 - [Visão geral dos Serviços inteligentes](home.md)
 - [Preparar dados para uso nos Serviços inteligentes](data-preparation.md)
@@ -44,4 +43,5 @@ ht-degree: 25%
       - [Informações do Discover](customer-ai/user-guide/discover-insights.md)
       - [Criar segmentos usando pontuações do Customer AI](customer-ai/user-guide/create-segment.md)
       - [Fazer download das pontuações](customer-ai/user-guide/download-scores.md)
+   - [Solução de problemas de erros](customer-ai/troubleshooting.md)
 - [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

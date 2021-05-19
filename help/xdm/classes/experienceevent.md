@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform, home, tópicos populares, esquema, esquema, XDM, perfil individual, campos, esquemas, esquemas, Esquemas, identityMap, mapa de identidade, mapa de identidade, design de esquema, mapa, mapa, mapa, esquema de união, união
+keywords: Experience Platform; home; tópicos populares; esquema; Esquema; XDM; campos; esquemas; Esquemas; Mapa de identidade; Mapa de identidade; Mapa de identidade; Design de esquema; mapa; Mapa; modelagem de eventos; modelagem de eventos; práticas recomendadas; evento; eventos;
 solution: Experience Platform
 title: Classe XDM ExperienceEvent
 topic-legacy: overview
-description: Este documento fornece uma visão geral da classe XDM ExperienceEvent.
+description: Este documento fornece uma visão geral da classe XDM ExperienceEvent e práticas recomendadas para modelagem de dados de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1476'
 ht-degree: 1%
 
 ---

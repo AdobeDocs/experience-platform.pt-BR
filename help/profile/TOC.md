@@ -3,18 +3,17 @@ audience: user
 user-guide-title: Guia do Real-time Customer Profile
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Perfis
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 20%
+source-wordcount: '128'
+ht-degree: 19%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] visão geral](home.md)
+* [[!DNL Profile]visão geral](home.md)
 * [Visão geral do perfil (vídeo)](video/profile-overview.md)
 * [[!DNL Profile] medidas de proteção](guardrails.md)
 * [!DNL Profile] API {#api}
@@ -22,9 +21,9 @@ ht-degree: 20%
    * [Introdução](api/getting-started.md)
    * [Projeções de borda](api/edge-projections.md)
    * [Entidades ([!DNL Profile] acesso)](api/entities.md)
-   * [Exportar trabalhos ([!DNL Profile] exportar)](api/export-jobs.md)
+   * [Exportar tarefas ([!DNL Profile] exportar)](api/export-jobs.md)
    * [Mesclar políticas](api/merge-policies.md)
-   * [Visualizar status da amostra ([!DNL Profile] visualização)](api/preview-sample-status.md)
+   * [Visualizar o status da amostra ([!DNL Profile] pré-visualização)](api/preview-sample-status.md)
    * [[!DNL Profile] tarefas do sistema (Excluir solicitações)](api/profile-system-jobs.md)
 * Guias da interface do usuário do perfil {#ui}
    * [[!DNL Profile] Guia da interface do usuário](ui/user-guide.md)
@@ -41,7 +40,8 @@ ht-degree: 20%
    * [Expressões de exemplo](computed-attributes/expressions.md)
 * Tutoriais {#tutorials}
    * [Adicionar dados a [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Configurar um conjunto de dados  [!DNL Profile] & [!DNL Identity] para serviço](tutorials/dataset-configuration.md)
+   * [Configurar um conjunto de dados para o serviço  [!DNL Profile] & [!DNL Identity] ](tutorials/dataset-configuration.md)
+   * [Gerar o relatório de sobreposição de conjunto de dados](tutorials/dataset-overlap-report.md)
    * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Processamento de solicitação de privacidade](privacy.md)
 * [[!DNL Profile] guia de solução de problemas](troubleshooting.md)

@@ -6,13 +6,13 @@ topic-legacy: Customer AI Overview
 description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 landing-page-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 18%
 
 ---
+
 
 # Visão geral do Customer AI
 

@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
 workflow-type: tm+mt
-source-wordcount: '2566'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ No workflow **[!UICONTROL Ativate destination]**, na página **[!UICONTROL Selec
 
 ![segmentos para destino](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Etapa do ] mapeamento de identidade  {#identity-mapping}
+##  Etapa de mapeamento {#mapping}
 
 Aplica-se a: destinos sociais e destino de publicidade da Correspondência de clientes do Google
 

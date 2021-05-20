@@ -5,11 +5,10 @@ title: Conectar o Power BI ao Serviço de Consulta
 topic-legacy: connect
 description: Este documento aborda as etapas para conectar o Power BI com o Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 0%
+source-wordcount: '468'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +18,7 @@ Este documento aborda as etapas para conectar o Power BI com o Adobe Experience 
 
 >[!NOTE]
 >
-> Este guia pressupõe que você já tenha acesso a [!DNL Power BI] e esteja familiarizado com como navegar em sua interface. Mais informações sobre [!DNL Power BI] podem ser encontradas na documentação [oficial [!DNL Power BI] documentação](https://docs.looker.com/).
+> Este guia pressupõe que você já tenha acesso a [!DNL Power BI] e esteja familiarizado com como navegar em sua interface. Mais informações sobre [!DNL Power BI] podem ser encontradas na documentação [oficial [!DNL Power BI] documentação](https://docs.microsoft.com/pt-BR/power-bi/).
 >
 > Além disso, o Power BI está **somente** disponível em dispositivos Windows.
 

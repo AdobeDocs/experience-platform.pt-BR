@@ -3,10 +3,9 @@ keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; link
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '677'
 ht-degree: 1%
 
 ---
@@ -72,7 +71,7 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 >Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DNL Platform] após a ativação.
 > Os dados da fonte de atributo não são automaticamente transformados em hash.
 > 
-> Durante a etapa [Mapeamento de identidade](../../ui/activate-destinations.md#identity-mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para ter [!DNL Platform] automaticamente hash os dados na ativação.
+> Durante a etapa [Mapeamento de identidade](../../ui/activate-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para ter [!DNL Platform] automaticamente hash os dados na ativação.
 > 
 > A opção **[!UICONTROL Apply transformation]** só é exibida quando você seleciona atributos como campos de origem. Ele não é exibido quando você escolhe namespaces.
 

@@ -3,9 +3,9 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Guia da API do perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo perfis de exibição, criem e atualizem políticas de mesclagem, exportem ou exemplificem dados de perfil, e excluam dados de perfil que não são mais necessários ou foram adicionados com erro. Siga este guia para saber como executar operações principais usando a API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ Por meio do Adobe Experience Platform, você pode acessar os dados [!DNL Real-ti
 
 ## Mesclar políticas {#merge-policies}
 
-Ao reunir dados de várias fontes em [!DNL Experience Platform], as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar perfis de clientes individuais. Usando a API [!DNL Real-time Customer Profile], você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para saber mais sobre como trabalhar com políticas de mesclagem usando a API, visite o [guia do ponto de extremidade de políticas de mesclagem](merge-policies.md).
+Ao reunir dados de várias fontes em [!DNL Experience Platform], as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar perfis de clientes individuais. Usando a API [!DNL Real-time Customer Profile], você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para trabalhar com políticas de mesclagem usando a API, visite o [guia do ponto de extremidade de políticas de mesclagem](merge-policies.md).
 
-Para obter um guia para trabalhar com políticas de mesclagem usando a interface [!DNL Platform], consulte o [guia do usuário de políticas de mesclagem](../ui/merge-policies.md).
+Para saber mais sobre as políticas de mesclagem e sua função na Plataforma, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 ## Visualizar o status da amostra ([!DNL Profile] visualização) {#profile-preview}
 

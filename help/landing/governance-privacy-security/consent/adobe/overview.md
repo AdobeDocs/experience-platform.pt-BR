@@ -5,10 +5,9 @@ title: Processamento de consentimento no Adobe Experience Platform
 topic-legacy: getting started
 description: Saiba como processar sinais de consentimento do cliente no Adobe Experience Platform usando o padrão Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -34,7 +33,7 @@ Este guia requer um entendimento prático dos vários serviços do Experience Pl
    * [Comandos](../../../../edge/consent/supporting-consent.md) de consentimento do SDK: Uma visão geral do caso de uso dos comandos SDK relacionados ao consentimento mostrados neste guia.
 * [Serviço](../../../../segmentation/home.md) de segmentação do Adobe Experience Platform: Permite dividir os dados do Perfil do cliente em tempo real em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 
-## Resumo do fluxo de processamento de consentimento {#summary}
+## Resumo do fluxo de processamento do consentimento {#summary}
 
 A seguir, descreve como os dados de consentimento são processados após a configuração correta do sistema:
 
@@ -63,7 +62,7 @@ Como cada sistema CMP é exclusivo, você deve determinar a melhor maneira de pe
 
 Essa caixa de diálogo deve permitir que o cliente opte por participar ou não de casos de uso específicos de marketing e personalização para seus dados. Esses consentimentos e preferências devem estar em conformidade com o modelo de dados definido para o conjunto de dados habilitado para [!DNL Profile] na próxima etapa.
 
-## Adicionar campos de consentimento padronizados a um conjunto de dados [!DNL Profile] habilitado {#dataset}
+## Adicionar campos de consentimento padronizados a um conjunto de dados habilitado para [!DNL Profile] {#dataset}
 
 Os dados de consentimento do cliente devem ser enviados para um conjunto de dados habilitado para [!DNL Profile] cujo esquema contenha campos de consentimento. Esses campos devem ser incluídos no mesmo esquema e conjunto de dados que você usa para capturar informações de atributos sobre clientes individuais.
 
@@ -77,7 +76,7 @@ Depois de criar um conjunto de dados habilitado para [!DNL Profile] para process
 >
 >Se você não tiver conjuntos de dados em conflito, deverá definir a precedência do carimbo de data e hora para sua política de mesclagem. Isso ajuda a garantir que o consentimento mais recente especificado por um cliente seja a configuração de consentimento usada.
 
-Para obter mais informações sobre como trabalhar com políticas de mesclagem, consulte o [guia do usuário de políticas de mesclagem](../../../../profile/ui/merge-policies.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos Consents &amp; Preferences , conforme descrito no guia sobre [preparação do conjunto de dados](./dataset.md).
+Para obter mais informações sobre como trabalhar com políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos Consents &amp; Preferences , conforme descrito no guia sobre [preparação do conjunto de dados](./dataset.md).
 
 ## Trazer dados de consentimento para o Platform
 
@@ -97,11 +96,11 @@ Se as preferências de consentimento do cliente forem necessárias em seu aplica
 
 Consulte a documentação do SDK móvel para [configurar a Extensão móvel de consentimento](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) e [usando a API de consentimento](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Para obter mais detalhes sobre como lidar com preocupações de privacidade usando o Mobile SDK, consulte a seção [Privacy e GDPR](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr).
 
-### Assimilar dados de consentimento compatíveis com XDM diretamente {#batch}
+### Assimilar dados de consentimento em conformidade com o XDM diretamente {#batch}
 
 Você pode assimilar dados de consentimento compatíveis com XDM de um arquivo CSV usando a assimilação em lote. Isso pode ser útil se você tiver um backlog de dados de consentimento coletados anteriormente que ainda não foram integrados aos perfis de clientes.
 
-Siga o tutorial em [mapping um arquivo CSV para XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para saber como converter seus campos de dados para XDM e assimilá-los na plataforma. Ao selecionar [!UICONTROL Destination] para o mapeamento, selecione a opção **[!UICONTROL Use existing dataset]** e escolha o conjunto de dados de consentimento habilitado para [!DNL Profile] que você criou anteriormente.
+Siga o tutorial em [mapping um arquivo CSV para XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para saber como converter seus campos de dados para XDM e assimilá-los na plataforma. Ao selecionar o [!UICONTROL Destino] para o mapeamento, selecione a opção **[!UICONTROL Usar conjunto de dados existente]** e escolha o conjunto de dados de consentimento habilitado para [!DNL Profile] criado anteriormente.
 
 ## Teste sua implementação {#test-implementation}
 

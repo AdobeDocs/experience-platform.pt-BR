@@ -1,18 +1,22 @@
 ---
 keywords: Destinos; perguntas; perguntas frequentes; perguntas frequentes; perguntas frequentes sobre destinos
-title: Perguntas frequentes sobre destinos
-seo-title: Perguntas frequentes sobre destinos
-description: Respostas às perguntas mais frequentes sobre Destinos do Adobe Experience Platform
-seo-description: Respostas às perguntas mais frequentes sobre Destinos do Adobe Experience Platform
-source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
+title: Perguntas frequentes
+seo-title: Perguntas frequentes
+description: Respostas às perguntas mais frequentes sobre os destinos do Adobe Experience Platform
+seo-description: Respostas às perguntas mais frequentes sobre os destinos do Adobe Experience Platform
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '636'
+ht-degree: 6%
 
 ---
 
 
-# Perguntas frequentes sobre destinos {#faq}
+# Perguntas frequentes {#faq}
+
+## Visão geral {#overview}
+
+Este documento fornece respostas a perguntas frequentes sobre destinos do Adobe Experience Platform. Para perguntas e solução de problemas relacionados a outros serviços [!DNL Platform], incluindo aqueles encontrados em todas as [!DNL Platform] APIs, consulte o [Guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 

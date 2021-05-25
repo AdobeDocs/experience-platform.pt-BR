@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Guia do Real-time Customer Profile
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Perfis
-source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '135'
 ht-degree: 19%
 
 ---
@@ -15,29 +15,32 @@ ht-degree: 19%
 
 * [[!DNL Profile]visão geral](home.md)
 * [Visão geral do perfil (vídeo)](video/profile-overview.md)
-* [[!DNL Profile] medidas de proteção](guardrails.md)
+* [[!DNL Profile] e medidas de proteção da segmentação](guardrails.md)
+* [[!DNL Profile] painel](ui/profile-dashboard.md)
 * [!DNL Profile] API {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Projeções de borda](api/edge-projections.md)
    * [Entidades ([!DNL Profile] acesso)](api/entities.md)
    * [Exportar tarefas ([!DNL Profile] exportar)](api/export-jobs.md)
-   * [Mesclar políticas](api/merge-policies.md)
    * [Visualizar o status da amostra ([!DNL Profile] pré-visualização)](api/preview-sample-status.md)
    * [[!DNL Profile] tarefas do sistema (Excluir solicitações)](api/profile-system-jobs.md)
-* Guias da interface do usuário do perfil {#ui}
+* Interface do usuário do perfil {#ui}
    * [[!DNL Profile] Guia da interface do usuário](ui/user-guide.md)
-   * [[!DNL Profile] painel](ui/profile-dashboard.md)
    * [[!DNL Profile] personalização detalhada](ui/profile-customization.md)
-   * [Guia da interface do usuário de políticas de mesclagem](ui/merge-policies.md)
-   * [Criar políticas de mesclagem (Vídeo)](video/create-merge-policies.md)
-   * [Guia da interface do usuário do schema de união](ui/union-schema.md)
-   * [Visão geral do esquema de união (Vídeo)](video/union-schemas-overview.md)
 * (Alfa) Atributos calculados {#computed-attributes}
    * [Visão geral](computed-attributes/overview.md)
    * [API de atributos calculados](computed-attributes/ca-api.md)
    * [Configurar um campo de atributo calculado](computed-attributes/configure-api.md)
    * [Expressões de exemplo](computed-attributes/expressions.md)
+* Mesclar políticas {#merge-policies}
+   * [Visão geral](merge-policies/overview.md)
+   * [API de políticas de mesclagem](api/merge-policies.md)
+   * [Guia da interface do usuário de políticas de mesclagem](merge-policies/ui-guide.md)
+   * [Criar políticas de mesclagem (Vídeo)](video/create-merge-policies.md)
+* Esquemas de união {#union-schemas}
+   * [Guia da interface do usuário do schema de união](ui/union-schema.md)
+   * [Visão geral do esquema de união (Vídeo)](video/union-schemas-overview.md)
 * Tutoriais {#tutorials}
    * [Adicionar dados a [!DNL Profile]](tutorials/add-profile-data.md)
    * [Configurar um conjunto de dados para o serviço  [!DNL Profile] & [!DNL Identity] ](tutorials/dataset-configuration.md)

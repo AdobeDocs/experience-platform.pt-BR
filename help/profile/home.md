@@ -4,10 +4,9 @@ title: Visão geral do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real é um armazenamento de entidade de pesquisa genérico que mescla dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
@@ -64,9 +63,11 @@ Todas as empresas querem se comunicar com seus clientes de uma forma que se sint
 
 ### Mesclar políticas
 
-Ao reunir fragmentos de dados de várias fontes e combiná-los para ver uma exibição completa de cada um de seus clientes individuais, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão usados para criar o perfil do cliente. Quando há dados em conflito de vários conjuntos de dados, a política de mesclagem determinará como esses dados devem ser tratados e qual valor deve ser usado. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização.
+Ao reunir fragmentos de dados de várias fontes e combiná-los para ver uma exibição completa de cada um de seus clientes individuais, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão usados para criar o perfil do cliente.
 
-Para obter mais informações sobre como trabalhar com políticas de mesclagem usando a API [!DNL Real-time Customer Profile], consulte o [guia do ponto de extremidade de políticas de mesclagem](api/merge-policies.md). Para trabalhar com políticas de mesclagem usando a interface [!DNL Experience Platform], consulte o [guia da interface do usuário de políticas de mesclagem](ui/merge-policies.md).
+Quando há dados em conflito de vários conjuntos de dados, a política de mesclagem determina como esses dados devem ser tratados e qual valor deve ser usado. Por meio das RESTful APIs ou da interface do usuário, é possível criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização.
+
+Para saber mais sobre as políticas de mesclagem e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](merge-policies/overview.md).
 
 ### Esquemas de união {#profile-fragments-and-union-schemas}
 

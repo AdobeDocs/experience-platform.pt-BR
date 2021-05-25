@@ -3,10 +3,9 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-translation-type: tm+mt
-source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
+source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1160'
 ht-degree: 2%
 
 ---
@@ -132,3 +131,15 @@ Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo
 >[!TIP]
 >
 >A integração entre o Adobe Experience Platform e [!DNL Facebook] oferece suporte a preenchimentos retroativos de público-alvo históricos. Todas as qualificações de segmento histórico são enviadas para [!DNL Facebook] quando você ativa os segmentos para o destino.
+
+## Solução de problemas {#troubleshooting}
+
+### 400 Mensagem de erro de solicitação incorreta {#bad-request}
+
+Ao ativar segmentos para [!DNL Facebook], você pode receber o seguinte erro:
+
+`{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
+
+Esse erro ocorre quando os clientes estão usando contas recém-criadas e as permissões [!DNL Facebook] ainda não estão ativas.
+
+Se você receber a mensagem de erro `400 Bad Request` após seguir as etapas em [Pré-requisitos da conta do Facebook](#facebook-account-prerequisites), aguarde alguns dias para que as permissões [!DNL Facebook] entrem em vigor.

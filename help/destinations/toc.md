@@ -4,19 +4,18 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
-source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '477'
+ht-degree: 11%
 
 ---
 
 
 # Destinos {#destinations}
 
-* [Visão geral dos destinos](./home.md)
+* [Destinos visão geral](./home.md)
 * [Tipos e categorias de destino](./destination-types.md)
-* [Perguntas frequentes sobre destinos](./destinations-faq.md)
 * Tutoriais da API {#api}
    * [Conecte-se a destinos de fluxo e ative dados usando a API do Serviço de fluxo](./api/streaming-destinations.md)
    * [Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/email-marketing.md)
@@ -135,4 +134,5 @@ ht-degree: 10%
       * [Extensão de Tags Invoca](./catalog/voice/invoca.md)
       * [Extensão Medallia](./catalog/voice/medallia.md)
       * [Extensão da Caixa de entrada do URL de conversa](./catalog/voice/talkurl.md)
+* [Perguntas frequentes](./destinations-faq.md)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

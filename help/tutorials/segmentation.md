@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: O Serviço de segmentação da Adobe Experience Platform fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos-alvo a partir dos dados do Perfil do cliente em tempo real. Esses segmentos são configurados e mantidos centralmente na Platform e são prontamente acessíveis por qualquer solução de Adobe.
 exl-id: e45de6b5-ff71-4908-ad79-898084763704
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ Exportar segmentos contendo dados [!DNL Profile] requer primeiro [criar um conju
 
 ## Configurar políticas de mesclagem
 
-O Adobe Experience Platform permite reunir dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa exibição unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para trabalhar com políticas de mesclagem na interface do usuário [!DNL Platform], visite o [guia do usuário de políticas de mesclagem](../profile/ui/merge-policies.md). Para trabalhar com políticas de mesclagem usando a API [!DNL Real-time Customer Profile], consulte o [guia do desenvolvedor de políticas de mesclagem](../profile/api/merge-policies.md).
+O Adobe Experience Platform permite reunir dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa exibição unificada. Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Para saber mais sobre as políticas de mesclagem e a função que elas desempenham no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](../profile/merge-policies/overview.md).
 
 ## Impor conformidade de uso de dados para segmentos
 

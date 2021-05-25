@@ -4,11 +4,10 @@ user-guide-title: Tutoriais da Adobe Experience Platform
 breadcrumb-title: Tutoriais da Platform
 user-guide-description: Comece a usar a Platform de forma rápida e fácil, seguindo os tutoriais passo a passo, abordando tudo, desde a preparação de dados para assimilação até o trabalho com algoritmos avançados de aprendizado de máquina.
 type: Tutorial
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 13%
+source-wordcount: '71'
+ht-degree: 14%
 
 ---
 
@@ -22,7 +21,6 @@ ht-degree: 13%
 * [Data Science Workspace](data-science-workspace.md)
 * [Destinos](destinations-tutorials.md)
 * [Assimilar dados na plataforma](data-ingestion.md)
-* [Perfis e identidades](configure-profile.md)
 * [Esquemas e descritores de relacionamento](schemas.md)
 * [Segmentos e públicos](segmentation.md)
 

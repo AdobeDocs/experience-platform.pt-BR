@@ -5,9 +5,9 @@ title: Suporte ao IAB TCF 2.0 no Experience Platform
 topic-legacy: privacy events
 description: Saiba como configurar operações de dados e esquemas para transmitir opções de consentimento do cliente ao ativar segmentos para destinos no Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Os dados de consentimento do cliente devem ser enviados para conjuntos de dados 
 
 Depois de criar um conjunto de dados habilitado para [!DNL Profile] para coletar dados de consentimento, você deve garantir que suas políticas de mesclagem tenham sido configuradas para sempre incluir campos de consentimento TCF nos perfis do cliente. Isso envolve definir a precedência do conjunto de dados para que seu conjunto de dados de consentimento seja priorizado em relação a outros conjuntos de dados potencialmente conflitantes.
 
-Para obter mais informações sobre como trabalhar com políticas de mesclagem, consulte o [guia do usuário de políticas de mesclagem](../../../../profile/ui/merge-policies.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus segmentos incluam todos os atributos de consentimento necessários fornecidos pelo [XDM privacy schema group](./dataset.md#privacy-field-group), conforme descrito no guia sobre a preparação do conjunto de dados.
+Para obter mais informações sobre como trabalhar com políticas de mesclagem, consulte a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus segmentos incluam todos os atributos de consentimento necessários fornecidos pelo [XDM privacy schema group](./dataset.md#privacy-field-group), conforme descrito no guia sobre a preparação do conjunto de dados.
 
 ## Integre o SDK da Web do Experience Platform para coletar dados de consentimento do cliente {#sdk}
 
@@ -126,13 +126,13 @@ Depois de fornecer um nome exclusivo para a configuração, selecione o botão d
 | Campo de configuração da borda | Valor |
 | --- | --- |
 | [!UICONTROL Sandbox] | O nome da plataforma [sandbox](../../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a configuração de borda. |
-| [!UICONTROL Streaming Inlet] | Uma conexão de transmissão válida para Experience Platform. Consulte o tutorial em [criar uma conexão de transmissão](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de transmissão existente. |
-| [!UICONTROL Event Dataset] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). |
-| [!UICONTROL Profile Dataset] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). |
+| [!UICONTROL Entrada de transmissão] | Uma conexão de transmissão válida para Experience Platform. Consulte o tutorial em [criar uma conexão de transmissão](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de transmissão existente. |
+| [!UICONTROL Conjunto de dados do evento] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). |
+| [!UICONTROL Conjunto de dados de perfil] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Quando terminar, selecione **[!UICONTROL Save]** na parte inferior da tela e continue seguindo os prompts adicionais para concluir a configuração.
+Quando terminar, selecione **[!UICONTROL Save]** na parte inferior da tela e continue a seguir quaisquer prompts adicionais para concluir a configuração.
 
 ### Comandos de alteração de consentimento
 

@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2590'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ Por exemplo, se um cliente interagir com sua marca em vários canais, sua organi
 
 Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece etapas para trabalhar com políticas de mesclagem usando a API.
 
-Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o [guia da interface do usuário de políticas de mesclagem](../ui/merge-policies.md).
+Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o [guia da interface do usuário de políticas de mesclagem](../merge-policies/ui-guide.md). Para saber mais sobre as políticas de mesclagem em geral e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 ## Introdução
 
@@ -760,7 +759,7 @@ Para usar um carimbo de data e hora personalizado, o [[!DNL External Source Syst
 
 Para obter instruções passo a passo sobre como trabalhar com esquemas usando a API do Registro de Esquemas, incluindo como adicionar grupos de campos a esquemas, visite o [tutorial para criar um esquema usando a API](../../xdm/tutorials/create-schema-api.md).
 
-Para trabalhar com carimbos de data e hora personalizados usando a interface do usuário, consulte a seção [usando carimbos de data e hora personalizados](../ui/merge-policies.md#custom-timestamps) no [guia do usuário de políticas de mesclagem](../ui/merge-policies.md).
+Para trabalhar com carimbos de data e hora personalizados usando a interface do usuário, consulte a seção [usando carimbos de data e hora personalizados](../merge-policies/overview.md#custom-timestamps) na [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 #### [!DNL External Source System Audit Details] detalhes do grupo de campos  {#field-group-details}
 

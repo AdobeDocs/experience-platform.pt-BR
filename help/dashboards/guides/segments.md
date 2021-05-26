@@ -2,22 +2,16 @@
 keywords: Experience Platform, perfil, segmento, segmentos, segmentação, interface do usuário, interface do usuário, personalização, painel de segmentos, painel
 title: Painel de segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
-topic-legacy: guide
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
-# (Beta) Painel de segmentos {#segment-dashboard}
-
->[!IMPORTANT]
->
->A funcionalidade do painel descrita neste documento está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Painel de segmentos {#segment-dashboard}
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre seus segmentos, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de segmentos na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
@@ -35,23 +29,31 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 
 ## Explorar o painel de segmentos
 
-Para navegar até o painel de segmentos na interface do usuário da plataforma, selecione **[!UICONTROL Segments]** no painel à esquerda e selecione a guia **[!UICONTROL Overview]** para exibir o painel.
+Para navegar até o painel de segmentos na interface do usuário da plataforma, selecione **[!UICONTROL Segmentos]** no painel à esquerda e selecione a guia **[!UICONTROL Visão geral]** para exibir o painel.
 
 ![](../images/segments/dashboard-overview.png)
 
-### Selecionar um segmento
+### Modificar o painel [!UICONTROL Segmentos]
 
-O painel selecionará automaticamente um segmento a ser exibido, mas você poderá alterar o segmento exibido usando o menu suspenso. Para escolher um segmento diferente, selecione o menu suspenso ao lado do nome do segmento e selecione o segmento que deseja visualizar.
+Você pode modificar a aparência do painel [!UICONTROL Segmentos] selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a [!UICONTROL biblioteca de widgets] para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
->[!NOTE]
->
->O menu suspenso mostra todos os segmentos criados por sua organização até agora. Isso pode significar que você precisará rolar a página para visualizar a lista completa de segmentos disponíveis.
+Consulte a documentação [modificando painéis](../modify.md) e [biblioteca de widgets](../widget-library.md) para saber mais.
+
+## Selecionar um segmento
+
+O painel seleciona automaticamente um segmento para exibição, no entanto, você pode alterar o segmento usando o menu suspenso ou o seletor de segmentos.
+
+Para escolher um segmento diferente, selecione o menu suspenso ao lado do nome do segmento ou use o seletor de segmentos para abrir a caixa de diálogo de seleção de segmentos.
 
 ![](../images/segments/change-segment.png)
 
-### Widgets e métricas
+![](../images/segments/select-segment-dialog.png)
 
-O painel de segmentos é composto de widgets, que são métricas somente leitura que fornecem informações importantes sobre o segmento selecionado. A data e a hora da &quot;última atualização&quot; no widget mostram quando o último instantâneo dos dados foi tirado.
+## Widgets e métricas
+
+O painel de segmentos é composto de widgets, que são métricas somente leitura que fornecem informações importantes sobre o segmento selecionado.
+
+A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado. A data e a hora do instantâneo são fornecidas em UTC; não está no fuso horário do usuário individual ou da Organização IMS.
 
 ![](../images/segments/widget-timestamp.png)
 
@@ -59,33 +61,46 @@ O painel de segmentos é composto de widgets, que são métricas somente leitura
 
 O Experience Platform fornece vários widgets que podem ser usados para visualizar métricas diferentes relacionadas ao seu segmento. Selecione o nome de um widget abaixo para saber mais:
 
-* [[!UICONTROL Segment size]](#segment-size)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
+* [[!UICONTROL Tamanho do público-alvo]](#audience-size)
+* [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)
+* [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
+* [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
 
-### [!UICONTROL Segment size] {#segment-size}
+### [!UICONTROL Tamanho do público-alvo] {#audience-size}
 
-O widget **[!UICONTROL Segment size]** exibe o número total de perfis mesclados no segmento selecionado no momento em que o instantâneo foi tirado. Esse número é o resultado da aplicação da política de mesclagem de segmentos aos seus dados de Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo no segmento.
+O widget **[!UICONTROL Audience size]** exibe o número total de perfis mesclados no segmento selecionado no momento em que o instantâneo foi tirado. Esse número é o resultado da aplicação da política de mesclagem de segmentos aos seus dados de Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo no segmento.
 
 Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
-![](../images/segments/segment-size.png)
+![](../images/segments/audience-size.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Tendência do tamanho do público-alvo] {#audience-size-trend}
 
-O widget **[!UICONTROL Profiles added over time]** fornece informações sobre o número total de perfis no segmento conforme capturados durante o instantâneo diário, nos últimos 30 dias. Este widget exibe como o tamanho do segmento pode ter mudado em um período de 30 dias, à medida que novos perfis se qualificam para ou saem do segmento.
+O widget **[!UICONTROL Audience size tend]** fornece informações sobre o número total de perfis no segmento conforme capturados durante o instantâneo diário, nos últimos 30 dias, 90 dias ou 12 meses. Este widget exibe como o tamanho do segmento pode ter mudado ao longo do tempo, à medida que novos perfis se qualificam para ou saem do segmento.
 
 Para saber mais sobre a avaliação de segmentos e como os perfis se qualificam e saem dos segmentos, consulte a [documentação do Serviço de segmentação](../../segmentation/home.md).
 
-![](../images/segments/profiles-added-over-time.png)
+![](../images/segments/audience-size-trend.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Sobreposição de identidade] {#identity-overlap}
 
-O widget **[!UICONTROL Profiles by namespace]** exibe o detalhamento dos namespaces em todos os perfis mesclados no segmento selecionado. O número total de perfis por namespace de identidade ([!UICONTROL ID namespace] no widget) pode ser maior que o número total de perfis no segmento, pois um perfil pode ter vários namespaces associados a ele. Em outras palavras, adicionar os valores mostrados para cada namespace pode totalizar mais do que o total de perfis no segmento, pois se um cliente interagir com sua marca em mais de um canal, vários namespaces podem ser associados a esse cliente individual.
+O widget **[!UICONTROL Sobreposição de identidade]** exibe um diagrama Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis em seu segmento que contém várias identidades.
 
-Para saber mais sobre os namespaces de identidade, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Depois de usar os menus suspensos no widget para selecionar as identidades que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada identidade, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos.
 
-![](../images/segments/profiles-by-namespace.png)
+Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
+
+Para saber mais sobre identidades, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+![](../images/segments/identity-overlap.png)
+
+### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
+
+O widget **[!UICONTROL Perfis por identidade]** exibe o detalhamento das identidades em todos os perfis mesclados no segmento selecionado. O número total de perfis por identidade pode ser maior que o número total de perfis no segmento, pois um perfil pode ter várias identidades associadas a ele. Em outras palavras, adicionar os valores mostrados para cada identidade pode totalizar mais do que o tamanho total do público no segmento, pois se um cliente interagir com sua marca em mais de um canal, várias identidades podem ser associadas a esse cliente individual.
+
+Para saber mais sobre identidades, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+![](../images/segments/profiles-by-identity.png)
 
 ## Próximas etapas
 

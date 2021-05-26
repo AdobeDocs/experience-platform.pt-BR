@@ -1,23 +1,18 @@
 ---
 solution: Experience Platform
 title: Introdução aos Painéis do Experience Platform
-topic-legacy: overview
 type: Documentation
 description: Explore vários painéis no Adobe Experience Platform para visualizar informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 3%
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
-# (Beta) Visão geral dos painéis {#dashboards}
 
->[!IMPORTANT]
->
->A funcionalidade do painel está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Visão geral dos painéis {#dashboards}
 
 O Adobe Experience Platform fornece vários painéis através dos quais você pode visualizar informações importantes sobre os dados de sua organização, como capturados durante os instantâneos diários.
 
@@ -27,7 +22,7 @@ Os painéis fornecem relatórios prontos sobre os dados de sua organização e s
 
 ## Introdução aos painéis
 
-Para acessar painéis, navegue até a seção apropriada na interface do usuário da plataforma (UI). Na seção , selecione a guia **[!UICONTROL Overview]** , se ela não for selecionada automaticamente, para exibir o painel.
+Para acessar painéis, navegue até a seção apropriada na interface do usuário da plataforma (UI). Na seção , selecione a guia **[!UICONTROL Overview]**, se ela não for selecionada automaticamente, para exibir o painel.
 
 Os dados no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados e os painéis não estão sendo atualizados em tempo real.
 
@@ -39,4 +34,4 @@ Os dados no instantâneo mostram os dados exatamente como aparecem no momento es
 
 Há vários painéis disponíveis no Experience Platform, cada um com transparência nos dados de clientes de sua organização.
 
-Para saber mais sobre esses painéis e suas métricas disponíveis, selecione na lista de painéis disponíveis na navegação da documentação.
+Para saber mais sobre esses painéis e suas métricas, selecione um painel na lista de painéis disponíveis na navegação da documentação.

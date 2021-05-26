@@ -4,10 +4,10 @@ title: Guia da interface do usuário do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real cria uma visualização holística de cada cliente individual, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento é um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 1%
+source-wordcount: '1303'
+ht-degree: 0%
 
 ---
 
@@ -29,11 +29,7 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Profile
 
 ![](../images/user-guide/profiles-overview.png)
 
-### Painel de perfis (alfa)
-
->[!IMPORTANT]
->
->A funcionalidade do painel está atualmente em alfa e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+### Painel de perfis
 
 Para alguns usuários, selecionar **[!UICONTROL Profiles]** na navegação à esquerda e abrir a guia **[!UICONTROL Overview]** fornece um painel que descreve as métricas principais relacionadas aos dados do seu Perfil.
 

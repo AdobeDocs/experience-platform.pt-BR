@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Explore e processe conjuntos de dados brutos alimentando painéis de Experience Platform
 type: Documentation
 description: Saiba como usar o Serviço de query para explorar e processar conjuntos de dados brutos que alimentam perfis, segmentos e painéis de destino no Experience Platform.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Você pode usar o Serviço de query para consultar conjuntos de dados brutos par
 
 Para cada política de mesclagem ativa no Perfil do cliente em tempo real, há um conjunto de dados de atributo de perfil disponível no lago de dados.
 
-A convenção de nomenclatura desse conjunto de dados é **Profile Attribute** seguida de um valor alfanumérico. Por exemplo: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+A convenção de nomenclatura desses conjuntos de dados é **Profile Attribute** seguida de um valor alfanumérico. Por exemplo: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-Para entender o esquema completo do conjunto de dados, você pode visualizar e explorar o esquema usando o visualizador de conjunto de dados na interface do usuário do Experience Platform.
+Para entender o esquema completo de cada conjunto de dados, você pode visualizar e explorar os conjuntos de dados usando o visualizador de conjunto de dados na interface do usuário do Experience Platform.
 
 ### Conjunto de dados de metadados do segmento
 
-Há um conjunto de dados de metadados de segmento disponível no lago de dados para cada um dos segmentos da organização.
+Há um conjunto de dados de metadados de segmento disponível no lago de dados que contém metadados para cada um dos segmentos da organização.
 
 A convenção de nomenclatura desse conjunto de dados é **Profile Segment Definition** seguida de um valor alfanumérico. Por exemplo: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-A imagem a seguir mostra o esquema do conjunto de dados de metadados do segmento.
+Para entender o esquema completo do conjunto de dados, você pode visualizar e explorar o esquema usando o visualizador de conjunto de dados na interface do usuário do Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
 ### Conjunto de dados de metadados de destino
 
-Os metadados para seus destinos ativados estão disponíveis como um conjunto de dados bruto no lago de dados.
+Os metadados para todos os destinos ativados de sua organização estão disponíveis como um conjunto de dados bruto no lago de dados.
 
 A convenção de nomenclatura desse conjunto de dados é **DIM_Destination**.
 
-A imagem a seguir mostra o esquema do conjunto de dados de metadados de destino.
+Para entender o esquema completo do conjunto de dados, você pode visualizar e explorar o esquema usando o visualizador de conjunto de dados na interface do usuário do Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### Contagem de segmentos ativados por destino para todos os destinos
 
 ## Próximas etapas
 

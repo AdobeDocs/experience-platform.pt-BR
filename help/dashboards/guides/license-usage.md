@@ -2,22 +2,16 @@
 keywords: Experience Platform, interface do usuário, interface do usuário, personalização, painel de uso de licença, painel, uso de licença, direito, consumo
 title: Painel de uso de licença
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre o uso de licenças da sua organização.
-topic-legacy: guide
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 2%
+source-wordcount: '926'
+ht-degree: 0%
 
 ---
 
-# (Beta) Painel de uso de licença {#license-usage-dashboard}
-
->[!IMPORTANT]
->
->A funcionalidade do painel descrita neste documento está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+# Painel de uso de licença {#license-usage-dashboard}
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre o uso de licenças de sua organização, conforme capturado durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de uso da licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
@@ -33,25 +27,40 @@ O painel de uso da licença exibe um instantâneo dos dados relacionados à lice
 
 ## Explorar o painel de uso de licença
 
-Para navegar até o painel de uso da licença na interface do usuário da plataforma, selecione **[!UICONTROL License usage]** no painel esquerdo. Isso é aberto com a guia **[!UICONTROL Overview]** exibindo o painel.
+Para navegar até o painel de uso da licença na interface do usuário da plataforma, selecione **[!UICONTROL License usage]** no painel esquerdo. Isso abre a guia **[!UICONTROL Visão geral]** exibindo o painel.
+
+>[!NOTE]
+>
+>O painel de uso da licença não é habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para poder visualizar o painel. Para obter etapas sobre como conceder permissões de acesso para visualizar o painel de uso da licença, consulte o [guia de permissões do painel](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Selecionar uma sandbox
 
-Para escolher uma sandbox para exibir no painel, selecione [!UICONTROL Production] ou [!UICONTROL Development]. A sandbox selecionada é indicada pelo botão de opção ao lado do nome da sandbox.
+Para escolher uma sandbox para exibir no painel, selecione [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento]. A sandbox selecionada é indicada pelo botão de opção ao lado do nome da sandbox.
 
->[!NOTE]
->
->O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Production] ou [!UICONTROL Development] fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
+O relatório de consumo de sandboxes é cumulativo para todas as sandboxes do mesmo tipo. Em outras palavras, selecionar [!UICONTROL Produção] ou [!UICONTROL Desenvolvimento] fornece relatórios de consumo para todas as sandboxes de produção ou desenvolvimento, respectivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
+>[!WARNING]
+>
+>A permissão para exibir o painel de uso da licença deve ser especificada em um nível de sandbox. Isso significa que a permissão para visualizar o painel deve ser adicionada a cada sandbox individual. Essa limitação será solucionada em uma versão futura. Enquanto isso, a seguinte solução alternativa está disponível:
+>
+>1. Crie um perfil de produto no Adobe Admin Console.
+>2. Em Permissão na categoria Sandbox , adicione todas as sandboxes que deseja visualizar no painel de uso da licença.
+>3. Na categoria Permissão do painel do usuário , adicione a permissão &quot;Exibir painel de uso da licença&quot;.
+
+
 ### Selecionar um intervalo de datas
 
-Depois de selecionar uma sandbox, você pode usar a lista suspensa intervalo de datas para selecionar o período de tempo a ser exibido no painel. Há três opções disponíveis: [!UICONTROL Last 30 days], [!UICONTROL Last 90 days] e [!UICONTROL Last 12 months]. Os últimos 30 dias são selecionados por padrão.
+Depois de selecionar uma sandbox, você pode usar a lista suspensa intervalo de datas para selecionar o período de tempo a ser exibido no painel. Há várias opções disponíveis, incluindo o valor padrão dos últimos 30 dias.
 
 ![](../images/license-usage/select-date-range.png)
+
+Você também pode selecionar **[!UICONTROL Custom date]** para escolher o período exibido.
+
+![](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -63,14 +72,22 @@ Cada widget exibe gráficos de linha que comparam os números reais de sua organ
 
 ## Métricas disponíveis
 
-No momento, há quatro métricas disponíveis no painel de uso da licença:
+O painel de uso da licença informa sobre quatro métricas principais, com mais métricas a serem adicionadas em versões subsequentes. As métricas disponíveis estão listadas abaixo.
 
-* [!UICONTROL Addressable Audience] (medido pelo número de perfis)
-* [!UICONTROL Average profile richness]
-* [!UICONTROL Total consumed storage]
-* [!UICONTROL Data scanned per segmentation ratio]
+>[!NOTE]
+>
+>Três das métricas disponíveis estão atualmente em beta.
 
-A definição de cada uma dessas métricas varia de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada da Descrição do produto:
+* [!UICONTROL Público-alvo endereçável]
+* [!UICONTROL Riqueza média do perfil]  (Beta)
+* [!UICONTROL Dados digitalizados por proporção de segmentação]  (Beta)
+* [!UICONTROL Armazenamento total consumido]  (Beta)
+
+>[!WARNING]
+>
+>Limitação conhecida da métrica [!UICONTROL Total de armazenamento consumido]: Ao excluir dados em lote, esse lote é colocado em um estado de exclusão flexível por um período de 7 dias para suportar casos de uso de recuperação de dados. Após 7 dias, o lote é movido para um estado de exclusão permanente. Os relatórios sobre o armazenamento total consumido não refletirão qualquer alteração no gráfico de tendências até que o lote esteja no estado de exclusão permanente. Esse problema será resolvido em uma versão futura.
+
+A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização. Para obter definições detalhadas de cada métrica, consulte a documentação apropriada da Descrição do produto:
 
 | Licença | Descrição do produto |
 |---|---|
@@ -79,6 +96,10 @@ A definição de cada uma dessas métricas varia de acordo com o licenciamento a
 | <ul><li>PLATAFORMA DE DADOS DO CLIENTE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE RT:PRFL OD PARA 50 M</li></ul> | [Plataforma de dados do cliente em tempo real](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:ATIVAÇÃO DE OD</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL DE ATÉ 50 M</li></ul> | [Adobe Experience Platform Ativation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELIGÊNCIA DE OD</li></ul> | [Inteligência Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+
+>[!WARNING]
+>
+>O painel de uso de licença informa somente a licença mais recente que foi provisionada para sua organização. Se a licença mais recente provisionada para sua organização não aparecer na tabela acima, o painel de uso da licença pode não ser exibido corretamente. O suporte para licenças adicionais e várias licenças em uma única organização está planejado para uma versão futura.
 
 ## Próximas etapas
 

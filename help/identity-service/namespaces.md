@@ -5,10 +5,9 @@ title: Visão geral do Namespace de identidade
 topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-translation-type: tm+mt
-source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
+source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -74,33 +73,39 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | TNTID | Um namespace que representa Adobe Target. Consulte o seguinte documento no [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) para obter mais informações. |
 | Windows AID | Um namespace que representa uma ID de publicidade do Windows. Consulte o seguinte documento em [ID de publicidade do Windows](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obter mais informações. |
 
-Para exibir namespaces padrão na interface do usuário, selecione **[!UICONTROL Identities]** na navegação à esquerda e selecione a guia **[!UICONTROL Browse]** para exibir uma lista de namespaces de identidade padrão acessíveis à sua organização. Você pode classificar os namespaces alfabeticamente por seus **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]** ou **[!UICONTROL Owner]**. Como alternativa, você pode classificar os namespaces cronologicamente pela data de atualização mais recente.
+Para exibir namespaces de identidade na interface do usuário, selecione **[!UICONTROL Identities]** na navegação esquerda e selecione **[!UICONTROL Browse]**.
 
-Selecione um namespace para ver informações mais específicas no painel direito.
+![navegar](./images/browse.png)
 
->[!NOTE]
->
->A Platform também fornece namespaces para fins de integração. Esses namespaces são ocultos por padrão, pois são usados para se conectar com outros sistemas e não são usados para unir identidades. Para exibir namespaces de integração, selecione **[!UICONTROL View integration identities]**.
+Uma lista de namespaces de identidade aparece na interface principal da página, exibindo informações sobre seus nomes, símbolos de identidade, data da última atualização e se eles são um namespace padrão ou personalizado. O painel direito contém informações sobre [!UICONTROL Identidades exclusivas] e [!UICONTROL Intensidade do gráfico de identidade].  Identidades exclusivas referem-se ao número de identidades que existem na sandbox específica que você está usando, enquanto o gráfico de  [!UICONTROL identidade ] fortalece a exibição de informações sobre o número de IDs de cookie e não cookie na sandbox.
 
-![](./images/browse-namespaces.png)
+![identidades](./images/identities.png)
+
+A Platform também fornece namespaces para fins de integração. Esses namespaces são ocultos por padrão, pois são usados para se conectar com outros sistemas e não são usados para unir identidades. Para exibir namespaces de integração, selecione **[!UICONTROL Exibir identidades de integração]**.
+
+![view-integration-identities](./images/view-integration-identities.png)
+
+Selecione um namespace de identidade na lista para exibir informações em um namespace específico. Selecionar um namespace de identidade atualiza a exibição no painel direito para mostrar metadados em relação ao namespace de identidade selecionado, incluindo o número de identidades assimiladas e o número de registros que falharam e foram ignorados.
+
+![select-namespace](./images/select-namespace.png)
 
 ## Gerenciamento de namespaces personalizados {#manage-namespaces}
 
 Dependendo dos dados organizacionais e dos casos de uso, pode ser necessário criar namespaces personalizados. Os namespaces personalizados podem ser criados usando a API [[!DNL Identity Service]](./api/create-custom-namespace.md) ou por meio da interface do usuário.
 
-Para criar um namespace personalizado usando a interface do usuário, navegue até o espaço de trabalho **[!UICONTROL Identities]**, selecione **[!UICONTROL Browse]** e selecione **[!UICONTROL Create identity namespace]**.
+Para criar um namespace personalizado usando a interface do usuário, navegue até o espaço de trabalho **[!UICONTROL Identidades]**, selecione **[!UICONTROL Procurar]** e selecione **[!UICONTROL Criar namespace de identidade]**.
 
-![](./images/create.png)
+![select-create](./images/select-create.png)
 
-A caixa de diálogo **[!UICONTROL Create identity namespace]** é exibida. Forneça um **[!UICONTROL Display name]** e **[!UICONTROL Identity symbol]** exclusivos e selecione o tipo de identidade que deseja criar. Você também pode adicionar uma descrição opcional para obter mais informações sobre o namespace. Todos os tipos de identidade, exceto **Identificador de não pessoas**, seguem o mesmo comportamento da compilação. Se você selecionar **Identificador de não pessoas** como tipo de identidade ao criar um namespace, a compilação não ocorrerá. Para obter informações específicas sobre cada tipo de identidade, consulte a tabela em [tipos de identidade](#identity-types).
+A caixa de diálogo **[!UICONTROL Criar namespace de identidade]** é exibida. Forneça um **[!UICONTROL Nome de exibição]** e **[!UICONTROL Símbolo de identidade]** exclusivos e selecione o tipo de identidade que deseja criar. Você também pode adicionar uma descrição opcional para adicionar mais informações sobre o namespace. Todos os tipos de identidade, exceto **Identificador de não pessoas**, seguem o mesmo comportamento da compilação. Se você selecionar **Identificador de não pessoas** como tipo de identidade ao criar um namespace, a compilação não ocorrerá. Para obter informações específicas sobre cada tipo de identidade, consulte a tabela em [tipos de identidade](#identity-types).
 
-Quando terminar, selecione **[!UICONTROL Create]**.
+Quando terminar, selecione **[!UICONTROL Criar]**.
 
 >[!IMPORTANT]
 >
 >Os namespaces definidos são privados de sua organização e exigem um símbolo de identidade exclusivo para serem criados com êxito.
 
-![](./images/create-namespace.png)
+![create-identity-namespace](./images/create-identity-namespace.png)
 
 Semelhante aos namespaces padrão, você pode selecionar um namespace personalizado na guia **[!UICONTROL Browse]** para exibir seus detalhes. No entanto, com um namespace personalizado, também é possível editar o nome de exibição e a descrição na área de detalhes.
 

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '978'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Atualizações dos recursos existentes na Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Perfil do cliente em tempo real](#profile)
+- [Fontes](#sources)
 
 ## Painéis {#dashboards}
 
@@ -82,3 +83,15 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 | Relatório de sobreposição de conjunto de dados | O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do armazenamento de Perfil, expondo os conjuntos de dados que mais contribuem para o público-alvo endereçável. Além de fornecer insights dos dados do Perfil, este relatório ajuda os usuários a tomar ações para otimizar o uso da licença, como definir um limite para a duração de determinados dados. Para saber mais, siga o tutorial em [gerar o relatório de sobreposição de conjunto de dados](../../profile/tutorials/dataset-overlap-report.md). |
 
 Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados [!DNL Profile], comece lendo a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+
+## [!DNL Sources] {#sources}
+
+A Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+
+O Experience Platform fornece uma RESTful API e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e se conectar a sistemas de armazenamento externos e serviços CRM, definir horários para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Suporte à interface do usuário para assimilação de arquivo compactado | Agora é possível visualizar e assimilar arquivos compactados JSON ou delimitados usando fontes de armazenamento em nuvem na interface do usuário do . Para obter mais informações, consulte o tutorial em [configurar um fluxo de dados para uma conexão de origem de armazenamento em nuvem na interface do usuário](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+
+Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

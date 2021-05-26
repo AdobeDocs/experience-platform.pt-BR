@@ -2,21 +2,16 @@
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, interface do usuário, interface do usuário, personalização, painel de perfil, painel
 title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
-topic-legacy: guide
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1150'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!UICONTROL Painel de perfis]
-
->[!IMPORTANT]
->
->A funcionalidade do painel descrita neste documento está atualmente em beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+#  Painel de perfis
 
 A interface do usuário do Adobe Experience Platform (UI) fornece um painel pelo qual você pode visualizar informações importantes sobre seus dados [!DNL Real-time Customer Profile], conforme capturados durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel [!UICONTROL Perfis] na interface do usuário e fornece informações sobre as métricas exibidas no painel.
 
@@ -38,9 +33,17 @@ Para navegar até o painel [!UICONTROL Profiles] na interface do usuário da pla
 
 ![](../images/profiles/dashboard-overview.png)
 
-### Selecionar políticas de mesclagem
+### Modificar o painel [!UICONTROL Perfis]
 
-As métricas exibidas no painel [!UICONTROL Profiles] são baseadas em políticas de mesclagem aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são reunidos de várias fontes, é possível que os dados contenham valores conflitantes (por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listar o cliente como &quot;casado&quot;) e é tarefa da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
+Você pode modificar a aparência do painel [!UICONTROL Profiles] selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a [!UICONTROL biblioteca de widgets] para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+
+Consulte a documentação [modificando painéis](../modify.md) e [biblioteca de widgets](../widget-library.md) para saber mais.
+
+## Mesclar políticas
+
+As métricas exibidas no painel [!UICONTROL Profiles] são baseadas em políticas de mesclagem aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são reunidos de várias fontes para criar o perfil do cliente, é possível que os dados contenham valores conflitantes (por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listá-lo como &quot;casado&quot;). É tarefa da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
+
+Para obter mais informações sobre políticas de mesclagem, incluindo como criar, editar e declarar uma política de mesclagem padrão para sua organização, comece lendo a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
 
 O painel selecionará automaticamente uma política de mesclagem a ser exibida, mas você poderá alterar a política de mesclagem selecionada usando o menu suspenso. Para escolher uma política de mesclagem diferente, selecione o menu suspenso ao lado do nome da política de mesclagem e selecione a política de mesclagem que deseja exibir.
 
@@ -48,71 +51,67 @@ O painel selecionará automaticamente uma política de mesclagem a ser exibida, 
 >
 >O menu suspenso mostra apenas as políticas de mesclagem relacionadas à Classe de Perfil Individual XDM. No entanto, se sua organização tiver criado várias políticas de mesclagem, pode significar que você precisará rolar para exibir a lista completa das políticas de mesclagem disponíveis.
 
-Para obter mais informações sobre políticas de mesclagem, incluindo como criar, editar e declarar uma política de mesclagem padrão para sua organização, comece lendo a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
-
 ![](../images/profiles/select-merge-policy.png)
 
-### Widgets e métricas
+## Widgets e métricas
 
-O painel é composto de widgets, que são métricas somente leitura, fornecendo informações importantes sobre os dados do perfil. A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado.
+O painel é composto de widgets, que são métricas somente leitura, fornecendo informações importantes sobre os dados do perfil.
 
-![](../images/profiles/dashboard-timestamp.png)
+A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado. A data e a hora do instantâneo são fornecidas em UTC; não está no fuso horário do usuário individual ou da Organização IMS.
 
 ## Widgets disponíveis
 
 O Experience Platform fornece vários widgets que você pode usar para visualizar métricas diferentes relacionadas aos dados do seu perfil. Selecione o nome de um widget abaixo para saber mais:
 
-* [[!UICONTROL Tamanho do público-alvo]](#audience-size)
+* [[!UICONTROL Contagem de perfis]](#profile-count)
 * [[!UICONTROL Perfis adicionados]](#profiles-added)
-* [[!UICONTROL Perfis adicionados ao longo do tempo]](#profiles-added-over-time)
-* [[!UICONTROL Perfis por namespace]](#profiles-by-namespace)
-* [[!UICONTROL Sobreposição de namespace]](#namespace-overlap)
+* [[!UICONTROL Tendência da contagem de perfis]](#profiles-count-trend)
+* [[!UICONTROL Perfis por identidade]](#profiles-by-identity)
+* [[!UICONTROL Sobreposição de identidade]](#identity-overlap)
 
-### [!UICONTROL Tamanho do público-alvo] {#audience-size}
+### [!UICONTROL Contagem de perfis] {#profile-count}
 
-O widget **[!UICONTROL Audience size]** exibe o número total de perfis mesclados no armazenamento de dados do perfil no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+O widget **[!UICONTROL Profile count]** exibe o número total de perfis mesclados no armazenamento de dados do perfil no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a seção *Perfil de fragmentos vs perfis mesclados* da [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
 
->[!NOTE]
->
->A política de mesclagem usada para calcular essa métrica não é a mesma que a política de mesclagem gerada pelo sistema usada para calcular [!UICONTROL Públicos-alvo endereçáveis] no painel [!UICONTROL Uso da licença], portanto, a contagem de públicos-alvo nos painéis [!UICONTROL Perfis] e [!UICONTROL Uso da licença] provavelmente não será exatamente igual ao mesmo o mesmo.
-
-![](../images/profiles/audience-size.png)
+![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Perfis adicionados] {#profiles-added}
 
-O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do perfil desde que o último instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do Perfil a partir do último instantâneo tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+
+Você pode usar o seletor suspenso para exibir os perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL Perfis adicionados ao longo do tempo] {#profiles-added-over-time}
+### [!UICONTROL Tendência da contagem de perfis] {#profiles-count-trend}
 
-O widget **[!UICONTROL Perfis adicionados ao longo do tempo]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do perfil diariamente nos últimos 30 dias. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado.
+O widget **[!UICONTROL Profiles count tend]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado.
 
 A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
-![](../images/profiles/profiles-added-over-time.png)
+![](../images/profiles/profile-count-trend.png)
 
-### [!UICONTROL Perfis por namespace] {#profiles-by-namespace}
+### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
 
-O widget **[!UICONTROL Perfis por namespace]** exibe o detalhamento dos namespaces de identidade em todos os perfis mesclados no armazenamento de Perfis. O número total de perfis por [!UICONTROL ID namespace] (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis de mesclagem, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
+O widget **[!UICONTROL Perfis por identidade]** exibe o detalhamento das identidades em todos os perfis mesclados no armazenamento de Perfis. O número total de perfis por identidade (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
-Para saber mais sobre os namespaces de identidade, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Para saber mais sobre identidades, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/profiles/profiles-by-namespace.png)
+![](../images/profiles/profiles-by-identity.png)
 
-### [!UICONTROL Sobreposição de namespace] {#namespace-overlap}
+### [!UICONTROL Sobreposição de identidade] {#identity-overlap}
 
-O widget **[!UICONTROL Sobreposição de namespace]** exibe um diagrama Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis em seu armazenamento de perfil que contém vários namespaces de identidade.
+O widget **[!UICONTROL Sobreposição de identidade]** exibe um diagrama Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis em seu armazenamento de perfil que contém várias identidades.
 
-Depois de usar os menus suspensos no widget para selecionar os namespaces de identidade que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada namespace, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos.
+Depois de usar os menus suspensos no widget para selecionar as identidades que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada identidade, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos.
 
-Se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de um namespace de identidade.
+Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
 
-Para saber mais sobre os namespaces de identidade, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Para saber mais sobre identidades, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![](../images/profiles/namespace-overlap.png)
+![](../images/profiles/identity-overlap.png)
 
 ## Próximas etapas
 

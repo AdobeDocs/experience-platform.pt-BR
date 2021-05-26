@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Notas de versão da Adobe Experience Platform
 breadcrumb-title: Notas de versão da Platform
 user-guide-description: Notas de versão mensais da Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 8f38e009adcae6d045b8353c6d2276a2c3bd0213
+source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 91%
+source-wordcount: '50'
+ht-degree: 92%
 
 ---
 
@@ -16,12 +15,13 @@ ht-degree: 91%
 
 * [Notas de versão da plataforma atual](latest/latest.md)
 * 2021 {#2021}
+   * [Maio de 2021](2021/may-2021.md)
    * [Abril de 2021](2021/april-2021.md)
    * [Março de 2021](2021/march-2021.md)
    * [Fevereiro de 2021](2021/february-2021.md)
    * [Janeiro de 2021](2021/january-2021.md)
 * 2020 {#2020}
-   * [de dezembro de 2020](2020/december-2020.md)
+   * [Dezembro de 2020](2020/december-2020.md)
    * [Novembro de 2020](2020/november-2020.md)
    * [Outubro de 2020](2020/october-2020.md)
    * [Setembro de 2020](2020/september-2020.md)
@@ -34,7 +34,7 @@ ht-degree: 91%
    * [Fevereiro de 2020](2020/february-2020.md)
    * [Janeiro de 2020](2020/january-2020.md)
 * 2019 {#2019}
-   * [de dezembro de 2019](2019/december-2019.md)
+   * [2019 de dezembro](2019/december-2019.md)
    * [Novembro de 2019](2019/november-2019.md)
    * [Setembro de 2019](2019/september-2019.md)
    * [Julho de 2019](2019/july-2019.md)

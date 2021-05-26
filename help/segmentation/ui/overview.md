@@ -5,10 +5,9 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-translation-type: tm+mt
-source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -32,9 +31,15 @@ Também é importante saber dois termos principais que são usados por meio dest
 
 ## Visão geral
 
-Na [[!DNL Experience Platform] UI](https://platform.adobe.com/), selecione **[!UICONTROL Segments]** no painel de navegação esquerdo para abrir a guia **[!UICONTROL Overview]**. Esta guia fornece links para a documentação e vídeos para ajudar você a entender e começar a trabalhar com segmentos.
+Na [[!DNL Experience Platform] UI](https://platform.adobe.com/), selecione **[!UICONTROL Segmentos]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]**. Esta guia fornece links para a documentação e vídeos para ajudar você a entender e começar a trabalhar com segmentos.
 
 ![](../images/ui/overview/segment-overview.png)
+
+### Painel de segmentos
+
+Para alguns usuários, selecionar **[!UICONTROL Segmentos]** na navegação à esquerda e abrir a guia **[!UICONTROL Visão geral]** fornece um painel que descreve as métricas principais relacionadas aos dados do seu segmento.
+
+Para saber mais, visite o [guia do painel de segmentos](segment-dashboard.md).
 
 ## Procurar
 
@@ -44,7 +49,7 @@ Selecione a guia **[!UICONTROL Browse]** para ver uma lista de todas as definiç
 
 Essa exibição lista informações sobre a definição do segmento, incluindo detalhamento, churn, contagem de perfis, método de avaliação, data criada e data da última modificação.
 
-O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Realized], [!UICONTROL Existing] e [!UICONTROL Exiting].
+O detalhamento mostra um gráfico de barras que descreve a porcentagem de perfis que pertencem a cada um dos seguintes status: [!UICONTROL Realizado], [!UICONTROL Existente] e [!UICONTROL Saindo].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +67,9 @@ O método de avaliação pode ser streaming ou batch. Segmentos de fluxo são co
 
 Na parte superior da página, há opções para adicionar todos os segmentos a uma programação e para criar um novo segmento.
 
-Alternar **[!UICONTROL Add all segments to schedule]** permitirá a segmentação agendada. Mais informações sobre a segmentação agendada podem ser encontradas na seção [segmentação agendada deste guia do usuário](#scheduled-segmentation).
+Alternar **[!UICONTROL Adicionar todos os segmentos para agendar]** permitirá a segmentação agendada. Mais informações sobre a segmentação agendada podem ser encontradas na seção [segmentação agendada deste guia do usuário](#scheduled-segmentation).
 
-Selecionar **[!UICONTROL Create segment]** o levará ao Construtor de segmentos. Para saber mais sobre como criar segmentos, leia a seção sobre [como criar um segmento no guia do usuário](#create-segment).
+Selecionar **[!UICONTROL Criar segmento]** o levará ao Construtor de segmentos. Para saber mais sobre como criar segmentos, leia a seção sobre [como criar um segmento no guia do usuário](#create-segment).
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -78,7 +83,7 @@ A seleção da linha de definição de segmento fornece um resumo da definição
 
 ## Detalhes da definição de segmento {#segment-details}
 
-Para ver mais detalhes sobre uma definição de segmento específica, selecione o nome de um segmento na guia **[!UICONTROL Browse]** .
+Para ver mais detalhes sobre uma definição de segmento específica, selecione o nome de um segmento na guia **[!UICONTROL Procurar]**.
 
 A página de detalhes do segmento é exibida. Na parte superior, há um resumo da definição do segmento, informações sobre o tamanho do público-alvo qualificado, bem como destinos para os quais o segmento é ativado.
 
@@ -86,19 +91,19 @@ A página de detalhes do segmento é exibida. Na parte superior, há um resumo d
 
 ### Resumo do segmento
 
-A seção **[!UICONTROL Segment summary]** fornece informações como ID, nome, descrição e detalhes dos atributos.
+A seção **[!UICONTROL Resumo do segmento]** fornece informações como ID, nome, descrição e detalhes dos atributos.
 
-Além disso, você tem a opção de editar o segmento. Selecionar **[!UICONTROL Edit segment]** o trará para [!DNL Segment Builder]. Para obter informações mais detalhadas sobre o uso do espaço de trabalho [!DNL Segment Builder], leia o [[!DNL Segment Builder] guia do usuário](./segment-builder.md).
+Além disso, você tem a opção de editar o segmento. Selecionar **[!UICONTROL Editar segmento]** o trará para [!DNL Segment Builder]. Para obter informações mais detalhadas sobre o uso do espaço de trabalho [!DNL Segment Builder], leia o [[!DNL Segment Builder] guia do usuário](./segment-builder.md).
 
 ### Público-alvo total no segmento
 
-A seção **[!UICONTROL Total audience in segment]** mostra o número total de perfis qualificados para o segmento.
+A seção **[!UICONTROL Público-alvo total no segmento]** mostra o número total de perfis qualificados para o segmento.
 
 As estimativas são geradas usando um tamanho de amostra dos dados de amostra desse dia. Se houver menos de 1 milhão de entidades em seu armazenamento de perfil, o conjunto de dados completo será usado; para entre 1 e 20 milhões de entidades, são utilizadas 1 milhão de entidades; e para mais de 20 milhões de entidades, são utilizados 5% do total de entidades. Mais informações sobre a geração de estimativas de segmento podem ser encontradas na [seção de geração de estimativa](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) do tutorial de criação de segmento.
 
 ### Destinos ativados
 
-A seção **[!UICONTROL Activated destinations]** mostra os destinos para os quais este segmento está ativado.
+A seção **[!UICONTROL Destinos ativados]** mostra os destinos para os quais este segmento está ativado.
 
 >[!NOTE]
 >
@@ -128,7 +133,7 @@ Informações mais detalhadas sobre cada [!DNL Profile] podem ser vistas selecio
 
 ## Criação de um segmento {#create-segment}
 
-Selecionar **[!UICONTROL Create segment]** no canto superior direito abre o espaço de trabalho [!DNL Segment Builder], onde você pode começar a criar uma definição de segmento.
+Selecionar **[!UICONTROL Criar segmento]** no canto superior direito abre o espaço de trabalho [!DNL Segment Builder], onde você pode começar a criar uma definição de segmento.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
@@ -148,7 +153,7 @@ A avaliação sob demanda envolve o uso da API para executar a avaliação e cri
 
 ### Ativar a segmentação agendada {#enable-scheduled-segmentation}
 
-Habilitar suas definições de segmento para avaliação agendada pode ser feito usando a interface do usuário ou a API. Na interface do usuário, retorne à guia **[!UICONTROL Browse]** dentro de **[!UICONTROL Segments]** e alterne para **[!UICONTROL Add all segments to schedule]**. Isso fará com que todos os segmentos sejam avaliados com base no agendamento definido pela organização.
+Habilitar suas definições de segmento para avaliação agendada pode ser feito usando a interface do usuário ou a API. Na interface do usuário, retorne à guia **[!UICONTROL Browse]** em **[!UICONTROL Segments]** e alterne para **[!UICONTROL Add all segments to schedule]**. Isso fará com que todos os segmentos sejam avaliados com base no agendamento definido pela organização.
 
 >[!NOTE]
 >

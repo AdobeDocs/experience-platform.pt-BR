@@ -4,17 +4,16 @@ title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consent for Privacy, Personalization and Marketing Preferences tem como objetivo oferecer suporte à coleta de permissões e preferências do cliente geradas pelas CMPs (Consent Management Platforms) e outras fontes de suas operações de dados.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1837'
-ht-degree: 1%
+source-wordcount: '1868'
+ht-degree: 2%
 
 ---
 
 # [!DNL Consents & Preferences] tipo de dados
 
-O tipo de dados [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (a seguir denominado &quot;tipo de dados &quot;[!DNL Consents & Preferences]&quot;) é um tipo de dados [!DNL Experience Data Model] (XDM) destinado a suportar a coleta de permissões e preferências do cliente geradas pelas Plataformas de gerenciamento de consentimento (CMPs) e outras fontes de suas operações de dados.
+O tipo de dados [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (a seguir conhecido como o tipo de dados &quot;[!DNL Consents & Preferences]&quot;) é um tipo de dados [!DNL Experience Data Model] (XDM) destinado a suportar a coleta de permissões e preferências do cliente geradas pelas CMPs (Consent Management Platforms) e outras fontes de suas operações de dados.
 
 Este documento aborda a estrutura e o uso pretendido dos campos fornecidos pelo tipo de dados [!DNL Consents & Preferences] .
 
@@ -90,7 +89,7 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 >Você pode gerar dados JSON de amostra para qualquer esquema XDM definido no Experience Platform para ajudar a visualizar como os dados de consentimento e preferência do cliente devem ser mapeados. Consulte a documentação a seguir para obter mais informações:
 >
 >* [Gerar dados de amostra na interface do usuário](../ui/sample.md)
->* [Gerar dados de amostra na API](../api/sample-data.md)
+* [Gerar dados de amostra na API](../api/sample-data.md)
 
 
 ## `consents` {#choices}
@@ -141,6 +140,8 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 | --- | --- |
 | `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `adID`
 
 `adID` representa o consentimento do cliente para que uma ID do anunciante (IDFA ou GAID) possa ser usada para vincular o cliente entre aplicativos neste dispositivo.
@@ -154,6 +155,8 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 | Propriedade | Descrição |
 | --- | --- |
 | `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `share`
 
@@ -169,15 +172,15 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 | --- | --- |
 | `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `personalize` {#personalize}
 
 `personalize` O captura as preferências do cliente sobre quais maneiras seus dados podem ser usados para personalização. Os clientes podem recusar casos de uso de personalização específica ou recusar totalmente a personalização.
 
 >[!IMPORTANT]
->
->`personalize` não abrange casos de uso de marketing. Por exemplo, se um cliente recusar a personalização de todos os canais, ele não deverá parar de receber comunicações por meio desses canais. Em vez disso, as mensagens recebidas devem ser genéricas e não baseadas no seu perfil.
->
->Pelo mesmo exemplo, se um cliente recusar o marketing direto para todos os canais (por meio de `marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber mensagens, mesmo que a personalização seja permitida.
+`personalize` não abrange casos de uso de marketing. Por exemplo, se um cliente recusar a personalização de todos os canais, ele não deverá parar de receber comunicações por meio desses canais. Em vez disso, as mensagens recebidas devem ser genéricas e não baseadas no seu perfil.
+Pelo mesmo exemplo, se um cliente recusar o marketing direto para todos os canais (por meio de `marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber mensagens, mesmo que a personalização seja permitida.
 
 ```json
 "personalize": {
@@ -191,6 +194,8 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 | --- | --- |
 | `content` | Representa as preferências do cliente para conteúdo personalizado em seu site ou aplicativo. |
 | `val` | A preferência de personalização fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não precisa ser solicitado a fornecer o consentimento, o valor desse campo deve indicar a base em que a personalização deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `marketing` {#marketing}
 
@@ -226,6 +231,8 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 | `time` | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing foi alterada, se aplicável. Observe que, se o carimbo de data e hora de qualquer preferência individual for igual ao fornecido em `metadata`, esse campo não precisará ser definido para essa preferência. |
 | `reason` | Quando um cliente recusa um caso de uso de marketing, esse campo de cadeia de caracteres representa o motivo pelo qual o cliente optou por não participar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `metadata`
 
 `metadata` captura metadados gerais sobre os consentimentos e preferências do cliente sempre que foram atualizados pela última vez.
@@ -240,6 +247,8 @@ O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!DNL Con
 | --- | --- |
 | `time` | Um carimbo de data e hora ISO 8601 para a última vez que qualquer consentimento e preferência do cliente foi atualizado. Esse campo pode ser usado em vez de aplicar carimbos de data e hora a preferências individuais para reduzir a carga e a complexidade. Fornecer um valor `time` em uma preferência individual substitui o carimbo de data e hora `metadata` dessa preferência específica. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Inserção de dados usando o tipo de dados {#ingest}
 
 Para usar o tipo de dados [!DNL Consents & Preferences] para assimilar dados de consentimento de seus clientes, você deve criar um conjunto de dados com base em um esquema que contenha esse tipo de dados.
@@ -247,10 +256,8 @@ Para usar o tipo de dados [!DNL Consents & Preferences] para assimilar dados de 
 Consulte o tutorial em [criar um esquema na interface do usuário](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir tipos de dados a campos. Depois de criar um schema contendo um campo com o tipo de dados [!DNL Consents & Preferences] , consulte a seção sobre [criar um conjunto de dados](../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, seguindo as etapas para criar um conjunto de dados com um esquema existente.
 
 >[!IMPORTANT]
->
->Se desejar enviar dados de consentimento para [!DNL Real-time Customer Profile], é necessário criar um schema habilitado para [!DNL Profile] com base na classe [!DNL XDM Individual Profile] que contém o tipo de dados [!DNL Consents & Preferences]. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas aos requisitos [!DNL Real-time Customer Profile] para schemas e conjuntos de dados.
->
->Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral sobre [mesclar políticas](../../rtcdp/profile/merge-policies.md) para obter mais informações.
+Se desejar enviar dados de consentimento para [!DNL Real-time Customer Profile], é necessário criar um schema habilitado para [!DNL Profile] com base na classe [!DNL XDM Individual Profile] que contém o tipo de dados [!DNL Consents & Preferences]. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas aos requisitos [!DNL Real-time Customer Profile] para schemas e conjuntos de dados.
+Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral sobre [mesclar políticas](../../rtcdp/profile/merge-policies.md) para obter mais informações.
 
 ## Lidar com alterações de consentimento e preferência
 
@@ -276,6 +283,8 @@ A tabela a seguir descreve os valores aceitos para `val`:
 | `VI` | Interesse vital do indivíduo | A recolha de dados para o fim especificado é necessária para proteger os interesses vitais do indivíduo. |
 | `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para levar a cabo uma missão de interesse público ou no exercício da autoridade oficial. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Valores aceitos para `preferred` {#preferred-values}
 
 A tabela a seguir descreve os valores aceitos para `preferred`:
@@ -295,6 +304,8 @@ A tabela a seguir descreve os valores aceitos para `preferred`:
 | `other` | Um canal que não se encaixa em uma categoria padrão. |
 | `none` | Nenhum canal preferencial. |
 | `unknown` | O canal preferido é desconhecido. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Schema [!DNL Consents & Preferences] completo {#full-schema}
 

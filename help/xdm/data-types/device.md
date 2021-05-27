@@ -5,17 +5,16 @@ title: Tipo de dados do dispositivo
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados do Device XDM.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 4%
+source-wordcount: '329'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Device] tipo de dados
+#  Tipo de dados de dispositivo
 
-[!UICONTROL Device] é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é uma instância de aplicativo ou navegador que pode ser rastreada nas sessões, normalmente por cookies.
+ Dispositivo é um tipo de dados XDM padrão que descreve um dispositivo identificado. Um dispositivo é uma instância de aplicativo ou navegador que pode ser rastreada nas sessões, normalmente por cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -32,6 +31,8 @@ ht-degree: 4%
 | `typeID` | String | Um identificador para o dispositivo. Pode ser um identificador do DeviceAtlas ou outro serviço que identifique o hardware que está sendo usado. |
 | `typeIDService` | String | O namespace do serviço usado para identificar o tipo de dispositivo. Consulte o [apêndice](#typeIDService) para obter detalhes sobre os valores aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
@@ -39,7 +40,7 @@ Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM p�
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device] .
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device].
 
 ## Valores aceitos para typeIDService {#typeIDService}
 

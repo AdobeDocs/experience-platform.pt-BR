@@ -5,11 +5,10 @@ title: Ponto de Extremidade da API Unions
 description: O endpoint /unips na API do Registro de Schema permite gerenciar programaticamente esquemas de união XDM em seu aplicativo de experiência.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 1%
+source-wordcount: '915'
+ht-degree: 3%
 
 ---
 
@@ -66,6 +65,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. O
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Retorna a classe JSON completa para cada recurso, com `$ref` original e `allOf` incluídas. (Limite: 300) |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz `results` no corpo da resposta. Se sindicatos tiverem sido definidos, os detalhes de cada união serão fornecidos como objetos dentro do storage. Se nenhuma união tiver sido definida, o status HTTP 200 (OK) ainda será retornado, mas a matriz `results` estará vazia.
@@ -89,7 +90,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e uma matriz `results` 
 }
 ```
 
-## Procurar uma união {#lookup}
+## Procurar um sindicato {#lookup}
 
 Você pode visualizar uma união específica executando uma solicitação do GET que inclui o `$id` e, dependendo do cabeçalho Accept, alguns ou todos os detalhes da união.
 
@@ -107,6 +108,8 @@ GET /tenant/schemas/{UNION_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{UNION_ID}` | O URI `$id` codificado no URL da união que você deseja pesquisar. Os URIs para esquemas de união são anexados com &quot;__union&quot;. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -128,6 +131,8 @@ Os seguintes cabeçalhos Accept estão disponíveis para pesquisas de schema de 
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Bruto com `$ref` e `allOf`. Inclui títulos e descrições. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` e  `allOf` resolvidos. Inclui títulos e descrições. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -192,6 +197,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | O `$id` da classe cujos esquemas ativados por união você deseja listar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera uma lista de todos os schemas que fazem parte da união para a classe [!DNL XDM Individual Profile].
@@ -212,6 +219,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. O
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Retorna o esquema JSON completo para cada recurso, com `$ref` e `allOf` originais incluídos. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 

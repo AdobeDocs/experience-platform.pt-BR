@@ -4,17 +4,16 @@ title: Campo de preferência de marketing genérico com tipo de dados de assinat
 topic-legacy: overview
 description: Este documento fornece uma visão geral do Campo de Preferência de Marketing Genérico com o tipo de dados XDM de Assinaturas.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 2%
+source-wordcount: '738'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Generic Marketing Preference Field with Subscriptions] tipo de dados
+# [!UICONTROL Campo de Preferência de Marketing Genérico com Tipo de Dados de ] Assinaturas
 
-[!UICONTROL Generic Marketing Preference Field with Subscriptions] é um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de marketing específica.
+[!UICONTROL O Campo de preferência de marketing genérico com ] assinaturas é um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de marketing específica.
 
 >[!NOTE]
 >
@@ -31,6 +30,8 @@ ht-degree: 2%
 | `time` | DateTime | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing foi alterada, se aplicável. |
 | `val` | String | A escolha de preferência fornecida pelo cliente para este caso de uso de marketing. Consulte a [próxima seção](#val) para obter valores e definições aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## `val` {#val}
 
 A tabela a seguir descreve os valores aceitos para `val`:
@@ -46,6 +47,8 @@ A tabela a seguir descreve os valores aceitos para `val`:
 | `CP` | Cumprimento de uma obrigação legal | A recolha de dados para a finalidade especificada é necessária para cumprir as obrigações legais da empresa. |
 | `VI` | Interesse vital do indivíduo | A recolha de dados para o fim especificado é necessária para proteger os interesses vitais do indivíduo. |
 | `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para levar a cabo uma missão de interesse público ou no exercício da autoridade oficial. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `subscriptions` {#subscriptions}
 
@@ -90,6 +93,8 @@ O JSON a seguir representa um exemplo de campo de marketing para um canal de mar
 | --- | --- |
 | `type` | O tipo de assinatura. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos. |
 | `subscribers` | Um campo opcional tipo mapa que representa um conjunto de identificadores (como endereços de email ou números de telefone) que assinaram uma assinatura específica. Cada chave nesse objeto representa o identificador em questão e contém duas subpropriedades: <ul><li>`time`: Um carimbo de data e hora ISO 8601, de quando a identidade é subscrita, se aplicável.</li><li>`source`: A origem do assinante. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Recursos adicionais
 

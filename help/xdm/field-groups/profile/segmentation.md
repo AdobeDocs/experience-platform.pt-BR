@@ -5,22 +5,21 @@ title: Detalhes da associação ao segmento Grupo de campos do esquema
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da associação ao segmento .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 1%
+source-wordcount: '426'
+ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Segment Membership Details] grupo de campos de esquema
+# [!UICONTROL Grupo de campos ] Detalhes da associação ao segmento
 
 >[!NOTE]
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Segment Membership Details] é um grupo de campos de esquema padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa que captura informações relacionadas à associação de segmentos, incluindo a quais segmentos o indivíduo pertence, a última hora de qualificação e quando a associação é válida até.
+[!UICONTROL Associação de Segmento ] Detalhes é um grupo de campo de esquema padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa que captura informações relacionadas à associação de segmentos, incluindo a quais segmentos o indivíduo pertence, a última hora de qualificação e quando a associação é válida até.
 
 >[!WARNING]
 >
@@ -31,6 +30,8 @@ ht-degree: 1%
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `segmentMembership` | Mapa | Um objeto de mapa que descreve as associações de segmento de cada indivíduo. A estrutura desse objeto é descrita detalhadamente abaixo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 A seguir, um exemplo de `segmentMembership` mapa que o sistema preencheu para um perfil específico. As associações de segmento são classificadas por namespace, conforme indicado pelas chaves de nível raiz do objeto. Por sua vez, as chaves individuais em cada namespace representam as IDs dos segmentos dos quais o perfil é membro. Cada objeto de segmento contém vários subcampos que fornecem mais detalhes sobre a associação:
 
@@ -78,6 +79,8 @@ A seguir, um exemplo de `segmentMembership` mapa que o sistema preencheu para um
 | `xdm:validUntil` | Um carimbo de data e hora de quando a associação de segmento não deve mais ser considerada válida. |
 | `xdm:status` | Indica se a associação de segmento foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
 | `xdm:payload` | Algumas associações de segmento incluem uma carga que descreve valores adicionais diretamente relacionados à associação. Somente uma carga de um determinado tipo pode ser fornecida para cada associação. `xdm:payloadType` indica o tipo de carga útil (`boolean`,  `number`,  `propensity` ou  `string`), enquanto sua propriedade irmão fornece o valor para o tipo de carga útil. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 

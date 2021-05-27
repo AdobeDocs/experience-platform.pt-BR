@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Ponto de extremidade da API de grupos de campos
 description: O endpoint /fieldgroups na API do Registro de Schema permite gerenciar programaticamente grupos de campos de esquema XDM no aplicativo de experiência.
 topic: guia do desenvolvedor
-translation-type: tm+mt
-source-git-commit: b25c545e86c8ffd6b5832893152aef597feaf71f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 2%
+source-wordcount: '1217'
+ht-degree: 3%
 
 ---
 
@@ -40,6 +39,8 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | O contêiner que deseja recuperar grupos de campos de: `global` para grupos de campos criados por Adobe ou `tenant` para grupos de campos de propriedade de sua organização. |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte o [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera uma lista de grupos de campos do contêiner `tenant`, usando um parâmetro de consulta `orderby` para classificar os grupos de campos pelo atributo `title`.
@@ -60,6 +61,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. O
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Retorna o grupo de campos JSON completo para cada recurso, com `$ref` e `allOf` originais incluídos. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -122,6 +125,8 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | `{CONTAINER_ID}` | O contêiner que contém o grupo de campos que você deseja recuperar: `global` para um grupo de campos criado por Adobe ou `tenant` para um grupo de campos pertencente à sua organização. |
 | `{FIELD_GROUP_ID}` | O `meta:altId` ou `$id` codificado por URL do grupo de campos que você deseja pesquisar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera um grupo de campos pelo seu valor `meta:altId` fornecido no caminho.
@@ -145,6 +150,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. T
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidas, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` resolvidos, incluíam descritores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -398,6 +405,8 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | O `meta:altId` ou `$id` codificado por URL do grupo de campos que você deseja regravar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir reescreve um grupo de campos existente, adicionando um novo campo `propertyCountry`.
@@ -581,6 +590,8 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | O URL codificado `$id` URI ou `meta:altId` do grupo de campos que você deseja atualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação de exemplo abaixo atualiza o `description` de um grupo de campos existente e adiciona um novo campo `propertyCity`.
@@ -717,6 +728,8 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | O URL codificado `$id` URI ou `meta:altId` do grupo de campos que você deseja excluir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

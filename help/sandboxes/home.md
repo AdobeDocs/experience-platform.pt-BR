@@ -5,10 +5,9 @@ title: Visão geral das sandboxes
 topic-legacy: overview
 description: As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -23,9 +22,19 @@ Este documento fornece uma visão geral de alto nível das sandboxes no Experien
 
 ## Noções básicas sobre sandboxes
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Uma instância do Experience Platform suporta uma sandbox de produção e várias sandboxes de não produção, com cada sandbox mantendo sua própria biblioteca independente de recursos da plataforma (incluindo esquemas, conjuntos de dados, perfis e assim por diante).  Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox.
+As sandboxes são partições virtuais em uma única instância do Experience Platform, o que permite uma integração perfeita com o processo de desenvolvimento de seus aplicativos de experiência digital. Todo o conteúdo e as ações realizadas em uma sandbox são restritas apenas a essa sandbox e não afetam nenhuma outra sandbox. Há dois tipos de sandboxes compatíveis com o Experience Platform:
 
-As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar a sandbox de produção. Além disso, as sandboxes de não produção têm um recurso de redefinição que remove todos os recursos criados pelo cliente da sandbox. As sandboxes de não produção não podem ser convertidas em sandboxes de produção. Uma licença padrão do Experience Platform concede cinco sandboxes (uma produção e quatro não produção). É possível adicionar pacotes de dez sandboxes de não produção até um máximo de 75 sandboxes no total. Entre em contato com o administrador de organização IMS ou o representante de vendas de Adobe para obter mais detalhes.
+* **Caixa de proteção** de produção: Uma sandbox de produção deve ser usada com perfis no ambiente de produção. A Platform permite criar várias sandboxes de produção para fornecer a funcionalidade correta para os dados, mantendo o isolamento operacional. Esse recurso permite dedicar sandboxes de produção específicas a linhas distintas de negócios, marcas, projetos ou regiões. As sandboxes de produção oferecem suporte a um volume de perfis de produção até o compromisso [!DNL Profile] licenciado (medido cumulativamente em todas as sandboxes de produção autorizadas). Você tem direito a usar o perfil médio licenciado por [!DNL Profile] autorizado (medido cumulativamente em todas as sandboxes de produção autorizadas).
+* **Sandbox** de desenvolvimento: Uma sandbox de desenvolvimento é uma sandbox que pode ser usada exclusivamente para desenvolvimento e testes com perfis não relacionados à produção. As sandboxes de desenvolvimento oferecem suporte a um volume de perfis de não produção de até 10% do compromisso [!DNL Profile] licenciado (medido cumulativamente em todas as sandboxes de desenvolvimento autorizadas). Você tem direito a até:
+   * Uma riqueza média de perfis de não produção de 75 quilobytes por perfil de não produção autorizado (medida cumulativamente em todas as sandboxes de desenvolvimento autorizadas);
+   * Um trabalho de segmentação em lote por dia, por sandbox de desenvolvimento;
+   * Uma média de 120 [!DNL Profile] chamadas de API, por [!DNL Profile], por ano (medidas cumulativamente em todas as sandboxes de desenvolvimento autorizadas.
+
+Uma instância do Experience Platform suporta várias sandboxes de produção e desenvolvimento, com cada sandbox mantendo sua própria biblioteca independente de recursos da plataforma (incluindo esquemas, conjuntos de dados, perfis e assim por diante). Além disso, as sandboxes de produção e desenvolvimento têm um recurso de redefinição que remove todos os recursos criados pelo cliente da sandbox. As sandboxes de desenvolvimento não podem ser convertidas em sandboxes de produção.
+
+Uma licença Experience Platform padrão concede um total de cinco sandboxes, que podem ser classificadas como produção ou desenvolvimento. Você pode licenciar pacotes adicionais de 10 sandboxes até um máximo de 75 sandboxes no total. Essas sandboxes adicionais podem ser usadas para criar sandboxes de produção e desenvolvimento. Entre em contato com o administrador de organização IMS ou o representante de vendas de Adobe para obter mais detalhes.
+
+Finalmente, a sandbox de produção padrão é a primeira sandbox de produção criada quando uma Org de IMS é criada pela primeira vez. A sandbox de produção padrão permite assimilar ou consumir dados da Platform, bem como aceitar solicitações que não incluem valores para um nome de sandbox ou ID de sandbox.
 
 >[!NOTE]
 >
@@ -66,7 +75,7 @@ Se `x-sandbox-name` não estiver incluído em uma chamada de API, o sistema usar
 
 ### API de sandbox
 
-A API de sandbox permite gerenciar sandboxes usando operações de RESTful API. Consulte o [guia do desenvolvedor do sandbox](api/getting-started.md) para obter informações detalhadas sobre como usar a API, incluindo solicitações formatadas corretamente e respostas de exemplo.
+A API de sandbox permite gerenciar sandboxes usando operações de RESTful API. Consulte o [guia do desenvolvedor do sandbox](api/overview.md) para obter informações detalhadas sobre como usar a API, incluindo solicitações formatadas corretamente e respostas de exemplo.
 
 ## Próximas etapas
 

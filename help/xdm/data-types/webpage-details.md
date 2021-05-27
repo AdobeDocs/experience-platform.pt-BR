@@ -5,17 +5,16 @@ title: Tipo de dados de detalhes da página da Web
 topic-legacy: overview
 description: Este documento fornece uma visão geral dos detalhes da página da Web Tipo de dados do Experience Data Model (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '411'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Web page details] tipo de dados
+# [!UICONTROL Página da Web ] detalha o tipo de dados
 
-[!UICONTROL Web page details] é um tipo de dados padrão do Experience Data Model (XDM) que descreve detalhes sobre uma página da Web que acabou de ser carregada e visualizada, conforme registrado por um ExperienceEvent.
+[!UICONTROL A página da Web ] detalha um tipo de dados padrão do Experience Data Model (XDM) que descreve detalhes sobre uma página da Web que acabou de ser carregada e visualizada, conforme registrada por um ExperienceEvent.
 
 O tipo de dados destina-se aos detalhes completos da página e aos carregamentos iniciais da página de aplicativos web de página única (SPA). Para interações que estão acontecendo em uma página carregada que não acionam um novo carregamento de página, consulte o tipo de dados [interação da Web](./web-interactions.md) .
 
@@ -23,7 +22,7 @@ O tipo de dados destina-se aos detalhes completos da página e aos carregamentos
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `pageViews` | [[!UICONTROL Measure]](./measure.md) | O número de visualizações em uma página da Web. |
+| `pageViews` | [[!UICONTROL Medição]](./measure.md) | O número de visualizações em uma página da Web. |
 | `URL` | String | O URL normal ou normal da página da Web. Pode ou não ser o URL real usado para acessar a página. Para registrar o URL usado para acessar a página, use `webLink`. O formato URI deve seguir o padrão [RFC 3986](https://tools.ietf.org/html/rfc3986). |
 | `isErrorPage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página de erro ou não. Esse sinalizador é usado para classificar amplamente interações da Web. O erro é definido pelo aplicativo e pode corresponder a uma página servida com um código de erro HTTP. |
 | `isHomePage` | Booleano | Essa propriedade usa um sinalizador para indicar se a página é uma página inicial ou não. Esse sinalizador é usado para classificar amplamente interações da Web. A definição de página inicial é determinada pelo aplicativo. |
@@ -31,6 +30,8 @@ O tipo de dados destina-se aos detalhes completos da página e aos carregamentos
 | `server` | String | O servidor normal ou normativo que hospeda a página da Web. Pode ser ou não o host ou servidor que realmente atendeu à interação da página. |
 | `siteSection` | String | O nome normativo da seção do site em que esta página da Web está. Isso pode ser usado para classificar ou categorizar a interação. |
 | `viewName` | String | O nome da exibição em uma página. Essa propriedade geralmente é usada com aplicativos de página única ou páginas que têm guias ou controles que alteram a maioria do layout da página. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

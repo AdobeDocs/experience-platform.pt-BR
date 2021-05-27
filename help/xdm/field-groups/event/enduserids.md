@@ -5,22 +5,21 @@ title: Grupo de Campos do Esquema Detalhes da ID do Usuário Final
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da ID do usuário final.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '214'
+ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL End User ID Details] grupo de campos de esquema
+# [!UICONTROL Grupo de campos Detalhes da ID de usuário final ] do schema
 
 >[!NOTE]
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL End User ID Details] é um grupo de campos de esquema padrão para a  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), usada para descrever as informações de identidade de um indivíduo em vários aplicativos de Adobe. O grupo de campos fornece um objeto de nível raiz `endUserIDs`, que contém um campo somente leitura `_experience` cujos valores são atualizados automaticamente à medida que os dados são assimilados.
+[!UICONTROL ID de usuário final ] Detalha um grupo de campo de esquema padrão para a  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), usado para descrever as informações de identidade de um indivíduo em vários aplicativos de Adobe. O grupo de campos fornece um objeto de nível raiz `endUserIDs`, que contém um campo somente leitura `_experience` cujos valores são atualizados automaticamente à medida que os dados são assimilados.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -34,6 +33,8 @@ ht-degree: 0%
 | `mcid` | [Identidade](../../data-types/identity.md) | Adobe Marketing Cloud ID. |
 | `phonenumberid` | [Identidade](../../data-types/identity.md) | IDs de número de telefone. |
 | `tntid` | [Identidade](../../data-types/identity.md) | IDs de usuário final do Adobe Target. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 

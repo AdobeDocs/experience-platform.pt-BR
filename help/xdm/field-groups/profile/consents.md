@@ -4,21 +4,20 @@ title: Privacidade/Personalização/Preferências de marketing (Consentimentos) 
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Privacidade/Personalização/Preferências de marketing (Consentimentos) .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 1%
+source-wordcount: '2304'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] grupo de campos
+# [!UICONTROL Grupo de campos Privacidade/Personalização/Preferências de marketing (Consentimentos)] 
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (a seguir, chamado de grupo de  [!DNL Privacy & Consents] campos) é um grupo de campos padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md), que é usada para capturar informações de consentimento e preferência do cliente.
+[!UICONTROL Privacidade/Personalização/Preferências de marketing (Consentimentos)]  (a seguir chamado de grupo de  [!DNL Privacy & Consents] campos) é um grupo de campos padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md), que é usada para capturar informações de consentimento e preferência do cliente.
 
 >[!NOTE]
 >
->Como esse grupo de campos é compatível somente com [!DNL XDM Individual Profile], ele não pode ser usado para schemas [!DNL XDM ExperienceEvent]. Se desejar incluir dados de consentimento e preferência no esquema do Evento de Experiência, adicione o tipo de dados [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md) ao schema por meio do uso de um [grupo de campos personalizado](../../ui/resources/field-groups.md#create).
+>Como esse grupo de campos é compatível somente com [!DNL XDM Individual Profile], ele não pode ser usado para schemas [!DNL XDM ExperienceEvent]. Se desejar incluir dados de consentimento e preferência no esquema Evento de experiência, adicione o tipo de dados [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md) ao schema por meio do uso de um [grupo de campos personalizado](../../ui/resources/field-groups.md#create).
 
 ## Estrutura do grupo de campos {#structure}
 
@@ -108,7 +107,7 @@ O JSON a seguir mostra um exemplo do tipo de dados que o grupo de campos [!DNL C
 >Você pode gerar dados JSON de amostra para qualquer esquema XDM definido no Experience Platform para ajudar a visualizar como os dados de consentimento e preferência do cliente devem ser mapeados. Consulte a documentação a seguir para obter mais informações:
 >
 >* [Gerar dados de amostra na interface do usuário](../../ui/sample.md)
->* [Gerar dados de amostra na API](../../api/sample-data.md)
+* [Gerar dados de amostra na API](../../api/sample-data.md)
 
 
 ## Casos de uso do campo
@@ -129,6 +128,8 @@ Os casos de uso planejados para cada um desses campos são fornecidos nas seçõ
 | --- | --- |
 | `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `share`
 
 `share` representa o consentimento do cliente para saber se seus dados podem ser compartilhados com (ou vendidos a) terceiros.
@@ -143,15 +144,15 @@ Os casos de uso planejados para cada um desses campos são fornecidos nas seçõ
 | --- | --- |
 | `val` | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `personalize` {#personalize}
 
 `personalize` O captura as preferências do cliente sobre quais maneiras seus dados podem ser usados para personalização. Os clientes podem recusar casos de uso de personalização específica ou recusar totalmente a personalização.
 
 >[!IMPORTANT]
->
->`personalize` não abrange casos de uso de marketing. Por exemplo, se um cliente recusar a personalização de todos os canais, ele não deverá parar de receber comunicações por meio desses canais. Em vez disso, as mensagens recebidas devem ser genéricas e não baseadas no seu perfil.
->
->Pelo mesmo exemplo, se um cliente recusar o marketing direto para todos os canais (por meio de `marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber mensagens, mesmo que a personalização seja permitida.
+`personalize` não abrange casos de uso de marketing. Por exemplo, se um cliente recusar a personalização de todos os canais, ele não deverá parar de receber comunicações por meio desses canais. Em vez disso, as mensagens recebidas devem ser genéricas e não baseadas no seu perfil.
+Pelo mesmo exemplo, se um cliente recusar o marketing direto para todos os canais (por meio de `marketing`, explicado na [próxima seção](#marketing)), então esse cliente não deverá receber mensagens, mesmo que a personalização seja permitida.
 
 ```json
 "personalize": {
@@ -165,6 +166,8 @@ Os casos de uso planejados para cada um desses campos são fornecidos nas seçõ
 | --- | --- |
 | `content` | Representa as preferências do cliente para conteúdo personalizado em seu site ou aplicativo. |
 | `val` | A preferência de personalização fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não precisa ser solicitado a fornecer o consentimento, o valor desse campo deve indicar a base em que a personalização deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `marketing` {#marketing}
 
@@ -199,6 +202,8 @@ Os casos de uso planejados para cada um desses campos são fornecidos nas seçõ
 | `val` | A preferência fornecida pelo cliente para o caso de uso especificado. Nos casos em que o cliente não tenha que ser solicitado a fornecer o consentimento, o valor desse campo deve indicar a base em que o caso de uso de marketing deve ocorrer. Consulte o [apêndice](#choice-values) para obter os valores e as definições aceitos. |
 | `time` | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing foi alterada, se aplicável. Observe que, se o carimbo de data e hora de qualquer preferência individual for igual ao fornecido em `metadata`, esse campo não precisará ser definido para essa preferência. |
 | `reason` | Quando um cliente recusa um caso de uso de marketing, esse campo de cadeia de caracteres representa o motivo pelo qual o cliente optou por não participar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### `subscriptions` {#subscriptions}
 
@@ -243,6 +248,8 @@ As propriedades `email`, `push` e `sms` do objeto `marketing` podem representar 
 | `type` | O tipo de assinatura. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos. |
 | `subscribers` | Um campo opcional tipo mapa que representa um conjunto de identificadores (como endereços de email ou números de telefone) que assinaram uma assinatura específica. Cada chave nesse objeto representa o identificador em questão e contém duas subpropriedades: <ul><li>`time`: Um carimbo de data e hora ISO 8601, de quando a identidade é subscrita, se aplicável.</li><li>`source`: A origem do assinante. Pode ser qualquer string descritiva, desde que tenha 15 caracteres ou menos.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 
 ### `metadata`
 
@@ -258,16 +265,16 @@ As propriedades `email`, `push` e `sms` do objeto `marketing` podem representar 
 | --- | --- |
 | `time` | Um carimbo de data e hora ISO 8601 para a última vez que qualquer consentimento e preferência do cliente foi atualizado. Esse campo pode ser usado em vez de aplicar carimbos de data e hora a preferências individuais para reduzir a carga e a complexidade. Fornecer um valor `time` em uma preferência individual substitui o carimbo de data e hora `metadata` dessa preferência específica. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `idSpecific`
 
 `idSpecific` pode ser usado quando um consentimento ou preferência específico não se aplica universalmente a um cliente, mas é restrito a um único dispositivo ou ID. Por exemplo, um cliente pode recusar o recebimento de emails para um endereço, enquanto pode permitir emails em outro.
 
 >[!IMPORTANT]
->
->Os consentimentos e preferências de nível de canal (ou seja, aqueles fornecidos em `consents` fora de `idSpecific`) se aplicam às IDs nesse canal. Portanto, todos os consentimentos e preferências no nível do canal afetam diretamente se configurações equivalentes específicas de ID ou dispositivo são respeitadas:
->
->* Se o cliente tiver optado por não participar no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` serão ignorados.
->* Se o consentimento ou a preferência no nível do canal não estiver definida ou o cliente tiver optado por participar, os consentimentos ou preferências equivalentes em `idSpecific` serão honrados.
+Os consentimentos e preferências de nível de canal (ou seja, aqueles fornecidos em `consents` fora de `idSpecific`) se aplicam às IDs nesse canal. Portanto, todos os consentimentos e preferências no nível do canal afetam diretamente se configurações equivalentes específicas de ID ou dispositivo são respeitadas:
+* Se o cliente tiver optado por não participar no nível do canal, quaisquer consentimentos ou preferências equivalentes em `idSpecific` serão ignorados.
+* Se o consentimento ou a preferência no nível do canal não estiver definida ou o cliente tiver optado por participar, os consentimentos ou preferências equivalentes em `idSpecific` serão honrados.
 
 
 Cada chave no objeto `idSpecific` representa um namespace de identidade específico reconhecido pelo Adobe Experience Platform Identity Service. Embora você possa definir seus próprios namespaces personalizados para categorizar identificadores diferentes, é recomendável usar um dos namespaces padrão fornecidos pelo Serviço de identidade para reduzir os tamanhos de armazenamento para o Perfil do cliente em tempo real. Para obter mais informações sobre namespaces de identidade, consulte a [visão geral do namespace de identidade](../../../identity-service/namespaces.md) na documentação do Serviço de identidade.
@@ -332,8 +339,7 @@ O consentimento `adID` representa o consentimento do cliente para saber se uma I
 ```
 
 >[!NOTE]
->
->Não é esperado que você defina esse valor diretamente, pois o Adobe Experience Platform Mobile SDK o define automaticamente quando apropriado.
+Não é esperado que você defina esse valor diretamente, pois o Adobe Experience Platform Mobile SDK o define automaticamente quando apropriado.
 
 ## Inserção de dados usando o grupo de campos {#ingest}
 
@@ -342,10 +348,8 @@ Para usar o grupo de campos [!DNL Consents & Preferences] para assimilar dados d
 Consulte o tutorial em [criar um esquema na interface do usuário](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) para obter etapas sobre como atribuir grupos de campos a campos. Depois de criar um schema contendo um campo com o grupo de campos [!DNL Consents & Preferences], consulte a seção em [criar um conjunto de dados](../../../catalog/datasets/user-guide.md#create) no guia do usuário do conjunto de dados, seguindo as etapas para criar um conjunto de dados com um esquema existente.
 
 >[!IMPORTANT]
->
->Se desejar enviar dados de consentimento para [!DNL Real-time Customer Profile], é necessário criar um schema habilitado para [!DNL Profile] com base na classe [!DNL XDM Individual Profile] que contém o grupo de campos [!DNL Consents & Preferences]. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas aos requisitos [!DNL Real-time Customer Profile] para schemas e conjuntos de dados.
->
->Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral sobre [mesclar políticas](../../../rtcdp/profile/merge-policies.md) para obter mais informações.
+Se desejar enviar dados de consentimento para [!DNL Real-time Customer Profile], é necessário criar um schema habilitado para [!DNL Profile] com base na classe [!DNL XDM Individual Profile] que contém o grupo de campos [!DNL Consents & Preferences]. O conjunto de dados criado com base nesse esquema também deve ser habilitado para [!DNL Profile]. Consulte os tutoriais vinculados acima para etapas específicas relacionadas aos requisitos [!DNL Real-time Customer Profile] para schemas e conjuntos de dados.
+Além disso, também é necessário garantir que suas políticas de mesclagem estejam configuradas para priorizar os conjuntos de dados que contêm os dados de consentimento e preferência mais recentes, para que os perfis do cliente sejam atualizados corretamente. Consulte a visão geral sobre [mesclar políticas](../../../rtcdp/profile/merge-policies.md) para obter mais informações.
 
 ## Lidar com alterações de consentimento e preferência
 
@@ -371,6 +375,8 @@ A tabela a seguir descreve os valores aceitos para `val`:
 | `VI` | Interesse vital do indivíduo | A recolha de dados para o fim especificado é necessária para proteger os interesses vitais do indivíduo. |
 | `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para levar a cabo uma missão de interesse público ou no exercício da autoridade oficial. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Valores aceitos para `preferred` {#preferred-values}
 
 A tabela a seguir descreve os valores aceitos para `preferred`:
@@ -390,6 +396,8 @@ A tabela a seguir descreve os valores aceitos para `preferred`:
 | `other` | Um canal que não se encaixa em uma categoria padrão. |
 | `none` | Nenhum canal preferencial. |
 | `unknown` | O canal preferido é desconhecido. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Schema [!DNL Consents & Preferences] completo {#full-schema}
 

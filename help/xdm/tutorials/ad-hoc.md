@@ -6,11 +6,10 @@ description: Em circunstâncias específicas, pode ser necessário criar um esqu
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 2%
+source-wordcount: '832'
+ht-degree: 3%
 
 ---
 
@@ -87,6 +86,8 @@ curl -X POST \
 | `$ref` | O comportamento dos dados para a nova classe. Para classes ad-hoc, esse valor deve ser definido como `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Um objeto que contém os campos personalizados da classe, expressos como pares de valores chave de nomes de campos e tipos de dados. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nome do objeto `properties._adhoc` por um GUID que é um identificador exclusivo gerado pelo sistema e somente leitura para a classe. O atributo `meta:datasetNamespace` também é gerado automaticamente e incluído na resposta.
@@ -147,6 +148,8 @@ Uma resposta bem-sucedida retorna os detalhes da nova classe, substituindo o nom
 | Propriedade | Descrição |
 | --- | --- |
 | `$id` | Um URI que serve como o identificador exclusivo gerado pelo sistema somente leitura para a nova classe ad-hoc. Esse valor é usado na próxima etapa da criação de um schema ad-hoc. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Criar um esquema ad-hoc
 
@@ -238,6 +241,8 @@ GET /tenant/schemas/{SCHEMA_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SCHEMA_ID}` | O URL codificado `$id` URI ou `meta:altId` do esquema ad hoc que você deseja acessar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

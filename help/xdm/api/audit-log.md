@@ -5,11 +5,10 @@ title: Ponto de extremidade da API de log de auditoria
 description: O endpoint /auditlog na API do Registro de Schema permite recuperar uma lista cronológica de alterações feitas em um recurso XDM existente.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 2%
+source-wordcount: '406'
+ht-degree: 3%
 
 ---
 
@@ -36,6 +35,8 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{RESOURCE_ID}` | O `meta:altId` ou `$id` codificado por URL do recurso cujo log de auditoria você deseja recuperar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -96,3 +97,5 @@ Uma resposta bem-sucedida retorna uma lista cronológica de alterações feitas 
 | `action` | O tipo de mudança que foi feita. |
 | `path` | Uma string [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) indicando o caminho para o campo específico que foi alterado ou adicionado. |
 | `value` | O valor atribuído ao campo novo ou atualizado. |
+
+{style=&quot;table-layout:auto&quot;}

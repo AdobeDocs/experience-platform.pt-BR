@@ -5,17 +5,16 @@ title: Tipo de dados de identidade
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de identidade.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 3%
+source-wordcount: '287'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Identity] tipo de dados
+#  Tipo de dados de identidade
 
-[!UICONTROL Identity] é um tipo de dados XDM padrão usado para distinguir claramente as pessoas que interagem com experiências digitais. A identidade é estabelecida por um provedor de identidade, que é referenciado em um atributo `namespace`. Em cada `namespace`, a identidade é exclusiva.
+ A identidade é um tipo de dados XDM padrão, usado para distinguir claramente as pessoas que interagem com experiências digitais. A identidade é estabelecida por um provedor de identidade, que é referenciado em um atributo `namespace`. Em cada `namespace`, a identidade é exclusiva.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
@@ -27,6 +26,8 @@ ht-degree: 3%
 | `primary` | Booleano | Indica se esta é a identidade primária do indivíduo. Cada indivíduo só pode ter uma identidade primária. |
 | `xid` | String | Quando presente, esse valor representa um identificador de namespace cruzado que é exclusivo em todos os identificadores de escopo de namespace em todos os namespaces. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
@@ -34,7 +35,7 @@ Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM púb
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Identity] .
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Identity].
 
 ## Valores aceitos para authenticationState {#authenticatedState}
 

@@ -5,11 +5,10 @@ title: Acesso a dados em notebooks Jupyterlab
 topic-legacy: Developer Guide
 description: Este guia tem como foco o uso de notebooks Júpiter, criados no Data Science Workspace para acessar seus dados.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 9%
+source-wordcount: '3290'
+ht-degree: 8%
 
 ---
 
@@ -35,7 +34,7 @@ Os dados de esquema ExperienceEvent usados variaram em tamanho começando em mil
 
 Os dados do esquema ad-hoc foram pré-processados usando [!DNL Query Service] Criar tabela como seleção (CTAS). Esses dados também variaram em tamanho a partir de mil linhas (1.000) que variam de até um bilhão (1B) de linhas.
 
-### Quando usar o modo de lote vs. modo interativo {#mode}
+### Quando usar o modo de lote vs. o modo interativo {#mode}
 
 Ao ler conjuntos de dados com blocos de dados PySpark e Scala, você tem a opção de usar o modo interativo ou o modo de lote para ler o conjunto de dados. Interativo é feito para resultados rápidos, enquanto o modo de lote é para grandes conjuntos de dados.
 
@@ -155,8 +154,8 @@ Para gravar em um conjunto de dados no bloco de dados JupyterLab, selecione a gu
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
 - Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação com o conjunto de dados selecionado.
-- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura com o conjunto de dados selecionado.
-- Use **[!UICONTROL Query Data in Notebook]** para gerar uma célula de consulta básica com o conjunto de dados selecionado.
+- Use **[!UICONTROL Explorar dados no notebook]** para gerar uma célula de leitura com seu conjunto de dados selecionado.
+- Use **[!UICONTROL Dados de consulta no Bloco de notas]** para gerar uma célula de consulta básica com o conjunto de dados selecionado.
 
 Como alternativa, você pode copiar e colar a seguinte célula de código. Substitua o `{DATASET_ID}` e o `{PANDA_DATAFRAME}`.
 
@@ -175,7 +174,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Antes de usar [!DNL Query Service] em [!DNL JupyterLab], certifique-se de ter uma compreensão funcional da [[!DNL Query Service] sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-Consultar dados usando [!DNL Query Service] requer que você forneça o nome do conjunto de dados de destino. Você pode gerar as células de código necessárias localizando o conjunto de dados desejado usando o **[!UICONTROL Data explorer]**. Clique com o botão direito na listagem do conjunto de dados e clique em **[!UICONTROL Query Data in Notebook]** para gerar duas células de código no bloco de notas. Essas duas células são descritas com mais detalhes abaixo.
+Consultar dados usando [!DNL Query Service] requer que você forneça o nome do conjunto de dados de destino. Você pode gerar as células de código necessárias localizando o conjunto de dados desejado usando o **[!UICONTROL Data Explorer]**. Clique com o botão direito na listagem do conjunto de dados e clique em **[!UICONTROL Consultar dados no bloco de notas]** para gerar duas células de código no bloco de notas. Essas duas células são descritas com mais detalhes abaixo.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -291,7 +290,7 @@ Para gravar em um conjunto de dados no bloco de dados JupyterLab, selecione a gu
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
 - Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação com o conjunto de dados selecionado.
-- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura com o conjunto de dados selecionado.
+- Use **[!UICONTROL Explorar dados no notebook]** para gerar uma célula de leitura com seu conjunto de dados selecionado.
 
 Como alternativa, você pode copiar e colar a seguinte célula de código:
 
@@ -355,7 +354,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 ```
 
-### Usando o %dataset para ler e gravar com um bloco de anotações PySpark 3 {#magic}
+### Utilizando %dataset para ler e escrever com um bloco de notas PySpark 3 {#magic}
 
 Com a introdução de [!DNL Spark] 2.4, `%dataset` mágica personalizada é fornecida para uso em notebooks PySpark 3 ([!DNL Spark] 2.4). Para obter mais detalhes sobre comandos mágicos disponíveis no kernel do IPython, visite a [documentação mágica do IPython](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
 
@@ -386,11 +385,23 @@ Um comando mágico [!DNL Data Science Workspace] personalizado para ler ou grava
 - **Exemplo** de leitura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Exemplo** de gravação:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
+>[!IMPORTANT]
+>
+> Armazenar dados em cache usando `df.cache()` antes de gravar dados pode melhorar muito o desempenho do notebook. Isso pode ajudar se você estiver recebendo um dos seguintes erros:
+> 
+> - Trabalho anulado devido a falha de estágio ... Só é possível compactar RDDs com o mesmo número de elementos em cada partição.
+> - Cliente RPC remoto desassociado e outros erros de memória.
+> - Mau desempenho ao ler e gravar conjuntos de dados.
+
+> 
+> 
+Consulte o [guia de solução de problemas](../troubleshooting-guide.md) para obter mais informações.
+
 Você pode gerar automaticamente os exemplos acima na compra do JupyterLab usando o seguinte método:
 
 Selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Write Data in Notebook]** no menu suspenso do conjunto de dados que deseja usar. Uma entrada de código executável é exibida na parte inferior do notebook.
 
-- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura.
+- Use **[!UICONTROL Explorar dados no notebook]** para gerar uma célula de leitura.
 - Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
@@ -476,6 +487,18 @@ val spark = SparkSession
 
 No Scala, é possível importar `clientContext` para obter e retornar valores da Plataforma, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala abaixo, `clientContext` é usado para obter e retornar todos os valores necessários para ler um conjunto de dados.
 
+>[!IMPORTANT]
+>
+> Armazenar dados em cache usando `df.cache()` antes de gravar dados pode melhorar muito o desempenho do notebook. Isso pode ajudar se você estiver recebendo um dos seguintes erros:
+> 
+> - Trabalho anulado devido a falha de estágio ... Só é possível compactar RDDs com o mesmo número de elementos em cada partição.
+> - Cliente RPC remoto desassociado e outros erros de memória.
+> - Mau desempenho ao ler e gravar conjuntos de dados.
+
+> 
+> 
+Consulte o [guia de solução de problemas](../troubleshooting-guide.md) para obter mais informações.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -510,9 +533,9 @@ df1.show(10)
 
 Você pode gerar automaticamente o exemplo acima na compra do JupyterLab usando o seguinte método:
 
-Selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explore Data in Notebook]** no menu suspenso do conjunto de dados que deseja usar. Uma entrada de código executável é exibida na parte inferior do notebook.
+Selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explorar dados no notebook]** no menu suspenso do conjunto de dados que deseja usar. Uma entrada de código executável é exibida na parte inferior do notebook.
 E
-- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura.
+- Use **[!UICONTROL Explorar dados no notebook]** para gerar uma célula de leitura.
 - Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
@@ -520,6 +543,18 @@ E
 ### Gravar em um conjunto de dados {#scala-write-dataset}
 
 No Scala, é possível importar `clientContext` para obter e retornar valores da Plataforma, isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo Scala abaixo, `clientContext` é usado para definir e retornar todos os valores necessários para gravar em um conjunto de dados.
+
+>[!IMPORTANT]
+>
+> Armazenar dados em cache usando `df.cache()` antes de gravar dados pode melhorar muito o desempenho do notebook. Isso pode ajudar se você estiver recebendo um dos seguintes erros:
+> 
+> - Trabalho anulado devido a falha de estágio ... Só é possível compactar RDDs com o mesmo número de elementos em cada partição.
+> - Cliente RPC remoto desassociado e outros erros de memória.
+> - Mau desempenho ao ler e gravar conjuntos de dados.
+
+> 
+> 
+Consulte o [guia de solução de problemas](../troubleshooting-guide.md) para obter mais informações.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}

@@ -5,11 +5,10 @@ title: Restrições de Tipo de Campo XDM
 topic-legacy: overview
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização para os quais podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 1%
+source-wordcount: '1097'
+ht-degree: 4%
 
 ---
 
@@ -160,30 +159,32 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | Tipo XDM | Parquet | SQL Spark | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Tipo: `BYTE_ARRAY`<br>Anotação: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL Long] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Integer] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Duplo] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Longo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Número inteiro] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Curto] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotação: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Date] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Data ] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotação: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Boolean] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Map] | `MAP`-grupo anotado<br><br> (`<key-type>` deve ser  `STRING`) | `MapType`<br><br>(`keyType` deve ser  `StringType`) | `java.util.Map` |
+| [!UICONTROL Booleano] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Mapa] | `MAP`-grupo anotado<br><br> (`<key-type>` deve ser  `STRING`) | `MapType`<br><br>(`keyType` deve ser  `StringType`) | `java.util.Map` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Scala, .NET e CosmosDB {#scala}
 
 | Tipo XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Duplo] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Longo] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Número inteiro] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Curto] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Data ] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Map] | `Map` | (N/D) | `object` |
+| [!UICONTROL Booleano] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Mapa] | `Map` | (N/D) | `object` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -192,15 +193,15 @@ As seções abaixo descrevem como cada tipo XDM mapeia para outros formatos de s
 | Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
-| [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
-| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Duplo] | `double` | `Double` | `double` |
+| [!UICONTROL Longo] | `long` | `Integer` | `int64` |
+| [!UICONTROL Número inteiro] | `int` | `Integer` | `int32` |
+| [!UICONTROL Curto] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Date] | `date` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
+| [!UICONTROL Data ] | `date` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Milissegundos do Unix) | `int64`<br>(Milissegundos do Unix) |
-| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
-| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Booleano] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
+| [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
 
 {style=&quot;table-layout:auto&quot;}
 

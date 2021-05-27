@@ -5,17 +5,16 @@ title: Tipo de dados de pesquisa
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados Search Experience Data Model (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 5%
+source-wordcount: '184'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Search] tipo de dados
+#  Tipo de dados de pesquisa
 
-[!UICONTROL Search] é um tipo de dados padrão do Experience Data Model (XDM) que contém informações sobre a atividade de pesquisa na Web.
+ Pesquisas é um tipo de dados padrão do Experience Data Model (XDM) que contém informações sobre a atividade de pesquisa na Web.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
@@ -28,6 +27,8 @@ ht-degree: 5%
 | `searchEngine` | String | O mecanismo de pesquisa usado pela pesquisa. |
 | `searchEngineID` | String | O identificador específico do aplicativo usado para identificar o mecanismo de pesquisa. |
 | `slot` | String | A seção nomeada da página onde o resultado da pesquisa foi exibido. O valor dessa propriedade deve ser igual a um dos valores de enumeração conhecidos definidos, como `top`, `side` ou `bottom`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

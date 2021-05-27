@@ -4,11 +4,10 @@ user-guide-title: Ajuda do Sandoboxes na Adobe Experience Platform
 breadcrumb-title: Guia de Sandoxes
 user-guide-description: Particionamento de uma instância do Platform em ambientes virtuais para desenvolvimento, teste e implantação de aplicativos.
 feature: Gerenciamento de dados
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 31%
+source-wordcount: '66'
+ht-degree: 45%
 
 ---
 
@@ -20,15 +19,12 @@ ht-degree: 31%
    * [Visão geral da interface do usuário do Sandbox](ui/overview.md)
    * [Guia do usuário de sandbox](ui/user-guide.md)
 * API Sandbox {#api}
+   * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
-   * [Listar tipos de sandbox compatíveis](api/list-sandbox-types.md)
-   * [Listar todas as sandboxes](api/list-all-sandboxes.md)
-   * [Listar sandboxes ativas para o usuário atual](api/list-active-sandboxes.md)
-   * [Procurar uma sandbox](api/look-up-sandbox.md)
-   * [Criar uma sandbox](api/create-sandbox.md)
-   * [Atualizar uma sandbox](api/update-sandbox.md)
-   * [Redefinir uma sandbox](api/reset-sandbox.md)
-   * [Excluir uma sandbox](api/delete-sandbox.md)
+   * [sandboxes disponíveis](api/available.md)
+   * [Gerenciamento de sandbox](api/sandboxes.md)
+   * [Tipos de sandbox](api/types.md)
+   * [Apêndice](api/appendix.md)
 * [Guia de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

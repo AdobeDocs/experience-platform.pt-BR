@@ -5,11 +5,10 @@ title: Comportamento do ponto de extremidade da API
 description: O endpoint /comporors na API do Registro de Schema permite recuperar todos os comportamentos disponíveis no contêiner global.
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 2%
+source-wordcount: '428'
+ht-degree: 3%
 
 ---
 
@@ -17,8 +16,8 @@ ht-degree: 2%
 
 No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve referenciar um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso na Platform, há dois comportamentos disponíveis:
 
-* **[!UICONTROL Record]**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
-* **[!UICONTROL Time-series]**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
+* **[!UICONTROL Registro]**: Fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
+* **[!UICONTROL Série]** cronológica: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
 
 >[!NOTE]
 >
@@ -89,7 +88,7 @@ curl -X GET \
 }
 ```
 
-## Procure um comportamento {#lookup}
+## Pesquisar um comportamento {#lookup}
 
 Você pode pesquisar um comportamento específico fornecendo a ID no caminho de uma solicitação do GET para o endpoint `/behaviors`.
 
@@ -102,6 +101,8 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{BEHAVIOR_ID}` | O `meta:altId` ou `$id` codificado por URL do comportamento que você deseja pesquisar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

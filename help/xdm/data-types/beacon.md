@@ -5,17 +5,16 @@ title: Tipo de dados do sinal
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe Perfil individual XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 3%
+source-wordcount: '251'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Beacon] tipo de dados
+#  Tipo de dados Beacondata
 
-[!UICONTROL Beacon] é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade para aplicativos móveis, à medida que os dispositivos móveis estão dentro do alcance.
+ Beaconis é um tipo de dados XDM padrão que descreve o dispositivo sem fio que comunica informações de identidade a aplicativos móveis, à medida que os dispositivos móveis estão dentro da faixa.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -26,6 +25,8 @@ ht-degree: 3%
 | `proximity` | String | Distância estimada do sinal. Consulte o [apêndice](#proximity) para obter os valores e as definições aceitos. |
 | `proximityUUID` | String | Um UUID de proximidade (Identificador universal exclusivo) é um tipo especial de identificador usado para distinguir beacons em sua rede de todos os outros beacons em redes fora de seu controle. A UUID de proximidade é configurada em um beacon, para ser transmitida a dispositivos móveis no intervalo para identificar os beacons de uma organização. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
@@ -33,7 +34,7 @@ Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM púb
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Beacon] .
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Beacon].
 
 ## Valores aceitos para proximidade {#proximity}
 

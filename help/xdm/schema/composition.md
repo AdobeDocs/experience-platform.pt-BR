@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Os intervalos válidos desses tipos escalares podem ser restritos ainda mais a d
 * Longo
 * Curto
 * Byte
-* Data
+* Data 
 * Data e hora
 * Mapa
 
@@ -293,6 +293,8 @@ Há alguns fatores principais a serem considerados ao escolher objetos em vez de
 | --- | --- |
 | Aumenta o aninhamento | Menos ou sem aninhamento |
 | Cria agrupamentos de campos lógicos | Os campos são colocados em locais ad-hoc |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Objetos
 

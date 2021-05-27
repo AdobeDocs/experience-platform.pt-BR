@@ -5,10 +5,9 @@ title: Introdução à API do Registro de Schema
 description: Este documento fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API do Registro de Schema.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -154,7 +153,7 @@ Uma resposta bem-sucedida retorna informações sobre o uso do [!DNL Schema Regi
  }
 ```
 
-## Entenda o `CONTAINER_ID` {#container}
+## Entender o `CONTAINER_ID` {#container}
 
 As chamadas à API [!DNL Schema Registry] exigem o uso de um `CONTAINER_ID`. Há dois contêineres para fazer chamadas de API: o contêiner `global` e o contêiner `tenant`.
 
@@ -212,6 +211,8 @@ A tabela a seguir lista valores de cabeçalho compatíveis `Accept`, incluindo a
 | `application/vnd.adobe.xed-notext+json; version=1` | XDM bruto com `$ref` e `allOf`. Sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` resolvidos. Sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` resolvidos. Os descritores são incluídos. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >

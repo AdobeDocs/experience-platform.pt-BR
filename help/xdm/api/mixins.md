@@ -5,11 +5,10 @@ title: Ponto de extremidade da API Mixins
 description: O endpoint /mixins na API do Registro de Schema permite gerenciar programaticamente mixins XDM no aplicativo de experiência.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 2%
+source-wordcount: '1214'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +46,8 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | O contêiner do qual você deseja recuperar mixins de: `global` para mixins criados por Adobe ou `tenant` para mixins de propriedade de sua organização. |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte o [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera uma lista de mixins do contêiner `tenant`, usando um parâmetro de consulta `orderby` para classificar os mixins pelo atributo `title`.
@@ -67,6 +68,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. O
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Retorna a combinação JSON completa para cada recurso, com `$ref` original e `allOf` incluídas. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -114,7 +117,7 @@ A solicitação acima usou o cabeçalho `application/vnd.adobe.xed-id+json` `Acc
 }
 ```
 
-## Procure um mixin {#lookup}
+## Procure uma mistura {#lookup}
 
 Você pode pesquisar um mixin específico incluindo a ID do mixin no caminho de uma solicitação do GET.
 
@@ -128,6 +131,8 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | --- | --- |
 | `{CONTAINER_ID}` | O contêiner que contém o mixin que você deseja recuperar: `global` para um mixin criado por Adobe ou `tenant` para um mixin de propriedade de sua organização. |
 | `{MIXIN_ID}` | O `meta:altId` ou o `$id` codificado por URL do mixin que você deseja procurar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -152,6 +157,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. T
 | `application/vnd.adobe.xed-notext+json; version=1` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` resolvidas, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` resolvidos, incluíam descritores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -405,6 +412,8 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | O `meta:altId` ou `$id` codificado por URL do mixin que você deseja regravar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir reescreve um mixin existente, adicionando um novo campo `propertyCountry`.
@@ -588,6 +597,8 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | O URL codificado `$id` ou `meta:altId` do mixin que você deseja atualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação de exemplo abaixo atualiza o `description` de um mixin existente e adiciona um novo campo `propertyCity`.
@@ -724,6 +735,8 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{MIXIN_ID}` | O URL codificado `$id` URI ou `meta:altId` do mixin que você deseja excluir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

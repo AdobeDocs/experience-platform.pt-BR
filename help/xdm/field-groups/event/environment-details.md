@@ -5,22 +5,21 @@ title: Grupo de campos do esquema Detalhes do ambiente
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes do ambiente ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '215'
+ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Environment Details] grupo de campos de esquema
+# [!UICONTROL Grupo de campos ] Detalhes do ambiente
 
 >[!NOTE]
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Environment Details] é um grupo de campos de esquema padrão para a classe  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) usada para capturar informações sobre detalhes do ambiente relacionados a um Evento de experiência, como detalhes do dispositivo, informações do navegador, hora local e outras informações geográficas.
+[!UICONTROL Os ] Detalhes do ambiente são um grupo de campo de esquema padrão para a classe  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) usada para capturar informações relacionadas a detalhes do ambiente relacionados a um Evento de experiência, como detalhes do dispositivo, informações do navegador, hora local e outras informações geográficas.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
@@ -29,6 +28,8 @@ ht-degree: 1%
 | `device` | [Dispositivo](../../data-types/device.md) | Descreve uma instância identificada de dispositivo, aplicativo ou navegador de dispositivo que é rastreável entre sessões, normalmente por cookies. |
 | `environment` | [Ambiente](../../data-types/environment.md) | Descreve informações sobre o contexto de situação da observação do evento, detalhando especificamente informações transitórias, como a rede ou as versões de software. |
 | `placeContext` | [Inserir contexto](../../data-types/place-context.md) | Descreve as circunstâncias transitórias relacionadas com a observação de eventos. Os exemplos incluem informações específicas da localidade, como tempo, hora local, tráfego, dia da semana, dia útil vs. feriado e horário de trabalho. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 

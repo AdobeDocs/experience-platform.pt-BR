@@ -6,11 +6,10 @@ description: Este documento fornece um tutorial para definir uma relação um pa
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 1%
+source-wordcount: '1369'
+ht-degree: 2%
 
 ---
 
@@ -231,6 +230,8 @@ Uma resposta bem-sucedida retorna os detalhes do grupo de campos recém-criado.
 | --- | --- |
 | `$id` | O identificador exclusivo gerado pelo sistema, somente leitura, do novo grupo de campos. Assume a forma de um URI. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Registre o URI `$id` do grupo de campos, que será usado na próxima etapa de adicionar o grupo de campos ao schema de origem.
 
 ### Adicionar o grupo de campos ao schema de origem
@@ -246,6 +247,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SCHEMA_ID}` | O URL codificado `$id` URI ou `meta:altId` do schema de origem. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -275,6 +278,8 @@ curl -X PATCH \
 | `op` | A operação PATCH a ser executada. Essa solicitação usa a operação `add`. |
 | `path` | O caminho para o campo de esquema onde o novo recurso será adicionado. Ao adicionar grupos de campos a schemas, o valor deve ser &quot;/allOf/-&quot;. |
 | `value.$ref` | O `$id` do grupo de campos a ser adicionado. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -378,6 +383,8 @@ curl -X POST \
 | `sourceProperty` | O caminho para o campo de identidade principal do esquema de destino. |
 | `xdm:identityNamespace` | O namespace de identidade do campo de referência. Deve ser o mesmo namespace usado ao definir o campo como a identidade primária do schema. Consulte a [visão geral do namespace de identidade](../../identity-service/home.md) para obter mais informações. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna os detalhes do descritor de referência recém-criado para o esquema de destino.
@@ -436,6 +443,8 @@ curl -X POST \
 | `xdm:destinationSchema` | O URL `$id` do schema de destino. |
 | `xdm:destinationVersion` | O número da versão do schema de destino. |
 | `xdm:destinationProperty` | O caminho para o campo de referência no schema de destino. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Resposta
 

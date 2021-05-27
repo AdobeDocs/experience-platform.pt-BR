@@ -5,17 +5,16 @@ title: Tipo de dados do ambiente
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados do Ambiente XDM.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 4%
+source-wordcount: '468'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Environment] tipo de dados
+#  Tipo de dados do ambiente
 
-[!UICONTROL Environment] é um tipo de dados XDM padrão que descreve o ambiente circundante de um evento observado, detalhando especificamente informações transitórias, como versões de rede e de software.
+ Ambientes é um tipo de dados XDM padrão que descreve o ambiente ao redor de um evento observado, detalhando especificamente informações transitórias, como versões de rede e de software.
 
 >[!IMPORTANT]
 >
@@ -41,6 +40,8 @@ ht-degree: 4%
 | `viewportHeight` | Número inteiro | O tamanho vertical em pixels da janela em que a experiência foi exibida. Para um evento de exibição da Web, essa é a altura da janela de visualização do navegador. |
 | `viewPortWidth` | Número inteiro | O tamanho horizontal em pixels da janela em que a experiência foi exibida. Para um evento de exibição da Web, essa é a largura da janela de visualização do navegador. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
@@ -48,7 +49,7 @@ Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM púb
 
 ## Apêndice
 
-A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device] .
+A seção a seguir contém informações adicionais sobre o tipo de dados [!UICONTROL Device].
 
 ## Valores aceitos para o tipo {#type}
 

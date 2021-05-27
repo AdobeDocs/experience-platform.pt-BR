@@ -5,10 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-translation-type: tm+mt
-source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,13 @@ ht-degree: 0%
 
 O Adobe Experience Platform [!DNL Privacy Service] processa as solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e [!DNL California Consumer Privacy Act] (CCPA).
 
-Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para [!DNL Real-time Customer Profile].
+Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para [!DNL Real-time Customer Profile] no Adobe Experience Platform.
+
+>[!NOTE]
+>
+>Este guia só aborda como fazer solicitações de privacidade para o armazenamento de dados do perfil no Experience Platform. Se também planeja fazer solicitações de privacidade para o Platform Data Lake, consulte o guia sobre [processamento de solicitação de privacidade no Data Lake](../catalog/privacy.md), além deste tutorial.
+>
+>Para obter etapas sobre como fazer solicitações de privacidade para outros aplicativos Adobe Experience Cloud, consulte a [documentação do Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introdução
 
@@ -41,7 +46,7 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 
 >[!IMPORTANT]
 >
->O Privacy Service só pode processar dados [!DNL Profile] usando uma política de mesclagem que não executa a compilação de identidade. Se estiver usando a interface do usuário para confirmar se suas solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como seu tipo [!UICONTROL ID stitching]. Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL ID stitching] está definido como &quot;[!UICONTROL Private graph]&quot;.
+>O Privacy Service só pode processar dados [!DNL Profile] usando uma política de mesclagem que não executa a compilação de identidade. Se estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se você está usando uma política com &quot;[!DNL None]&quot; como seu tipo [!UICONTROL ID stitching]. Em outras palavras, não é possível usar uma política de mesclagem em que [!UICONTROL Compilação de ID] esteja definida como &quot;[!UICONTROL Gráfico privado]&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
 >
@@ -95,14 +100,13 @@ curl -X POST \
     "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
 ```
 
 ### Uso da interface do usuário
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Profile]** em **[!UICONTROL Products]** para processar tarefas para dados armazenados no [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Profile]** em **[!UICONTROL Products]** para processar tarefas para dados armazenados em [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 

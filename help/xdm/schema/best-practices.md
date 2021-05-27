@@ -5,10 +5,9 @@ title: Práticas Recomendadas Para A Modelagem De Dados
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2524'
 ht-degree: 1%
 
 ---
@@ -55,6 +54,8 @@ Depois de criar um ERD para identificar as entidades essenciais que deseja traze
 | Entidades de pesquisa | As entidades de pesquisa representam conceitos que podem estar relacionados a uma pessoa, mas não podem ser usados diretamente para identificar o indivíduo. As entidades que se encaixam nesta categoria devem ser representadas por esquemas baseados em **classes personalizadas**. |
 | Entidades de evento | As entidades de evento representam conceitos relacionados às ações que um cliente pode realizar, aos eventos do sistema ou a qualquer outro conceito, onde você pode querer rastrear as alterações ao longo do tempo. As entidades que se enquadram nesta categoria devem ser representadas por esquemas baseados na **[!DNL XDM ExperienceEvent]classe**. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Considerações para classificação de entidade
 
 As seções abaixo fornecem mais orientações sobre como classificar suas entidades nas categorias acima.
@@ -77,6 +78,8 @@ Se quiser analisar como determinados atributos em uma entidade são alterados ao
 | 1234567 | Remover | 275098 | 1 | 1 de outubro, 10:33 |
 | 1234567 | Adicionar | 486502 | 1 | 1 de outubro, 10:41 |
 | 1234567 | Adicionar | 910482 | 5 | 3 de outubro de 2015 |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Casos de uso de segmentação
 
@@ -118,6 +121,8 @@ A tabela a seguir descreve alguns relacionamentos de entidade comuns e as catego
 | Clientes e check-outs do carrinho | Um para muitos | Um único cliente pode ter muitos check-outs de carrinho, que são eventos que podem ser rastreados ao longo do tempo. Portanto, os clientes seriam uma entidade de perfil, enquanto os Check-outs do carrinho seriam uma entidade de evento. |
 | Clientes e contas de fidelidade | Um para um | Um único cliente pode ter apenas uma conta de fidelidade, e vice-versa. Como o relacionamento é um para um, tanto Clientes quanto Contas de fidelidade representam entidades de perfil. |
 | Clientes e assinaturas | Um para muitos | Um único cliente pode ter muitas subscrições. Como a empresa só está preocupada com as assinaturas atuais de um cliente, os Clientes são uma entidade de perfil, enquanto as Assinaturas são uma entidade de pesquisa. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Prós e contras de diferentes classes de entidade {#pros-and-cons}
 

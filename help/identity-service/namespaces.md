@@ -5,9 +5,9 @@ title: Visão geral do Namespace de identidade
 topic-legacy: overview
 description: Os namespaces de identidade são um componente do Identity Service que serve como indicadores do contexto ao qual uma identidade está relacionada. Por exemplo, eles distinguem um valor de "name@email.com" como um endereço de email ou "443522" como uma ID de CRM numérica.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 2%
 
 ---
@@ -73,6 +73,8 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | TNTID | Um namespace que representa Adobe Target. Consulte o seguinte documento no [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) para obter mais informações. |
 | Windows AID | Um namespace que representa uma ID de publicidade do Windows. Consulte o seguinte documento em [ID de publicidade do Windows](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obter mais informações. |
 
+### Exibir namespaces de identidade
+
 Para exibir namespaces de identidade na interface do usuário, selecione **[!UICONTROL Identities]** na navegação esquerda e selecione **[!UICONTROL Browse]**.
 
 ![navegar](./images/browse.png)
@@ -89,7 +91,7 @@ Selecione um namespace de identidade na lista para exibir informações em um na
 
 ![select-namespace](./images/select-namespace.png)
 
-## Gerenciamento de namespaces personalizados {#manage-namespaces}
+## Gerenciar namespaces personalizados {#manage-namespaces}
 
 Dependendo dos dados organizacionais e dos casos de uso, pode ser necessário criar namespaces personalizados. Os namespaces personalizados podem ser criados usando a API [[!DNL Identity Service]](./api/create-custom-namespace.md) ou por meio da interface do usuário.
 

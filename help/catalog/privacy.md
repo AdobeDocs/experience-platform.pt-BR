@@ -5,10 +5,9 @@ title: Processamento de solicitação de privacidade no Data Lake
 topic-legacy: overview
 description: A Adobe Experience Platform Privacy Service processa solicitações do cliente para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade de dados do cliente armazenados no Data Lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -18,6 +17,12 @@ ht-degree: 0%
 O Adobe Experience Platform [!DNL Privacy Service] processa solicitações de acesso, recusa de venda ou exclusão de seus dados pessoais, conforme definido pelas regulamentações legais e organizacionais de privacidade.
 
 Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados do cliente armazenados no [!DNL Data Lake].
+
+>[!NOTE]
+>
+>Este guia só aborda como fazer solicitações de privacidade para o Data Lake no Experience Platform. Se você também planeja fazer solicitações de privacidade para o armazenamento de dados do Perfil do cliente em tempo real, consulte o guia sobre o [processamento de solicitação de privacidade para Perfil](../profile/privacy.md) além deste tutorial.
+>
+>Para obter etapas sobre como fazer solicitações de privacidade para outros aplicativos Adobe Experience Cloud, consulte a [documentação do Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introdução
 
@@ -57,7 +62,7 @@ Há dois métodos de adicionar um descritor de identidade a um esquema de conjun
 
 ### Usar a interface {#identity-ui}
 
-Na interface do usuário [!DNL Experience Platform ], o espaço de trabalho **[!UICONTROL Schemas]** permite editar os esquemas XDM existentes. Para adicionar um descritor de identidade a um esquema, selecione o esquema na lista e siga as etapas para [definir um campo de esquema como um campo de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) no tutorial [!DNL Schema Editor].
+Na interface do usuário [!DNL Experience Platform ], o espaço de trabalho **[!UICONTROL Schemas]** permite editar seus esquemas XDM existentes. Para adicionar um descritor de identidade a um esquema, selecione o esquema na lista e siga as etapas para [definir um campo de esquema como um campo de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) no tutorial [!DNL Schema Editor].
 
 Depois de definir os campos apropriados no esquema como campos de identidade, você pode prosseguir para a próxima seção em [envio de solicitações de privacidade](#submit).
 
@@ -143,7 +148,7 @@ A seção a seguir descreve como fazer solicitações de privacidade para [!DNL 
 
 ### Uso da interface do usuário
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Profile]** em **[!UICONTROL Products]** para processar tarefas para dados armazenados no [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Profile]** em **[!UICONTROL Products]** para processar tarefas para dados armazenados em [!DNL Data Lake] ou [!DNL Real-time Customer Profile], respectivamente.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 

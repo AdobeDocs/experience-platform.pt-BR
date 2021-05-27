@@ -4,17 +4,16 @@ title: Tipo de dados do campo de consentimento genérico
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do campo de consentimento genérico.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 1%
+source-wordcount: '480'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Generic Consent Field] tipo de dados
+# [!UICONTROL Tipo ] de dados Campo de consentimento genérico
 
-[!UICONTROL Generic Consent Field] é um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de consentimento específica.
+[!UICONTROL Os ] campos de consentimento genérico são um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de consentimento específica.
 
 >[!NOTE]
 >
@@ -25,6 +24,8 @@ ht-degree: 1%
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `val` | String | A opção de consentimento fornecida pelo cliente para esse caso de uso. Consulte a tabela abaixo para obter os valores e as definições aceitos. |
+
+{style=&quot;table-layout:auto&quot;}
 
 A tabela a seguir descreve os valores aceitos para `val`:
 
@@ -39,6 +40,8 @@ A tabela a seguir descreve os valores aceitos para `val`:
 | `CP` | Cumprimento de uma obrigação legal | A recolha de dados para a finalidade especificada é necessária para cumprir as obrigações legais da empresa. |
 | `VI` | Interesse vital do indivíduo | A recolha de dados para o fim especificado é necessária para proteger os interesses vitais do indivíduo. |
 | `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para levar a cabo uma missão de interesse público ou no exercício da autoridade oficial. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

@@ -5,11 +5,10 @@ title: Endpoints da API de exportação/importação
 description: Os endpoints /export e /import na API do Registro de Schema permitem compartilhar recursos XDM entre as Organizações do IMS e as sandboxes.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 1%
+source-wordcount: '510'
+ht-degree: 2%
 
 ---
 
@@ -36,6 +35,8 @@ GET /rpc/export/{RESOURCE_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{RESOURCE_ID}` | O `meta:altId` ou `$id` codificado por URL do recurso XDM que você deseja exportar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

@@ -5,17 +5,16 @@ title: Tipo de dados de detalhes do navegador
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de detalhes do navegador.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 7%
+source-wordcount: '266'
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Browser details] tipo de dados
+# [!UICONTROL Tipo de dados de ] detalhes do navegador
 
-[!UICONTROL Browser details] é um tipo de dados XDM padrão que descreve detalhes relacionados a um navegador ou aplicativo.
+[!UICONTROL O navegador ] detalha um tipo de dados XDM padrão que descreve os detalhes relacionados a um navegador ou aplicativo.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -35,6 +34,8 @@ ht-degree: 7%
 | `version` | String | A versão do aplicativo ou do navegador. |
 | `viewportHeight` | Número inteiro | O tamanho vertical em pixels da janela em que o evento foi exibido. Para um evento de exibição da Web, essa é a altura da janela de visualização do navegador. |
 | `viewportWidth` | Número inteiro | O tamanho horizontal em pixels da janela em que o evento foi exibido. Para um evento de exibição da Web, essa é a largura da janela de visualização do navegador. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

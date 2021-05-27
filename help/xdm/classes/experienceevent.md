@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe XDM ExperienceEvent e práticas recomendadas para modelagem de dados de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1482'
 ht-degree: 1%
 
 ---
@@ -30,6 +30,8 @@ A própria classe [!DNL XDM ExperienceEvent] fornece vários campos relacionados
 | `producedBy` | Um valor de string que descreve o produtor ou a origem do evento. Esse campo pode ser usado para filtrar determinados produtores de eventos, se necessário para fins de segmentação.<br><br>Alguns valores sugeridos para esta propriedade são fornecidos na seção [ do ](#producedBy)apêndice. Este campo é um enum extensível, o que significa que você também pode usar suas próprias strings para representar produtores de eventos diferentes. |
 | `identityMap` | Campo de mapa que contém um conjunto de identidades namespacadas para o indivíduo ao qual o evento se aplica. Este campo é atualizado automaticamente pelo sistema conforme os dados de identidade são assimilados. Para utilizar corretamente este campo para [Real-time Customer Profile](../../profile/home.md), não tente atualizar manualmente o conteúdo do campo em suas operações de dados.<br /><br />Consulte a seção sobre mapas de identidade nas  [noções básicas da ](../schema/composition.md#identityMap) composição do schema para obter mais informações sobre seu caso de uso. |
 | `timestamp` | Um carimbo de data e hora ISO 8601 de quando o evento ocorreu, formatado de acordo com [RFC 3339, Seção 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Esse carimbo de data e hora deve ocorrer no passado. Consulte a seção abaixo em [timestamps](#timestamps) para obter as práticas recomendadas sobre o uso desse campo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Práticas recomendadas para modelagem de eventos
 
@@ -100,6 +102,8 @@ A tabela a seguir descreve os valores aceitos para `eventType`, juntamente com s
 | `delivery.feedback` | Eventos de feedback para um delivery, como um delivery de email. |
 | `message.feedback` | Eventos de feedback como enviado/rejeição/erro para mensagens enviadas a um cliente. |
 | `message.tracking` | Rastreamento de eventos como ações abertas/click/personalizadas em mensagens enviadas a um cliente. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Valores sugeridos para `producedBy` {#producedBy}
 

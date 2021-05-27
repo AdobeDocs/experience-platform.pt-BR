@@ -1,212 +1,50 @@
 ---
 keywords: Experience Platform, home, tópicos populares, dados de armazenamento em nuvem, dados de transmissão, streaming
 solution: Experience Platform
-title: Colete dados de transmissão usando conectores de origem e APIs
+title: Criar um fluxo de dados de fluxo para dados brutos usando a API do serviço de fluxo
 topic-legacy: overview
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para a plataforma usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-translation-type: tm+mt
-source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1111'
 ht-degree: 2%
 
 ---
 
-# Colete dados de transmissão usando conectores de origem e APIs
+# Crie um fluxo de dados para dados brutos usando a API [!DNL Flow Service]
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
-
-Este tutorial aborda as etapas para recuperar dados de um conector de origem de fluxo e trazê-los para [!DNL Experience Platform] usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial aborda as etapas para recuperar dados brutos de um conector de fonte de transmissão e trazê-los para o Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
-Este tutorial requer uma ID de conexão válida para um conector de transmissão. Se não tiver essas informações, consulte os seguintes tutoriais sobre como criar uma conexão de origem de transmissão antes de tentar este tutorial:
-
-- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
-- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../create/streaming/http.md)
-- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
-
-Este tutorial também requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    - [Noções básicas da composição](../../../../xdm/schema/composition.md) do schema: Saiba mais sobre os elementos básicos dos esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição do schema.
    - [Guia](../../../../xdm/api/getting-started.md) do desenvolvedor do Registro de Schema: Inclui informações importantes que você precisa saber para executar com sucesso chamadas para a API do Registro de Esquema. Isso inclui seu `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com especial atenção ao cabeçalho Accept e seus possíveis valores).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no  [!DNL Experience Platform].
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): A assimilação de streaming para  [!DNL Platform] fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o  [!DNL Experience Platform] em tempo real.
-- [Sandboxes](../../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): A assimilação de streaming para Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
+- [Sandboxes](../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para coletar dados de transmissão com êxito usando a API [!DNL Flow Service].
+### Uso de APIs da plataforma
 
-### Lendo exemplos de chamadas de API
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia sobre como [começar a usar APIs da plataforma](../../../../landing/api-guide.md).
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+### Criar uma conexão de origem {#source}
 
-### Coletar valores para cabeçalhos necessários
+Este tutorial também exige que você tenha uma ID de conexão de origem válida para um conector de transmissão. Se não tiver essas informações, consulte os seguintes tutoriais sobre como criar uma conexão de origem de transmissão antes de tentar este tutorial:
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
-
-- `Content-Type: application/json`
-
-## Criar uma conexão de origem {#source}
-
-Você pode criar uma conexão de origem fazendo uma solicitação POST para a API [!DNL Flow Service]. Uma conexão de origem consiste em uma ID de conexão, um caminho para o arquivo de dados de origem e uma ID de especificação de conexão.
-
-Para criar uma conexão de origem, você também deve definir um valor enum para o atributo de formato de dados.
-
-Use os seguintes valores enum para conectores baseados em arquivo:
-
-| Formato dos dados | Valor de enumeração |
-| ----------- | ---------- |
-| Delimitado | `delimited` |
-| JSON | `json` |
-| Parquet | `parquet` |
-
-Para todos os conectores baseados em tabela, defina o valor como `tabular`.
-
-**Formato da API**
-
-```http
-POST /sourceConnections
-```
-
-**Solicitação**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Test source connector for streaming data",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-        "connectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-        "description": "Test source connector for streaming data",
-        "data": {
-            "format": "delimited"
-        },
-            "connectionSpec": {
-            "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-            "version": "1.0"
-        }
-    }'
-```
-
-| Propriedade | Descrição |
-| --- | --- |
-| `providerId` | A ID do provedor do seu conector de transmissão. |
-| `connectionId` | A ID de conexão exclusiva do seu conector de transmissão. |
-| `connectionSpec.id` | A ID de especificação de conexão associada ao seu conector de transmissão específico. |
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão de origem recém-criada. Essa ID é necessária em uma etapa posterior para criar um fluxo de dados.
-
-```json
-{
-    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
-}
-```
-
-## Obter URL de ponto de extremidade de fluxo {#get-endpoint}
-
-Com a conexão de origem criada, agora é possível recuperar o URL do terminal de transmissão.
-
-**Formato da API**
-
-```http
-GET /flowservice/sourceConnections/{CONNECTION_ID}
-```
-
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | O valor `id` de sourceConnections que você criou anteriormente. |
-
-**Solicitação**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas sobre a conexão solicitada. O URL do ponto de extremidade de transmissão é criado automaticamente com a conexão e pode ser recuperado usando o valor `inletUrl` .
-
-```json
-{
-    "items": [
-        {
-            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-            "createdAt": 1617743929826,
-            "updatedAt": 1617743930363,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
-            "sandboxName": "prod",
-            "imsOrgId": "{IMS_ORG}",
-            "name": "Test source connector for streaming data",
-            "description": "Test source connector for streaming data",
-            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-            "state": "enabled",
-            "data": {
-                "format": "delimited",
-                "schema": null,
-                "properties": null
-            },
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "params": {
-                "sourceId": "Streaming raw data",
-                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
-                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
-                "dataType": "raw",
-                "name": "hgtest"
-            },
-            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
-            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
-            "inheritedAttributes": {
-                "baseConnection": {
-                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
-                    "connectionSpec": {
-                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                        "version": "1.0"
-                    }
-                }
-            }
-        }
-    ]
-}
-```
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados em [!DNL Platform], um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de target é usado para criar um conjunto de dados [!DNL Platform] no qual os dados de origem estão contidos. Esse esquema XDM de destino também estende a classe XDM [!DNL Individual Profile].
+Para que os dados de origem sejam usados na Platform, um schema de target deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O schema de destino é usado para criar um conjunto de dados da plataforma no qual os dados de origem estão contidos. Esse esquema XDM de destino também estende a classe XDM [!DNL Individual Profile].
 
-Um esquema XDM de destino pode ser criado executando uma solicitação de POST para a [API do Registro de Schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Para criar um esquema XDM de destino, faça uma solicitação de POST ao terminal `/schemas` da [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **Formato da API**
 
@@ -314,7 +152,7 @@ Uma resposta bem-sucedida retorna detalhes do schema recém-criado, incluindo se
 
 ## Criar um conjunto de dados de destino
 
-Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API do Serviço de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino dentro da carga útil.
+Com um esquema XDM de destino criado e seu `$id` exclusivo, agora é possível criar um conjunto de dados de destino para conter seus dados de origem. Para criar um conjunto de dados de destino, faça uma solicitação POST ao endpoint `dataSets` da [API do Serviço de Catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornecendo a ID do esquema de destino dentro da carga útil.
 
 **Formato da API**
 
@@ -367,9 +205,9 @@ Uma resposta bem-sucedida retorna uma matriz contendo a ID do conjunto de dados 
 
 ## Criar uma conexão de destino {#target-connection}
 
-Uma conexão target representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, você deve fornecer a ID de especificação de conexão fixa associada ao data lake. Essa ID de especificação de conexão é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+As conexões do Target criam e gerenciam uma conexão de destino com a Platform ou qualquer local onde os dados transferidos chegarão. As conexões do Target contêm informações sobre o destino de dados, o formato de dados e a ID de conexão do Target necessárias para criar um fluxo de dados. As instâncias de conexão do Target são específicas de um locatário e da Organização IMS.
 
-Agora você tem os identificadores exclusivos em um esquema de destino em um conjunto de dados de destino e a ID de especificação de conexão em um lago de dados. Usando esses identificadores, você pode criar uma conexão de destino usando a API [!DNL Flow Service] para especificar o conjunto de dados que conterá os dados de origem de entrada.
+Para criar uma conexão de destino, faça uma solicitação de POST ao endpoint `/targetConnections` da API [!DNL Flow Service]. Como parte da solicitação, você deve fornecer o formato de dados, o `dataSetId` recuperado na etapa anterior e a ID de especificação de conexão fixa vinculada a [!DNL Data Lake]. Essa ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato da API**
 
@@ -402,15 +240,16 @@ curl -X POST \
             }
         },
         "params": {
-        "dataSetId": "5f7187bac6d00f194fb937c0"
+            "dataSetId": "5f7187bac6d00f194fb937c0"
         }
     }'
 ```
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `params.dataSetId` | A ID do conjunto de dados de destino. |
-| `connectionSpec.id` | A ID de especificação de conexão usada para conexão com o Data Lake. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | A ID de especificação de conexão usada para se conectar ao [!DNL Data Lake]. Essa ID é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | O formato especificado dos dados que você está trazendo para [!DNL Data Lake]. |
+| `params.dataSetId` | A ID do conjunto de dados de destino recuperado na etapa anterior. |
 
 **Resposta**
 
@@ -425,19 +264,21 @@ Uma resposta bem-sucedida retorna o identificador exclusivo da nova conexão de 
 
 ## Criar um mapeamento {#mapping}
 
-Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o schema de destino ao qual o conjunto de dados de destino adere. Isso é feito executando uma solicitação POST para o Serviço de conversão com mapeamentos de dados definidos na carga da solicitação.
+Para que os dados de origem sejam assimilados em um conjunto de dados de destino, eles devem primeiro ser mapeados para o schema de destino ao qual o conjunto de dados de destino adere.
+
+Para criar um conjunto de mapeamento, faça uma solicitação de POST para o endpoint `mappingSets` da [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml), fornecendo o esquema XDM de destino `$id` e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 **Formato da API**
 
 ```http
-POST /conversion/mappingSets
+POST /mappingSets
 ```
 
 **Solicitação**
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -483,20 +324,21 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 }
 ```
 
-## Pesquisar especificações do fluxo de dados {#specs}
+## Recuperar uma lista de especificações do fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para [!DNL Platform]. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação do GET para a API [!DNL Flow Service]. As especificações de fluxo de dados são responsáveis pela coleta de dados de um conector de transmissão.
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a plataforma. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação do GET para a API [!DNL Flow Service].
+
 **Formato da API**
 
 ```http
-GET /flowSpecs?property=name=="Steam data with transformation"
+GET /flowSpecs
 ```
 
 **Solicitação**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name=="Steam data with transformation"' \
+    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
@@ -504,23 +346,26 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dados responsável por trazer os dados do seu conector de transmissão para [!DNL Platform]. Essa ID é necessária na próxima etapa para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna uma lista de especificações de fluxo de dados. A ID de especificação do fluxo de dados que você precisa recuperar para criar um fluxo de dados usando qualquer um dos [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] ou [!DNL Google PubSub], é `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
     "items": [
         {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "name": "Steam data with transformation",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
+            "name": "Stream data with optional transformation",
             "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
             "version": "1.0",
             "sourceConnectionSpecIds": [
-                "d27d4907-7351-47dd-bbc2-05a04365703d",
-                "51ae16c2-bdad-42fd-9fce-8d5dfddaf140",
-                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb"
+                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "86043421-563b-46ec-8e6c-e23184711bf6",
+                "70116022-a743-464a-bbfe-e226a7f8210c"
             ],
             "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                "db4fe783-ef79-4a12-bda9-32b2b1bc3b2c"
             ],
             "transformationSpecs": [
                 {
@@ -528,23 +373,18 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dad
                     "spec": {
                         "$schema": "http://json-schema.org/draft-07/schema#",
                         "type": "object",
-                        "description": "defines various params required for different mapping from Raw to XDM",
+                        "description": "defines various params required for different mapping from source to target",
                         "properties": {
                             "mappingId": {
                                 "type": "string"
                             }
-                        },
-                        "required": [
-                            "mappingId"
-                        ]
+                        }
                     }
                 }
             ],
             "attributes": {
                 "uiAttributes": {
                     "apiFeatures": {
-                        "deleteSupported": false,
-                        "updateSupported": false,
                         "flowRunsSupported": false
                     }
                 }
@@ -569,7 +409,7 @@ Uma resposta bem-sucedida retorna os detalhes da especificação de fluxo de dad
                     }
                 ]
             }
-        }
+        },
     ]
 }
 ```
@@ -604,7 +444,7 @@ curl -X POST \
         "name": "Streaming dataflow",
         "description": "Streaming dataflow",
         "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
             "version": "1.0"
         },
         "sourceConnectionIds": [
@@ -643,65 +483,9 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 }
 ```
 
-## Postando dados brutos a serem assimilados {#ingest-data}
-
-Depois de criar o fluxo, é possível enviar a mensagem JSON para o endpoint de transmissão criado anteriormente.
-
-**Formato da API**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| Parâmetro | Descrição |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | O valor `id` da conexão de transmissão recém-criada. |
-
-**Solicitação**
-
-A solicitação de exemplo assimila dados brutos no endpoint de transmissão que foi criado anteriormente.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male"
-      "birthday": {
-          "year": 1984
-          "month": 6
-          "day": 9
-      }
-  }'
-```
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das informações recém-assimiladas.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | A ID da conexão de transmissão criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
-| `receivedTimeMs`: Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
-
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou um fluxo de dados para coletar dados de transmissão do seu conector de transmissão. Os dados recebidos agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou um fluxo de dados para coletar dados de transmissão do seu conector de transmissão. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do perfil do cliente em tempo real](../../../../profile/home.md)
 - [Visão geral do Data Science Workspace](../../../../data-science-workspace/home.md)

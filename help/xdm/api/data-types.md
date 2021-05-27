@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Ponto de extremidade da API de tipos de dados
 description: O endpoint /datatypes na API do Registro de Schema permite gerenciar programaticamente os tipos de dados XDM no aplicativo de experiência.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 2%
+source-wordcount: '1172'
+ht-degree: 4%
 
 ---
 
@@ -39,6 +38,8 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | O contêiner do qual você deseja recuperar tipos de dados: `global` para tipos de dados criados pelo Adobe ou `tenant` para tipos de dados pertencentes à sua organização. |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte o [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera uma lista de tipos de dados do contêiner `tenant`, usando um parâmetro de consulta `orderby` para classificar os tipos de dados pelo atributo `title`.
@@ -59,6 +60,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. O
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Retorna o tipo de dados JSON completo para cada recurso, com `$ref` e `allOf` originais incluídos. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -109,6 +112,8 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | O contêiner que contém o tipo de dados que você deseja recuperar: `global` para um tipo de dados criado por Adobe ou `tenant` para um tipo de dados pertencente à sua organização. |
 | `{DATA_TYPE_ID}` | O `meta:altId` ou `$id` codificado por URL do tipo de dados que você deseja pesquisar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera um tipo de dados de acordo com seu valor `meta:altId` fornecido no caminho.
@@ -132,6 +137,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. T
 | `application/vnd.adobe.xed-notext+json; version=1` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` resolvidas, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` resolvidos, incluíam descritores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -344,6 +351,8 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | O `meta:altId` ou `$id` codificado por URL do tipo de dados que você deseja regravar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir reescreve um tipo de dados existente, adicionando um novo campo `floorSize`.
@@ -472,6 +481,8 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{DATA_TYPE_ID}` | O URL codificado `$id` URI ou `meta:altId` do tipo de dados que você deseja atualizar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -609,6 +620,8 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{DATA_TYPE_ID}` | O URL codificado `$id` URI ou `meta:altId` do tipo de dados que você deseja excluir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

@@ -5,22 +5,21 @@ title: Grupo de Campos do Esquema Detalhes do Contato Pessoal
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes do contato pessoal .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-translation-type: tm+mt
-source-git-commit: 4755f9b7666efd8354a5f15aeed40a7da4a06efe
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 6%
+source-wordcount: '169'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL Personal Contact Details] grupo de campos de esquema
+# [!UICONTROL Grupo de campos ] Detalhes do Contato Pessoal
 
 >[!NOTE]
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Personal Contact Details] é um grupo de campos de esquema padrão para a  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe que descreve as informações de contato de uma pessoa individual.
+[!UICONTROL Os ] Detalhes do contato pessoal são um grupo de campos de esquema padrão para a  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe que descreve as informações de contato de uma pessoa individual.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -31,6 +30,8 @@ ht-degree: 6%
 | `homePhone` | [Número de telefone](../../data-types/phone-number.md) | Descreve o número de telefone residencial da pessoa. |
 | `mobilePhone` | [Número de telefone](../../data-types/phone-number.md) | Descreve o número de telefone celular da pessoa. |
 | `personalEmail` | [Endereço de email](../../data-types/email-address.md) | Descreve o endereço de email da pessoa. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 

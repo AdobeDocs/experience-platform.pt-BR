@@ -4,17 +4,16 @@ title: Tipo de Dados do Campo de Preferência de Marketing Genérico
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do Campo de Preferência de Marketing Genérico.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 1%
+source-wordcount: '541'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Generic Marketing Preference Field] tipo de dados
+# [!UICONTROL Tipo de dados de ] Campos de Preferência de Marketing Genérico
 
-[!UICONTROL Generic Marketing Preference Field] é um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de marketing específica.
+[!UICONTROL Os ] Campos genéricos de preferência de marketing são um tipo de dados XDM padrão que descreve a seleção de um cliente para uma preferência de marketing específica.
 
 >[!NOTE]
 >
@@ -30,6 +29,8 @@ ht-degree: 1%
 | `time` | DateTime | Um carimbo de data e hora ISO 8601 de quando a preferência de marketing foi alterada, se aplicável. |
 | `val` | String | A escolha de preferência fornecida pelo cliente para este caso de uso de marketing. Consulte a tabela abaixo para obter os valores e as definições aceitos. |
 
+{style=&quot;table-layout:auto&quot;}
+
 A tabela a seguir descreve os valores aceitos para `val`:
 
 | Valor | Title | Descrição |
@@ -43,6 +44,8 @@ A tabela a seguir descreve os valores aceitos para `val`:
 | `CP` | Cumprimento de uma obrigação legal | A recolha de dados para a finalidade especificada é necessária para cumprir as obrigações legais da empresa. |
 | `VI` | Interesse vital do indivíduo | A recolha de dados para o fim especificado é necessária para proteger os interesses vitais do indivíduo. |
 | `PI` | Interesse público | A recolha de dados para o fim especificado é necessária para levar a cabo uma missão de interesse público ou no exercício da autoridade oficial. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

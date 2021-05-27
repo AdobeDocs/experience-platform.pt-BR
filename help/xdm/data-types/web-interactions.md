@@ -5,26 +5,27 @@ title: Tipo de Dados de Interação da Web
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados do Experience Data Model (XDM) de interação da Web.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 2%
+source-wordcount: '190'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Web interaction] tipo de dados
+# [!UICONTROL Tipo ] de dados de interação da Web
 
-[!UICONTROL Web interaction] é um tipo de dados padrão do Experience Data Model (XDM) que descreve informações sobre interações que aconteceram em uma página da Web depois que o carregamento da página inicial foi concluído. Destina-se a gravar interações em aplicativos da Web avançados que não acionam um novo carregamento de página, como aplicativos da Web de página única (SPA).
+[!UICONTROL A interação ] com a Web é um tipo de dados padrão do Experience Data Model (XDM) que descreve informações sobre interações que aconteceram em uma página da Web depois que o carregamento da página inicial foi concluído. Destina-se a gravar interações em aplicativos da Web avançados que não acionam um novo carregamento de página, como aplicativos da Web de página única (SPA).
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `linkClicks` | [[!UICONTROL Measure]](./measure.md) | Uma medida que rastreia o clique de um link da Web. |
+| `linkClicks` | [[!UICONTROL Medição]](./measure.md) | Uma medida que rastreia o clique de um link da Web. |
 | `URL` | String | O link ou URL real usado para essa interação da Web. |
 | `name` | String | O nome normativo usado para este link da Web. Isso é usado para fins de classificação. |
 | `type` | String | O tipo de link. Essa propriedade deve ser igual a um dos seguintes valores de enumeração: <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 

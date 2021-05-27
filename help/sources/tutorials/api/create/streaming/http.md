@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-translation-type: tm+mt
-source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -416,3 +415,59 @@ Se o cabeçalho `Authorization` não estiver presente ou um token de acesso inv�
     }
 }
 ```
+
+### Postar dados brutos a serem assimilados na plataforma {#ingest-data}
+
+Depois de criar o fluxo, é possível enviar a mensagem JSON para o endpoint de transmissão criado anteriormente.
+
+**Formato da API**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | O valor `id` da conexão de transmissão recém-criada. |
+
+**Solicitação**
+
+A solicitação de exemplo assimila dados brutos no endpoint de transmissão que foi criado anteriormente.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das informações recém-assimiladas.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Propriedade | Descrição |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | A ID da conexão de transmissão criada anteriormente. |
+| `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
+| `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |

@@ -5,11 +5,10 @@ title: Ponto de Extremidade da API de Esquemas
 description: O endpoint /schemas na API do Registro de Schema permite gerenciar programaticamente os esquemas XDM no aplicativo de experiência.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 2%
+source-wordcount: '1458'
+ht-degree: 4%
 
 ---
 
@@ -40,6 +39,8 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | O contêiner que contém os esquemas que você deseja recuperar: `global` para esquemas criados pelo Adobe ou `tenant` para esquemas de propriedade de sua organização. |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados por. Consulte o [documento de apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera uma lista de schemas do contêiner `tenant`, usando um parâmetro de consulta `orderby` para classificar os resultados pelo seu atributo `title`.
@@ -60,6 +61,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. O
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Retorna um breve resumo de cada recurso. Este é o cabeçalho recomendado para listar recursos. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Retorna o esquema JSON completo para cada recurso, com `$ref` e `allOf` originais incluídos. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -110,6 +113,8 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | O container que hospeda o schema que você deseja recuperar: `global` para um esquema criado por Adobe ou `tenant` para um esquema pertencente à sua organização. |
 | `{SCHEMA_ID}` | O `meta:altId` ou `$id` codificado por URL do esquema que você deseja pesquisar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação a seguir recupera um esquema especificado pelo seu valor `meta:altId` no caminho.
@@ -133,6 +138,8 @@ O formato de resposta depende do cabeçalho `Accept` enviado na solicitação. T
 | `application/vnd.adobe.xed-notext+json; version=1` | Simples com `$ref` e `allOf`, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` resolvidas, sem títulos ou descrições. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` resolvidos, incluíam descritores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Resposta**
 
@@ -229,6 +236,8 @@ curl -X POST \
 | --- | --- |
 | `allOf` | Uma matriz de objetos, com cada objeto referindo-se a uma classe ou grupo de campos cujos campos o esquema implementa. Cada objeto contém uma única propriedade (`$ref`) cujo valor representa `$id` da classe ou grupo de campos que o novo schema implementará. Uma classe deve ser fornecida, com zero ou mais grupos de campo adicionais. No exemplo acima, o único objeto na matriz `allOf` é a classe do esquema. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna o status HTTP 201 (Created) e uma carga útil contendo os detalhes do schema recém-criado, incluindo `$id`, `meta:altId` e `version`. Esses valores são somente leitura e são atribuídos pelo [!DNL Schema Registry].
@@ -287,6 +296,8 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SCHEMA_ID}` | O `meta:altId` ou `$id` codificado por URL do esquema que você deseja regravar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -368,6 +379,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SCHEMA_ID}` | O URL codificado `$id` URI ou `meta:altId` do esquema que você deseja atualizar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 
@@ -458,6 +471,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | O URL codificado `$id` URI ou `meta:altId` do esquema que você deseja ativar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitação**
 
 A solicitação de exemplo abaixo adiciona uma matriz `meta:immutableTags` a um schema existente, dando à matriz um valor de sequência único `union` para habilitá-la para uso no Perfil.
@@ -538,6 +553,8 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SCHEMA_ID}` | O URL codificado `$id` URI ou `meta:altId` do esquema que você deseja excluir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitação**
 

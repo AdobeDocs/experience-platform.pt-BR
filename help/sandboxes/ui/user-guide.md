@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Sandbox
 topic-legacy: user guide
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,28 @@ Na janela de confirmação final, digite o nome da sandbox na caixa de diálogo 
 
 ![redefinir confirmação](../images/ui/reset-confirm.png)
 
+Após alguns instantes, uma caixa de confirmação aparecerá na parte inferior da tela para confirmar uma redefinição bem-sucedida.
+
+![success](../images/ui/success.png)
+
+### Mensagens de erro
+
+Uma sandbox de produção padrão que contém dados CDA não pode ser redefinida e retorna o seguinte erro.
+
+![cda](../images/ui/cda.png)
+
+Uma sandbox de produção padrão que contém dados PBD também não pode ser redefinida e retorna o seguinte erro.
+
+![pbd](../images/ui/pbd.png)
+
+Uma sandbox de produção padrão que contém dados para CDA e PBD também não pode ser redefinida e retorna o seguinte erro.
+
+![both](../images/ui/both.png)
+
+Uma sandbox de produção usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o Audience Core Service também não pode ser redefinida e retorna o seguinte erro.
+
+![seg](../images/ui/seg.png)
+
 ## Excluir uma sandbox
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Uma caixa de diálogo é exibida, solicitando que você confirme sua escolha. Se
 Na janela de confirmação final, digite o nome da sandbox na caixa de diálogo e selecione **[!UICONTROL Continuar]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Uma sandbox de produção usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o Audience Core Service não pode ser excluída e retorna o seguinte erro.
+
+![seg](../images/ui/seg.png)
 
 ## Próximas etapas
 

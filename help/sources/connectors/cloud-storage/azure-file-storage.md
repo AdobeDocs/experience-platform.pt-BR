@@ -5,19 +5,14 @@ title: Visão Geral do Conector de Origem de Armazenamento de Ficheiros do Azure
 topic-legacy: overview
 description: Saiba como conectar o Armazenamento de Arquivos do Azure à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-# (Beta) Conector de Armazenamento de Arquivos do Azure
-
->[!NOTE]
->
->O conector do Armazenamento de Arquivos do Azure está em beta. Consulte a [Visão geral das Fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
+# Conector de Armazenamento de Arquivos do Azure
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform] e [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 

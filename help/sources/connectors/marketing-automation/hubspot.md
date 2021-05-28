@@ -5,19 +5,14 @@ title: Visão geral do conector de origem do HubSpot
 topic-legacy: overview
 description: Saiba como conectar o HubSpot ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL HubSpot]
-
->[!NOTE]
->
->O conector [!DNL HubSpot] está em beta. Consulte a [Visão geral das Fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
+# [!DNL HubSpot] conector
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

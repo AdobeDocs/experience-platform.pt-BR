@@ -5,19 +5,14 @@ title: Visão geral do conector de origem GreenPlum
 topic-legacy: overview
 description: Saiba como conectar o GreenPlum ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL GreenPlum]
-
->[!NOTE]
->
->O conector [!DNL GreenPlum] está em beta. Consulte a [Visão geral das Fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
+# [!DNL GreenPlum] conector
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de banco de dados como [!DNL Microsoft], MySQL e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 

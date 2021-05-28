@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o GreenPlum ao Adobe Experience Platform usando a API do Serviço de fluxo.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '533'
 ht-degree: 2%
 
 ---
 
 # Crie uma conexão de origem [!DNL GreenPlum] usando a API [!DNL Flow Service]
-
->[!NOTE]
->
->O conector [!DNL GreenPlum] está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 

@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Azure synapse Analytics ao Adobe Experience Platform usando a API de Serviço de Fluxo.
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
 
 # Crie uma conexão de origem [!DNL Azure Synapse Analytics] usando a API [!DNL Flow Service]
-
->[!NOTE]
->
->O conector do Azure synapse Analytics está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
 [!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
 

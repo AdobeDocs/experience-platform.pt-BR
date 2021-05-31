@@ -3,10 +3,10 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os fluxos de dados. '
 keywords: configuração, datastreams, datastreamId, edge, edge configuration id, Environment Settings, edgeConfigId, identidade, sincronização de id ativada, ID do contêiner de sincronização de ID, sandbox, Streaming Inlet, conjunto de dados de eventos, target, código do cliente, Token de propriedade, Target Environment ID, Destinos de cookies, destinos de url, Configurações do Analytics Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5642fa155d487982f01d25fa765bb36ad5c3bb21
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 2%
+source-wordcount: '904'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Os datastreams podem ser criados no Adobe [!DNL Experience Platform Launch] usan
 
 >[!NOTE]
 >
->A ferramenta de configuração de conjuntos de dados está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Experience Platform Launch] como um gerenciador de tags. Além disso, os usuários exigem permissões de desenvolvimento em [!DNL Experience Platform Launch]. Consulte o artigo [Permissões do usuário](https://docs.adobe.com/content/help/pt-BR/launch/using/reference/admin/user-permissions.html) na documentação [!DNL Experience Platform Launch] para obter mais detalhes.
+>A ferramenta de configuração de conjuntos de dados está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Experience Platform Launch] como um gerenciador de tags. Além disso, os usuários exigem permissões de desenvolvimento em [!DNL Experience Platform Launch]. Consulte o artigo [Permissões do usuário](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) na documentação [!DNL Experience Platform Launch] para obter mais detalhes.
 
 Crie um armazenamento de dados clicando em **[!UICONTROL New Datastream]** na área superior direita da tela. Depois de fornecer um nome e uma descrição, você é solicitado a fornecer as configurações padrão para cada ambiente. As configurações disponíveis são detalhadas abaixo.
 
@@ -35,17 +35,17 @@ A ID usada no SDK como `edgeConfigId` é uma ID composta que especifica a config
 
 Abaixo estão as configurações disponíveis para cada ambiente de configuração. A maioria das seções pode ser ativada ou desativada. Quando desativadas, as configurações são salvas, mas não estão ativas.
 
-## [!UICONTROL Third Party ID] Configurações
+## [!UICONTROL Configurações ] IDS de terceiros
 
-A seção ID de terceiros é a única seção que está sempre ativa. Ele tem duas configurações disponíveis: &quot;[!UICONTROL Third Party ID Sync Enabled]&quot; e &quot;[!UICONTROL Third Party ID Sync Container ID]&quot;.
+A seção ID de terceiros é a única seção que está sempre ativa. Ele tem duas configurações disponíveis: &quot;[!UICONTROL Sincronização de ID de terceiros ativada]&quot; e &quot;[!UICONTROL ID do contêiner de sincronização de ID de terceiros]&quot;.
 
 ![Seção de identidade da interface do usuário de configuração](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL Third Party ID Sync Enabled]
+### [!UICONTROL Sincronização de ID de terceiros ativada]
 
 Controla se o SDK executa ou não sincronizações de identidade com parceiros de terceiros.
 
-### [!UICONTROL Third Party ID Sync Container ID]
+### [!UICONTROL ID do contêiner de sincronização de ID de terceiros]
 
 As sincronizações de ID podem ser agrupadas em contêineres para permitir que sincronizações de ID diferentes sejam executadas em momentos diferentes. Isso controla qual contêiner de sincronizações de ID é executado para uma determinada ID de configuração.
 
@@ -59,13 +59,13 @@ As configurações listadas aqui permitem enviar dados para o Adobe Experience P
 
 As sandboxes são locais na Adobe Experience Platform que permitem aos clientes isolar os dados e as implementações uns dos outros. Para obter mais detalhes sobre como elas funcionam, consulte a [documentação de sandboxes](../../sandboxes/home.md).
 
-### [!UICONTROL Streaming Inlet]
+### [!UICONTROL Entrada de transmissão]
 
 Uma entrada de transmissão é uma fonte HTTP no Adobe Experience Platform. Eles são criados na guia &quot;[!UICONTROL Sources]&quot; no Adobe Experience Platform como uma API HTTP.
 
-### [!UICONTROL Event Dataset]
+### [!UICONTROL Conjunto de dados do evento]
 
-Os datastreams suportam o envio de dados para conjuntos de dados que têm um esquema de classe [!UICONTROL Experience Event].
+Os datastreams suportam o envio de dados para conjuntos de dados que têm um esquema da classe [!UICONTROL Experience Event].
 
 ## Configurações do Adobe Target
 
@@ -77,19 +77,19 @@ Para configurar o Adobe Target, você deve fornecer um código de cliente. Os ou
 >
 >A Organização associada ao código de cliente deve corresponder à organização em que a ID de configuração é criada.
 
-### [!UICONTROL Client Code]
+### [!UICONTROL Código do cliente]
 
-A ID exclusiva de uma conta de destino. Para encontrar isso, você pode navegar até [!UICONTROL Adobe Target] > [!UICONTROL Setup] > [!UICONTROL Implementation] > [!UICONTROL edit settings] ao lado do botão [!UICONTROL download] para [!UICONTROL at.js] ou [!UICONTROL mbox.js]
+A ID exclusiva de uma conta de destino. Para encontrar isso, você pode navegar até [!UICONTROL Adobe Target] > [!UICONTROL Configuração] [!UICONTROL Implementação] > [!UICONTROL editar configurações] ao lado do botão [!UICONTROL baixar] para [!UICONTROL at.js] ou &lt;a1 2/>mbox.js][!UICONTROL 
 
-### [!UICONTROL Property Token]
+### [!UICONTROL Token de propriedade]
 
-[!DNL Target] O permite que os clientes controlem permissões por meio do uso de propriedades do . Os detalhes podem ser encontrados na seção [Permissões empresariais](https://docs.adobe.com/content/help/pt-BR/target/using/administer/manage-users/enterprise/properties-overview.html) da documentação [!DNL Target].
+[!DNL Target] O permite que os clientes controlem permissões por meio do uso de propriedades do . Os detalhes podem ser encontrados na seção [Permissões empresariais](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) da documentação [!DNL Target].
 
-O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
+O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL configuração] > [!UICONTROL Propriedades]
 
-### [!UICONTROL Target Environment ID]
+### [!UICONTROL ID do ambiente do Target]
 
-[](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) Os ambientes no Adobe Target ajudam você a gerenciar a implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
+[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Os ambientes no Adobe Target ajudam você a gerenciar a implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com cada ambiente.
 
 O Adobe recomenda definir isso de forma diferente para cada um dos ambientes de armazenamento de dados `dev`, `stage` e `prod` para simplificar as coisas. No entanto, se você já tiver ambientes Adobe Target definidos, poderá usá-los.
 
@@ -99,13 +99,13 @@ Tudo o que é necessário para enviar dados para o Adobe Audience Manager é hab
 
 ![Bloco de configurações do Adobe Audience Manager](../../assets/edge_configuration_aam.png)
 
-### [!UICONTROL Cookie Destinations Enabled]
+### [!UICONTROL Destinos de cookies ativados]
 
-Permite que o SDK compartilhe informações do segmento por meio de [Destinos de cookies](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) de [!DNL Audience Manager].
+Permite que o SDK compartilhe informações do segmento por meio de [Destinos de cookies](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) de [!DNL Audience Manager].
 
-### [!UICONTROL URL Destinations Enabled]
+### [!UICONTROL Destinos de URL ativados]
 
-Permite que o SDK compartilhe informações do segmento por meio de [URL Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Eles são configurados em [!DNL Audience Manager].
+Permite que o SDK compartilhe informações do segmento por meio de [URL Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Eles são configurados em [!DNL Audience Manager].
 
 ## Configurações do Adobe Analytics
 
@@ -113,6 +113,6 @@ Controla se os dados são enviados para o Adobe Analytics. Detalhes adicionais e
 
 ![Bloco de configurações do Adobe Analytics](../../assets/edge_configuration_aa.png)
 
-### [!UICONTROL Report Suite ID]
+### [!UICONTROL ID de conjunto de relatórios]
 
 O conjunto de relatórios pode ser encontrado na seção Admin do Adobe Analytics em [!UICONTROL Admin > ReportSuites]. Se vários conjuntos de relatórios forem especificados, os dados serão copiados para cada conjunto de relatórios.

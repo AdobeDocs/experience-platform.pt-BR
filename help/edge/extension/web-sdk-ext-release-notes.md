@@ -1,19 +1,18 @@
 ---
-title: Notas de versão da extensão do SDK da Web da Adobe Experience Platform
+title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
 seo-description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 79%
+source-wordcount: '1130'
+ht-degree: 78%
 
 ---
 
+# Notas de versão da extensão do Adobe Experience Platform Web SDK
 
-# Notas de versão da extensão do SDK da Web da Adobe Experience Platform
-
-Este documento aborda as notas de versão da extensão Adobe Experience Platform Web SDK para o Adobe Experience Platform Launch. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://docs.adobe.com/content/help/pt-BR/experience-platform/edge/release-notes.html).
+Este documento aborda as notas de versão da extensão Adobe Experience Platform Web SDK para Adobe Experience Platform Launch. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## 9 de março de 2020
 
@@ -24,7 +23,7 @@ Contém a versão 2.4.0 da biblioteca de SDK da Web da Adobe Experience Platform
 * Adição da caixa de seleção [&quot;descarregamento de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) para Enviar interface do usuário de ação de evento.
 * Adição de suporte para uma opção `out` quando [configurar o consentimento padrão](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que descarta todos os eventos até que o consentimento seja recebido (a opção `pending` existente enfileira os eventos e os envia depois que o consentimento é recebido).
 * Adição de uma dica de ferramenta ao campo de consentimento padrão.
-* Adição de suporte para [Padrão de Consentimento 2.0 da Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Adição de suporte para [Adobe Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * Um erro melhor agora é exibido na interface do usuário do elemento de dados Objeto XDM se o token de acesso do usuário for inválido ou provisionado incorretamente.
 * Correção de um erro de origem cruzada (que não afeta a operação da extensão) que era exibido no console do desenvolvedor do navegador ao visualizar um elemento de dados Objeto XDM.
 
@@ -70,7 +69,7 @@ Contém a versão 2.3.0 da biblioteca de SDK da Web da Adobe Experience Platform
 #### Recursos
 
 * Nova alteração: remove a ação `syncIdentity` e oferece suporte à transmissão dessas IDs na ação `sendEvent`. Desative qualquer regra existente que use essa ação antes de atualizar a extensão.
-* Atualizar para Alloy v. 2.1.0 ([Notas de versão](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html)).
+* Atualizar para Alloy v. 2.1.0 ([Notas de versão](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)).
 * Suporte ao Padrão de consentimento IAB 2.0 na ação `setConsent`.
 * Suporte à substituição da ID do conjunto de dados na ação `sendEvent`.
 * Adiciona um novo Elemento de dados do tipo `IdentityMap`, que pode ser usado para preencher a entrada `identityMap` no Elemento de dados do objeto XDM (agora ativado) e na ação `setConsent`.

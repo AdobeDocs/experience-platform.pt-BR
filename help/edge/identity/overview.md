@@ -1,16 +1,15 @@
 ---
-title: Recuperar Experience Cloud IDs usando o SDK da Web da Adobe Experience Platform
-description: Saiba como recuperar Adobe Experience Cloud IDs (ECIDs) usando o SDK da Web da Adobe Experience Platform.
+title: Recuperar IDs do Experience Cloud usando o SDK da Web da Adobe Experience Platform
+description: Saiba como recuperar Adobe Experience Cloud IDs (ECIDs) usando o Adobe Experience Platform Web SDK.
 seo-description: Saiba Como Obter A Adobe Experience Cloud Id.
 keywords: Identidade, Identidade Primária, Serviço de Identidade, Identidade de Terceiros, Migração de ID, ID de Visitante, identidade de terceiros, thirdPartyCookiesEnabled, idMigrationEnabled, getIdentity, Identidades de Sincronização, syncIdentity, sendEvent, identityMap, primário, ecid, Namespace de Identidade, id de namespace, authenticationState, hashEnabled;
-translation-type: tm+mt
-source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '961'
 ht-degree: 3%
 
 ---
-
 
 # Recuperar Adobe Experience Cloud IDs
 
@@ -18,7 +17,7 @@ O SDK da Web da Adobe Experience Platform aproveita o [Adobe Identity Service](.
 
 ## Identidade própria
 
-O [!DNL Identity Service] armazena a identidade em um cookie em um domínio próprio. O [!DNL Identity Service] tenta definir o cookie usando um cabeçalho HTTP no domínio. Se isso falhar, o [!DNL Identity Service] voltará à configuração de cookies por meio do Javascript. A Adobe recomenda configurar um CNAME para garantir que os cookies não sejam limitados por restrições de ITP do lado do cliente.
+O [!DNL Identity Service] armazena a identidade em um cookie em um domínio próprio. O [!DNL Identity Service] tenta definir o cookie usando um cabeçalho HTTP no domínio. Se isso falhar, o [!DNL Identity Service] voltará à configuração de cookies por meio do Javascript. O Adobe recomenda configurar um CNAME para garantir que os cookies não sejam limitados por restrições de ITP do lado do cliente.
 
 ## Identidade de terceiros
 
@@ -30,19 +29,19 @@ Ao migrar da API de visitante, você também pode migrar cookies AMCV existentes
 
 * Quando algumas páginas de um domínio estão usando a API do visitante e outras estão usando esse SDK. Para ser compatível com esse caso, o SDK lê os cookies AMCV existentes e grava um novo cookie com a ECID existente. Além disso, o SDK grava cookies AMCV para que, se a ECID for obtida primeiro em uma página instrumentada com o SDK, as páginas subsequentes instrumentadas com a API do visitante tenham a mesma ECID.
 * Quando o SDK da Web da Adobe Experience Platform é configurado em uma página que também tem a API do visitante. Para ser compatível com esse caso, se o cookie AMCV não estiver definido, o SDK procura a API do visitante na página e a chama para obter a ECID.
-* Quando todo o site estiver usando o SDK da Web da Adobe Experience Platform e não tiver a API de visitante, é útil migrar as ECIDs para que as informações de visitante de retorno sejam retidas. Depois que o SDK é implantado com `idMigrationEnabled` por um período de tempo para que a maioria dos cookies do visitante seja migrada, a configuração pode ser desativada.
+* Quando o site inteiro estiver usando o SDK da Web da Adobe Experience Platform e não tiver a API de visitante, é útil migrar as ECIDs para que as informações de visitante de retorno sejam retidas. Depois que o SDK é implantado com `idMigrationEnabled` por um período de tempo para que a maioria dos cookies do visitante seja migrada, a configuração pode ser desativada.
 
 ## Atualização de características da migração
 
-Quando dados formatados em XDM são enviados para o Audience Manager, esses dados precisam ser convertidos em sinais ao migrar. Suas características precisarão ser atualizadas para refletir as novas chaves fornecidas pelo XDM. Esse processo é facilitado usando a [ferramenta BAAAM](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que o Audience Manager criou.
+Quando os dados formatados do XDM são enviados para o Audience Manager, esses dados precisam ser convertidos em sinais ao migrar. Suas características precisarão ser atualizadas para refletir as novas chaves fornecidas pelo XDM. Esse processo é facilitado usando a [ferramenta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que o Audience Manager criou.
 
 ## Encaminhamento pelo lado do servidor
 
-Se você tiver o encaminhamento pelo lado do servidor habilitado e estiver usando `appmeasurement.js`. e `visitor.js` você pode manter o recurso de encaminhamento pelo lado do servidor habilitado e isso não causará problemas. No back-end, a Adobe busca qualquer segmento do AAM e os adiciona à chamada para o Analytics. Se a chamada para o Analytics contiver esses segmentos, o Analytics não chamará o Audience Manager para encaminhar dados, de modo que não há coleta de dados duplicada. Também não há necessidade de Dica de localização ao usar o SDK da Web, pois os mesmos endpoints de segmentação são chamados no back-end.
+Se você tiver o encaminhamento pelo lado do servidor habilitado e estiver usando `appmeasurement.js`. e `visitor.js` você pode manter o recurso de encaminhamento pelo lado do servidor habilitado e isso não causará problemas. No back-end, o Adobe busca qualquer segmento de AAM e os adiciona à chamada para o Analytics. Se a chamada para o Analytics contiver esses segmentos, o Analytics não chamará o Audience Manager para encaminhar dados, de modo que não haja nenhuma coleta de dados dupla. Também não há necessidade de Dica de localização ao usar o SDK da Web, pois os mesmos endpoints de segmentação são chamados no back-end.
 
 ## Recuperar a ID de visitante e a ID de região
 
-Se quiser usar a ID de visitante exclusiva, use o comando `getIdentity`. `getIdentity` retorna a ECID existente para o visitante atual. Para visitantes pela primeira vez que ainda não têm uma ECID, esse comando gera uma nova ECID. `getIdentity` também retorna a ID da região do visitante. Consulte o [Guia do usuário do Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) para obter mais informações.
+Se quiser usar a ID de visitante exclusiva, use o comando `getIdentity`. `getIdentity` retorna a ECID existente para o visitante atual. Para visitantes pela primeira vez que ainda não têm uma ECID, esse comando gera uma nova ECID. `getIdentity` também retorna a ID da região do visitante. Consulte o [Guia do Usuário do Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) para obter mais informações.
 
 >[!NOTE]
 >
@@ -91,7 +90,7 @@ alloy("sendEvent", {
 });
 ```
 
-Cada propriedade dentro de `identityMap` representa identidades pertencentes a um [namespace de identidade](../../identity-service/namespaces.md) específico. O nome da propriedade deve ser o símbolo do namespace de identidade, que pode ser encontrado listado na interface do usuário da Adobe Experience Platform em &quot;[!UICONTROL Identities]&quot;. O valor da propriedade deve ser uma matriz de identidades pertencentes a esse namespace de identidade.
+Cada propriedade dentro de `identityMap` representa identidades pertencentes a um [namespace de identidade](../../identity-service/namespaces.md) específico. O nome da propriedade deve ser o símbolo do namespace de identidade, que você pode encontrar listado na interface do usuário do Adobe Experience Platform em &quot;[!UICONTROL Identities]&quot;. O valor da propriedade deve ser uma matriz de identidades pertencentes a esse namespace de identidade.
 
 Cada objeto de identidade na matriz de identidades é estruturado da seguinte maneira:
 
@@ -99,7 +98,7 @@ Cada objeto de identidade na matriz de identidades é estruturado da seguinte ma
 
 | **Tipo** | **Obrigatório** | **Valor padrão** |
 | -------- | ------------ | ----------------- |
-| String | Sim | nenhuma |
+| String | Sim | None |
 
 Essa é a ID que você deseja sincronizar para o namespace em questão.
 

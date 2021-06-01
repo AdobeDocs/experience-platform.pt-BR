@@ -3,46 +3,48 @@ title: Uso do Adobe Target com o SDK da Web da plataforma
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform usando o Adobe Target
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 32bc4fc3c8a33c5ba91f6edb0d859691046bccaf
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '816'
 ht-degree: 3%
 
 ---
 
-# Uso do Adobe Target com o SDK da Web da plataforma
+# Usar [!DNL Adobe Target] com o [!DNL Platform Web SDK]
 
-O Adobe Experience Platform [!DNL Web SDK] pode entregar e renderizar experiências personalizadas gerenciadas no Adobe Target para o canal da Web. Você pode usar um editor WYSIWYG, chamado [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para criar, ativar e entregar suas atividades e experiências de personalização.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] O pode entregar e renderizar experiências personalizadas gerenciadas no  [!DNL Adobe Target] para o canal da Web. Você pode usar um editor WYSIWYG, chamado [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para criar, ativar e entregar suas atividades e experiências de personalização.
 
-Os seguintes recursos foram testados e atualmente são compatíveis com o Target:
+Os seguintes recursos foram testados e atualmente são compatíveis em [!DNL Target]:
 
-* Testes A/B
-* Relatórios de impressão e conversão do A4T
-* Automated Personalization
-* Direcionamento de experiência
-* Testes multivariados
-* Relatórios de conversão e impressão do Target nativo
-* Suporte ao VEC
+* [Testes A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Atividades de Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Relatório de impressão e conversão do Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [Suporte ao VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
-## Ativação do Adobe Target
+## Ativar [!DNL Adobe Target]
 
 Para ativar [!DNL Target], faça o seguinte:
 
-1. Ative o Target no [datastream](../../fundamentals/datastreams.md) com o código de cliente apropriado.
+1. Ative [!DNL Target] em seu [datastream](../../fundamentals/datastreams.md) com o código de cliente apropriado.
 1. Adicione a opção `renderDecisions` aos eventos.
 
 Em seguida, opcionalmente, também é possível adicionar as seguintes opções:
 
-* `decisionScopes`: Recupere atividades específicas (úteis para atividades criadas com o compositor baseado em formulário) adicionando essa opção aos eventos.
-* [Pré-ocultar trecho](../manage-flicker.md): Ocultar apenas determinadas partes da página.
+* **`decisionScopes`**: Recupere atividades específicas (úteis para atividades criadas com o compositor baseado em formulário) adicionando essa opção aos eventos.
+* **[Pré-ocultar trecho](../manage-flicker.md)**: Ocultar apenas determinadas partes da página.
 
 ## Uso do VEC do Adobe Target
 
-Para usar o VEC com uma implementação do SDK da Web da plataforma, instale e ative a [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a [Extensão de ajuda do Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
+Para usar o VEC com uma implementação [!DNL Platform Web SDK], instale e ative a extensão de ajuda do VEC do [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
+
+Para obter mais informações, consulte [Extensão de assistente do Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) no *Guia do Adobe Target*.
 
 ## Atividades do VEC de renderização automática
 
-O SDK da Web da Adobe Experience Platform tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC da Adobe Target na Web para seus usuários. Para indicar ao Adobe Experience Platform Web SDK para renderizar automaticamente atividades do VEC, envie um evento com `renderDecisions = true`:
+O [!DNL Adobe Experience Platform Web SDK] tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC do [!DNL Adobe Target] na Web para seus usuários. Para indicar [!DNL Experience Platform Web SDK] para renderizar automaticamente atividades do VEC, envie um evento com `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -65,7 +67,7 @@ alloy
 
 ## Uso do Compositor baseado em formulário
 
-O Experience Composer baseado em formulário é uma interface não visual útil para configurar os Testes A/B, [!DNL Experience Targeting], Automated Personalization e Recommendations com tipos de resposta diferentes, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada pela Adobe Target, a lógica de negócios principal pode ser executada. Para recuperar as decisões das atividades do Composer baseado em formulário, envie um evento com todos os &quot;Deciscopes&quot; para os quais deseja recuperar uma decisão.
+O [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) é uma interface não visual que é útil para configurar [!UICONTROL Testes A/B], [!UICONTROL Direcionamento de experiência], [!UICONTROL Automated Personalization] e [!UICONTROL Recommendations] atividades com diferentes tipos de resposta, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada por [!DNL Target], a lógica de negócios principal pode ser executada. Para recuperar as decisões das atividades do Composer baseado em formulário, envie um evento com todos os &quot;Deciscopes&quot; para os quais deseja recuperar uma decisão.
 
 ```javascript
 alloy
@@ -88,11 +90,11 @@ alloy
 
 ## Escopos de decisão
 
-`decisionScopes` define seções, locais ou partes de suas páginas em que você deseja renderizar uma experiência personalizada. Esses `decisionScopes` são personalizáveis e definidos pelo usuário. Para clientes atuais [!DNL Target], `decisionScopes` também são conhecidas como &quot;mboxes&quot;. Na interface [!DNL Target], `decisionScopes` aparece como &quot;locais&quot;.
+`decisionScopes` defina seções, locais ou partes de suas páginas em que você deseja renderizar uma experiência personalizada. Esses `decisionScopes` são personalizáveis e definidos pelo usuário. Para clientes atuais [!DNL Target], `decisionScopes` também são conhecidas como &quot;mboxes&quot;. Na interface [!DNL Target], `decisionScopes` aparece como &quot;locais&quot;.
 
 ## O `__view__` Escopo
 
-O Adobe Experience Platform Web SDK fornece funcionalidades onde você pode recuperar ações do VEC sem depender do SDK para renderizar as ações do VEC para você. Envie um evento com `__view__` definido como um `decisionScopes`.
+O [!DNL Experience Platform Web SDK] fornece funcionalidade para recuperar ações do VEC sem depender do SDK para renderizar as ações do VEC para você. Envie um evento com `__view__` definido como um `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
@@ -116,9 +118,9 @@ alloy("sendEvent", {
 
 ## Públicos-alvo no XDM
 
-Ao definir públicos para suas atividades do Target que são entregues por meio do SDK da Web da Adobe Experience Platform, [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR) deve ser definido e usado. Depois de definir esquemas, classes e grupos de campos de esquema XDM, você pode criar uma regra de público-alvo do Target definida pelos dados XDM para direcionamento. No Target, os dados do XDM são exibidos no Audience Builder como um parâmetro personalizado. O XDM é serializado usando notação de pontos (por exemplo, `web.webPageDetails.name`).
+Ao definir públicos para suas atividades [!DNL Target] que são entregues por meio do [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR) deve ser definido e usado. Depois de definir esquemas, classes e grupos de campos de esquema XDM, você pode criar uma regra de público-alvo [!DNL Target] definida pelos dados XDM para direcionamento. Em [!DNL Target], os dados do XDM são exibidos no [!UICONTROL Audience Builder] como um parâmetro personalizado. O XDM é serializado usando notação de pontos (por exemplo, `web.webPageDetails.name`).
 
-Se você tiver atividades do Target com públicos-alvo predefinidos que usam parâmetros personalizados ou um perfil de usuário, elas não serão entregues corretamente por meio do SDK. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. No entanto, há campos de direcionamento de público-alvo prontos para uso compatíveis com o SDK da Web da Adobe Experience Platform que não exigem XDM. Esses campos estão disponíveis na interface do usuário do Target que não requer XDM:
+Se você tiver [!DNL Target] atividades com públicos-alvo predefinidos que usam parâmetros personalizados ou um perfil de usuário, elas não serão entregues corretamente por meio do SDK. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. No entanto, há campos de direcionamento de público-alvo prontos para uso compatíveis por meio do [!DNL Platform Web SDK] que não exigem XDM. Esses campos estão disponíveis na interface [!DNL Target] que não requer XDM:
 
 * Biblioteca do Target
 * Geografia 
@@ -128,6 +130,55 @@ Se você tiver atividades do Target com públicos-alvo predefinidos que usam par
 * Browser
 * Fontes de Tráfego
 * Intervalo de tempo
+
+Para obter mais informações, consulte [Categorias para públicos](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) no *Guia do Adobe Target*.
+
+### Atualização de perfil único
+
+O [!DNL Platform Web SDK] permite atualizar o perfil para o perfil [!DNL Target] e para o [!DNL Platform Web SDK] como um evento de experiência.
+
+Para atualizar um perfil [!DNL Target], verifique se os dados do perfil foram passados com o seguinte:
+
+| Chave | Tipo | Descrição |
+| --- | --- | --- |
+| `renderDecisions` | Booleano | Instrui o componente de personalização se ele deve interpretar ações DOM |
+| `decisionScopes` | Matriz `<String>` | Uma lista de escopos para recuperar decisões de |
+| `xdm` | Objeto | Dados formatados no XDM que chegam ao SDK da Web da plataforma como um evento de experiência |
+| `data` | Objeto | Pares de valor/chave arbitrária enviados para soluções [!DNL Target] na classe de destino. |
+
+O código [!DNL Platform Web SDK] típico usando esse comando é semelhante ao seguinte:
+
+**`sendEvent`com dados de perfil**
+
+```
+alloy("sendEvent", {
+   renderDecisions: true|false,
+   xdm: { // Experience Event XDM data },
+   data: { // Freeform stuff (event & profile) }
+});
+```
+
+**Código de exemplo**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  xdm: {
+    device: {
+      screenWidth: 9999
+    }
+  },
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30
+      }
+    }
+  }
+}) 
+.then(console.log);
+```
 
 ## Terminologia
 

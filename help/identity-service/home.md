@@ -5,10 +5,9 @@ title: Visão geral do serviço de identidade
 topic-legacy: overview
 description: O serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visão de seu cliente e de seu comportamento ao unir identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -114,6 +113,10 @@ Os esquemas de registro e de série de tempo fornecem os meios para incluir dado
 ### Marcar campos XDM como identidade
 
 Qualquer campo do tipo `string` em esquemas que implementam classes XDM de registro ou de série de tempo pode ser rotulado como um campo de identidade. Como resultado, todos os dados assimilados nesse campo seriam considerados dados de identidade.
+
+>[!NOTE]
+>
+>Os campos do tipo matriz e mapa não são suportados e não podem ser marcados e rotulados como campos de identidade.
 
 Os campos de identidade também permitem a vinculação de identidades se compartilharem dados PII comuns.
 Por exemplo, ao rotular os campos de número de telefone como campos de identidade, [!DNL Identity Service] define automaticamente as relações com os outros indivíduos que estiverem usando o mesmo número de telefone.

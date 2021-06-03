@@ -1,23 +1,22 @@
 ---
-keywords: google ad manager, google ad, doubleclick, DoubleClick AdX, DoubleClick, Google Ad Manager, Google ad manager
+keywords: google ad manager; google ad; doubleclick; DoubleClick AdX; DoubleClick; Google Ad Manager; Google ad manager; Google ad manager; DFP
 title: Conexão com o Google Ad Manager
-description: 'O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios do Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.  '
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios do Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
+exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
+source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Ad Manager] conexão
 
 ## Visão geral {#overview}
 
-[!DNL Google Ad Manager], anteriormente conhecida como  [!DNL DoubleClick] por Publishers ou  [!DNL DoubleClick AdX], é uma plataforma de veiculação de anúncios da  [!DNL Google] que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
+[!DNL Google Ad Manager], anteriormente conhecida como  [!DNL DoubleClick for Publishers] (DFP) ou  [!DNL DoubleClick AdX], é uma plataforma de veiculação de anúncios da  [!DNL Google] que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 
-## Especificações de destino {#specifics}
+## Especificações do destino {#specifics}
 
 Observe os seguintes detalhes que são específicos para os destinos [!DNL Google Ad Manager]:
 
@@ -62,25 +61,25 @@ Antes de criar o destino [!DNL Google Ad Manager] na Plataforma, você deve entr
 
 ## Configurar destino
 
-Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione **[!DNL Google Ad Manager]** e selecione **[!UICONTROL Configure]**.
+Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione **[!DNL Google Ad Manager]** e selecione **[!UICONTROL Configurar]**.
 
 ![Conectar o destino do Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/catalog.png)
 
 >[!NOTE]
 >
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+>Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 
-Na etapa **Configurar** do fluxo de trabalho criar destino, preencha o [!UICONTROL Basic Information] para o destino.
+Na etapa **Configurar** do workflow criar destino, preencha o [!UICONTROL Informações básicas] para o destino.
 
 ![Informações básicas sobre o Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
 
-* **[!UICONTROL Name]**: Preencha o nome preferencial para esse destino.
-* **[!UICONTROL Description]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL Account Type]**: Selecione uma opção, dependendo de sua conta com o Google:
+* **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
+* **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
+* **[!UICONTROL Tipo]** de conta: Selecione uma opção, dependendo de sua conta com o Google:
    * Use `DFP by Google` para [!DNL DoubleClick] para Editores
    * Use `AdX buyer` para [!DNL Google AdX]
-* **[!UICONTROL Account ID]**: Preencha a ID da conta com  [!DNL Google]. Pode ser a ID de rede ou a ID do link de público-alvo. Normalmente, essa é uma ID de oito dígitos.
-* **[!UICONTROL Marketing action]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL ID]** da conta: Preencha a ID da conta com  [!DNL Google]. Pode ser a ID de rede ou a ID do link de público-alvo. Normalmente, essa é uma ID de oito dígitos.
+* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >

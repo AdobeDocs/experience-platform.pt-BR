@@ -5,10 +5,9 @@ title: Visão geral das políticas de uso de dados
 topic-legacy: policies
 description: Para que os rótulos de uso de dados sejam compatíveis com a conformidade dos dados, é necessário implementar políticas de uso de dados. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing das quais você tem permissão para ou tem restrição para executar em dados dentro do Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -48,7 +47,7 @@ Experience Platform has the ability to share segments with Adobe Audience Manage
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
-## Gerenciando políticas de uso de dados {#manage}
+## Gerenciamento de políticas de uso de dados {#manage}
 
 Depois que os rótulos de uso de dados forem aplicados, os assistentes de dados poderão usar a API [!DNL Policy Service] ou a interface do usuário [!DNL Experience Platform] para gerenciar e avaliar políticas relacionadas às ações de marketing executadas em dados que contêm rótulos de uso de dados. Você pode criar e atualizar políticas, determinar o status de uma política e trabalhar com ações de marketing para avaliar se uma ação específica viola uma política de uso de dados.
 
@@ -79,11 +78,12 @@ A tabela abaixo descreve as principais ações de marketing fornecidas prontas p
 | Ação de marketing | Descrição |
 | --- | --- |
 | Analytics | Uma ação que usa dados para fins de análise, como medir, analisar e criar relatórios sobre o uso pelos clientes dos sites ou aplicativos de sua organização. |
-| Combinar com PII | Uma ação que combina informações pessoais identificáveis (PII) com dados anônimos. Os contratos para dados provenientes de redes de anúncios, servidores de anúncios e provedores de dados de terceiros frequentemente incluem proibições contratuais específicas sobre o uso desses dados com dados diretamente identificáveis. |
+| Combinar com dados diretamente identificáveis | Uma ação que combina informações pessoais identificáveis (PII) com dados anônimos. Os contratos para dados provenientes de redes de anúncios, servidores de anúncios e provedores de dados de terceiros frequentemente incluem proibições contratuais específicas sobre o uso desses dados com dados diretamente identificáveis. |
 | Direcionamento entre sites | Uma ação que usa dados para o direcionamento de anúncios entre sites. A combinação de dados de vários sites, incluindo uma combinação de dados no local e dados fora do site ou uma combinação de dados de várias fontes fora do site, é chamada de dados entre sites. Os dados entre sites geralmente são coletados e processados para fazer inferências sobre os interesses dos usuários. |
 | Ciência de dados | Uma ação que usa dados para fluxos de trabalho da ciência de dados. Alguns contratos incluem proibições explícitas sobre a utilização de dados para a ciência de dados. Às vezes, elas são redigidas em termos que proíbem o uso de dados para Inteligência Artificial (AI), aprendizado de máquina (ML) ou modelagem. |
 | Direcionamento de email | Uma ação que usa dados em campanhas de segmentação de email. |
 | Exportar para Terceiros | Uma ação que exporta dados para processadores e entidades que não têm relacionamento direto com os clientes. Muitos provedores de dados têm termos nos contratos que proíbem a exportação de dados de onde eles foram coletados originalmente. Por exemplo, os contratos de rede social geralmente restringem a transferência de dados que você recebe deles. |
 | Publicidade no site | Uma ação que usa dados para anúncios no site, incluindo a seleção e a entrega de anúncios nos sites ou aplicativos de sua organização, ou para medir a entrega e a eficácia de tais anúncios. |
 | Personalização no site | Uma ação que usa dados para personalização de conteúdo no site. A personalização no site é qualquer dado usado para fazer inferências sobre os interesses dos usuários e é usado para selecionar qual conteúdo ou anúncios são exibidos com base nessas inferências. |
+| Correspondência de segmentos | Uma ação que usa dados para a Correspondência de segmentos do Adobe Experience Platform, que permite que dois ou mais usuários da Plataforma troquem dados de segmentos. Ao ativar as políticas que fazem referência a essa ação, é possível restringir quais dados são usados para a Correspondência de segmentos. Por exemplo, se a política principal &quot;Restringir compartilhamento de dados&quot; estiver ativada, quaisquer dados com um rótulo [C11](../labels/reference.md#c11) não poderão ser usados para Correspondência de segmentos. |
 | Personalização de identidade única | Uma ação que requer que uma única identidade seja usada para fins de personalização, em vez de compilar identidades de várias fontes. |

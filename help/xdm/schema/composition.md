@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esse
 
 Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Gráfico de identidade]&quot; para esse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma exibição agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;[!UICONTROL Identity]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos da organização, pois também podem ser bons campos &quot;[!UICONTROL Identity]&quot;.
+Os campos comumente marcados como &quot;[!UICONTROL Identity]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM ou outros campos de ID exclusivos. Você também deve considerar todos os identificadores exclusivos específicos da organização, pois também podem ser bons campos &quot;[!UICONTROL Identity]&quot;.
 
 É importante pensar nas identidades do cliente durante a fase de planejamento do schema para ajudar a garantir que os dados estejam sendo reunidos para criar o perfil mais robusto possível. Consulte a visão geral em [Adobe Experience Platform Identity Service](../../identity-service/home.md) para saber mais sobre como as informações de identidade podem ajudar você a entregar experiências digitais para seus clientes.
 
@@ -108,13 +108,15 @@ Como a natureza das experiências digitais continua a evoluir, também os esquem
 
 Como a manutenção da compatibilidade com versões anteriores é crucial para a evolução do schema, [!DNL Experience Platform] aplica um princípio de controle de versão meramente aditivo para garantir que qualquer revisão do schema resulte apenas em atualizações e alterações não destrutivas. Em outras palavras, **alterações de quebra não são suportadas.**
 
-| Alterações suportadas | Quebrando alterações (Não suportado) |
-|------------------------------------|---------------------------------|
-| <ul><li>Adição de novos campos a um schema existente</li><li>Como tornar um campo obrigatório opcional</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Introdução de novos campos obrigatórios</li><li>Renomeação ou redefinição de campos existentes</li><li>Remoção ou restrição de valores de campo anteriormente suportados</li><li>Mover atributos para um local diferente na árvore</li></ul> |
-
 >[!NOTE]
 >
->Se um schema ainda não tiver sido usado para assimilar dados em [!DNL Experience Platform], você poderá introduzir uma alteração de quebra nesse schema. No entanto, uma vez que o schema tenha sido usado em [!DNL Platform], ele deverá aderir à política de controle de versão aditiva.
+>Se um schema ainda não tiver sido usado para assimilar dados em [!DNL Experience Platform] e não tiver sido ativado para uso no Perfil do cliente em tempo real, você poderá introduzir uma alteração de quebra nesse schema. No entanto, uma vez que o schema tenha sido usado em [!DNL Platform], ele deverá aderir à política de controle de versão aditiva.
+
+A tabela a seguir detalha quais alterações são compatíveis ao editar esquemas, grupos de campos e tipos de dados:
+
+| Alterações suportadas | Quebrando alterações (Não suportado) |
+| --- | --- |
+| <ul><li>Adicionar novos campos ao recurso</li><li>Como tornar um campo obrigatório opcional</li><li>Alteração do nome de exibição e da descrição do recurso</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Introdução de novos campos obrigatórios</li><li>Renomeação ou redefinição de campos existentes</li><li>Remoção ou restrição de valores de campo anteriormente suportados</li><li>Mover atributos para um local diferente na árvore</li></ul> |
 
 ### Esquemas e assimilação de dados
 

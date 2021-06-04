@@ -5,10 +5,9 @@ title: Glossário de rótulos de uso de dados
 topic-legacy: labels
 description: Este documento descreve todos os rótulos de uso de dados suportados atualmente pelo Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1982'
 ht-degree: 2%
 
 ---
@@ -24,7 +23,7 @@ Este documento descreve os rótulos de uso de dados principais fornecidos atualm
 Os rótulos &quot;C&quot; do contrato são usados para categorizar dados que têm obrigações contratuais ou estão relacionados às políticas de governança de dados da sua organização.
 
 | Rótulo | Definição |
-|---|---|
+| --- | --- |
 | **C1** | Os dados só podem ser exportados do Adobe Experience Cloud de forma agregada sem incluir identificadores individuais ou de dispositivos. [Mais informações...](#c1) |
 | **C2** | Os dados não podem ser exportados para um terceiro. [Mais informações...](#c2) |
 | **C3** | Os dados não podem ser combinados ou usados com informações diretamente identificáveis. [Mais informações...](#c3) |
@@ -35,13 +34,14 @@ Os rótulos &quot;C&quot; do contrato são usados para categorizar dados que tê
 | **C8** | Os dados não podem ser usados para medir os sites ou aplicativos de sua organização. [Mais informações...](#c8) |
 | **C9** | Os dados não podem ser usados em workflows da ciência de dados. [Mais informações...](#c9) |
 | **C10** | Os dados não podem ser usados para a ativação de identidade compilada. [Mais informações...](#c10) |
+| **C11** | Os dados não podem ser compartilhados com parceiros de Correspondência de segmentos. [Mais informações...](#c11) |
 
 ## Rótulos de identidade
 
 Os rótulos de identidade &quot;I&quot; são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica.
 
 | Rótulo | Definição |
-|---|---|
+| --- | --- |
 | **I1** | Dados diretamente identificáveis que podem identificar ou entrar em contato com uma pessoa específica, em vez de um dispositivo. |
 | **I2** | Dados indiretamente identificáveis que podem ser usados em combinação com quaisquer outros dados para identificar ou contactar uma pessoa específica. |
 
@@ -52,7 +52,7 @@ Os rótulos &quot;S&quot; confidenciais são usados para categorizar dados que v
 Um tipo de dados que você pode considerar sensíveis pode ser diferentes tipos de dados geográficos; no entanto, esta categoria não se limita aos dados geográficos.
 
 | Rótulo | Definição |
-|---|---|
+| --- | --- |
 | **S1** | Dados que especificam latitude e longitude que podem ser usados para determinar a localização precisa de um dispositivo. |
 | **S2** | Dados que podem ser usados para determinar uma área de geofence amplamente definida. |
 
@@ -127,3 +127,7 @@ Alguns contratos incluem proibições explícitas sobre a utilização de dados 
 #### C10 {#c10}
 
 Algumas políticas de uso de dados restringem o uso de dados de identidade compilados para personalização. O rótulo C10 é aplicado automaticamente aos segmentos se suas políticas de mesclagem usarem a opção &quot;gráfico privado&quot;.
+
+#### C11 {#c11}
+
+A Correspondência de segmentos do Adobe Experience Platform permite que você corresponda segmentos primários com preferências de privacidade e consentimento, facilitando a criação de perfis enriquecidos e insights de downstream. O rótulo C11 indica dados que não devem ser usados em processos [!DNL Segment Match]. Depois de determinar quais conjuntos de dados e/ou campos você deseja excluir da Correspondência de segmentos e adicionar o rótulo C11 de acordo, o rótulo é aplicado automaticamente pelo fluxo de trabalho Correspondência de segmentos .

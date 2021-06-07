@@ -4,20 +4,27 @@ title: ERD do Modelo de Dados do Setor de Viagem e Hospitalidade
 topic-legacy: overview
 description: Visualize um diagrama de relacionamento de entidade (ERD) que descreve um modelo de dados padronizado para o setor de viagem e hospitalidade, compatível com o Experience Data Model (XDM) para uso no Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
 workflow-type: tm+mt
-source-wordcount: '79'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Travel and hospitality] ERD do modelo de dados do setor
+# [!UICONTROL Modelo de dados do setor de viagem e ] hospitalidade
 
-O diagrama de relacionamento de entidade (ERD) a seguir representa um modelo de dados padronizado para o setor de viagem e hospitalidade.
+O diagrama de relacionamento de entidade (ERD) a seguir representa um modelo de dados padronizado para o setor de viagem e hospitalidade. O ERD é intencionalmente apresentado de forma desnormalizada e considerando como os dados são armazenados no Adobe Experience Platform.
+
+Use a seguinte legenda para interpretar este ERD:
+
+* Cada entidade mostrada no é baseada em uma classe [Experience Data Model (XDM) subjacente](../composition.md#class).
+* Para uma determinada entidade, cada linha marcada em **bold** representa um grupo de campos ou um tipo de dados, com os campos relevantes que ela fornece listados abaixo em texto sem negrito.
+* Os campos mais importantes para uma determinada entidade são destacados em vermelho.
+* Todas as propriedades que podem ser usadas para identificar clientes individuais são marcadas como &quot;identidade&quot;, com uma dessas propriedades marcadas como &quot;identidade primária&quot;.
+* Os relacionamentos de entidade são marcados como não dependentes, já que os eventos baseados em cookies geralmente não podem determinar a pessoa ou o indivíduo que fez a transação.
+
+![](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >
->Para obter mais informações sobre modelos de dados do setor e como interpretar esse ERD, consulte a [visão geral do modelo de dados do setor](./overview.md).
-
-![](../../images/industries/travel-hospitality.png)
+>A entidade Evento de experiência inclui um campo &quot;_ID&quot;, que representa o atributo identificador exclusivo (`_id`) fornecido pela classe XDM ExperienceEvent. Consulte o documento de referência em [XDM ExperienceEvent](../../classes/experienceevent.md) para obter mais detalhes sobre o que é esperado para esse valor.

@@ -4,10 +4,10 @@ description: Saiba como mapear variáveis manualmente no Adobe Analytics usando 
 seo-description: Mapear variáveis manualmente para o Adobe Analytics usando regras de processamento com o SDK da Web
 keywords: adobe analytics, analytics, variáveis, variáveis de mapeamento, variáveis de mapa, contextData, dados de contexto, regras de processamento, regras, xdm, schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 17%
+source-wordcount: '395'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ O Adobe Experience Platform [!DNL Web SDK] pode mapear determinadas variáveis a
 
 Para dados XDM que não são mapeados automaticamente para [!DNL Analytics], você pode usar [dados de contexto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) para corresponder ao [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Em seguida, ele pode ser mapeado para [!DNL Analytics] usando [regras de processamento](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) para preencher variáveis [!DNL Analytics].
 
-Além disso, é possível usar um conjunto padrão de ações e listas de produtos para enviar ou recuperar dados com o SDK da Web da Adobe Experience Platform. Para fazer isso, consulte [Produtos](https://experienceleague.adobe.com/docs/experience-platform/edge/implement/commerce.html).
+Além disso, é possível usar um conjunto padrão de ações e listas de produtos para enviar ou recuperar dados com o SDK da Web da Adobe Experience Platform. Para fazer isso, consulte [Coletar informações sobre comércio e produto](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Dados de contexto
 

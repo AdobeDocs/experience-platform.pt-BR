@@ -2,14 +2,13 @@
 keywords: móvel; brasa; Mensagens;
 title: Ligação de brasa
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que possibilita experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
+source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '953'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) [!DNL Braze] conexão
 
@@ -25,7 +24,7 @@ O destino [!DNL Braze] ajuda a enviar os dados do perfil para [!DNL Braze].
 
 Para enviar dados de perfil para [!DNL Braze], primeiro você deve se conectar ao destino.
 
-## Especificações de destino {#specifics}
+## Especificações do destino {#specifics}
 
 Observe os seguintes detalhes que são específicos ao destino [!DNL Braze]:
 
@@ -41,7 +40,7 @@ Como comerciante, desejo direcionar usuários em um destino de envolvimento móv
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Google Ad Manager] O suporta a ativação de identidades descritas na tabela abaixo.
+[!DNL Braze] O suporta a ativação de identidades descritas na tabela abaixo.
 
 | Identidade do Target | Descrição | Considerações |
 |---|---|---|
@@ -54,29 +53,29 @@ Como comerciante, desejo direcionar usuários em um destino de envolvimento móv
 
 ## Conecte-se ao destino {#connect-destination}
 
-Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione [!DNL Braze] e selecione **[!UICONTROL Configure]**.
+Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Braze] e selecione **[!UICONTROL Configurar]**.
 
 ![Configurar Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/configure.png)
 
 >[!NOTE]
 >
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+>Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 >
 >![Ativar Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/activate.png)
 
-Na etapa [!UICONTROL Account], é necessário fornecer o token de conta [!DNL Braze]. Esta é sua chave [!DNL Braze] [!DNL API]. Você pode encontrar instruções detalhadas sobre como obter sua chave [!DNL API] aqui: [Visão geral da chave da API REST](https://www.braze.com/docs/api/api_key/). Insira o token e clique em **[!UICONTROL Connect to destination]**.
+Na etapa [!UICONTROL Account], é necessário fornecer o token de conta [!DNL Braze]. Esta é sua chave [!DNL Braze] [!DNL API]. Você pode encontrar instruções detalhadas sobre como obter sua chave [!DNL API] aqui: [Visão geral da chave da API REST](https://www.braze.com/docs/api/api_key/). Insira o token e clique em **[!UICONTROL Conectar ao destino]**.
 
 ![Etapa da Conta de Destino Brasileira](../../assets/catalog/mobile-engagement/braze/account.png)
 
-Clique em **[!UICONTROL Next]**. Na etapa [!UICONTROL Authentication], é necessário inserir os detalhes da conexão [!DNL Braze]:
-* **[!UICONTROL Name]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
-* **[!UICONTROL Description]**: insira uma descrição que ajudará a identificar esse destino no futuro.
-* **[!UICONTROL Endpoint Instance]**: pergunte ao seu  [!DNL Braze] representante qual instância de ponto de extremidade você deve usar.
-* **[!UICONTROL Marketing action]**: as ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+Clique em **[!UICONTROL Próximo]**. Na etapa [!UICONTROL Authentication], é necessário inserir os detalhes da conexão [!DNL Braze]:
+* **[!UICONTROL Nome]**: insira um nome pelo qual você reconhecerá esse destino no futuro.
+* **[!UICONTROL Descrição]**: insira uma descrição que ajudará a identificar esse destino no futuro.
+* **[!UICONTROL Instância]** do ponto de extremidade: pergunte ao seu  [!DNL Braze] representante qual instância de ponto de extremidade você deve usar.
+* **[!UICONTROL Ação]** de marketing: as ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ![Etapa de Autenticação Brasileira](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
-Clique em **[!UICONTROL Create destination]**. Seu destino foi criado. Você pode clicar em **[!UICONTROL Save & Exit]** se desejar ativar segmentos posteriormente, ou selecionar **[!UICONTROL Next]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
+Clique em **[!UICONTROL Criar destino]**. Seu destino foi criado. Você pode clicar em **[!UICONTROL Salvar e sair]** se desejar ativar segmentos posteriormente, ou selecionar **[!UICONTROL Próximo]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
 
 ## Ativar segmentos {#activate-segments}
 
@@ -90,7 +89,7 @@ O mapeamento consiste em criar um link entre os campos do esquema [!DNL Experien
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Braze], siga estas etapas:
 
-Na etapa [!UICONTROL Mapping], clique em **[!UICONTROL Add new mapping]**.
+Na etapa [!UICONTROL Mapeamento], clique em **[!UICONTROL Adicionar novo mapeamento]**.
 
 ![Mapeamento de adição de destino de site](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -98,25 +97,25 @@ Na seção [!UICONTROL Source Field], clique no botão de seta ao lado do campo 
 
 ![Mapeamento de Origem de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-Na janela [!UICONTROL Select source field], é possível escolher entre duas categorias de campos XDM:
-* [!UICONTROL Select attributes]: use essa opção para mapear um campo específico do esquema XDM para um  [!DNL Braze] atributo.
+Na janela [!UICONTROL Select source field], você pode escolher entre duas categorias de campos XDM:
+* [!UICONTROL Selecionar atributos]: use essa opção para mapear um campo específico do esquema XDM para um  [!DNL Braze] atributo.
 
 ![Atributo da Fonte de Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Select identity namespace]: Use esta opção para mapear um namespace de  [!DNL Platform] identidade para um  [!DNL Braze] namespace.
+* [!UICONTROL Selecionar namespace] de identidade: Use esta opção para mapear um namespace de  [!DNL Platform] identidade para um  [!DNL Braze] namespace.
 
 ![Namespace da Fonte do Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Escolha o campo de origem e clique em **[!UICONTROL Select]**.
 
-Na seção [!UICONTROL Target Field], clique no ícone de mapeamento à direita do campo.
+Na seção [!UICONTROL Campo de destino], clique no ícone de mapeamento à direita do campo.
 
 ![Mapeamento de Destino da Brasileira](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 Na janela [!UICONTROL Select target field], é possível escolher entre três categorias de campos de destino:
-* [!UICONTROL Select attributes]: Use essa opção para mapear os atributos XDM para  [!DNL Braze] atributos padrão.
-* [!UICONTROL Select identity namespace]: Use esta opção para mapear namespaces de  [!DNL Platform] identidade para namespaces de  [!DNL Braze] identidade.
-* [!UICONTROL Select custom attributes]: Use esta opção para mapear atributos XDM para  [!DNL Braze] atributos personalizados que você definiu em sua  [!DNL Braze] conta.
+* [!UICONTROL Selecionar atributos]: Use essa opção para mapear os atributos XDM para  [!DNL Braze] atributos padrão.
+* [!UICONTROL Selecionar namespace] de identidade: Use esta opção para mapear namespaces de  [!DNL Platform] identidade para namespaces de  [!DNL Braze] identidade.
+* [!UICONTROL Selecionar atributos] personalizados: Use esta opção para mapear atributos XDM para  [!DNL Braze] atributos personalizados que você definiu em sua  [!DNL Braze] conta.
 * Também é possível usar essa opção para renomear atributos XDM existentes em [!DNL Braze]. Por exemplo, mapear um atributo `lastName` XDM para um atributo `Last_Name` personalizado em [!DNL Braze], criará o atributo `Last_Name` em [!DNL Braze], se ele ainda não existir, e mapeará o atributo `lastName` XDM para ele.
 
 ![Campos de mapeamento de destino do site](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
@@ -149,4 +148,3 @@ Para verificar se os dados foram exportados com êxito para o destino [!DNL Braz
 ## Uso e governança de dados {#data-usage-governance}
 
 Todos os destinos [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte [Visão geral da governança de dados](../../../data-governance/home.md).
-

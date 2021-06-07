@@ -5,9 +5,9 @@ title: Classe XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe XDM ExperienceEvent e práticas recomendadas para modelagem de dados de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: c5b15cf23801457c3846499185d7dfd61cfa5291
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -65,8 +65,12 @@ Se você estiver transmitindo dados para a Platform usando uma conexão de orige
 
 O Adobe fornece vários grupos de campos padrão para uso com a classe [!DNL XDM ExperienceEvent] . Esta é uma lista de alguns grupos de campos comumente usados para a classe :
 
+* [[!UICONTROL Detalhes de marketing da campanha]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Detalhes do canal]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Detalhes de comércio]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL Detalhes da ID de usuário final]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Detalhes do ambiente]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Detalhes da Web]](../field-groups/event/web-details.md)
 
 ## Apêndice
 

@@ -4,11 +4,10 @@ title: Visão geral dos modelos de dados do setor
 topic-legacy: overview
 description: Saiba mais sobre os modelos de dados padronizados para vários ramos do setor que podem ser construídos com os componentes padrão do Experience Data Model (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 0%
+source-wordcount: '353'
+ht-degree: 1%
 
 ---
 
@@ -33,25 +32,13 @@ Para ler os ERDs referenciados neste guia, você deve ter um entendimento práti
 
 Também é recomendável revisar o [guia de práticas recomendadas de modelagem de dados](../../schema/best-practices.md) para obter diretrizes gerais sobre como mapear seus dados para XDM.
 
-## ERDs do modelo de dados do setor {#erds}
-
-Os modelos verticais do setor representados por ERDs abaixo são criados intencionalmente de forma desnormalizada e considerando como os dados são armazenados na plataforma.
-
-Para um determinado ERD, cada entidade mostrada em é baseada em uma classe XDM subjacente. Para uma determinada entidade, cada linha marcada em **bold** representa um grupo de campos ou um tipo de dados, com os campos relevantes que ela fornece listados abaixo em texto sem negrito. Os campos mais importantes para uma determinada entidade são destacados em vermelho.
-
->[!NOTE]
->
->Algumas entidades podem incluir um campo &quot;_ID&quot;. Isso representa o identificador exclusivo (`_id`) que a Platform atribui automaticamente a entidades de evento ou perfil quando são assimiladas. No entanto, é possível optar por usar seus próprios valores de ID exclusivos para esse campo, se desejar.
-
-Todas as propriedades que podem ser usadas para identificar clientes individuais são marcadas como &quot;identidade&quot;, com uma dessas propriedades marcadas como &quot;identidade primária&quot;.
-
-Os relacionamentos de entidade são marcados como não dependentes, já que os eventos baseados em cookies geralmente não podem determinar a pessoa ou o indivíduo que fez a transação.
+## ERDs de modelo de dados do setor {#erds}
 
 Os perfumes são fornecidos para os seguintes setores industriais:
 
-* [[!UICONTROL Retail]](./retail.md)
-* [[!UICONTROL Financial services]](./financial.md)
-* [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
+* [[!UICONTROL Varejo]](./retail.md)
+* [[!UICONTROL Serviços financeiros]](./financial.md)
+* [[!UICONTROL Viagem e hospitalidade]](./travel-hospitality.md)
 
 ## Próximas etapas
 

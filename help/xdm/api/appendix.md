@@ -5,7 +5,7 @@ title: Apêndice do Guia da API do Registro de Schema
 description: Este documento fornece informações complementares relacionadas ao trabalho com a API do Registro de Esquema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 1%
@@ -76,7 +76,7 @@ Veja a seguir uma comparação lado a lado que mostra campos relacionados ao ani
   <th>Modo de compatibilidade</th>
   <tr>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "xdm:birthDate": {
               "Título": "Data de nascimento",
@@ -97,7 +97,7 @@ Veja a seguir uma comparação lado a lado que mostra campos relacionados ao ani
   </pre>
   </td>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "birthDate": {
               "Título": "Data de nascimento",

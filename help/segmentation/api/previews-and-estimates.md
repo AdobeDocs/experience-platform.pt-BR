@@ -5,10 +5,9 @@ title: Pré-visualizações e Estimativas de pontos de extremidade da API
 topic-legacy: developer guide
 description: Conforme a definição do segmento é desenvolvida, você pode usar as ferramentas de estimativa e visualização no Adobe Experience Platform para exibir informações de nível de resumo, de modo a ajudar a garantir que você esteja isolando o público-alvo esperado.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '978'
 ht-degree: 2%
 
 ---
@@ -75,7 +74,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
@@ -84,6 +84,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | A expressão PQL para consultar os dados. |
 | `predicateType` | O tipo de predicado da expressão de consulta em `predicateExpression`. No momento, o único valor aceito para essa propriedade é `pql/text`. |
 | `predicateModel` | O nome da classe de esquema [!DNL Experience Data Model] (XDM) na qual os dados do perfil se baseiam. |
+| `graphType` | O tipo de gráfico do qual você deseja obter o cluster. Os valores suportados são `none` (não executa identificação de identidade) e `pdg` (executa identificação com base no seu gráfico de identidade privado). |
 
 **Resposta**
 

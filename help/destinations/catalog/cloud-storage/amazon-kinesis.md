@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino cinesis;cinesis
 title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para fazer o stream de dados do Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 4febcef82c6da4534051cbe68820984814786224
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -37,6 +37,45 @@ Por exemplo, um prospecto baixou um white-paper que os qualifica em um segmento 
 ## Tipo de exportação {#export-type}
 
 **Baseado em perfil**  - você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do fluxo de trabalho de ativação de  [destino](../../ui/activate-destinations.md#select-attributes).
+
+## Permissões [!DNL Amazon Kinesis] necessárias {#required-kinesis-permission}
+
+Para se conectar e exportar dados com êxito para seus fluxos [!DNL Amazon Kinesis], o Experience Platform precisa de permissões para as seguintes ações:
+
+* `kinesis:ListStreams`
+* `kinesis:PutRecord`
+* `kinesis:PutRecords`
+
+Essas permissões são organizadas por meio do console [!DNL Kinesis] e são verificadas pela Platform depois que você configura o destino do Kinesis na interface do usuário da plataforma.
+
+O exemplo abaixo exibe os direitos mínimos de acesso necessários para exportar dados com êxito para um destino [!DNL Kinesis].
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:ListStreams",
+                "kinesis:PutRecord",
+                "kinesis:PutRecords"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
+
+| Propriedade | Descrição |
+| -------- | ----------- |
+| `kinesis:ListStreams` | Uma ação que lista seus fluxos de dados do Amazon Kinesis. |
+| `kinesis:PutRecord` | Uma ação que grava um único registro de dados em um fluxo de dados do Kinesis. |
+| `kinesis:PutRecords` | Uma ação que grava vários registros de dados em um fluxo de dados do Kinesis em uma única chamada. |
+
+Para obter mais informações sobre como controlar o acesso para [!DNL Kinesis] fluxos de dados, leia o seguinte [[!DNL Kinesis] documento](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Conectar destino {#connect-destination}
 

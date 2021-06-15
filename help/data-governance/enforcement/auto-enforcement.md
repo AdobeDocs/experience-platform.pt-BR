@@ -5,9 +5,9 @@ title: Aplicação Automática de Política
 topic-legacy: guide
 description: Este documento aborda como as políticas de uso de dados são aplicadas automaticamente ao ativar segmentos para destinos no Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -65,6 +65,12 @@ Cada estágio na linha do tempo acima representa uma entidade que pode contribui
 | Política de mesclagem | As políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados ao mesclar fragmentos de vários conjuntos de dados. Violações de política ocorrerão se suas políticas de mesclagem estiverem configuradas para que os conjuntos de dados com rótulos restritos sejam ativados em um destino. Consulte a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md) para obter mais informações. |
 | Segmento | As regras de segmento definem quais atributos devem ser incluídos nos perfis do cliente. Dependendo dos campos incluídos em uma definição de segmento, o segmento herdará quaisquer rótulos de uso aplicados a esses campos. Violações de política ocorrerão se você ativar um segmento cujos rótulos herdados são restritos pelas políticas aplicáveis do destino, com base em seu caso de uso de marketing. |
 | Destino | Ao configurar um destino, uma ação de marketing (às vezes chamada de caso de uso de marketing) pode ser definida. Esse caso de uso correlaciona-se a uma ação de marketing, conforme definido em uma política de uso de dados. Em outras palavras, o caso de uso de marketing definido para um destino determina quais políticas de uso de dados se aplicam a esse destino. Violações de política ocorrerão se você ativar um segmento cujos rótulos de uso são restritos pelas políticas aplicáveis do destino. |
+
+>[!IMPORTANT]
+>
+>Algumas políticas de uso de dados podem especificar dois ou mais rótulos com uma relação AND. Por exemplo, uma política pode restringir uma ação de marketing se os rótulos `C1` E `C2` estiverem presentes, mas não restringir a mesma ação se apenas um desses rótulos estiver presente.
+>
+>Quando se trata de imposição automática, a estrutura de Governança de dados não considera a ativação de segmentos separados em um destino como uma combinação de dados. Portanto, a política `C1 AND C2` de exemplo é **NOT** aplicada se esses rótulos estiverem incluídos em segmentos separados. Em vez disso, essa política só é aplicada quando ambos os rótulos estão presentes no mesmo segmento após a ativação.
 
 Quando ocorrem violações de política, as mensagens resultantes que aparecem na interface do usuário fornecem ferramentas úteis para explorar a linhagem de dados de contribuição da violação para ajudar a resolver o problema. Mais detalhes são fornecidos na próxima seção.
 

@@ -3,7 +3,7 @@ keywords: correspondência de cliente do google, correspondência de cliente do 
 title: Conexão de correspondência do cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas do Google, como Pesquisa, Compras, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Para promover a versão, eles carregam endereços de email do banco de dados do 
 
 ## Governança de dados para destinos [!DNL Google Customer Match] {#data-governance}
 
-Alguns destinos no Experience Platform têm certas regras e obrigações para os dados enviados para a plataforma de destino ou recebidos dela. Você é responsável por entender as limitações e obrigações dos dados e como usá-los no Adobe Experience Platform e na plataforma de destino. O Adobe Experience Platform fornece ferramentas de governança de dados para ajudá-lo a gerenciar algumas dessas obrigações de uso de dados. [Saiba ](../../..//data-governance/labels/overview.md) mais sobre as ferramentas e as políticas de governança de dados.
+Alguns destinos no Experience Platform têm certas regras e obrigações para os dados enviados para a plataforma de destino ou recebidos dela. Você é responsável por entender as limitações e obrigações dos dados e como usá-los no Adobe Experience Platform e na plataforma de destino. O Adobe Experience Platform fornece ferramentas de governança de dados para ajudá-lo a gerenciar algumas dessas obrigações de uso de dados. [Saiba ](../../../data-governance/labels/overview.md) mais sobre as ferramentas e as políticas de governança de dados.
 
 ## Identidades compatíveis {#supported-identities}
 

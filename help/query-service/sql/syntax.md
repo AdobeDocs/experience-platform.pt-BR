@@ -5,10 +5,9 @@ title: Sintaxe SQL no Serviço de Consulta
 topic-legacy: syntax
 description: Este documento mostra a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
@@ -229,6 +228,34 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 **Parâmetros**
 
 - `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se a tabela  **** não existir.
+
+## SOLTAR BANCO DE DADOS
+
+O comando `DROP DATABASE` elimina um banco de dados existente.
+
+```sql
+DROP DATABASE [IF EXISTS] db_name
+```
+
+**Parâmetros**
+
+- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se o banco de dados  **** não existir.
+
+## ESQUEMA DE SOLTAR
+
+O comando `DROP SCHEMA` elimina um esquema existente.
+
+```sql
+DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
+```
+
+**Parâmetros**
+
+- `IF EXISTS`: Se isso for especificado, nenhuma exceção será lançada se o schema  **** não existir.
+
+- `RESTRICT`: Valor padrão para o modo . Se isso for especificado, o schema só será descartado se **não** contiver nenhuma tabela.
+
+- `CASCADE`: Se isso for especificado, o schema será descartado junto com todas as tabelas presentes no schema.
 
 ## CRIAR EXIBIÇÃO
 

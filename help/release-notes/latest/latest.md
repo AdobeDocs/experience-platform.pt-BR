@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
+source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1306'
 ht-degree: 3%
 
 ---
@@ -82,7 +82,6 @@ O Adobe Experience Platform permite que você conduza experiências coordenadas,
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Mesclar atualizações do fluxo de trabalho da política | Ao criar e atualizar políticas de mesclagem na interface do usuário, os usuários agora podem visualizar 20 perfis de amostra com base no esquema de união. Isso permite que os usuários visualizem a aparência dos perfis do cliente antes de salvar as configurações da política de mesclagem. Para obter mais informações, consulte o [guia da interface do usuário de políticas de mesclagem](../../profile/merge-policies/ui-guide.md). |
 | Relatório de sobreposição de conjunto de dados | O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do armazenamento de Perfil, expondo os conjuntos de dados que mais contribuem para o público-alvo endereçável. Além de fornecer insights dos dados do Perfil, este relatório ajuda os usuários a tomar ações para otimizar o uso da licença, como definir um limite para a duração de determinados dados. Para saber mais, siga o tutorial em [gerar o relatório de sobreposição de conjunto de dados](../../profile/tutorials/dataset-overlap-report.md). |
 
 Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados [!DNL Profile], comece lendo a [Visão geral do perfil do cliente em tempo real](../../profile/home.md).

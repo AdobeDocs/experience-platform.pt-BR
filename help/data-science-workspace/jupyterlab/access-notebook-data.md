@@ -5,9 +5,9 @@ title: Acesso a dados em notebooks Jupyterlab
 topic-legacy: Developer Guide
 description: Este guia tem como foco o uso de notebooks Júpiter, criados no Data Science Workspace para acessar seus dados.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3294'
 ht-degree: 8%
 
 ---
@@ -362,7 +362,7 @@ Com a introdução de [!DNL Spark] 2.4, `%dataset` mágica personalizada é forn
 **Uso**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **Descrição**
@@ -373,8 +373,8 @@ Um comando mágico [!DNL Data Science Workspace] personalizado para ler ou grava
 | --- | --- | --- |
 | `{action}` | O tipo de ação a ser executada no conjunto de dados. Duas ações estão disponíveis &quot;ler&quot; ou &quot;gravar&quot;. | Sim |
 | `--datasetId {id}` | Usado para fornecer a ID do conjunto de dados para ler ou gravar. | Sim |
-| `--dataFrame {df}` | Os pandas dataframe. <ul><li> Quando a ação é &quot;lida&quot;, {df} é a variável na qual os resultados da operação de leitura do conjunto de dados estão disponíveis. </li><li> Quando a ação é &quot;gravar&quot;, esse dataframe {df} é gravado no conjunto de dados. </li></ul> | Sim |
-| `--mode` | Um parâmetro adicional que altera a forma como os dados são lidos. Os parâmetros permitidos são &quot;batch&quot; e &quot;interativos&quot;. Por padrão, o modo é definido como &quot;interativo&quot;. Recomenda-se usar o modo &quot;batch&quot; ao ler grandes quantidades de dados. | Não |
+| `--dataFrame {df}` | Os pandas dataframe. <ul><li> Quando a ação é &quot;lida&quot;, {df} é a variável na qual os resultados da operação de leitura do conjunto de dados estão disponíveis (como um dataframe). </li><li> Quando a ação é &quot;gravar&quot;, esse dataframe {df} é gravado no conjunto de dados. </li></ul> | Sim |
+| `--mode` | Um parâmetro adicional que altera a forma como os dados são lidos. Os parâmetros permitidos são &quot;batch&quot; e &quot;interativos&quot;. Por padrão, o modo é definido como &quot;batch&quot;.<br> É recomendável que você use o modo &quot;interativo&quot; para aumentar o desempenho da consulta em conjuntos de dados menores. | Sim |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ Um comando mágico [!DNL Data Science Workspace] personalizado para ler ou grava
 
 **Exemplos**
 
-- **Exemplo** de leitura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Exemplo** de gravação:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **Exemplo** de leitura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **Exemplo** de gravação:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ As células a seguir filtram um conjunto de dados [!DNL ExperienceEvent] para da
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,7 +568,7 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```

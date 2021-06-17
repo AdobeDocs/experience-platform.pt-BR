@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de gerenciamento de sandbox
 topic-legacy: developer guide
 description: O endpoint /sandboxes na API do Sandbox permite gerenciar sandboxes de forma programática no Adobe Experience Platform.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
@@ -348,11 +348,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 (OK) com os detalhes da sand
 
 ## Redefinir uma sandbox {#reset}
 
->[!IMPORTANT]
->
->A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado nela também estiver sendo usado pelo Adobe Analytics para o recurso [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou se o gráfico de identidade hospedado nele também estiver sendo usado pelo Adobe Audience Manager para o recurso [Destinos baseados em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
-
-As sandboxes de desenvolvimento têm um recurso de &quot;redefinição de fábrica&quot; que exclui todos os recursos não padrão de uma sandbox. Você pode redefinir uma sandbox fazendo uma solicitação de PUT que inclui o `name` da sandbox no caminho da solicitação.
+As sandboxes têm um recurso de &quot;redefinição de fábrica&quot; que exclui todos os recursos não padrão de uma sandbox. Você pode redefinir uma sandbox fazendo uma solicitação de PUT que inclui o `name` da sandbox no caminho da solicitação.
 
 **Formato da API**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SANDBOX_NAME}` | A propriedade `name` da sandbox que você deseja redefinir. |
+| `validationOnly` | Um parâmetro opcional que permite fazer uma verificação prévia na operação de redefinição da sandbox sem fazer a solicitação real. Defina esse parâmetro como `validationOnly=true` para verificar se a sandbox que você está prestes a redefinir contém qualquer Adobe Analytics, Adobe Audience Manager ou segmento que compartilha dados. |
 
 **Solicitação**
 
@@ -370,7 +367,7 @@ A solicitação a seguir redefine uma sandbox chamada &quot;acme-dev&quot;.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **Resposta**
 
+>[!NOTE]
+>
+>Depois que uma sandbox é redefinida, leva aproximadamente 30 segundos para ser provisionada pelo sistema.
+
 Uma resposta bem-sucedida retorna os detalhes da sandbox atualizada, mostrando que seu `state` é uma &quot;redefinição&quot;.
 
 ```json
@@ -399,18 +400,76 @@ Uma resposta bem-sucedida retorna os detalhes da sandbox atualizada, mostrando q
 }
 ```
 
->[!NOTE]
->
->Depois que uma sandbox é redefinida, leva aproximadamente 30 segundos para ser provisionada pelo sistema. Depois de provisionado, o `state` da sandbox torna-se &quot;ativo&quot; ou &quot;falhou&quot;.
+A sandbox de produção padrão e qualquer sandbox de produção criada pelo usuário não podem ser redefinidas se o gráfico de identidade hospedado nela também estiver sendo usado pelo Adobe Analytics para o recurso [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou se o gráfico de identidade hospedado nele também estiver sendo usado pelo Adobe Audience Manager para o recurso [Destinos baseados em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
-A tabela a seguir contém possíveis exceções que podem impedir a redefinição de uma sandbox:
+Veja a seguir uma lista de possíveis exceções que podem impedir a redefinição de uma sandbox:
 
-| Código de erro | Descrição |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+Você pode continuar a redefinir uma sandbox de produção que é usada para o compartilhamento de segmentos bidirecionais com [!DNL Audience Manager] ou [!DNL Audience Core Service] adicionando o parâmetro `ignoreWarnings` à solicitação.
+
+**Formato da API**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| Parâmetro | Descrição |
 | --- | --- |
-| `2074-400` | Essa sandbox não pode ser redefinida porque o gráfico de identidade hospedado nessa sandbox também está sendo usado pelo Adobe Analytics para o recurso de Análise entre dispositivos (CDA). |
-| `2075-400` | Esta sandbox não pode ser redefinida porque o gráfico de identidade hospedado nesta sandbox também está sendo usado pelo Adobe Audience Manager para o recurso Destinos baseados em pessoas (PBD) . |
-| `2076-400` | Essa sandbox não pode ser redefinida porque o gráfico de identidade hospedado nessa sandbox também está sendo usado pelo Adobe Audience Manager para o recurso Destinos baseados em pessoas (PBD), bem como pelo Adobe Analytics para o recurso Análise entre dispositivos (CDA) . |
-| `2077-400` | Aviso: A sandbox `{SANDBOX_NAME}` é usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o serviço principal de público-alvo. |
+| `{SANDBOX_NAME}` | A propriedade `name` da sandbox que você deseja redefinir. |
+| `ignoreWarnings` | Um parâmetro opcional que permite ignorar a verificação de validação e forçar a redefinição de uma sandbox de produção usada para o compartilhamento de segmentos bidirecionais com [!DNL Audience Manager] ou [!DNL Audience Core Service]. Esse parâmetro não pode ser aplicado a uma sandbox de produção padrão. |
+
+**Solicitação**
+
+A solicitação a seguir redefine uma sandbox de produção chamada &quot;acme&quot;.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna os detalhes da sandbox atualizada, mostrando que seu `state` é uma &quot;redefinição&quot;.
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Excluir uma sandbox {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parâmetro | Descrição |
 | --- | --- |
 | `{SANDBOX_NAME}` | O `name` da sandbox que você deseja excluir. |
+| `validationOnly` | Um parâmetro opcional que permite fazer uma verificação prévia na operação de exclusão da sandbox sem fazer a solicitação real. Defina esse parâmetro como `validationOnly=true` para verificar se a sandbox que você está prestes a redefinir contém qualquer Adobe Analytics, Adobe Audience Manager ou segmento que compartilha dados. |
+| `ignoreWarnings` | Um parâmetro opcional que permite ignorar a verificação de validação e forçar a exclusão de uma sandbox de produção criada pelo usuário, usada para o compartilhamento de segmentos bidirecionais com [!DNL Audience Manager] ou [!DNL Audience Core Service]. Esse parâmetro não pode ser aplicado a uma sandbox de produção padrão. |
 
 **Solicitação**
 
-A solicitação a seguir exclui uma sandbox chamada &quot;acme-dev&quot;.
+A solicitação a seguir exclui uma sandbox de produção chamada &quot;acme&quot;.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ Uma resposta bem-sucedida retorna os detalhes atualizados da sandbox, mostrando 
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"

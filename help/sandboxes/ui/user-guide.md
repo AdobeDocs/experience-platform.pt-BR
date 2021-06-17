@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Sandbox
 topic-legacy: user guide
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Quando terminar de criar a sandbox, atualize a página e a nova sandbox aparecer
 
 >[!IMPORTANT]
 >
->A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado nela também estiver sendo usado pelo Adobe Analytics para o recurso [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou se o gráfico de identidade hospedado nele também estiver sendo usado pelo Adobe Audience Manager para o recurso [Destinos baseados em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html). As sandboxes de produção usadas para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o serviço principal de público-alvo também não podem ser redefinidas.
+>A sandbox de produção padrão não poderá ser redefinida se o gráfico de identidade hospedado nela também estiver sendo usado pelo Adobe Analytics para o recurso [Análise entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) ou se o gráfico de identidade hospedado nele também estiver sendo usado pelo Adobe Audience Manager para o recurso [Destinos baseados em pessoas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
 A redefinição de uma sandbox de produção ou desenvolvimento exclui todos os recursos associados a ela (esquemas, conjuntos de dados e assim por diante), mantendo o nome da sandbox e as permissões associadas. Essa sandbox &quot;limpa&quot; continua disponível com o mesmo nome para usuários que têm acesso a ela.
 
@@ -88,29 +88,29 @@ Após alguns instantes, uma caixa de confirmação aparecerá na parte inferior 
 
 ![success](../images/ui/success.png)
 
-### Mensagens de erro
+### Avisos
 
-Uma sandbox de produção padrão que contém dados CDA não pode ser redefinida e retorna o seguinte erro.
+Uma sandbox de produção padrão que contém dados CDA não pode ser redefinida e retorna o seguinte aviso.
 
 ![cda](../images/ui/cda.png)
 
-Uma sandbox de produção padrão que contém dados PBD também não pode ser redefinida e retorna o seguinte erro.
+Uma sandbox de produção padrão que contém dados PBD também não pode ser redefinida e retorna o seguinte aviso.
 
 ![pbd](../images/ui/pbd.png)
 
-Uma sandbox de produção padrão que contém dados para CDA e PBD também não pode ser redefinida e retorna o seguinte erro.
+Uma sandbox de produção padrão que contém dados para CDA e PBD também não pode ser redefinida e retorna o seguinte aviso.
 
 ![both](../images/ui/both.png)
 
-Uma sandbox de produção usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o Audience Core Service também não pode ser redefinida e retorna o seguinte erro.
+Você pode redefinir uma sandbox de produção que é usada para o compartilhamento de segmentos bidirecionais com [!DNL Audience Manager] ou [!DNL Audience Core Service]. Selecione [!UICONTROL Continuar] para prosseguir com a redefinição.
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## Excluir uma sandbox
 
 >[!IMPORTANT]
 >
->A sandbox de produção padrão não pode ser excluída e as sandboxes de produção usadas para o compartilhamento de segmentos bidirecionais com o Adobe Audience Manager ou o Audience Core Service também não podem ser excluídas.
+>A sandbox de produção padrão não pode ser excluída.
 
 A exclusão de uma sandbox de produção ou desenvolvimento remove permanentemente todos os recursos associados a essa sandbox, incluindo permissões.
 
@@ -126,9 +126,9 @@ Na janela de confirmação final, digite o nome da sandbox na caixa de diálogo 
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Uma sandbox de produção usada para o compartilhamento bidirecional de segmentos com o Adobe Audience Manager ou o Audience Core Service não pode ser excluída e retorna o seguinte erro.
+Uma sandbox de produção criada pelo usuário e usada para o compartilhamento de segmentos bidirecionais com [!DNL Audience Manager] ou [!DNL Audience Core Service] ainda pode ser excluída após o seguinte aviso.
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## Próximas etapas
 

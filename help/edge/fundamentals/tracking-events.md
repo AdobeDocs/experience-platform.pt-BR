@@ -2,27 +2,26 @@
 title: Rastrear eventos usando o SDK da Web da Adobe Experience Platform
 description: Saiba como rastrear eventos do SDK da Web da Adobe Experience Platform.
 keywords: sendEvent; xdm; eventType; datasetId; sendBeacon; send Beacon; documentUnloading; document Unloading; onBeforeEventSend;
-translation-type: tm+mt
-source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
+exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
+source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
 
-
 # Rastrear eventos
 
-Para enviar dados do evento para a Adobe Experience Cloud, use o comando `sendEvent` . O comando `sendEvent` é a maneira principal de enviar dados para o [!DNL Experience Cloud] e recuperar conteúdo personalizado, identidades e destinos de público-alvo.
+Para enviar dados do evento para o Adobe Experience Cloud, use o comando `sendEvent`. O comando `sendEvent` é a maneira principal de enviar dados para o [!DNL Experience Cloud] e recuperar conteúdo personalizado, identidades e destinos de público-alvo.
 
-Os dados enviados para a Adobe Experience Cloud se enquadram em duas categorias:
+Os dados enviados para o Adobe Experience Cloud são divididos em duas categorias:
 
 * Dados XDM
 * Dados não XDM (não compatível no momento)
 
 ## Envio de dados XDM
 
-Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um esquema criado na Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
+Os dados XDM são um objeto cujo conteúdo e estrutura correspondem a um esquema criado no Adobe Experience Platform. [Saiba mais sobre como criar um schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Quaisquer dados XDM que você deseja que façam parte de sua análise, personalização, públicos-alvo ou destinos devem ser enviados usando a opção `xdm`.
 
@@ -69,15 +68,38 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-Neste exemplo, a camada de dados é clonada serializando-a para JSON e depois desserializando-a. Em seguida, o resultado clonado é transmitido ao comando `sendEvent`. Isso garante que o comando `sendEvent` tenha um instantâneo da camada de dados como existia quando o comando `sendEvent` foi executado, de modo que modificações posteriores no objeto da camada de dados original não sejam refletidas nos dados enviados para o servidor. Se você estiver usando uma camada de dados orientada por eventos, a clonagem de seus dados provavelmente já será manipulada automaticamente. Por exemplo, se estiver usando a [Camada de dados do cliente da Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), o método `getState()` fornecerá um instantâneo computado e clonado de todas as alterações anteriores. Isso também é feito para você automaticamente se estiver usando a extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch.
+Neste exemplo, a camada de dados é clonada serializando-a para JSON e depois desserializando-a. Em seguida, o resultado clonado é transmitido ao comando `sendEvent`. Isso garante que o comando `sendEvent` tenha um instantâneo da camada de dados como existia quando o comando `sendEvent` foi executado, de modo que modificações posteriores no objeto da camada de dados original não sejam refletidas nos dados enviados para o servidor. Se você estiver usando uma camada de dados orientada por eventos, a clonagem de seus dados provavelmente já será manipulada automaticamente. Por exemplo, se estiver usando a [Camada de dados do cliente do Adobe](https://github.com/adobe/adobe-client-data-layer/wiki), o método `getState()` fornecerá um instantâneo computado e clonado de todas as alterações anteriores. Isso também é feito para você automaticamente se estiver usando a extensão Adobe Experience Platform Web SDK no Adobe Experience Platform Launch.
 
 >[!NOTE]
 >
 >Há um limite de 32 KB nos dados que podem ser enviados em cada evento no campo XDM.
 
+
 ### Envio de dados não XDM
 
-No momento, não há suporte para o envio de dados que não correspondem a um esquema XDM. O suporte está planejado para uma data futura.
+Os dados que não correspondem a um esquema XDM devem ser enviados usando a opção `data` do comando `sendEvent`. Esse recurso é compatível com versões 2.5.0 e posteriores do SDK da Web.
+
+Isso é útil se você precisar atualizar um perfil do Adobe Target ou enviar atributos do Recommendations do Target. [Leia mais sobre esses recursos do Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
+
+No futuro, você poderá enviar a camada de dados completa sob a opção `data` e mapeá-la para o lado do servidor XDM.
+
+**Como enviar atributos do Perfil e do Recommendations para o Adobe Target:**
+
+```
+alloy("sendEvent", {
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30,
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
+
 
 ### Configuração `eventType` {#event-types}
 
@@ -110,7 +132,7 @@ Em um evento de experiência XDM, há um campo opcional `eventType`. Isso manté
 | delivery.feedback | Eventos de feedback para um delivery. Exemplo de eventos de feedback para um delivery de email |
 
 
-Esses tipos de evento serão mostrados em uma lista suspensa se estiver usando a extensão Adobe Experience Platform Launch ou se você sempre puder transmiti-los sem o Experience Platform Launch. Eles podem ser transmitidos como parte da opção `xdm` .
+Esses tipos de evento serão exibidos em uma lista suspensa se você estiver usando a extensão Adobe Experience Platform Launch ou sempre puder transmiti-los sem o Experience Platform Launch. Eles podem ser transmitidos como parte da opção `xdm` .
 
 
 ```javascript
@@ -158,11 +180,11 @@ alloy("sendEvent", {
 
 ### Adição de informações de identidade
 
-As informações de identidade personalizadas também podem ser adicionadas ao evento. Consulte [Recuperação da Experience Cloud ID](../identity/overview.md).
+As informações de identidade personalizadas também podem ser adicionadas ao evento. Consulte [Recuperando Experience Cloud ID](../identity/overview.md).
 
 ## Uso da API sendBeacon
 
-Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura a navegação da página. Para informar ao Adobe Experience Platform [!DNL Web SDK] para usar `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando event.  Exemplo:
+Pode ser complicado enviar dados de evento antes que o usuário da página da Web tenha saído. Se a solicitação demorar muito, o navegador pode cancelar a solicitação. Alguns navegadores implementaram uma API padrão da Web chamada `sendBeacon` para permitir que os dados sejam coletados com mais facilidade durante esse período. Ao usar `sendBeacon`, o navegador faz a solicitação da Web no contexto de navegação global. Isso significa que o navegador faz a solicitação de beacon em segundo plano e não segura a navegação da página. Para dizer ao Adobe Experience Platform [!DNL Web SDK] para usar `sendBeacon`, adicione a opção `"documentUnloading": true` ao comando event.  Exemplo:
 
 
 ```javascript
@@ -181,7 +203,7 @@ alloy("sendEvent", {
 });
 ```
 
-Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` de uma vez. Em muitos navegadores, o limite é de 64 K. Se o navegador rejeitar o evento porque a carga é muito grande, a Adobe Experience Platform [!DNL Web SDK] recorrerá ao uso de seu método de transporte normal (por exemplo, busca).
+Os navegadores impuseram limites para a quantidade de dados que pode ser enviada com `sendBeacon` de uma vez. Em muitos navegadores, o limite é de 64 K. Se o navegador rejeitar o evento porque a carga é muito grande, o Adobe Experience Platform [!DNL Web SDK] voltará a usar seu método de transporte normal (por exemplo, busca).
 
 ## Lidar com respostas de eventos
 

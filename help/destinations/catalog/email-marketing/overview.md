@@ -4,7 +4,7 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os provedores de serviços de email (ESPs) permitem gerenciar suas atividades de marketing por email, como para enviar campanhas de email promocionais.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Para obter informações sobre essa etapa, consulte a etapa [Selecionar atributo
 O Adobe recomenda selecionar um identificador exclusivo do [schema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Geralmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no schema.
 
 | Identificador exclusivo | Campo XDM no esquema unificado |
------------------ | ---------------------------
+|----------------- | ---------------------------|
 | Endereço de email | `personalEmail.address` |
 | Telefone | `mobilePhone.number` |
 | ID do programa de fidelidade | `Customer-defined XDM field` |
@@ -73,7 +73,7 @@ O Adobe recomenda selecionar um identificador exclusivo do [schema de união](..
 No seletor de campo Schema , escolha outros campos que deseja exportar para o destino do email. Algumas opções recomendadas são:
 
 | Esquema | Campo XDM |
------- | ---------
+|------ | ---------|
 | Nome | `person.name.firstName` |
 | Sobrenome | `person.name.lastName` |
 | Telefone | `mobilePhone.number` |

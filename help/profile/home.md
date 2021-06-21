@@ -4,14 +4,14 @@ title: Visão geral do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real é um armazenamento de entidade de pesquisa genérico que mescla dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile]visão geral
+# [!DNL Real-time Customer Profile] visão geral
 
 O Adobe Experience Platform permite que você conduza experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagirem com sua marca. Com [!DNL Real-time Customer Profile], você pode ver uma visualização holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. [!DNL Profile] O permite consolidar os dados do cliente em uma visualização unificada que oferece uma conta acionável com carimbo de data e hora de cada interação com o cliente. Esta visão geral ajudará você a entender a função e o uso de [!DNL Real-time Customer Profile] em [!DNL Experience Platform].
 
@@ -120,7 +120,7 @@ Como está relacionado ao acesso aos dados, o controle de dados desempenha uma f
 
 ### Tratamento de solicitações de recusa e privacidade de dados
 
-[!DNL Experience Platform] O permite que os clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no  [!DNL Real-time Customer Profile]. Para obter mais informações sobre como as solicitações de recusa são tratadas, consulte a documentação sobre [como atender às solicitações de recusa](../segmentation/honoring-opt-outs.md).
+[!DNL Experience Platform] O permite que os clientes enviem solicitações de recusa relacionadas ao uso e armazenamento de seus dados no  [!DNL Real-time Customer Profile]. Para obter mais informações sobre como as solicitações de recusa são tratadas, consulte a documentação sobre [como atender às solicitações de recusa](../segmentation/consents.md).
 
 ## Próximas etapas e recursos adicionais
 

@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: A Estrutura de insights do modelo fornece ao cientista de dados ferramentas no Data Science Workspace para fazer escolhas rápidas e informadas para modelos ideais de aprendizado de máquina com base em experimentos.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Atualmente, a Estrutura de insights do modelo oferece suporte aos seguintes temp
 
 O código de amostra das receitas pode ser encontrado no repositório [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) em `recipes`. Arquivos específicos deste repositório serão referenciados neste tutorial.
 
-### Escala {#scala}
+### Scala {#scala}
 
 Há duas maneiras de trazer métricas para as receitas. Uma é usar as métricas de avaliação padrão fornecidas pelo SDK e a outra é gravar métricas de avaliação personalizadas.
 
@@ -44,7 +43,7 @@ Há duas maneiras de trazer métricas para as receitas. Uma é usar as métricas
 As avaliações padrão são calculadas como parte dos algoritmos de classificação. Estes são alguns valores padrão para avaliadores que estão implementados no momento:
 
 | Classe do Avaliador | `evaluation.class` |
---- | ---
+|--- | ---|
 | DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |

@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Serviço de segmentação da Adobe Experience Platform
 breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie segmentos e gere públicos a partir dos dados do Real-time Customer Profile.
-feature: Segmentos
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+feature: 'Segmentos '
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
    - [Segmentação de borda](api/edge-segmentation.md)
    - [Exportar trabalhos](api/export-jobs.md)
    - [Visualizações e estimativas](api/previews-and-estimates.md)
-   - [Scheduler](api/schedules.md)
+   - [Agendamentos](api/schedules.md)
    - [Definições de segmento](api/segment-definitions.md)
    - [Trabalhos de segmento](api/segment-jobs.md)
    - [Pesquisa de segmento](api/segment-search.md)
@@ -36,7 +36,7 @@ ht-degree: 21%
    - [Segmentação de streaming](ui/streaming-segmentation.md)
    - [Segmentação de transmissão (vídeo)](video/streaming-segmentation-overview.md)
    - [Refatoração das restrições de tempo](ui/segment-refactoring.md)
-- [Respeito às opções de não participação](honoring-opt-outs.md)
+- [Respeito do consentimento](consents.md)
 - [Segmentação de várias entidades](multi-entity-segmentation.md)
 - Idioma da Consulta de Perfil {#pql}
    - [Visão geral](pql/overview.md)
@@ -44,7 +44,7 @@ ht-degree: 21%
    - [Funções de comparação](pql/comparison-functions.md)
    - [Array, list e defina funções](pql/array-functions.md)
    - [Funções do mapa](pql/map-functions.md)
-   - [Funções da string](pql/string-functions.md)
+   - [Funções de string](pql/string-functions.md)
    - [Funções do objeto](pql/object-functions.md)
    - [Funções aritméticas](pql/arithmetic-functions.md)
    - [Funções de agregação](pql/aggregation-functions.md)

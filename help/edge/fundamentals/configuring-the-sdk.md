@@ -4,11 +4,10 @@ description: Saiba como configurar o SDK da Web da Adobe Experience Platform.
 seo-description: Saiba como configurar o SDK da Web do Experience Platform
 keywords: configurar; configuração; SDK; borda; SDK da Web; configurar; edgeConfigId; contexto; Web; dispositivo; ambiente; placeContext; debugEnabled; edgeDomain; orgId; clickCollectionEnabled; onBeforeEventSend; defaultConsent; configurações de sdk da web; prehideStyle; opacity; cookieDestinationsEnabled; urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-translation-type: tm+mt
-source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
+source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 9%
+source-wordcount: '839'
+ht-degree: 15%
 
 ---
 
@@ -70,7 +69,7 @@ Indica se a depuração está ativada. Configurar essa configuração como `true
 
 ### `edgeDomain` {#edge-domain}
 
-Preencha este campo com seu domínio primário. Para obter mais detalhes, consulte a [documentação](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Preencha este campo com seu domínio primário. Para obter mais detalhes, consulte a [documentação](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=pt-BR).
 
 O domínio é semelhante a `data.{customerdomain.com}` para um site em www.{customerdomain.com}.
 
@@ -94,7 +93,7 @@ Sua ID de organização [!DNL Experience Cloud] atribuída. Ao configurar vária
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica se os dados associados aos cliques em links são coletados automaticamente. Consulte [Rastreamento automático de link](../data-collection/track-links.md#automaticLinkTracking) para obter mais informações.
+Indica se os dados associados aos cliques em links são coletados automaticamente. Consulte [Rastreamento automático de link](../data-collection/track-links.md#automaticLinkTracking) para obter mais informações. Os links também são rotulados como links de download se incluírem um atributo de download ou se o link terminar com uma extensão de arquivo. Os qualificadores de link de download podem ser configurados com uma expressão regular. O valor padrão é `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 

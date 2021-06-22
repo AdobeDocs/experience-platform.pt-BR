@@ -4,9 +4,9 @@ title: Painel de segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,11 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 
 ## Explorar o painel de segmentos
 
-Para navegar até o painel de segmentos na interface do usuário da plataforma, selecione **[!UICONTROL Segmentos]** no painel à esquerda e selecione a guia **[!UICONTROL Visão geral]** para exibir o painel.
+Para navegar até o painel [!UICONTROL Segmentos] na interface do usuário da plataforma, selecione **[!UICONTROL Segmentos]** no painel esquerdo e selecione a guia **[!UICONTROL Visão geral]** para exibir o painel.
+
+>[!NOTE]
+>
+>Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel [!UICONTROL Segmentos] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudá-lo a começar a usar a segmentação.
 
 ![](../images/segments/dashboard-overview.png)
 

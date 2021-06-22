@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ O painel [!UICONTROL Destinos] exibe um instantâneo dos destinos que sua organi
 ## Explorar o painel de destinos
 
 Para navegar até o painel de destinos na interface do usuário da plataforma, selecione **[!UICONTROL Destinations]** no painel à esquerda e selecione a guia **[!UICONTROL Overview]** para exibir o painel.
+
+>[!NOTE]
+>
+>Se sua organização for nova no Experience Platform e ainda não tiver destinos ativos, o painel [!UICONTROL Destinos] e a guia [!UICONTROL Visão geral] não estarão visíveis. Em vez disso, selecionar [!UICONTROL Destinations] na navegação à esquerda exibe a guia [!UICONTROL Catalog]. Para saber mais sobre a guia [!UICONTROL Catalog], consulte o [[!UICONTROL Destinations] guia do espaço de trabalho](../../destinations/ui/destinations-workspace.md).
 
 ![](../images/destinations/dashboard-overview.png)
 

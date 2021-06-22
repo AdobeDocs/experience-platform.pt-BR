@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,19 @@ Também é importante saber dois termos principais que são usados por meio dest
 
 ## Visão geral
 
-Na [[!DNL Experience Platform] UI](https://platform.adobe.com/), selecione **[!UICONTROL Segmentos]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]**. Esta guia fornece links para a documentação e vídeos para ajudar você a entender e começar a trabalhar com segmentos.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Segmentos]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** exibindo o painel [!UICONTROL Segmentos].
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel [!UICONTROL Segmentos] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudá-lo a começar a usar segmentos.
 
-### Painel de segmentos
+###  Painel de segmentos  {#segments-dashboard}
 
-Para alguns usuários, selecionar **[!UICONTROL Segmentos]** na navegação à esquerda e abrir a guia **[!UICONTROL Visão geral]** fornece um painel que descreve as métricas principais relacionadas aos dados do seu segmento.
+O painel **[!UICONTROL Segmentos]** descreve as métricas principais relacionadas aos dados de segmento da sua organização.
 
-Para saber mais, visite o [guia do painel de segmentos](segment-dashboard.md).
+Para saber mais, visite o [guia do painel de segmentos](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Procurar
 

@@ -5,7 +5,7 @@ user-guide-title: Ajuda do Adobe Experience Platform Web SDK
 breadcrumb-title: Guia do Web SDK
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Edge Network.
 feature: Gerenciamento de dados
-source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
+source-git-commit: 8fd779d9fa73c178e8a8660a6cef01cfa112ecdc
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 33%
@@ -54,7 +54,7 @@ ht-degree: 33%
       * [Integração com o Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Integrar sem Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * Extensão do SDK da Web para Adobe Experience Platform Launch {#extension}
-   * [Extensão do SDK da Web](extension/web-sdk-extension.md)
+   * [Extensão do SDK da Web](extension/web-sdk-extension-configuration.md)
    * [Tipos de ação](extension/action-types.md)
    * [Tipos de elementos de dados](extension/data-element-types.md)
    * [Acesso à ECID](extension/accessing-the-ecid.md)

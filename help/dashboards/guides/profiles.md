@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 ## Explorar o painel [!UICONTROL Perfis]
 
 Para navegar até o painel [!UICONTROL Profiles] na interface do usuário da plataforma, selecione **[!UICONTROL Profiles]** no painel esquerdo e selecione a guia **[!UICONTROL Overview]** para exibir o painel.
+
+>[!NOTE]
+>
+>Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel [!UICONTROL Perfis] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudá-lo a começar a usar o Perfil do cliente em tempo real.
 
 ![](../images/profiles/dashboard-overview.png)
 

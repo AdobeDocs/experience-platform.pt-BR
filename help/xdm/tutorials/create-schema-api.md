@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial usa a API do Registro de esquema para orientá-lo pelas etapas para compor um esquema usando uma classe padrão.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '2426'
 ht-degree: 1%
@@ -482,11 +481,11 @@ Uma solicitação bem-sucedida retorna o Status de Resposta HTTP 201 (Criado) co
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "fieldgroups",
+    "meta:resourceType": "mixins",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -519,7 +518,7 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
@@ -543,7 +542,7 @@ Você pode ver que o grupo de campos foi adicionado com êxito porque a resposta
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +556,7 @@ Você pode ver que o grupo de campos foi adicionado com êxito porque a resposta
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -619,7 +618,7 @@ Em `"properties"`, é possível ver o namespace `_{TENANT_ID}` criado ao adicion
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -834,7 +833,7 @@ PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -896,11 +895,11 @@ A resposta agora inclui uma referência (`$ref`) ao tipo de dados no objeto &quo
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "fieldgroups",
+    "meta:resourceType": "mixins",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -958,7 +957,7 @@ Executar uma solicitação de GET para pesquisar o esquema agora mostra a refer�
 
 Os esquemas são usados para assimilar dados em [!DNL Experience Platform]. Esses dados são usados em vários serviços para criar uma única visualização unificada de um indivíduo. Para ajudar nesse processo, os campos principais podem ser marcados como &quot;Identidade&quot; e, após a assimilação de dados, os dados nesses campos são inseridos no &quot;Gráfico de identidade&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-time Customer Profile]](../../profile/home.md) e outros [!DNL Experience Platform] serviços para fornecer uma visualização agrupada de cada cliente individual.
 
-Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID do CRM ou outros campos de ID exclusivos.
+Os campos comumente marcados como &quot;Identidade&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM ou outros campos de ID exclusivos.
 
 Considere todos os identificadores exclusivos específicos da organização, pois também podem ser bons campos de identidade.
 
@@ -1068,7 +1067,7 @@ A resposta mostra que a operação foi executada com êxito e o schema agora con
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1081,7 @@ A resposta mostra que a operação foi executada com êxito e o schema agora con
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1205,7 +1204,7 @@ A seguir, é exibido o esquema Membros da Fidelidade concluído no formato JSON:
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",

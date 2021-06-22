@@ -2,10 +2,10 @@
 title: Casos de uso compatíveis com o SDK da Web da Adobe Experience Platform
 description: Saiba quais casos de uso são compatíveis com o SDK da Web da Adobe Experience Platform.
 keywords: web sdk; casos de uso
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 16%
+source-wordcount: '574'
+ht-degree: 15%
 
 ---
 
@@ -40,7 +40,7 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | --- | --- |
 | Enviar eventos de experiência |  |
 | Offer Decisioning | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Enviar dados para o Perfil de dados do cliente em tempo real com baixa latência |
+| Se o conjunto de dados estiver ativado para o perfil, a capacidade de enviar dados para o Perfil de dados do cliente em tempo real |  |
 | Enviar dados para o Customer Journey Analytics em tempo real |  |
 | Consentimento de gravação no perfil | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Encaminhar dados do lado do servidor em tempo real para terceiros | [Documentação](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | Suporte a atributos do visitante |  |
 | Scripts de perfil |  |
 | XDM se tornar parâmetros da mbox |  |
+| Ofertas de redirecionamento compatíveis com relatórios A4T | [Documentação](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Atualização do perfil do Target | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Recomendações |  |
+| ID de terceiros da mBox |  |
 
 {style=&quot;table-layout:auto&quot;}
 

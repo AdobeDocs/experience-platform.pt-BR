@@ -3,18 +3,18 @@ keywords: Experience Platform, perfil, perfil do cliente em tempo real, soluçã
 title: Visualizar ponto de extremidade da API de status de amostra (Visualização de perfil)
 description: Usando o ponto de extremidade de status de amostra de visualização, parte da API do Perfil do cliente em tempo real, é possível visualizar a amostra mais recente e bem-sucedida de seus dados de Perfil, listar a distribuição de perfis por conjunto de dados e por identidade e gerar um relatório de sobreposição de conjunto de dados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
+source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2450'
 ht-degree: 1%
 
 ---
 
 # Visualizar ponto de extremidade do status da amostra (Visualização do perfil)
 
-O Adobe Experience Platform permite assimilar dados de clientes de várias fontes para criar um perfil robusto e unificado para cada um dos clientes individuais. À medida que os dados são assimilados no Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas ao perfil.
+O Adobe Experience Platform permite assimilar dados de clientes de várias fontes para criar um perfil robusto e unificado para cada um dos clientes individuais. À medida que os dados são assimilados no Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real.
 
-Os resultados desse trabalho de amostra podem ser exibidos usando o terminal `/previewsamplestatus` da API do Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar as distribuições de perfil pelo conjunto de dados e pelo namespace de identidade, bem como para gerar um relatório de sobreposição de conjunto de dados para ganhar visibilidade sobre a composição do Profile store de sua organização. Este guia aborda as etapas necessárias para visualizar essas métricas usando o endpoint da API `/previewsamplestatus`.
+Os resultados desse trabalho de amostra podem ser exibidos usando o endpoint `/previewsamplestatus`, parte da API do Perfil do cliente em tempo real. Esse endpoint também pode ser usado para listar as distribuições de perfil pelo conjunto de dados e pelo namespace de identidade, bem como para gerar um relatório de sobreposição de conjunto de dados e um relatório de sobreposição de identidade para ganhar visibilidade sobre a composição do Profile store de sua organização. Este guia aborda as etapas necessárias para visualizar essas métricas usando o endpoint da API `/previewsamplestatus`.
 
 >[!NOTE]
 >
@@ -124,7 +124,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | Parâmetro | Descrição |
 |---|---|
-| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios forem executados na data, o relatório mais recente para essa data será retornado. Se não existir um relatório para a data especificada, um erro 404 será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
+| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios foram executados na data, o relatório mais recente dessa data será retornado. Se um relatório não existir para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
 
 **Solicitação**
 
@@ -204,15 +204,15 @@ A resposta inclui uma matriz `data`, contendo uma lista de objetos do conjunto d
 | `createdUser` | A ID de usuário do usuário que criou o conjunto de dados. |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado é da data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 
-## Listar distribuição de perfil por namespace
+## Listar distribuição de perfil por namespace de identidade
 
-Você pode executar uma solicitação de GET para o endpoint `/previewsamplestatus/report/namespace` para visualizar o detalhamento por namespace de identidade em todos os perfis mesclados no armazenamento de Perfil.
+Você pode executar uma solicitação de GET para o endpoint `/previewsamplestatus/report/namespace` para visualizar o detalhamento por namespace de identidade em todos os perfis mesclados no armazenamento de Perfil. Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela organização.
 
 Os namespaces de identidade são um componente importante do Adobe Experience Platform Identity Service que serve como indicadores do contexto ao qual os dados do cliente estão relacionados. Para saber mais, comece lendo a [visão geral do namespace de identidade](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
->O número total de perfis por namespace (somando os valores mostrados para cada namespace) sempre será maior que a métrica de contagem de perfis, pois um perfil pode ser associado a vários namespaces. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
+>O número total de perfis por namespace (somando os valores mostrados para cada namespace) pode ser maior que a métrica de contagem de perfis, pois um perfil pode ser associado a vários namespaces. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
 
 **Formato da API**
 
@@ -223,7 +223,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | Parâmetro | Descrição |
 |---|---|
-| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios forem executados na data, o relatório mais recente para essa data será retornado. Se não existir um relatório para a data especificada, um erro 404 será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
+| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios foram executados na data, o relatório mais recente dessa data será retornado. Se um relatório não existir para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
 
 **Solicitação**
 
@@ -301,9 +301,9 @@ A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhe
 | `code` | O `code` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do serviço de identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md) e também é chamado de [!UICONTROL Símbolo de identidade] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
 | `value` | O valor `id` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do serviço de identidade](../../identity-service/api/list-namespaces.md). |
 
-## Gerar relatório de sobreposição de conjunto de dados
+## Gerar o relatório de sobreposição de conjunto de dados
 
-O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do armazenamento de perfil de sua organização, expondo os conjuntos de dados que mais contribuem para o público-alvo endereçável (perfis). Além de fornecer insights sobre seus dados, este relatório pode ajudar você a tomar ações para otimizar o uso da licença, como definir um TTL para determinados conjuntos de dados.
+O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do armazenamento de perfil de sua organização, expondo os conjuntos de dados que mais contribuem para o público-alvo endereçável (perfis mesclados). Além de fornecer insights sobre seus dados, este relatório pode ajudar você a tomar ações para otimizar o uso da licença, como definir um TTL para determinados conjuntos de dados.
 
 Você pode gerar o relatório de sobreposição de conjunto de dados executando uma solicitação de GET para o endpoint `/previewsamplestatus/report/dataset/overlap`.
 
@@ -352,6 +352,8 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 | `data` | O objeto `data` contém listas de conjuntos de dados separadas por vírgulas e suas respectivas contagens de perfil. |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado é da data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 
+### Interpretação do relatório de sobreposição de conjunto de dados
+
 Os resultados do relatório podem ser interpretados a partir dos conjuntos de dados e das contagens de perfil na resposta. Considere o seguinte exemplo de objeto de relatório `data`:
 
 ```json
@@ -366,7 +368,102 @@ Este relatório fornece as seguintes informações:
 * Há 107 perfis que são compostos apenas de dados do conjunto de dados `5eeda0032af7bb19162172a7`.
 * Há um total de 454.642 perfis na organização.
 
+## Gerar o relatório de sobreposição de identidade
+
+O relatório de sobreposição de identidade fornece visibilidade sobre a composição do armazenamento de perfil de sua organização, expondo as identidades que mais contribuem para o público-alvo endereçável (perfis mesclados). Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela organização.
+
+Você pode gerar o relatório de sobreposição de identidade executando uma solicitação GET para o endpoint `/previewsamplestatus/report/identity/overlap`.
+
+**Formato da API**
+
+```http
+GET /previewsamplestatus/report/identity/overlap
+GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+```
+
+| Parâmetro | Descrição |
+|---|---|
+| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios foram executados na mesma data, o relatório mais recente dessa data será retornado. Se um relatório não existir para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
+
+**Solicitação**
+
+A solicitação a seguir usa o parâmetro `date` para retornar o relatório mais recente da data especificada.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Resposta**
+
+Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de sobreposição de identidade.
+
+```json
+{
+    "data": {
+        "Email,crmid,loyal": 2,
+        "ECID,Email,crmid": 7,
+        "ECID,Email,mobilenr": 12,
+        "AAID,ECID,loyal": 1,
+        "mobilenr": 25,
+        "AAID,ECID": 1508,
+        "ECID,crmid": 1,
+        "AAID,ECID,crmid": 2,
+        "Email,crmid": 328,
+        "CORE": 49,
+        "AAID": 446,
+        "crmid,loyal": 20988,
+        "Email": 10904,
+        "crmid": 249,
+        "ECID,Email": 74,
+        "Phone": 40,
+        "Email,Phone,loyal": 48,
+        "AAID,AVID,ECID": 85,
+        "Email,loyal": 1002,
+        "AAID,ECID,Email,Phone,crmid": 5,
+        "AAID,ECID,Email,crmid,loyal": 23,
+        "AAID,AVID,ECID,Email,crmid": 2,
+        "AVID": 3,
+        "AAID,ECID,Phone": 1,
+        "loyal": 43,
+        "ECID,Email,crmid,loyal": 6,
+        "AAID,ECID,Email,Phone,crmid,loyal": 1,
+        "AAID,ECID,Email": 2,
+        "AAID,ECID,Email,crmid": 142,
+        "AVID,ECID": 24,
+        "ECID": 6565
+    },
+    "reportTimestamp": "2021-12-29T16:55:03.624"
+}
+```
+
+| Propriedade | Descrição |
+|---|---|
+| `data` | O objeto `data` contém listas separadas por vírgulas com combinações exclusivas de códigos de namespace de identidade e suas respectivas contagens de perfil. |
+| Códigos de namespace | O `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` para seu `name` pode ser encontrado usando a [API do serviço de identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). O `code` também é conhecido como o [!UICONTROL Símbolo de identidade] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/namespaces.md). |
+| `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado é da data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
+
+### Interpretação do relatório de sobreposição de identidade
+
+Os resultados do relatório podem ser interpretados a partir das identidades e contagens de perfil na resposta. O valor numérico de cada linha informa quantos perfis são compostos dessa combinação exata de namespaces de identidade padrão e personalizados.
+
+Considere o seguinte trecho do objeto `data`:
+
+```json
+  "AAID,ECID,Email,crmid": 142,
+  "AVID,ECID": 24,
+  "ECID": 6565
+```
+
+Este relatório fornece as seguintes informações:
+* Há 142 perfis compostos de `AAID`, `ECID` e `Email` identidades padrão, bem como de um namespace de identidade `crmid` personalizado.
+* Há 24 perfis compostos de `AAID` e `ECID` namespaces de identidade.
+* Há 6.565 perfis que incluem apenas uma identidade `ECID`.
+
 ## Próximas etapas
 
-Agora que você sabe visualizar os dados de amostra no armazenamento de perfil e executar o relatório de sobreposição de conjunto de dados, também pode usar a estimativa e os endpoints de visualização da API do Serviço de segmentação para exibir informações de resumo sobre as definições do segmento. Essas informações ajudam a garantir que você esteja isolando o público-alvo esperado em seu segmento. Para saber mais sobre como trabalhar com visualizações e estimativas de segmento usando a API de segmentação, visite o [guia de visualização e estimativa de endpoints](../../segmentation/api/previews-and-estimates.md).
+Agora que você sabe visualizar os dados de amostra no armazenamento de perfil e executar vários relatórios de sobreposição, também pode usar a estimativa e os endpoints de visualização da API do Serviço de segmentação para exibir as informações de nível de resumo relacionadas às definições do segmento. Essas informações ajudam a garantir que você esteja isolando o público-alvo esperado em seu segmento. Para saber mais sobre como trabalhar com visualizações e estimativas de segmento usando a API de segmentação, visite o [guia de visualização e estimativa de endpoints](../../segmentation/api/previews-and-estimates.md).
 

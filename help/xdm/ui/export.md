@@ -5,10 +5,9 @@ description: Saiba como exportar um esquema existente para uma sandbox ou Organi
 topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 Todos os recursos da Biblioteca de esquemas estão contidos em uma sandbox específica de uma Organização IMS. Em alguns casos, você pode compartilhar recursos do Experience Data Model (XDM) entre sandboxes e Orgs do IMS.
 
-Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Schemas] na interface do usuário do Adobe Experience Platform permite gerar uma carga de exportação para qualquer schema na Biblioteca de Esquemas. Essa carga útil pode ser usada em uma chamada para a API do Registro de Schema para importar o esquema (e todos os recursos dependentes) para uma sandbox de destino e a Organização IMS.
+Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Schemas] na interface do usuário do Adobe Experience Platform permite gerar uma carga de exportação para qualquer schema na Biblioteca de Schema. Essa carga útil pode ser usada em uma chamada para a API do Registro de Schema para importar o esquema (e todos os recursos dependentes) para uma sandbox de destino e a Organização IMS.
 
 >[!NOTE]
 >
@@ -29,13 +28,13 @@ Embora a interface do usuário da plataforma permita exportar recursos do XDM, v
 
 ## Gerar uma carga de exportação
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** no painel de navegação esquerdo. No espaço de trabalho [!UICONTROL Schemas], localize o schema que deseja exportar e abra-o no [!DNL Schema Editor].
+Na interface do usuário da plataforma, selecione **[!UICONTROL Schemas]** na navegação à esquerda. No espaço de trabalho [!UICONTROL Schemas], localize o esquema que deseja exportar e abra-o no [!DNL Schema Editor].
 
 >[!TIP]
 >
 >Consulte o guia em [explorar recursos XDM](./explore.md) para obter detalhes sobre como encontrar o recurso XDM que você está procurando.
 
-Depois que o esquema for aberto, selecione o ícone **[!UICONTROL Copy JSON]** (![Copiar Ícone](../images/ui/export/icon.png)) na parte superior direita da tela.
+Depois que o esquema for aberto, selecione o ícone **[!UICONTROL Copiar JSON]** (![Copiar Ícone](../images/ui/export/icon.png)) na parte superior direita da tela.
 
 ![](../images/ui/export/copy-json.png)
 
@@ -44,9 +43,9 @@ Isso copia uma carga JSON para a área de transferência, gerada com base na est
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +170,12 @@ Isso copia uma carga JSON para a área de transferência, gerada com base na est
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +188,8 @@ Isso copia uma carga JSON para a área de transferência, gerada com base na est
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -213,4 +212,4 @@ Depois de copiar o JSON de exportação para o esquema, você pode usá-lo como 
 
 ## Próximas etapas
 
-Ao seguir este guia, você exportou com êxito um esquema XDM para uma Organização IMS ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário [!UICONTROL Schemas], consulte a [[!UICONTROL Schemas] visão geral da interface do usuário](./overview.md).
+Ao seguir este guia, você exportou com êxito um esquema XDM para uma Organização IMS ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário [!UICONTROL Schemas], consulte a [[!UICONTROL Visão geral da interface do usuário do Schemas]](./overview.md).

@@ -4,9 +4,9 @@ title: Guia da interface do usuário do perfil do cliente em tempo real
 topic-legacy: guide
 description: O Perfil do cliente em tempo real cria uma visualização holística de cada cliente individual, combinando dados de vários canais, incluindo dados online, offline, CRM e de terceiros. Este documento é um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,19 @@ Este guia da interface do usuário requer uma compreensão dos vários serviços
 
 ## Visão geral
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Profiles]** na navegação à esquerda para abrir a guia **[!UICONTROL Overview]**. Esta guia fornece links para a documentação e vídeos para ajudar você a entender e começar a trabalhar com perfis.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Profiles]** na navegação à esquerda para abrir a guia **[!UICONTROL Overview]** exibindo o painel [!UICONTROL Profiles].
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel [!UICONTROL Perfis] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudá-lo a começar a usar o Perfil do cliente em tempo real.
 
-### Painel de perfis
+###  Painel de perfis  {#profile-dashboard}
 
-Para alguns usuários, selecionar **[!UICONTROL Profiles]** na navegação à esquerda e abrir a guia **[!UICONTROL Overview]** fornece um painel que descreve as métricas principais relacionadas aos dados do seu Perfil.
+O painel **[!UICONTROL Perfis]** descreve as métricas principais relacionadas aos dados de Perfil de sua organização.
 
-Para saber mais, visite o [Guia do painel de perfis](profile-dashboard.md).
+Para saber mais, visite o [Guia do painel de perfis](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Procurar
 

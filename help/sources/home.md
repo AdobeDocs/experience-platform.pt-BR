@@ -5,10 +5,9 @@ title: Visão geral dos conectores de origem
 topic-legacy: overview
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-translation-type: tm+mt
-source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
+source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -31,13 +30,13 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 
 - [Visão geral do conector Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Criar uma conexão de origem do Adobe Audience Manager na interface do usuário](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Visão geral do conector de dados de classificações Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Visão geral da conexão da fonte de dados Classificações Adobe Analytics](connectors/adobe-applications/classifications.md)
 - [Criar uma conexão de fonte de dados de classificações do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Visão geral do conector de dados do Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Visão geral da conexão da fonte de dados do conjunto de relatórios do Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Criar uma conexão de origem do Adobe Analytics na interface do usuário](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Criar uma conexão de origem de Atributos do cliente na interface do usuário](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] visão geral do conector](connectors/adobe-applications/marketo/marketo.md)
-- [Criar conexão  [!DNL Marketo Engage] de recurso na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Criar uma conexão de origem  [!DNL Marketo Engage] na interface do usuário](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Publicidade
 
@@ -131,15 +130,15 @@ O Experience Platform oferece suporte para assimilação de dados de um sistema 
 
 ## Controle de acesso para fontes na assimilação de dados
 
-As permissões para fontes na assimilação de dados podem ser gerenciadas na Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissions]** em um perfil de produto específico. No painel **[!UICONTROL Edit Permissions]**, você pode acessar as permissões pertencentes às fontes por meio da entrada de menu **[!UICONTROL data ingestion]**. A permissão **[!UICONTROL View Sources]** concede acesso somente leitura às fontes disponíveis na guia **[!UICONTROL Catalog]** e às fontes autenticadas na guia **[!UICONTROL Browse]**, enquanto a permissão **[!UICONTROL Manage Sources]** concede acesso total a fontes de leitura, criação, edição e desativação.
+As permissões para fontes na assimilação de dados podem ser gerenciadas na Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissões]** em um perfil de produto específico. No painel **[!UICONTROL Editar Permissões]**, você pode acessar as permissões pertencentes a fontes por meio da entrada de menu **[!UICONTROL assimilação de dados]**. A permissão **[!UICONTROL Exibir fontes]** concede acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]**, enquanto a permissão **[!UICONTROL Gerenciar fontes]** concede acesso total para ler, criar, editar e desativar fontes.
 
 A tabela a seguir descreve como a interface do usuário se comporta com base em diferentes combinações dessas permissões:
 
 | Nível de permissão | Descrição |
 | ---- | ----|
-| **[!UICONTROL View Sources]** Ligado | Conceda acesso somente leitura a fontes em cada tipo-fonte na guia Catálogo , bem como nas guias Procurar, Contas e Fluxo de dados. |
-| **[!UICONTROL Manage Sources]** Ligado | Além das funções incluídas em **[!UICONTROL View Sources]**, concede acesso à opção **[!UICONTROL Connect Source]** em **[!UICONTROL Catalog]** e à opção **[!UICONTROL Select Data]** em **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** O também permite ativar ou desativar  **[!UICONTROL DataFlows]** e editar suas programações. |
-| **[!UICONTROL View Sources]** Desligado e  **[!UICONTROL Manage Sources]** desligado | Revogar todo o acesso às fontes. |
+| **[!UICONTROL Exibir]** FontesOn | Conceda acesso somente leitura a fontes em cada tipo-fonte na guia Catálogo , bem como nas guias Procurar, Contas e Fluxo de dados. |
+| **[!UICONTROL Gerenciar]** fontesOn | Além das funções incluídas em **[!UICONTROL Exibir Fontes]**, concede acesso à opção **[!UICONTROL Conectar Origem]** em **[!UICONTROL Catálogo]** e à opção **[!UICONTROL Selecionar Dados]** em **[!UICONTROL Procurar]**. **[!UICONTROL Gerenciar]** fontes também permite ativar ou desativar  **** DataFlowes e editar suas programações. |
+| **[!UICONTROL Exibir]** origensDesativado e  **[!UICONTROL Gerenciar]** origensDesativado | Revogar todo o acesso às fontes. |
 
 Para obter mais informações sobre as permissões disponíveis concedidas por meio do Admin Console, incluindo essas quatro fontes, consulte a [visão geral do controle de acesso](../access-control/home.md).
 
@@ -147,7 +146,7 @@ Para obter mais informações sobre as permissões disponíveis concedidas por m
 
 Ao usar qualquer uma das Fontes rotuladas como beta (&quot;Beta&quot;), Você reconhece que o Beta é fornecido ***&quot;no estado em que se encontra&quot; sem garantia de qualquer tipo***.
 
-O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. É aconselhável ter cuidado e não depender de forma alguma do correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
+O Adobe não deve ter a obrigação de manter, corrigir, atualizar, alterar, modificar ou de qualquer outra forma suportar o Beta. Recomenda-se que tenha cuidado e não se baseie de forma alguma no correto funcionamento ou desempenho desses materiais Beta e/ou de acompanhamento. O Beta é considerado Informações Confidenciais do Adobe.
 
 Qualquer &quot;Feedback&quot; (informações relacionadas ao Beta, incluindo, mas não se limitando a problemas ou defeitos que você encontra ao usar o Beta, sugestões, melhorias e recomendações) fornecidas por Você ao Adobe é atribuído ao Adobe, incluindo todos os direitos, título e interesse em e para tal Feedback.
 

@@ -5,9 +5,9 @@ title: Conector de origem do Adobe Analytics para dados do conjunto de relatóri
 topic-legacy: overview
 description: Este documento fornece uma visão geral do Analytics e descreve os casos de uso para dados do Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,8 @@ Para obter informações detalhadas sobre o mapeamento de campo que ocorre entre
 
 ## Qual é a latência esperada para os dados do Analytics na plataforma?
 
+A latência esperada de dados do Analytics na plataforma é descrita na tabela abaixo. A latência varia de acordo com a configuração do cliente, os volumes de dados e os aplicativos do consumidor. Por exemplo, se a implementação do Analytics estiver configurada com `A4T` a latência para Pipeline aumentará para 5-10 minutos.
+
 | Dados do Analytics | Latência esperada |
 | -------------- | ---------------- |
 | Novos dados para [!DNL Real-time Customer Profile] (A4T **não** ativado) | &lt; 2 minutos |
@@ -53,7 +55,7 @@ Para obter informações detalhadas sobre o mapeamento de campo que ocorre entre
 
 >[!NOTE]
 >
->A latência varia de acordo com a configuração do cliente, os volumes de dados e os aplicativos do consumidor. Por exemplo, se a implementação [!DNL Analytics] estiver configurada com `A4T` a latência para pipeline aumentará para 5-10 minutos.
+>Os dados de preenchimento retroativo do Analytics não são assimilados em [!DNL Profile] e, portanto, não são contabilizados nos perfis de licença.
 
 ## Identificadores primários em dados [!DNL Analytics]
 

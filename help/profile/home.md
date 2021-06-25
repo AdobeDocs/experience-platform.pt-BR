@@ -2,11 +2,11 @@
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API, perfil unificado, perfil unificado, unificado, perfil, rtcp, gráficos XDM
 title: Visão geral do perfil do cliente em tempo real
 topic-legacy: guide
-description: O Perfil do cliente em tempo real é um armazenamento de entidade de pesquisa genérico que mescla dados de vários ativos de dados corporativos e, em seguida, fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
+description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos relacionados à série de tempo. Esse recurso permite que os profissionais de marketing conduzam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,7 @@ O Repositório de Perfis usa uma infraestrutura do Microsoft Azure Cosmos DB e o
 
 O Experience Platform fornece uma série de medidas de proteção para ajudar você a evitar a criação de [Esquemas do Experience Data Model (XDM)](../xdm/home.md) que o Perfil do cliente em tempo real não suporta. Isso inclui limites suaves que resultarão em degradação do desempenho, além de limites rígidos que resultarão em erros e interrupções do sistema. Para obter mais informações, incluindo uma lista de diretrizes e casos de uso de exemplo, leia a documentação [Perfil de medidas de proteção](guardrails.md).
 
-### (Beta) Painel do perfil {#profile-dashboard}
-
->[!IMPORTANT]
->
->A funcionalidade do painel está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.
+### Painel de perfis {#profile-dashboard}
 
 A interface do usuário do Experience Platform fornece um painel através do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real, conforme capturado durante um instantâneo diário. Para saber como acessar e trabalhar com o painel [!DNL Profile] na interface do usuário, e informações detalhadas sobre as métricas exibidas no painel, consulte o [Guia da interface do usuário do painel de perfis](ui/profile-dashboard.md).
 
@@ -69,7 +65,7 @@ Quando há dados em conflito de vários conjuntos de dados, a política de mescl
 
 Para saber mais sobre as políticas de mesclagem e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](merge-policies/overview.md).
 
-### Esquemas de união {#profile-fragments-and-union-schemas}
+### Schemas da União {#profile-fragments-and-union-schemas}
 
 Um dos principais recursos de [!DNL Real-time Customer Profile] é a capacidade de unificar dados de vários canais. Quando [!DNL Real-time Customer Profile] é usado para acessar uma entidade, ela pode fornecer uma visualização mesclada de todos os fragmentos de perfil para essa entidade em conjuntos de dados, chamada de &quot;visualização de união&quot; e disponibilizada por meio do que é conhecido como schema de união.
 

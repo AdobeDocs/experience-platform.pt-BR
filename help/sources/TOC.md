@@ -4,10 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 13%
 
 ---
@@ -230,7 +229,8 @@ ht-degree: 13%
       - [Fluxo de dados da conexão de pagamento](tutorials/ui/dataflow/payments.md)
       - [Fluxo de dados da conexão de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Ativar dados de entrada para preencher perfis de cliente](tutorials/ui/profile.md)
-   - [Monitorar fluxos de dados](tutorials/ui/monitor.md)
+   - [Monitorar fluxos de dados em lote](tutorials/ui/monitor.md)
+   - [Monitorar fluxos de dados de transmissão](tutorials/ui/monitor-streaming.md)
    - [Atualizar contas](tutorials/ui/update.md)
    - [Atualizar fluxos de dados](tutorials/ui/update-dataflows.md)
    - [Excluir contas](tutorials/ui/delete-accounts.md)

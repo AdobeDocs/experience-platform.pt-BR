@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Para ativar dados em destinos, você deve ter [conectado com êxito um destino](
 
 As etapas no fluxo de trabalho de ativação variam um pouco entre os tipos de destino. O fluxo de trabalho completo para todos os tipos de destino é descrito abaixo.
 
-## Selecione o destino para ativar os dados em {#select-destination}
+## Selecione para qual destino os dados serão ativados {#select-destination}
 
 Aplica-se a: Todos os destinos
 
@@ -37,7 +37,7 @@ Na interface do usuário do Adobe Experience Platform, navegue até **[!UICONTRO
 
 Siga as etapas na próxima seção para selecionar os segmentos que deseja ativar.
 
-## [!UICONTROL Etapa Selecionar ] segmentos  {#select-segments}
+## [!UICONTROL Etapa Selecionar ] segmentos {#select-segments}
 
 Aplica-se a: Todos os destinos
 
@@ -149,8 +149,13 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
    >
    >A opção para exportar arquivos em um determinado momento do dia está atualmente em beta e só está disponível para um número selecionado de clientes.
 
+   >[!IMPORTANT]
+   >
+   >Dependendo de quando o trabalho de exportação de perfil terminar de ser executado e quando o serviço de destino iniciar o trabalho de ativação de segmento, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo necessários. Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, recomendamos configurar o primeiro tempo de exportação de arquivos após as 12h GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
+
 
 ### Exportar arquivos incrementais {#export-incremental-files}
 
@@ -173,7 +178,11 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
    >[!IMPORTANT]
    >
-   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. Os clientes não beta podem exportar arquivos incrementais uma vez por dia, às 12:00 PM UTC (7:00 AM EST).
+   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes.
+
+   >[!IMPORTANT]
+   >
+   >Dependendo de quando o trabalho de exportação de perfil terminar de ser executado e quando o serviço de destino iniciar o trabalho de ativação de segmento, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo necessários. Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, recomendamos configurar o primeiro tempo de exportação de arquivos após as 12h GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
@@ -204,7 +213,7 @@ Selecione **[!UICONTROL Aplicar alterações]** para confirmar a seleção.
 
 Após concluir a configuração de todos os segmentos, selecione **[!UICONTROL Next]** para continuar.
 
-## **[!UICONTROL Etapa de]** agendamento do segmento  {#segment-schedule}
+## **[!UICONTROL Etapa de]** agendamento do segmento {#segment-schedule}
 
 Aplica-se a: destinos de publicidade, destinos sociais
 
@@ -224,7 +233,7 @@ Na página **[!UICONTROL Segment schedule]**, você pode definir a data de iníc
 
 ![inserir id do aplicativo](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Selecionar etapa de]** atribuição  {#select-attributes}
+## **[!UICONTROL Selecionar etapa de]** atribuição {#select-attributes}
 
 Aplica-se a: destinos de marketing por email e destinos de armazenamento em nuvem
 
@@ -425,7 +434,7 @@ Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL
 
 ![confirmar seleção](../assets/ui/activate-destinations/confirm-selection.png)
 
-## Verifique se a ativação do segmento foi bem-sucedida {#verify-activation}
+## Verificar se a ativação de segmentos foi bem-sucedida {#verify-activation}
 
 ### Destinos de marketing por email e destinos de armazenamento em nuvem {#esp-and-cloud-storage}
 

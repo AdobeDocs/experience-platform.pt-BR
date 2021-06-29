@@ -4,9 +4,9 @@ user-guide-title: Ajuda dos Conectores de origem da Adobe Experience Platform
 breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimile dados a partir de uma variedade de fontes ou estruture, rotule e aprimore os dados já assimilados.
 feature: Assimilação de dados, Fontes
-source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
+source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '623'
 ht-degree: 13%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 13%
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Conector Salesforce](connectors/crm/salesforce.md)
+      - [Conector Veeva CRM](connectors/crm/veeva.md)
    - Sucesso do cliente {#customer-success}
       - [Conector da Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
@@ -100,6 +101,7 @@ ht-degree: 13%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -186,6 +188,7 @@ ht-degree: 13%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)

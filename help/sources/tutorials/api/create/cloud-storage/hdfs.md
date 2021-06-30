@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform, home, tópicos populares, Sistema de Arquivos Distribuído do Apache Hadoop, hadoop Apache, hdfs, HDFS
 solution: Experience Platform
-title: Criar uma conexão de origem Apache HDFS usando a API do Serviço de fluxo
+title: Criar uma conexão base do Apache HDFS usando a API do Serviço de fluxo
 topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar um sistema de arquivos distribuído do Apache Hadoop ao Adobe Experience Platform usando a API do Serviço de fluxo.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 2%
+source-wordcount: '465'
+ht-degree: 1%
 
 ---
 
-# Crie uma conexão de origem [!DNL Apache] HDFS usando a API [!DNL Flow Service]
+# Crie uma conexão base [!DNL Apache] HDFS usando a API [!DNL Flow Service]
 
 >[!NOTE]
 >
 >O conector HDFS do Apache está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes para trazer para o Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
+Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
 
-Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para conectar um Sistema de Arquivos Distribuído do Apache Hadoop (a seguir denominado &quot;HDFS&quot;) a [!DNL Experience Platform].
+Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Apache Hadoop Distributed File System] (a seguir chamada &quot;[!DNL HDFS]&quot;) usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
@@ -31,38 +30,24 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Adobe E
 * [Fontes](../../../../home.md):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
 * [Sandboxes](../../../../../sandboxes/home.md):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao HDFS usando a API [!DNL Flow Service].
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a [!DNL HDFS] usando a API [!DNL Flow Service].
 
 ### Obter credenciais necessárias
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `url` | O URL define os parâmetros de autenticação necessários para a conexão com o HDFS anonimamente. Para obter mais informações sobre como obter esse valor, consulte [este documento HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | O identificador é necessário para criar uma conexão. A ID de especificação de conexão fixa para HDFS é `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `url` | O URL define os parâmetros de autenticação necessários para conexão a [!DNL HDFS] anonimamente. Para obter mais informações sobre como obter esse valor, consulte [this [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL AdWords] é: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
-### Lendo exemplos de chamadas de API
+### Uso de APIs da plataforma
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia sobre como [começar a usar APIs da plataforma](../../../../../landing/api-guide.md).
 
-### Coletar valores para cabeçalhos necessários
+## Criar uma conexão base
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
-
-* `Content-Type: application/json`
-
-## Criar uma conexão
-
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta HDFS, pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Para criar uma ID de conexão base, faça uma solicitação de POST ao endpoint `/connections`, fornecendo as credenciais de autenticação [!DNL HDFS] como parte dos parâmetros da solicitação.
 
 **Formato da API**
 
@@ -72,7 +57,7 @@ POST /connections
 
 **Solicitação**
 
-A solicitação a seguir cria uma nova conexão HDFS, configurada pelas propriedades fornecidas no payload:
+A solicitação a seguir cria uma conexão base para [!DNL HDFS]:
 
 ```shell
 curl -X POST \
@@ -100,8 +85,8 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --------- | ----------- |
-| `auth.params.url` | O URL que define os parâmetros de autenticação necessários para se conectar ao HDFS anonimamente |
-| `connectionSpec.id` | A ID de especificação da conexão HDFS: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | A URL que define os parâmetros de autenticação necessários para conexão a [!DNL HDFS] anonimamente |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL HDFS]: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Resposta**
 
@@ -116,4 +101,4 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão HDFS usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar um armazenamento em nuvem de terceiros usando a API do Serviço de Fluxo](../../explore/cloud-storage.md).
+Ao seguir este tutorial, você criou uma conexão [!DNL HDFS] usando a API [!DNL Flow Service] e obteve o valor de ID exclusivo da conexão. Você pode usar essa ID no próximo tutorial à medida que aprende a [explorar um armazenamento em nuvem de terceiros usando a API do Serviço de Fluxo](../../explore/cloud-storage.md).

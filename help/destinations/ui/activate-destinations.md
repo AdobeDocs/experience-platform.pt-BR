@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0f0a71d8c1c3f36d6966ab37bd9749a59bc4aecf
+source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
 workflow-type: tm+mt
-source-wordcount: '2674'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -148,10 +148,7 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
    >[!IMPORTANT]
    >
    >A opção para exportar arquivos em um determinado momento do dia está atualmente em beta e só está disponível para um número selecionado de clientes.
-
-   <!-- >[!IMPORTANT]
-      >
-      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+   ><br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo necessários.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, recomendamos configurar o primeiro tempo de exportação de arquivos após as 12h GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
@@ -178,11 +175,7 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
    >[!IMPORTANT]
    >
-   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes.
-
-   <!-- >[!IMPORTANT]
-     >
-     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. <br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo necessários.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, recomendamos configurar o primeiro tempo de exportação de arquivos após as 12h GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.

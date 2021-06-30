@@ -5,15 +5,14 @@ title: Visão Geral do Conector de Origem Azure Blob
 topic-legacy: overview
 description: Saiba como conectar o Azure Blob ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
 
-# Conector Azure Blob
+# Conector de blob do Azure
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Você pode trazer seus dados desses sistemas para [!DNL Platform].
 
@@ -44,11 +43,11 @@ A documentação abaixo fornece informações sobre como conectar o Azure Blob a
 
 ### Uso de APIs
 
-- [Criar uma conexão de origem do Azure Blob usando a API do Serviço de Fluxo](../../tutorials/api/create/cloud-storage/blob.md)
-- [Explore um sistema de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
-- [Colete dados de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
+- [Criar uma conexão base do Azure Blob usando a API do Serviço de Fluxo](../../tutorials/api/create/cloud-storage/blob.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
+- [Criar um fluxo de dados para uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso da interface do usuário
 
 - [Criar uma conexão de origem do Azure Blob na interface do usuário](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Criar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário do](../../tutorials/ui/dataflow/batch/cloud-storage.md)

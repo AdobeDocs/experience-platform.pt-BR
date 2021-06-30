@@ -5,10 +5,9 @@ title: Visão geral do conector de origem da Salesforce Service Cloud
 topic-legacy: overview
 description: Saiba como conectar o Salesforce Service Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Sales
 
 ## Conecte [!DNL Salesforce Service Cloud ]a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem da Salesforce Service Cloud usando a API do Serviço de Fluxo](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
-- [Explorar um sistema bem-sucedido do cliente usando a API do Serviço de Fluxo](../../tutorials/api/explore/customer-success.md)
-- [Colete dados de um sistema bem-sucedido do cliente usando a API de Serviço de Fluxo](../../tutorials/api/collect/customer-success.md)
+- [Criar uma conexão básica da Salesforce Service Cloud usando a API do Serviço de Fluxo](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de sucesso do cliente usando a API do Serviço de Fluxo](../../tutorials/api/explore/customer-success.md)
+- [Criar um fluxo de dados para uma fonte de sucesso do cliente usando a API de Serviço de Fluxo](../../tutorials/api/collect/customer-success.md)
 
 ## Conecte [!DNL Salesforce Service Cloud] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem da nuvem do Salesforce Service na interface do usuário](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Configurar o fluxo de dados para uma conexão bem-sucedida do cliente na interface do usuário](../../tutorials/ui/dataflow/customer-success.md)
+- [Criar fluxo de dados para uma conexão de origem de sucesso do cliente na interface do usuário](../../tutorials/ui/dataflow/customer-success.md)

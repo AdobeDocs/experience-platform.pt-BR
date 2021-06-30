@@ -3,11 +3,10 @@ keywords: Experience Platform; home; tópicos populares; api; API; XDM; sistema 
 solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface do usuário
 description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
-topic: Guia do usuário
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+topic-legacy: user guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ Embora não seja necessário para este guia, é recomendável seguir também o t
 
 Para criar um novo grupo de campos, primeiro selecione um schema ao qual o grupo de campos será adicionado. Você pode optar por [criar um novo schema](./schemas.md#create) ou [selecionar um schema existente para editar](./schemas.md#edit).
 
-Depois de abrir o schema no [!DNL Schema Editor], selecione **[!UICONTROL Add]** ao lado da seção [!UICONTROL Field groups] no painel esquerdo.
+Depois de abrir o schema no [!DNL Schema Editor], selecione **[!UICONTROL Adicionar]** ao lado da seção [!UICONTROL Grupos de campos] no painel esquerdo.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Uma caixa de diálogo é exibida mostrando uma lista de grupos de campos existentes para sua organização. Próximo à parte superior da caixa de diálogo, selecione **[!UICONTROL Create new field group]**. Aqui, você pode fornecer um **[!UICONTROL Display name]** e **[!UICONTROL Description]** para o grupo de campos. Quando terminar, selecione **[!UICONTROL Add field group]**.
+Uma caixa de diálogo é exibida mostrando uma lista de grupos de campos existentes para sua organização. Próximo à parte superior da caixa de diálogo, selecione **[!UICONTROL Criar novo grupo de campos]**. Aqui você pode fornecer um **[!UICONTROL Display name]** e **[!UICONTROL Description]** para o grupo de campos. Quando terminar, selecione **[!UICONTROL Adicionar grupo de campos]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -59,9 +58,9 @@ Para adicionar campos a um grupo de campos no [!DNL Schema Editor], comece selec
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Um **[!UICONTROL New field]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia em [definindo campos na interface do usuário](../fields/overview.md#define) para obter etapas específicas sobre como configurar e adicionar o campo ao grupo de campos.
+Um **[!UICONTROL Novo campo]** aparece na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o guia em [definindo campos na interface do usuário](../fields/overview.md#define) para obter etapas específicas sobre como configurar e adicionar o campo ao grupo de campos.
 
-Continue a adicionar quantos campos forem necessários ao grupo de campos. Quando terminar, selecione **[!UICONTROL Save]** para salvar o schema e o grupo de campos.
+Continue a adicionar quantos campos forem necessários ao grupo de campos. Quando terminar, selecione **[!UICONTROL Save]** para salvar o esquema e o grupo de campos.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -69,6 +68,6 @@ Se o mesmo grupo de campos já estiver empregado em outros schemas, os campos re
 
 ## Próximas etapas
 
-Este guia cobriu como criar e editar grupos de campos usando a interface do usuário da plataforma. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Schemas] visão geral do espaço de trabalho](../overview.md).
+Este guia cobriu como criar e editar grupos de campos usando a interface do usuário da plataforma. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Visão geral do espaço de trabalho Schemas]](../overview.md).
 
 Para saber como gerenciar grupos de campos usando a API [!DNL Schema Registry], consulte o [guia de ponto de extremidade de grupos de campos](../../api/field-groups.md).

@@ -2,12 +2,11 @@
 keywords: Experience Platform; home; mapeador; conjunto de mapeamento; mapeamento;
 solution: Experience Platform
 title: Visão geral dos conjuntos de mapeamento
-topic: visão geral
+topic-legacy: overview
 description: Saiba como usar conjuntos de mapeamento com a Preparação de dados do Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 4c06f621eb6fba8daa6501d56255cddbbcfdbda2
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---

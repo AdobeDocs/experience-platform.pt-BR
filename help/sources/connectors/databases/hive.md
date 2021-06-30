@@ -5,10 +5,9 @@ title: Visão geral do Apache Hive no Azure HDInsights Source Connector
 topic-legacy: overview
 description: Saiba como conectar o Apache Hive no Azure HDInsights ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Apach
 
 ## Conecte [!DNL Apache Hive] em [!DNL Azure HDInsights] a [!DNL Platform] usando APIs
 
-- [Criar um Apache Hive na conexão de origem do Azure HDInsights usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/hive.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar um Apache Hive na conexão base do Azure HDInsights usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/hive.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conecte [!DNL Apache Hive] em [!DNL Azure HDInsights] a [!DNL Platform] usando a interface do usuário
 
 - [Criar um Apache Hive na conexão de origem do Azure HDInsights na interface do usuário](../../tutorials/ui/create/databases/hive.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

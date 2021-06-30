@@ -5,10 +5,9 @@ title: Visão geral do Conector de origem de armazenamento do Google Cloud
 topic-legacy: overview
 description: Saiba como conectar o Armazenamento do Google Cloud à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 
 ## Configuração de pré-requisito para conectar sua conta [!DNL Google Cloud Storage]
 
-Para se conectar à Platform, você deve primeiro habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra [!DNL Google Cloud Platform] e selecione **[!UICONTROL Settings]** na opção **[!UICONTROL Cloud Storage]** no painel de navegação.
+Para se conectar à Platform, você deve primeiro habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -56,11 +55,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Googl
 
 ### Uso de APIs
 
-- [Criar uma conexão de origem do armazenamento do Google Cloud usando a API do Serviço de fluxo](../../tutorials/api/create/cloud-storage/google.md)
-- [Explore um sistema de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
-- [Colete dados de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
+- [Criar uma conexão básica do Armazenamento no Google Cloud usando a API do Serviço de fluxo](../../tutorials/api/create/cloud-storage/google.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
+- [Criar um fluxo de dados para uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso da interface do usuário
 
 - [Criar uma conexão de origem do Armazenamento do Google Cloud na interface do usuário](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Criar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário do](../../tutorials/ui/dataflow/batch/cloud-storage.md)

@@ -5,10 +5,9 @@ title: Visão geral do conector de origem OData genérico
 topic-legacy: overview
 description: Saiba como conectar OData genérico ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Gener
 
 ## Conecte [!DNL Generic OData] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem OData genérica usando a API do Serviço de fluxo](../../tutorials/api/create/protocols/odata.md)
-- [Explore um aplicativo de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/explore/protocols.md)
-- [Coletar dados de um aplicativo de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/collect/protocols.md)
+- [Criar uma conexão básica OData genérica usando a API do Serviço de fluxo](../../tutorials/api/create/protocols/odata.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/explore/protocols.md)
+- [Criar um fluxo de dados para uma fonte de protocolos usando a API do Serviço de Fluxo](../../tutorials/api/collect/protocols.md)
 
 ## Conecte [!DNL Generic OData] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem OData genérica na interface do usuário](../../tutorials/ui/create/protocols/odata.md)
-- [Configurar um fluxo de dados para uma conexão de protocolos na interface do usuário](../../tutorials/ui/dataflow/protocols.md)
+- [Criar um fluxo de dados para uma conexão de origem de protocolos na interface do usuário](../../tutorials/ui/dataflow/protocols.md)

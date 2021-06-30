@@ -5,10 +5,9 @@ title: Visão Geral do Conector de Origem IBM DB2
 topic-legacy: overview
 description: Saiba como conectar o IBM DB2 ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ A documentação abaixo fornece informações sobre como conectar o IBM DB2 a [!
 
 ## Conecte o IBM DB2 a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem IBM DB2 usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/ibm-db2.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica do IBM DB2 usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/ibm-db2.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conecte o IBM DB2 a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem IBM DB2 na interface do usuário](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

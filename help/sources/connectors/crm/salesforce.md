@@ -5,10 +5,9 @@ title: Visão geral do conector de origem do Salesforce
 topic-legacy: overview
 description: Saiba como conectar o Salesforce ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Sales
 
 ## Conecte [!DNL Salesforce] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem do Salesforce usando a API do Serviço de Fluxo](../../tutorials/api/create/crm/salesforce.md)
-- [Explorar um sistema CRM usando a API do Serviço de Fluxo](../../tutorials/api/explore/crm.md)
-- [Coletar dados do CRM usando a API do Serviço de Fluxo](../../tutorials/api/collect/crm.md)
+- [Criar uma conexão base do Salesforce usando a API do Serviço de Fluxo](../../tutorials/api/create/crm/salesforce.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de CRM usando a API do Serviço de Fluxo](../../tutorials/api/explore/crm.md)
+- [Crie um fluxo de dados para uma fonte CRM usando a API do Serviço de Fluxo](../../tutorials/api/collect/crm.md)
 
 ## Conecte [!DNL Salesforce] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem do Salesforce na interface do usuário](../../tutorials/ui/create/crm/salesforce.md)
-- [Configurar um fluxo de dados para uma conexão CRM na interface do usuário](../../tutorials/ui/dataflow/crm.md)
+- [Criar um fluxo de dados para uma conexão CRM na interface do usuário](../../tutorials/ui/dataflow/crm.md)

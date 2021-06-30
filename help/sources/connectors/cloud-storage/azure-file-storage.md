@@ -5,9 +5,9 @@ title: Visão Geral do Conector de Origem de Armazenamento de Ficheiros do Azure
 topic-legacy: overview
 description: Saiba como conectar o Armazenamento de Arquivos do Azure à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Azure
 
 ### Uso de APIs
 
-- [Criar uma conexão de origem do Armazenamento de Arquivo do Azure usando a API do Serviço de Fluxo](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Explore um sistema de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
-- [Colete dados de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
+- [Criar uma conexão base do Armazenamento de Arquivos do Azure usando a API do Serviço de Fluxo](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/explore/cloud-storage.md)
+- [Criar um fluxo de dados para uma fonte de armazenamento em nuvem usando a API do Serviço de Fluxo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso da interface do usuário
 
 - [Criar uma conexão de origem do Armazenamento de Arquivos do Azure na interface do usuário](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Criar um fluxo de dados para uma conexão de armazenamento em nuvem na interface do usuário do](../../tutorials/ui/dataflow/batch/cloud-storage.md)

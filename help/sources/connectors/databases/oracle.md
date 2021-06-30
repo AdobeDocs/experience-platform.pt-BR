@@ -5,10 +5,9 @@ title: Visão geral do conector de origem do Oracle
 topic-legacy: overview
 description: Saiba como conectar o Oracle ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Oracl
 
 ## Conecte [!DNL Oracle] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem de Oracle usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/oracle.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica do Oracle usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/oracle.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conecte [!DNL Oracle] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem do Oracle na interface do usuário](../../tutorials/ui/create/databases/oracle.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

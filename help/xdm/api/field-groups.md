@@ -3,10 +3,10 @@ keywords: Experience Platform, home, tópicos populares, api, API, XDM, sistema 
 solution: Experience Platform
 title: Ponto de extremidade da API de grupos de campos
 description: O endpoint /fieldgroups na API do Registro de Schema permite gerenciar programaticamente grupos de campos de esquema XDM no aplicativo de experiência.
-topic: guia do desenvolvedor
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+topic-legacy: developer guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1215'
 ht-degree: 3%
 
 ---

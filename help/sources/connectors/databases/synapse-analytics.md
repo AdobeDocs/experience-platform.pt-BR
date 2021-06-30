@@ -5,9 +5,9 @@ title: Visão geral do conector de origem do Azure synapse Analytics
 topic-legacy: overview
 description: Saiba como conectar o Azure synapse Analytics ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Azure
 
 ## Conecte [!DNL Azure Synapse Analytics] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem do Azure synapse Analytics usando a API de Serviço de Fluxo](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica do Azure synapse Analytics usando a API do Serviço de fluxo](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conecte [!DNL Azure Synapse Analytics] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem do Azure synapse Analytics na interface do usuário](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

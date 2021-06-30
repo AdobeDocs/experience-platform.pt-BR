@@ -5,9 +5,9 @@ title: Visão geral do Google BigQuery Source Connector
 topic-legacy: overview
 description: Saiba como conectar o Google BigQuery à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Googl
 
 ### Uso de APIs
 
-- [Criar uma conexão de origem do Google BigQuery usando a API de Serviço de Fluxo](../../tutorials/api/create/databases/bigquery.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica do Google BigQuery usando a API de Serviço de Fluxo](../../tutorials/api/create/databases/bigquery.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ### Uso da interface do usuário
 
 - [Criar uma conexão de origem do Google BigQuery na interface do usuário](../../tutorials/ui/create/databases/bigquery.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

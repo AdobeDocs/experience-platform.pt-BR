@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform; home; tópicos populares; MariaDB; mariadb
 solution: Experience Platform
-title: Criar uma conexão de origem do MariaDB usando a API do Serviço de fluxo
+title: Criar uma conexão básica do MariaDB usando a API do Serviço de fluxo
 topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform ao MariaDB usando a API do Serviço de Fluxo.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
 
+# Crie uma conexão base [!DNL MariaDB] usando a API [!DNL Flow Service]
 
-# Crie uma conexão de origem [!DNL MariaDB] usando a API [!DNL Flow Service]
+Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
-
-Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para se conectar [!DNL Experience Platform] a [!DNL MariaDB].
+Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL MariaDB] usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
@@ -36,43 +35,29 @@ Para que [!DNL Flow Service] se conecte a [!DNL MariaDB], você deve fornecer a 
 | Credencial | Descrição |
 | ---------- | ----------- |
 | `connectionString` | A cadeia de conexão associada à autenticação [!DNL MariaDB]. O padrão da string de conexão [!DNL MariaDB] é: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | A ID usada para gerar uma conexão. A ID de especificação de conexão fixa para [!DNL MariaDB] é `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL MariaDB] é `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Para obter mais informações sobre como obter uma string de conexão, consulte [este documento MariaDB](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Para obter mais informações sobre como obter uma string de conexão, consulte este [[!DNL MariaDB] documento](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
-### Lendo exemplos de chamadas de API
+### Uso de APIs da plataforma
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no [!DNL Experience Platform] guia de solução de problemas.
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia sobre como [começar a usar APIs da plataforma](../../../../../landing/api-guide.md).
 
-### Coletar valores para cabeçalhos necessários
+## Criar uma conexão base
 
-Para fazer chamadas para [!DNL Platform] APIs, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API [!DNL Experience Platform], conforme mostrado abaixo:
+Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
-
-* `Content-Type: application/json`
-
-## Criar uma conexão
-
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta [!DNL MariaDB], pois pode ser usada para criar vários conectores de origem para trazer dados diferentes.
+Para criar uma ID de conexão base, faça uma solicitação de POST ao endpoint `/connections`, fornecendo as credenciais de autenticação [!DNL MariaDB] como parte dos parâmetros da solicitação.
 
 **Formato da API**
 
-```http
+```https
 POST /connections
 ```
 
 **Solicitação**
 
-Para criar uma conexão [!DNL MariaDB], a ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL MariaDB] é `3000eb99-cd47-43f3-827c-43caf170f015`.
+A solicitação a seguir cria uma conexão base para [!DNL MariaDB]:
 
 ```shell
 curl -X POST \
@@ -101,7 +86,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `auth.params.connectionString` | A cadeia de conexão associada à autenticação [!DNL MariaDB]. O padrão da string de conexão [!DNL MariaDB] é: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | A ID de especificação da conexão [!DNL MariaDB] é: `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL MariaDB] é: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Resposta**
 

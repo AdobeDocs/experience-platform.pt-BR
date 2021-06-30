@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform, home, tópicos populares, Microsoft Dynamics, microsoft dynamics, dinâmica, Dynamics
 solution: Experience Platform
-title: Criar uma conexão de origem do Microsoft Dynamics usando a API do Serviço de fluxo
+title: Criar uma conexão básica do Microsoft Dynamics usando a API do Serviço de fluxo
 topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar a Platform a uma conta do Microsoft Dynamics usando a API de Serviço de Fluxo.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '637'
 ht-degree: 2%
 
 ---
 
-# Crie uma conexão de origem [!DNL Microsoft Dynamics] usando a API [!DNL Flow Service]
+# Crie uma conexão base [!DNL Microsoft Dynamics] usando a API [!DNL Flow Service]
 
-[!DNL Flow Service] O é usado para coletar e centralizar dados do cliente de várias fontes diferentes no Adobe Experience Platform. O serviço fornece uma interface de usuário e uma RESTful API da qual todas as fontes compatíveis são conectáveis.
+Uma conexão base representa a conexão autenticada entre uma fonte e o Adobe Experience Platform.
 
-Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas para conectar a Platform a uma conta [!DNL Microsoft Dynamics] (a seguir denominada &quot;Dinâmica&quot;) usando a API do Serviço de fluxo.
+Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL Microsoft Dynamics] (a seguir chamada &quot;[!DNL Dynamics]&quot;) usando a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introdução
 
@@ -40,36 +39,23 @@ Para que [!DNL Flow Service] se conecte a [!DNL Dynamics], você deve fornecer v
 | `password` | A senha da sua conta [!DNL Dynamics]. |
 | `servicePrincipalId` | A ID do cliente da sua conta [!DNL Dynamics]. Essa ID é necessária ao usar a principal de serviço e a autenticação baseada em chave. |
 | `servicePrincipalKey` | A chave secreta da entidade de serviço. Essa credencial é necessária ao usar a entidade de serviço e a autenticação baseada em chave. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões base e de origem. A ID de especificação de conexão para [!DNL Dynamics] é: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
 Para obter mais informações sobre a introdução, visite [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
-### Lendo exemplos de chamadas de API
+### Uso de APIs da plataforma
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
+Para obter informações sobre como fazer chamadas para APIs da plataforma com êxito, consulte o guia sobre como [começar a usar APIs da plataforma](../../../../../landing/api-guide.md).
 
-### Coletar valores para cabeçalhos necessários
+## Criar uma conexão base
 
-Para fazer chamadas para APIs da plataforma, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). A conclusão do tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
+Uma conexão base retém informações entre a fonte e a Plataforma, incluindo as credenciais de autenticação da fonte, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos da fonte e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos e formatos de dados.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+Para criar uma ID de conexão base, faça uma solicitação de POST ao endpoint `/connections`, fornecendo as credenciais de autenticação [!DNL Dynamics] como parte dos parâmetros da solicitação.
 
-Todos os recursos no Experience Platform, incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para APIs da plataforma exigem um cabeçalho que especifica o nome da sandbox em que a operação ocorrerá:
+### Criar uma conexão base [!DNL Dynamics] usando autenticação básica
 
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
-
-* `Content-Type: application/json`
-
-## Criar uma conexão
-
-Uma conexão especifica uma fonte e contém suas credenciais para essa fonte. Somente uma conexão é necessária por conta [!DNL Dynamics], pois pode ser usada para criar vários fluxos de dados para trazer dados diferentes.
-
-### Criar uma conexão [!DNL Dynamics] usando autenticação básica
-
-Para criar uma conexão [!DNL Dynamics] usando a autenticação básica, faça uma solicitação POST para a API [!DNL Flow Service], fornecendo valores para as `serviceUri`, `username` e `password` da sua conexão.
+Para criar uma conexão base [!DNL Dynamics] usando a autenticação básica, faça uma solicitação POST para a API [!DNL Flow Service], fornecendo valores para as `serviceUri`, `username` e `password` da sua conexão.
 
 **Formato da API**
 
@@ -78,8 +64,6 @@ POST /connections
 ```
 
 **Solicitação**
-
-Para criar uma conexão [!DNL Dynamics], a ID de especificação de conexão exclusiva deve ser fornecida como parte da solicitação POST. A ID de especificação de conexão para [!DNL Dynamics] é `38ad80fe-8b06-4938-94f4-d4ee80266b07`.
 
 ```shell
 curl -X POST \
@@ -112,7 +96,7 @@ curl -X POST \
 | `auth.params.serviceUri` | O URI de serviço associado à instância [!DNL Dynamics]. |
 | `auth.params.username` | O nome de usuário associado à sua conta [!DNL Dynamics]. |
 | `auth.params.password` | A senha associada à sua conta [!DNL Dynamics]. |
-| `connectionSpec.id` | A especificação de conexão `id` da sua conta [!DNL Dynamics] recuperada na etapa anterior. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Dynamics]: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **Resposta**
 
@@ -125,9 +109,9 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identi
 }
 ```
 
-### Criar uma conexão [!DNL Dynamics] usando a autenticação baseada em chave principal de serviço
+### Criar uma conexão base [!DNL Dynamics] usando autenticação baseada em chave principal de serviço
 
-Para criar uma conexão [!DNL Dynamics] usando a autenticação com chave principal de serviço, faça uma solicitação POST para a API [!DNL Flow Service], fornecendo valores para as `serviceUri`, `servicePrincipalId` e `servicePrincipalKey` da sua conexão.
+Para criar uma conexão base [!DNL Dynamics] usando a autenticação com chave principal de serviço, faça uma solicitação POST para a API [!DNL Flow Service], fornecendo valores para as `serviceUri`, `servicePrincipalId` e `servicePrincipalKey` da sua conexão.
 
 **Formato da API**
 
@@ -168,6 +152,7 @@ curl -X POST \
 | `auth.params.serviceUri` | O URI de serviço associado à instância [!DNL Dynamics]. |
 | `auth.params.servicePrincipalId` | A ID do cliente da sua conta [!DNL Dynamics]. Essa ID é necessária ao usar a principal de serviço e a autenticação baseada em chave. |
 | `auth.params.servicePrincipalKey` | A chave secreta da entidade de serviço. Essa credencial é necessária ao usar a entidade de serviço e a autenticação baseada em chave. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Dynamics]: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **Resposta**
 

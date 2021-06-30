@@ -4,14 +4,13 @@ solution: Experience Platform
 title: Visão geral do Conector de origem MariaDB
 topic-legacy: overview
 description: Saiba como conectar MariaDB ao Adobe Experience Platform usando APIs ou a interface do usuário.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL MariaDB] conector
 
@@ -27,11 +26,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Maria
 
 ## Conecte [!DNL MariaDB] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem do MariaDB usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/mariadb.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão básica do MariaDB usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/mariadb.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conecte [!DNL MariaDB] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem do MariaDB na interface do usuário](../../tutorials/ui/create/databases/mariadb.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

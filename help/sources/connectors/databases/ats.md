@@ -5,10 +5,9 @@ title: Visão Geral do Conector de Origem de Armazenamento de Tabela do Azure
 topic-legacy: overview
 description: Saiba como conectar o Armazenamento de Tabela do Azure à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -35,11 +34,11 @@ A documentação abaixo fornece informações sobre como se conectar [!DNL Azure
 
 ## Conecte [!DNL Azure Table Storage] a [!DNL Platform] usando APIs
 
-- [Criar uma conexão de origem do Armazenamento de Tabela do Azure usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/ats.md)
-- [Explorar um sistema de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
-- [Coletar dados de um banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
+- [Criar uma conexão base de Armazenamento de Tabela do Azure usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/ats.md)
+- [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
+- [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conecte [!DNL Azure Table Storage] a [!DNL Platform] usando a interface do usuário
 
 - [Criar uma conexão de origem do Armazenamento de Tabela do Azure na interface do usuário](../../tutorials/ui/create/databases/ats.md)
-- [Configurar um fluxo de dados para uma conexão de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)
+- [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform, perfil, perfil do cliente em tempo real, solução de problemas, API, perfil unificado, perfil unificado, unificado, perfil, rtcp, gráficos XDM
 title: Recursos gerais de acessibilidade na plataforma
-topic: guia
+topic-legacy: guide
 type: Documentation
 description: Saiba mais sobre os recursos gerais de acessibilidade compatíveis com o Adobe Experience Platform, incluindo navegação por teclado, paletas de cores e contraste, e suporte a tecnologia assistiva.
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---

@@ -3,9 +3,9 @@ title: Rastrear eventos usando o SDK da Web da Adobe Experience Platform
 description: Saiba como rastrear eventos do SDK da Web da Adobe Experience Platform.
 keywords: sendEvent; xdm; eventType; datasetId; sendBeacon; send Beacon; documentUnloading; document Unloading; onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Para enviar dados do evento para o Adobe Experience Cloud, use o comando `sendEv
 Os dados enviados para o Adobe Experience Cloud são divididos em duas categorias:
 
 * Dados XDM
-* Dados não XDM (não compatível no momento)
+* Dados não XDM
 
 ## Envio de dados XDM
 
@@ -75,7 +75,7 @@ Neste exemplo, a camada de dados é clonada serializando-a para JSON e depois de
 >Há um limite de 32 KB nos dados que podem ser enviados em cada evento no campo XDM.
 
 
-### Envio de dados não XDM
+## Envio de dados não XDM
 
 Os dados que não correspondem a um esquema XDM devem ser enviados usando a opção `data` do comando `sendEvent`. Esse recurso é compatível com versões 2.5.0 e posteriores do SDK da Web.
 
@@ -85,7 +85,7 @@ No futuro, você poderá enviar a camada de dados completa sob a opção `data` 
 
 **Como enviar atributos do Perfil e do Recommendations para o Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -231,7 +231,7 @@ alloy("sendEvent", {
   });
 ```
 
-## Modificar eventos globalmente {#modifying-events-globally}
+## Modificação global de eventos {#modifying-events-globally}
 
 Se quiser adicionar, remover ou modificar campos do evento globalmente, você pode configurar um retorno de chamada `onBeforeEventSend`.  Esse retorno de chamada é chamado sempre que um evento é enviado.  Esse retorno de chamada é passado em um objeto de evento com um campo `xdm`.  Modifique `content.xdm` para alterar os dados enviados com o evento.
 

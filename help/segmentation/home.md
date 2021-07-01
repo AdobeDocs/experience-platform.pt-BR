@@ -5,15 +5,14 @@ title: Visão geral do serviço de segmentação
 topic-legacy: overview
 description: Saiba mais sobre o Adobe Experience Platform Segmentation Service e a função que ele desempenha no ecossistema da plataforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3e92494351e487468e6292c34763e5b2281fd6c5
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service]visão geral
+# [!DNL Segmentation Service] visão geral
 
 O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma RESTful API que permite criar segmentos e gerar públicos-alvo a partir dos dados [!DNL Real-time Customer Profile]. Esses segmentos são configurados e mantidos centralmente em [!DNL Platform] e são prontamente acessíveis por qualquer solução de Adobe.
 
@@ -44,6 +43,8 @@ Para obter informações sobre como criar definições de segmento usando a API,
 >[!NOTE]
 >
 >Caso um esquema seja estendido, todos os uploads futuros devem atualizar os campos recém-adicionados de acordo. Para obter mais informações sobre como personalizar [!DNL Experience Data Model] (XDM), visite o [Tutorial do Editor de Esquema](../xdm/tutorials/create-schema-ui.md).
+>
+>Além disso, se o TTL (time-to-live) estiver ativado no conjunto de dados, isso pode afetar a associação do segmento criado. Para obter mais informações sobre TTL e como ele pode afetar a segmentação, leia o [Guia TTL do Serviço de perfil](../profile/apply-ttl.md).
 
 ## Avaliar segmentos
 

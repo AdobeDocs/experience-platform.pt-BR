@@ -6,10 +6,9 @@ description: Este documento aborda a criação de destinos de transmissão usand
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2024'
 ht-degree: 1%
 
 ---
@@ -45,7 +44,7 @@ Para concluir as etapas neste tutorial, você deve ter as seguintes credenciais 
 * Para conexões [!DNL Amazon Kinesis]: `accessKeyId`, `secretKey`, `region` ou `connectionUrl`
 * Para conexões [!DNL Azure Event Hubs]: `sasKeyName`, `sasKey`, `namespace`
 
-### Lendo chamadas de API de exemplo {#reading-sample-api-calls}
+### Lendo exemplos de chamadas de API {#reading-sample-api-calls}
 
 Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações do . Isso inclui caminhos, cabeçalhos necessários e cargas de solicitação formatadas corretamente. O JSON de exemplo retornado nas respostas da API também é fornecido. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
@@ -69,7 +68,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 * Tipo de conteúdo: `application/json`
 
-### Documentação do alternador {#swagger-docs}
+### Documentação do Swagger {#swagger-docs}
 
 Você pode encontrar a documentação de referência complementar para todas as chamadas de API neste tutorial no Swagger. Consulte a documentação da [API do Serviço de Fluxo no Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Recomendamos que você use este tutorial e a página de documentação do Swagger em paralelo.
 
@@ -155,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o Serviço de perfil unificado -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o Serviço de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Resposta**
 
@@ -185,7 +184,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -200,11 +199,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Use a ID obtida na etapa anterior.
-* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o Serviço de perfil unificado -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o Serviço de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) para a conexão de origem recém-criada para o Serviço de perfil unificado. Isso confirma que você se conectou com êxito aos dados de Experience Platform. Armazene esse valor conforme for necessário em uma etapa posterior.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) para a conexão de origem recém-criada para o Serviço de perfil. Isso confirma que você se conectou com êxito aos dados de Experience Platform. Armazene esse valor conforme for necessário em uma etapa posterior.
 
 ```json
 {
@@ -470,7 +469,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Use o fluxo de dados obtido na etapa anterior.
 * `{ETAG}`: Use a tag obtida na etapa anterior.
-* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento para os segmentos que deseja ativar, vá para **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecione **[!UICONTROL Segmentation Service API]** no menu de navegação esquerdo e procure a operação `GET /segment/definitions` em **[!UICONTROL Segment Definitions]**.
+* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento para os segmentos que deseja ativar, vá para **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecione **[!UICONTROL API do serviço de segmentação]** no menu de navegação esquerdo e procure a operação `GET /segment/definitions` em **[!UICONTROL Definições de segmento]**.
 * `{PROFILE_ATTRIBUTE}`: Por exemplo,  `personalEmail.address` ou  `person.lastName`
 
 **Resposta**
@@ -594,7 +593,7 @@ A resposta retornada deve incluir no parâmetro `transformations` os segmentos e
 }
 ```
 
-## Uso de coleções Postman para se conectar a destinos de transmissão {#collections}
+## Uso de coleções Postman para se conectar a destinos de transmissão  {#collections}
 
 Para se conectar aos destinos de transmissão descritos neste tutorial de forma mais simplificada, você pode usar [[!DNL Postman]](https://www.postman.com/).
 

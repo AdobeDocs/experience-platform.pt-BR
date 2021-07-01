@@ -6,10 +6,9 @@ description: Este documento aborda a criação de destinos de marketing por emai
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1704'
 ht-degree: 1%
 
 ---
@@ -121,7 +120,7 @@ Uma resposta bem-sucedida contém uma lista de destinos disponíveis e seus iden
 }
 ```
 
-## Conecte-se aos seus [!DNL Experience Platform] dados {#connect-to-your-experience-platform-data}
+## Conecte-se aos seus dados [!DNL Experience Platform] {#connect-to-your-experience-platform-data}
 
 ![Etapas de destino visão geral etapa 2](../assets/api/email-marketing/step2.png)
 
@@ -183,7 +182,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o Serviço de perfil unificado -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para o Serviço de perfil -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Resposta**
 
@@ -195,7 +194,7 @@ Uma resposta bem-sucedida contém o identificador exclusivo da conexão base (`i
 }
 ```
 
-### Conecte-se aos seus [!DNL Experience Platform] dados {#connect-to-platform-data}
+### Conecte-se aos seus dados [!DNL Experience Platform] {#connect-to-platform-data}
 
 **Formato da API**
 
@@ -217,7 +216,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
-  "name": "Connecting to Unified Profile Service",
+  "name": "Connecting to Profile Service",
   "description": "Optional",
   "baseConnectionId": "{BASE_CONNECTION_ID}",
   "connectionSpec": {
@@ -241,7 +240,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -257,11 +256,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Use a ID obtida na etapa anterior.
-* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Use a ID de especificação de conexão para  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) para a conexão de origem recém-criada para [!DNL Unified Profile Service]. Isso confirma que você se conectou com êxito aos dados [!DNL Experience Platform]. Armazene esse valor conforme for necessário em uma etapa posterior.
+Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) para a conexão de origem recém-criada para [!DNL Profile Service]. Isso confirma que você se conectou com êxito aos dados [!DNL Experience Platform]. Armazene esse valor conforme for necessário em uma etapa posterior.
 
 ```json
 {
@@ -270,7 +269,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) para a conex�
 ```
 
 
-## Conectar-se ao destino de marketing por email {#connect-to-email-marketing-destination}
+## Conectar ao destino de marketing por email {#connect-to-email-marketing-destination}
 
 ![Etapas de destino visão geral etapa 3](../assets/api/email-marketing/step3.png)
 
@@ -593,7 +592,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Use o fluxo de dados obtido na etapa anterior.
 * `{ETAG}`: Use a tag obtida na etapa anterior.
-* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento para os segmentos que deseja ativar, vá para **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecione **[!UICONTROL Segmentation Service API]** no menu de navegação esquerdo e procure a operação `GET /segment/definitions` em **[!UICONTROL Segment Definitions]**.
+* `{SEGMENT_ID}`: Forneça a ID do segmento que deseja exportar para esse destino. Para recuperar IDs de segmento para os segmentos que deseja ativar, vá para **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selecione **[!UICONTROL API do serviço de segmentação]** no menu de navegação esquerdo e procure a operação `GET /segment/definitions` em **[!UICONTROL Definições de segmento]**.
 * `{PROFILE_ATTRIBUTE}`: Por exemplo, `"person.lastName"`
 
 **Resposta**

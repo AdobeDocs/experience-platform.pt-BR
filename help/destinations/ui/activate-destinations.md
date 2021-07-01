@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
+source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2806'
 ht-degree: 0%
 
 ---
@@ -147,8 +147,7 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
 
    >[!IMPORTANT]
    >
-   >A opção para exportar arquivos em um determinado momento do dia está atualmente em beta e só está disponível para um número selecionado de clientes.
-   ><br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo necessários.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, recomendamos configurar o primeiro tempo de exportação de arquivos após as 12h GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+   >A opção de exportar arquivos em um determinado horário do dia está atualmente em beta e está disponível somente para um número selecionado de clientes.<br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
@@ -175,7 +174,7 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
    >[!IMPORTANT]
    >
-   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. <br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo necessários.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, recomendamos configurar o primeiro tempo de exportação de arquivos após as 12h GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. <br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.

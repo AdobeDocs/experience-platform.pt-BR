@@ -4,10 +4,10 @@ description: Saiba como mapear variáveis manualmente no Adobe Analytics usando 
 seo-description: Mapear variáveis manualmente para o Adobe Analytics usando regras de processamento com o SDK da Web
 keywords: adobe analytics, analytics, variáveis, variáveis de mapeamento, variáveis de mapa, contextData, dados de contexto, regras de processamento, regras, xdm, schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 16%
+source-wordcount: '403'
+ht-degree: 13%
 
 ---
 
@@ -21,7 +21,7 @@ Além disso, é possível usar um conjunto padrão de ações e listas de produt
 
 ## Dados de contexto
 
-Para serem usados por [!DNL Analytics], os dados do XDM são nivelados usando a notação de pontos e disponibilizados como `contextData`. A lista de pares de valores a seguir mostra um exemplo de `context data`:
+Para serem usados por [!DNL Analytics], os dados do XDM são nivelados usando a notação de pontos e disponibilizados como `contextData`. A lista de pares de valores a seguir mostra um exemplo de como o `context data` se parece quando é nivelado:
 
 ```json
 {

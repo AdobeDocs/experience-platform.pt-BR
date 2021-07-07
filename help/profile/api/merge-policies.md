@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '2590'
 ht-degree: 1%
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para ver uma visualização completa de cada um dos clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma exibição unificada.
 
-Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias fontes estão em conflito (por exemplo, um fragmento lista o cliente como &quot;único&quot; enquanto o outro lista o cliente como &quot;casado&quot;), a política de mesclagem determina quais informações devem ser incluídas no perfil do indivíduo.
+Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparece em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. When the data from multiple sources conflicts (for example one fragment lists the customer as &quot;single&quot; while the other lists the customer as &quot;married&quot;) the merge policy determines which information to include in the profile for the individual.
 
-Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece etapas para trabalhar com políticas de mesclagem usando a API.
+Usando RESTful APIs ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. This guide provides steps for working with merge policies using the API.
 
 Para trabalhar com políticas de mesclagem usando a interface do usuário, consulte o [guia da interface do usuário de políticas de mesclagem](../merge-policies/ui-guide.md). Para saber mais sobre as políticas de mesclagem em geral e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
@@ -38,7 +38,7 @@ Embora cada organização possa potencialmente ter várias políticas de mesclag
 
 ### Objeto de política de mesclagem completa
 
-O objeto de política de mesclagem completa representa um conjunto de preferências que controla os aspectos da mesclagem de fragmentos de perfil.
+The complete merge policy object represents a set of preferences controlling aspects of merging profile fragments.
 
 **Objeto de política de mesclagem**
 
@@ -121,7 +121,7 @@ Onde `{IDENTITY_GRAPH_TYPE}` é um dos seguintes:
     }
 ```
 
-### Mesclar atributos {#attribute-merge}
+### Mesclagem de atributos {#attribute-merge}
 
 Um fragmento de perfil é a informação do perfil para apenas uma identidade da lista de identidades que existem para um usuário específico. Quando o tipo de gráfico de identidade usado resulta em mais de uma identidade, há um potencial para conflitante entre atributos de perfil e a prioridade deve ser especificada. Usando `attributeMerge`, você pode especificar quais atributos de perfil priorizar no caso de um conflito de mesclagem entre conjuntos de dados do tipo Valor-chave (dados de registro).
 
@@ -136,7 +136,7 @@ Um fragmento de perfil é a informação do perfil para apenas uma identidade da
 Onde `{ATTRIBUTE_MERGE_TYPE}` é um dos seguintes:
 
 * **`timestampOrdered`**: (padrão) Dar prioridade ao perfil que foi atualizado por último. Usando esse tipo de mesclagem, o atributo `data` não é necessário. `timestampOrdered` também suporta carimbos de data e hora personalizados, que terão prioridade ao mesclar fragmentos de perfil dentro ou entre conjuntos de dados. Para saber mais, consulte a seção Apêndice em [usando carimbos de data e hora personalizados](#custom-timestamps).
-* **`dataSetPrecedence`** : Atribua prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. Isso pode ser usado quando as informações presentes em um conjunto de dados são preferenciais ou confiáveis em relação aos dados em outro conjunto de dados. Ao usar esse tipo de mesclagem, o atributo `order` é necessário, pois lista os conjuntos de dados na ordem de prioridade.
+* **`dataSetPrecedence`** : Atribua prioridade aos fragmentos de perfil com base no conjunto de dados de onde eles vieram. This could be used when information present in one dataset is preferred or trusted over data in another dataset. Ao usar esse tipo de mesclagem, o atributo `order` é necessário, pois lista os conjuntos de dados na ordem de prioridade.
    * **`order`**: Quando &quot;dataSetPrecedence&quot; é usado, uma  `order` matriz deve ser fornecida com uma lista de conjuntos de dados. Nenhum conjunto de dados incluído na lista será mesclado. Em outras palavras, os conjuntos de dados devem ser listados explicitamente para serem mesclados a um perfil. A matriz `order` lista as IDs dos conjuntos de dados em ordem de prioridade.
 
 #### Exemplo de objeto `attributeMerge` usando tipo `dataSetPrecedence`
@@ -241,9 +241,9 @@ Consulte a seção [components of merge policy](#components-of-merge-policies) n
 
 ### Recuperar várias políticas de mesclagem por suas IDs
 
-Você pode recuperar várias políticas de mesclagem fazendo uma solicitação POST para o endpoint `/config/mergePolicies/bulk-get` e incluindo as IDs das políticas de mesclagem que deseja recuperar no corpo da solicitação.
+You can retrieve multiple merge policies by making a POST request to the `/config/mergePolicies/bulk-get` endpoint and including the IDs of the merge policies you wish to retrieve in the request body.
 
-**Formato da API**
+**API format**
 
 ```http
 POST /config/mergePolicies/bulk-get
@@ -334,7 +334,7 @@ Uma resposta bem-sucedida retorna o Status HTTP 207 (Multi-Status) e os detalhes
 }
 ```
 
-Consulte a seção [components of merge policy](#components-of-merge-policies) no início deste documento para obter detalhes sobre cada um dos elementos individuais que compõem uma política de mesclagem.
+See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
 
 ### Listar várias políticas de mesclagem por critérios
 
@@ -352,10 +352,10 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. Valor padrão: 20º |
 | `orderBy` | Especifica o campo pelo qual ordenar os resultados como em `orderBy=name` ou `orderBy=+name` para classificar por nome em ordem crescente ou `orderBy=-name`, para classificar em ordem decrescente. Omitir esse valor resulta na classificação padrão de `name` em ordem crescente. |
 | `schema.name` | Nome do schema para o qual recuperar as políticas de mesclagem disponíveis. |
-| `identityGraph.type` | Filtros resulta pelo tipo de gráfico de identidade. Os valores possíveis incluem &quot;none&quot; e &quot;pdg&quot; (Gráfico privado). |
+| `identityGraph.type` | Filters results by the identity graph type. Os valores possíveis incluem &quot;none&quot; e &quot;pdg&quot; (Gráfico privado). |
 | `attributeMerge.type` | Filtra os resultados pelo tipo de mesclagem de atributo usado. Os valores possíveis incluem &quot;timestampOrdered&quot; e &quot;dataSetPrecedence&quot;. |
-| `start` | Deslocamento da página - especifique a ID inicial dos dados a serem recuperados. Valor padrão: 0 |
-| `version` | Especifique isso se quiser usar uma versão específica da política de mesclagem. Por padrão, a versão mais recente será usada. |
+| `start` | Deslocamento da página - especifique a ID inicial dos dados a serem recuperados. Default value: 0 |
+| `version` | Specify this if you are looking to use a specific version of the merge policy. Por padrão, a versão mais recente será usada. |
 
 Para obter mais informações sobre `schema.name`, `identityGraph.type` e `attributeMerge.type`, consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) fornecida anteriormente neste guia.
 
@@ -539,9 +539,9 @@ Você pode modificar uma política de mesclagem existente editando atributos ind
 
 ### Editar campos de política de mesclagem individuais
 
-Você pode editar campos individuais para uma política de mesclagem fazendo uma solicitação de PATCH para o endpoint `/config/mergePolicies/{mergePolicyId}`:
+You can edit individual fields for a merge policy by making a PATCH request to the `/config/mergePolicies/{mergePolicyId}` endpoint:
 
-**Formato da API**
+**API format**
 
 ```http
 PATCH /config/mergePolicies/{mergePolicyId}
@@ -617,7 +617,7 @@ Uma resposta bem-sucedida retorna os detalhes da política de mesclagem recém-a
 
 Outra maneira de modificar uma política de mesclagem é usar uma solicitação PUT, que substitui toda a política de mesclagem.
 
-**Formato da API**
+**API format**
 
 ```http
 PUT /config/mergePolicies/{mergePolicyId}
@@ -625,7 +625,7 @@ PUT /config/mergePolicies/{mergePolicyId}
 
 | Parâmetro | Descrição |
 |---|---|
-| `{mergePolicyId}` | O identificador da política de mesclagem que você deseja substituir. |
+| `{mergePolicyId}` | The identifier of the merge policy you want to overwrite. |
 
 **Solicitação**
 
@@ -664,9 +664,9 @@ curl -X PUT \
 | Propriedade | Descrição |
 |---|---|
 | `name` | Um nome amigável para o ser humano pelo qual a política de mesclagem pode ser identificada em exibições de lista. |
-| `identityGraph` | O gráfico de identidade do qual obter identidades relacionadas para mesclar. |
+| `identityGraph` | The identity graph from which to obtain related identities to merge. |
 | `attributeMerge` | A maneira pela qual priorizar valores de atributos de perfil em caso de conflitos de dados. |
-| `schema` | A classe de esquema XDM associada à política de mesclagem. |
+| `schema` | The XDM schema class associated with the merge policy. |
 | `default` | Especifica se essa política de mesclagem é o padrão para o esquema. |
 
 Consulte a seção [componentes das políticas de mesclagem](#components-of-merge-policies) para obter mais informações.
@@ -761,9 +761,9 @@ Para obter instruções passo a passo sobre como trabalhar com esquemas usando a
 
 Para trabalhar com carimbos de data e hora personalizados usando a interface do usuário, consulte a seção [usando carimbos de data e hora personalizados](../merge-policies/overview.md#custom-timestamps) na [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
-#### [!DNL External Source System Audit Details] detalhes do grupo de campos  {#field-group-details}
+#### [!DNL External Source System Audit Details] detalhes do grupo de campos {#field-group-details}
 
-O exemplo a seguir mostra campos preenchidos corretamente no grupo de campos [!DNL External Source System Audit Details]. O grupo de campos completo JSON também pode ser visualizado no [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) no GitHub.
+O exemplo a seguir mostra campos preenchidos corretamente no grupo de campos [!DNL External Source System Audit Details]. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) on GitHub.
 
 ```json
 {

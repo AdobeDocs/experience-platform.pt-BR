@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
+source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
 workflow-type: tm+mt
-source-wordcount: '3708'
+source-wordcount: '3726'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ A normalização é um conceito fundamental por trás de [!DNL Experience Platfo
 
 A infraestrutura na qual [!DNL Experience Platform] é criado, conhecida como [!DNL XDM System], facilita workflows baseados em esquema e inclui os [!DNL Schema Registry], [!DNL Schema Editor], metadados de esquema e padrões de consumo de serviço. Consulte a [Visão geral do sistema XDM](../home.md) para obter mais informações.
 
-Há vários benefícios principais para a criação e utilização de schemas em [!DNL Experience Platform]. Primeiro, os esquemas permitem uma melhor governança de dados e minimização de dados, o que é especialmente importante com as regras de privacidade. Em segundo lugar, a criação de esquemas com componentes padrão do Adobe permite insights prontos e o uso de serviços de AI/ML com personalizações mínimas. Por último, os schemas fornecem infraestrutura para informações de compartilhamento de dados e orquestração eficiente.
+Há vários benefícios principais para o aproveitamento de schemas em [!DNL Experience Platform]. Primeiro, os esquemas permitem uma melhor governança de dados e minimização de dados, o que é especialmente importante com as regras de privacidade. Em segundo lugar, a criação de esquemas com componentes padrão do Adobe permite insights prontos e o uso de serviços de AI/ML com personalizações mínimas. Por último, os schemas fornecem infraestrutura para informações de compartilhamento de dados e orquestração eficiente.
 
 ## Planejamento do esquema
 
@@ -68,7 +68,7 @@ Há duas maneiras de enviar dados de identidade para a Platform:
 
 `identityMap` é um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Este campo pode ser usado para fornecer informações de identidade para seus esquemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
 
-A principal desvantagem do uso de `identityMap` é que as identidades se tornam incorporadas aos dados e, como resultado, se tornam menos visíveis. Se você estiver assimilando dados brutos, deverá definir campos de identidade individuais dentro da estrutura do schema real. Os esquemas que utilizam `identityMap` também não podem participar de relacionamentos.
+A principal desvantagem do uso de `identityMap` é que as identidades se tornam incorporadas aos dados e, como resultado, se tornam menos visíveis. Se você estiver assimilando dados brutos, deverá definir campos de identidade individuais dentro da estrutura do schema real. Os esquemas que usam `identityMap` também não podem participar de relacionamentos.
 
 No entanto, os mapas de identidade podem ser particularmente úteis se você estiver trazendo dados de fontes que armazenam identidades juntas (como [!DNL Airship] ou Adobe Audience Manager) ou quando houver um número variável de identidades para um esquema. Além disso, os mapas de identidade são necessários se você estiver usando o [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
@@ -111,7 +111,7 @@ Como mostra o exemplo acima, cada chave no objeto `identityMap` representa um na
 
 Como a natureza das experiências digitais continua a evoluir, também os esquemas usados para representá-las. Um schema bem projetado é, portanto, capaz de se adaptar e evoluir conforme necessário, sem causar alterações destrutivas nas versões anteriores do schema.
 
-Como a manutenção da compatibilidade com versões anteriores é crucial para a evolução do schema, [!DNL Experience Platform] aplica um princípio de controle de versão meramente aditivo para garantir que qualquer revisão do schema resulte apenas em atualizações e alterações não destrutivas. Em outras palavras, **alterações de quebra não são suportadas.**
+Como a manutenção da compatibilidade com versões anteriores é crucial para a evolução do schema, [!DNL Experience Platform] aplica um princípio de controle de versão meramente aditivo. Esse princípio garante que qualquer revisão do schema resulte apenas em atualizações e alterações não destrutivas. Em outras palavras, **alterações de quebra não são suportadas.**
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ A tabela a seguir detalha quais alterações são compatíveis ao editar esquema
 
 | Alterações suportadas | Quebrando alterações (Não suportado) |
 | --- | --- |
-| <ul><li>Adicionar novos campos ao recurso</li><li>Como tornar um campo obrigatório opcional</li><li>Alteração do nome de exibição e da descrição do recurso</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Introdução de novos campos obrigatórios</li><li>Renomeação ou redefinição de campos existentes</li><li>Remoção ou restrição de valores de campo anteriormente suportados</li><li>Mover atributos para um local diferente na árvore</li></ul> |
+| <ul><li>Adicionar novos campos ao recurso</li><li>Como tornar um campo obrigatório opcional</li><li>Alteração do nome de exibição e da descrição do recurso</li><li>Ativar o esquema para participar do perfil</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Introdução de novos campos obrigatórios</li><li>Renomeação ou redefinição de campos existentes</li><li>Remoção ou restrição de valores de campo anteriormente suportados</li><li>Mover campos existentes para um local diferente na árvore</li><li>Exclusão do schema</li><li>Desabilitação do esquema de participar do Perfil</li></ul> |
 
 ### Esquemas e assimilação de dados
 
@@ -299,7 +299,7 @@ Há alguns fatores principais a serem considerados ao escolher objetos em vez de
 | Objetos | Campos de forma livre |
 | --- | --- |
 | Aumenta o aninhamento | Menos ou sem aninhamento |
-| Cria agrupamentos de campos lógicos | Os campos são colocados em locais ad-hoc |
+| Cria agrupamentos de campos lógicos | Os campos são colocados em locais ad hoc |
 
 {style=&quot;table-layout:auto&quot;}
 

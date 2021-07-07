@@ -5,7 +5,7 @@ title: Detalhes demográficos - Grupo de campos do esquema
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos do schema Detalhes demográficos .
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 4%
@@ -38,5 +38,5 @@ ht-degree: 4%
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)

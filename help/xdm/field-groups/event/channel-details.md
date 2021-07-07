@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Grupo de Campos do Esquema de Detalhes do Canal
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes do canal .
-source-git-commit: b9168052174c250810e59e403cb77419d510df3b
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 3%
@@ -30,5 +30,5 @@ ht-degree: 3%
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-channel.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-channel.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)

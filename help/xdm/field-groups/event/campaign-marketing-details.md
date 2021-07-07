@@ -3,8 +3,8 @@ keywords: Experience Platform, home, tópicos populares, esquema, Esquema, XDM, 
 solution: Experience Platform
 title: Grupo de Campos Detalhes do Esquema de Marketing da Campanha
 topic-legacy: overview
-description: Este documento fornece uma visão geral do grupo de campos Detalhes de marketing da campanha .
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+description: This document provides an overview of the Campaign Marketing Details schema field group.
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Detalhes de marketing da campanha ] é um grupo de campo de esquema padrão para a  [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), usado para descrever informações da campanha de marketing, como grupo da campanha, nome e código de rastreamento.
+[!UICONTROL Campaign Marketing Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), used to describe marketing campaign information such as campaign group, name, and tracking code.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 
@@ -30,5 +30,5 @@ ht-degree: 3%
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)

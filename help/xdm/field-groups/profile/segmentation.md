@@ -5,7 +5,7 @@ title: Detalhes da associação ao segmento Grupo de campos do esquema
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes da associação ao segmento .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 2%
@@ -19,11 +19,11 @@ ht-degree: 2%
 >
 >Os nomes de vários grupos de campos de esquema foram alterados. Consulte o documento em [atualizações do nome do grupo de campos](../name-updates.md) para obter mais informações.
 
-[!UICONTROL Associação de Segmento ] Detalhes é um grupo de campo de esquema padrão para a  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa que captura informações relacionadas à associação de segmentos, incluindo a quais segmentos o indivíduo pertence, a última hora de qualificação e quando a associação é válida até.
+[!UICONTROL Segment Membership Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). O grupo de campos fornece um único campo de mapa que captura informações relacionadas à associação de segmentos, incluindo a quais segmentos o indivíduo pertence, a última hora de qualificação e quando a associação é válida até.
 
 >[!WARNING]
 >
->Embora o campo `segmentMembership` deva ser adicionado manualmente ao esquema do perfil usando esse grupo de campos, você não deve tentar preencher ou atualizar manualmente esse campo. O sistema atualiza automaticamente o mapa `segmentMembership` para cada perfil, à medida que os trabalhos de segmentação são executados.
+>While the `segmentMembership` field must be manually added to your profile schema using this field group, you should not attempt to manually populate or update this field. O sistema atualiza automaticamente o mapa `segmentMembership` para cada perfil, à medida que os trabalhos de segmentação são executados.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-A seguir, um exemplo de `segmentMembership` mapa que o sistema preencheu para um perfil específico. As associações de segmento são classificadas por namespace, conforme indicado pelas chaves de nível raiz do objeto. Por sua vez, as chaves individuais em cada namespace representam as IDs dos segmentos dos quais o perfil é membro. Cada objeto de segmento contém vários subcampos que fornecem mais detalhes sobre a associação:
+A seguir, um exemplo de `segmentMembership` mapa que o sistema preencheu para um perfil específico. As associações de segmento são classificadas por namespace, conforme indicado pelas chaves de nível raiz do objeto. Por sua vez, as chaves individuais em cada namespace representam as IDs dos segmentos dos quais o perfil é membro. Each segment object contains several sub-fields that provide further details about the membership:
 
 ```json
 {
@@ -75,14 +75,14 @@ A seguir, um exemplo de `segmentMembership` mapa que o sistema preencheu para um
 | Propriedade | Descrição |
 | --- | --- |
 | `xdm:version` | A versão do segmento para a qual este perfil se qualificou. |
-| `xdm:lastQualificationTime` | Um carimbo de data e hora da última vez que esse perfil se qualificou para o segmento. |
+| `xdm:lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `xdm:validUntil` | Um carimbo de data e hora de quando a associação de segmento não deve mais ser considerada válida. |
-| `xdm:status` | Indica se a associação de segmento foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: O perfil está inserindo o segmento como parte da solicitação atual.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
-| `xdm:payload` | Algumas associações de segmento incluem uma carga que descreve valores adicionais diretamente relacionados à associação. Somente uma carga de um determinado tipo pode ser fornecida para cada associação. `xdm:payloadType` indica o tipo de carga útil (`boolean`,  `number`,  `propensity` ou  `string`), enquanto sua propriedade irmão fornece o valor para o tipo de carga útil. |
+| `xdm:status` | Indica se a associação de segmento foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`existing`: O perfil já fazia parte do segmento antes da solicitação e continua mantendo sua associação.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: O perfil está saindo do segmento como parte da solicitação atual.</li></ul> |
+| `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Somente uma carga de um determinado tipo pode ser fornecida para cada associação. `xdm:payloadType` indica o tipo de carga útil (`boolean`,  `number`,  `propensity` ou  `string`), enquanto sua propriedade irmão fornece o valor para o tipo de carga útil. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

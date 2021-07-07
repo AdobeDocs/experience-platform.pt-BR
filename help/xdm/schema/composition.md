@@ -5,9 +5,9 @@ title: Noções básicas da composição do esquema
 topic-legacy: overview
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos blocos de construção, princípios e práticas recomendadas para a composição de schemas a serem usados no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
 workflow-type: tm+mt
-source-wordcount: '3726'
+source-wordcount: '3629'
 ht-degree: 0%
 
 ---
@@ -66,9 +66,9 @@ Há duas maneiras de enviar dados de identidade para a Platform:
 
 #### `identityMap` {#identityMap}
 
-`identityMap` é um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
+`identityMap` é um campo do tipo mapa que descreve os vários valores de identidade de um indivíduo, juntamente com seus namespaces associados. Este campo pode ser usado para fornecer informações de identidade para seus esquemas, em vez de definir valores de identidade dentro da estrutura do próprio schema.
 
-A principal desvantagem do uso de `identityMap` é que as identidades se tornam incorporadas aos dados e, como resultado, se tornam menos visíveis. Se você estiver assimilando dados brutos, deverá definir campos de identidade individuais dentro da estrutura do schema real. Schemas that use `identityMap` also cannot participate in relationships.
+A principal desvantagem do uso de `identityMap` é que as identidades se tornam incorporadas aos dados e, como resultado, se tornam menos visíveis. Se você estiver assimilando dados brutos, deverá definir campos de identidade individuais dentro da estrutura do schema real. Os esquemas que usam `identityMap` também não podem participar de relacionamentos.
 
 No entanto, os mapas de identidade podem ser particularmente úteis se você estiver trazendo dados de fontes que armazenam identidades juntas (como [!DNL Airship] ou Adobe Audience Manager) ou quando houver um número variável de identidades para um esquema. Além disso, os mapas de identidade são necessários se você estiver usando o [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
@@ -105,13 +105,13 @@ Como mostra o exemplo acima, cada chave no objeto `identityMap` representa um na
 
 >[!NOTE]
 >
->Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. Primary identities only need to be set for schemas intended to be used in [!DNL Real-time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
+>Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. As identidades primárias só precisam ser definidas para esquemas destinados a serem usados em [!DNL Real-time Customer Profile]. Consulte a seção sobre [schemas de união](#union) para obter mais informações.
 
-### Schema evolution principles {#evolution}
+### Princípios de evolução do schema {#evolution}
 
-As the nature of digital experiences continues to evolve, so must the schemas used to represent them. Um schema bem projetado é, portanto, capaz de se adaptar e evoluir conforme necessário, sem causar alterações destrutivas nas versões anteriores do schema.
+Como a natureza das experiências digitais continua a evoluir, também os esquemas usados para representá-las. Um schema bem projetado é, portanto, capaz de se adaptar e evoluir conforme necessário, sem causar alterações destrutivas nas versões anteriores do schema.
 
-Como a manutenção da compatibilidade com versões anteriores é crucial para a evolução do schema, [!DNL Experience Platform] aplica um princípio de controle de versão meramente aditivo. Esse princípio garante que qualquer revisão do schema resulte apenas em atualizações e alterações não destrutivas. In other words, **breaking changes are not supported.**
+Como a manutenção da compatibilidade com versões anteriores é crucial para a evolução do schema, [!DNL Experience Platform] aplica um princípio de controle de versão meramente aditivo. Esse princípio garante que qualquer revisão do schema resulte apenas em atualizações e alterações não destrutivas. Em outras palavras, **alterações de quebra não são suportadas.**
 
 >[!NOTE]
 >
@@ -159,11 +159,17 @@ Os grupos de campos definem a(s) classe(s) com a qual são compatíveis, com bas
 
 [!DNL Experience Platform] O inclui muitos grupos de campos Adobe padrão, além de permitir que os fornecedores definam grupos de campos para seus usuários e usuários individuais definam grupos de campos para seus próprios conceitos específicos.
 
-For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard field groups that define those common concepts. No entanto, os conceitos específicos para casos de uso menos comuns (como &quot;[!UICONTROL Nível do Programa de Fidelidade]&quot;) geralmente não têm um grupo de campo predefinido. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
+Por exemplo, para capturar detalhes como &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; para o esquema &quot;[!UICONTROL Loyalty Members]&quot;, você poderá usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos específicos para casos de uso menos comuns (como &quot;[!UICONTROL Nível do Programa de Fidelidade]&quot;) geralmente não têm um grupo de campo predefinido. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
+
+>[!NOTE]
+>
+>É altamente recomendável usar grupos de campos padrão sempre que possível em seus esquemas, já que esses campos são entendidos implicitamente pelos serviços [!DNL Experience Platform] e fornecem maior consistência quando usados em [!DNL Platform] componentes.
+>
+>Os campos fornecidos pelos componentes padrão (como &quot;Nome&quot; e &quot;Endereço de email&quot;) contêm conotações adicionais além dos tipos básicos de campos escalares, informando [!DNL Platform] que quaisquer campos que compartilhem o mesmo tipo de dados se comportarão da mesma maneira. Esse comportamento pode ser confiável para ser consistente, independentemente de onde os dados vêm ou em que serviço [!DNL Platform] os dados estão sendo usados.
 
 Lembre-se de que os esquemas são compostos de grupos de campos &quot;zero ou mais&quot;, portanto, isso significa que você pode compor um schema válido sem usar nenhum grupo de campos.
 
-A captura de tela a seguir demonstra como os grupos de campo são representados na interface do usuário da plataforma. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema&#39;s structure.
+A captura de tela a seguir demonstra como os grupos de campo são representados na interface do usuário da plataforma. Um único grupo de campos ([!UICONTROL Demographic Details]) é adicionado a um schema neste exemplo, que fornece um agrupamento de campos para a estrutura do schema.
 
 ![](../images/schema-composition/field-group.png)
 
@@ -173,17 +179,17 @@ Para obter a lista mais atualizada de grupos de campos XDM padrão disponíveis,
 
 Os tipos de dados são usados como tipos de campo de referência em classes ou esquemas, da mesma forma que os campos literais básicos. A principal diferença é que os tipos de dados podem definir vários subcampos. Semelhante a um grupo de campos, um tipo de dados permite o uso consistente de uma estrutura de vários campos, mas tem mais flexibilidade do que um grupo de campos, pois um tipo de dados pode ser incluído em qualquer lugar de um esquema ao adicioná-lo como o &quot;tipo de dados&quot; de um campo.
 
-[!DNL Experience Platform] O fornece vários tipos de dados comuns como parte do  [!DNL Schema Registry] para suportar o uso de padrões padrão para descrever estruturas de dados comuns. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become clearer as you walk through the steps to define data types.
+[!DNL Experience Platform] O fornece vários tipos de dados comuns como parte do  [!DNL Schema Registry] para suportar o uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes nos tutoriais [!DNL Schema Registry], onde ficará mais claro à medida que você percorre as etapas para definir tipos de dados.
 
 A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário da plataforma. Um dos campos fornecidos pelo grupo de campos [!UICONTROL Detalhes Demográficos] usa o tipo de dados &quot;[!UICONTROL Nome da pessoa]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos onde o nome de uma pessoa precisa ser capturado.
 
 ![](../images/schema-composition/data-type.png)
 
-For the most up-to-date list of available standard XDM data types, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Como alternativa, consulte o guia em [explorar componentes XDM](../ui/explore.md) se preferir exibir recursos na interface do usuário.
+Para obter a lista mais atualizada dos tipos de dados XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/datatypes). Como alternativa, consulte o guia em [explorar componentes XDM](../ui/explore.md) se preferir exibir recursos na interface do usuário.
 
 ### Campo
 
-A field is the most basic building block of a schema. Fields provide constraints regarding the type of data they can contain by defining a specific data type. Esses tipos de dados básicos definem um único campo, enquanto os [data types](#data-type) mencionados anteriormente permitem definir vários subcampos e reutilizar a mesma estrutura de vários campos em vários schemas. Assim, além de definir um &quot;tipo de dados&quot; de campo como um dos tipos de dados definidos no Registro, [!DNL Experience Platform] suporta tipos escalares básicos como:
+Um campo é o bloco de construção mais básico de um schema. Os campos fornecem restrições sobre o tipo de dados que podem conter, definindo um tipo de dados específico. Esses tipos de dados básicos definem um único campo, enquanto os [data types](#data-type) mencionados anteriormente permitem definir vários subcampos e reutilizar a mesma estrutura de vários campos em vários schemas. Assim, além de definir um &quot;tipo de dados&quot; de campo como um dos tipos de dados definidos no Registro, [!DNL Experience Platform] suporta tipos escalares básicos como:
 
 * String
 * Número inteiro
@@ -210,24 +216,6 @@ Os intervalos válidos desses tipos escalares podem ser restritos ainda mais a d
 >
 >O tipo de campo &quot;mapear&quot; permite dados de pares de valores chave, incluindo vários valores para uma única chave. Os mapas só podem ser definidos no nível do sistema, o que significa que você pode encontrar um mapa em um esquema definido pelo setor ou pelo fornecedor, mas não estão disponíveis para uso nos campos definidos. O [Guia do desenvolvedor da API de Registro de Schema](../api/getting-started.md) contém mais informações sobre a definição de tipos de campos.
 
-Algumas operações de dados usadas por serviços e aplicativos de downstream impõem restrições em tipos de campo específicos. Os serviços afetados incluem, mas não se limitam a:
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-Antes de criar um schema para uso em serviços downstream, reveja a documentação apropriada para esses serviços a fim de entender melhor os requisitos de campo e as restrições para as operações de dados para as quais o schema se destina.
-
-### Campos XDM
-
-Além dos campos básicos e da capacidade de definir seus próprios tipos de dados, o XDM fornece um conjunto padrão de campos e tipos de dados que são compreendidos implicitamente pelos serviços [!DNL Experience Platform] e fornecem maior consistência quando usados em [!DNL Platform] componentes.
-
-Esses campos, como &quot;Nome&quot; e &quot;Endereço de email&quot;, contêm conotações adicionais além dos tipos básicos de campos escalares, informando [!DNL Platform] que quaisquer campos que compartilham o mesmo tipo de dados XDM se comportarão da mesma maneira. Esse comportamento pode ser confiável para ser consistente, independentemente de onde os dados vêm ou em que serviço [!DNL Platform] os dados estão sendo usados.
-
-Consulte o [dicionário de campos XDM](field-dictionary.md) para obter uma lista completa de campos XDM disponíveis. Recomenda-se usar campos e tipos de dados XDM sempre que possível para oferecer suporte à consistência e à padronização em [!DNL Experience Platform].
-
 ## Exemplo de composição
 
 Os esquemas representam o formato e a estrutura dos dados que serão assimilados em [!DNL Platform] e são criados usando um modelo de composição. Como mencionado anteriormente, esses esquemas são compostos de uma classe e zero ou mais grupos de campos compatíveis com essa classe.
@@ -242,23 +230,23 @@ O diagrama abaixo mostra esses esquemas e os campos contribuídos por cada grupo
 
 ### União {#union}
 
-Embora [!DNL Experience Platform] permita compor esquemas para casos de uso específicos, também permite ver uma &quot;união&quot; de esquemas para um tipo de classe específico. O diagrama anterior mostra dois esquemas com base na classe XDM ExperienceEvent e dois esquemas com base na classe [!DNL XDM Individual Profile]. The union, shown below, aggregates the fields of all schemas that share the same class ([!DNL XDM ExperienceEvent] and [!DNL XDM Individual Profile], respectively).
+Embora [!DNL Experience Platform] permita compor esquemas para casos de uso específicos, também permite ver uma &quot;união&quot; de esquemas para um tipo de classe específico. O diagrama anterior mostra dois esquemas com base na classe XDM ExperienceEvent e dois esquemas com base na classe [!DNL XDM Individual Profile]. A união, mostrada abaixo, agrega os campos de todos os schemas que compartilham a mesma classe ([!DNL XDM ExperienceEvent] e [!DNL XDM Individual Profile], respectivamente).
 
 ![](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-time Customer Profile], it will be included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes as well as a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
+Ao ativar um schema para uso com [!DNL Real-time Customer Profile], ele será incluído na união para esse tipo de classe. [!DNL Profile] O oferece perfis robustos e centralizados de atributos do cliente, bem como uma conta com carimbos de data e hora de cada evento que o cliente teve em qualquer sistema integrado com o  [!DNL Platform]. [!DNL Profile] O usa a exibição de união para representar esses dados e fornecer uma visão holística de cada cliente individual.
 
 Para obter mais informações sobre como trabalhar com [!DNL Profile], consulte a [Visão geral do Perfil do cliente em tempo real](../../profile/home.md).
 
-## Mapping datafiles to XDM schemas
+## Mapeamento de arquivos de dados para esquemas XDM
 
-Todos os arquivos de dados assimilados em [!DNL Experience Platform] devem estar em conformidade com a estrutura de um esquema XDM. Para obter mais informações sobre como formatar arquivos de dados para estar em conformidade com hierarquias XDM (incluindo arquivos de amostra), consulte o documento em [amostras de transformações ETL](../../etl/transformations.md). For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
+Todos os arquivos de dados assimilados em [!DNL Experience Platform] devem estar em conformidade com a estrutura de um esquema XDM. Para obter mais informações sobre como formatar arquivos de dados para estar em conformidade com hierarquias XDM (incluindo arquivos de amostra), consulte o documento em [amostras de transformações ETL](../../etl/transformations.md). Para obter informações gerais sobre como assimilar arquivos de dados em [!DNL Experience Platform], consulte a [visão geral da assimilação de lote](../../ingestion/batch-ingestion/overview.md).
 
 ## Esquemas para segmentos externos
 
 Se você estiver trazendo segmentos de sistemas externos para o Platform, deverá usar os seguintes componentes para capturá-los em seus esquemas:
 
-* [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
+* [[!UICONTROL Classe de ] definição de segmento](../classes/segment-definition.md): Use essa classe padrão para capturar atributos-chave de uma definição de segmento externo.
 * [[!UICONTROL Grupo de campos ] Detalhes da associação do segmento](../field-groups/profile/segmentation.md): Adicione esse grupo de campos ao seu  [!UICONTROL Esquema de perfis individuais do ] XDM para associar perfis do cliente a segmentos específicos.
 
 ## Próximas etapas
@@ -274,21 +262,21 @@ O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe 
 
 Para começar a compor o schema usando a interface do usuário, siga o [Tutorial do Editor de Esquema](../tutorials/create-schema-ui.md) para criar o schema &quot;Membros de Fidelidade&quot; mencionado em todo este documento.
 
-Para começar a usar a API [!DNL Schema Registry], leia o [Guia do desenvolvedor da API do Registro de Schema](../api/getting-started.md). After reading the developer guide, follow the steps outlined in the tutorial on [creating a schema using the Schema Registry API](../tutorials/create-schema-api.md).
+Para começar a usar a API [!DNL Schema Registry], leia o [Guia do desenvolvedor da API do Registro de Schema](../api/getting-started.md). Depois de ler o guia do desenvolvedor, siga as etapas descritas no tutorial em [criar um schema usando a API do Registro de Schema](../tutorials/create-schema-api.md).
 
 ## Apêndice
 
-The following sections contain additional information regarding the principles of schema composition.
+As seções a seguir contêm informações adicionais sobre os princípios da composição do schema.
 
-### Relational tables versus embedded objects {#embedded}
+### Tabelas relacionais versus objetos incorporados {#embedded}
 
-Ao trabalhar com bancos de dados relacionais, as práticas recomendadas envolvem a normalização de dados ou a divisão de uma entidade em partes discretas que são exibidas em várias tabelas. In order to read the data as a whole or update the entity, read and write operations must be made across many individual tables using JOIN.
+Ao trabalhar com bancos de dados relacionais, as práticas recomendadas envolvem a normalização de dados ou a divisão de uma entidade em partes discretas que são exibidas em várias tabelas. Para ler os dados como um todo ou atualizar a entidade, as operações de leitura e gravação devem ser realizadas em várias tabelas individuais usando JOIN.
 
 Por meio do uso de objetos incorporados, os esquemas XDM podem representar diretamente dados complexos e armazená-los em documentos autônomos com uma estrutura hierárquica. Um dos principais benefícios dessa estrutura é que ela permite consultar os dados sem precisar reconstruir a entidade por associações caras a várias tabelas desnormalizadas. Não há restrições rígidas para quantos níveis sua hierarquia de esquema pode ter.
 
 ### Esquemas e grandes dados {#big-data}
 
-Modern digital systems generate vast amounts of behavioral signals (transaction data, web logs, internet of things, display, and so on). Esses grandes dados oferecem oportunidades extraordinárias para otimizar experiências, mas são desafiadores a usá-las devido à escala e variedade dos dados. Para obter valor dos dados, a sua estrutura, formato e definições devem ser padronizados de modo a que possam ser processados de forma consistente e eficiente.
+Sistemas digitais modernos geram grandes quantidades de sinais comportamentais (dados de transação, logs da Web, internet de coisas, exibição e assim por diante). Esses grandes dados oferecem oportunidades extraordinárias para otimizar experiências, mas são desafiadores a usá-las devido à escala e variedade dos dados. Para obter valor dos dados, a sua estrutura, formato e definições devem ser padronizados de modo a que possam ser processados de forma consistente e eficiente.
 
 Os esquemas solucionam esse problema ao permitir que os dados sejam integrados de várias fontes, padronizados por meio de estruturas e definições comuns e compartilhados entre soluções. Isso permite que processos e serviços subsequentes respondam a qualquer tipo de pergunta que esteja sendo feita sobre os dados, afastando-se da abordagem tradicional à modelagem de dados, onde todas as perguntas que serão feitas sobre os dados são conhecidas antecipadamente e os dados são modelados de forma a estarem em conformidade com essas expectativas.
 
@@ -320,9 +308,9 @@ Os prós e contras do uso de objetos em campos de forma livre estão listados ab
 
 #### Campos de forma livre
 
-The pros and cons of using free-form fields over objects are listed below.
+Os prós e contras do uso de campos de forma livre em objetos estão listados abaixo.
 
-**Pros**:
+**Vantagens**:
 
 * Campos de forma livre são criados diretamente no objeto raiz do esquema (`_tenantId`), aumentando a visibilidade.
 * As sequências de referência para campos de forma livre tendem a ser mais curtas ao usar o Serviço de query.

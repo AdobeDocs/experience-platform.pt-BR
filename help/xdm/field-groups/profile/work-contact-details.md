@@ -5,7 +5,7 @@ title: Grupo de Campos do Esquema Detalhes do Contato de Trabalho
 topic-legacy: overview
 description: Este documento fornece uma visão geral do grupo de campos Detalhes do contato de trabalho .
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 4%
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 ![](../../images/field-groups/work-contact-details.png)
 
-| Propriedade | Tipo de dados | Descrição |
+| Propriedade | Data type | Descrição |
 | --- | --- | --- |
 | `workAddress` | [Endereço postal](../../data-types/postal-address.md) | Descreve o endereço de trabalho da pessoa. |
 | `workEmail` | [Endereço de email](../../data-types/email-address.md) | Descreve o endereço de email de trabalho da pessoa. |
@@ -34,5 +34,5 @@ ht-degree: 4%
 
 Para obter mais detalhes sobre o grupo de campos, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)

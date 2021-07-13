@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
+source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
 workflow-type: tm+mt
-source-wordcount: '2928'
+source-wordcount: '2888'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
 
 >[!IMPORTANT]
 >
->Alterar o agendamento de exportação de arquivo, de qualquer configuração de agendamento para exportação de arquivo completo, com a **[!UICONTROL Frequency]** definida como **[!UICONTROL Once]**, para segmentos que já foram exportados, não exporta um novo arquivo de preenchimento retroativo. Para exportar um novo arquivo de preenchimento retroativo com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras.
+>No momento, não há suporte para alterar o agendamento de exportação de arquivo para segmentos que já foram exportados. Para reexportar segmentos com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras.
 
 ### Exportar arquivos incrementais {#export-incremental-files}
 
@@ -184,7 +184,7 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
 >[!IMPORTANT]
 >
->Alterar o agendamento de exportação de arquivo, de qualquer configuração de agendamento para exportação de arquivo completo, com a **[!UICONTROL Frequency]** definida como **[!UICONTROL Once]**, para segmentos que já foram exportados, não exporta um novo arquivo de preenchimento retroativo. Para exportar um novo arquivo de preenchimento retroativo com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras.
+>No momento, não há suporte para alterar o agendamento de exportação de arquivo para segmentos que já foram exportados. Para reexportar segmentos com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras.
 
 ### Configurar nomes de arquivo {#file-names}
 

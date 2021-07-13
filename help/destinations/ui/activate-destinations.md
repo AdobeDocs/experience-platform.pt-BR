@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2928'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,9 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
 
+>[!IMPORTANT]
+>
+>Alterar o agendamento de exportação de arquivo, de qualquer configuração de agendamento para exportação de arquivo completo, com a **[!UICONTROL Frequency]** definida como **[!UICONTROL Once]**, para segmentos que já foram exportados, não exporta um novo arquivo de preenchimento retroativo. Para exportar um novo arquivo de preenchimento retroativo com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras.
 
 ### Exportar arquivos incrementais {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
+
+>[!IMPORTANT]
+>
+>Alterar o agendamento de exportação de arquivo, de qualquer configuração de agendamento para exportação de arquivo completo, com a **[!UICONTROL Frequency]** definida como **[!UICONTROL Once]**, para segmentos que já foram exportados, não exporta um novo arquivo de preenchimento retroativo. Para exportar um novo arquivo de preenchimento retroativo com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras.
 
 ### Configurar nomes de arquivo {#file-names}
 

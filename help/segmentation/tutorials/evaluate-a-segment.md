@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Siga este tutorial para saber como avaliar segmentos e acessar resultados de segmentos usando a API do Serviço de segmentação da Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
@@ -55,7 +54,7 @@ Depois de desenvolver, testar e salvar a definição de segmento, você pode ava
 
 Se ainda não tiver concluído o [criar um segmento usando o tutorial da API de segmentação](./create-a-segment.md) ou criado uma definição de segmento usando [Construtor de segmentos](../ui/overview.md), faça isso antes de prosseguir com este tutorial.
 
-## Avaliação agendada {#scheduled-evaluation}
+## Avaliação programada {#scheduled-evaluation}
 
 Por meio da avaliação agendada, a Organização IMS pode criar um agendamento recorrente para executar automaticamente tarefas de exportação.
 
@@ -191,9 +190,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/xdm/context/profile__union",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true
     }
 }'
 ```
@@ -202,7 +198,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Um nome descritivo para o conjunto de dados. |
 | `schemaRef.id` | A ID da exibição de união (schema) à qual o conjunto de dados será associado. |
-| `fileDescription.persisted` | Um valor booleano que, quando definido como `true`, permite que o conjunto de dados persista na exibição de união. |
 
 **Resposta**
 

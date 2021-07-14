@@ -5,10 +5,9 @@ title: Preparar dados para uso em serviços inteligentes
 topic-legacy: Intelligent Services
 description: Para que os Serviços inteligentes descubram insights de seus dados de eventos de marketing, os dados devem ser semanticamente enriquecidos e mantidos em uma estrutura padrão. Os Serviços inteligentes usam esquemas do Experience Data Model (XDM) para fazer isso.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: aa73f8f4175793e82d6324b7c59bdd44bf8d20f9
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2766'
 ht-degree: 1%
 
 ---
@@ -19,17 +18,29 @@ Para que [!DNL Intelligent Services] descubra insights de seus dados de eventos 
 
 Este documento fornece orientação geral sobre como mapear os dados de eventos de marketing de vários canais para o esquema CEE, destacando informações sobre campos importantes no esquema para ajudá-lo a determinar como mapear os dados de maneira eficaz para sua estrutura. Se você planeja usar dados do Adobe Analytics, visualize a seção para [Preparação de dados do Adobe Analytics](#analytics-data). Se você planeja usar os dados do Adobe Audience Manager (somente o Customer AI), visualize a seção para [Preparação de dados do Adobe Audience Manager](#AAM-data).
 
+## Requisitos de dados
+
+[!DNL Intelligent Services] exigem quantidades diferentes de dados históricos, dependendo da meta que você criar. Independentemente disso, os dados que você preparar para **all** [!DNL Intelligent Services] devem incluir jornadas/eventos de cliente positivos e negativos. Ter eventos negativos e positivos melhora a precisão e a precisão do modelo.
+
+Por exemplo, se estiver usando a AI do cliente para prever a propensão a comprar um produto, o modelo para a AI do cliente precisa de exemplos de caminhos de compra bem-sucedidos e exemplos de caminhos mal-sucedidos. Isso ocorre porque, durante o treinamento do modelo, o Customer AI procura entender quais eventos e jornadas levam a uma compra. Isso também inclui as ações executadas por clientes que não compraram, como um indivíduo que parou a jornada ao adicionar um item ao carrinho. No entanto, esses clientes podem exibir comportamentos semelhantes, a API do cliente pode fornecer insights e detalhar as principais diferenças e fatores que levam a uma pontuação de propensão mais alta. Da mesma forma, o Attribution AI requer ambos os tipos de eventos e jornadas para exibir métricas como eficácia do ponto de contato, principais caminhos de conversão e detalhamentos por posição do ponto de contato.
+
+Para obter mais exemplos e informações sobre requisitos de dados históricos, visite a seção [Customer AI](./customer-ai/input-output.md#data-requirements) ou [Attribution AI](./attribution-ai/input-output.md#data-requirements) requisitos de dados históricos na documentação de entrada/saída.
+
+### Diretrizes para compilar dados
+
+É recomendável costurar os eventos de um usuário em uma id comum, quando possível. Por exemplo, você pode ter dados do usuário com &quot;id1&quot; em 10 eventos. Posteriormente, o mesmo usuário excluiu a id do cookie e é registrado como &quot;id2&quot; nos próximos 20 eventos. Se você sabe que id1 e id2 correspondem ao mesmo usuário, a prática recomendada é unir todos os 30 eventos a uma id comum.
+
+Se isso não for possível, você deve tratar cada conjunto de eventos como um usuário diferente ao criar os dados de entrada do modelo. Isso garante os melhores resultados durante o treinamento e a pontuação do modelo.
+
 ## Resumo do workflow
 
 O processo de preparação varia dependendo se os dados são armazenados no Adobe Experience Platform ou externamente. Esta seção resume as etapas necessárias, tendo em conta qualquer um dos cenários.
 
 ### Preparação de dados externos
 
-Se os dados forem armazenados fora de [!DNL Experience Platform], siga as etapas abaixo:
+Se os dados forem armazenados fora do Experience Platform, será necessário mapear os dados para os campos obrigatórios e relevantes em um [Consumer ExperienceEvent schema](#cee-schema). Esse esquema pode ser aumentado com grupos de campos personalizados para capturar melhor os dados do cliente. Depois de mapeado, você pode criar um conjunto de dados usando o esquema Consumer ExperienceEvent e [assimilar seus dados na Platform](../ingestion/home.md). O conjunto de dados CEE pode ser selecionado ao configurar um [!DNL Intelligent Service].
 
-1. Entre em contato com os Serviços de consultoria do Adobe para solicitar credenciais de acesso para um contêiner dedicado do Armazenamento Azure Blob.
-1. Usando suas credenciais de acesso, faça upload de seus dados para o contêiner de Blob.
-1. Trabalhe com os Serviços de consultoria do Adobe para obter seus dados mapeados para o [schema ExperienceEvent do consumidor](#cee-schema) e assimilados em [!DNL Intelligent Services].
+Dependendo do [!DNL Intelligent Service] que você deseja usar, podem ser necessários campos diferentes. Observe que é uma prática recomendada adicionar dados a um campo se você tiver os dados disponíveis. Para saber mais sobre os campos obrigatórios, visite o [Attribution AI](./attribution-ai/input-output.md) ou [Guia de entrada/saída do Customer AI](./customer-ai/input-output.md).
 
 ### Preparação de dados do Adobe Analytics {#analytics-data}
 
@@ -53,7 +64,7 @@ Depois que o conector de origem estiver transmitindo seus dados para o Experienc
 
 ### [!DNL Experience Platform] preparação de dados
 
-Se os dados já estiverem armazenados em [!DNL Platform] e não forem transmitidos por meio dos conectores de origem Adobe Analytics ou Adobe Audience Manager (somente no Customer AI), siga as etapas abaixo. Ainda é recomendável entender o esquema CEE se planeja trabalhar com a API do cliente.
+Se os dados já estiverem armazenados em [!DNL Platform] e não forem transmitidos por meio dos conectores de origem Adobe Analytics ou Adobe Audience Manager (somente no Customer AI), siga as etapas abaixo. Ainda é recomendável entender o esquema CEE.
 
 1. Revise a estrutura do [Consumer ExperienceEvent schema](#cee-schema) e determine se os dados podem ser mapeados para seus campos.
 2. Entre em contato com os Serviços de consultoria do Adobe para ajudar a mapear seus dados para o esquema e assimilá-los em [!DNL Intelligent Services] ou [siga as etapas deste guia](#mapping) se desejar mapear os dados por conta própria.
@@ -110,11 +121,11 @@ Em seguida, navegue até o campo que deseja como uma identidade primária e sele
 
 ![Selecione o campo](./images/data-preparation/find_field.png)
 
-No menu **[!UICONTROL Field properties]**, role para baixo até encontrar a caixa de seleção **[!UICONTROL Identity]**. Depois de marcar a caixa , a opção para definir a identidade selecionada como **[!UICONTROL Primary identity]** é exibida. Selecione essa caixa também.
+No menu **[!UICONTROL Field properties]**, role para baixo até encontrar a caixa de seleção **[!UICONTROL Identity]**. Depois de marcar a caixa , a opção para definir a identidade selecionada como **[!UICONTROL Identidade primária]** é exibida. Selecione essa caixa também.
 
 ![Selecionar caixa de seleção](./images/data-preparation/set_primary_identity.png)
 
-Em seguida, você deve fornecer um **[!UICONTROL Identity namespace]** da lista de namespaces predefinidos na lista suspensa. Neste exemplo, o espaço de nome ECID é selecionado desde que uma Adobe Audience Manager ID `mcid.id` esteja sendo usada. Selecione **[!UICONTROL Apply]** para confirmar as atualizações e selecione **[!UICONTROL Save]** no canto superior direito para salvar as alterações no esquema.
+Em seguida, você deve fornecer um **[!UICONTROL Namespace de identidade]** da lista de namespaces predefinidos na lista suspensa. Neste exemplo, o espaço de nome ECID é selecionado desde que uma Adobe Audience Manager ID `mcid.id` esteja sendo usada. Selecione **[!UICONTROL Aplicar]** para confirmar as atualizações, em seguida, selecione **[!UICONTROL Salvar]** no canto superior direito para salvar as alterações no esquema.
 
 ![Salve as alterações](./images/data-preparation/select_namespace.png)
 
@@ -145,7 +156,7 @@ Este campo representa o canal de marketing relacionado ao ExperienceEvent. O cam
 
 Para obter informações completas sobre cada um dos subcampos necessários para `xdm:channel`, consulte a especificação [experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md). Para alguns exemplos de mapeamentos, consulte a tabela [abaixo](#example-channels).
 
-#### Exemplo de mapeamentos de canal {#example-channels}
+#### Exemplo de mapeamento de canal {#example-channels}
 
 A tabela a seguir fornece alguns exemplos de canais de marketing mapeados para o schema `xdm:channel` :
 
@@ -313,7 +324,7 @@ Depois de criar e salvar o esquema, você pode criar um novo conjunto de dados c
 * [Criar um conjunto de dados na interface do usuário](../catalog/datasets/user-guide.md#create)  (siga o fluxo de trabalho para usar um esquema existente)
 * [Criar um conjunto de dados na API](../catalog/datasets/create.md)
 
-Depois que o conjunto de dados é criado, você pode encontrá-lo na interface do usuário da plataforma no espaço de trabalho **[!UICONTROL Datasets]** .
+Depois que o conjunto de dados for criado, você poderá encontrá-lo na interface do usuário da plataforma no espaço de trabalho **[!UICONTROL Datasets]**.
 
 ![](images/data-preparation/dataset-location.png)
 

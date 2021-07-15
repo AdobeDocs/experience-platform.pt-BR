@@ -4,9 +4,9 @@ title: Tipo de dados do campo de preferência Personalização genérica
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do campo de preferência de personalização genérica.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '483'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Esse tipo de dados deve ser usado para personalizar a estrutura dos esquemas de consentimento de sua organização usando o [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] grupo de campos](../field-groups/profile/consents.md) como uma linha de base.
+>Esse tipo de dados deve ser usado para personalizar a estrutura dos esquemas de consentimento de sua organização usando o grupo de campos [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md) como uma linha de base.
 
 ![](../images/data-types/personalization-field.png)
 

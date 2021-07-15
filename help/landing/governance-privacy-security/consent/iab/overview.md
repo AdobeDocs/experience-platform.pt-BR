@@ -5,10 +5,10 @@ title: Suporte ao IAB TCF 2.0 no Experience Platform
 topic-legacy: privacy events
 description: Saiba como configurar operações de dados e esquemas para transmitir opções de consentimento do cliente ao ativar segmentos para destinos no Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
 workflow-type: tm+mt
-source-wordcount: '2476'
-ht-degree: 0%
+source-wordcount: '2564'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ A Platform permite coletar dados de consentimento do cliente por meio do seguint
 
 Além dos comandos do SDK acionados por ganchos de alteração de consentimento da CMP, os dados de consentimento também podem fluir para o Experience Platform por meio de quaisquer dados XDM gerados pelo cliente que sejam carregados diretamente para um conjunto de dados habilitado para [!DNL Profile].
 
-Qualquer segmento compartilhado com a Plataforma pela Adobe Audience Manager (por meio do [!DNL Audience Manager] conector de origem ou de outro modo) também pode conter dados de consentimento, desde que os campos apropriados tenham sido aplicados a esses segmentos por meio de [!DNL Experience Cloud Identity Service]. Para obter mais informações sobre como coletar dados de consentimento em [!DNL Audience Manager], consulte o documento no plug-in do [Adobe Audience Manager para TCF do IAB](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Qualquer segmento compartilhado com a Plataforma pela Adobe Audience Manager (por meio do [!DNL Audience Manager] conector de origem ou de outro modo) também pode conter dados de consentimento, desde que os campos apropriados tenham sido aplicados a esses segmentos por meio de [!DNL Experience Cloud Identity Service]. Para obter mais informações sobre como coletar dados de consentimento em [!DNL Audience Manager], consulte o documento no plug-in do [Adobe Audience Manager para TCF do IAB](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=pt-BR).
 
 ### Execução de consentimento a jusante
 
@@ -74,7 +74,7 @@ Depois que os dados de consentimento da TCF forem assimilados com êxito, os seg
 
 O restante das seções neste documento fornecem orientação sobre como configurar a Platform e suas operações de dados para atender aos requisitos de coleta e aplicação descritos acima.
 
-## Determine como gerar dados de consentimento do cliente em seu CMP {#consent-data}
+## Determine como gerar dados de consentimento do cliente em sua CMP {#consent-data}
 
 Como cada sistema CMP é exclusivo, você deve determinar a melhor maneira de permitir que seus clientes forneçam consentimento à medida que interagirem com seu serviço. Uma maneira comum de fazer isso é usando uma caixa de diálogo de consentimento de cookie, semelhante ao seguinte exemplo:
 
@@ -97,9 +97,9 @@ As cadeias de caracteres de consentimento só podem ser criadas por uma CMP regi
 
 ## Criar conjuntos de dados com campos de consentimento da TCF {#datasets}
 
-Os dados de consentimento do cliente devem ser enviados para conjuntos de dados cujos esquemas contêm campos de consentimento da TCF. Consulte o tutorial em [criar conjuntos de dados para capturar o consentimento do TCF 2.0](./dataset.md) para saber como criar os dois conjuntos de dados necessários antes de continuar com este guia.
+Os dados de consentimento do cliente devem ser enviados para conjuntos de dados cujos esquemas contêm campos de consentimento da TCF. Consulte o tutorial em [criar conjuntos de dados para capturar o consentimento TCF 2.0](./dataset.md) para saber como criar o conjunto de dados de perfil necessário (e um conjunto de dados opcional do Evento de experiência) antes de continuar com este guia.
 
-## Atualize [!DNL Profile] as políticas de mesclagem para incluir dados de consentimento {#merge-policies}
+## Atualizar [!DNL Profile] políticas de mesclagem para incluir dados de consentimento {#merge-policies}
 
 Depois de criar um conjunto de dados habilitado para [!DNL Profile] para coletar dados de consentimento, você deve garantir que suas políticas de mesclagem tenham sido configuradas para sempre incluir campos de consentimento TCF nos perfis do cliente. Isso envolve definir a precedência do conjunto de dados para que seu conjunto de dados de consentimento seja priorizado em relação a outros conjuntos de dados potencialmente conflitantes.
 
@@ -127,8 +127,8 @@ Depois de fornecer um nome exclusivo para a configuração, selecione o botão d
 | --- | --- |
 | [!UICONTROL Sandbox] | O nome da plataforma [sandbox](../../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a configuração de borda. |
 | [!UICONTROL Entrada de transmissão] | Uma conexão de transmissão válida para Experience Platform. Consulte o tutorial em [criar uma conexão de transmissão](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de transmissão existente. |
-| [!UICONTROL Conjunto de dados do evento] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). |
-| [!UICONTROL Conjunto de dados de perfil] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). |
+| [!UICONTROL Conjunto de dados do evento] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). Se você incluiu o [[!UICONTROL Consentimento IAB TCF 2.0] grupo de campos](../../../../xdm/field-groups/event/iab.md) no esquema deste conjunto de dados, é possível rastrear eventos de alteração de consentimento ao longo do tempo usando o comando [`sendEvent`](#sendEvent), armazenando esses dados nesse conjunto de dados. Lembre-se de que os valores de consentimento armazenados nesse conjunto de dados são **not** usados em workflows de imposição automática. |
+| [!UICONTROL Conjunto de dados de perfil] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). Ao responder aos ganchos de alteração de consentimento da CMP usando o comando [`setConsent`](#setConsent), os dados coletados serão armazenados nesse conjunto de dados. Como esse conjunto de dados está habilitado para Perfil, os valores de consentimento armazenados nesse conjunto de dados são honrados durante os workflows de imposição automática. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -142,7 +142,7 @@ Depois de criar a configuração de borda descrita na seção anterior, você po
 >
 >Para obter uma introdução à sintaxe comum para todos os comandos do SDK da plataforma, consulte o documento em [executar comandos](../../../../edge/fundamentals/executing-commands.md).
 
-#### Uso de ganchos de alteração de consentimento da CMP
+#### Uso de ganchos de alteração de consentimento da CMP {#setConsent}
 
 Muitas CMPs fornecem ganchos prontos para uso que ouvem eventos de alteração de consentimento. Quando esses eventos ocorrem, você pode usar o comando `setConsent` para atualizar os dados de consentimento desse cliente.
 
@@ -189,7 +189,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Uso de eventos
+#### Uso de eventos {#sendEvent}
 
 Você também pode coletar dados de consentimento do TCF 2.0 em cada evento acionado na plataforma usando o comando `sendEvent`.
 
@@ -245,7 +245,7 @@ O TCF 2.0 também exige que a fonte de dados verifique a permissão de fornecedo
 >
 >Qualquer segmento compartilhado com a Adobe Audience Manager conterá os mesmos valores de consentimento da TCF 2.0 que seus equivalentes da plataforma. Como [!DNL Audience Manager] compartilha a mesma ID de fornecedor que a Plataforma (565), as mesmas finalidades e permissões de fornecedor são necessárias. Consulte o documento no plug-in do [Adobe Audience Manager para TCF do IAB](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) para obter mais informações.
 
-## Teste sua implementação {#test-implementation}
+## Testar sua implementação {#test-implementation}
 
 Depois de configurar a implementação do TCF 2.0 e exportar segmentos para destinos, os dados que não atenderem aos requisitos de consentimento não serão exportados. No entanto, para ver se os perfis do cliente certos foram filtrados durante a exportação, você deve verificar manualmente os armazenamentos de dados em seus destinos para ver se o consentimento foi empregado corretamente.
 

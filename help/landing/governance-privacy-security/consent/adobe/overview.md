@@ -5,9 +5,9 @@ title: Processamento de consentimento no Adobe Experience Platform
 topic-legacy: getting started
 description: Saiba como processar sinais de consentimento do cliente no Adobe Experience Platform usando o padrão Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ Na versão atual do suporte de processamento de consentimento no Platform, somen
 
 >[!NOTE]
 >
->Para obter mais informações sobre a estrutura dos campos de consentimento XDM mencionados acima, consulte o guia no tipo de dados [Consents &amp; Preferences](../../../../xdm/data-types/consents.md).
+>Para obter mais informações sobre a estrutura dos campos de consentimento XDM mencionados acima, consulte o guia no tipo de dados [[!UICONTROL Consents and Preferences]](../../../../xdm/data-types/consents.md).
 
 Depois que o sistema é configurado, o SDK da Web da plataforma interpreta o valor de consentimento da coleta de dados para o usuário atual a fim de determinar se os dados devem ser enviados para a Rede de borda da Adobe Experience Platform, descartados do cliente ou persistentes até que a permissão da coleta de dados seja definida como sim ou não.
 
-## Determine como gerar dados de consentimento do cliente em seu CMP {#consent-data}
+## Determine como gerar dados de consentimento do cliente em sua CMP {#consent-data}
 
 Como cada sistema CMP é exclusivo, você deve determinar a melhor maneira de permitir que seus clientes forneçam consentimento à medida que interagirem com seu serviço. Uma maneira comum de fazer isso é usando uma caixa de diálogo de consentimento de cookie, semelhante ao seguinte exemplo:
 
@@ -68,7 +68,7 @@ Os dados de consentimento do cliente devem ser enviados para um conjunto de dado
 
 Consulte o tutorial em [configurar um conjunto de dados para capturar dados de consentimento](./dataset.md) para obter etapas detalhadas sobre como adicionar esses campos obrigatórios a um conjunto de dados habilitado para [!DNL Profile] antes de continuar com este guia.
 
-## Atualize [!DNL Profile] as políticas de mesclagem para incluir dados de consentimento {#merge-policies}
+## Atualizar [!DNL Profile] políticas de mesclagem para incluir dados de consentimento {#merge-policies}
 
 Depois de criar um conjunto de dados habilitado para [!DNL Profile] para processar dados de consentimento, você deve garantir que suas políticas de mesclagem tenham sido configuradas para sempre incluir campos de consentimento em cada perfil de cliente. Isso envolve definir a precedência do conjunto de dados para que seu conjunto de dados de consentimento seja priorizado em relação a outros conjuntos de dados potencialmente conflitantes.
 
@@ -76,7 +76,7 @@ Depois de criar um conjunto de dados habilitado para [!DNL Profile] para process
 >
 >Se você não tiver conjuntos de dados em conflito, deverá definir a precedência do carimbo de data e hora para sua política de mesclagem. Isso ajuda a garantir que o consentimento mais recente especificado por um cliente seja a configuração de consentimento usada.
 
-Para obter mais informações sobre como trabalhar com políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos Consents &amp; Preferences , conforme descrito no guia sobre [preparação do conjunto de dados](./dataset.md).
+Para obter mais informações sobre como trabalhar com políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos [!UICONTROL Consentes e Preferências], conforme descrito no guia sobre [preparação do conjunto de dados](./dataset.md).
 
 ## Trazer dados de consentimento para o Platform
 
@@ -86,11 +86,11 @@ Principalmente, você deve usar o SDK da Web da Adobe Experience Platform para e
 
 Os detalhes de cada um desses métodos são fornecidos nas subseções abaixo.
 
-### Configure o SDK da Web do Experience Platform para processar os dados de consentimento {#web-sdk}
+### Configurar o SDK da Web do Experience Platform para processar dados de consentimento {#web-sdk}
 
 Depois de configurar o CMP para acompanhar eventos de alteração de consentimento no site, você pode integrar o SDK da Web do Experience Platform para receber as configurações de consentimento atualizadas e enviá-las para a plataforma em cada carregamento de página e sempre que ocorrerem eventos de alteração de consentimento. Consulte o guia em [configurar o SDK da Web para processar os dados de consentimento do cliente](./sdk.md) para obter mais informações.
 
-### Configure o SDK do Experience Platform Mobile para processar dados de consentimento {#mobile-sdk}
+### Configurar o SDK do Experience Platform Mobile para processar dados de consentimento {#mobile-sdk}
 
 Se as preferências de consentimento do cliente forem necessárias em seu aplicativo móvel, você poderá integrar o SDK do Experience Platform Mobile para recuperar e atualizar as configurações de consentimento, enviando-o para a Plataforma sempre que a API de consentimento for chamada.
 
@@ -102,7 +102,7 @@ Você pode assimilar dados de consentimento compatíveis com XDM de um arquivo C
 
 Siga o tutorial em [mapping um arquivo CSV para XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para saber como converter seus campos de dados para XDM e assimilá-los na plataforma. Ao selecionar o [!UICONTROL Destino] para o mapeamento, selecione a opção **[!UICONTROL Usar conjunto de dados existente]** e escolha o conjunto de dados de consentimento habilitado para [!DNL Profile] criado anteriormente.
 
-## Teste sua implementação {#test-implementation}
+## Testar sua implementação {#test-implementation}
 
 Depois de assimilar dados de consentimento do cliente em seu conjunto de dados habilitado para [!DNL Profile], você pode verificar os perfis atualizados para ver se eles contêm atributos de consentimento.
 

@@ -5,9 +5,9 @@ title: Respeito do consentimento em segmentos
 topic-legacy: overview
 description: Saiba como honrar as preferências de consentimento do cliente para coleta de dados pessoais e compartilhamento em operações do segmento.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ O cumprimento dos valores de consentimento do cliente requer uma compreensão do
 
 ## Campos de esquema de consentimento
 
-Para honrar os consentimentos e as preferências do cliente, um dos esquemas que fazem parte do esquema de união [!UICONTROL XDM Individual Profile] deve conter o grupo de campos padrão **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**.
+Para honrar os consentimentos e preferências do cliente, um dos esquemas que faz parte do esquema de união [!UICONTROL Perfil individual XDM] deve conter o grupo de campos padrão **[!UICONTROL Consentimentos e Preferências]**.
 
 Para obter detalhes sobre a estrutura e o caso de uso pretendido de cada atributo fornecido pelo grupo de campos, consulte o [guia de referência de consentimentos e preferências](../xdm/field-groups/profile/consents.md). Para obter instruções passo a passo sobre como adicionar um grupo de campos a um esquema, consulte o [Guia da interface do usuário XDM](../xdm/ui/resources/schemas.md#add-field-groups).
 

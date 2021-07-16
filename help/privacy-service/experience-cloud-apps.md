@@ -5,9 +5,9 @@ title: Aplicativos Privacy Service e Experience Cloud
 topic-legacy: overview
 description: Este documento fornece uma referência para como configurar diferentes aplicativos Experience Cloud para operações relacionadas à privacidade.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
+source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '594'
 ht-degree: 13%
 
 ---
@@ -49,9 +49,9 @@ Veja a seguir uma lista de [!DNL Experience Cloud] aplicativos que não estão i
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Uma visão geral das funcionalidades do GDPR para o Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Uma visão geral de como um administrador de privacidade do cliente ou AEM administrador pode lidar com solicitações do GDPR. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Etapas para fazer com que o GDPR acesse e exclua solicitações usando o Livefyre. |
-| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | Como desenvolvedores podem usar extensões e o construtor de regras para definir soluções de opt-in/opt-out. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Certifique-se de que as instalações do Magento Commerce estejam em conformidade com os requisitos de legislações específicas de privacidade. |
 | [Marketo](https://www.marketo.com/company/trust/gdpr/) | Saiba como as regras de privacidade se aplicam ao Marketo. |
+| [Tags no Adobe Experience Platform](../tags/ui/client-side/consent.md) | Como desenvolvedores podem usar extensões e o construtor de regras para definir soluções de opt-in/opt-out. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Saiba como o Workfront coleta dados pessoais e como um titular de dados pode enviar uma solicitação de privacidade por meio de um formulário. |
 
 {style=&quot;table-layout:auto&quot;}

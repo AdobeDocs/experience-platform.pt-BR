@@ -4,9 +4,9 @@ title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consent for Privacy, Personalization and Marketing Preferences tem como objetivo oferecer suporte à coleta de permissões e preferências do cliente geradas pelas CMPs (Consent Management Platforms) e outras fontes de suas operações de dados.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1905'
 ht-degree: 2%
 
 ---
@@ -309,4 +309,4 @@ A tabela a seguir descreve os valores aceitos para `preferred`:
 
 ### Schema completo [!UICONTROL Consentimentos e Preferências] {#full-schema}
 
-Para visualizar o esquema completo do tipo de dados [!UICONTROL Consents and Preferences], consulte o [repositório XDM oficial](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Para visualizar o esquema completo do tipo de dados [!UICONTROL Consents and Preferences], consulte o [repositório XDM oficial](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).

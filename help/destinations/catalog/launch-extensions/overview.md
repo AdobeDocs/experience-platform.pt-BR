@@ -3,9 +3,9 @@ keywords: extensões do launch, extensão do launch, destinos do launch; Extens�
 title: Extensão do Adobe Experience Platform Launch
 description: O Adobe Experience Platform Launch reúne os recursos de gerenciamento de tags de última geração da Adobe. O Platform Launch oferece aos clientes uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20a9103dd96116f3099bccc9eeb678be5ac2bb79
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '600'
 ht-degree: 14%
 
 ---
@@ -17,7 +17,7 @@ O Adobe Experience Platform Launch é a próxima geração de recursos de gerenc
 Para obter uma introdução aos recursos do Experience Platform Launch, consulte os recursos abaixo:
 
 - Adobe Experience Platform Launch [documentação](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=pt-BR)
-- Adobe Experience Platform Launch [vídeos de início rápido](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Comece com [Introdução ao Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) e [Visão geral do processo de publicação](https://helpx.adobe.com/br/analytics/how-to/adobe-launch-publishing-process.html), em seguida, passe para os próximos conceitos.
+- Adobe Experience Platform Launch [vídeos de início rápido](../../../tags/quick-start/videos.md). Comece com [Introdução ao Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) e [Visão geral do processo de publicação](https://helpx.adobe.com/br/analytics/how-to/adobe-launch-publishing-process.html), em seguida, passe para os próximos conceitos.
 
 ## Como encontrar as extensões do Platform launch na interface da plataforma {#how-to-find-extensions-in-interface}
 
@@ -25,7 +25,7 @@ Para localizar as extensões do Platform launch na interface da plataforma, nave
 
 ![Filtro de extensões na interface](../../assets/catalog/launch-extensions/filter.png)
 
-## Como as extensões do Platform launch funcionam {#how-extensions-work}
+## Como funcionam as extensões do Platform launch {#how-extensions-work}
 
 As extensões do Platform launch encaminham os dados brutos do evento para vários tipos de destinos. Pense nas extensões como um tipo de destino **Encaminhamento de eventos** . Esse é um tipo mais simples de integração com plataformas de destino, que só encaminha dados brutos do evento. Exemplos disso são a [Extensão de personalização do Gainsight](../personalization/gainsight.md) ou a [Confirmação de voz da extensão do cliente](../voice/confirmit-digital-feedback.md).
 
@@ -33,7 +33,7 @@ As extensões do Platform launch encaminham os dados brutos do evento para vári
 
 ![Extensões de Experience Platform Launch em comparação com outros destinos](../../assets/common/launch-and-other-destinations.png)
 
-## Benefícios do uso de extensões de Platform launch {#extensions-benefits}
+## Benefícios do uso de extensões do Platform launch {#extensions-benefits}
 
 A Adobe Experience Platform Launch é gratuita para clientes atuais do Experience Cloud. O Platform launch simplifica a implantação de tags em seu site por meio de extensões fáceis de usar que podem ser instaladas, configuradas, atualizadas e excluídas. O Platform launch tem um pequeno espaço no seu site e permite que você mantenha suas páginas carregadas rapidamente.
 
@@ -41,9 +41,9 @@ A Adobe Experience Platform Launch é gratuita para clientes atuais do Experienc
 >
 >Embora não seja possível ativar segmentos para extensões do Platform launch, é possível configurar regras para encaminhar apenas os dados do evento em determinadas situações. Leia mais abaixo.
 
-Você pode criar *regras* que determinam quando encaminhar dados do evento para extensões. Essa funcionalidade avançada permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar os dados do evento em cada interação. Para obter mais informações, leia sobre as regras na [documentação do Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Você pode criar *regras* que determinam quando encaminhar dados do evento para extensões. Essa funcionalidade avançada permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar os dados do evento em cada interação. Para obter mais informações, leia sobre as regras na [documentação do Adobe Experience Platform Launch](../../../tags/ui/managing-resources/rules.md).
 
-## Exemplo de casos de uso para extensões de Platform launch {#extensions-use-cases}
+## Exemplo de casos de uso para extensões do Platform launch {#extensions-use-cases}
 
 As extensões do Platform launch permitem atender a vários casos de uso do cliente. Alguns exemplos de casos de uso para usar extensões do Platform launch são:
 

@@ -5,9 +5,9 @@ title: Tipo de dados do endereço de email
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de endereço de email.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '192'
 ht-degree: 2%
 
 ---
@@ -32,5 +32,5 @@ ht-degree: 2%
 
 Para obter mais detalhes sobre o tipo de dados de endereço de email, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)

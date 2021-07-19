@@ -1,9 +1,9 @@
 ---
 title: Visão geral da extensão do Adobe Media Analytics para áudio e vídeo
 description: Saiba mais sobre a extensão da tag Adobe Medium Analytics for Audio and Video no Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '991'
 ht-degree: 93%
 
 ---
@@ -52,7 +52,7 @@ Depois de incluir todas as três extensões mencionadas acima em seu projeto de 
 | Export APIs to Window Object | Ativar ou desativar a exportação de APIs do Media Analytics para o escopo global |
 | Variable Name | Uma variável usada para exportar as APIs do Media Analytics sob o objeto `window` |
 
-**Lembrete**: a extensão do MA exige as extensões do [Analytics](../analytics/overview.md) e da [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=pt-BR). Você também deve adicionar essas extensões à propriedade da sua extensão e configurá-las.
+**Lembrete**: a extensão do MA exige as extensões do [Analytics](../analytics/overview.md) e da [Experience Cloud ID](../id-service/overview.md). Você também deve adicionar essas extensões à propriedade da sua extensão e configurá-las.
 
 ## Uso da extensão do MA
 
@@ -176,7 +176,7 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
 
 >[!NOTE]
 >
->**Testes:** nessa versão, para testar sua extensão, você deve carregá-la no [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com), onde você tem acesso a todas as extensões dependentes.
+>**Testes:** nessa versão, para testar sua extensão, você deve carregá-la no [ Platform ](../../../extension-dev/submit/upload-and-test.md), onde você tem acesso a todas as extensões dependentes.
 
 
 <!--

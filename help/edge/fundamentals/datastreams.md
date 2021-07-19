@@ -3,10 +3,10 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os fluxos de dados. '
 keywords: configuração, datastreams, datastreamId, edge, edge configuration id, Environment Settings, edgeConfigId, identidade, sincronização de id ativada, ID do contêiner de sincronização de ID, sandbox, Streaming Inlet, conjunto de dados de eventos, target, código do cliente, Token de propriedade, Target Environment ID, Destinos de cookies, destinos de url, Configurações do Analytics Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 0%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Os datastreams podem ser criados no Adobe [!DNL Experience Platform Launch] usan
 
 >[!NOTE]
 >
->A ferramenta de configuração de conjuntos de dados está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Experience Platform Launch] como um gerenciador de tags. Além disso, os usuários exigem permissões de desenvolvimento em [!DNL Experience Platform Launch]. Consulte o artigo [Permissões do usuário](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) na documentação [!DNL Experience Platform Launch] para obter mais detalhes.
+>A ferramenta de configuração de conjuntos de dados está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Experience Platform Launch] como um gerenciador de tags. Além disso, os usuários exigem permissões de desenvolvimento em [!DNL Experience Platform Launch]. Consulte o artigo [Permissões do usuário](../../tags/ui/administration/user-permissions.md) na documentação [!DNL Experience Platform Launch] para obter mais detalhes.
 
 Crie um armazenamento de dados clicando em **[!UICONTROL New Datastream]** na área superior direita da tela. Depois de fornecer um nome e uma descrição, você é solicitado a fornecer as configurações padrão para cada ambiente. As configurações disponíveis são detalhadas abaixo.
 
@@ -83,7 +83,7 @@ A ID exclusiva de uma conta de destino. Para encontrar isso, você pode navegar 
 
 ### [!UICONTROL Token de propriedade]
 
-[!DNL Target] O permite que os clientes controlem permissões por meio do uso de propriedades do . Os detalhes podem ser encontrados na seção [Permissões empresariais](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) da documentação [!DNL Target].
+[!DNL Target] O permite que os clientes controlem permissões por meio do uso de propriedades do . Os detalhes podem ser encontrados na seção [Permissões empresariais](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR) da documentação [!DNL Target].
 
 O token de propriedade pode ser encontrado em [!UICONTROL Adobe Target] > [!UICONTROL configuração] > [!UICONTROL Propriedades]
 

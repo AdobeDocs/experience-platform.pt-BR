@@ -1,10 +1,10 @@
 ---
 title: Notas de versão
 description: As notas de versão mais recentes para tags no Adobe Experience Platform.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 54%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 19 de julho de 2021
+
+**Ajustes ao direito**  &quot;Gerenciar propriedades&quot; - O direito de Gerenciar propriedades encontrou um problema em que o usuário tinha permissão para criar uma nova propriedade, mas não podia vê-la depois de ter sido criada (conforme descrito no thread da comunidade  [aqui](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Uma correção agora está ativa com permissões sendo aplicadas, conforme descrito no artigo.
+
+>[!NOTE]
+>
+>Se você atribuir o novo direito &quot;Editar propriedade&quot; a um grupo de usuários, a interface do usuário não será atualizada para ativar os campos na tela de configuração da propriedade. Uma correção para esse problema será implementada em uma versão futura.
 
 ## 17 de maio de 2021
 

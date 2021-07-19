@@ -1,14 +1,22 @@
 ---
 title: Notas de versão da Extensão de plug-ins comuns do Analytics
 description: As notas de versão mais recentes para a extensão de tag de plug-ins comuns do Analytics no Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 94%
+source-wordcount: '314'
+ht-degree: 92%
 
 ---
 
 # Notas de versão da extensão de plug-ins comuns do Analytics
+
+## 23 de junho de 2021
+
+### Extensão de plug-ins comuns do Analytics 3.0.6
+
+#### Correções de erros
+
+* Correção de um problema em que getPercentPageViewed quebrava ao usar caracteres especiais
 
 ## 20 de maio de 2021
 

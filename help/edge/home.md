@@ -3,16 +3,16 @@ title: Visão geral do SDK da Web da Adobe Experience Platform
 description: Saiba como usar o SDK da Web da Adobe Experience Platform para integrar os recursos da plataforma ao seu site.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; edge; Visitor.js; AppMeasurement.js; AT.js; DIL.js; Web sdk; SDK; Web SDK; Launch; launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 7607f01109de1f6207f2e910a8620698c60b89d4
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
 
 # Visão geral do SDK da Web da Adobe Experience Platform
 
-O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes do Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] por meio da rede de borda Adobe Experience Platform. Além da biblioteca do JavaScript, há uma [extensão do Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) para ajudar com suas configurações do SDK da Web.
+O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes do Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] por meio da rede de borda Adobe Experience Platform. Além da biblioteca do JavaScript, há uma [extensão do Experience Platform Launch](../tags/extensions/web/sdk/overview.md) para ajudar com suas configurações do SDK da Web.
 
 ## Experience Edge
 

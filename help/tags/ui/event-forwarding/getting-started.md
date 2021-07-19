@@ -1,9 +1,9 @@
 ---
 title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos no Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '906'
 ht-degree: 48%
 
 ---
@@ -110,7 +110,7 @@ Crie sua propriedade na interface do usuário da Coleta de dados, em seguida, us
 
 1. Selecione o Domínio de borda.
 
-Consulte a [documentação da extensão SDK da Web](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=pt-BR) para obter mais opções de configuração.
+Consulte a [documentação da extensão SDK da Web](../../extensions/web/sdk/overview.md) para obter mais opções de configuração.
 
 ## Criar uma regra de tag para enviar dados para o SDK da Web da plataforma
 

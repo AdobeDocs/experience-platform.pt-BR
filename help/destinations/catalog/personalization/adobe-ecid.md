@@ -2,22 +2,21 @@
 Keywords: ECID;ecid
 title: Extensão do Experience Cloud ID Service
 description: A extensão do Serviço de ID do Experience Cloud é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 4%
+source-wordcount: '445'
+ht-degree: 5%
 
 ---
 
-
-# [!DNL Experience Cloud] Extensão do serviço de ID  {#adobe-ecid-extension}
+# [!DNL Experience Cloud] Extensão do serviço de ID {#adobe-ecid-extension}
 
 ## Visão geral {#overview}
 
 Essa extensão implementa o [!DNL Experience Cloud] Serviço de ID, que identifica visitantes em todas as soluções [!DNL Experience Cloud].
 
-[!DNL Experience Cloud] O Serviço de ID é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a [página de extensão do Serviço de ID do Experience Cloud](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) na documentação [!DNL Experience Platform Launch].
+[!DNL Experience Cloud] O Serviço de ID é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a [página de extensão do Serviço de ID do Experience Cloud](../../../tags/extensions/web/id-service/overview.md) na documentação [!DNL Experience Platform Launch].
 
 Este destino é uma extensão [!DNL Adobe Experience Platform Launch]. Para obter mais informações sobre como as extensões [!DNL Platform Launch] funcionam na plataforma, consulte [Visão geral das extensões do Experience Platform Launch](../launch-extensions/overview.md).
 
@@ -33,32 +32,32 @@ Para usar essa extensão, você precisa acessar [!DNL Experience Platform Launch
 
 Para instalar a extensão [!DNL Experience Cloud] do serviço de ID:
 
-Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 
-Clique no destino para realçá-lo e selecione **[!UICONTROL Configure]** no painel direito. Se o controle **[!UICONTROL Configure]** estiver esmaecido, a permissão **[!UICONTROL manage_properties]** não será exibida. Consulte [Pré-requisitos](#prerequisites).
+Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configurar]** estiver esmaecido, você não terá a permissão **[!UICONTROL manage_properties]**. Consulte [Pré-requisitos](#prerequisites).
 
-Na janela **[!UICONTROL Select available Platform Launch property]**, selecione a propriedade [!DNL Platform Launch] na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade em [!DNL Platform Launch]. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) da documentação [!DNL Launch].
+Na janela **[!UICONTROL Select available Platform launch property]**, selecione a propriedade [!DNL Platform Launch] na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade em [!DNL Platform Launch]. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](../../../tags/ui/administration/companies-and-properties.md#properties-page) da documentação [!DNL Launch].
 
 O fluxo de trabalho leva você até [!DNL Platform Launch] para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a [página de extensão do Serviço de ID do Experience Cloud](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) na documentação [!DNL Experience Launch].
+Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a [página de extensão do Serviço de ID do Experience Cloud](../../../tags/extensions/web/id-service/overview.md) na documentação [!DNL Experience Launch].
 
-Você também pode instalar a extensão diretamente na [interface do Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Adicionar uma nova extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) na documentação [!DNL Platform Launch].
+Você também pode instalar a extensão diretamente na [interface do Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Adicionar uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) na documentação [!DNL Platform Launch].
 
 ## Como usar a extensão {#how-to-use}
 
 Depois de instalar a extensão, você pode iniciar a configuração das regras diretamente em [!DNL Platform Launch].
 
-Em [!DNL Platform Launch], você pode configurar regras para as extensões instaladas para enviar dados de evento para o destino da extensão somente em determinadas situações. Para obter mais informações sobre como configurar regras para suas extensões, consulte a [Documentação de regras](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Em [!DNL Platform Launch], você pode configurar regras para as extensões instaladas para enviar dados de evento para o destino da extensão somente em determinadas situações. Para obter mais informações sobre como configurar regras para suas extensões, consulte a [Documentação de regras](../../../tags/ui/managing-resources/rules.md).
 
-## Configurar, atualizar e excluir a extensão {#configure-upgrade-delete}
+## Configurar, atualizar e excluir extensão {#configure-upgrade-delete}
 
 Você pode configurar, atualizar e excluir extensões na interface [!DNL Platform Launch].
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Install]** para a extensão. Desative o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para chegar a [!DNL Platform Launch] e configure ou exclua sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Instalar]** para a extensão. Desative o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para chegar a [!DNL Platform Launch] e configure ou exclua sua extensão.
 
-Para atualizar sua extensão, consulte [Atualização de extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) na documentação [!DNL Platform Launch].
+Para atualizar sua extensão, consulte [Atualização de extensão](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) na documentação [!DNL Platform Launch].

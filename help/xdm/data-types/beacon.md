@@ -5,9 +5,9 @@ title: Tipo de dados do sinal
 topic-legacy: overview
 description: Este documento fornece uma visão geral da classe Perfil individual XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 4%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 4%
 
 Para obter mais detalhes sobre o tipo de dados, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.schema.json)
 
 ## Apêndice
 

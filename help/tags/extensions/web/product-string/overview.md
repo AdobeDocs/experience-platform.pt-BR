@@ -1,9 +1,9 @@
 ---
 title: Visão geral da extensão de cadeia de caracteres do produto Adobe Analytics
 description: Saiba mais sobre a extensão de tag da Cadeia de caracteres de produto do Adobe Analytics no Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 95%
 
 ---
@@ -93,4 +93,4 @@ Essa ação deve ser acompanhada por uma ação &quot;Adobe Analytics - Definir 
 ### Exigências
 
 * Uma [camada de](https://theblog.adobe.com/data-layers-buzzword-best-practice/) dados baseada em objetos com variáveis para todos os dados relacionados ao produto (como ID do produto, quantidade, preço). Essa extensão não funciona com camadas de dados baseadas em matriz.
-* A extensão [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=pt-BR) deve ser instalada.
+* A extensão [Adobe Analytics](../analytics/overview.md) deve ser instalada.

@@ -1,31 +1,30 @@
 ---
-keywords: Caixa de entrada do URL de conversa;Caixa de entrada do url de conversa;Caixa de entrada do URL de conversa;caixa de entrada do URL de conversa;URL de conversa;URL de conversa;URL de conversa
-title: Extensão da Caixa de Entrada do URL de Conversação
+keywords: Caixa de entrada do URL de palestra, caixa de entrada do url de fala, caixa de entrada do URL de fala, url de fala, URL de fala, url de fala
+title: Extensão da Caixa de entrada do URL de conversa
 description: A extensão Caixa de entrada do URL de conversa é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 4%
+source-wordcount: '511'
+ht-degree: 5%
 
 ---
 
-
 # [!DNL Talk URL Inbox] extensão {#talk-url-extension}
 
-Receba mensagens de voz de seus visitantes de página da Web. Inclui a interface hospedada e o aprendizado de máquina baseado em nuvem para transcrever suas mensagens de voz em insights de texto instantaneamente.
+Receba mensagens de voz dos visitantes da página da Web. Inclui a interface hospedada e o aprendizado de máquina baseado em nuvem para transcrever suas mensagens de voz em insights de texto instantaneamente.
 
-[!DNL Talk URL Inbox] é uma voz da extensão do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] O é uma voz da extensão do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
-Este destino é uma extensão Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões de lançamento de plataforma funcionam na Plataforma, consulte [Visão geral das extensões do Adobe Experience Platform Launch](../launch-extensions/overview.md).
+Esse destino é uma extensão do Adobe Experience Platform Launch. Para obter mais informações sobre como as extensões do Platform launch funcionam na plataforma, consulte [Visão geral das extensões do Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
-![Extensão da Caixa de Entrada do URL de Conversação](../../assets/catalog/voice/talkurl/catalog.png)
+![Extensão da Caixa de entrada do URL de conversa](../../assets/catalog/voice/talkurl/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram a Plataforma.
+Essa extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram a Platform.
 
-Para usar essa extensão, você precisa acessar o Adobe Experience Platform Launch. O Launch de plataforma é oferecido aos clientes da Adobe Experience Cloud como um recurso incluído, de valor agregado. Entre em contato com o administrador da organização para obter acesso ao Platform Launch e peça que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar o Adobe Experience Platform Launch. O Platform launch é oferecido aos clientes da Adobe Experience Cloud como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso ao Platform launch e solicitar que ele conceda a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
@@ -35,28 +34,28 @@ Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 
-Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configure]** estiver acinzentado, você não terá a permissão **[!UICONTROL manage_properties]**. Consulte [Pré-requisitos](#prerequisites).
+Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configurar]** estiver esmaecido, você não terá a permissão **[!UICONTROL manage_properties]**. Consulte [Pré-requisitos](#prerequisites).
 
-Na janela **[!UICONTROL Selecione a propriedade Platform Launch disponível]**, selecione a propriedade Platform Launch na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Launch da plataforma. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) da documentação do Launch de plataforma.
+Na janela **[!UICONTROL Select available Platform launch property]**, selecione a propriedade do Platform launch na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade no Platform launch. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](../../../tags/ui/administration/companies-and-properties.md#properties-page) da documentação do Platform launch.
 
-O fluxo de trabalho leva você ao Platform Launch para concluir a instalação.
+O fluxo de trabalho leva você ao Platform launch para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão e suporte de instalação, consulte a página [Caixa de entrada do URL de conversa no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a página [Caixa de entrada de URL de conversa no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
-Você também pode instalar a extensão diretamente na [interface do Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Adicionar uma nova extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) na documentação do Launch da plataforma.
+Você também pode instalar a extensão diretamente na [interface do Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Adicionar uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) na documentação do Platform launch.
 
 ## Como usar a extensão {#how-to-use}
 
-Depois de instalar a extensão, é possível configurar o start das regras para ela diretamente no Platform Launch.
+Depois de instalar a extensão, você pode iniciar a configuração das regras diretamente no Platform launch.
 
-No Platform Launch, você pode configurar regras para suas extensões instaladas para enviar dados de evento para o destino da extensão somente em determinadas situações. Para obter mais informações sobre como configurar regras para suas extensões, consulte [Documentação das regras](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+No Platform launch, você pode configurar regras para suas extensões instaladas para enviar dados de evento para o destino da extensão somente em determinadas situações. Para obter mais informações sobre como configurar regras para suas extensões, consulte a [Documentação de regras](../../../tags/ui/managing-resources/rules.md).
 
 ## Configurar, atualizar e excluir extensão {#configure-upgrade-delete}
 
-Você pode configurar, atualizar e excluir extensões na interface do Platform Launch.
+Você pode configurar, atualizar e excluir extensões na interface do Platform launch.
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Install]** para a extensão. Exclua o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para acessar o Launch da plataforma e configurar ou excluir sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da plataforma ainda exibirá **[!UICONTROL Instalar]** para a extensão. Desative o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para chegar ao Platform launch e configure ou exclua sua extensão.
 
-Para atualizar sua extensão, consulte [Atualização da extensão](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) na documentação do Launch da plataforma.
+Para atualizar sua extensão, consulte [Atualização de extensão](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) na documentação do Platform launch.

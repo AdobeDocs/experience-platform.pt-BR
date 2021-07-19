@@ -1,9 +1,9 @@
 ---
 title: Notas de versão da extensão do Adobe Target v2
 description: As notas de versão mais recentes para a extensão de tag Adobe Target v2 no Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '438'
 ht-degree: 78%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 78%
 
 ### Extensão 0.14 do Adobe Target v2
 
-- Adição de uma nova ação Carregar o Target com a [Decisão no dispositivo](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=pt-BR#load-target-with-on-device-decisioning), que carrega a at.js 2.5 com recursos da Decisão no dispositivo.
+- Adição de uma nova ação Carregar o Target com a [Decisão no dispositivo](./overview.md#load-target-with-on-device-decisioning), que carrega a at.js 2.5 com recursos da Decisão no dispositivo.
 - Atualização do at.js para 2.5
 
 

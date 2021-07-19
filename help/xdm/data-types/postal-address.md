@@ -5,9 +5,9 @@ title: Tipo de dados do endereço postal
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM de Endereço Postal.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 1%
 
 ---
@@ -44,5 +44,5 @@ ht-degree: 1%
 
 Para obter mais detalhes sobre o tipo de dados de endereço postal, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)

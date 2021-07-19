@@ -44,6 +44,7 @@ Se você já tiver uma conta da empresa ou se não planeja concluir a lista, ign
    >[!NOTE]
    >
    >Este é um formato de arquivo diferente do usado no código de extensão. A própria extensão conterá um arquivo svg como o [ícone](../manifest.md).
+   
    - **Imagem em destaque**  - Obtenha atenção usando uma imagem que pode ser independente e mostrará sua marca e destacará seu aplicativo. A Imagem em destaque é aquela que aparece quando alguém compartilha um link com sua listagem do Exchange ou posta sobre ela em redes sociais. Portanto, precisa ser uma representação modelo de sua marca.
    - **Logotipo do App Publisher** - este é o logotipo corporativo. Verifique se o ícone tem as dimensões apropriadas de 1280 x 720 ou 2560 x 1440 (16:9) em formato png ou jpg.
    - **Instruções de configuração**  - Informe aos clientes como configurar sua extensão do Adobe Experience Platform. Certifique-se de que eles entendam as configurações necessárias e as próximas etapas quando sua [visualização de configuração](../configuration.md) for exibida imediatamente após a instalação da extensão em uma propriedade. 

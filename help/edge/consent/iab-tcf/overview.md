@@ -3,10 +3,9 @@ title: Suporte à TCF 2.0 do IAB no SDK da Web da Adobe Experience Platform
 description: Saiba como oferecer suporte às preferências de consentimento do TCF 2.0 do IAB usando o SDK da Web da Adobe Experience Platform
 keywords: consentimento; setConsent; grupo de campo de privacidade do perfil; grupo de campo de privacidade do evento de experiência; grupo de campo de privacidade; IAB TCF 2.0; CDP em tempo real; Perfil de dados do cliente em tempo real
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -31,9 +30,9 @@ Para implementar o SDK da Web com o IAB TCF 2.0, você deve ter uma compreensão
 Para enviar dados de consentimento ao Adobe Experience Platform usando o SDK, o seguinte é obrigatório:
 
 - Um conjunto de dados cujo esquema se baseia na classe [!DNL XDM Individual Profile] e contém campos de consentimento TCF 2.0, habilitados para uso em [!DNL Real-time Customer Profile].
-- Uma configuração de borda configurada com o Platform e o conjunto de dados habilitado para perfil mencionado acima.
+- Um conjunto de dados configurado com a Platform e o conjunto de dados habilitado para perfil mencionado acima.
 
-Consulte o guia em [Conformidade TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter instruções sobre como criar os conjuntos de dados e a configuração de borda necessários.
+Consulte o guia em [TCF 2.0 Compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter instruções sobre como criar os conjuntos de dados e o conjunto de dados necessários.
 
 ## integração Audience Manager
 
@@ -41,7 +40,7 @@ O Adobe Audience Manager (AAM) inclui suporte para IAB TCF 2.0, que permite aval
 
 >[!TIP]
 >
->Para integrar com o Audience Manager por meio do SDK da Web da Adobe Experience Platform, verifique se você tem uma configuração de borda configurada para encaminhar para o Adobe Audience Manager.
+>Para integrar com o Audience Manager por meio do SDK da Web da Adobe Experience Platform, verifique se você tem um conjunto de dados configurado para encaminhar para o Adobe Audience Manager.
 
 ## Integração entre Experience Events e Adobe Analytics
 
@@ -50,7 +49,7 @@ Enquanto a CDP em tempo real e os públicos-alvo do Audience Manager monitoram a
 Para coletar informações de consentimento sobre eventos, é necessário o seguinte:
 
 - Um conjunto de dados com base na classe [!DNL XDM Experience Event], com o grupo de campos de esquema de privacidade [!DNL Experience Event].
-- Uma configuração de borda configurada com o conjunto de dados [!DNL XDM Experience Event] acima.
+- Um conjunto de dados configurado com o conjunto de dados [!DNL XDM Experience Event] acima.
 
 Para obter mais informações sobre como converter um evento de experiência XDM em uma ocorrência do Analytics, comece lendo a documentação de [Visão geral do Analytics](../../data-collection/adobe-analytics/analytics-overview.md).
 

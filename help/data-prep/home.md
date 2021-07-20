@@ -5,10 +5,9 @@ title: Visão geral da preparação de dados
 topic-legacy: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-translation-type: tm+mt
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -25,6 +24,10 @@ A Preparação de dados permite que os engenheiros de dados mapeiem, transformem
 - Visualizar os dados conforme são manipulados na Preparação de dados
 
 A Preparação de dados também aplica várias validações de dados intrínsecas para garantir que a integridade dos dados seja mantida à medida que é assimilada. Sempre que possível, a Preparação de dados mapeia automaticamente os esquemas de dados recebidos para o XDM. Os engenheiros de dados podem alterar, corrigir e excluir os mapeamentos sugeridos e substituí-los pelos mapeamentos conforme apropriado.
+
+>[!NOTE]
+>
+>A menos que a mensagem resultante seja um XDM inválido, qualquer erro de transformação na Preparação de dados resultará na definição desses atributos como `null`, enquanto o restante da linha será assimilado. Se a linha resolver para XDM inválido, a linha **not** será assimilada. Em ambos os casos, o erro será documentado.
 
 ## Mapeamento
 

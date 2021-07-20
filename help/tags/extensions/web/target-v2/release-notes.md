@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da extensão do Adobe Target v2
 description: As notas de versão mais recentes para a extensão de tag Adobe Target v2 no Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 78%
+source-wordcount: '572'
+ht-degree: 62%
 
 ---
 
@@ -13,6 +13,30 @@ ht-degree: 78%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 20 de julho de 2021
+
+### Extensão 0.15.1 do Adobe Target v2
+
+- Correção de um problema com um conflito de nome de função `stringify` , que resultava na geração de valores UUID incorretos para `sessionId`, `requestId` e assim por diante.
+
+## 16 de julho de 2021
+
+### Extensão 0.15.0 do Adobe Target v2
+
+- Adicionar atributo seguro aos cookies sempre que as configurações da at.js secureOnly estiver definido como verdadeiro
+- Os tokens de resposta agora estão disponíveis ao usar `triggerView()`
+- Correção de um erro relacionado ao evento `CONTENT_RENDERING_NO_OFFERS` . Agora é acionado corretamente sempre que não há conteúdo retornado do Target
+- Os detalhes das métricas de clique do A4T são retornados corretamente ao usar solicitações de pré-busca
+- A geração de UUID não usa mais `Math.random()`, mas depende de `window.crypto`
+- `sessionId` a expiração do cookie é estendida corretamente em cada chamada de rede
+- A inicialização do cache de visualização de SPA agora é manipulada corretamente e atende às configurações `viewsEnable`
+
+## 2 de junho de 2021
+
+### Extensão 0.14.2 do Adobe Target v2
+
+- Correção de um bug em que o pacote final do Launch contém duas versões da at.js, uma com o On-Device Decisioning e outra sem.
 
 ## 19 de maio de 2021
 

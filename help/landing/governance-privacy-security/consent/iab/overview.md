@@ -5,9 +5,9 @@ title: Suporte ao IAB TCF 2.0 no Experience Platform
 topic-legacy: privacy events
 description: Saiba como configurar operações de dados e esquemas para transmitir opções de consentimento do cliente ao ativar segmentos para destinos no Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2559'
 ht-degree: 1%
 
 ---
@@ -117,15 +117,15 @@ Depois de configurar o CMP para gerar cadeias de consentimento, você deve integ
 
 **O SDK não faz interface com nenhum CMPs pronto para uso**. Cabe a você determinar como integrar o SDK ao seu site, acompanhar as alterações de consentimento no CMP e chamar o comando apropriado.
 
-### Criar uma nova configuração de borda
+### Criar um novo armazenamento de dados
 
-Para que o SDK envie dados para o Experience Platform, primeiro você deve criar uma nova configuração de borda para a Platform em [!DNL Adobe Experience Platform Launch]. Etapas específicas para criar uma nova configuração são fornecidas na [documentação do SDK](../../../../edge/fundamentals/datastreams.md).
+Para que o SDK envie dados para o Experience Platform, primeiro você deve criar um novo datastream para Platform em [!DNL Adobe Experience Platform Launch]. Etapas específicas para criar uma nova configuração são fornecidas na [documentação do SDK](../../../../edge/fundamentals/datastreams.md).
 
 Depois de fornecer um nome exclusivo para a configuração, selecione o botão de alternância ao lado de **[!UICONTROL Adobe Experience Platform]**. Em seguida, use os seguintes valores para preencher o restante do formulário:
 
-| Campo de configuração da borda | Valor |
+| Campo de fluxo de dados | Valor |
 | --- | --- |
-| [!UICONTROL Sandbox] | O nome da plataforma [sandbox](../../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a configuração de borda. |
+| [!UICONTROL Sandbox] | O nome da plataforma [sandbox](../../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar o conjunto de dados. |
 | [!UICONTROL Entrada de transmissão] | Uma conexão de transmissão válida para Experience Platform. Consulte o tutorial em [criar uma conexão de transmissão](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de transmissão existente. |
 | [!UICONTROL Conjunto de dados do evento] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). Se você incluiu o [[!UICONTROL Consentimento IAB TCF 2.0] grupo de campos](../../../../xdm/field-groups/event/iab.md) no esquema deste conjunto de dados, é possível rastrear eventos de alteração de consentimento ao longo do tempo usando o comando [`sendEvent`](#sendEvent), armazenando esses dados nesse conjunto de dados. Lembre-se de que os valores de consentimento armazenados nesse conjunto de dados são **not** usados em workflows de imposição automática. |
 | [!UICONTROL Conjunto de dados de perfil] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). Ao responder aos ganchos de alteração de consentimento da CMP usando o comando [`setConsent`](#setConsent), os dados coletados serão armazenados nesse conjunto de dados. Como esse conjunto de dados está habilitado para Perfil, os valores de consentimento armazenados nesse conjunto de dados são honrados durante os workflows de imposição automática. |
@@ -136,7 +136,7 @@ Quando terminar, selecione **[!UICONTROL Save]** na parte inferior da tela e con
 
 ### Comandos de alteração de consentimento
 
-Depois de criar a configuração de borda descrita na seção anterior, você pode começar a usar comandos do SDK para enviar dados de consentimento para a Platform. As seções abaixo fornecem exemplos de como cada comando do SDK pode ser usado em diferentes cenários.
+Depois de criar o conjunto de dados descrito na seção anterior, você pode começar a usar comandos do SDK para enviar dados de consentimento para a Platform. As seções abaixo fornecem exemplos de como cada comando do SDK pode ser usado em diferentes cenários.
 
 >[!NOTE]
 >

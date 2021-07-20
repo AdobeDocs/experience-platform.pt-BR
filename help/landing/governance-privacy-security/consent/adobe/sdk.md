@@ -3,11 +3,10 @@ title: Processar dados de consentimento do cliente usando o SDK da Web da Adobe 
 topic-legacy: getting started
 description: Saiba como integrar o SDK da Web da Adobe Experience Platform para processar dados de consentimento do cliente no Adobe Experience Platform usando o padrão Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 0%
+source-wordcount: '1237'
+ht-degree: 3%
 
 ---
 
@@ -23,35 +22,35 @@ Este tutorial pressupõe que você já tenha determinado como gerar dados de con
 
 Além disso, este guia requer uma compreensão funcional das extensões do Adobe Experience Platform Launch e como elas são instaladas em aplicativos Web. Consulte a seguinte documentação para obter mais informações:
 
-* [Visão geral do platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Manual de início rápido](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
-* [Visão geral da publicação](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
+* [Visão geral do platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=pt-BR)
+* [Manual de início rápido](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=pt-BR)
+* [Visão geral da publicação](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=pt-BR)
 
-## Configurar uma configuração de borda
+## Configurar um armazenamento de dados
 
-Para que o SDK envie dados para o Experience Platform, é necessário ter uma configuração de borda existente para a Plataforma configurada no Adobe Experience Platform Launch. Além disso, o [!UICONTROL Profile Dataset] selecionado para a configuração deve conter campos de consentimento padronizados.
+Para que o SDK envie dados para o Experience Platform, é necessário ter um conjunto de dados existente para a Plataforma configurada no Adobe Experience Platform Launch. Além disso, o [!UICONTROL Conjunto de dados de perfil] selecionado para a configuração deve conter campos de consentimento padronizados.
 
 Depois de criar uma nova configuração ou selecionar uma existente para editar, selecione o botão de alternância ao lado de **[!UICONTROL Adobe Experience Platform]**. Em seguida, use os valores listados abaixo para preencher o formulário.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Campo de configuração da borda | Valor |
+| Campo de fluxo de dados | Valor |
 | --- | --- |
-| [!UICONTROL Sandbox] | O nome da plataforma [sandbox](../../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a configuração de borda. |
-| [!UICONTROL Streaming Inlet] | Uma conexão de transmissão válida para Experience Platform. Consulte o tutorial em [criar uma conexão de transmissão](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de transmissão existente. |
-| [!UICONTROL Event Dataset] | Um conjunto de dados [!DNL XDM ExperienceEvent] que você planeja enviar dados do evento para o usando o SDK. Embora seja necessário fornecer um conjunto de dados de evento para criar uma configuração de borda da plataforma, observe que o envio de dados de consentimento diretamente por meio de eventos não é compatível no momento. |
-| [!UICONTROL Profile Dataset] | O conjunto de dados habilitado para [!DNL Profile] com campos de consentimento do cliente que você criou anteriormente. |
+| [!UICONTROL Sandbox] | O nome da plataforma [sandbox](../../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar o conjunto de dados. |
+| [!UICONTROL Entrada de transmissão] | Uma conexão de transmissão válida para Experience Platform. Consulte o tutorial em [criar uma conexão de transmissão](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de transmissão existente. |
+| [!UICONTROL Conjunto de dados do evento] | Um conjunto de dados [!DNL XDM ExperienceEvent] que você planeja enviar dados do evento para o usando o SDK. Embora seja necessário fornecer um conjunto de dados de evento para criar um conjunto de dados da plataforma, observe que o envio de dados de consentimento diretamente por meio de eventos não é compatível no momento. |
+| [!UICONTROL Conjunto de dados de perfil] | O conjunto de dados habilitado para [!DNL Profile] com campos de consentimento do cliente que você criou anteriormente. |
 
-Quando terminar, selecione **[!UICONTROL Save]** na parte inferior da tela e continue seguindo os prompts adicionais para concluir a configuração.
+Quando terminar, selecione **[!UICONTROL Save]** na parte inferior da tela e continue a seguir quaisquer prompts adicionais para concluir a configuração.
 
 
 ## Instalar e configurar a extensão do SDK da Web da plataforma
 
-Depois de criar uma configuração de borda conforme descrito na seção anterior, você deve configurar a extensão SDK da Web da plataforma que será implantada no site. Se não tiver a extensão SDK instalada na propriedade do Platform launch, selecione **[!UICONTROL Extensions]** na navegação à esquerda, seguida pela guia **[!UICONTROL Catalog]**. Em seguida, selecione **[!UICONTROL Install]** na extensão SDK da plataforma dentro da lista de extensões disponíveis.
+Depois de criar um conjunto de dados conforme descrito na seção anterior, você deve configurar a extensão SDK da Web da plataforma que será implantada no site. Se não tiver a extensão SDK instalada na propriedade do Platform launch, selecione **[!UICONTROL Extensões]** na navegação à esquerda, seguida pela guia **[!UICONTROL Catálogo]**. Em seguida, selecione **[!UICONTROL Install]** na extensão do SDK da plataforma na lista de extensões disponíveis.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Ao configurar o SDK, em **[!UICONTROL Edge Configurations]**, selecione a configuração criada na etapa anterior.
+Ao configurar o SDK, em **[!UICONTROL Edge Configurations]**, selecione o conjunto de dados criado na etapa anterior.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
@@ -73,13 +72,13 @@ Se a região do usuário for determinada por uma CMP, você poderá usar as segu
 1. No manipulador de eventos, defina uma variável `adobeDefaultConsent` com base na região do usuário e carregue o script da biblioteca de Platforms launch usando JavaScript.
 1. Configure um elemento de dados que use a variável `adobeDefaultConsent` do JavaScript e use esse elemento de dados como o valor de consentimento padrão para o usuário.
 
-Para criar um elemento de dados na interface do usuário do Platform launch, selecione **[!UICONTROL Data Elements]** na navegação à esquerda e selecione **[!UICONTROL Add Data Element]** para navegar até a caixa de diálogo de criação do elemento de dados.
+Para criar um elemento de dados na interface do usuário do Platform launch, selecione **[!UICONTROL Elementos de dados]** na navegação à esquerda e selecione **[!UICONTROL Adicionar elemento de dados]** para navegar até a caixa de diálogo de criação do elemento de dados.
 
-Aqui, você deve criar um elemento de dados [!UICONTROL JavaScript Variable] com base em `adobeDefaultConsent`. Selecione **[!UICONTROL Save]** quando terminar.
+Aqui, você deve criar um elemento de dados [!UICONTROL Variável JavaScript] com base em `adobeDefaultConsent`. Selecione **[!UICONTROL Salvar]** ao concluir.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Depois que o elemento de dados é criado, navegue de volta para a página de configuração da extensão do SDK da Web. Na seção [!UICONTROL Privacy], selecione **[!UICONTROL Provided by data element]** e use a caixa de diálogo fornecida para selecionar o elemento de dados de consentimento padrão criado anteriormente.
+Depois que o elemento de dados é criado, navegue de volta para a página de configuração da extensão do SDK da Web. Na seção [!UICONTROL Privacy], selecione **[!UICONTROL Fornecido pelo elemento de dados]** e use a caixa de diálogo fornecida para selecionar o elemento de dados de consentimento padrão criado anteriormente.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 

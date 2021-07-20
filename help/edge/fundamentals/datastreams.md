@@ -1,11 +1,11 @@
 ---
 title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os fluxos de dados. '
-keywords: configuração, datastreams, datastreamId, edge, edge configuration id, Environment Settings, edgeConfigId, identidade, sincronização de id ativada, ID do contêiner de sincronização de ID, sandbox, Streaming Inlet, conjunto de dados de eventos, target, código do cliente, Token de propriedade, Target Environment ID, Destinos de cookies, destinos de url, Configurações do Analytics Blockreport suite id;
+keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---

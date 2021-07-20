@@ -5,10 +5,9 @@ title: Monitoramento da assimilação de dados
 topic-legacy: overview
 description: Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer uma Adobe ID e acesso ao Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-translation-type: tm+mt
-source-git-commit: 6bedd5ec0865e858a337155deb80309a54e30892
+source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -55,6 +54,10 @@ Os detalhes de um registro de transmissão com falha exibem as mesmas informaç�
 
 Além disso, registros com falha fornecem detalhes sobre os erros que ocorreram ao processar o lote. No exemplo abaixo, ocorreu um erro de análise ao converter ou validar os dados.
 
+>[!NOTE]
+>
+>Se houver erros nas linhas assimiladas, essas linhas **not** serão descartadas, a menos que a mensagem resultante resulte em XDM inválido.
+
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Monitorar a assimilação de dados de ponta a ponta do lote
@@ -76,5 +79,9 @@ Os detalhes de um lote com falha exibem as mesmas informações de um lote bem-s
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
 Além disso, os lotes com falha fornecem detalhes sobre os erros que ocorreram durante o processamento do lote. No exemplo abaixo, ocorreu um erro com o lote assimilado porque ele tem o número máximo de identidades da pessoa.
+
+>[!NOTE]
+>
+>Se houver erros nas linhas assimiladas, essas linhas **not** serão descartadas, a menos que a mensagem resultante resulte em XDM inválido.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

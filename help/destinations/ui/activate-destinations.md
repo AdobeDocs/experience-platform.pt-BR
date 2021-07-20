@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
+source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '3054'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,21 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
 ![Exportar arquivos completos](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Use o seletor **[!UICONTROL Frequency]** para escolher entre exportações únicas (**[!UICONTROL Once]**) ou **[!UICONTROL Diariamente]**. Exportar um arquivo completo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 AM UTC (7:00 PM EST).
+
+   >[!IMPORTANT]
+   >
+   >Ao definir a data de início e término, a **[!UICONTROL Data Inicial]** indica quando as exportações de arquivo estão programadas para iniciar e a **[!UICONTROL Data Final]** indica quando as exportações de arquivo estão programadas para parar. As exportações de arquivo iniciam na **[!UICONTROL Data inicial]**, mas não incluem a **[!UICONTROL Data final]**.
+   >
+   >Por exemplo, se você definir o seguinte agendamento:
+   >
+   >* Exportar: Incremental a cada 3 horas
+   >* Data de início: 7/19
+   >* Data final: 21/7
+
+   >
+   >Os arquivos começarão a exportar em 19/7 e pararão a exportação em 20/7 em 23:59:59 UTC. Não haverá arquivos entregues em 21/7.
+
+
 2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer. Exportar um arquivo **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data de início para a data de término no momento selecionado.
 
    >[!IMPORTANT]
@@ -167,11 +182,27 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 ![Exportar arquivos incrementais](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. Use o seletor **[!UICONTROL Frequency]** para escolher entre **[!UICONTROL Exportações Diárias]** ou **[!UICONTROL Por hora]**. Exportar um arquivo incremental **[!UICONTROL Diariamente]** exporta o arquivo todos os dias da data inicial para a data final às 12:00 PM UTC (7:00 AM EST).
+
+
+   >[!IMPORTANT]
+   >
+   >Ao definir a data de início e término, a **[!UICONTROL Data Inicial]** indica quando as exportações de arquivo estão programadas para iniciar e a **[!UICONTROL Data Final]** indica quando as exportações de arquivo estão programadas para parar. As exportações de arquivo iniciam na **[!UICONTROL Data inicial]**, mas não incluem a **[!UICONTROL Data final]**.
+   >
+   >Por exemplo, se você definir o seguinte agendamento:
+   >
+   >* Exportar: Incremental a cada 3 horas
+   >* Data de início: 7/19
+   >* Data final: 21/7
+
+   >
+   >Os arquivos começarão a exportar em 19/7 e pararão a exportação em 20/7 em 23:59:59 UTC. Não haverá arquivos entregues em 21/7.
+
    * Ao selecionar **[!UICONTROL Por hora]**, use o seletor **[!UICONTROL Cada]** para escolher entre as opções **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** por hora.
 
       >[!IMPORTANT]
       >
       >A opção para exportar arquivos incrementais a cada 3, 6, 8 ou 12 horas está atualmente em beta e está disponível somente para um número selecionado de clientes. Os clientes não beta podem exportar arquivos incrementais uma vez por dia.
+
 
 2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 

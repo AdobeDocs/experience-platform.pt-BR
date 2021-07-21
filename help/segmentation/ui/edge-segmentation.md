@@ -5,10 +5,9 @@ title: Guia da interface do usuário de segmentação de borda
 topic-legacy: ui guide
 description: A segmentação de borda é a capacidade de avaliar segmentos na Platform instantaneamente na borda, permitindo casos de uso de personalização de página da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-translation-type: tm+mt
-source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
+source-git-commit: 8375d5a35ef652335c60b4b8b4571bf42ec1924a
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '345'
 ht-degree: 4%
 
 ---
@@ -32,9 +31,7 @@ Um query pode ser avaliado com segmentação de borda se atender a qualquer um d
 | Consulta de frequência | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes. |  |
 | Consulta de frequência que se refere a um perfil | Qualquer definição de segmento que se refere a um evento que ocorre pelo menos um determinado número de vezes e tem um ou mais atributos de perfil. |  |
 
-Se a consulta corresponder a qualquer um dos tipos de consulta acima, você poderá ativá-la para segmentação de borda ativando o **[!UICONTROL Evaluate as streaming segment on the edge]**.
-
-![](../images/ui/edge-segmentation/mark-on-edge.png)
+Se a query corresponder a qualquer um dos tipos de query acima, ela será avaliada automaticamente usando a segmentação de borda.
 
 Os seguintes tipos de query são **não** compatíveis atualmente com a segmentação de borda:
 

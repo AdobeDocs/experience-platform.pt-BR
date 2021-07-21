@@ -5,11 +5,10 @@ title: 'Segmentação de borda usando a API '
 topic-legacy: developer guide
 description: Este documento contém exemplos de como usar a segmentação de borda com a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +30,7 @@ Este guia do desenvolvedor requer uma compreensão funcional dos vários serviç
 
 Para fazer chamadas com êxito para endpoints da API [!DNL Data Prep], leia o guia sobre a [introdução às APIs da plataforma](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
 
-## Tipos de consulta de segmentação de borda {#query-types}
+## Tipos de query de segmentação de borda {#query-types}
 
 Para que um segmento seja avaliado usando a segmentação de borda, a query deve estar em conformidade com as seguintes diretrizes:
 
@@ -168,7 +167,7 @@ Uma resposta bem-sucedida retorna uma matriz de segmentos na Organização IMS q
 
 ## Criar um segmento que esteja habilitado para a segmentação de borda
 
-Você pode criar um segmento habilitado para a segmentação de borda, fazendo uma solicitação de POST para o endpoint `/segment/definitions`. Além de corresponder a um dos tipos de consulta de segmentação de borda [listados acima](#query-types), você deve definir o sinalizador `evaluationInfo.synchronous.enabled` no payload como true.
+Você pode criar um segmento habilitado para a segmentação de borda, fazendo uma solicitação de POST ao endpoint `/segment/definitions` que corresponda a um dos tipos de consulta de segmentação de borda [listados acima](#query-types).
 
 **Formato da API**
 
@@ -201,18 +200,9 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "synchronous": {
-            "enabled": true
-        }
     }
 }'
 ```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `evaluationInfo.synchronous.enabled` | O objeto `evaluationInfo` determina o tipo de avaliação pela qual a definição de segmento será submetida. Para usar a segmentação de borda, defina `evaluationInfo.synchronous.enabled` com um valor de `true`. |
 
 **Resposta**
 

@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão do SDK da Web
 description: Saiba mais sobre a extensão de tag do SDK da Web no Adobe Experience Platform.
-source-git-commit: de35da5a2c59b3df310b928265f2acc3648e66e5
+source-git-commit: 934e74528a5bde72f3cbd216f56157b18f884cba
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 79%
+source-wordcount: '126'
+ht-degree: 77%
 
 ---
 
@@ -16,4 +16,4 @@ ht-degree: 79%
 
 A extensão SDK da Web da Adobe Experience Platform envia dados para a Adobe Experience Cloud de propriedades da Web, por meio da rede de borda da Adobe Experience Platform. A extensão SDK da Web da Platform permite a transmissão de dados na plataforma, a sincronização de identidades, a aceitação e a coleta automática de dados de contexto.
 
-Para obter detalhes sobre como configurar a extensão SDK da Web da Platform, consulte a [documentação do SDK da Web da Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=pt-BR#extension).
+Para obter detalhes sobre como configurar a extensão SDK da Web da Platform, consulte a [documentação do SDK da Web da Adobe Experience Platform](../../../../edge/extension/web-sdk-extension-configuration.md).

@@ -4,9 +4,9 @@ title: Painel de segmentos
 description: 'O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre segmentos criados por sua organização. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Para navegar até o painel [!UICONTROL Segmentos] na interface do usuário da pl
 
 ### Modificar o painel [!UICONTROL Segmentos]
 
-Você pode modificar a aparência do painel [!UICONTROL Segmentos] selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a [!UICONTROL biblioteca de widgets] para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência do painel [!UICONTROL Segmentos] selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a **[!UICONTROL biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
-Consulte a documentação [modificando painéis](../modify.md) e [biblioteca de widgets](../widget-library.md) para saber mais.
+Consulte a documentação [modificando painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
 
 ## Selecionar um segmento
 
@@ -61,9 +61,11 @@ A data e a hora da &quot;última atualização&quot; em um widget mostram quando
 
 ![](../images/segments/widget-timestamp.png)
 
-## Widgets disponíveis
+## Widgets padrão
 
-O Experience Platform fornece vários widgets que podem ser usados para visualizar métricas diferentes relacionadas ao seu segmento. Selecione o nome de um widget abaixo para saber mais:
+O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos seus segmentos. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando a [!UICONTROL biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo a [visão geral da biblioteca de widgets](../customize/widget-library.md).
+
+Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
 * [[!UICONTROL Tamanho do público-alvo]](#audience-size)
 * [[!UICONTROL Tendência do tamanho do público-alvo]](#audience-size-trend)

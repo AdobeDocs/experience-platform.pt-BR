@@ -5,10 +5,9 @@ title: Criar e editar esquemas na interface do usuário
 description: Saiba mais sobre as noções básicas de como criar e editar esquemas na interface do usuário do Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 6402499535b71f43c158fcec7e2b0065437bed51
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -29,11 +28,11 @@ Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão g
 
 ## Criar um novo schema {#create}
 
-No espaço de trabalho [!UICONTROL Schemas], selecione **[!UICONTROL Create schema]** no canto superior direito. Na lista suspensa que aparece, você pode escolher entre **[!UICONTROL XDM Individual Profile]** e **[!UICONTROL XDM ExperienceEvent]** como a classe base do esquema. Como alternativa, você pode selecionar **[!UICONTROL Browse]** para selecionar na lista completa de classes disponíveis, ou [criar uma nova classe personalizada](./classes.md#create) em vez disso.
+No espaço de trabalho [!UICONTROL Schemas], selecione **[!UICONTROL Criar esquema]** no canto superior direito. Na lista suspensa que aparece, você pode escolher entre **[!UICONTROL Perfil individual XDM]** e **[!UICONTROL XDM ExperienceEvent]** como a classe base do esquema. Como alternativa, você pode selecionar **[!UICONTROL Procurar]** para selecionar na lista completa de classes disponíveis, ou [criar uma nova classe personalizada](./classes.md#create) em vez disso.
 
 ![](../../images/ui/resources/schemas/create-schema.png)
 
-Depois de selecionar uma classe, o [!DNL Schema Editor] aparece e a estrutura base do esquema (fornecida pela classe) é mostrada na tela. A partir daqui, você pode usar o painel direito para adicionar um **[!UICONTROL Display name]** e **[!UICONTROL Description]** para o schema.
+Depois de selecionar uma classe, o [!DNL Schema Editor] aparece e a estrutura base do esquema (fornecida pela classe) é mostrada na tela. Aqui, você pode usar o painel direito para adicionar um **[!UICONTROL Display name]** e **[!UICONTROL Description]** ao schema.
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
@@ -55,13 +54,13 @@ Para editar um schema existente, selecione a guia **[!UICONTROL Browse]** e sele
 
 Depois de selecionar um schema, o [!DNL Schema Editor] aparece com a estrutura do schema mostrada na tela. Agora é possível [adicionar grupos de campos](#add-field-groups) ao esquema, [editar nomes de exibição de campos](#display-names) ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o esquema empregar algum.
 
-## Adicionar grupos de campos a um esquema {#add-field-groups}
+## Adicionar grupos de campos a um schema {#add-field-groups}
 
 >[!NOTE]
 >
 >Esta seção aborda como adicionar grupos de campos existentes a um schema. Se quiser criar um novo grupo de campos personalizado, consulte o guia em [criar e editar grupos de campos](./field-groups.md#create).
 
-Após abrir um schema dentro do [!DNL Schema Editor], é possível adicionar campos ao schema por meio do uso de grupos de campos. Para iniciar, selecione **[!UICONTROL Add]** ao lado de **[!UICONTROL Field groups]** no painel esquerdo.
+Após abrir um schema dentro do [!DNL Schema Editor], é possível adicionar campos ao schema por meio do uso de grupos de campos. Para iniciar, selecione **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos de campos]** no painel esquerdo.
 
 ![](../../images/ui/resources/schemas/add-field-group-button.png)
 
@@ -77,7 +76,7 @@ Se você souber a atividade geral ou a área comercial dos campos que deseja adi
 >
 >Para obter mais informações sobre as práticas recomendadas para modelagem de dados específica do setor no XDM, consulte a documentação sobre [modelos de dados do setor](../../schema/industries/overview.md).
 
-Também é possível usar a barra de pesquisa para ajudar a localizar o grupo de campos desejado. Os grupos de campos cujo nome corresponde ao query são exibidos na parte superior da lista. Em **[!UICONTROL Standard Fields]**, grupos de campos contendo campos que descrevem os atributos de dados desejados são exibidos.
+Também é possível usar a barra de pesquisa para ajudar a localizar o grupo de campos desejado. Os grupos de campos cujo nome corresponde ao query são exibidos na parte superior da lista. Em **[!UICONTROL Campos padrão]**, grupos de campos contendo campos que descrevem os atributos de dados desejados são exibidos.
 
 ![](../../images/ui/resources/schemas/field-group-search.png)
 
@@ -89,7 +88,7 @@ Marque a caixa de seleção ao lado do nome do grupo de campos que deseja adicio
 >
 >Para qualquer grupo de campos listado, você pode passar o mouse ou focar no ícone de informações (![](../../images/ui/resources/schemas/info-icon.png)) para exibir uma breve descrição do tipo de dados que o grupo de campos captura. Você também pode selecionar o ícone de visualização (![](../../images/ui/resources/schemas/preview-icon.png)) para exibir a estrutura dos campos que o grupo de campos fornece antes de decidir adicioná-lo ao schema.
 
-Depois de escolher os grupos de campos, selecione **[!UICONTROL Add field groups]** para adicioná-los ao schema.
+Depois de escolher os grupos de campos, selecione **[!UICONTROL Add field groups]** para adicioná-los ao esquema.
 
 ![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
@@ -109,17 +108,17 @@ Para ativar o schema, comece selecionando o nome do schema no painel à esquerda
 
 ![](../../images/ui/resources/schemas/profile-toggle.png)
 
-Um provedor é exibido, avisando que, uma vez que um esquema foi ativado e salvo, ele não poderá ser desativado. Selecione **[!UICONTROL Enable]** para continuar.
+Um provedor é exibido, avisando que, uma vez que um esquema foi ativado e salvo, ele não poderá ser desativado. Selecione **[!UICONTROL Ativar]** para continuar.
 
 ![](../../images/ui/resources/schemas/profile-confirm.png)
 
-A tela reaparece com a alternância [!UICONTROL Profile] ativada.
+A tela é exibida novamente com a opção [!UICONTROL Profile] ativada.
 
 >[!IMPORTANT]
 >
 >Como o esquema ainda não foi salvo, esse é o ponto de não retorno se você mudar de ideia sobre permitir que o esquema participe do Perfil do cliente em tempo real: depois de salvar um schema ativado, ele não poderá mais ser desativado. Selecione a opção **[!UICONTROL Profile]** novamente para desativar o esquema.
 
-Para concluir o processo, selecione **[!UICONTROL Save]** para salvar o schema.
+Para concluir o processo, selecione **[!UICONTROL Save]** para salvar o esquema.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
@@ -132,12 +131,14 @@ Depois de atribuir uma classe e adicionar grupos de campos a um esquema, você p
 >[!NOTE]
 >
 >Lembre-se de que os nomes de exibição dos campos que pertencem a classes ou grupos de campos padrão só podem ser editados no contexto de um schema específico. Em outras palavras, alterar o nome de exibição de um campo padrão em um schema não afeta outros esquemas que empregam a mesma classe ou grupo de campos associado.
+>
+>Depois de fazer alterações nos nomes de exibição dos campos de um esquema, essas alterações são refletidas imediatamente em qualquer conjunto de dados existente com base nesse esquema.
 
 Para editar o nome de exibição de um campo de esquema, selecione o campo na tela. No painel direito, forneça o novo nome em **[!UICONTROL Display name]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
-Selecione **[!UICONTROL Apply]** no painel direito e a tela será atualizada para mostrar o novo nome de exibição do campo. Selecione **[!UICONTROL Save]** para aplicar as alterações ao schema.
+Selecione **[!UICONTROL Aplicar]** no painel à direita e a tela será atualizada para mostrar o novo nome de exibição do campo. Selecione **[!UICONTROL Save]** para aplicar as alterações ao esquema.
 
 ![](../../images/ui/resources/schemas/display-name-changed.png)
 
@@ -155,11 +156,11 @@ Para reatribuir uma classe, selecione **[!UICONTROL Assign]** no lado esquerdo d
 
 Uma caixa de diálogo é exibida mostrando uma lista de todas as classes disponíveis, incluindo qualquer classe definida por sua organização (o proprietário sendo &quot;[!UICONTROL Customer]&quot;), bem como classes padrão definidas pelo Adobe.
 
-Selecione uma classe na lista para exibir sua descrição no lado direito da caixa de diálogo. Você também pode selecionar **[!UICONTROL Preview class structure]** para ver os campos e metadados associados à classe. Selecione **[!UICONTROL Assign class]** para continuar.
+Selecione uma classe na lista para exibir sua descrição no lado direito da caixa de diálogo. Você também pode selecionar **[!UICONTROL Visualizar estrutura de classe]** para ver os campos e metadados associados à classe. Selecione **[!UICONTROL Atribuir classe]** para continuar.
 
 ![](../../images/ui/resources/schemas/assign-class.png)
 
-Uma nova caixa de diálogo é aberta, solicitando que você confirme que deseja atribuir uma nova classe. Selecione **[!UICONTROL Assign]** para confirmar.
+Uma nova caixa de diálogo é aberta, solicitando que você confirme que deseja atribuir uma nova classe. Selecione **[!UICONTROL Atribuir]** para confirmar.
 
 ![](../../images/ui/resources/schemas/assign-confirm.png)
 
@@ -169,6 +170,6 @@ Após confirmar a alteração de classe, a tela será redefinida e todo o progre
 
 Este documento abordou as noções básicas para a criação e edição de schemas na interface do usuário da plataforma. É altamente recomendável revisar o [tutorial de criação de esquema](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente para criar um schema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados para casos de uso exclusivos.
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Schemas] visão geral do espaço de trabalho](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Visão geral do espaço de trabalho Schemas]](../overview.md).
 
 Para saber como gerenciar schemas na API [!DNL Schema Registry], consulte o [guia de ponto de extremidade de schemas](../../api/schemas.md).

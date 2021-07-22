@@ -4,10 +4,10 @@ user-guide-title: Ajuda de painéis da Adobe Experience Platform
 breadcrumb-title: Manual de painéis
 user-guide-description: Visualize dados da Experience Platform em painéis personalizáveis.
 feature: Gerenciamento de dados
-source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
+source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 41%
+source-wordcount: '56'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,12 @@ ht-degree: 41%
    * [Segmentos](guides/segments.md)
    * [Destinos](guides/destinations.md)
    * [Uso da licença](guides/license-usage.md)
-* [Modificar painéis](modify.md)
-* [Biblioteca de widgets](widget-library.md)
+* Personalização de painéis {#customize}
+   * [Visão geral da personalização](customize/overview.md)
+   * [Modificar painéis](customize/modify.md)
+   * [Biblioteca de widgets](customize/widget-library.md)
+   * [Widgets padrão](customize/standard-widgets.md)
+   * [Widgets personalizados](customize/custom-widgets.md)
+   * [Editar esquema](customize/edit-schema.md)
 * [Conjuntos de dados do painel de query](query.md)
 * [Notas de versão da plataforma](https://www.adobe.com/go/platform-release-notes-en)

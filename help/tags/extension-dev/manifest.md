@@ -1,9 +1,9 @@
 ---
 title: Manifesto de extensão
 description: Saiba como configurar um arquivo de manifesto JSON que informa ao Adobe Experience Platform como consumir corretamente sua extensão.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 77%
 
 ---
@@ -22,7 +22,7 @@ Um manifesto de extensão deve consistir no seguinte:
 
 | Propriedade | Descrição |
 | --- | --- |
-| `name` | O nome da sua extensão. Ele deve ser exclusivo dentre todas as outras extensões do Reator e deve estar em conformidade com as [regras de nomenclatura](#naming-rules). **Isso é usado pelas tags como um identificador e não deve ser alterado após a publicação da extensão.** |
+| `name` | O nome da sua extensão. Ele deve ser exclusivo de todas as outras extensões e deve estar em conformidade com [regras de nomenclatura](#naming-rules). **Isso é usado pelas tags como um identificador e não deve ser alterado após a publicação da extensão.** |
 | `platform` | A plataforma para sua extensão. O único valor aceito neste momento é `web`. |
 | `version` | A versão da sua extensão. Deve seguir o formato de controle de versão [semver](http://semver.org/). É consistente com o campo de versão [npm](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | O nome legível da sua extensão. Isso será exibido para os usuários da plataforma. Não é necessário mencionar &quot;tags&quot; ou &quot;Extensão&quot;; os usuários já saberão que estão visualizando uma extensão de tag. |

@@ -4,9 +4,9 @@ title: Painel Destinos
 description: O Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ A interface do usuário do Adobe Experience Platform (UI) fornece um painel atra
 
 Para obter uma visão geral dos destinos, bem como um catálogo de todos os destinos disponíveis no Experience Platform, visite a [documentação de destinos](../../destinations/home.md).
 
-##  Destinos, dados do painel  {#destinations-dashboard-data}
+##  Destinos, dados do painel {#destinations-dashboard-data}
 
 O painel [!UICONTROL Destinos] exibe um instantâneo dos destinos que sua organização habilitou no Perfil de experiência. Os dados no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel de destinos não está sendo atualizado em tempo real.
 
@@ -35,9 +35,17 @@ Para navegar até o painel de destinos na interface do usuário da plataforma, s
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Widgets disponíveis
+### Modificação do painel de destinos
 
-O Experience Platform fornece vários widgets que podem ser usados para visualizar métricas diferentes relacionadas aos destinos. Selecione o nome de um widget abaixo para saber mais:
+Você pode modificar a aparência do painel de destinos selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a **[!UICONTROL biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+
+Consulte a documentação [modificando painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
+
+## Widgets padrão
+
+O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos destinos. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando a [!UICONTROL biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo a [visão geral da biblioteca de widgets](../customize/widget-library.md).
+
+Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
 * [[!UICONTROL Destinos mais usados]](#most-used-destinations)
 * [[!UICONTROL Destinos criados recentemente]](#recently-created-destinations)

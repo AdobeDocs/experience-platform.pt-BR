@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Para navegar até o painel [!UICONTROL Profiles] na interface do usuário da pla
 
 ### Modificar o painel [!UICONTROL Perfis]
 
-Você pode modificar a aparência do painel [!UICONTROL Profiles] selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a [!UICONTROL biblioteca de widgets] para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
+Você pode modificar a aparência do painel [!UICONTROL Profiles] selecionando **[!UICONTROL Modificar painel]**. Isso permite mover, adicionar e remover widgets do painel, bem como acessar a **[!UICONTROL biblioteca de widgets]** para explorar os widgets disponíveis e criar widgets personalizados para sua organização.
 
-Consulte a documentação [modificando painéis](../modify.md) e [biblioteca de widgets](../widget-library.md) para saber mais.
+Consulte a documentação [modificando painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
 
 ## Mesclar políticas
 
@@ -63,9 +63,11 @@ O painel é composto de widgets, que são métricas somente leitura, fornecendo 
 
 A data e a hora da &quot;última atualização&quot; em um widget mostram quando o último instantâneo dos dados foi tirado. A data e a hora do instantâneo são fornecidas em UTC; não está no fuso horário do usuário individual ou da Organização IMS.
 
-## Widgets disponíveis
+## Widgets padrão
 
-O Experience Platform fornece vários widgets que você pode usar para visualizar métricas diferentes relacionadas aos dados do seu perfil. Selecione o nome de um widget abaixo para saber mais:
+O Adobe fornece vários widgets padrão que podem ser usados para visualizar métricas diferentes relacionadas aos dados do seu perfil. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando a [!UICONTROL biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo a [visão geral da biblioteca de widgets](../customize/widget-library.md).
+
+Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na seguinte lista:
 
 * [[!UICONTROL Contagem de perfis]](#profile-count)
 * [[!UICONTROL Perfis adicionados]](#profiles-added)

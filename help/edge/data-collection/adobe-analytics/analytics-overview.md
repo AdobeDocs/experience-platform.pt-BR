@@ -1,33 +1,32 @@
 ---
 title: Envio de dados para o Adobe Analytics usando o Adobe Experience Platform Web SDK
-description: Saiba como enviar dados para a Adobe Analytics com o SDK da Adobe Experience Platform Web.
-keywords: adobe analytics;analytics;mapped data;mapped vars;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+description: Saiba como enviar dados para o Adobe Analytics com o SDK da Web da Adobe Experience Platform.
+keywords: adobe analytics; analytics; dados mapeados; vars mapeadas;
+exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 7%
 
 ---
 
+# Envio de dados para o Adobe Analytics
 
-# Envio de dados para a Adobe Analytics
-
-O Adobe Experience Platform [!DNL Web SDK] pode enviar dados para a Adobe Analytics. Isso funciona traduzindo `xdm` em um formato que a Adobe Analytics pode usar.
+O Adobe Experience Platform [!DNL Web SDK] pode enviar dados para o Adobe Analytics. Isso funciona traduzindo `xdm` em um formato que o Adobe Analytics pode usar.
 
 ## Configuração
 
-A Adobe Analytics coleta automaticamente os dados que você está enviando se você tiver um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
+A Adobe Analytics coleta automaticamente os dados que você está enviando se você tem um conjunto de relatórios mapeado na interface do usuário de configuração do cliente. Aqui você pode mapear um ou mais relatórios para uma determinada configuração. Depois que um conjunto de relatórios é mapeado, os dados começam a fluir automaticamente.
 
 ## Dados mapeados automaticamente
 
-O Adobe Experience Platform [!DNL Edge Network] mapeia automaticamente muitas variáveis XDM. A lista completa dessas variáveis está listada [aqui](automatically-mapped-vars.md).
+O Adobe Experience Platform [!DNL Edge Network] mapeia automaticamente muitas variáveis XDM. A lista completa dessas variáveis é listada [aqui](automatically-mapped-vars.md).
 
 ## Dados mapeados manualmente
 
 Todos os dados coletados pela rede de borda podem ser acessados pelas regras de processamento. Os dados são nivelados usando a notação de pontos e estão disponíveis como contextData.
 
-Se você tivesse uma schema parecida com esta.
+Se você tivesse um esquema que se parecesse com este.
 
 ```javascript
 {
@@ -52,7 +51,7 @@ Se você tivesse uma schema parecida com esta.
 }
 ```
 
-Essas seriam as chaves de dados de contexto disponíveis para você.
+Em seguida, essas seriam as chaves de dados de contexto disponíveis para você.
 
 ```javascript
 a.x.key //value
@@ -65,6 +64,6 @@ a.x.arrayofobjects.0.obj1key //objval0
 a.x.arrayofobjects.1.obj2key //objval1
 ```
 
-Este é um exemplo de uma regra de processamento que usaria esses dados.
+Este é um exemplo de regra de processamento que usaria esses dados.
 
-![Interface das regras de processamento](../../../assets/edge_analytics_processing_rules.png)
+![Interface das regras de processamento](./assets/edge_analytics_processing_rules.png)

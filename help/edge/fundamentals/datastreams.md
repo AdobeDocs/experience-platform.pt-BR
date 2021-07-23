@@ -3,7 +3,7 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os fluxos de dados. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Sua organização deve ser provisionada para esse recurso. Entre em contato com 
 
 Os datastreams podem ser criados no Adobe [!DNL Experience Platform Launch] usando a ferramenta de configuração Datastream.
 
-![navegação de ferramentas de datastreams](../../assets/datastreams_config.png)
+![navegação de ferramentas de datastreams](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Abaixo estão as configurações disponíveis para cada ambiente de configuraç�
 
 A seção ID de terceiros é a única seção que está sempre ativa. Ele tem duas configurações disponíveis: &quot;[!UICONTROL Sincronização de ID de terceiros ativada]&quot; e &quot;[!UICONTROL ID do contêiner de sincronização de ID de terceiros]&quot;.
 
-![Seção de identidade da interface do usuário de configuração](../../assets/edge_configuration_identity.png)
+![Seção de identidade da interface do usuário de configuração](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL Sincronização de ID de terceiros ativada]
 
@@ -53,7 +53,7 @@ As sincronizações de ID podem ser agrupadas em contêineres para permitir que 
 
 As configurações listadas aqui permitem enviar dados para o Adobe Experience Platform. Você só deve ativar essa seção se tiver comprado a Adobe Experience Platform.
 
-![Bloco de configurações do Adobe Experience Platform](../../assets/edge_configuration_aep.png)
+![Bloco de configurações do Adobe Experience Platform](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL Sandbox]
 
@@ -71,7 +71,7 @@ Os datastreams suportam o envio de dados para conjuntos de dados que têm um esq
 
 Para configurar o Adobe Target, você deve fornecer um código de cliente. Os outros campos são opcionais.
 
-![Bloco de configurações do Adobe Target](../../assets/edge_configuration_target.png)
+![Bloco de configurações do Adobe Target](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ O Adobe recomenda definir isso de forma diferente para cada um dos ambientes de 
 
 Tudo o que é necessário para enviar dados para o Adobe Audience Manager é habilitar esta seção. As outras configurações são opcionais, mas são incentivadas.
 
-![Bloco de configurações do Adobe Audience Manager](../../assets/edge_configuration_aam.png)
+![Bloco de configurações do Adobe Audience Manager](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Destinos de cookies ativados]
 
@@ -111,7 +111,7 @@ Permite que o SDK compartilhe informações do segmento por meio de [URL Destina
 
 Controla se os dados são enviados para o Adobe Analytics. Detalhes adicionais estão na [Visão geral do Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloco de configurações do Adobe Analytics](../../assets/edge_configuration_aa.png)
+![Bloco de configurações do Adobe Analytics](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL ID de conjunto de relatórios]
 

@@ -2,10 +2,10 @@
 title: Casos de uso compatíveis com o SDK da Web da Adobe Experience Platform
 description: Saiba quais casos de uso são compatíveis com o SDK da Web da Adobe Experience Platform.
 keywords: web sdk; casos de uso
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 15%
+source-wordcount: '555'
+ht-degree: 14%
 
 ---
 
@@ -29,7 +29,7 @@ Esta página lista os casos de uso compatíveis com o SDK da Web, com links para
 | Enviar dados para várias organizações na página | [Documentação](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Registros e relatórios detalhados de erros |  |
 | Rastrear solicitações do lado do cliente e do lado do servidor |  |
-| Extensão do Adobe Experience Platform Launch | [Documentos de extensão do SDK da Web](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension) |
+| Extensão do Adobe Experience Platform Launch | [Documentos de extensão do SDK da Web](../../tags/extensions/web/sdk/overview.md) |
 | Ferramentas de depuração disponíveis | [Extensão do Debugger ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) e  [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style=&quot;table-layout:auto&quot;}

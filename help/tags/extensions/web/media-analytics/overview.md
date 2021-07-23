@@ -1,9 +1,9 @@
 ---
 title: Visão geral da extensão do Adobe Media Analytics para áudio e vídeo
 description: Saiba mais sobre a extensão da tag Adobe Medium Analytics for Audio and Video no Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '986'
 ht-degree: 93%
 
 ---
@@ -108,7 +108,7 @@ A extensão do MA exporta as APIs do MediaHeartbeat no objeto da janela global a
 
 ### Com o uso a partir de outras extensões
 
-A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados `media-heartbeat` a outras extensões. (Para obter informações adicionais sobre Módulos compartilhados, consulte a [documentação Módulos compartilhados](https://developer.adobelaunch.com/extensions/shared_modules/).)
+A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados `media-heartbeat` a outras extensões. (Para obter informações adicionais sobre Módulos compartilhados, consulte a [documentação Módulos compartilhados](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >

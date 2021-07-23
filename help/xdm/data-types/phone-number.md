@@ -5,9 +5,9 @@ title: Tipo de dados do número de telefone
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados XDM do número de telefone.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '213'
 ht-degree: 2%
 
 ---
@@ -31,5 +31,5 @@ ht-degree: 2%
 
 Para obter mais detalhes sobre o tipo de dados do número de telefone, consulte o repositório XDM público:
 
-* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.schema.json)
+* [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)

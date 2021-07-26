@@ -5,36 +5,32 @@ title: Visão geral do conector de origem do Amazon Redshift
 topic-legacy: overview
 description: Saiba como conectar o Amazon Redshift ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 600b216932a7d19440534c4b190fb2f3766c8785
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL Amazon Redshift]
+# [!DNL Amazon Redshift] conector
 
->[!NOTE]
->
->O conector [!DNL Amazon Redshift] está em beta. Consulte a [Visão geral das Fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando serviços [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
-
-[!DNL Experience Platform] O oferece suporte para assimilar dados de um banco de dados de terceiros. [!DNL Platform] pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Amazon Redshift].
+O Experience Platform oferece suporte para assimilar dados de um banco de dados de terceiros. A plataforma pode se conectar a diferentes tipos de bancos de dados, como relacional, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Amazon Redshift].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. A não adição de endereços IP específicos da região à lista de permissões pode causar erros ou não desempenho ao usar fontes. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como se conectar [!DNL Amazon Redshift] a [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como se conectar [!DNL Amazon Redshift] à Plataforma usando APIs ou a interface do usuário:
 
-## Conecte [!DNL Amazon Redshift] a [!DNL Platform] usando APIs
+## Conecte [!DNL Amazon Redshift] à plataforma usando APIs
 
 - [Criar uma conexão básica do Amazon Redshift usando a API do Serviço de fluxo](../../tutorials/api/create/databases/redshift.md)
 - [Explore a estrutura de dados e o conteúdo de uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/explore/database-nosql.md)
 - [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de Fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conecte [!DNL Amazon Redshift] a [!DNL Platform] usando a interface do usuário
+## Conecte [!DNL Amazon Redshift] à plataforma usando a interface do usuário
 
 - [Criar uma conexão de origem do Amazon Redshift na interface do usuário](../../tutorials/ui/create/databases/redshift.md)
 - [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface do usuário](../../tutorials/ui/dataflow/databases.md)

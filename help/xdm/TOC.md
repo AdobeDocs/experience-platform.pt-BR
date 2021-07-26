@@ -4,9 +4,9 @@ user-guide-title: Ajuda do sistema do Experience Data Model (XDM)
 breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Use as classes do Experience Data Model (XDM) e os grupos de campos do esquema para padronizar os dados de experiência.
 feature: Esquemas
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '320'
 ht-degree: 18%
 
 ---
@@ -40,11 +40,13 @@ ht-degree: 18%
       * [Detalhes de contato pessoal](./field-groups/profile/personal-contact-details.md)
       * [Consentimentos e preferências](./field-groups/profile/consents.md)
       * [Detalhes da associação ao segmento](./field-groups/profile/segmentation.md)
+      * [Subscrição Telecom](./field-groups/profile/telecom-subscription.md)
       * [Detalhes do Contato do Trabalho](./field-groups/profile/work-contact-details.md)
    * Grupos de campos de evento {#event}
       * [Detalhes de marketing da campanha](./field-groups/event/campaign-marketing-details.md)
       * [Detalhes do canal](./field-groups/event/channel-details.md)
       * [Detalhes de comércio](./field-groups/event/commerce-details.md)
+      * [Detalhes de troca de dispositivo](./field-groups/event/device-trade-in-details.md)
       * [Detalhes da ID de usuário final](./field-groups/event/enduserids.md)
       * [Detalhes do ambiente](./field-groups/event/environment-details.md)
       * [Consentimento do IAB TCF 2.0](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 18%
    * [Comércio](./data-types/commerce.md)
    * [Sequência de consentimento](./data-types/consent-string.md)
    * [Consentimentos e preferências](./data-types/consents.md)
+   * [Moeda](./data-types/currency.md)
    * [Dispositivo](./data-types/device.md)
    * [Endereço de email](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 18%
    * [Item da lista de produtos](./data-types/product-list-item.md)
    * [Pesquisa](./data-types/search.md)
    * [Assinatura](./data-types/subscription.md)
+   * [Subscrição Telecom](./data-types/telecom-subscription.md)
    * [Informações da Web](./data-types/web-information.md)
    * [Interação da Web](./data-types/web-interaction.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)

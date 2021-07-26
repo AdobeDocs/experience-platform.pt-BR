@@ -3,10 +3,10 @@ title: Uso do Adobe Target com o SDK da Web da plataforma
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform usando o Adobe Target
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
+source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 4%
+source-wordcount: '1220'
+ht-degree: 5%
 
 ---
 
@@ -17,13 +17,29 @@ ht-degree: 4%
 Os seguintes recursos foram testados e atualmente são compatíveis em [!DNL Target]:
 
 * [Testes A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR)
 * [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Atividades de Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 * [Atividades do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Relatório de impressão e conversão do Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Suporte ao VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+
+## [!DNL Platform Web SDK] diagrama do sistema
+
+O diagrama a seguir ajuda você a entender o fluxo de trabalho das [!DNL Target] e [!DNL Platform Web SDK] decisões de borda.
+
+![Diagrama da decisão de borda do Adobe Target com o SDK da Web da plataforma](./assets/target-platform-web-sdk.png)
+
+| Chame | Detalhes |
+| --- | --- |
+| 1 | O dispositivo carrega o [!DNL Platform Web SDK]. O [!DNL Platform Web SDK] envia uma solicitação para a rede de borda com dados XDM, a ID do ambiente de datastreams, parâmetros transmitidos e a ID do cliente (opcional). A página (ou contêineres) é pré-oculta. |
+| 2 | A rede de borda envia a solicitação aos serviços de borda para enriquecê-la com a ID do visitante, o consentimento e outras informações de contexto do visitante, como localização geográfica e nomes amigáveis ao dispositivo. |
+| 3 | A rede de borda envia a solicitação de personalização enriquecida para a borda [!DNL Target] com a ID do visitante e os parâmetros transmitidos. |
+| 4 | Os scripts de perfil executam e, em seguida, fazem o feed no armazenamento de perfil [!DNL Target]. O armazenamento de perfil busca segmentos da [!UICONTROL Biblioteca de público-alvo] (por exemplo, segmentos compartilhados de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
+| 5 | Com base nos parâmetros de solicitação de URL e dados de perfil, [!DNL Target] determina quais atividades e experiências serão exibidas para o visitante na exibição de página atual e para exibições futuras pré-buscadas. [!DNL Target] em seguida, envia isso de volta para a rede de borda. |
+| 6 | a. A rede de borda envia a resposta de personalização de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional. O conteúdo personalizado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<br>b. O conteúdo personalizado para exibições que são mostradas como resultado das ações do usuário em um Aplicativo de página única (SPA) é armazenado em cache para que possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas. &#x200B;<br>c. A rede de borda envia a ID do visitante e outros valores em cookies, como consentimento, ID da sessão, identidade, verificação de cookie, personalização e assim por diante. |
+| 7 | A rede de borda encaminha [!UICONTROL os detalhes do Analytics for Target] (A4T) (metadados de atividade, experiência e conversão) para o &#x200B; de borda [!DNL Analytics]. |
 
 ## Ativar [!DNL Adobe Target]
 
@@ -124,11 +140,11 @@ Ao definir públicos para suas atividades [!DNL Target] que são entregues por m
 Se você tiver [!DNL Target] atividades com públicos-alvo predefinidos que usam parâmetros personalizados ou um perfil de usuário, elas não serão entregues corretamente por meio do SDK. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. No entanto, há campos de direcionamento de público-alvo prontos para uso compatíveis por meio do [!DNL Platform Web SDK] que não exigem XDM. Esses campos estão disponíveis na interface [!DNL Target] que não requer XDM:
 
 * Biblioteca do Target
-* Geografia 
+* Geografia
 * Rede
 * Operating System
 * Páginas do site
-* Browser
+* Navegador
 * Fontes de Tráfego
 * Intervalo de tempo
 

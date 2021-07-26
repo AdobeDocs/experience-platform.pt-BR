@@ -5,9 +5,9 @@ title: Tipo de Dados de Assinatura
 topic-legacy: overview
 description: Este documento fornece uma visão geral do tipo de dados do Modelo de dados de experiência de assinatura (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d99ddc65849a88350bf61977b399b07989554426
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 10%
 
 ---

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como conectar o HP Vertica à Adobe Experience Platform usando a API do Serviço de Fluxo.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 3506e8307d5f6dbdb11a04911ddbd6dc81b8278f
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '476'
+ht-degree: 1%
 
 ---
 
@@ -27,8 +27,8 @@ Este tutorial o orienta pelas etapas para criar uma conexão básica para [!DNL 
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html):  [!DNL Experience Platform] O permite que os dados sejam assimilados de várias fontes, além de fornecer a você a capacidade de estruturar, mapear e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
-* [Sandboxes](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html):  [!DNL Experience Platform] O fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): O Experience Platform permite que os dados sejam assimilados de várias fontes, fornecendo a capacidade de estruturar, rotular e aprimorar os dados recebidos usando  [!DNL Platform] serviços.
+* [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única  [!DNL Platform] instância em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a [!DNL HP Vertica] usando a API [!DNL Flow Service].
 

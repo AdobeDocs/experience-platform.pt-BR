@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Amazon Redshift usando a interface do Adobe Experience Platform.
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 600b216932a7d19440534c4b190fb2f3766c8785
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
 
 # Criar uma conexão de origem [!DNL Amazon Redshift] na interface do usuário
-
->[!NOTE]
->
->O conector [!DNL Amazon Redshift] está em beta. Consulte a [Visão geral das Fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores com marca beta.
 
 Os conectores de origem no Adobe Experience Platform oferecem a capacidade de assimilar dados de origem externa de acordo com a programação. Este tutorial fornece etapas para criar um conector de origem [!DNL Amazon Redshift] (a seguir chamado &quot;[!DNL Redshift]&quot;) usando a interface do usuário [!DNL Platform].
 
@@ -50,25 +45,25 @@ Para obter mais informações sobre a introdução, consulte [this [!DNL Redshif
 
 Depois de coletar suas credenciais necessárias, siga as etapas abaixo para vincular sua conta [!DNL Redshift] a [!DNL Platform].
 
-Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Sources]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Sources]**. A tela **[!UICONTROL Catalog]** exibe uma variedade de fontes com as quais você pode criar uma conta.
+Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Databases]**, selecione **[!UICONTROL Amazon Redshift]**. Se esta for a primeira vez que você usa esse conector, selecione **[!UICONTROL Configure]**. Caso contrário, selecione **[!UICONTROL Add data]** para criar um novo conector [!DNL Redshift].
+Na categoria **[!UICONTROL Bancos de Dados]**, selecione **[!UICONTROL Amazon Redshift]**. Se esta for a primeira vez que você usa esse conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Add data]** para criar um novo conector [!DNL Redshift].
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)
 
-A página **[!UICONTROL Connect to Amazon Redshift]** é exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
+A página **[!UICONTROL Conectar-se ao Amazon Redshift]** é exibida. Nesta página, você pode usar novas credenciais ou credenciais existentes.
 
 ### Nova conta
 
-Se estiver usando novas credenciais, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais [!DNL Redshift]. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+Se estiver usando novas credenciais, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome, uma descrição opcional e suas credenciais [!DNL Redshift]. Quando terminar, selecione **[!UICONTROL Connect]** e deixe algum tempo para que a nova conexão seja estabelecida.
 
 ![](../../../../images/tutorials/create/redshift/new.png)
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta [!DNL Redshift] com a qual deseja se conectar e selecione **[!UICONTROL Next]** para prosseguir.
+Para conectar uma conta existente, selecione a conta [!DNL Redshift] com a qual deseja se conectar e selecione **[!UICONTROL Próximo]** para prosseguir.
 
 ![](../../../../images/tutorials/create/redshift/existing.png)
 

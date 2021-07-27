@@ -1,10 +1,10 @@
 ---
 title: Tipos de condição para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo condição para uma extensão de tag em uma propriedade da Web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 86%
+source-wordcount: '497'
+ht-degree: 67%
 
 ---
 
@@ -14,13 +14,24 @@ ht-degree: 86%
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Um módulo de biblioteca de tipo de condição tem uma meta: avaliar se algo é verdadeiro ou falso. O que ele avalia depende de você.
+No contexto de uma regra, uma condição é avaliada após a ocorrência de um evento. Todas as condições devem retornar verdadeiro para que a regra continue a ser processada. A exceção é quando os usuários colocam as condições explicitamente em um bucket de &quot;exceção&quot;, nesse caso, todas as condições no bucket devem retornar false para que a regra continue o processamento.
+
+Como exemplo, uma extensão pode fornecer um tipo de condição &quot;visor contém&quot;, na qual o usuário do poderia especificar um seletor de CSS. Quando a condição é avaliada no site do cliente, a extensão pode encontrar elementos que correspondam ao seletor de CSS e retornar se algum deles está contido no visor do usuário.
+
+Este documento aborda como definir tipos de condição para uma extensão da Web no Adobe Experience Platform.
 
 >[!NOTE]
 >
->Esse documento abrange tipos de condição para extensões da Web. Se você estiver desenvolvendo uma extensão de borda, consulte o manual sobre [tipos de condição para extensões de borda](../edge/condition-types.md).
+>Se você estiver desenvolvendo uma extensão de borda, consulte o manual sobre [tipos de condição para extensões de borda](../edge/condition-types.md).
 >
->Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de tags. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+>Este documento pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões da Web. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+
+Os tipos de condição normalmente consistem no seguinte:
+
+1. Uma [view](./views.md) mostrada na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da condição.
+2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e avaliar uma condição.
+
+Um módulo de biblioteca do tipo condição tem um objetivo: avalie se algo é verdadeiro ou falso. O que ele avalia depende de você.
 
 Por exemplo, se você deseja avaliar se o usuário está no host `example.com`, seu módulo pode ser semelhante a:
 

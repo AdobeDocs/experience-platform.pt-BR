@@ -1,10 +1,10 @@
 ---
 title: Tipos de ação para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo ação para uma extensão de tag em uma propriedade da Web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 65%
+source-wordcount: '407'
+ht-degree: 53%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 65%
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Um módulo de biblioteca do tipo ação tem como objetivo executar uma ação predefinida. O que essa ação faz é inteiramente de sua escolha. Deseja enviar um beacon, mostrar uma oferta, agradecer ao usuário por visitar, salvar um cookie ou abrir um bate-papo de suporte?
+No contexto de tags de coleta de dados, uma ação é algo que é executado depois que um evento de regra ocorre e todas as condições passaram na avaliação.
+
+Por exemplo, uma extensão pode fornecer um tipo de ação &quot;mostrar o bate-papo de suporte&quot;, que pode exibir uma caixa de diálogo de bate-papo de suporte para ajudar usuários que estejam com dificuldades ao fazer check-out.
+
+Este documento aborda como definir tipos de ação para uma extensão da Web no Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Esse documento abrange tipos de ação para extensões da Web. Se você estiver desenvolvendo uma extensão de borda, consulte o manual sobre [tipos de ação para extensões de borda](../edge/action-types.md).
 >
->Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de tags. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+>Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões da Web. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+
+Os tipos de ação normalmente consistem no seguinte:
+
+1. Uma [view](./views.md) mostrada na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações da ação.
+2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e executar uma ação.
 
 ```js
 module.exports = function(settings) {

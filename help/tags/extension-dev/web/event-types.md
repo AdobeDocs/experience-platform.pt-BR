@@ -1,24 +1,33 @@
 ---
 title: Tipos de evento para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo evento para uma extensão da Web no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 5a6549577c61817f6fe239e1e9e47ab06d2bc807
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 44%
+source-wordcount: '1047'
+ht-degree: 33%
 
 ---
 
-# Tipos de evento
+# Tipos de evento para extensões da Web
 
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Um módulo de biblioteca do tipo de evento é projetado para detectar quando uma atividade ocorre e, em seguida, chamar uma função para acionar uma regra associada. O evento que está sendo detectado é personalizável. Ele pode detectar quando um usuário faz um determinado gesto, rola rapidamente ou interage com algo?
+Em uma regra de tag, um evento é uma atividade que deve ocorrer para que uma regra seja acionada. Como exemplo, uma extensão da Web pode fornecer um tipo de evento de &quot;gesto&quot; que observa a ocorrência de um determinado mouse ou gesto de toque. Quando o gesto ocorre, a lógica do evento aciona a regra.
+
+Um módulo de biblioteca do tipo de evento é projetado para detectar quando uma atividade ocorre e, em seguida, chamar uma função para acionar uma regra associada. O evento que está sendo detectado é personalizável. Por exemplo, pode detectar quando um usuário faz um determinado gesto, rola rapidamente ou interage com algo.
+
+Este documento aborda como definir tipos de evento para uma extensão da Web no Adobe Experience Platform.
 
 >[!NOTE]
 >
->Este documento pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de tags. Consulte a visão geral na [formatação de módulo de biblioteca](./format.md) para obter uma introdução à sua implementação antes de retornar a este guia.
+>Este documento pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões da Web. Consulte a visão geral na [formatação de módulo de biblioteca](./format.md) para obter uma introdução à sua implementação antes de retornar a este guia.
+
+Os tipos de evento são definidos por extensões e geralmente consistem no seguinte:
+
+1. Uma [view](./views.md) mostrada na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do evento.
+2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e observar a ocorrência de determinada atividade.
 
 `module.exports` aceite os  `settings` parâmetros  `trigger` e . Isso permite a personalização do tipo de evento.
 
@@ -95,9 +104,9 @@ trigger({
 
 ## Respeitar a ordem das regras
 
-Tags no Adobe Experience Platform oferecem aos usuários a capacidade de solicitar regras. Por exemplo, um usuário pode criar duas regras que usam o tipo de evento de alteração de orientação e personalizar a ordem em que as regras são acionadas. Supondo que o usuário do Adobe Experience Platform especifique um valor de pedido de `2` para o evento de alteração de orientação na Regra A e um valor de pedido de `1` para o evento de alteração de orientação na Regra B. Isso indica que, quando a orientação mudar em um dispositivo móvel, a Regra B deverá ser acionada antes que a Regra A (regras com valores de ordem mais baixos sejam acionadas primeiro).
+As tags oferecem aos usuários a capacidade de solicitar regras. Por exemplo, um usuário pode criar duas regras que usam o tipo de evento de alteração de orientação e personalizar a ordem em que as regras são acionadas. Supondo que o usuário do Adobe Experience Platform especifique um valor de pedido de `2` para o evento de alteração de orientação na Regra A e um valor de pedido de `1` para o evento de alteração de orientação na Regra B. Isso indica que, quando a orientação mudar em um dispositivo móvel, a Regra B deverá ser acionada antes que a Regra A (regras com valores de ordem mais baixa sejam acionadas primeiro).
 
-Como mencionado anteriormente, a função exportada em nosso módulo de evento será chamada uma vez para cada regra configurada para usar nosso tipo de evento. Cada vez que a função exportada é chamada, ela recebe uma função exclusiva `trigger` vinculada a uma regra específica. No cenário descrito, nossa função exportada será chamada uma vez com uma função `trigger` vinculada à Regra B e, em seguida, novamente com uma função `trigger` vinculada à Regra A. A Regra B aparece primeiro porque o usuário lhe deu um valor de ordem menor que a Regra A. Quando nosso módulo de biblioteca detecta uma alteração de orientação, é importante chamar as funções `trigger` na mesma ordem em que foram fornecidas ao módulo da biblioteca.
+Como mencionado anteriormente, a função exportada em nosso módulo de evento será chamada uma vez para cada regra configurada para usar nosso tipo de evento. Cada vez que a função exportada é chamada, ela recebe uma função exclusiva `trigger` vinculada a uma regra específica. No cenário descrito anteriormente, nossa função exportada será chamada uma vez com uma função `trigger` vinculada à Regra B e novamente com uma função `trigger` vinculada à Regra A. A regra B vem primeiro porque o usuário lhe deu um valor de ordem menor que a Regra A. Quando nosso módulo de biblioteca detecta uma alteração de orientação, é importante chamar as funções `trigger` na mesma ordem em que foram fornecidas ao módulo de biblioteca.
 
 No código de exemplo abaixo, observe que quando uma alteração de orientação é detectada, as funções de acionamento são chamadas na mesma ordem em que foram fornecidas à função exportada:
 

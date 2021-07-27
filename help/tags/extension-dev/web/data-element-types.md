@@ -1,26 +1,35 @@
 ---
 title: Tipos de elementos de dados para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo elemento de dados para uma extensão de tag em uma propriedade da Web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 70%
+source-wordcount: '595'
+ht-degree: 63%
 
 ---
 
-# Tipos de elementos de dados para extensões de borda
+# Tipos de elemento de dados para extensões da Web
 
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-A finalidade de um módulo de biblioteca do tipo elemento de dados é recuperar um pedaço de dados. O método para esta recuperação é personalizável. Tipos de elemento de dados diferentes permitem que os usuários do Adobe Experience Platform recuperem dados do armazenamento local, de um cookie ou de um elemento DOM.
+Nas tags de coleta de dados, os elementos de dados são basicamente aliases a partes de dados em uma página. Esses dados podem ser encontrados em parâmetros de cadeias de caracteres de consulta, cookies, elementos DOM ou outros locais. Um elemento de dados pode ser referenciado por regras e atua como uma abstração para acessar esses dados.
+
+Os tipos de elementos de dados são fornecidos por extensões e permitem que os usuários configurem elementos de dados para acessar partes de dados de uma maneira específica. Por exemplo, uma extensão pode fornecer um tipo de elemento de dados &quot;item de armazenamento local&quot; no qual o usuário do pode especificar um nome de item de armazenamento local. Quando o elemento de dados é referenciado por uma regra, a extensão pode procurar o valor do item do armazenamento local usando o nome do item do armazenamento local fornecido pelo usuário ao configurar o elemento de dados.
+
+Este documento aborda como definir tipos de elementos de dados para uma extensão da Web no Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Este documento fornece informações sobre tipos de elementos de dados para extensões da Web. Se você estiver desenvolvendo uma extensão de borda, consulte o manual sobre [tipos de elementos de dados para extensões de borda](../edge/data-element-types.md).
+>Se estiver desenvolvendo uma extensão de borda, consulte o guia sobre [tipos de elemento de dados para extensões de borda](../edge/data-element-types.md) em vez disso.
 >
->Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões de tags. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+>Este documento também pressupõe que você esteja familiarizado com os módulos de biblioteca e como eles são integrados nas extensões da Web. Se você precisar de uma introdução, consulte a visão geral sobre [formatação do módulo de biblioteca](./format.md) antes de retornar a este guia.
+
+Os tipos de elementos de dados normalmente consistem no seguinte:
+
+1. Uma [view](./views.md) mostrada na interface do usuário da coleta de dados que permite que os usuários modifiquem as configurações do elemento de dados.
+2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tags para interpretar as configurações e recuperar partes de dados.
 
 Considere uma situação em que você deseja permitir que os usuários recuperem dados de um item de armazenamento local chamado `productName`. Seu módulo pode ser semelhante a:
 

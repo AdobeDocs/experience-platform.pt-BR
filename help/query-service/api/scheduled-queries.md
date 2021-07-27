@@ -5,10 +5,9 @@ title: Ponto de Extremidade da API de Consultas Agendadas
 topic-legacy: scheduled queries
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas agendadas com a API do serviço de consulta.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1010'
 ht-degree: 3%
 
 ---
@@ -125,7 +124,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de consultas p
 
 ### Criar uma nova consulta agendada
 
-Você pode criar uma nova consulta agendada fazendo uma solicitação de POST ao endpoint `/schedules`.
+Você pode criar uma nova consulta agendada fazendo uma solicitação de POST ao endpoint `/schedules`. Ao criar uma consulta agendada na API, você também pode vê-la no Editor de consultas. Para obter mais informações sobre consultas agendadas na interface do usuário, leia a [documentação do Editor de consultas](../ui/user-guide.md#scheduled-queries).
 
 **Formato da API**
 

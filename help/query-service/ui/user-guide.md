@@ -5,9 +5,9 @@ title: Guia da interface do usuário do Editor de consultas
 topic-legacy: query editor
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas de dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,57 @@ Enquanto você exibe um query em [!DNL Query Editor], o painel **[!UICONTROL Det
 
 ![Imagem](../images/ui/query-editor/query-details.png)
 
-Esse painel permite gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear a consulta exibida e exibir o código SQL em um formato fácil de copiar na guia **[!UICONTROL SQL Query]**. Esse painel também mostra metadados úteis, como a última vez que a query foi modificada e quem a modificou, se aplicável. Para gerar um conjunto de dados, selecione **[!UICONTROL Conjunto de dados de saída]**. A caixa de diálogo **[!UICONTROL Conjunto de dados de saída]** é exibida. Insira um nome e uma descrição, depois selecione **[!UICONTROL Executar Consulta]**. O novo conjunto de dados é exibido na guia **[!UICONTROL Conjuntos de dados]** na interface do usuário [!DNL Query Service] em [!DNL Platform].
+Esse painel permite gerar um conjunto de dados de saída diretamente da interface do usuário, excluir ou nomear a consulta exibida e adicionar um agendamento à consulta.
+
+Esse painel também mostra metadados úteis, como a última vez que a query foi modificada e quem a modificou, se aplicável. Para gerar um conjunto de dados, selecione **[!UICONTROL Conjunto de dados de saída]**. A caixa de diálogo **[!UICONTROL Conjunto de dados de saída]** é exibida. Insira um nome e uma descrição, depois selecione **[!UICONTROL Executar Consulta]**. O novo conjunto de dados é exibido na guia **[!UICONTROL Conjuntos de dados]** na interface do usuário [!DNL Query Service] em [!DNL Platform].
+
+### Consultas agendadas {#scheduled-queries}
+
+>[!NOTE]
+>
+> Você só pode adicionar um agendamento a um query que já tenha sido criado, salvo e executado. Além disso, você **not** poderá adicionar um agendamento a uma consulta parametrizada.
+
+Para adicionar um agendamento a um query, selecione **[!UICONTROL Adicionar agendamento]**.
+
+![Imagem](../images/ui/query-editor/add-schedule.png)
+
+A página **[!UICONTROL Schedule details]** é exibida. Nesta página, você pode escolher a frequência do query agendado, as datas em que o query agendado será executado, bem como o conjunto de dados para o qual exportar o query.
+
+![Imagem](../images/ui/query-editor/schedule-details.png)
+
+Você pode escolher as seguintes opções para **[!UICONTROL Frequency]**:
+
+- **[!UICONTROL Por hora]**: A consulta agendada será executada a cada hora para o período de datas selecionado.
+- **[!UICONTROL Diariamente]**: A consulta agendada será executada a cada X dias no momento e no período de datas selecionado. Observe que a hora selecionada está em **UTC**, e não seu fuso horário local.
+- **[!UICONTROL Semanalmente]**: A consulta selecionada será executada nos dias da semana, da hora e do período de datas selecionado. Observe que a hora selecionada está em **UTC**, e não seu fuso horário local.
+- **[!UICONTROL Mensalmente]**: A consulta selecionada será executada todos os meses no dia, hora e período de datas selecionado. Observe que a hora selecionada está em **UTC**, e não seu fuso horário local.
+- **[!UICONTROL Anualmente]**: A consulta selecionada será executada todos os anos no dia, mês, hora e período de datas selecionado. Observe que a hora selecionada está em **UTC**, e não seu fuso horário local.
+
+Para o conjunto de dados, você tem a opção de usar um conjunto de dados existente ou criar um novo conjunto de dados.
+
+>[!IMPORTANT]
+>
+> Como você está usando um conjunto de dados existente ou criando um novo, **not** precisa incluir `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte da consulta, já que os conjuntos de dados já estão definidos. A inclusão de `INSERT INTO` ou `CREATE TABLE AS SELECT` como parte das consultas agendadas resultará em um erro.
+
+Depois de confirmar todos esses detalhes, selecione **[!UICONTROL Save]** para criar um agendamento.
+
+A página de detalhes da consulta é exibida novamente e agora mostra os detalhes do agendamento recém-criado, incluindo a ID do agendamento, o próprio agendamento e o conjunto de dados de saída do agendamento. Você pode usar a ID de agendamento para pesquisar mais informações sobre as execuções do próprio query agendado. Para saber mais, leia o [guia de endpoints de execução de consulta agendados](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> Você só pode agendar **um** modelo de consulta usando a interface do usuário. Se quiser adicionar agendamentos adicionais a um template de query, será necessário usar a API . Se um agendamento já tiver sido adicionado usando a API, você **not** será adicionado a agendamentos adicionais usando a interface do usuário. Se vários agendamentos já estiverem anexados a um template de query, somente o agendamento mais antigo será exibido. Para saber como adicionar agendamentos usando a API, leia o [guia do endpoint de consultas agendadas](../api/scheduled-queries.md).
+>
+> Além disso, você deve atualizar a página se quiser garantir que tenha o estado mais recente do agendamento que está visualizando.
+
+#### Excluir um agendamento
+
+Você pode excluir um agendamento selecionando **[!UICONTROL Excluir um agendamento]**.
+
+![Imagem](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> Se quiser excluir um agendamento para um query, desative o agendamento primeiro.
 
 ### Salvar consultas
 

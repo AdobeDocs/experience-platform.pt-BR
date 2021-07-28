@@ -4,9 +4,9 @@ title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel pelo qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
+source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Você pode modificar a aparência do painel [!UICONTROL Profiles] selecionando *
 
 Consulte a documentação [modificando painéis](../customize/modify.md) e [visão geral da biblioteca de widgets](../customize/widget-library.md) para saber mais.
 
-## Mesclar políticas
+## Mesclar políticas {#merge-policies}
 
 As métricas exibidas no painel [!UICONTROL Profiles] são baseadas em políticas de mesclagem aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são reunidos de várias fontes para criar o perfil do cliente, é possível que os dados contenham valores conflitantes (por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listá-lo como &quot;casado&quot;). É tarefa da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
 
@@ -79,29 +79,39 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 
 O widget **[!UICONTROL Profile count]** exibe o número total de perfis mesclados no armazenamento de dados do perfil no momento em que o instantâneo foi tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
-Para obter mais informações sobre fragmentos e perfis mesclados, comece lendo a seção *Perfil de fragmentos vs perfis mesclados* da [Visão geral do perfil do cliente em tempo real](../../profile/home.md).
+Consulte a seção [sobre políticas de mesclagem anteriormente neste documento](#merge-policies) para saber mais.
+
+>[!NOTE]
+>
+>O widget [!UICONTROL Profile count] pode mostrar um número diferente da contagem de perfis mostrada na guia [!UICONTROL Browse] na seção [!UICONTROL Profiles] da interface do usuário por vários motivos. O motivo mais comum é porque a guia [!UICONTROL Browse] faz referência ao número total de perfis mesclados com base na política de mesclagem padrão da organização, enquanto o widget [!UICONTROL Profile count] faz referência ao número total de perfis mesclados com base na política de mesclagem que você selecionou para exibir no painel.
+>
+>Outro motivo comum é devido às diferenças entre o momento em que o instantâneo do painel é tirado e o momento em que o trabalho de amostra é executado para a guia [!UICONTROL Browse]. Você pode ver quando o widget [!UICONTROL Profile count] foi atualizado pela última vez, observando o carimbo de data e hora no widget, e para saber mais sobre como o trabalho de amostra é acionado na guia [!UICONTROL Browse], consulte a seção [profile count no guia da interface do usuário de perfil do cliente em tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Perfis adicionados] {#profiles-added}
 
-O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do Perfil a partir do último instantâneo tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+O widget **[!UICONTROL Perfis adicionados]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do Perfil a partir do último instantâneo tirado. Esse número é o resultado da política de mesclagem selecionada ser aplicada aos dados do Perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo. Você pode usar o seletor suspenso para exibir os perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
 
-Você pode usar o seletor suspenso para exibir os perfis adicionados nos últimos 30 dias, 90 dias ou 12 meses.
+>[!NOTE]
+>
+>O widget [!UICONTROL Perfis adicionados] reflete o número de perfis adicionados ao sistema após a configuração inicial da organização. Por exemplo, se quatro milhões de perfis foram adicionados durante a configuração e você adicionou um milhão de perfis adicionais nos últimos 30 dias, o widget [!UICONTROL Perfis adicionados] exibiria &quot;1.000.000&quot;, enquanto o widget [!UICONTROL Contagem de perfis] exibiria &quot;5.000.00&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendência da contagem de perfis] {#profiles-count-trend}
 
-O widget **[!UICONTROL Profiles count tend]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado.
+O widget **[!UICONTROL Profiles count tend]** exibe o número total de perfis mesclados que foram adicionados ao armazenamento de dados do perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
 
-A contagem de perfis adicionada é o resultado da política de mesclagem selecionada ser aplicada aos dados do perfil para unir fragmentos de perfil para formar um único perfil para cada indivíduo.
+Consulte a seção [sobre políticas de mesclagem anteriormente neste documento](#merge-policies) para saber mais.
 
 ![](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Perfis por identidade] {#profiles-by-identity}
 
 O widget **[!UICONTROL Perfis por identidade]** exibe o detalhamento das identidades em todos os perfis mesclados no armazenamento de Perfis. O número total de perfis por identidade (em outras palavras, adicionar os valores mostrados para cada namespace) pode ser maior que o número total de perfis mesclados, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
+
+Consulte a seção [sobre políticas de mesclagem anteriormente neste documento](#merge-policies) para saber mais.
 
 Para saber mais sobre identidades, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
@@ -111,9 +121,9 @@ Para saber mais sobre identidades, visite a [documentação do Adobe Experience 
 
 O widget **[!UICONTROL Sobreposição de identidade]** exibe um diagrama Venn ou um diagrama de conjunto, mostrando a sobreposição de perfis em seu armazenamento de perfil que contém várias identidades.
 
-Depois de usar os menus suspensos no widget para selecionar as identidades que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada identidade, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos.
+Depois de usar os menus suspensos no widget para selecionar as identidades que deseja comparar, os círculos aparecem exibindo o tamanho relativo de cada identidade, com o número de perfis contendo ambos os namespaces sendo representado pelo tamanho da sobreposição entre os círculos. Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
 
-Se um cliente interagir com sua marca em mais de um canal, várias identidades serão associadas a esse cliente individual, portanto, é provável que sua organização tenha vários perfis contendo fragmentos de mais de uma identidade.
+Para obter mais informações sobre fragmentos de perfil, comece lendo a seção em [fragmentos de perfil vs perfis mesclados](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) na visão geral do Perfil do cliente em tempo real.
 
 Para saber mais sobre identidades, visite a [documentação do Adobe Experience Platform Identity Service](../../identity-service/home.md).
 

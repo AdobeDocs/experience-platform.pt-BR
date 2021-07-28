@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
+source-git-commit: 1b750f0dc51983251d39515de15cd0286f5b51c1
 workflow-type: tm+mt
-source-wordcount: '3054'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para que seus arquivos ex
 
    >[!IMPORTANT]
    >
-   >A opção de exportar arquivos em um determinado horário do dia está atualmente em beta e está disponível somente para um número selecionado de clientes.<br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+   >Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
 4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
@@ -199,19 +199,15 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para que seus arquivos
 
    * Ao selecionar **[!UICONTROL Por hora]**, use o seletor **[!UICONTROL Cada]** para escolher entre as opções **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** por hora.
 
-      >[!IMPORTANT]
-      >
-      >A opção para exportar arquivos incrementais a cada 3, 6, 8 ou 12 horas está atualmente em beta e está disponível somente para um número selecionado de clientes. Os clientes não beta podem exportar arquivos incrementais uma vez por dia.
 
-
-2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
+1. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
    >[!IMPORTANT]
    >
-   >A opção para selecionar a hora do dia para a exportação só está disponível para um determinado número de clientes. <br> <br> Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo.  <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
+   >Devido à forma como os processos internos do Experience Platform são configurados, a primeira exportação de arquivo incremental ou completo pode não conter todos os dados de preenchimento retroativo. <br> <br> Para garantir uma exportação de dados de preenchimento retroativo completa e mais atualizada para arquivos completos e incrementais, o Adobe recomenda definir o primeiro tempo de exportação de arquivo após as 12 PM GMT do dia seguinte. Essa é uma limitação que será abordada em versões futuras.
 
-3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
-4. Selecione **[!UICONTROL Create]** para salvar o agendamento.
+1. Use o seletor **[!UICONTROL Date]** para escolher o dia ou o intervalo em que a exportação deve ocorrer.
+1. Selecione **[!UICONTROL Create]** para salvar o agendamento.
 
 >[!IMPORTANT]
 >
@@ -302,10 +298,6 @@ Recomenda-se que um dos atributos seja um [identificador exclusivo](../../destin
 >title="Sobre chaves de desduplicação"
 >abstract="Elimine vários registros do mesmo perfil nos arquivos de exportação selecionando uma chave de desduplicação. Selecione um namespace único ou até dois atributos de esquema XDM como uma chave de desduplicação. Não selecionar uma chave de desduplicação pode levar a entradas de perfil duplicadas nos arquivos de exportação."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Saiba mais na documentação"
-
->[!IMPORTANT]
->
->A opção para usar chaves de desduplicação está atualmente em beta e só está disponível para um número selecionado de clientes.
 
 Chaves de desduplicação eliminam a possibilidade de ter vários registros do mesmo perfil em um arquivo de exportação.
 

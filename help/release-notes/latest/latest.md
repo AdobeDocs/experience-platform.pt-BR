@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
+source-git-commit: ab868a813815e10b520cda2a0abe76e3acdd2ac6
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 10%
+source-wordcount: '531'
+ht-degree: 8%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 10%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Data Science Workspace](#dsw)
+- [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Fontes](#sources)
 
@@ -34,6 +35,17 @@ O Data Science Workspace usa o aprendizado de máquina e a inteligência artific
 | Atualizações de biblioteca e sistema operacional | O Data Science Workspace fez atualizações significativas de bibliotecas e SOs para melhorar a funcionalidade e usabilidade. Isso inclui o JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 com suporte para CUDA 11 e CUDNN 8 e muito mais. Para saber como visualizar as bibliotecas disponíveis no JupyterLab, visite a seção [bibliotecas compatíveis](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) na documentação de visão geral dos notebooks JupyterLab. |
 
 Para obter informações mais gerais sobre o Data Science Workspace, consulte a [Visão geral do Data Science Workspace](../../data-science-workspace/home.md).
+
+## Destinos {#destinations}
+
+Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| --- | --- |
+| [Exportações de arquivos incrementais mais rápidas](../../destinations/ui/activate-destinations.md#export-incremental-files) | Agora é possível agendar exportações de arquivos incrementais para destinos com base em arquivos a cada 3, 6, 8 e 12 horas. No momento, não há suporte para a alteração do agendamento de exportação de arquivos para segmentos que já foram salvos. Para reexportar segmentos com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras. |
+| [Suporte para chaves de desduplicação](../../destinations/ui/activate-destinations.md#deduplication-keys) | Elimine vários registros do mesmo perfil nos arquivos de exportação selecionando uma chave de desduplicação. Você pode selecionar um único namespace ou até dois atributos de esquema XDM como uma chave de desduplicação. |
 
 ## Experience Data Model (XDM) {#xdm}
 

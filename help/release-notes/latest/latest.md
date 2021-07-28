@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ab868a813815e10b520cda2a0abe76e3acdd2ac6
+source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 8%
+source-wordcount: '802'
+ht-degree: 7%
 
 ---
 
@@ -20,8 +20,10 @@ ht-degree: 8%
 Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [Data Science Workspace](#dsw)
+- [Fluxos de dados](#destinations)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Serviço de query](#query)
 - [Fontes](#sources)
 
 ## Data Science Workspace {#dsw}
@@ -35,6 +37,20 @@ O Data Science Workspace usa o aprendizado de máquina e a inteligência artific
 | Atualizações de biblioteca e sistema operacional | O Data Science Workspace fez atualizações significativas de bibliotecas e SOs para melhorar a funcionalidade e usabilidade. Isso inclui o JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 com suporte para CUDA 11 e CUDNN 8 e muito mais. Para saber como visualizar as bibliotecas disponíveis no JupyterLab, visite a seção [bibliotecas compatíveis](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) na documentação de visão geral dos notebooks JupyterLab. |
 
 Para obter informações mais gerais sobre o Data Science Workspace, consulte a [Visão geral do Data Science Workspace](../../data-science-workspace/home.md).
+
+## Fluxos de dados {#dataflows}
+
+Na Platform, os dados são assimilados de várias fontes diferentes, analisados no sistema e ativados para uma grande variedade de destinos. A Platform facilita o processo de rastreamento desse fluxo de dados potencialmente não linear ao fornecer transparência com fluxos de dados.
+
+Os fluxos de dados são uma representação de tarefas que movem dados pela plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados de conectores de origem para conjuntos de dados de destino, onde são utilizados pelo Serviço de identidade e pelo Perfil do cliente em tempo real antes de serem ativados para destinos.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Painel Destinos | Agora você pode usar o painel de monitoramento para monitorar os fluxos de dados para destinos do . Para saber mais, leia o tutorial em [destinos de monitoramento na interface do usuário](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
+
+Para obter informações mais gerais sobre fluxos de dados, consulte a [visão geral dos fluxos de dados](../../dataflows/home.md). Para saber mais sobre destinos, consulte a [visão geral de destinos](../../destinations/home.md).
 
 ## Destinos {#destinations}
 
@@ -51,13 +67,25 @@ Os destinos são integrações pré-criadas com plataformas de destino que permi
 
 O Experience Data Model (XDM) é uma especificação de código aberto criada para melhorar o poder das experiências digitais. Fornece estruturas e definições comuns para dados na forma de schemas, que permitem que qualquer aplicativo se comunique com os serviços da plataforma.
 
-**Novos recursos**
-
 | Recurso | Descrição |
 | --- | --- |
 | Filtro da indústria das telecomunicações | Ao adicionar grupos de campos a um schema na interface do usuário, agora é possível filtrar pelo setor de telecomunicações. Consulte o [diagrama de relacionamento da entidade do setor de telecomunicações (ERD)](../../xdm/schema/industries/telecom.md) para ver um modelo de dados recomendado para casos de uso de telecom. |
 
 Para obter informações mais gerais sobre XDM na Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md).
+
+## Serviço de query {#query}
+
+O Serviço de query fornece a capacidade de usar o SQL padrão para consultar dados no Adobe Experience Platform, suportando uma variedade de casos de uso de análise e gerenciamento de dados. É uma ferramenta sem servidor que permite unir conjuntos de dados do Data Lake e capturar os resultados da consulta como um novo conjunto de dados para uso em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+
+Você pode usar o Serviço de query para criar ecossistemas de análise de dados, criando uma imagem dos clientes em seus vários canais de interação. Esses canais podem incluir pontos de venda, Web, dispositivos móveis ou sistemas CRM.
+
+**Novos recursos**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Consultas agendadas | Agora é possível agendar consultas no Platform usando o Editor de consultas. Para saber mais, leia a documentação no [Editor de consultas](../../query-service/ui/user-guide.md#scheduled-queries). |
+
+Para obter mais informações, consulte a [documentação do Serviço de consulta](../../query-service/home.md).
 
 ## Fontes {#sources}
 

@@ -6,7 +6,7 @@ title: Monitorar fluxos de dados para destinos na interface do usuário
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
+source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 0%
@@ -117,7 +117,7 @@ A página de detalhes também exibe uma lista de identidades que falharam e iden
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Painel de monitoramento de destinos
+## Painel de monitoramento de destinos {#monitoring-destinations-dashboard}
 
 Para acessar o painel [!UICONTROL Monitoring], selecione **[!UICONTROL Monitoring]** (![ícone de monitoramento](../assets/ui/monitor-destinations/monitoring-icon.png)
 ) no painel de navegação esquerdo. Uma vez na página [!UICONTROL Monitoring], selecione [!UICONTROL Destinations]. O painel [!UICONTROL Monitoring] contém métricas e informações sobre as tarefas de execução de destino.

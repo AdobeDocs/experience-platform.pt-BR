@@ -1,10 +1,10 @@
 ---
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 79%
+source-wordcount: '1631'
+ht-degree: 78%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 
@@ -38,8 +38,6 @@ Os elementos de dados são preenchidos com dados quando usados em regras ou cham
 
 1. [Crie um elemento de dados](#create-a-data-element), se ainda não o fez.
 1. Use o elemento de dados em uma [regra](./rules.md) ou um script personalizado.
-
-Para assistir a um vídeo de introdução, consulte [Elementos de dados](../../quick-start/videos.md).
 
 ## Uso do elemento de dados
 

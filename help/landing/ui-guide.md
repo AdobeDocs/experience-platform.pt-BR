@@ -5,10 +5,9 @@ title: Visão geral da interface do usuário do Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1755'
 ht-degree: 3%
 
 ---
@@ -21,7 +20,7 @@ Para saber mais sobre o Adobe Experience Platform, leia a [Experience Platform o
 
 ## Tela inicial
 
-Depois de fazer logon no Adobe Experience Platform, você está na página [!UICONTROL Home], que é composta pelas seções [painel de métricas](#metrics), [dados recentes](#recent-data) e [aprendizagem recomendada](#recommended-learning).
+Depois de fazer logon no Adobe Experience Platform, você estará na página [!UICONTROL Início], que é composta pelas seções [painel de métricas](#metrics), [dados recentes](#recent-data) e [aprendizagem recomendada](#recommended-learning).
 
 ![](images/user-guide/homepage.png)
 
@@ -31,11 +30,11 @@ O painel de métricas fornece cartões que fornecem informações sobre conjunto
 
 ![](images/user-guide/homepage-dashboard.png)
 
-A seção **[!UICONTROL Datasets]** mostra o número de conjuntos de dados na organização IMS. Esse número é atualizado quando um novo conjunto de dados é criado. Mais informações sobre conjuntos de dados podem ser encontradas na [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
+A seção **[!UICONTROL Datasets]** mostra o número de conjuntos de dados em sua Organização IMS. Esse número é atualizado quando um novo conjunto de dados é criado. Mais informações sobre conjuntos de dados podem ser encontradas na [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
 
 A seção **[!UICONTROL Profiles]** mostra o número total de pessoas com perfis em sua Organização IMS, excluindo fragmentos de perfil. Esse número total de pessoas representa o público-alvo total endereçável e é atualizado uma vez a cada 24 horas. Mais informações sobre perfis podem ser encontradas na [Visão geral do Perfil do cliente em tempo real](../profile/home.md).
 
-A seção **[!UICONTROL Segments]** mostra o número total de segmentos criados na Organização IMS. Esse número é atualizado quando um novo segmento é criado. Mais informações sobre segmentos podem ser encontradas na [Visão geral do Serviço de segmentação](../segmentation/home.md).
+A seção **[!UICONTROL Segmentos]** mostra o número total de segmentos criados em sua Organização IMS. Esse número é atualizado quando um novo segmento é criado. Mais informações sobre segmentos podem ser encontradas na [Visão geral do Serviço de segmentação](../segmentation/home.md).
 
 A seção **[!UICONTROL Destinations]** mostra o número total de destinos criados para a Organização IMS. Esse número é atualizado quando um novo destino é criado. Mais informações sobre destinos podem ser encontradas na [visão geral de destinos](../destinations/home.md).
 
@@ -45,17 +44,17 @@ O painel de dados recente fornece informações sobre conjuntos de dados, fontes
 
 ![](images/user-guide/homepage-recent.png)
 
-A seção **[!UICONTROL Recent datasets]** lista os cinco conjuntos de dados criados mais recentemente na organização IMS. Essa lista é atualizada sempre que um novo conjunto de dados é criado. Você pode selecionar um conjunto de dados na lista para exibir mais informações sobre o conjunto de dados especificado ou selecionar **[!UICONTROL View all]** para ver uma lista de todos os conjuntos de dados criados. Mais informações sobre conjuntos de dados podem ser encontradas na [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
+A seção **[!UICONTROL Conjuntos de dados recentes]** lista os cinco conjuntos de dados criados mais recentemente na organização IMS. Essa lista é atualizada sempre que um novo conjunto de dados é criado. Você pode selecionar um conjunto de dados na lista para exibir mais informações sobre o conjunto de dados especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todos os conjuntos de dados criados. Mais informações sobre conjuntos de dados podem ser encontradas na [visão geral dos conjuntos de dados](../catalog/datasets/overview.md).
 
-A seção **[!UICONTROL Recent sources]** lista os cinco conectores de origem criados mais recentemente na organização IMS. Essa lista é atualizada sempre que um novo conector de origem é criado. Você pode selecionar uma conexão de origem na lista para exibir mais informações sobre o conector especificado ou selecionar **[!UICONTROL View all]** para ver uma lista de todas as conexões de origem criadas. Mais informações sobre fontes podem ser encontradas na [visão geral das fontes](../sources/home.md).
+A seção **[!UICONTROL Recent sources]** lista os cinco conectores de origem criados mais recentemente na organização do IMS. Essa lista é atualizada sempre que um novo conector de origem é criado. Você pode selecionar uma conexão de origem na lista para exibir mais informações sobre o conector especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todas as conexões de origem criadas. Mais informações sobre fontes podem ser encontradas na [visão geral das fontes](../sources/home.md).
 
-A seção **[!UICONTROL Recent segments]** lista as cinco definições de segmento criadas mais recentemente na Organização IMS. Essa lista é atualizada sempre que uma nova definição de segmento é criada. Você pode selecionar uma definição de segmento na lista para exibir mais informações sobre a definição de segmento especificada ou selecionar **[!UICONTROL View all]** para ver uma lista de todas as definições de segmento criadas. Mais informações sobre segmentos podem ser encontradas na [Visão geral do Serviço de segmentação](../segmentation/home.md).
+A seção **[!UICONTROL Recent segments]** lista as cinco definições de segmento criadas mais recentemente na organização IMS. Essa lista é atualizada sempre que uma nova definição de segmento é criada. Você pode selecionar uma definição de segmento na lista para exibir mais informações sobre a definição de segmento especificada ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todas as definições de segmento criadas. Mais informações sobre segmentos podem ser encontradas na [Visão geral do Serviço de segmentação](../segmentation/home.md).
 
-A seção **[!UICONTROL Recent destinations]** lista os cinco destinos criados mais recentemente na organização IMS. Essa lista é atualizada sempre que um novo destino é criado. Você pode selecionar um destino na lista para exibir mais informações sobre o destino especificado ou selecionar **[!UICONTROL View all]** para ver uma lista de todos os destinos criados. Mais informações sobre destinos podem ser encontradas na [visão geral de destinos](../destinations/home.md).
+A seção **[!UICONTROL Destinos recentes]** lista os cinco destinos criados mais recentemente na organização IMS. Essa lista é atualizada sempre que um novo destino é criado. Você pode selecionar um destino na lista para exibir mais informações sobre o destino especificado ou selecionar **[!UICONTROL Exibir todos]** para ver uma lista de todos os destinos criados. Mais informações sobre destinos podem ser encontradas na [visão geral de destinos](../destinations/home.md).
 
 ### Aprendizagem recomendada
 
-A seção **[!UICONTROL Recommended learning]** fornece links para a documentação útil para começar a usar o Adobe Experience Platform.
+A seção **[!UICONTROL Aprendizagem recomendada]** fornece links para a documentação útil para começar a usar o Adobe Experience Platform.
 
 ![](images/user-guide/homepage-recommended.png)
 
@@ -79,17 +78,17 @@ Selecionar o alternador abre um menu suspenso de Organizações IMS às quais vo
 
 ### Aplicativos de switch
 
-O próximo item no lado direito da navegação superior é o **application switcher**, representado pelo ícone ![application switcher](./images/user-guide/app-switcher-icon.png). Ao selecionar esse ícone, você pode alternar entre aplicativos do Adobe aos quais a sua Organização IMS tem acesso, como Experience Platform, Analytics, Assets e Launch.
+O próximo item no lado direito da navegação superior é o **application switcher**, representado pelo ícone ![application switcher](./images/user-guide/app-switcher-icon.png). Ao selecionar esse ícone, você pode alternar entre aplicativos do Adobe aos quais a sua Organização IMS tem acesso, como Experience Platform, Analytics, Assets e outros.
 
 ### Ajuda
 
-À direita do alternador de aplicativos, há o **menu de ajuda e suporte**, que é representado pelo ícone ![ponto de interrogação/ajuda](./images/user-guide/help-icon.png). Ao selecionar esse ícone, um menu pop-up é exibido, contendo vários recursos de ajuda e suporte. A guia **[!UICONTROL Help]** mostra uma lista de documentação relevante para a página em que você está no momento. A guia **[!UICONTROL Support]** permite criar um tíquete de suporte com a equipe de suporte do Adobe. A guia **[!UICONTROL Feedback]** permite enviar feedback sobre a Platform para o Adobe.
+À direita do alternador de aplicativos, há o **menu de ajuda e suporte**, que é representado pelo ícone ![ponto de interrogação/ajuda](./images/user-guide/help-icon.png). Ao selecionar esse ícone, um menu pop-up é exibido, contendo vários recursos de ajuda e suporte. A guia **[!UICONTROL Ajuda]** mostra uma lista de documentação relevante para a página em que você está no momento. A guia **[!UICONTROL Support]** permite criar um tíquete de suporte com a equipe de suporte do Adobe. A guia **[!UICONTROL Feedback]** permite enviar feedback sobre a Platform para o Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Notificações e anúncios
 
-Na seção **notifications**, que é representada pelo ícone ![bell/Notifications and Announces](images/user-guide/notification-icon.png). A guia **[!UICONTROL Notifications]** mostra informações importantes sobre o produto e outras atualizações relevantes, enquanto a guia **[!UICONTROL Announcements]** mostra informações sobre a manutenção do serviço.
+Na seção **notifications**, que é representada pelo ícone ![bell/Notifications and Announces](images/user-guide/notification-icon.png). A guia **[!UICONTROL Notifications]** mostra informações importantes sobre o produto e outras atualizações relevantes, enquanto a guia **[!UICONTROL Announces]** mostra informações sobre a manutenção do serviço.
 
 ### Perfil de usuário
 
@@ -111,15 +110,15 @@ A navegação no lado esquerdo da tela lista todos os diferentes serviços compa
 
 A seção **[!UICONTROL Home]** permite retornar à página inicial da interface do usuário da plataforma.
 
-A seção **[!UICONTROL Workflows]** mostra uma lista de fluxos de trabalho de várias etapas para executar operações no Platform. Mais informações sobre workflows podem ser encontradas na [visão geral dos workflows](./workflows.md).
+A seção **[!UICONTROL Workflows]** mostra uma lista de workflows em várias etapas para executar operações dentro da plataforma. Mais informações sobre workflows podem ser encontradas na [visão geral dos workflows](./workflows.md).
 
-### [!UICONTROL Connections]
+### [!UICONTROL Conexões]
 
 A seção **[!UICONTROL Sources]** permite criar, atualizar e excluir conexões de origem, permitindo assimilar dados de fontes externas na Plataforma. Mais informações sobre fontes podem ser encontradas na [visão geral das fontes](../sources/home.md).
 
 A seção **[!UICONTROL Destinations]** permite criar, atualizar e excluir destinos, permitindo exportar dados da Platform para muitos destinos externos. Mais informações sobre destinos podem ser encontradas na [visão geral de destinos](../destinations/home.md).
 
-### [!UICONTROL Customer]
+### [!UICONTROL Cliente]
 
 A seção **[!UICONTROL Profiles]** permite navegar pelos perfis do cliente, visualizar métricas de perfil, criar e gerenciar políticas de mesclagem e visualizar esquemas de união. Para saber mais sobre como usar a seção [!UICONTROL Profiles], leia o [[!DNL Profile] guia do usuário](../profile/ui/user-guide.md). Mais informações sobre o Perfil do cliente em tempo real podem ser encontradas na [Visão geral do perfil do cliente em tempo real](../profile/home.md).
 
@@ -127,35 +126,35 @@ A seção **[!UICONTROL Segments]** permite criar e gerenciar definições de se
 
 A seção **[!UICONTROL Identities]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre a seção [!UICONTROL Identities], incluindo informações sobre namespaces de identidade e como usar identidades na interface do usuário da plataforma, consulte a [visão geral do namespace de identidade](../identity-service/namespaces.md).
 
-### [!UICONTROL Privacy]
+### [!UICONTROL Privacidade]
 
-A seção **[!UICONTROL Policies]** permite criar e gerenciar políticas de uso de dados. Para saber mais sobre como usar a seção Políticas , leia o [guia do usuário das políticas de uso de dados](../data-governance/policies/user-guide.md). Mais informações sobre as políticas de uso de dados podem ser encontradas na [visão geral das políticas de uso de dados](../data-governance/policies/overview.md).
+A seção **[!UICONTROL Policies]** permite criar e gerenciar as políticas de uso de dados. Para saber mais sobre como usar a seção Políticas , leia o [guia do usuário das políticas de uso de dados](../data-governance/policies/user-guide.md). Mais informações sobre as políticas de uso de dados podem ser encontradas na [visão geral das políticas de uso de dados](../data-governance/policies/overview.md).
 
 A seção **[!UICONTROL Requests]** permite criar e gerenciar solicitações de privacidade. Observe que você deve ser incluir na lista de permissões para ter acesso à interface do usuário do Privacy Service. Para saber mais sobre como usar a seção Solicitações, leia o [guia do usuário do Privacy Service](../privacy-service/ui/user-guide.md). Mais informações sobre o Privacy Service podem ser encontradas na [Privacy Service overview](../privacy-service/home.md).
 
-### [!UICONTROL Data Science]
+### [!UICONTROL Ciência de dados]
 
 A seção **[!UICONTROL Notebooks]** fornece acesso ao JupyterLab, um ambiente de desenvolvimento interativo que permite explorar, analisar e modelar seus dados. Para saber mais sobre como usar a seção Notebooks , leia o [Guia do usuário do JupyterLab](../data-science-workspace/jupyterlab/overview.md). Mais informações sobre o Data Science Workspace podem ser encontradas na [Visão geral do Data Science Workspace](../data-science-workspace/home.md)
 
-A seção **[!UICONTROL Models]** permite que você aproveite o aprendizado de máquina e a inteligência artificial para criar, desenvolver, treinar e ajustar modelos para fazer previsões. Mais informações sobre a seção Modelos podem ser encontradas no tutorial em [treinamento e avaliar um modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+A seção **[!UICONTROL Modelos]** permite que você aproveite o aprendizado de máquina e a inteligência artificial para criar, desenvolver, treinar e ajustar modelos para fazer previsões. Mais informações sobre a seção Modelos podem ser encontradas no tutorial em [treinamento e avaliar um modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-A seção **[!UICONTROL Services]** permite gerenciar seus modelos publicados para pontuação de treinamento programado ou aproveitar os Serviços inteligentes Adobe, um conjunto de serviços de IA que fornecem experiências personalizadas em tempo real para os clientes. Mais informações sobre a seção Serviços podem ser encontradas no [Tutorial Publicação de um modelo como um serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+A seção **[!UICONTROL Services]** permite gerenciar seus modelos publicados para treinamento programado ou aproveitar os serviços Adobe e de pontuação Inteligente, um conjunto de serviços de IA que fornecem experiências personalizadas em tempo real para os clientes. Mais informações sobre a seção Serviços podem ser encontradas no [Tutorial Publicação de um modelo como um serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
-### [!UICONTROL Data management]
+### [!UICONTROL Gerenciamento de dados]
 
 A seção **[!UICONTROL Schemas]** permite criar e gerenciar esquemas do Experience Data Model (XDM). Para saber mais sobre schemas, leia o tutorial em [criar um schema](../xdm/tutorials/create-schema-ui.md). Mais informações sobre o XDM podem ser encontradas na [Visão geral do sistema XDM](../xdm/home.md).
 
 A seção **[!UICONTROL Datasets]** permite criar e gerenciar conjuntos de dados. Mais informações sobre conjuntos de dados podem ser encontradas no [guia do usuário dos conjuntos de dados](../catalog/datasets/user-guide.md).
 
-A seção **[!UICONTROL Queries]** permite criar e gerenciar consultas, registrar consultas SQL realizadas pelo Adobe Experience Platform Query Service e exibir suas credenciais PostgreSQL. Mais informações sobre consultas podem ser encontradas no [Guia do usuário do Serviço de Consulta](../query-service/ui/overview.md).
+A seção **[!UICONTROL Queries]** permite criar e gerenciar consultas, registrar consultas SQL feitas pelo Adobe Experience Platform Query Service e exibir suas credenciais PostgreSQL. Mais informações sobre consultas podem ser encontradas no [Guia do usuário do Serviço de Consulta](../query-service/ui/overview.md).
 
 A seção **[!UICONTROL Monitoring]** permite monitorar a assimilação em lote e streaming. Mais informações sobre o monitoramento podem ser encontradas no [guia do usuário de assimilação de dados de monitoramento](../ingestion/quality/monitor-data-ingestion.md).
 
-### [!UICONTROL Decisioning]
+### [!UICONTROL Decisão]
 
 O Offer Decisioning é um serviço de aplicativos integrado à Adobe Experience Platform. Ele permite usar a Experience Platform para oferecer a melhor oferta e experiência aos clientes em todos os pontos de contato na hora certa. Para saber mais sobre o Offer Decisioning, incluindo trabalhar com [!UICONTROL Offers] e [!UICONTROL Activities], visite a [documentação do Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html).
 
-### [!UICONTROL Administration]
+### [!UICONTROL Administração]
 
 A interface do usuário da Platform (UI) fornece um painel através do qual você pode visualizar informações importantes sobre o uso de licenças da organização, conforme capturado durante um instantâneo diário. Isso pode ser acessado selecionando **[!UICONTROL License usage]** na navegação. Para saber mais sobre o painel de uso da licença, visite o [guia do painel de uso da licença](license-usage-dashboard.md).
 

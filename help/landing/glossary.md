@@ -5,10 +5,9 @@ title: Glossário do Adobe Experience Platform
 topic-legacy: getting started
 description: Um glossário de terminologia importante na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '7147'
+source-wordcount: '7225'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 1%
 
 **ID** da chave de acesso: Uma ID de chave de acesso é um identificador exclusivo associado a uma chave de acesso secreta  [!DNL Amazon] S3. A ID da chave de acesso e a chave de acesso secreta são usadas em conjunto para assinar [!DNL Amazon Web Services] (AWS) solicitações.
 
-**Ação**: No  [!DNL Platform Launch], uma ação é um tipo específico de componente de regra que define o que deve ocorrer depois que um evento ocorre e as condições são avaliadas e passadas.
+**Ação**: No contexto de tags, uma ação é um tipo específico de componente de regra que define o que deve ocorrer depois que um evento ocorre e as condições são avaliadas e passadas.
 
 **Ativar**: Ativar é a ação realizada por um usuário para mapear um segmento ou perfis para um destino, como  [!DNL Oracle Eloqua],  [!DNL Google], ou  [!DNL Salesforce Marketing Cloud].
 
@@ -32,8 +31,6 @@ ht-degree: 1%
 **Adobe Admin Console**: A Adobe Admin Console fornece um local central para gerenciar direitos de produto e acesso do Adobe para sua organização. Por meio do console, os administradores podem conceder a grupos de usuários permissões de acesso para vários recursos da plataforma, como &quot;Gerenciar conjuntos de dados&quot;, &quot;Visualizar conjuntos de dados&quot; ou &quot;Gerenciar perfis&quot;.
 
 **Adobe Experience Platform**: A Adobe Experience Platform padroniza dados e conteúdo em toda a empresa, acionando perfis de clientes em tempo real, permitindo a ciência de dados e acelerando a velocidade do conteúdo para impulsionar a personalização da experiência na jornada do cliente.
-
-**Adobe Experience Platform Launch**:  [!DNL Platform Launch] O é um ecossistema de gerenciamento de tags e SDK, integrado ao Experience Platform e  [!DNL Experience Cloud] aplicativos. [!DNL Platform Launch] O fornece ferramentas para implantar, unificar e gerenciar integrações de análise, marketing e publicidade necessárias para potencializar experiências de clientes relevantes em todos os dispositivos clientes.
 
 **Serviço** de query do Adobe Experience Platform: Permite que analistas de dados consultem eventos e perfis para uso em análises e aprendizado de máquina. Com o Serviço de query, cientistas e analistas de dados podem obter todos os seus conjuntos de dados armazenados no Experience Platform (incluindo dados comportamentais, bem como ponto de venda (POS), gerenciamento de relacionamento com o cliente (CRM) e muito mais) e consultar esses conjuntos de dados para responder perguntas específicas sobre os dados.
 
@@ -81,7 +78,7 @@ ht-degree: 1%
 
 **Segmentação** em lote: A segmentação em lote é uma alternativa a um processo de seleção de dados contínuo e move todos os dados de perfil de uma só vez por meio de definições de segmento para produzir públicos correspondentes. Depois de criado, esse segmento é salvo e armazenado para que possa ser exportado para uso.
 
-**Criar**: No  [!DNL Platform Launch], uma build é um arquivo ou conjunto de arquivos que contém todas as configurações e códigos necessários para executar a lógica comercial contida em uma biblioteca, permitindo implantar essa biblioteca no site ou no aplicativo móvel.
+**Criar**: No contexto de tags, uma build é um arquivo ou conjunto de arquivos que contêm todas as configurações e códigos necessários para executar a lógica comercial contida em uma biblioteca, permitindo implantar essa biblioteca no site ou no aplicativo móvel.
 
 **Ferramentas** de inteligência empresarial: As ferramentas de Inteligência empresarial (BI, Business Intelligence) são integradas primariamente ao  [!DNL Experience Platform Query Service]. As ferramentas de BI são tipos de software de aplicativos que coletam e processam grandes quantidades de dados não estruturados de sistemas internos e externos.
 
@@ -105,7 +102,7 @@ ht-degree: 1%
 
 **Composição**: Uma composição é um agrupamento de componentes que formam juntos para formar o schema.
 
-**Condição**: No  [!DNL Platform Launch], uma condição é um componente de regra que avalia uma instrução lógica que deve retornar  `true` ou  `false`. Todas as condições devem ser avaliadas como `true` e todas as condições de exceção devem ser avaliadas como `false` antes que qualquer ação na regra seja executada.
+**Condição**: No contexto de tags, uma condição é um componente de regra que avalia uma declaração lógica que deve retornar  `true` ou  `false`. Todas as condições devem ser avaliadas como `true` e todas as condições de exceção devem ser avaliadas como `false` antes que qualquer ação na regra seja executada.
 
 **Console**: No  [!DNL Query Service], o console fornece informações sobre o status e a operação de um query. O console exibe o status da conexão com [!DNL Query Service], as operações de consulta que estão sendo executadas e quaisquer mensagens de erro que resultem dessas consultas.
 
@@ -147,13 +144,13 @@ ht-degree: 1%
 
 ## D
 
-**Dicionário** de dados: No  [!DNL Platform Launch], um dicionário de dados (também conhecido como mapa de dados) é um conjunto de elementos de dados definidos em uma propriedade.
+**Dicionário** de dados: No contexto de tags, um dicionário de dados (também conhecido como mapa de dados) é um conjunto de elementos de dados definidos em uma propriedade.
 
-**Elemento** de dados: No  [!DNL Platform Launch], um elemento de dados é um ponteiro usado nas regras e extensões para apontar para uma parte específica dos dados existentes no dispositivo cliente.
+**Elemento** de dados: No contexto de tags, um elemento de dados é um ponteiro usado em regras e extensões para apontar para uma parte específica dos dados existentes no dispositivo cliente.
 
 **Assimilação** de dados: A assimilação de dados é o processo de adição de dados de uma fonte ao Experience Platform. Os dados podem ser assimilados na plataforma de várias maneiras, incluindo streaming, lotes ou adicionados por meio de conectores de origem.
 
-**Camada** de dados: No  [!DNL Platform Launch], uma camada de dados é uma estrutura de dados que existe no dispositivo cliente e que contém metadados sobre o contexto em que uma página ou tela é visualizada.
+**Camada** de dados: No contexto de tags, uma camada de dados é uma estrutura de dados existente no dispositivo cliente que contém metadados sobre o contexto em que uma página ou tela é visualizada.
 
 **Governança** de dados: O controle de dados abrange as estratégias e tecnologias usadas para garantir que os dados estejam em conformidade com os regulamentos e as políticas organizacionais em relação ao uso de dados.
 
@@ -195,7 +192,7 @@ ht-degree: 1%
 
 **Catálogo** de destino: Um catálogo de destino é uma lista de destinos disponíveis no Experience Platform.
 
-**Regras** de chamada direta: No  [!DNL Platform Launch], uma regra de chamada direta é uma regra que é executada quando é chamada diretamente da página, ignorando a detecção de eventos e os sistemas de pesquisa.
+**Regras** de chamada direta: No contexto das tags , uma regra de chamada direta é uma regra que é executada quando é chamada diretamente da página, ignorando a detecção de eventos e os sistemas de pesquisa.
 
 **Nome** de exibição: No Experience Data Model (XDM), um nome de exibição é amigável para um campo que é mostrado na interface do usuário.
 
@@ -207,15 +204,15 @@ ht-degree: 1%
 
 **Ação** de marketing de direcionamento de email: Uma ação de marketing que usa dados em campanhas de segmentação de email.
 
-**Código** incorporado: No  [!DNL Platform Launch], o código incorporado é uma tag de script colocada no HTML em um site ou ambiente. O código incorporado instrui o navegador para onde recuperar a build.
+**Código** incorporado: No contexto de tags, o código incorporado é uma tag de script colocada no HTML em um site ou ambiente. O código incorporado instrui o navegador para onde recuperar a build.
 
 **Enumeração**: Uma enumeração (enum) é um campo XDM restrito a um conjunto de valores predefinidos.
 
-**Ambiente**: No  [!DNL Platform Launch], um ambiente é um conjunto de instruções de implantação que especifica o delivery do host e o formato de arquivo de uma build. Uma biblioteca deve ser emparelhada a um ambiente antes de ser criada.
+**Ambiente**: No contexto de tags, um ambiente é um conjunto de instruções de implantação que especifica o delivery do host e o formato de arquivo de uma build. Uma biblioteca deve ser emparelhada a um ambiente antes de ser criada.
 
 **Diagnósticos** de erro: Os diagnósticos de erros permitem a geração de mensagens de erro detalhadas para lotes assimilados. O limite de erro permite configurar a porcentagem de erros aceitáveis antes que um lote falhe.
 
-**Evento**: No  [!DNL Platform Launch], um evento é um tipo específico de componente de regra, que é um acionador que ocorre em um dispositivo cliente para iniciar a execução de uma regra.
+**Evento**: No contexto de tags, um evento é um tipo específico de componente de regra, que é um acionador que ocorre em um dispositivo cliente para iniciar a execução de uma regra.
 
 **Entidades** de evento: No contexto da modelagem de dados, as entidades de evento representam conceitos relacionados às ações que um cliente pode realizar, eventos do sistema ou qualquer outro conceito, onde você pode querer rastrear as alterações ao longo do tempo. As entidades que se enquadram nesta categoria devem ser representadas por esquemas baseados na classe [!DNL XDM ExperienceEvent].
 
@@ -227,9 +224,9 @@ ht-degree: 1%
 
 **Evento** de experiência: Um Evento de experiência representa um instantâneo do sistema quando ocorre uma interação ou evento relacionado a uma experiência do cliente. Os Eventos de experiência são registros de fatos imutáveis do que aconteceu e representam o que aconteceu sem agregação ou interpretação. No Experience Data Model (XDM), esse conceito é capturado pela classe [!DNL XDM ExperienceEvent].
 
-**Extensão**: No  [!DNL Platform Launch], uma extensão é um pacote de funcionalidade adicionada a uma  [!DNL Platform Launch] propriedade. Normalmente, uma extensão é focada em uma solução de marketing ou análise específica e fornece as ferramentas necessárias para implantar essa tecnologia em um ambiente cliente.
+**Extensão**: No contexto de tags, uma extensão é um pacote de funcionalidade adicionada a uma propriedade de tag. Normalmente, uma extensão é focada em uma solução de marketing ou análise específica e fornece as ferramentas necessárias para implantar essa tecnologia em um ambiente cliente.
 
-**Pacote** de extensão: No  [!DNL Platform Launch], um pacote de extensão é um arquivo ZIP criado e carregado por um desenvolvedor de extensão que fornece tudo o que é necessário para  [!DNL Platform Launch] os usuários instalarem a extensão dentro de sua propriedade. Um pacote de extensão contém um manifesto especificando informações sobre a extensão, o HTML/JavaScript necessário para que os usuários finais configurem o comportamento da extensão [!DNL Platform Launch] e o JavaScript executável entregue ao ambiente cliente (se necessário).
+**Pacote** de extensão: No contexto de tags, um pacote de extensão é um arquivo ZIP criado e carregado por um desenvolvedor de extensão que fornece tudo o que é necessário para que os usuários das tags instalem a extensão dentro de suas propriedades. Um pacote de extensão contém um manifesto especificando informações sobre a extensão, o HTML/JavaScript necessário para que os usuários finais configurem o comportamento da extensão de tag e o JavaScript executável entregue ao ambiente do cliente (se necessário).
 
 ## F
 
@@ -255,7 +252,7 @@ ht-degree: 1%
 
 ## H
 
-**Host**: No  [!DNL Platform Launch], um host especifica o local, o domínio e as credenciais do usuário necessárias  [!DNL Platform Launch] para fornecer uma criação.
+**Host**: No contexto de tags, um host especifica o local, o domínio e as credenciais do usuário necessárias para que o sistema forneça uma build.
 
 ## I
 
@@ -265,7 +262,7 @@ ht-degree: 1%
 
 **Rótulos** de identidade (&quot;I&quot;): Os rótulos de uso de dados de identidade (&quot;I&quot;) são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica.
 
-**Gráfico** de identidade: Um gráfico de identidade é um mapa de relacionamentos entre identidades compiladas e vinculadas que existem para um cliente individual. Cada gráfico de identidade é atualizado em tempo quase real com a atividade do cliente. A estrutura comum de relacionamentos de identidade em seus dados é representada pelo [!UICONTROL Private Graph], que serve como o blueprint estrutural de cada gráfico de identidade individual.
+**Gráfico** de identidade: Um gráfico de identidade é um mapa de relacionamentos entre identidades compiladas e vinculadas que existem para um cliente individual. Cada gráfico de identidade é atualizado em tempo quase real com a atividade do cliente. A estrutura comum de relacionamentos de identidade em seus dados é representada pelo [!UICONTROL Gráfico privado], que serve como o blueprint estrutural para cada gráfico de identidade individual.
 
 **Namespace** de identidade: Um namespace de identidade define o contexto de um identificador, como um endereço de email ou ID de CRM.
 
@@ -307,7 +304,7 @@ ht-degree: 1%
 
 ## L
 
-**Biblioteca**: No  [!DNL Platform Launch], uma biblioteca é um conjunto de lógicas de negócios que contém instruções de como a  [!DNL Platform Launch] biblioteca deve se comportar no dispositivo cliente.
+**Biblioteca**: No contexto de tags, uma biblioteca é um conjunto de lógicas de negócios que contém instruções de como a biblioteca de tags deve se comportar no dispositivo cliente.
 
 **Entidades** de pesquisa: No contexto da modelagem de dados, as entidades de pesquisa representam conceitos que podem estar relacionados a uma pessoa individual, mas não podem ser usadas diretamente para identificar o indivíduo. As entidades que se enquadram nesta categoria devem ser representadas por esquemas baseados em classes personalizadas do Experience Data Model (XDM).
 
@@ -327,7 +324,7 @@ ht-degree: 1%
 
 **Mistura**: Consulte &quot;Grupo de campos do esquema&quot;.
 
-**Módulo**: No  [!DNL Platform Launch], um módulo é um snippet do JavaScript executável fornecido por uma extensão, que executa ações em um ambiente cliente sem precisar criar uma regra.
+**Módulo**: No contexto de tags, um módulo é um snippet do JavaScript executável fornecido por uma extensão, que executa ações em um ambiente cliente sem precisar criar uma regra.
 
 ## N
 
@@ -351,7 +348,7 @@ ht-degree: 1%
 
 ## P
 
-**Ingestão** parcial: A assimilação parcial permite a assimilação de registros válidos de dados em lote dentro de um limite de erro especificado. Os diagnósticos de erros para registros com falha podem ser baixados ou acessados na [!UICONTROL Monitoring] ou [!UICONTROL Sources] visão geral da execução do fluxo de dados.
+**Ingestão** parcial: A assimilação parcial permite a assimilação de registros válidos de dados em lote dentro de um limite de erro especificado. Os diagnósticos de erros para registros com falha podem ser baixados ou acessados na [!UICONTROL Visão geral da execução do fluxo de dados Monitoring] ou [!UICONTROL Sources].
 
 **Arquivos** de parâmetro: Um arquivo Parquet é um formato de arquivo de armazenamento em colunas com estruturas de dados aninhadas complexas. Os arquivos de parâmetro são necessários para adicionar dados para preencher um conjunto de dados de esquema.
 
@@ -391,7 +388,7 @@ ht-degree: 1%
 
 **ID** do perfil: Uma ID de perfil é um identificador gerado automaticamente associado a um tipo de identidade e representa um perfil.
 
-**Propriedade**: No  [!DNL Platform Launch], uma propriedade do é um contêiner de tudo o que é necessário para implantar um conjunto de tags.
+**Propriedade**: No contexto de tags, uma propriedade é um contêiner de tudo o que é necessário para implantar um conjunto de tags.
 
 ## Q
 
@@ -415,13 +412,13 @@ ht-degree: 1%
 
 **Representação**: No  [!DNL Offer Decisioning], uma representação são informações usadas por um canal para exibir uma oferta, como local ou idioma.
 
-**Recurso**: No  [!DNL Platform Launch], um recurso é um termo genérico que se refere às opções que o  [!DNL Platform Launch] usuário pode configurar no ambiente do cliente, incluindo extensões, elementos de dados e regras.
+**Recurso**: No contexto de tags, um recurso é um termo genérico que se refere às opções que o usuário da tag pode configurar dentro do ambiente do cliente, incluindo extensões, elementos de dados e regras.
 
 **Controle** de acesso baseado em funções: O controle de acesso baseado em funções permite que os administradores atribuam acesso e permissões aos usuários do Experience Platform. As permissões incluem a capacidade de exibir e/ou usar recursos do Experience Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados.
 
-**Regra**: No  [!DNL Platform Launch], uma regra é uma coleção de componentes que definem um conjunto específico de eventos, condições e ações que devem ser agrupados logicamente.
+**Regra**: No contexto de tags, uma regra é uma coleção de componentes que definem um conjunto específico de eventos, condições e ações que devem ser agrupados logicamente.
 
-**Componente** de regra: No  [!DNL Platform Launch], os componentes da regra são os eventos, as condições e as ações que compõem uma regra.
+**Componente** de regra: No contexto de tags, os componentes da regra são os eventos, as condições e as ações que compõem uma regra.
 
 **Tempo de execução**: O tempo de execução especifica um ambiente de tempo de execução para uma fórmula de aprendizado de máquina. [!DNL Python]Os tempos de execução do , R,  [!DNL Spark], PySpark e Tensorflow permitem que você insira um URL para uma imagem do Docker de uma fonte de receita.
 
@@ -501,6 +498,8 @@ ht-degree: 1%
 
 ## T
 
+**Tags**: No Adobe Experience Platform, as tags fornecem ferramentas para implantar, unificar e gerenciar integrações de análise, marketing e anúncios necessárias para potencializar experiências de cliente relevantes em todos os dispositivos clientes.
+
 **Recursos** do Target: No mapeamento de recursos, um recurso de destino é o recurso previsto por um modelo.
 
 **Dados** da série cronológica: Os dados das séries cronológicas fornecem um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de um registro.
@@ -527,7 +526,7 @@ ht-degree: 1%
 
 **Perfil** individual XDM: O XDM  [!DNL Individual Profile] é uma classe baseada em registros que forma uma representação singular dos atributos de indivíduos identificados e parcialmente identificados. Os perfis altamente identificados podem ser usados para comunicações pessoais ou participações direcionadas e podem conter informações pessoais detalhadas, como nome, gênero, data de nascimento, local e informações de contato, incluindo números de telefone e endereços de email.
 
-**Sistema** XDM: O Sistema XDM representa a estrutura que opera os esquemas XDM para uso nos serviços Experience Platform downstream.
+**Sistema** XDM: O Sistema XDM representa a estrutura que opera esquemas XDM para uso em serviços Experience Platform downstream.
 
 ## Y
 

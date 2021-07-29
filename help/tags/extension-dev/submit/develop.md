@@ -1,10 +1,10 @@
 ---
 title: Desenvolver uma extensão
 description: Este documento fornece uma visão geral do processo de desenvolvimento da extensão de tag com links para documentação adicional para processos mais detalhados.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 46%
+source-wordcount: '531'
+ht-degree: 43%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma extensão de tag deve ser considerada como um produto (pequeno) com suas próprias necessidades. Determinar como um usuário do Adobe Experience Platform desejará usar sua extensão pode ajudar você a classificar a funcionalidade em quais tipos de evento, tipos de condição, tipos de ação e tipos de elementos de dados sua extensão deve fornecer.
 

@@ -4,9 +4,9 @@ user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Coleta de dados
-source-git-commit: 5da1fd18e0032c5e3d6695639f98a7ee683819f1
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 79%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 79%
 * Introdução {#get-started}
    * [Manual de início rápido](./quick-start/quick-start.md)
    * [Guias de implementação](./quick-start/implementation-guides.md)
-   * [Vídeos](./quick-start/videos.md)
 * Interface do usuário da coleta de dados {#ui}
    * [Visão geral](./ui/managing-resources/overview.md)
    * Extensões {#extensions}

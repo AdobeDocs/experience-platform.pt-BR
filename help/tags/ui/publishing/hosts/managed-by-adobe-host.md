@@ -1,10 +1,10 @@
 ---
 title: Visão geral dos hosts gerenciados pela Adobe
 description: Saiba mais sobre a opção de hospedagem padrão para implantar builds de bibliotecas de tags no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 66%
+source-wordcount: '1175'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Hosts gerenciados pelo Adobe são a configuração padrão do host para implantar builds de biblioteca de tags no Adobe Experience Platform. Ao criar uma nova propriedade por meio da interface do usuário da Coleta de dados, um host padrão gerenciado por Adobe é criado para você.
 
@@ -89,7 +89,7 @@ Os cabeçalhos de controle de cache são aplicados apenas à build da biblioteca
 
 ## Usar a hospedagem gerenciada por Adobe na interface do usuário da coleta de dados
 
-Quando você cria uma propriedade na [Interface do usuário da coleta de dados](http://launch.adobe.com/br) pela primeira vez, um host gerenciado pelo Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pelo Adobe por padrão.
+Quando você cria uma propriedade na [Interface do usuário da coleta de dados](https://experience.adobe.com/#/data-collection/) pela primeira vez, um host gerenciado pelo Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pelo Adobe por padrão.
 
 >[!NOTE]
 >

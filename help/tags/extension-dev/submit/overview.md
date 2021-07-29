@@ -1,10 +1,10 @@
 ---
 title: Visão geral do processo de envio de extensão
 description: Saiba mais sobre as etapas para enviar sua extensão no Adobe Experience Platform do desenvolvimento para o lançamento.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 41%
+source-wordcount: '229'
+ht-degree: 34%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Enviar uma extensão para o catálogo de coleta de dados no Adobe Experience Platform pode parecer uma tarefa intimidante. Este documento fornece um guia passo a passo para enviar sua extensão por meio do uso de guias sequenciais individuais. Para enviar sua extensão, é necessário concluir as seguintes etapas:
 

@@ -1,10 +1,10 @@
 ---
 title: Fluxo de publicação
 description: Saiba mais sobre o processo de criação de bibliotecas, o teste de builds e a aprovação deles para produção no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 92%
+source-wordcount: '1499'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O fluxo de publicação de tags no Adobe Experience Platform refere-se ao processo de criação de bibliotecas, teste builds e aprovação para produção.
 
@@ -63,7 +63,7 @@ A tabela a seguir descreve as ações disponíveis para uma biblioteca no estado
 | [!UICONTROL Enviar e criar para preparo] | Isso só pode ser executado por um usuário com os direitos de Desenvolver e Aprovar. Essa ação desmarca a biblioteca do ambiente de desenvolvimento, move a biblioteca para o estado [!UICONTROL Enviado] e cria a bibilioteca para o ambiente de preparo. A última criação da biblioteca deve ter sido bem-sucedida para que essa opção seja ativada. |
 | [!UICONTROL Aprovar para publicação] | Isso só pode ser executado por um usuário com os direitos de Desenvolver e Aprovar. Essa ação desatribui a biblioteca do ambiente de desenvolvimento e a move para o estado [!UICONTROL Aprovado], ignorando completamente o ambiente de preparo e o estado [!UICONTROL Enviado]. A última criação da biblioteca deve ter sido bem-sucedida para que essa opção seja ativada. |
 | [!UICONTROL Aprovar e publicar para a produção] | Isso só pode ser executado por um usuário com os direitos de Desenvolver, Aprovar e Publicar. Essa ação desatribui a biblioteca do ambiente de desenvolvimento, move a mesma para o estado [!UICONTROL Aprovado] e publica para a produção. Após a conclusão do build de produção, a biblioteca será movida para o estado [!UICONTROL Publicado]. A última criação da biblioteca deve ter sido bem-sucedida para que essa opção seja ativada. |
-| [!UICONTROL Excluir] | Remova a biblioteca do Platform Launch. Essa ação não removerá a build do ambiente. |
+| [!UICONTROL Excluir] | Remova a biblioteca do sistema. Essa ação não removerá a build do ambiente. |
 
 ### [!UICONTROL Enviada] {#submitted}
 

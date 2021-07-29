@@ -5,9 +5,9 @@ title: Visão geral da coleção de dados
 topic-legacy: overview
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '304'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,8 @@ A coleta de dados é compatível com as seguintes fontes do lado do cliente:
 As tecnologias de coleta de dados fornecidas pelo Experience Platform se concentram na descoberta e acessibilidade de conjuntos de dados assimilados. Essas tecnologias incluem o seguinte:
 
 * [Rede de borda Adobe Experience Platform](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Tags](../tags/home.md)
+* [Encaminhamento de evento](../tags/ui/event-forwarding/overview.md)
 * [SDK da Web da Adobe Experience Platform](../edge/home.md)
 * [Experience Data Model (XDM)](../xdm/home.md)
 
@@ -37,7 +38,7 @@ Os SDKs móveis e da Web da Adobe Experience Platform recolhem e compactam todas
 
 ## Processo de mudança para implantar a tecnologia Adobe
 
-A Platform Edge Network é uma rede distribuída globalmente, rápida e confiável, de servidores capazes de receber e processar dados em grande escala. Usando o Platform launch, você pode configurar [datastreams](../edge/fundamentals/datastreams.md) para produtos como Adobe Target, Adobe Audience Manager e Adobe Analytics, que permitem ativar esses produtos no lado do servidor sem alterar o código do lado do cliente.
+A Platform Edge Network é uma rede distribuída globalmente, rápida e confiável, de servidores capazes de receber e processar dados em grande escala. Usando tags, você pode configurar [datastreams](../edge/fundamentals/datastreams.md) para produtos como Adobe Target, Adobe Audience Manager e Adobe Analytics, que permitem ativar esses produtos no lado do servidor sem alterar o código do lado do cliente.
 
 ![](./images/deploy.png)
 

@@ -1,9 +1,9 @@
 ---
 title: Exibições em extensões da Web
 description: 'Saiba como definir visualizações para módulos de biblioteca em extensões da Web do Adobe Experience Platform '
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2063'
 ht-degree: 77%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Cada tipo de evento, condição, ação ou elemento de dados pode fornecer uma visualização, o que permite ao usuário fornecer configurações. A extensão também pode ter uma [visualização de configuração de extensão](../configuration.md) de nível superior, o que permite aos usuários fornecer configurações globais para a extensão inteira. O processo de construção de uma visualização é idêntico em todos os tipos de visualizações.
 

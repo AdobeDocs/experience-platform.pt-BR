@@ -1,10 +1,10 @@
 ---
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 90%
+source-wordcount: '1210'
+ht-degree: 86%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 ## 20 de maio de 2021
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados por uma tag à página usarão o nonce que você configurou. Essa alteração aceita o uso de uma Política de segurança de conteúdo com um nonce para que os scripts do Platform Launch ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar o Platform Launch com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
+* **Suporte para CSP Nonce** - a extensão principal agora tem um parâmetro de configuração opcional. Você pode adicionar um elemento de dados que faça referência a um nonce. Se configurado, todos os scripts incorporados adicionados por uma tag à página usarão o nonce que você configurou. Essa alteração suporta o uso de uma Política de segurança de conteúdo com um nonce para que os scripts de tag ainda possam ser carregados em um ambiente CSP. Você pode ler mais sobre como usar tags com um CSP [aqui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junho de 2019
 

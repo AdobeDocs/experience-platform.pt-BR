@@ -1,10 +1,10 @@
 ---
 title: Excluir recursos
 description: Saiba como excluir recursos de tags no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 84%
+source-wordcount: '550'
+ht-degree: 81%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A exclusão de um recurso é uma remoção permanente desse recurso do Adobe Experience Platform. Se você ainda quiser que o recurso apareça na interface do usuário da coleta de dados, mas não esteja na biblioteca de tags, consulte [Remover recursos de uma biblioteca](remove-resources-from-library.md).
 

@@ -1,18 +1,17 @@
 ---
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
-description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
-seo-description: Extensão SDK da Web da Adobe Experience Platform no Adobe Experience Platform Launch
+description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
-Este documento aborda as notas de versão da extensão Adobe Experience Platform Web SDK para Adobe Experience Platform Launch. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## Versão 2.6.0 - 27 de julho de 2021
 
@@ -103,14 +102,14 @@ Essas decisões retornam do comando `sendEvent` somente se `renderDecisions` est
 * A solicitação feita durante a migração da ID é enviada para o endpoint demdex para melhorar a identificação entre domínios quando o cookie demdex não está definido.
 * A solicitação feita durante a migração de ID sempre espera uma resposta para garantir que o cookie de identidade seja definido.
 * Ao executar um comando inválido, uma lista de nomes de comando válidos será registrada no console.
-* Adição de uma caixa de seleção para alternar o suporte a cookies de terceiros na extensão do Adobe Experience Platform Launch. Isso desativa chamadas com demdex.net.
+* Adição de uma caixa de seleção para alternar o suporte a cookies de terceiros na extensão de tag. Isso desativa chamadas com demdex.net.
 
 ## Versão 0.0.5 - 20 de dezembro de 2019
 
-* Adicionar configurações do Rastreador de atividade à extensão do Platform Launch.
+* Adicionar configurações do Rastreador de atividade à extensão de tag
 * Expor EventType e EventMergeId no comando do evento.
-* Adicionar configuração onBeforeEventSend à extensão do Platform Launch.
-* Adicionar configuração edgeBasePath à extensão do Platform Launch.
+* Adicionar configuração onBeforeEventSend à extensão de tag
+* Adicionar configuração edgeBasePath à extensão de tag
 
 ## Versão 0.0.3 - 25 de novembro de 2019
 

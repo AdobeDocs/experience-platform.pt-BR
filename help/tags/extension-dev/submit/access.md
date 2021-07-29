@@ -1,10 +1,10 @@
 ---
 title: Conceder acesso ao usuário
 description: Configure as contas de usuário de tag e permissões dos membros da equipe no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 25%
+source-wordcount: '738'
+ht-degree: 22%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Antes de começar a usar o extension_package, é necessário configurar os membros da equipe com contas de usuário e permissões. Isso é realizado no [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -39,7 +39,7 @@ Alguns de vocês podem ter acesso a mais de uma organização (Org). Para adicio
 
 Um perfil de produto é um grupo. Direitos individuais são atribuídos a perfis de produtos e qualquer usuário no perfil herdará esses direitos.
 
-Escolha o link **[!UICONTROL Products]** na parte superior e **[!UICONTROL Experience Cloud]** à esquerda. Se você não tiver a Adobe Experience Platform Launch listada, os clientes devem entrar em contato com a equipe de conta e os parceiros devem enviar um email para <ExchangeTechEC@adobe.com>.
+Escolha o link **[!UICONTROL Products]** na parte superior e **[!UICONTROL Experience Cloud]** à esquerda. Se você não tiver a interface do usuário da coleta de dados listada, os clientes devem entrar em contato com a equipe de conta e os parceiros devem enviar um email <ExchangeTechEC@adobe.com>.
 
 ![Guia Produtos do Admin Console](../images/getting-started/admin-console-products-launch.png)
 

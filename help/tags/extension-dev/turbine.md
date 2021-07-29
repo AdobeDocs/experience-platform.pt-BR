@@ -1,10 +1,10 @@
 ---
 title: Variável sem turbina
 description: Saiba mais sobre o objeto turbine, uma variável gratuita que fornece informações e utilitários específicos para o tempo de execução da tag do Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 58%
+source-wordcount: '577'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O objeto `turbine` é uma &quot;variável livre&quot; no escopo dos módulos de biblioteca da extensão. Ele fornece informações e utilitários específicos para o tempo de execução da tag do Adobe Experience Platform e está sempre disponível para módulos de biblioteca sem usar `require()`.
 
@@ -90,7 +90,7 @@ Recupera um módulo que foi compartilhado de outra extensão. Se nenhum módulo 
 turbine.logger.error('Error!');
 ```
 
-O utilitário de registro é usado para registrar mensagens no console. As mensagens serão exibidas somente no console se a depuração for ativada pelo usuário. A maneira recomendada de ativar a depuração é usar o [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) ou a extensão [ Launch e DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk) do Chrome. Como alternativa, o usuário pode executar o seguinte comando `_satellite.setDebug(true)` dentro do console do desenvolvedor do navegador. O agente de log tem os seguintes métodos:
+O utilitário de registro é usado para registrar mensagens no console. As mensagens serão exibidas somente no console se a depuração for ativada pelo usuário. A maneira recomendada de ativar a depuração é usar o [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Como alternativa, o usuário pode executar o seguinte comando `_satellite.setDebug(true)` dentro do console do desenvolvedor do navegador. O agente de log tem os seguintes métodos:
 
 * `logger.log(message: string)`: registra uma mensagem no console.
 * `logger.info(message: string)`: registra uma mensagem informativa no console.

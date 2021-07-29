@@ -1,10 +1,10 @@
 ---
 title: Fazer upload e implementar testes completos para uma extensão
 description: Saiba como validar, carregar e testar sua extensão no Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2391'
-ht-degree: 36%
+source-wordcount: '2392'
+ht-degree: 35%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para testar extensões de tags no Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface do usuário da coleta de dados para instalar o pacote de extensão em uma propriedade e exercer seus recursos dentro de uma biblioteca de tags e criação.
 

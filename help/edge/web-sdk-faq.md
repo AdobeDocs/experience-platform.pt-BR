@@ -2,10 +2,10 @@
 title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Obtenha respostas para perguntas frequentes sobre o SDK da Web da Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 1%
+source-wordcount: '1802'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,7 @@ Atualmente, é necessário implantar diferentes bibliotecas JavaScript com base 
 * Nenhuma dessas bibliotecas foi criada para trabalhar entre si.
 * Casos de uso entre soluções e Adobe Experience Platform exigem que essas bibliotecas diferentes sejam interdependentes, causando atrito de implantação.
 
-Embora o Adobe Experience Platform Launch facilite ao máximo a implantação e o gerenciamento dessas bibliotecas, ainda há problemas com:
+Embora as tags na Platform facilitem ao máximo a implantação e o gerenciamento dessas bibliotecas, ainda há problemas com:
 
 * Tamanho da biblioteca (excesso de código de Adobe em uma página)
 * Desempenho (os sites demoram muito para carregar)
@@ -62,11 +62,11 @@ O SDK da Web da Adobe Experience Platform também pode enviar dados diretamente 
 
 **Desempenho:** o SDK da Web é menor do que o uso de todas as bibliotecas de Adobe atuais e fornece carregamentos de página significativamente mais rápidos.
 
-**Simplicidade:** a combinação de XDM, SDK da Web, Experience Platform Launch, Experience Edge, soluções da Adobe Experience Cloud e Adobe Experience Platform cria uma história de coleta de dados fácil de entender e simples de seguir.
+**Simplicidade:** a combinação de XDM, SDK da Web, tags, Experience Edge, soluções da Adobe Experience Cloud e Adobe Experience Platform cria uma história de coleta de dados fácil de entender e simples de seguir.
 
 * **XDM:** o schema independente da solução usado para enviar dados ao Adobe. Não há mais marcação para evars ou mboxes.
 * **Adobe Experience Platform Web SDK:** facilita o envio e o recebimento de dados para a Adobe Experience Platform Edge Network.
-* **Experience Platform Launch:** simplifica a implantação e a configuração do SDK da Web (e de quaisquer outras tags do JavaScript) em um site.
+* **Tags:** simplifica a implantação e a configuração do SDK da Web (e de quaisquer outras tags do JavaScript) em um site.
 * **Experience Edge:** roteie facilmente os dados para a Adobe Experience Platform e as soluções no formato necessário.
 * **Soluções Adobe Experience Platform e Adobe:** ative a proposta de valor.
 
@@ -74,7 +74,7 @@ O SDK da Web da Adobe Experience Platform também pode enviar dados diretamente 
 
 **Moderno e pronto para o futuro:** o SDK da Web e sua conexão com a Rede de borda da Experience Cloud permitiram que o Adobe modernizasse significativamente como o Adobe lida com a coleta de dados, a personalização, o consentimento e o futuro de cookies de terceiros. (Ela ativa um domínio próprio, gerenciado pelo Adobe.)
 
-**Tempo até o valor:** o Adobe trabalhou bastante (e continuará) para facilitar ao máximo a implantação do SDK da Web via Experience Platform Launch e o mapeamento de dados do lado do cliente para XDM.  Depois que esse trabalho for feito, todas as outras soluções Adobe e serviços Adobe Experience Platform poderão ser ativados ou desativados no lado do servidor. Por exemplo, se estiver usando essa opção para o Adobe Analytics e quiser ativar o Target ou o Experience Platform, você pode simplesmente virar um botão na configuração do Datastream e acender esses casos de uso.
+**Tempo até o valor:** o Adobe trabalhou bastante (e continuará) para facilitar ao máximo a implantação do SDK da Web por meio de tags e do mapeamento de dados do lado do cliente para o XDM.  Depois que esse trabalho for feito, todas as outras soluções Adobe e serviços Adobe Experience Platform poderão ser ativados ou desativados no lado do servidor. Por exemplo, se estiver usando essa opção para o Adobe Analytics e quiser ativar o Target ou o Experience Platform, você pode simplesmente virar um botão na configuração do Datastream e acender esses casos de uso.
 
 ## O que é o Alloy?
 
@@ -113,7 +113,7 @@ O SDK da Web está evoluindo rapidamente. Mais casos de uso estão sendo trabalh
 
 Depende. O SDK da Web da Adobe Experience Platform pode ser implantado em dois estilos diferentes. Um documento de migração futuro fornecerá detalhes adicionais.
 
-* **Apenas outra tag:** se o site já tiver tags de soluções e você não puder remarcar, mas desejar enviar dados para a Adobe Experience Platform Edge Network para casos de uso do Experience Platform ou para os recursos do lado do servidor do Experience Platform Launch futuros (veja abaixo), você poderá adicionar a  `alloy.js` tag ao site, onde ela funcionará como &quot;apenas outra tag&quot;.
+* **Apenas outra tag:** se o site já tiver tags de soluções e você não puder remarcar, mas desejar enviar dados para a Adobe Experience Platform Edge Network para casos de uso do Experience Platform ou para os recursos futuros de encaminhamento de eventos (veja abaixo), é possível adicionar a  `alloy.js` tag ao site, onde funciona como &quot;apenas outra tag&quot;.
 
 * **A única tag:** se quiser usar o SDK da Web para uma solução do Experience Cloud, use-o para todas  __ as soluções da página. Por exemplo, se o seu site já estiver marcado para o Adobe Analytics e você quiser usá-lo para o Target, será necessário usá-lo para ambos, bem como para qualquer outro no futuro.
 
@@ -123,33 +123,33 @@ Em outras palavras, se decidir usar o SDK da Web da Adobe Experience Platform pa
 
 Sim, o SDK da Web da Adobe Experience Platform fornece um recurso de Migração de identidade. Siga as instruções para migração de ID na [Documentação de identidade do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) para obter mais detalhes.
 
-## Como o SDK da Web é diferente do Adobe Experience Platform Launch?
+## Como o SDK da Web é diferente das tags?
 
-* **Experience Platform** Inicia o gerenciador de código do dispositivo. Use-o para implantar o código com mais facilidade. É livre e poderoso.
+* **Tags na Experience** Platform gerenciam o código do dispositivo. Use-os para implantar o código com mais facilidade. Elas são livres e poderosas.
 
-* **O** SDK da Web da Adobe Experience Platform é o nome oficial do novo código que seria implantado pelo Experience Platform Launch para casos de uso do Adobe. Também é livre e poderoso.
+* **O** SDK da Web da Adobe Experience Platform é o nome oficial do novo código que seria implantado por tags para casos de uso de Adobe. Também é livre e poderoso.
 
 * **`alloy.js`** é o nome do arquivo do código Adobe Experience Platform Web SDK.
 
-## Preciso usar o Adobe Experience Platform Launch para implantar o SDK da Web?
+## Preciso usar tags para implantar o SDK da Web?
 
 Não. Você pode baixar o arquivo `alloy.js` sozinho.
 
 No entanto:
 
-* O SDK da Web da Adobe Experience Platform requer algo chamado de ID do conjunto de dados, para que a rede de borda possa identificar o fluxo e determinar o que fazer com os dados. Essa ID é criada no Experience Platform Launch. Isso não significa que você precisa usar o Experience Platform Launch para criar propriedades ou implantar o código JavaScript, mas sim usar o Experience Platform Launch para criar uma ID de configuração.
+* O SDK da Web da Adobe Experience Platform requer algo chamado de ID do conjunto de dados, para que a rede de borda possa identificar o fluxo e determinar o que fazer com os dados. Essa ID é criada no Experience Platform. Isso não significa que você precisa usar a interface do usuário da coleta de dados para criar propriedades ou implantar o código do JavaScript, mas sim usar tags para criar uma ID de configuração.
 
-* O Adobe Experience Platform Launch não é apenas o melhor gerenciador de tags e SDK disponível, mas facilita a implantação do `alloy.js` e o mapeamento de dados para esquemas XDM. Se decidir não usar o Experience Platform Launch, será necessário gerenciar a implantação de `alloy.js`, o desenvolvimento de eventos e o mapeamento de seus dados para o XDM antes de enviá-los. Esse é um processo _muito_ mais difícil do que usar o Experience Platform Launch.
+* As tags não são apenas o melhor gerenciador de tags e SDK disponível, mas também facilitam a implantação do `alloy.js` e o mapeamento de dados para esquemas XDM. Se decidir não usar tags, será necessário gerenciar a implantação de `alloy.js`, o desenvolvimento de eventos e o mapeamento de seus dados para o XDM antes de enviá-los. Esse é um processo _muito mais difícil do que usar tags._
 
-* É recomendável usar o Experience Platform Launch para implantar `alloy.js`, mesmo que seja a única tag para a qual você o usa.
+* É recomendável usar tags para implantar `alloy.js`, mesmo que seja a única tag para a qual você o usa.
 
-## O que é o &quot;Lado do servidor Adobe Experience Platform Launch&quot;?
+## O que é o encaminhamento de eventos?
 
-Posteriormente em 2020, o Experience Platform Launch lançará os recursos de encaminhamento do lado do servidor. Se você usar nossos SDKs e enviar o XDM para o Experience Edge, esses novos recursos permitirão instalar novas extensões do lado do servidor e mapear esses dados para qualquer coisa — e enviá-los para qualquer lugar — da nossa rede de borda. Pense nisso como &quot;coleta de dados como um serviço&quot;.  Isso estará disponível por um custo, além de ser incluído como parte do Adobe Experience Platform.
+Se você usar nossos SDKs e enviar o XDM para o Experience Edge, esses novos recursos de encaminhamento de eventos permitirão instalar novas extensões do lado do servidor e mapear esses dados para qualquer coisa — e enviá-los para qualquer lugar — de nossa rede de borda. Pense nisso como &quot;coleta de dados como um serviço&quot;.  Isso estará disponível por um custo, além de ser incluído como parte do Adobe Experience Platform.
 
 ## O que é um CNAME ou domínio próprio e por que ele é importante?
 
-Mais informações sobre um CNAME estão disponíveis na [documentação do Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
+Mais informações sobre um CNAME estão disponíveis na [documentação do Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=pt-BR)
 
 ## O SDK da Web da Adobe Experience Platform usa cookies? Em caso afirmativo, que cookies utiliza?
 

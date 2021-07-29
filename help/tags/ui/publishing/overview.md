@@ -1,10 +1,10 @@
 ---
 title: Visão geral da publicação
 description: Saiba mais sobre o processo de publicação de alterações nas bibliotecas de código do gerenciamento de tags no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 83%
+source-wordcount: '609'
+ht-degree: 80%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O Adobe Experience Platform permite encapsular alterações no código de gerenciamento de tags em bibliotecas individuais. Como várias bibliotecas agora podem ser desenvolvidas em paralelo por diferentes equipes, essas bibliotecas devem seguir um processo deliberado e permissionado para unir alterações antes de serem enviadas para o ambiente de produção.
 

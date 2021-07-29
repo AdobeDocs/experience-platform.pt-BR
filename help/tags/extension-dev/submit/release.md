@@ -1,10 +1,10 @@
 ---
 title: Lançar uma extensão
 description: Saiba como lançar de forma privada ou pública uma extensão de tag no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 58%
+source-wordcount: '321'
+ht-degree: 52%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Quando os testes e a documentação estiverem concluídos, a extensão estará pronta para ser lançada. Atualmente, existem dois tipos de lançamentos que podem ser executados:
 

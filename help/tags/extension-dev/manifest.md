@@ -1,10 +1,10 @@
 ---
 title: Manifesto de extensão
 description: Saiba como configurar um arquivo de manifesto JSON que informa ao Adobe Experience Platform como consumir corretamente sua extensão.
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 77%
+source-wordcount: '2647'
+ht-degree: 76%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 No diretório base da sua extensão, você deve criar um arquivo chamado `extension.json`. Ele contém detalhes críticos da sua extensão que permitem que o Adobe Experience Platform o consuma corretamente. Alguns conteúdos são formados à maneira de [npms `package.json`](https://docs.npmjs.com/files/package.json).
 

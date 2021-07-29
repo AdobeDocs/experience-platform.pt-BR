@@ -3,9 +3,9 @@ title: Suporte à TCF 2.0 do IAB no SDK da Web da Adobe Experience Platform
 description: Saiba como oferecer suporte às preferências de consentimento do TCF 2.0 do IAB usando o SDK da Web da Adobe Experience Platform
 keywords: consentimento; setConsent; grupo de campo de privacidade do perfil; grupo de campo de privacidade do evento de experiência; grupo de campo de privacidade; IAB TCF 2.0; CDP em tempo real; Perfil de dados do cliente em tempo real
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 O SDK da Web da Adobe Experience Platform tem suporte para a Estrutura de transparência e consentimento do Interative Advertising Bureau, versão 2.0 (TCF do IAB 2.0). Este guia mostra os requisitos para oferecer suporte ao IAB TCF 2.0 por meio do Adobe Experience Platform Web SDK, integrando-o à Plataforma de dados do cliente em tempo real, ao Audience Manager, aos Eventos de experiência, ao Adobe Analytics e ao Experience Edge.
 
-Além disso, os guias a seguir estão disponíveis para ajudar no aprendizado de como integrar a TCF do IAB 2.0 com e sem a Adobe Experience Platform Launch.
+Além disso, os guias a seguir estão disponíveis para ajudar no aprendizado de como integrar a TCF do IAB 2.0 com e sem tags.
 
-- [Com Adobe Experience Platform Launch](./with-launch.md)
-- [Sem Adobe Experience Platform Launch](./without-launch.md)
+- [Com tags](./with-launch.md)
+- [Sem tags](./without-launch.md)
 
 ## Introdução
 
@@ -90,4 +90,4 @@ Para obter mais informações sobre o comando `sendEvent`, leia a documentação
 
 ## Próximas etapas
 
-Agora que você tem uma compreensão básica da Estrutura de transparência e consentimento 2.0 do IAB, consulte qualquer um dos guias sobre como usar o IAB TCF 2.0 [com Adobe Experience Platform Launch](./with-launch.md) ou [sem Adobe Experience Platform Launch](./without-launch.md).
+Agora que você tem uma compreensão básica da Estrutura de transparência e consentimento 2.0 do IAB, consulte qualquer um dos guias sobre como usar o TCF 2.0 do IAB [com tags](./with-launch.md) ou [sem tags](./without-launch.md).

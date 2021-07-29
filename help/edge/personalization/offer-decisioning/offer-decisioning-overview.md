@@ -3,7 +3,7 @@ title: Usar o Offer Decisioning com o SDK da Web da plataforma
 description: O SDK da Web da Adobe Experience Platform pode fornecer e renderizar ofertas personalizadas gerenciadas no Offer Decisioning. É possível criar suas ofertas e outros objetos relacionados usando a interface do usuário do Offer Decisioning ou a API.
 keywords: offer decisioning, decisão, Web SDK, Platform Web SDK, ofertas personalizadas, delivery de ofertas, delivery de ofertas, personalização de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 3%
@@ -65,10 +65,10 @@ Para ativar o Offer Decisioning, é necessário executar as seguintes etapas:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Siga as instruções para [instalar o SDK](../../fundamentals/installing-the-sdk.md) (O SDK pode ser instalado independentemente ou por meio de [Adobe Experience Platform Launch](http://launch.adobe.com/br). Este é um [guia de início rápido para Platform launch](../../../tags/quick-start/quick-start.md)).
+1. Siga as instruções para [instalar o SDK](../../fundamentals/installing-the-sdk.md) (O SDK pode ser instalado independentemente ou por meio da [Interface do usuário da coleta de dados](https://experience.adobe.com/#/data-collection/). Consulte o [guia de início rápido das tags](../../../tags/quick-start/quick-start.md)) para obter mais informações.
 1. [Configure o ](../../fundamentals/configuring-the-sdk.md) SDK para Offer Decisioning. Etapas adicionais específicas do Offer decisioning são fornecidas abaixo.
 
-   * SDK instalado independente
+   * Instalar o SDK independente
 
       1. Configure a ação &quot;sendEvent&quot; com seu `decisionScopes`
 
@@ -81,10 +81,10 @@ Para ativar o Offer Decisioning, é necessário executar as seguintes etapas:
              ]
           })
          ```
-   * SDK instalado do Platform launch
+   * Instalar o SDK por meio de tags
 
-      1. [Criar uma propriedade de Platform launch](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Adicionar o código incorporado do Platform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Criar uma propriedade de tag](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Adicionar o código incorporado](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Instale e configure a extensão SDK da Web da plataforma com o Datastream que você acabou de criar ao selecionar a configuração no menu suspenso &quot;Datastream&quot;. Consulte a documentação sobre [extensões](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)

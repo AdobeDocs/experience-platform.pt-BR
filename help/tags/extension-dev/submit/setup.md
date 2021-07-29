@@ -1,10 +1,10 @@
 ---
 title: Configuração da organização da Experience Cloud
 description: Saiba como registrar uma organização da Adobe Experience Cloud para começar a desenvolver extensões para o Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 54%
+source-wordcount: '608'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para desenvolver extensões de tags no Adobe Experience Platform, é necessário registrar uma organização da Adobe Experience Cloud.
 

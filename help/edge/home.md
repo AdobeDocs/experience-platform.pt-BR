@@ -3,22 +3,22 @@ title: Visão geral do SDK da Web da Adobe Experience Platform
 description: Saiba como usar o SDK da Web da Adobe Experience Platform para integrar os recursos da plataforma ao seu site.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; edge; Visitor.js; AppMeasurement.js; AT.js; DIL.js; Web sdk; SDK; Web SDK; Launch; launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
 
 # Visão geral do SDK da Web da Adobe Experience Platform
 
-O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes do Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] por meio da rede de borda Adobe Experience Platform. Além da biblioteca do JavaScript, há uma [extensão do Experience Platform Launch](../tags/extensions/web/sdk/overview.md) para ajudar com suas configurações do SDK da Web.
+O Adobe Experience Platform Web SDK é uma biblioteca JavaScript do lado do cliente que permite que os clientes do Adobe Experience Cloud interajam com os vários serviços no [!DNL Experience Cloud] por meio da rede de borda Adobe Experience Platform. Além da biblioteca do JavaScript, há uma [extensão de tag](../tags/extensions/web/sdk/overview.md) para ajudar nas configurações do SDK da Web.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] é parte da coleção que compõe o Experience Edge. O Experience Edge consiste em três tecnologias:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** um SDK e  [!DNL Experience Platform Launch] extensão do JavaScript para simplificar bastante  [!DNL Adobe] as tecnologias de implantação
+* **[!DNL Adobe Experience Platform Web SDK]:** um SDK do JavaScript e uma extensão de tag para simplificar bastante  [!DNL Adobe] as tecnologias de implantação
 * **Adobe Experience Platform Mobile SDK:** uma extensão para o SDK móvel v5 para permitir que os clientes usem a nova metodologia de implantação
 * **[!DNL Adobe Experience Platform Edge Network]** Uma rede global distribuída de servidores que permite uma nova metodologia de implantação de  [!DNL Adobe] produtos
 

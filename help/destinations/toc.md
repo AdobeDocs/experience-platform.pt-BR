@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
-source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '476'
 ht-degree: 11%
 
 ---
@@ -100,8 +100,8 @@ ht-degree: 11%
       * [Conexão Eloqua do Oracle](./catalog/email-marketing/oracle-eloqua.md)
       * [Conexão Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Conexão do Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Extensões de Experience Platform Launch {#launch-extensions}
-      * [Visão geral da extensão do Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
+   * Extensões de tag {#launch-extensions}
+      * [Visão geral da extensão de tag](./catalog/launch-extensions/overview.md)
    * Destinos de envolvimento móvel {#mobile-engagement}
       * [Visão geral dos destinos de envolvimento móvel](./catalog/mobile-engagement/overview.md)
       * [(Beta) Conexão dos atributos de navegação](./catalog/mobile-engagement/airship-attributes.md)

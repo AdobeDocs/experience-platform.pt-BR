@@ -1,10 +1,10 @@
 ---
 title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos no Adobe Experience Platform.
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 48%
+source-wordcount: '907'
+ht-degree: 46%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para usar o encaminhamento de eventos no Adobe Experience Platform, os dados devem ser enviados para a Rede de borda da Adobe Experience Platform usando uma ou mais das três opções a seguir:
 

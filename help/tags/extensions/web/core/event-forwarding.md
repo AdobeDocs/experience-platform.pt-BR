@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão de encaminhamento de eventos principais
 description: Saiba mais sobre a extensão de encaminhamento de eventos principais no Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 94%
+source-wordcount: '1724'
+ht-degree: 92%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão de encaminhamento de evento principal fornece eventos, condições e tipos de dados padrão para o encaminhamento de eventos no Adobe Experience Platform.
 
@@ -165,7 +165,7 @@ Para acessar o valor de um elemento de dados no código personalizado, use o mé
 getDataElementValue('productName') 
 ```
 
-As ações do Platform Launch Server Side são executadas sequencialmente. Também é possível que o código personalizado em uma ação retorne um valor que pode ser usado em uma ação subsequente. O valor retornado pode vir do código nessa ação ou do corpo da resposta de uma chamada feita a uma origem externa. Para referenciar dados de uma ação executada anteriormente em uma única regra em que a extensão Core é usada, crie um elemento de dados do tipo `Path` e use o seguinte caminho para fazer referência ao valor de uma variável chamada `productCategory` definida no código personalizado na extensão Core:
+As ações de encaminhamento de eventos são executadas sequencialmente. Também é possível que o código personalizado em uma ação retorne um valor que pode ser usado em uma ação subsequente. O valor retornado pode vir do código nessa ação ou do corpo da resposta de uma chamada feita a uma origem externa. Para referenciar dados de uma ação executada anteriormente em uma única regra em que a extensão Core é usada, crie um elemento de dados do tipo `Path` e use o seguinte caminho para fazer referência ao valor de uma variável chamada `productCategory` definida no código personalizado na extensão Core:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 

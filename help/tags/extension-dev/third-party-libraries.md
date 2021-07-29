@@ -1,10 +1,10 @@
 ---
 title: Implementação de bibliotecas de terceiros
 description: Saiba mais sobre os diferentes métodos de hospedagem de bibliotecas de terceiros nas extensões de tags da Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 69%
+source-wordcount: '1330'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Um dos principais objetivos das extensões de tags no Adobe Experience Platform é permitir que você implemente facilmente as tecnologias de marketing (bibliotecas) existentes no seu site. Usando extensões, você pode implementar bibliotecas fornecidas por redes de entrega de conteúdo (CDNs) de terceiros sem precisar editar manualmente o HTML do seu site.
 

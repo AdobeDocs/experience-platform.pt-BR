@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 52%
+source-wordcount: '1093'
+ht-degree: 53%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 52%
 
 Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Versão 2.6.1 - 29 de julho de 2021
+
+Contém a versão 2.6.1 da biblioteca de SDK da Web da Adobe Experience Platform.
+
 ## Versão 2.6.0 - 27 de julho de 2021
+
+Contém a versão 2.6.0 da biblioteca de SDK da Web da Adobe Experience Platform.
 
 * Rótulos, descrições e mensagens de erro usando o termo &quot;configuração de borda&quot; foram alteradas para usar o termo &quot;datastream&quot; para alinhar-se à terminologia mais recente do Adobe Experience Platform.
 * Na visualização de configuração de extensão, foi adicionado suporte para lidar com um grande número de conjuntos de dados e ambientes de fluxo de dados.

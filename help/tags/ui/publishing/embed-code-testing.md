@@ -1,10 +1,10 @@
 ---
 title: Testar códigos incorporados usando o Adobe Experience Platform Debugger
 description: Saiba como usar o Platform Debugger para testar localmente diferentes códigos incorporados para o Adobe Experience Platform em seu site.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 85%
+source-wordcount: '516'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 À medida que você faz alterações nas builds da biblioteca de tags no Adobe Experience Platform, deve testar essas alterações antes de implantar a build no ambiente de produção. Se não tiver um ambiente dedicado de preparo ou desenvolvimento para seu site, você poderá usar o Adobe Experience Platform Debugger para testar localmente diferentes códigos incorporados dentro do site.
 

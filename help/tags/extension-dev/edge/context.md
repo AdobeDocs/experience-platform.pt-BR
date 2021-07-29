@@ -1,10 +1,10 @@
 ---
 title: Contexto em módulos de extensão de borda
 description: Saiba mais sobre o objeto de contexto e a função que ele desempenha ao interagir com módulos de biblioteca nas extensões de tag das propriedades de borda.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 84%
+source-wordcount: '747'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
-> O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+> A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Todos os módulos de biblioteca em extensões de borda recebem um objeto `context` quando são executados. Este documento aborda as propriedades fornecidas pelo objeto `context` e a função que desempenham nos módulos de biblioteca.
 

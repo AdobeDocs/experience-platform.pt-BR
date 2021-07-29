@@ -1,10 +1,10 @@
 ---
 title: Referência a Objeto Satélite de Tags
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele no Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1123'
-ht-degree: 52%
+source-wordcount: '1124'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento serve como referência para o objeto `_satellite` do lado do cliente e as várias funções que você pode executar com ele.
 

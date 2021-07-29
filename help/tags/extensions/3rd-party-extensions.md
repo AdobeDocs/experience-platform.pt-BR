@@ -1,10 +1,10 @@
 ---
 title: Extensões de terceiros
 description: Saiba mais sobre extensões de terceiros para o Adobe Experience Platform.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 84%
+source-wordcount: '141'
+ht-degree: 71%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Além das extensões fornecidas pelas soluções da Adobe, também estão disponíveis extensões de terceiros para o Adobe Experience Platform 
 

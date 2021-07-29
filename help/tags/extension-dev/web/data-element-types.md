@@ -1,10 +1,10 @@
 ---
 title: Tipos de elementos de dados para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo elemento de dados para uma extensão de tag em uma propriedade da Web.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 63%
+source-wordcount: '596'
+ht-degree: 60%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Nas tags de coleta de dados, os elementos de dados são basicamente aliases a partes de dados em uma página. Esses dados podem ser encontrados em parâmetros de cadeias de caracteres de consulta, cookies, elementos DOM ou outros locais. Um elemento de dados pode ser referenciado por regras e atua como uma abstração para acessar esses dados.
 

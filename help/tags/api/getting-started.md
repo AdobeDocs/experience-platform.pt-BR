@@ -1,9 +1,9 @@
 ---
 title: Introdução à API do reator
 description: Saiba como começar a usar a API do Reator, incluindo etapas para gerar as credenciais de acesso necessárias.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ A próxima tela solicita que você selecione um ou mais perfis de produto para a
 
 >[!NOTE]
 >
->Os perfis de produto são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares no Adobe Experience Platform Launch. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto selecionar para a API, entre em contato com o administrador.
+>Os perfis de produtos são gerenciados por sua organização por meio da Adobe Admin Console e contêm conjuntos específicos de permissões para recursos granulares. Os perfis de produto e suas permissões só podem ser gerenciados por usuários com privilégios de administrador na organização. Se não tiver certeza sobre quais perfis de produto selecionar para a API, entre em contato com o administrador.
 
 Selecione os perfis de produto desejados na lista e selecione **Salvar API configurada** para concluir o registro da API.
 
@@ -98,7 +98,7 @@ Um novo token de acesso é gerado e um botão para copiar o token para a área d
 
 #### Gerar tokens de acesso programaticamente {#program}
 
-Se estiver usando a integração do Launch para um aplicativo, você poderá gerar tokens de acesso de forma programática por meio de solicitações de API. Para fazer isso, você deve obter os seguintes valores:
+Se você estiver usando a integração para um aplicativo, poderá gerar tokens de acesso de forma programática por meio de solicitações de API. Para fazer isso, você deve obter os seguintes valores:
 
 * ID do cliente (`{API_KEY}`)
 * Segredo do cliente (`{SECRET}`)

@@ -1,10 +1,10 @@
 ---
 title: Regras
 description: Saiba como as extensões de tag funcionam no Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1983'
-ht-degree: 83%
+source-wordcount: '1977'
+ht-degree: 82%
 
 ---
 
@@ -12,13 +12,11 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags no Adobe Experience Platform seguem um sistema baseado em regras. Eles procuram a interação do usuário e dados associados. Quando os critérios definidos nas regras são cumpridos, a regra aciona a extensão, o script ou o código do lado do cliente identificado.
 
 Crie regras para integrar os dados e a funcionalidade de tecnologia de marketing e de anúncios que unifique produtos diferentes em uma única solução.
-
-Para assistir a um vídeo de introdução, consulte [Construtor de regras](../../quick-start/videos.md).
 
 ## Estrutura da regra
 

@@ -3,9 +3,9 @@ title: Configurar o conjunto de dados para o SDK da Web do Experience Platform
 description: 'Saiba como configurar os fluxos de dados. '
 keywords: configuração; datastreams; datastreamId; edge; datastream id; Configurações do ambiente; edgeConfigId; identidade; sincronização de id ativada; ID do contêiner de sincronização de ID; Sandbox; Streaming Inlet; Conjunto de dados de eventos; target; código do cliente; ID do ambiente do Target; Destinos de cookies; Destinos de url; ID do conjunto de relatórios de bloqueio de configurações do Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -19,17 +19,17 @@ Sua organização deve ser provisionada para esse recurso. Entre em contato com 
 
 ## Criação de uma configuração de conjunto de dados
 
-Os datastreams podem ser criados no Adobe [!DNL Experience Platform Launch] usando a ferramenta de configuração Datastream.
+Os conjuntos de dados podem ser criados na interface do usuário da Coleta de dados usando a ferramenta de configuração do conjunto de dados.
 
 ![navegação de ferramentas de datastreams](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->A ferramenta de configuração de conjuntos de dados está disponível para os clientes na lista de permissões, independentemente de usarem [!DNL Experience Platform Launch] como um gerenciador de tags. Além disso, os usuários exigem permissões de desenvolvimento em [!DNL Experience Platform Launch]. Consulte o artigo [Permissões do usuário](../../tags/ui/administration/user-permissions.md) na documentação [!DNL Experience Platform Launch] para obter mais detalhes.
+>A ferramenta de configuração de conjuntos de dados está disponível para os clientes na lista de permissões, independentemente de usarem a Platform como um gerenciador de tags. Além disso, os usuários exigem permissões de desenvolvimento. Consulte o artigo [permissões do usuário](../../tags/ui/administration/user-permissions.md) na documentação das tags para obter mais detalhes.
 
 Crie um armazenamento de dados clicando em **[!UICONTROL New Datastream]** na área superior direita da tela. Depois de fornecer um nome e uma descrição, você é solicitado a fornecer as configurações padrão para cada ambiente. As configurações disponíveis são detalhadas abaixo.
 
-Ao criar um armazenamento de dados, três ambientes são criados automaticamente com configurações idênticas. Esses três ambientes são *dev*, *stage* e *prod*. Eles correspondem aos três ambientes padrão em [!DNL Experience Platform Launch]. Quando você cria uma biblioteca [!DNL Experience Platform Launch] em um ambiente de desenvolvimento, a biblioteca usa automaticamente o ambiente de desenvolvimento de sua configuração. Você pode editar as configurações em ambientes individuais tanto quanto desejar.
+Ao criar um armazenamento de dados, três ambientes são criados automaticamente com configurações idênticas. Esses três ambientes são *dev*, *stage* e *prod*. Eles correspondem aos três ambientes padrão para tags. Ao criar uma biblioteca de tags em um ambiente de desenvolvimento, a biblioteca usa automaticamente o ambiente de desenvolvimento de sua configuração. Você pode editar as configurações em ambientes individuais tanto quanto desejar.
 
 A ID usada no SDK como `edgeConfigId` é uma ID composta que especifica a configuração e o ambiente (por exemplo, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Se nenhum ambiente estiver presente na ID composta (por exemplo, `stage` no exemplo anterior), o ambiente de produção será usado.
 

@@ -3,9 +3,9 @@ title: Coletar automaticamente informações no SDK da Web da Adobe Experience P
 description: Uma visão geral de cada parte das informações que o SDK da Adobe Experience Platform coleta automaticamente.
 keywords: coletar informações, contexto, configurar, dispositivo, screenHeight, screen Height, screenOrientation, screenOrientation, screenWidth, screen Width, ambiente, viewportHeight, viewport Height, viewportWidth, viewport Width, crowserDetails, detalhes do navegador, implementationDetails, implementation Details, nome, version, placeContext, localTime, localTimezoneOffset;Deslocamento de fuso horário local;timestamp;web;url;webPageDetails;web Page Details;web Page Reference;web Referrer;web Referrer;landscape;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '511'
 ht-degree: 6%
 
 ---
@@ -48,7 +48,7 @@ Detalhes sobre o ambiente do navegador.
 
 ### Tipo de ambiente
 
-Browser
+Navegador
 
 | **Caminho na carga:** | **Exemplo:** |
 | ------------------------------- | ------------ |
@@ -82,7 +82,7 @@ Informações sobre o SDK usado para coletar o evento.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um URI para melhorar a exclusividade entre identificadores fornecidos por diferentes bibliotecas de software. Quando a biblioteca independente é usada, o valor é `https://ns.adobe.com/experience/alloy`. Quando a biblioteca é usada como parte da extensão do Platform launch, o valor é `https://ns.adobe.com/experience/alloy+reactor`.
+O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um URI para melhorar a exclusividade entre identificadores fornecidos por diferentes bibliotecas de software. Quando a biblioteca independente é usada, o valor é `https://ns.adobe.com/experience/alloy`. Quando a biblioteca é usada como parte da extensão da tag, o valor é `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Versão
 
@@ -90,7 +90,7 @@ O identificador do kit de desenvolvimento de software (SDK).  Este campo usa um 
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Quando a biblioteca independente é usada, o valor é simplesmente a versão da biblioteca. Quando a biblioteca é usada como parte da extensão do Platform launch, essa é a versão da biblioteca e a versão da extensão do Platform launch unida com um &quot;+&quot;. Por exemplo, se a versão da biblioteca fosse 2.1.0 e a versão da extensão do Platform launch fosse 2.1.3, o valor seria `2.1.0+2.1.3`.
+Quando a biblioteca independente é usada, o valor é simplesmente a versão da biblioteca. Quando a biblioteca é usada como parte da extensão de tag, essa é a versão da biblioteca e a versão da extensão de tag unida com um &quot;+&quot;. Por exemplo, se a versão da biblioteca fosse 2.1.0 e a versão da extensão de tag fosse 2.1.3, o valor seria `2.1.0+2.1.3`.
 
 ### Ambiente
 

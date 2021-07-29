@@ -1,10 +1,10 @@
 ---
 title: Referência a extensões da Adobe
 description: Encontre a documentação para extensões de tag para produtos Adobe no Adobe Experience Platform.
-source-git-commit: 5da1fd18e0032c5e3d6695639f98a7ee683819f1
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 71%
+source-wordcount: '143'
+ht-degree: 59%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Veja a seguir uma lista da documentação das extensões de tag fornecidas pelas soluções do Adobe:
 

@@ -1,10 +1,10 @@
 ---
 title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos no Adobe Experience Platform, que permite usar a Rede de borda da plataforma para executar tarefas sem alterar a implementação de tags.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 42%
+source-wordcount: '547'
+ht-degree: 39%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O encaminhamento de eventos no Adobe Experience Platform diminui o peso da página da Web e do aplicativo usando a Rede de borda da Adobe Experience Platform para executar tarefas normalmente realizadas no cliente. As regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos sem alterar as implementações do lado do cliente.
 

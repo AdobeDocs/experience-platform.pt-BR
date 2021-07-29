@@ -3,14 +3,13 @@ keywords: destinos, destino, tipos de destino
 title: Tipos e categorias de destino
 seo-title: Tipos e categorias de destino
 description: Saiba mais sobre os diferentes tipos e categorias de destinos no Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
-
 
 # Tipos e categorias de destino
 
@@ -24,7 +23,7 @@ No Adobe Experience Platform, distinguimos entre dois tipos de destino: conexõe
 
 ## Conexões {#connections}
 
-**[!UICONTROL Profile Export]** Os destinos e  **[!UICONTROL Segment Export]** no Adobe Experience Platform capturam dados de evento, os combinam com outras fontes de dados para formar o Perfil do cliente em tempo  [real](../profile/home.md), aplicar segmentação e exportar segmentos e perfis qualificados para destinos.
+**[!UICONTROL Exportar]** perfis e  **[!UICONTROL segmentar destinos de]** exportação no Adobe Experience Platform capturar dados de evento, combiná-los com outras fontes de dados para formar o Perfil do cliente em tempo  [real](../profile/home.md), aplicar segmentação e exportar segmentos e perfis qualificados para destinos.
 
 ## Destinos de exportação de perfil
 
@@ -42,15 +41,15 @@ O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
 ## Extensões {#extensions}
 
-A Platform aproveita o poder e a flexibilidade do Adobe Experience Platform Launch para incluir extensões de Platform launch na interface da plataforma.
+A Platform aproveita o poder e a flexibilidade do gerenciamento de tags, permitindo configurar extensões de tags na interface do usuário da coleta de dados.
 
 >[!TIP]
 >
->Para obter informações detalhadas sobre as extensões do Adobe Experience Platform Launch, incluindo casos de uso e como encontrá-las na interface, consulte a [Visão geral das extensões do Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md).
+>Para obter informações detalhadas sobre extensões de tag, incluindo casos de uso e como encontrá-las na interface, consulte a [visão geral das extensões de tag](./catalog/launch-extensions/overview.md).
 
-As extensões do Platform launch encaminham os dados brutos do evento para vários tipos de destinos. Pense nas extensões como um tipo de destino **Encaminhamento de eventos** . Esse é um tipo mais simples de integração com plataformas de destino, que só encaminha dados brutos do evento. Exemplos disso são a [Extensão de personalização do Gainsight](./catalog/personalization/gainsight.md) ou a [Confirmação de voz da extensão do cliente](./catalog/voice/confirmit-digital-feedback.md).
+As extensões de tag encaminham os dados brutos do evento para vários tipos de destinos. Pense nas extensões como um tipo de destino **Encaminhamento de eventos** . Esse é um tipo mais simples de integração com plataformas de destino, que só encaminha dados brutos do evento. Exemplos disso são a [Extensão de personalização do Gainsight](./catalog/personalization/gainsight.md) ou a [Confirmação de voz da extensão do cliente](./catalog/voice/confirmit-digital-feedback.md).
 
-![Extensões de Experience Platform Launch em comparação com outros destinos](./assets/common/launch-and-other-destinations.png)
+![Extensões de tag em comparação a outros destinos](./assets/common/launch-and-other-destinations.png)
 
 ## Quando usar conexões e extensões
 
@@ -65,4 +64,3 @@ As extensões são úteis quando os dados do evento são usados para acionar uma
 As conexões e extensões no [catálogo de destinos](https://platform.adobe.com/destination/catalog) são agrupadas por categoria de destino (**Advertising**, **Cloud storage**, **Plataformas de pesquisa**, **Email marketing** etc.), dependendo da ação de marketing que ajudam a realizar. Para obter mais informações sobre cada categoria, bem como os destinos incluídos em cada categoria, consulte a [Documentação do catálogo de destinos](./catalog/overview.md).
 
 ![Categorias de destino](./assets/destination-types/destination-categories-menu.png)
-

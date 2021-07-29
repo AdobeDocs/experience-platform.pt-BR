@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão do Adobe Target
 description: Saiba mais sobre a extensão de tag para Adobe Target no Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 81%
+source-wordcount: '1194'
+ht-degree: 79%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre as opções disponíveis ao usar esta extensão para criar uma regra.
 

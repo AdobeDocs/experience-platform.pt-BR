@@ -1,10 +1,10 @@
 ---
 title: Visão geral de hosts
 description: Saiba mais sobre as diferentes opções de hospedagem disponíveis no Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 92%
+source-wordcount: '166'
+ht-degree: 81%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Extensões, regras e elementos de dados são blocos fundamentais. Quando você quiser que o aplicativo faça algo, esses blocos fundamentais serão adicionados às bibliotecas e, em seguida, uma biblioteca será “incorporada” em uma build. Essas builds são entregues para um local hospedado.
 

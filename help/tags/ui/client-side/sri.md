@@ -1,10 +1,10 @@
 ---
 title: Compatibilidade de Integridade de sub-recursos (SRI)
 description: Saiba como a integridade de sub-recursos (SRI) é compatível com o Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 81%
+source-wordcount: '601'
+ht-degree: 78%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento aborda como a SRI (Integridade de sub-recursos) é compatível com o Adobe Experience Platform.
 

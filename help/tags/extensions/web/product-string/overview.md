@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão de cadeia de caracteres do produto Adobe Analytics
 description: Saiba mais sobre a extensão de tag da Cadeia de caracteres de produto do Adobe Analytics no Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 95%
+source-wordcount: '525'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A variável dos produtos `products` acompanha a forma como usuários interagem com os produtos de seu site. Por exemplo, a variável `products` pode rastrear quantas vezes um produto é exibido, adicionado ao carrinho, passado pelo checkout e adquirido. Ela também pode rastrear a eficácia relativa de categorias de comercialização de seu site.
 

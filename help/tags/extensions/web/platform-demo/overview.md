@@ -1,10 +1,10 @@
 ---
 title: Visão geral da extensão de demonstração da Adobe Experience Platform
 description: Saiba mais sobre a extensão de demonstração da Adobe Experience Platform no Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 85%
+source-wordcount: '1069'
+ht-degree: 83%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch está sendo reformulado como um conjunto de tecnologias de coleção de dados na Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleta de dados no Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 >[!NOTE]
 >

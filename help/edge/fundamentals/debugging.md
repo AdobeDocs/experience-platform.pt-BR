@@ -3,9 +3,9 @@ title: Depuração no SDK da Web da Adobe Experience Platform
 description: Saiba como alternar recursos de depuração no SDK da Web do Experience Platform.
 keywords: depurar o sdk da web, depurar, configurar, comando configurar, comando depurar, edgeConfigId, setDebug, debugEnabled, depurar;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -78,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Atualmente, o objeto `libraryInfo` fornecido contém as seguintes propriedades:
 
-* `version` Esta é a versão da biblioteca carregada. Por exemplo, se a versão da biblioteca que está sendo carregada fosse 1.0.0, o valor seria `1.0.0`. Quando a biblioteca é executada dentro da extensão do Adobe Experience Platform Launch (chamada de &quot;AEP Web SDK&quot;), a versão é a versão da biblioteca e a versão da extensão do Platform launch é unida com um sinal &quot;+&quot;. Por exemplo, se a versão da biblioteca fosse 1.0.0 e a versão da extensão do Platform launch fosse 1.2.0, o valor seria `1.0.0+1.2.0`.
+* `version` Esta é a versão da biblioteca carregada. Por exemplo, se a versão da biblioteca que está sendo carregada fosse 1.0.0, o valor seria `1.0.0`. Quando a biblioteca é executada dentro da extensão da tag (chamada de &quot;AEP Web SDK&quot;), a versão é a versão da biblioteca e a versão da extensão da tag é unida com um sinal &quot;+&quot;. Por exemplo, se a versão da biblioteca fosse 1.0.0 e a versão da extensão de tag fosse 1.2.0, o valor seria `1.0.0+1.2.0`.

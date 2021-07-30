@@ -3,10 +3,10 @@ keywords: Marketo Munchkin, marketo munchkin, extensão do Marketo Munchkin, ext
 title: Extensão do Marketo Munchkin
 description: A extensão Marketo Munchkin é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 8%
+source-wordcount: '481'
+ht-degree: 9%
 
 ---
 
@@ -18,7 +18,7 @@ Do gerenciamento de clientes potenciais ao marketing baseado em contas, [!DNL Ma
 
 O JavaScript [!DNL Marketo’s Munchkin][!DNL Marketo] permite rastrear as visitas da página do usuário final e os cliques nas páginas de aterrissagem do e páginas da Web externas.
 
-[!DNL Marketo Munchkin] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
+[!DNL Marketo Munchkin] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre o Marketo Munchkin, leia [Rastreamento de lead](https://developers.marketo.com/javascript-api/lead-tracking/) na documentação do Marketo.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões de tag funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -43,8 +43,6 @@ Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no pa
 Selecione a propriedade na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](../../../tags/ui/administration/companies-and-properties.md#properties-page) de na documentação de tags.
 
 O fluxo de trabalho o orienta pelas etapas para concluir a instalação.
-
-Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a página [Marketo Munchkin no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
 
 Você também pode instalar a extensão diretamente na [Interface do usuário da coleta de dados](https://experience.adobe.com/#/data-collection/). Para obter mais informações, consulte a seção sobre [adicionar uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) na documentação das tags.
 

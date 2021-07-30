@@ -3,10 +3,10 @@ keywords: livefyre; extensão do livefyre
 title: Extensão do Adobe Livefyre
 description: A extensão Adobe Livefyre é um destino social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 O Adobe Livefyre permite descobrir, organizar e publicar um fluxo constante de conteúdo gerado pelo usuário no seu site para criar experiências autênticas e altamente personalizadas.
 
-Adobe Livefyre é uma extensão social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre é uma extensão social no Adobe Experience Platform. Para obter mais informações sobre o Adobe Livefyre, leia o [Guia de implementação do Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões de tags funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -42,10 +42,7 @@ Selecione a propriedade da tag na qual deseja instalar a extensão. Você també
 
 O fluxo de trabalho direciona você para a interface do usuário da coleta de dados para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a página [Livefyre Adobe no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
-
 Você também pode instalar a extensão diretamente na [Interface do usuário da coleta de dados](https://experience.adobe.com/#/data-collection/). Consulte o guia sobre [adicionar uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obter mais informações.
-
 
 ## Como usar a extensão {#how-to-use}
 

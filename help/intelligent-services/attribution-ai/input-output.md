@@ -5,7 +5,7 @@ title: Entrada e saída no Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas no Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
+source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 3%
@@ -141,7 +141,7 @@ A tabela a seguir descreve os campos de esquema na saída de exemplo de pontuaç
 | identidade (Objeto) | Falso | Contém os detalhes do usuário usado para criar o modelo, como `id` e `namespace`. |
 | id (cadeia de caracteres) | Verdadeiro | ID de identidade do usuário, como ID de cookie ou AAID ou MCID etc. <br> **Exemplo:** 17348762725408656344688320891369597404 |
 | namespace (cadeia de caracteres) | Verdadeiro | Namespace de identidade usado para criar os caminhos e, portanto, o modelo. <br> **Exemplo:** aaid |
-| touchpointsDetail (Matriz de objetos) | Verdadeiro | A lista de detalhes do ponto de contato que levam à conversão ordenada pela ocorrência do ponto de contato ou pelo carimbo de data e hora. |
+| touchpointsDetail (Matriz de objetos) | Verdadeiro | A lista de detalhes do ponto de contato que levam à conversão solicitada por | ocorrência de ponto de contato ou carimbo de data e hora. |
 | touchpointName (String) | Verdadeiro | Nome do ponto de contato que foi configurado durante a configuração. <br> **Exemplo:** PAID_SEARCH_CLICK |
 | pontuações (Objeto) | Verdadeiro | Contribuição do ponto de contato para essa conversão como pontuação. Para obter mais informações sobre as pontuações produzidas nesse objeto, consulte a seção [pontuações de atribuição agregada](#aggregated-attribution-scores) . |
 | touchPoint (objeto) | Verdadeiro | Metadados de ponto de contato. Para obter mais informações sobre as pontuações produzidas nesse objeto, consulte a seção [pontuações agregadas](#aggregated-scores) . |

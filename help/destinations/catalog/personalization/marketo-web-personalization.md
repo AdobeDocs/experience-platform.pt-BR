@@ -3,9 +3,9 @@ keywords: Marketo Web Personalization, personalização da Web de marketing, ext
 title: Extensão Marketo Web Personalization
 description: A extensão Marketo Web Personalization é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Essa extensão implanta o script para os aplicativos [!DNL Marketo’s] Web Personalization e ContentAI . [!DNL Marketo] A Personalização da Web identifica e personaliza de forma exclusiva o conteúdo para as características de visitantes da Web, como firmográficos para visitantes anônimos e uma grande variedade de atributos comportamentais na Plataforma de  [!DNL Marketo] engajamento para visitantes conhecidos. [!DNL Marketo] O ContentAI contém recursos para recomendações e personalização alimentadas por IA para campanhas da Web e de email que são exclusivas para clientes B2B.
 
-[!DNL Marketo Web Personalization] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre personalização da Web e ContentAI no Marketo, leia [Visão geral da personalização da Web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões de tag funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no pa
 Selecione a propriedade na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](../../../tags/ui/administration/companies-and-properties.md#properties-page) de na documentação de tags.
 
 O fluxo de trabalho o orienta pelas etapas para concluir a instalação.
-
-Para obter informações sobre as opções de configuração de extensão e o suporte de instalação, consulte a página [Marketo Web Personalization no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
 Você também pode instalar a extensão diretamente na [Interface do usuário da coleta de dados](https://experience.adobe.com/#/data-collection/). Para obter mais informações, consulte a seção sobre [adicionar uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) na documentação das tags.
 

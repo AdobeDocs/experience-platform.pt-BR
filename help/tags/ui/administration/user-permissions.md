@@ -1,7 +1,7 @@
 ---
 title: Permissões de usuário
 description: Saiba mais sobre as diferentes permissões de tag disponíveis para usuários do Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -75,7 +75,6 @@ As permissões disponíveis neste grupo são:
 Os direitos da empresa se aplicam às permissões que abrangem várias propriedades. Atualmente, há três:
 
 * **Gerenciar propriedades:** isso permite criar novas propriedades na interface do usuário da Coleta de dados e modificar os metadados e as configurações no nível da propriedade. Também é possível excluir propriedades. Leia a [documentação de propriedades](companies-and-properties.md) para obter mais informações. São administradores que normalmente executam essa função.
-* 
 * Concede a capacidade de criar novas propriedades e modificar os metadados e as configurações no nível da propriedade. Também é possível excluir propriedades. Leia mais sobre as propriedades [aqui](companies-and-properties.md). São administradores que normalmente executam essa função.
 * **Desenvolver extensões:** concede a capacidade de criar e modificar pacotes de extensão da empresa, incluindo versões privadas e solicitações de lançamento de versão pública.
 * **Gerenciar configurações do aplicativo:** está disponível apenas para clientes que possuem o Adobe Journey Optimizer licenciadado ou alguma outra solução que ofereça acesso a mensagens móveis no aplicativo e por push.  Isso permite gerenciar os aplicativos que o Experience Cloud conhece, juntamente com as credenciais de push necessárias para se comunicar com o serviço Firebase Cloud Messaging e o serviço de notificação por push da Apple.

@@ -3,9 +3,9 @@ keywords: twitter; Twitter; tag de site universal do twitter; tag de site univer
 title: Extensão de tag do site universal do twitter
 description: A extensão de tag do site universal do Twitter é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '462'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Twitter Universal Website Tag] O fornece ações para enviar beacons para a Tag UWT do Twitter.
 
-[!DNL Twitter Universal Website Tag] O é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte [Rastreamento avançado de conversão](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
+[!DNL Twitter Universal Website Tag] O é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte [Rastreamento de conversão](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) na documentação do Twitter.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões de tag funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 

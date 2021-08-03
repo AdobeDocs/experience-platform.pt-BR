@@ -5,10 +5,9 @@ title: Fazer download das pontuações no Attribution AI
 topic-legacy: Downloading scores
 description: Este documento serve como um guia para baixar pontuações para o Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 2%
 
 ---
@@ -25,7 +24,7 @@ Além disso, para acessar pontuações para o Attribution AI, é necessário ter
 
 ## Encontrar a ID do conjunto de dados {#dataset-id}
 
-Na instância de serviço do Attribution AI insights, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Access scores]**.
+Na instância de serviço do Attribution AI insights, clique na lista suspensa *Mais ações* na navegação superior direita e selecione **[!UICONTROL Pontuações de acesso]**.
 
 ![mais ações](./images/download-scores/more-actions.png)
 
@@ -166,7 +165,7 @@ Uma resposta bem-sucedida retorna uma carga contendo um objeto `_links`. No obje
 }
 ```
 
-## Recupere seus arquivos {#retrieving-your-files}
+## Recuperar arquivos {#retrieving-your-files}
 
 Usando o valor `href` obtido na etapa anterior como uma chamada de API, faça uma nova solicitação do GET para recuperar o diretório de arquivos.
 
@@ -261,7 +260,7 @@ A resposta baixa o arquivo solicitado no diretório atual. Neste exemplo, o nome
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-As pontuações baixadas estarão no formato Parquet e precisarão de um [!DNL Spark]-shell ou leitor Parquet para visualizar as pontuações. Para visualização de pontuação bruta, você pode usar [Ferramentas do Apache Parquet](https://github.com/apache/parquet-mr/tree/master/parquet-tools). As ferramentas do Parquet podem analisar os dados com [!DNL Spark].
+As pontuações baixadas estarão no formato Parquet e precisarão de um [!DNL Spark]-shell ou leitor Parquet para visualizar as pontuações. Para visualização de pontuação bruta, você pode usar [Ferramentas do Apache Parquet](https://parquet.apache.org/documentation/latest/). As ferramentas do Parquet podem analisar os dados com [!DNL Spark].
 
 ## Próximas etapas
 

@@ -3,9 +3,9 @@ title: Uso do Adobe Target com o SDK da Web da plataforma
 description: Saiba como renderizar conteúdo personalizado com o SDK da Web do Experience Platform usando o Adobe Target
 keywords: target; adobe target; activity.id; experience.id; renderDecisões; decisionScopes; pré-ocultar trecho; vec; Experience Composer baseado em formulário; xdm; públicos-alvo; decisões; escopo; esquema; diagrama do sistema; diagrama
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
+source-git-commit: 930756b4e10c42edf2d58be16c51d71df207d1af
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1273'
 ht-degree: 5%
 
 ---
@@ -42,8 +42,8 @@ O diagrama a seguir ajuda você a entender o fluxo de trabalho das [!DNL Target]
 | 3 | A rede de borda envia a solicitação de personalização enriquecida para a borda [!DNL Target] com a ID do visitante e os parâmetros transmitidos. |
 | 4 | Os scripts de perfil executam e, em seguida, fazem o feed no armazenamento de perfil [!DNL Target]. O armazenamento de perfil busca segmentos da [!UICONTROL Biblioteca de público-alvo] (por exemplo, segmentos compartilhados de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
 | 5 | Com base nos parâmetros de solicitação de URL e dados de perfil, [!DNL Target] determina quais atividades e experiências serão exibidas para o visitante na exibição de página atual e para exibições futuras pré-buscadas. [!DNL Target] em seguida, envia isso de volta para a rede de borda. |
-| 6 | a. A rede de borda envia a resposta de personalização de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional. O conteúdo personalizado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<br>b. O conteúdo personalizado para exibições que são mostradas como resultado das ações do usuário em um Aplicativo de página única (SPA) é armazenado em cache para que possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas. &#x200B;<br>c. A rede de borda envia a ID do visitante e outros valores em cookies, como consentimento, ID da sessão, identidade, verificação de cookie, personalização e assim por diante. |
-| 7 | A rede de borda encaminha [!UICONTROL os detalhes do Analytics for Target] (A4T) (metadados de atividade, experiência e conversão) para o &#x200B; de borda [!DNL Analytics]. |
+| 6 | a. A rede de borda envia a resposta de personalização de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional. O conteúdo personalizado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<br>b. O conteúdo personalizado para exibições que são mostradas como resultado das ações do usuário em um Aplicativo de página única (SPA) é armazenado em cache para que possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas. <br>c. A rede de borda envia a ID do visitante e outros valores em cookies, como consentimento, ID da sessão, identidade, verificação de cookie, personalização e assim por diante. |
+| 7 | A rede de borda encaminha [!UICONTROL os detalhes do Analytics for Target] (A4T) (metadados de atividade, experiência e conversão) para a borda [!DNL Analytics]. |
 
 ## Ativar [!DNL Adobe Target]
 
@@ -63,79 +63,9 @@ Para usar o VEC com uma implementação [!DNL Platform Web SDK], instale e ative
 
 Para obter mais informações, consulte [Extensão de assistente do Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) no *Guia do Adobe Target*.
 
-## Atividades do VEC de renderização automática
+## Renderização de conteúdo personalizado
 
-O [!DNL Adobe Experience Platform Web SDK] tem o poder de renderizar automaticamente suas experiências definidas por meio do VEC do [!DNL Adobe Target] na Web para seus usuários. Para indicar [!DNL Experience Platform Web SDK] para renderizar automaticamente atividades do VEC, envie um evento com `renderDecisions = true`:
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## Uso do Compositor baseado em formulário
-
-O [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) é uma interface não visual que é útil para configurar [!UICONTROL Testes A/B], [!UICONTROL Direcionamento de experiência], [!UICONTROL Automated Personalization] e [!UICONTROL Recommendations] atividades com diferentes tipos de resposta, como JSON, HTML, Imagem etc. Dependendo do tipo de resposta ou da decisão retornada por [!DNL Target], a lógica de negócios principal pode ser executada. Para recuperar as decisões das atividades do Composer baseado em formulário, envie um evento com todos os &quot;Deciscopes&quot; para os quais deseja recuperar uma decisão.
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## Escopos de decisão
-
-`decisionScopes` defina seções, locais ou partes de suas páginas em que você deseja renderizar uma experiência personalizada. Esses `decisionScopes` são personalizáveis e definidos pelo usuário. Para clientes atuais [!DNL Target], `decisionScopes` também são conhecidas como &quot;mboxes&quot;. Na interface [!DNL Target], `decisionScopes` aparece como &quot;locais&quot;.
-
-## O `__view__` Escopo
-
-O [!DNL Experience Platform Web SDK] fornece funcionalidade para recuperar ações do VEC sem depender do SDK para renderizar as ações do VEC para você. Envie um evento com `__view__` definido como um `decisionScopes`.
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```
+Consulte [Rendering personalization content](../rendering-personalization-content.md) para obter mais informações.
 
 ## Públicos-alvo no XDM
 
@@ -153,6 +83,86 @@ Se você tiver [!DNL Target] atividades com públicos-alvo predefinidos que usam
 * Intervalo de tempo
 
 Para obter mais informações, consulte [Categorias para públicos](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) no *Guia do Adobe Target*.
+
+### Tokens de resposta
+
+Os tokens de resposta são usados principalmente para enviar metadados a terceiros, como Google, Facebook etc. Os tokens de resposta são retornados
+no campo `meta` dentro de `propositions` -> `items`. Esta é uma amostra:
+
+```
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+
+Para coletar os tokens de resposta, é necessário assinar a promessa `alloy.sendEvent`, repetir por meio de `propositions`
+e extraia os detalhes de `items` -> `meta`. Cada `proposition` tem um campo booleano `renderAttempted`
+indicando se o `proposition` foi renderizado ou não. Consulte a amostra abaixo:
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
+
+Quando a renderização automática é ativada, a matriz de propostas contém:
+
+#### No carregamento da página:
+
+* Composer baseado em formulário baseado `propositions` com sinalizador `renderAttempted` definido como `false`
+* Apresentações baseadas no Visual Experience Composer com sinalizador `renderAttempted` definido como `true`
+* Apresentações baseadas no Visual Experience Composer para uma visualização de Aplicativo de página única com sinalizador `renderAttempted` definido como `true`
+
+#### Na Exibição - alteração (para exibições em cache):
+
+* Apresentações baseadas no Visual Experience Composer para uma visualização de Aplicativo de página única com sinalizador `renderAttempted` definido como `true`
+
+Quando a renderização automática está desativada, a matriz de propostas contém:
+
+#### No carregamento da página:
+
+* Composer baseado em formulário baseado `propositions` com sinalizador `renderAttempted` definido como `false`
+* Apresentações baseadas no Visual Experience Composer com sinalizador `renderAttempted` definido como `false`
+* Apresentações baseadas no Visual Experience Composer para uma visualização de Aplicativo de página única com sinalizador `renderAttempted` definido como `false`
+
+#### Na Exibição - alteração (para exibições em cache):
+
+* Apresentações baseadas no Visual Experience Composer para uma visualização de Aplicativo de página única com sinalizador `renderAttempted` definido como `false`
 
 ### Atualização de perfil único
 
@@ -244,7 +254,7 @@ mboxTrace e mboxDebug foram descontinuadas. Use [[!DNL Platform Web SDK] depuran
 
 ## Terminologia
 
-__Decisões:__ No  [!DNL Target], as decisões estão relacionadas à experiência selecionada em uma Atividade.
+__Apresentações:__ No  [!DNL Target], as apresentações estão correlacionadas à experiência selecionada em uma Atividade.
 
 __Esquema:__ O schema de uma decisão é o tipo de oferta no  [!DNL Target].
 

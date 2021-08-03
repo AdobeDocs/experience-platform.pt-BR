@@ -5,10 +5,9 @@ title: Visão geral da interface do usuário do JupyterLab
 topic-legacy: Overview
 description: O JupyterLab é uma interface de usuário baseada na Web para o Project Jupyter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para os cientistas de dados trabalharem com notebooks, códigos e dados do Júpiter. Este documento fornece uma visão geral do JupyterLab e seus recursos, bem como instruções para executar ações comuns.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91003bf142008bcb1277269b45d8a55234ea6564
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1831'
 ht-degree: 3%
 
 ---
@@ -108,7 +107,7 @@ A área de trabalho principal em [!DNL JupyterLab] permite organizar documentos 
 
 ### Configuração da GPU e do servidor de memória em [!DNL Python]/R
 
-Em [!DNL JupyterLab], selecione o ícone de engrenagem no canto superior direito para abrir *Configuração do servidor do notebook*. Você pode ativar a GPU e alocar a quantidade de memória necessária usando o controle deslizante . A quantidade de memória que você pode alocar depende de quanto sua organização provisionou. Selecione **[!UICONTROL Update configs]** para salvar.
+Em [!DNL JupyterLab], selecione o ícone de engrenagem no canto superior direito para abrir *Configuração do servidor do notebook*. Você pode ativar a GPU e alocar a quantidade de memória necessária usando o controle deslizante . A quantidade de memória que você pode alocar depende de quanto sua organização provisionou. Selecione **[!UICONTROL Atualizar configurações]** para salvar.
 
 >[!NOTE]
 >
@@ -118,9 +117,9 @@ Em [!DNL JupyterLab], selecione o ícone de engrenagem no canto superior direito
 
 ### Encerrar e reiniciar [!DNL JupyterLab]
 
-Em [!DNL JupyterLab], você pode encerrar a sessão para impedir que outros recursos sejam usados. Comece selecionando o **ícone de energia** ![ícone de energia](../images/jupyterlab/user-guide/power_button.png) e selecione **[!UICONTROL Shut Down]** no portão que aparece para terminar a sessão. As sessões do notebook terminam automaticamente após 12 horas sem atividade.
+Em [!DNL JupyterLab], você pode encerrar a sessão para impedir que outros recursos sejam usados. Comece selecionando o **ícone de energia** ![ícone de energia](../images/jupyterlab/user-guide/power_button.png) e selecione **[!UICONTROL Encerrar]** no servidor que aparece para terminar a sessão. As sessões do notebook terminam automaticamente após 12 horas sem atividade.
 
-Para reiniciar [!DNL JupyterLab], selecione o **ícone de reinicialização** ![ícone de reinicialização](../images/jupyterlab/user-guide/restart_button.png) localizado diretamente à esquerda do ícone de energia e selecione **[!UICONTROL Restart]** na parte superior exibida.
+Para reiniciar [!DNL JupyterLab], selecione o **ícone de reinicialização** ![ícone de reinicialização](../images/jupyterlab/user-guide/restart_button.png) localizado diretamente à esquerda do ícone de energia e selecione **[!UICONTROL Reiniciar]** no servidor que aparece.
 
 ![rescindir o jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -255,6 +254,11 @@ Para saber mais sobre cada um dos notebooks suportados e como usá-los, visite o
 
 ## Bibliotecas compatíveis {#supported-libraries}
 
-Para obter uma lista de pacotes suportados em Python, R e PySpark, copie e cole `!pip list --format=columns` em uma nova célula e, em seguida, execute a célula. Uma lista de pacotes suportados é preenchida em ordem alfabética.
+Para obter uma lista de pacotes suportados em Python, R e PySpark, copie e cole `!conda list` em uma nova célula e, em seguida, execute a célula. Uma lista de pacotes suportados é preenchida em ordem alfabética.
 
 ![exemplo](../images/jupyterlab/user-guide/libraries.PNG)
+
+Além disso, as seguintes dependências são usadas, mas não listadas:
+* CUDA 11.2
+* CUDNN 8.1
+

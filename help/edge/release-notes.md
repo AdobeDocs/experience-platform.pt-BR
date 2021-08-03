@@ -3,14 +3,18 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 5%
+source-wordcount: '714'
+ht-degree: 4%
 
 ---
 
 # Notas de versão
+
+## Versão 2.6.2 - 4 de agosto de 2021
+
+* Correção de um problema em que um aviso sobre a desativação de `result.decisions` (fornecido pelo comando `sendEvent`) era registrado no console mesmo quando a propriedade `result.decisions` não estava sendo acessada. Nenhum aviso será registrado ao acessar a propriedade `result.decisions`, mas a propriedade ainda está obsoleta.
 
 ## Versão 2.6.1 - 29 de julho de 2021
 

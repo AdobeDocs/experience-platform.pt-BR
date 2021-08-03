@@ -2,10 +2,10 @@
 title: Tipos de elementos de dados na extensão do SDK da Web da Adobe Experience Platform
 description: Saiba mais sobre os diferentes tipos de elementos de dados fornecidos pela extensão de tag Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 49%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 49%
 Depois de definir seus [tipos de ação](action-types.md) no [extensão de tag do Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), configure os tipos de elemento de dados.
 
 Esta página descreve os tipos de elementos de dados disponíveis.
+
 
 ## ID de mesclagem de eventos
 
@@ -31,7 +32,7 @@ Use o formato XDM para enviar dados para o SDK da Web da Adobe Experience Platfo
 
 ![](./assets/XDM-object.png)
 
-Observe que quando você abre determinados campos do esquema, como `web.webPageDetails.URL`, alguns itens são coletados automaticamente. Mesmo que vários itens sejam coletados automaticamente, você pode substituir qualquer item, se necessário. Todos os valores podem ser preenchidos manualmente ou usando outros elementos de dados.
+Observe que, quando você abre determinados campos do esquema, como `web.webPageDetails.URL`, alguns itens são coletados automaticamente. Mesmo que vários itens sejam coletados automaticamente, você pode substituir qualquer item, se necessário. Todos os valores podem ser preenchidos manualmente ou usando outros elementos de dados.
 
 >[!NOTE]
 >

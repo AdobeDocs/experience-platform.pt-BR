@@ -3,9 +3,9 @@ keywords: correspondência de cliente do google, correspondência de cliente do 
 title: Conexão de correspondência do cliente do Google
 description: A Correspondência de clientes do Google permite que você use seus dados online e offline para acessar e reengajar seus clientes em propriedades próprias e operadas do Google, como Pesquisa, Compras, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Configurar destino - apresentação em vídeo {#video}
 
-O vídeo abaixo demonstra as etapas para configurar um destino [!DNL Google Customer Match] e ativar segmentos. As etapas também são apresentadas sequencialmente nas próximas seções.
+O vídeo abaixo demonstra as etapas para configurar um destino social e ativar segmentos. O vídeo usa o LinkedIn como exemplo, mas as etapas são semelhantes em todos os destinos sociais, incluindo [!DNL Google Customer Match]. As etapas no vídeo também são apresentadas sequencialmente nas próximas seções.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 

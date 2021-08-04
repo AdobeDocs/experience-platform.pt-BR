@@ -3,7 +3,7 @@ keywords: Analisar. ly; parsamente; parsamente; parse.ly; Parse.ly
 title: Extensão do Parse.ly Analytics
 description: A extensão Parse.ly Analytics é um destino do Analytics no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para usar essa extensão, você precisa acessar tags no Adobe Experience Platfor
 
 Para instalar a extensão [!DNL Parse.ly]:
 
-Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 

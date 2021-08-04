@@ -3,7 +3,7 @@ keywords: Marketo; marketo; extensão do Marketo; extensão do marketo
 title: Extensão do Marketo
 description: A extensão Marketo é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para usar essa extensão, você precisa acessar tags no Adobe Experience Platfor
 
 Para instalar a extensão [!DNL Marketo]:
 
-1. Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+1. Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Selecione a extensão do catálogo ou use a barra de pesquisa.
 3. Clique no destino para realçá-lo e selecione **[!UICONTROL Configurar]** no painel direito. Se o controle **[!UICONTROL Configurar]** estiver esmaecido, você não terá a permissão **[!UICONTROL manage_properties]**. Consulte [Pré-requisitos](#prerequisites).
 4. Selecione a propriedade na qual deseja instalar a extensão. Você também tem a opção de criar uma nova propriedade. Uma propriedade é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Saiba mais sobre as propriedades na seção [Propriedades da página](../../../tags/ui/administration/companies-and-properties.md#properties-page) de na documentação de tags.

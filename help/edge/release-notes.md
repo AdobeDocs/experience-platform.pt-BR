@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## Versão 2.6.0 - 27 de julho de 2021
 
-* Fornece mais conteúdo de personalização na promessa `sendEvent` resolvida, incluindo tokens de resposta do Adobe Target. Quando o comando `sendEvent` é executado, uma promessa é retornada, que é eventualmente resolvida com um objeto `result` contendo as informações recebidas do servidor. Esse objeto de resultado inclui uma propriedade chamada `decisions`. Esta propriedade `decisions` foi preterida. Uma nova propriedade, `propositions`, foi adicionada. Essa nova propriedade fornece aos clientes acesso a mais conteúdo de personalização, incluindo tokens de resposta. Mais documentação estará disponível em breve.
+* Fornece mais conteúdo de personalização na promessa `sendEvent` resolvida, incluindo tokens de resposta do Adobe Target. Quando o comando `sendEvent` é executado, uma promessa é retornada, que é eventualmente resolvida com um objeto `result` contendo as informações recebidas do servidor. Anteriormente, esse objeto de resultado incluía uma propriedade chamada `decisions`. Esta propriedade `decisions` foi preterida. Uma nova propriedade, `propositions`, foi adicionada. Essa nova propriedade fornece aos clientes acesso a mais conteúdo de personalização, incluindo [tokens de resposta](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
 
 ## Versão 2.5.0 - junho de 2021
 

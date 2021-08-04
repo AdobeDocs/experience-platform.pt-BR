@@ -3,7 +3,7 @@ keywords: gtag; google gtag; extensão do google; extensão do google gtag; GTAG
 title: Extensão gtag do Google
 description: A extensão de tag do Google é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para usar essa extensão, você precisa acessar tags no Adobe Experience Platfor
 
 Para instalar a extensão do Google gtag:
 
-Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 

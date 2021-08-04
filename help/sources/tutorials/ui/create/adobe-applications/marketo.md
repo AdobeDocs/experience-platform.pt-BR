@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Este tutorial fornece etapas para criar um conector de fonte Marketo Engage na interface do usuário para trazer dados B2B para o Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-translation-type: tm+mt
-source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
+source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -30,7 +29,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Modelo de dados de experiência (XDM)](../../../../../xdm/home.md): A estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Criar e editar esquemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md): Saiba como criar e editar esquemas na interface do usuário.
 * [Namespaces](../../../../../identity-service/namespaces.md) de identidade: Os namespaces de identidade são um componente do  [!DNL Identity Service] que serve como indicadores do contexto ao qual uma identidade está relacionada. Uma identidade totalmente qualificada inclui um valor de ID e um namespace.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
+* [[!DNL Real-time Customer Profile]](/help/profile/home.md): Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Obter credenciais necessárias
@@ -49,7 +48,7 @@ Depois de coletar suas credenciais necessárias, siga as etapas da próxima seç
 
 ## Conecte sua conta [!DNL Marketo]
 
-Na interface do usuário da plataforma, selecione **[!UICONTROL Sources]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. A tela [!UICONTROL Catalog] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
 
@@ -61,7 +60,7 @@ A página **[!UICONTROL Connect to Marketo Engage]** é exibida. Nesta página, 
 
 ### Nova conta
 
-Se estiver criando uma nova conta, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome de conta, uma descrição opcional e suas credenciais de autenticação [!DNL Marketo]. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+Se estiver criando uma nova conta, selecione **[!UICONTROL New account]**. No formulário de entrada exibido, forneça um nome de conta, uma descrição opcional e suas credenciais de autenticação [!DNL Marketo]. Quando terminar, selecione **[!UICONTROL Connect to source]** e, em seguida, conceda algum tempo para que a nova conexão seja estabelecida.
 
 ![nova conta](../../../../images/tutorials/create/marketo/new.png)
 
@@ -75,11 +74,11 @@ Para criar um fluxo de dados com uma conta existente, selecione **[!UICONTROL Ex
 
 Depois de criar sua conta [!DNL Marketo], a próxima etapa fornece uma interface para você explorar [!DNL Marketo] conjuntos de dados.
 
-A metade esquerda da interface é um navegador de diretório, exibindo os 10 conjuntos de dados [!DNL Marketo]. Uma conexão de origem [!DNL Marketo] que funcione totalmente requer a assimilação dos nove conjuntos de dados diferentes. Se você também estiver usando o recurso de [!DNL Marketo] marketing baseado em conta (ABM), também deverá criar um 10º fluxo de dados para assimilar o conjunto de dados [!UICONTROL Named Accounts].
+A metade esquerda da interface é um navegador de diretório, exibindo os 10 conjuntos de dados [!DNL Marketo]. Uma conexão de origem [!DNL Marketo] que funcione totalmente requer a assimilação dos nove conjuntos de dados diferentes. Se você também estiver usando o recurso de [!DNL Marketo] marketing baseado em conta (ABM), também deverá criar um 10º fluxo de dados para assimilar o conjunto de dados [!UICONTROL Contas nomeadas].
 
 >[!NOTE]
 >
->Por motivos de brevidade, o tutorial a seguir usa [!UICONTROL Named Accounts] como exemplo, mas as etapas descritas abaixo se aplicam a qualquer um dos 10 conjuntos de dados [!DNL Marketo].
+>Por motivos de brevidade, o tutorial a seguir usa [!UICONTROL Contas Nomeadas] como um exemplo, mas as etapas descritas abaixo se aplicam a qualquer um dos 10 conjuntos de dados [!DNL Marketo].
 
 Selecione o conjunto de dados que deseja assimilar primeiro e selecione **[!UICONTROL Next]**.
 
@@ -87,17 +86,17 @@ Selecione o conjunto de dados que deseja assimilar primeiro e selecione **[!UICO
 
 ## Mapear esquemas [!DNL Marketo] para a plataforma
 
-A etapa [!UICONTROL Mapping] é exibida, fornecendo uma interface para mapear [!DNL Marketo] esquemas para a Plataforma.
+A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear [!DNL Marketo] esquemas para a Plataforma.
 
 Escolha um conjunto de dados para os dados de entrada que serão assimilados. Você pode usar um conjunto de dados existente ou criar um novo conjunto de dados.
 
 ### Usar um conjunto de dados existente
 
-Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Existing dataset]** e selecione o ícone do conjunto de dados.
+Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]** e selecione o ícone do conjunto de dados.
 
 ![conjunto de dados existente](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-A caixa de diálogo **[!UICONTROL Select dataset]** é exibida. Encontre o conjunto de dados com o schema apropriado que deseja usar, selecione-o e, em seguida, selecione **[!UICONTROL Confirm]**.
+A caixa de diálogo **[!UICONTROL Selecionar conjunto de dados]** é exibida. Encontre o conjunto de dados com o esquema apropriado que deseja usar, selecione-o e depois selecione **[!UICONTROL Confirmar]**.
 
 ![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
 
@@ -105,9 +104,9 @@ A caixa de diálogo **[!UICONTROL Select dataset]** é exibida. Encontre o conju
 
 Para assimilar dados em um novo conjunto de dados, selecione **[!UICONTROL New dataset]** e insira um nome e uma descrição para o conjunto de dados nos campos fornecidos.
 
-Você pode procurar um esquema inserindo seu nome na barra de pesquisa **[!UICONTROL Select schema]**. Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar **[!UICONTROL Advanced search]** para acessar a página de esquemas existentes, incluindo seus respectivos detalhes.
+Você pode procurar um esquema inserindo seu nome na barra de pesquisa **[!UICONTROL Selecionar esquema]**. Você também pode selecionar o ícone suspenso para ver uma lista de schemas existentes. Como alternativa, você pode selecionar **[!UICONTROL Pesquisa avançada]** para acessar a página de esquemas existentes, incluindo seus respectivos detalhes.
 
-Alterne o botão **[!UICONTROL Profile dataset]** para ativar o conjunto de dados de destino para [!DNL Profile], permitindo criar uma exibição holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados para [!DNL Profile] serão incluídos em [!DNL Profile] e as alterações serão aplicadas quando você salvar o fluxo de dados.
+Alterne o botão **[!UICONTROL Conjunto de dados de perfil]** para ativar seu conjunto de dados de destino para [!DNL Profile], permitindo criar uma visualização holística dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados para [!DNL Profile] serão incluídos em [!DNL Profile] e as alterações serão aplicadas quando você salvar o fluxo de dados.
 
 ![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
 
@@ -132,7 +131,7 @@ Selecione **[!UICONTROL Preview data]** para ver os resultados do mapeamento com
 
 ![mapeamento](../../../../images/tutorials/create/marketo/mapping.png)
 
-A [!UICONTROL Preview] janela fornece uma interface para explorar os resultados do mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
+O provedor [!UICONTROL Preview] fornece uma interface para explorar os resultados de mapeamento de até 100 linhas de dados de amostra do conjunto de dados selecionado.
 
 ![visualização](../../../../images/tutorials/create/marketo/mapping-preview.png)
 
@@ -140,17 +139,17 @@ Depois que os campos de origem forem mapeados para os campos de destino apropria
 
 ## Fornecer detalhes do fluxo de dados
 
-A etapa [!UICONTROL Dataflow detail] é exibida, permitindo que você forneça um nome e uma breve descrição sobre o novo fluxo de dados.
+A etapa [!UICONTROL Detalhes do fluxo de dados] é exibida, permitindo que você forneça um nome e uma breve descrição sobre seu novo fluxo de dados.
 
 ![detalhe do fluxo de dados](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-Ative a opção **[!UICONTROL Error diagnostics]** para permitir a geração detalhada de mensagens de erro para lotes recém-assimilados, que pode ser baixada usando a API . Para obter mais informações, consulte o tutorial em [recuperar diagnósticos de erro de assimilação de dados](../../../../../ingestion/quality/error-diagnostics.md).
+Ative a opção **[!UICONTROL Error diagnostics]** para permitir a geração detalhada de mensagens de erro para lotes recém-assimilados, que pode ser baixada usando a API. Para obter mais informações, consulte o tutorial em [recuperar diagnósticos de erro de assimilação de dados](../../../../../ingestion/quality/error-diagnostics.md).
 
 ![erros](../../../../images/tutorials/create/marketo/errors.png)
 
-O conector [!DNL Marketo] usa a assimilação em lote para assimilar todos os registros históricos e usa a assimilação de streaming para atualizações em tempo real. Isso permite que o conector continue o streaming ao assimilar qualquer registro incorreto. Ative o botão **[!UICONTROL Partial ingestion]** e defina o [!UICONTROL Error threshold %] como máximo para impedir que o fluxo de dados falhe.
+O conector [!DNL Marketo] usa a assimilação em lote para assimilar todos os registros históricos e usa a assimilação de streaming para atualizações em tempo real. Isso permite que o conector continue o streaming ao assimilar qualquer registro incorreto. Ative o botão **[!UICONTROL Assimilação parcial]** e, em seguida, defina o [!UICONTROL Limite de erro %] como máximo para impedir que o fluxo de dados falhe.
 
-**[!UICONTROL Partial ingestion]** O oferece a capacidade de assimilar dados que contenham erros até um determinado limite. Para obter mais informações, consulte a [visão geral da ingestão parcial de lote](../../../../../ingestion/batch-ingestion/partial.md).
+**[!UICONTROL O]** questionário parcial oferece a capacidade de assimilar dados que contenham erros até um determinado limite. Para obter mais informações, consulte a [visão geral da ingestão parcial de lote](../../../../../ingestion/batch-ingestion/partial.md).
 
 Depois de fornecer os detalhes do fluxo de dados e definir o limite de erro como máximo, selecione **[!UICONTROL Next]**.
 
@@ -158,10 +157,10 @@ Depois de fornecer os detalhes do fluxo de dados e definir o limite de erro como
 
 ## Revisar o fluxo de dados
 
-A etapa **[!UICONTROL Review]** é exibida, permitindo que você revise o novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa **[!UICONTROL Revisar]** é exibida, permitindo que você revise o novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-* **[!UICONTROL Connection]**: Mostra o tipo de origem, o caminho relevante da entidade de origem escolhida e a quantidade de colunas dentro dessa entidade de origem.
-* **[!UICONTROL Assign dataset & map fields]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
+* **[!UICONTROL Conexão]**: Mostra o tipo de origem, o caminho relevante da entidade de origem escolhida e a quantidade de colunas dentro dessa entidade de origem.
+* **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: Mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
 
 Depois de revisar o fluxo de dados, selecione **[!UICONTROL Finish]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
@@ -177,11 +176,11 @@ Os atributos personalizados em conjuntos de dados não podem ser ocultos ou remo
 
 ## Excluir seu fluxo de dados
 
-Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho [!UICONTROL Dataflows]. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [excluir fluxos de dados na interface do usuário](../../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho [!UICONTROL Fluxos de dados]. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial em [excluir fluxos de dados na interface do usuário](../../delete.md).
 
 ## Próximas etapas
 
 Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer [!DNL Marketo] dados. Os dados recebidos agora podem ser usados por serviços downstream da plataforma, como [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
-* [[!DNL Real-time Customer Profile] visão geral](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] visão geral](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] visão geral](/help/profile/home.md)
+* [[!DNL Data Science Workspace] visão geral](/help/data-science-workspace/home.md)

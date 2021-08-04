@@ -3,7 +3,7 @@ keywords: Extensão de mastertag do Awin Advertiser; mastertag; Awin; awin; AWIN
 title: Extensão Awin Advertiser Mastertag
 description: A extensão Awin Advertiser Mastertag é um destino de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 99a9ea40-b89f-4503-91a7-60cc8e1cd6d3
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para usar essa extensão, você precisa acessar tags no Adobe Experience Platfor
 
 Para instalar a extensão [!DNL Awin Advertiser Mastertag]:
 
-Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 

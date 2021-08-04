@@ -3,9 +3,9 @@ keywords: Conexão facebook; Conexão facebook; Destinos facebook; facebook; ins
 title: Conexão facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público-alvo, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Para direcioná-los em redes sociais, eles podem integrar os dados do cliente do
 
 Em seguida, eles podem usar seus dados offline, incluindo as IDs de associação associadas e os níveis do cliente para criar novos segmentos de público-alvo que podem direcionar por meio do destino [!DNL Facebook].
 
-## Identidades compatíveis {#supported-identities}
+## Identidades suportadas {#supported-identities}
 
 [!DNL Facebook Custom Audiences] O suporta a ativação de identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/namespaces.md).
 
@@ -108,11 +108,11 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 
 Antes de usar o namespace `Extern_ID` para enviar dados a [!DNL Facebook], sincronize seus próprios identificadores usando [!DNL Facebook Pixel]. Consulte a [documentação oficial do Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obter informações detalhadas.
 
-## Conecte-se ao destino {#connect-destination}
+## Ligar ao destino {#connect-destination}
 
 Para se conectar ao destino [!DNL Facebook], consulte [Fluxo de trabalho de autenticação de destinos sociais](./workflow.md).
 
-O vídeo abaixo também demonstra as etapas para configurar um destino [!DNL Facebook] e ativar segmentos.
+O vídeo abaixo também demonstra as etapas para configurar um destino social e ativar segmentos. O vídeo usa o LinkedIn como exemplo, mas as etapas são semelhantes em todos os destinos sociais.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 

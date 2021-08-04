@@ -3,7 +3,7 @@ keywords: PebblePost; pebblepost; PebblePost Correspondência direta programáti
 title: Extensão PebblePost
 description: A extensão PebblePost é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Para usar essa extensão, você precisa acessar tags no Adobe Experience Platfor
 
 Para instalar a extensão [!DNL PebblePost]:
 
-Na [Interface da plataforma](http://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão do catálogo ou use a barra de pesquisa.
 

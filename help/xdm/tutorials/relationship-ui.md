@@ -6,11 +6,10 @@ description: Este documento fornece um tutorial para definir uma relação entre
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 1%
+source-wordcount: '1000'
+ht-degree: 0%
 
 ---
 
@@ -44,15 +43,27 @@ Para fins de referência, as seções a seguir descrevem a estrutura de cada sch
 
 ### [!DNL Loyalty Members] schema
 
-O schema de origem &quot;[!DNL Loyalty Members]&quot; é baseado na classe [!DNL XDM Individual Profile] e é o schema que foi construído no tutorial para [criar um schema na interface do usuário](create-schema-ui.md). Ele inclui um objeto `loyalty` em seu namespace `_tenantId`, que inclui vários campos específicos de fidelidade. Um desses campos, `loyaltyId`, serve como a identidade primária para o schema no namespace [!UICONTROL Email]. Conforme visto em **[!UICONTROL Schema Properties]**, este esquema foi ativado para uso em [!DNL Real-time Customer Profile].
+O schema de origem &quot;[!DNL Loyalty Members]&quot; é baseado na classe [!DNL XDM Individual Profile] e é o schema que foi construído no tutorial para [criar um schema na interface do usuário](create-schema-ui.md). Ele inclui um objeto `loyalty` em seu namespace `_tenantId`, que inclui vários campos específicos de fidelidade. Um desses campos, `loyaltyId`, serve como a identidade primária para o schema no namespace [!UICONTROL Email]. Conforme visto em **[!UICONTROL Propriedades do Esquema]**, este esquema foi ativado para uso em [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### [!DNL Hotels] schema
 
-O esquema de destino &quot;[!DNL Hotels]&quot; é baseado em uma classe personalizada &quot;[!DNL Hotels]&quot; e contém campos que descrevem um hotel. O campo `hotelId` serve como a identidade primária para o esquema em um namespace `hotelId` personalizado. Como o schema [!DNL Loyalty Members], esse schema também foi ativado para [!DNL Real-time Customer Profile].
+O esquema de destino &quot;[!DNL Hotels]&quot; é baseado em uma classe personalizada &quot;[!DNL Hotels]&quot; e contém campos que descrevem um hotel.
 
 ![](../images/tutorials/relationship/hotels.png)
+
+Para participar de um relacionamento, o schema de destino deve ter uma identidade primária. Neste exemplo, o campo `hotelId` é usado como a identidade primária, usando um namespace de identidade personalizado &quot;ID do hotel&quot;.
+
+![Identidade primária do hotel](../images/tutorials/relationship/hotel-identity.png)
+
+>[!NOTE]
+>
+>Para saber como criar namespaces de identidade personalizados, consulte a [documentação do Serviço de identidade](../../identity-service/namespaces.md#manage-namespaces).
+
+Depois que a identidade primária é definida, o schema de destino deve ser ativado para [!DNL Real-time Customer Profile].
+
+![Ativar para Perfil](../images/tutorials/relationship/hotel-profile.png)
 
 ## Criar um grupo de campos do schema de relacionamento
 
@@ -66,11 +77,11 @@ Comece selecionando **[!UICONTROL Add]** na seção **[!UICONTROL Field groups]*
 
 ![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-A caixa de diálogo [!UICONTROL Add field group] é exibida. Aqui, selecione **[!UICONTROL Create new field group]**. Nos campos de texto exibidos, insira um nome de exibição e uma descrição para o novo grupo de campos. Selecione **[!UICONTROL Add field groups]** quando terminar.
+A caixa de diálogo [!UICONTROL Adicionar grupo de campos] é exibida. Aqui, selecione **[!UICONTROL Criar novo grupo de campos]**. Nos campos de texto exibidos, insira um nome de exibição e uma descrição para o novo grupo de campos. Selecione **[!UICONTROL Adicionar grupos de campos]** quando terminar.
 
 ![](../images/tutorials/relationship/create-field-group.png)
 
-A tela reaparece com &quot;[!DNL Favorite Hotel]&quot; aparecendo na seção **[!UICONTROL Field groups]**. Selecione o nome do grupo de campos e selecione **[!UICONTROL Add field]** ao lado do campo de nível raiz `Loyalty Members`.
+A tela reaparece com &quot;[!DNL Favorite Hotel]&quot; aparecendo na seção **[!UICONTROL Field groups]**. Selecione o nome do grupo de campos e selecione **[!UICONTROL Adicionar campo]** ao lado do campo de nível raiz `Loyalty Members`.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -78,15 +89,15 @@ Um novo campo aparece na tela sob o namespace `_tenantId`. Em **[!UICONTROL Fiel
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Quando terminar, selecione **[!UICONTROL Apply]**.
+Quando terminar, selecione **[!UICONTROL Aplicar]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-O campo atualizado `favoriteHotel` aparece na tela. Selecione **[!UICONTROL Save]** para finalizar as alterações no schema.
+O campo atualizado `favoriteHotel` aparece na tela. Selecione **[!UICONTROL Save]** para finalizar as alterações no esquema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## Definir um campo de relação para o schema de origem {#relationship-field}
+## Definir um campo de relacionamento para o schema de origem {#relationship-field}
 
 Depois que o schema de origem tiver um campo de referência dedicado definido, você poderá designá-lo como um campo de relacionamento.
 
@@ -94,11 +105,11 @@ Selecione o campo `favoriteHotel` na tela e role para baixo em **[!UICONTROL Fie
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Selecione a lista suspensa para **[!UICONTROL Reference schema]** e selecione o schema de destino para a relação (&quot;[!DNL Hotels]&quot; neste exemplo). Se o schema de destino estiver ativado para [!DNL Profile], o campo **[!UICONTROL Reference identity namespace]** será automaticamente definido para o namespace da identidade primária do schema de destino. Se o schema não tiver uma identidade primária definida, você deverá selecionar manualmente o namespace que planeja usar no menu suspenso. Selecione **[!UICONTROL Apply]** quando terminar.
+Selecione a lista suspensa para **[!UICONTROL Reference schema]** e selecione o schema de destino para a relação (&quot;[!DNL Hotels]&quot; neste exemplo). Se o schema de destino estiver ativado para [!DNL Profile], o campo **[!UICONTROL Reference identity namespace]** será automaticamente definido para o namespace da identidade primária do schema de destino. Se o schema não tiver uma identidade primária definida, você deverá selecionar manualmente o namespace que planeja usar no menu suspenso. Selecione **[!UICONTROL Aplicar]** quando terminar.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-O campo `favoriteHotel` agora é destacado como uma relação na tela, exibindo o nome e o namespace de identidade de referência do schema de destino. Selecione **[!UICONTROL Save]** para salvar suas alterações e concluir o fluxo de trabalho.
+O campo `favoriteHotel` agora é destacado como uma relação na tela, exibindo o nome e o namespace de identidade de referência do schema de destino. Selecione **[!UICONTROL Save]** para salvar as alterações e concluir o fluxo de trabalho.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 

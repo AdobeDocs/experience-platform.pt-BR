@@ -5,10 +5,10 @@ title: Guia de solução de problemas do serviço de query
 topic-legacy: troubleshooting
 description: Este documento contém informações sobre códigos de erro comuns encontrados e as possíveis causas.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e3557fe75680153f051b8a864ad8f6aca5f743ee
+source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 1%
+source-wordcount: '525'
+ht-degree: 6%
 
 ---
 
@@ -51,8 +51,8 @@ SELECT a._company AS _company,
 a._id AS _id,
 a.timestamp AS timestamp
 FROM actual_dataset a
-WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
-AND timestamp < To_timestamp('2021-01-21 13:00:00')
+WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
+AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
@@ -77,7 +77,7 @@ Não é possível usar curingas para obter todos os dados de suas linhas, pois o
 
 ## Erros da API REST
 
-| Código de status HTTP | Descrição | Causas possíveis |
+| Código do status HTTP | Descrição | Possíveis causas |
 | ---------------- | ----------- | --------------- |
 | 400 | Solicitação inválida | Consulta malformada ou ilegal |
 | 401° | Falha na autenticação | Token de autenticação inválido |
@@ -85,15 +85,20 @@ Não é possível usar curingas para obter todos os dados de suas linhas, pois o
 
 ## Erros da API PostgreSQL
 
-| Código de erro e estado de conexão | Descrição | Causa Possível |
-| ------------------------------- | ----------- | -------------- |
-| **28P01** Inicialização - autenticação | Senha inválida | Token de autenticação inválido |
-| **28000** Inicialização - autenticação | Tipo de autorização inválido | Tipo de autorização inválido. Deve ser `AuthenticationCleartextPassword`. |
-| **42P12** Inicialização - autenticação | Nenhuma tabela encontrada | Nenhuma tabela encontrada para uso |
-| **42601** Consulta | Erro de sintaxe | Comando ou erro de sintaxe inválido |
-| **58000** Consulta | Erro do sistema | Falha do sistema interno |
-| **42P01** Consulta | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
-| **42P07** Consulta | Tabela existe | A tabela já existe com o mesmo nome (CRIAR TABELA) |
-| **53400** Consulta | LIMITE excede o valor máximo | O usuário especificou uma cláusula LIMIT superior a 100.000 |
-| **53400** Consulta | Tempo limite do demonstrativo | A declaração ao vivo enviada demorou mais de 10 minutos |
-| **08P01** N/D | Tipo de mensagem não suportado | Tipo de mensagem não suportado |
+| Código de erro | Estado da conexão | Descrição | Causa possível |
+| ---------- | ---------------- | ----------- | -------------- |
+| **08P01** | N/D | Tipo de mensagem não suportado | Tipo de mensagem não suportado |
+| **28P01** | Iniciar - autenticação | Senha inválida | Token de autenticação inválido |
+| **28000** | Iniciar - autenticação | Tipo de autorização inválido | Tipo de autorização inválido. Deve ser `AuthenticationCleartextPassword`. |
+| **42P12** | Iniciar - autenticação | Nenhuma tabela encontrada | Nenhuma tabela encontrada para uso |
+| **42601** | Consulta | Erro de sintaxe | Comando ou erro de sintaxe inválido |
+| **42P01** | Consulta | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
+| **42P07** | Consulta | Tabela existe | Já existe uma tabela com o mesmo nome (CRIAR TABELA) |
+| **53400** | Consulta | LIMITE excede o valor máximo | O usuário especificou uma cláusula LIMIT superior a 100.000 |
+| **53400** | Consulta | Tempo limite do demonstrativo | A declaração ao vivo enviada demorou mais de 10 minutos |
+| **58000** | Consulta | Erro do sistema | Falha do sistema interno |
+| **0A000** | Query/Comando | Não suportado | Não há suporte para o recurso/funcionalidade no query/comando |
+| **42501** | Consulta DROP TABLE | Eliminar tabela não criada pelo Serviço de Consulta | A tabela que está sendo solta não foi criada pelo Serviço de Consulta usando a instrução `CREATE TABLE` |
+| **42501** | Consulta DROP TABLE | Tabela não criada pelo usuário autenticado | A tabela que está sendo solta não foi criada pelo usuário conectado no momento |
+| **42P01** | Consulta DROP TABLE | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |
+| **42P12** | Consulta DROP TABLE | Nenhuma tabela encontrada para `dbName`: verifique o `dbName` | Nenhuma tabela foi encontrada no banco de dados atual |

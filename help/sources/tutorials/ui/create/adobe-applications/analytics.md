@@ -6,17 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 2%
+source-wordcount: '1450'
+ht-degree: 1%
 
 ---
 
 # Criar uma conexão de origem do Adobe Analytics na interface do usuário
 
-Este tutorial fornece etapas para criar uma conexão de origem Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
+Este tutorial fornece etapas para criar uma conexão de origem Adobe Analytics na interface do usuário para trazer [!DNL Analytics] dados do conjunto de relatórios para o Adobe Experience Platform.
 
 ## Introdução
 
@@ -26,54 +25,139 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Perfil](../../../../../profile/home.md) do cliente em tempo real: Fornece um perfil de consumidor unificado e em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../../../../sandboxes/home.md): O Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
+### Terminologia principal
+
+É importante entender os seguintes termos principais usados em todo este documento:
+
+* **Atributo** padrão: Atributos padrão são qualquer atributo predefinido pelo Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis nos grupos de campos [!DNL Analytics] de origem e [!DNL Analytics] de esquema.
+* **Atributo** personalizado: Atributos personalizados são qualquer atributo na hierarquia de dimensão personalizada no  [!DNL Analytics]. Eles também estão entre os esquemas definidos pelo Adobe, mas podem ser interpretados de forma diferente por clientes diferentes. Os atributos personalizados incluem eVars, props e listas. Consulte a documentação a seguir [[!DNL Analytics] sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre eVars.
+* **Qualquer atributo em grupos** de campos personalizados: Os atributos originados de grupos de campos criados por clientes são definidos pelo usuário e não são considerados atributos padrão ou personalizados.
+* **Nomes** amigáveis: Nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em uma  [!DNL Analytics] implementação. Consulte a documentação a seguir [[!DNL Analytics] sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obter mais informações sobre nomes amigáveis.
+
 ## Criar uma conexão de origem com o Adobe Analytics
 
-Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Sources]** na barra de navegação esquerda para acessar o espaço de trabalho de origens. A tela **Catalog** exibe as fontes disponíveis para criar conexões de entrada com o e cada fonte mostra o número de contas e fluxos de conjunto de dados existentes associados a elas.
+Na interface do usuário da plataforma, selecione **[!UICONTROL Fontes]** no painel de navegação esquerdo para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Também é possível usar a barra de pesquisa para restringir as fontes exibidas.
 
-Na categoria **[!UICONTROL Adobe applications]**, selecione **[!UICONTROL Adobe Analytics]** para expor uma barra de informações no lado direito da tela. A barra de informações fornece uma breve descrição da fonte selecionada, bem como opções para se conectar com a fonte ou exibir sua documentação. Para exibir as contas existentes, selecione **[!UICONTROL Accounts]**.
+Na categoria **[!UICONTROL Adobe applications]**, selecione **[!UICONTROL Adobe Analytics]** e selecione **[!UICONTROL Add data]**.
 
-![](../../../../images/tutorials/create/analytics/catalog.png)
+![catálogo](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Selecionar dados
 
-A etapa **[!UICONTROL Adobe Analytics]** é exibida. Os fluxos de conjunto de dados estabelecidos anteriormente para o Analytics são listados nesta tela. Você pode criar um novo fluxo de conjunto de dados clicando em **[!UICONTROL Select data]**.
+A etapa **[!UICONTROL Adicionar dados de origem do Analytics]** é exibida. Selecione **[!UICONTROL Conjunto de relatórios]** para começar a criar uma conexão de origem para os dados do conjunto de relatórios do Analytics e selecione o conjunto de relatórios que deseja assimilar. Selecione **[!UICONTROL Next]** para continuar.
 
 >[!NOTE]
 >
 >Várias conexões de entrada para uma fonte podem ser feitas para trazer dados diferentes.
 
-![](../../../../images/tutorials/create/analytics/dataset-flows.png)
+![](../../../../images/tutorials/create/analytics/add-data.png)
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-Na lista de conjuntos de relatórios disponíveis, selecione aquele que deseja trazer para a Plataforma e clique em **[!UICONTROL Next]**.
+### Mapeamento
 
-![](../../../../images/tutorials/create/analytics/select-data.png)
+>[!IMPORTANT]
+>
+>O recurso de suporte de Preparação de dados para a fonte [!DNL Analytics] está em beta.
 
-### Dê um nome ao fluxo do conjunto de dados
+A página [!UICONTROL Mapeamento] fornece uma interface para mapear campos de origem para seus campos de esquema de destino apropriados. A partir daqui, você pode mapear variáveis personalizadas para novos grupos de campos do esquema e aplicar cálculos, conforme suportado pela Preparação de dados. Selecione um schema de target para iniciar o processo de mapeamento.
 
-A etapa **[!UICONTROL Dataset flow detail]** é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo do conjunto de dados. Selecione **[!UICONTROL Next]** quando terminar.
+>[!TIP]
+>
+>Somente os esquemas que têm o grupo de campos do modelo [!DNL Analytics] são exibidos no menu de seleção de esquema. Outros esquemas são omitidos. Se não houver esquemas apropriados disponíveis para seus dados de conjunto de relatórios, você deverá criar um novo esquema. Para obter etapas detalhadas sobre como criar schemas, consulte o guia sobre [como criar e editar schemas na interface do usuário](../../../../../xdm/ui/resources/schemas.md).
 
-![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
+![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
-### Revisar o fluxo do conjunto de dados
+A seção [!UICONTROL Mapear campos padrão] exibe painéis para [!UICONTROL Mapeamentos padrão aplicados], [!UICONTROL Mapeamentos padrão não correspondentes] e [!UICONTROL Mapeamentos personalizados]. Consulte a tabela a seguir para obter informações específicas sobre cada categoria:
 
-A etapa **[!UICONTROL Review]** é exibida, permitindo revisar o novo fluxo do conjunto de dados de entrada do Analytics antes de ele ser criado. Os detalhes da conexão são agrupados por categorias, incluindo:
+| Mapear campos padrão | Descrição |
+| --- | --- |
+| [!UICONTROL Mapeamentos padrão aplicados] | O painel [!UICONTROL Mapeamentos padrão aplicados] exibe o número total de atributos padrão mapeados. Os mapeamentos padrão referem-se a conjuntos de mapeamento entre atributos padrão nos dados de origem [!DNL Analytics] e atributos padrão no grupo de campos [!DNL Analytics]. Eles são pré-mapeados e não podem ser editados. |
+| [!UICONTROL Mapeamentos padrão não correspondentes] | O painel [!UICONTROL Mapeamentos padrão não correspondentes] refere-se ao número de atributos padrão mapeados que contêm conflitos de nome amigáveis. Esses conflitos aparecem quando você reutiliza um esquema que já tem um conjunto preenchido de descritores de campo. Você pode continuar com seu fluxo de dados [!DNL Analytics] mesmo com conflitos de nome amigáveis. |
+| [!UICONTROL Mapeamentos personalizados] | O painel [!UICONTROL Mapeamentos personalizados] exibe o número de atributos personalizados mapeados, incluindo eVars, props e listas. Os mapeamentos personalizados referem-se a conjuntos de mapeamento entre atributos personalizados nos dados de origem [!DNL Analytics] e atributos personalizados no grupo de campos [!DNL Analytics]. Atributos personalizados podem ser mapeados para outros atributos personalizados, bem como atributos padrão. |
 
-* **[!UICONTROL Connection]**: Mostra o tipo da conexão de origem e o conjunto de relatórios selecionado.
-* **[!UICONTROL Assign dataset & map fields]**: Ao criar outros conectores de origem, esse contêiner mostra em qual conjunto de dados os dados de origem estão assimilando, incluindo o esquema ao qual o conjunto de dados adere. O esquema de saída e o conjunto de dados são configurados automaticamente para fluxos de conjunto de dados do Analytics.
+![campos padrão do mapa](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
-![](../../../../images/tutorials/create/analytics/review.png)
+Para visualizar o grupo de campos do esquema do modelo [!DNL Analytics] ExperienceEvent, selecione **[!UICONTROL Exibir]** no painel [!UICONTROL Mapeamentos padrão aplicados].
 
-### Monitorar o fluxo do conjunto de dados
+![view](../../../../images/tutorials/create/analytics/view.png)
 
-Depois que o fluxo do conjunto de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele. Na tela **[!UICONTROL Catalog]**, selecione **[!UICONTROL Dataset flows]** para visualizar uma lista de fluxos estabelecidos associados à sua conta do Analytics.
+A página [!UICONTROL Grupo de campos do esquema de modelo do Adobe Analytics ExperienceEvent] fornece uma interface para usar na inspeção da estrutura do esquema. Quando terminar, selecione **[!UICONTROL Fechar]**.
 
-![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
+![visualização de grupo de campos](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-A tela **Fluxo do conjunto de dados** é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, tempo de criação e status.
+A Platform detecta automaticamente seus conjuntos de mapeamento para qualquer conflito de nome amigável. Se não houver conflitos com seus conjuntos de mapeamento, selecione **[!UICONTROL Next]** para continuar.
+
+![mapeamento](../../../../images/tutorials/create/analytics/mapping.png)
+
+Se houver conflitos de nome amigáveis em seus conjuntos de mapeamento, você ainda poderá continuar com seu fluxo de dados [!DNL Analytics], reconhecendo que os descritores de campo serão os mesmos. Como alternativa, você pode optar por criar um novo schema com um conjunto em branco de descritores.
+
+Selecione **[!UICONTROL Next]** para continuar.
+
+![cautela](../../../../images/tutorials/create/analytics/caution.png)
+
+#### Mapeamentos personalizados
+
+Para usar as funções de Preparação de dados e adicionar um novo mapeamento ou campos calculados para atributos personalizados, selecione **[!UICONTROL Exibir mapeamentos personalizados]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Em seguida, selecione **[!UICONTROL Adicionar novo mapeamento]**.
+
+Dependendo das suas necessidades, você pode selecionar **[!UICONTROL Add new mapping]** ou **[!UICONTROL Add calculated field]** a partir das opções exibidas.
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+Um conjunto de mapeamento vazio é exibido. Selecione o ícone de mapeamento para adicionar um campo de origem.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+Você pode usar a interface para navegar pela estrutura do schema de origem e identificar o novo campo de origem que deseja usar. Após selecionar o campo de origem que deseja mapear, selecione **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Em seguida, selecione o ícone de mapeamento em [!UICONTROL Campo de destino] para mapear o campo de origem selecionado para o campo de destino apropriado.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Semelhante ao schema de origem, você pode usar a interface para navegar pela estrutura do schema de destino e selecionar o campo de destino para o qual deseja mapear. Depois de selecionar o campo de destino apropriado, selecione **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+Com seu conjunto de mapeamento personalizado concluído, selecione **[!UICONTROL Próximo]** para prosseguir.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+
+A documentação a seguir fornece mais recursos para entender a Preparação de dados, os campos calculados e as funções de mapeamento:
+
+* [Visão geral da preparação de dados](../../../../../data-prep/home.md)
+* [Funções de mapeamento da preparação de dados](../../../../../data-prep/functions.md)
+* [Mapear um arquivo CSV para um esquema XDM e adicionar campos calculados](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+
+### Fornecer detalhes do fluxo de dados
+
+A etapa **[!UICONTROL Detalhes do fluxo de dados]** é exibida, onde você deve fornecer um nome e uma descrição opcional para o fluxo de dados. Selecione **[!UICONTROL Next]** quando terminar.
+
+![detalhe do fluxo de dados](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+
+### Revisão
+
+A etapa [!UICONTROL Revisar] é exibida, permitindo que você revise o novo fluxo de dados do Analytics antes de ele ser criado. Os detalhes da conexão são agrupados por categorias, incluindo:
+
+* [!UICONTROL Conexão]: Exibe a plataforma de origem da conexão.
+* [!UICONTROL Tipo] de dados: Exibe o conjunto de relatórios selecionado e sua ID de conjunto de relatórios correspondente.
+
+![revisão](../../../../images/tutorials/create/analytics/review.png)
+
+### Monitorar o fluxo de dados
+
+Depois que o fluxo de dados for criado, é possível monitorar os dados que estão sendo assimilados por meio dele. Na tela [!UICONTROL Catálogo], selecione **[!UICONTROL Fluxos de dados]** para exibir uma lista de fluxos estabelecidos associados à sua conta do Analytics.
+
+![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+
+A tela **Fluxos de dados** é exibida. Nesta página há um par de fluxos de conjunto de dados, incluindo informações sobre seu nome, dados de origem, tempo de criação e status.
 
 O conector instancia dois fluxos de conjunto de dados. Um fluxo representa dados de preenchimento retroativo e o outro é dados em tempo real. Os dados de preenchimento retroativo não são configurados para Perfil, mas são enviados para o lago de dados para casos de uso analíticos e da ciência de dados.
 
@@ -81,30 +165,28 @@ Para obter mais informações sobre preenchimento retroativo, dados em tempo rea
 
 Selecione o fluxo do conjunto de dados que deseja visualizar na lista.
 
-![](../../../../images/tutorials/create/analytics/backfill.png)
+![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-A página **Atividade do conjunto de dados** é exibida. Essa página exibe a taxa de mensagens que estão sendo consumidas no formato de um gráfico. Selecione *Data governance* no cabeçalho superior para acessar os campos de rotulagem.
+A página **[!UICONTROL Atividade do conjunto de dados]** é exibida. Essa página exibe a taxa de mensagens que estão sendo consumidas no formato de um gráfico. Selecione **[!UICONTROL Data governance]** no cabeçalho superior para acessar os campos de rotulagem.
 
-![](../../../../images/tutorials/create/analytics/batches.png)
+![atividade do conjunto de dados](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-Você pode visualizar os rótulos herdados de um fluxo de conjunto de dados da tela *Data governance*. Para acessar rótulos específicos, selecione o botão de edição na parte superior direita.
+Você pode visualizar os rótulos herdados de um fluxo de conjunto de dados da tela [!UICONTROL Data governance]. Para obter mais informações sobre como rotular dados provenientes do Analytics, visite o [guia de rótulos de uso de dados](../../../../../data-governance/labels/user-guide.md).
 
-![](../../../../images/tutorials/create/analytics/data-gov.png)
+![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
 
-O painel **Editar rótulos de governança** é exibido. Essa tela permite que você acesse e edite o contrato, a identidade e os rótulos confidenciais de um fluxo de conjunto de dados.
+Para excluir um fluxo de dados, vá para a página [!UICONTROL Fluxos de dados] e selecione os elipses (`...`) ao lado do nome do fluxo de dados e selecione [!UICONTROL Excluir].
 
-Para obter mais informações sobre como rotular dados provenientes do Analytics, visite o [guia de rótulos de uso de dados](../../../../../data-governance/labels/user-guide.md).
-
-![](../../../../images/tutorials/create/analytics/labels.png)
+![excluir](../../../../images/tutorials/create/analytics/delete.png)
 
 ## Próximas etapas e recursos adicionais
 
-Depois que a conexão é criada, um esquema de destino e um fluxo de conjunto de dados são criados automaticamente para conter os dados recebidos. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a assimilação inicial for concluída, os dados do Analytics e serão usados pelos serviços de downstream da plataforma, como o Perfil do cliente em tempo real e o Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, um esquema de destino e um fluxo de dados são criados automaticamente para conter os dados recebidos. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a assimilação inicial for concluída, [!DNL Analytics] dados e serão usados por serviços de plataforma downstream, como [!DNL Real-time Customer Profile] e Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
 
-* [Visão geral do perfil do cliente em tempo real](../../../../../profile/home.md)
-* [Visão geral do serviço de segmentação](../../../../../segmentation/home.md)
-* [Visão geral do Data Science Workspace](../../../../../data-science-workspace/home.md)
-* [Visão geral do Serviço de query](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile] visão geral](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] visão geral](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace] visão geral](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service] visão geral](../../../../../query-service/home.md)
 
 O vídeo a seguir é destinado a respaldar a compreensão da assimilação de dados pelo uso do conector do Adobe Analytics Source:
 

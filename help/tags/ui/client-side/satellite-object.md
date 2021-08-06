@@ -1,14 +1,14 @@
 ---
-title: Referência a Objeto Satélite de Tags
-description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele no Adobe Experience Platform.
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: Referência a Objeto Satélite
+description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele em tags.
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 45%
+source-wordcount: '1251'
+ht-degree: 43%
 
 ---
 
-# Referência de objeto do Satélite de tags do Adobe Experience Platform
+# Referência a objeto do satélite
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ title: Guia da interface do usuário do serviço de segmentação
 topic-legacy: ui guide
 description: O Serviço de segmentação do Adobe Experience Platform fornece uma interface de usuário para criar e gerenciar definições de segmento.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Segment
 >
 >Se sua organização for nova na Plataforma e ainda não tiver conjuntos de dados ativos do Perfil ou políticas de mesclagem criadas, o painel [!UICONTROL Segmentos] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudá-lo a começar a usar segmentos.
 
-###  Painel de segmentos  {#segments-dashboard}
+###  Painel de segmentos {#segments-dashboard}
 
 O painel **[!UICONTROL Segmentos]** descreve as métricas principais relacionadas aos dados de segmento da sua organização.
 
@@ -83,9 +83,13 @@ A barra lateral direita contém informações sobre todos os segmentos na organi
 
 A seleção da linha de definição de segmento fornece um resumo da definição do segmento, incluindo opções para editar ou excluir o segmento, o público qualificado do segmento, o tamanho total do público-alvo, além do nome do segmento, descrição, método de avaliação, data criada e data da última modificação.
 
+>[!NOTE]
+>
+> Você **não** poderá excluir um segmento que seja usado em uma ativação de destino.
+
 ![](../images/ui/overview/segment-browse-details.png)
 
-## Detalhes da definição de segmento {#segment-details}
+## Detalhes da definição do segmento {#segment-details}
 
 Para ver mais detalhes sobre uma definição de segmento específica, selecione o nome de um segmento na guia **[!UICONTROL Procurar]**.
 
@@ -149,7 +153,7 @@ Para obter informações mais detalhadas sobre o uso do espaço de trabalho [!DN
 
 ![](../images/ui/overview/segment-builder.png)
 
-## Segmentação agendada {#scheduled-segmentation}
+## Segmentação programada {#scheduled-segmentation}
 
 Depois que as definições de segmento forem criadas, você poderá avaliá-las por meio de uma avaliação sob demanda ou programada (contínua). Avaliação significa mover [!DNL Real-time Customer Profile] dados por meio de definições de segmento para produzir públicos correspondentes. Depois de criados, os públicos-alvo são salvos e armazenados para que possam ser exportados usando [!DNL Experience Platform] APIs.
 
@@ -167,7 +171,7 @@ No momento, os agendamentos só podem ser criados usando a API. Para obter etapa
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
-## Segmentação de fluxo {#streaming-segmentation}
+## Segmentação de streaming {#streaming-segmentation}
 
 A segmentação por streaming é a capacidade de fazer segmentação em [!DNL Platform] quase em tempo real, ao mesmo tempo em que se concentra na riqueza de dados. Com a segmentação de fluxo, a qualificação de segmento agora acontece à medida que os dados chegam a [!DNL Platform], o que diminui a necessidade de agendar e executar tarefas de segmentação.
 

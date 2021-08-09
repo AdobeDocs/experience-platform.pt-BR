@@ -3,9 +3,9 @@ keywords: Experience Platform, interface do usuário, interface do usuário, pai
 title: Criação de widgets personalizados para painéis
 description: 'Este guia fornece instruções passo a passo para a criação de widgets personalizados para uso em painéis do Adobe Experience Platform. '
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
+source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,11 @@ Selecione a guia **[!UICONTROL Personalizado]** para começar a criar widgets pe
 
 ## Criar um widget personalizado
 
-Para criar um widget personalizado, selecione **[!UICONTROL Criar]** no centro da biblioteca de widgets ou, se os widgets personalizados já tiverem sido criados, selecione **[!UICONTROL Criar widget]** no canto superior direito da biblioteca de widgets.
+Para criar um widget personalizado, selecione **[!UICONTROL Criar widget]** no canto superior direito da biblioteca de widgets ou, se esse for o primeiro widget personalizado de sua organização, selecione **[!UICONTROL Criar]** no centro da biblioteca de widgets.
 
 ![](../images/customization/create-widget.png)
 
-Na caixa de diálogo **[!UICONTROL Criar widget]**, você pode fornecer um título e uma descrição para o novo widget e escolher o atributo que deseja que o widget exiba.
+Na caixa de diálogo **[!UICONTROL Criar widget]**, forneça um título e uma descrição para o novo widget e escolha o atributo que deseja que o widget exiba.
 
 >[!NOTE]
 >
@@ -59,23 +59,59 @@ Para escolher um atributo, selecione o botão de opção ao lado do atributo que
 
 ![](../images/customization/create-widget-dialog.png)
 
-## Visualizar widget personalizado
+## Selecionar uma visualização
 
-Uma visualização do novo widget é exibida na caixa de diálogo, mostrando um gráfico de barras horizontal com dados de zombaria.
+Após selecionar um atributo, uma visualização do novo widget é exibida na caixa de diálogo. A inteligência artificial é usada para selecionar automaticamente uma visualização que melhor se ajuste aos dados do atributo e fornecer opções de visualização adicionais que você pode selecionar manualmente.
+
+Dependendo do atributo , a AI recomenda opções de visualização diferentes. A lista completa de visualizações inclui:
+
+* Gráfico de barras horizontal: As linhas horizontais são usadas para representar valores.
+* Gráfico de barras vertical: Linhas verticais são usadas para representar valores.
+* Gráfico de rosca: Semelhante a um gráfico de pizza, os valores são mostrados como partes ou partes de um todo.
+* Gráfico de dispersão: Usa um eixo horizontal e vertical para indicar valores.
+* Gráfico de linhas: Os valores são exibidos usando uma única linha para mostrar as alterações em um período.
+* Cartão de número: Exibe um número de resumo para representar um único valor de chave.
+* Tabela de dados: Os valores são exibidos como linhas em uma tabela.
 
 >[!NOTE]
 >
->A única métrica atualmente suportada para todos os atributos é a contagem de perfis e a única visualização atualmente suportada para widgets personalizados é um gráfico de barras horizontal.
+>A única métrica atualmente suportada para todos os atributos é a contagem de perfis.
 >
 >Os dados mostrados no widget de exemplo são apenas para fins ilustrativos. A visualização não exibe os dados reais da organização.
 
+Para salvar seu novo widget e retornar à guia [!UICONTROL Personalizado], selecione **[!UICONTROL Criar]**.
+
 ![](../images/customization/create-widget-select-attribute.png)
 
-Para salvar seu novo widget e retornar à guia [!UICONTROL Personalizado], selecione **[!UICONTROL Criar]**. O novo widget agora está disponível para ser adicionado a um painel ao escolher o widget da biblioteca e selecionar **[!UICONTROL Adicionar widget]**.
+O novo widget agora está disponível para ser adicionado a um painel ao escolher o widget da biblioteca e selecionar **[!UICONTROL Adicionar widget]**.
 
-## Arquivar um widget personalizado
+![](../images/customization/custom-widgets-new.png)
 
-Depois que um widget é adicionado à biblioteca, ele pode ser arquivado usando o botão **[!UICONTROL Arquivar]**. Também é possível editar o widget para atualizar o título ou os campos de descrição.
+## Ocultar um widget personalizado
+
+Depois que um widget é adicionado à biblioteca, ele pode ser oculto selecionando as reticências (`...`) no cartão de widget e depois selecionando **[!UICONTROL Ocultar widget]**. Também é possível visualizar e editar o widget na mesma lista suspensa.
+
+Para exibir widgets ocultos, selecione **[!UICONTROL Mostrar widgets ocultos]** no canto superior direito da biblioteca de widgets.
+
+>[!WARNING]
+>
+>Ocultar um widget na biblioteca não remove o widget dos painéis de usuários individuais. Se um widget não deve mais ser usado em sua organização, certifique-se de comunicar isso diretamente a todos os usuários da plataforma, pois eles precisarão remover o widget de seus painéis.
+
+![](../images/customization/hide-widget.png)
+
+## Editar um widget personalizado
+
+Você pode editar widgets personalizados na biblioteca de widgets selecionando os elipses (`...`) no cartão de widget e depois selecionando **[!UICONTROL Editar]** no menu suspenso.
+
+![](../images/customization/custom-widget-edit.png)
+
+Na caixa de diálogo **[!UICONTROL Editar widget]**, é possível editar o título e a descrição do widget, bem como visualizar e selecionar visualizações diferentes. Depois que as edições forem feitas, selecione **[!UICONTROL Save]** para salvar as alterações e retornar à guia de widgets personalizados.
+
+>[!WARNING]
+>
+>Editar um widget na biblioteca não atualiza o widget para usuários individuais. Se um widget tiver sido atualizado, certifique-se de comunicar isso diretamente a todos os usuários da plataforma, pois eles precisarão remover o widget desatualizado de seus painéis e, em seguida, selecionar e adicionar o widget atualizado da biblioteca de widgets.
+
+![](../images/customization/edit-widget.png)
 
 ## Próximas etapas
 

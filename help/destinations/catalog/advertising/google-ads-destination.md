@@ -1,15 +1,14 @@
 ---
 keywords: Google ads, google ads, google adwords, Google AdWords, Google Adwords
 title: Conexão com o Google Ads
-description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem anúncios por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade online que permite que as empresas paguem anúncios por clique em pesquisas baseadas em texto, exibições gráficas, vídeos YouTube e exibições móveis no aplicativo.
+exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Ads] conexão
 
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Google Ads], anteriormente conhecido como  [!DNL Google AdWords], é um serviço de anúncios online que permite que as empresas paguem anúncios por clique em pesquisas baseadas em texto, exibições gráficas,  [!DNL YouTube] vídeos e exibições móveis no aplicativo.
 
-## Especificações de destino {#specifics}
+## Especificações do destino {#specifics}
 
 Observe os seguintes detalhes que são específicos para os destinos [!DNL Google Ads]:
 
@@ -62,30 +61,30 @@ Observe os seguintes detalhes que são específicos para os destinos [!DNL Googl
 
 Antes de criar o destino [!DNL Google Ads] na Plataforma, você deve entrar em contato com [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Entre em contato com [!DNL Google] e forneça as seguintes informações:
 
-* **ID**  da conta: essa é a ID da conta do Adobe com  [!DNL Google]. Entre em contato com o Atendimento ao cliente do Adobe ou seu representante do Adobe para obter essa ID.
-* **ID**  do cliente: esta é a ID da conta do cliente Adobe com  [!DNL Google]. Entre em contato com o Atendimento ao cliente do Adobe ou seu representante do Adobe para obter essa ID.
+* **ID** da conta: ID da conta do Adobe com o Google. ID da conta: 87933855.
+* **ID** do cliente: ID da conta do cliente do Adobe com o Google. ID do cliente: 89690775.
 * Seu tipo de conta: **AdWords**
-* **ID do Google AdWords** : Essa é a sua ID com  [!DNL Google]. Normalmente, o formato da ID é 123-456-7890.
+* **ID do Google AdWords**: Essa é a sua ID com  [!DNL Google]. Normalmente, o formato da ID é 123-456-7890.
 
 ## Configurar destino
 
-Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione [!DNL Google Ads] e selecione **[!UICONTROL Configure]**.
+Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Ads] e selecione **[!UICONTROL Configurar]**.
 
 ![Conectar destino do Google Ads](../../assets/catalog/advertising/google-ads-destination/catalog.png)
 
 >[!NOTE]
 >
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+>Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 
-Na etapa **Configurar** do fluxo de trabalho criar destino, preencha o [!UICONTROL Basic Information] para o destino.
+Na etapa **Configurar** do workflow criar destino, preencha o [!UICONTROL Informações básicas] para o destino.
 
 ![Informações básicas sobre o Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
 
-* **[!UICONTROL Name]**: Preencha o nome preferencial para esse destino.
-* **[!UICONTROL Description]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL Account Type]**: O AdWords é a única opção disponível.
-* **[!UICONTROL Account ID]**: Preencha a ID da conta com  [!DNL Google Ads]. Normalmente, o formato da ID é 123-456-7890.
-* **[!UICONTROL Marketing action]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
+* **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
+* **[!UICONTROL Tipo]** de conta: O AdWords é a única opção disponível.
+* **[!UICONTROL ID]** da conta: Preencha a ID da conta com  [!DNL Google Ads]. Normalmente, o formato da ID é 123-456-7890.
+* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 ## Ativar segmentos para [!DNL Google Ads]
 

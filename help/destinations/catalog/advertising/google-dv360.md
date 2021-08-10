@@ -2,14 +2,13 @@
 keywords: Gerenciador de lances DoubleClick, Gerenciador de lances DoubleClick, DoubleClick, Display & Video 360, display 360, video 360, Video 360, Display 360, exibição e vídeo
 title: Conexão Google Display & Video 360
 description: Display & Video 360, anteriormente conhecido como DoubleClick Bid Manager, é uma ferramenta usada para executar campanhas digitais direcionadas para o público-alvo em fontes de inventário de Exibição, Vídeo e Dispositivo móvel.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Display & Video 360] conexão
 
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Display & Video 360], anteriormente conhecida como  [!DNL DoubleClick Bid Manager], é uma ferramenta usada para executar o redirecionamento e campanhas digitais direcionadas ao público-alvo em fontes de inventário de Exibição, Vídeo e Móvel.
 
-## Especificações de destino {#specifics}
+## Especificações do destino {#specifics}
 
 Observe os seguintes detalhes que são específicos para os destinos [!DNL Google Display & Video 360]:
 
@@ -56,31 +55,31 @@ Observe os seguintes detalhes que são específicos para os destinos [!DNL Googl
 
 Antes de criar o destino [!DNL Google Display & Video 360] na Plataforma, você deve entrar em contato com o Google solicitando que o Adobe seja colocado na lista de provedores de dados permitidos e que sua conta seja adicionada à lista de permissões. Entre em contato com o Google e forneça as seguintes informações:
 
-* **ID**  da conta: esta é a ID da conta do Adobe com o Google. Entre em contato com o Atendimento ao cliente do Adobe ou seu representante do Adobe para obter essa ID.
-* **ID**  do cliente: esta é a ID da conta do cliente Adobe com o Google. Entre em contato com o Atendimento ao cliente do Adobe ou seu representante do Adobe para obter essa ID.
+* **ID** da conta: ID da conta do Adobe com o Google. ID da conta: 87933855.
+* **ID** do cliente: ID da conta do cliente do Adobe com o Google. ID do cliente: 89690775.
 * **Seu tipo** de conta: use  **[!DNL Invite advertiser]** para permitir que os públicos-alvo sejam compartilhados somente com uma marca específica em sua conta do Display &amp; Video 360 ou use  **[!DNL Invite partner]** para permitir que os públicos-alvo sejam compartilhados com todas as marcas em sua conta do Display &amp; Video 360 .
 
 ## Configurar destino
 
-Em **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selecione [!DNL Google Display & Video 360] e selecione **[!UICONTROL Configure]**.
+Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Google Display & Video 360] e selecione **[!UICONTROL Configurar]**.
 
 ![Conecte o destino Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/catalog.png)
 
 >[!NOTE]
 >
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre [!UICONTROL Activate] e [!UICONTROL Configure], consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+>Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre [!UICONTROL Ativate] e [!UICONTROL Configure], consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 
-Na etapa **Setup** do workflow de criação de destino, preencha o [!UICONTROL Basic Information] para o destino, bem como as ações de marketing que devem se aplicar a esse destino.
+Na etapa **Setup** do workflow de criação de destino, preencha as [!UICONTROL Informações básicas] para o destino, bem como as ações de marketing que devem se aplicar a esse destino.
 
 ![Informações básicas sobre Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
 
-* **[!UICONTROL Name]**: Preencha o nome preferencial para esse destino.
-* **[!UICONTROL Description]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
-* **[!UICONTROL Account Type]**: Selecione uma opção, dependendo de sua conta com o Google:
+* **[!UICONTROL Nome]**: Preencha o nome preferencial para esse destino.
+* **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
+* **[!UICONTROL Tipo]** de conta: Selecione uma opção, dependendo de sua conta com o Google:
    * Use `Invite Advertiser` para permitir que os públicos-alvo sejam compartilhados somente com uma marca específica em sua conta do Display &amp; Video 360 .
    * Use `Invite Partner` para permitir que os públicos-alvo sejam compartilhados com todas as marcas em sua conta do Display &amp; Video 360.
-* **[!UICONTROL Account ID]**: Preencha a ID da  **[!DNL Invite partner]** conta do  **[!DNL Invite advertiser]** ou com o Google. Normalmente, essa é uma ID de seis ou sete dígitos.
-* **[!UICONTROL Marketing action]**: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
+* **[!UICONTROL ID]** da conta: Preencha a ID da  **[!DNL Invite partner]** conta do  **[!DNL Invite advertiser]** ou com o Google. Normalmente, essa é uma ID de seis ou sete dígitos.
+* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >

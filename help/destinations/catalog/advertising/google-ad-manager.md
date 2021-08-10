@@ -3,9 +3,9 @@ keywords: google ad manager; google ad; doubleclick; DoubleClick AdX; DoubleClic
 title: Conexão com o Google Ad Manager
 description: O Google Ad Manager, anteriormente conhecido como DoubleClick for Publishers ou DoubleClick AdX, é uma plataforma de veiculação de anúncios do Google que oferece aos editores os meios de gerenciar a exibição de anúncios em seus sites, por meio de vídeos e aplicativos móveis.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -53,8 +53,8 @@ Se você deseja criar seu primeiro destino com [!DNL Google Ad Manager] e não a
 
 Antes de criar o destino [!DNL Google Ad Manager] na Plataforma, você deve entrar em contato com [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada à lista de permissões. Entre em contato com [!DNL Google] e forneça as seguintes informações:
 
-* **ID**  da conta: essa é a ID da conta do Adobe com  [!DNL Google]. Entre em contato com o Atendimento ao cliente do Adobe ou seu representante do Adobe para obter essa ID.
-* **ID**  do cliente: esta é a ID da conta do cliente Adobe com  [!DNL Google]. Entre em contato com o Atendimento ao cliente do Adobe ou seu representante do Adobe para obter essa ID.
+* **ID** da conta: ID da conta do Adobe com o Google. ID da conta: 87933855.
+* **ID** do cliente: ID da conta do cliente do Adobe com o Google. ID do cliente: 89690775.
 * **ID**  de rede: esta é a sua conta com  [!DNL Google Ad Manager]
 * **ID**  do link de público-alvo: esta é a sua conta com  [!DNL Google Ad Manager]
 * Seu tipo de conta. DFP por Google ou AdX comprador.

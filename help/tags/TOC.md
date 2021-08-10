@@ -4,10 +4,10 @@ user-guide-title: Ajuda das tags
 breadcrumb-title: Tags
 user-guide-description: Saiba como implantar e gerenciar tags de análise, marketing e publicidade para potencializar as experiências dos clientes.
 feature: Coleta de dados
-source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
+source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 80%
+source-wordcount: '378'
+ht-degree: 79%
 
 ---
 
@@ -88,9 +88,6 @@ ht-degree: 80%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Visão geral](./extensions/web/asset-insights/overview.md)
          * [Notas de versão](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Experience Manager Forms {#forms}
-         * [Visão geral](./extensions/web/forms/overview.md)
-         * [Notas de versão](./extensions/web/forms/release-notes.md)
       * Adobe Medium Analytics para áudio e vídeo {#media-analytics}
          * [Visão geral](./extensions/web/media-analytics/overview.md)
          * [Notas de versão](./extensions/web/media-analytics/release-notes.md)

@@ -5,11 +5,10 @@ title: Acesso e recursos do Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: O documento a seguir descreve as permissões do Data Science Workspace e o acesso aos recursos.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 3%
+source-wordcount: '685'
+ht-degree: 2%
 
 ---
 
@@ -21,26 +20,28 @@ O documento a seguir descreve as permissões do Data Science Workspace e o acess
 
 - **Notebooks:** oferece um ambiente de desenvolvimento interativo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analisar e modelar seus dados no Experience Platform.
 - **Modelos:** fornece ferramentas usadas para criar, publicar e armazenar fórmulas e modelos avançados de aprendizado de máquina. Para obter mais informações, visite o tutorial [criar e publicar um modelo de aprendizado de máquina](./models-recipes/create-publish-model.md).
-- **Serviços:** contém serviços fornecidos pelo Adobe, como Serviços  [inteligentes ](../intelligent-services/home.md) e quaisquer serviços personalizados criados com o Data Science Workspace.
+- **Serviços:** contém serviços fornecidos pelo Adobe, como serviços de  [AI/ML e ](../intelligent-services/home.md) quaisquer serviços personalizados criados com o Data Science Workspace.
 
 Por que estou vendo apenas a guia Serviços?
 
-- Sua organização só pode ter direito à Plataforma de dados do cliente em tempo real (RTCDP), que inclui a API do cliente de serviço inteligente.
+- Sua organização só pode ter direito à Plataforma de dados do cliente em tempo real (RTCDP), que inclui o Serviço de IA/ML do cliente.
 
 Se não conseguir ver nenhuma das guias **Data Science** e quiser usar os recursos do Data Science Workspace, entre em contato com o administrador da empresa para verificar se você tem uma licença Adobe Experience Platform Intelligence.
 
-## Aditamento de pacote Adobe Experience Platform Intelligence
+## Embalagem da Data Science Workspace
 
-A tabela a seguir descreve algumas das principais diferenças para o Data Science Workspace com e sem o complemento do pacote Adobe Experience Platform Intelligence :
+Os recursos do Data Science Workspace estão disponíveis no pacote Adobe Experience Platform Intelligence e no complemento Advanced Intelligence Pack
+
+A tabela a seguir descreve algumas das principais diferenças para os direitos do Data Science Workspace com e sem o complemento Advanced Intelligence Pack:
 
 >[!NOTE]
 >
->Você pode licenciar mais de um pacote de Inteligência e o aumento da capacidade é adicionado ao seu direito geral. Por exemplo, se você licenciou 2 adjuntos de pacotes Adobe Experience Platform Intelligence, terá direito a um total de 20 usuários simultâneos de Notebook.
+>Você pode licenciar mais de um Addon do Advanced Intelligence Pack e o aumento da capacidade é adicionado ao seu direito geral. Por exemplo, se você licenciou 2 Adobe Experience Platform Advanced Intelligence Pack Addons, tem direito a um total de 20 usuários simultâneos de Notebook.
 
-|  | [!DNL Data Science Workspace] | [!DNL Data Science Workspace] com o complemento de pacote de inteligência |
+| Direito do Data Science Workspace | Somente Pacote de inteligência Adobe Experience Platform | Adobe Experience Platform Intelligence mais complemento de pacote de inteligência avançada |
 | --- | :---: | :---: |
 | Número de usuários do Notebook suportados. | 5 usuários simultâneos | O primeiro pacote adiciona 5 usuários simultâneos e compras adicionais e adiciona 10 usuários simultâneos por pacote. |
-| Permite notebooks Jupyter integrados para análise de dados exploratórios e criação de modelos (R, Python, Scala, PySpark) | X | X |
+| Permite notebooks Jupyter integrados para análise de dados exploratórios e criação de modelos. | X (Suporta bibliotecas R, Python e Scala) | X (adiciona bibliotecas PySpark e Spark ML) |
 | Integração nativa com o Serviço de query. Capacidade de explorar e modelar conjuntos de dados usando SQL em notebooks. | X | X |
 | Acesso a modelos de notebook pré-criados para análises preditivas. | X | X |
 | Treine e marque manualmente modelos com notebooks Jupyter. | X | X |
@@ -62,11 +63,11 @@ Para usar o Data Science Workspace, a permissão &quot;Gerenciar Data Science Wo
 
 ## Suporte a sandbox
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância da Platform é compatível com uma sandbox de produção e várias sandboxes de não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar a sandbox de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md).
+As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância da Platform é compatível com várias sandboxes de produção e de não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar as sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md).
 
 Atualmente, o Data Science Workspace tem a seguinte limitação de sandbox:
 
-- Os recursos de computação são compartilhados nas sandbox de produção e nas sandboxes de não produção.
+- Os recursos de computação são compartilhados nas sandboxes de produção e não produção.
 
 ## Próximas etapas
 

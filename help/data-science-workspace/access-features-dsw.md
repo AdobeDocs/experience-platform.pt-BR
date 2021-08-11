@@ -5,9 +5,9 @@ title: Acesso e recursos do Data Science Workspace
 topic-legacy: Access and features for data science workspace
 description: O documento a seguir descreve as permissões do Data Science Workspace e o acesso aos recursos.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Para usar o Data Science Workspace, a permissão &quot;Gerenciar Data Science Wo
 
 ## Suporte a sandbox
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância da Platform é compatível com várias sandboxes de produção e de não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar as sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md).
+As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância da Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar as sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md).
 
 Atualmente, o Data Science Workspace tem a seguinte limitação de sandbox:
 

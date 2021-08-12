@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: A assimilação de streaming permite carregar seus dados no Adobe Experience Platform usando endpoints de streaming em tempo real. As APIs de assimilação de streaming oferecem suporte a dois modos de validação - síncrona e assíncrona.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 3%
@@ -63,7 +62,7 @@ Todas as solicitações que contêm uma carga útil (POST, PUT, PATCH) exigem um
 
 A validação síncrona é um método de validação que fornece feedback imediato sobre por que uma assimilação falhou. No entanto, após uma falha, os registros que falham na validação são descartados e impedidos de serem enviados downstream. Como resultado, a validação síncrona só deve ser usada durante o processo de desenvolvimento. Ao fazer a validação síncrona, os chamadores são informados do resultado da validação XDM e, se ele falhar, do motivo da falha.
 
-Por padrão, a validação síncrona não está ativada. Para habilitá-lo, você deve transmitir o parâmetro de consulta opcional `synchronousValidation=true` ao fazer chamadas de API. Além disso, a validação síncrona só está disponível no momento se o terminal de fluxo estiver no data center do VA7.
+Por padrão, a validação síncrona não está ativada. Para habilitá-lo, você deve transmitir o parâmetro de consulta opcional `syncValidation=true` ao fazer chamadas de API. Além disso, a validação síncrona só está disponível no momento se o terminal de fluxo estiver no data center do VA7.
 
 Se uma mensagem falhar durante a validação síncrona, ela não será gravada na fila de saída, o que fornece feedback imediato para os usuários.
 
@@ -74,7 +73,7 @@ Se uma mensagem falhar durante a validação síncrona, ela não será gravada n
 **Formato da API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parâmetro | Descrição |
@@ -86,7 +85,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 Envie a seguinte solicitação para assimilar dados na entrada de dados com validação síncrona:
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```
@@ -185,7 +184,7 @@ Com a validação assíncrona ativada, uma resposta bem-sucedida retorna o segui
     "inletId": "f6ca9706d61de3b78be69e2673ad68ab9fb2cece0c1e1afc071718a0033e6877",
     "xactionId": "1555445493896:8600:8",
     "receivedTimeMs": 1555445493932,
-    "synchronousValidation": {
+    "syncValidation": {
         "skipped": true
     }
 }

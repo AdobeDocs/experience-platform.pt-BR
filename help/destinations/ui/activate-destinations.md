@@ -6,9 +6,9 @@ seo-title: Ativar perfis e segmentos para um destino
 description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 seo-description: Ative os dados que você tem no Adobe Experience Platform mapeando segmentos para destinos. Para fazer isso, siga as etapas abaixo.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
+source-git-commit: dd9e822fd485d26d5101e12e241465c354db5ad3
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ No workflow **[!UICONTROL Ativate destination]**, na página **[!UICONTROL Selec
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformação"
->abstract="Marque essa opção ao usar campos de origem sem hash (como *personalEmail.address* **personalEmail.address** `personalEmail.address`), para que o Adobe Experience Platform os faça hash automaticamente na ativação."
+>abstract="Marque essa opção ao usar campos de origem sem hash para que o Adobe Experience Platform os faça automaticamente com hash na ativação."
 
 Aplica-se a: destinos sociais e destino de publicidade da Correspondência de clientes do Google
 

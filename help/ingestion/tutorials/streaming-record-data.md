@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar APIs de assimilação de streaming, parte das APIs do serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-translation-type: tm+mt
-source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1190'
 ht-degree: 2%
 
 ---
@@ -276,13 +275,13 @@ Com o conjunto de dados e a conexão de transmissão no lugar, é possível assi
 **Formato da API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | O valor `inletId` da conexão de transmissão criada anteriormente. |
-| `synchronousValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se definido como `true`, ele poderá ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor é definido como `false`. |
+| `syncValidation` | Um parâmetro de consulta opcional destinado a fins de desenvolvimento. Se definido como `true`, ele poderá ser usado para feedback imediato para determinar se a solicitação foi enviada com êxito. Por padrão, esse valor é definido como `false`. Observe que, se você definir este parâmetro de consulta como `true`, a taxa de solicitação será limitada a 60 vezes por minuto por `CONNECTION_ID`. |
 
 **Solicitação**
 
@@ -295,7 +294,7 @@ A solicitação de exemplo abaixo assimila um registro com um nome de origem aus
 >A chamada de API a seguir **not** requer cabeçalhos de autenticação.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Cache-Control: no-cache" \
   -H "Content-Type: application/json" \
   -d '{
@@ -360,7 +359,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do recém-trans
     "inletId": "{CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507,
-    "synchronousValidation": {
+    "syncValidation": {
         "status": "pass"
     }
 }
@@ -371,7 +370,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do recém-trans
 | `{CONNECTION_ID}` | A ID da conexão de transmissão criada anteriormente. |
 | `xactionId` | Um identificador exclusivo gerou no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro em vários sistemas e com a depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
-| `synchronousValidation.status` | Como o parâmetro de consulta `synchronousValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
+| `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, esse valor será exibido. Se a validação tiver êxito, o status será `pass`. |
 
 ## Recuperar os dados de registro recém-assimilados
 

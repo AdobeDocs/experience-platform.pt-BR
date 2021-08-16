@@ -2,16 +2,24 @@
 title: Notas de versão da extensão do Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 53%
+source-wordcount: '1173'
+ht-degree: 51%
 
 ---
 
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
 Este documento aborda as notas de versão da extensão de tag Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes sobre o próprio SDK, consulte as [Notas de versão do SDK da Web da plataforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versão 2.7.0 - 16 de agosto de 2021
+
+Contém a versão 2.6.3 da biblioteca de SDK da Web da Adobe Experience Platform.
+
+* Ao usar o tipo de elemento de dados do Mapa de identidade , os identificadores cujas IDs são resolvidas para valores que não são strings preenchidas são automaticamente removidos do mapa de identidade.
+* Correção de um erro que ocorria ao tentar salvar um elemento de dados usando o tipo de elemento de dados Objeto XDM e nenhum esquema era selecionado.
+* Tipografia da interface do usuário aprimorada.
 
 ## Versão 2.6.2 - 4 de agosto de 2021
 

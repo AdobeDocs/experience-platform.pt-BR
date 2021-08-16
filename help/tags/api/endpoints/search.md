@@ -1,10 +1,10 @@
 ---
 title: Ponto de extremidade de pesquisa
 description: Saiba como fazer chamadas para o endpoint /search na API do reator.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
@@ -43,25 +43,15 @@ Para obter informações mais detalhadas sobre como usar essa funcionalidade, co
 
 O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
 
-## Recuperar uma lista de regras {#list}
+## Executar uma pesquisa {#perform}
 
-Você pode recuperar uma lista de regras pertencentes a uma propriedade, incluindo, fazendo uma solicitação do GET.
+Você pode realizar uma pesquisa fazendo uma solicitação de POST.
 
 **Formato da API**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Parâmetro | Descrição |
-| --- | --- |
-| `PROPERTY_ID` | O `id` da propriedade cujos componentes você deseja listar. |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->Usando parâmetros de consulta, as regras listadas podem ser filtradas com base nos seguintes atributos:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Consulte o guia sobre [respostas de filtragem](../guides/filtering.md) para obter mais informações.
 
 **Solicitação**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {

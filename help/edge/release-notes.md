@@ -3,14 +3,18 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK; Plataforma Web SDK; Web SDK; Notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
+source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '738'
 ht-degree: 4%
 
 ---
 
 # Notas de versão
+
+## Versão 2.6.3 - 16 de agosto de 2021
+
+* Correção de um problema em que os objetos não destinados ao uso público eram expostos por meio da promessa resolvida pelo comando `configure`.
 
 ## Versão 2.6.2 - 4 de agosto de 2021
 

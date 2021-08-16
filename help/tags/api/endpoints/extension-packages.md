@@ -1,10 +1,10 @@
 ---
 title: Ponto de extremidade de pacotes de extensão
 description: Saiba como fazer chamadas para o endpoint /extension_packages na API do Reator.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 6%
+source-wordcount: '955'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,32 @@ Um pacote de extensão pertence à [empresa](./companies.md) do desenvolvedor qu
 ## Introdução
 
 O endpoint usado neste guia faz parte da [API do reator](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, reveja o [guia de introdução](../getting-started.md) para obter informações importantes sobre como autenticar para a API.
+
+Além de entender como fazer chamadas para a API do Reator, também é importante entender como os atributos `status` e `availability` de um pacote de extensão afetam quais ações você pode executar nele. Elas são explicadas nas seções abaixo.
+
+### Status
+
+Os pacotes de extensão têm três status possíveis: `pending`, `succeeded` e `failed`.
+
+| Status | Descrição |
+| --- | --- |
+| `pending` | Quando um pacote de extensão é criado, seu `status` é definido como `pending`. Isso indica que o sistema recebeu as informações do pacote de extensão e começará o processamento. Pacotes de extensão com status `pending` não estão disponíveis para uso. |
+| `succeeded` | O status de um pacote de extensão é atualizado para `succeeded` se ele concluir o processamento com êxito. |
+| `failed` | O status de um pacote de extensão é atualizado para `failed` se ele não concluir o processamento com êxito. Um pacote de extensão com status `failed` pode ser atualizado até que o processamento seja bem-sucedido. Pacotes de extensão com status `failed` não estão disponíveis para uso. |
+
+### Disponibilidade
+
+Há níveis de disponibilidade para um pacote de extensão: `development`, `private` e `public`.
+
+| Disponibilidade | Descrição |
+| --- | --- |
+| `development` | Um pacote de extensão em `development` só é visível e está disponível na empresa proprietária. Além disso, ele só pode ser usado em propriedades que estão configuradas para desenvolvimento de extensão. |
+| `private` | Um pacote de extensão `private` é visível somente para a empresa proprietária e só pode ser instalado nas propriedades que a empresa possui. |
+| `public` | Um pacote de extensão `public` é visível e está disponível para todas as empresas e propriedades. |
+
+>[!NOTE]
+>
+>Quando um pacote de extensão é criado, `availability` é definido como `development`. Depois que o teste for concluído, você poderá fazer a transição do pacote de extensão para `private` ou `public`.
 
 ## Recuperar uma lista de pacotes de extensão {#list}
 
@@ -46,6 +72,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -231,6 +258,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -441,11 +469,11 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão, incluindo 
 }
 ```
 
-## Criar ou atualizar um pacote de extensão {#create}
+## Criar um pacote de extensão {#create}
 
 Os pacotes de extensão são criados usando uma ferramenta de scaffolding Node.js e salvos em sua máquina local antes de serem enviados à API Reator. Para obter mais informações sobre como configurar um pacote de extensão, consulte o guia sobre [introdução ao desenvolvimento de extensão](../../extension-dev/getting-started.md).
 
-Depois de criar o arquivo de pacote de extensão, você pode enviá-lo para a API do Reator por meio de uma solicitação POST. Se o pacote de extensão já existir na API, essa chamada atualizará o pacote para uma nova versão.
+Depois de criar o arquivo de pacote de extensão, você pode enviá-lo para a API do Reator por meio de uma solicitação POST.
 
 **Formato da API**
 
@@ -676,12 +704,12 @@ Uma resposta bem-sucedida retorna os detalhes do pacote de extensão recém-cria
 
 ## Atualizar um pacote de extensão {#update}
 
-Você pode atualizar um pacote de extensão incluindo sua ID no caminho de uma solicitação de POST.
+Você pode atualizar um pacote de extensão incluindo sua ID no caminho de uma solicitação de PATCH.
 
 **Formato da API**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | Parâmetro | Descrição |
@@ -695,7 +723,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 Assim como em [criar um pacote de extensão](#create), uma versão local do pacote atualizado deve ser carregada por meio de dados de formulário.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,7 +962,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Uma versão privada é alcançada fornecendo um `action` com um valor `release_private` no `meta` dos dados da solicitação.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1179,7 +1207,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Uma versão privada é alcançada fornecendo um `action` com um valor `release_private` no `meta` dos dados da solicitação.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1275,6 +1303,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 

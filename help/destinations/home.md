@@ -5,10 +5,10 @@ seo-title: Visão geral dos destinos
 description: Saiba como ativar dados do Adobe Experience Platform para destinos de campanhas de marketing entre canais, emails, anúncios direcionados e muito mais.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Uma das funcionalidades principais da Platform é assimilar seus dados primário
 ## Etapas de destinos {#steps}
 
 * Escolha em um [catálogo de autoatendimento](./catalog/overview.md) de todos os destinos disponíveis na Plataforma.
-* Use destinos para [ativar](./ui/activate-destinations.md) e envie perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
+* Use destinos para e envie perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Programe exportações de dados para seus destinos preferidos em momentos regulares.
 
 ## Controles {#controls}
@@ -66,4 +66,8 @@ Para obter mais informações sobre a seleção de ações de marketing no workf
 * [Destinos de marketing por email](./catalog/email-marketing/overview.md)
 * [Destinos sociais](./catalog/social/overview.md)
 
-Para obter mais informações sobre violações da política de dados no fluxo de trabalho de ativação do segmento, consulte a etapa Revisar em [Ativar perfis e segmentos para um destino](./ui/activate-destinations.md#review).
+Para obter mais informações sobre violações da política de dados no fluxo de trabalho de ativação do segmento, consulte a etapa Revisar nos seguintes guias:
+
+* [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](./ui/activate-segment-streaming-destinations.md#review)
+* [Ativar dados do público-alvo para destinos de exportação de perfil de fluxo](./ui/activate-streaming-profile-destinations.md#review)
+* [Ativar dados do público-alvo para destinos de exportação de perfil em lote](./ui/activate-batch-profile-destinations.md#review)

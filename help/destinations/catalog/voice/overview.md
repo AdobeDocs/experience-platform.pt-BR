@@ -1,23 +1,26 @@
 ---
-keywords: destinos de voz;Destinos de voz
-title: Visão geral da voz dos destinos do Cliente
-description: As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de bate-papo. As informações agrupadas podem ser filtradas e analisadas para permitir que o empresa otimize seu site para atender às suas necessidades.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+keywords: destinos de voz, destinos de voz
+title: Visão geral da voz dos destinos do cliente
+description: As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de chat. As informações coletadas podem ser filtradas e analisadas para permitir que as empresas otimizem seu site para atender aos requisitos.
+exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
 
+# Visão geral da voz dos destinos do cliente {#voice-of-customer-destinations}
 
-# Voz da visão geral dos destinos do Cliente {#voice-of-customer-destinations}
+## Visão geral
 
-As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de bate-papo. As informações agrupadas podem ser filtradas e analisadas para permitir que o empresa otimize seu site para atender às suas necessidades.
+As plataformas de voz coletam e coletam dados de várias fontes, incluindo mensagens de voz, dados de chamada e conversas de chat. As informações coletadas podem ser filtradas e analisadas para permitir que as empresas otimizem seu site para atender aos requisitos.
 
-Atualmente, a Adobe Experience Platform oferece suporte à Voz dos destinos do Cliente listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+## Voz com suporte dos destinos do cliente {#supported-destinations}
 
-- [Confirmar extensão de Comentários Digitais](./confirmit-digital-feedback.md)
-- [Extensão Tags Invoca](./invoca.md)
-- [Extensão Medallia](./medallia.md)
-- [Extensão da Caixa de Entrada do URL de Conversação](./talkurl.md)
+Atualmente, a Adobe Experience Platform oferece suporte à Voz dos destinos do cliente listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+
+* [Confirmar extensão de Feedback digital](confirmit-digital-feedback.md)
+* [Extensão de Tags Invoca](invoca.md)
+* [Extensão Medallia](medallia.md)
+* [Extensão da Caixa de entrada do URL de conversa](talkurl.md)

@@ -3,9 +3,9 @@ keywords: Destino do hub de eventos do Azure; hub de eventos do azure; azure eve
 title: (Beta) !Hubs de Eventos do Azure]
 description: Crie uma conexão de saída em tempo real com o armazenamento do !DNL Azure Event Hubs] para fazer o stream de dados do Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -38,31 +38,23 @@ Por exemplo, um prospecto baixou um white-paper que os qualifica em um segmento 
 
 **Baseado em perfil**  - você está exportando todos os membros de um segmento, junto com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos do fluxo de trabalho de ativação de  [destino](../../ui/activate-destinations.md#select-attributes).
 
-## Conectar destino {#connect-destination}
+## Conecte-se ao destino {#connect}
 
-Consulte [Fluxo de trabalho de destinos de armazenamento na nuvem ](./workflow.md)para obter instruções sobre como se conectar aos destinos de armazenamento na nuvem, incluindo [!DNL Azure Event Hubs].
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-Para destinos [!DNL Azure Event Hubs], insira as seguintes informações no workflow criar destino:
+### Parâmetros de conexão {#parameters}
 
-## Etapa da conta {#account-step}
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Chave SAS]** e Chave  **[!UICONTROL SAS]**: Preencha o nome e a chave da chave SAS. Saiba mais sobre como autenticar para [!DNL Azure Event Hubs] com chaves SAS na [documentação da Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Preencha seu  [!DNL Azure Event Hubs] namespace. Saiba mais sobre [!DNL Azure Event Hubs] namespaces na [documentação da Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-
-![Entrada necessária na etapa da conta](../../assets/catalog/cloud-storage/event-hubs/account.png)
-
-## Etapa de autenticação {#authentication-step}
-
 * **[!UICONTROL Nome]**: Preencha um nome para a conexão com o  [!DNL Azure Event Hubs].
 * **[!UICONTROL Descrição]**: Forneça uma descrição da conexão.  Exemplos: &quot;Clientes Premium&quot;, &quot;Masculino interessado em cozinha&quot;.
 * **[!UICONTROL eventHubName]**: Forneça um nome para o fluxo para o  [!DNL Azure Event Hubs] destino.
-* **[!UICONTROL Ações]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
-![Dados necessários na etapa de autenticação](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+## Ativar segmentos para este destino {#activate}
 
-## Ativar segmentos {#activate-segments}
-
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter informações sobre o fluxo de trabalho de ativação de segmentos.
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
 ## Dados exportados {#exported-data}
 

@@ -3,9 +3,9 @@ keywords: atributos do dirigível, destino do dirigível
 title: Conexão de atributos de aeróstato
 description: Transmita dados de público-alvo do Adobe diretamente para o Airship como atributos de público-alvo para direcionamento dentro do Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Aproveite os atributos do Adobe Experience Platform para enriquecer ainda mais o
 
 ## Conecte-se ao destino {#connect}
 
-Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
 ### Parâmetros de conexão {#parameters}
 
@@ -82,7 +82,7 @@ Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve 
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
 ## Considerações de mapeamento {#mapping-considerations}
 

@@ -3,10 +3,9 @@ keywords: etiquetas de aeróstato, destino de aeróstato
 title: Ligação de Etiquetas de Avião
 description: Transmita dados de público-alvo do Adobe para o Airship como tags de público-alvo para definição de metas dentro do Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -55,13 +54,13 @@ Consulte [Gerenciar grupos de tags](https://docs.airship.com/tutorials/manage-pr
 
 ## Gerar token portador
 
-Vá para **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** no [Painel de bordo](https://go.airship.com) e selecione **[!UICONTROL Tokens]** no menu à esquerda.
+Vá para **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs &amp; Integrations]** no [Airship dashboard](https://go.airship.com) e selecione **[!UICONTROL Tokens]** no menu à esquerda.
 
-Clique em **[!UICONTROL Create Token]**.
+Clique em **[!UICONTROL Criar token]**.
 
 Forneça um nome amigável para o token, por exemplo, &quot;Destino de tags de Adobe&quot; e selecione &quot;Todo acesso&quot; para a função.
 
-Clique em **[!UICONTROL Create Token]** e salve os detalhes como confidenciais.
+Clique em **[!UICONTROL Criar token]** e salve os detalhes como confidenciais.
 
 ## Casos de uso
 
@@ -77,59 +76,27 @@ Acione mensagens um para um em tempo real quando os usuários caírem em ou saí
 
 Por exemplo, um varejista configura um segmento específico de marca jeans na Platform. Esse varejista agora pode acionar uma mensagem móvel assim que alguém definir sua preferência de jeans para uma marca específica.
 
-## Conectar-se a [!DNL Airship Tags] {#connect-airship-tags}
+## Conecte-se ao destino {#connect}
 
-Em **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, role até a categoria **[!UICONTROL Mobile Engagement]**. Selecione **[!DNL Airship Tags]** e selecione **[!UICONTROL Configure]**.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
->[!NOTE]
->
->Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Activate]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulte a seção [Catálogo](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+### Parâmetros de conexão {#parameters}
 
-![Conectar-se às Tags de nave](../../assets/catalog/mobile-engagement/airship-tags/catalog.png)
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
-Na etapa **Account**, se você tiver configurado anteriormente uma conexão com seu destino [!DNL Airship Tags], selecione **[!UICONTROL Existing Account]** e selecione sua conexão existente. Ou você pode selecionar **[!UICONTROL New Account]** para configurar uma nova conexão para [!DNL Airship Tags]. Selecione **[!UICONTROL Connect to destination]** para conectar o Adobe Experience Platform ao seu projeto [!DNL Airship] usando o token portador gerado pelo painel [!DNL Airship].
+* **[!UICONTROL Token]** portador: o token portador gerado pelo  [!DNL Airship] painel.
+* **[!UICONTROL Nome]**: insira um nome que ajudará a identificar esse destino.
+* **[!UICONTROL Descrição]**: insira uma descrição para este destino.
+* **[!UICONTROL Domínio]**: selecione um data center dos EUA ou da UE, dependendo de qual data center se aplica a esse destino.  [!DNL Airship] 
 
->[!NOTE]
->
->A Adobe Experience Platform oferece suporte à validação de credenciais no processo de autenticação e exibe uma mensagem de erro se você inserir credenciais incorretas em sua conta [!DNL Airship]. Isso garante que você não conclua o fluxo de trabalho com credenciais incorretas.
 
-![Conectar-se às Tags de nave](../../assets/catalog/mobile-engagement/airship-tags/connect-account.png)
+## Ativar segmentos para este destino {#activate}
 
-Depois que suas credenciais forem confirmadas e o Adobe Experience Platform estiver conectado ao projeto [!DNL Airship], você poderá selecionar **[!UICONTROL Next]** para prosseguir para a etapa **[!UICONTROL Setup]**.
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
-Na etapa **[!UICONTROL Authentication]** , digite um **[!UICONTROL Name]** e um **[!UICONTROL Description]** para o fluxo de ativação.
+## Considerações de mapeamento {#mapping-considerations}
 
-Além disso, nesta etapa, é possível selecionar data center dos EUA ou da UE, dependendo de qual data center se aplica a esse destino. [!DNL Airship] Finalmente, selecione um ou mais **[!UICONTROL Marketing Actions]** para os quais os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar as suas próprias ações. Para obter mais informações sobre ações de marketing, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
-
-Selecione **[!UICONTROL Create Destination]** depois de preencher os campos acima.
-
-![Conectar-se às Tags de nave](../../assets/catalog/mobile-engagement/airship-tags/select-domain.png)
-
-Seu destino foi criado. Você pode selecionar **[!UICONTROL Save & Exit]** se desejar ativar segmentos posteriormente ou selecionar **[!UICONTROL Next]** para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
-
-## Ativar segmentos {#activate-segments}
-
-Para ativar segmentos para [!DNL Airship Tags], siga as etapas abaixo:
-
-Em **[!UICONTROL Destinations > Browse]**, selecione o destino [!DNL Airship Tags] onde deseja ativar seus segmentos.
-
-![fluxo de ativação](../../assets/catalog/mobile-engagement/airship-tags/browse.png)
-
-Clique no nome do destino. Isso leva você ao fluxo Ativar .
-
-Observe que, se já existir um fluxo de ativação para um destino, você poderá ver os segmentos que estão sendo enviados para o destino no momento. Selecione **[!UICONTROL Edit activation]** no painel direito e siga as etapas abaixo para modificar os detalhes de ativação.
-
-![fluxo de ativação](../../assets/catalog/mobile-engagement/airship-tags/activate.png)
-
-Selecione **[!UICONTROL Activate]**. No workflow **[!UICONTROL Activate destination]**, na página **[!UICONTROL Select Segments]**, selecione quais segmentos enviar para [!DNL Airship Tags].
-
-![segmentos para destino](../../assets/catalog/mobile-engagement/airship-tags/select-segments.png)
-
-Na etapa **[!UICONTROL Mapping]** , selecione quais atributos e identidades do esquema [XDM](../../../xdm/home.md) serão mapeadas para o esquema de destino. Selecione **[!UICONTROL Add new mapping]** para navegar pelo esquema e mapeá-lo para a identidade de destino correspondente.
-
-![tela inicial do mapeamento de identidade](../../assets/catalog/mobile-engagement/airship-tags/identity-mapping.png)
-
-[!DNL Airship] As tags podem ser definidas em um canal, que representa a instância do dispositivo, por exemplo, iPhone ou um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID do cliente. Se você tiver endereços de email de texto simples (sem hash) como identidade primária em seu esquema, selecione o campo de email em seu **[!UICONTROL Source Attributes]** e mapeie para o [!DNL Airship] usuário nomeado na coluna direita em **[!UICONTROL Target Identities]**, conforme mostrado abaixo.
+[!DNL Airship] As tags podem ser definidas em um canal, que representa a instância do dispositivo, por exemplo, iPhone ou um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID do cliente. Se você tiver endereços de email de texto simples (sem hash) como identidade primária em seu esquema, selecione o campo de email em seus **[!UICONTROL Atributos de origem]** e mapeie para o usuário nomeado [!DNL Airship] na coluna à direita em **[!UICONTROL Identidades do Target]**, conforme mostrado abaixo.
 
 ![Mapeamento de usuário nomeado](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
@@ -138,21 +105,6 @@ Para identificadores que devem ser mapeados para um canal, ou seja, um dispositi
 ![Conectar-se a ](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![Tags de aeróstatoConectar-se a Mapeamento de ](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
 ![Tags de AirshipChannel](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
-
-Na página **[!UICONTROL Segment schedule]**, o agendamento está atualmente desativado. Clique em **[!UICONTROL Next]** para continuar com a etapa de revisão.
-
-Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancel]** para quebrar o fluxo, **[!UICONTROL Back]** para modificar suas configurações ou **[!UICONTROL Finish]** para confirmar sua seleção e começar a enviar dados para o destino.
-
->[!IMPORTANT]
->
->Nesta etapa, o Adobe Experience Platform verifica violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de segmento até que você tenha resolvido a violação. Para obter informações sobre como resolver violações de política, consulte [Aplicação de política](../../../data-governance/enforcement/auto-enforcement.md) na seção Documentação de governança de dados.
-
-![confirmar seleção](../../assets/common/data-policy-violation.png)
-
-Se nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Finish]** para confirmar a seleção e iniciar o envio de dados para o destino.
-
-![confirmar seleção](../../assets/catalog/mobile-engagement/airship-tags/review.png)
-
 
 ## Uso e governança de dados {#data-usage-governance}
 

@@ -3,10 +3,10 @@ keywords: extensões de tags, extensão de tag, destinos do launch; extensões d
 title: Extensões de tag no Adobe Experience Platform
 description: A Adobe Experience Platform oferece a próxima geração de recursos de gerenciamento de tags do Adobe. A Platform oferece uma forma simples de implantar e gerenciar todas as tags de análise, marketing e anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 1%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ A Adobe Experience Platform oferece a próxima geração de recursos de gerencia
 
 Para obter uma introdução às tags, consulte os recursos abaixo:
 
-- [Visão geral das tags](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=pt-BR)
+- [Visão geral das tags](../../../tags/home.md)
 - [Guia de início rápido](../../../tags/quick-start/quick-start.md)
 
 ## Como encontrar extensões de tags na interface do Platform {#how-to-find-extensions-in-interface}

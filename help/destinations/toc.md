@@ -4,9 +4,9 @@ user-guide-title: Guia de destinos
 user-guide-description: Ative seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinos
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '492'
 ht-degree: 11%
 
 ---
@@ -21,9 +21,13 @@ ht-degree: 11%
    * [Conecte-se a destinos de marketing por email e ative dados usando a API do Serviço de Fluxo](./api/email-marketing.md)
 * Guias da interface {#ui}
    * [Área de trabalho Destinos](./ui/destinations-workspace.md)
-   * [Conectar-se a um destino](./ui/connect-destination.md)
+   * [Criar uma nova conexão de destino](./ui/connect-destination.md)
+   * Ativar dados do público-alvo para destinos{#activate}
+      * [Visão geral de Activation](./ui/activation-overview.md)
+      * [Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo](./ui/activate-segment-streaming-destinations.md)
+      * [Ativar dados do público-alvo para destinos de exportação de perfil de fluxo](./ui/activate-streaming-profile-destinations.md)
+      * [Ativar dados do público-alvo para destinos de exportação de perfil em lote](./ui/activate-batch-profile-destinations.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)
-   * [Ativar perfis e segmentos para um destino](./ui/activate-destinations.md)
    * [Atualizar contas de destino](./ui/update-accounts.md)
    * [Editar fluxos de ativação](./ui/edit-activation.md)
    * [Excluir destinos](./ui/delete-destinations.md)

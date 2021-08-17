@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Ativar os dados do público-alvo para os destinos de exportação do segmento de fluxo
 description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
 seo-description: Saiba como ativar os dados do público-alvo no Adobe Experience Platform, mapeando segmentos para destinos de transmissão de segmentos.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,11 @@ Use as caixas de seleção à esquerda dos nomes de segmentos para selecionar os
 ![Selecionar segmentos](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## Mapear atributos e identidades {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Aplicar transformação"
+>abstract="Marque essa opção ao usar campos de origem sem hash para que o Adobe Experience Platform os faça automaticamente com hash na ativação."
 
 >[!IMPORTANT]
 >

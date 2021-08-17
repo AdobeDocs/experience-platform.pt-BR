@@ -6,10 +6,9 @@ seo-title: Editar fluxos de ativação
 description: Siga as etapas neste artigo para editar um fluxo de ativação existente no Adobe Experience Platform.
 seo-description: Siga as etapas neste artigo para editar um fluxo de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 Siga as etapas abaixo para editar os fluxos de ativação existentes no Adobe Experience Platform:
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para visualizar os destinos existentes.
+1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para ver os destinos existentes.
 
    ![Procurar destinos](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -30,8 +29,8 @@ Siga as etapas abaixo para editar os fluxos de ativação existentes no Adobe Ex
 
    ![Selecionar destino](../assets/ui/edit-activation/destination-select.png)
 
-4. A página de detalhes do destino é exibida, mostrando os controles disponíveis. Selecione **[!UICONTROL Activate]** no painel direito para alterar quais segmentos enviar para o destino.
+4. A página de detalhes do destino é exibida, mostrando os controles disponíveis. Selecione **[!UICONTROL Ativate]** no painel direito para alterar quais segmentos enviar para o destino.
 
    ![Detalhes do destino](../assets/ui/edit-activation/destination-details.png)
 
-5. Consulte [Ativar perfis e segmentos para um destino](activate-destinations.md) para obter detalhes sobre como ativar novos segmentos.
+5. Consulte [Visão geral de ativação](activation-overview.md) para obter detalhes sobre como ativar novos segmentos.

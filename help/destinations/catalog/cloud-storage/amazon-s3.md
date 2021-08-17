@@ -3,14 +3,14 @@ keywords: Amazon S3; destino S3; s3; amazon s3
 title: Conexão Amazon S3
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Web Services (AWS) S3 para exportar periodicamente arquivos de dados delimitados por tabulação ou CSV do Adobe Experience Platform para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon S3] conexão  {#s3-connection}
+# [!DNL Amazon S3] conexão {#s3-connection}
 
 ## Visão geral {#overview}
 
@@ -22,19 +22,27 @@ Crie uma conexão de saída em tempo real com seu armazenamento [!DNL Amazon Web
 
 ![Tipo de exportação com base em perfil do Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## Conectar destino {#connect-destination}
+## Conecte-se ao destino {#connect}
 
-Consulte [Fluxo de trabalho de destinos de armazenamento na nuvem ](./workflow.md) para obter instruções sobre como se conectar aos destinos de armazenamento na nuvem, incluindo [!DNL Amazon S3].
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-Para destinos [!DNL Amazon S3], insira as seguintes informações no workflow criar destino:
+### Parâmetros de conexão {#parameters}
 
-* **[!DNL Amazon S3]chave de acesso e chave  [!DNL Amazon S3] secreta**: No  [!DNL Amazon S3], gere um  `access key - secret access key` par para conceder à Platform acesso à sua  [!DNL Amazon S3] conta. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
+
+* **[!DNL Amazon S3]chave** de acesso e chave  **[!DNL Amazon S3]secreta**: No  [!DNL Amazon S3], gere um  `access key - secret access key` par para conceder à Platform acesso à sua  [!DNL Amazon S3] conta. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Nome]**: insira um nome que ajudará a identificar esse destino.
+* **[!UICONTROL Descrição]**: insira uma descrição deste destino.
+* **[!UICONTROL Nome]** do bucket: digite o nome do  [!DNL Amazon S3] bucket a ser usado por esse destino.
+* **[!UICONTROL Caminho]** da pasta: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
+
+Opcionalmente, é possível anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Sua chave pública deve ser gravada como uma sequência de caracteres [!DNL Base64] codificada.
 
 >[!TIP]
 >
->No workflow de destino de conexão, você pode criar uma pasta personalizada no armazenamento Amazon S3 por arquivo de segmento exportado. Leia [Use macros para criar uma pasta no seu local de armazenamento](./workflow.md#use-macros) para obter instruções.
+>No workflow de destino de conexão, você pode criar uma pasta personalizada no armazenamento Amazon S3 por arquivo de segmento exportado. Leia [Use macros para criar uma pasta no seu local de armazenamento](overview.md#use-macros) para obter instruções.
 
-## Permissões [!DNL Amazon S3] necessárias {#required-s3-permission}
+### Permissões [!DNL Amazon S3] necessárias {#required-s3-permission}
 
 Para se conectar e exportar dados para o local de armazenamento [!DNL Amazon S3] com êxito, crie um usuário do Gerenciamento de identidade e acesso (IAM) para [!DNL Platform] em [!DNL Amazon S3] e atribua permissões para as seguintes ações:
 
@@ -44,7 +52,6 @@ Para se conectar e exportar dados para o local de armazenamento [!DNL Amazon S3]
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
-
 
 <!--
 
@@ -56,6 +63,9 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
+## Ativar segmentos para este destino {#activate}
+
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
 ## Dados exportados {#exported-data}
 

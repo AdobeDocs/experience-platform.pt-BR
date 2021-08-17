@@ -5,8 +5,7 @@ seo-title: Visão geral dos destinos
 description: Saiba como ativar dados do Adobe Experience Platform para destinos de campanhas de marketing entre canais, emails, anúncios direcionados e muito mais.
 seo-description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, anúncios direcionados e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 1%
@@ -29,7 +28,7 @@ Uma das funcionalidades principais da Platform é assimilar seus dados primário
 * Use destinos para [ativar](./ui/activate-destinations.md) e envie perfis ou segmentos para plataformas de automação de marketing, plataformas de publicidade digital e muito mais.
 * Programe exportações de dados para seus destinos preferidos em momentos regulares.
 
-## Controla {#controls}
+## Controles {#controls}
 
 Os controles no [Destinations workspace](./ui/destinations-workspace.md) permitem:
 
@@ -49,7 +48,7 @@ A funcionalidade Destinos no Platform funciona com permissões de controle de ac
 
 Para obter mais informações sobre controles de acesso, consulte o [Guia do usuário de controle de acesso](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] restrições na ativação de dados para destinos  {#data-governance}
+## [!DNL Data Governance] restrições na ativação de dados para destinos {#data-governance}
 
 O controle de dados é empregado para destinos da plataforma por meio de:
 
@@ -60,11 +59,11 @@ Consulte [!DNL Data Governance] na documentação da plataforma para obter mais 
 
 Para obter mais informações sobre a seleção de ações de marketing no workflow criar destino, consulte as seguintes páginas para os diferentes tipos de destino na Platform:
 
-* [Destinos de publicidade - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
+* [Destinos de publicidade - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
 * [Destinos de publicidade - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Destinos de publicidade - Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
-* [Destinos de armazenamento na nuvem](./catalog/cloud-storage/workflow.md)
+* [Destinos de publicidade - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
 * [Destinos de marketing por email](./catalog/email-marketing/overview.md)
-* [Destinos sociais](./catalog/social/workflow.md)
+* [Destinos sociais](./catalog/social/overview.md)
 
 Para obter mais informações sobre violações da política de dados no fluxo de trabalho de ativação do segmento, consulte a etapa Revisar em [Ativar perfis e segmentos para um destino](./ui/activate-destinations.md#review).

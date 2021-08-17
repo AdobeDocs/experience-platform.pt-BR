@@ -3,9 +3,9 @@ keywords: conexão do linkedin; conexão do linkedin; destinos do linkedin; link
 title: Conexão de públicos-alvo correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público-alvo, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Se você optar por hash nos endereços de email, certifique-se de estar em confo
 >Os dados de namespaces sem hash são automaticamente atribuídos a hash por [!DNL Platform] após a ativação.
 > Os dados da fonte de atributo não são automaticamente transformados em hash.
 > 
-> Durante a etapa [Mapeamento de identidade](../../ui/activate-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para ter [!DNL Platform] automaticamente hash os dados na ativação.
+> Durante a etapa [Mapeamento de identidade](../../ui/activate-segment-streaming-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para ter [!DNL Platform] automaticamente hash os dados na ativação.
 > 
 > A opção **[!UICONTROL Apply transformation]** só é exibida quando você seleciona atributos como campos de origem. Ele não é exibido quando você escolhe namespaces.
 
@@ -99,7 +99,7 @@ Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve 
 
 ## Ativar segmentos para este destino {#activate}
 
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
+Consulte [Ativar os dados do público-alvo para os destinos de exportação de segmentos de fluxo](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para esse destino.
 
 ## Dados exportados {#exported-data}
 

@@ -1,15 +1,15 @@
 ---
 title: Destino de Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análise e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais CRM e do engajamento do cliente para marketing baseado em conta e atribuição de receita.
-source-git-commit: 9b1c805f0717d0ed2c5759420d20abf5dcdeaabc
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
 
 
-# Destino do Marketo Engage (Beta) {#beta-marketo-engage-destination}
+# (Beta) Marketo Engage destination {#beta-marketo-engage-destination}
 
 >[!IMPORTANT]
 >
@@ -36,6 +36,14 @@ Exportar segmento - você está exportando todos os membros de um segmento (púb
 
 As instruções sobre como configurar o destino [podem ser encontradas aqui](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en).
 
+## Conecte-se ao destino {#connect}
+
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
+
 ## Uso e governança de dados {#data-usage-governance}
 
 Todos os destinos [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como [!DNL Adobe Experience Platform] aplica o controle de dados, consulte a [Visão geral da governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+## Ativar segmentos para este destino {#activate}
+
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.

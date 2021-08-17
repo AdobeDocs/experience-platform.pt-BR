@@ -1,27 +1,30 @@
 ---
-keywords: personalização;Personalização
+keywords: personalização, personalização
 title: Visão geral dos destinos de personalização
-description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+description: As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os profissionais de marketing a navegar em dados anônimos, veiculando ofertas ou anúncios em prospetos com base em atividades anteriores ou como parte de segmentos de público-alvo com hábitos semelhantes.
+exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '136'
 ht-degree: 9%
 
 ---
 
-
 # Visão geral dos destinos de personalização {#personalization-destinations}
 
-As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os comerciantes a navegar em dados anônimos, oferecendo ofertas ou anúncios a prospectos com base em atividades anteriores ou como parte de segmentos de audiências com hábitos semelhantes.
+## Visão geral {#overview}
 
-Atualmente, a Plataforma suporta os destinos de personalização listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+As plataformas de personalização coletam dados e insights de comportamentos individuais. Essas plataformas podem ajudar os profissionais de marketing a navegar em dados anônimos, veiculando ofertas ou anúncios em prospetos com base em atividades anteriores ou como parte de segmentos de público-alvo com hábitos semelhantes.
 
-* [Extensão do Adobe Target](./adobe-target.md)
-* [Extensão do Adobe Target v2](./adobe-target-v2.md)
-* [Extensão de Beemray](./beemray.md)
-* [Extensão Inteligência do Visitante D&amp;B](./dnb.md)
-* [Extensão do Experience Cloud ID Service](./adobe-ecid.md)
-* [Extensão de gansight](./gainsight.md)
-* [Extensão Kickfire](./kickfire.md)
-* [Extensão Marketo Web Personalization](./marketo-web-personalization.md)
+## Destinos de personalização compatíveis {#supported-destinations}
+
+Atualmente, a Platform oferece suporte aos destinos de personalização listados abaixo. Para obter informações sobre como se conectar a esses destinos, consulte os links individuais:
+
+* [Extensão do Adobe Target](adobe-target.md)
+* [Extensão do Adobe Target v2](adobe-target-v2.md)
+* [Extensão do Beemray](beemray.md)
+* [Extensão Inteligência do visitante D&amp;B](dnb.md)
+* [Extensão do Experience Cloud ID Service](adobe-ecid.md)
+* [Extensão do Gainsight](gainsight.md)
+* [Extensão do Kickfire](kickfire.md)
+* [Extensão Marketo Web Personalization](marketo-web-personalization.md)

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 7%
@@ -60,8 +60,8 @@ Os destinos são integrações pré-criadas com plataformas de destino que permi
 
 | Recurso | Descrição |
 | --- | --- |
-| [Exportações de arquivos incrementais mais rápidas](../../destinations/ui/activate-destinations.md#export-incremental-files) | Agora é possível agendar exportações de arquivos incrementais para destinos com base em arquivos a cada 3, 6, 8 e 12 horas. No momento, não há suporte para a alteração do agendamento de exportação de arquivos para segmentos que já foram salvos. Para reexportar segmentos com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras. |
-| [Suporte para chaves de desduplicação](../../destinations/ui/activate-destinations.md#deduplication-keys) | Elimine vários registros do mesmo perfil nos arquivos de exportação selecionando uma chave de desduplicação. Você pode selecionar um único namespace ou até dois atributos de esquema XDM como uma chave de desduplicação. |
+| [Exportações de arquivos incrementais mais rápidas](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | Agora é possível agendar exportações de arquivos incrementais para destinos com base em arquivos a cada 3, 6, 8 e 12 horas. No momento, não há suporte para a alteração do agendamento de exportação de arquivos para segmentos que já foram salvos. Para reexportar segmentos com uma programação diferente, você deve criar uma nova instância de destino. Esta é uma limitação que será abordada em versões futuras. |
+| [Suporte para chaves de desduplicação](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Elimine vários registros do mesmo perfil nos arquivos de exportação selecionando uma chave de desduplicação. Você pode selecionar um único namespace ou até dois atributos de esquema XDM como uma chave de desduplicação. |
 
 ## Experience Data Model (XDM) {#xdm}
 

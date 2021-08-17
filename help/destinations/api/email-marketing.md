@@ -6,9 +6,9 @@ description: Este documento aborda a criação de destinos de marketing por emai
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial usa o destino Adobe Campaign em todos os exemplos, mas as etapas s
 
 ![Visão geral - as etapas para criar um destino e ativar segmentos](../assets/api/email-marketing/overview.png)
 
-Se preferir usar a interface do usuário no Platform para conectar um destino e ativar dados, consulte os tutoriais [Conectar um destino](../ui/connect-destination.md) e [Ativar perfis e segmentos a um destino](../ui/activate-destinations.md).
+Se preferir usar a interface do usuário no Platform para conectar um destino e ativar dados, consulte os tutoriais [Connect a destination](../ui/connect-destination.md) e [Ativate audience data to batch profile export destination](../ui/activate-batch-profile-destinations.md) .
 
 ## Introdução
 

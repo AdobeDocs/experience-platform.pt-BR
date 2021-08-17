@@ -5,9 +5,9 @@ title: Visão geral da preparação de dados
 topic-legacy: overview
 description: Este documento apresenta a Preparação de dados no Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,12 @@ A Preparação de dados também aplica várias validações de dados intrínseca
 Um mapeamento é uma associação de um atributo de entrada ou campo calculado a um atributo XDM. Um único atributo pode ser mapeado para vários atributos XDM criando mapeamentos individuais.
 
 Para saber mais sobre as diferentes funções de mapeamento, leia o [guia de funções de mapeamento](./functions.md).
+
+### Campos calculados
+
+Os campos calculados permitem que os valores sejam criados com base nos atributos no schema de entrada. Esses valores podem ser atribuídos aos atributos no schema de destino e receber um nome e uma descrição para permitir uma referência mais fácil.
+
+Para saber mais sobre campos calculados, leia o [guia de campos calculados](./functions.md#calculated-fields).
 
 ## Conjunto de mapeamentos
 

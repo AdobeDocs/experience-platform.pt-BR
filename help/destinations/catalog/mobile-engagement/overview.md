@@ -1,20 +1,21 @@
 ---
-keywords: mensagens móveis;destinos de mensagens móveis;Braze; Avião
+keywords: mensagens móveis, destinos de mensagens móveis, Braze; Aeronave
 title: Visão geral dos destinos de envolvimento móvel
-description: Saiba mais sobre os diferentes destinos de envolvimento móvel suportados pela Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+description: Saiba mais sobre os diferentes destinos de envolvimento móvel compatíveis com o Adobe Experience Platform.
+exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral dos destinos de envolvimento móvel {#mobile-destinations}
 
-[!DNL Adobe Experience Platform] suporta atualmente os seguintes destinos de envolvimento móvel:
+## Destinos de engajamento móvel suportados {#supported-destinations}
 
-* [Ligação de atributos de dirigível](./airship-attributes.md)
-* [Ligação de Etiquetas de Avião](./airship-tags.md)
-* [Conexão com o Braze](./braze.md)
+[!DNL Adobe Experience Platform] atualmente suporta os seguintes destinos de engajamento móvel:
+
+* [Conexão de atributos de aeróstato](airship-attributes.md)
+* [Ligação de Etiquetas de Avião](airship-tags.md)
+* [Ligação de brasa](braze.md)

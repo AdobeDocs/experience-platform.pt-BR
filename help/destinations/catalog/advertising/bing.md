@@ -3,14 +3,14 @@ keywords: 'publicidade; bing; '
 title: Conexão do Microsoft Bing
 description: Com o destino de conexão do Microsoft Bing, você pode executar redirecionamento e campanhas digitais direcionadas ao público-alvo em todo o Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 2931efa6f67a042255fb1d31c0683f73d817b55b
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '382'
+ht-degree: 1%
 
 ---
 
-# [!DNL Microsoft Bing] conexão  {#bing-destination}
+# [!DNL Microsoft Bing] conexão {#bing-destination}
 
 ## Visão geral {#overview}
 
@@ -42,38 +42,25 @@ Ao configurar o destino, você deve fornecer as seguintes informações:
 
 * [!UICONTROL ID] da conta: este é seu  [!DNL Bing Ads CID], no formato inteiro.
 
-## Conecte-se ao destino {#connect-destination}
+## Conecte-se ao destino {#connect}
 
-Em **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]**, selecione [!DNL Microsoft Bing] e selecione **[!UICONTROL Configurar]**.
+Para se conectar a esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-![Configurar o destino do Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
+### Parâmetros de conexão {#parameters}
 
-Se uma conexão com esse destino já existir, você poderá ver um botão **[!UICONTROL Ativar]** no cartão de destino. Para obter mais informações sobre a diferença entre **[!UICONTROL Ativate]** e **[!UICONTROL Configure]**, consulte a seção [Catalog](../../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
-
-![Ativar Destino do Microsoft Bing](../../assets/catalog/advertising/bing/activate.png)
-
-## Etapa de autenticação {#authentication}
-
-Na etapa **[!UICONTROL Authentication]**, você deve inserir os detalhes da conexão de destino:
+Enquanto [configurar](../../ui/connect-destination.md) esse destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Nome]**: Um nome pelo qual você reconhecerá esse destino no futuro.
 * **[!UICONTROL Descrição]**: Uma descrição que ajudará a identificar esse destino no futuro.
 * **[!UICONTROL ID]** da conta: Seu  [!DNL Bing Ads CID].
-* **[!UICONTROL Ação]** de marketing: As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [Governança de dados no Adobe Experience Platform](../../../data-governance/policies/overview.md) . Para obter informações sobre as ações de marketing individuais definidas pelo Adobe, consulte a [Visão geral das políticas de uso de dados](../../../data-governance/policies/overview.md).
 
-![Autenticação de Destino do Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
+## Ativar segmentos para este destino {#activate}
 
-Clique em **[!UICONTROL Criar destino]**. Seu destino foi criado. Você pode clicar em [!UICONTROL Salvar e sair] se desejar ativar segmentos posteriormente, ou clicar em [!UICONTROL Próximo] para continuar o fluxo de trabalho e selecionar segmentos para ativar. Em ambos os casos, consulte a próxima seção, [Ativar segmentos](#activate-segments), para o restante do fluxo de trabalho.
-
-## Ativar segmentos {#activate-segments}
-
-Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md#select-attributes) para obter informações sobre o fluxo de trabalho de ativação de segmentos.
+Consulte [Ativar perfis e segmentos para um destino](../../ui/activate-destinations.md) para obter instruções sobre como ativar segmentos de público-alvo para destinos.
 
 Na etapa [Agendamento do segmento](../../ui/activate-destinations.md#segment-schedule), você deve mapear manualmente os segmentos para a ID correspondente ou para o nome amigável no destino.
 
 Ao mapear segmentos, recomendamos que você use o nome do segmento [!DNL Platform] ou uma forma mais curta dele, para facilitar o uso. No entanto, a ID do segmento ou o nome no seu destino não precisam corresponder àquela em sua conta [!DNL Platform]. Qualquer valor inserido no campo de mapeamento será refletido pelo destino.
-
-![ID de mapeamento de segmento](../../assets/common/segment-mapping-id.png)
 
 ## Dados exportados {#exported-data}
 
